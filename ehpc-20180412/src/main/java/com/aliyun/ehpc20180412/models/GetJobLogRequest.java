@@ -5,25 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetJobLogRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The maximum size of logs that you can read in a single request.</p>
+     * <br>
+     * <p>Unit: bits</p>
+     * <br>
+     * <p>Default value: 1024</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The node on which the job runs.</p>
-     * <br>
-     * <p>*   If the job is completed, you do not need to specify the parameter.</p>
-     * <p>*   If the job is running, you must specify the parameter.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("ExecHost")
     public String execHost;
-
-    /**
-     * <p>The ID of the job.</p>
-     */
-    @NameInMap("JobId")
-    public String jobId;
 
     /**
      * <p>The position where logs start to be read.</p>
@@ -32,15 +27,17 @@ public class GetJobLogRequest extends TeaModel {
      * <br>
      * <p>Default value: 0</p>
      */
+    @NameInMap("JobId")
+    public String jobId;
+
+    /**
+     * <p>The content of the output logs. The content is encoded in Base64.</p>
+     */
     @NameInMap("Offset")
     public Long offset;
 
     /**
-     * <p>The maximum size of logs that you can read in a single request.</p>
-     * <br>
-     * <p>Unit: bits</p>
-     * <br>
-     * <p>Default value: 1024</p>
+     * <p>The ID of the job.</p>
      */
     @NameInMap("Size")
     public Integer size;

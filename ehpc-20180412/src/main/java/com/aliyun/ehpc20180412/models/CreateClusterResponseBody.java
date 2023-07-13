@@ -4,23 +4,12 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the E-HPC cluster.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the task.</p>
-     * <br>
-     * <p>>  CreateCluster is an asynchronous API operation. If a request succeeds, a response is immediately generated before nodes are created. You can call the [ListTasks](~~268225~~) operation to query the result of the task.</p>
-     */
     @NameInMap("TaskId")
     public String taskId;
 

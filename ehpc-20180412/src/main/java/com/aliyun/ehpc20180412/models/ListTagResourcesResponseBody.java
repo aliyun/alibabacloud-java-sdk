@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is required for the next query. If the NextToken parameter is empty, no subsequent query will be sent.</p>
+     * <p>The token that is required for the next query. If the NextToken parameter is empty, no subsequent query is available.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -53,25 +53,25 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
-         * <p>The ID of the resource. Set the value to the ID of the cluster.</p>
+         * <p>The resource ID. Set the value to the ID of the cluster.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. Set the value to cluster, which indicates E-HPC clusters.</p>
+         * <p>The type of the resource whose tags are queried. Set the value to cluster, which indicates E-HPC clusters.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

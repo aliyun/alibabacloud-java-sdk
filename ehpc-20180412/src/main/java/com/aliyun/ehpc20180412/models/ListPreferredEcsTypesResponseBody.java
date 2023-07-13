@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListPreferredEcsTypesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes of the E-HPC cluster.</p>
+     * <p>The list of recommended ECS instances. Each series contains the recommended ECS instance types for various nodes of the E-HPC cluster.</p>
      */
     @NameInMap("Series")
     public ListPreferredEcsTypesResponseBodySeries series;
 
     /**
-     * <p>Indicates whether spot instances are supported.</p>
+     * <p>Indicates whether preemptible instances are supported.</p>
      */
     @NameInMap("SupportSpotInstance")
     public Boolean supportSpotInstance;
@@ -160,24 +160,24 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
 
     public static class ListPreferredEcsTypesResponseBodySeriesSeriesInfo extends TeaModel {
         /**
-         * <p>The recommended ECS instance types for various nodes of the E-HPC cluster.</p>
+         * <p>Recommended instance types for nodes in an E-HPC cluser.</p>
          */
         @NameInMap("Roles")
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles;
 
         /**
-         * <p>The ID of the ECS instance series. Valid values:</p>
+         * <p>The ECS instance series ID. Valid values:</p>
          * <br>
-         * <p>*   HighCompute: high computing</p>
-         * <p>*   HighMem: high storage</p>
-         * <p>*   GPU</p>
-         * <p>*   All: all options.</p>
+         * <p>*   HighCompute: compute-optimized instance families</p>
+         * <p>*   HighMem: memory-optimized instance families</p>
+         * <p>*   GPU: GPU-accelerated instance families</p>
+         * <p>*   All: all instance families</p>
          */
         @NameInMap("SeriesId")
         public String seriesId;
 
         /**
-         * <p>The name of the instance series. Valid values:</p>
+         * <p>The instance series name. Valid values:</p>
          * <br>
          * <p>*   SeriesHighCompute</p>
          * <p>*   SeriesHighMem</p>

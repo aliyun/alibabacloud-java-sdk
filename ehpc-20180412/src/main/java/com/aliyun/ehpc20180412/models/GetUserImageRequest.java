@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserImageRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -17,7 +17,7 @@ public class GetUserImageRequest extends TeaModel {
     public String containerType;
 
     /**
-     * <p>The name of the image.</p>
+     * <p>The image name.</p>
      */
     @NameInMap("ImageName")
     public String imageName;
@@ -35,7 +35,7 @@ public class GetUserImageRequest extends TeaModel {
     public String OSSBucket;
 
     /**
-     * <p>The endpoint of OSS.</p>
+     * <p>The OSS endpoint.</p>
      */
     @NameInMap("OSSEndPoint")
     public String OSSEndPoint;

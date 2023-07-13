@@ -7,11 +7,14 @@ public class CreateHybridClusterRequest extends TeaModel {
     @NameInMap("EcsOrder")
     public CreateHybridClusterRequestEcsOrder ecsOrder;
 
+    /**
+     * <p>An array that consists of the information about the software.</p>
+     */
     @NameInMap("Application")
     public java.util.List<CreateHybridClusterRequestApplication> application;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -32,18 +35,18 @@ public class CreateHybridClusterRequest extends TeaModel {
      * <p>The preemption policy of the compute nodes. Valid values:</p>
      * <br>
      * <p>*   NoSpot: The compute nodes are pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</p>
+     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
      * <br>
-     * <p>Default value: NoSpot</p>
+     * <p>Default value: NoSpot.</p>
      */
     @NameInMap("ComputeSpotStrategy")
     public String computeSpotStrategy;
 
     /**
-     * <p>The description of the cluster. The description must be 2 to 256 characters in length. It cannot start with http:// or https://.</p>
+     * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
      * <br>
-     * <p>Default value: null</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -54,7 +57,7 @@ public class CreateHybridClusterRequest extends TeaModel {
      * <p>*   nis</p>
      * <p>*   ldap</p>
      * <br>
-     * <p>Default value: nis</p>
+     * <p>Default value: nis.</p>
      */
     @NameInMap("Domain")
     public String domain;
@@ -66,7 +69,16 @@ public class CreateHybridClusterRequest extends TeaModel {
     public String ehpcVersion;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The mode in which the proxy node manages the offline nodes. Valid values:</p>
+     * <br>
+     * <p>*   SSH: indicates management via SSH logon.</p>
+     * <p>*   CA: indicates management through Cloud Assistant.</p>
+     */
+    @NameInMap("HybridClusterOpMode")
+    public String hybridClusterOpMode;
+
+    /**
+     * <p>The IDs of the images.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -89,9 +101,9 @@ public class CreateHybridClusterRequest extends TeaModel {
     public String jobQueue;
 
     /**
-     * <p>The name of the AccessKey pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The name of the key pair. The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with http:// or https://.[](http://https://。、（:）、（\_）（-）。)</p>
      * <br>
-     * <p>>  For more information, see [Create an SSH key pair](~~51793~~).</p>
+     * <p>> To use an SSH key pair, see [Create an SSH key pair](~~51793~~).</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
@@ -108,7 +120,7 @@ public class CreateHybridClusterRequest extends TeaModel {
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("MultiOs")
     public Boolean multiOs;
@@ -119,6 +131,9 @@ public class CreateHybridClusterRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The information about the nodes in the local cluster.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<CreateHybridClusterRequestNodes> nodes;
 
@@ -146,6 +161,9 @@ public class CreateHybridClusterRequest extends TeaModel {
     @NameInMap("OnPremiseVolumeRemotePath")
     public String onPremiseVolumeRemotePath;
 
+    /**
+     * <p>The parameter that is used to connect to the OpenLDAP server.</p>
+     */
     @NameInMap("OpenldapPar")
     public CreateHybridClusterRequestOpenldapPar openldapPar;
 
@@ -156,18 +174,33 @@ public class CreateHybridClusterRequest extends TeaModel {
     public String osTag;
 
     /**
-     * <p>The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The password can contain the following special characters:</p>
+     * <p>The root password of the logon node. The password must be 8 to 30 characters in length and contain at least three of the following items: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported: `() ~ ! @ # $ % ^ & * - = + | { } [ ] : ; ‘ < > , . ? /`</p>
      * <br>
-     * <p>`() ~ ! @ # $ % ^ & * - = + | { } [ ] : ; ‘ < > , . ? /`</p>
-     * <br>
-     * <p>>  We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
+     * <p>> We recommend that you use HTTPS to call the API operation to prevent password leakage.</p>
      */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The mode configurations of the plug-in. This parameter takes effect only when the SchedulerType parameter is set to custom.</p>
+     * <br>
+     * <p>The value must be a JSON string. The parameter contains the following parameters: pluginMod, pluginLocalPath, and pluginOssPath.</p>
+     * <br>
+     * <p>*   pluginMod: the mode of the plug-in. The following modes are supported:</p>
+     * <br>
+     * <p>    *   oss: The plug-in is downloaded and decompressed from OSS to a local path. The local path is specified by the pluginLocalPath parameter.</p>
+     * <p>    *   image: By default, the plug-in is stored in a pre-defined local path. The local path is specified by the pluginLocalPath parameter.</p>
+     * <br>
+     * <p>*   pluginLocalPath: the local path where the plug-in is stored. We recommend that you select a shared directory in oss mode and a non-shared directory in image mode.</p>
+     * <br>
+     * <p>*   pluginOssPath: the remote path where the plug-in is stored in OSS. This parameter takes effect only when the pluginMod parameter is set to oss.</p>
+     */
     @NameInMap("Plugin")
     public String plugin;
 
+    /**
+     * <p>The list of post-installation script information.</p>
+     */
     @NameInMap("PostInstallScript")
     public java.util.List<CreateHybridClusterRequestPostInstallScript> postInstallScript;
 
@@ -193,9 +226,11 @@ public class CreateHybridClusterRequest extends TeaModel {
     public Boolean schedulerPreInstall;
 
     /**
-     * <p>You can select an existing security group.</p>
+     * <p>You can select an existing security group by its ID.</p>
      * <br>
-     * <p>>  If you specify this parameter, you cannot specify the `SecurityGroupName` parameter at the same time.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**If you specify this parameter, you cannot specify the **SecurityGroupName`  parameter. `</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -203,13 +238,13 @@ public class CreateHybridClusterRequest extends TeaModel {
     /**
      * <p>If you do not use an existing security group, set the parameter to the name of a new security group. A default policy is applied to the new security group.</p>
      * <br>
-     * <p>>  If you specify this parameter, you cannot specify the `SecurityGroupId` parameter at the same time.</p>
+     * <p>> If you specify this parameter, you cannot specify the `SecurityGroupId` parameter.</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The ID of the vSwitch to which the instance connects to.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -221,13 +256,13 @@ public class CreateHybridClusterRequest extends TeaModel {
     public String volumeId;
 
     /**
-     * <p>The mount target of the file system. Mount targets cannot be automatically created for NAS file systems.</p>
+     * <p>The mount target of the NAS file system. The mount target is of the VPC type. Mount targets cannot be automatically created for NAS file systems.</p>
      */
     @NameInMap("VolumeMountpoint")
     public String volumeMountpoint;
 
     /**
-     * <p>The type of the protocol that is used by the file system. Only NFS is supported.</p>
+     * <p>The type of the protocol that is used by the NAS file system. Only NFS is supported.</p>
      */
     @NameInMap("VolumeProtocol")
     public String volumeProtocol;
@@ -239,11 +274,14 @@ public class CreateHybridClusterRequest extends TeaModel {
     public String volumeType;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the cluster belongs.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the E-HPC cluster belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The parameter that is used to connect to the Windows AD server.</p>
+     */
     @NameInMap("WinAdPar")
     public CreateHybridClusterRequestWinAdPar winAdPar;
 
@@ -328,6 +366,14 @@ public class CreateHybridClusterRequest extends TeaModel {
     }
     public String getEhpcVersion() {
         return this.ehpcVersion;
+    }
+
+    public CreateHybridClusterRequest setHybridClusterOpMode(String hybridClusterOpMode) {
+        this.hybridClusterOpMode = hybridClusterOpMode;
+        return this;
+    }
+    public String getHybridClusterOpMode() {
+        return this.hybridClusterOpMode;
     }
 
     public CreateHybridClusterRequest setImageId(String imageId) {
@@ -594,7 +640,7 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     public static class CreateHybridClusterRequestEcsOrderManager extends TeaModel {
         /**
-         * <p>The instance type of the management node on the cloud. Only Proxy Mode is supported.</p>
+         * <p>The instance type of the management node. Only Proxy Mode is supported.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -646,7 +692,7 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     public static class CreateHybridClusterRequestApplication extends TeaModel {
         /**
-         * <p>The tag of the application. Valid values of N: 1 to 5.</p>
+         * <p>The tag of the software.</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -673,7 +719,7 @@ public class CreateHybridClusterRequest extends TeaModel {
          * <p>*   nis</p>
          * <p>*   ldap</p>
          * <br>
-         * <p>Default value: nis</p>
+         * <p>Default value: nis.</p>
          */
         @NameInMap("AccountType")
         public String accountType;
@@ -714,7 +760,7 @@ public class CreateHybridClusterRequest extends TeaModel {
          * <p>*   opengridscheduler</p>
          * <p>*   deadline</p>
          * <br>
-         * <p>Default value: pbs</p>
+         * <p>Default value: pbs.</p>
          */
         @NameInMap("SchedulerType")
         public String schedulerType;
@@ -775,9 +821,21 @@ public class CreateHybridClusterRequest extends TeaModel {
     }
 
     public static class CreateHybridClusterRequestOpenldapPar extends TeaModel {
+        /**
+         * <p>The BaseDN of the LDAP server.</p>
+         */
         @NameInMap("BaseDn")
         public String baseDn;
 
+        /**
+         * <p>The home directory of the Linux server.</p>
+         */
+        @NameInMap("FallbackHomeDir")
+        public String fallbackHomeDir;
+
+        /**
+         * <p>The IP address of the LDAP server.</p>
+         */
         @NameInMap("LdapServerIp")
         public String ldapServerIp;
 
@@ -794,6 +852,14 @@ public class CreateHybridClusterRequest extends TeaModel {
             return this.baseDn;
         }
 
+        public CreateHybridClusterRequestOpenldapPar setFallbackHomeDir(String fallbackHomeDir) {
+            this.fallbackHomeDir = fallbackHomeDir;
+            return this;
+        }
+        public String getFallbackHomeDir() {
+            return this.fallbackHomeDir;
+        }
+
         public CreateHybridClusterRequestOpenldapPar setLdapServerIp(String ldapServerIp) {
             this.ldapServerIp = ldapServerIp;
             return this;
@@ -806,13 +872,13 @@ public class CreateHybridClusterRequest extends TeaModel {
 
     public static class CreateHybridClusterRequestPostInstallScript extends TeaModel {
         /**
-         * <p>The parameters that are used to run the post-installation script. Valid values of N: 1 to 16.</p>
+         * <p>The parameter that is used to run the script after the cluster is created.</p>
          */
         @NameInMap("Args")
         public String args;
 
         /**
-         * <p>The full path of the post-installation script. Valid values of N: 1 to 16.</p>
+         * <p>The full path of the post-installation script.</p>
          */
         @NameInMap("Url")
         public String url;
@@ -841,15 +907,27 @@ public class CreateHybridClusterRequest extends TeaModel {
     }
 
     public static class CreateHybridClusterRequestWinAdPar extends TeaModel {
+        /**
+         * <p>The name of the AD domain.</p>
+         */
         @NameInMap("AdDc")
         public String adDc;
 
+        /**
+         * <p>The IP address of the AD domain.</p>
+         */
         @NameInMap("AdIp")
         public String adIp;
 
+        /**
+         * <p>The AD user.</p>
+         */
         @NameInMap("AdUser")
         public String adUser;
 
+        /**
+         * <p>The password of the AD user.</p>
+         */
         @NameInMap("AdUserPasswd")
         public String adUserPasswd;
 

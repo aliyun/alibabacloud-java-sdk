@@ -15,6 +15,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>Product List</p>
+     */
     @NameInMap("Commodities")
     public java.util.List<DescribePriceRequestCommodities> commodities;
 
@@ -200,6 +203,9 @@ public class DescribePriceRequest extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
 
+        /**
+         * <p>The list of data disks created with the node.</p>
+         */
         @NameInMap("DataDisks")
         public java.util.List<DescribePriceRequestCommoditiesDataDisks> dataDisks;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHybridClusterResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

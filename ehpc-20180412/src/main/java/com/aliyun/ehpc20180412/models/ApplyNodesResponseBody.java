@@ -19,7 +19,7 @@ public class ApplyNodesResponseBody extends TeaModel {
     public ApplyNodesResponseBodyInstanceIds instanceIds;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -31,7 +31,7 @@ public class ApplyNodesResponseBody extends TeaModel {
     public Integer satisfiedAmount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

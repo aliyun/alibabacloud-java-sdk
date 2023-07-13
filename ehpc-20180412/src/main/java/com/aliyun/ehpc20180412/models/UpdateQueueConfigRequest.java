@@ -20,6 +20,9 @@ public class UpdateQueueConfigRequest extends TeaModel {
     @NameInMap("ComputeInstanceType")
     public String computeInstanceType;
 
+    @NameInMap("DeploymentSetId")
+    public String deploymentSetId;
+
     /**
      * <p>The name of the queue.</p>
      */
@@ -53,6 +56,14 @@ public class UpdateQueueConfigRequest extends TeaModel {
     }
     public String getComputeInstanceType() {
         return this.computeInstanceType;
+    }
+
+    public UpdateQueueConfigRequest setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
+        return this;
+    }
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
     }
 
     public UpdateQueueConfigRequest setQueueName(String queueName) {

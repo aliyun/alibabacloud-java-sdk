@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster. You can call the [ListClusters](~~87116~~) operation to query the list of clusters in a region.</p>
+     * <p>The type of the image. Valid values:</p>
+     * <br>
+     * <p>*   system: public image</p>
+     * <p>*   self: custom image</p>
+     * <p>*   others: shared image</p>
+     * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

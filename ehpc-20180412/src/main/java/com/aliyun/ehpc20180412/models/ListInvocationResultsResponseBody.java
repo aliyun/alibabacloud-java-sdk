@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListInvocationResultsResponseBody extends TeaModel {
     /**
-     * <p>The result of the command.</p>
+     * <p>Indicates whether the command was run and its result was obtained.</p>
      */
     @NameInMap("InvocationResults")
     public ListInvocationResultsResponseBodyInvocationResults invocationResults;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The result of the command.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,28 +81,19 @@ public class ListInvocationResultsResponseBody extends TeaModel {
 
     public static class ListInvocationResultsResponseBodyInvocationResultsInvocationResult extends TeaModel {
         /**
-         * <p>The ID of the command.</p>
+         * <p>The ID of the node on which the command was run.</p>
          */
         @NameInMap("CommandId")
         public String commandId;
 
-        /**
-         * <p>The exit code.</p>
-         */
         @NameInMap("ExitCode")
         public Integer exitCode;
 
         /**
-         * <p>The time at which the command entered the Finished state.</p>
+         * <p>The ID of the command.</p>
          */
         @NameInMap("FinishedTime")
         public String finishedTime;
-
-        /**
-         * <p>The ID of the node on which the command was run.</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         /**
          * <p>The status of the command. Valid values:</p>
@@ -112,17 +103,23 @@ public class ListInvocationResultsResponseBody extends TeaModel {
          * <p>*   Failed</p>
          * <p>*   Stopped</p>
          */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The exit code.</p>
+         */
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
         /**
-         * <p>The output result.</p>
+         * <p>The time at which the command entered the Finished state.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>Indicates whether the command was run and its result was obtained.</p>
+         * <p>The output result.</p>
          */
         @NameInMap("Success")
         public Boolean success;

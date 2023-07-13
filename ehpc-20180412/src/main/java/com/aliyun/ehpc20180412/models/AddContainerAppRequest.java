@@ -5,16 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddContainerAppRequest extends TeaModel {
     /**
-     * <p>The type of the container. Set the value to singularity.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ContainerType")
     public String containerType;
-
-    /**
-     * <p>The description of the container.</p>
-     */
-    @NameInMap("Description")
-    public String description;
 
     /**
      * <p>The tags of the image.</p>
@@ -23,19 +17,25 @@ public class AddContainerAppRequest extends TeaModel {
      * <br>
      * <p>Default value: latest</p>
      */
-    @NameInMap("ImageTag")
-    public String imageTag;
+    @NameInMap("Description")
+    public String description;
 
     /**
-     * <p>The name of the container. The name must be 2 to 64 characters in length. It must start with a letter and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The type of the container. Set the value to singularity.</p>
      */
-    @NameInMap("Name")
-    public String name;
+    @NameInMap("ImageTag")
+    public String imageTag;
 
     /**
      * <p>The name of the repository. The image that has the same name as the repository is pulled.</p>
      * <br>
      * <p>For information about image names, visit [Docker Hub official website](https://hub.docker.com/search?q=\&type=image).</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    /**
+     * <p>The description of the container.</p>
      */
     @NameInMap("Repository")
     public String repository;

@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListQueuesResponseBody extends TeaModel {
+    /**
+     * <p>The details of the queue.</p>
+     */
     @NameInMap("Queues")
     public ListQueuesResponseBodyQueues queues;
 
@@ -55,7 +58,7 @@ public class ListQueuesResponseBody extends TeaModel {
 
     public static class ListQueuesResponseBodyQueuesQueueInfoSpotInstanceTypesInstance extends TeaModel {
         /**
-         * <p>The specifications of the ECS instance.</p>
+         * <p>The instance type of the preemptible instance.</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
@@ -115,18 +118,20 @@ public class ListQueuesResponseBody extends TeaModel {
         @NameInMap("ComputeInstanceType")
         public ListQueuesResponseBodyQueuesQueueInfoComputeInstanceType computeInstanceType;
 
+        @NameInMap("DeploymentSetId")
+        public String deploymentSetId;
+
         /**
          * <p>Indicates whether the queue enabled auto scale-out. Valid values:</p>
          * <br>
-         * <p>true: The queue enabled auto scale-out.</p>
-         * <br>
-         * <p>false: The queue disabled auto scale-out.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
         /**
-         * <p>The prefix of the host name.</p>
+         * <p>The orefix of the host name.</p>
          */
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
@@ -138,7 +143,7 @@ public class ListQueuesResponseBody extends TeaModel {
         public String hostNameSuffix;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The ID of the custom image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -155,17 +160,18 @@ public class ListQueuesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The information about the preemptible instance.</p>
+         */
         @NameInMap("SpotInstanceTypes")
         public ListQueuesResponseBodyQueuesQueueInfoSpotInstanceTypes spotInstanceTypes;
 
         /**
          * <p>The preemption policy of the compute nodes. Valid values:</p>
          * <br>
-         * <p>NoSpot: The instances of the compute node are pay-as-you-go instances.</p>
-         * <br>
-         * <p>SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</p>
-         * <br>
-         * <p>SpotAsPriceGo: The instances of the compute node are preemptible instances. The price of these instances is based on the current market price.</p>
+         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
@@ -173,9 +179,8 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * <p>The type of the queue. Valid values:</p>
          * <br>
-         * <p>Execution: Queues in which jobs can be executed.</p>
-         * <br>
-         * <p>Router: Queues in which jobs cannot be executed but are forwarded to the bounded Execution queue for processing.</p>
+         * <p>*   Execution: Queues in which jobs can be executed.</p>
+         * <p>*   Router: Queues in which jobs cannot be executed but are forwarded to the bounded Execution queue for processing.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -191,6 +196,14 @@ public class ListQueuesResponseBody extends TeaModel {
         }
         public ListQueuesResponseBodyQueuesQueueInfoComputeInstanceType getComputeInstanceType() {
             return this.computeInstanceType;
+        }
+
+        public ListQueuesResponseBodyQueuesQueueInfo setDeploymentSetId(String deploymentSetId) {
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
         }
 
         public ListQueuesResponseBodyQueuesQueueInfo setEnableAutoGrow(Boolean enableAutoGrow) {

@@ -4,9 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetAutoScaleConfigRequest extends TeaModel {
-    /**
-     * <p>The ID of the cluster.</p>
-     */
     @NameInMap("ClusterId")
     public String clusterId;
 

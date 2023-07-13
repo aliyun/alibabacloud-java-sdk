@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SyncUsersRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the list of E-HPC clusters.</p>
      */
@@ -13,9 +13,9 @@ public class SyncUsersRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the region where the cluster resides.</p>
+     * <p>The region ID.</p>
      * <br>
-     * <p>You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is available.</p>
+     * <p>You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCommandsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */
@@ -19,7 +19,7 @@ public class ListCommandsRequest extends TeaModel {
     public String commandId;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the page to return.</p>
      * <br>
      * <p>Page number starts from page 1.</p>
      * <br>
@@ -29,10 +29,8 @@ public class ListCommandsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Valid values: 1 to 50.</p>
-     * <br>
+     * <p>The number of entries to return on each page.\</p>
+     * <p>Valid values: 1 to 50.\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")

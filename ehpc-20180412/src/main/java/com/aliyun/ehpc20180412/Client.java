@@ -27,7 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+      * The operation that you want to perform. Set the value to AddContainerApp.
       *
       * @param request AddContainerAppRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -54,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
+      * The operation that you want to perform. Set the value to AddContainerApp.
       *
       * @param request AddContainerAppRequest
       * @return AddContainerAppResponse
@@ -270,7 +270,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+      * The ID of the zone.
+      * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
       *
       * @param request CreateClusterRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -297,7 +298,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
+      * The ID of the zone.
+      * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
       *
       * @param request CreateClusterRequest
       * @return CreateClusterResponse
@@ -759,7 +761,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+      * ## Description
+      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
       *
       * @param request DeleteUsersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -786,7 +789,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are still retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data that was retained for the deleted user is not reused.
+      * ## Description
+      * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
       *
       * @param request DeleteUsersRequest
       * @return DeleteUsersResponse
@@ -1133,13 +1137,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeNFSClientStatusWithOptions(request, runtime);
     }
 
-    /**
-      * ****
-      *
-      * @param request DescribePriceRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribePriceResponse
-     */
     public DescribePriceResponse describePriceWithOptions(DescribePriceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1160,15 +1157,42 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePriceResponse());
     }
 
-    /**
-      * ****
-      *
-      * @param request DescribePriceRequest
-      * @return DescribePriceResponse
-     */
     public DescribePriceResponse describePrice(DescribePriceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePriceWithOptions(request, runtime);
+    }
+
+    public DescribeServerlessJobsResponse describeServerlessJobsWithOptions(DescribeServerlessJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIds)) {
+            query.put("JobIds", request.jobIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeServerlessJobs"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServerlessJobsResponse());
+    }
+
+    public DescribeServerlessJobsResponse describeServerlessJobs(DescribeServerlessJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeServerlessJobsWithOptions(request, runtime);
     }
 
     public EditJobTemplateResponse editJobTemplateWithOptions(EditJobTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2313,6 +2337,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSecurityGroupsWithOptions(request, runtime);
     }
 
+    public ListServerlessJobsResponse listServerlessJobsWithOptions(ListServerlessJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIds)) {
+            query.put("JobIds", request.jobIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobNames)) {
+            query.put("JobNames", request.jobNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queues)) {
+            query.put("Queues", request.queues);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startOrder)) {
+            query.put("StartOrder", request.startOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.state)) {
+            query.put("State", request.state);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.submitOrder)) {
+            query.put("SubmitOrder", request.submitOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.submitTimeEnd)) {
+            query.put("SubmitTimeEnd", request.submitTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.submitTimeStart)) {
+            query.put("SubmitTimeStart", request.submitTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.users)) {
+            query.put("Users", request.users);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListServerlessJobs"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListServerlessJobsResponse());
+    }
+
+    public ListServerlessJobsResponse listServerlessJobs(ListServerlessJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listServerlessJobsWithOptions(request, runtime);
+    }
+
     public ListSoftwaresResponse listSoftwaresWithOptions(ListSoftwaresRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2522,7 +2623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+      * The new cluster name.
       *
       * @param request ModifyClusterAttributesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2549,7 +2650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you modify the basic information of a cluster, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
+      * The new cluster name.
       *
       * @param request ModifyClusterAttributesRequest
       * @return ModifyClusterAttributesResponse
@@ -2890,7 +2991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+      * Configures the auto scaling settings of a cluster.
       *
       * @param request SetAutoScaleConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2917,7 +3018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you specify different auto scaling settings in the Queue Configuration section and Global Configurations section on the Auto Scale page, the settings in the Queue Configuration section prevail.
+      * Configures the auto scaling settings of a cluster.
       *
       * @param request SetAutoScaleConfigRequest
       * @return SetAutoScaleConfigResponse
@@ -3318,6 +3419,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.stopNodesWithOptions(request, runtime);
     }
 
+    public StopServerlessJobsResponse stopServerlessJobsWithOptions(StopServerlessJobsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIds)) {
+            query.put("JobIds", request.jobIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopServerlessJobs"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopServerlessJobsResponse());
+    }
+
+    public StopServerlessJobsResponse stopServerlessJobs(StopServerlessJobsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopServerlessJobsWithOptions(request, runtime);
+    }
+
     public StopVisualServiceResponse stopVisualServiceWithOptions(StopVisualServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -3381,6 +3515,113 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitJobResponse submitJob(SubmitJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitJobWithOptions(request, runtime);
+    }
+
+    public SubmitServerlessJobResponse submitServerlessJobWithOptions(SubmitServerlessJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitServerlessJobShrinkRequest request = new SubmitServerlessJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.arrayProperties)) {
+            request.arrayPropertiesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.arrayProperties, "ArrayProperties", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.container)) {
+            request.containerShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.container, "Container", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dependsOn)) {
+            request.dependsOnShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dependsOn, "DependsOn", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceType)) {
+            request.instanceTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceType, "InstanceType", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vSwitchId)) {
+            request.vSwitchIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitchId, "VSwitchId", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.arrayPropertiesShrink)) {
+            query.put("ArrayProperties", request.arrayPropertiesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.containerShrink)) {
+            query.put("Container", request.containerShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
+            query.put("Cpu", request.cpu);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dependsOnShrink)) {
+            query.put("DependsOn", request.dependsOnShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ephemeralStorage)) {
+            query.put("EphemeralStorage", request.ephemeralStorage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypeShrink)) {
+            query.put("InstanceType", request.instanceTypeShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            query.put("JobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobPriority)) {
+            query.put("JobPriority", request.jobPriority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
+            query.put("Memory", request.memory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ramRoleName)) {
+            query.put("RamRoleName", request.ramRoleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spotPriceLimit)) {
+            query.put("SpotPriceLimit", request.spotPriceLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spotStrategy)) {
+            query.put("SpotStrategy", request.spotStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIdShrink)) {
+            query.put("VSwitchId", request.vSwitchIdShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitServerlessJob"),
+            new TeaPair("version", "2018-04-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitServerlessJobResponse());
+    }
+
+    public SubmitServerlessJobResponse submitServerlessJob(SubmitServerlessJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitServerlessJobWithOptions(request, runtime);
     }
 
     public SummaryImagesResponse summaryImagesWithOptions(SummaryImagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

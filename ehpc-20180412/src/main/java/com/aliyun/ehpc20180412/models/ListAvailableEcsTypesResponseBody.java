@@ -11,7 +11,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
     public ListAvailableEcsTypesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -111,13 +111,13 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         public Integer instanceBandwidthTx;
 
         /**
-         * <p>The inbound packet forwarding rate over the internal network. Unit: pps</p>
+         * <p>The inbound packet forwarding rate over the internal network. Unit: pps.</p>
          */
         @NameInMap("InstancePpsRx")
         public Integer instancePpsRx;
 
         /**
-         * <p>The outbound packet forwarding rate over the internal network. Unit: pps</p>
+         * <p>The outbound packet forwarding rate over the internal network. Unit: pps.</p>
          */
         @NameInMap("InstancePpsTx")
         public Integer instancePpsTx;
@@ -129,7 +129,7 @@ public class ListAvailableEcsTypesResponseBody extends TeaModel {
         public String instanceTypeId;
 
         /**
-         * <p>The memory size of the ECS instance. Unit: GiB</p>
+         * <p>The memory size of the ECS instance. Unit: GiB.</p>
          */
         @NameInMap("MemorySize")
         public Integer memorySize;

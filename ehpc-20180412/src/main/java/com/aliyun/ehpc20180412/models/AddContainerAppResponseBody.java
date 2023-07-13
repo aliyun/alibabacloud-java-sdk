@@ -4,14 +4,11 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddContainerAppResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the container.</p>
-     */
     @NameInMap("ContainerId")
     public AddContainerAppResponseBodyContainerId containerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the container.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
