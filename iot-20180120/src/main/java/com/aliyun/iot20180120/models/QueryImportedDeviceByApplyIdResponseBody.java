@@ -4,30 +4,60 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryImportedDeviceByApplyIdResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The queried devices.</p>
+     */
     @NameInMap("DeviceList")
     public QueryImportedDeviceByApplyIdResponseBodyDeviceList deviceList;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The **ProductKey** of the product to which the devices belong.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 
@@ -109,15 +139,33 @@ public class QueryImportedDeviceByApplyIdResponseBody extends TeaModel {
     }
 
     public static class QueryImportedDeviceByApplyIdResponseBodyDeviceListDevice extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         * <br>
+         * <p>>  Keep the information confidential.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The DeviceSecret of the device.</p>
+         * <br>
+         * <p>>  Keep the information confidential.</p>
+         */
         @NameInMap("DeviceSecret")
         public String deviceSecret;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The serial number (SN) of the device.</p>
+         * <br>
+         * <p>> If you did not specify an SN for the device, this parameter is empty.</p>
+         */
         @NameInMap("Sn")
         public String sn;
 

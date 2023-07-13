@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see [Error codes](~~87387~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public GetSpeechLicenseDeviceStatisticsResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +83,21 @@ public class GetSpeechLicenseDeviceStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetSpeechLicenseDeviceStatisticsResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of available licenses.</p>
+         */
         @NameInMap("AvailableQuota")
         public Integer availableQuota;
 
+        /**
+         * <p>The number of expired licenses.</p>
+         */
         @NameInMap("ExpiredQuota")
         public Integer expiredQuota;
 
+        /**
+         * <p>The number of licenses that are about to expire.</p>
+         */
         @NameInMap("ExpiringQuota")
         public Integer expiringQuota;
 

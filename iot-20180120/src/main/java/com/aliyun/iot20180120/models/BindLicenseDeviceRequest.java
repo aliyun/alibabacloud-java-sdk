@@ -10,12 +10,23 @@ public class BindLicenseDeviceRequest extends TeaModel {
     @NameInMap("IotIdList")
     public java.util.List<String> iotIdList;
 
+    /**
+     * <p>The ID of the Enterprise Edition instance. You can view the **ID** of the instance on the **Overview** page in the IoT Platform console.</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The license type that specifies the audio and video specifications. Valid values: **480P** and **720P**.</p>
+     */
     @NameInMap("LicenseCode")
     public String licenseCode;
 
+    /**
+     * <p>The **ProductKey** of the product to which the devices belong.</p>
+     * <br>
+     * <p>You can go to the IoT Platform console or call the [QueryProductList](~~69271~~) operation to view the information about all products of the instance.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

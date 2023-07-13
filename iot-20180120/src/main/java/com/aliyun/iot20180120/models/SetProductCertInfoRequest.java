@@ -4,12 +4,28 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetProductCertInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can view the ID of the instance on the **Overview** page in the IoT Platform console.****</p>
+     * <br>
+     * <p>>  If your instance has an ID, you must specify the ID for the parameter. Otherwise, the call fails. If no Overview page or ID is generated for your instance, you do not need configure this parameter.</p>
+     * <br>
+     * <p>For more information, see [Overview](~~356505~~).</p>
+     */
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    /**
+     * <p>The source from which the X.509 certificate is issued.</p>
+     * <br>
+     * <p>*   **1**: The X.509 certificate is issued by IoT Platform.</p>
+     * <p>*   **3**: The X.509 certificate is issued by a third-party platform.</p>
+     */
     @NameInMap("IssueModel")
     public Integer issueModel;
 
+    /**
+     * <p>The **ProductKey** of the product.</p>
+     */
     @NameInMap("ProductKey")
     public String productKey;
 

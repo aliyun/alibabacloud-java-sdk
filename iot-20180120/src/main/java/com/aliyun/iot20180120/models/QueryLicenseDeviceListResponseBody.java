@@ -4,18 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryLicenseDeviceListResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request fails. For more information, see the **"Error codes"** section in this topic.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response message.</p>
+     */
     @NameInMap("Data")
     public QueryLicenseDeviceListResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +83,45 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryLicenseDeviceListResponseBodyDataDeviceListItem extends TeaModel {
+        /**
+         * <p>The DeviceName of the device.</p>
+         */
         @NameInMap("DeviceName")
         public String deviceName;
 
+        /**
+         * <p>The expiration time of the license.</p>
+         */
         @NameInMap("ExpiryTime")
         public Long expiryTime;
 
+        /**
+         * <p>The time when the license was bound to the device.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The device ID.</p>
+         */
         @NameInMap("IotId")
         public String iotId;
 
+        /**
+         * <p>The license type that indicates the audio and video specifications. Valid values: **480P** and **720P**.</p>
+         */
         @NameInMap("LicenseCode")
         public String licenseCode;
 
+        /**
+         * <p>The **ProductKey** of the product to which the device belongs.</p>
+         */
         @NameInMap("ProductKey")
         public String productKey;
 
+        /**
+         * <p>The ProductName of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
@@ -169,15 +208,27 @@ public class QueryLicenseDeviceListResponseBody extends TeaModel {
     }
 
     public static class QueryLicenseDeviceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the devices.</p>
+         */
         @NameInMap("DeviceList")
         public QueryLicenseDeviceListResponseBodyDataDeviceList deviceList;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageId")
         public Integer pageId;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
