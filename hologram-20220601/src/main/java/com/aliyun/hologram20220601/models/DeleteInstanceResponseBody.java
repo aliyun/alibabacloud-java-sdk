@@ -3,49 +3,34 @@ package com.aliyun.hologram20220601.models;
 
 import com.aliyun.tea.*;
 
-public class ResumeInstanceResponseBody extends TeaModel {
-    /**
-     * <p>The returned result, which indicates whether the operation was successful.</p>
-     */
+public class DeleteInstanceResponseBody extends TeaModel {
     @NameInMap("Data")
     public Boolean data;
 
-    /**
-     * <p>The error code returned if the request failed.</p>
-     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
-    /**
-     * <p>The error message returned if the request failed.</p>
-     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    /**
-     * <p>The HTTP status code.</p>
-     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The request result, which indicates whether the request was successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static ResumeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ResumeInstanceResponseBody self = new ResumeInstanceResponseBody();
+    public static DeleteInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteInstanceResponseBody self = new DeleteInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ResumeInstanceResponseBody setData(Boolean data) {
+    public DeleteInstanceResponseBody setData(Boolean data) {
         this.data = data;
         return this;
     }
@@ -53,7 +38,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public ResumeInstanceResponseBody setErrorCode(String errorCode) {
+    public DeleteInstanceResponseBody setErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
     }
@@ -61,7 +46,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         return this.errorCode;
     }
 
-    public ResumeInstanceResponseBody setErrorMessage(String errorMessage) {
+    public DeleteInstanceResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
@@ -69,7 +54,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         return this.errorMessage;
     }
 
-    public ResumeInstanceResponseBody setHttpStatusCode(String httpStatusCode) {
+    public DeleteInstanceResponseBody setHttpStatusCode(String httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -77,7 +62,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public ResumeInstanceResponseBody setRequestId(String requestId) {
+    public DeleteInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -85,7 +70,7 @@ public class ResumeInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ResumeInstanceResponseBody setSuccess(Boolean success) {
+    public DeleteInstanceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

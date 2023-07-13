@@ -4,24 +4,39 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The details of the instance.</p>
+     */
     @NameInMap("Instance")
     public GetInstanceResponseBodyInstance instance;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The request result, which indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -79,27 +94,119 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstanceEndpoints extends TeaModel {
+        /**
+         * <p>The endpoint. This parameter is returned if both the AnyTunnel and SingleTunnel modes are enabled for an instance, and the instance is switched from the AnyTunnel mode to the SingleTunnel mode. In this case, two endpoints are returned.</p>
+         */
         @NameInMap("AlternativeEndpoints")
         public String alternativeEndpoints;
 
+        /**
+         * <p>Indicates whether the network is enabled.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The endpoint.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The network type.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   VPCSingleTunnel</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    virtual private cloud (VPC)</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   Intranet</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    internal network</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   VPCAnyTunnel</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    not supported by new instances</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Internet</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Internet</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>VPC ID</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of VPC to which the instance belongs.</p>
+         */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 
@@ -167,9 +274,15 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstanceTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -197,81 +310,383 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstance extends TeaModel {
+        /**
+         * <p>Indicates whether auto-renewal is enabled.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("AutoRenewal")
         public String autoRenewal;
 
+        /**
+         * <p>The cold storage capacity of the instance. Unit: GB. Standard SSD is used for hot storage, and HDD is used for cold storage.</p>
+         */
         @NameInMap("ColdStorage")
         public Long coldStorage;
 
+        /**
+         * <p>The commodity code.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   hologram_maxcomputeAccelerate_public_cn</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    China site/Lakehouse Acceleration Edition</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   hologram_combo_public_cn</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    China site/Subscription</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   hologram_prepay_public_intl</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    International site/Subscription</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   hologram_storage_dp_cn</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    China site/Storage plan</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   hologram_postpay_public_cn</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    China site/Pay-as-you-go</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   hologram_postpay_public_intl</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    International site/Pay-as-you-go</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   hologram_maxcomputeAccelerate_public_intl</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    International site/Lakehouse Acceleration Edition</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   hologram_cu_dp_cn</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    China site/Compute plan</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The number of compute nodes. In a typical configuration, a node has 16 vCPUs and 32 GB of memory.</p>
+         */
         @NameInMap("ComputeNodeCount")
         public Long computeNodeCount;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public Long cpu;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The amount of data that can be stored in the disk of the Standard storage class. Unit: GB.</p>
+         */
         @NameInMap("Disk")
         public String disk;
 
+        /**
+         * <p>Indicates whether data lake acceleration is enabled.</p>
+         */
         @NameInMap("EnableHiveAccess")
         public String enableHiveAccess;
 
+        /**
+         * <p>The list of endpoints.</p>
+         */
         @NameInMap("Endpoints")
         public java.util.List<GetInstanceResponseBodyInstanceEndpoints> endpoints;
 
+        /**
+         * <p>The expiration time. This parameter is invalid for pay-as-you-go instances.</p>
+         */
         @NameInMap("ExpirationTime")
         public String expirationTime;
 
+        /**
+         * <p>网关节点数量。</p>
+         */
         @NameInMap("GatewayCount")
         public Long gatewayCount;
 
+        /**
+         * <p>网关cpu资源。</p>
+         * <p>单位：core。</p>
+         */
         @NameInMap("GatewayCpu")
         public Long gatewayCpu;
 
+        /**
+         * <p>网关内存资源。</p>
+         * <p>单位：GB。</p>
+         */
         @NameInMap("GatewayMemory")
         public Long gatewayMemory;
 
+        /**
+         * <p>The billing method of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PostPaid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    pay-as-you-go</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   PrePaid</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    subscription</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name. The instance name must be 2 to 64 characters in length.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The owner of the instance.</p>
+         */
         @NameInMap("InstanceOwner")
         public String instanceOwner;
 
+        /**
+         * <p>The status of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Creating</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Suspended</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Allocating</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
+        /**
+         * <p>The type of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Follower</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    read-only secondary instance</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   Standard</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    normal instance</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The ID of the primary instance.</p>
+         */
         @NameInMap("LeaderInstanceId")
         public String leaderInstanceId;
 
+        /**
+         * <p>The memory size. Unit: GB.</p>
+         */
         @NameInMap("Memory")
         public Long memory;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The reason for the suspension.</p>
+         */
         @NameInMap("SuspendReason")
         public String suspendReason;
 
+        /**
+         * <p>The instance tag.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetInstanceResponseBodyInstanceTags> tags;
 
+        /**
+         * <p>The instance version.</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The ID of the zone where the instance resides.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
