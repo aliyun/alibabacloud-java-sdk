@@ -16,6 +16,9 @@ public class RestartDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("NodeId")
+    public String nodeId;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -47,6 +50,14 @@ public class RestartDBInstanceRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public RestartDBInstanceRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     public RestartDBInstanceRequest setOwnerAccount(String ownerAccount) {
