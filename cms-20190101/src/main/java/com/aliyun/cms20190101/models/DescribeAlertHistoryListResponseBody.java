@@ -4,21 +4,44 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertHistoryListResponseBody extends TeaModel {
+    /**
+     * <p>The details of historical alerts.</p>
+     */
     @NameInMap("AlarmHistoryList")
     public DescribeAlertHistoryListResponseBodyAlarmHistoryList alarmHistoryList;
 
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public String total;
 
@@ -171,66 +194,143 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistory extends TeaModel {
+        /**
+         * <p>The timestamp when the alert was triggered. Unit: milliseconds.</p>
+         */
         @NameInMap("AlertTime")
         public Long alertTime;
 
+        /**
+         * <p>The TradeManager IDs of the alert contacts.</p>
+         * <br>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
+         */
         @NameInMap("ContactALIIMs")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactALIIMs contactALIIMs;
 
+        /**
+         * <p>The alert contact groups.</p>
+         */
         @NameInMap("ContactGroups")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactGroups contactGroups;
 
+        /**
+         * <p>The email addresses of the alert contacts.</p>
+         */
         @NameInMap("ContactMails")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactMails contactMails;
 
+        /**
+         * <p>The mobile numbers of the alert contacts.</p>
+         * <br>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
+         */
         @NameInMap("ContactSmses")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContactSmses contactSmses;
 
+        /**
+         * <p>The alert contacts that receive alert notifications.</p>
+         */
         @NameInMap("Contacts")
         public DescribeAlertHistoryListResponseBodyAlarmHistoryListAlarmHistoryContacts contacts;
 
+        /**
+         * <p>The resources that are monitored.</p>
+         */
         @NameInMap("Dimensions")
         public String dimensions;
 
+        /**
+         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
+         */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
+        /**
+         * <p>The expression that is used to trigger alerts.</p>
+         */
         @NameInMap("Expression")
         public String expression;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The instance name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The duration of the alert. Unit: milliseconds.</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
+        /**
+         * <p>The severity level and notification methods of the alert. Valid values:</p>
+         * <br>
+         * <p>*   P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         * <p>*   OK: No alert is generated.</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The metric name.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The namespace of the cloud service.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The alert status. Valid values:</p>
+         * <br>
+         * <p>*   ALARM: Alerts are triggered.</p>
+         * <p>*   OK: No alerts are triggered.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>Indicates whether alerts are muted. Valid values:</p>
+         * <br>
+         * <p>*   2 (default): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</p>
+         * <p>*   0: Alerts are triggered or cleared.</p>
+         * <p>*   1: The alert rule is ineffective.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The threshold of the metric value to trigger or clear an alert.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The callback URL.</p>
+         */
         @NameInMap("Webhooks")
         public String webhooks;
 

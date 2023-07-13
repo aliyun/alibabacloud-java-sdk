@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeProjectMetaResponseBody extends TeaModel {
     /**
-     * <p>The tags. Tags are used to filter services.</p>
+     * <p>The status code.</p>
      * <br>
-     * <p>You can filter services only by the tag whose `name` is `product`. Example: {"name":"product","value":"ECS"}.</p>
-     * <br>
-     * <p>>  We recommend that you do not use the special tags in the CloudMonitor console.</p>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -21,43 +19,37 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Valid values: 1 to 100.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The details of the cloud service.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeProjectMeta**.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The details of the cloud service.</p>
      */
     @NameInMap("Resources")
     public DescribeProjectMetaResponseBodyResources resources;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Total")
     public String total;
@@ -132,14 +124,27 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectMetaResponseBodyResourcesResource extends TeaModel {
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The tags. Tags are used to filter services.</p>
+         * <br>
+         * <p>Tags are returned in the following format: `[{"name":"Tag key","value":"Tag value"}, {"name":"Tag key","value":"Tag value"}]`. The following tags are commonly used:</p>
+         * <br>
+         * <p>*   alertUnit: the unit of the metric value in alerts. If the unit is small, the original metric value may be too large. In this case, you can use the `alertUnit` tag to specify an appropriate unit. This tag is used in CloudMonitor.</p>
+         * <p>*   minAlertPeriod: the minimum time interval to report a new alert. The interval is usually set to 1 minute.</p>
+         * <p>*   metricCategory: the service specification. Example: kvstore_sharding. An Alibaba Cloud service may have different specifications that are defined in the same namespace. You can use this parameter to distinguish between service specifications.</p>
+         * <p>*   is_alarm: specifies whether an alert rule can be set. We recommend that you do not use the special tags in the CloudMonitor console.</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The namespace of the cloud service. Format: `acs_Service name abbreviation`. For more information about namespaces, see [Appendix 1: Metrics](~~163515~~).</p>
          */
         @NameInMap("Namespace")
         public String namespace;

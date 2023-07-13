@@ -5,29 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     /**
-     * <p>The name of the country.</p>
+     * <p>The name or ID of the city.</p>
      * <br>
-     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     * <p>> City names support fuzzy match.</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
-     * <p>The name of the area.</p>
+     * <p>Specifies whether to query IPv4 probes. Valid values:</p>
+     * <br>
+     * <p>*   true (default): IPv4 probes are queried.</p>
+     * <p>*   false: IPv4 probes are not queried.</p>
      */
     @NameInMap("IPV4")
     public Boolean IPV4;
 
     /**
-     * <p>The name of the area.</p>
+     * <p>Specifies whether to query IPv6 probes. Valid values:</p>
      * <br>
-     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     * <p>*   true (default): IPv6 probes are queried.</p>
+     * <p>*   false: IPv6 probes are not queried.</p>
      */
     @NameInMap("IPV6")
     public Boolean IPV6;
 
     /**
-     * <p>The name of the province.</p>
+     * <p>The name or ID of the carrier.</p>
+     * <br>
+     * <p>> Carrier names support fuzzy match.</p>
      */
     @NameInMap("Isp")
     public String isp;
@@ -36,7 +42,10 @@ public class DescribeSiteMonitorISPCityListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IP address pool.</p>
+     * <p>Specifies whether to return all detection points. Valid values:</p>
+     * <br>
+     * <p>*   true (default): returns all detection points.</p>
+     * <p>*   false: returns only available detection points.</p>
      */
     @NameInMap("ViewAll")
     public Boolean viewAll;
