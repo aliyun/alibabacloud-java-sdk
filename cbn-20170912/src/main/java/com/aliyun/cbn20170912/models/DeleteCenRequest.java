@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DeleteCenRequest extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 

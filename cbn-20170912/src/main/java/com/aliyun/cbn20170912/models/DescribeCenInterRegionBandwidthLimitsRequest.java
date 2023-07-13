@@ -36,6 +36,9 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("TrRegionId")
+    public String trRegionId;
+
     public static DescribeCenInterRegionBandwidthLimitsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenInterRegionBandwidthLimitsRequest self = new DescribeCenInterRegionBandwidthLimitsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DescribeCenInterRegionBandwidthLimitsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeCenInterRegionBandwidthLimitsRequest setTrRegionId(String trRegionId) {
+        this.trRegionId = trRegionId;
+        return this;
+    }
+    public String getTrRegionId() {
+        return this.trRegionId;
     }
 
 }
