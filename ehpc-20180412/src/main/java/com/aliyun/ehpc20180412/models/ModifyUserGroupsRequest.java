@@ -4,17 +4,25 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserGroupsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the asynchronous mode for this request.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The information about the user.</p>
+     */
     @NameInMap("User")
     public java.util.List<ModifyUserGroupsRequestUser> user;
 
@@ -49,7 +57,7 @@ public class ModifyUserGroupsRequest extends TeaModel {
 
     public static class ModifyUserGroupsRequestUser extends TeaModel {
         /**
-         * <p>The new permission group of the user. Valid values:</p>
+         * <p>The new permission group of the user N. Valid values:</p>
          * <br>
          * <p>*   users: an ordinary permission group. It is applicable to ordinary users that need only to submit and debug jobs.</p>
          * <p>*   wheel: a sudo permission group. It is applicable to the administrator who needs to manage the cluster. In addition to submitting and debugging jobs, users who have sudo permissions can run sudo commands to install software and restart nodes.</p>
@@ -58,7 +66,7 @@ public class ModifyUserGroupsRequest extends TeaModel {
         public String group;
 
         /**
-         * <p>The name of the user whose permissions you want to modify. Valid values of N: 1 to 100.</p>
+         * <p>The name of the user N whose permissions you want to modify. Valid values of N: 1 to 100.</p>
          * <br>
          * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
          */

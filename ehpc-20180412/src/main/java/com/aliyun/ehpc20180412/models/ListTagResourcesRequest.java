@@ -11,20 +11,26 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region to which the resource belongs.</p>
+     * <p>The region ID of the resource.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs. You can specify up to 50 IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to cluster, which indicates E-HPC clusters.</p>
+     * <p>The resource type. Set the value to cluster, which indicates E-HPC clusters.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The resource tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -75,13 +81,13 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;

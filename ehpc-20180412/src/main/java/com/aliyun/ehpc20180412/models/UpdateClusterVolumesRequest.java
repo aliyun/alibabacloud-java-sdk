@@ -4,11 +4,14 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class UpdateClusterVolumesRequest extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to UpdateClusterVolumes</p>
+     */
     @NameInMap("AdditionalVolumes")
     public java.util.List<UpdateClusterVolumesRequestAdditionalVolumes> additionalVolumes;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -62,7 +65,7 @@ public class UpdateClusterVolumesRequest extends TeaModel {
 
     public static class UpdateClusterVolumesRequestAdditionalVolumes extends TeaModel {
         /**
-         * <p>The queue name of the nth attached mounted filesystem.</p>
+         * <p>The ID of the cluster.</p>
          */
         @NameInMap("JobQueue")
         public String jobQueue;
@@ -88,11 +91,14 @@ public class UpdateClusterVolumesRequest extends TeaModel {
         @NameInMap("RemoteDirectory")
         public String remoteDirectory;
 
+        /**
+         * <p>The ID of the nth additional mounted file system.</p>
+         */
         @NameInMap("Roles")
         public java.util.List<UpdateClusterVolumesRequestAdditionalVolumesRoles> roles;
 
         /**
-         * <p>The ID of the nth additional mounted file system.</p>
+         * <p>The queue name of the nth attached mounted filesystem.</p>
          */
         @NameInMap("VolumeId")
         public String volumeId;

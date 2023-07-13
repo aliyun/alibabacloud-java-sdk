@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListUpgradeClientsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The upgrade records of the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The latest version of the E-HPC client.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

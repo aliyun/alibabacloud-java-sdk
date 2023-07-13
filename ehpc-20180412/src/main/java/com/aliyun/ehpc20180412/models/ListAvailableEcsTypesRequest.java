@@ -19,7 +19,7 @@ public class ListAvailableEcsTypesRequest extends TeaModel {
      * <p>*   false: available</p>
      * <p>*   true: sold out</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("ShowSoldOut")
     public Boolean showSoldOut;
@@ -29,7 +29,7 @@ public class ListAvailableEcsTypesRequest extends TeaModel {
      * <br>
      * <p>*   NoSpot: The ECS instances are pay-as-you-go instances.</p>
      * <p>*   SpotWithPriceLimit: The ECS instances are preemptible instances that have a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The ECS instances are preemptible instances for which the market price at the time of purchase is used as the bid price.</p>
+     * <p>*   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;

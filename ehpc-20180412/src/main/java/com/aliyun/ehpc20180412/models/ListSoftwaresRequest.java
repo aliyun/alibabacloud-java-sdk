@@ -5,17 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListSoftwaresRequest extends TeaModel {
     /**
-     * <p>The version of the E-HPC client.</p>
+     * <p>The image tag of the cluster.</p>
      * <br>
-     * <p>You can call the [ListCurrentClientVersion](~~87223~~) operation to query the E-HPC client version.</p>
+     * <p>You can use the [ListImages](~~87213~~) to query the image tag of the cluster.</p>
      */
     @NameInMap("EhpcVersion")
     public String ehpcVersion;
 
     /**
-     * <p>The image tag of the cluster.</p>
-     * <br>
-     * <p>You can use the [ListImages](~~87213~~) to query the image tag of the cluster.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("OsTag")
     public String osTag;

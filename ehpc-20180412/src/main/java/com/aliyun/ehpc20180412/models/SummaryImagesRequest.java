@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class SummaryImagesRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The names of all images in the cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The type of the image. Set the value to singularity.</p>
-     */
     @NameInMap("ContainerType")
     public String containerType;
 

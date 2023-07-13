@@ -7,10 +7,10 @@ public class AddNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to allocate a public IP address to the compute nodes. Valid values:</p>
      * <br>
-     * <p>*   true: A public IP address is allocated to the compute nodes.</p>
-     * <p>*   false: A public IP address is not allocated to the compute nodes.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("AllocatePublicAddress")
     public Boolean allocatePublicAddress;
@@ -21,7 +21,7 @@ public class AddNodesRequest extends TeaModel {
      * <p>*   true: enables auto-renewal</p>
      * <p>*   false: disables auto-renewal</p>
      * <br>
-     * <p>Default value: true</p>
+     * <p>Default value: true.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
@@ -29,16 +29,16 @@ public class AddNodesRequest extends TeaModel {
     /**
      * <p>The auto-renewal period of the subscription compute nodes. The parameter takes effect when AutoRenew is set to true.</p>
      * <br>
-     * <p>*   If PeriodUnit is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.</p>
-     * <p>*   If PeriodUnit is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, and 12.</p>
+     * <p>*   Valid values when PeriodUnit is set to Week: 1, 2, and 3.</p>
+     * <p>*   Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, and 12.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How do I ensure the idempotence of a request?](~~25693~~)</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -52,12 +52,12 @@ public class AddNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether the compute nodes support hyper-threading. Valid values:</p>
+     * <p>Specifies whether to enable hyper-threading for the compute node. Valid values:</p>
      * <br>
-     * <p>*   true: Hyper-threading is supported.</p>
-     * <p>*   false: Hyper-threading is not supported.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
-     * <p>Default value: true</p>
+     * <p>Default value: true.</p>
      */
     @NameInMap("ComputeEnableHt")
     public Boolean computeEnableHt;
@@ -83,11 +83,11 @@ public class AddNodesRequest extends TeaModel {
     /**
      * <p>The preemption policy of the compute nodes. The parameter only takes effect when EcsChargeType is set to PostPaid. Valid values:</p>
      * <br>
-     * <p>*   NoSpot: The compute nodes are pay-as-you-go instances.</p>
-     * <p>*   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</p>
+     * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The policy applies to preemptible instances for which a maximum hourly price is specified.</p>
      * <p>*   SpotAsPriceGo: The compute nodes are preemptible instances for which the market price at the time of purchase is used as the bid price.</p>
      * <br>
-     * <p>Default value: NoSpot</p>
+     * <p>Default value: NoSpot.</p>
      */
     @NameInMap("ComputeSpotStrategy")
     public String computeSpotStrategy;
@@ -108,13 +108,19 @@ public class AddNodesRequest extends TeaModel {
      * <p>*   manual: The compute nodes are manually added.</p>
      * <p>*   autoscale: The compute nodes are automatically added.</p>
      * <br>
-     * <p>Default value: manual</p>
+     * <p>Default value: manual.</p>
      */
     @NameInMap("CreateMode")
     public String createMode;
 
+    /**
+     * <p>The list of data disks.</p>
+     */
     @NameInMap("DataDisks")
     public java.util.List<AddNodesRequestDataDisks> dataDisks;
+
+    @NameInMap("DnsConfig")
+    public String dnsConfig;
 
     /**
      * <p>The billing method of the compute nodes. Valid values:</p>
@@ -122,7 +128,7 @@ public class AddNodesRequest extends TeaModel {
      * <p>*   PostPaid: pay-as-you-go</p>
      * <p>*   PrePaid: subscription</p>
      * <br>
-     * <p>Default value: PostPaid</p>
+     * <p>Default value: PostPaid.</p>
      * <br>
      * <p>If the parameter is set to PrePaid, auto-renewal is enabled by default. After the E-HPC cluster is released, auto-renewal is disabled.</p>
      */
@@ -146,7 +152,7 @@ public class AddNodesRequest extends TeaModel {
      * <br>
      * <p>*   The operating system that is specified by the image must be the same as that of the existing cluster nodes. For example, if the operating system of the cluster nodes is CentOS, you can select only a CentOS image.</p>
      * <br>
-     * <p>> If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of the cluster nodes is Windows.</p>
+     * <p>> If you add nodes to a hybrid cloud cluster that supports multiple operating systems, you can select a Windows Server image or a CentOS image when the operating system of nodes is Windows.</p>
      * <br>
      * <p>*   The major version of the image specified for the compute nodes that you want to add is the same as that of the image of the cluster. For example, if the version of the cluster image is CentOS 7.x, the version of the image specified for the compute nodes must be CentOS 7.x.</p>
      * <br>
@@ -163,7 +169,7 @@ public class AddNodesRequest extends TeaModel {
      * <p>*   others: shared image</p>
      * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
      * <br>
-     * <p>Default value: system</p>
+     * <p>Default value: system.</p>
      */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
@@ -195,7 +201,7 @@ public class AddNodesRequest extends TeaModel {
     /**
      * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</p>
      * <br>
-     * <p>Default value: 0</p>
+     * <p>Default value: 0.</p>
      */
     @NameInMap("InternetMaxBandWidthOut")
     public Integer internetMaxBandWidthOut;
@@ -213,56 +219,62 @@ public class AddNodesRequest extends TeaModel {
      * <p>*   If the number of available ECS instances is greater than the value of the MinCount parameter and less than that of the Count parameter, the compute nodes are added based on the value of the MinCount parameter.</p>
      * <p>*   If the number of available ECS instances is greater than the value of the Count parameter, the compute nodes are added based on the value of the Count parameter.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("MinCount")
     public Integer minCount;
 
+    /**
+     * <p>The communication mode of the ENI. Valid values:</p>
+     * <br>
+     * <p>*   Standard: uses the TCP communication mode.</p>
+     * <p>*   HighPerformance: enables the Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.</p>
+     */
     @NameInMap("NetworkInterfaceTrafficMode")
     public String networkInterfaceTrafficMode;
 
     /**
      * <p>The duration of the subscription. The unit of the duration is specified by the PeriodUnit parameter. The parameter only takes effect when InstanceChargeType is set to PrePaid. Valid values:</p>
      * <br>
-     * <p>*   If PeriodUnit is set to Week, the valid values of the Period parameter are 1, 2, 3, and 4.</p>
+     * <p>*   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.</p>
      * <p>*   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Period")
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period. Valid values:</p>
+     * <p>The unit of the subscription period of the resource. Valid values:</p>
      * <br>
      * <p>*   Week</p>
      * <p>*   Month</p>
      * <br>
-     * <p>Default value: Month</p>
+     * <p>Default value: Month.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
     /**
-     * <p>Specifies whether to set the API operation as a synchronous operation. Valid values:</p>
+     * <p>Specifies whether to set this operation as a synchronous operation. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("Sync")
     public Boolean sync;
 
     /**
-     * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
+     * <p>The performance level of the ESSD to be used as the system disk. Default value: PL1. Valid values:</p>
      * <br>
      * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
      * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
      * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
      * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
      * <br>
-     * <p>Default value: PL1</p>
+     * <p>Default value: PL1.</p>
      * <br>
      * <p>For more information about ESSD performance parameters, see [ESSD](~~122389~~).</p>
      */
@@ -270,11 +282,11 @@ public class AddNodesRequest extends TeaModel {
     public String systemDiskLevel;
 
     /**
-     * <p>The size of the system disk. Unit: GiB</p>
+     * <p>The size of the system disk. Unit: GiB.</p>
      * <br>
-     * <p>Valid values: 40 to 500</p>
+     * <p>Valid values: 40 to 500.</p>
      * <br>
-     * <p>Default value: 40</p>
+     * <p>Default value: 40.</p>
      */
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
@@ -282,12 +294,12 @@ public class AddNodesRequest extends TeaModel {
     /**
      * <p>The type of the system disk. Valid values:</p>
      * <br>
-     * <p>*   cloud_efficiency: ultra disk.</p>
-     * <p>*   cloud_ssd: SSD.</p>
-     * <p>*   cloud_essd: ESSD.</p>
+     * <p>*   cloud_efficiency: ultra disk</p>
+     * <p>*   cloud_ssd: SSD</p>
+     * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
      * <p>*   cloud: basic disk. Disks of this type are retired.</p>
      * <br>
-     * <p>Default value: cloud_efficiency</p>
+     * <p>Default value: cloud_efficiency.</p>
      */
     @NameInMap("SystemDiskType")
     public String systemDiskType;
@@ -411,6 +423,14 @@ public class AddNodesRequest extends TeaModel {
     }
     public java.util.List<AddNodesRequestDataDisks> getDataDisks() {
         return this.dataDisks;
+    }
+
+    public AddNodesRequest setDnsConfig(String dnsConfig) {
+        this.dnsConfig = dnsConfig;
+        return this;
+    }
+    public String getDnsConfig() {
+        return this.dnsConfig;
     }
 
     public AddNodesRequest setEcsChargeType(String ecsChargeType) {
@@ -582,9 +602,9 @@ public class AddNodesRequest extends TeaModel {
          * <p>*   cloud_essd: ESSD</p>
          * <p>*   cloud: basic disk</p>
          * <br>
-         * <p>Default value: cloud_efficiency</p>
+         * <p>Default value: cloud_efficiency.</p>
          * <br>
-         * <p>Valid values of N: 0 to 16</p>
+         * <p>Valid values of N: 0 to 16.</p>
          */
         @NameInMap("DataDiskCategory")
         public String dataDiskCategory;
@@ -595,9 +615,9 @@ public class AddNodesRequest extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>Default value: true</p>
+         * <p>Default value: true.</p>
          * <br>
-         * <p>Valid values of N: 0 to 16</p>
+         * <p>Valid values of N: 0 to 16.</p>
          */
         @NameInMap("DataDiskDeleteWithInstance")
         public Boolean dataDiskDeleteWithInstance;
@@ -608,9 +628,9 @@ public class AddNodesRequest extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>Default value: false</p>
+         * <p>Default value: false.</p>
          * <br>
-         * <p>Valid values of N: 0 to 16</p>
+         * <p>Valid values of N: 0 to 16.</p>
          */
         @NameInMap("DataDiskEncrypted")
         public Boolean dataDiskEncrypted;
@@ -618,7 +638,7 @@ public class AddNodesRequest extends TeaModel {
         /**
          * <p>The KMS key ID of the data disk.</p>
          * <br>
-         * <p>Valid values of N: 0 to 16</p>
+         * <p>Valid values of N: 0 to 16.</p>
          */
         @NameInMap("DataDiskKMSKeyId")
         public String dataDiskKMSKeyId;
@@ -631,21 +651,21 @@ public class AddNodesRequest extends TeaModel {
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
          * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          * <br>
-         * <p>Default value: PL1</p>
+         * <p>Default value: PL1.</p>
          * <br>
-         * <p>Valid values of N: 0 to 16</p>
+         * <p>Valid values of N: 0 to 16.</p>
          */
         @NameInMap("DataDiskPerformanceLevel")
         public String dataDiskPerformanceLevel;
 
         /**
-         * <p>The size of the data disk. Unit: GB</p>
+         * <p>The size of the data disk. Unit: GB.</p>
          * <br>
-         * <p>Valid values: 40 to 500</p>
+         * <p>Valid values: 40 to 500.</p>
          * <br>
-         * <p>Default value: 40</p>
+         * <p>Default value: 40.</p>
          * <br>
-         * <p>Valid values of N: 0 to 16</p>
+         * <p>Valid values of N: 0 to 16.</p>
          */
         @NameInMap("DataDiskSize")
         public Integer dataDiskSize;

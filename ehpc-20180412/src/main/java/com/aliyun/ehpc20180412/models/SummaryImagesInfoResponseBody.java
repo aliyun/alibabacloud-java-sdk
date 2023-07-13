@@ -4,15 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class SummaryImagesInfoResponseBody extends TeaModel {
-    /**
-     * <p>The detailed information about the image.</p>
-     */
     @NameInMap("ImagesInfo")
     public String imagesInfo;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

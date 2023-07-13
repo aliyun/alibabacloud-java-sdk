@@ -59,14 +59,20 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("OSName")
         public String OSName;
 
+        /**
+         * <p>The name of the image in English.</p>
+         */
         @NameInMap("OSNameEn")
         public String OSNameEn;
 
         /**
-         * <p>The image tag of the cluster.</p>
+         * <p>The tag that is added to the image.</p>
          */
         @NameInMap("OsTag")
         public String osTag;

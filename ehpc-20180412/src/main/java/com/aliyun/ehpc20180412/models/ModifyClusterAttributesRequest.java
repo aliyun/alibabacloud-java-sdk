@@ -5,45 +5,40 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterAttributesRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster that you want to modify.</p>
+     * <p>The ID of the image.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The new cluster description.</p>
-     */
     @NameInMap("Description")
     public String description;
 
-    /**
-     * <p>The ID of the image.</p>
-     */
     @NameInMap("ImageId")
     public String imageId;
 
-    /**
-     * <p>The new image type of the cluster. Valid values:</p>
-     * <br>
-     * <p>*   system: public image</p>
-     * <p>*   self: custom image</p>
-     * <p>*   others: shared image</p>
-     * <p>*   marketplace: Alibaba Cloud Marketplace image</p>
-     */
     @NameInMap("ImageOwnerAlias")
     public String imageOwnerAlias;
 
     /**
-     * <p>The new cluster name.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>授权实例配置时，要绑定RAM角色的节点类型。</p>
+     */
     @NameInMap("RamNodeTypes")
     public java.util.List<String> ramNodeTypes;
 
+    /**
+     * <p>授权实例配置时，实例RAM角色的名称。</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
+
+    @NameInMap("WinAdPar")
+    public ModifyClusterAttributesRequestWinAdPar winAdPar;
 
     public static ModifyClusterAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterAttributesRequest self = new ModifyClusterAttributesRequest();
@@ -104,6 +99,77 @@ public class ModifyClusterAttributesRequest extends TeaModel {
     }
     public String getRamRoleName() {
         return this.ramRoleName;
+    }
+
+    public ModifyClusterAttributesRequest setWinAdPar(ModifyClusterAttributesRequestWinAdPar winAdPar) {
+        this.winAdPar = winAdPar;
+        return this;
+    }
+    public ModifyClusterAttributesRequestWinAdPar getWinAdPar() {
+        return this.winAdPar;
+    }
+
+    public static class ModifyClusterAttributesRequestWinAdPar extends TeaModel {
+        @NameInMap("AdDc")
+        public String adDc;
+
+        @NameInMap("AdIp")
+        public String adIp;
+
+        @NameInMap("AdUser")
+        public String adUser;
+
+        @NameInMap("AdUserPasswd")
+        public String adUserPasswd;
+
+        @NameInMap("FallbackHomeDir")
+        public String fallbackHomeDir;
+
+        public static ModifyClusterAttributesRequestWinAdPar build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterAttributesRequestWinAdPar self = new ModifyClusterAttributesRequestWinAdPar();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterAttributesRequestWinAdPar setAdDc(String adDc) {
+            this.adDc = adDc;
+            return this;
+        }
+        public String getAdDc() {
+            return this.adDc;
+        }
+
+        public ModifyClusterAttributesRequestWinAdPar setAdIp(String adIp) {
+            this.adIp = adIp;
+            return this;
+        }
+        public String getAdIp() {
+            return this.adIp;
+        }
+
+        public ModifyClusterAttributesRequestWinAdPar setAdUser(String adUser) {
+            this.adUser = adUser;
+            return this;
+        }
+        public String getAdUser() {
+            return this.adUser;
+        }
+
+        public ModifyClusterAttributesRequestWinAdPar setAdUserPasswd(String adUserPasswd) {
+            this.adUserPasswd = adUserPasswd;
+            return this;
+        }
+        public String getAdUserPasswd() {
+            return this.adUserPasswd;
+        }
+
+        public ModifyClusterAttributesRequestWinAdPar setFallbackHomeDir(String fallbackHomeDir) {
+            this.fallbackHomeDir = fallbackHomeDir;
+            return this;
+        }
+        public String getFallbackHomeDir() {
+            return this.fallbackHomeDir;
+        }
+
     }
 
 }

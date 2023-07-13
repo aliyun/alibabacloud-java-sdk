@@ -4,11 +4,6 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class AddNodesResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the instance.</p>
-     * <br>
-     * <p>>  AddNodes is an asynchronous API operation. If a request succeeds, a response is immediately generated before ECS instances are created. Therefore, the value of the parameter is null. You can call the [ListNodes](~~87161~~) operation to obtain the IDs of the ECS instances.</p>
-     */
     @NameInMap("InstanceIds")
     public AddNodesResponseBodyInstanceIds instanceIds;
 

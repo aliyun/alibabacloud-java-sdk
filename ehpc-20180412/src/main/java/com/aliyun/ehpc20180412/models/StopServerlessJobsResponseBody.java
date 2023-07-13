@@ -3,19 +3,16 @@ package com.aliyun.ehpc20180412.models;
 
 import com.aliyun.tea.*;
 
-public class SetPostScriptsResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
+public class StopServerlessJobsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static SetPostScriptsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SetPostScriptsResponseBody self = new SetPostScriptsResponseBody();
+    public static StopServerlessJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StopServerlessJobsResponseBody self = new StopServerlessJobsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SetPostScriptsResponseBody setRequestId(String requestId) {
+    public StopServerlessJobsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

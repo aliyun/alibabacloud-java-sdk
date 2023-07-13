@@ -10,26 +10,32 @@ public class UnTagResourcesRequest extends TeaModel {
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("All")
     public Boolean all;
 
     /**
-     * <p>The ID of the region to which the resource belongs.</p>
+     * <p>The region ID of the resource.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to cluster, which indicates E-HPC clusters.</p>
+     * <p>The type of the resource from which you want to remove tags. Set the value to cluster, which indicates E-HPC clusters.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPreferredEcsTypesRequest extends TeaModel {
     /**
-     * <p>The billing method of the ECS instance. Valid values:</p>
+     * <p>The billing method of the ECS instances. Valid values:</p>
      * <br>
-     * <p>*   PostPaid: pay-as-you-go</p>
-     * <p>*   PrePaid: subscription</p>
+     * <p>*   PostPaid</p>
+     * <p>*   PrePaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -16,15 +16,15 @@ public class ListPreferredEcsTypesRequest extends TeaModel {
     /**
      * <p>The bidding policy of the ECS instance. Valid values:</p>
      * <br>
-     * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance to be created is a preemptible instance with a user-defined maximum hourly price.</p>
-     * <p>*   SpotAsPriceGo: The instance is a preemptible instance whose price is based on the current market price.</p>
+     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

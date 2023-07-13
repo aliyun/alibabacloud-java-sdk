@@ -5,25 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListUpgradeClientsResponseBody extends TeaModel {
     /**
-     * <p>The upgrade records of the cluster.</p>
+     * <p>The time when the operation was performed.</p>
      */
     @NameInMap("ClientRecords")
     public java.util.List<ListUpgradeClientsResponseBodyClientRecords> clientRecords;
 
-    /**
-     * <p>The current version of the E-HPC client.</p>
-     */
     @NameInMap("CurrentVersion")
     public String currentVersion;
 
     /**
-     * <p>The latest version of the E-HPC client.</p>
+     * <p>The version of the E-HPC client after the upgrade.</p>
      */
     @NameInMap("LatestVersion")
     public String latestVersion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The version of the E-HPC client before the upgrade.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -66,27 +63,15 @@ public class ListUpgradeClientsResponseBody extends TeaModel {
     }
 
     public static class ListUpgradeClientsResponseBodyClientRecords extends TeaModel {
-        /**
-         * <p>The version of the E-HPC client after the upgrade.</p>
-         */
         @NameInMap("NewVersion")
         public String newVersion;
 
-        /**
-         * <p>The version of the E-HPC client before the upgrade.</p>
-         */
         @NameInMap("OldVersion")
         public String oldVersion;
 
-        /**
-         * <p>The ID of the user that upgraded the E-HPC client.</p>
-         */
         @NameInMap("SubUid")
         public String subUid;
 
-        /**
-         * <p>The time when the operation was performed.</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

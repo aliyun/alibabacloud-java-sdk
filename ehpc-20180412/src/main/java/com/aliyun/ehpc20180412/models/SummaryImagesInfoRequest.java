@@ -5,20 +5,17 @@ import com.aliyun.tea.*;
 
 public class SummaryImagesInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The container type of the image. Set the value to singularity.</p>
+     * <p>The detailed information about the image.</p>
      */
     @NameInMap("ContainerType")
     public String containerType;
 
-    /**
-     * <p>The name of the image. You can call the [SummaryImages](~~440783~~) operation to query the names of all images in a cluster.</p>
-     */
     @NameInMap("ImageName")
     public String imageName;
 

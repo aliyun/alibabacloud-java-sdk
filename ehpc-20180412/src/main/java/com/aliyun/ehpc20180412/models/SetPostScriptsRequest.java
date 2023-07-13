@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class SetPostScriptsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
-     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The post-processing scripts.</p>
+     */
     @NameInMap("PostInstallScripts")
     public java.util.List<SetPostScriptsRequestPostInstallScripts> postInstallScripts;
 
@@ -52,13 +55,13 @@ public class SetPostScriptsRequest extends TeaModel {
 
     public static class SetPostScriptsRequestPostInstallScripts extends TeaModel {
         /**
-         * <p>The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.</p>
+         * <p>The parameter that is used to run the post-processing script.</p>
          */
         @NameInMap("Args")
         public String args;
 
         /**
-         * <p>The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.</p>
+         * <p>The URL that is used to download the post-processing script.</p>
          */
         @NameInMap("Url")
         public String url;
