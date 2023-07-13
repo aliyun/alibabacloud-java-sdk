@@ -699,6 +699,9 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        @NameInMap("AgentGroup")
+        public String agentGroup;
+
         /**
          * <p>The keyword to be matched.</p>
          * <br>
@@ -773,6 +776,14 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
         }
         public String getAddress() {
             return this.address;
+        }
+
+        public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor setAgentGroup(String agentGroup) {
+            this.agentGroup = agentGroup;
+            return this;
+        }
+        public String getAgentGroup() {
+            return this.agentGroup;
         }
 
         public DescribeSiteMonitorListResponseBodySiteMonitorsSiteMonitor setCreateTime(String createTime) {

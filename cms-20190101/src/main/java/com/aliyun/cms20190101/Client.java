@@ -2407,6 +2407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.
+      * This API operation is no longer maintained. We recommend that you call the [DescribeAlertLogList](~~201087~~) operation.
       *
       * @param request DescribeAlertHistoryListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2483,6 +2484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * @deprecated : DescribeAlertHistoryList is deprecated, please use Cms::2019-01-01::DescribeAlertLogList instead.
+      * This API operation is no longer maintained. We recommend that you call the [DescribeAlertLogList](~~201087~~) operation.
       *
       * @param request DescribeAlertHistoryListRequest
       * @return DescribeAlertHistoryListResponse
@@ -4175,6 +4177,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ids", request.ids);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isEnable)) {
+            query.put("IsEnable", request.isEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("Namespace", request.namespace);
         }
@@ -4189,6 +4203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeType)) {
+            query.put("ScopeType", request.scopeType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -5176,7 +5194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The description of the cloud service.
+      * The information obtained by this operation includes the service description, namespace, and tags.
       *
       * @param request DescribeProjectMetaRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5215,7 +5233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The description of the cloud service.
+      * The information obtained by this operation includes the service description, namespace, and tags.
       *
       * @param request DescribeProjectMetaRequest
       * @return DescribeProjectMetaResponse
@@ -5329,7 +5347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The code of the province.
+      * This topic provides an example on how to query the detection points that are provided by China Unicom in Guiyang.
       *
       * @param request DescribeSiteMonitorISPCityListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5376,7 +5394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The code of the province.
+      * This topic provides an example on how to query the detection points that are provided by China Unicom in Guiyang.
       *
       * @param request DescribeSiteMonitorISPCityListRequest
       * @return DescribeSiteMonitorISPCityListResponse

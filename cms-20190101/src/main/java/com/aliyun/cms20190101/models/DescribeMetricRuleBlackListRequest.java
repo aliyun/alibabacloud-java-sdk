@@ -13,6 +13,15 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     @NameInMap("Ids")
     public java.util.List<String> ids;
 
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
+
+    @NameInMap("IsEnable")
+    public Boolean isEnable;
+
+    @NameInMap("Name")
+    public String name;
+
     /**
      * <p>The timestamp when the blacklist policy expired.</p>
      * <br>
@@ -44,6 +53,9 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ScopeType")
+    public String scopeType;
+
     public static DescribeMetricRuleBlackListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleBlackListRequest self = new DescribeMetricRuleBlackListRequest();
         return TeaModel.build(map, self);
@@ -63,6 +75,30 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     }
     public java.util.List<String> getIds() {
         return this.ids;
+    }
+
+    public DescribeMetricRuleBlackListRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public DescribeMetricRuleBlackListRequest setIsEnable(Boolean isEnable) {
+        this.isEnable = isEnable;
+        return this;
+    }
+    public Boolean getIsEnable() {
+        return this.isEnable;
+    }
+
+    public DescribeMetricRuleBlackListRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public DescribeMetricRuleBlackListRequest setNamespace(String namespace) {
@@ -103,6 +139,14 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeMetricRuleBlackListRequest setScopeType(String scopeType) {
+        this.scopeType = scopeType;
+        return this;
+    }
+    public String getScopeType() {
+        return this.scopeType;
     }
 
 }

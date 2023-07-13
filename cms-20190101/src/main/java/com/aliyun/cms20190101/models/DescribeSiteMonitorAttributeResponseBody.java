@@ -548,6 +548,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("diagnosis_ping")
         public Boolean diagnosisPing;
 
+        @NameInMap("dns_hijack_whitelist")
+        public String dnsHijackWhitelist;
+
         @NameInMap("dns_match_rule")
         public String dnsMatchRule;
 
@@ -662,6 +665,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public Boolean getDiagnosisPing() {
             return this.diagnosisPing;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setDnsHijackWhitelist(String dnsHijackWhitelist) {
+            this.dnsHijackWhitelist = dnsHijackWhitelist;
+            return this;
+        }
+        public String getDnsHijackWhitelist() {
+            return this.dnsHijackWhitelist;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setDnsMatchRule(String dnsMatchRule) {
@@ -841,6 +852,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        @NameInMap("AgentGroup")
+        public String agentGroup;
+
         /**
          * <p>The name of the site monitoring task.</p>
          */
@@ -894,6 +908,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getAddress() {
             return this.address;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitors setAgentGroup(String agentGroup) {
+            this.agentGroup = agentGroup;
+            return this;
+        }
+        public String getAgentGroup() {
+            return this.agentGroup;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitors setInterval(String interval) {
