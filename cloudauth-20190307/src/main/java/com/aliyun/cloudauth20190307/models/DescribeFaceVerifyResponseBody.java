@@ -54,6 +54,9 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
     }
 
     public static class DescribeFaceVerifyResponseBodyResultObject extends TeaModel {
+        @NameInMap("DeviceRisk")
+        public String deviceRisk;
+
         @NameInMap("DeviceToken")
         public String deviceToken;
 
@@ -72,6 +75,14 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         public static DescribeFaceVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaceVerifyResponseBodyResultObject self = new DescribeFaceVerifyResponseBodyResultObject();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFaceVerifyResponseBodyResultObject setDeviceRisk(String deviceRisk) {
+            this.deviceRisk = deviceRisk;
+            return this;
+        }
+        public String getDeviceRisk() {
+            return this.deviceRisk;
         }
 
         public DescribeFaceVerifyResponseBodyResultObject setDeviceToken(String deviceToken) {
