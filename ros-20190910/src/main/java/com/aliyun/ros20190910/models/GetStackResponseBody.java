@@ -954,6 +954,12 @@ public class GetStackResponseBody extends TeaModel {
         @NameInMap("PendingResourceCount")
         public Integer pendingResourceCount;
 
+        @NameInMap("StackActionProgress")
+        public Float stackActionProgress;
+
+        @NameInMap("StackOperationProgress")
+        public Float stackOperationProgress;
+
         /**
          * <p>The number of resources that are created.</p>
          */
@@ -1001,6 +1007,22 @@ public class GetStackResponseBody extends TeaModel {
         }
         public Integer getPendingResourceCount() {
             return this.pendingResourceCount;
+        }
+
+        public GetStackResponseBodyResourceProgress setStackActionProgress(Float stackActionProgress) {
+            this.stackActionProgress = stackActionProgress;
+            return this;
+        }
+        public Float getStackActionProgress() {
+            return this.stackActionProgress;
+        }
+
+        public GetStackResponseBodyResourceProgress setStackOperationProgress(Float stackOperationProgress) {
+            this.stackOperationProgress = stackOperationProgress;
+            return this;
+        }
+        public Float getStackOperationProgress() {
+            return this.stackOperationProgress;
         }
 
         public GetStackResponseBodyResourceProgress setSuccessResourceCount(Integer successResourceCount) {
