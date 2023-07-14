@@ -174,6 +174,9 @@ public class ImportAppAlertRulesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tags")
+    public java.util.List<ImportAppAlertRulesRequestTags> tags;
+
     @NameInMap("TemplageAlertConfig")
     public String templageAlertConfig;
 
@@ -220,6 +223,14 @@ public class ImportAppAlertRulesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ImportAppAlertRulesRequest setTags(java.util.List<ImportAppAlertRulesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ImportAppAlertRulesRequestTags> getTags() {
+        return this.tags;
+    }
+
     public ImportAppAlertRulesRequest setTemplageAlertConfig(String templageAlertConfig) {
         this.templageAlertConfig = templageAlertConfig;
         return this;
@@ -234,6 +245,36 @@ public class ImportAppAlertRulesRequest extends TeaModel {
     }
     public String getTemplateAlertId() {
         return this.templateAlertId;
+    }
+
+    public static class ImportAppAlertRulesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ImportAppAlertRulesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ImportAppAlertRulesRequestTags self = new ImportAppAlertRulesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportAppAlertRulesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ImportAppAlertRulesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

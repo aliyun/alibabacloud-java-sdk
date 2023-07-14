@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeletePrometheusMonitoringRequest extends TeaModel {
     /**
-     * <p>probe1</p>
+     * <p>The ID of the Prometheus instance.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The returned information.</p>
+     * <p>The name of the monitoring configuration.</p>
      */
     @NameInMap("MonitoringName")
     public String monitoringName;
 
     /**
-     * <p>The Monitoring Name.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The status code returned.</p>
+     * <p>The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
      */
     @NameInMap("Type")
     public String type;

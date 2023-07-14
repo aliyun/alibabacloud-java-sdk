@@ -47,7 +47,7 @@ public class CreateOrUpdateWebhookContactRequest extends TeaModel {
      * <p>The ID of the webhook alert contact.</p>
      * <br>
      * <p>*   If you do not specify this parameter, a new webhook alert contact is created.</p>
-     * <p>*</p>
+     * <p>* If you specify this parameter, the specified webhook alert contact is modified.</p>
      */
     @NameInMap("WebhookId")
     public Long webhookId;

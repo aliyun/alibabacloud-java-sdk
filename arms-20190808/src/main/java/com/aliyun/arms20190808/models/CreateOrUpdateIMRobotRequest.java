@@ -46,8 +46,8 @@ public class CreateOrUpdateIMRobotRequest extends TeaModel {
     /**
      * <p>The ID of the IM chatbot.</p>
      * <br>
-     * <p>*   If you do not specify the parameter, a new IM chatbot is created.</p>
-     * <p>*</p>
+     * <p>- If you do not specify the parameter, a new IM chatbot is created.</p>
+     * <p>- If you specify this parameter, the specified IM chatbot is modified.</p>
      */
     @NameInMap("RobotId")
     public Long robotId;

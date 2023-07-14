@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateIntegrationResponseBody extends TeaModel {
     /**
-     * <p>[0,0]</p>
+     * <p>The Information about the alert integration.</p>
      */
     @NameInMap("Integration")
     public UpdateIntegrationResponseBodyIntegration integration;
 
     /**
-     * <p>The fields whose values are deduplicated.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,102 +39,110 @@ public class UpdateIntegrationResponseBody extends TeaModel {
 
     public static class UpdateIntegrationResponseBodyIntegration extends TeaModel {
         /**
-         * <p>The activity of the alert integration</p>
+         * <p>The endpoint of the alert integration.</p>
          */
         @NameInMap("ApiEndpoint")
         public String apiEndpoint;
 
         /**
-         * <p>Indicates whether the alert integration was enabled. Valid values:</p>
+         * <p>Indicates whether alert events are automatically cleared. Valid values:</p>
          * <br>
-         * <p>*   true</p>
+         * <p>*   true (default)</p>
          * <p>*   false</p>
          */
         @NameInMap("AutoRecover")
         public Boolean autoRecover;
 
         /**
-         * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
+         * <p>The description of the alert integration.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the alert integration is enabled. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>The fields whose values are deduplicated.</p>
          */
         @NameInMap("DuplicateKey")
         public String duplicateKey;
 
         /**
-         * <p>Modifies the information about an integration.</p>
+         * <p>The extended mapped fields of the alert source.</p>
          */
         @NameInMap("ExtendedFieldRedefineRules")
         public java.util.List<java.util.Map<String, ?>> extendedFieldRedefineRules;
+
+        /**
+         * <p>The predefined mapped fields of the alert source.</p>
+         */
+        @NameInMap("FieldRedefineRules")
+        public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
+
+        /**
+         * <p>The field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
+         * <br>
+         * <p>> Only Log Service supports this parameter.</p>
+         */
+        @NameInMap("InitiativeRecoverField")
+        public String initiativeRecoverField;
 
         /**
          * <p>The value of the field for clearing alert events. The system queries alert events based on the field of alert clearing events and clears the alert events.</p>
          * <br>
          * <p>> Only Log Service supports this parameter.</p>
          */
-        @NameInMap("FieldRedefineRules")
-        public java.util.List<java.util.Map<String, ?>> fieldRedefineRules;
-
-        @NameInMap("InitiativeRecoverField")
-        public String initiativeRecoverField;
-
         @NameInMap("InitiativeRecoverValue")
         public String initiativeRecoverValue;
 
         /**
-         * <p>The extended mapped fields are mapped to the fields of ARMS alerts. For more information, see the description of the ExtendedFieldRedefineRules parameter.</p>
+         * <p>The ID of the alert integration.</p>
          */
         @NameInMap("IntegrationId")
         public Long integrationId;
 
         /**
-         * <p>The description of the alert integration.</p>
+         * <p>The name of the alert integration.</p>
          */
         @NameInMap("IntegrationName")
         public String integrationName;
 
         /**
-         * <p>CloudMonitor integration</p>
+         * <p>The service of the alert integration. Valid values:</p>
+         * <br>
+         * <p>*   CLOUD_MONITOR: CloudMonitor</p>
+         * <p>*   LOG_SERVICE: Log Service</p>
          */
         @NameInMap("IntegrationProductType")
         public String integrationProductType;
 
         /**
-         * <p>The extended mapped fields are mapped to the fields of ARMS alerts.</p>
+         * <p>The activity of the alert integration</p>
          */
         @NameInMap("Liveness")
         public String liveness;
 
         /**
-         * <p>CLOUD_MONITOR</p>
+         * <p>The time when alert events are automatically cleared. Unit: seconds. Default value: 300.</p>
          */
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
         /**
-         * <p>LABEL.dimensions::LABEL.ruleId</p>
+         * <p>The authentication token of the alert integration.</p>
          */
         @NameInMap("ShortToken")
         public String shortToken;
 
         /**
-         * <p>Specifies whether to automatically clear alert events. Valid values:</p>
-         * <br>
-         * <p>*   true (default)</p>
-         * <p>*   false</p>
+         * <p>The total number of alert events and the number of abnormal alert events in the last hour.</p>
          */
         @NameInMap("Stat")
         public java.util.List<Long> stat;
 
         /**
-         * <p>The description of the alert integration.</p>
+         * <p>Indicates whether the alert integration is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("State")
         public Boolean state;

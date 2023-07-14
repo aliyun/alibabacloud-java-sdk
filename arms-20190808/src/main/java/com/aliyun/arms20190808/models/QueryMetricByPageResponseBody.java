@@ -88,6 +88,9 @@ public class QueryMetricByPageResponseBody extends TeaModel {
     }
 
     public static class QueryMetricByPageResponseBodyData extends TeaModel {
+        @NameInMap("Completed")
+        public Boolean completed;
+
         /**
          * <p>The data entries returned.</p>
          */
@@ -115,6 +118,14 @@ public class QueryMetricByPageResponseBody extends TeaModel {
         public static QueryMetricByPageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryMetricByPageResponseBodyData self = new QueryMetricByPageResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryMetricByPageResponseBodyData setCompleted(Boolean completed) {
+            this.completed = completed;
+            return this;
+        }
+        public Boolean getCompleted() {
+            return this.completed;
         }
 
         public QueryMetricByPageResponseBodyData setItems(java.util.List<java.util.Map<String, ?>> items) {

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     /**
-     * <p>The information about EventBridge integrations on each page.</p>
+     * <p>The information about EventBridge integrations that is returned on each page.</p>
      */
     @NameInMap("PageBean")
     public ListEventBridgeIntegrationsResponseBodyPageBean pageBean;
 
     /**
-     * <p>The ID of the EventBridge integration.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,12 +38,21 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     }
 
     public static class ListEventBridgeIntegrationsResponseBodyPageBeanEventBridgeIntegrations extends TeaModel {
+        /**
+         * <p>The description of the EventBridge integration.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the EventBridge integration.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the EventBridge integration.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -79,20 +88,26 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     }
 
     public static class ListEventBridgeIntegrationsResponseBodyPageBean extends TeaModel {
+        /**
+         * <p>The EventBridge integrations.</p>
+         */
         @NameInMap("EventBridgeIntegrations")
         public java.util.List<ListEventBridgeIntegrationsResponseBodyPageBeanEventBridgeIntegrations> eventBridgeIntegrations;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The number of the returned page.</p>
          */
         @NameInMap("Page")
         public Long page;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The description of the EventBridge integration.</p>
+         * <p>The total number of EventBridge integrations that are returned.</p>
          */
         @NameInMap("Total")
         public Long total;

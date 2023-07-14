@@ -28,6 +28,9 @@ public class SearchAlertRulesRequest extends TeaModel {
     @NameInMap("SystemRegionId")
     public String systemRegionId;
 
+    @NameInMap("Tags")
+    public java.util.List<SearchAlertRulesRequestTags> tags;
+
     @NameInMap("Title")
     public String title;
 
@@ -103,6 +106,14 @@ public class SearchAlertRulesRequest extends TeaModel {
         return this.systemRegionId;
     }
 
+    public SearchAlertRulesRequest setTags(java.util.List<SearchAlertRulesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<SearchAlertRulesRequestTags> getTags() {
+        return this.tags;
+    }
+
     public SearchAlertRulesRequest setTitle(String title) {
         this.title = title;
         return this;
@@ -117,6 +128,36 @@ public class SearchAlertRulesRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class SearchAlertRulesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static SearchAlertRulesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            SearchAlertRulesRequestTags self = new SearchAlertRulesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchAlertRulesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public SearchAlertRulesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

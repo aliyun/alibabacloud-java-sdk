@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetRetcodeAppByPidResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned application data.</p>
+     */
     @NameInMap("RetcodeApp")
     public GetRetcodeAppByPidResponseBodyRetcodeApp retcodeApp;
 
@@ -32,9 +38,15 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
     }
 
     public static class GetRetcodeAppByPidResponseBodyRetcodeAppTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,21 +74,46 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
     }
 
     public static class GetRetcodeAppByPidResponseBodyRetcodeApp extends TeaModel {
+        /**
+         * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application that is monitored by Browser Monitoring.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The process identifier (PID) of the application.</p>
+         */
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The type of the application that is monitored by Browser Monitoring. Valid values:</p>
+         * <br>
+         * <p>*   `web`: web application</p>
+         * <p>*   `weex`: Weex mobile app</p>
+         * <p>*   `mini_dd`: DingTalk mini program</p>
+         * <p>*   `mini_alipay`: Alipay mini program</p>
+         * <p>*   `mini_wx`: WeChat mini program</p>
+         * <p>*   `mini_common`: mini program on other platforms</p>
+         */
         @NameInMap("RetcodeAppType")
         public String retcodeAppType;
 
+        /**
+         * <p>The tags that are attached to the instance.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetRetcodeAppByPidResponseBodyRetcodeAppTags> tags;
 

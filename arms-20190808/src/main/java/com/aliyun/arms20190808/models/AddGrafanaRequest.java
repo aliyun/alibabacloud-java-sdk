@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddGrafanaRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The abbreviation of the software that is supported by Application Real-Time Monitoring Service (ARMS). Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.</p>
+     */
     @NameInMap("Integration")
     public String integration;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

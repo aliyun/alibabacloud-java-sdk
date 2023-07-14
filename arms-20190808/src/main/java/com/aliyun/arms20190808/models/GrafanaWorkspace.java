@@ -7,6 +7,9 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("commercial")
     public Boolean commercial;
 
+    @NameInMap("deployType")
+    public String deployType;
+
     @NameInMap("description")
     public String description;
 
@@ -64,6 +67,9 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("status")
     public String status;
 
+    @NameInMap("tags")
+    public java.util.List<GrafanaWorkspaceTags> tags;
+
     @NameInMap("upgradeVersion")
     public java.util.List<String> upgradeVersion;
 
@@ -81,6 +87,14 @@ public class GrafanaWorkspace extends TeaModel {
     }
     public Boolean getCommercial() {
         return this.commercial;
+    }
+
+    public GrafanaWorkspace setDeployType(String deployType) {
+        this.deployType = deployType;
+        return this;
+    }
+    public String getDeployType() {
+        return this.deployType;
     }
 
     public GrafanaWorkspace setDescription(String description) {
@@ -235,6 +249,14 @@ public class GrafanaWorkspace extends TeaModel {
         return this.status;
     }
 
+    public GrafanaWorkspace setTags(java.util.List<GrafanaWorkspaceTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GrafanaWorkspaceTags> getTags() {
+        return this.tags;
+    }
+
     public GrafanaWorkspace setUpgradeVersion(java.util.List<String> upgradeVersion) {
         this.upgradeVersion = upgradeVersion;
         return this;
@@ -249,6 +271,36 @@ public class GrafanaWorkspace extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public static class GrafanaWorkspaceTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static GrafanaWorkspaceTags build(java.util.Map<String, ?> map) throws Exception {
+            GrafanaWorkspaceTags self = new GrafanaWorkspaceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GrafanaWorkspaceTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GrafanaWorkspaceTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

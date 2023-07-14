@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallPromClusterRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

@@ -16,6 +16,9 @@ public class GetTraceAppRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Tags")
+    public java.util.List<GetTraceAppRequestTags> tags;
+
     public static GetTraceAppRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTraceAppRequest self = new GetTraceAppRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,44 @@ public class GetTraceAppRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetTraceAppRequest setTags(java.util.List<GetTraceAppRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetTraceAppRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class GetTraceAppRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetTraceAppRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            GetTraceAppRequestTags self = new GetTraceAppRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTraceAppRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetTraceAppRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

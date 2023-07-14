@@ -1,3 +1,6 @@
+2023-07-14 Version: 4.0.0
+- Api update.
+
 2023-05-26 Version: 3.0.1
 - Add solution to response for GetAlerts Api.
 

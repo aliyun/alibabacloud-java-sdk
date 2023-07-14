@@ -13,6 +13,9 @@ public class DeletePrometheusAlertRuleRequest extends TeaModel {
     @NameInMap("AlertId")
     public Long alertId;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     public static DeletePrometheusAlertRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePrometheusAlertRuleRequest self = new DeletePrometheusAlertRuleRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class DeletePrometheusAlertRuleRequest extends TeaModel {
     }
     public Long getAlertId() {
         return this.alertId;
+    }
+
+    public DeletePrometheusAlertRuleRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
 }
