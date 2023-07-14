@@ -1445,6 +1445,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createWorkitemRecordWithOptions(organizationId, request, headers, runtime);
     }
 
+    public CreateWorkitemV2Response createWorkitemV2WithOptions(String organizationId, CreateWorkitemV2Request request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assignedTo)) {
+            body.put("assignedTo", request.assignedTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.category)) {
+            body.put("category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fieldValueList)) {
+            body.put("fieldValueList", request.fieldValueList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentIdentifier)) {
+            body.put("parentIdentifier", request.parentIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.participants)) {
+            body.put("participants", request.participants);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.spaceIdentifier)) {
+            body.put("spaceIdentifier", request.spaceIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sprintIdentifier)) {
+            body.put("sprintIdentifier", request.sprintIdentifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
+            body.put("subject", request.subject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trackers)) {
+            body.put("trackers", request.trackers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifier)) {
+            body.put("verifier", request.verifier);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.versions)) {
+            body.put("versions", request.versions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workitemTypeIdentifier)) {
+            body.put("workitemTypeIdentifier", request.workitemTypeIdentifier);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkitemV2"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + com.aliyun.openapiutil.Client.getEncodeParam(organizationId) + "/workitem"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkitemV2Response());
+    }
+
+    public CreateWorkitemV2Response createWorkitemV2(String organizationId, CreateWorkitemV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createWorkitemV2WithOptions(organizationId, request, headers, runtime);
+    }
+
     public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3311,6 +3394,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getWorkItemWorkFlowInfoWithOptions(organizationId, workitemId, request, headers, runtime);
+    }
+
+    public GetWorkitemAttachmentCreatemetaResponse getWorkitemAttachmentCreatemetaWithOptions(String organizationId, String workitemIdentifier, GetWorkitemAttachmentCreatemetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("fileName", request.fileName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkitemAttachmentCreatemeta"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + com.aliyun.openapiutil.Client.getEncodeParam(organizationId) + "/workitem/" + com.aliyun.openapiutil.Client.getEncodeParam(workitemIdentifier) + "/attachment/createmeta"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkitemAttachmentCreatemetaResponse());
+    }
+
+    public GetWorkitemAttachmentCreatemetaResponse getWorkitemAttachmentCreatemeta(String organizationId, String workitemIdentifier, GetWorkitemAttachmentCreatemetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getWorkitemAttachmentCreatemetaWithOptions(organizationId, workitemIdentifier, request, headers, runtime);
     }
 
     public GetWorkitemCommentListResponse getWorkitemCommentListWithOptions(String organizationId, String workitemId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6724,5 +6838,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateWorkitemFieldWithOptions(organizationId, request, headers, runtime);
+    }
+
+    public WorkitemAttachmentCreateResponse workitemAttachmentCreateWithOptions(String organizationId, String workitemIdentifier, WorkitemAttachmentCreateRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileKey)) {
+            body.put("fileKey", request.fileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalFilename)) {
+            body.put("originalFilename", request.originalFilename);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "WorkitemAttachmentCreate"),
+            new TeaPair("version", "2021-06-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/organization/" + com.aliyun.openapiutil.Client.getEncodeParam(organizationId) + "/workitem/" + com.aliyun.openapiutil.Client.getEncodeParam(workitemIdentifier) + "/attachment"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new WorkitemAttachmentCreateResponse());
+    }
+
+    public WorkitemAttachmentCreateResponse workitemAttachmentCreate(String organizationId, String workitemIdentifier, WorkitemAttachmentCreateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.workitemAttachmentCreateWithOptions(organizationId, workitemIdentifier, request, headers, runtime);
     }
 }
