@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates that the request is successful.</p>
+     * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,7 +17,7 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
     public GetPrometheusRemoteWriteResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

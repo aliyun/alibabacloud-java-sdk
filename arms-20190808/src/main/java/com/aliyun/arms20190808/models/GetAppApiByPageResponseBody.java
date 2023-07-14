@@ -77,6 +77,9 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     }
 
     public static class GetAppApiByPageResponseBodyData extends TeaModel {
+        @NameInMap("Completed")
+        public Boolean completed;
+
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
@@ -92,6 +95,14 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         public static GetAppApiByPageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAppApiByPageResponseBodyData self = new GetAppApiByPageResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAppApiByPageResponseBodyData setCompleted(Boolean completed) {
+            this.completed = completed;
+            return this;
+        }
+        public Boolean getCompleted() {
+            return this.completed;
         }
 
         public GetAppApiByPageResponseBodyData setItems(java.util.List<java.util.Map<String, ?>> items) {

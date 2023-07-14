@@ -5,33 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusMonitoringRequest extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The ID of the Prometheus instance.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>Monitoring configuration yaml string.</p>
+     * <p>The monitoring configuration. Specify a YAML string.</p>
      */
     @NameInMap("ConfigYaml")
     public String configYaml;
 
     /**
-     * <p>The Monitoring Name.</p>
+     * <p>The name of the monitoring configuration.</p>
      */
     @NameInMap("MonitoringName")
     public String monitoringName;
 
     /**
-     * <p>The result of the operation.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the monitoring configuration. </p>
-     * <p>Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. </p>
-     * <p>Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
+     * <p>The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
      */
     @NameInMap("Type")
     public String type;

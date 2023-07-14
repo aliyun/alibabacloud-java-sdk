@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSilencePolicyRequest extends TeaModel {
     /**
-     * <p>The matching rules. Sample statement:</p>
+     * <p>The ID of the silence policy.</p>
      * <br>
-     * <p>```</p>
-     * <br>
-     * <p>[</p>
-     * <p>     {</p>
-     * <p>	 "matchingConditions": [</p>
-     * <p>	 {</p>
-     * <p>	 "value": "test", // The value of the matching condition. </p>
-     * <p>	 "key": "altertname", // The key of the matching condition. </p>
-     * <p>	 "operator": "eq" // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   </p>
-     * <p>	 }</p>
-     * <p>	 ]</p>
-     * <p>     }</p>
-     * <p>	 ]</p>
-     * <p>```</p>
+     * <p>*   If you do not configure this parameter, a new silence policy is created.</p>
+     * <p>*   If you configure this parameter, the specified silence policy is modified.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateOrUpdateSilencePolicy**.</p>
+     * <p>The matching rules. The following code shows the format of matching rules:</p>
+     * <br>
+     * <p>    [</p>
+     * <p>         {</p>
+     * <p>    	 "matchingConditions": [</p>
+     * <p>    	 {</p>
+     * <p>    	 "value": "test", // The value of the matching condition. </p>
+     * <p>    	 "key": "altertname", // The key of the matching condition. </p>
+     * <p>    	 "operator": "eq" // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   </p>
+     * <p>    	 }</p>
+     * <p>    	 ]</p>
+     * <p>         }</p>
+     * <p>    	 ]</p>
      */
     @NameInMap("MatchingRules")
     public String matchingRules;

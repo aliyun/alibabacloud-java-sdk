@@ -7,6 +7,9 @@ public class DescribePrometheusAlertRuleRequest extends TeaModel {
     @NameInMap("AlertId")
     public Long alertId;
 
+    @NameInMap("ClusterId")
+    public String clusterId;
+
     public static DescribePrometheusAlertRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePrometheusAlertRuleRequest self = new DescribePrometheusAlertRuleRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribePrometheusAlertRuleRequest extends TeaModel {
     }
     public Long getAlertId() {
         return this.alertId;
+    }
+
+    public DescribePrometheusAlertRuleRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
     }
 
 }

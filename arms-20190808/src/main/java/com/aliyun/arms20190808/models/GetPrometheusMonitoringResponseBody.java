@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusMonitoringResponseBody extends TeaModel {
     /**
-     * <p>The status code or error code.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The Monitoring Object.</p>
+     * <p>The returned struct.</p>
      */
     @NameInMap("Data")
     public GetPrometheusMonitoringResponseBodyData data;
@@ -23,7 +23,7 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,32 +67,31 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
 
     public static class GetPrometheusMonitoringResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Prometheus instance.</p>
+         * <p>Prometheus实例ID。</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The Yaml string of monitoring.</p>
+         * <p>The monitoring configuration. The value is a YAML string.</p>
          */
         @NameInMap("ConfigYaml")
         public String configYaml;
 
         /**
-         * <p>The Monitoring Name.</p>
+         * <p>The name of the monitoring configuration.</p>
          */
         @NameInMap("MonitoringName")
         public String monitoringName;
 
         /**
-         * <p>The status of the monitoring.</p>
+         * <p>The status of the monitoring configuration. Valid values: run and stop.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The instance support for container service types includes: serviceMonitor, podMonitor, customJob, and probe.</p>
-         * <p>ECS type instances support: customJob, probe.</p>
+         * <p>The type of the monitoring configuration. Valid values: ServiceMonitor, PodMonitor, CustomJob, and Probe.</p>
          */
         @NameInMap("Type")
         public String type;

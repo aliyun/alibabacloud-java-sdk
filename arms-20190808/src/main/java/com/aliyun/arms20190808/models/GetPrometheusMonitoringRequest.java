@@ -11,7 +11,7 @@ public class GetPrometheusMonitoringRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The Monitoring Name.</p>
+     * <p>The name of the monitoring configuration.</p>
      */
     @NameInMap("MonitoringName")
     public String monitoringName;
@@ -23,8 +23,7 @@ public class GetPrometheusMonitoringRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance support for container service types includes: serviceMonitor, podMonitor, customJob, and probe.</p>
-     * <p>ECS type instances support: customJob, probe.</p>
+     * <p>The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, CustomJob, and Probe. Valid values for a Prometheus instance for ECS: CustomJob and Probe.</p>
      */
     @NameInMap("Type")
     public String type;

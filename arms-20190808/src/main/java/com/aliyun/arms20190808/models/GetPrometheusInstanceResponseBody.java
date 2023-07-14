@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>The status code returned. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,13 +17,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     public GetPrometheusInstanceResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -109,18 +109,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the cluster.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>*   The instance type. Valid values: remote-write (Prometheus instance for Remote Write),</p>
-         * <p>*   ecs (Prometheus instance for ECS),</p>
-         * <p>*   cloud-monitor (Prometheus instance for Alibaba Cloud services in the Chinese mainland),</p>
-         * <p>*   cloud-product (Prometheus instance for Alibaba Cloud services outside China),</p>
-         * <p>*   global-view (global aggregation instance), and</p>
-         * <p>*   aliyun-cs (Prometheus instance for Container Service).</p>
+         * <p>The instance type. Valid values: remote-write (Prometheus instance for Remote Write), ecs (Prometheus instance for ECS), cloud-monitor (Prometheus instance for Alibaba Cloud services in China), cloud-product (Prometheus instance for Alibaba Cloud services outside China), global-view (Prometheus instance for GlobalView), aliyun-cs (Prometheus instance for Container Service).</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
@@ -132,10 +127,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String grafanaInstanceId;
 
         /**
-         * <p>The billing method. Valid values:</p>
-         * <br>
-         * <p>*   PREPAY: subscription</p>
-         * <p>*   POSTPAY: pay-as-you-go</p>
+         * <p>The billing method. Valid values: PREPAY (subscription) and POSTPAY (pay-as-you-go).</p>
          */
         @NameInMap("PaymentType")
         public String paymentType;
@@ -183,7 +175,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the VSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

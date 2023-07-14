@@ -4,9 +4,6 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends TeaModel {
-    @NameInMap("ListAsConsole")
-    public Boolean listAsConsole;
-
     /**
      * <p>code!=200</p>
      */
@@ -25,14 +22,6 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends TeaMod
     public static ListPrometheusInstanceByTagAndResourceGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPrometheusInstanceByTagAndResourceGroupIdRequest self = new ListPrometheusInstanceByTagAndResourceGroupIdRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListPrometheusInstanceByTagAndResourceGroupIdRequest setListAsConsole(Boolean listAsConsole) {
-        this.listAsConsole = listAsConsole;
-        return this;
-    }
-    public Boolean getListAsConsole() {
-        return this.listAsConsole;
     }
 
     public ListPrometheusInstanceByTagAndResourceGroupIdRequest setRegionId(String regionId) {
