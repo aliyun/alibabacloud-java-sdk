@@ -13,6 +13,9 @@ public class BackendCallSignalRequest extends TeaModel {
     @NameInMap("CountryId")
     public String countryId;
 
+    @NameInMap("OutId")
+    public String outId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -64,6 +67,14 @@ public class BackendCallSignalRequest extends TeaModel {
     }
     public String getCountryId() {
         return this.countryId;
+    }
+
+    public BackendCallSignalRequest setOutId(String outId) {
+        this.outId = outId;
+        return this;
+    }
+    public String getOutId() {
+        return this.outId;
     }
 
     public BackendCallSignalRequest setOwnerId(Long ownerId) {

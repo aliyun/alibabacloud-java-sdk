@@ -10,9 +10,6 @@ public class QueryRecordingEnableRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     public static QueryRecordingEnableRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRecordingEnableRequest self = new QueryRecordingEnableRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class QueryRecordingEnableRequest extends TeaModel {
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
-    }
-
-    public QueryRecordingEnableRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
 }
