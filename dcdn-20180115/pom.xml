@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dcdn20180115</artifactId>
-  <version>1.1.12</version>
+  <version>1.1.13</version>
   <packaging>jar</packaging>
   <name>dcdn20180115</name>
   <description>Alibaba Cloud dcdn (20180115) SDK for Java
