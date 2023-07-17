@@ -4,21 +4,39 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class UpdateWorkflowDagRequest extends TeaModel {
+    /**
+     * <p>The directed acyclic graph (DAG) of the workflow, including the information about the nodes and the edges. Specify the value of this parameter in the JSON format.</p>
+     */
     @NameInMap("DagJson")
     public String dagJson;
 
+    /**
+     * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The workflow ID.</p>
+     */
     @NameInMap("WorkflowId")
     public String workflowId;
 

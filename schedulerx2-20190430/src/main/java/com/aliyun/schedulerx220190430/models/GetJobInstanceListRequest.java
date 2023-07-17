@@ -4,6 +4,9 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetJobInstanceListRequest extends TeaModel {
+    /**
+     * <p>结束时间（时间戳）。</p>
+     */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
@@ -14,7 +17,7 @@ public class GetJobInstanceListRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+     * <p>The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
@@ -32,14 +35,27 @@ public class GetJobInstanceListRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region in which the application resides.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>开始时间（时间戳）。</p>
+     */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 
+    /**
+     * <p>实例状态。包含以下几种状态：</p>
+     * <br>
+     * <p>1：等待</p>
+     * <p>3：运行中</p>
+     * <p>4：成功</p>
+     * <p>5：失败</p>
+     * <p>9：拒绝</p>
+     * <p>对应枚举类： com.alibaba.schedulerx.common.domain.InstanceStatus</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

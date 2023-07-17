@@ -17,7 +17,7 @@ public class StopInstanceRequest extends TeaModel {
     public Long instanceId;
 
     /**
-     * <p>The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+     * <p>The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
@@ -35,7 +35,7 @@ public class StopInstanceRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region in which the application resides.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -11,7 +11,7 @@ public class StopInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The error message that is returned if an error occurs.</p>
+     * <p>The error message that is returned only if an error occurs.</p>
      */
     @NameInMap("Message")
     public String message;

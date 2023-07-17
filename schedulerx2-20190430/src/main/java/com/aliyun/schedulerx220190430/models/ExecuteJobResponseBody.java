@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class ExecuteJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The ID of the job instance that is returned if the call is successful.</p>
+     * <p>The ID of the job instance that is returned if the request is successful.</p>
      */
     @NameInMap("Data")
     public ExecuteJobResponseBodyData data;
 
     /**
-     * <p>The error message that is returned if an error occurs.</p>
+     * <p>The error message that is returned only if the corresponding error occurs.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   `true`: The call is successful.</p>
-     * <p>*   `false`: The call fails.</p>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,7 +84,7 @@ public class ExecuteJobResponseBody extends TeaModel {
 
     public static class ExecuteJobResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the job instance.</p>
+         * <p>The job instance ID.</p>
          */
         @NameInMap("JobInstanceId")
         public Long jobInstanceId;

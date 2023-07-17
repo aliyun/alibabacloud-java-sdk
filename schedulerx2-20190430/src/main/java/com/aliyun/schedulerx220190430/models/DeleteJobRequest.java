@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeleteJobRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in Distributed Task Scheduling Platform.</p>
+     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the job. You can obtain the ID on the **Task Management** page in Distributed Task Scheduling Platform.</p>
+     * <p>The ID of the job. You can obtain the ID on the **Task Management** page in the SchedulerX console.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in Distributed Task Scheduling Platform.</p>
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>This parameter is required only for a special third party.</p>
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;

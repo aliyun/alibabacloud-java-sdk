@@ -4,18 +4,36 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetWorkflowInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the workflow instance.</p>
+     */
     @NameInMap("Data")
     public GetWorkflowInstanceResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceDagEdges extends TeaModel {
+        /**
+         * <p>The upstream job instance of the current job instance. The value 0 indicates that the upstream job instance is the root node.</p>
+         */
         @NameInMap("Source")
         public Long source;
 
+        /**
+         * <p>The downstream job instance of the current job instance.</p>
+         */
         @NameInMap("Target")
         public Long target;
 
@@ -95,30 +119,60 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes extends TeaModel {
+        /**
+         * <p>The number of retries when the job instance failed.</p>
+         */
         @NameInMap("Attempt")
         public Integer attempt;
 
+        /**
+         * <p>The data timestamp of the job instance.</p>
+         */
         @NameInMap("DataTime")
         public String dataTime;
 
+        /**
+         * <p>The time when the job instance stopped running.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The job ID.</p>
+         */
         @NameInMap("JobId")
         public Long jobId;
 
+        /**
+         * <p>The job instance ID.</p>
+         */
         @NameInMap("JobInstanceId")
         public Long jobInstanceId;
 
+        /**
+         * <p>The state of the job instance.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The time when the job instance was scheduled to run.</p>
+         */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
+        /**
+         * <p>The time when the job instance started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        @NameInMap("Status")
+        public Integer status;
+
+        /**
+         * <p>The server on which the job instance was run.</p>
+         */
         @NameInMap("WorkAddr")
         public String workAddr;
 
@@ -191,6 +245,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
             return this.startTime;
         }
 
+        public GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
         public GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes setWorkAddr(String workAddr) {
             this.workAddr = workAddr;
             return this;
@@ -202,9 +264,15 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceDag extends TeaModel {
+        /**
+         * <p>The dependencies between job instances.</p>
+         */
         @NameInMap("Edges")
         public java.util.List<GetWorkflowInstanceResponseBodyDataWfInstanceDagEdges> edges;
 
+        /**
+         * <p>The job instances.</p>
+         */
         @NameInMap("Nodes")
         public java.util.List<GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes> nodes;
 
@@ -232,18 +300,39 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowInstanceResponseBodyDataWfInstanceInfo extends TeaModel {
+        /**
+         * <p>The data timestamp of the workflow instance.</p>
+         */
         @NameInMap("DataTime")
         public String dataTime;
 
+        /**
+         * <p>The time when the workflow instance stopped running.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The time when the workflow instance was scheduled to run.</p>
+         */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
+        /**
+         * <p>The time when the workflow instance started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The state of the workflow instance. Valid values:</p>
+         * <br>
+         * <p>*   1: pending</p>
+         * <p>*   2: preparing</p>
+         * <p>*   3: running</p>
+         * <p>*   4: successful</p>
+         * <p>*   5: failed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -295,9 +384,15 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static class GetWorkflowInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The directed acyclic graph (DAG) of the workflow instance, including job instances and dependencies.</p>
+         */
         @NameInMap("WfInstanceDag")
         public GetWorkflowInstanceResponseBodyDataWfInstanceDag wfInstanceDag;
 
+        /**
+         * <p>The details of the workflow instance, including the state of the workflow instance, the time when the workflow instance started to run, the time when the workflow instance stopped running, the state of each job instance, and the dependencies between job instances.</p>
+         */
         @NameInMap("WfInstanceInfo")
         public GetWorkflowInstanceResponseBodyDataWfInstanceInfo wfInstanceInfo;
 

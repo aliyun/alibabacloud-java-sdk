@@ -4,18 +4,36 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ListWorkflowInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about workflow instances.</p>
+     */
     @NameInMap("Data")
     public ListWorkflowInstanceResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,24 +83,51 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static class ListWorkflowInstanceResponseBodyDataWfInstanceInfos extends TeaModel {
+        /**
+         * <p>The data timestamp of the workflow instance.</p>
+         */
         @NameInMap("DataTime")
         public String dataTime;
 
+        /**
+         * <p>The time when the workflow instance stopped running.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The time when the workflow instance was scheduled to run.</p>
+         */
         @NameInMap("ScheduleTime")
         public String scheduleTime;
 
+        /**
+         * <p>The time when the workflow instance started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The state of the workflow instance. Valid values:</p>
+         * <br>
+         * <p>*   1: pending</p>
+         * <p>*   2: preparing</p>
+         * <p>*   3: running</p>
+         * <p>*   4: successful</p>
+         * <p>*   5: failed</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The workflow instance ID.</p>
+         */
         @NameInMap("WfInstanceId")
         public Long wfInstanceId;
 
+        /**
+         * <p>The workflow ID.</p>
+         */
         @NameInMap("WorkflowId")
         public Long workflowId;
 
@@ -150,6 +195,9 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
     }
 
     public static class ListWorkflowInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The workflow instances.</p>
+         */
         @NameInMap("WfInstanceInfos")
         public java.util.List<ListWorkflowInstanceResponseBodyDataWfInstanceInfos> wfInstanceInfos;
 

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class GrantPermissionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to grant the permissions with the GRANT option. Valid values: -**true**: grants the permissions with the GRANT option. -**false**: does not grant the permissions with the GRANT option.</p>
+     * <p>Specifies whether to grant the permissions with the GRANT option. Valid values: -**true** -**false**</p>
      */
     @NameInMap("GrantOption")
     public Boolean grantOption;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The namespace ID.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>This parameter is required only for a special third party.</p>
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

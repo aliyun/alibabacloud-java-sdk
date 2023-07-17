@@ -3,25 +3,31 @@ package com.aliyun.schedulerx220190430.models;
 
 import com.aliyun.tea.*;
 
-public class BatchDeleteRouteStrategyResponseBody extends TeaModel {
+public class GetOverviewResponseBody extends TeaModel {
     @NameInMap("Code")
     public Integer code;
+
+    @NameInMap("Data")
+    public String data;
 
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    public static BatchDeleteRouteStrategyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BatchDeleteRouteStrategyResponseBody self = new BatchDeleteRouteStrategyResponseBody();
+    public static GetOverviewResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetOverviewResponseBody self = new GetOverviewResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchDeleteRouteStrategyResponseBody setCode(Integer code) {
+    public GetOverviewResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -29,7 +35,15 @@ public class BatchDeleteRouteStrategyResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchDeleteRouteStrategyResponseBody setMessage(String message) {
+    public GetOverviewResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public GetOverviewResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -37,7 +51,7 @@ public class BatchDeleteRouteStrategyResponseBody extends TeaModel {
         return this.message;
     }
 
-    public BatchDeleteRouteStrategyResponseBody setRequestId(String requestId) {
+    public GetOverviewResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -45,7 +59,7 @@ public class BatchDeleteRouteStrategyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchDeleteRouteStrategyResponseBody setSuccess(Boolean success) {
+    public GetOverviewResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

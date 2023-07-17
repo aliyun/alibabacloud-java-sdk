@@ -29,7 +29,7 @@ public class ListJobsRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region in which the job resides.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

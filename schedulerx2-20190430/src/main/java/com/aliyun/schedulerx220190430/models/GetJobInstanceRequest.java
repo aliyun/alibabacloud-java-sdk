@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetJobInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the job.</p>
+     * <p>The job ID.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The ID of the job instance.</p>
+     * <p>The job instance ID.</p>
      */
     @NameInMap("JobInstanceId")
     public Long jobInstanceId;
 
     /**
-     * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

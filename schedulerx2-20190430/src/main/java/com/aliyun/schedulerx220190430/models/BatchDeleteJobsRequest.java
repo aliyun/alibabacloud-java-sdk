@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in Distributed Task Scheduling Platform.</p>
+     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The job IDs. Multiple job IDs are separated by commas (,).</p>
+     * <p>The job IDs. Separate multiple job IDs with commas (,).</p>
      */
     @NameInMap("JobIdList")
     public java.util.List<Long> jobIdList;
 
     /**
-     * <p>The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the **Namespace** page in Distributed Task Scheduling Platform.</p>
+     * <p>The ID of the namespace to which the job belongs. You can obtain the ID of the namespace on the **Namespace** page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>This parameter is required only for a special third party.</p>
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;

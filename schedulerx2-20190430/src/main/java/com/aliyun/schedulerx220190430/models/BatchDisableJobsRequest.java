@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDisableJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the ID of the application on the **Application Management** page in the SchedulerX console.</p>
+     * <p>The ID of the application. You can obtain the application ID on the **Application Management** page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -23,13 +23,13 @@ public class BatchDisableJobsRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Required only for a special third party.</p>
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region in which the job resides.</p>
+     * <p>The ID of the region to which the job belongs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

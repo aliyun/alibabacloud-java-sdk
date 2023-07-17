@@ -4,27 +4,51 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class RerunJobRequest extends TeaModel {
+    /**
+     * <p>The data timestamp of the job. Specify a string in the HH:mm:ss format.</p>
+     */
     @NameInMap("DataTime")
     public String dataTime;
 
+    /**
+     * <p>The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("EndDate")
     public Long endDate;
 
+    /**
+     * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The job ID.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The time when the job starts to rerun. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("StartDate")
     public Long startDate;
 
