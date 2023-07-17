@@ -149,6 +149,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @NameInMap("JobInstanceId")
         public Long jobInstanceId;
 
+        @NameInMap("JobName")
+        public String jobName;
+
         /**
          * <p>The state of the job instance.</p>
          */
@@ -219,6 +222,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
         public Long getJobInstanceId() {
             return this.jobInstanceId;
+        }
+
+        public GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes setJobName(String jobName) {
+            this.jobName = jobName;
+            return this;
+        }
+        public String getJobName() {
+            return this.jobName;
         }
 
         public GetWorkflowInstanceResponseBodyDataWfInstanceDagNodes setResult(String result) {
