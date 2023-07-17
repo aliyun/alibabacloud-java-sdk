@@ -97,6 +97,9 @@ public class ListFilesResponseBody extends TeaModel {
     }
 
     public static class ListFilesResponseBodyDataFiles extends TeaModel {
+        @NameInMap("AbsoluteFolderPath")
+        public String absoluteFolderPath;
+
         /**
          * <p>Specifies whether the automatic parsing feature is enabled for the file. Valid values:</p>
          * <br>
@@ -240,6 +243,14 @@ public class ListFilesResponseBody extends TeaModel {
         public static ListFilesResponseBodyDataFiles build(java.util.Map<String, ?> map) throws Exception {
             ListFilesResponseBodyDataFiles self = new ListFilesResponseBodyDataFiles();
             return TeaModel.build(map, self);
+        }
+
+        public ListFilesResponseBodyDataFiles setAbsoluteFolderPath(String absoluteFolderPath) {
+            this.absoluteFolderPath = absoluteFolderPath;
+            return this;
+        }
+        public String getAbsoluteFolderPath() {
+            return this.absoluteFolderPath;
         }
 
         public ListFilesResponseBodyDataFiles setAutoParsing(Boolean autoParsing) {
