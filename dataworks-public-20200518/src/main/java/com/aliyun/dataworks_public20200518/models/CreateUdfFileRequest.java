@@ -16,6 +16,9 @@ public class CreateUdfFileRequest extends TeaModel {
     @NameInMap("CmdDescription")
     public String cmdDescription;
 
+    @NameInMap("CreateFolderIfNotExists")
+    public Boolean createFolderIfNotExists;
+
     /**
      * <p>The example for calling the function. This parameter corresponds to the Example parameter in the Register Function section of the configuration tab of the function in the DataWorks console.</p>
      */
@@ -97,6 +100,14 @@ public class CreateUdfFileRequest extends TeaModel {
     }
     public String getCmdDescription() {
         return this.cmdDescription;
+    }
+
+    public CreateUdfFileRequest setCreateFolderIfNotExists(Boolean createFolderIfNotExists) {
+        this.createFolderIfNotExists = createFolderIfNotExists;
+        return this;
+    }
+    public Boolean getCreateFolderIfNotExists() {
+        return this.createFolderIfNotExists;
     }
 
     public CreateUdfFileRequest setExample(String example) {

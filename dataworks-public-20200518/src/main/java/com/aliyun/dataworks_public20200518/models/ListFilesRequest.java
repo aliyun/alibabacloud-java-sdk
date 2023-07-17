@@ -4,11 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListFilesRequest extends TeaModel {
+    @NameInMap("ExactFileName")
+    public String exactFileName;
+
     /**
      * <p>The path of the files.</p>
      */
     @NameInMap("FileFolderPath")
     public String fileFolderPath;
+
+    @NameInMap("FileIdIn")
+    public String fileIdIn;
 
     /**
      * <p>The types of the code in the files.</p>
@@ -23,6 +29,12 @@ public class ListFilesRequest extends TeaModel {
      */
     @NameInMap("Keyword")
     public String keyword;
+
+    @NameInMap("NeedAbsoluteFolderPath")
+    public Boolean needAbsoluteFolderPath;
+
+    @NameInMap("NeedContent")
+    public Boolean needContent;
 
     /**
      * <p>The ID of the node that is scheduled. You can call the [ListNodes](~~173979~~) operation to query the ID of the node.</p>
@@ -82,12 +94,28 @@ public class ListFilesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListFilesRequest setExactFileName(String exactFileName) {
+        this.exactFileName = exactFileName;
+        return this;
+    }
+    public String getExactFileName() {
+        return this.exactFileName;
+    }
+
     public ListFilesRequest setFileFolderPath(String fileFolderPath) {
         this.fileFolderPath = fileFolderPath;
         return this;
     }
     public String getFileFolderPath() {
         return this.fileFolderPath;
+    }
+
+    public ListFilesRequest setFileIdIn(String fileIdIn) {
+        this.fileIdIn = fileIdIn;
+        return this;
+    }
+    public String getFileIdIn() {
+        return this.fileIdIn;
     }
 
     public ListFilesRequest setFileTypes(String fileTypes) {
@@ -104,6 +132,22 @@ public class ListFilesRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListFilesRequest setNeedAbsoluteFolderPath(Boolean needAbsoluteFolderPath) {
+        this.needAbsoluteFolderPath = needAbsoluteFolderPath;
+        return this;
+    }
+    public Boolean getNeedAbsoluteFolderPath() {
+        return this.needAbsoluteFolderPath;
+    }
+
+    public ListFilesRequest setNeedContent(Boolean needContent) {
+        this.needContent = needContent;
+        return this;
+    }
+    public Boolean getNeedContent() {
+        return this.needContent;
     }
 
     public ListFilesRequest setNodeId(Long nodeId) {

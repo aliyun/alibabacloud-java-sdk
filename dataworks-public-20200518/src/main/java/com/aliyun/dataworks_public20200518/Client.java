@@ -1159,6 +1159,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Content", request.content);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createFolderIfNotExists)) {
+            body.put("CreateFolderIfNotExists", request.createFolderIfNotExists);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cronExpress)) {
             body.put("CronExpress", request.cronExpress);
         }
@@ -2094,6 +2098,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createRemindWithOptions(request, runtime);
     }
 
+    public CreateResourceFileResponse createResourceFileWithOptions(CreateResourceFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            body.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileDescription)) {
+            body.put("FileDescription", request.fileDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileFolderPath)) {
+            body.put("FileFolderPath", request.fileFolderPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            body.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            body.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originResourceName)) {
+            body.put("OriginResourceName", request.originResourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.owner)) {
+            body.put("Owner", request.owner);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.registerToCalcEngine)) {
+            body.put("RegisterToCalcEngine", request.registerToCalcEngine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceFile)) {
+            body.put("ResourceFile", request.resourceFile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageURL)) {
+            body.put("StorageURL", request.storageURL);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadMode)) {
+            body.put("UploadMode", request.uploadMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateResourceFile"),
+            new TeaPair("version", "2020-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateResourceFileResponse());
+    }
+
+    public CreateResourceFileResponse createResourceFile(CreateResourceFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createResourceFileWithOptions(request, runtime);
+    }
+
     public CreateTableResponse createTableWithOptions(CreateTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2292,6 +2369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.cmdDescription)) {
             body.put("CmdDescription", request.cmdDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createFolderIfNotExists)) {
+            body.put("CreateFolderIfNotExists", request.createFolderIfNotExists);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.example)) {
@@ -7301,8 +7382,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFilesResponse listFilesWithOptions(ListFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exactFileName)) {
+            body.put("ExactFileName", request.exactFileName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileFolderPath)) {
             body.put("FileFolderPath", request.fileFolderPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileIdIn)) {
+            body.put("FileIdIn", request.fileIdIn);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileTypes)) {
@@ -7311,6 +7400,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
             body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needAbsoluteFolderPath)) {
+            body.put("NeedAbsoluteFolderPath", request.needAbsoluteFolderPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needContent)) {
+            body.put("NeedContent", request.needContent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {

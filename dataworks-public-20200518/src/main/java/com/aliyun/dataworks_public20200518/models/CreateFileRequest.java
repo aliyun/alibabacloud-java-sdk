@@ -55,6 +55,9 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("CreateFolderIfNotExists")
+    public Boolean createFolderIfNotExists;
+
     /**
      * <p>The CRON expression that represents the automatic scheduling policy of the node. This parameter corresponds to the Cron Expression parameter in the Schedule section of the Properties tab in the [DataWorks console](https://workbench.data.aliyun.com/console). After you configure the Scheduling Cycle and Run At parameters in the DataWorks console, DataWorks generates the value of the Cron Expression parameter.</p>
      * <br>
@@ -318,6 +321,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public CreateFileRequest setCreateFolderIfNotExists(Boolean createFolderIfNotExists) {
+        this.createFolderIfNotExists = createFolderIfNotExists;
+        return this;
+    }
+    public Boolean getCreateFolderIfNotExists() {
+        return this.createFolderIfNotExists;
     }
 
     public CreateFileRequest setCronExpress(String cronExpress) {
