@@ -4,27 +4,56 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteStrategyRequest extends TeaModel {
+    /**
+     * <p>The ID of the application group. You can obtain the ID on the **Application Management** page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The job ID. You can obtain the ID on the **Task Management** page in the SchedulerX console.</p>
+     */
     @NameInMap("JobId")
     public Long jobId;
 
+    /**
+     * <p>The name of the routing policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to enable the routing policy. Valid values:</p>
+     * <br>
+     * <p>*   **0**: disables the routing policy.</p>
+     * <p>*   **1**: enables the routing policy.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The details of the routing policy. The value is a JSON string. For more information about this parameter, see **the additional information about request parameters** below this table.</p>
+     */
     @NameInMap("StrategyContent")
     public String strategyContent;
 
+    /**
+     * <p>The type of the routing policy. Valid value:</p>
+     * <br>
+     * <p>*   **3**: routes by proportion.</p>
+     */
     @NameInMap("Type")
     public Integer type;
 

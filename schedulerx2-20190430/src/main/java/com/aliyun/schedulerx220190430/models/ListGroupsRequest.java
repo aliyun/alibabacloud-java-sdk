@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListGroupsRequest extends TeaModel {
     /**
-     * <p>The namespace. You can obtain the namespace on the **Namespace** page in Distributed Task Scheduling Platform.</p>
+     * <p>应用分组名称。</p>
+     */
+    @NameInMap("AppGroupName")
+    public String appGroupName;
+
+    /**
+     * <p>The namespace ID. You can obtain the namespace ID on the **Namespace** page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>Required only for a special third party.</p>
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region in which the application is located.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -25,6 +31,14 @@ public class ListGroupsRequest extends TeaModel {
     public static ListGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsRequest self = new ListGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListGroupsRequest setAppGroupName(String appGroupName) {
+        this.appGroupName = appGroupName;
+        return this;
+    }
+    public String getAppGroupName() {
+        return this.appGroupName;
     }
 
     public ListGroupsRequest setNamespace(String namespace) {

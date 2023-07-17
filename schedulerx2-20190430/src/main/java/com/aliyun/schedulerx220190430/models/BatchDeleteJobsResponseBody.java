@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteJobsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The additional information returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -23,10 +23,10 @@ public class BatchDeleteJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether jobs are deleted in batches. Valid values:</p>
+     * <p>Indicates whether multiple jobs were deleted at a time. Valid values:</p>
      * <br>
-     * <p>*   **true**: Jobs are deleted in batches.</p>
-     * <p>*   **false**: Failed to delete jobs in batches.</p>
+     * <p>*   **true**: Multiple jobs were deleted at a time.</p>
+     * <p>*   **false**: Multiple jobs were not deleted at a time.</p>
      */
     @NameInMap("Success")
     public Boolean success;

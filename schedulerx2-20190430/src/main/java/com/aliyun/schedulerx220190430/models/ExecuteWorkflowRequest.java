@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ExecuteWorkflowRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.</p>
+     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The dynamic parameter of the workflow instance. The parameter must be 1 to 1,000 bytes in length.</p>
+     * <p>The dynamic parameter of the workflow instance. The value of the parameter can be up to 1,000 bytes in length.</p>
      */
     @NameInMap("InstanceParameters")
     public String instanceParameters;
 
     /**
-     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.</p>
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>This parameter is required only for a special third party.</p>
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
@@ -32,7 +32,7 @@ public class ExecuteWorkflowRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the workflow.</p>
+     * <p>The workflow ID.</p>
      */
     @NameInMap("WorkflowId")
     public Long workflowId;

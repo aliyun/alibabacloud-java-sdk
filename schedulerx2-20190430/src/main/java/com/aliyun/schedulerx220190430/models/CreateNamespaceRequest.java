@@ -17,13 +17,13 @@ public class CreateNamespaceRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The UID of the namespace, which is globally unique. We recommend that you use the UUID to generate the UID.</p>
+     * <p>The unique identifier (UID) of the namespace. We recommend that you use the universally unique identifier (UUID) to generate the UID.</p>
      */
     @NameInMap("Uid")
     public String uid;

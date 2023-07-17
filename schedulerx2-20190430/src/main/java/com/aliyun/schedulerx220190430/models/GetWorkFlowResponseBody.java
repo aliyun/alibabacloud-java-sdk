@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetWorkFlowResponseBody extends TeaModel {
     /**
-     * <p>The error code that is returned.</p>
+     * <p>Error codes</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,7 +17,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
     public GetWorkFlowResponseBodyData data;
 
     /**
-     * <p>The error message that is returned.</p>
+     * <p>Error message</p>
      */
     @NameInMap("Message")
     public String message;
@@ -179,7 +179,7 @@ public class GetWorkFlowResponseBody extends TeaModel {
         public Long source;
 
         /**
-         * <p>The ID of the target job.</p>
+         * <p>The ID of the object job.</p>
          */
         @NameInMap("Target")
         public Long target;

@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The information about the list of applications.</p>
+     * <p>The information about the applications.</p>
      */
     @NameInMap("Data")
     public ListGroupsResponseBodyData data;
 
     /**
-     * <p>The additional information returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: The call is successful.</p>
-     * <p>*   **false**: The call fails.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,13 +84,13 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyDataAppGroups extends TeaModel {
         /**
-         * <p>应用分组ID</p>
+         * <p>The application group ID.</p>
          */
         @NameInMap("AppGroupId")
         public Long appGroupId;
 
         /**
-         * <p>The key for the application.</p>
+         * <p>The AppKey for the application.</p>
          */
         @NameInMap("AppKey")
         public String appKey;
@@ -102,7 +102,7 @@ public class ListGroupsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The application description.</p>
+         * <p>The description of the application.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -162,7 +162,7 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of applications and details of applications.</p>
+         * <p>The applications and their details.</p>
          */
         @NameInMap("AppGroups")
         public java.util.List<ListGroupsResponseBodyDataAppGroups> appGroups;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DesignateWorkersResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The error message that is returned if an error occurs.</p>
+     * <p>The returned error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListNamespacesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The list of namespaces.</p>
+     * <p>The information about the namespaces.</p>
      */
     @NameInMap("Data")
     public ListNamespacesResponseBodyData data;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: The call is successful.</p>
-     * <p>*   **false**: The call fails.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -96,7 +96,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The namespace ID.</p>
          */
         @NameInMap("UId")
         public String UId;
@@ -134,7 +134,7 @@ public class ListNamespacesResponseBody extends TeaModel {
 
     public static class ListNamespacesResponseBodyData extends TeaModel {
         /**
-         * <p>The list and details of the namespaces.</p>
+         * <p>The namespaces and their details.</p>
          */
         @NameInMap("Namespaces")
         public java.util.List<ListNamespacesResponseBodyDataNamespaces> namespaces;

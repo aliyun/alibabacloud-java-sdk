@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class GetJobInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can obtain the ID of the application on the Application Management page in the SchedulerX console.</p>
+     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the job. You can obtain the ID of the job on the Task Management page in the SchedulerX console.</p>
+     * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The job name.</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
-     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     * <p>The namespace source. This parameter is required only for a special third party.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region in which the job resides.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

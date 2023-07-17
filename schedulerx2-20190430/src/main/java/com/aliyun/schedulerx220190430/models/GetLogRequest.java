@@ -4,39 +4,75 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetLogRequest extends TeaModel {
+    /**
+     * <p>The time when the job stops running. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
+    /**
+     * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The job ID.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The job instance ID.</p>
+     */
     @NameInMap("JobInstanceId")
     public String jobInstanceId;
 
+    /**
+     * <p>The keyword.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
+    /**
+     * <p>The number of rows to return. The maximum number is 200.</p>
+     */
     @NameInMap("Line")
     public Integer line;
 
+    /**
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
+     */
     @NameInMap("NamespaceSource")
     public String namespaceSource;
 
+    /**
+     * <p>The number of offset rows. This parameter can be used for a paged query.</p>
+     */
     @NameInMap("Offset")
     public Integer offset;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to reverse the order. By default, the order is reversed.</p>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 
+    /**
+     * <p>The time when the job starts to run. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
 

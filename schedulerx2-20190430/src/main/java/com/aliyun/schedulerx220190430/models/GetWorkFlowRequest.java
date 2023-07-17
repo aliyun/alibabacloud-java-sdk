@@ -17,7 +17,7 @@ public class GetWorkFlowRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The source of the namespcae.</p>
+     * <p>The source of the namespace.</p>
      */
     @NameInMap("NamespaceSource")
     public String namespaceSource;

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The error message that is returned only if the error occurs.</p>
+     * <p>The error message that was returned only if the corresponding error occurred.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The list of regions.</p>
+     * <p>The available regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
@@ -29,10 +29,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: The call is successful.</p>
-     * <p>*   **false**: The call fails.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,7 +84,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The displayed name of the region, which varies based on the current language.</p>
+         * <p>The display name of the region, which varies based on the current language.</p>
          */
         @NameInMap("LocalName")
         public String localName;

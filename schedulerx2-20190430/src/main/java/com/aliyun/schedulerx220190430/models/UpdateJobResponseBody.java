@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The additional information that is returned only if the error occurs.</p>
+     * <p>The additional information returned only if an error occurs.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

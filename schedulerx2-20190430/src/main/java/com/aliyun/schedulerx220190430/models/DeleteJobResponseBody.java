@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The additional information returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -23,10 +23,10 @@ public class DeleteJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the job is deleted.</p>
+     * <p>Indicates whether the job was deleted. Valid values:</p>
      * <br>
-     * <p>*   **true**: The job is deleted.</p>
-     * <p>*   **false**: Failed to delete the job.</p>
+     * <p>*   **true**: The job was deleted.</p>
+     * <p>*   **false**: The job was not deleted.</p>
      */
     @NameInMap("Success")
     public Boolean success;

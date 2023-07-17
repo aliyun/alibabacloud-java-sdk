@@ -17,19 +17,19 @@ public class ExecuteJobRequest extends TeaModel {
     public Integer designateType;
 
     /**
-     * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
+     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The parameters that are passed to trigger the job to run. The input value can be any string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.</p>
+     * <p>The parameters that are passed to trigger the job to run. The input value can be a random string. The parameters that are passed are obtained by calling the `context.getInstanceParameters()` class in the `processor` code. The parameters are different from custom parameters for creating jobs.</p>
      */
     @NameInMap("InstanceParameters")
     public String instanceParameters;
 
     /**
-     * <p>The ID of the job. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
+     * <p>The job ID. You can obtain the job ID on the Task Management page in the SchedulerX console.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
@@ -41,7 +41,7 @@ public class ExecuteJobRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The ID of the namespace. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -53,7 +53,7 @@ public class ExecuteJobRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

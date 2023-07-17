@@ -16,6 +16,12 @@ public class CreateAppGroupRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>应用类型。</p>
+     * <br>
+     * <p>- 1、普通应用。</p>
+     * <p>- 2、k8s应用。</p>
+     */
     @NameInMap("AppType")
     public Integer appType;
 
@@ -25,11 +31,18 @@ public class CreateAppGroupRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>是否开启日志。</p>
+     * <br>
+     * <p>- true：开启</p>
+     * <br>
+     * <p>- false：关闭</p>
+     */
     @NameInMap("EnableLog")
     public Boolean enableLog;
 
     /**
-     * <p>The ID of the application. You can obtain the application ID on the Application Management page in Distributed Task Scheduling Platform.</p>
+     * <p>The application ID. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -53,7 +66,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public String monitorContactsJson;
 
     /**
-     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in Distributed Task Scheduling Platform.</p>
+     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -71,7 +84,7 @@ public class CreateAppGroupRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

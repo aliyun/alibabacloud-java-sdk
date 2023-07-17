@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DesignateWorkersRequest extends TeaModel {
     /**
-     * <p>The type of the designated machines. Valid values: 1: worker. 2: label.</p>
+     * <p>The type of the machines to be designated. Valid values: 1 and 2. The value 1 specifies the worker type. The value 2 specifies the label type.</p>
      */
     @NameInMap("DesignateType")
     public Integer designateType;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the job.</p>
+     * <p>The job ID.</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
-     * <p>The designated `labels`. The value is a `JSON` string.</p>
+     * <p>The designated `labels`. Specify the value of the parameter in a `JSON` string.</p>
      */
     @NameInMap("Labels")
     public String labels;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The unique identifier (UID) of the namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -41,7 +41,7 @@ public class DesignateWorkersRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -53,7 +53,7 @@ public class DesignateWorkersRequest extends TeaModel {
     public Boolean transferable;
 
     /**
-     * <p>The designated workers. The value is a JSON string.</p>
+     * <p>The designated machines. Specify the value of the parameter in a JSON string.</p>
      */
     @NameInMap("Workers")
     public String workers;

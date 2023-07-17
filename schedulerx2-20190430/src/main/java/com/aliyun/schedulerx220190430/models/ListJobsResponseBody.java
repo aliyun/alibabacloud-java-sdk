@@ -96,7 +96,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String userMail;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -542,7 +542,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String parameters;
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>Indicates whether the job is enabled. Valid values:</p>
          * <br>
          * <p>*   **1**: The job is enabled and can be triggered.</p>
          * <p>*   **0**: The job is disabled and cannot be triggered.</p>

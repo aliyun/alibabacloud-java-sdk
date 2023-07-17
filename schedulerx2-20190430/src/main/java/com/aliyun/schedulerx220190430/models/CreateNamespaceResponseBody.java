@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The information of the namespace.</p>
+     * <p>The information about the namespace.</p>
      */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
 
     /**
-     * <p>The error message that is returned only if the error occurs.</p>
+     * <p>The error message that is returned only if the corresponding error occurs.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether an application is created. Valid values:</p>
+     * <p>Indicates whether the application was created. Valid values:</p>
      * <br>
-     * <p>*   **true**: The application is created.</p>
-     * <p>*   **false**: Failed to create the application.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,7 +84,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     public static class CreateNamespaceResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier of the namespace.</p>
+         * <p>The UID of the namespace.</p>
          */
         @NameInMap("NamespaceUid")
         public String namespaceUid;
