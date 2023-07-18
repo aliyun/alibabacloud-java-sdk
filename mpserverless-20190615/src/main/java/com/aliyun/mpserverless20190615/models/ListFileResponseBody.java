@@ -43,6 +43,9 @@ public class ListFileResponseBody extends TeaModel {
     }
 
     public static class ListFileResponseBodyDataList extends TeaModel {
+        @NameInMap("AuthDelta")
+        public Integer authDelta;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
@@ -67,6 +70,14 @@ public class ListFileResponseBody extends TeaModel {
         public static ListFileResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             ListFileResponseBodyDataList self = new ListFileResponseBodyDataList();
             return TeaModel.build(map, self);
+        }
+
+        public ListFileResponseBodyDataList setAuthDelta(Integer authDelta) {
+            this.authDelta = authDelta;
+            return this;
+        }
+        public Integer getAuthDelta() {
+            return this.authDelta;
         }
 
         public ListFileResponseBodyDataList setGmtCreate(String gmtCreate) {

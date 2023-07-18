@@ -4,6 +4,9 @@ package com.aliyun.mpserverless20190615.models;
 import com.aliyun.tea.*;
 
 public class ListFileRequest extends TeaModel {
+    @NameInMap("AuthDelta")
+    public Integer authDelta;
+
     @NameInMap("FileId")
     public String fileId;
 
@@ -28,6 +31,14 @@ public class ListFileRequest extends TeaModel {
     public static ListFileRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFileRequest self = new ListFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFileRequest setAuthDelta(Integer authDelta) {
+        this.authDelta = authDelta;
+        return this;
+    }
+    public Integer getAuthDelta() {
+        return this.authDelta;
     }
 
     public ListFileRequest setFileId(String fileId) {
