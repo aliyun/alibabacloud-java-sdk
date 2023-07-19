@@ -4,18 +4,50 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsJobDetailRequest extends TeaModel {
+    /**
+     * <p>DescribeDtsJobDetail</p>
+     */
     @NameInMap("DtsInstanceID")
     public String dtsInstanceID;
 
+    /**
+     * <p>The state of the data migration or data synchronization task.</p>
+     * <br>
+     * <p>Valid values for a data migration task:</p>
+     * <br>
+     * <p>*   **NotStarted**: The migration is not started.</p>
+     * <p>*   **Migrating**: The migration is in progress.</p>
+     * <p>*   **Failed**: The migration failed.</p>
+     * <p>*   **Finished**: The migration is complete.</p>
+     * <br>
+     * <p>Valid values for a data synchronization task:</p>
+     * <br>
+     * <p>*   **NotStarted**: The task is not started.</p>
+     * <p>*   **Prechecking**: The task is in precheck.</p>
+     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+     * <p>*   **Initializing**: The task is performing initial synchronization.</p>
+     * <p>*   **InitializeFailed**: Initial synchronization failed.</p>
+     * <p>*   **Synchronizing**: The task is in progress.</p>
+     * <p>*   **Failed**: The task failed to synchronize data.</p>
+     * <p>*   **Suspending**: The task is paused.</p>
+     * <p>*   **Modifying**: The objects in the task are being modified.</p>
+     * <p>*   **Finished**: The task is complete.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("SyncSubJobHistory")
     public Boolean syncSubJobHistory;
 
+    /**
+     * <p>Queries the details of a data migration, data synchronization, or change tracking task.</p>
+     */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 

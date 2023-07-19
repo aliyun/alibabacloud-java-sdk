@@ -4,21 +4,43 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerChannelRequest extends TeaModel {
+    /**
+     * <p>The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     * <br>
+     * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     * <br>
+     * <p>>  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The parent task ID of the distributed task.</p>
+     */
     @NameInMap("ParentChannelId")
     public String parentChannelId;
 
+    /**
+     * <p>The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

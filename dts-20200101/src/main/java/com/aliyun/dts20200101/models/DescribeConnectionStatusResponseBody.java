@@ -4,21 +4,39 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectionStatusResponseBody extends TeaModel {
+    /**
+     * <p>The connectivity of DTS servers to the destination database.</p>
+     */
     @NameInMap("DestinationConnectionStatus")
     public java.util.Map<String, ?> destinationConnectionStatus;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The connectivity of DTS servers to the source database.</p>
+     */
     @NameInMap("SourceConnectionStatus")
     public java.util.Map<String, ?> sourceConnectionStatus;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 

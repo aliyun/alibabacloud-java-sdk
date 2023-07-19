@@ -3,7 +3,7 @@ package com.aliyun.dts20200101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeDtsJobConfigResponse extends TeaModel {
+public class DescribeChannelAccountResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeDtsJobConfigResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeDtsJobConfigResponseBody body;
+    public DescribeChannelAccountResponseBody body;
 
-    public static DescribeDtsJobConfigResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeDtsJobConfigResponse self = new DescribeDtsJobConfigResponse();
+    public static DescribeChannelAccountResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeChannelAccountResponse self = new DescribeChannelAccountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDtsJobConfigResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeChannelAccountResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeDtsJobConfigResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeDtsJobConfigResponse setStatusCode(Integer statusCode) {
+    public DescribeChannelAccountResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeDtsJobConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeDtsJobConfigResponse setBody(DescribeDtsJobConfigResponseBody body) {
+    public DescribeChannelAccountResponse setBody(DescribeChannelAccountResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeDtsJobConfigResponseBody getBody() {
+    public DescribeChannelAccountResponseBody getBody() {
         return this.body;
     }
 

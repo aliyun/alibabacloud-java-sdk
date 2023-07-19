@@ -4,65 +4,91 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
-    @NameInMap("DiffRowCount")
-    public Long diffRowCount;
+    /**
+     * <p>The number of tables that contain inconsistent data.</p>
+     */
+    @NameInMap("DiffTableCount")
+    public Long diffTableCount;
 
+    /**
+     * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the value of **ErrMessage**.</p>
+     * <br>
+     * <p>>  For example, if the return value of **ErrMessage** is **The Value of Input Parameter %s is not valid** and the return value of **DynamicMessage** is **Type**, the specified value of **Type** is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    @NameInMap("FailedCount")
-    public Long failedCount;
-
+    /**
+     * <p>The total number of data rows that were verified.</p>
+     */
     @NameInMap("FinishedCount")
     public Long finishedCount;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    @NameInMap("InitCount")
-    public Long initCount;
-
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RunningCount")
-    public Long runningCount;
-
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The details of data verification results.</p>
+     */
     @NameInMap("TableDetails")
     public java.util.List<DescribeDataCheckTableDetailsResponseBodyTableDetails> tableDetails;
 
+    /**
+     * <p>The total number of tables on which data verification was performed.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
-
-    @NameInMap("WarningCount")
-    public Long warningCount;
 
     public static DescribeDataCheckTableDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataCheckTableDetailsResponseBody self = new DescribeDataCheckTableDetailsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDataCheckTableDetailsResponseBody setDiffRowCount(Long diffRowCount) {
-        this.diffRowCount = diffRowCount;
+    public DescribeDataCheckTableDetailsResponseBody setDiffTableCount(Long diffTableCount) {
+        this.diffTableCount = diffTableCount;
         return this;
     }
-    public Long getDiffRowCount() {
-        return this.diffRowCount;
+    public Long getDiffTableCount() {
+        return this.diffTableCount;
     }
 
     public DescribeDataCheckTableDetailsResponseBody setDynamicCode(String dynamicCode) {
@@ -97,14 +123,6 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public DescribeDataCheckTableDetailsResponseBody setFailedCount(Long failedCount) {
-        this.failedCount = failedCount;
-        return this;
-    }
-    public Long getFailedCount() {
-        return this.failedCount;
-    }
-
     public DescribeDataCheckTableDetailsResponseBody setFinishedCount(Long finishedCount) {
         this.finishedCount = finishedCount;
         return this;
@@ -121,14 +139,6 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public DescribeDataCheckTableDetailsResponseBody setInitCount(Long initCount) {
-        this.initCount = initCount;
-        return this;
-    }
-    public Long getInitCount() {
-        return this.initCount;
-    }
-
     public DescribeDataCheckTableDetailsResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -143,14 +153,6 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeDataCheckTableDetailsResponseBody setRunningCount(Long runningCount) {
-        this.runningCount = runningCount;
-        return this;
-    }
-    public Long getRunningCount() {
-        return this.runningCount;
     }
 
     public DescribeDataCheckTableDetailsResponseBody setSuccess(Boolean success) {
@@ -177,42 +179,75 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeDataCheckTableDetailsResponseBody setWarningCount(Long warningCount) {
-        this.warningCount = warningCount;
-        return this;
-    }
-    public Long getWarningCount() {
-        return this.warningCount;
-    }
-
     public static class DescribeDataCheckTableDetailsResponseBodyTableDetails extends TeaModel {
+        /**
+         * <p>The time when data verification was performed.</p>
+         */
         @NameInMap("BootTime")
         public String bootTime;
 
+        /**
+         * <p>The number of data rows that contain inconsistent data.</p>
+         */
         @NameInMap("DiffCount")
         public Long diffCount;
 
+        /**
+         * <p>The error code returned if the request failed.</p>
+         */
+        @NameInMap("ErrorCode")
+        public Integer errorCode;
+
+        /**
+         * <p>The number of data rows that were verified.</p>
+         */
         @NameInMap("FinishCount")
         public Long finishCount;
 
+        /**
+         * <p>The auto-increment primary key that is used to identify the data in a verification result.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the source database.</p>
+         */
         @NameInMap("SourceDbName")
         public String sourceDbName;
 
+        /**
+         * <p>The name of the source table.</p>
+         */
         @NameInMap("SourceTbName")
         public String sourceTbName;
 
+        /**
+         * <p>The state of the data verification task. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The data verification task was complete.</p>
+         * <p>*   **2**: The data verification task was being initialized.</p>
+         * <p>*   **3**: The data verification task was in progress.</p>
+         * <p>*   **5**: The data verification task failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the destination database.</p>
+         */
         @NameInMap("TargetDbName")
         public String targetDbName;
 
+        /**
+         * <p>The name of the destination table.</p>
+         */
         @NameInMap("TargetTbName")
         public String targetTbName;
 
+        /**
+         * <p>The total number of data rows.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -235,6 +270,14 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         }
         public Long getDiffCount() {
             return this.diffCount;
+        }
+
+        public DescribeDataCheckTableDetailsResponseBodyTableDetails setErrorCode(Integer errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public Integer getErrorCode() {
+            return this.errorCode;
         }
 
         public DescribeDataCheckTableDetailsResponseBodyTableDetails setFinishCount(Long finishCount) {

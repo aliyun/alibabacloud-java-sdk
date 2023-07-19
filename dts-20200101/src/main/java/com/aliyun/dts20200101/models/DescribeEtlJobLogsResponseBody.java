@@ -4,27 +4,51 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEtlJobLogsResponseBody extends TeaModel {
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code. This example indicates that the specified ETL task ID is invalid.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may be deleted.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The logs of ETL tasks.</p>
+     */
     @NameInMap("EtlRunningLogs")
     public java.util.List<DescribeEtlJobLogsResponseBodyEtlRunningLogs> etlRunningLogs;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. If the call failed, false is returned.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -98,21 +122,39 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeEtlJobLogsResponseBodyEtlRunningLogs extends TeaModel {
+        /**
+         * <p>The state of the ETL task.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The module for which the logs are generated, such as the conversion module of ETL tasks.</p>
+         */
         @NameInMap("ContentKey")
         public String contentKey;
 
+        /**
+         * <p>The ID of the ETL task.</p>
+         */
         @NameInMap("EtlId")
         public String etlId;
 
+        /**
+         * <p>The time when the log was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("LogDatetime")
         public String logDatetime;
 
+        /**
+         * <p>The log level. Valid values: ERROR, WARN, INFO, and DEBUG.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

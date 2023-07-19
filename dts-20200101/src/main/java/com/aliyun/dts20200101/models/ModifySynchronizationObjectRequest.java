@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifySynchronizationObjectRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
@@ -13,9 +16,22 @@ public class ModifySynchronizationObjectRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The synchronization direction. Valid values:</p>
+     * <br>
+     * <p>*   **Forward**</p>
+     * <p>*   **Reverse**</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   Default value: **Forward**.</p>
+     * <p>*   This parameter is required only when the topology of the data synchronization instance is two-way synchronization.</p>
+     */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 
+    /**
+     * <p>The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.</p>
+     */
     @NameInMap("SynchronizationJobId")
     public String synchronizationJobId;
 

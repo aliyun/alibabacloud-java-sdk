@@ -4,36 +4,75 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrationJobAlertResponseBody extends TeaModel {
+    /**
+     * <p>The mobile phone numbers that receive latency-related alerts.</p>
+     */
     @NameInMap("DelayAlertPhone")
     public String delayAlertPhone;
 
+    /**
+     * <p>Indicates whether task latency is monitored. Valid values:</p>
+     * <br>
+     * <p>*   **enable**: yes</p>
+     * <p>*   **disable**: no</p>
+     */
     @NameInMap("DelayAlertStatus")
     public String delayAlertStatus;
 
+    /**
+     * <p>The threshold for triggering latency alerts. Unit: seconds.</p>
+     */
     @NameInMap("DelayOverSeconds")
     public String delayOverSeconds;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The mobile phone numbers that receive status-related alerts.</p>
+     */
     @NameInMap("ErrorAlertPhone")
     public String errorAlertPhone;
 
+    /**
+     * <p>Indicates whether task status is monitored. Valid values:</p>
+     * <br>
+     * <p>*   **enable**: yes</p>
+     * <p>*   **disable**: no</p>
+     */
     @NameInMap("ErrorAlertStatus")
     public String errorAlertStatus;
 
+    /**
+     * <p>The ID of the data migration instance.</p>
+     */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
+    /**
+     * <p>The name of the data migration task.</p>
+     */
     @NameInMap("MigrationJobName")
     public String migrationJobName;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 

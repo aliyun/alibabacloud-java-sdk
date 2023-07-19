@@ -4,18 +4,34 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class StopDedicatedClusterRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>>  You must specify one of the **InstanceId** and **DedicatedClusterId** parameters.</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("DedicatedClusterName")
     public String dedicatedClusterName;
 
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>>  You must specify one of the **InstanceId** and **DedicatedClusterId** parameters.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

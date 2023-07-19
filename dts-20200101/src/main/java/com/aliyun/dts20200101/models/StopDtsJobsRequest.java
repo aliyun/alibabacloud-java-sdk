@@ -4,9 +4,19 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class StopDtsJobsRequest extends TeaModel {
+    /**
+     * <p>The ID of the data migration or data synchronization task.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   Separate multiple task IDs by **,** (commas).</p>
+     * <p>*   You can call the [DescribeDtsJobs](~~209702~~) operation to query task IDs.</p>
+     */
     @NameInMap("DtsJobIds")
     public String dtsJobIds;
 
+    /**
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

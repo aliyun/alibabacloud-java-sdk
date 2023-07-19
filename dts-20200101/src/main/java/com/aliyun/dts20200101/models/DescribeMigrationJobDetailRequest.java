@@ -7,24 +7,42 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     @NameInMap("MigrationMode")
     public DescribeMigrationJobDetailRequestMigrationMode migrationMode;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.</p>
+     */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -98,12 +116,39 @@ public class DescribeMigrationJobDetailRequest extends TeaModel {
     }
 
     public static class DescribeMigrationJobDetailRequestMigrationMode extends TeaModel {
+        /**
+         * <p>Specifies whether to query the details of full data migration. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <br>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>> Default value: **false**</p>
+         */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
+        /**
+         * <p>Specifies whether to query the details of incremental data migration. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <br>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>> Default value: **false**</p>
+         */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
+        /**
+         * <p>Specifies whether to query the details of schema migration. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <br>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>> Default value: **false**</p>
+         */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
 

@@ -13,6 +13,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("SubscriptionInstance")
     public ConfigureSubscriptionInstanceRequestSubscriptionInstance subscriptionInstance;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
@@ -22,15 +25,31 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 
+    /**
+     * <p>The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.</p>
+     */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
+    /**
+     * <p>The network type of the change tracking instance. Set the value to **vpc**. A value of vpc indicates the Virtual Private Cloud (VPC) network type.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the **SubscriptionInstance.VPCId** and **SubscriptionInstance.VSwitchID** parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.</p>
+     * <p>*   The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</p>
+     */
     @NameInMap("SubscriptionInstanceNetworkType")
     public String subscriptionInstanceNetworkType;
 
+    /**
+     * <p>The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](~~141902~~).</p>
+     */
     @NameInMap("SubscriptionObject")
     public String subscriptionObject;
 
@@ -120,33 +139,87 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     }
 
     public static class ConfigureSubscriptionInstanceRequestSourceEndpoint extends TeaModel {
+        /**
+         * <p>The name of the source database.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The IP address of the source database.</p>
+         * <br>
+         * <p>>  This parameter is required only when the source database is a self-managed database.</p>
+         */
         @NameInMap("IP")
         public String IP;
 
+        /**
+         * <p>The ID of the source database.</p>
+         * <br>
+         * <p>>  This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the source database. Valid values:</p>
+         * <br>
+         * <p>*   **RDS**: ApsaraDB RDS for MySQL instance</p>
+         * <p>*   **PolarDB**: PolarDB for MySQL cluster</p>
+         * <p>*   **LocalInstance**: self-managed database with a public IP address</p>
+         * <p>*   **ECS**: self-managed database hosted on an Elastic Compute Service (ECS) instance</p>
+         * <p>*   **Express**: self-managed database connected over Express Connect</p>
+         * <p>*   **CEN**: self-managed database connected over Cloud Enterprise Network (CEN)</p>
+         * <p>*   **dg**: self-managed database connected over Database Gateway</p>
+         * <br>
+         * <p>>  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](~~49436~~) operation.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The system ID (SID) of the Oracle database.</p>
+         * <br>
+         * <p>>  This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the source database belongs.</p>
+         * <br>
+         * <p>>  This parameter is required only when you track data changes across different Alibaba Cloud accounts.</p>
+         */
         @NameInMap("OwnerID")
         public String ownerID;
 
+        /**
+         * <p>The password of the account that is used to connect to the source database.</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <p>The service port number of the source database.</p>
+         * <br>
+         * <p>>  This parameter is required only when the source database is a self-managed database.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.</p>
+         * <br>
+         * <p>>  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The username of the account that is used to connect to the source database.</p>
+         * <br>
+         * <p>>  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](~~145715~~).</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -238,9 +311,21 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     }
 
     public static class ConfigureSubscriptionInstanceRequestSubscriptionDataType extends TeaModel {
+        /**
+         * <p>Specifies whether to track DDL statements. Default value: true. Valid values:</p>
+         * <br>
+         * <p>*   **true**: tracks DDL statements.</p>
+         * <p>*   **false**: does not track DDL statements.</p>
+         */
         @NameInMap("DDL")
         public Boolean DDL;
 
+        /**
+         * <p>Specifies whether to track DML statements. Default value: true. Valid values:</p>
+         * <br>
+         * <p>*   **true**: tracks DML statements.</p>
+         * <p>*   **false**: does not tack DML statements.</p>
+         */
         @NameInMap("DML")
         public Boolean DML;
 
@@ -268,9 +353,19 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     }
 
     public static class ConfigureSubscriptionInstanceRequestSubscriptionInstance extends TeaModel {
+        /**
+         * <p>The ID of the VPC in which the change tracking instance is deployed.</p>
+         * <br>
+         * <p>>  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The ID of the vSwitch in the specified VPC.</p>
+         * <br>
+         * <p>>  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

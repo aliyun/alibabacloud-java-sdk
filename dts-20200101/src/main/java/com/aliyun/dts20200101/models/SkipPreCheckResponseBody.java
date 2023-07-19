@@ -4,36 +4,71 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class SkipPreCheckResponseBody extends TeaModel {
+    /**
+     * <p>The error code. This parameter will be removed in the future.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>>  If the specified **JobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **JobId** is returned for **DynamicMessage**.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the DTS task on which the precheck is performed.</p>
+     */
     @NameInMap("MigrationJobId")
     public String migrationJobId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the precheck task.</p>
+     */
     @NameInMap("ScheduleJobId")
     public String scheduleJobId;
 
+    /**
+     * <p>The shortened name of the precheck item.</p>
+     */
     @NameInMap("SkipItems")
     public String skipItems;
 
+    /**
+     * <p>The name of the precheck item.</p>
+     */
     @NameInMap("SkipNames")
     public String skipNames;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

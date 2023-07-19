@@ -4,15 +4,33 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.</p>
+     */
     @NameInMap("ConsumerGroupName")
     public String consumerGroupName;
 
+    /**
+     * <p>The password that corresponds to the username of the consumer group.</p>
+     * <br>
+     * <p>*   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>*   A password must be 8 to 32 characters in length.</p>
+     */
     @NameInMap("ConsumerGroupPassword")
     public String consumerGroupPassword;
 
+    /**
+     * <p>The username of the consumer group.</p>
+     * <br>
+     * <p>*   A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (\_).</p>
+     * <p>*   A username cannot exceed 16 characters in length.</p>
+     */
     @NameInMap("ConsumerGroupUserName")
     public String consumerGroupUserName;
 
@@ -22,6 +40,9 @@ public class CreateConsumerGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
+     */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 

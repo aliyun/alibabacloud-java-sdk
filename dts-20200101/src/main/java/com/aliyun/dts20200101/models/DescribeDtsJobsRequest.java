@@ -4,56 +4,192 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsJobsRequest extends TeaModel {
+    /**
+     * <p>The ID of the DTS dedicated cluster on which the task runs.</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    @NameInMap("DtsBisLabel")
+    public String dtsBisLabel;
+
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The ID of the parent task.</p>
+     * <br>
+     * <p>>  In most cases, you do not need to specify this parameter.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The type of the DTS task. Valid values:</p>
+     * <br>
+     * <p>*   **MIGRATION**: data migration. This is the default value.</p>
+     * <p>*   **SYNC**: data synchronization.</p>
+     * <p>*   **SUBSCRIBE**: change tracking.</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>The basis on which the returned DTS tasks are sorted. Valid values:</p>
+     * <br>
+     * <p>*   **CreateTime**: sorts the DTS tasks based on the points in time when the DTS tasks are created.</p>
+     * <p>*   **FinishTime**: sorts the DTS tasks based on the points in time when the DTS tasks are complete.</p>
+     * <p>*   **duLimit** sorts the DTS tasks based on the upper limits on DTS Units (DUs) that the DTS tasks can use. This option applies only to the DTS tasks that are run on a DTS dedicated cluster.</p>
+     * <br>
+     * <p>>  You can also set the **OrderDirection** parameter to specify whether to sort the DTS tasks in ascending or descending order.</p>
+     */
     @NameInMap("OrderColumn")
     public String orderColumn;
 
+    /**
+     * <p>The order in which the returned DTS tasks are sorted. Valid values:</p>
+     * <br>
+     * <p>*   **ASC**: sorts the DTS tasks in ascending order. This is the default value.</p>
+     * <p>*   **DESC**: sorts the DTS tasks in descending order.</p>
+     */
     @NameInMap("OrderDirection")
     public String orderDirection;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The content of the query condition.</p>
+     * <br>
+     * <p>>  You must set the **Type** parameter to specify the type of the query condition.</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>This parameter is discontinued.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The state of the DTS task.</p>
+     * <br>
+     * <p>Valid values for a data migration task:</p>
+     * <br>
+     * <p>*   **NotStarted**: The task is not started.</p>
+     * <p>*   **Prechecking**: The task is being prechecked.</p>
+     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+     * <p>*   **PreCheckPass**: The task passed the precheck.</p>
+     * <p>*   **NotConfigured**: The task is not configured.</p>
+     * <p>*   **Migrating**: The task is in progress.</p>
+     * <p>*   **Suspending**: The task is paused.</p>
+     * <p>*   **MigrationFailed**: The task failed.</p>
+     * <p>*   **Finished**: The task is complete.</p>
+     * <p>*   **Retrying**: The task is being retried.</p>
+     * <p>*   **Upgrade**: The task is being upgraded.</p>
+     * <p>*   **Locked**: The task is locked.</p>
+     * <p>*   **Downgrade**: The task is being downgraded.</p>
+     * <br>
+     * <p>Valid values for a data synchronization task:</p>
+     * <br>
+     * <p>*   **NotStarted**: The task is not started.</p>
+     * <p>*   **Prechecking**: The task is being prechecked.</p>
+     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+     * <p>*   **PreCheckPass**: The task passed the precheck.</p>
+     * <p>*   **NotConfigured**: The task is not configured.</p>
+     * <p>*   **Initializing**: The task is being initialized.</p>
+     * <p>*   **InitializeFailed**: Initialization failed.</p>
+     * <p>*   **Synchronizing**: The task is in progress.</p>
+     * <p>*   **Failed**: The task failed.</p>
+     * <p>*   **Suspending**: The task is paused.</p>
+     * <p>*   **Modifying**: The objects in the task are being modified.</p>
+     * <p>*   **Finished**: The task is complete.</p>
+     * <p>*   **Retrying**: The task is being retried.</p>
+     * <p>*   **Upgrade**: The task is being upgraded.</p>
+     * <p>*   **Locked**: The task is locked.</p>
+     * <p>*   **Downgrade**: The task is being downgraded.</p>
+     * <br>
+     * <p>Valid values for a change tracking task:</p>
+     * <br>
+     * <p>*   **NotConfigured**: The task is not configured.</p>
+     * <p>*   **NotStarted**: The task is not started.</p>
+     * <p>*   **Prechecking**: The task is being prechecked.</p>
+     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+     * <p>*   **PreCheckPass**: The task passed the precheck.</p>
+     * <p>*   **Starting**: The task is being started.</p>
+     * <p>*   **Normal**: The task is running as expected.</p>
+     * <p>*   **Retrying**: The task is being retried.</p>
+     * <p>*   **Abnormal**: The task is not running as expected.</p>
+     * <p>*   **Upgrade**: The task is being upgraded.</p>
+     * <p>*   **Locked**: The task is locked.</p>
+     * <p>*   **Downgrade**: The task is being downgraded.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the DTS task to be queried. Specify tags in the JSON format.</p>
+     * <br>
+     * <p>>  You can call the **ListTagResources** operation to query the tag key and tag value.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 
+    /**
+     * <p>The type of the query condition. Valid values:</p>
+     * <br>
+     * <p>*   **instance**: queries DTS tasks based on the ID of a DTS instance.</p>
+     * <p>*   **name**: queries DTS tasks based on the name of a DTS instance. Fuzzy match is supported.</p>
+     * <p>*   **srcRds**: queries DTS tasks based on the ID of an ApsaraDB RDS instance. The ApsaraDB RDS instance is the source instance of a DTS task.</p>
+     * <p>*   **rds**: queries DTS tasks based on the ID of an ApsaraDB RDS instance. The ApsaraDB RDS instance is the destination instance of a DTS task.</p>
+     * <br>
+     * <p>>  You must set the **Params** parameter to specify the content of the query condition.</p>
+     */
     @NameInMap("Type")
     public String type;
+
+    /**
+     * <p>Specifies whether to skip the **DbObject** parameter in the response. The DbObject parameter specifies the objects of the data migration, data synchronization, or change tracking task. Valid values:</p>
+     * <br>
+     * <p>- **true**: does not return **DbObject**.</p>
+     * <p>- **false**: returns **DbObject**. If you set this parameter to false, the response time is shortened.</p>
+     */
+    @NameInMap("WithoutDbList")
+    public Boolean withoutDbList;
 
     public static DescribeDtsJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDtsJobsRequest self = new DescribeDtsJobsRequest();
@@ -66,6 +202,14 @@ public class DescribeDtsJobsRequest extends TeaModel {
     }
     public String getDedicatedClusterId() {
         return this.dedicatedClusterId;
+    }
+
+    public DescribeDtsJobsRequest setDtsBisLabel(String dtsBisLabel) {
+        this.dtsBisLabel = dtsBisLabel;
+        return this;
+    }
+    public String getDtsBisLabel() {
+        return this.dtsBisLabel;
     }
 
     public DescribeDtsJobsRequest setDtsInstanceId(String dtsInstanceId) {
@@ -194,6 +338,14 @@ public class DescribeDtsJobsRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public DescribeDtsJobsRequest setWithoutDbList(Boolean withoutDbList) {
+        this.withoutDbList = withoutDbList;
+        return this;
+    }
+    public Boolean getWithoutDbList() {
+        return this.withoutDbList;
     }
 
 }

@@ -4,54 +4,105 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned by the backend service. The number is incremented.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The CPU utilization of the cluster. Unit: percentage.</p>
+     */
     @NameInMap("CpuTotal")
     public Float cpuTotal;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <p>The total disk size of the cluster. Unit: GB.</p>
+     */
     @NameInMap("DiskTotal")
     public Float diskTotal;
 
+    /**
+     * <p>The disk usage of the cluster. Unit: GB.</p>
+     */
     @NameInMap("DiskUsed")
     public Float diskUsed;
 
+    /**
+     * <p>The total number of DTS units (DUs).</p>
+     */
     @NameInMap("DuTotal")
     public Integer duTotal;
 
+    /**
+     * <p>The usage of DUs.</p>
+     */
     @NameInMap("DuUsed")
     public Integer duUsed;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace %s in the ErrMessage parameter.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The total amount of memory. A value of 0 is temporarily returned.</p>
+     */
     @NameInMap("MemoryTotal")
     public Float memoryTotal;
 
+    /**
+     * <p>The memory usage. A value of 0 is temporarily returned.</p>
+     */
     @NameInMap("MemoryUsed")
     public Float memoryUsed;
 
+    /**
+     * <p>The memory usage.</p>
+     */
     @NameInMap("MemoryUsedPercentage")
     public Float memoryUsedPercentage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The number of tasks that are in progress.</p>
+     */
     @NameInMap("TaskRunning")
     public Integer taskRunning;
 

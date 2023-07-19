@@ -4,18 +4,42 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobPasswordRequest extends TeaModel {
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>Specifies the database to which the password belongs. Valid values:</p>
+     * <br>
+     * <p>*   **src**: source database</p>
+     * <p>*   **dest**: destination database</p>
+     * <br>
+     * <p>>  This parameter must be specified.</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The new password of the account.</p>
+     * <br>
+     * <p>>  This parameter must be specified and cannot be the same as the current password.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The account of the source or destination database.</p>
+     * <br>
+     * <p>>  This parameter must be specified.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

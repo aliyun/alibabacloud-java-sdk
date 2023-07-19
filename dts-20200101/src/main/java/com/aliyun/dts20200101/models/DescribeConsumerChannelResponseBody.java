@@ -4,30 +4,57 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerChannelResponseBody extends TeaModel {
+    /**
+     * <p>The details of the consumer groups.</p>
+     */
     @NameInMap("ConsumerChannels")
     public java.util.List<DescribeConsumerChannelResponseBodyConsumerChannels> consumerChannels;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The maximum number of consumer groups that can be displayed on one page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The total number of consumer groups.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -109,21 +136,45 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
     }
 
     public static class DescribeConsumerChannelResponseBodyConsumerChannels extends TeaModel {
+        /**
+         * <p>The ID of the consumer group.</p>
+         */
         @NameInMap("ConsumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <p>The name of the consumer group.</p>
+         */
         @NameInMap("ConsumerGroupName")
         public String consumerGroupName;
 
+        /**
+         * <p>The username of the consumer group.</p>
+         */
         @NameInMap("ConsumerGroupUserName")
         public String consumerGroupUserName;
 
+        /**
+         * <p>The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
+         */
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
 
+        /**
+         * <p>The message latency, which is the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data tracked by the change tracking task. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <br>
+         * <p>For example, the latest data in the source database is generated at 10:00. The change tracking task reads the data generated at 09:55, and the downstream client consumes the data generated at 09:30. In this case, the message latency is the UNIX timestamp difference between 09:55 and 09:30.</p>
+         * <br>
+         * <p>>  If the return value of this parameter is **-1**, no client is connected to the consumer group.</p>
+         */
         @NameInMap("MessageDelay")
         public Long messageDelay;
 
+        /**
+         * <p>The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.</p>
+         * <br>
+         * <p>>  If the return value of this parameter is -1, no client is connected to the consumer group.</p>
+         */
         @NameInMap("UnconsumedData")
         public Long unconsumedData;
 

@@ -4,9 +4,15 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyConsumptionTimestampRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The consumption checkpoint. The format is *yyyy-MM-dd*T*HH:mm:ss*Z. The time is displayed in UTC.</p>
+     */
     @NameInMap("ConsumptionTimestamp")
     public String consumptionTimestamp;
 
@@ -16,6 +22,9 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.</p>
+     */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 

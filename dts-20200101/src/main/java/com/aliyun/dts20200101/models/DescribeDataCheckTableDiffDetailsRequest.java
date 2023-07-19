@@ -4,11 +4,14 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
+    @NameInMap("CheckType")
+    public Integer checkType;
+
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("JobStepId")
-    public String jobStepId;
+    @NameInMap("DtsJobId")
+    public String dtsJobId;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -24,6 +27,14 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDataCheckTableDiffDetailsRequest setCheckType(Integer checkType) {
+        this.checkType = checkType;
+        return this;
+    }
+    public Integer getCheckType() {
+        return this.checkType;
+    }
+
     public DescribeDataCheckTableDiffDetailsRequest setDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -32,12 +43,12 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
         return this.dbName;
     }
 
-    public DescribeDataCheckTableDiffDetailsRequest setJobStepId(String jobStepId) {
-        this.jobStepId = jobStepId;
+    public DescribeDataCheckTableDiffDetailsRequest setDtsJobId(String dtsJobId) {
+        this.dtsJobId = dtsJobId;
         return this;
     }
-    public String getJobStepId() {
-        return this.jobStepId;
+    public String getDtsJobId() {
+        return this.dtsJobId;
     }
 
     public DescribeDataCheckTableDiffDetailsRequest setPageNumber(Long pageNumber) {

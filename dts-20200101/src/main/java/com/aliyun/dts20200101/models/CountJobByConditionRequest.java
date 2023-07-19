@@ -4,30 +4,118 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CountJobByConditionRequest extends TeaModel {
+    /**
+     * <p>The type of the destination database.</p>
+     */
     @NameInMap("DestDbType")
     public String destDbType;
 
+    /**
+     * <p>The ID of the DTS task.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The type of the DTS task. Valid values:</p>
+     * <br>
+     * <p>*   **MIGRATION**: data migration task</p>
+     * <p>*   **SYNC**: data synchronization task</p>
+     * <p>*   **SUBSCRIBE**: change tracking task</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>The content of the query condition, which corresponds to the value of the JobType parameter.</p>
+     */
     @NameInMap("Params")
     public String params;
 
+    /**
+     * <p>One of the query conditions. The ID of the region. For more information, see [Supported regions](~~141033~~).</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [Supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the source database.</p>
+     */
     @NameInMap("SrcDbType")
     public String srcDbType;
 
+    /**
+     * <p>The status of the DTS task.</p>
+     * <br>
+     * <p>Valid values for a data migration task:</p>
+     * <br>
+     * <p>*   **NotStarted**: The task is not started.</p>
+     * <p>*   **Prechecking**: The task is in precheck.</p>
+     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+     * <p>*   **PreCheckPass**: The task passed the precheck.</p>
+     * <p>*   **NotConfigured**: The task is not configured.</p>
+     * <p>*   **Migrating**: The task is in progress.</p>
+     * <p>*   **Suspending**: The task is paused.</p>
+     * <p>*   **MigrationFailed**: The task failed to migrate data.</p>
+     * <p>*   **Finished**: The task is complete.</p>
+     * <p>*   **Retrying**: The task is being retried.</p>
+     * <p>*   **Upgrade**: The task is being upgraded.</p>
+     * <p>*   **Locked**: The task is locked.</p>
+     * <p>*   **Downgrade**: The task is being downgraded.</p>
+     * <br>
+     * <p>Valid values for a data synchronization task:</p>
+     * <br>
+     * <p>*   **NotStarted**: The task is not started.</p>
+     * <p>*   **Prechecking**: The task is in precheck.</p>
+     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+     * <p>*   **PreCheckPass**: The task passed the precheck.</p>
+     * <p>*   **NotConfigured**: The task is not configured.</p>
+     * <p>*   **Initializing**: The task is performing initial synchronization.</p>
+     * <p>*   **InitializeFailed**: Initial synchronization failed.</p>
+     * <p>*   **Synchronizing**: The task is in progress.</p>
+     * <p>*   **Failed**: The task failed to synchronize data.</p>
+     * <p>*   **Suspending**: The task is paused.</p>
+     * <p>*   **Modifying**: The objects in the task are being modified.</p>
+     * <p>*   **Finished**: The task is complete.</p>
+     * <p>*   **Retrying**: The task is being retried.</p>
+     * <p>*   **Upgrade**: The task is being upgraded.</p>
+     * <p>*   **Locked**: The task is locked.</p>
+     * <p>*   **Downgrade**: The task is being downgraded.</p>
+     * <br>
+     * <p>Valid values for a change tracking task:</p>
+     * <br>
+     * <p>*   **NotConfigured**: The task is not configured.</p>
+     * <p>*   **NotStarted**: The task is not started.</p>
+     * <p>*   **Prechecking**: The task is in precheck.</p>
+     * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+     * <p>*   **PreCheckPass**: The task passed the precheck.</p>
+     * <p>*   **Starting**: The task is being started.</p>
+     * <p>*   **Normal**: The task is running as expected.</p>
+     * <p>*   **Retrying**: The task is being retried.</p>
+     * <p>*   **Abnormal**: The task is not running as expected.</p>
+     * <p>*   **Upgrade**: The task is being upgraded.</p>
+     * <p>*   **Locked**: The task is locked.</p>
+     * <p>*   **Downgrade**: The task is being downgraded.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The content of the query condition. Valid values:</p>
+     * <br>
+     * <p>*   **name**: the name of the task</p>
+     * <p>*   **rds**: the ID of the destination instance</p>
+     * <p>*   **instance**: the ID of the Data Transmission Service (DTS) instance</p>
+     * <p>*   **srcRds**: the ID of the source instance</p>
+     * <br>
+     * <p>> The value of this parameter corresponds to the value of the **JobType** parameter.</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,21 +4,44 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagKeysRequest extends TeaModel {
+    /**
+     * <p>The type of the tag. Valid values:</p>
+     * <br>
+     * <p>*   **Custom**: The tag is added by a user.</p>
+     * <p>*   **System**: The tag is added by the system.</p>
+     * <br>
+     * <p>>  By default, if the parameter is left empty, custom tags and system tags are returned.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1. This parameter is used together with PageSize.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of tags to return on each page if the DTS instance has multiple tags. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The resource type. Set the value to **ALIYUN::DTS::INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

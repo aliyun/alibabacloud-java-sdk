@@ -4,21 +4,39 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagValuesResponseBody extends TeaModel {
+    /**
+     * <p>The type of the tag key.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The start page of the returned pages.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of tag values returned on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag values that are associated with the tag key.</p>
+     */
     @NameInMap("TagValues")
     public java.util.List<String> tagValues;
 
+    /**
+     * <p>The total number of tag values that are associated with the tag key.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

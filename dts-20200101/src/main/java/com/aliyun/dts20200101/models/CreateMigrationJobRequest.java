@@ -4,21 +4,40 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateMigrationJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   For more information about the test performance of each specification, see [Specifications of data migration instances](~~26606~~).</p>
+     * <p>*   For more information about the pricing of data migration instances, see [Pricing](~~117780~~).</p>
+     */
     @NameInMap("MigrationJobClass")
     public String migrationJobClass;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the region where the data migration instance resides. The region ID of the data migration instance is the same as that of the destination database. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the region where the data migration instance resides. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

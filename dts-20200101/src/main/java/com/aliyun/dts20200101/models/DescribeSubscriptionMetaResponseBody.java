@@ -4,21 +4,39 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionMetaResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the subtasks.</p>
+     */
     @NameInMap("SubscriptionMetaList")
     public java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> subscriptionMetaList;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -76,18 +94,35 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     }
 
     public static class DescribeSubscriptionMetaResponseBodySubscriptionMetaList extends TeaModel {
+        /**
+         * <p>The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.</p>
+         * <br>
+         * <p>>  You can use a search engine to obtain a UNIX timestamp converter.</p>
+         */
         @NameInMap("Checkpoint")
         public Long checkpoint;
 
+        /**
+         * <p>The objects of the subtask. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+         */
         @NameInMap("DBList")
         public String DBList;
 
+        /**
+         * <p>The endpoint and port number of the change tracking instance.</p>
+         */
         @NameInMap("DProxyUrl")
         public String DProxyUrl;
 
+        /**
+         * <p>The consumer group ID of the subtask.</p>
+         */
         @NameInMap("Sid")
         public String sid;
 
+        /**
+         * <p>The topic of the subtask.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 

@@ -4,15 +4,26 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobDuLimitRequest extends TeaModel {
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The upper limit of DUs for the DTS task.</p>
+     * <br>
+     * <p>>  Minimum value: **1**.</p>
+     */
     @NameInMap("DuLimit")
     public Long duLimit;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the region in which the DTS instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
