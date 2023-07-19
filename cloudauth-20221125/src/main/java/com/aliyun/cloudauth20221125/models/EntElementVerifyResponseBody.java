@@ -60,6 +60,9 @@ public class EntElementVerifyResponseBody extends TeaModel {
         @NameInMap("BizCode")
         public String bizCode;
 
+        @NameInMap("OpenTime")
+        public String openTime;
+
         @NameInMap("ReasonCode")
         public String reasonCode;
 
@@ -80,6 +83,14 @@ public class EntElementVerifyResponseBody extends TeaModel {
         }
         public String getBizCode() {
             return this.bizCode;
+        }
+
+        public EntElementVerifyResponseBodyResult setOpenTime(String openTime) {
+            this.openTime = openTime;
+            return this;
+        }
+        public String getOpenTime() {
+            return this.openTime;
         }
 
         public EntElementVerifyResponseBodyResult setReasonCode(String reasonCode) {
