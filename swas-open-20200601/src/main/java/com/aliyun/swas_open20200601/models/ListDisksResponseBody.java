@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListDisksResponseBody extends TeaModel {
     /**
-     * <p>Details about the disks.</p>
+     * <p>The region ID of the disks.</p>
      */
     @NameInMap("Disks")
     public java.util.List<ListDisksResponseBodyDisks> disks;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class ListDisksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of disks.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -134,6 +134,9 @@ public class ListDisksResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>轻量应用服务器名称。</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
@@ -143,6 +146,9 @@ public class ListDisksResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>磁盘备注。</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

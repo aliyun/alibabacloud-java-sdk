@@ -1581,9 +1581,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Usage notes
       * You can specify multiple request parameters such as `InstanceId` and `DiskIds`. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ## QPS limits
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](/help/en/simple-application-server/latest/qps-limit-1).
       *
       * @param request ListDisksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1634,9 +1633,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Usage notes
       * You can specify multiple request parameters such as `InstanceId` and `DiskIds`. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ## QPS limits
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](/help/en/simple-application-server/latest/qps-limit-1).
       *
       * @param request ListDisksRequest
       * @return ListDisksResponse
@@ -1889,6 +1887,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2063,9 +2065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ## QPS limits
-      * The queries per second (QPS) limit for a single user for the API operation is 10 calls per minute. If the number of calls to the API operation per minute exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limit](/help/en/simple-application-server/latest/qps-limit-1).
+      * ## Description
+      * You can configure multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Configured parameters have logical AND relations. Only the configured parameters are included in the filter conditions.
+      * ### QPS limits
+      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
       *
       * @param request ListSnapshotsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2120,9 +2123,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to be queried. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ## QPS limits
-      * The queries per second (QPS) limit for a single user for the API operation is 10 calls per minute. If the number of calls to the API operation per minute exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limit](/help/en/simple-application-server/latest/qps-limit-1).
+      * ## Description
+      * You can configure multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Configured parameters have logical AND relations. Only the configured parameters are included in the filter conditions.
+      * ### QPS limits
+      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
       *
       * @param request ListSnapshotsRequest
       * @return ListSnapshotsResponse
@@ -3086,6 +3090,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartInstancesResponse startInstances(StartInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startInstancesWithOptions(request, runtime);
+    }
+
+    public StartTerminalSessionResponse startTerminalSessionWithOptions(StartTerminalSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartTerminalSession"),
+            new TeaPair("version", "2020-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartTerminalSessionResponse());
+    }
+
+    public StartTerminalSessionResponse startTerminalSession(StartTerminalSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startTerminalSessionWithOptions(request, runtime);
     }
 
     public StopDatabaseInstanceResponse stopDatabaseInstanceWithOptions(StopDatabaseInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
