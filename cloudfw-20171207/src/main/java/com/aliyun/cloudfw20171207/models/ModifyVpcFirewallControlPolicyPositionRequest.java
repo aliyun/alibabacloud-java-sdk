@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
+    @NameInMap("AclUuid")
+    public String aclUuid;
+
     /**
      * <p>The natural language of the request and response. </p>
      * <br>
@@ -45,6 +48,14 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends TeaModel {
     public static ModifyVpcFirewallControlPolicyPositionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpcFirewallControlPolicyPositionRequest self = new ModifyVpcFirewallControlPolicyPositionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVpcFirewallControlPolicyPositionRequest setAclUuid(String aclUuid) {
+        this.aclUuid = aclUuid;
+        return this;
+    }
+    public String getAclUuid() {
+        return this.aclUuid;
     }
 
     public ModifyVpcFirewallControlPolicyPositionRequest setLang(String lang) {

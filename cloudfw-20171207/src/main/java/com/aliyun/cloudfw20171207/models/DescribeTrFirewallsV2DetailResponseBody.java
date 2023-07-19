@@ -28,8 +28,14 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @NameInMap("FirewallStatus")
     public String firewallStatus;
 
+    @NameInMap("FirewallSubnetCidr")
+    public String firewallSubnetCidr;
+
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
+
+    @NameInMap("FirewallVpcCidr")
+    public String firewallVpcCidr;
 
     @NameInMap("RegionNo")
     public String regionNo;
@@ -39,6 +45,12 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
 
     @NameInMap("RouteMode")
     public String routeMode;
+
+    @NameInMap("TrAttachmentMasterCidr")
+    public String trAttachmentMasterCidr;
+
+    @NameInMap("TrAttachmentSlaveCidr")
+    public String trAttachmentSlaveCidr;
 
     @NameInMap("TransitRouterId")
     public String transitRouterId;
@@ -112,12 +124,28 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
         return this.firewallStatus;
     }
 
+    public DescribeTrFirewallsV2DetailResponseBody setFirewallSubnetCidr(String firewallSubnetCidr) {
+        this.firewallSubnetCidr = firewallSubnetCidr;
+        return this;
+    }
+    public String getFirewallSubnetCidr() {
+        return this.firewallSubnetCidr;
+    }
+
     public DescribeTrFirewallsV2DetailResponseBody setFirewallSwitchStatus(String firewallSwitchStatus) {
         this.firewallSwitchStatus = firewallSwitchStatus;
         return this;
     }
     public String getFirewallSwitchStatus() {
         return this.firewallSwitchStatus;
+    }
+
+    public DescribeTrFirewallsV2DetailResponseBody setFirewallVpcCidr(String firewallVpcCidr) {
+        this.firewallVpcCidr = firewallVpcCidr;
+        return this;
+    }
+    public String getFirewallVpcCidr() {
+        return this.firewallVpcCidr;
     }
 
     public DescribeTrFirewallsV2DetailResponseBody setRegionNo(String regionNo) {
@@ -142,6 +170,22 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     }
     public String getRouteMode() {
         return this.routeMode;
+    }
+
+    public DescribeTrFirewallsV2DetailResponseBody setTrAttachmentMasterCidr(String trAttachmentMasterCidr) {
+        this.trAttachmentMasterCidr = trAttachmentMasterCidr;
+        return this;
+    }
+    public String getTrAttachmentMasterCidr() {
+        return this.trAttachmentMasterCidr;
+    }
+
+    public DescribeTrFirewallsV2DetailResponseBody setTrAttachmentSlaveCidr(String trAttachmentSlaveCidr) {
+        this.trAttachmentSlaveCidr = trAttachmentSlaveCidr;
+        return this;
+    }
+    public String getTrAttachmentSlaveCidr() {
+        return this.trAttachmentSlaveCidr;
     }
 
     public DescribeTrFirewallsV2DetailResponseBody setTransitRouterId(String transitRouterId) {
