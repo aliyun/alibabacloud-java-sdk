@@ -4,12 +4,22 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDTSIPRequest extends TeaModel {
+    /**
+     * <p>The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <br>
+     * <p>>  If the destination instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.</p>
+     */
     @NameInMap("DestinationEndpointRegion")
     public String destinationEndpointRegion;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <br>
+     * <p>>  If the source instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.</p>
+     */
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;
 

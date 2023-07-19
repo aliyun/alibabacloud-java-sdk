@@ -4,39 +4,77 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of DTS tasks and the details of each task.</p>
+     */
     @NameInMap("DtsJobList")
     public java.util.List<DescribeDtsJobsResponseBodyDtsJobList> dtsJobList;
 
+    /**
+     * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>>  For example, if the value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The DTS tasks and the details of each task.</p>
+     */
     @NameInMap("EtlDemoList")
     public java.util.List<DescribeDtsJobsResponseBodyEtlDemoList> etlDemoList;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of DTS tasks that meet the query condition.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -142,18 +180,36 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus extends TeaModel {
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+         * <br>
+         * <p>- **true** </p>
+         * <p>- **false**</p>
+         */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
+        /**
+         * <p>The progress of the task. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of tables that have been migrated.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of the task. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -205,15 +261,33 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus extends TeaModel {
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of the ETL task.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of records that have been processed by the ETL task.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of the ETL task. Valid values:</p>
+         * <br>
+         * <p>*   **NotStarted**: The task is not started.</p>
+         * <p>*   **Migrating**: The task is in progress.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Finished**: The task is complete.</p>
+         * <p>*   **Catched**: The task is not delayed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -257,15 +331,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if full data synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of full data synchronization. This is expressed as a percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of records that have been synchronized during full data synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of full data synchronization. Valid values:</p>
+         * <br>
+         * <p>*   **NotStarted**: The task is not started.</p>
+         * <p>*   **Migrating**: The task is in progress.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -309,18 +400,44 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if incremental data migration or synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         * <br>
+         * <p>>  To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
+        /**
+         * <p>The progress of incremental data migration or synchronization.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of records that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of incremental data migration or synchronization. Valid values:</p>
+         * <br>
+         * <p>*   **NotStarted**: The task is not started.</p>
+         * <p>*   **Migrating**: The task is in progress.</p>
+         * <p>*   **Failed**: The task failed.</p>
+         * <p>*   **Finished**: The task is complete.</p>
+         * <p>*   **Catched**: The task is not delayed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -372,33 +489,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database type of the destination instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the destination instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the destination instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the **EngineName** parameter of the destination instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The database service port of the destination instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **DISABLE**: SSL encryption is disabled.</p>
+         * <p>*   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.</p>
+         * <p>*   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.</p>
+         * <p>*   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the destination instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -490,9 +644,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListErrorDetails extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The URL of the documentation.</p>
+         */
         @NameInMap("HelpUrl")
         public String helpUrl;
 
@@ -519,13 +679,185 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus extends TeaModel {
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The progress of the full data verification task. Unit: percentage.</p>
+         */
+        @NameInMap("Percent")
+        public String percent;
+
+        /**
+         * <p>The progress of the full data verification task.</p>
+         */
+        @NameInMap("Progress")
+        public String progress;
+
+        /**
+         * <p>The state of the full data verification task. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The verification is not started. </p>
+         * <p>- **Checking**: The verification is in progress. </p>
+         * <p>- **Failed**: The verification failed. </p>
+         * <p>- **Finished**: The verification is complete.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus extends TeaModel {
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        /**
+         * <p>The progress of the incremental data verification task. Unit: percentage.</p>
+         */
+        @NameInMap("Percent")
+        public String percent;
+
+        /**
+         * <p>The progress of the incremental data verification task.</p>
+         */
+        @NameInMap("Progress")
+        public String progress;
+
+        /**
+         * <p>The state of the incremental data verification task. Valid values:</p>
+         * <br>
+         * <p>- **Catched**: The verification is delayed. </p>
+         * <p>- **NotStarted**: The verification is not started. </p>
+         * <p>- **Checking**: The verification is in progress. </p>
+         * <p>- **Failed**: The verification failed.</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeDtsJobsResponseBodyDtsJobListMigrationMode extends TeaModel {
+        /**
+         * <p>Indicates whether full data migration or synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
+        /**
+         * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
+        /**
+         * <p>Indicates whether full data verification is performed. Valid values:</p>
+         * <p>-  **true**: yes</p>
+         * <p>-   **false**: no</p>
+         */
+        @NameInMap("FullDataCheck")
+        public Boolean fullDataCheck;
+
+        /**
+         * <p>Indicates whether incremental data verification is performed. Valid values:</p>
+         * <p>-  **true**: yes</p>
+         * <p>-   **false**: no</p>
+         */
+        @NameInMap("IncDataCheck")
+        public Boolean incDataCheck;
+
+        /**
+         * <p>Indicates whether schema migration or schema synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false**: no</p>
+         */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
 
@@ -550,6 +882,22 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.dataSynchronization;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListMigrationMode setFullDataCheck(Boolean fullDataCheck) {
+            this.fullDataCheck = fullDataCheck;
+            return this;
+        }
+        public Boolean getFullDataCheck() {
+            return this.fullDataCheck;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListMigrationMode setIncDataCheck(Boolean incDataCheck) {
+            this.incDataCheck = incDataCheck;
+            return this;
+        }
+        public Boolean getIncDataCheck() {
+            return this.incDataCheck;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode setStructureInitialization(Boolean structureInitialization) {
             this.structureInitialization = structureInitialization;
             return this;
@@ -561,9 +909,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListPerformance extends TeaModel {
+        /**
+         * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         */
         @NameInMap("Rps")
         public String rps;
 
@@ -591,18 +945,40 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail extends TeaModel {
+        /**
+         * <p>The name of the precheck item.</p>
+         */
         @NameInMap("CheckItem")
         public String checkItem;
 
+        /**
+         * <p>The description of the precheck item.</p>
+         */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
+        /**
+         * <p>The precheck result. Valid values:</p>
+         * <br>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
+         */
         @NameInMap("CheckResult")
         public String checkResult;
 
+        /**
+         * <p>The error message returned if the task failed to pass the precheck.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.</p>
+         */
         @NameInMap("FailedReason")
         public String failedReason;
 
+        /**
+         * <p>The method to fix the precheck failure.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the value of the **CheckResult** parameter is **Failed**.</p>
+         */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -654,15 +1030,33 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus extends TeaModel {
+        /**
+         * <p>The result of each precheck item.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<DescribeDtsJobsResponseBodyDtsJobListPrecheckStatusDetail> detail;
 
+        /**
+         * <p>The cause of the precheck failure.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The precheck progress. This is expressed as a percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The precheck status. Valid values:</p>
+         * <br>
+         * <p>*   **NotStarted**</p>
+         * <p>*   **Suspending**:</p>
+         * <p>*   **Checking**</p>
+         * <p>*   **Failed**</p>
+         * <p>*   **Finished**</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -706,42 +1100,94 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListRetryState extends TeaModel {
+        /**
+         * <p>The error message returned if these retries failed.</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The maximum duration of a retry. Unit: seconds.</p>
+         */
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("MigrationErrCode")
         public String migrationErrCode;
 
+        /**
+         * <p>The ID of the error code-related documentation.</p>
+         */
         @NameInMap("MigrationErrHelpDocId")
         public String migrationErrHelpDocId;
 
+        /**
+         * <p>The key of the error code-related documentation.</p>
+         */
         @NameInMap("MigrationErrHelpDocKey")
         public String migrationErrHelpDocKey;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("MigrationErrMsg")
         public String migrationErrMsg;
 
+        /**
+         * <p>The type of the error code.</p>
+         */
+        @NameInMap("MigrationErrType")
+        public String migrationErrType;
+
+        /**
+         * <p>The solution to the error.</p>
+         */
         @NameInMap("MigrationErrWorkaround")
         public String migrationErrWorkaround;
 
+        /**
+         * <p>The progress of the instance when DTS retries.</p>
+         */
         @NameInMap("Module")
         public String module;
 
+        /**
+         * <p>The number of retries that have been performed.</p>
+         */
         @NameInMap("RetryCount")
         public Integer retryCount;
 
+        /**
+         * <p>The object on which these retries are performed. Valid values:</p>
+         * <br>
+         * <p>- **srcDB**: the source database </p>
+         * <p>- **destDB**: the destination database </p>
+         * <p>- **inner_module**: an internal module of DTS</p>
+         */
         @NameInMap("RetryTarget")
         public String retryTarget;
 
+        /**
+         * <p>The time that has elapsed from the time when the first retry starts. Unit: seconds.</p>
+         */
         @NameInMap("RetryTime")
         public Integer retryTime;
 
+        /**
+         * <p>Indicates whether the task is being retried. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("Retrying")
         public Boolean retrying;
 
@@ -806,6 +1252,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.migrationErrMsg;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListRetryState setMigrationErrType(String migrationErrType) {
+            this.migrationErrType = migrationErrType;
+            return this;
+        }
+        public String getMigrationErrType() {
+            return this.migrationErrType;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListRetryState setMigrationErrWorkaround(String migrationErrWorkaround) {
             this.migrationErrWorkaround = migrationErrWorkaround;
             return this;
@@ -857,15 +1311,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if initial full data synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of initial full data synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of entries that have been synchronized during initial full data synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of initial full data synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -909,18 +1380,38 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if incremental data synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         * <br>
+         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
+        /**
+         * <p>The progress of incremental data synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of incremental data synchronization.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -972,33 +1463,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database that contains the synchronized objects in the destination instance.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database engine of the destination instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the destination instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the destination instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The port number of the destination instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>- **DISABLE**: SSL encryption is disabled. </p>
+         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
+         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
+         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the destination instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -1090,9 +1618,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The URL of the documentation.</p>
+         */
         @NameInMap("HelpUrl")
         public String helpUrl;
 
@@ -1120,12 +1654,28 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode extends TeaModel {
+        /**
+         * <p>Indicates whether initial full data synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>-  **true**</p>
+         * <p>-  **false**</p>
+         */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
+        /**
+         * <p>Indicates whether incremental data synchronization is performed. Valid values:</p>
+         * <p>-  **true**</p>
+         * <p>-  **false**</p>
+         */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
+        /**
+         * <p>Indicates whether initial schema synchronization is performed. Valid values:</p>
+         * <p>-  **true**</p>
+         * <p>-  **false**</p>
+         */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
 
@@ -1161,9 +1711,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance extends TeaModel {
+        /**
+         * <p>The size of data that is synchronized per second. Unit: MB/s.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The number of times that SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         */
         @NameInMap("Rps")
         public String rps;
 
@@ -1191,18 +1747,36 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail extends TeaModel {
+        /**
+         * <p>The name of the precheck item.</p>
+         */
         @NameInMap("CheckItem")
         public String checkItem;
 
+        /**
+         * <p>The description of the precheck item.</p>
+         */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
+        /**
+         * <p>The precheck result. Valid values:</p>
+         * <br>
+         * <p>- **Success**</p>
+         * <p>- **Failed**</p>
+         */
         @NameInMap("CheckResult")
         public String checkResult;
 
+        /**
+         * <p>The error message returned if the task failed to pass the precheck.</p>
+         */
         @NameInMap("FailedReason")
         public String failedReason;
 
+        /**
+         * <p>The method to fix a precheck failure.</p>
+         */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -1254,15 +1828,33 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus extends TeaModel {
+        /**
+         * <p>The result of each precheck item.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatusDetail> detail;
 
+        /**
+         * <p>The error message returned if the precheck failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The precheck progress. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The precheck state. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The precheck is not started. </p>
+         * <p>- **Suspending**: The precheck is paused. </p>
+         * <p>- **Checking**: The precheck is in progress. </p>
+         * <p>- **Failed**: The precheck failed. </p>
+         * <p>- **Finished**: The precheck is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -1306,33 +1898,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database engine of the source instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the source instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the source instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The port number of the source instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>- **DISABLE**: SSL encryption is disabled. </p>
+         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
+         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
+         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the source instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -1424,15 +2053,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if initial schema synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of initial schema synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of tables that have been synchronized during initial schema synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of initial schema synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -1476,84 +2122,178 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJob extends TeaModel {
+        /**
+         * <p>The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
+        /**
+         * <p>The CPU utilization of the instance. Unit: percentage.</p>
+         */
         @NameInMap("CpuUsage")
         public String cpuUsage;
 
+        /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The state of initial full data synchronization.</p>
+         */
         @NameInMap("DataInitializationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataInitializationStatus dataInitializationStatus;
 
+        /**
+         * <p>The state of incremental data synchronization.</p>
+         */
         @NameInMap("DataSynchronizationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDataSynchronizationStatus dataSynchronizationStatus;
 
+        /**
+         * <p>The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.</p>
+         */
         @NameInMap("DbObject")
         public String dbObject;
 
+        /**
+         * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+         */
         @NameInMap("DedicatedClusterId")
         public String dedicatedClusterId;
 
+        /**
+         * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+         */
         @NameInMap("Delay")
         public Long delay;
 
+        /**
+         * <p>The connection settings of the destination instance.</p>
+         */
         @NameInMap("DestinationEndpoint")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobDestinationEndpoint destinationEndpoint;
 
+        /**
+         * <p>The ID of the data synchronization instance.</p>
+         */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
+        /**
+         * <p>The instance class. </p>
+         * <br>
+         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).</p>
+         */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
+        /**
+         * <p>The synchronization direction. **Reverse** is returned.</p>
+         */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
+        /**
+         * <p>The ID of the synchronization task.</p>
+         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
+        /**
+         * <p>The name of the data synchronization task.</p>
+         */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        /**
+         * <p>The number of DUs that have been used.</p>
+         */
         @NameInMap("DuUsage")
         public Long duUsage;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorDetails")
         public java.util.List<DescribeDtsJobsResponseBodyDtsJobListReverseJobErrorDetails> errorDetails;
 
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The checkpoint of the ETL task.</p>
+         */
+        @NameInMap("EtlSafeCheckpoint")
+        public String etlSafeCheckpoint;
+
+        /**
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **PayType** is **PrePaid**.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The memory that has been used. Unit: MB.</p>
+         */
         @NameInMap("MemUsage")
         public String memUsage;
 
+        /**
+         * <p>The initial synchronization types.</p>
+         */
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode migrationMode;
 
+        /**
+         * <p>The billing method of the DTS instance. Valid values:</p>
+         * <br>
+         * <p>- **PrePaid**: subscription</p>
+         * <p>- **PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The performance of the data synchronization instance.</p>
+         */
         @NameInMap("Performance")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPerformance performance;
 
+        /**
+         * <p>The precheck state.</p>
+         */
         @NameInMap("PrecheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobPrecheckStatus precheckStatus;
 
+        /**
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         */
         @NameInMap("Reserved")
         public String reserved;
 
+        /**
+         * <p>The connection settings of the source instance.</p>
+         */
         @NameInMap("SourceEndpoint")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobSourceEndpoint sourceEndpoint;
 
+        /**
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The state of initial schema synchronization.</p>
+         */
         @NameInMap("StructureInitializationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus structureInitializationStatus;
 
@@ -1698,6 +2438,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setEtlSafeCheckpoint(String etlSafeCheckpoint) {
+            this.etlSafeCheckpoint = etlSafeCheckpoint;
+            return this;
+        }
+        public String getEtlSafeCheckpoint() {
+            return this.etlSafeCheckpoint;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
@@ -1781,33 +2529,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database engine of the source instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the source instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the source instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The port number of the source instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>- **DISABLE**: SSL encryption is disabled. </p>
+         * <p>- **ENABLE_WITH_CERTIFICAT**E: SSL encryption is enabled and the CA certificate is uploaded. </p>
+         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
+         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the source instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -1899,15 +2684,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if schema migration or initial schema synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of schema migration or initial schema synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of schema migration or initial schema synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -1951,9 +2753,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListTagList extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -1981,141 +2789,327 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobList extends TeaModel {
+        /**
+         * <p>Indicates whether the **new** change tracking feature is used.</p>
+         * <br>
+         * <p>>  This parameter is returned only for change tracking instances of the new version.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BeginTimestamp")
         public String beginTimestamp;
 
+        /**
+         * <p>The start offset of incremental data synchronization. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
+        /**
+         * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
 
+        /**
+         * <p>The downstream client information, in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.</p>
+         */
         @NameInMap("ConsumptionClient")
         public String consumptionClient;
 
+        /**
+         * <p>The CPU utilization of the instance. Unit: percentage.</p>
+         */
         @NameInMap("CpuUsage")
         public String cpuUsage;
 
+        /**
+         * <p>The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The state of the physical gateway-based migration task.</p>
+         */
         @NameInMap("DataCloudStatus")
         public DescribeDtsJobsResponseBodyDtsJobListDataCloudStatus dataCloudStatus;
 
+        /**
+         * <p>The state of the extract, transform, and load (ETL) task. Valid values:</p>
+         * <br>
+         * <p>>  This parameter collection is returned only if an ETL task is configured.</p>
+         */
         @NameInMap("DataEtlStatus")
         public DescribeDtsJobsResponseBodyDtsJobListDataEtlStatus dataEtlStatus;
 
+        /**
+         * <p>The state of full data synchronization.</p>
+         */
         @NameInMap("DataInitializationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListDataInitializationStatus dataInitializationStatus;
 
+        /**
+         * <p>The state of incremental data migration or synchronization.</p>
+         */
         @NameInMap("DataSynchronizationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListDataSynchronizationStatus dataSynchronizationStatus;
 
+        /**
+         * <p>The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see "Objects of DTS tasks".</p>
+         */
         @NameInMap("DbObject")
         public String dbObject;
 
+        /**
+         * <p>The ID of the DTS dedicated cluster on which a DTS task runs.</p>
+         */
         @NameInMap("DedicatedClusterId")
         public String dedicatedClusterId;
 
+        /**
+         * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+         */
         @NameInMap("Delay")
         public Long delay;
 
+        /**
+         * <p>The connection settings of the destination instance.</p>
+         */
         @NameInMap("DestinationEndpoint")
         public DescribeDtsJobsResponseBodyDtsJobListDestinationEndpoint destinationEndpoint;
 
+        @NameInMap("DtsBisLabel")
+        public String dtsBisLabel;
+
+        /**
+         * <p>The ID of the data synchronization instance.</p>
+         */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
+        /**
+         * <p>The instance class.</p>
+         * <br>
+         * <p>>  For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).</p>
+         */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
+        /**
+         * <p>The synchronization direction. The value is **Reverse**.</p>
+         */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
+        /**
+         * <p>The ID of the data synchronization task.</p>
+         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
+        /**
+         * <p>The name of the data synchronization task.</p>
+         */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        /**
+         * <p>The number of DUs that have been used.</p>
+         */
         @NameInMap("DuUsage")
         public Long duUsage;
 
+        /**
+         * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTimestamp")
         public String endTimestamp;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorDetails")
         public java.util.List<DescribeDtsJobsResponseBodyDtsJobListErrorDetails> errorDetails;
 
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The checkpoint of the ETL task.</p>
+         */
+        @NameInMap("EtlSafeCheckpoint")
+        public String etlSafeCheckpoint;
+
+        /**
+         * <p>The point in time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <br>
+         * <p>>  This parameter is returned only if the value of the **PayType** parameter is **PrePaid**.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The state information about the full data verification task.</p>
+         */
+        @NameInMap("FullDataCheckStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus fullDataCheckStatus;
+
+        /**
+         * <p>The state information about the incremental data verification task.</p>
+         */
+        @NameInMap("IncDataCheckStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus incDataCheckStatus;
+
+        /**
+         * <p>The type of the DTS task. Valid values:</p>
+         * <br>
+         * <p>- **MIGRATION**: data migration task </p>
+         * <p>- **SYNC**: data synchronization task </p>
+         * <p>- **SUBSCRIBE**: change tracking task</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>The memory that has been used. Unit: MB.</p>
+         */
         @NameInMap("MemUsage")
         public String memUsage;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("MigrationErrCode")
         public String migrationErrCode;
 
+        /**
+         * <p>The ID of the error code-related documentation.</p>
+         */
         @NameInMap("MigrationErrHelpDocId")
         public String migrationErrHelpDocId;
 
+        /**
+         * <p>The key of the error code-related documentation.</p>
+         */
         @NameInMap("MigrationErrHelpDocKey")
         public String migrationErrHelpDocKey;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("MigrationErrMsg")
         public String migrationErrMsg;
 
+        /**
+         * <p>The type of the error code.</p>
+         */
+        @NameInMap("MigrationErrType")
+        public String migrationErrType;
+
+        /**
+         * <p>The solution to the error.</p>
+         */
         @NameInMap("MigrationErrWorkaround")
         public String migrationErrWorkaround;
 
+        /**
+         * <p>The migration or synchronization modes.</p>
+         */
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode migrationMode;
 
+        /**
+         * <p>The source of the task. Valid values:</p>
+         * <br>
+         * <p>*   **PTS**</p>
+         * <p>*   **DMS**</p>
+         * <p>*   **DTS**</p>
+         */
         @NameInMap("OriginType")
         public String originType;
 
+        /**
+         * <p>The billing method of the DTS instance. Valid values:</p>
+         * <br>
+         * <p>*   **PrePaid**: subscription</p>
+         * <p>*   **PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The performance of the data migration or synchronization instance.</p>
+         */
         @NameInMap("Performance")
         public DescribeDtsJobsResponseBodyDtsJobListPerformance performance;
 
+        /**
+         * <p>The precheck state.</p>
+         */
         @NameInMap("PrecheckStatus")
         public DescribeDtsJobsResponseBodyDtsJobListPrecheckStatus precheckStatus;
 
+        /**
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         */
         @NameInMap("Reserved")
         public String reserved;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("ResourceGroupDisplayName")
         public String resourceGroupDisplayName;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The information about the retries performed by DTS due to an exception.</p>
+         */
         @NameInMap("RetryState")
         public DescribeDtsJobsResponseBodyDtsJobListRetryState retryState;
 
+        /**
+         * <p>The details of the data synchronization task in the reverse direction. </p>
+         * <br>
+         * <p>> This parameter is returned only for two-way data synchronization tasks.</p>
+         */
         @NameInMap("ReverseJob")
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob reverseJob;
 
+        /**
+         * <p>The connection settings of the source instance.</p>
+         */
         @NameInMap("SourceEndpoint")
         public DescribeDtsJobsResponseBodyDtsJobListSourceEndpoint sourceEndpoint;
 
+        /**
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The state of schema migration or initial schema synchronization.</p>
+         */
         @NameInMap("StructureInitializationStatus")
         public DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus structureInitializationStatus;
 
+        /**
+         * <p>The tags of the task.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<DescribeDtsJobsResponseBodyDtsJobListTagList> tagList;
 
@@ -2244,6 +3238,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.destinationEndpoint;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setDtsBisLabel(String dtsBisLabel) {
+            this.dtsBisLabel = dtsBisLabel;
+            return this;
+        }
+        public String getDtsBisLabel() {
+            return this.dtsBisLabel;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setDtsInstanceID(String dtsInstanceID) {
             this.dtsInstanceID = dtsInstanceID;
             return this;
@@ -2316,12 +3318,36 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobList setEtlSafeCheckpoint(String etlSafeCheckpoint) {
+            this.etlSafeCheckpoint = etlSafeCheckpoint;
+            return this;
+        }
+        public String getEtlSafeCheckpoint() {
+            return this.etlSafeCheckpoint;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobList setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setFullDataCheckStatus(DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus fullDataCheckStatus) {
+            this.fullDataCheckStatus = fullDataCheckStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus getFullDataCheckStatus() {
+            return this.fullDataCheckStatus;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setIncDataCheckStatus(DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus incDataCheckStatus) {
+            this.incDataCheckStatus = incDataCheckStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListIncDataCheckStatus getIncDataCheckStatus() {
+            return this.incDataCheckStatus;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setJobType(String jobType) {
@@ -2370,6 +3396,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getMigrationErrMsg() {
             return this.migrationErrMsg;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setMigrationErrType(String migrationErrType) {
+            this.migrationErrType = migrationErrType;
+            return this;
+        }
+        public String getMigrationErrType() {
+            return this.migrationErrType;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setMigrationErrWorkaround(String migrationErrWorkaround) {
@@ -2495,15 +3529,33 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListDataEtlStatus extends TeaModel {
+        /**
+         * <p>The error message returned if the ETL task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of the ETL task. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of entries that have been processed by the ETL task.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of the ETL task. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete. </p>
+         * <p>- **Catched**: The task is not delayed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -2547,15 +3599,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListDataInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if full data migration or initial full data synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of full data migration or initial full data synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of entries that have been migrated or synchronized during full data migration or initial full data synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of full data migration or initial full data synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -2599,18 +3668,44 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListDataSynchronizationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if incremental data migration or synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         * <br>
+         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
+        /**
+         * <p>The progress of incremental data migration or synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of incremental data migration or synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete. </p>
+         * <p>- **Catched**: The task is not delayed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -2662,33 +3757,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListDestinationEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database that contains the migrated objects in the destination instance.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database engine of the destination instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the destination instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the destination instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The port number of the destination instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>- **DISABLE**: SSL encryption is disabled. </p>
+         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
+         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
+         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the destination instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -2780,12 +3912,30 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListMigrationMode extends TeaModel {
+        /**
+         * <p>Indicates whether full data migration or initial full data synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
+        /**
+         * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
+        /**
+         * <p>Indicates whether schema migration or initial schema synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
 
@@ -2821,9 +3971,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListPerformance extends TeaModel {
+        /**
+         * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         */
         @NameInMap("Rps")
         public String rps;
 
@@ -2851,18 +4007,40 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatusDetail extends TeaModel {
+        /**
+         * <p>The name of the precheck item.</p>
+         */
         @NameInMap("CheckItem")
         public String checkItem;
 
+        /**
+         * <p>The description of the precheck item.</p>
+         */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
+        /**
+         * <p>The precheck result. Valid values:</p>
+         * <br>
+         * <p>- **Success**</p>
+         * <p>- **Failed**</p>
+         */
         @NameInMap("CheckResult")
         public String checkResult;
 
+        /**
+         * <p>The error message returned if the task failed to pass the precheck. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         */
         @NameInMap("FailedReason")
         public String failedReason;
 
+        /**
+         * <p>The method to fix a precheck failure. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -2914,15 +4092,33 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatus extends TeaModel {
+        /**
+         * <p>The result of each precheck item.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatusDetail> detail;
 
+        /**
+         * <p>The error message returned if the precheck failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The precheck progress. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The precheck state. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The precheck is not started. </p>
+         * <p>- **Suspending**: The precheck is paused. </p>
+         * <p>- **Checking**: The precheck is in progress. </p>
+         * <p>- **Failed**: The precheck failed. </p>
+         * <p>- **Finished**: The precheck is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -2966,27 +4162,58 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListRetryState extends TeaModel {
+        /**
+         * <p>The error message returned if these retries failed.</p>
+         */
         @NameInMap("ErrMessage")
         public String errMessage;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The maximum duration of a retry. Unit: seconds.</p>
+         */
         @NameInMap("MaxRetryTime")
         public Integer maxRetryTime;
 
+        /**
+         * <p>The progress of the instance when DTS retries.</p>
+         */
         @NameInMap("Module")
         public String module;
 
+        /**
+         * <p>The number of retries that have been performed.</p>
+         */
         @NameInMap("RetryCount")
         public Integer retryCount;
 
+        /**
+         * <p>The object on which these retries are performed. Valid values:</p>
+         * <br>
+         * <p>- **srcDB**: the source database </p>
+         * <p>- **destDB**: the destination database </p>
+         * <p>- **inner_module**: an internal module of DTS</p>
+         */
         @NameInMap("RetryTarget")
         public String retryTarget;
 
+        /**
+         * <p>The time that has elapsed from the time when the first retry starts. Unit: seconds.</p>
+         */
         @NameInMap("RetryTime")
         public Integer retryTime;
 
+        /**
+         * <p>Indicates whether the task is being retried. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("Retrying")
         public Boolean retrying;
 
@@ -3062,15 +4289,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if initial full data synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of initial full data synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of entries that have been synchronized during initial full data synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of initial full data synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -3114,18 +4358,38 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataSynchronizationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if incremental data synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>Indicates whether the instance needs to be upgraded. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         * <br>
+         * <p>> To upgrade a DTS instance, call the [TransferInstanceClass](~~281093~~) operation.</p>
+         */
         @NameInMap("NeedUpgrade")
         public Boolean needUpgrade;
 
+        /**
+         * <p>The progress of incremental data synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of entries that have been migrated or synchronized during incremental data migration or synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of incremental data synchronization.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -3177,33 +4441,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobDestinationEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database that contains the synchronized objects in the destination instance.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database engine of the destination instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the destination instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the destination instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the destination instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **EngineName** of the destination instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The port number of the destination instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the destination instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>- **DISABLE**: SSL encryption is disabled. </p>
+         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
+         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
+         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the destination instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -3295,12 +4596,30 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobMigrationMode extends TeaModel {
+        /**
+         * <p>Indicates whether full data migration or initial full data synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("DataInitialization")
         public Boolean dataInitialization;
 
+        /**
+         * <p>Indicates whether incremental data migration or synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("DataSynchronization")
         public Boolean dataSynchronization;
 
+        /**
+         * <p>Indicates whether schema migration or initial schema synchronization is performed. Valid values:</p>
+         * <br>
+         * <p>- **true**</p>
+         * <p>- **false**</p>
+         */
         @NameInMap("StructureInitialization")
         public Boolean structureInitialization;
 
@@ -3336,9 +4655,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPerformance extends TeaModel {
+        /**
+         * <p>The size of data that is migrated or synchronized per second. Unit: MB/s.</p>
+         */
         @NameInMap("Flow")
         public String flow;
 
+        /**
+         * <p>The number of times that SQL statements are migrated or synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.</p>
+         */
         @NameInMap("Rps")
         public String rps;
 
@@ -3366,18 +4691,40 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatusDetail extends TeaModel {
+        /**
+         * <p>The name of the precheck item.</p>
+         */
         @NameInMap("CheckItem")
         public String checkItem;
 
+        /**
+         * <p>The description of the precheck item.</p>
+         */
         @NameInMap("CheckItemDescription")
         public String checkItemDescription;
 
+        /**
+         * <p>The precheck result. Valid values:</p>
+         * <br>
+         * <p>- **Success**</p>
+         * <p>- **Failed**</p>
+         */
         @NameInMap("CheckResult")
         public String checkResult;
 
+        /**
+         * <p>The error message returned if the task failed to pass the precheck. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         */
         @NameInMap("FailedReason")
         public String failedReason;
 
+        /**
+         * <p>The method to fix a precheck failure. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **CheckResult** is **Failed**.</p>
+         */
         @NameInMap("RepairMethod")
         public String repairMethod;
 
@@ -3429,15 +4776,33 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatus extends TeaModel {
+        /**
+         * <p>The result of each precheck item.</p>
+         */
         @NameInMap("Detail")
         public java.util.List<DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatusDetail> detail;
 
+        /**
+         * <p>The error message returned if the precheck failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The precheck progress. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The precheck state. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The precheck is not started. </p>
+         * <p>- **Suspending**: The precheck is paused. </p>
+         * <p>- **Checking**: The precheck is in progress. </p>
+         * <p>- **Failed**: The precheck failed. </p>
+         * <p>- **Finished**: The precheck is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -3481,33 +4846,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobSourceEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database engine of the source instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the source instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the source instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The port number of the source instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>- **DISABLE**: SSL encryption is disabled. </p>
+         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
+         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
+         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the source instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -3599,15 +5001,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJobStructureInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if initial schema synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of initial schema synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of tables that have been synchronized during initial schema synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of initial schema synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -3651,69 +5070,148 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListReverseJob extends TeaModel {
+        /**
+         * <p>The start offset of incremental data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
+        /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The state of initial full data synchronization.</p>
+         */
         @NameInMap("DataInitializationStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataInitializationStatus dataInitializationStatus;
 
+        /**
+         * <p>The state of incremental data synchronization.</p>
+         */
         @NameInMap("DataSynchronizationStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobDataSynchronizationStatus dataSynchronizationStatus;
 
+        /**
+         * <p>The schema of the objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see Objects of DTS tasks.</p>
+         */
         @NameInMap("DbObject")
         public String dbObject;
 
+        /**
+         * <p>The latency of incremental data synchronization. Unit: seconds.</p>
+         */
         @NameInMap("Delay")
         public Long delay;
 
+        /**
+         * <p>The connection settings of the destination instance.</p>
+         */
         @NameInMap("DestinationEndpoint")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobDestinationEndpoint destinationEndpoint;
 
+        /**
+         * <p>The ID of the data synchronization instance.</p>
+         */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
+        /**
+         * <p>The instance class. </p>
+         * <br>
+         * <p>> For more information about the test performance of each instance class, see [Specifications of data synchronization instances](~~26605~~).</p>
+         */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
+        /**
+         * <p>The synchronization direction. **Reverse** is returned.</p>
+         */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
+        /**
+         * <p>The ID of the synchronization task.</p>
+         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
+        /**
+         * <p>The name of the data synchronization task.</p>
+         */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The checkpoint of the ETL task.</p>
+         */
+        @NameInMap("EtlSafeCheckpoint")
+        public String etlSafeCheckpoint;
+
+        /**
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the* yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **PayType** is **PrePaid**.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The migration types or initial synchronization types.</p>
+         */
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobMigrationMode migrationMode;
 
+        /**
+         * <p>The billing method of the DTS instance. Valid values:</p>
+         * <br>
+         * <p>- **PrePaid**: subscription</p>
+         * <p>- **PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The performance of the data migration or synchronization instance.</p>
+         */
         @NameInMap("Performance")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobPerformance performance;
 
+        /**
+         * <p>The precheck state.</p>
+         */
         @NameInMap("PrecheckStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobPrecheckStatus precheckStatus;
 
+        /**
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         */
         @NameInMap("Reserved")
         public String reserved;
 
+        /**
+         * <p>The connection settings of the source instance.</p>
+         */
         @NameInMap("SourceEndpoint")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobSourceEndpoint sourceEndpoint;
 
+        /**
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The state of initial schema synchronization.</p>
+         */
         @NameInMap("StructureInitializationStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJobStructureInitializationStatus structureInitializationStatus;
 
@@ -3826,6 +5324,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
+        public DescribeDtsJobsResponseBodyEtlDemoListReverseJob setEtlSafeCheckpoint(String etlSafeCheckpoint) {
+            this.etlSafeCheckpoint = etlSafeCheckpoint;
+            return this;
+        }
+        public String getEtlSafeCheckpoint() {
+            return this.etlSafeCheckpoint;
+        }
+
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJob setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
@@ -3901,33 +5407,70 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListSourceEndpoint extends TeaModel {
+        /**
+         * <p>The name of the database that contains the objects to be migrated from the source instance.</p>
+         */
         @NameInMap("DatabaseName")
         public String databaseName;
 
+        /**
+         * <p>The database engine of the source instance.</p>
+         */
         @NameInMap("EngineName")
         public String engineName;
 
+        /**
+         * <p>The ID of the source instance.</p>
+         */
         @NameInMap("InstanceID")
         public String instanceID;
 
+        /**
+         * <p>The type of the source instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The endpoint of the source instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The SID of the Oracle database. </p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **EngineName** of the source instance is **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+         */
         @NameInMap("OracleSID")
         public String oracleSID;
 
+        /**
+         * <p>The port number of the source instance.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the region in which the source instance resides. For more information, see [Supported regions](~~141033~~).</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>- **DISABLE**: SSL encryption is disabled. </p>
+         * <p>- **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled and the CA certificate is uploaded. </p>
+         * <p>- **ENABLE_ONLY_4_MONGODB_ALTAS**: SSL encryption is enabled for the connection with an AWS MongoDB Altas database. </p>
+         * <p>- **ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256**: SCRAM-SHA-256 is used to encrypt the connection with a Kafka cluster.</p>
+         */
         @NameInMap("SslSolutionEnum")
         public String sslSolutionEnum;
 
+        /**
+         * <p>The database account of the source instance.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -4019,15 +5562,32 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListStructureInitializationStatus extends TeaModel {
+        /**
+         * <p>The error message returned if schema migration or initial schema synchronization failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The progress of schema migration or initial schema synchronization. Unit: percentage.</p>
+         */
         @NameInMap("Percent")
         public String percent;
 
+        /**
+         * <p>The number of tables that have been migrated or synchronized during schema migration or initial schema synchronization.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of schema migration or initial schema synchronization. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: The task is not started. </p>
+         * <p>- **Migrating**: The task is in progress. </p>
+         * <p>- **Failed**: The task failed. </p>
+         * <p>- **Finished**: The task is complete.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -4071,9 +5631,15 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoListTagList extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -4101,108 +5667,246 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyEtlDemoList extends TeaModel {
+        /**
+         * <p>Indicates whether the **new** change tracking feature is used. </p>
+         * <br>
+         * <p>> This parameter is returned only for change tracking instances of the new version.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The start of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BeginTimestamp")
         public String beginTimestamp;
 
+        /**
+         * <p>The start offset of incremental data migration or data synchronization. This value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
+        /**
+         * <p>The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ConsumptionCheckpoint")
         public String consumptionCheckpoint;
 
+        /**
+         * <p>The downstream client information in the following format: <IP address of the downstream client>:<Random ID generated by DTS>.</p>
+         */
         @NameInMap("ConsumptionClient")
         public String consumptionClient;
 
+        /**
+         * <p>The time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:s*sZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The state of the ETL task. </p>
+         * <br>
+         * <p>> This parameter collection is returned only if an ETL task is configured.</p>
+         */
         @NameInMap("DataEtlStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListDataEtlStatus dataEtlStatus;
 
+        /**
+         * <p>The state of full data migration or initial full data synchronization.</p>
+         */
         @NameInMap("DataInitializationStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListDataInitializationStatus dataInitializationStatus;
 
+        /**
+         * <p>The state of incremental data migration or synchronization.</p>
+         */
         @NameInMap("DataSynchronizationStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListDataSynchronizationStatus dataSynchronizationStatus;
 
+        /**
+         * <p>The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).</p>
+         */
         @NameInMap("DbObject")
         public String dbObject;
 
+        /**
+         * <p>The latency of incremental data migration or synchronization. </p>
+         * <br>
+         * <p>> If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.</p>
+         */
         @NameInMap("Delay")
         public Long delay;
 
+        /**
+         * <p>The connection settings of the destination instance.</p>
+         */
         @NameInMap("DestinationEndpoint")
         public DescribeDtsJobsResponseBodyEtlDemoListDestinationEndpoint destinationEndpoint;
 
+        /**
+         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
+        /**
+         * <p>The instance class. </p>
+         * <br>
+         * <p>> For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).</p>
+         */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
+        /**
+         * <p>The synchronization direction. Valid values:</p>
+         * <br>
+         * <p>- **Forward**</p>
+         * <p>- **Reverse**</p>
+         * <br>
+         * <p>> This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.</p>
+         */
         @NameInMap("DtsJobDirection")
         public String dtsJobDirection;
 
+        /**
+         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
+        /**
+         * <p>The name of the data migration, data synchronization, or change tracking task.</p>
+         */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        /**
+         * <p>The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EndTimestamp")
         public String endTimestamp;
 
+        /**
+         * <p>The error message returned if the task failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The checkpoint of the ETL task.</p>
+         */
+        @NameInMap("EtlSafeCheckpoint")
+        public String etlSafeCheckpoint;
+
+        /**
+         * <p>The time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <br>
+         * <p>> This parameter is returned only if the returned value of **PayType** is **PrePaid**.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The type of the DTS task. Valid values:</p>
+         * <br>
+         * <p>- **MIGRATION**: data migration task </p>
+         * <p>- **SYNC**: data synchronization task </p>
+         * <p>- **SUBSCRIBE**: change tracking task</p>
+         */
         @NameInMap("JobType")
         public String jobType;
 
+        /**
+         * <p>The migration types or initial synchronization types.</p>
+         */
         @NameInMap("MigrationMode")
         public DescribeDtsJobsResponseBodyEtlDemoListMigrationMode migrationMode;
 
+        /**
+         * <p>The source of the task.</p>
+         * <p>- **PTS**</p>
+         * <p>- **DMS**</p>
+         * <p>- **DTS**</p>
+         */
         @NameInMap("OriginType")
         public String originType;
 
+        /**
+         * <p>The billing method of the DTS instance. Valid values:</p>
+         * <br>
+         * <p>- **PrePaid**: subscription </p>
+         * <p>- **PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The performance of the data migration or synchronization instance.</p>
+         */
         @NameInMap("Performance")
         public DescribeDtsJobsResponseBodyEtlDemoListPerformance performance;
 
+        /**
+         * <p>The precheck state.</p>
+         */
         @NameInMap("PrecheckStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListPrecheckStatus precheckStatus;
 
+        /**
+         * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).</p>
+         */
         @NameInMap("Reserved")
         public String reserved;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("ResourceGroupDisplayName")
         public String resourceGroupDisplayName;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The information about the retries performed by DTS due to an exception.</p>
+         */
         @NameInMap("RetryState")
         public DescribeDtsJobsResponseBodyEtlDemoListRetryState retryState;
 
+        /**
+         * <p>The details of the data synchronization task in the reverse direction. </p>
+         * <br>
+         * <p>> This parameter is returned only for two-way data synchronization tasks.</p>
+         */
         @NameInMap("ReverseJob")
         public DescribeDtsJobsResponseBodyEtlDemoListReverseJob reverseJob;
 
+        /**
+         * <p>The connection settings of the source instance.</p>
+         */
         @NameInMap("SourceEndpoint")
         public DescribeDtsJobsResponseBodyEtlDemoListSourceEndpoint sourceEndpoint;
 
+        /**
+         * <p>The state of the DTS instance. For more information about the valid values, see the description of the request parameter **Status**.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The state of schema migration or initial schema synchronization.</p>
+         */
         @NameInMap("StructureInitializationStatus")
         public DescribeDtsJobsResponseBodyEtlDemoListStructureInitializationStatus structureInitializationStatus;
 
+        /**
+         * <p>The tags of the task.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<DescribeDtsJobsResponseBodyEtlDemoListTagList> tagList;
 
@@ -4361,6 +6065,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyEtlDemoList setEtlSafeCheckpoint(String etlSafeCheckpoint) {
+            this.etlSafeCheckpoint = etlSafeCheckpoint;
+            return this;
+        }
+        public String getEtlSafeCheckpoint() {
+            return this.etlSafeCheckpoint;
         }
 
         public DescribeDtsJobsResponseBodyEtlDemoList setExpireTime(String expireTime) {

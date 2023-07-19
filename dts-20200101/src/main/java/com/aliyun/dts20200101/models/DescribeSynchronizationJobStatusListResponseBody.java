@@ -4,27 +4,51 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of data synchronization instances displayed on one page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The status of the data synchronization tasks.</p>
+     */
     @NameInMap("SynchronizationJobListStatusList")
     public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList> synchronizationJobListStatusList;
 
+    /**
+     * <p>The total number of data synchronization instances.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -98,12 +122,37 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     }
 
     public static class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList extends TeaModel {
+        /**
+         * <p>The UNIX timestamp generated when the latest data record was synchronized.</p>
+         * <br>
+         * <p>>  You can use a search engine to obtain a UNIX timestamp converter.</p>
+         */
         @NameInMap("Checkpoint")
         public String checkpoint;
 
+        /**
+         * <p>The status of the data synchronization task in this direction. Valid values:</p>
+         * <br>
+         * <p>*   **NotStarted**: The task is not started.</p>
+         * <p>*   **Prechecking**: The task is being prechecked.</p>
+         * <p>*   **PrecheckFailed**: The task failed to pass the precheck.</p>
+         * <p>*   **Initializing**: The task is performing initial synchronization.</p>
+         * <p>*   **InitializeFailed**: Initial synchronization failed.</p>
+         * <p>*   **Synchronizing**: The task is synchronizing data.</p>
+         * <p>*   **Failed**: The task failed to synchronize data.</p>
+         * <p>*   **Suspending**: The task is paused.</p>
+         * <p>*   **Modifying**: The objects in the task are being modified.</p>
+         * <p>*   **Finished**: The task is completed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The synchronization direction. Valid values:</p>
+         * <br>
+         * <p>*   **Forward**</p>
+         * <p>*   **Reverse**</p>
+         */
         @NameInMap("SynchronizationDirection")
         public String synchronizationDirection;
 
@@ -139,9 +188,15 @@ public class DescribeSynchronizationJobStatusListResponseBody extends TeaModel {
     }
 
     public static class DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusList extends TeaModel {
+        /**
+         * <p>The details of data synchronization tasks in each direction.</p>
+         */
         @NameInMap("SynchronizationDirectionInfoList")
         public java.util.List<DescribeSynchronizationJobStatusListResponseBodySynchronizationJobListStatusListSynchronizationDirectionInfoList> synchronizationDirectionInfoList;
 
+        /**
+         * <p>The ID of the data synchronization instance.</p>
+         */
         @NameInMap("SynchronizationJobId")
         public String synchronizationJobId;
 

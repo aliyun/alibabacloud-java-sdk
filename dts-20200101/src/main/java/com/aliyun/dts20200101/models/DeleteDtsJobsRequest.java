@@ -4,9 +4,18 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteDtsJobsRequest extends TeaModel {
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     * <br>
+     * <p>> *   Separate multiple task IDs with commas (,).</p>
+     * <p>> *   You can call the [DescribeDtsJobs](~~209702~~) operation to query task IDs.</p>
+     */
     @NameInMap("DtsJobIds")
     public String dtsJobIds;
 
+    /**
+     * <p>The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

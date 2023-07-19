@@ -4,24 +4,52 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobsRequest extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</p>
+     * <p>*   This parameter can be an empty string.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the data synchronization task.</p>
+     * <br>
+     * <p>>  Fuzzy matching is supported.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</p>
+     * <p>*   This parameter cannot be an empty string.</p>
+     */
     @NameInMap("SynchronizationJobName")
     public String synchronizationJobName;
 
@@ -98,9 +126,15 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     }
 
     public static class DescribeSynchronizationJobsRequestTag extends TeaModel {
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The maximum number of entries that can be displayed on the current page.</p>
+         */
         @NameInMap("Value")
         public String value;
 

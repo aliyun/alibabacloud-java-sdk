@@ -4,18 +4,33 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class StartSubscriptionInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The task ID. This parameter will be removed in the future.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

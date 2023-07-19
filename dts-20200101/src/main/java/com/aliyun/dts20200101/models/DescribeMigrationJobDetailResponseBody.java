@@ -4,33 +4,63 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrationJobDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details of full data migration.</p>
+     */
     @NameInMap("DataInitializationDetailList")
     public DescribeMigrationJobDetailResponseBodyDataInitializationDetailList dataInitializationDetailList;
 
+    /**
+     * <p>The details of incremental data migration.</p>
+     */
     @NameInMap("DataSynchronizationDetailList")
     public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The maximum number of data migration instances that can be displayed on one page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of schema migration.</p>
+     */
     @NameInMap("StructureInitializationDetailList")
     public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailList structureInitializationDetailList;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The total number of entries that are returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -120,27 +150,56 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrationJobDetailResponseBodyDataInitializationDetailListDataInitializationDetail extends TeaModel {
+        /**
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
 
+        /**
+         * <p>The error message returned if full data migration failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The number of records that have been migrated.</p>
+         */
         @NameInMap("FinishRowNum")
         public String finishRowNum;
 
+        /**
+         * <p>The time taken by full data migration.</p>
+         */
         @NameInMap("MigrationTime")
         public String migrationTime;
 
+        /**
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
+        /**
+         * <p>The status of full data migration. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: Full data migration is not started.</p>
+         * <p>- **Migrating**: Full data migration is in progress.</p>
+         * <p>- **Failed**: Full data migration failed.</p>
+         * <p>- **Finished**: Full data migration is completed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The total number of records that are supposed to be migrated by the task.</p>
+         */
         @NameInMap("TotalRowNum")
         public String totalRowNum;
 
@@ -235,18 +294,38 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailListDataSynchronizationDetail extends TeaModel {
+        /**
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
 
+        /**
+         * <p>The error message returned if incremental data migration failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
+        /**
+         * <p>The status of incremental data migration. Valid values:</p>
+         * <br>
+         * <p>*   **NotStarted**: Incremental data migration is not started.</p>
+         * <p>*   **Migrating**: Incremental data migration is in progress.</p>
+         * <p>*   **Failed**: Incremental data migration failed.</p>
+         * <p>*   **Finished**: Incremental data migration is completed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
@@ -317,24 +396,50 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintListStructureInitializationDetail extends TeaModel {
+        /**
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
 
+        /**
+         * <p>The error message returned if constraints failed to be created.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The syntax to create constraints.</p>
+         */
         @NameInMap("ObjectDefinition")
         public String objectDefinition;
 
+        /**
+         * <p>The name of migration object.</p>
+         */
         @NameInMap("ObjectName")
         public String objectName;
 
+        /**
+         * <p>The type of the migration object. The value is **Table**.</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
+        /**
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
+        /**
+         * <p>The status of constraint creation. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**</p>
+         * <p>- **Migrating**</p>
+         * <p>- **Failed**</p>
+         * <p>- **Finished**</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -421,27 +526,58 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetail extends TeaModel {
+        /**
+         * <p>The constraints of the migration object, such as indexes and foreign keys. </p>
+         * <br>
+         * <p>>  This parameter is returned only if the **ObjectType** parameter is set to **Table** and the migration object has constraints.</p>
+         */
         @NameInMap("ConstraintList")
         public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailListStructureInitializationDetailConstraintList constraintList;
 
+        /**
+         * <p>The name of the database to which the migration object in the destination instance belongs.</p>
+         */
         @NameInMap("DestinationOwnerDBName")
         public String destinationOwnerDBName;
 
+        /**
+         * <p>The error message returned if schema migration failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The schema of the migration object.</p>
+         */
         @NameInMap("ObjectDefinition")
         public String objectDefinition;
 
+        /**
+         * <p>The name of migration object.</p>
+         */
         @NameInMap("ObjectName")
         public String objectName;
 
+        /**
+         * <p>The type of the migration object. Valid values: **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.</p>
+         */
         @NameInMap("ObjectType")
         public String objectType;
 
+        /**
+         * <p>The name of the database to which the migration object in the source instance belongs.</p>
+         */
         @NameInMap("SourceOwnerDBName")
         public String sourceOwnerDBName;
 
+        /**
+         * <p>The status of schema migration. Valid values:</p>
+         * <br>
+         * <p>- **NotStarted**: Schema migration is not started.</p>
+         * <p>- **Migrating**: Schema migration is in progress.</p>
+         * <p>- **Failed**: Schema migration failed.</p>
+         * <p>- **Finished**: Schema migration is completed.</p>
+         */
         @NameInMap("Status")
         public String status;
 

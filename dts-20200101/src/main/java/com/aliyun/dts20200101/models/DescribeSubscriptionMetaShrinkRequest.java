@@ -4,18 +4,37 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSubscriptionMetaShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the distributed change tracking instance.</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>The ID of the region in which the change tracking instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the consumer group.</p>
+     */
     @NameInMap("Sid")
     public String sid;
 
+    /**
+     * <p>The IDs of all subtasks in the distributed change tracking task. Separate multiple subtask IDs with commas (,).</p>
+     * <br>
+     * <p>>  You must specify at least one of the SubMigrationJobIds and **Topics** parameters. We recommend that you specify the SubMigrationJobIds parameter.</p>
+     */
     @NameInMap("SubMigrationJobIds")
     public String subMigrationJobIdsShrink;
 
+    /**
+     * <p>The topics of all subtasks in the distributed change tracking task. Separate multiple topics with commas (,).</p>
+     * <br>
+     * <p>>  You must specify at least one of the **SubMigrationJobIds** and Topics parameters. We recommend that you specify the **SubMigrationJobIds** parameter.</p>
+     */
     @NameInMap("Topics")
     public String topicsShrink;
 

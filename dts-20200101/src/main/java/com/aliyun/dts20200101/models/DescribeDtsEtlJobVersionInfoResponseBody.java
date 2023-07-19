@@ -4,36 +4,69 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
+    /**
+     * <p>The details of ETL tasks.</p>
+     */
     @NameInMap("DtsEtlJobVersionInfos")
     public java.util.List<DescribeDtsEtlJobVersionInfoResponseBodyDtsEtlJobVersionInfos> dtsEtlJobVersionInfos;
 
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code. This example indicates that the specified ETL task ID is invalid.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may have been deleted.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The page number of the returned page. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of records returned on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. If the call failed, false is returned.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of records.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -131,33 +164,63 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsEtlJobVersionInfoResponseBodyDtsEtlJobVersionInfos extends TeaModel {
+        /**
+         * <p>The time when the ETL task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the creator.</p>
+         */
         @NameInMap("Creator")
         public String creator;
 
+        /**
+         * <p>The username of the creator.</p>
+         */
         @NameInMap("CreatorName")
         public String creatorName;
 
+        /**
+         * <p>The ID of the DTS instance.</p>
+         */
         @NameInMap("DtsInstanceId")
         public String dtsInstanceId;
 
+        /**
+         * <p>The ID of the ETL task.</p>
+         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
+        /**
+         * <p>The name of the ETL task.</p>
+         */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        /**
+         * <p>The time when the ETL task was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The safe checkpoint of the ETL task.</p>
+         */
         @NameInMap("SafeCheckpoint")
         public String safeCheckpoint;
 
+        /**
+         * <p>The log level. Valid values: ERROR, WARN, INFO, and DEBUG.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The version number of the ETL task.</p>
+         */
         @NameInMap("Version")
         public Integer version;
 

@@ -4,15 +4,35 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class StartDtsJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMigrationJobs](~~208139~~), [DescribeSubscriptionInstances](~~49442~~), or [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The region ID of the Data Transmission Service (DTS) instance. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The synchronization direction. Default value: Forward. Valid values:</p>
+     * <br>
+     * <p>*   **Forward**: Data is synchronized from the source database to the destination database.</p>
+     * <br>
+     * <p>*   **Reverse**: Data is synchronized from the destination database to the source database.</p>
+     * <br>
+     * <p>>You can set this parameter to **Reverse** to start the reverse synchronization task only if the topology is two-way synchronization.</p>
+     */
     @NameInMap("SynchronizationDirection")
     public String synchronizationDirection;
 

@@ -3,57 +3,40 @@ package com.aliyun.dts20200101.models;
 
 import com.aliyun.tea.*;
 
-public class StopDtsJobResponseBody extends TeaModel {
-    /**
-     * <p>The dynamic error code. This parameter will be removed in the future.</p>
-     */
+public class DescribeChannelAccountResponseBody extends TeaModel {
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
-    /**
-     * <p>The dynamic error message, which is used to replace **%s** in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
-     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
-    /**
-     * <p>The error code returned if the call failed.</p>
-     */
     @NameInMap("ErrCode")
     public String errCode;
 
-    /**
-     * <p>The error message returned if the call failed.</p>
-     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
-    /**
-     * <p>The HTTP status code.</p>
-     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
+    @NameInMap("Password")
+    public String password;
+
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>Indicates whether the call was successful.</p>
-     */
     @NameInMap("Success")
     public Boolean success;
 
-    public static StopDtsJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        StopDtsJobResponseBody self = new StopDtsJobResponseBody();
+    @NameInMap("Username")
+    public String username;
+
+    public static DescribeChannelAccountResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeChannelAccountResponseBody self = new DescribeChannelAccountResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public StopDtsJobResponseBody setDynamicCode(String dynamicCode) {
+    public DescribeChannelAccountResponseBody setDynamicCode(String dynamicCode) {
         this.dynamicCode = dynamicCode;
         return this;
     }
@@ -61,7 +44,7 @@ public class StopDtsJobResponseBody extends TeaModel {
         return this.dynamicCode;
     }
 
-    public StopDtsJobResponseBody setDynamicMessage(String dynamicMessage) {
+    public DescribeChannelAccountResponseBody setDynamicMessage(String dynamicMessage) {
         this.dynamicMessage = dynamicMessage;
         return this;
     }
@@ -69,7 +52,7 @@ public class StopDtsJobResponseBody extends TeaModel {
         return this.dynamicMessage;
     }
 
-    public StopDtsJobResponseBody setErrCode(String errCode) {
+    public DescribeChannelAccountResponseBody setErrCode(String errCode) {
         this.errCode = errCode;
         return this;
     }
@@ -77,7 +60,7 @@ public class StopDtsJobResponseBody extends TeaModel {
         return this.errCode;
     }
 
-    public StopDtsJobResponseBody setErrMessage(String errMessage) {
+    public DescribeChannelAccountResponseBody setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -85,7 +68,7 @@ public class StopDtsJobResponseBody extends TeaModel {
         return this.errMessage;
     }
 
-    public StopDtsJobResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public DescribeChannelAccountResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -93,7 +76,15 @@ public class StopDtsJobResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public StopDtsJobResponseBody setRequestId(String requestId) {
+    public DescribeChannelAccountResponseBody setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public DescribeChannelAccountResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -101,12 +92,20 @@ public class StopDtsJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StopDtsJobResponseBody setSuccess(Boolean success) {
+    public DescribeChannelAccountResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DescribeChannelAccountResponseBody setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
     }
 
 }

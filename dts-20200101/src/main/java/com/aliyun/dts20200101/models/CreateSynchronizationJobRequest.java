@@ -10,42 +10,99 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     @NameInMap("SourceEndpoint")
     public CreateSynchronizationJobRequestSourceEndpoint sourceEndpoint;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>If you set the **SourceEndpoint.InstanceType** parameter to **DRDS**, you must specify the DBInstanceCount parameter. This parameter specifies the number of private RDS instances attached to the source PolarDB-X instance. Default value: **1**.</p>
+     */
     @NameInMap("DBInstanceCount")
     public Integer DBInstanceCount;
 
+    /**
+     * <p>The ID of the region where the destination database resides. For more information, see [List of supported regions](~~141033~~).</p>
+     * <br>
+     * <p>>  If the **SourceRegion** parameter is set to the China (Hong Kong) region or a region outside the Chinese mainland, you must set the DestRegion parameter to the same region ID.</p>
+     */
     @NameInMap("DestRegion")
     public String destRegion;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The billing method of the data synchronization instance.</p>
+     * <br>
+     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid** (default value): pay-as-you-go</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The billing cycle of the subscription instance. Valid values:</p>
+     * <br>
+     * <p>*   **Year**</p>
+     * <p>*   **Month**</p>
+     * <br>
+     * <p>>  You must specify this parameter only if you set the PayType parameter to **PrePaid**.</p>
+     */
     @NameInMap("Period")
     public String period;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the region where the source database resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("SourceRegion")
     public String sourceRegion;
 
+    /**
+     * <p>The specification of the data synchronization instance. Valid values: **micro**, **small**, **medium**, and **large**.</p>
+     * <br>
+     * <p>>  For more information about the test performance of each specification, see [Specifications of data synchronization instances](~~26605~~).</p>
+     */
     @NameInMap("SynchronizationJobClass")
     public String synchronizationJobClass;
 
+    /**
+     * <p>The synchronization topology. Valid values:</p>
+     * <br>
+     * <p>*   **oneway**: one-way synchronization</p>
+     * <p>*   **bidirectional**: two-way synchronization</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   The default value is **oneway**.</p>
+     * <p>*   This parameter can be set to **bidirectional** only when the **SourceEndpoint.InstanceType** and **DestinationEndpoint.InstanceType** parameters are set to **MySQL**, **PolarDB**, or **Redis**.</p>
+     */
     @NameInMap("Topology")
     public String topology;
 
+    /**
+     * <p>The subscription length.</p>
+     * <br>
+     * <p>*   If the billing cycle is **Year**, the value range is **1 to 5**.</p>
+     * <p>*   If the billing cycle is **Month**, the value range is **1 to 60**.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if you set the PayType parameter to **PrePaid**.</p>
+     */
     @NameInMap("UsedTime")
     public Integer usedTime;
 
+    /**
+     * <p>The network type. Valid value: **Intranet**, which indicates virtual private cloud (VPC).</p>
+     */
     @NameInMap("networkType")
     public String networkType;
 
@@ -175,6 +232,18 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     }
 
     public static class CreateSynchronizationJobRequestDestinationEndpoint extends TeaModel {
+        /**
+         * <p>The instance type of the destination database. Valid values:</p>
+         * <br>
+         * <p>*   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database</p>
+         * <p>*   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster</p>
+         * <p>*   **Redis**: Redis database</p>
+         * <p>*   **MaxCompute**: MaxCompute project</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   Default value: **MySQL**.</p>
+         * <p>*   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -194,6 +263,18 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     }
 
     public static class CreateSynchronizationJobRequestSourceEndpoint extends TeaModel {
+        /**
+         * <p>The instance type of the source database. Valid values:</p>
+         * <br>
+         * <p>*   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database</p>
+         * <p>*   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster</p>
+         * <p>*   **Redis**: Redis database</p>
+         * <p>*   **DRDS**: PolarDB-X instance V1.0</p>
+         * <br>
+         * <p>> </p>
+         * <p>*   Default value: **MySQL**.</p>
+         * <p>*   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 

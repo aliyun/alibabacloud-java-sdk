@@ -4,24 +4,53 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DeleteDtsJobResponseBody extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to **DeleteDtsJob**.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **DeleteDtsJob**.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The synchronization direction. Valid values:</p>
+     * <br>
+     * <p>*   **Forward**: Data is synchronized from the source database to the destination database.</p>
+     * <p>*   **Reverse**: Data is synchronized from the destination database to the source database.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   Default value: **Forward**.</p>
+     * <p>*   You can set this parameter to **Reverse** to delete the reverse synchronization task only if the topology is two-way synchronization.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

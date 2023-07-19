@@ -4,12 +4,18 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

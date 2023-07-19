@@ -4,24 +4,45 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class InitDtsRdsInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The built-in account that is used by DTS to connect to the node.</p>
+     */
     @NameInMap("AdminAccount")
     public String adminAccount;
 
+    /**
+     * <p>The password of the built-in account.</p>
+     */
     @NameInMap("AdminPassword")
     public String adminPassword;
 
+    /**
+     * <p>The error code returned if the request fails.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 

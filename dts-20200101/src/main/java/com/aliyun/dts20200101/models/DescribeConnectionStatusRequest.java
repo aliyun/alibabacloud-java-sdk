@@ -4,72 +4,206 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectionStatusRequest extends TeaModel {
+    /**
+     * <p>You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **Oracle**. Valid values:</p>
+     * <br>
+     * <p>*   **SID**: non-RAC architecture</p>
+     * <p>*   **RAC**: Real Application Cluster (RAC) architecture</p>
+     * <br>
+     * <p>>  This parameter is optional. The data type of this parameter is String.</p>
+     */
     @NameInMap("DestinationEndpointArchitecture")
     public String destinationEndpointArchitecture;
 
+    /**
+     * <p>The name of the destination database or the authentication database.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   You must specify this parameter if the **DestinationEndpointEngineName** parameter is set to **PostgreSQL**, **DRDS**, or **MongoDB**. You must also specify this parameter if the **DestinationEndpointInstanceType** parameter is set to **PolarDB_o**.</p>
+     * <p>*   If the **DestinationEndpointEngineName** parameter is set to **PostgreSQL** or **DRDS**, specify the name of the destination database. If the DestinationEndpointEngineName parameter is set to **MongoDB**, specify the name of the authentication database.</p>
+     * <p>*   If the **DestinationEndpointInstanceType** parameter is set to **PolarDB_o**, specify the name of the destination database.</p>
+     */
     @NameInMap("DestinationEndpointDatabaseName")
     public String destinationEndpointDatabaseName;
 
+    /**
+     * <p>The engine type of the destination database. Valid values: **MySQL**, **DRDS**, **SQLServer**, **PostgreSQL**, **PPAS**, **MongoDB**, and **Redis**.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if the **DestinationEndpointInstanceType** parameter is set to **RDS**, **DRDS**, **ECS**, **LocalInstance**, or **Express**.</p>
+     */
     @NameInMap("DestinationEndpointEngineName")
     public String destinationEndpointEngineName;
 
+    /**
+     * <p>The endpoint of the destination database.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if the **DestinationEndpointInstanceType** parameter is set to **LocalInstance** or **Express**.</p>
+     */
     @NameInMap("DestinationEndpointIP")
     public String destinationEndpointIP;
 
+    /**
+     * <p>The ID of the destination instance.</p>
+     */
     @NameInMap("DestinationEndpointInstanceID")
     public String destinationEndpointInstanceID;
 
+    /**
+     * <p>The instance type of the destination database. Valid values:</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)</p>
+     * <p>*   **LocalInstance**: self-managed database with a public IP address</p>
+     * <p>*   **RDS**: ApsaraDB RDS instance</p>
+     * <p>*   **DRDS**: PolarDB-X instance</p>
+     * <p>*   **MongoDB**: ApsaraDB for MongoDB instance</p>
+     * <p>*   **Redis**: ApsaraDB for Redis instance</p>
+     * <p>*   **PetaData**: HybridDB for MySQL instance</p>
+     * <p>*   **POLARDB**: PolarDB for MySQL cluster</p>
+     * <p>*   **PolarDB_o**: PolarDB for Oracle cluster</p>
+     * <p>*   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0</p>
+     * <p>*   **Greenplum**: AnalyticDB for PostgreSQL instance</p>
+     */
     @NameInMap("DestinationEndpointInstanceType")
     public String destinationEndpointInstanceType;
 
+    /**
+     * <p>You must specify this parameter only if the **DestinationEndpointEngineName** parameter is set to **Oracle**. Valid values:</p>
+     * <br>
+     * <p>*   **SID**: non-RAC architecture</p>
+     * <p>*   **RAC**: RAC architecture</p>
+     * <br>
+     * <p>>  This parameter is optional. The data type of this parameter is String.</p>
+     */
     @NameInMap("DestinationEndpointOracleSID")
     public String destinationEndpointOracleSID;
 
+    /**
+     * <p>The password of the destination database account.</p>
+     */
     @NameInMap("DestinationEndpointPassword")
     public String destinationEndpointPassword;
 
+    /**
+     * <p>The service port number of the source database.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if the **SourceEndpointInstanceType** parameter is set to **ECS**, **LocalInstance**, or **Express**.</p>
+     */
     @NameInMap("DestinationEndpointPort")
     public String destinationEndpointPort;
 
+    /**
+     * <p>The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("DestinationEndpointRegion")
     public String destinationEndpointRegion;
 
+    /**
+     * <p>The database account of the destination database.</p>
+     * <br>
+     * <p>>  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).</p>
+     */
     @NameInMap("DestinationEndpointUserName")
     public String destinationEndpointUserName;
 
+    /**
+     * <p>The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **Oracle**. Valid values:</p>
+     * <br>
+     * <p>*   **SID**: non-RAC architecture</p>
+     * <p>*   **RAC**: RAC architecture</p>
+     * <br>
+     * <p>>  This parameter is optional.</p>
+     */
     @NameInMap("SourceEndpointArchitecture")
     public String sourceEndpointArchitecture;
 
+    /**
+     * <p>The name of the source database or the authentication database.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   You must specify this parameter if the **SourceEndpointEngineName** parameter is set to **PostgreSQL** or **MongoDB**. You must also specify this parameter if the **SourceEndpointInstanceType** parameter is set to **PolarDB_o**.</p>
+     * <p>*   If the **SourceEndpointEngineName** parameter is set to **PostgreSQL** or **DRDS**, specify the name of the source database. If the SourceEndpointEngineName parameter is set to **MongoDB**, specify the name of the authentication database.</p>
+     * <p>*   If the **SourceEndpointInstanceType** parameter is set to **PolarDB_o**, specify the name of the source database.</p>
+     */
     @NameInMap("SourceEndpointDatabaseName")
     public String sourceEndpointDatabaseName;
 
+    /**
+     * <p>The engine type of the source database. Valid values: **MySQL**, **TiDB**, **SQLServer**, **PostgreSQL**, **Oracle**, **MongoDB**, and **Redis**.</p>
+     * <br>
+     * <p>>  Default value: **MySQL**.</p>
+     */
     @NameInMap("SourceEndpointEngineName")
     public String sourceEndpointEngineName;
 
+    /**
+     * <p>The endpoint of the source database.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if the **SourceEndpointInstanceType** parameter is set to **LocalInstance** or **Express**.</p>
+     */
     @NameInMap("SourceEndpointIP")
     public String sourceEndpointIP;
 
+    /**
+     * <p>The ID of the source instance.</p>
+     */
     @NameInMap("SourceEndpointInstanceID")
     public String sourceEndpointInstanceID;
 
+    /**
+     * <p>The type of the source instance. Valid values:</p>
+     * <br>
+     * <p>*   **RDS**: ApsaraDB RDS instance</p>
+     * <p>*   **LocalInstance**: self-managed database with a public IP address</p>
+     * <p>*   **ECS**: self-managed database that is hosted on ECS</p>
+     * <p>*   **Express**: self-managed database that is connected over Express Connect</p>
+     * <p>*   **dg**: self-managed database that is connected over Database Gateway</p>
+     * <p>*   **MongoDB**: ApsaraDB for MongoDB instance</p>
+     * <p>*   **POLARDB**: PolarDB for MySQL cluster</p>
+     * <p>*   **PolarDB_o**: PolarDB for Oracle cluster</p>
+     */
     @NameInMap("SourceEndpointInstanceType")
     public String sourceEndpointInstanceType;
 
+    /**
+     * <p>The SID of the Oracle database.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if the **SourceEndpointEngineName** parameter is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.</p>
+     */
     @NameInMap("SourceEndpointOracleSID")
     public String sourceEndpointOracleSID;
 
+    /**
+     * <p>The password of the source database account.</p>
+     */
     @NameInMap("SourceEndpointPassword")
     public String sourceEndpointPassword;
 
+    /**
+     * <p>The service port number of the source database.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if the **SourceEndpointInstanceType** parameter is set to **ECS**, **LocalInstance**, or **Express**.</p>
+     */
     @NameInMap("SourceEndpointPort")
     public String sourceEndpointPort;
 
+    /**
+     * <p>The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("SourceEndpointRegion")
     public String sourceEndpointRegion;
 
+    /**
+     * <p>The database account of the source database.</p>
+     * <br>
+     * <p>>  The permissions that are required for database accounts vary with the migration or synchronization scenario. For more information, see [Overview of data migration scenarios](~~26618~~) and [Overview of data synchronization scenarios](~~130744~~).</p>
+     */
     @NameInMap("SourceEndpointUserName")
     public String sourceEndpointUserName;
 

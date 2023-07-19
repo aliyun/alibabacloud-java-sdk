@@ -4,30 +4,79 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateJobMonitorRuleRequest extends TeaModel {
+    /**
+     * <p>The threshold for triggering latency alerts.</p>
+     * <br>
+     * <p>*   If the **Type** parameter is set to **delay**, the threshold must be an integer. You can set the threshold based on your requirements. To prevent jitters caused by network and database overloads, we recommend that you set the threshold to more than 10 seconds. Unit: seconds.</p>
+     * <p>*   If the **Type** parameter is set to **full_timeout**, the threshold must be an integer. Unit: hours.</p>
+     * <br>
+     * <p>>  This parameter is required if the **Type** parameter is set to **delay** or **full_timeout** and the **State** parameter is set to **Y**.</p>
+     */
     @NameInMap("DelayRuleTime")
     public Long delayRuleTime;
 
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The alert threshold.</p>
+     */
     @NameInMap("NoticeValue")
     public Integer noticeValue;
 
+    /**
+     * <p>The statistical period of the incremental data verification task. Unit: minutes.</p>
+     * <br>
+     * <p>>  Valid values: 1, 3, 5, and 30.</p>
+     */
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The mobile numbers that receive alert notifications. Separate multiple mobile numbers with commas (,).</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   This parameter is available only for users of the China site (aliyun.com). Only mobile numbers in the Chinese mainland are supported. You can specify up to 10 mobile numbers.</p>
+     * <p>*   Users of the international site (alibabacloud.com) cannot receive alerts by using mobile phones, but can [configure alert rules for DTS tasks in the CloudMonitor console](~~175876~~).</p>
+     */
     @NameInMap("Phone")
     public String phone;
 
+    /**
+     * <p>The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to enable the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   **Y**: enables the alert rule.</p>
+     * <p>*   **N**: disables the alert rule.</p>
+     * <br>
+     * <p>Default value: **Y**.</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The number of statistical periods of the incremental data verification task.</p>
+     */
     @NameInMap("Times")
     public Integer times;
 
+    /**
+     * <p>The metric that is used to monitor the task. Valid values:</p>
+     * <br>
+     * <p>*   **delay**: the **Latency** metric.</p>
+     * <p>*   **error**: the **Status** metric.</p>
+     * <p>*   **full_timeout**: the **Full Timeout** metric.</p>
+     * <br>
+     * <p>Default value: **error**. You must manually set this value.</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,30 +4,57 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ListDedicatedClusterResponseBody extends TeaModel {
+    /**
+     * <p>The statuses of all clusters.</p>
+     */
     @NameInMap("DedicatedClusterStatusList")
     public ListDedicatedClusterResponseBodyDedicatedClusterStatusList dedicatedClusterStatusList;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The total number of clusters that meet the query condition.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -109,63 +136,132 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     }
 
     public static class ListDedicatedClusterResponseBodyDedicatedClusterStatusListDedicatedClusterStatus extends TeaModel {
+        /**
+         * <p>The CPU utilization, in percentage.</p>
+         */
         @NameInMap("CpuUtilization")
         public Long cpuUtilization;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DedicatedClusterId")
         public String dedicatedClusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("DedicatedClusterName")
         public String dedicatedClusterName;
 
+        /**
+         * <p>The disk usage.</p>
+         */
         @NameInMap("DiskUtilization")
         public Long diskUtilization;
 
+        /**
+         * <p>The ID of the DTS instance.</p>
+         */
         @NameInMap("DtsInstanceID")
         public String dtsInstanceID;
 
+        /**
+         * <p>The number of DTS units (DUs).</p>
+         */
         @NameInMap("Du")
         public Long du;
 
+        /**
+         * <p>The DU usage, in percentage.</p>
+         */
         @NameInMap("DuUtilization")
         public Long duUtilization;
 
+        /**
+         * <p>The time when the cluster was created.</p>
+         */
         @NameInMap("GmtCreated")
         public Long gmtCreated;
 
+        /**
+         * <p>The memory usage.</p>
+         */
         @NameInMap("MemUtilization")
         public Long memUtilization;
 
+        /**
+         * <p>The number of nodes in the cluster.</p>
+         */
         @NameInMap("NodeCount")
         public Long nodeCount;
 
+        /**
+         * <p>The number of over-provisioned DUs.</p>
+         */
         @NameInMap("OversoldDu")
         public Long oversoldDu;
 
+        /**
+         * <p>The ID of the region in which the DTS instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **init**: The cluster is being initialized.</p>
+         * <p>*   **schedule**: The cluster is pending scheduling.</p>
+         * <p>*   **running**: The cluster is running.</p>
+         * <p>*   **upgrade**: The cluster is being upgraded.</p>
+         * <p>*   **downgrade**: The cluster is being downgraded.</p>
+         * <p>*   **locked**: The cluster is locked.</p>
+         * <p>*   **releasing**: The cluster is being released.</p>
+         * <p>*   **released**: The cluster is released.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The total number of CPU cores.</p>
+         */
         @NameInMap("TotalCpuCore")
         public Long totalCpuCore;
 
+        /**
+         * <p>The total disk capacity. Unit: GB.</p>
+         */
         @NameInMap("TotalDiskGBSize")
         public Long totalDiskGBSize;
 
+        /**
+         * <p>The total memory capacity. Unit: GB.</p>
+         */
         @NameInMap("TotalMemGBSize")
         public Long totalMemGBSize;
 
+        /**
+         * <p>The number of used CPU cores.</p>
+         */
         @NameInMap("UsedCpuCore")
         public Long usedCpuCore;
 
+        /**
+         * <p>The used disk capacity. Unit: GB.</p>
+         */
         @NameInMap("UsedDiskGBSize")
         public Long usedDiskGBSize;
 
+        /**
+         * <p>The number of used DUs.</p>
+         */
         @NameInMap("UsedDu")
         public Long usedDu;
 
+        /**
+         * <p>The used memory capacity. Unit: GB.</p>
+         */
         @NameInMap("UsedMemGBSize")
         public Long usedMemGBSize;
 

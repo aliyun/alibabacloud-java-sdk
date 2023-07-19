@@ -4,33 +4,68 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeJobMonitorRuleResponseBody extends TeaModel {
+    /**
+     * <p>The error code. This parameter will be removed in the future.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>>  If the specified **DtsJobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The monitoring rules of the DTS task.</p>
+     */
     @NameInMap("MonitorRules")
     public java.util.List<DescribeJobMonitorRuleResponseBodyMonitorRules> monitorRules;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**:The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The topics of all subtasks in the distributed change tracking task.</p>
+     */
     @NameInMap("Topics")
     public java.util.List<String> topics;
 
@@ -120,6 +155,12 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeJobMonitorRuleResponseBodyMonitorRules extends TeaModel {
+        /**
+         * <p>The threshold that triggers the alert.</p>
+         * <br>
+         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **delay**, the unit of DelayRuleTime is seconds.</p>
+         * <p>*   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.</p>
+         */
         @NameInMap("DelayRuleTime")
         public Long delayRuleTime;
 
@@ -135,15 +176,30 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         @NameInMap("Period")
         public Integer period;
 
+        /**
+         * <p>The mobile phone numbers that receive alert notifications. Multiple mobile numbers are separated by commas (,).</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>Indicates whether the monitoring rule is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **Y**: The monitoring rule is enabled.</p>
+         * <p>*   **N**: The monitoring rule is disabled.</p>
+         */
         @NameInMap("State")
         public String state;
 
         @NameInMap("Times")
         public Integer times;
 
+        /**
+         * <p>The type of the monitoring rule. Valid values:</p>
+         * <br>
+         * <p>*   **delay**: If the task latency reaches the threshold, an alert is triggered.</p>
+         * <p>*   **error**: If an exception occurs, an alert is triggered.</p>
+         */
         @NameInMap("Type")
         public String type;
 

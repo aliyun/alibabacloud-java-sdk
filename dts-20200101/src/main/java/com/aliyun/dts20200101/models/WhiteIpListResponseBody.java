@@ -7,24 +7,48 @@ public class WhiteIpListResponseBody extends TeaModel {
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call was successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The CIDR blocks of DTS servers. Multiple CIDR blocks are separated by commas (,).</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.</p>
+     */
     @NameInMap("IpList")
     public String ipList;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

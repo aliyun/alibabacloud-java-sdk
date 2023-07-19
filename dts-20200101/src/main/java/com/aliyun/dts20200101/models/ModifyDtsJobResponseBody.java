@@ -4,21 +4,41 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyDtsJobResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the DTS task.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     * <br>
+     * <p>>  The data type of this parameter is String. Sample value: **The actual sample value is The request processing has failed due to some unknown error.</p>
+     */
     @NameInMap("ErrMessage")
     public Boolean errMessage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,81 +4,168 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedClusterResponseBody extends TeaModel {
+    /**
+     * <p>The CPU utilization. Unit: percentage.</p>
+     */
     @NameInMap("CpuUtilization")
     public Long cpuUtilization;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("DedicatedClusterName")
     public String dedicatedClusterName;
 
+    /**
+     * <p>The disk usage.</p>
+     */
     @NameInMap("DiskUtilization")
     public Long diskUtilization;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DtsInstanceID")
     public String dtsInstanceID;
 
+    /**
+     * <p>The number of DTS units (DUs).</p>
+     */
     @NameInMap("Du")
     public Long du;
 
+    /**
+     * <p>The DU usage. Unit: percentage.</p>
+     */
     @NameInMap("DuUtilization")
     public Long duUtilization;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The time when the cluster was created.</p>
+     */
     @NameInMap("GmtCreated")
     public Long gmtCreated;
 
+    /**
+     * <p>The time when the cluster stopped.</p>
+     */
     @NameInMap("GmtFinished")
     public Long gmtFinished;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The memory usage.</p>
+     */
     @NameInMap("MemUtilization")
     public Long memUtilization;
 
+    /**
+     * <p>The number of nodes in the cluster.</p>
+     */
     @NameInMap("NodeCount")
     public Long nodeCount;
 
+    /**
+     * <p>The number of DUs that exceeds the upper limit.</p>
+     */
     @NameInMap("OversoldDu")
     public Long oversoldDu;
 
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **init**: The cluster is being initialized.</p>
+     * <p>*   **schedule**: The cluster is pending scheduling.</p>
+     * <p>*   **running**: The cluster is running.</p>
+     * <p>*   **upgrade**: The cluster is being upgraded.</p>
+     * <p>*   **downgrade**: The cluster is being downgraded.</p>
+     * <p>*   **locked**: The cluster is locked.</p>
+     * <p>*   **releasing**: The cluster is being released.</p>
+     * <p>*   **released**: The cluster is released.</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The total number of CPU cores.</p>
+     */
     @NameInMap("TotalCpuCore")
     public Long totalCpuCore;
 
+    /**
+     * <p>The total disk size. Unit: GB.</p>
+     */
     @NameInMap("TotalDiskGBSize")
     public Long totalDiskGBSize;
 
+    /**
+     * <p>The total amount of memory. Unit: GB.</p>
+     */
     @NameInMap("TotalMemGBSize")
     public Long totalMemGBSize;
 
+    /**
+     * <p>The number of used CPU cores.</p>
+     */
     @NameInMap("UsedCpuCore")
     public Long usedCpuCore;
 
+    /**
+     * <p>The used disk size. Unit: GB.</p>
+     */
     @NameInMap("UsedDiskGBSize")
     public Long usedDiskGBSize;
 
+    /**
+     * <p>The number of used DUs.</p>
+     */
     @NameInMap("UsedDu")
     public Long usedDu;
 
+    /**
+     * <p>The amount of used memory. Unit: GB.</p>
+     */
     @NameInMap("UsedMemGBSize")
     public Long usedMemGBSize;
 

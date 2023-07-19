@@ -4,21 +4,39 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerChannelResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.</p>
+     */
     @NameInMap("ConsumerGroupID")
     public String consumerGroupID;
 
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the call failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 

@@ -4,33 +4,63 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedClusterMonitorRuleRequest extends TeaModel {
+    /**
+     * <p>The alert threshold for CPU utilization. Unit: percentage.</p>
+     */
     @NameInMap("CpuAlarmThreshold")
     public Long cpuAlarmThreshold;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DedicatedClusterId")
     public String dedicatedClusterId;
 
+    /**
+     * <p>The alert threshold for disk usage. Unit: percentage.</p>
+     */
     @NameInMap("DiskAlarmThreshold")
     public Long diskAlarmThreshold;
 
+    /**
+     * <p>The alert threshold for DTS Unit (DU) usage. Unit: percentage.</p>
+     */
     @NameInMap("DuAlarmThreshold")
     public Long duAlarmThreshold;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The alert threshold for memory usage. Unit: percentage.</p>
+     */
     @NameInMap("MemAlarmThreshold")
     public Long memAlarmThreshold;
 
+    /**
+     * <p>Specifies whether to enable the alert feature. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enables the alert feature.</p>
+     * <p>*   **0**: disables the alert feature.</p>
+     */
     @NameInMap("NoticeSwitch")
     public Long noticeSwitch;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The mobile phone number to which alerts are sent. Separate multiple mobile phone numbers with commas (,).</p>
+     */
     @NameInMap("Phones")
     public String phones;
 
+    /**
+     * <p>The ID of the region in which the Data Transmission Service (DTS) instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

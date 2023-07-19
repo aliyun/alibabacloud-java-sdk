@@ -4,9 +4,15 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEndpointSwitchStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -16,6 +22,9 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The task ID, which is returned after you call the [SwitchSynchronizationEndpoint](~~201858~~) operation.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

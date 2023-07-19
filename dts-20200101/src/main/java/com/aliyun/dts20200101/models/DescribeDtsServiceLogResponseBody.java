@@ -4,36 +4,69 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsServiceLogResponseBody extends TeaModel {
+    /**
+     * <p>The dynamic error code. This parameter will be removed soon.</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The error code returned if the request fails.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of log entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the logs.</p>
+     */
     @NameInMap("ServiceLogContexts")
     public java.util.List<DescribeDtsServiceLogResponseBodyServiceLogContexts> serviceLogContexts;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The total number of logs that meet the query conditions.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Long totalRecordCount;
 
@@ -131,12 +164,21 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsServiceLogResponseBodyServiceLogContexts extends TeaModel {
+        /**
+         * <p>The log content.</p>
+         */
         @NameInMap("Context")
         public String context;
 
+        /**
+         * <p>The log level.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The time when the logs were collected. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("Time")
         public String time;
 

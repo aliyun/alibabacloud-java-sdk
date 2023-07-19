@@ -4,21 +4,33 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeConsumerGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 
     @NameInMap("OwnerId")
     public String ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.</p>
+     */
     @NameInMap("SubscriptionInstanceId")
     public String subscriptionInstanceId;
 

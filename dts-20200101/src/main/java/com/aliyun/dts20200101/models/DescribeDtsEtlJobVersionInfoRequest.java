@@ -4,18 +4,33 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the Data Transmission Service (DTS) instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>The ID of the ETL task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.</p>
+     */
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region in which the DTS instance resides. You can call the [DescribeRegions](~~25609~~) operation to query the available Alibaba Cloud regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

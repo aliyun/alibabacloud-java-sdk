@@ -4,11 +4,14 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataCheckReportUrlRequest extends TeaModel {
+    @NameInMap("CheckType")
+    public Integer checkType;
+
     @NameInMap("DbName")
     public String dbName;
 
-    @NameInMap("JobStepId")
-    public String jobStepId;
+    @NameInMap("DtsJobId")
+    public String dtsJobId;
 
     @NameInMap("TbName")
     public String tbName;
@@ -16,6 +19,14 @@ public class DescribeDataCheckReportUrlRequest extends TeaModel {
     public static DescribeDataCheckReportUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataCheckReportUrlRequest self = new DescribeDataCheckReportUrlRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDataCheckReportUrlRequest setCheckType(Integer checkType) {
+        this.checkType = checkType;
+        return this;
+    }
+    public Integer getCheckType() {
+        return this.checkType;
     }
 
     public DescribeDataCheckReportUrlRequest setDbName(String dbName) {
@@ -26,12 +37,12 @@ public class DescribeDataCheckReportUrlRequest extends TeaModel {
         return this.dbName;
     }
 
-    public DescribeDataCheckReportUrlRequest setJobStepId(String jobStepId) {
-        this.jobStepId = jobStepId;
+    public DescribeDataCheckReportUrlRequest setDtsJobId(String dtsJobId) {
+        this.dtsJobId = dtsJobId;
         return this;
     }
-    public String getJobStepId() {
-        return this.jobStepId;
+    public String getDtsJobId() {
+        return this.dtsJobId;
     }
 
     public DescribeDataCheckReportUrlRequest setTbName(String tbName) {

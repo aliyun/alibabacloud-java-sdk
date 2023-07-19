@@ -4,21 +4,50 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class InitDtsRdsInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the data synchronization task.</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>If the node is a self-managed MySQL database that is connected over CEN, you must specify the ID of the CEN instance.</p>
+     * <br>
+     * <p>> You must specify the **EndpointRegion** and **EndpointInstanceId** parameters or the EndpointCenId parameter based on the type of the node.</p>
+     */
     @NameInMap("EndpointCenId")
     public String endpointCenId;
 
+    /**
+     * <p>If the node is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.</p>
+     * <br>
+     * <p>> *   You must also specify the **EndpointRegion** parameter.</p>
+     * <p>>*   You must specify the EndpointInstanceId parameter or the **EndpointCenId** parameter based on the type of the node.</p>
+     */
     @NameInMap("EndpointInstanceId")
     public String endpointInstanceId;
 
+    /**
+     * <p>The type of the node. Valid values:</p>
+     * <br>
+     * <p>*   **RDS**: an ApsaraDB RDS for MySQL instance</p>
+     * <p>*   **CEN**: a self-managed MySQL database that is connected over CEN</p>
+     */
     @NameInMap("EndpointInstanceType")
     public String endpointInstanceType;
 
+    /**
+     * <p>If the node is an ApsaraDB RDS for MySQL instance, you must specify the region in which the ApsaraDB RDS for MySQL instance resides.</p>
+     * <br>
+     * <p>> *   You must also specify the **EndpointInstanceId** parameter.</p>
+     * <p>>*   You must specify the EndpointRegion parameter or the **EndpointCenId** parameter based on the type of the node.</p>
+     */
     @NameInMap("EndpointRegion")
     public String endpointRegion;
 
+    /**
+     * <p>The ID of the region in which the active geo-redundancy database cluster resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
