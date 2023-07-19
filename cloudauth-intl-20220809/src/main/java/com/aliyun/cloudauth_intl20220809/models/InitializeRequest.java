@@ -10,6 +10,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("Crop")
     public String crop;
 
+    @NameInMap("DocScanMode")
+    public String docScanMode;
+
     @NameInMap("DocType")
     public String docType;
 
@@ -83,6 +86,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getCrop() {
         return this.crop;
+    }
+
+    public InitializeRequest setDocScanMode(String docScanMode) {
+        this.docScanMode = docScanMode;
+        return this;
+    }
+    public String getDocScanMode() {
+        return this.docScanMode;
     }
 
     public InitializeRequest setDocType(String docType) {

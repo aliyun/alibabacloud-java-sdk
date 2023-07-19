@@ -596,6 +596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Crop", request.crop);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.docScanMode)) {
+            query.put("DocScanMode", request.docScanMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
             query.put("DocType", request.docType);
         }
