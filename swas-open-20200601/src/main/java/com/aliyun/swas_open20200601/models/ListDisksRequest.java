@@ -5,11 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListDisksRequest extends TeaModel {
     /**
-     * <p>The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The IDs of the disks. The value can be a JSON array that consists of up to 100 disk IDs. Separate multiple disk IDs with commas (,).</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
 
+    /**
+     * <p>磁盘类型。可能值：</p>
+     * <br>
+     * <p>- System：系统盘</p>
+     * <br>
+     * <p>- Data：数据盘</p>
+     * <br>
+     * <p>默认全量查询</p>
+     */
     @NameInMap("DiskType")
     public String diskType;
 
@@ -20,7 +29,7 @@ public class ListDisksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -28,9 +37,9 @@ public class ListDisksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */

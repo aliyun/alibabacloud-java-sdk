@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
     /**
-     * <p>The ID of the source disk.</p>
+     * <p>The disk ID.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
@@ -17,7 +17,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -25,7 +25,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -33,13 +33,13 @@ public class ListSnapshotsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the simple application server.</p>
+     * <p>The region ID of the simple application server that corresponds to the snapshots.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of the snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+     * <p>The snapshot IDs. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple snapshot IDs with commas (,).</p>
      */
     @NameInMap("SnapshotIds")
     public String snapshotIds;
