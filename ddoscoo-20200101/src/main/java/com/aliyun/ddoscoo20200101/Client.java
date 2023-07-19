@@ -130,8 +130,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CertId", request.certId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.certIdentifier)) {
+            query.put("CertIdentifier", request.certIdentifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.certName)) {
             query.put("CertName", request.certName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certRegion)) {
+            query.put("CertRegion", request.certRegion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
@@ -3287,6 +3295,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceStatusWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+      *
+      * @param request DescribeInstancesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstancesResponse
+     */
     public DescribeInstancesResponse describeInstancesWithOptions(DescribeInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3355,6 +3370,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstancesResponse());
     }
 
+    /**
+      * You can call the DescribeInstances operation to query the details of Anti-DDoS Pro or Anti-DDoS Premium instances within the Alibaba Cloud account by page. The details include the ID, mitigation plan, expiration time, and forwarding status.
+      *
+      * @param request DescribeInstancesRequest
+      * @return DescribeInstancesResponse
+     */
     public DescribeInstancesResponse describeInstances(DescribeInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstancesWithOptions(request, runtime);
@@ -3993,7 +4014,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the ISP. For more information, see the ISP codes table.
+      * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+      * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribePortViewSourceIspsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4036,7 +4060,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the ISP. For more information, see the ISP codes table.
+      * You can call the DescribePortViewSourceIsps operation to query the ISPs from which requests are sent to one or more Anti-DDoS Pro or Anti-DDoS Premium instances within a specific period of time.
+      * > The data returned for this operation cannot reflect the actual traffic volume because Layer 4 identity authentication algorithms are updated for Anti-DDoS Pro and Anti-DDoS Premium. You can call this operation to calculate only the proportion of requests sent from different ISPs. If you want to query the request traffic volume, we recommend that you call the [DescribePortFlowList](~~157460~~) operation.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribePortViewSourceIspsRequest
       * @return DescribePortViewSourceIspsResponse
@@ -5595,6 +5622,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableWebCCRuleWithOptions(request, runtime);
     }
 
+    /**
+      * You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
+      *
+      * @param request ModifyBizBandWidthModeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyBizBandWidthModeResponse
+     */
     public ModifyBizBandWidthModeResponse modifyBizBandWidthModeWithOptions(ModifyBizBandWidthModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5623,6 +5657,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBizBandWidthModeResponse());
     }
 
+    /**
+      * You can switch between the metering methods of the burstable clean bandwidth feature. The new metering method takes effect from 00:00 on the first day of the next month. You can change the metering method up to three times each calendar month. The most recent metering method that you select takes effect in the next month. You cannot change the metering method on the last day of each calendar month.
+      *
+      * @param request ModifyBizBandWidthModeRequest
+      * @return ModifyBizBandWidthModeResponse
+     */
     public ModifyBizBandWidthModeResponse modifyBizBandWidthMode(ModifyBizBandWidthModeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBizBandWidthModeWithOptions(request, runtime);
@@ -5864,6 +5904,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyElasticBandWidthWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
+      *
+      * @param request ModifyElasticBizBandWidthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyElasticBizBandWidthResponse
+     */
     public ModifyElasticBizBandWidthResponse modifyElasticBizBandWidthWithOptions(ModifyElasticBizBandWidthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5896,6 +5943,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyElasticBizBandWidthResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that you have fully understood the billing method and [pricing](https://help.aliyun.com/document_detail/283754.html) of the burstable clean bandwidth feature. After you call this operation for the first time, the modification immediately takes effect.
+      *
+      * @param request ModifyElasticBizBandWidthRequest
+      * @return ModifyElasticBizBandWidthResponse
+     */
     public ModifyElasticBizBandWidthResponse modifyElasticBizBandWidth(ModifyElasticBizBandWidthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyElasticBizBandWidthWithOptions(request, runtime);
@@ -6136,6 +6189,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyNetworkRuleAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
+      *
+      * @param request ModifyOcspStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyOcspStatusResponse
+     */
     public ModifyOcspStatusResponse modifyOcspStatusWithOptions(ModifyOcspStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6164,6 +6224,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyOcspStatusResponse());
     }
 
+    /**
+      * This feature is available only for a website that supports HTTPS. If HTTPS is selected for Protocol, we recommend that you enable this feature.
+      *
+      * @param request ModifyOcspStatusRequest
+      * @return ModifyOcspStatusResponse
+     */
     public ModifyOcspStatusResponse modifyOcspStatus(ModifyOcspStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyOcspStatusWithOptions(request, runtime);

@@ -4,12 +4,21 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTotalAttackMaxFlowResponseBody extends TeaModel {
+    /**
+     * <p>The peak bandwidth of attack traffic. Unit: bit/s.</p>
+     */
     @NameInMap("Bps")
     public Long bps;
 
+    /**
+     * <p>The peak packet rate of attack traffic . Unit: packets per second (pps).</p>
+     */
     @NameInMap("Pps")
     public Long pps;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

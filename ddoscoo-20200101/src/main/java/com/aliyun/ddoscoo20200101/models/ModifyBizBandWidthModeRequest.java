@@ -4,9 +4,20 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBizBandWidthModeRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The metering method of the burstable clean bandwidth feature. Valid values:</p>
+     * <br>
+     * <p>*   **month**: the metering method of monthly 95th percentile</p>
+     * <p>*   **day**: the metering method of daily 95th percentile</p>
+     */
     @NameInMap("Mode")
     public String mode;
 

@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHeadersResponseBody extends TeaModel {
+    /**
+     * <p>The information about the custom header.</p>
+     */
     @NameInMap("CustomHeader")
     public DescribeHeadersResponseBodyCustomHeader customHeader;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeHeadersResponseBody extends TeaModel {
     }
 
     public static class DescribeHeadersResponseBodyCustomHeader extends TeaModel {
+        /**
+         * <p>The domain name of the website.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The header of the response.</p>
+         */
         @NameInMap("Headers")
         public String headers;
 

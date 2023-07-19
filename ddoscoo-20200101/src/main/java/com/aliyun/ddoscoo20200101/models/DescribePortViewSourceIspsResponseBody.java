@@ -4,9 +4,15 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribePortViewSourceIspsResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the details of the ISP.</p>
+     */
     @NameInMap("Isps")
     public java.util.List<DescribePortViewSourceIspsResponseBodyIsps> isps;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,17 @@ public class DescribePortViewSourceIspsResponseBody extends TeaModel {
     }
 
     public static class DescribePortViewSourceIspsResponseBodyIsps extends TeaModel {
+        /**
+         * <p>The total number of requests that are sent from the ISP.</p>
+         * <br>
+         * <p>> This parameter does not indicate the accurate number of requests. You can use this parameter to calculate the proportion of requests from different ISPs.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The ID of the ISP. For more information, see the ISP codes table.</p>
+         */
         @NameInMap("IspId")
         public String ispId;
 

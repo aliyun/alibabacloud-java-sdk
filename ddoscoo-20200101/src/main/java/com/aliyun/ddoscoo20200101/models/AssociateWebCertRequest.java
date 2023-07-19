@@ -20,6 +20,9 @@ public class AssociateWebCertRequest extends TeaModel {
     @NameInMap("CertId")
     public Integer certId;
 
+    @NameInMap("CertIdentifier")
+    public String certIdentifier;
+
     /**
      * <p>The name of the certificate that you want to associate. This parameter must be used together with the **Cert** and **Key** parameters.</p>
      * <br>
@@ -27,6 +30,9 @@ public class AssociateWebCertRequest extends TeaModel {
      */
     @NameInMap("CertName")
     public String certName;
+
+    @NameInMap("CertRegion")
+    public String certRegion;
 
     /**
      * <p>The domain name of the website.</p>
@@ -71,12 +77,28 @@ public class AssociateWebCertRequest extends TeaModel {
         return this.certId;
     }
 
+    public AssociateWebCertRequest setCertIdentifier(String certIdentifier) {
+        this.certIdentifier = certIdentifier;
+        return this;
+    }
+    public String getCertIdentifier() {
+        return this.certIdentifier;
+    }
+
     public AssociateWebCertRequest setCertName(String certName) {
         this.certName = certName;
         return this;
     }
     public String getCertName() {
         return this.certName;
+    }
+
+    public AssociateWebCertRequest setCertRegion(String certRegion) {
+        this.certRegion = certRegion;
+        return this;
+    }
+    public String getCertRegion() {
+        return this.certRegion;
     }
 
     public AssociateWebCertRequest setDomain(String domain) {

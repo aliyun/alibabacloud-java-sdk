@@ -4,9 +4,17 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHeadersRequest extends TeaModel {
+    /**
+     * <p>The domain name that you want to query.</p>
+     * <br>
+     * <p>> You can call the [DescribeDomains](~~91724~~) operation to query all the domain names that are added to Anti-DDoS Pro or Anti-DDoS Premium.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

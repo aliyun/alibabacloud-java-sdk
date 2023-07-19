@@ -38,6 +38,9 @@ public class DescribeCertsResponseBody extends TeaModel {
     }
 
     public static class DescribeCertsResponseBodyCerts extends TeaModel {
+        @NameInMap("CertIdentifier")
+        public String certIdentifier;
+
         /**
          * <p>The domain name that is associated with the certificate.</p>
          */
@@ -86,6 +89,14 @@ public class DescribeCertsResponseBody extends TeaModel {
         public static DescribeCertsResponseBodyCerts build(java.util.Map<String, ?> map) throws Exception {
             DescribeCertsResponseBodyCerts self = new DescribeCertsResponseBodyCerts();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCertsResponseBodyCerts setCertIdentifier(String certIdentifier) {
+            this.certIdentifier = certIdentifier;
+            return this;
+        }
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         public DescribeCertsResponseBodyCerts setCommon(String common) {
