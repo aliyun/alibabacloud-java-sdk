@@ -4,6 +4,11 @@ package com.aliyun.ddoscoo20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSecurityProfileRequest extends TeaModel {
+    /**
+     * <p>The domain name of the website.</p>
+     * <br>
+     * <p>> A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.</p>
+     */
     @NameInMap("Domain")
     public String domain;
 

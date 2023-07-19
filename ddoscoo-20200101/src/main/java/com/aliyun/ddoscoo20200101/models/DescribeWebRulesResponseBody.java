@@ -159,6 +159,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @NameInMap("CertName")
         public String certName;
 
+        @NameInMap("CertRegion")
+        public String certRegion;
+
         @NameInMap("Cname")
         public String cname;
 
@@ -256,6 +259,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
         public String getCertName() {
             return this.certName;
+        }
+
+        public DescribeWebRulesResponseBodyWebRules setCertRegion(String certRegion) {
+            this.certRegion = certRegion;
+            return this;
+        }
+        public String getCertRegion() {
+            return this.certRegion;
         }
 
         public DescribeWebRulesResponseBodyWebRules setCname(String cname) {

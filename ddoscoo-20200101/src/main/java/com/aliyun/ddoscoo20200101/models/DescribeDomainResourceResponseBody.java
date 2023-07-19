@@ -17,7 +17,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>An array that consists of the configurations of the forwarding rule.</p>
+     * <p>The configurations of the forwarding rule.</p>
      */
     @NameInMap("WebRules")
     public java.util.List<DescribeDomainResourceResponseBodyWebRules> webRules;
@@ -53,7 +53,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
     public static class DescribeDomainResourceResponseBodyWebRulesProxyTypes extends TeaModel {
         /**
-         * <p>An array that consists of the port numbers.</p>
+         * <p>The port numbers.</p>
          */
         @NameInMap("ProxyPorts")
         public java.util.List<String> proxyPorts;
@@ -94,7 +94,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
 
     public static class DescribeDomainResourceResponseBodyWebRules extends TeaModel {
         /**
-         * <p>An array consisting of the IP addresses that are included in the blacklist of the domain name.</p>
+         * <p>The IP addresses that are included in the blacklist of the domain name.</p>
          */
         @NameInMap("BlackList")
         public java.util.List<String> blackList;
@@ -102,8 +102,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Frequency Control policy is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("CcEnabled")
         public Boolean ccEnabled;
@@ -111,8 +111,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("CcRuleEnabled")
         public Boolean ccRuleEnabled;
@@ -141,7 +141,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public String cname;
 
         /**
-         * <p>An array that consists of custom cipher suites.</p>
+         * <p>The custom cipher suites.</p>
          */
         @NameInMap("CustomCiphers")
         public java.util.List<String> customCiphers;
@@ -155,8 +155,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Enable HTTP/2 is turned on. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Http2Enable")
         public Boolean http2Enable;
@@ -164,8 +164,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Enforce HTTPS Routing is turned on. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Http2HttpsEnable")
         public Boolean http2HttpsEnable;
@@ -173,8 +173,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Enable HTTP is turned on. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Https2HttpEnable")
         public Boolean https2HttpEnable;
@@ -190,13 +190,21 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public String httpsExt;
 
         /**
-         * <p>An array consisting of the IDs of the instances to which the domain name is added.</p>
+         * <p>The IDs of the instances to which the domain name is added.</p>
          */
         @NameInMap("InstanceIds")
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The scheduling algorithm for back-to-origin traffic. Valid values:</p>
+         * <p>Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:</p>
+         * <p>- **true**: yes</p>
+         * <p>- **false**: no</p>
+         */
+        @NameInMap("OcspEnabled")
+        public Boolean ocspEnabled;
+
+        /**
+         * <p>The load balancing algorithm for back-to-origin traffic. Valid values:</p>
          * <br>
          * <p>*   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.</p>
          * <p>*   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.</p>
@@ -208,14 +216,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance forwards the traffic that is destined for the website. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
+         * <p>*   **true**: Anti-DDoS Pro or Anti-DDoS Premium forwards the traffic that is destined for the website.</p>
          * <p>*   **false**: no</p>
          */
         @NameInMap("ProxyEnabled")
         public Boolean proxyEnabled;
 
         /**
-         * <p>An array that consists of the details of the protocol type and port number.</p>
+         * <p>The details about the protocol type and port number.</p>
          */
         @NameInMap("ProxyTypes")
         public java.util.List<DescribeDomainResourceResponseBodyWebRulesProxyTypes> proxyTypes;
@@ -223,7 +231,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>The reason why the domain name is invalid. Valid values:</p>
          * <br>
-         * <p>*   **1**: No ICP filing is completed for the domain name.</p>
+         * <p>*   **1**: No Content Provider (ICP) filing is completed for the domain name.</p>
          * <p>*   **2**: The business for which you registered the domain name does not meet regulatory requirements.</p>
          * <br>
          * <p>If the two reasons are both involved, the value **2** is returned.</p>
@@ -241,7 +249,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public Boolean punishStatus;
 
         /**
-         * <p>An array that consists of the addresses of the origin servers.</p>
+         * <p>The addresses of origin servers.</p>
          */
         @NameInMap("RealServers")
         public java.util.List<String> realServers;
@@ -258,8 +266,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         /**
          * <p>Indicates whether TLS 1.3 is supported. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Ssl13Enabled")
         public Boolean ssl13Enabled;
@@ -285,7 +293,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         public String sslProtocols;
 
         /**
-         * <p>An array consisting of the IP addresses that are included in the whitelist of the domain name.</p>
+         * <p>The IP addresses that are included in the whitelist of the domain name.</p>
          */
         @NameInMap("WhiteList")
         public java.util.List<String> whiteList;
@@ -397,6 +405,14 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
         }
         public java.util.List<String> getInstanceIds() {
             return this.instanceIds;
+        }
+
+        public DescribeDomainResourceResponseBodyWebRules setOcspEnabled(Boolean ocspEnabled) {
+            this.ocspEnabled = ocspEnabled;
+            return this;
+        }
+        public Boolean getOcspEnabled() {
+            return this.ocspEnabled;
         }
 
         public DescribeDomainResourceResponseBodyWebRules setPolicyMode(String policyMode) {
