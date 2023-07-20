@@ -82,6 +82,12 @@ public class Service extends TeaModel {
     @NameInMap("SafetyLock")
     public String safetyLock;
 
+    @NameInMap("SecondaryInternetEndpoint")
+    public String secondaryInternetEndpoint;
+
+    @NameInMap("SecondaryIntranetEndpoint")
+    public String secondaryIntranetEndpoint;
+
     @NameInMap("ServiceConfig")
     public String serviceConfig;
 
@@ -323,6 +329,22 @@ public class Service extends TeaModel {
     }
     public String getSafetyLock() {
         return this.safetyLock;
+    }
+
+    public Service setSecondaryInternetEndpoint(String secondaryInternetEndpoint) {
+        this.secondaryInternetEndpoint = secondaryInternetEndpoint;
+        return this;
+    }
+    public String getSecondaryInternetEndpoint() {
+        return this.secondaryInternetEndpoint;
+    }
+
+    public Service setSecondaryIntranetEndpoint(String secondaryIntranetEndpoint) {
+        this.secondaryIntranetEndpoint = secondaryIntranetEndpoint;
+        return this;
+    }
+    public String getSecondaryIntranetEndpoint() {
+        return this.secondaryIntranetEndpoint;
     }
 
     public Service setServiceConfig(String serviceConfig) {
