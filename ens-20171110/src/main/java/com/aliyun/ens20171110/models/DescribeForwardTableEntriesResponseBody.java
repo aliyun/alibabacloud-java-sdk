@@ -92,6 +92,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
+        @NameInMap("StandbyExternalIp")
+        public String standbyExternalIp;
+
+        @NameInMap("StandbyStatus")
+        public String standbyStatus;
+
         @NameInMap("Status")
         public String status;
 
@@ -170,6 +176,22 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
         public String getNatGatewayId() {
             return this.natGatewayId;
+        }
+
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntries setStandbyExternalIp(String standbyExternalIp) {
+            this.standbyExternalIp = standbyExternalIp;
+            return this;
+        }
+        public String getStandbyExternalIp() {
+            return this.standbyExternalIp;
+        }
+
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntries setStandbyStatus(String standbyStatus) {
+            this.standbyStatus = standbyStatus;
+            return this;
+        }
+        public String getStandbyStatus() {
+            return this.standbyStatus;
         }
 
         public DescribeForwardTableEntriesResponseBodyForwardTableEntries setStatus(String status) {

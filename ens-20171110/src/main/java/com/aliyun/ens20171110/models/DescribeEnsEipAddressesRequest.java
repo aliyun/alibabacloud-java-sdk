@@ -28,6 +28,9 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Standby")
+    public String standby;
+
     public static DescribeEnsEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsEipAddressesRequest self = new DescribeEnsEipAddressesRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DescribeEnsEipAddressesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeEnsEipAddressesRequest setStandby(String standby) {
+        this.standby = standby;
+        return this;
+    }
+    public String getStandby() {
+        return this.standby;
     }
 
 }

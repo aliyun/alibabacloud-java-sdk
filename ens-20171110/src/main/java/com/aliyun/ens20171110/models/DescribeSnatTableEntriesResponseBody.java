@@ -80,6 +80,12 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @NameInMap("SourceCIDR")
         public String sourceCIDR;
 
+        @NameInMap("StandbySnatIp")
+        public String standbySnatIp;
+
+        @NameInMap("StandbyStatus")
+        public String standbyStatus;
+
         @NameInMap("Status")
         public String status;
 
@@ -126,6 +132,22 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
         public String getSourceCIDR() {
             return this.sourceCIDR;
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntries setStandbySnatIp(String standbySnatIp) {
+            this.standbySnatIp = standbySnatIp;
+            return this;
+        }
+        public String getStandbySnatIp() {
+            return this.standbySnatIp;
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntries setStandbyStatus(String standbyStatus) {
+            this.standbyStatus = standbyStatus;
+            return this;
+        }
+        public String getStandbyStatus() {
+            return this.standbyStatus;
         }
 
         public DescribeSnatTableEntriesResponseBodySnatTableEntries setStatus(String status) {

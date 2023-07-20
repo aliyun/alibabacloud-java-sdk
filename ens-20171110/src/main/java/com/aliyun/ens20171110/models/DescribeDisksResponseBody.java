@@ -103,6 +103,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Portable")
         public Boolean portable;
 
+        @NameInMap("SerialId")
+        public String serialId;
+
         @NameInMap("Size")
         public Integer size;
 
@@ -190,6 +193,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public Boolean getPortable() {
             return this.portable;
+        }
+
+        public DescribeDisksResponseBodyDisksDisks setSerialId(String serialId) {
+            this.serialId = serialId;
+            return this;
+        }
+        public String getSerialId() {
+            return this.serialId;
         }
 
         public DescribeDisksResponseBodyDisksDisks setSize(Integer size) {

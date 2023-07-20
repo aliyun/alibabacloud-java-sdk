@@ -22,6 +22,9 @@ public class CreateSnatEntryRequest extends TeaModel {
     @NameInMap("SourceVSwitchId")
     public String sourceVSwitchId;
 
+    @NameInMap("StandbySnatIp")
+    public String standbySnatIp;
+
     public static CreateSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnatEntryRequest self = new CreateSnatEntryRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class CreateSnatEntryRequest extends TeaModel {
     }
     public String getSourceVSwitchId() {
         return this.sourceVSwitchId;
+    }
+
+    public CreateSnatEntryRequest setStandbySnatIp(String standbySnatIp) {
+        this.standbySnatIp = standbySnatIp;
+        return this;
+    }
+    public String getStandbySnatIp() {
+        return this.standbySnatIp;
     }
 
 }

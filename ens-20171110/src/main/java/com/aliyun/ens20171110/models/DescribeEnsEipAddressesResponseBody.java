@@ -95,11 +95,17 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        @NameInMap("IpStatus")
+        public String ipStatus;
+
         @NameInMap("Isp")
         public String isp;
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Standby")
+        public Boolean standby;
 
         @NameInMap("Status")
         public String status;
@@ -189,6 +195,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setIpStatus(String ipStatus) {
+            this.ipStatus = ipStatus;
+            return this;
+        }
+        public String getIpStatus() {
+            return this.ipStatus;
+        }
+
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setIsp(String isp) {
             this.isp = isp;
             return this;
@@ -203,6 +217,14 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setStandby(Boolean standby) {
+            this.standby = standby;
+            return this;
+        }
+        public Boolean getStandby() {
+            return this.standby;
         }
 
         public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress setStatus(String status) {

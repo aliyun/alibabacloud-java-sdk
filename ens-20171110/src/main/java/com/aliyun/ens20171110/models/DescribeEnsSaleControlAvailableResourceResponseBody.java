@@ -65,11 +65,20 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         @NameInMap("Area")
         public String area;
 
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("Country")
+        public String country;
+
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
         @NameInMap("EnsRegionName")
         public String ensRegionName;
+
+        @NameInMap("Isp")
+        public String isp;
 
         @NameInMap("Province")
         public String province;
@@ -87,6 +96,22 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
             return this.area;
         }
 
+        public DescribeEnsSaleControlAvailableResourceResponseBodySaleControlAvailableResourceAvailableRegion setCity(String city) {
+            this.city = city;
+            return this;
+        }
+        public String getCity() {
+            return this.city;
+        }
+
+        public DescribeEnsSaleControlAvailableResourceResponseBodySaleControlAvailableResourceAvailableRegion setCountry(String country) {
+            this.country = country;
+            return this;
+        }
+        public String getCountry() {
+            return this.country;
+        }
+
         public DescribeEnsSaleControlAvailableResourceResponseBodySaleControlAvailableResourceAvailableRegion setEnsRegionId(String ensRegionId) {
             this.ensRegionId = ensRegionId;
             return this;
@@ -101,6 +126,14 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
         }
         public String getEnsRegionName() {
             return this.ensRegionName;
+        }
+
+        public DescribeEnsSaleControlAvailableResourceResponseBodySaleControlAvailableResourceAvailableRegion setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
         }
 
         public DescribeEnsSaleControlAvailableResourceResponseBodySaleControlAvailableResourceAvailableRegion setProvince(String province) {
