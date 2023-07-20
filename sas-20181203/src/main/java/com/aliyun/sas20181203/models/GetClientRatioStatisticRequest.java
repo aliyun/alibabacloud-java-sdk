@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetClientRatioStatisticRequest extends TeaModel {
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     @NameInMap("StatisticTypes")
     public java.util.List<String> statisticTypes;
 
@@ -16,6 +19,14 @@ public class GetClientRatioStatisticRequest extends TeaModel {
     public static GetClientRatioStatisticRequest build(java.util.Map<String, ?> map) throws Exception {
         GetClientRatioStatisticRequest self = new GetClientRatioStatisticRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetClientRatioStatisticRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public GetClientRatioStatisticRequest setStatisticTypes(java.util.List<String> statisticTypes) {

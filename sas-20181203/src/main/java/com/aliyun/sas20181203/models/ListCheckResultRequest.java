@@ -16,6 +16,9 @@ public class ListCheckResultRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("CustomParam")
+    public Boolean customParam;
+
     /**
      * <p>The instance IDs of the cloud services that you want to query. Separate multiple IDs with commas (,).</p>
      */
@@ -151,6 +154,14 @@ public class ListCheckResultRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListCheckResultRequest setCustomParam(Boolean customParam) {
+        this.customParam = customParam;
+        return this;
+    }
+    public Boolean getCustomParam() {
+        return this.customParam;
     }
 
     public ListCheckResultRequest setInstanceIds(java.util.List<String> instanceIds) {

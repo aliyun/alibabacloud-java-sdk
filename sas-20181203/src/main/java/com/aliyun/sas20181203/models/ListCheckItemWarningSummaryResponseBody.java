@@ -91,6 +91,11 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
         @NameInMap("CheckType")
         public String checkType;
 
+        /**
+         * <p>Checks if the item belongs to the container runtime category.Valid values:</p>
+         * <p>*   **true**</p>
+         * <p>*  **false**</p>
+         */
         @NameInMap("ContainerCheckItem")
         public Boolean containerCheckItem;
 

@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAgentlessTaskCountResponseBody extends TeaModel {
+    @NameInMap("BaselineCheckCount")
+    public Integer baselineCheckCount;
+
+    @NameInMap("CveVulCount")
+    public Integer cveVulCount;
+
     @NameInMap("LastTaskTime")
     public Long lastTaskTime;
 
@@ -16,6 +22,9 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     @NameInMap("RiskMachine")
     public Integer riskMachine;
 
+    @NameInMap("ScaVulCount")
+    public Integer scaVulCount;
+
     @NameInMap("ScanMachine")
     public Integer scanMachine;
 
@@ -25,6 +34,22 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     public static GetAgentlessTaskCountResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAgentlessTaskCountResponseBody self = new GetAgentlessTaskCountResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAgentlessTaskCountResponseBody setBaselineCheckCount(Integer baselineCheckCount) {
+        this.baselineCheckCount = baselineCheckCount;
+        return this;
+    }
+    public Integer getBaselineCheckCount() {
+        return this.baselineCheckCount;
+    }
+
+    public GetAgentlessTaskCountResponseBody setCveVulCount(Integer cveVulCount) {
+        this.cveVulCount = cveVulCount;
+        return this;
+    }
+    public Integer getCveVulCount() {
+        return this.cveVulCount;
     }
 
     public GetAgentlessTaskCountResponseBody setLastTaskTime(Long lastTaskTime) {
@@ -57,6 +82,14 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     }
     public Integer getRiskMachine() {
         return this.riskMachine;
+    }
+
+    public GetAgentlessTaskCountResponseBody setScaVulCount(Integer scaVulCount) {
+        this.scaVulCount = scaVulCount;
+        return this;
+    }
+    public Integer getScaVulCount() {
+        return this.scaVulCount;
     }
 
     public GetAgentlessTaskCountResponseBody setScanMachine(Integer scanMachine) {

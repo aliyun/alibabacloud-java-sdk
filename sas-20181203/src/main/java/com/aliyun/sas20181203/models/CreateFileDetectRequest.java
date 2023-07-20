@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateFileDetectRequest extends TeaModel {
+    /**
+     * <p>The URL that is used to download the file. You can specify this parameter to trigger file detection without the need to upload the file in advance.</p>
+     */
     @NameInMap("DownloadUrl")
     public String downloadUrl;
 
@@ -14,7 +17,7 @@ public class CreateFileDetectRequest extends TeaModel {
     public String hashKey;
 
     /**
-     * <p>The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.</p>
+     * <p>The key of the file that is stored in the Object Storage Service (OSS) bucket. If you specify the DownloadUrl parameter, you can leave this parameter empty. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.</p>
      */
     @NameInMap("OssKey")
     public String ossKey;

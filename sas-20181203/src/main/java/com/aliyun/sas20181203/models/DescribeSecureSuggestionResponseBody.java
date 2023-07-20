@@ -11,7 +11,46 @@ public class DescribeSecureSuggestionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the unhandled security risks.</p>
+     * <p>The sub-type of the unhandled risk. Valid values:</p>
+     * <br>
+     * <p>*   **ALARM_HIGH**: Unhandled Urgency Alerts</p>
+     * <p>*   **ALARM_MEDIUM**: Unhandled Warning Alerts</p>
+     * <p>*   **ALARM_LOW**: Unhandled Reminder Alerts</p>
+     * <p>*   **VUL_EMR_UNCHECK**: Unchecked Urgent Vulnerabilities</p>
+     * <p>*   **VUL_EMR_UNFIX**: Unfixed Urgent Vulnerabilities</p>
+     * <p>*   **VUL_WIN**: Unfixed Windows Server Vulnerabilities</p>
+     * <p>*   **VUL_LINUX**: Unfixed Linux Server Vulnerabilities</p>
+     * <p>*   **VUL_CMS**: Unfixed CMS Vulnerabilities</p>
+     * <p>*   **ACCESSKEY_LEAK**: AccessKey Leakage Risks</p>
+     * <p>*   **HC_WARN**: Baseline Risks</p>
+     * <p>*   **HC_WEAK_EXPLOIT_WARN**: There is a risk of weak passwords exposed by the public network.</p>
+     * <p>*   **HC_WEAK_PASSWORD_WARN**: Risk of weak password</p>
+     * <p>*   **HC_HIGH_EXPLOIT_WARN**: There is a high risk of invasion</p>
+     * <p>*   **HC_OTHER_WARN**: Security Configuration risk</p>
+     * <p>*   **HC_DATABASE_WARN**: Database has security risks</p>
+     * <p>*   **CLOUD_HC_SAS_OPEN**: Security protection has not been installed on the server</p>
+     * <p>*   **CLOUD_HC_AEGIS_OFFLINE**: Server protection status is offline</p>
+     * <p>*   **CLOUD_HC_ACCOUNT_DOUBLE_CHECK**: Two-Factor Authentication not Enabled for Primary Account</p>
+     * <p>*   **CLOUD_HC_RDS**: RDS-database security policy failed, security risks</p>
+     * <p>*   **CLOUD_HC_DDOS**: Risks in Anti-DDoS Pro Back-to-Origin Settings</p>
+     * <p>*   **CLOUD_HC_HIGH_LEVEL**: Cloud product configuration has high risk</p>
+     * <p>*   **CLOUD_HC_OTHER_LEVEL**: Cloud product configuration has medium and low risk risks</p>
+     * <p>*   **OTHER_ATTACH**: Attacks</p>
+     * <p>*   **OTHER_DATABASE_ATTACH**: Database has security risks</p>
+     * <p>*   **REINFORCE_BASELINE**: Config Assessment</p>
+     * <p>*   **REINFORCE_SUSPICIOUS**: Antivirus</p>
+     * <p>*   **REINFORCE_ANALYSIS**: Log Analysis</p>
+     * <p>*   **REINFORCE_AK_LEAK**: AccessKey Leaked Intelligence Detection</p>
+     * <p>*   **REINFORCE_WEB_LOCK**: Website tamper-proofing capability not configured</p>
+     * <p>*   **REINFORCE_BRUTE_FORCE**: Anti brute force cracking</p>
+     * <p>*   **REINFORCE_XPRESS_INSTALL**: One-click client installation</p>
+     * <p>*   **REINFORCE_RANSOMWARE**: Enable anti-extortion strategy</p>
+     * <p>*   **REINFORCE_UNI_RANSOMWARE**: Anti-ransomware for Databases</p>
+     * <p>*   **REINFORCE_VIRUS_SCHEDULE_SCAN**: Periodic virus scan policies not configured</p>
+     * <p>*   **REINFORCE_IMAGE_REPO_SCAN**: No container image scan range configured</p>
+     * <p>*   **REINFORCE_IMAGE_SCAN_TASK**: Image security scan</p>
+     * <p>*   **REINFORCE_K8S_LOG_ANALYSIS**: Container K8s threat detection is disabled</p>
+     * <p>*   **REINFORCE_CONTAINER_NETWORK**: Container Visualization</p>
      */
     @NameInMap("Suggestions")
     public java.util.List<DescribeSecureSuggestionResponseBodySuggestions> suggestions;

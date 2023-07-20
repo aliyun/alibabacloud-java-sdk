@@ -175,6 +175,9 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The custom sorting field. Default value: **operateTime**. Valid values:</p>
      * <br>
@@ -430,6 +433,14 @@ public class DescribeSuspEventsRequest extends TeaModel {
     }
     public String getRemark() {
         return this.remark;
+    }
+
+    public DescribeSuspEventsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeSuspEventsRequest setSortColumn(String sortColumn) {

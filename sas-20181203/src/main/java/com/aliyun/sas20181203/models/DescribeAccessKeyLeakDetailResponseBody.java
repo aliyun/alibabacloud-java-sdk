@@ -58,11 +58,17 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     @NameInMap("Source")
     public String source;
 
+    @NameInMap("TokenValid")
+    public Integer tokenValid;
+
     @NameInMap("Type")
     public String type;
 
     @NameInMap("WhitelistStatus")
     public String whitelistStatus;
+
+    @NameInMap("WhitelistTime")
+    public Long whitelistTime;
 
     public static DescribeAccessKeyLeakDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessKeyLeakDetailResponseBody self = new DescribeAccessKeyLeakDetailResponseBody();
@@ -213,6 +219,14 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         return this.source;
     }
 
+    public DescribeAccessKeyLeakDetailResponseBody setTokenValid(Integer tokenValid) {
+        this.tokenValid = tokenValid;
+        return this;
+    }
+    public Integer getTokenValid() {
+        return this.tokenValid;
+    }
+
     public DescribeAccessKeyLeakDetailResponseBody setType(String type) {
         this.type = type;
         return this;
@@ -227,6 +241,14 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
     }
     public String getWhitelistStatus() {
         return this.whitelistStatus;
+    }
+
+    public DescribeAccessKeyLeakDetailResponseBody setWhitelistTime(Long whitelistTime) {
+        this.whitelistTime = whitelistTime;
+        return this;
+    }
+    public Long getWhitelistTime() {
+        return this.whitelistTime;
     }
 
 }

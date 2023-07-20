@@ -116,6 +116,9 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StatusMessage")
+        public String statusMessage;
+
         public static ListCheckInstanceResultResponseBodyBasicData build(java.util.Map<String, ?> map) throws Exception {
             ListCheckInstanceResultResponseBodyBasicData self = new ListCheckInstanceResultResponseBodyBasicData();
             return TeaModel.build(map, self);
@@ -159,6 +162,14 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListCheckInstanceResultResponseBodyBasicData setStatusMessage(String statusMessage) {
+            this.statusMessage = statusMessage;
+            return this;
+        }
+        public String getStatusMessage() {
+            return this.statusMessage;
         }
 
     }

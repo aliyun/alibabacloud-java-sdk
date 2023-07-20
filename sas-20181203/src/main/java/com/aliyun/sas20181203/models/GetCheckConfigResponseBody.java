@@ -10,6 +10,12 @@ public class GetCheckConfigResponseBody extends TeaModel {
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
+    @NameInMap("EnableAddCheck")
+    public Boolean enableAddCheck;
+
+    @NameInMap("EnableAutoCheck")
+    public Boolean enableAutoCheck;
+
     /**
      * <p>The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:</p>
      * <br>
@@ -26,6 +32,9 @@ public class GetCheckConfigResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("SelectedChecks")
+    public java.util.List<GetCheckConfigResponseBodySelectedChecks> selectedChecks;
 
     /**
      * <p>An array that consists of the information about the check items.</p>
@@ -52,6 +61,22 @@ public class GetCheckConfigResponseBody extends TeaModel {
         return this.cycleDays;
     }
 
+    public GetCheckConfigResponseBody setEnableAddCheck(Boolean enableAddCheck) {
+        this.enableAddCheck = enableAddCheck;
+        return this;
+    }
+    public Boolean getEnableAddCheck() {
+        return this.enableAddCheck;
+    }
+
+    public GetCheckConfigResponseBody setEnableAutoCheck(Boolean enableAutoCheck) {
+        this.enableAutoCheck = enableAutoCheck;
+        return this;
+    }
+    public Boolean getEnableAutoCheck() {
+        return this.enableAutoCheck;
+    }
+
     public GetCheckConfigResponseBody setEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -68,6 +93,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetCheckConfigResponseBody setSelectedChecks(java.util.List<GetCheckConfigResponseBodySelectedChecks> selectedChecks) {
+        this.selectedChecks = selectedChecks;
+        return this;
+    }
+    public java.util.List<GetCheckConfigResponseBodySelectedChecks> getSelectedChecks() {
+        return this.selectedChecks;
+    }
+
     public GetCheckConfigResponseBody setStandards(java.util.List<GetCheckConfigResponseBodyStandards> standards) {
         this.standards = standards;
         return this;
@@ -82,6 +115,36 @@ public class GetCheckConfigResponseBody extends TeaModel {
     }
     public Integer getStartTime() {
         return this.startTime;
+    }
+
+    public static class GetCheckConfigResponseBodySelectedChecks extends TeaModel {
+        @NameInMap("CheckId")
+        public Long checkId;
+
+        @NameInMap("SectionId")
+        public Long sectionId;
+
+        public static GetCheckConfigResponseBodySelectedChecks build(java.util.Map<String, ?> map) throws Exception {
+            GetCheckConfigResponseBodySelectedChecks self = new GetCheckConfigResponseBodySelectedChecks();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCheckConfigResponseBodySelectedChecks setCheckId(Long checkId) {
+            this.checkId = checkId;
+            return this;
+        }
+        public Long getCheckId() {
+            return this.checkId;
+        }
+
+        public GetCheckConfigResponseBodySelectedChecks setSectionId(Long sectionId) {
+            this.sectionId = sectionId;
+            return this;
+        }
+        public Long getSectionId() {
+            return this.sectionId;
+        }
+
     }
 
     public static class GetCheckConfigResponseBodyStandards extends TeaModel {
