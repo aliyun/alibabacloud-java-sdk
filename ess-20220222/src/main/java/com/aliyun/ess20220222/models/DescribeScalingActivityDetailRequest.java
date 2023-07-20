@@ -13,9 +13,6 @@ public class DescribeScalingActivityDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

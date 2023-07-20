@@ -1559,6 +1559,9 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("EmptyDirVolumeMedium")
         public String emptyDirVolumeMedium;
 
+        @NameInMap("EmptyDirVolumeSizeLimit")
+        public String emptyDirVolumeSizeLimit;
+
         /**
          * <p>The endpoint of the NFS server.</p>
          */
@@ -1660,6 +1663,14 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getEmptyDirVolumeMedium() {
             return this.emptyDirVolumeMedium;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumes setEmptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
+            this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
+            return this;
+        }
+        public String getEmptyDirVolumeSizeLimit() {
+            return this.emptyDirVolumeSizeLimit;
         }
 
         public DescribeEciScalingConfigurationsResponseBodyScalingConfigurationsVolumes setFlexVolumeDriver(String flexVolumeDriver) {

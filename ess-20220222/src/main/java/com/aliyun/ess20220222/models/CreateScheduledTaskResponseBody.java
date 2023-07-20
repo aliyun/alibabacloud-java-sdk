@@ -4,15 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduledTaskResponseBody extends TeaModel {
-    /**
-     * <p>auditing</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("ScheduledTaskId")
     public String scheduledTaskId;
 

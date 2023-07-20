@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyAlarmResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the event-triggered task.</p>
      */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
     /**
-     * <p>auditing</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

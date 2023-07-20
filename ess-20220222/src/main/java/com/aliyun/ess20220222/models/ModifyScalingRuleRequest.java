@@ -24,6 +24,9 @@ public class ModifyScalingRuleRequest extends TeaModel {
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
+    /**
+     * <p>监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度信息。</p>
+     */
     @NameInMap("AlarmDimensions")
     public java.util.List<ModifyScalingRuleRequestAlarmDimensions> alarmDimensions;
 
@@ -145,9 +148,7 @@ public class ModifyScalingRuleRequest extends TeaModel {
     public String scalingRuleId;
 
     /**
-     * <p>The cooldown time of the scaling rule. This parameter is available only if you set the ScalingRuleType parameter to SimpleScalingRule.</p>
-     * <br>
-     * <p>Valid values: 0 to 86400. Unit: seconds.</p>
+     * <p>The name of the scaling rule. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of a scaling rule must be unique within an Alibaba Cloud account in a region.</p>
      */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
@@ -354,9 +355,15 @@ public class ModifyScalingRuleRequest extends TeaModel {
     }
 
     public static class ModifyScalingRuleRequestAlarmDimensions extends TeaModel {
+        /**
+         * <p>监控项关联的维度信息键。</p>
+         */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        /**
+         * <p>监控项关联的维度信息值。</p>
+         */
         @NameInMap("DimensionValue")
         public String dimensionValue;
 

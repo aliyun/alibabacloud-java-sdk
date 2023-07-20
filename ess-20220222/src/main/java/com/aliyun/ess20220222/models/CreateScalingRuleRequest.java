@@ -27,6 +27,9 @@ public class CreateScalingRuleRequest extends TeaModel {
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
+    /**
+     * <p>监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度键值信息。</p>
+     */
     @NameInMap("AlarmDimensions")
     public java.util.List<CreateScalingRuleRequestAlarmDimensions> alarmDimensions;
 
@@ -37,31 +40,21 @@ public class CreateScalingRuleRequest extends TeaModel {
     public Integer cooldown;
 
     /**
-     * <p>The number of consecutive times that the event-triggered task created for scale-in activities must meet the threshold conditions before an alert is triggered. After a target tracking scaling rule is created, an event-triggered task is automatically created and then associated with the target tracking scaling rule.</p>
+     * <p>Specifies whether to disable scale-in. This parameter is available only if you set ScalingRuleType to TargetTrackingScalingRule.</p>
      * <br>
-     * <p>Default value: 15.</p>
+     * <p>Default value: false</p>
      */
     @NameInMap("DisableScaleIn")
     public Boolean disableScaleIn;
 
     /**
-     * <p>The predefined metric that you want to monitor. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule.</p>
+     * <p>The warmup period of an instance. This parameter is available only if you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the Warmup state to a scaling group but does not report the monitoring data of the ECS instances to CloudMonitor during the warmup period.</p>
      * <br>
-     * <p>Valid values if you set the ScalingRuleType parameter to TargetTrackingScalingRule:</p>
+     * <p>> Auto Scaling calculates the number of ECS instances that must be scaled. ECS instances in the Warmup state are not counted towards the current capacity of the scaling group.</p>
      * <br>
-     * <p>*   CpuUtilization: the average CPU utilization</p>
-     * <p>*   ClassicInternetRx: the average inbound Internet traffic over the classic network</p>
-     * <p>*   ClassicInternetTx: the average outbound Internet traffic over the classic network</p>
-     * <p>*   VpcInternetRx: the average inbound Internet traffic over the virtual private cloud (VPC)</p>
-     * <p>*   VpcInternetTx: the average outbound Internet traffic over the VPC</p>
-     * <p>*   IntranetRx: the average inbound traffic over the internal network</p>
-     * <p>*   IntranetTx: the average outbound traffic over the internal network</p>
+     * <p>Valid values: 0 to 86400. Unit: seconds.</p>
      * <br>
-     * <p>Valid values if you set the ScalingRuleType parameter to PredictiveScalingRule:</p>
-     * <br>
-     * <p>*   CpuUtilization: the average CPU utilization</p>
-     * <p>*   IntranetRx: the average inbound traffic over the internal network</p>
-     * <p>*   IntranetTx: the average outbound traffic over the internal network</p>
+     * <p>Default value: 300</p>
      */
     @NameInMap("EstimatedInstanceWarmup")
     public Integer estimatedInstanceWarmup;
@@ -175,13 +168,14 @@ public class CreateScalingRuleRequest extends TeaModel {
     public String scalingRuleName;
 
     /**
-     * <p>The warmup period of an instance. This parameter is available only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule. Auto Scaling adds ECS instances that are in the warmup state to a scaling group but does not report monitoring data to CloudMonitor during the warmup period.</p>
+     * <p>The type of the scaling rule. Valid values:</p>
      * <br>
-     * <p>> Auto Scaling calculates the number of ECS instances that must be scaled. ECS instances in the warmup state are not counted towards the current capacity of the scaling group.</p>
+     * <p>*   SimpleScalingRule: adjusts the number of ECS instances based on the values of AdjustmentType and AdjustmentValue.</p>
+     * <p>*   TargetTrackingScalingRule: calculates the number of ECS instances that need to be scaled in a dynamic manner and maintains the value of a predefined metric close to the value of TargetValue.</p>
+     * <p>*   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.</p>
+     * <p>*   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of the predefined metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the boundary values for the scaling group.</p>
      * <br>
-     * <p>Valid values: 0 to 86400. Unit: seconds.</p>
-     * <br>
-     * <p>Default value: 300.</p>
+     * <p>Default value: SimpleScalingRule</p>
      */
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
@@ -398,9 +392,15 @@ public class CreateScalingRuleRequest extends TeaModel {
     }
 
     public static class CreateScalingRuleRequestAlarmDimensions extends TeaModel {
+        /**
+         * <p>监控项关联的维度信息键。</p>
+         */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        /**
+         * <p>监控项关联的维度信息值。</p>
+         */
         @NameInMap("DimensionValue")
         public String dimensionValue;
 

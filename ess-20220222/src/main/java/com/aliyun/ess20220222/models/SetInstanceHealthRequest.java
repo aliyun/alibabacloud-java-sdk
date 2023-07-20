@@ -4,18 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class SetInstanceHealthRequest extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("HealthStatus")
     public String healthStatus;
 
-    /**
-     * <p>The health status of the ECS instance. Valid values:</p>
-     * <br>
-     * <p>*   Healthy</p>
-     * <p>*   Unhealthy</p>
-     */
     @NameInMap("InstanceId")
     public String instanceId;
 

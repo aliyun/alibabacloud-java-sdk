@@ -4,46 +4,24 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DetachDBInstancesRequest extends TeaModel {
-    /**
-     * <p>The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The IDs of the ApsaraDB RDS instances. You can specify up to five ApsaraDB RDS instances.</p>
-     */
     @NameInMap("DBInstances")
     public java.util.List<String> DBInstances;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
-     * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
-     */
     @NameInMap("ForceDetach")
     public Boolean forceDetach;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>Specifies whether to remove the private IP addresses of instances in the scaling group from the whitelist that manages access to the ApsaraDB RDS instance with which the scaling group is associated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

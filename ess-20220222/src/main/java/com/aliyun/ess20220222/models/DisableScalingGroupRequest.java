@@ -16,9 +16,6 @@ public class DisableScalingGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

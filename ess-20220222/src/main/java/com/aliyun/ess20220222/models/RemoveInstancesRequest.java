@@ -4,20 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class RemoveInstancesRequest extends TeaModel {
-    /**
-     * <p>Specifies whether to adjust the expected number of ECS instances in the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   true: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group decreases.</p>
-     * <p>*   false: After ECS instances are removed from the scaling group, the expected number of ECS instances in the scaling group remains unchanged.</p>
-     * <br>
-     * <p>Default value: true.</p>
-     */
     @NameInMap("DecreaseDesiredCapacity")
     public Boolean decreaseDesiredCapacity;
 
-    /**
-     * <p>The IDs of the ECS instances that you want to remove from the scaling group.</p>
-     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
@@ -27,32 +16,9 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the scaling group.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The action that you want Auto Scaling to perform after the ECS instance is removed from the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   recycle: puts the ECS instance into economical mode.</p>
-     * <br>
-     * <p>    **</p>
-     * <br>
-     * <p>    **Note**This setting takes effect only if you set the ScalingPolicy parameter to recycle.</p>
-     * <br>
-     * <p>*   release: releases the ECS instance.</p>
-     * <br>
-     * <p>The ScalingPolicy parameter that you specify when you call the CreateScalingGroup operation specifies the reclaim mode of the scaling group. The RemovePolicy parameter that you specify when you call the RemoveInstances operation specifies the action to be performed on ECS instances after the ECS instances are removed. Example:</p>
-     * <br>
-     * <p>*   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to recycle, the ECS instances are put into economical mode after the ECS instances are removed from the scaling group.</p>
-     * <p>*   If you set the ScalingPolicy parameter to recycle and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.</p>
-     * <p>*   If you set the ScalingPolicy parameter to release and the RemovePolicy parameter to recycle, the ECS instances are released after the ECS instances are removed from the scaling group.</p>
-     * <p>*   If you set both the ScalingPolicy parameter and the RemovePolicy parameter to release, the ECS instances are released after the ECS instances are removed from the scaling group.</p>
-     * <br>
-     * <p>Default value: release.</p>
-     */
     @NameInMap("RemovePolicy")
     public String removePolicy;
 
@@ -62,9 +28,6 @@ public class RemoveInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the scaling group.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

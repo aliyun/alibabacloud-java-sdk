@@ -4,15 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class CreateAlarmResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the event-triggered task.</p>
-     */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

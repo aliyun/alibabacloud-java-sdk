@@ -4,30 +4,18 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class SetInstancesProtectionRequest extends TeaModel {
-    /**
-     * <p>The IDs of the ECS instances.</p>
-     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The IDs of the ECS instances.</p>
-     */
     @NameInMap("ProtectedFromScaleIn")
     public Boolean protectedFromScaleIn;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>Specifies whether to put ECS instances into the Protected state. Auto Scaling does not remove ECS instances in the Protected state from scaling groups during scale-in activities.</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

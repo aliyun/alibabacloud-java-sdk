@@ -10,9 +10,6 @@ public class RebalanceInstancesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the scaling activity.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,9 +19,6 @@ public class RebalanceInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The region ID of the scaling group.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

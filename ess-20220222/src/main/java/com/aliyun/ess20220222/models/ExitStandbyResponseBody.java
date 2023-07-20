@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class ExitStandbyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the scaling activity.</p>
+     * <p>330440</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>auditing</p>
-     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

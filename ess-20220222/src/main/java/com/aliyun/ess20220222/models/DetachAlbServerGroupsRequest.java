@@ -4,46 +4,24 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DetachAlbServerGroupsRequest extends TeaModel {
-    /**
-     * <p>Details of the ALB server groups.</p>
-     */
     @NameInMap("AlbServerGroups")
     public java.util.List<DetachAlbServerGroupsRequestAlbServerGroups> albServerGroups;
 
-    /**
-     * <p>Specifies whether to remove existing Elastic Compute Service (ECS) instances from the ALB server group that you want to disassociate from the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   true: removes existing ECS instances and returns the value of the `ScalingActivityId` parameter. You can use the scaling activity ID to check whether the ECS instances are removed.</p>
-     * <p>*   false: does not remove existing ECS instances.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>Details of the ALB server groups.</p>
-     */
     @NameInMap("ForceDetach")
     public Boolean forceDetach;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the scaling group.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.</p>
-     * <br>
-     * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
@@ -109,15 +87,9 @@ public class DetachAlbServerGroupsRequest extends TeaModel {
     }
 
     public static class DetachAlbServerGroupsRequestAlbServerGroups extends TeaModel {
-        /**
-         * <p>The port number used by the ECS instances in the ALB server group.</p>
-         */
         @NameInMap("AlbServerGroupId")
         public String albServerGroupId;
 
-        /**
-         * <p>The ID of the scaling activity in which the ALB server group is disassociated from the scaling group and the ECS instances in the ALB server group are removed from the ALB server group. This parameter is returned only after you set the `ForceDetach` parameter to `true`.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 

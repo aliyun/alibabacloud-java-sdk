@@ -4,15 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeLifecycleHooksRequest extends TeaModel {
-    /**
-     * <p>The ID of the lifecycle hook.</p>
-     */
     @NameInMap("LifecycleHookIds")
     public java.util.List<String> lifecycleHookIds;
 
-    /**
-     * <p>The name of the lifecycle hook.</p>
-     */
     @NameInMap("LifecycleHookName")
     public String lifecycleHookName;
 
@@ -22,34 +16,18 @@ public class DescribeLifecycleHooksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
-     * <p>Default value: 50.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The region ID of the scaling group.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>The ID of the scaling group.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
