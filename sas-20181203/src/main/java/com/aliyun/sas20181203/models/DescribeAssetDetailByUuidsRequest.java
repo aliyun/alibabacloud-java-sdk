@@ -13,6 +13,9 @@ public class DescribeAssetDetailByUuidsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The UUIDs of the ECS instances. Separate multiple UUIDs with commas (,).</p>
      */
@@ -30,6 +33,14 @@ public class DescribeAssetDetailByUuidsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeAssetDetailByUuidsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeAssetDetailByUuidsRequest setUuids(String uuids) {

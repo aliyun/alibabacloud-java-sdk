@@ -38,6 +38,11 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the new server group to which the servers belong.</p>
+     * <br>
+     * <p>>  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 

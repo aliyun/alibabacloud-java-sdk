@@ -18,6 +18,12 @@ public class UpdateHoneypotPresetRequest extends TeaModel {
     @NameInMap("HoneypotPresetId")
     public String honeypotPresetId;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

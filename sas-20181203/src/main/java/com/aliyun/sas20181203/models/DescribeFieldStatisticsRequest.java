@@ -16,6 +16,9 @@ public class DescribeFieldStatisticsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     public static DescribeFieldStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFieldStatisticsRequest self = new DescribeFieldStatisticsRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class DescribeFieldStatisticsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeFieldStatisticsRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
 }

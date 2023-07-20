@@ -251,6 +251,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StatusMessage")
+        public String statusMessage;
+
         /**
          * <p>The ID of the check task.</p>
          */
@@ -342,6 +345,14 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListCheckResultResponseBodyChecks setStatusMessage(String statusMessage) {
+            this.statusMessage = statusMessage;
+            return this;
+        }
+        public String getStatusMessage() {
+            return this.statusMessage;
         }
 
         public ListCheckResultResponseBodyChecks setTaskId(String taskId) {

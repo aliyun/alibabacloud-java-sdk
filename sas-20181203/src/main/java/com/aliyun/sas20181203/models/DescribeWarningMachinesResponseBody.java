@@ -116,9 +116,15 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         @NameInMap("Bind")
         public Boolean bind;
 
+        /**
+         * <p>The ID of the container.</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <p>The name of container.</p>
+         */
         @NameInMap("ContainerName")
         public String containerName;
 

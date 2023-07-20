@@ -7,6 +7,12 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
     @NameInMap("AutoDeleteDays")
     public Integer autoDeleteDays;
 
+    @NameInMap("ReleaseAfterScan")
+    public Boolean releaseAfterScan;
+
+    @NameInMap("ScanDataDisk")
+    public Boolean scanDataDisk;
+
     @NameInMap("TargetType")
     public Integer targetType;
 
@@ -24,6 +30,22 @@ public class CreateAgentlessScanTaskRequest extends TeaModel {
     }
     public Integer getAutoDeleteDays() {
         return this.autoDeleteDays;
+    }
+
+    public CreateAgentlessScanTaskRequest setReleaseAfterScan(Boolean releaseAfterScan) {
+        this.releaseAfterScan = releaseAfterScan;
+        return this;
+    }
+    public Boolean getReleaseAfterScan() {
+        return this.releaseAfterScan;
+    }
+
+    public CreateAgentlessScanTaskRequest setScanDataDisk(Boolean scanDataDisk) {
+        this.scanDataDisk = scanDataDisk;
+        return this;
+    }
+    public Boolean getScanDataDisk() {
+        return this.scanDataDisk;
     }
 
     public CreateAgentlessScanTaskRequest setTargetType(Integer targetType) {

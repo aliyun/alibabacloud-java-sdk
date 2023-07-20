@@ -92,6 +92,9 @@ public class DescribeGroupedVulRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceDirectoryAccountId")
+    public Long resourceDirectoryAccountId;
+
     /**
      * <p>The tag that is used to filter vulnerabilities. Valid values:</p>
      * <br>
@@ -216,6 +219,14 @@ public class DescribeGroupedVulRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeGroupedVulRequest setResourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+        this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+        return this;
+    }
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
     }
 
     public DescribeGroupedVulRequest setSearchTags(String searchTags) {
