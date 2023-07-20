@@ -28,6 +28,9 @@ public class CreateForwardEntryRequest extends TeaModel {
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    @NameInMap("StandbyExternalIp")
+    public String standbyExternalIp;
+
     public static CreateForwardEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateForwardEntryRequest self = new CreateForwardEntryRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class CreateForwardEntryRequest extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public CreateForwardEntryRequest setStandbyExternalIp(String standbyExternalIp) {
+        this.standbyExternalIp = standbyExternalIp;
+        return this;
+    }
+    public String getStandbyExternalIp() {
+        return this.standbyExternalIp;
     }
 
 }

@@ -13,6 +13,9 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("Standby")
+    public Boolean standby;
+
     public static AssociateEnsEipAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateEnsEipAddressRequest self = new AssociateEnsEipAddressRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class AssociateEnsEipAddressRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public AssociateEnsEipAddressRequest setStandby(Boolean standby) {
+        this.standby = standby;
+        return this;
+    }
+    public Boolean getStandby() {
+        return this.standby;
     }
 
 }

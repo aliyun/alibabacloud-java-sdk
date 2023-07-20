@@ -10,6 +10,9 @@ public class DescribeEnsSaleControlStockRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("CustomAccount")
+    public String customAccount;
+
     @NameInMap("ModuleCode")
     public String moduleCode;
 
@@ -35,6 +38,14 @@ public class DescribeEnsSaleControlStockRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public DescribeEnsSaleControlStockRequest setCustomAccount(String customAccount) {
+        this.customAccount = customAccount;
+        return this;
+    }
+    public String getCustomAccount() {
+        return this.customAccount;
     }
 
     public DescribeEnsSaleControlStockRequest setModuleCode(String moduleCode) {
