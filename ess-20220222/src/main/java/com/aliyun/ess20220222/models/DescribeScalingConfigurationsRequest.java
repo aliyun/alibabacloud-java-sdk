@@ -13,15 +13,15 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
     /**
      * <p>The number of the page to return. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

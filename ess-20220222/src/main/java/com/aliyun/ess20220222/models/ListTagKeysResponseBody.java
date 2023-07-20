@@ -4,27 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
-    /**
-     * <p>Details of the tag keys.</p>
-     */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    /**
-     * <p>Details of the tag keys.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

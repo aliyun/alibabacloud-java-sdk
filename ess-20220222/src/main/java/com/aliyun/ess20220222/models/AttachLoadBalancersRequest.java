@@ -4,35 +4,18 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachLoadBalancersRequest extends TeaModel {
-    /**
-     * <p>The IDs of the CLB instances.</p>
-     */
     @NameInMap("Async")
     public Boolean async;
 
-    /**
-     * <p>Specifies whether to attach the CLB instance to the scaling group in an asynchronous manner. If you attach the CLB instance from the scaling group in an asynchronous manner, the call is successful only after all operations are successful. If a specific operation fails, the call fails. We recommend that you set this parameter to true. Valid values:</p>
-     * <br>
-     * <p>*   true: attaches the CLB instance to the scaling group in an asynchronous manner. In this case, the ID of the scaling activity is returned.</p>
-     * <p>*   false: does not attach the CLB instance to the scaling group in an asynchronous manner.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).</p>
-     */
     @NameInMap("ForceAttach")
     public Boolean forceAttach;
 
     @NameInMap("LoadBalancerConfigs")
     public java.util.List<AttachLoadBalancersRequestLoadBalancerConfigs> loadBalancerConfigs;
 
-    /**
-     * <p>The IDs of the CLB instances.</p>
-     */
     @NameInMap("LoadBalancers")
     public java.util.List<String> loadBalancers;
 
@@ -42,14 +25,6 @@ public class AttachLoadBalancersRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>Specifies whether to add all instances in the scaling group to the vServer groups of the CLB instance. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

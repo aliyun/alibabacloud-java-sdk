@@ -72,13 +72,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    /**
-      * Associates one or more Application Load Balancer (ALB) server groups with a scaling group.
-      *
-      * @param request AttachAlbServerGroupsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AttachAlbServerGroupsResponse
-     */
     public AttachAlbServerGroupsResponse attachAlbServerGroupsWithOptions(AttachAlbServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -127,24 +120,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachAlbServerGroupsResponse());
     }
 
-    /**
-      * Associates one or more Application Load Balancer (ALB) server groups with a scaling group.
-      *
-      * @param request AttachAlbServerGroupsRequest
-      * @return AttachAlbServerGroupsResponse
-     */
     public AttachAlbServerGroupsResponse attachAlbServerGroups(AttachAlbServerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachAlbServerGroupsWithOptions(request, runtime);
     }
 
-    /**
-      * Associates one or more ApsaraDB RDS instances with a scaling group.
-      *
-      * @param request AttachDBInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AttachDBInstancesResponse
-     */
     public AttachDBInstancesResponse attachDBInstancesWithOptions(AttachDBInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -193,24 +173,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachDBInstancesResponse());
     }
 
-    /**
-      * Associates one or more ApsaraDB RDS instances with a scaling group.
-      *
-      * @param request AttachDBInstancesRequest
-      * @return AttachDBInstancesResponse
-     */
     public AttachDBInstancesResponse attachDBInstances(AttachDBInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachDBInstancesWithOptions(request, runtime);
     }
 
-    /**
-      * Manually adds Elastic Compute Service (ECS) instances or elastic container instances to a scaling group.
-      *
-      * @param request AttachInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AttachInstancesResponse
-     */
     public AttachInstancesResponse attachInstancesWithOptions(AttachInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -271,24 +238,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachInstancesResponse());
     }
 
-    /**
-      * Manually adds Elastic Compute Service (ECS) instances or elastic container instances to a scaling group.
-      *
-      * @param request AttachInstancesRequest
-      * @return AttachInstancesResponse
-     */
     public AttachInstancesResponse attachInstances(AttachInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachInstancesWithOptions(request, runtime);
     }
 
-    /**
-      * Attaches one or more Classic Load Balancer (CLB) instances to a scaling group.
-      *
-      * @param request AttachLoadBalancersRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AttachLoadBalancersResponse
-     */
     public AttachLoadBalancersResponse attachLoadBalancersWithOptions(AttachLoadBalancersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -341,12 +295,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachLoadBalancersResponse());
     }
 
-    /**
-      * Attaches one or more Classic Load Balancer (CLB) instances to a scaling group.
-      *
-      * @param request AttachLoadBalancersRequest
-      * @return AttachLoadBalancersResponse
-     */
     public AttachLoadBalancersResponse attachLoadBalancers(AttachLoadBalancersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachLoadBalancersWithOptions(request, runtime);
@@ -405,13 +353,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachServerGroupsWithOptions(request, runtime);
     }
 
-    /**
-      * Attaches one or more vServer groups of a Classic Load Balancer (CLB) instance to a scaling group.
-      *
-      * @param request AttachVServerGroupsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AttachVServerGroupsResponse
-     */
     public AttachVServerGroupsResponse attachVServerGroupsWithOptions(AttachVServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -460,24 +401,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachVServerGroupsResponse());
     }
 
-    /**
-      * Attaches one or more vServer groups of a Classic Load Balancer (CLB) instance to a scaling group.
-      *
-      * @param request AttachVServerGroupsRequest
-      * @return AttachVServerGroupsResponse
-     */
     public AttachVServerGroupsResponse attachVServerGroups(AttachVServerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachVServerGroupsWithOptions(request, runtime);
     }
 
-    /**
-      * A resource is an entity of cloud services that you create on Alibaba Cloud. For example, a scaling group is a resource. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources, monitor resources, and perform operations in a centralized manner. This way, you do not need to view and check your Alibaba Cloud resources in each Alibaba Cloud service.
-      *
-      * @param request ChangeResourceGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ChangeResourceGroupResponse
-     */
     public ChangeResourceGroupResponse changeResourceGroupWithOptions(ChangeResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -522,12 +450,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
-    /**
-      * A resource is an entity of cloud services that you create on Alibaba Cloud. For example, a scaling group is a resource. A resource group is a collection of infrastructure for projects, environments, or stacks. In a resource group, you can manage resources, monitor resources, and perform operations in a centralized manner. This way, you do not need to view and check your Alibaba Cloud resources in each Alibaba Cloud service.
-      *
-      * @param request ChangeResourceGroupRequest
-      * @return ChangeResourceGroupResponse
-     */
     public ChangeResourceGroupResponse changeResourceGroup(ChangeResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.changeResourceGroupWithOptions(request, runtime);
@@ -603,17 +525,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.completeLifecycleActionWithOptions(request, runtime);
     }
 
-    /**
-      * *   If you set the MetricType parameter to custom, you must report your custom metrics to CloudMonitor before you can create event-triggered tasks by using custom metrics. For more information, see [Custom monitoring event-triggered tasks](~~74861~~).
-      * *   When you create an event-triggered task, you must specify the MetricName, DimensionKey, and DimensionValue parameters to determine the range of statistics that you want to aggregate for the metrics of the scaling group. For example, you can specify the user_id and scaling_group dimensions for an event-triggered task to aggregate monitoring data of all Elastic Compute Service (ECS) instances or elastic container instances in a scaling group within an Alibaba Cloud account.
-      *     *   If you set the MetricType parameter to custom, the valid values are your custom metrics.
-      *     *   For information about the supported metrics when you set the MetricType parameter to system, see [Event-triggered task for system monitoring](~~74854~~).
-      * > The user_id and scaling_group dimensions are automatically populated. You need to only specify the device and state dimensions. For more information, see the `DimensionKey` and `DimensionValue` parameters in the "Request parameters" section of this topic.
-      *
-      * @param request CreateAlarmRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateAlarmResponse
-     */
     public CreateAlarmResponse createAlarmWithOptions(CreateAlarmRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -710,16 +621,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAlarmResponse());
     }
 
-    /**
-      * *   If you set the MetricType parameter to custom, you must report your custom metrics to CloudMonitor before you can create event-triggered tasks by using custom metrics. For more information, see [Custom monitoring event-triggered tasks](~~74861~~).
-      * *   When you create an event-triggered task, you must specify the MetricName, DimensionKey, and DimensionValue parameters to determine the range of statistics that you want to aggregate for the metrics of the scaling group. For example, you can specify the user_id and scaling_group dimensions for an event-triggered task to aggregate monitoring data of all Elastic Compute Service (ECS) instances or elastic container instances in a scaling group within an Alibaba Cloud account.
-      *     *   If you set the MetricType parameter to custom, the valid values are your custom metrics.
-      *     *   For information about the supported metrics when you set the MetricType parameter to system, see [Event-triggered task for system monitoring](~~74854~~).
-      * > The user_id and scaling_group dimensions are automatically populated. You need to only specify the device and state dimensions. For more information, see the `DimensionKey` and `DimensionValue` parameters in the "Request parameters" section of this topic.
-      *
-      * @param request CreateAlarmRequest
-      * @return CreateAlarmResponse
-     */
     public CreateAlarmResponse createAlarm(CreateAlarmRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAlarmWithOptions(request, runtime);
@@ -1025,13 +926,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createLifecycleHookWithOptions(request, runtime);
     }
 
-    /**
-      * Creates a notification.
-      *
-      * @param request CreateNotificationConfigurationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateNotificationConfigurationResponse
-     */
     public CreateNotificationConfigurationResponse createNotificationConfigurationWithOptions(CreateNotificationConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1076,12 +970,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNotificationConfigurationResponse());
     }
 
-    /**
-      * Creates a notification.
-      *
-      * @param request CreateNotificationConfigurationRequest
-      * @return CreateNotificationConfigurationResponse
-     */
     public CreateNotificationConfigurationResponse createNotificationConfiguration(CreateNotificationConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNotificationConfigurationWithOptions(request, runtime);
@@ -1089,12 +977,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Auto Scaling automatically creates Elastic Compute Service (ECS) instances based on the specified scaling configuration. ECS instances can be created in the following modes:
-      * *   InstancePatternInfos: intelligent configuration mode. In this mode, you need to only specify the number of vCPUs, memory size, instance family, and maximum price. Auto Scaling selects the lowest-priced instance type based on your configurations to create ECS instances. This mode is available only for scaling groups that reside in virtual private clouds (VPCs). This mode reduces the failures of scale-outs caused by insufficient inventory of instance types.
+      * *   InstancePatternInfos: intelligent configuration mode. In this mode, you need to only specify the number of vCPUs, memory size, instance family, and maximum price. Auto Scaling selects the instance type that has the lowest price based on the configurations to create ECS instances. This mode is available only for scaling groups that reside in virtual private clouds (VPCs). This mode reduces scale-out failures caused by insufficient inventory of instance types.
       * *   InstanceType: In this mode, you must specify one instance type.
       * *   InstanceTypes: In this mode, you can specify more than one instance type.
       * *   InstanceTypeOverrides: In this mode, you can specify multiple instance types and weights for the instance types.
-      * *   Cpu and Memory: In this mode, you must specify the number of vCPUs and the memory size. Auto Scaling determines the range of available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling creates ECS instances of the lowest-priced instance type. This mode is available only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
-      * > You cannot specify InstanceType, InstanceTypes, InstanceTypeOverrides, and Cpu and Memory parameters at the same time. You can specify InstanceType and InstancePatternInfos or specify InstanceTypes and InstancePatternInfo at the same time. If you specify the InstanceType and InstancePatternInfos parameters or specify the InstanceTypes and InstancePatternInfos parameters at the same time, Auto Scaling preferentially uses the instance types that are specified by the InstanceType or InstanceTypes parameter for scale-outs. If the instance types that are specified by the InstanceType or InstanceTypes parameter do not have sufficient inventory, Auto Scaling uses the instance types that are specified by the InstancePatternInfos parameter for scale-outs.
+      * *   Cpu and Memory: In this mode, you must specify the number of vCPUs and the memory size. Auto Scaling determines the range of available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling creates ECS instances by using the lowest-priced instance type. This mode is available only if Scaling Policy is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
+      * > You cannot specify InstanceType, InstanceTypes, InstanceTypeOverrides, and Cpu and Memory at the same time. You can specify InstanceType and InstancePatternInfos or specify InstanceTypes and InstancePatternInfo at the same time. If you specify InstanceType and InstancePatternInfos or specify InstanceTypes and InstancePatternInfos at the same time, Auto Scaling preferentially uses the instance types that are specified by InstanceType or InstanceTypes for scale-outs. If the instance types that are specified by InstanceType or InstanceTypes do not have sufficient inventory, Auto Scaling uses the instance types that are specified by InstancePatternInfos for scale-outs.
       *
       * @param tmpReq CreateScalingConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1332,12 +1220,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Auto Scaling automatically creates Elastic Compute Service (ECS) instances based on the specified scaling configuration. ECS instances can be created in the following modes:
-      * *   InstancePatternInfos: intelligent configuration mode. In this mode, you need to only specify the number of vCPUs, memory size, instance family, and maximum price. Auto Scaling selects the lowest-priced instance type based on your configurations to create ECS instances. This mode is available only for scaling groups that reside in virtual private clouds (VPCs). This mode reduces the failures of scale-outs caused by insufficient inventory of instance types.
+      * *   InstancePatternInfos: intelligent configuration mode. In this mode, you need to only specify the number of vCPUs, memory size, instance family, and maximum price. Auto Scaling selects the instance type that has the lowest price based on the configurations to create ECS instances. This mode is available only for scaling groups that reside in virtual private clouds (VPCs). This mode reduces scale-out failures caused by insufficient inventory of instance types.
       * *   InstanceType: In this mode, you must specify one instance type.
       * *   InstanceTypes: In this mode, you can specify more than one instance type.
       * *   InstanceTypeOverrides: In this mode, you can specify multiple instance types and weights for the instance types.
-      * *   Cpu and Memory: In this mode, you must specify the number of vCPUs and the memory size. Auto Scaling determines the range of available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling creates ECS instances of the lowest-priced instance type. This mode is available only if the Scaling Policy parameter is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
-      * > You cannot specify InstanceType, InstanceTypes, InstanceTypeOverrides, and Cpu and Memory parameters at the same time. You can specify InstanceType and InstancePatternInfos or specify InstanceTypes and InstancePatternInfo at the same time. If you specify the InstanceType and InstancePatternInfos parameters or specify the InstanceTypes and InstancePatternInfos parameters at the same time, Auto Scaling preferentially uses the instance types that are specified by the InstanceType or InstanceTypes parameter for scale-outs. If the instance types that are specified by the InstanceType or InstanceTypes parameter do not have sufficient inventory, Auto Scaling uses the instance types that are specified by the InstancePatternInfos parameter for scale-outs.
+      * *   Cpu and Memory: In this mode, you must specify the number of vCPUs and the memory size. Auto Scaling determines the range of available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling creates ECS instances by using the lowest-priced instance type. This mode is available only if Scaling Policy is set to Cost Optimization Policy and no instance type is specified in the scaling configuration.
+      * > You cannot specify InstanceType, InstanceTypes, InstanceTypeOverrides, and Cpu and Memory at the same time. You can specify InstanceType and InstancePatternInfos or specify InstanceTypes and InstancePatternInfo at the same time. If you specify InstanceType and InstancePatternInfos or specify InstanceTypes and InstancePatternInfos at the same time, Auto Scaling preferentially uses the instance types that are specified by InstanceType or InstanceTypes for scale-outs. If the instance types that are specified by InstanceType or InstanceTypes do not have sufficient inventory, Auto Scaling uses the instance types that are specified by InstancePatternInfos for scale-outs.
       *
       * @param request CreateScalingConfigurationRequest
       * @return CreateScalingConfigurationResponse
@@ -1600,7 +1488,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Creates a scaling rule.
+      * A scaling rule defines a specific scaling activity, such as adding or removing N instances. If the number of Elastic Compute Service (ECS) instances in a scaling group is less than the minimum number allowed or greater than the maximum number allowed after a scaling rule is executed, Auto Scaling calculates the number of ECS instances that need to be added or removed. This ensures that the number of ECS instances can be maintained within the valid range after the scaling rule is executed. Examples:
+      * *   If your scaling group contains two ECS instances and allows up to three ECS instances, only one ECS instance is added to your scaling group after you execute a scale-out rule in which three ECS instances are specified.
+      * *   If your scaling group contains three ECS instances and requires at least two ECS instances, only one ECS instance is removed from your scaling group after you execute a scale-in rule in which five ECS instances are specified.
+      * Before you call this operation, take note of the following items:
+      * *   If you set AdjustmentType to TotalCapacity, the number of ECS instances in the scaling group is adjusted to the specified value. The value of AdjustmentValue must be greater than or equal to 0.
+      * *   If you set AdjustmentType to QuantityChangeInCapacity, a positive value of AdjustmentValue specifies the number of ECS instances that are added to the scaling group, and a negative value of AdjustmentValue specifies the number of ECS instances that are removed from the scaling group.
+      * *   If you set AdjustmentType to PercentChangeInCapacity, Auto Scaling uses the following formula to calculate a value, and then rounds the value to the nearest integer to obtain the number of ECS instances that need to be scaled: Value of TotalCapacity × Value of AdjustmentValue/100.
+      * *   If you specify a cooldown period for the scaling rule, the specified cooldown period takes effect after the rule is executed. Otherwise, the value of DefaultCooldown of the scaling group takes effect.
+      * *   You can create only a limited number of scaling rules for a scaling group. For more information, see the "Limits" topic.
+      * *   The unique identifier (ScalingRuleAri) of a scaling rule can be used by the following operations:
+      *     *   ExecuteScalingRule: You can call this operation to manually execute a specific scaling rule. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to execute.
+      *     *   CreateScheduledTask: You can call this operation to create a scheduled task. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to associate with the scheduled task.
       *
       * @param request CreateScalingRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1723,7 +1622,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Creates a scaling rule.
+      * A scaling rule defines a specific scaling activity, such as adding or removing N instances. If the number of Elastic Compute Service (ECS) instances in a scaling group is less than the minimum number allowed or greater than the maximum number allowed after a scaling rule is executed, Auto Scaling calculates the number of ECS instances that need to be added or removed. This ensures that the number of ECS instances can be maintained within the valid range after the scaling rule is executed. Examples:
+      * *   If your scaling group contains two ECS instances and allows up to three ECS instances, only one ECS instance is added to your scaling group after you execute a scale-out rule in which three ECS instances are specified.
+      * *   If your scaling group contains three ECS instances and requires at least two ECS instances, only one ECS instance is removed from your scaling group after you execute a scale-in rule in which five ECS instances are specified.
+      * Before you call this operation, take note of the following items:
+      * *   If you set AdjustmentType to TotalCapacity, the number of ECS instances in the scaling group is adjusted to the specified value. The value of AdjustmentValue must be greater than or equal to 0.
+      * *   If you set AdjustmentType to QuantityChangeInCapacity, a positive value of AdjustmentValue specifies the number of ECS instances that are added to the scaling group, and a negative value of AdjustmentValue specifies the number of ECS instances that are removed from the scaling group.
+      * *   If you set AdjustmentType to PercentChangeInCapacity, Auto Scaling uses the following formula to calculate a value, and then rounds the value to the nearest integer to obtain the number of ECS instances that need to be scaled: Value of TotalCapacity × Value of AdjustmentValue/100.
+      * *   If you specify a cooldown period for the scaling rule, the specified cooldown period takes effect after the rule is executed. Otherwise, the value of DefaultCooldown of the scaling group takes effect.
+      * *   You can create only a limited number of scaling rules for a scaling group. For more information, see the "Limits" topic.
+      * *   The unique identifier (ScalingRuleAri) of a scaling rule can be used by the following operations:
+      *     *   ExecuteScalingRule: You can call this operation to manually execute a specific scaling rule. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to execute.
+      *     *   CreateScheduledTask: You can call this operation to create a scheduled task. In this operation, you can set ScalingRuleAri to the unique identifier of the scaling rule that you want to associate with the scheduled task.
       *
       * @param request CreateScalingRuleRequest
       * @return CreateScalingRuleResponse
@@ -1733,13 +1643,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createScalingRuleWithOptions(request, runtime);
     }
 
-    /**
-      * Creates a scheduled task.
-      *
-      * @param request CreateScheduledTaskRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateScheduledTaskResponse
-     */
     public CreateScheduledTaskResponse createScheduledTaskWithOptions(CreateScheduledTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1828,12 +1731,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateScheduledTaskResponse());
     }
 
-    /**
-      * Creates a scheduled task.
-      *
-      * @param request CreateScheduledTaskRequest
-      * @return CreateScheduledTaskResponse
-     */
     public CreateScheduledTaskResponse createScheduledTask(CreateScheduledTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createScheduledTaskWithOptions(request, runtime);
@@ -1921,13 +1818,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAlarmWithOptions(request, runtime);
     }
 
-    /**
-      * Deletes a scaling configuration that is used to create elastic container instances.
-      *
-      * @param request DeleteEciScalingConfigurationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteEciScalingConfigurationResponse
-     */
     public DeleteEciScalingConfigurationResponse deleteEciScalingConfigurationWithOptions(DeleteEciScalingConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1968,26 +1858,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEciScalingConfigurationResponse());
     }
 
-    /**
-      * Deletes a scaling configuration that is used to create elastic container instances.
-      *
-      * @param request DeleteEciScalingConfigurationRequest
-      * @return DeleteEciScalingConfigurationResponse
-     */
     public DeleteEciScalingConfigurationResponse deleteEciScalingConfiguration(DeleteEciScalingConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEciScalingConfigurationWithOptions(request, runtime);
     }
 
-    /**
-      * If you delete a lifecycle hook that is in effect in a scaling group, instances exit the Pending state in advance. You can use one of the following methods to specify the lifecycle hooks that you want to delete:
-      * *   Specify the scaling group ID of the lifecycle hook that you want to delete by using the ScalingGroupId parameter and the lifecycle hook name by using the LifecycleHookName parameter.
-      * *   Specify the lifecycle hook ID by using the LifecycleHookId parameter. In this case, the ScalingGroupId parameter and the LifecycleHookName parameter are ignored.
-      *
-      * @param request DeleteLifecycleHookRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteLifecycleHookResponse
-     */
     public DeleteLifecycleHookResponse deleteLifecycleHookWithOptions(DeleteLifecycleHookRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2036,14 +1911,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLifecycleHookResponse());
     }
 
-    /**
-      * If you delete a lifecycle hook that is in effect in a scaling group, instances exit the Pending state in advance. You can use one of the following methods to specify the lifecycle hooks that you want to delete:
-      * *   Specify the scaling group ID of the lifecycle hook that you want to delete by using the ScalingGroupId parameter and the lifecycle hook name by using the LifecycleHookName parameter.
-      * *   Specify the lifecycle hook ID by using the LifecycleHookId parameter. In this case, the ScalingGroupId parameter and the LifecycleHookName parameter are ignored.
-      *
-      * @param request DeleteLifecycleHookRequest
-      * @return DeleteLifecycleHookResponse
-     */
     public DeleteLifecycleHookResponse deleteLifecycleHook(DeleteLifecycleHookRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteLifecycleHookWithOptions(request, runtime);
@@ -2094,13 +1961,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteNotificationConfigurationWithOptions(request, runtime);
     }
 
-    /**
-      * Deletes a scaling configuration that is used to create Elastic Compute Service (ECS) instances.
-      *
-      * @param request DeleteScalingConfigurationRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteScalingConfigurationResponse
-     */
     public DeleteScalingConfigurationResponse deleteScalingConfigurationWithOptions(DeleteScalingConfigurationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2137,24 +1997,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScalingConfigurationResponse());
     }
 
-    /**
-      * Deletes a scaling configuration that is used to create Elastic Compute Service (ECS) instances.
-      *
-      * @param request DeleteScalingConfigurationRequest
-      * @return DeleteScalingConfigurationResponse
-     */
     public DeleteScalingConfigurationResponse deleteScalingConfiguration(DeleteScalingConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteScalingConfigurationWithOptions(request, runtime);
     }
 
-    /**
-      * Deletes a scaling group.
-      *
-      * @param request DeleteScalingGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteScalingGroupResponse
-     */
     public DeleteScalingGroupResponse deleteScalingGroupWithOptions(DeleteScalingGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2199,12 +2046,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteScalingGroupResponse());
     }
 
-    /**
-      * Deletes a scaling group.
-      *
-      * @param request DeleteScalingGroupRequest
-      * @return DeleteScalingGroupResponse
-     */
     public DeleteScalingGroupResponse deleteScalingGroup(DeleteScalingGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteScalingGroupWithOptions(request, runtime);
@@ -2434,13 +2275,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEciScalingConfigurationsWithOptions(request, runtime);
     }
 
-    /**
-      * Queries lifecycle actions.
-      *
-      * @param request DescribeLifecycleActionsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeLifecycleActionsResponse
-     */
     public DescribeLifecycleActionsResponse describeLifecycleActionsWithOptions(DescribeLifecycleActionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2489,27 +2323,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLifecycleActionsResponse());
     }
 
-    /**
-      * Queries lifecycle actions.
-      *
-      * @param request DescribeLifecycleActionsRequest
-      * @return DescribeLifecycleActionsResponse
-     */
     public DescribeLifecycleActionsResponse describeLifecycleActions(DescribeLifecycleActionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLifecycleActionsWithOptions(request, runtime);
     }
 
-    /**
-      * You can use one of the following methods to query lifecycle hooks:
-      * *   Specify a list of lifecycle hook IDs by using the LifecycleHookIds parameter. In this case, you do not need to specify the ScalingGroupId and LifecycleHookName parameters.
-      * *   Specify the scaling group ID by using the ScalingGroupId parameter.
-      * *   Specify the scaling group ID by using the ScalingGroupId parameter and the lifecycle hook name by using the LifecycleHookName parameter at the same time.
-      *
-      * @param request DescribeLifecycleHooksRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeLifecycleHooksResponse
-     */
     public DescribeLifecycleHooksResponse describeLifecycleHooksWithOptions(DescribeLifecycleHooksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2566,15 +2384,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLifecycleHooksResponse());
     }
 
-    /**
-      * You can use one of the following methods to query lifecycle hooks:
-      * *   Specify a list of lifecycle hook IDs by using the LifecycleHookIds parameter. In this case, you do not need to specify the ScalingGroupId and LifecycleHookName parameters.
-      * *   Specify the scaling group ID by using the ScalingGroupId parameter.
-      * *   Specify the scaling group ID by using the ScalingGroupId parameter and the lifecycle hook name by using the LifecycleHookName parameter at the same time.
-      *
-      * @param request DescribeLifecycleHooksRequest
-      * @return DescribeLifecycleHooksResponse
-     */
     public DescribeLifecycleHooksResponse describeLifecycleHooks(DescribeLifecycleHooksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLifecycleHooksWithOptions(request, runtime);
@@ -2989,18 +2798,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeScalingGroupsWithOptions(request, runtime);
     }
 
-    /**
-      * You can query ECS instances by scaling group ID, scaling configuration ID, health status, lifecycle status, and instance creation method.
-      *
-      * @param request DescribeScalingInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeScalingInstancesResponse
-     */
     public DescribeScalingInstancesResponse describeScalingInstancesWithOptions(DescribeScalingInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.creationType)) {
             query.put("CreationType", request.creationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creationTypes)) {
+            query.put("CreationTypes", request.creationTypes);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.healthStatus)) {
@@ -3072,19 +2878,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScalingInstancesResponse());
     }
 
-    /**
-      * You can query ECS instances by scaling group ID, scaling configuration ID, health status, lifecycle status, and instance creation method.
-      *
-      * @param request DescribeScalingInstancesRequest
-      * @return DescribeScalingInstancesResponse
-     */
     public DescribeScalingInstancesResponse describeScalingInstances(DescribeScalingInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeScalingInstancesWithOptions(request, runtime);
     }
 
     /**
-      * Queries all scaling rules in a scaling group.
+      * You can specify a scaling group ID to query the information about all scaling rules in a scaling group. You can also specify the scaling rule ID, name, unique identifier, or type in the request parameters as filter conditions.
       *
       * @param request DescribeScalingRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3163,7 +2963,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Queries all scaling rules in a scaling group.
+      * You can specify a scaling group ID to query the information about all scaling rules in a scaling group. You can also specify the scaling rule ID, name, unique identifier, or type in the request parameters as filter conditions.
       *
       * @param request DescribeScalingRulesRequest
       * @return DescribeScalingRulesResponse
@@ -3173,13 +2973,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeScalingRulesWithOptions(request, runtime);
     }
 
-    /**
-      * You can query scheduled tasks by scaling rule, task ID, or task name.
-      *
-      * @param request DescribeScheduledTasksRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeScheduledTasksResponse
-     */
     public DescribeScheduledTasksResponse describeScheduledTasksWithOptions(DescribeScheduledTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3244,12 +3037,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeScheduledTasksResponse());
     }
 
-    /**
-      * You can query scheduled tasks by scaling rule, task ID, or task name.
-      *
-      * @param request DescribeScheduledTasksRequest
-      * @return DescribeScheduledTasksResponse
-     */
     public DescribeScheduledTasksResponse describeScheduledTasks(DescribeScheduledTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeScheduledTasksWithOptions(request, runtime);
@@ -3361,13 +3148,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachDBInstancesWithOptions(request, runtime);
     }
 
-    /**
-      * Removes one or more Elastic Compute Service (ECS) instances or elastic container instances from a scaling group.
-      *
-      * @param request DetachInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DetachInstancesResponse
-     */
     public DetachInstancesResponse detachInstancesWithOptions(DetachInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3424,12 +3204,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachInstancesResponse());
     }
 
-    /**
-      * Removes one or more Elastic Compute Service (ECS) instances or elastic container instances from a scaling group.
-      *
-      * @param request DetachInstancesRequest
-      * @return DetachInstancesResponse
-     */
     public DetachInstancesResponse detachInstances(DetachInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachInstancesWithOptions(request, runtime);
@@ -3545,13 +3319,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.detachServerGroupsWithOptions(request, runtime);
     }
 
-    /**
-      * Detaches one or more vServer groups of a Classic Load Balancer (CLB) instance from a scaling group.
-      *
-      * @param request DetachVServerGroupsRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DetachVServerGroupsResponse
-     */
     public DetachVServerGroupsResponse detachVServerGroupsWithOptions(DetachVServerGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3600,12 +3367,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachVServerGroupsResponse());
     }
 
-    /**
-      * Detaches one or more vServer groups of a Classic Load Balancer (CLB) instance from a scaling group.
-      *
-      * @param request DetachVServerGroupsRequest
-      * @return DetachVServerGroupsResponse
-     */
     public DetachVServerGroupsResponse detachVServerGroups(DetachVServerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachVServerGroupsWithOptions(request, runtime);
@@ -3652,13 +3413,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.disableAlarmWithOptions(request, runtime);
     }
 
-    /**
-      * Disables a scaling group.
-      *
-      * @param request DisableScalingGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DisableScalingGroupResponse
-     */
     public DisableScalingGroupResponse disableScalingGroupWithOptions(DisableScalingGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3699,12 +3453,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisableScalingGroupResponse());
     }
 
-    /**
-      * Disables a scaling group.
-      *
-      * @param request DisableScalingGroupRequest
-      * @return DisableScalingGroupResponse
-     */
     public DisableScalingGroupResponse disableScalingGroup(DisableScalingGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disableScalingGroupWithOptions(request, runtime);
@@ -3845,16 +3593,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableScalingGroupWithOptions(request, runtime);
     }
 
-    /**
-      * *   If you call the operation to set an Elastic Compute Service (ECS) instance in a scaling group that is associated with a Server Load Balancer (SLB) instance to the Standby state, the weight of the ECS instance as a backend server of the SLB instance is set to 0.
-      * *   You can remove an ECS instance that is in the Standby state from a scaling group and release the instance.
-      * *   When scale-in activities are triggered by changes in the number of scaling groups or by event-triggered tasks, the ECS instances that are in the Standby state are not removed from the scaling groups.
-      * *   If Auto Scaling considers an ECS instance that is in the Standby state unhealthy, such as in the Stopping or Restarting state, Auto Scaling does not update the health check status of the ECS instance or trigger scale-in activities to remove the ECS instance from the scaling group. Auto Scaling updates the health check status of the ECS instance only when the ECS instance is no longer in the Standby state.
-      *
-      * @param request EnterStandbyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return EnterStandbyResponse
-     */
     public EnterStandbyResponse enterStandbyWithOptions(EnterStandbyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3899,27 +3637,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new EnterStandbyResponse());
     }
 
-    /**
-      * *   If you call the operation to set an Elastic Compute Service (ECS) instance in a scaling group that is associated with a Server Load Balancer (SLB) instance to the Standby state, the weight of the ECS instance as a backend server of the SLB instance is set to 0.
-      * *   You can remove an ECS instance that is in the Standby state from a scaling group and release the instance.
-      * *   When scale-in activities are triggered by changes in the number of scaling groups or by event-triggered tasks, the ECS instances that are in the Standby state are not removed from the scaling groups.
-      * *   If Auto Scaling considers an ECS instance that is in the Standby state unhealthy, such as in the Stopping or Restarting state, Auto Scaling does not update the health check status of the ECS instance or trigger scale-in activities to remove the ECS instance from the scaling group. Auto Scaling updates the health check status of the ECS instance only when the ECS instance is no longer in the Standby state.
-      *
-      * @param request EnterStandbyRequest
-      * @return EnterStandbyResponse
-     */
     public EnterStandbyResponse enterStandby(EnterStandbyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enterStandbyWithOptions(request, runtime);
     }
 
-    /**
-      * Executes a scaling rule.
-      *
-      * @param request ExecuteScalingRuleRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ExecuteScalingRuleResponse
-     */
     public ExecuteScalingRuleResponse executeScalingRuleWithOptions(ExecuteScalingRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3976,19 +3698,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteScalingRuleResponse());
     }
 
-    /**
-      * Executes a scaling rule.
-      *
-      * @param request ExecuteScalingRuleRequest
-      * @return ExecuteScalingRuleResponse
-     */
     public ExecuteScalingRuleResponse executeScalingRule(ExecuteScalingRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeScalingRuleWithOptions(request, runtime);
     }
 
     /**
-      * If the scaling group is associated with a load balancing instance, the ECS instance weight will be set to the weight value defined in the scaling configuration.
+      * The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
       *
       * @param request ExitStandbyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4043,7 +3759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the scaling group is associated with a load balancing instance, the ECS instance weight will be set to the weight value defined in the scaling configuration.
+      * The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
       *
       * @param request ExitStandbyRequest
       * @return ExitStandbyResponse
@@ -4209,7 +3925,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Modifies an event-triggered task.
+      * *   If you set MetricType to custom, you must report your custom metrics to CloudMonitor before you can create event-triggered tasks by using the custom metrics. For more information, see [Custom monitoring event-triggered tasks](~~74861~~).
+      * *   When you create an event-triggered task, you must specify MetricName, DimensionKey, and DimensionValue to determine the range of statistics that you want to aggregate for the metrics of the scaling group. For example, you can specify the user_id and scaling_group dimensions for an event-triggered task to aggregate monitoring data of all Elastic Compute Service (ECS) instances in a scaling group within an Alibaba Cloud account.
+      *     *   If you set MetricType to custom, the valid values are your custom metrics.
+      *     *   For information about the metrics that are supported if you set MetricType to system, see [Event-triggered task for system monitoring](~~74854~~).
+      * > The user_id and scaling_group dimensions are automatically populated. You need to only specify the device and state dimensions. For more information, see `DimensionKey` and `DimensionValue` in the "Request parameters" section of this topic.
       *
       * @param request ModifyAlarmRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4312,7 +4032,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Modifies an event-triggered task.
+      * *   If you set MetricType to custom, you must report your custom metrics to CloudMonitor before you can create event-triggered tasks by using the custom metrics. For more information, see [Custom monitoring event-triggered tasks](~~74861~~).
+      * *   When you create an event-triggered task, you must specify MetricName, DimensionKey, and DimensionValue to determine the range of statistics that you want to aggregate for the metrics of the scaling group. For example, you can specify the user_id and scaling_group dimensions for an event-triggered task to aggregate monitoring data of all Elastic Compute Service (ECS) instances in a scaling group within an Alibaba Cloud account.
+      *     *   If you set MetricType to custom, the valid values are your custom metrics.
+      *     *   For information about the metrics that are supported if you set MetricType to system, see [Event-triggered task for system monitoring](~~74854~~).
+      * > The user_id and scaling_group dimensions are automatically populated. You need to only specify the device and state dimensions. For more information, see `DimensionKey` and `DimensionValue` in the "Request parameters" section of this topic.
       *
       * @param request ModifyAlarmRequest
       * @return ModifyAlarmResponse
@@ -4684,7 +4408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.
+      * You can change the name of a scaling configuration in a scaling group. The name must be unique within the scaling group.
       *
       * @param tmpReq ModifyScalingConfigurationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4905,7 +4629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If you want to change the name of a scaling configuration in a scaling group, make sure that the new name is unique within the scaling group.
+      * You can change the name of a scaling configuration in a scaling group. The name must be unique within the scaling group.
       *
       * @param request ModifyScalingConfigurationRequest
       * @return ModifyScalingConfigurationResponse
@@ -4915,13 +4639,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyScalingConfigurationWithOptions(request, runtime);
     }
 
-    /**
-      * Modifies a scaling group.
-      *
-      * @param request ModifyScalingGroupRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyScalingGroupResponse
-     */
     public ModifyScalingGroupResponse modifyScalingGroupWithOptions(ModifyScalingGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5058,12 +4775,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyScalingGroupResponse());
     }
 
-    /**
-      * Modifies a scaling group.
-      *
-      * @param request ModifyScalingGroupRequest
-      * @return ModifyScalingGroupResponse
-     */
     public ModifyScalingGroupResponse modifyScalingGroup(ModifyScalingGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyScalingGroupWithOptions(request, runtime);
@@ -5186,13 +4897,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyScalingRuleWithOptions(request, runtime);
     }
 
-    /**
-      * Modifies a scheduled task.
-      *
-      * @param request ModifyScheduledTaskRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ModifyScheduledTaskResponse
-     */
     public ModifyScheduledTaskResponse modifyScheduledTaskWithOptions(ModifyScheduledTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5285,24 +4989,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyScheduledTaskResponse());
     }
 
-    /**
-      * Modifies a scheduled task.
-      *
-      * @param request ModifyScheduledTaskRequest
-      * @return ModifyScheduledTaskResponse
-     */
     public ModifyScheduledTaskResponse modifyScheduledTask(ModifyScheduledTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyScheduledTaskWithOptions(request, runtime);
     }
 
-    /**
-      * Rebalances Elastic Compute Service (ECS) instances in a multi-zone scaling group across zones.
-      *
-      * @param request RebalanceInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RebalanceInstancesResponse
-     */
     public RebalanceInstancesResponse rebalanceInstancesWithOptions(RebalanceInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5347,24 +5038,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RebalanceInstancesResponse());
     }
 
-    /**
-      * Rebalances Elastic Compute Service (ECS) instances in a multi-zone scaling group across zones.
-      *
-      * @param request RebalanceInstancesRequest
-      * @return RebalanceInstancesResponse
-     */
     public RebalanceInstancesResponse rebalanceInstances(RebalanceInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rebalanceInstancesWithOptions(request, runtime);
     }
 
-    /**
-      * Prolongs a lifecycle hook for Elastic Compute Service (ECS) instances.
-      *
-      * @param request RecordLifecycleActionHeartbeatRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RecordLifecycleActionHeartbeatResponse
-     */
     public RecordLifecycleActionHeartbeatResponse recordLifecycleActionHeartbeatWithOptions(RecordLifecycleActionHeartbeatRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5413,31 +5091,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RecordLifecycleActionHeartbeatResponse());
     }
 
-    /**
-      * Prolongs a lifecycle hook for Elastic Compute Service (ECS) instances.
-      *
-      * @param request RecordLifecycleActionHeartbeatRequest
-      * @return RecordLifecycleActionHeartbeatResponse
-     */
     public RecordLifecycleActionHeartbeatResponse recordLifecycleActionHeartbeat(RecordLifecycleActionHeartbeatRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recordLifecycleActionHeartbeatWithOptions(request, runtime);
     }
 
-    /**
-      * *   Before you call this operation, make sure that the following requirements are met:
-      *     *   The scaling group is in the Active state.
-      *     *   No scaling activity is in progress within the scaling group.
-      * > If no scaling activity is in progress within the scaling group, you can call the operation even within the cooldown period.
-      * *   If an ECS instance is automatically created by Auto Scaling, or if an ECS instance is manually added to a scaling group and managed by the scaling group, the ECS instance is stopped in economical mode or is released after the instance is removed from the scaling group.
-      * *   If an ECS instance is manually added to a scaling group and is not managed by the scaling group, the ECS instance is not stopped or released after the instance is removed from the scaling group.
-      * *   If the difference between the number of existing ECS instances specified by the TotalCapacity parameter and the number of ECS instances that you call this operation to remove is less than the value of the MinSize parameter, the call fails.
-      * A successful call only means that Auto Scaling accepts the request. The scaling activity may still fail. You can obtain the status of a scaling activity based on the value of the ScalingActivityId parameter in the response.
-      *
-      * @param request RemoveInstancesRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return RemoveInstancesResponse
-     */
     public RemoveInstancesResponse removeInstancesWithOptions(RemoveInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5494,19 +5152,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveInstancesResponse());
     }
 
-    /**
-      * *   Before you call this operation, make sure that the following requirements are met:
-      *     *   The scaling group is in the Active state.
-      *     *   No scaling activity is in progress within the scaling group.
-      * > If no scaling activity is in progress within the scaling group, you can call the operation even within the cooldown period.
-      * *   If an ECS instance is automatically created by Auto Scaling, or if an ECS instance is manually added to a scaling group and managed by the scaling group, the ECS instance is stopped in economical mode or is released after the instance is removed from the scaling group.
-      * *   If an ECS instance is manually added to a scaling group and is not managed by the scaling group, the ECS instance is not stopped or released after the instance is removed from the scaling group.
-      * *   If the difference between the number of existing ECS instances specified by the TotalCapacity parameter and the number of ECS instances that you call this operation to remove is less than the value of the MinSize parameter, the call fails.
-      * A successful call only means that Auto Scaling accepts the request. The scaling activity may still fail. You can obtain the status of a scaling activity based on the value of the ScalingActivityId parameter in the response.
-      *
-      * @param request RemoveInstancesRequest
-      * @return RemoveInstancesResponse
-     */
     public RemoveInstancesResponse removeInstances(RemoveInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeInstancesWithOptions(request, runtime);
@@ -5562,14 +5207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Compared with the ExecuteScalingRule operation, the ScaleWithAdjustment operation does not require a scaling rule to be created in advance. Before you call the ScaleWithAdjustment operation, take note of the following items:
-      * *   The following conditions must be met:
-      *     *   The scaling group is in the Active state.
-      *     *   No scaling activities in the scaling group are in progress.
-      * *   If no scaling activities in the scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
-      * *   If the addition of a specified number of Elastic Compute Service (ECS) instances to a scaling group causes the total number of ECS instances in the scaling group to exceed the maximum number of instances allowed, Auto Scaling adds only a specific number of ECS instances to ensure that the total number of instances is equal to the maximum number of instances.
-      * *   If the removal of a specified number of ECS instances from a scaling group causes the total number of ECS instances in the scaling group to drop below the minimum number of instances allowed, Auto Scaling removes only a specific number of ECS instances to ensure that the total number of instances is equal to the minimum number of instances.
-      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the `ScalingActivityId` parameter in the response.
+      * The ID of the scaling activity.
       *
       * @param request ScaleWithAdjustmentRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5628,14 +5266,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Compared with the ExecuteScalingRule operation, the ScaleWithAdjustment operation does not require a scaling rule to be created in advance. Before you call the ScaleWithAdjustment operation, take note of the following items:
-      * *   The following conditions must be met:
-      *     *   The scaling group is in the Active state.
-      *     *   No scaling activities in the scaling group are in progress.
-      * *   If no scaling activities in the scaling group are in progress, the operation can trigger scaling activities even before the cooldown time expires.
-      * *   If the addition of a specified number of Elastic Compute Service (ECS) instances to a scaling group causes the total number of ECS instances in the scaling group to exceed the maximum number of instances allowed, Auto Scaling adds only a specific number of ECS instances to ensure that the total number of instances is equal to the maximum number of instances.
-      * *   If the removal of a specified number of ECS instances from a scaling group causes the total number of ECS instances in the scaling group to drop below the minimum number of instances allowed, Auto Scaling removes only a specific number of ECS instances to ensure that the total number of instances is equal to the minimum number of instances.
-      * A successful call indicates that Auto Scaling accepts the request. However, the scaling activity may still fail. You can obtain the status of a scaling activity by using the value of the `ScalingActivityId` parameter in the response.
+      * The ID of the scaling activity.
       *
       * @param request ScaleWithAdjustmentRequest
       * @return ScaleWithAdjustmentResponse
@@ -5690,13 +5321,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setGroupDeletionProtectionWithOptions(request, runtime);
     }
 
-    /**
-      * Configures the health check feature for Elastic Compute Service (ECS) instances.
-      *
-      * @param request SetInstanceHealthRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SetInstanceHealthResponse
-     */
     public SetInstanceHealthResponse setInstanceHealthWithOptions(SetInstanceHealthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5733,24 +5357,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetInstanceHealthResponse());
     }
 
-    /**
-      * Configures the health check feature for Elastic Compute Service (ECS) instances.
-      *
-      * @param request SetInstanceHealthRequest
-      * @return SetInstanceHealthResponse
-     */
     public SetInstanceHealthResponse setInstanceHealth(SetInstanceHealthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setInstanceHealthWithOptions(request, runtime);
     }
 
-    /**
-      * Puts one or more Elastic Compute Service (ECS) instances into the Protected state.
-      *
-      * @param request SetInstancesProtectionRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return SetInstancesProtectionResponse
-     */
     public SetInstancesProtectionResponse setInstancesProtectionWithOptions(SetInstancesProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5791,12 +5402,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetInstancesProtectionResponse());
     }
 
-    /**
-      * Puts one or more Elastic Compute Service (ECS) instances into the Protected state.
-      *
-      * @param request SetInstancesProtectionRequest
-      * @return SetInstancesProtectionResponse
-     */
     public SetInstancesProtectionResponse setInstancesProtection(SetInstancesProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setInstancesProtectionWithOptions(request, runtime);
@@ -6003,6 +5608,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {

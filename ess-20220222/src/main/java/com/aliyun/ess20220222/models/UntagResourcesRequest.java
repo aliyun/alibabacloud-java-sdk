@@ -4,44 +4,24 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
-    /**
-     * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
-     */
     @NameInMap("All")
     public Boolean all;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
-     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>Specifies whether to remove all tags from the Auto Scaling resource. This parameter takes effect only if you do not specify the `TagKeys` parameter. Valid values:</p>
-     * <br>
-     * <p>*   true: removes all tags from the Auto Scaling resource.</p>
-     * <p>*   false: does not remove tags from the Auto Scaling resource.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
-    /**
-     * <p>The keys of the tags that you want to remove from the Auto Scaling resource. You can specify 1 to 20 tag keys.</p>
-     */
     @NameInMap("TagKeys")
     public java.util.List<String> tagKeys;
 

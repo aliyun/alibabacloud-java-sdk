@@ -23,7 +23,7 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details of the scaling rules.</p>
+     * <p>The scaling rules.</p>
      */
     @NameInMap("ScalingRules")
     public java.util.List<DescribeScalingRulesResponseBodyScalingRules> scalingRules;
@@ -80,9 +80,15 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions extends TeaModel {
+        /**
+         * <p>监控项关联的维度信息键。</p>
+         */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
+        /**
+         * <p>监控项关联的维度信息值。</p>
+         */
         @NameInMap("DimensionValue")
         public String dimensionValue;
 
@@ -354,6 +360,9 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
         @NameInMap("AdjustmentValue")
         public Integer adjustmentValue;
 
+        /**
+         * <p>监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度信息。</p>
+         */
         @NameInMap("AlarmDimensions")
         public java.util.List<DescribeScalingRulesResponseBodyScalingRulesAlarmDimensions> alarmDimensions;
 

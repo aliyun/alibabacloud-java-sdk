@@ -4,77 +4,36 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlarmsRequest extends TeaModel {
-    /**
-     * <p>The ID of the event-triggered task.</p>
-     */
     @NameInMap("AlarmTaskId")
     public String alarmTaskId;
 
-    /**
-     * <p>Specifies whether to enable the event-triggered task. Valid values:</p>
-     * <br>
-     * <p>*   true: enables the event-triggered task.</p>
-     * <p>*   false: disables the event-triggered task.</p>
-     */
     @NameInMap("IsEnable")
     public Boolean isEnable;
 
-    /**
-     * <p>The name of the event-triggered task.</p>
-     */
     @NameInMap("MetricName")
     public String metricName;
 
-    /**
-     * <p>The type of the metric. Valid values:</p>
-     * <br>
-     * <p>*   system: system metrics of CloudMonitor</p>
-     * <p>*   custom: custom metrics that are reported to CloudMonitor</p>
-     */
     @NameInMap("MetricType")
     public String metricType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The region ID of the event-triggered task.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>The ID of the scaling group with which the event-triggered task is associated.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
-    /**
-     * <p>The status of the event-triggered task. Valid values:</p>
-     * <br>
-     * <p>*   ALARM: The alert condition is met and an alert is triggered.</p>
-     * <p>*   OK: The alert condition is not met.</p>
-     * <p>*   INSUFFICIENT_DATA: Auto Scaling cannot determine whether the alert condition is met due to insufficient data.</p>
-     */
     @NameInMap("State")
     public String state;
 

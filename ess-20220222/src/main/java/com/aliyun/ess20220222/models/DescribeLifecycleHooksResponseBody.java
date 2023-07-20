@@ -4,33 +4,18 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeLifecycleHooksResponseBody extends TeaModel {
-    /**
-     * <p>Details of the lifecycle hooks.</p>
-     */
     @NameInMap("LifecycleHooks")
     public java.util.List<DescribeLifecycleHooksResponseBodyLifecycleHooks> lifecycleHooks;
 
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of lifecycle hooks.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,73 +65,30 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
     }
 
     public static class DescribeLifecycleHooksResponseBodyLifecycleHooks extends TeaModel {
-        /**
-         * <p>The action that Auto Scaling performs after the lifecycle hook ends.</p>
-         */
         @NameInMap("DefaultResult")
         public String defaultResult;
 
-        /**
-         * <p>The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends.</p>
-         */
         @NameInMap("HeartbeatTimeout")
         public Integer heartbeatTimeout;
 
-        /**
-         * <p>The ID of the lifecycle hook.</p>
-         */
         @NameInMap("LifecycleHookId")
         public String lifecycleHookId;
 
-        /**
-         * <p>The name of the lifecycle hook.</p>
-         */
         @NameInMap("LifecycleHookName")
         public String lifecycleHookName;
 
-        /**
-         * <p>The status of the lifecycle hook. Valid values:</p>
-         * <br>
-         * <p>*   Active</p>
-         * <p>*   InActive</p>
-         */
         @NameInMap("LifecycleHookStatus")
         public String lifecycleHookStatus;
 
-        /**
-         * <p>The type of the scaling activity to which the lifecycle hook applies.</p>
-         */
         @NameInMap("LifecycleTransition")
         public String lifecycleTransition;
 
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the method that is used by Auto Scaling to send notifications when the lifecycle hook takes effect. Specify the value in one of the following formats:</p>
-         * <br>
-         * <p>*   If you do not create a notification rule, specify the value in the `acs:ess:{region-id}:{account-id}:null/null` format.</p>
-         * <p>*   If you specify a Message Service (MNS) queue as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.</p>
-         * <p>*   If you specify an MNS topic as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.</p>
-         * <p>*   If you specify an Operation Orchestration Service (OOS) template as the notification method, specify the value in the `acs:oos:{region-id}:{account-id}:template/{templatename}` format.</p>
-         * <br>
-         * <p>The variables in the preceding parameter formats have the following meanings:</p>
-         * <br>
-         * <p>*   region-id: the region ID of the scaling group.</p>
-         * <p>*   account-id: the ID of the Alibaba Cloud account.</p>
-         * <p>*   queuename: the name of the MNS queue.</p>
-         * <p>*   topicname: the name of the MNS topic.</p>
-         * <p>*   templatename: the name of the OOS template.</p>
-         */
         @NameInMap("NotificationArn")
         public String notificationArn;
 
-        /**
-         * <p>The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect.</p>
-         */
         @NameInMap("NotificationMetadata")
         public String notificationMetadata;
 
-        /**
-         * <p>The ID of the scaling group.</p>
-         */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 

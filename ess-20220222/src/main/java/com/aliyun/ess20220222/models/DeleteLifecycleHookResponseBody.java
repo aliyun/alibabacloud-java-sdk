@@ -4,9 +4,6 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DeleteLifecycleHookResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -11,15 +11,17 @@ public class DescribeScalingRulesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The number of the page to return. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the scaling group.</p>
+     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -79,7 +81,12 @@ public class DescribeScalingRulesRequest extends TeaModel {
     public String scalingRuleType;
 
     /**
-     * <p>The IDs of the scaling rules that you want to query.</p>
+     * <p>Specifies whether to return the event-triggered tasks that are associated with the scaling rules. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false</p>
      */
     @NameInMap("ShowAlarmRules")
     public Boolean showAlarmRules;

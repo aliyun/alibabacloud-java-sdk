@@ -4,23 +4,12 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class ScaleWithAdjustmentResponseBody extends TeaModel {
-    /**
-     * <p>The type of scaling activity.</p>
-     * <br>
-     * <p>When the ActivityType is CapacityChange, it means that the scaling activity corresponding to the return value ScalingActivityId only modifies the expected number of instances of the scaling group, and does not perform scaling immediately. Scope of application: scaling groups of the expected number of instances.</p>
-     */
     @NameInMap("ActivityType")
     public String activityType;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The ID of the scaling activity.</p>
-     */
     @NameInMap("ScalingActivityId")
     public String scalingActivityId;
 

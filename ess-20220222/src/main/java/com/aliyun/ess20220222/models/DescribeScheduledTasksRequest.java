@@ -10,25 +10,12 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The region ID of the scaling group to which the scheduled task belongs.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -38,27 +25,15 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the scaling group to which the scheduled task belongs.</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
-    /**
-     * <p>The actions that you want Auto Scaling to perform when the scheduled task is triggered.</p>
-     */
     @NameInMap("ScheduledActions")
     public java.util.List<String> scheduledActions;
 
-    /**
-     * <p>The ID of the scheduled task that you want to query.</p>
-     */
     @NameInMap("ScheduledTaskIds")
     public java.util.List<String> scheduledTaskIds;
 
-    /**
-     * <p>The names of the scheduled tasks that you want to query.</p>
-     */
     @NameInMap("ScheduledTaskNames")
     public java.util.List<String> scheduledTaskNames;
 

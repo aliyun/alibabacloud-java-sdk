@@ -657,6 +657,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>ECS实例是否使用ecs-user用户登录。可能值：</p>
+         * <br>
+         * <p>- true：是。</p>
+         * <p>- false：否。</p>
+         */
         @NameInMap("ImageOptionsLoginAsNonRoot")
         public Boolean imageOptionsLoginAsNonRoot;
 

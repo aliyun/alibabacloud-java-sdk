@@ -13,9 +13,6 @@ public class DeleteScalingConfigurationRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("ScalingConfigurationId")
     public String scalingConfigurationId;
 

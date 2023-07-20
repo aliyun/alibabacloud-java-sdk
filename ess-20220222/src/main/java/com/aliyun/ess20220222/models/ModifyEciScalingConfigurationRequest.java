@@ -2276,6 +2276,9 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         @NameInMap("Medium")
         public String medium;
 
+        @NameInMap("SizeLimit")
+        public String sizeLimit;
+
         public static ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume build(java.util.Map<String, ?> map) throws Exception {
             ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume self = new ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume();
             return TeaModel.build(map, self);
@@ -2287,6 +2290,14 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
         }
         public String getMedium() {
             return this.medium;
+        }
+
+        public ModifyEciScalingConfigurationRequestVolumesEmptyDirVolume setSizeLimit(String sizeLimit) {
+            this.sizeLimit = sizeLimit;
+            return this;
+        }
+        public String getSizeLimit() {
+            return this.sizeLimit;
         }
 
     }

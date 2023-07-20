@@ -4,14 +4,6 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingGroupsRequest extends TeaModel {
-    /**
-     * <p>The type of the instances that are managed by the scaling group. Valid values:</p>
-     * <br>
-     * <p>*   ECS: Elastic Compute Service (ECS) instances.</p>
-     * <p>*   ECI: elastic container instances.</p>
-     * <br>
-     * <p>Default value: ECS.</p>
-     */
     @NameInMap("GroupType")
     public String groupType;
 
@@ -21,33 +13,15 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The region ID of the scaling group.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The ID of the resource group to which the scaling group you want to query belongs.</p>
-     * <br>
-     * <p>> If the specified resource group contains no scaling groups, null is returned.</p>
-     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -57,25 +31,12 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The IDs of the scaling groups that you want to query.</p>
-     * <br>
-     * <p>The query result does not contain the IDs of inactive scaling groups, and no errors are returned.</p>
-     */
     @NameInMap("ScalingGroupIds")
     public java.util.List<String> scalingGroupIds;
 
-    /**
-     * <p>The name of the scaling group.</p>
-     */
     @NameInMap("ScalingGroupName")
     public String scalingGroupName;
 
-    /**
-     * <p>The names of the scaling groups that you want to query.</p>
-     * <br>
-     * <p>The query result does not contain the names of inactive scaling groups, and no errors are returned.</p>
-     */
     @NameInMap("ScalingGroupNames")
     public java.util.List<String> scalingGroupNames;
 

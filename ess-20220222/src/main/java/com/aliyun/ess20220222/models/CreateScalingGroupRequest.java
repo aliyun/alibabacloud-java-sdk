@@ -280,6 +280,11 @@ public class CreateScalingGroupRequest extends TeaModel {
     @NameInMap("ScalingPolicy")
     public String scalingPolicy;
 
+    /**
+     * <p>Details of the server groups.</p>
+     * <br>
+     * <p>>  You cannot use the AlbServerGroups parameter and the ServerGroups parameter to specify the same server group.</p>
+     */
     @NameInMap("ServerGroups")
     public java.util.List<CreateScalingGroupRequestServerGroups> serverGroups;
 
@@ -968,15 +973,32 @@ public class CreateScalingGroupRequest extends TeaModel {
     }
 
     public static class CreateScalingGroupRequestServerGroups extends TeaModel {
+        /**
+         * <p>The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group. Valid values: 1 to 65535.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the server group.</p>
+         */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        /**
+         * <p>The type of the server group. Valid values:</p>
+         * <br>
+         * <p>*   ALB: Application Load Balancer (ALB) server group</p>
+         * <p>*   NLB: Network Load Balancer (NLB) server group</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The weight of an Elastic Compute Service (ECS) instance in the scaling group as a backend server after Auto Scaling adds the ECS instance to the server group. Valid values: 0 to 100.</p>
+         * <br>
+         * <p>If you increase the weight of an ECS instance in the server group, the number of access requests that are forwarded to the ECS instance also increases. If you set the Weight parameter of an ECS instance in the server group to 0, no access requests are forwarded to the ECS instance.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

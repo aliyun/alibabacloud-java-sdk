@@ -4,44 +4,24 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class AttachAlbServerGroupsRequest extends TeaModel {
-    /**
-     * <p>Details of the ALB server group.</p>
-     */
     @NameInMap("AlbServerGroups")
     public java.util.List<AttachAlbServerGroupsRequestAlbServerGroups> albServerGroups;
 
-    /**
-     * <p>Specifies whether to add the ECS instances in the scaling group to the ALB server group. Valid values:</p>
-     * <br>
-     * <p>*   true: adds the ECS instances to the ALB server group and returns the value of the `ScalingActivityId` parameter. You can check whether the ECS instances are added to the ALB server group by using the ID of the scaling activity.</p>
-     * <p>*   false: does not add the ECS instances to the ALB server group.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>Details of the ALB server group.</p>
-     */
     @NameInMap("ForceAttach")
     public Boolean forceAttach;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the scaling group.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).</p>
-     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
@@ -107,23 +87,12 @@ public class AttachAlbServerGroupsRequest extends TeaModel {
     }
 
     public static class AttachAlbServerGroupsRequestAlbServerGroups extends TeaModel {
-        /**
-         * <p>The weight of the ECS instance as a backend server after the instance is added to the ALB server group.</p>
-         * <br>
-         * <p>If you increase the weight of an ECS instance in an ALB server group, the number of access requests that are forwarded to the ECS instance increases. If you set the Weight parameter for an ECS instance to 0, no access requests are forwarded to the ECS instance. Valid values: 0 to 100.</p>
-         */
         @NameInMap("AlbServerGroupId")
         public String albServerGroupId;
 
-        /**
-         * <p>The ID of the scaling activity in which Auto Scaling associates the ALB server group with the scaling group and adds ECS instances in the scaling group to the ALB server group. This parameter is returned only if you set the `ForceAttach` parameter to `true`.</p>
-         */
         @NameInMap("Port")
         public Integer port;
 
-        /**
-         * <p>The port number used by the ECS instance after the ECS instance is added to the ALB server group. Valid values: 1 to 65535.</p>
-         */
         @NameInMap("Weight")
         public Integer weight;
 

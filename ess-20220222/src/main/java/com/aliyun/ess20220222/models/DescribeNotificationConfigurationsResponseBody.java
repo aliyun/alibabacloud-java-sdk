@@ -4,15 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
-    /**
-     * <p>Details of the notifications.</p>
-     */
     @NameInMap("NotificationConfigurationModels")
     public java.util.List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels> notificationConfigurationModels;
 
-    /**
-     * <p>Details of the notifications.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,21 +32,12 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     }
 
     public static class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels extends TeaModel {
-        /**
-         * <p>The ID of the scaling group.</p>
-         */
         @NameInMap("NotificationArn")
         public String notificationArn;
 
-        /**
-         * <p>The types of the notifications.</p>
-         */
         @NameInMap("NotificationTypes")
         public java.util.List<String> notificationTypes;
 
-        /**
-         * <p>The types of the notifications.</p>
-         */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
