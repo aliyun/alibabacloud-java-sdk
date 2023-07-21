@@ -86,6 +86,9 @@ public class CreateFlowLogRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateFlowLogRequestTag> tag;
+
     @NameInMap("TrafficPath")
     public java.util.List<String> trafficPath;
 
@@ -208,6 +211,14 @@ public class CreateFlowLogRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public CreateFlowLogRequest setTag(java.util.List<CreateFlowLogRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateFlowLogRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateFlowLogRequest setTrafficPath(java.util.List<String> trafficPath) {
         this.trafficPath = trafficPath;
         return this;
@@ -222,6 +233,36 @@ public class CreateFlowLogRequest extends TeaModel {
     }
     public String getTrafficType() {
         return this.trafficType;
+    }
+
+    public static class CreateFlowLogRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateFlowLogRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateFlowLogRequestTag self = new CreateFlowLogRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFlowLogRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateFlowLogRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

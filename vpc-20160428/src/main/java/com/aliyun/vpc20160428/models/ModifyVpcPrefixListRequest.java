@@ -8,23 +8,26 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     public java.util.List<ModifyVpcPrefixListRequestAddPrefixListEntry> addPrefixListEntry;
 
     /**
-     * <p>The CIDR block to be added to the prefix list.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>>  If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the **AddPrefixListEntry.N.Description** parameter.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the CIDR block to be added to the prefix list.</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <br>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>*   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.</p>
      */
     @NameInMap("MaxEntries")
     public Integer maxEntries;
@@ -36,32 +39,29 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The new description of the prefix list.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("PrefixListDescription")
     public String prefixListDescription;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>The ID of the prefix list.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>The new name of the prefix list.</p>
      * <br>
-     * <p>*   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("PrefixListName")
     public String prefixListName;
 
     /**
-     * <p>The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.</p>
+     * <p>The region ID of the prefix list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -186,13 +186,17 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     public static class ModifyVpcPrefixListRequestAddPrefixListEntry extends TeaModel {
         /**
-         * <p>The CIDR block that you want to delete from the prefix list.</p>
+         * <p>The CIDR block to be added to the prefix list.</p>
+         * <br>
+         * <p>>  If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the **AddPrefixListEntry.N.Description** parameter.</p>
          */
         @NameInMap("Cidr")
         public String cidr;
 
         /**
-         * <p>The description of the CIDR block that you want to delete.</p>
+         * <p>The description of the CIDR block to be added to the prefix list.</p>
+         * <br>
+         * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -222,15 +226,13 @@ public class ModifyVpcPrefixListRequest extends TeaModel {
 
     public static class ModifyVpcPrefixListRequestRemovePrefixListEntry extends TeaModel {
         /**
-         * <p>The region ID of the prefix list.</p>
+         * <p>The CIDR block that you want to delete from the prefix list.</p>
          */
         @NameInMap("Cidr")
         public String cidr;
 
         /**
-         * <p>The new description of the prefix list.</p>
-         * <br>
-         * <p>The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+         * <p>The description of the CIDR block that you want to delete.</p>
          */
         @NameInMap("Description")
         public String description;

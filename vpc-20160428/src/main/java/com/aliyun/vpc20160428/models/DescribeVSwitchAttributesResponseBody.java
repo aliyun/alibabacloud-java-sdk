@@ -28,6 +28,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnabledIpv6")
+    public Boolean enabledIpv6;
+
     /**
      * <p>The IPv6 CIDR block of the vSwitch.</p>
      */
@@ -150,6 +153,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeVSwitchAttributesResponseBody setEnabledIpv6(Boolean enabledIpv6) {
+        this.enabledIpv6 = enabledIpv6;
+        return this;
+    }
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     public DescribeVSwitchAttributesResponseBody setIpv6CidrBlock(String ipv6CidrBlock) {

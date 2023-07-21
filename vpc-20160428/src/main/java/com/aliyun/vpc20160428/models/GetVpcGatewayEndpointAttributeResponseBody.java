@@ -4,8 +4,29 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     */
     @NameInMap("CreationTime")
     public String creationTime;
+
+    /**
+     * <p>The description of the gateway endpoint.</p>
+     */
+    @NameInMap("EndpointDescription")
+    public String endpointDescription;
+
+    /**
+     * <p>The ID of the gateway endpoint.</p>
+     */
+    @NameInMap("EndpointId")
+    public String endpointId;
+
+    /**
+     * <p>The name of the gateway endpoint.</p>
+     */
+    @NameInMap("EndpointName")
+    public String endpointName;
 
     /**
      * <p>The status of the gateway endpoint. Valid values:</p>
@@ -17,29 +38,17 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
      * <p>*   **Dissociating**: being disassociated</p>
      * <p>*   **Deleting**: being deleted</p>
      */
-    @NameInMap("EndpointDescription")
-    public String endpointDescription;
+    @NameInMap("EndpointStatus")
+    public String endpointStatus;
 
     /**
      * <p>The access policy for the cloud service.</p>
      */
-    @NameInMap("EndpointId")
-    public String endpointId;
-
-    /**
-     * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
-     */
-    @NameInMap("EndpointName")
-    public String endpointName;
-
-    @NameInMap("EndpointStatus")
-    public String endpointStatus;
-
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -47,11 +56,14 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the route table associated with the gateway endpoint.</p>
+     */
     @NameInMap("RouteTables")
     public java.util.List<String> routeTables;
 
     /**
-     * <p>The ID of the route table associated with the gateway endpoint.</p>
+     * <p>The name of the endpoint service.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
@@ -59,6 +71,9 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<GetVpcGatewayEndpointAttributeResponseBodyTags> tags;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

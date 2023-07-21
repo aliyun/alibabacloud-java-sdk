@@ -99,6 +99,9 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateVpcRequestTag> tag;
+
     /**
      * <p>The user CIDR block. Separate user CIDR blocks with commas (,). You can specify up to three user CIDR blocks.</p>
      * <br>
@@ -232,6 +235,14 @@ public class CreateVpcRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateVpcRequest setTag(java.util.List<CreateVpcRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateVpcRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateVpcRequest setUserCidr(String userCidr) {
         this.userCidr = userCidr;
         return this;
@@ -246,6 +257,36 @@ public class CreateVpcRequest extends TeaModel {
     }
     public String getVpcName() {
         return this.vpcName;
+    }
+
+    public static class CreateVpcRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateVpcRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateVpcRequestTag self = new CreateVpcRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVpcRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateVpcRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

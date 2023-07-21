@@ -5,54 +5,56 @@ import com.aliyun.tea.*;
 
 public class CreateNatIpRequest extends TeaModel {
     /**
-     * <p>The ID of the CIDR block to which the NAT IP address belongs.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
-     * <p>The CIDR block to which the NAT IP address belongs.</p>
-     */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    /**
-     * <p>The description of the NAT IP address.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
-     */
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
-    /**
-     * <p>The NAT IP address.</p>
-     */
-    @NameInMap("NatIp")
-    public String natIp;
-
-    /**
-     * <p>The NAT IP address that you want to create.</p>
-     * <br>
-     * <p>If you do not specify an IP address, the system selects a random IP address from the specified CIDR block.</p>
-     */
-    @NameInMap("NatIpCidr")
-    public String natIpCidr;
-
-    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
-    @NameInMap("NatIpDescription")
-    public String natIpDescription;
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>Specifies whether only to precheck this request. Valid values:</p>
      * <br>
      * <p>*   **true**: sends the precheck request but does not create the NAT IP address. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the NAT IP address is created.</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.</p>
+     */
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    /**
+     * <p>The NAT IP address that you want to create.</p>
+     * <br>
+     * <p>If you do not specify an IP address, the system selects a random IP address from the specified CIDR block.</p>
+     */
+    @NameInMap("NatIp")
+    public String natIp;
+
+    /**
+     * <p>The CIDR block to which the NAT IP address belongs.</p>
+     */
+    @NameInMap("NatIpCidr")
+    public String natIpCidr;
+
+    /**
+     * <p>The description of the NAT IP address.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
+    @NameInMap("NatIpDescription")
+    public String natIpDescription;
+
+    /**
+     * <p>The name of the NAT IP address.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("NatIpName")
     public String natIpName;
@@ -64,9 +66,9 @@ public class CreateNatIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the NAT IP address.</p>
+     * <p>The region ID of the NAT gateway to which the NAT IP address that you want to create belongs.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -198,6 +198,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("FlowLogDeliverErrorMessage")
+        public String flowLogDeliverErrorMessage;
+
+        @NameInMap("FlowLogDeliverStatus")
+        public String flowLogDeliverStatus;
+
         /**
          * <p>The ID of the flow log.</p>
          */
@@ -333,6 +339,22 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setFlowLogDeliverErrorMessage(String flowLogDeliverErrorMessage) {
+            this.flowLogDeliverErrorMessage = flowLogDeliverErrorMessage;
+            return this;
+        }
+        public String getFlowLogDeliverErrorMessage() {
+            return this.flowLogDeliverErrorMessage;
+        }
+
+        public DescribeFlowLogsResponseBodyFlowLogsFlowLog setFlowLogDeliverStatus(String flowLogDeliverStatus) {
+            this.flowLogDeliverStatus = flowLogDeliverStatus;
+            return this;
+        }
+        public String getFlowLogDeliverStatus() {
+            return this.flowLogDeliverStatus;
         }
 
         public DescribeFlowLogsResponseBodyFlowLogsFlowLog setFlowLogId(String flowLogId) {

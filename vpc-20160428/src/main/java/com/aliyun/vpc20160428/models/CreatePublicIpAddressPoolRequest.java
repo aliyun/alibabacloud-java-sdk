@@ -85,6 +85,9 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreatePublicIpAddressPoolRequestTag> tag;
+
     public static CreatePublicIpAddressPoolRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePublicIpAddressPoolRequest self = new CreatePublicIpAddressPoolRequest();
         return TeaModel.build(map, self);
@@ -176,6 +179,44 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreatePublicIpAddressPoolRequest setTag(java.util.List<CreatePublicIpAddressPoolRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreatePublicIpAddressPoolRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreatePublicIpAddressPoolRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreatePublicIpAddressPoolRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreatePublicIpAddressPoolRequestTag self = new CreatePublicIpAddressPoolRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePublicIpAddressPoolRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreatePublicIpAddressPoolRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

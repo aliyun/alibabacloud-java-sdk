@@ -169,6 +169,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -219,6 +222,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
      */
     @NameInMap("Spec")
     public String spec;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateRouterInterfaceRequestTags> tags;
 
     public static CreateRouterInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRouterInterfaceRequest self = new CreateRouterInterfaceRequest();
@@ -393,6 +399,14 @@ public class CreateRouterInterfaceRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateRouterInterfaceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateRouterInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -439,6 +453,44 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     }
     public String getSpec() {
         return this.spec;
+    }
+
+    public CreateRouterInterfaceRequest setTags(java.util.List<CreateRouterInterfaceRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateRouterInterfaceRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class CreateRouterInterfaceRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateRouterInterfaceRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateRouterInterfaceRequestTags self = new CreateRouterInterfaceRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRouterInterfaceRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateRouterInterfaceRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

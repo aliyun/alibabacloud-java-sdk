@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The destination CIDR block of the route in the gateway route table.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
-     * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <p>The ID of the gateway route table that you want to query.</p>
      */
     @NameInMap("GatewayRouteTableId")
     public String gatewayRouteTableId;
 
     /**
-     * <p>The ID of the gateway route table that you want to query.</p>
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The destination CIDR block of the route in the gateway route table.</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -38,10 +38,9 @@ public class ListGatewayRouteTableEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The region ID of the gateway route table.</p>
      * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

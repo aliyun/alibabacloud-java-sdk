@@ -264,6 +264,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("ReservationOrderType")
     public String reservationOrderType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>Indicates whether the router interface is the requester or the acceptor of the peering connection.</p>
      */
@@ -331,6 +334,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
      */
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Tags")
+    public DescribeRouterInterfaceAttributeResponseBodyTags tags;
 
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the router interface belongs.</p>
@@ -623,6 +629,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         return this.reservationOrderType;
     }
 
+    public DescribeRouterInterfaceAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeRouterInterfaceAttributeResponseBody setRole(String role) {
         this.role = role;
         return this;
@@ -679,12 +693,69 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         return this.success;
     }
 
+    public DescribeRouterInterfaceAttributeResponseBody setTags(DescribeRouterInterfaceAttributeResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeRouterInterfaceAttributeResponseBodyTags getTags() {
+        return this.tags;
+    }
+
     public DescribeRouterInterfaceAttributeResponseBody setVpcInstanceId(String vpcInstanceId) {
         this.vpcInstanceId = vpcInstanceId;
         return this;
     }
     public String getVpcInstanceId() {
         return this.vpcInstanceId;
+    }
+
+    public static class DescribeRouterInterfaceAttributeResponseBodyTagsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeRouterInterfaceAttributeResponseBodyTagsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouterInterfaceAttributeResponseBodyTagsTags self = new DescribeRouterInterfaceAttributeResponseBodyTagsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouterInterfaceAttributeResponseBodyTagsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeRouterInterfaceAttributeResponseBodyTagsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeRouterInterfaceAttributeResponseBodyTags extends TeaModel {
+        @NameInMap("Tags")
+        public java.util.List<DescribeRouterInterfaceAttributeResponseBodyTagsTags> tags;
+
+        public static DescribeRouterInterfaceAttributeResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouterInterfaceAttributeResponseBodyTags self = new DescribeRouterInterfaceAttributeResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouterInterfaceAttributeResponseBodyTags setTags(java.util.List<DescribeRouterInterfaceAttributeResponseBodyTagsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeRouterInterfaceAttributeResponseBodyTagsTags> getTags() {
+            return this.tags;
+        }
+
     }
 
 }

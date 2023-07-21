@@ -54,6 +54,9 @@ public class CreateIpv6GatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateIpv6GatewayRequestTag> tag;
+
     /**
      * <p>The ID of the VPC for which you want to create the IPv6 gateway.</p>
      */
@@ -137,12 +140,50 @@ public class CreateIpv6GatewayRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateIpv6GatewayRequest setTag(java.util.List<CreateIpv6GatewayRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateIpv6GatewayRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateIpv6GatewayRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class CreateIpv6GatewayRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateIpv6GatewayRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateIpv6GatewayRequestTag self = new CreateIpv6GatewayRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIpv6GatewayRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateIpv6GatewayRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

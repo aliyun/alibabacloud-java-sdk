@@ -4,11 +4,16 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
+    /**
+     * <p>The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.</p>
+     * <br>
+     * <p>Valid values: **1** to **1000**.</p>
+     */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the EIP bandwidth plan.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -20,9 +25,9 @@ public class ModifyCommonBandwidthPackageSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.</p>
+     * <p>The region ID of the EIP bandwidth plan.</p>
      * <br>
-     * <p>Valid values: **1** to **1000**.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

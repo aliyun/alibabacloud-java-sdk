@@ -55,6 +55,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateTrafficMirrorFilterRequestTag> tag;
+
     /**
      * <p>The description of the filter.</p>
      * <br>
@@ -154,6 +157,14 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateTrafficMirrorFilterRequest setTag(java.util.List<CreateTrafficMirrorFilterRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateTrafficMirrorFilterRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateTrafficMirrorFilterRequest setTrafficMirrorFilterDescription(String trafficMirrorFilterDescription) {
@@ -408,6 +419,36 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         }
         public String getSourcePortRange() {
             return this.sourcePortRange;
+        }
+
+    }
+
+    public static class CreateTrafficMirrorFilterRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateTrafficMirrorFilterRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateTrafficMirrorFilterRequestTag self = new CreateTrafficMirrorFilterRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTrafficMirrorFilterRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateTrafficMirrorFilterRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

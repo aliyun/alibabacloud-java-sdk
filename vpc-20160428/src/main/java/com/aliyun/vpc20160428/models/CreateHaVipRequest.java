@@ -62,6 +62,9 @@ public class CreateHaVipRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateHaVipRequestTag> tag;
+
     /**
      * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
      */
@@ -153,12 +156,50 @@ public class CreateHaVipRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateHaVipRequest setTag(java.util.List<CreateHaVipRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateHaVipRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateHaVipRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
+    }
+
+    public static class CreateHaVipRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateHaVipRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateHaVipRequestTag self = new CreateHaVipRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHaVipRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateHaVipRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

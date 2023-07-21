@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListVpcGatewayEndpointsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The ID of the gateway endpoint.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The region ID of the gateway endpoint.</p>
+     * <p>The name of the gateway endpoint.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The name must be 1 to 128 characters in length.</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
@@ -27,8 +27,8 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     /**
      * <p>The token that is used for the next query. Valid values:</p>
      * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -40,7 +40,9 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The list of gateway endpoints.</p>
+     * <p>The region ID of the gateway endpoint.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,7 +57,7 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the endpoint service.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

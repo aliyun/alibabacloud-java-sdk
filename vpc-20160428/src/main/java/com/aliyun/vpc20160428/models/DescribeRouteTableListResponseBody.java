@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteTableListResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the VPC to which the route table belongs.</p>
+     * <p>The detailed information about the route tables.</p>
      */
     @NameInMap("RouterTableList")
     public DescribeRouteTableListResponseBodyRouterTableList routerTableList;
 
     /**
-     * <p>The detailed information about the route tables.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -100,13 +100,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTagsTag extends TeaModel {
         /**
-         * <p>The value of the tag that is added to the route table.</p>
+         * <p>The key of the tag that is added to the route table.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The value of the tag that is added to the route table.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -174,10 +174,79 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
 
     public static class DescribeRouteTableListResponseBodyRouterTableListRouterTableListType extends TeaModel {
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
+         * <br>
+         * <p>*   **VSwitch**: a vSwitch</p>
+         * <p>*   **Gateway**: an IPv4 gateway</p>
          */
         @NameInMap("AssociateType")
         public String associateType;
+
+        /**
+         * <p>The time when the route table was created.</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        /**
+         * <p>The description of the route table.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The detailed information about the IPv4 gateway.</p>
+         */
+        @NameInMap("GatewayIds")
+        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds gatewayIds;
+
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the route table belongs.</p>
+         */
+        @NameInMap("OwnerId")
+        public Long ownerId;
+
+        /**
+         * <p>The ID of the resource group to which the route table belongs.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The ID of the route table.</p>
+         */
+        @NameInMap("RouteTableId")
+        public String routeTableId;
+
+        /**
+         * <p>The name of the route table.</p>
+         */
+        @NameInMap("RouteTableName")
+        public String routeTableName;
+
+        /**
+         * <p>The type of the route table. Valid values:</p>
+         * <br>
+         * <p>*   **Custom**: a custom route table</p>
+         * <p>*   **System**: a system route table</p>
+         */
+        @NameInMap("RouteTableType")
+        public String routeTableType;
+
+        /**
+         * <p>The ID of the router to which the route table belongs.</p>
+         */
+        @NameInMap("RouterId")
+        public String routerId;
+
+        /**
+         * <p>The type of the router to which the route table belongs. Valid values:</p>
+         * <br>
+         * <p>*   **VRouter**: a vRouter</p>
+         * <p>*   **VBR**: a VBR</p>
+         */
+        @NameInMap("RouterType")
+        public String routerType;
 
         /**
          * <p>The status of the route table. Valid values:</p>
@@ -186,89 +255,23 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
          * <p>*   **Available**: available</p>
          * <p>*   **Deleting**: being deleted</p>
          */
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        /**
-         * <p>The type of the route table. Valid values:</p>
-         * <br>
-         * <p>*   **Custom**: a custom route table</p>
-         * <p>*   **System**: a system route table</p>
-         */
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("GatewayIds")
-        public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeGatewayIds gatewayIds;
-
-        /**
-         * <p>The description of the route table.</p>
-         */
-        @NameInMap("OwnerId")
-        public Long ownerId;
-
-        /**
-         * <p>The type of the router to which the route table belongs. Valid values:</p>
-         * <br>
-         * <p>*   **VRouter**: a vRouter</p>
-         * <p>*   **VBR**: a VBR</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        /**
-         * <p>The ID of the Alibaba Cloud account to which the route table belongs.</p>
-         */
-        @NameInMap("RouteTableId")
-        public String routeTableId;
-
-        /**
-         * <p>The tag added to the route table.</p>
-         */
-        @NameInMap("RouteTableName")
-        public String routeTableName;
-
-        /**
-         * <p>The ID of the resource group to which the route table belongs.</p>
-         */
-        @NameInMap("RouteTableType")
-        public String routeTableType;
-
-        /**
-         * <p>The type of the cloud resource with which the route table is associated. Valid values:</p>
-         * <br>
-         * <p>*   **VSwitch**: a vSwitch</p>
-         * <p>*   **Gateway**: an IPv4 gateway</p>
-         */
-        @NameInMap("RouterId")
-        public String routerId;
-
-        /**
-         * <p>The name of the route table.</p>
-         */
-        @NameInMap("RouterType")
-        public String routerType;
-
-        /**
-         * <p>The ID of the router to which the route table belongs.</p>
-         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The key of the tag that is added to the route table.</p>
+         * <p>The tag added to the route table.</p>
          */
         @NameInMap("Tags")
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeTags tags;
 
         /**
-         * <p>The detailed information about the IPv4 gateway.</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchIds")
         public DescribeRouteTableListResponseBodyRouterTableListRouterTableListTypeVSwitchIds vSwitchIds;
 
         /**
-         * <p>The time when the route table was created.</p>
+         * <p>The ID of the VPC to which the route table belongs.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

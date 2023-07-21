@@ -10,6 +10,11 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,6 +27,17 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: a VPC</p>
+     * <p>*   **VSWITCH**: a vSwitch</p>
+     * <p>*   **ROUTETABLE**: a route table</p>
+     * <p>*   **EIP**: an EIP</p>
+     * <p>*   **VpnGateway**: a VPN gateway</p>
+     * <p>*   **NATGATEWAY**: a NAT gateway</p>
+     * <p>*   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -98,9 +114,19 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag that is added to the resource. You can specify at most 20 tag keys. The tag value cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag that is added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

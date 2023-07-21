@@ -37,11 +37,17 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeVirtualBorderRoutersRequestTags> tags;
 
     public static DescribeVirtualBorderRoutersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualBorderRoutersRequest self = new DescribeVirtualBorderRoutersRequest();
@@ -96,6 +102,14 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeVirtualBorderRoutersRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeVirtualBorderRoutersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -110,6 +124,14 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeVirtualBorderRoutersRequest setTags(java.util.List<DescribeVirtualBorderRoutersRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeVirtualBorderRoutersRequestTags> getTags() {
+        return this.tags;
     }
 
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {
@@ -148,6 +170,36 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
             return this;
         }
         public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeVirtualBorderRoutersRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVirtualBorderRoutersRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVirtualBorderRoutersRequestTags self = new DescribeVirtualBorderRoutersRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVirtualBorderRoutersRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVirtualBorderRoutersRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
             return this.value;
         }
 

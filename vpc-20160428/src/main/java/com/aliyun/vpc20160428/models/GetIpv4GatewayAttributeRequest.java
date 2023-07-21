@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIpv4GatewayAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the virtual private cloud (VPC) with which the IPv4 gateway is associated.</p>
+     * <p>The ID of the IPv4 gateway.</p>
      */
     @NameInMap("Ipv4GatewayId")
     public String ipv4GatewayId;
@@ -17,7 +17,9 @@ public class GetIpv4GatewayAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetIpv4GatewayAttribute**.</p>
+     * <p>The region ID of the IPv4 gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

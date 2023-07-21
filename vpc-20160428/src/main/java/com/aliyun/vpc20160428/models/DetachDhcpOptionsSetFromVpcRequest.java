@@ -5,21 +5,28 @@ import com.aliyun.tea.*;
 
 public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
-
-    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
      * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
      * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
      */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The ID of the DHCP options set to be disassociated from a VPC.</p>
+     */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
 
+    /**
+     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <br>
+     * <p>**true**: checks the request without performing the operation. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <br>
+     * <p>**false** (default): sends the request. If the request passes the check, a 2XX HTTP status code is returned and the operation is performed.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -30,7 +37,7 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The region to which the DHCP options set belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,11 +49,7 @@ public class DetachDhcpOptionsSetFromVpcRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
-     * <br>
-     * <p>**true**: checks the request without performing the operation. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <br>
-     * <p>**false** (default): sends the request. If the request passes the check, a 2XX HTTP status code is returned and the operation is performed.</p>
+     * <p>The ID of the VPC.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
