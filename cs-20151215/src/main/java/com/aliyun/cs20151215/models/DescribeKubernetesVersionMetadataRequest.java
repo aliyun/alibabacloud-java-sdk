@@ -10,6 +10,9 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     @NameInMap("KubernetesVersion")
     public String kubernetesVersion;
 
+    @NameInMap("Mode")
+    public String mode;
+
     @NameInMap("Profile")
     public String profile;
 
@@ -38,6 +41,14 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     }
     public String getKubernetesVersion() {
         return this.kubernetesVersion;
+    }
+
+    public DescribeKubernetesVersionMetadataRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public DescribeKubernetesVersionMetadataRequest setProfile(String profile) {
