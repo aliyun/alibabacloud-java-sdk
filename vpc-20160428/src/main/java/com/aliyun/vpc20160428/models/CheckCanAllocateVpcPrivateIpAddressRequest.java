@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     /**
-     * <p>Indicates whether the private IP address is available. Valid values:</p>
+     * <p>The version of the private IP address. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.</p>
+     * <p>*   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.</p>
      */
     @NameInMap("IpVersion")
     public String ipVersion;
@@ -20,13 +20,15 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CheckCanAllocateVpcPrivateIpAddress**.</p>
+     * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>To query whether a private IP address is available, the private IP address must belong to the vSwitch specified by the **VSwitchId** parameter.</p>
+     * <p>The region ID of the vSwitch to which the private IP address that you want to query belongs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,10 +40,7 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The version of the private IP address. Valid values:</p>
-     * <br>
-     * <p>*   **ipv4**: IPv4 If you want to query an IPv4 address, this parameter is optional.</p>
-     * <p>*   **ipv6**: IPv6 If you want to query an IPv6 address, this parameter is required.</p>
+     * <p>The ID of the vSwitch to which the private IP address to be queried belongs.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

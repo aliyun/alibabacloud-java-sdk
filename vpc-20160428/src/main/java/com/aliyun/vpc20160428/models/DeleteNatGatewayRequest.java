@@ -4,21 +4,6 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteNatGatewayRequest extends TeaModel {
-    @NameInMap("Force")
-    public Boolean force;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("NatGatewayId")
-    public String natGatewayId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     /**
      * <p>Specifies whether to forcefully delete the NAT gateway. Valid values:</p>
      * <br>
@@ -35,6 +20,26 @@ public class DeleteNatGatewayRequest extends TeaModel {
      * <p>    *   If the NAT gateway has SNAT entries, delete them first.</p>
      * <p>    *   If the NAT gateway has DNAT entries, delete them first.</p>
      * <p>    *   If the NAT gateway is associated with an EIP, disassociate the EIP from the NAT gateway first.</p>
+     */
+    @NameInMap("Force")
+    public Boolean force;
+
+    /**
+     * <p>The ID of the NAT gateway that you want to delete.</p>
+     */
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The ID of the region where the NAT gateway is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

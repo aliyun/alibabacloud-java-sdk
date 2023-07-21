@@ -4,22 +4,28 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The name of the VPN gateway.</p>
+     */
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("OrderId")
-    public Long orderId;
 
     /**
      * <p>The ID of the order.</p>
      * <br>
      * <p>If automatic payment is disabled, you must manually complete the payment for the VPN gateway in the [Alibaba Cloud Management console](https://usercenter2-intl.aliyun.com/billing/#/account/overview).</p>
      */
+    @NameInMap("OrderId")
+    public Long orderId;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the VPN gateway.</p>
+     * <p>The ID of the VPN gateway.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

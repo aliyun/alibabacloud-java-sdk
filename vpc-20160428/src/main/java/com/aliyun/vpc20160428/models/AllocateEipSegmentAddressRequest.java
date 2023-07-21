@@ -5,6 +5,28 @@ import com.aliyun.tea.*;
 
 public class AllocateEipSegmentAddressRequest extends TeaModel {
     /**
+     * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
+     * <br>
+     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, the valid values for **Bandwidth** are **1** to **500**.</p>
+     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, the valid values for **Bandwidth** are **1** to **200**.</p>
+     * <p>*   When **InstanceChargeType** is set to **PrePaid**, the valid values for **Bandwidth** are **1** to **1000**.</p>
+     * <br>
+     * <p>Default value: **5**. Unit: Mbit/s.</p>
+     */
+    @NameInMap("Bandwidth")
+    public String bandwidth;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. </p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The **client token** can contain only ASCII characters. </p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>The subnet mask length of the contiguous EIPs. Valid values:</p>
      * <br>
      * <p>- **28**: applies for 16 contiguous EIPs in each call.</p>
@@ -15,20 +37,8 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
      * <br>
      * <p>>  The number of contiguous EIPs allocated by the system may be less than the requested number because one, three, or four EIPs may be reserved.</p>
      */
-    @NameInMap("Bandwidth")
-    public String bandwidth;
-
-    /**
-     * <p>The maximum bandwidth of the EIP. Unit: Mbit/s.</p>
-     * <br>
-     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, the valid values for **Bandwidth** are **1** to **500**.</p>
-     * <p>*   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, the valid values for **Bandwidth** are **1** to **200**.</p>
-     * <p>*   When **InstanceChargeType** is set to **PrePaid**, the valid values for **Bandwidth** are **1** to **1000**.</p>
-     * <br>
-     * <p>Default value: **5**. Unit: Mbit/s.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("EipMask")
+    public String eipMask;
 
     /**
      * <p>The metering method of the contiguous EIPs. Valid values:</p>
@@ -36,8 +46,8 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
      * <p>*   **PayByBandwidth** (default): pay-by-bandwidth</p>
      * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
      */
-    @NameInMap("EipMask")
-    public String eipMask;
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
 
     /**
      * <p>The line type. Valid values:</p>
@@ -58,17 +68,11 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
      * <br>
      * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
      */
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
-
-    /**
-     * <p>The ID of the contiguous EIP group.</p>
-     */
     @NameInMap("Isp")
     public String isp;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>Set the value to **public**, which specifies the Internet.</p>
      */
     @NameInMap("Netmode")
     public String netmode;
@@ -80,13 +84,15 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Set the value to **public**, which specifies the Internet.</p>
+     * <p>The region ID of the contiguous EIPs.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

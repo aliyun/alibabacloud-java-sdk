@@ -4,9 +4,15 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVSwitchResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeleteVpcPrefixListRequest extends TeaModel {
     /**
-     * <p>The region ID of the prefix list.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <br>
+     * <p>*   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -25,14 +30,16 @@ public class DeleteVpcPrefixListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
-     * <br>
-     * <p>*   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>The ID of the prefix list that you want to delete.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
+    /**
+     * <p>The region ID of the prefix list.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

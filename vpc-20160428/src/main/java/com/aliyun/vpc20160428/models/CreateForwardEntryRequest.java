@@ -5,39 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateForwardEntryRequest extends TeaModel {
     /**
-     * <p>The ID of the DNAT entry.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>*   The private IP address of the ECS instance that needs to communicate with the Internet when you configure a DNAT entry for an Internet NAT gateway. The private IP address must meet the following requirements:</p>
-     * <br>
-     * <p>    *   It must belong to the CIDR block of the VPC where the NAT gateway is deployed.</p>
-     * <p>    *   The DNAT entry takes effect only if the private IP address is assigned to an ECS instance and the ECS instance is not associated with an EIP.</p>
-     * <br>
-     * <p>*   The private IP address that uses DNAT when you add a DNAT entry to a VPC NAT gateway.</p>
+     * <p>*   The EIP that can be accessed over the Internet when you configure a DNAT entry for an Internet NAT gateway.</p>
+     * <p>*   The NAT IP address that can be accessed by external networks when you configure a DNAT entry for a VPC NAT gateway.</p>
      */
     @NameInMap("ExternalIp")
     public String externalIp;
-
-    /**
-     * <p>*   The internal port or port range that is used for port forwarding when you configure a DNAT entry for an Internet NAT gateway. Valid values: **1** to **65535**.</p>
-     * <p>*   The port of the destination ECS instance to be mapped when you configure a DNAT entry for a VPC NAT gateway. Valid values: **1** to **65535**.</p>
-     */
-    @NameInMap("ExternalPort")
-    public String externalPort;
-
-    /**
-     * <p>Specifies whether to remove limits on the port range. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
-     * <br>
-     * <p>>  If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than 1024, set **Portbreak** to **true**.</p>
-     */
-    @NameInMap("ForwardEntryName")
-    public String forwardEntryName;
 
     /**
      * <p>*   The external port range that is used for port forwarding when you configure a DNAT entry for an Internet NAT gateway.</p>
@@ -48,8 +30,40 @@ public class CreateForwardEntryRequest extends TeaModel {
      * <br>
      * <p>*   The port that can be accessed by external networks when you configure a DNAT entry for a VPC NAT gateway. Valid values: **1** to **65535**.</p>
      */
+    @NameInMap("ExternalPort")
+    public String externalPort;
+
+    /**
+     * <p>The name of the DNAT entry.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
+    @NameInMap("ForwardEntryName")
+    public String forwardEntryName;
+
+    /**
+     * <p>The ID of the DNAT table.</p>
+     */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
+
+    /**
+     * <p>*   The private IP address of the ECS instance that needs to communicate with the Internet when you configure a DNAT entry for an Internet NAT gateway. The private IP address must meet the following requirements:</p>
+     * <br>
+     * <p>    *   It must belong to the CIDR block of the VPC where the NAT gateway is deployed.</p>
+     * <p>    *   The DNAT entry takes effect only if the private IP address is assigned to an ECS instance and the ECS instance is not associated with an EIP.</p>
+     * <br>
+     * <p>*   The private IP address that uses DNAT when you add a DNAT entry to a VPC NAT gateway.</p>
+     */
+    @NameInMap("InternalIp")
+    public String internalIp;
+
+    /**
+     * <p>*   The internal port or port range that is used for port forwarding when you configure a DNAT entry for an Internet NAT gateway. Valid values: **1** to **65535**.</p>
+     * <p>*   The port of the destination ECS instance to be mapped when you configure a DNAT entry for a VPC NAT gateway. Valid values: **1** to **65535**.</p>
+     */
+    @NameInMap("InternalPort")
+    public String internalPort;
 
     /**
      * <p>The protocol. Valid values:</p>
@@ -57,24 +71,6 @@ public class CreateForwardEntryRequest extends TeaModel {
      * <p>*   **TCP**: The NAT gateway forwards TCP packets.</p>
      * <p>*   **UDP**: The NAT gateway forwards UDP packets.</p>
      * <p>*   **Any**: The NAT gateway forwards packets of all protocols. If you set **IpProtocol** to **Any**, you must also set **ExternalPort** and **InternalPort** to **Any** to implement DNAT IP mapping.</p>
-     */
-    @NameInMap("InternalIp")
-    public String internalIp;
-
-    /**
-     * <p>The name of the DNAT entry.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
-     */
-    @NameInMap("InternalPort")
-    public String internalPort;
-
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
-     * <br>
-     * <p>>  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -86,14 +82,20 @@ public class CreateForwardEntryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to remove limits on the port range. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default): no</p>
+     * <br>
+     * <p>>  If an SNAT entry and a DNAT entry use the same public IP address, and you want to specify a port number greater than 1024, set **Portbreak** to **true**.</p>
      */
     @NameInMap("PortBreak")
     public Boolean portBreak;
 
     /**
-     * <p>*   The EIP that can be accessed over the Internet when you configure a DNAT entry for an Internet NAT gateway.</p>
-     * <p>*   The NAT IP address that can be accessed by external networks when you configure a DNAT entry for a VPC NAT gateway.</p>
+     * <p>The region ID of the NAT gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

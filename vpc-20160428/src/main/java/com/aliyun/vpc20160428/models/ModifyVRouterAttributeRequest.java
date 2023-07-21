@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVRouterAttributeRequest extends TeaModel {
+    /**
+     * <p>The description of the vRouter.</p>
+     * <br>
+     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -14,9 +19,9 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the vRouter.</p>
+     * <p>The ID of the region where the vRouter is deployed.</p>
      * <br>
-     * <p>The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,11 +33,16 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the vRouter.</p>
      */
     @NameInMap("VRouterId")
     public String VRouterId;
 
+    /**
+     * <p>The name of the vRouter.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("VRouterName")
     public String VRouterName;
 

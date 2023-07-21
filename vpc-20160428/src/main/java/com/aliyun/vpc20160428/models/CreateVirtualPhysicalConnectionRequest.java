@@ -5,18 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The description of the hosted connection.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
-
-    /**
-     * <p>The region ID of the hosted connection.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
-     */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
 
     /**
      * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
@@ -24,8 +18,42 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
      * <p>*   **true**: checks the request without performing the operation. The hosted connection is not created. The system checks the required parameters, request syntax, and instance status. If the request fails the check, an error message is returned. If the request passes the check, `DRYRUN.SUCCESS` is returned.</p>
      * <p>*   **false**: sends the request. If the request passes the check, the hosted connection is created. This is the default value.</p>
      */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The name of the hosted connection.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The payer for the hosted connection. Valid values:</p>
+     * <br>
+     * <p>*   **PayByPhysicalConnectionOwner**: The partner pays for the hosted connection.</p>
+     * <p>*   **PayByVirtualPhysicalConnectionOwner**: The tenant pays for the hosted connection.</p>
+     */
+    @NameInMap("OrderMode")
+    public String orderMode;
+
+    /**
+     * <p>The ID of the Express Connect circuit over which the hosted connection is created.</p>
+     */
+    @NameInMap("PhysicalConnectionId")
+    public String physicalConnectionId;
+
+    /**
+     * <p>The region ID of the hosted connection.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The bandwidth value of the hosted connection.</p>
@@ -36,8 +64,11 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
      * <br>
      * <p>**M** indicates Mbit/s, and **G** indicates Gbit/s.</p>
      */
-    @NameInMap("OrderMode")
-    public String orderMode;
+    @NameInMap("Spec")
+    public String spec;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateVirtualPhysicalConnectionRequestTag> tag;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
@@ -46,45 +77,20 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
      * <br>
      * <p>>  If you do not set this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
      */
-    @NameInMap("PhysicalConnectionId")
-    public String physicalConnectionId;
-
-    /**
-     * <p>The ID of the hosted connection.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    /**
-     * <p>The ID of the Express Connect circuit over which the hosted connection is created.</p>
-     */
-    @NameInMap("Spec")
-    public String spec;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateVirtualPhysicalConnectionRequestTag> tag;
-
-    /**
-     * <p>The description of the hosted connection.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
-     */
     @NameInMap("Token")
     public String token;
 
     /**
-     * <p>The Alibaba Cloud account ID of the tenant.</p>
+     * <p>The virtual local area network (VLAN) ID of the hosted connection. Valid values: **0** to **2999**.</p>
+     * <br>
+     * <p>*   If the VLAN ID is set to **0**, it indicates that the switch port of the virtual border router (VBR) is a Layer 3 router interface instead of a VLAN interface. When a Layer 3 router interface is used, each Express Connect circuit corresponds to a VBR.</p>
+     * <p>*   If the VLAN ID is set to a value from **1** to **2999**, the switch port of the VBR is a Layer 3 VLAN subinterface. When a Layer 3 VLAN subinterface is used, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit with which the VBR is associated can be used to connect to VPCs that belong to different Alibaba Cloud accounts. VBRs in different VLANs are isolated from each other at Layer 2.</p>
      */
     @NameInMap("VlanId")
     public Long vlanId;
 
     /**
-     * <p>The name of the hosted connection.</p>
-     * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The Alibaba Cloud account ID of the tenant.</p>
      */
     @NameInMap("VpconnAliUid")
     public Long vpconnAliUid;

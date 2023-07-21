@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewayRequest extends TeaModel {
     /**
-     * <p>The type of the VPN gateway.</p>
+     * <p>Specifies whether to return information about pending orders. Valid values:</p>
      * <br>
-     * <p>The value is set to **Normal**, which indicates a standard NAT gateway.</p>
+     * <p>*   **false** (default): no</p>
+     * <p>*   **true**: yes</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
@@ -19,7 +20,9 @@ public class DescribeVpnGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The region ID of the VPN gateway.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -31,10 +34,7 @@ public class DescribeVpnGatewayRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to return information about pending orders. Valid values:</p>
-     * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>The ID of the VPN gateway.</p>
      */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;

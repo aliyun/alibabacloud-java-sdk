@@ -8,28 +8,32 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public java.util.List<String> dhcpOptionsSetId;
 
     /**
-     * <p>The list of the DHCP options sets.</p>
+     * <p>The name of the DHCP options set.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("DhcpOptionsSetName")
     public String dhcpOptionsSetName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The root domain. For example, you can set the value to example.com.</p>
+     * <br>
+     * <p>After a DHCP options set is associated with a virtual private cloud (VPC), the root domain in the DHCP options set is automatically synchronized with the Elastic Compute Service (ECS) instances in the VPC.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no next query is to be sent.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that is used for the next query.</p>
+     * <p>The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListDhcpOptionsSets**.</p>
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -41,7 +45,9 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the DHCP options set. You can specify at most 20 IDs.</p>
+     * <p>The region ID of the DHCP options sets that you want to query.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

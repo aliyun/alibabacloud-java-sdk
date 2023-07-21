@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class EnablePhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -17,15 +19,15 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operation that you want to perform.</p>
-     * <br>
-     * <p>Set the value to **EnablePhysicalConnection**.</p>
+     * <p>The ID of the Express Connect circuit.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
-     * <p>The ID of the Express Connect circuit.</p>
+     * <p>The region ID of the Express Connect circuit.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

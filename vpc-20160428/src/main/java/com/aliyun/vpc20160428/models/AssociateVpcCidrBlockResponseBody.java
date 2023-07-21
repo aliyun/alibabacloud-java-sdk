@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **AssociateVpcCidrBlock**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

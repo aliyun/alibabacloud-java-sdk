@@ -5,29 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the next hop.</p>
+     * <p>The details of the routes in the gateway route table.</p>
      */
     @NameInMap("GatewayRouteEntryModels")
     public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels> gatewayRouteEntryModels;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The details of the routes in the gateway route table.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status of the route. Valid values:</p>
-     * <br>
-     * <p>*   **Pending**</p>
-     * <p>*   **Available**</p>
-     * <p>*   **Modifying**</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -70,24 +69,39 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
     }
 
     public static class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops extends TeaModel {
-        @NameInMap("Enabled")
-        public String enabled;
-
-        /**
-         * <p>The weight of the route.</p>
-         */
-        @NameInMap("NextHopId")
-        public String nextHopId;
-
         /**
          * <p>Indicates whether the route is available. Valid values:</p>
          * <br>
          * <p>*   **0**: unavailable</p>
          * <p>*   **1**: available</p>
          */
+        @NameInMap("Enabled")
+        public String enabled;
+
+        /**
+         * <p>The ID of the next hop.</p>
+         */
+        @NameInMap("NextHopId")
+        public String nextHopId;
+
+        /**
+         * <p>The type of the next hop. Valid values:</p>
+         * <br>
+         * <p>*   **Instance** (default): an ECS instance</p>
+         * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
+         * <p>*   **VpnGateway**: a VPN gateway</p>
+         * <p>*   **NatGateway**: a NAT gateway</p>
+         * <p>*   **NetworkInterface**: a secondary ENI</p>
+         * <p>*   **RouterInterface**: a router interface</p>
+         * <p>*   **IPv6Gateway**: an IPv6 gateway</p>
+         * <p>*   **Attachment**: a transit router</p>
+         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
+        /**
+         * <p>The weight of the route.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -132,22 +146,30 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
 
     public static class ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModels extends TeaModel {
         /**
-         * <p>The destination CIDR block of the route.</p>
+         * <p>The name of the route.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The information about the next hop.</p>
+         * <p>The destination CIDR block of the route.</p>
          */
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The name of the route.</p>
+         * <br>
+         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>The ID of the next hop.</p>
+         */
+        @NameInMap("NextHopId")
+        public String nextHopId;
 
         /**
          * <p>The type of the next hop. Valid values:</p>
@@ -156,34 +178,21 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
          * <p>*   **NetworkInterface**: an elastic network interface (ENI)</p>
          * <p>*   **Local**: a local next hop</p>
          */
-        @NameInMap("NextHopId")
-        public String nextHopId;
-
-        /**
-         * <p>The name of the route.</p>
-         * <br>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.</p>
-         */
         @NameInMap("NextHopType")
         public String nextHopType;
 
         /**
-         * <p>The type of the next hop. Valid values:</p>
-         * <br>
-         * <p>*   **Instance** (default): an ECS instance</p>
-         * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
-         * <p>*   **VpnGateway**: a VPN gateway</p>
-         * <p>*   **NatGateway**: a NAT gateway</p>
-         * <p>*   **NetworkInterface**: a secondary ENI</p>
-         * <p>*   **RouterInterface**: a router interface</p>
-         * <p>*   **IPv6Gateway**: an IPv6 gateway</p>
-         * <p>*   **Attachment**: a transit router</p>
+         * <p>The information about the next hop.</p>
          */
         @NameInMap("NextHops")
         public java.util.List<ListGatewayRouteTableEntriesResponseBodyGatewayRouteEntryModelsNextHops> nextHops;
 
         /**
-         * <p>The name of the route.</p>
+         * <p>The status of the route. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Modifying**</p>
          */
         @NameInMap("Status")
         public String status;

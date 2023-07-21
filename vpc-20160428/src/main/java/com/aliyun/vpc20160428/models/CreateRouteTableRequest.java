@@ -59,6 +59,9 @@ public class CreateRouteTableRequest extends TeaModel {
     @NameInMap("RouteTableName")
     public String routeTableName;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateRouteTableRequestTag> tag;
+
     /**
      * <p>The ID of the VPC to which the custom route table belongs.</p>
      * <br>
@@ -153,12 +156,50 @@ public class CreateRouteTableRequest extends TeaModel {
         return this.routeTableName;
     }
 
+    public CreateRouteTableRequest setTag(java.util.List<CreateRouteTableRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateRouteTableRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateRouteTableRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class CreateRouteTableRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateRouteTableRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateRouteTableRequestTag self = new CreateRouteTableRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRouteTableRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateRouteTableRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

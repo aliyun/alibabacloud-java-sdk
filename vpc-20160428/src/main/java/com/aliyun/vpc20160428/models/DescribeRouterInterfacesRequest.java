@@ -39,11 +39,17 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tags")
+    public java.util.List<DescribeRouterInterfacesRequestTags> tags;
 
     public static DescribeRouterInterfacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouterInterfacesRequest self = new DescribeRouterInterfacesRequest();
@@ -98,6 +104,14 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeRouterInterfacesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeRouterInterfacesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -112,6 +126,14 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeRouterInterfacesRequest setTags(java.util.List<DescribeRouterInterfacesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeRouterInterfacesRequestTags> getTags() {
+        return this.tags;
     }
 
     public static class DescribeRouterInterfacesRequestFilter extends TeaModel {
@@ -155,6 +177,36 @@ public class DescribeRouterInterfacesRequest extends TeaModel {
             return this;
         }
         public java.util.List<String> getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeRouterInterfacesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeRouterInterfacesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouterInterfacesRequestTags self = new DescribeRouterInterfacesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouterInterfacesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeRouterInterfacesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
             return this.value;
         }
 

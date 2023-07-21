@@ -4,47 +4,44 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GetDhcpOptionsSetResponseBody extends TeaModel {
+    /**
+     * <p>The information about the virtual private cloud (VPC) that is associated with the DHCP options set.</p>
+     */
     @NameInMap("AssociateVpcs")
     public java.util.List<GetDhcpOptionsSetResponseBodyAssociateVpcs> associateVpcs;
 
     /**
-     * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
-     * <br>
-     * <p>*   If you use hours as the unit, Valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.</p>
-     * <p>*   If you use days as the unit, Valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.</p>
+     * <p>The configuration information about the DHCP options set.</p>
      */
     @NameInMap("DhcpOptions")
     public GetDhcpOptionsSetResponseBodyDhcpOptions dhcpOptions;
 
     /**
-     * <p>The name of the DHCP options set.</p>
+     * <p>The description of the DHCP options set.</p>
      */
     @NameInMap("DhcpOptionsSetDescription")
     public String dhcpOptionsSetDescription;
 
     /**
-     * <p>The IP address of the DNS server.</p>
+     * <p>The ID of the DHCP options set.</p>
      */
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
 
     /**
-     * <p>The suffix of the hostname.</p>
+     * <p>The name of the DHCP options set.</p>
      */
     @NameInMap("DhcpOptionsSetName")
     public String dhcpOptionsSetName;
 
     /**
-     * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
-     * <br>
-     * <p>*   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.</p>
-     * <p>*   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.</p>
+     * <p>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</p>
      */
     @NameInMap("OwnerId")
     public Long ownerId;
 
     /**
-     * <p>The configuration information about the DHCP options set.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,7 +50,12 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the DHCP options set belongs.</p>
+     * <p>The status of the DHCP options set. Valid values:</p>
+     * <br>
+     * <p>*   **Available**: available</p>
+     * <p>*   **InUse**: in use</p>
+     * <p>*   **Deleted**: deleted</p>
+     * <p>*   **Pending**: being configured</p>
      */
     @NameInMap("Status")
     public String status;
@@ -147,9 +149,18 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     }
 
     public static class GetDhcpOptionsSetResponseBodyAssociateVpcs extends TeaModel {
+        /**
+         * <p>The status of the VPC that is associated with the DHCP options set. Valid values:</p>
+         * <br>
+         * <p>*   **InUse**: in use</p>
+         * <p>*   **Pending**: being configured</p>
+         */
         @NameInMap("AssociateStatus")
         public String associateStatus;
 
+        /**
+         * <p>The ID of the VPC that is associated with the DHCP options set.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -178,25 +189,31 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
 
     public static class GetDhcpOptionsSetResponseBodyDhcpOptions extends TeaModel {
         /**
-         * <p>The status of the VPC that is associated with the DHCP options set. Valid values:</p>
-         * <br>
-         * <p>*   **InUse**: in use</p>
-         * <p>*   **Pending**: being configured</p>
+         * <p>The suffix of the hostname.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The information about the virtual private cloud (VPC) that is associated with the DHCP options set.</p>
+         * <p>The IP address of the DNS server.</p>
          */
         @NameInMap("DomainNameServers")
         public String domainNameServers;
 
+        /**
+         * <p>The lease time of the IPv6 addresses for the DHCP options set.</p>
+         * <br>
+         * <p>*   If you use hours as the unit, Valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.</p>
+         * <p>*   If you use days as the unit, Valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.</p>
+         */
         @NameInMap("Ipv6LeaseTime")
         public String ipv6LeaseTime;
 
         /**
-         * <p>The ID of the VPC that is associated with the DHCP options set.</p>
+         * <p>The lease time of the IPv4 addresses for the DHCP options set.</p>
+         * <br>
+         * <p>*   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.</p>
+         * <p>*   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.</p>
          */
         @NameInMap("LeaseTime")
         public String leaseTime;

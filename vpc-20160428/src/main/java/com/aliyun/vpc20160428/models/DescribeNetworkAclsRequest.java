@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeNetworkAclsRequest extends TeaModel {
     /**
-     * <p>The ID of the inbound rule.</p>
+     * <p>The client token that you want to use to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The ID of the network ACL.</p>
      */
     @NameInMap("NetworkAclId")
     public String networkAclId;
 
     /**
-     * <p>The details about the network ACL.</p>
+     * <p>The name of the network ACL.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("NetworkAclName")
     public String networkAclName;
@@ -26,25 +32,27 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the network ACL.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The name of the network ACL.</p>
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the network ACL.</p>
+     * <p>The region ID of the network ACL.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The time when the network ACL was created.</p>
+     * <p>The ID of the associated instance.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -56,7 +64,9 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the associated VPC.</p>
+     * <p>The type of the associated instance. Set the value to **VSwitch**.</p>
+     * <br>
+     * <p>This parameter is valid only if **ResourceType** and **ResourceId** are both set.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -65,10 +75,7 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public java.util.List<DescribeNetworkAclsRequestTags> tags;
 
     /**
-     * <p>The status of the network ACL. Valid values:</p>
-     * <br>
-     * <p>*   **Available**</p>
-     * <p>*   **Modifying**</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the network ACL belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -184,13 +191,17 @@ public class DescribeNetworkAclsRequest extends TeaModel {
 
     public static class DescribeNetworkAclsRequestTags extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account to which the network ACL belongs.</p>
+         * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The region ID of the network ACL.</p>
+         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -83,6 +83,9 @@ public class CreateVpcPrefixListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateVpcPrefixListRequestTag> tag;
+
     public static CreateVpcPrefixListRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcPrefixListRequest self = new CreateVpcPrefixListRequest();
         return TeaModel.build(map, self);
@@ -192,6 +195,14 @@ public class CreateVpcPrefixListRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateVpcPrefixListRequest setTag(java.util.List<CreateVpcPrefixListRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateVpcPrefixListRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class CreateVpcPrefixListRequestPrefixListEntries extends TeaModel {
         /**
          * <p>The CIDR block specified in the prefix list.</p>
@@ -226,6 +237,36 @@ public class CreateVpcPrefixListRequest extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+    }
+
+    public static class CreateVpcPrefixListRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateVpcPrefixListRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateVpcPrefixListRequestTag self = new CreateVpcPrefixListRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVpcPrefixListRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateVpcPrefixListRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

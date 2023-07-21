@@ -5,26 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualBorderRouterRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The bandwidth of the VBR. Unit: Mbit/s.</p>
+     * <br>
+     * <p>*   When you create a VBR for a dedicated connection, valid values are **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2048**, **5120**, **8192**, **10240**, **20480**, **40960**, **50120**, **61440**, and **102400**.</p>
+     * <p>*   You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 
     /**
-     * <p>The IP address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
+     * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
      * <br>
-     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <p>>  Only the owner of the Express Connect circuit can set this parameter.</p>
      */
     @NameInMap("CircuitCode")
     public String circuitCode;
-
-    /**
-     * <p>The IPv6 address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
-     * <br>
-     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
-     */
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
@@ -33,33 +28,46 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
      * <br>
      * <p>>  If you do not set this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
      */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
+     * <p>The description of the VBR.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the VBR.</p>
+     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables IPv6.</p>
+     * <p>*   **false** (default): disables IPv6.</p>
      */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
     /**
-     * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
+     * <p>The IP address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
      * <br>
-     * <p>The two IP addresses must fall within the same subnet.</p>
+     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
      */
     @NameInMap("LocalGatewayIp")
     public String localGatewayIp;
 
     /**
-     * <p>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</p>
+     * <p>The IPv6 address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
      * <br>
-     * <p>The two IPv6 addresses must fall within the same subnet.</p>
+     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
      */
     @NameInMap("LocalIpv6GatewayIp")
     public String localIpv6GatewayIp;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateVirtualBorderRouter**.</p>
+     * <p>The name of the VBR.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -71,54 +79,55 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The description of the VBR.</p>
+     * <p>The IP address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
      */
     @NameInMap("PeerGatewayIp")
     public String peerGatewayIp;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <p>The IPv6 address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.</p>
      * <br>
-     * <p>*   **true**: enables IPv6.</p>
-     * <p>*   **false** (default): disables IPv6.</p>
+     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
      */
     @NameInMap("PeerIpv6GatewayIp")
     public String peerIpv6GatewayIp;
 
     /**
-     * <p>The bandwidth of the VBR. Unit: Mbit/s.</p>
+     * <p>The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.</p>
      * <br>
-     * <p>*   When you create a VBR for a dedicated connection, valid values are **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2048**, **5120**, **8192**, **10240**, **20480**, **40960**, **50120**, **61440**, and **102400**.</p>
-     * <p>*   You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.</p>
+     * <p>The two IPv6 addresses must fall within the same subnet.</p>
      */
     @NameInMap("PeeringIpv6SubnetMask")
     public String peeringIpv6SubnetMask;
 
     /**
-     * <p>The name of the VBR.</p>
+     * <p>The subnet mask of the IP addresses of the VBR and the gateway device in the data center.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The two IP addresses must fall within the same subnet.</p>
      */
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
     /**
-     * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
+     * <p>The ID of the Express Connect circuit.</p>
      * <br>
-     * <p>>  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
+     * <p>You can create a VBR for a dedicated connection or a hosted connection.</p>
      */
     @NameInMap("PhysicalConnectionId")
     public String physicalConnectionId;
 
     /**
-     * <p>The account ID of the VBR owner.</p>
+     * <p>The region ID of the Express Connect circuit.</p>
      * <br>
-     * <p>The default value is the ID of the current Alibaba Cloud account.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -126,18 +135,21 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateVirtualBorderRouterRequestTags> tags;
+
     /**
-     * <p>The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.</p>
+     * <p>The account ID of the VBR owner.</p>
      * <br>
-     * <p>>  Only the owner of the Express Connect circuit can set this parameter.</p>
+     * <p>The default value is the ID of the current Alibaba Cloud account.</p>
      */
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
 
     /**
-     * <p>The IP address of the VBR. Only the owner of the VBR can set or modify this parameter.</p>
+     * <p>The VLAN ID of the VBR. Valid values: **0 to 2999**.</p>
      * <br>
-     * <p>When you create a VBR for the owner of the Express Connect circuit, this parameter is required.</p>
+     * <p>>  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.</p>
      */
     @NameInMap("VlanId")
     public Integer vlanId;
@@ -275,6 +287,14 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateVirtualBorderRouterRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -291,6 +311,14 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public CreateVirtualBorderRouterRequest setTags(java.util.List<CreateVirtualBorderRouterRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateVirtualBorderRouterRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateVirtualBorderRouterRequest setVbrOwnerId(Long vbrOwnerId) {
         this.vbrOwnerId = vbrOwnerId;
         return this;
@@ -305,6 +333,36 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     }
     public Integer getVlanId() {
         return this.vlanId;
+    }
+
+    public static class CreateVirtualBorderRouterRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateVirtualBorderRouterRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateVirtualBorderRouterRequestTags self = new CreateVirtualBorderRouterRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateVirtualBorderRouterRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateVirtualBorderRouterRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

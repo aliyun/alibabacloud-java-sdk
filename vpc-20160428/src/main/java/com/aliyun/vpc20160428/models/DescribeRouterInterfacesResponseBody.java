@@ -79,6 +79,55 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags self = new DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags extends TeaModel {
+        @NameInMap("Tags")
+        public java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags> tags;
+
+        public static DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags self = new DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags setTags(java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTagsTags> getTags() {
+            return this.tags;
+        }
+
+    }
+
     public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType extends TeaModel {
         /**
          * <p>The ID of the access point.</p>
@@ -291,6 +340,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>Indicates whether the router interface is the initiator or acceptor of the peering connection.</p>
          */
@@ -329,6 +381,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags tags;
 
         /**
          * <p>The ID of the local virtual private cloud (VPC) in the peering connection.</p>
@@ -597,6 +652,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.reservationOrderType;
         }
 
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRole(String role) {
             this.role = role;
             return this;
@@ -643,6 +706,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setTags(DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceTypeTags getTags() {
+            return this.tags;
         }
 
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setVpcInstanceId(String vpcInstanceId) {

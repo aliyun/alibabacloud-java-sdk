@@ -5,26 +5,32 @@ import com.aliyun.tea.*;
 
 public class ModifyEipAddressAttributeRequest extends TeaModel {
     /**
-     * <p>The region ID of the EIP.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>The ID of the pay-as-you-go EIP.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
-     * <p>The new name of the EIP.</p>
+     * <p>The new maximum bandwidth of the EIP. Valid values:</p>
      * <br>
-     * <p>The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-).</p>
+     * <p>*   **1** to **200** if the metering method is pay-by-data-transfer. Unit: Mbit/s.</p>
+     * <p>*   **1** to **500** if the metering method is pay-by-bandwidth. Unit: Mbit/s.</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
+    /**
+     * <p>The new description of the EIP.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The new name of the EIP.</p>
+     * <br>
+     * <p>The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
@@ -36,9 +42,9 @@ public class ModifyEipAddressAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The new description of the EIP.</p>
+     * <p>The region ID of the EIP.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
