@@ -76,6 +76,9 @@ public class MonthBillGetResponseBody extends TeaModel {
     }
 
     public static class MonthBillGetResponseBodyModuleMonthAccountBillDetail extends TeaModel {
+        @NameInMap("billConfirmed")
+        public Integer billConfirmed;
+
         /**
          * <p>用车金额（单位：元）</p>
          */
@@ -133,6 +136,14 @@ public class MonthBillGetResponseBody extends TeaModel {
         public static MonthBillGetResponseBodyModuleMonthAccountBillDetail build(java.util.Map<String, ?> map) throws Exception {
             MonthBillGetResponseBodyModuleMonthAccountBillDetail self = new MonthBillGetResponseBodyModuleMonthAccountBillDetail();
             return TeaModel.build(map, self);
+        }
+
+        public MonthBillGetResponseBodyModuleMonthAccountBillDetail setBillConfirmed(Integer billConfirmed) {
+            this.billConfirmed = billConfirmed;
+            return this;
+        }
+        public Integer getBillConfirmed() {
+            return this.billConfirmed;
         }
 
         public MonthBillGetResponseBodyModuleMonthAccountBillDetail setCarAmount(Double carAmount) {
