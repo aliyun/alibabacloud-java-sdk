@@ -94,8 +94,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @NameInMap("car_level")
         public Integer carLevel;
 
+        @NameInMap("driver_card")
+        public String driverCard;
+
         @NameInMap("driver_confirm_time")
         public Long driverConfirmTime;
+
+        @NameInMap("driver_name")
+        public String driverName;
 
         @NameInMap("estimate_price")
         public Long estimatePrice;
@@ -185,12 +191,28 @@ public class CarOrderQueryResponseBody extends TeaModel {
             return this.carLevel;
         }
 
+        public CarOrderQueryResponseBodyModuleCarInfo setDriverCard(String driverCard) {
+            this.driverCard = driverCard;
+            return this;
+        }
+        public String getDriverCard() {
+            return this.driverCard;
+        }
+
         public CarOrderQueryResponseBodyModuleCarInfo setDriverConfirmTime(Long driverConfirmTime) {
             this.driverConfirmTime = driverConfirmTime;
             return this;
         }
         public Long getDriverConfirmTime() {
             return this.driverConfirmTime;
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfo setDriverName(String driverName) {
+            this.driverName = driverName;
+            return this;
+        }
+        public String getDriverName() {
+            return this.driverName;
         }
 
         public CarOrderQueryResponseBodyModuleCarInfo setEstimatePrice(Long estimatePrice) {
