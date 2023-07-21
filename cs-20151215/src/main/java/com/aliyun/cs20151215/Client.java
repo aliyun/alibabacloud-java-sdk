@@ -284,6 +284,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelWorkflowWithOptions(workflowName, request, headers, runtime);
     }
 
+    public CheckControlPlaneLogEnableResponse checkControlPlaneLogEnableWithOptions(String ClusterId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckControlPlaneLogEnable"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/controlplanelog"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckControlPlaneLogEnableResponse());
+    }
+
+    public CheckControlPlaneLogEnableResponse checkControlPlaneLogEnable(String ClusterId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.checkControlPlaneLogEnableWithOptions(ClusterId, headers, runtime);
+    }
+
     public CreateAutoscalingConfigResponse createAutoscalingConfigWithOptions(String ClusterId, CreateAutoscalingConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2274,6 +2298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kubernetesVersion)) {
             query.put("KubernetesVersion", request.kubernetesVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.profile)) {
@@ -4343,6 +4371,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateContactGroupForAlertWithOptions(ClusterId, headers, runtime);
+    }
+
+    public UpdateControlPlaneLogResponse updateControlPlaneLogWithOptions(String ClusterId, UpdateControlPlaneLogRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliuid)) {
+            body.put("aliuid", request.aliuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.components)) {
+            body.put("components", request.components);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logProject)) {
+            body.put("log_project", request.logProject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logTtl)) {
+            body.put("log_ttl", request.logTtl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateControlPlaneLog"),
+            new TeaPair("version", "2015-12-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/clusters/" + com.aliyun.openapiutil.Client.getEncodeParam(ClusterId) + "/controlplanelog"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateControlPlaneLogResponse());
+    }
+
+    public UpdateControlPlaneLogResponse updateControlPlaneLog(String ClusterId, UpdateControlPlaneLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateControlPlaneLogWithOptions(ClusterId, request, headers, runtime);
     }
 
     /**

@@ -157,8 +157,14 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         @NameInMap("version")
         public String version;
 
-        @NameInMap("multi_az")
-        public String multiAz;
+        @NameInMap("release_date")
+        public String releaseDate;
+
+        @NameInMap("expiration_date")
+        public String expirationDate;
+
+        @NameInMap("creatable")
+        public Boolean creatable;
 
         public static DescribeKubernetesVersionMetadataResponseBody build(java.util.Map<String, ?> map) throws Exception {
             DescribeKubernetesVersionMetadataResponseBody self = new DescribeKubernetesVersionMetadataResponseBody();
@@ -205,12 +211,28 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.version;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBody setMultiAz(String multiAz) {
-            this.multiAz = multiAz;
+        public DescribeKubernetesVersionMetadataResponseBody setReleaseDate(String releaseDate) {
+            this.releaseDate = releaseDate;
             return this;
         }
-        public String getMultiAz() {
-            return this.multiAz;
+        public String getReleaseDate() {
+            return this.releaseDate;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setExpirationDate(String expirationDate) {
+            this.expirationDate = expirationDate;
+            return this;
+        }
+        public String getExpirationDate() {
+            return this.expirationDate;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setCreatable(Boolean creatable) {
+            this.creatable = creatable;
+            return this;
+        }
+        public Boolean getCreatable() {
+            return this.creatable;
         }
 
     }
