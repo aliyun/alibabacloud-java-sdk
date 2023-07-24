@@ -4,18 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeRDDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The status information about the accelerated domain name.</p>
+     */
     @NameInMap("Domains")
     public DescribeRDDomainsResponseBodyDomains domains;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeRDDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The port of the origin server.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The priority.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The type of the origin server.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The origin server weight if multiple origin servers have been specified.</p>
+         */
         @NameInMap("Weight")
         public String weight;
 
@@ -150,36 +180,76 @@ public class DescribeRDDomainsResponseBody extends TeaModel {
         @NameInMap("BizName")
         public String bizName;
 
+        /**
+         * <p>The CNAME assigned to the accelerated domain name.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The reason why the accelerated domain name failed the review.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status of the accelerated domain name. Valid values:</p>
+         * <br>
+         * <p>*   online: The domain name is enabled.</p>
+         * <p>*   offline: The domain name is disabled.</p>
+         * <p>*   configuring: The domain name is being configured.</p>
+         * <p>*   configure_failed: The domain name failed to be configured.</p>
+         * <p>*   checking: The domain name is being reviewed.</p>
+         * <p>*   check_failed: The domain name failed the review.</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        /**
+         * <p>The time when the accelerated domain name was added to DCDN.</p>
+         */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The time when the accelerated domain name was modified.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Indicates whether the accelerated domain name was in a sandbox.</p>
+         */
         @NameInMap("Sandbox")
         public String sandbox;
 
         @NameInMap("ServiceCode")
         public String serviceCode;
 
+        /**
+         * <p>The information about the origin server.</p>
+         */
         @NameInMap("Sources")
         public DescribeRDDomainsResponseBodyDomainsPageDataSources sources;
 
+        /**
+         * <p>Indicates whether HTTPS is enabled.</p>
+         * <br>
+         * <p>*   on</p>
+         * <p>*   off</p>
+         */
         @NameInMap("SslProtocol")
         public String sslProtocol;
 

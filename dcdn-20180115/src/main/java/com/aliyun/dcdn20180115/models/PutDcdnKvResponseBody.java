@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class PutDcdnKvResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The length of the key.</p>
      */
     @NameInMap("Length")
     public Integer length;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The value of the key. If the value exceeds 256 characters in length, the first 100 characters and the last 100 characters are retained and other characters are not displayed.</p>
+     */
     @NameInMap("Value")
     public String value;
 

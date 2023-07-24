@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackDcdnStagingConfigResponseBody extends TeaModel {
     /**
-     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

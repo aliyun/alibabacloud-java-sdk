@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDcdnWafPolicyResponseBody extends TeaModel {
     /**
-     * <p>The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (\_).</p>
+     * <p>The ID of the protection policy that you created.</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
 
     /**
-     * <p>Specifies whether to set the current policy as the default policy. Valid values:</p>
-     * <br>
-     * <p>*   default: sets the current policy as the default policy.</p>
-     * <p>*   custom: does not set the current policy as the default policy.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

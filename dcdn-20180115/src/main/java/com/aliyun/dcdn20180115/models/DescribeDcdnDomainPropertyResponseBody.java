@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
     /**
-     * <p>The name of the protocol. Valid values:</p>
-     * <br>
-     * <p>*   **udp**: User Datagram Protocol (UDP)</p>
-     * <p>*   **tcp**: Transmission Control Protocol (TCP)</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>>  The maximum number of times that users can call this operation per second is 10.</p>
+     * <p>The protocol. Valid values:</p>
+     * <br>
+     * <p>*   **udp**</p>
+     * <p>*   **tcp**</p>
      */
     @NameInMap("Protocol")
     public String protocol;
 
     /**
-     * <p>The accelerated domain name that is queried.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

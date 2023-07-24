@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRoutineResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The metadata of the routine. The following table describes the fields.</p>
      */
     @NameInMap("Content")
     public java.util.Map<String, ?> content;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeRoutine**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

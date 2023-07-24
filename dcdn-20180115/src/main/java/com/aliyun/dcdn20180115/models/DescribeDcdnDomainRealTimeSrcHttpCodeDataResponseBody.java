@@ -5,37 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The proportions of HTTP status codes.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The end of the time range during which data was queried.</p>
+     * <br>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The proportion of the HTTP status code.</p>
+     * <p>The proportions of HTTP status codes at each time interval.</p>
      */
     @NameInMap("RealTimeSrcHttpCodeData")
     public DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeData realTimeSrcHttpCodeData;
 
     /**
-     * <p>The timestamp of the data returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The proportions of HTTP status codes at each time interval.</p>
+     * <p>The beginning of the time range during which data was queried.</p>
+     * <br>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -95,14 +99,20 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
 
     public static class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValueRealTimeSrcCodeProportionData extends TeaModel {
         /**
-         * <p>Queries the proportions of HTTP status codes returned during back-to-origin routing.</p>
+         * <p>The HTTP status code returned.</p>
          */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The number of HTTP status codes.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The proportion of the HTTP status code.</p>
+         */
         @NameInMap("Proportion")
         public String proportion;
 
@@ -158,22 +168,13 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
 
     public static class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageData extends TeaModel {
         /**
-         * <p>The number of HTTP status codes.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>- You can call this operation up to 10 times per second per account.</p>
-         * <p>- If you do not set the StartTime or EndTime parameter, data collected over the last one hour is queried. If you set both the StartTime and EndTime parameters, data collected within the specified time range is queried.</p>
-         * <br>
-         * <p>**Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. </p>
-         * <br>
-         * <p>| Time granularity | Maximum time range per query | Historical data available | Data delay |</p>
-         * <p>| ---------------- | ---------------------------- | ------------------------- | ---------- |</p>
-         * <p>| 1 minute | 1 hour | 7 days | 5 minutes |</p>
-         * <p>| 5 minutes | 3 days | 93 days | 15 minutes |</p>
-         * <p>| 1 hour | 31 days | 186 days | 4 hours |</p>
+         * <p>The proportions of the HTTP status codes.</p>
          */
         @NameInMap("Value")
         public DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBodyRealTimeSrcHttpCodeDataUsageDataValue value;

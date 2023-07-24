@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
     /**
-     * <p>The average response time. Unit: milliseconds.</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The average response speed. Unit: byte/s.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The total amount of network traffic.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the region.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The proportion of requests from the specified region based on the total number of requests in percentile. For example, a value of 90 indicates that 90% of the requests were coming from the specified region.</p>
+     * <p>The proportions of requests that were initiated from each region.</p>
      */
     @NameInMap("Value")
     public DescribeDcdnDomainRegionDataResponseBodyValue value;
@@ -94,50 +94,68 @@ public class DescribeDcdnDomainRegionDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainRegionDataResponseBodyValueRegionProportionData extends TeaModel {
+        /**
+         * <p>The average response size. Unit: bytes.</p>
+         */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
+        /**
+         * <p>The average response speed. Unit: byte/s.</p>
+         */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
+        /**
+         * <p>The average response time. Unit: milliseconds.</p>
+         */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
+        /**
+         * <p>The bandwidth.</p>
+         */
         @NameInMap("Bps")
         public String bps;
 
+        /**
+         * <p>The proportion of network traffic. For example, a value of 90 indicates that 90% of network traffic was coming from the specified ISP.</p>
+         */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
+        /**
+         * <p>The proportion of requests from the specified region based on the total number of requests in percentile. For example, a value of 90 indicates that 90% of the requests were coming from the specified region.</p>
+         */
         @NameInMap("Proportion")
         public String proportion;
 
         /**
-         * <p>The average response size. Unit: bytes.</p>
+         * <p>The number of queries per second (QPS).</p>
          */
         @NameInMap("Qps")
         public String qps;
 
+        /**
+         * <p>The information of the regions.</p>
+         */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>> </p>
-         * <p>*   If you do not specify the StartTime or EndTime parameters, the data within the last 24 hours is queried by default.</p>
-         * <p>*   If you specify the StartTime and EndTime parameters, the data within the specified time range is queried.</p>
-         * <p>*   The maximum number of times that each user can call this operation per second is 100.</p>
+         * <p>The name of the region.</p>
          */
         @NameInMap("RegionEname")
         public String regionEname;
 
         /**
-         * <p>The proportion of network traffic occupied by the specified region based on the total amount of network traffic in percentile. For example, a value of 90 indicates that 90% of the network traffic was coming from the specified region.</p>
+         * <p>The total amount of network traffic.</p>
          */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
         /**
-         * <p>The bandwidth.</p>
+         * <p>The total number of requests that are destined for your website.</p>
          */
         @NameInMap("TotalQuery")
         public String totalQuery;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RollbackDcdnStagingConfigRequest extends TeaModel {
     /**
-     * <p>>  You can call this operation up to 30 times per second per account.</p>
+     * <p>The accelerated domain name. You can specify only one domain name in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;

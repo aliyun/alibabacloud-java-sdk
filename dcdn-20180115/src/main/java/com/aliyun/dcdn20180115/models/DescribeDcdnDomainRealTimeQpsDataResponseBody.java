@@ -5,22 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
     /**
-     * <p>The accelerated domain name. Separate multiple accelerated domain names with commas (,).</p>
+     * <p>The information about the backup set.</p>
      */
     @NameInMap("Data")
     public DescribeDcdnDomainRealTimeQpsDataResponseBodyData data;
 
     /**
-     * <p>- You can call this operation up to 10 times per second per account.</p>
-     * <p>- If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.</p>
-     * <br>
-     * <p>**Time granularity**The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. </p>
-     * <br>
-     * <p>| Time granularity | Maximum time range per query | Historical data available | Data delay |</p>
-     * <p>| ---------------- | ---------------------------- | ------------------------- | ---------- |</p>
-     * <p>| 1 minute | 1 hour | 7 days | 5 minutes |</p>
-     * <p>| 5 minutes | 3 days | 93 days | 15 minutes |</p>
-     * <p>| 1 hour | 31 days | 186 days | 4 hours |</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -48,15 +39,13 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainRealTimeQpsDataResponseBodyDataQpsModel extends TeaModel {
         /**
-         * <p>The name of the Internet service provider (ISP).</p>
-         * <br>
-         * <p>You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.</p>
+         * <p>The number of queries per second (QPS).</p>
          */
         @NameInMap("Qps")
         public Float qps;
 
         /**
-         * <p>The QPS data.</p>
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

@@ -4,9 +4,17 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeDetailDataResponseBody extends TeaModel {
+    /**
+     * <p>The information returned.</p>
+     * <br>
+     * <p>> The value of this parameter is a JSON string. The following table describes the fields in Data.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

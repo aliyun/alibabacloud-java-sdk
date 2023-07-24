@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnVerifyContentResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The verification result.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>>  The maximum number of times that each user can call this operation per second is 100.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

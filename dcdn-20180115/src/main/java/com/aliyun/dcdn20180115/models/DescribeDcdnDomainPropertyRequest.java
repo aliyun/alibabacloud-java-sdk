@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainPropertyRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The accelerated domain name that you want to query. You can specify only one domain name in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
