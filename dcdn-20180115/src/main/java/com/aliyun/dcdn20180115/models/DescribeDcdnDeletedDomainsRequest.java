@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDeletedDomainsRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.</p>
+     * <p>The number of domain names to return on each page. Valid values: an integer from **1** to **500**. Default value: **20**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

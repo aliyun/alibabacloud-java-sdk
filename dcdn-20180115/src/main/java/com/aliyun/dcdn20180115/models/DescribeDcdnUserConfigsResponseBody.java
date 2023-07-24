@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
     /**
-     * <p>>You can call this operation up to 30 times per second per account.</p>
+     * <p>The user configurations.</p>
      */
     @NameInMap("Configs")
     public java.util.List<DescribeDcdnUserConfigsResponseBodyConfigs> configs;
 
     /**
-     * <p>The configuration returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,9 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
 
     public static class DescribeDcdnUserConfigsResponseBodyConfigs extends TeaModel {
         /**
-         * <p>The configuration returned.</p>
+         * <p>The name of the configuration.</p>
+         * <br>
+         * <p>The configuration is specified by enterprise users and public service sectors.</p>
          */
         @NameInMap("ArgName")
         public String argName;
@@ -49,7 +51,7 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
          * <br>
          * <p>*   cc_rule: HTTP flood protection</p>
          * <p>*   ddos_dispatch: DDoS mitigation</p>
-         * <p>*   edge_safe: application security on edge nodes</p>
+         * <p>*   edge_safe: application security on points of presence (POPs)</p>
          * <p>*   blocked_regions: region blacklist</p>
          * <p>*   http_acl_policy: precise access control</p>
          * <p>*   bot_manager: bot traffic management</p>
@@ -59,11 +61,7 @@ public class DescribeDcdnUserConfigsResponseBody extends TeaModel {
         public String argValue;
 
         /**
-         * <p>The configuration that you want to query. Valid values:</p>
-         * <br>
-         * <p>*   domain_business_control: user configurations</p>
-         * <p>*   bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence</p>
-         * <p>*   bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence</p>
+         * <p>The name of the feature.</p>
          */
         @NameInMap("FunctionName")
         public String functionName;

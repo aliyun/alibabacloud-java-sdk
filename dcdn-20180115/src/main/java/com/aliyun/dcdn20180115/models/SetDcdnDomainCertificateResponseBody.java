@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetDcdnDomainCertificateResponseBody extends TeaModel {
     /**
-     * <p>The private key. This parameter is required only if you enable the SSL certificate.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

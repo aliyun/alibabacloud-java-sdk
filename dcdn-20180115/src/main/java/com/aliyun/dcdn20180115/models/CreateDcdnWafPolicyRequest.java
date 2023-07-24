@@ -5,26 +5,38 @@ import com.aliyun.tea.*;
 
 public class CreateDcdnWafPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the protection policy that you created.</p>
+     * <p>The type of the WAF protection policy. Valid values:</p>
+     * <br>
+     * <p>*   waf_group: basic web protection</p>
+     * <p>*   custom_acl: custom protection</p>
+     * <p>*   whitelist: IP address whitelist</p>
+     * <p>*   ip_blacklist: IP address blacklist</p>
+     * <p>*   region_block: region blacklist</p>
+     * <p>*   bot: bot management</p>
      */
     @NameInMap("DefenseScene")
     public String defenseScene;
 
     /**
-     * <p>The ID of the protection policy that you created.</p>
+     * <p>The name of the protection policy. The name can be up to 64 characters in length and can contain letters, digits, and underscores (\_).</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>>*   You can call this operation up to 20 times per second per account.</p>
-     * <p>*   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.</p>
+     * <p>The status of the protection policy. Valid values:</p>
+     * <br>
+     * <p>*   on: The policy is enabled.</p>
+     * <p>*   off: The policy is disabled.</p>
      */
     @NameInMap("PolicyStatus")
     public String policyStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to set the current policy as the default policy. Valid values:</p>
+     * <br>
+     * <p>*   default: sets the current policy as the default policy.</p>
+     * <p>*   custom: does not set the current policy as the default policy.</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

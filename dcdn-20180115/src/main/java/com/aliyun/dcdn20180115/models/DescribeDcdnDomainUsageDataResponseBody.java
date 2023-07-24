@@ -5,51 +5,49 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
     /**
-     * <p>data.field</p>
+     * <p>The billable region where the usage data was collected.</p>
      */
     @NameInMap("Area")
     public String area;
 
     /**
-     * <p>data.area</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The time interval between the data entries to return. Unit: seconds.</p>
-     * <br>
-     * <p>The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The type of the content returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The beginning of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The type of the content returned.</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The billable region where the usage data was collected.</p>
+     * <p>The network traffic that was collected at each interval.</p>
      */
     @NameInMap("UsageDataPerInterval")
     public DescribeDcdnDomainUsageDataResponseBodyUsageDataPerInterval usageDataPerInterval;
@@ -125,25 +123,27 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainUsageDataResponseBodyUsageDataPerIntervalDataModule extends TeaModel {
         /**
-         * <p>The time interval between the data entries. Unit: seconds.</p>
+         * <p>The time of the peak bandwidth value if the **Field** parameter in the request is set to **bps**. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.</p>
          */
         @NameInMap("PeakTime")
         public String peakTime;
 
         /**
-         * <p>The network traffic that was collected at each interval.</p>
+         * <p>The data usage in a specific scenario.</p>
+         * <br>
+         * <p>> SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.</p>
          */
         @NameInMap("SpecialValue")
         public String specialValue;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The timestamp of the returned data.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>data.content</p>
+         * <p>The amount of resource usage.</p>
          */
         @NameInMap("Value")
         public String value;

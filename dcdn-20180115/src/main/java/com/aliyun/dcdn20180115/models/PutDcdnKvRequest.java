@@ -4,20 +4,26 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PutDcdnKvRequest extends TeaModel {
+    @NameInMap("Expiration")
+    public Long expiration;
+
+    @NameInMap("ExpirationTtl")
+    public Long expirationTtl;
+
     /**
-     * <p>The length of the key.</p>
+     * <p>The key. The key can be up to 512 characters in length, and cannot contain spaces.</p>
      */
     @NameInMap("Key")
     public String key;
 
     /**
-     * <p>The content of the key. The maximum size is 2 MB (2 x 1000 x 1000 bytes).</p>
+     * <p>The name of the namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The content of the key. If the value exceeds 256 characters in length, the first 100 characters and the last 100 characters are retained and other characters are discarded.</p>
+     * <p>The value of the key. The maximum size is 2 MB (2 x 1000 x 1000 bytes).</p>
      */
     @NameInMap("Value")
     public String value;
@@ -25,6 +31,22 @@ public class PutDcdnKvRequest extends TeaModel {
     public static PutDcdnKvRequest build(java.util.Map<String, ?> map) throws Exception {
         PutDcdnKvRequest self = new PutDcdnKvRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutDcdnKvRequest setExpiration(Long expiration) {
+        this.expiration = expiration;
+        return this;
+    }
+    public Long getExpiration() {
+        return this.expiration;
+    }
+
+    public PutDcdnKvRequest setExpirationTtl(Long expirationTtl) {
+        this.expirationTtl = expirationTtl;
+        return this;
+    }
+    public Long getExpirationTtl() {
+        return this.expirationTtl;
     }
 
     public PutDcdnKvRequest setKey(String key) {

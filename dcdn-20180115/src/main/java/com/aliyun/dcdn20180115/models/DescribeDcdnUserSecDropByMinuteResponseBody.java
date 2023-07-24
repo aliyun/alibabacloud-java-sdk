@@ -5,43 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The description of HTTP responses.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The array returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Len")
     public Integer len;
 
     /**
-     * <p>The domain name.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The beginning of the time range that was queried. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The object that triggered the rule.</p>
+     * <p>An array.</p>
      */
     @NameInMap("Rows")
     public java.util.List<DescribeDcdnUserSecDropByMinuteResponseBodyRows> rows;
 
     /**
-     * <p>The number of packets blocked within 5 minutes.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -109,37 +109,37 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
 
     public static class DescribeDcdnUserSecDropByMinuteResponseBodyRows extends TeaModel {
         /**
-         * <p>The security feature that blocked the packets.</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
-         * <p>>  The maximum number of times that users can call this operation per second is 50.</p>
+         * <p>The number of packets blocked within 5 minutes.</p>
          */
         @NameInMap("Drops")
         public Integer drops;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The object that triggered rate limiting.</p>
          */
         @NameInMap("Object")
         public String object;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The rule that was triggered.</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The array returned.</p>
+         * <p>The security feature that blocked the packets.</p>
          */
         @NameInMap("SecFunc")
         public String secFunc;
 
         /**
-         * <p>The rule that is triggered.</p>
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
          */
         @NameInMap("TmStr")
         public String tmStr;

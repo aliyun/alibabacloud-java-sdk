@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
     /**
-     * <p>The total amount of network traffic.</p>
+     * <p>The time interval between the data entries returned. Unit: seconds.</p>
      */
     @NameInMap("DataInterval")
     public String dataInterval;
 
     /**
-     * <p>The total number of requests.</p>
+     * <p>The accelerated domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The time interval between the data entries returned. Unit: seconds.</p>
+     * <p>The end of the time range during which data was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of queries per second.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The access statistics by ISP.</p>
+     * <p>The start of the time range during which data was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The average response speed. Unit: byte/ms.</p>
+     * <p>The access statistics by ISP.</p>
      */
     @NameInMap("Value")
     public DescribeDcdnDomainIspDataResponseBodyValue value;
@@ -95,75 +95,67 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainIspDataResponseBodyValueIspProportionData extends TeaModel {
         /**
-         * <p>The proportion of network traffic. For example, a value of 90 indicates that 90% of network traffic was coming from the specified ISP.</p>
+         * <p>The average response size. Unit: bytes.</p>
          */
         @NameInMap("AvgObjectSize")
         public String avgObjectSize;
 
         /**
-         * <p>The name of the ISP.</p>
+         * <p>The average response speed. Unit: byte/ms.</p>
          */
         @NameInMap("AvgResponseRate")
         public String avgResponseRate;
 
         /**
-         * <p>The bandwidth.</p>
+         * <p>The average response time. Unit: milliseconds.</p>
          */
         @NameInMap("AvgResponseTime")
         public String avgResponseTime;
 
         /**
-         * <p>The information about the ISP.</p>
+         * <p>The bandwidth.</p>
          */
         @NameInMap("Bps")
         public String bps;
 
         /**
-         * <p>The total amount of network traffic.</p>
+         * <p>The proportion of network traffic. For example, a value of 90 indicates that 90% of network traffic was coming from the specified ISP.</p>
          */
         @NameInMap("BytesProportion")
         public String bytesProportion;
 
         /**
-         * <p>The name of the ISP.</p>
+         * <p>The information about the ISP.</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
-         * <p>> </p>
-         * <p>*   You can call this operation up to 100 times per second.</p>
-         * <p>*   If **StartTime** is set but **EndTime** is not set, the data within the hour that starts from **StartTime** is queried.</p>
-         * <p>*   If **EndTime** is set but **StartTime** is not set, the data within the last hour that precedes **EndTime** is queried.</p>
-         * <p>*   You can query data of a domain name or all domain names that belong to your account.</p>
-         * <p>*   You can view data that is collected over the last seven days. The interval at which data is queried is based on the time range specified by **StartTime** and **EndTime**.</p>
-         * <p>    *   **If the time range is shorter than or equal to one hour**, data is queried every minute.</p>
-         * <p>    *   **If the time range is longer than 1 hour but shorter than or equal to three days**, data is queried every five minutes.</p>
-         * <p>    *   **If the time range is longer than three days but shorter than or equal to seven days**, data is queried every hour.</p>
+         * <p>The name of the ISP.</p>
          */
         @NameInMap("IspEname")
         public String ispEname;
 
         /**
-         * <p>The information about the ISP.</p>
+         * <p>The proportion of the HTTP status code.</p>
          */
         @NameInMap("Proportion")
         public String proportion;
 
         /**
-         * <p>The average response time. Unit: milliseconds.</p>
+         * <p>The number of queries per second (QPS).</p>
          */
         @NameInMap("Qps")
         public String qps;
 
         /**
-         * <p>The average response size. Unit: bytes.</p>
+         * <p>The total volume of traffic.</p>
          */
         @NameInMap("TotalBytes")
         public String totalBytes;
 
         /**
-         * <p>The proportion of requests.</p>
+         * <p>The total number of requests that are destined for your website.</p>
          */
         @NameInMap("TotalQuery")
         public String totalQuery;

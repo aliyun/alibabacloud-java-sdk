@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The information about the accelerated domain name.</p>
      */
     @NameInMap("Domains")
     public DescribeDcdnDeletedDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The total number of domain names returned.</p>
+     * <p>The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The list of accelerated domain names and the time each domain name was last modified.</p>
+     * <p>The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the accelerated domain name was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC+0.</p>
+     * <p>The total number of domain names returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -81,13 +81,13 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
 
     public static class DescribeDcdnDeletedDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
-         * <p>The total number of domain names returned.</p>
+         * <p>The accelerated domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>>  You can call this operation up to 10 times per second per account.</p>
+         * <p>The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

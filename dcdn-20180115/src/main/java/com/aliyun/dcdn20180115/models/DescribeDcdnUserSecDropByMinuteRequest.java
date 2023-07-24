@@ -5,57 +5,57 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserSecDropByMinuteRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The domain name.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:05:04Z.</p>
+     * <br>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The language. Valid values: en and zh. Default value: en</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The object that triggered rate limiting.</p>
      */
     @NameInMap("Object")
     public String object;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of the page to return. Pages start from page 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The description of HTTP responses.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. Example: 2006-01-02T15:05:04Z.</p>
-     * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>The rule that was triggered.</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0. Example: 2006-01-02T15:04:04Z.</p>
+     * <p>The name of the security feature.</p>
      */
     @NameInMap("SecFunc")
     public String secFunc;
 
     /**
-     * <p>The language. Valid values: en and zh. Default value: en</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:04:04Z.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

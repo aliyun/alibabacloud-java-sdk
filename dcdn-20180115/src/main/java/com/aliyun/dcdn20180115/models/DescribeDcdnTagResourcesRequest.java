@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnTagResourcesRequest extends TeaModel {
     /**
-     * <p>The tags of the instance.</p>
+     * <p>The list of resource IDs. You can specify a maximum of 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags. You can specify a maximum of 20 tag values.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnTagResourcesRequestTag> tag;

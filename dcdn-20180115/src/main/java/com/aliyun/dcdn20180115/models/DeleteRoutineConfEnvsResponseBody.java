@@ -11,7 +11,7 @@ public class DeleteRoutineConfEnvsResponseBody extends TeaModel {
     public java.util.Map<String, ?> content;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
