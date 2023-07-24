@@ -4,9 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostWebShellResponseBody extends TeaModel {
+    /**
+     * <p>The URL of the webshell.</p>
+     */
     @NameInMap("LoginUrl")
     public String loginUrl;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
