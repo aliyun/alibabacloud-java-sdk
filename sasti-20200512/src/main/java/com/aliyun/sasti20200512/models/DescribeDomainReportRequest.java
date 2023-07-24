@@ -10,6 +10,9 @@ public class DescribeDomainReportRequest extends TeaModel {
     @NameInMap("Field")
     public String field;
 
+    @NameInMap("ServiceLang")
+    public String serviceLang;
+
     public static DescribeDomainReportRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainReportRequest self = new DescribeDomainReportRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeDomainReportRequest extends TeaModel {
     }
     public String getField() {
         return this.field;
+    }
+
+    public DescribeDomainReportRequest setServiceLang(String serviceLang) {
+        this.serviceLang = serviceLang;
+        return this;
+    }
+    public String getServiceLang() {
+        return this.serviceLang;
     }
 
 }
