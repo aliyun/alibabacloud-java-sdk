@@ -4,21 +4,36 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeHostWebShellRequest extends TeaModel {
+    /**
+     * <p>The username of the account that is used to log on to the host of the instance.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The password of the account.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The hostname of the instance. You can call the [DescribeDBInstanceIpHostname](~~610525~~) operation to query the hostname.</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionID")
     public String regionID;
 
