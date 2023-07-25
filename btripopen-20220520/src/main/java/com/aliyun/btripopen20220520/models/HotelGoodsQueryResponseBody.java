@@ -219,6 +219,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         @NameInMap("last_discounts_price")
         public Long lastDiscountsPrice;
 
+        @NameInMap("last_discounts_rounding_price")
+        public Long lastDiscountsRoundingPrice;
+
         @NameInMap("last_num")
         public Integer lastNum;
 
@@ -263,6 +266,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
         public Long getLastDiscountsPrice() {
             return this.lastDiscountsPrice;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO setLastDiscountsRoundingPrice(Long lastDiscountsRoundingPrice) {
+            this.lastDiscountsRoundingPrice = lastDiscountsRoundingPrice;
+            return this;
+        }
+        public Long getLastDiscountsRoundingPrice() {
+            return this.lastDiscountsRoundingPrice;
         }
 
         public HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO setLastNum(Integer lastNum) {
