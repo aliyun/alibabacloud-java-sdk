@@ -7,21 +7,21 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>You can call the [ListAggregators](~~255797~~) operation to obtain the account group ID.</p>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
-     * <p>You can call the [ListAggregateConfigRules](~~264148~~) operation to obtain the rule ID.</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
@@ -29,10 +29,10 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The execution mode of the remediation template. Valid values:</p>
      * <br>
-     * <p>*   NON_EXECUTION: no execution.</p>
-     * <p>*   AUTO_EXECUTION: automatic execution.</p>
-     * <p>*   MANUAL_EXECUTION: manual execution.</p>
-     * <p>*   NOT_CONFIG: not specified.</p>
+     * <p>*   NON_EXECUTION: The remediation template is not executed.</p>
+     * <p>*   AUTO_EXECUTION: The remediation template is automatically executed.</p>
+     * <p>*   MANUAL_EXECUTION: The remediation template is manually executed.</p>
+     * <p>*   NOT_CONFIG: The execution mode is not specified.</p>
      */
     @NameInMap("InvokeType")
     public String invokeType;
@@ -40,22 +40,22 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The configuration of the remediation template.</p>
      * <br>
-     * <p>You can call the [ListRemediationTemplates](~~416781~~) operation to obtain the remediation template configuration from the `TemplateDefinition` response parameter.</p>
+     * <p>For more information about how to obtain the configuration of the remediation template, see [ListRemediationTemplates](~~416781~~). You can view the `TemplateDefinition` response parameter to obtain the configuration of the remediation template.</p>
      */
     @NameInMap("Params")
     public String params;
 
     /**
-     * <p>The identifier of the remediation template.</p>
+     * <p>The ID of the remediation template.</p>
      * <br>
-     * <p>*   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. You can call the [ListRemediationTemplates](~~416781~~) operation to obtain the remediation template identifier.</p>
+     * <p>*   If you set the `RemediationType` parameter to `OOS`, set this parameter to the identifier of the relevant official remediation template, such as `ACS-OSS-PutBucketAcl`. For more information about how to obtain the remediation template identifier, see [ListRemediationTemplates](~~416781~~).</p>
      * <p>*   If you set the `RemediationType` parameter to `FC`, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant Function Compute resource, such as `acs:fc:cn-hangzhou:100931896542****:services/ConfigService.LATEST/functions/test-php`.</p>
      */
     @NameInMap("RemediationTemplateId")
     public String remediationTemplateId;
 
     /**
-     * <p>The type of remediation to perform. Valid values:</p>
+     * <p>The type of the remediation template. Valid values:</p>
      * <br>
      * <p>*   OOS: stands for Operation Orchestration Service and indicates official remediation.</p>
      * <p>*   FC: stands for Function Compute and indicates custom remediation.</p>
@@ -64,9 +64,9 @@ public class CreateAggregateRemediationRequest extends TeaModel {
     public String remediationType;
 
     /**
-     * <p>The source of remediation. Valid values:</p>
+     * <p>The source of remediation template. Valid values:</p>
      * <br>
-     * <p>*   ALIYUN: official template. This is the default value.</p>
+     * <p>*   ALIYUN (default): official template.</p>
      * <p>*   CUSTOM: custom template.</p>
      * <p>*   NONE: none.</p>
      */

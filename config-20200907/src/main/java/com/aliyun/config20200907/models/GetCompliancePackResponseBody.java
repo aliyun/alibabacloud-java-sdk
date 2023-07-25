@@ -11,7 +11,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
     public GetCompliancePackResponseBodyCompliancePack compliancePack;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,8 +53,8 @@ public class GetCompliancePackResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the input parameter is required. Valid values:</p>
          * <br>
-         * <p>*   true: required</p>
-         * <p>*   false: optional</p>
+         * <p>*   true: The input parameter is required.</p>
+         * <p>*   false: The input parameter is optional.</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -92,7 +92,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackConfigRules extends TeaModel {
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -104,7 +104,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String configRuleName;
 
         /**
-         * <p>The input parameters of the rule.</p>
+         * <p>The details of the input parameter of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
@@ -116,17 +116,20 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the managed rule.</p>
+         * <p>The identifier of the managed rule.</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
+        @NameInMap("ResourceTypesScope")
+        public String resourceTypesScope;
+
         /**
          * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -176,6 +179,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return this.managedRuleIdentifier;
         }
 
+        public GetCompliancePackResponseBodyCompliancePackConfigRules setResourceTypesScope(String resourceTypesScope) {
+            this.resourceTypesScope = resourceTypesScope;
+            return this;
+        }
+        public String getResourceTypesScope() {
+            return this.resourceTypesScope;
+        }
+
         public GetCompliancePackResponseBodyCompliancePackConfigRules setRiskLevel(Integer riskLevel) {
             this.riskLevel = riskLevel;
             return this;
@@ -188,31 +199,31 @@ public class GetCompliancePackResponseBody extends TeaModel {
 
     public static class GetCompliancePackResponseBodyCompliancePackScope extends TeaModel {
         /**
-         * <p>The ID of the resource that is not evaluated by using the compliance package.</p>
+         * <p>The ID of the resource that you do not want to evaluate by using the compliance package.</p>
          */
         @NameInMap("ExcludeResourceIdsScope")
         public String excludeResourceIdsScope;
 
         /**
-         * <p>The ID of the region whose resources are evaluated by using the compliance package.</p>
+         * <p>The ID of the region whose resources you want to evaluate by using the compliance package.</p>
          */
         @NameInMap("RegionIdsScope")
         public String regionIdsScope;
 
         /**
-         * <p>The ID of the resource group whose resources are evaluated by using the compliance package.</p>
+         * <p>The ID of the resource group whose resources you want to evaluate by using the compliance package.</p>
          */
         @NameInMap("ResourceGroupIdsScope")
         public String resourceGroupIdsScope;
 
         /**
-         * <p>The tag key of the resource that is evaluated by using the compliance package.</p>
+         * <p>The tag key of the resource that you want to evaluate by using the compliance package.</p>
          */
         @NameInMap("TagKeyScope")
         public String tagKeyScope;
 
         /**
-         * <p>The tag value of the resource that is evaluated by using the compliance package.</p>
+         * <p>The tag value of the resource that you want to evaluate by using the compliance package.</p>
          */
         @NameInMap("TagValueScope")
         public String tagValueScope;
@@ -310,15 +321,15 @@ public class GetCompliancePackResponseBody extends TeaModel {
         /**
          * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
         /**
-         * <p>The resource group for which the compliance package takes effect.</p>
+         * <p>The resource group for which the compliance package took effect.</p>
          */
         @NameInMap("Scope")
         public GetCompliancePackResponseBodyCompliancePackScope scope;

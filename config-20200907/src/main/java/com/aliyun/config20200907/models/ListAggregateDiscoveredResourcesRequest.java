@@ -5,42 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The information about resources.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The `token` that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The timestamp when the resource was created. Unit: milliseconds.</p>
+     * <p>The ID of the region in which the resource resides. Separate multiple region IDs with commas (,).</p>
      */
     @NameInMap("Regions")
     public String regions;
 
+    /**
+     * <p>账号组内待查询资源所属的阿里云账号ID。 </p>
+     * <p>> 参数ResourceAccountId和ResourceOwnerId二选一，推荐使用本参数。</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
     /**
-     * <p>The return result of the request.</p>
+     * <p>The status of the resource. Valid values:</p>
+     * <br>
+     * <p>*   0: The resource is deleted.</p>
+     * <p>*   1 (default): The resource is retained.</p>
      */
     @NameInMap("ResourceDeleted")
     public Integer resourceDeleted;
 
     /**
-     * <p>The ID of the account group.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>The resource ID.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -50,7 +57,7 @@ public class ListAggregateDiscoveredResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The region ID.</p>
+     * <p>The type of the resource. Separate multiple resource types with commas (,).</p>
      */
     @NameInMap("ResourceTypes")
     public String resourceTypes;

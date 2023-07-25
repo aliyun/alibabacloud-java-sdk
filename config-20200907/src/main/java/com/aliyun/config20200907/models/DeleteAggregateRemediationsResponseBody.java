@@ -11,7 +11,7 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
     public java.util.List<DeleteAggregateRemediationsResponseBodyRemediationDeleteResults> remediationDeleteResults;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +39,25 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
 
     public static class DeleteAggregateRemediationsResponseBodyRemediationDeleteResults extends TeaModel {
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned.</p>
          * <br>
-         * <p>*   If the remediation setting is deleted, no error code is returned.</p>
-         * <p>*   If the remediation setting fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <p>*   If the remediation template is deleted, no error code is returned.</p>
+         * <p>*   If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The ID of the remediation setting.</p>
+         * <p>The ID of the remediation template.</p>
          */
         @NameInMap("RemediationId")
         public String remediationId;
 
         /**
-         * <p>Indicates whether the call is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <br>
-         * <p>*   true: The call is successful.</p>
-         * <p>*   false: The call fails.</p>
+         * <p>*   true: The request was successful.</p>
+         * <p>*   false: The request failed.</p>
          */
         @NameInMap("Success")
         public Boolean success;

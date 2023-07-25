@@ -4,14 +4,17 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class StartRemediationResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request was successful.</p>
+     * <p>*   false: The request failed.</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call is successful.</p>
-     * <p>*   false: The call fails.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

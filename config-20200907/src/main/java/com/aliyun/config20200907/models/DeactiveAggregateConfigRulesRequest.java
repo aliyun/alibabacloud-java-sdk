@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeactiveAggregateConfigRulesRequest extends TeaModel {
     /**
-     * <p>The result of the operation to disable the rule.</p>
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The results of the operations to disable the specified rules.</p>
+     * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;

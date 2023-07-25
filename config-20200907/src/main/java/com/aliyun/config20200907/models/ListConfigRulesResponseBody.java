@@ -149,6 +149,9 @@ public class ListConfigRulesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ResourceTypesScope")
+        public String resourceTypesScope;
+
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -236,6 +239,14 @@ public class ListConfigRulesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListConfigRulesResponseBodyConfigRulesConfigRuleList setResourceTypesScope(String resourceTypesScope) {
+            this.resourceTypesScope = resourceTypesScope;
+            return this;
+        }
+        public String getResourceTypesScope() {
+            return this.resourceTypesScope;
         }
 
         public ListConfigRulesResponseBodyConfigRulesConfigRuleList setRiskLevel(Integer riskLevel) {

@@ -11,7 +11,7 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
     public DetachConfigRuleToCompliancePackResponseBodyOperateRuleResult operateRuleResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,28 +39,25 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
 
     public static class DetachConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
         /**
-         * <p>The ID of the rule that is removed from the compliance package.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned.</p>
          * <br>
          * <p>*   This parameter is empty if the rule is removed from the compliance package.</p>
-         * <br>
-         * <p><!----></p>
-         * <br>
-         * <p>*   An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <p>*   An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <br>
-         * <p>*   true: The operation is successful.</p>
-         * <p>*   false: The operation fails.</p>
+         * <p>*   true: The request was successful.</p>
+         * <p>*   false: The request failed.</p>
          */
         @NameInMap("Success")
         public Boolean success;

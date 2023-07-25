@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeliveryChannelResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the delivery channel.</p>
+     */
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

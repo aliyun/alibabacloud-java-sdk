@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListRemediationsRequest extends TeaModel {
     /**
-     * <p>The ID of the rule. If you want to specify multiple IDs, separate them with commas (,).</p>
+     * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
      * <br>
-     * <p>You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
      */
     @NameInMap("ConfigRuleIds")
     public String configRuleIds;
 
+    /**
+     * <p>资源列表的页码。起始值：1。</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>分页查询时设置的每页行数。取值范围：1~50。</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

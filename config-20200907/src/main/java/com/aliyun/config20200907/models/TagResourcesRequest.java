@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the tag.</p>
+     * <p>The region ID of the tags.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs. You can add tags to up to 50 resources.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <br>
      * <p>*   `ACS::Config::Rule`</p>
      * <p>*   `ACS::Config::AggregateConfigRule`</p>
@@ -26,9 +29,9 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The tag value of the resource.</p>
      * <br>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>You can specify up to 20 tag values.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -72,17 +75,17 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource.</p>
+         * <p>The key of the tag that is added to the resource.</p>
          * <br>
-         * <p>You can specify up to 20 tag keys.</p>
+         * <p>You can add up to 20 tag keys to a resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the resource.</p>
+         * <p>The value of the tag that is added to the resource.</p>
          * <br>
-         * <p>You can specify up to 20 tag values.</p>
+         * <p>You can add up to 20 tag values to a resource.</p>
          */
         @NameInMap("Value")
         public String value;

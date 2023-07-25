@@ -4,24 +4,33 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationsResponseBody extends TeaModel {
+    /**
+     * <p>修正列表的页码。起始值：1。</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>分页查询时设置的每页行数。取值范围：1~50。</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The remediation settings returned.</p>
+     * <p>An array that contains the remediation templates.</p>
      */
     @NameInMap("Remediations")
     public java.util.List<ListRemediationsResponseBodyRemediations> remediations;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>修正设置总数。</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -72,13 +81,13 @@ public class ListRemediationsResponseBody extends TeaModel {
 
     public static class ListRemediationsResponseBodyRemediations extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account involved.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -86,10 +95,10 @@ public class ListRemediationsResponseBody extends TeaModel {
         /**
          * <p>The execution mode of the remediation template. Valid values:</p>
          * <br>
-         * <p>*   NON_EXECUTION: no execution.</p>
-         * <p>*   AUTO_EXECUTION: automatic execution.</p>
-         * <p>*   MANUAL_EXECUTION: manual execution.</p>
-         * <p>*   NOT_CONFIG: not specified.</p>
+         * <p>*   NON_EXECUTION: The remediation template was not executed.</p>
+         * <p>*   AUTO_EXECUTION: The remediation template was automatically executed.</p>
+         * <p>*   MANUAL_EXECUTION: The remediation template was manually executed.</p>
+         * <p>*   NOT_CONFIG: The execution mode was not specified.</p>
          */
         @NameInMap("InvokeType")
         public String invokeType;
@@ -109,22 +118,22 @@ public class ListRemediationsResponseBody extends TeaModel {
         /**
          * <p>The mode of the last successful execution of the remediation template. Valid values:</p>
          * <br>
-         * <p>*   NON_EXECUTION: no execution.</p>
-         * <p>*   AUTO_EXECUTION: automatic execution.</p>
-         * <p>*   MANUAL_EXECUTION: manual execution.</p>
-         * <p>*   NOT_CONFIG: not specified.</p>
+         * <p>*   NON_EXECUTION: The remediation template was not executed.</p>
+         * <p>*   AUTO_EXECUTION: The remediation template was automatically executed.</p>
+         * <p>*   MANUAL_EXECUTION: The remediation template was manually executed.</p>
+         * <p>*   NOT_CONFIG: The execution mode was not specified.</p>
          */
         @NameInMap("LastSuccessfulInvocationType")
         public String lastSuccessfulInvocationType;
 
         /**
-         * <p>The ID of the remediation setting.</p>
+         * <p>The ID of the remediation template.</p>
          */
         @NameInMap("RemediationId")
         public String remediationId;
 
         /**
-         * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
+         * <p>The converted configuration of the remediation template. This parameter is available only for an OOS remediation template.</p>
          */
         @NameInMap("RemediationOriginParams")
         public String remediationOriginParams;
@@ -140,16 +149,16 @@ public class ListRemediationsResponseBody extends TeaModel {
         public String remediationSourceType;
 
         /**
-         * <p>The identifier of the remediation template.</p>
+         * <p>The ID of the remediation template.</p>
          */
         @NameInMap("RemediationTemplateId")
         public String remediationTemplateId;
 
         /**
-         * <p>The type of remediation to perform. Valid values:</p>
+         * <p>The type of the remediation template. Valid values:</p>
          * <br>
-         * <p>*   OOS: stands for Operation Orchestration Service and indicates official remediation.</p>
-         * <p>*   FC: stands for Function Compute and indicates custom remediation.</p>
+         * <p>*   OOS: Operation Orchestration Service (official remediation)</p>
+         * <p>*   FC: Function Compute (custom remediation)</p>
          */
         @NameInMap("RemediationType")
         public String remediationType;

@@ -11,7 +11,7 @@ public class GetCompliancePackReportResponseBody extends TeaModel {
     public GetCompliancePackReportResponseBodyCompliancePackReport compliancePackReport;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

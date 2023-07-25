@@ -11,7 +11,7 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
     public GetAggregateConfigRulesReportResponseBodyConfigRulesReport configRulesReport;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -65,9 +65,9 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
         /**
          * <p>The status of the compliance evaluation report. Valid values:</p>
          * <br>
-         * <p>*   NONE: The compliance evaluation report is not generated.</p>
-         * <p>*   CREATING: The compliance evaluation report is being generated.</p>
-         * <p>*   COMPLETE: The compliance evaluation report is generated.</p>
+         * <p>*   NONE: The compliance evaluation report was not generated.</p>
+         * <p>*   CREATING: The compliance evaluation report was being generated.</p>
+         * <p>*   COMPLETE: The compliance evaluation report was generated.</p>
          */
         @NameInMap("ReportStatus")
         public String reportStatus;

@@ -13,7 +13,7 @@ public class DeleteAggregateConfigDeliveryChannelRequest extends TeaModel {
     /**
      * <p>The ID of the delivery channel.</p>
      * <br>
-     * <p>For information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](~~429842~~).</p>
+     * <p>For more information about how to obtain the ID of a delivery channel, see [ListAggregateConfigDeliveryChannels](~~429842~~).</p>
      */
     @NameInMap("DeliveryChannelId")
     public String deliveryChannelId;

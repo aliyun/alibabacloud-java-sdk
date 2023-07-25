@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the region in which the resource resides.</p>
+     * <p>The information about the resource.</p>
      */
     @NameInMap("DiscoveredResourceDetail")
     public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail discoveredResourceDetail;
 
     /**
-     * <p>The configuration of the resource.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,61 +39,73 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
 
     public static class GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail extends TeaModel {
         /**
-         * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
-         * <br>
-         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
-         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that does not have a specific state. In this case, this parameter is left empty.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The timestamp when the resource was created.</p>
+         * <p>The ID of the zone where the resource resides.</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * <p>The configuration of the resource.</p>
          */
         @NameInMap("Configuration")
         public String configuration;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>Indicates whether the resource is deleted. Valid values:</p>
-         * <br>
-         * <p>*   1: The resource is retained.</p>
-         * <p>*   0: The resource is deleted.</p>
+         * <p>The timestamp when the resource was created.</p>
          */
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
+        /**
+         * <p>Indicates whether the resource was deleted. Valid values:</p>
+         * <br>
+         * <p>*   1: The resource was not deleted.</p>
+         * <p>*   0: The resource was deleted.</p>
+         */
         @NameInMap("ResourceDeleted")
         public Integer resourceDeleted;
 
+        /**
+         * <p>The resource ID.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</p>
+         * <br>
+         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
+         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</p>
+         */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
         /**
-         * <p>The tags of the resource.</p>
+         * <p>The type of the resource.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The tags of the resource.</p>
          */
         @NameInMap("Tags")
         public String tags;

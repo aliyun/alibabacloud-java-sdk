@@ -19,7 +19,7 @@ public class RevertAggregateEvaluationResultsShrinkRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The resources that are to be reevaluated.</p>
+     * <p>The resources that you want to re-evaluate.</p>
      */
     @NameInMap("Resources")
     public String resourcesShrink;

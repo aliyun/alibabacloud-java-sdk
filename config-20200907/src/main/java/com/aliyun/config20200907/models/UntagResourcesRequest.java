@@ -8,7 +8,7 @@ public class UntagResourcesRequest extends TeaModel {
      * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
      * <br>
      * <p>*   true: All tags are removed from the resource.</p>
-     * <p>*   false: Specified tags are removed from the resource.</p>
+     * <p>*   false (default): The specified tags are removed from the resource.</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -20,15 +20,15 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * <br>
-     * <p>You can specify up to 50 resources.</p>
+     * <p>You can remove tags from up to 50 resources at a time.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <br>
      * <p>*   `ACS::Config::Rule`</p>
      * <p>*   `ACS::Config::AggregateConfigRule`</p>
@@ -40,9 +40,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag keys of the resource.</p>
-     * <br>
-     * <p>You can specify up to 20 tag keys.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

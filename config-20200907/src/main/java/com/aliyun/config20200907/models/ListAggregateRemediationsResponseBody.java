@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAggregateRemediationsResponseBody extends TeaModel {
     /**
-     * <p>The remediation settings returned.</p>
+     * <p>An array that contains remediation templates.</p>
      */
     @NameInMap("Remediations")
     public java.util.List<ListAggregateRemediationsResponseBodyRemediations> remediations;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
 
     public static class ListAggregateRemediationsResponseBodyRemediations extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account involved.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
@@ -51,7 +51,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String aggregatorId;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -59,10 +59,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         /**
          * <p>The execution mode of the remediation template. Valid values:</p>
          * <br>
-         * <p>*   NON_EXECUTION: no execution.</p>
-         * <p>*   AUTO_EXECUTION: automatic execution.</p>
-         * <p>*   MANUAL_EXECUTION: manual execution.</p>
-         * <p>*   NOT_CONFIG: not specified.</p>
+         * <p>*   NON_EXECUTION: The remediation template is not executed.</p>
+         * <p>*   AUTO_EXECUTION: The remediation template is automatically executed.</p>
+         * <p>*   MANUAL_EXECUTION: The remediation template is manually executed.</p>
+         * <p>*   NOT_CONFIG: The execution mode is not specified.</p>
          */
         @NameInMap("InvokeType")
         public String invokeType;
@@ -74,7 +74,7 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String lastSuccessfulInvocationId;
 
         /**
-         * <p>The timestamp of the last successful execution of the remediation template Unit: milliseconds.</p>
+         * <p>The timestamp of the last successful execution of the remediation template. Unit: milliseconds.</p>
          */
         @NameInMap("LastSuccessfulInvocationTime")
         public Long lastSuccessfulInvocationTime;
@@ -82,10 +82,10 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         /**
          * <p>The mode of the last successful execution of the remediation template. Valid values:</p>
          * <br>
-         * <p>*   NON_EXECUTION: no execution.</p>
-         * <p>*   AUTO_EXECUTION: automatic execution.</p>
-         * <p>*   MANUAL_EXECUTION: manual execution.</p>
-         * <p>*   NOT_CONFIG: not specified.</p>
+         * <p>*   NON_EXECUTION: The remediation template is not executed.</p>
+         * <p>*   AUTO_EXECUTION: The remediation template is automatically executed.</p>
+         * <p>*   MANUAL_EXECUTION: The remediation template is manually executed.</p>
+         * <p>*   NOT_CONFIG: The execution mode is not specified.</p>
          */
         @NameInMap("LastSuccessfulInvocationType")
         public String lastSuccessfulInvocationType;
@@ -97,13 +97,13 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String remediaitonOriginParams;
 
         /**
-         * <p>The ID of the remediation setting.</p>
+         * <p>The ID of the remediation template.</p>
          */
         @NameInMap("RemediationId")
         public String remediationId;
 
         /**
-         * <p>The source of remediation. Valid values:</p>
+         * <p>The source of remediation template. Valid values:</p>
          * <br>
          * <p>*   ALIYUN: official template.</p>
          * <p>*   CUSTOM: custom template.</p>
@@ -113,16 +113,16 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
         public String remediationSourceType;
 
         /**
-         * <p>The identifier of the remediation template.</p>
+         * <p>The ID of the remediation template.</p>
          */
         @NameInMap("RemediationTemplateId")
         public String remediationTemplateId;
 
         /**
-         * <p>The type of remediation to perform. Valid values:</p>
+         * <p>The type of the remediation template. Valid values:</p>
          * <br>
-         * <p>*   OOS: stands for Operation Orchestration Service and indicates official remediation.</p>
-         * <p>*   FC: stands for Function Compute and indicates custom remediation.</p>
+         * <p>*   OOS: Operation Orchestration Service (official remediation).</p>
+         * <p>*   FC: Function Compute (custom remediation).</p>
          */
         @NameInMap("RemediationType")
         public String remediationType;

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class StartAggregateConfigRuleEvaluationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <p>Indicates whether the involved resources were evaluated. Valid values:</p>
      * <br>
-     * <p>*   true: The operation is successful.</p>
-     * <p>*   false: The operation fails.</p>
+     * <p>*   true: The involved resources were evaluated.</p>
+     * <p>*   false: The involved resources were not evaluated</p>
      */
     @NameInMap("Result")
     public Boolean result;

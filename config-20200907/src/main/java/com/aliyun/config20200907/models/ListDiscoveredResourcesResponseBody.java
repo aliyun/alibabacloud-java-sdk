@@ -11,7 +11,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,13 +45,13 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>The ID of the zone in which the resource resides.</p>
+         * <p>The zone.</p>
          */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
         /**
-         * <p>The ID of the region where the resource resides.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("Region")
         public String region;
@@ -72,7 +72,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Integer resourceDeleted;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
@@ -84,10 +84,10 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public String resourceName;
 
         /**
-         * <p>The status of the resource. The value of this parameter varies based on the resource type and may be left empty. Example:</p>
+         * <p>The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:</p>
          * <br>
          * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
-         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.</p>
+         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</p>
          */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
@@ -207,7 +207,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
 
     public static class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles extends TeaModel {
         /**
-         * <p>The information about the resources.</p>
+         * <p>The details of the resources.</p>
          */
         @NameInMap("DiscoveredResourceProfileList")
         public java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;
@@ -219,7 +219,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the resources belong.</p>
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

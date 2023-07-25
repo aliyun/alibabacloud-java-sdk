@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCompliancePacksRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the value is unique among different requests. The value of this parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -21,8 +21,8 @@ public class DeleteCompliancePacksRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete the rules in the compliance package. Valid values:</p>
      * <br>
-     * <p>*   true: deletes the rules.</p>
-     * <p>*   false: retains the rules. This is the default value.</p>
+     * <p>*   true: The rules are deleted.</p>
+     * <p>*   false (default): The rules are not deleted.</p>
      */
     @NameInMap("DeleteRule")
     public Boolean deleteRule;

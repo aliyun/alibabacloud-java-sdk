@@ -11,7 +11,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
     public java.util.List<ListConfigDeliveryChannelsResponseBodyDeliveryChannels> deliveryChannels;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         public Long accountId;
 
         /**
-         * <p>Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:</p>
+         * <p>Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers the resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:</p>
          * <br>
          * <p>*   true: The specified destination receives resource change logs.</p>
          * <p>*   false: The specified destination does not receive resource change logs.</p>
@@ -54,7 +54,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         public Boolean configurationItemChangeNotification;
 
         /**
-         * <p>Indicates whether the specified destination receives scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots to OSS, MNS, or Log Service at `04:00Z` and `16:00Z` every day. The time is displayed in UTC. Valid values:</p>
+         * <p>Indicates whether the specified destination receives scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots at `04:00Z` and `16:00Z` to OSS, MNS, or Log Service every day. The time is displayed in UTC. Valid values:</p>
          * <br>
          * <p>*   true: The specified destination receives scheduled resource snapshots.</p>
          * <p>*   false: The specified destination does not receive scheduled resource snapshots.</p>
@@ -63,7 +63,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         public Boolean configurationSnapshot;
 
         /**
-         * <p>The ARN of the role that is assigned to the delivery channel.</p>
+         * <p>The ARN of the role assumed by the delivery channel.</p>
          */
         @NameInMap("DeliveryChannelAssumeRoleArn")
         public String deliveryChannelAssumeRoleArn;
@@ -73,15 +73,21 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
          * <br>
          * <p>*   If the value of the DeliveryChannelType parameter is MNS, take note of the following settings of the lowest risk level and resource types of the events to which you subscribed:</p>
          * <br>
-         * <p>    *   The setting of the lowest risk level of the events to which you subscribed is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`. The `value` field indicates the lowest risk level of the events to which you subscribed. Valid values: 1, 2, and 3, where 1 indicates the high risk level, 2 indicates the medium risk level, and 3 indicates the low risk level.</p>
+         * <p>    *   The setting of the lowest risk level for the events to which you want to subscribe is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`.</p>
          * <br>
-         * <p>    *   The setting of the resource types of the events to which you subscribed is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`. The `values` field indicates the resource types of the events to which you subscribed. The value of the field is a JSON array.</p>
+         * <p>        The `value` field indicates the lowest risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level, the value 2 indicates the medium risk level, and the value 3 indicates the low risk level.</p>
          * <br>
-         * <p>        Example: `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`.</p>
+         * <p>    *   The setting of the resource types of the events to which you want to subscribe is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.</p>
          * <br>
-         * <p>*   If the value of the DeliveryChannelType parameter is SLS, the setting of the resource types of the snapshots that you delivered is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`. The `values` field indicates the resource types of the snapshots that you delivered. The value of the field is a JSON array.</p>
+         * <p>        The `values` field indicates the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Examples:</p>
          * <br>
-         * <p>    Example: `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`.</p>
+         * <p>`[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`</p>
+         * <br>
+         * <p>*   If you set the DeliveryChannelType parameter to SLS, the setting of the resource types of the snapshots to which you want to deliver is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.</p>
+         * <br>
+         * <p>    The `values` field specifies the resource types of the snapshots to which you want to deliver. The value of the field is a JSON array. Examples:</p>
+         * <br>
+         * <p>`[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`</p>
          */
         @NameInMap("DeliveryChannelCondition")
         public String deliveryChannelCondition;
@@ -119,9 +125,9 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         public String deliveryChannelType;
 
         /**
-         * <p>The time when Cloud Config delivers scheduled resource snapshots every day.</p>
+         * <p>The time when Cloud Config delivers scheduled resources snapshots every day.</p>
          * <br>
-         * <p>Format: `HH:mmZ`. The time is displayed in UTC.</p>
+         * <p>Format: `HH:mmZ`. This time is displayed in UTC.</p>
          */
         @NameInMap("DeliverySnapshotTime")
         public String deliverySnapshotTime;
@@ -133,7 +139,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the specified destination receives resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are considered non-compliant. Valid values:</p>
+         * <p>Indicates whether the specified destination receives resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are evaluated as non-compliant. Valid values:</p>
          * <br>
          * <p>*   true: The specified destination receives resource non-compliance events.</p>
          * <p>*   false: The specified destination does not receive resource non-compliance events.</p>
@@ -142,7 +148,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         public Boolean nonCompliantNotification;
 
         /**
-         * <p>The ARN of the OSS bucket to which the delivery data is transferred when the size of the data exceeds the specified upper limit of the delivery channel.</p>
+         * <p>The ARN of the OSS bucket to which you want to transfer the delivery data when the size of the data exceeds the specified upper limit of the delivery channel.</p>
          */
         @NameInMap("OversizedDataOSSTargetArn")
         public String oversizedDataOSSTargetArn;

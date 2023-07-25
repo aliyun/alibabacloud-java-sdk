@@ -11,7 +11,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
     public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult compliancePackTemplatesResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -106,7 +106,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         /**
          * <p>The ID of the regulation.</p>
          * <br>
-         * <p>>  This parameter is available only for regulation compliance packages.</p>
+         * <p>> This parameter is available only for regulation compliance packages.</p>
          */
         @NameInMap("ControlId")
         public String controlId;
@@ -139,11 +139,17 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public String managedRuleName;
 
         /**
+         * <p>规则评估的资源类型。</p>
+         */
+        @NameInMap("ResourceTypesScope")
+        public String resourceTypesScope;
+
+        /**
          * <p>The risk level of the resources that are not compliant with the managed rule. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -209,6 +215,14 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             return this.managedRuleName;
         }
 
+        public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules setResourceTypesScope(String resourceTypesScope) {
+            this.resourceTypesScope = resourceTypesScope;
+            return this;
+        }
+        public String getResourceTypesScope() {
+            return this.resourceTypesScope;
+        }
+
         public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules setRiskLevel(Integer riskLevel) {
             this.riskLevel = riskLevel;
             return this;
@@ -233,7 +247,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public String compliancePackTemplateName;
 
         /**
-         * <p>The information about managed rules in the compliance package.</p>
+         * <p>An array that contains the managed rules in the compliance package.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules> configRules;
@@ -259,9 +273,9 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         /**
          * <p>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -331,19 +345,19 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult extends TeaModel {
         /**
-         * <p>The compliance package templates.</p>
+         * <p>An array that contains the compliance package templates.</p>
          */
         @NameInMap("CompliancePackTemplates")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates> compliancePackTemplates;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;

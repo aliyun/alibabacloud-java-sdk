@@ -7,7 +7,7 @@ public class CopyCompliancePacksRequest extends TeaModel {
     /**
      * <p>The IDs of the destination account groups into which the compliance packages are replicated. Separate multiple account group IDs with commas (,).</p>
      * <br>
-     * <p>>  If you leave this parameter empty, the compliance packages are replicated under the same account group.</p>
+     * <p>> If this parameter is left empty, the compliance packages are replicated to the current account group.</p>
      */
     @NameInMap("DesAggregatorIds")
     public String desAggregatorIds;

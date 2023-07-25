@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in a request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries returned for a single request. Valid values: 1 to 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to initiate the subsequent request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``</p>
+     * <p>The `token` that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -32,7 +32,7 @@ public class ListDiscoveredResourcesRequest extends TeaModel {
     public Integer resourceDeleted;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
