@@ -4,30 +4,60 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class SetDcdnDomainSSLCertificateRequest extends TeaModel {
+    /**
+     * <p>The ID of the certificate. This parameter takes effect only when **CertType** is set to **cas**.</p>
+     */
     @NameInMap("CertId")
     public Long certId;
 
+    /**
+     * <p>The name of the SSL certificate. You can specify only one certificate name.</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <p>The region of the SSL certificate. This parameter takes effect only when **CertType** is set to **cas**. Default value: **cn-hangzhou**. Valid values: **cn-hangzhou** and **ap-southeast-1**.</p>
+     */
     @NameInMap("CertRegion")
     public String certRegion;
 
+    /**
+     * <p>The type of the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **upload**: a user-uploaded SSL certificate.</p>
+     * <p>*   **cas**: a certificate that is acquired through Certificate Management Service.</p>
+     */
     @NameInMap("CertType")
     public String certType;
 
+    /**
+     * <p>The domain name that is secured by the SSL certificate.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPri")
     public String SSLPri;
 
+    /**
+     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
+     * <br>
+     * <p>*   **on**</p>
+     * <p>*   **off**</p>
+     */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
+    /**
+     * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.</p>
+     */
     @NameInMap("SSLPub")
     public String SSLPub;
 

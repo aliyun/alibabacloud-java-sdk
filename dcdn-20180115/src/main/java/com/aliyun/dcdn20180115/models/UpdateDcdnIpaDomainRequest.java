@@ -4,21 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class UpdateDcdnIpaDomainRequest extends TeaModel {
+    /**
+     * <p>The accelerated domain name that you want to modify. You can specify only one domain name in each request.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The information about the addresses of the origin server.</p>
+     */
     @NameInMap("Sources")
     public String sources;
 
+    /**
+     * <p>The top-level domain name.</p>
+     */
     @NameInMap("TopLevelDomain")
     public String topLevelDomain;
 

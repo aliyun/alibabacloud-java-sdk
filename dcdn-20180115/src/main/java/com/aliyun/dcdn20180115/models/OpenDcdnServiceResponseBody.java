@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenDcdnServiceResponseBody extends TeaModel {
     /**
-     * <p>The metering method of DCDN. Valid values:</p>
-     * <br>
-     * <p>*   **PayByTraffic**: pay-by-traffic</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

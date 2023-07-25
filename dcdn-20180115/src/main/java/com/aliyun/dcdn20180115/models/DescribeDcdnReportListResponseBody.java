@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnReportListResponseBody extends TeaModel {
+    /**
+     * <p>The information about the operations report.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
