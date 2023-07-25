@@ -19,9 +19,6 @@ public class ListServerlessJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("Queues")
-    public java.util.List<String> queues;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -39,9 +36,6 @@ public class ListServerlessJobsRequest extends TeaModel {
 
     @NameInMap("SubmitTimeStart")
     public String submitTimeStart;
-
-    @NameInMap("Users")
-    public java.util.List<String> users;
 
     public static ListServerlessJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServerlessJobsRequest self = new ListServerlessJobsRequest();
@@ -86,14 +80,6 @@ public class ListServerlessJobsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public ListServerlessJobsRequest setQueues(java.util.List<String> queues) {
-        this.queues = queues;
-        return this;
-    }
-    public java.util.List<String> getQueues() {
-        return this.queues;
     }
 
     public ListServerlessJobsRequest setRegionId(String regionId) {
@@ -142,14 +128,6 @@ public class ListServerlessJobsRequest extends TeaModel {
     }
     public String getSubmitTimeStart() {
         return this.submitTimeStart;
-    }
-
-    public ListServerlessJobsRequest setUsers(java.util.List<String> users) {
-        this.users = users;
-        return this;
-    }
-    public java.util.List<String> getUsers() {
-        return this.users;
     }
 
 }

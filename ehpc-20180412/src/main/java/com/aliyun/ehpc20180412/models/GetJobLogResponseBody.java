@@ -4,17 +4,26 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class GetJobLogResponseBody extends TeaModel {
+    /**
+     * <p>The content of the error logs. The content is encoded in Base64.</p>
+     */
     @NameInMap("ErrorLog")
     public String errorLog;
 
+    /**
+     * <p>The ID of the job.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The content of the output logs. The content is encoded in Base64.</p>
+     */
     @NameInMap("OutputLog")
     public String outputLog;
 
     /**
-     * <p>The content of the error logs. The content is encoded in Base64.</p>
+     * <p>The ID of the task.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

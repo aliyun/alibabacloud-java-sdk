@@ -27,7 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to AddContainerApp.
+      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
       *
       * @param request AddContainerAppRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -54,7 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to AddContainerApp.
+      * If you select an image for a new containerized application, the image is pulled from Docker Hub by default. However, the version of the image may not be up to date. You can call the [PullImage](~~159052~~) operation to pull the latest image.
       *
       * @param request AddContainerAppRequest
       * @return AddContainerAppResponse
@@ -2360,10 +2360,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.queues)) {
-            query.put("Queues", request.queues);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -2386,10 +2382,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.submitTimeStart)) {
             query.put("SubmitTimeStart", request.submitTimeStart);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.users)) {
-            query.put("Users", request.users);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
