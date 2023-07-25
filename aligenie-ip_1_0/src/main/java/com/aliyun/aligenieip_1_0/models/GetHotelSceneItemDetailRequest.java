@@ -13,6 +13,9 @@ public class GetHotelSceneItemDetailRequest extends TeaModel {
     @NameInMap("ItemId")
     public Long itemId;
 
+    @NameInMap("Name")
+    public String name;
+
     public static GetHotelSceneItemDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetHotelSceneItemDetailRequest self = new GetHotelSceneItemDetailRequest();
         return TeaModel.build(map, self);
@@ -32,6 +35,14 @@ public class GetHotelSceneItemDetailRequest extends TeaModel {
     }
     public Long getItemId() {
         return this.itemId;
+    }
+
+    public GetHotelSceneItemDetailRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

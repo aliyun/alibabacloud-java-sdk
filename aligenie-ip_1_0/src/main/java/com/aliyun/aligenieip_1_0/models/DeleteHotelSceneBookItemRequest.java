@@ -13,6 +13,9 @@ public class DeleteHotelSceneBookItemRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("Name")
+    public String name;
+
     public static DeleteHotelSceneBookItemRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteHotelSceneBookItemRequest self = new DeleteHotelSceneBookItemRequest();
         return TeaModel.build(map, self);
@@ -32,6 +35,14 @@ public class DeleteHotelSceneBookItemRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public DeleteHotelSceneBookItemRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
 }

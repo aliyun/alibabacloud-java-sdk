@@ -181,6 +181,9 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
     }
 
     public static class UpdateHotelSceneItemRequestUpdateHotelSceneReq extends TeaModel {
+        @NameInMap("DeliveryMethod")
+        public String deliveryMethod;
+
         @NameInMap("DialogueList")
         public java.util.List<UpdateHotelSceneItemRequestUpdateHotelSceneReqDialogueList> dialogueList;
 
@@ -196,8 +199,17 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PaymentMethod")
+        public String paymentMethod;
+
         @NameInMap("Price")
         public Long price;
+
+        @NameInMap("RobotName")
+        public String robotName;
 
         @NameInMap("Status")
         public String status;
@@ -205,6 +217,14 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         public static UpdateHotelSceneItemRequestUpdateHotelSceneReq build(java.util.Map<String, ?> map) throws Exception {
             UpdateHotelSceneItemRequestUpdateHotelSceneReq self = new UpdateHotelSceneItemRequestUpdateHotelSceneReq();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateHotelSceneItemRequestUpdateHotelSceneReq setDeliveryMethod(String deliveryMethod) {
+            this.deliveryMethod = deliveryMethod;
+            return this;
+        }
+        public String getDeliveryMethod() {
+            return this.deliveryMethod;
         }
 
         public UpdateHotelSceneItemRequestUpdateHotelSceneReq setDialogueList(java.util.List<UpdateHotelSceneItemRequestUpdateHotelSceneReqDialogueList> dialogueList) {
@@ -231,12 +251,36 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
             return this.id;
         }
 
+        public UpdateHotelSceneItemRequestUpdateHotelSceneReq setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateHotelSceneItemRequestUpdateHotelSceneReq setPaymentMethod(String paymentMethod) {
+            this.paymentMethod = paymentMethod;
+            return this;
+        }
+        public String getPaymentMethod() {
+            return this.paymentMethod;
+        }
+
         public UpdateHotelSceneItemRequestUpdateHotelSceneReq setPrice(Long price) {
             this.price = price;
             return this;
         }
         public Long getPrice() {
             return this.price;
+        }
+
+        public UpdateHotelSceneItemRequestUpdateHotelSceneReq setRobotName(String robotName) {
+            this.robotName = robotName;
+            return this;
+        }
+        public String getRobotName() {
+            return this.robotName;
         }
 
         public UpdateHotelSceneItemRequestUpdateHotelSceneReq setStatus(String status) {
