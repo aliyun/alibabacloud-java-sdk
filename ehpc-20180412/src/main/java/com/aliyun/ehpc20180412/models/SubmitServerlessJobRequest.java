@@ -216,8 +216,8 @@ public class SubmitServerlessJobRequest extends TeaModel {
     }
 
     public static class SubmitServerlessJobRequestContainerEnvironmentVar extends TeaModel {
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("Key")
+        public String key;
 
         @NameInMap("Value")
         public String value;
@@ -227,12 +227,12 @@ public class SubmitServerlessJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SubmitServerlessJobRequestContainerEnvironmentVar setName(String name) {
-            this.name = name;
+        public SubmitServerlessJobRequestContainerEnvironmentVar setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getKey() {
+            return this.key;
         }
 
         public SubmitServerlessJobRequestContainerEnvironmentVar setValue(String value) {
@@ -245,83 +245,12 @@ public class SubmitServerlessJobRequest extends TeaModel {
 
     }
 
-    public static class SubmitServerlessJobRequestContainerVolumeMountFlexVolume extends TeaModel {
-        @NameInMap("Driver")
-        public String driver;
-
-        @NameInMap("Options")
-        public String options;
-
-        public static SubmitServerlessJobRequestContainerVolumeMountFlexVolume build(java.util.Map<String, ?> map) throws Exception {
-            SubmitServerlessJobRequestContainerVolumeMountFlexVolume self = new SubmitServerlessJobRequestContainerVolumeMountFlexVolume();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitServerlessJobRequestContainerVolumeMountFlexVolume setDriver(String driver) {
-            this.driver = driver;
-            return this;
-        }
-        public String getDriver() {
-            return this.driver;
-        }
-
-        public SubmitServerlessJobRequestContainerVolumeMountFlexVolume setOptions(String options) {
-            this.options = options;
-            return this;
-        }
-        public String getOptions() {
-            return this.options;
-        }
-
-    }
-
-    public static class SubmitServerlessJobRequestContainerVolumeMountNFSVolume extends TeaModel {
-        @NameInMap("Path")
-        public String path;
-
-        @NameInMap("ReadOnly")
-        public Boolean readOnly;
-
-        @NameInMap("Server")
-        public String server;
-
-        public static SubmitServerlessJobRequestContainerVolumeMountNFSVolume build(java.util.Map<String, ?> map) throws Exception {
-            SubmitServerlessJobRequestContainerVolumeMountNFSVolume self = new SubmitServerlessJobRequestContainerVolumeMountNFSVolume();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitServerlessJobRequestContainerVolumeMountNFSVolume setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public SubmitServerlessJobRequestContainerVolumeMountNFSVolume setReadOnly(Boolean readOnly) {
-            this.readOnly = readOnly;
-            return this;
-        }
-        public Boolean getReadOnly() {
-            return this.readOnly;
-        }
-
-        public SubmitServerlessJobRequestContainerVolumeMountNFSVolume setServer(String server) {
-            this.server = server;
-            return this;
-        }
-        public String getServer() {
-            return this.server;
-        }
-
-    }
-
     public static class SubmitServerlessJobRequestContainerVolumeMount extends TeaModel {
-        @NameInMap("FlexVolume")
-        public SubmitServerlessJobRequestContainerVolumeMountFlexVolume flexVolume;
+        @NameInMap("FlexVolumeDriver")
+        public String flexVolumeDriver;
 
-        @NameInMap("NFSVolume")
-        public SubmitServerlessJobRequestContainerVolumeMountNFSVolume NFSVolume;
+        @NameInMap("FlexVolumeOptions")
+        public String flexVolumeOptions;
 
         @NameInMap("MountPath")
         public String mountPath;
@@ -331,20 +260,20 @@ public class SubmitServerlessJobRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SubmitServerlessJobRequestContainerVolumeMount setFlexVolume(SubmitServerlessJobRequestContainerVolumeMountFlexVolume flexVolume) {
-            this.flexVolume = flexVolume;
+        public SubmitServerlessJobRequestContainerVolumeMount setFlexVolumeDriver(String flexVolumeDriver) {
+            this.flexVolumeDriver = flexVolumeDriver;
             return this;
         }
-        public SubmitServerlessJobRequestContainerVolumeMountFlexVolume getFlexVolume() {
-            return this.flexVolume;
+        public String getFlexVolumeDriver() {
+            return this.flexVolumeDriver;
         }
 
-        public SubmitServerlessJobRequestContainerVolumeMount setNFSVolume(SubmitServerlessJobRequestContainerVolumeMountNFSVolume NFSVolume) {
-            this.NFSVolume = NFSVolume;
+        public SubmitServerlessJobRequestContainerVolumeMount setFlexVolumeOptions(String flexVolumeOptions) {
+            this.flexVolumeOptions = flexVolumeOptions;
             return this;
         }
-        public SubmitServerlessJobRequestContainerVolumeMountNFSVolume getNFSVolume() {
-            return this.NFSVolume;
+        public String getFlexVolumeOptions() {
+            return this.flexVolumeOptions;
         }
 
         public SubmitServerlessJobRequestContainerVolumeMount setMountPath(String mountPath) {

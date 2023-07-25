@@ -68,17 +68,14 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("IsArrayJob")
         public Boolean isArrayJob;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("JobId")
+        public String jobId;
 
-        @NameInMap("Owner")
-        public String owner;
+        @NameInMap("JobName")
+        public String jobName;
 
         @NameInMap("Priority")
         public String priority;
@@ -95,6 +92,9 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        @NameInMap("User")
+        public String user;
+
         public static ListServerlessJobsResponseBodyJobs build(java.util.Map<String, ?> map) throws Exception {
             ListServerlessJobsResponseBodyJobs self = new ListServerlessJobsResponseBodyJobs();
             return TeaModel.build(map, self);
@@ -108,14 +108,6 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public ListServerlessJobsResponseBodyJobs setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public ListServerlessJobsResponseBodyJobs setIsArrayJob(Boolean isArrayJob) {
             this.isArrayJob = isArrayJob;
             return this;
@@ -124,20 +116,20 @@ public class ListServerlessJobsResponseBody extends TeaModel {
             return this.isArrayJob;
         }
 
-        public ListServerlessJobsResponseBodyJobs setName(String name) {
-            this.name = name;
+        public ListServerlessJobsResponseBodyJobs setJobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getJobId() {
+            return this.jobId;
         }
 
-        public ListServerlessJobsResponseBodyJobs setOwner(String owner) {
-            this.owner = owner;
+        public ListServerlessJobsResponseBodyJobs setJobName(String jobName) {
+            this.jobName = jobName;
             return this;
         }
-        public String getOwner() {
-            return this.owner;
+        public String getJobName() {
+            return this.jobName;
         }
 
         public ListServerlessJobsResponseBodyJobs setPriority(String priority) {
@@ -178,6 +170,14 @@ public class ListServerlessJobsResponseBody extends TeaModel {
         }
         public String getSubmitTime() {
             return this.submitTime;
+        }
+
+        public ListServerlessJobsResponseBodyJobs setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
         }
 
     }

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of tasks required by a single compute node. Valid values: 1 to 1000.</p>
+     * <p>The list of job templates.</p>
      */
     @NameInMap("Templates")
     public ListJobTemplatesResponseBodyTemplates templates;
 
     /**
-     * <p>The list of job templates.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,64 +81,12 @@ public class ListJobTemplatesResponseBody extends TeaModel {
 
     public static class ListJobTemplatesResponseBodyTemplatesJobTemplates extends TeaModel {
         /**
-         * <p>The output file path of stderr.</p>
+         * <p>The job array.</p>
+         * <br>
+         * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
          */
         @NameInMap("ArrayRequest")
         public String arrayRequest;
-
-        /**
-         * <p>Indicates whether the job can be rerun. Valid values:</p>
-         * <br>
-         * <p>*   true: The job can be rerun.</p>
-         * <p>*   false: The job cannot be rerun.</p>
-         */
-        @NameInMap("ClockTime")
-        public String clockTime;
-
-        /**
-         * <p>The queue of the job.</p>
-         */
-        @NameInMap("CommandLine")
-        public String commandLine;
-
-        /**
-         * <p>The path that was used to run the job.</p>
-         */
-        @NameInMap("Gpu")
-        public Integer gpu;
-
-        /**
-         * <p>The name of the user that ran the job.</p>
-         */
-        @NameInMap("Id")
-        public String id;
-
-        /**
-         * <p>Indicates whether to decompress the job files downloaded from an OSS bucket. Valid values:</p>
-         * <br>
-         * <p>*   true: The job files are decompressed.</p>
-         * <p>*   false: The job files are not decompressed.</p>
-         */
-        @NameInMap("InputFileUrl")
-        public String inputFileUrl;
-
-        /**
-         * <p>The number of threads required by a single compute node. Valid values: 1 to 1000.</p>
-         */
-        @NameInMap("Mem")
-        public String mem;
-
-        /**
-         * <p>The ID of the job template.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>The output file path of stdout.</p>
-         */
-        @NameInMap("Node")
-        public Integer node;
 
         /**
          * <p>The maximum running time of the job. Valid formats:</p>
@@ -147,69 +95,109 @@ public class ListJobTemplatesResponseBody extends TeaModel {
          * <p>*   mm:ss</p>
          * <p>*   ss</p>
          */
-        @NameInMap("PackagePath")
-        public String packagePath;
+        @NameInMap("ClockTime")
+        public String clockTime;
 
         /**
-         * <p>The maximum memory usage of a single compute node. The unit can be GB, MB, or KB, and is case-insensitive.</p>
+         * <p>The command that was used to run the job.</p>
          */
-        @NameInMap("Priority")
-        public Integer priority;
-
-        /**
-         * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
-         */
-        @NameInMap("Queue")
-        public String queue;
-
-        /**
-         * <p>The name of the job template.</p>
-         */
-        @NameInMap("ReRunable")
-        public Boolean reRunable;
-
-        /**
-         * <p>The URL of the job files that were uploaded to an Object Storage Service (OSS) bucket.</p>
-         */
-        @NameInMap("RunasUser")
-        public String runasUser;
-
-        /**
-         * <p>The number of the compute nodes. Valid values: 1 to 500.</p>
-         */
-        @NameInMap("StderrRedirectPath")
-        public String stderrRedirectPath;
+        @NameInMap("CommandLine")
+        public String commandLine;
 
         /**
          * <p>The maximum GPU usage required by a single compute node. Valid values: 1 to 8.</p>
          * <br>
          * <p>The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.</p>
          */
+        @NameInMap("Gpu")
+        public Integer gpu;
+
+        /**
+         * <p>The ID of the job template.</p>
+         */
+        @NameInMap("Id")
+        public String id;
+
+        /**
+         * <p>The URL of the job files that were uploaded to an Object Storage Service (OSS) bucket.</p>
+         */
+        @NameInMap("InputFileUrl")
+        public String inputFileUrl;
+
+        /**
+         * <p>The maximum memory usage of a single compute node. The unit can be GB, MB, or KB, and is case-insensitive.</p>
+         */
+        @NameInMap("Mem")
+        public String mem;
+
+        /**
+         * <p>The name of the job template.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The number of the compute nodes. Valid values: 1 to 500.</p>
+         */
+        @NameInMap("Node")
+        public Integer node;
+
+        /**
+         * <p>The path that was used to run the job.</p>
+         */
+        @NameInMap("PackagePath")
+        public String packagePath;
+
+        /**
+         * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
+         */
+        @NameInMap("Priority")
+        public Integer priority;
+
+        /**
+         * <p>The queue of the job.</p>
+         */
+        @NameInMap("Queue")
+        public String queue;
+
+        /**
+         * <p>Indicates whether the job can be rerun. Valid values:</p>
+         * <br>
+         * <p>*   true: The job can be rerun.</p>
+         * <p>*   false: The job cannot be rerun.</p>
+         */
+        @NameInMap("ReRunable")
+        public Boolean reRunable;
+
+        /**
+         * <p>The name of the user that ran the job.</p>
+         */
+        @NameInMap("RunasUser")
+        public String runasUser;
+
+        /**
+         * <p>The output file path of stderr.</p>
+         */
+        @NameInMap("StderrRedirectPath")
+        public String stderrRedirectPath;
+
+        /**
+         * <p>The output file path of stdout.</p>
+         */
         @NameInMap("StdoutRedirectPath")
         public String stdoutRedirectPath;
 
         /**
-         * <p>The environment variables of the job.</p>
+         * <p>The number of tasks required by a single compute node. Valid values: 1 to 1000.</p>
          */
         @NameInMap("Task")
         public Integer task;
 
         /**
-         * <p>The job array.</p>
-         * <br>
-         * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
+         * <p>The number of threads required by a single compute node. Valid values: 1 to 1000.</p>
          */
         @NameInMap("Thread")
         public Integer thread;
-
-        @NameInMap("UnzipCmd")
-        public String unzipCmd;
-
-        /**
-         * <p>The command that was used to run the job.</p>
-         */
-        @NameInMap("Variables")
-        public String variables;
 
         /**
          * <p>The command that was used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:</p>
@@ -217,6 +205,21 @@ public class ListJobTemplatesResponseBody extends TeaModel {
          * <p>*   tar xzf: decompresses GZIP files.</p>
          * <p>*   tar xf: decompresses TAR files.</p>
          * <p>*   unzip: decompresses ZIP files.</p>
+         */
+        @NameInMap("UnzipCmd")
+        public String unzipCmd;
+
+        /**
+         * <p>The environment variables of the job.</p>
+         */
+        @NameInMap("Variables")
+        public String variables;
+
+        /**
+         * <p>Indicates whether to decompress the job files downloaded from an OSS bucket. Valid values:</p>
+         * <br>
+         * <p>*   true: The job files are decompressed.</p>
+         * <p>*   false: The job files are not decompressed.</p>
          */
         @NameInMap("WithUnzipCmd")
         public Boolean withUnzipCmd;

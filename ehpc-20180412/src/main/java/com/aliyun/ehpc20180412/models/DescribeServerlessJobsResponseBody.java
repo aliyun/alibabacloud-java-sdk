@@ -2593,20 +2593,17 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public Long endTime;
 
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("IsArrayJob")
         public Boolean isArrayJob;
 
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("JobName")
+        public String jobName;
+
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Owner")
-        public String owner;
 
         @NameInMap("Priority")
         public Long priority;
@@ -2622,6 +2619,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
         @NameInMap("SubmitTime")
         public Long submitTime;
+
+        @NameInMap("User")
+        public String user;
 
         public static DescribeServerlessJobsResponseBodyJobInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeServerlessJobsResponseBodyJobInfos self = new DescribeServerlessJobsResponseBodyJobInfos();
@@ -2652,14 +2652,6 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeServerlessJobsResponseBodyJobInfos setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
         public DescribeServerlessJobsResponseBodyJobInfos setIsArrayJob(Boolean isArrayJob) {
             this.isArrayJob = isArrayJob;
             return this;
@@ -2668,28 +2660,28 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
             return this.isArrayJob;
         }
 
+        public DescribeServerlessJobsResponseBodyJobInfos setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public DescribeServerlessJobsResponseBodyJobInfos setJobName(String jobName) {
+            this.jobName = jobName;
+            return this;
+        }
+        public String getJobName() {
+            return this.jobName;
+        }
+
         public DescribeServerlessJobsResponseBodyJobInfos setLastModifyTime(Long lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
             return this;
         }
         public Long getLastModifyTime() {
             return this.lastModifyTime;
-        }
-
-        public DescribeServerlessJobsResponseBodyJobInfos setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeServerlessJobsResponseBodyJobInfos setOwner(String owner) {
-            this.owner = owner;
-            return this;
-        }
-        public String getOwner() {
-            return this.owner;
         }
 
         public DescribeServerlessJobsResponseBodyJobInfos setPriority(Long priority) {
@@ -2730,6 +2722,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
         }
         public Long getSubmitTime() {
             return this.submitTime;
+        }
+
+        public DescribeServerlessJobsResponseBodyJobInfos setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
         }
 
     }
