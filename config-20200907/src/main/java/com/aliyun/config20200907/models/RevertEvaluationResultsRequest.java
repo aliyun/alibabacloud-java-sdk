@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RevertEvaluationResultsRequest extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
      * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
      */
@@ -13,7 +13,7 @@ public class RevertEvaluationResultsRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>The resources that are to be reevaluated.</p>
+     * <p>The resources that are to be re-evaluated.</p>
      */
     @NameInMap("Resources")
     public java.util.List<RevertEvaluationResultsRequestResources> resources;
@@ -55,7 +55,7 @@ public class RevertEvaluationResultsRequest extends TeaModel {
         public Long resourceAccountId;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * <br>
          * <p>For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~169620~~).</p>
          */
@@ -63,9 +63,9 @@ public class RevertEvaluationResultsRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          * <br>
-         * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
+         * <p>For more information about how to query the type of a resource, see [ListDiscoveredResources](~~169620~~).</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

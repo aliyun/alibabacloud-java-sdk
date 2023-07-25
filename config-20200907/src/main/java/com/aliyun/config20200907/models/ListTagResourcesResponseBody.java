@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <br>
-     * <p>>  If this parameter is left empty, no subsequent query exists.</p>
+     * <p>> If this parameter is left empty, no subsequent query exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -55,25 +55,25 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The tag key.</p>
+         * <p>A tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>A tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

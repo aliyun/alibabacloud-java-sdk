@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -17,15 +17,15 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * <br>
-     * <p>You can specify up to 50 resources.</p>
+     * <p>You can add tags to up to 50 resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <br>
      * <p>*   `ACS::Config::Rule`</p>
      * <p>*   `ACS::Config::AggregateConfigRule`</p>
@@ -39,7 +39,7 @@ public class ListTagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>The tags of the resource.</p>
      * <br>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>You can add up to 20 tags to a resource.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

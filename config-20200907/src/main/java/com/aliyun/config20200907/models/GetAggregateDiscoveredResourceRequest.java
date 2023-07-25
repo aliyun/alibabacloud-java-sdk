@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     /**
-     * <p>The type of the resource.</p>
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The ID of the zone in which the resource resides.</p>
+     * <p>The ID of the region in which the resource resides.</p>
+     * <br>
+     * <p>For more information about how to query the ID of a region in which the resource resides, see [ListAggregateDiscoveredResources](~~411691~~).</p>
      */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>账号组内待查询资源所属的阿里云账号ID。 </p>
+     * <p>> 参数ResourceAccountId和ResourceOwnerId必须设置其中一个，推荐使用本参数。</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The resource ID.</p>
+     * <br>
+     * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~411691~~).</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -30,7 +40,9 @@ public class GetAggregateDiscoveredResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The information about the resource.</p>
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~411691~~).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
     /**
-     * <p>The information about the delivery channel.</p>
+     * <p>The information about a delivery channel.</p>
      */
     @NameInMap("DeliveryChannel")
     public GetAggregateConfigDeliveryChannelResponseBodyDeliveryChannel deliveryChannel;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,7 +51,7 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         public String aggregatorId;
 
         /**
-         * <p>Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:</p>
+         * <p>Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers the resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:</p>
          * <br>
          * <p>*   true: The specified destination receives resource change logs.</p>
          * <p>*   false: The specified destination does not receive resource change logs.</p>
@@ -69,7 +69,7 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         public Boolean configurationSnapshot;
 
         /**
-         * <p>The ARN of the role assumed by the delivery channel.</p>
+         * <p>The ARN of the role that is assigned to the delivery channel.</p>
          */
         @NameInMap("DeliveryChannelAssumeRoleArn")
         public String deliveryChannelAssumeRoleArn;
@@ -77,17 +77,23 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         /**
          * <p>The rule that is attached to the delivery channel. This parameter is available when you deliver data of all types to MNS or deliver snapshots to Log Service.</p>
          * <br>
-         * <p>*   If the value of the DeliveryChannelType parameter is MNS, take note of the following settings of the lowest risk level and the resource types of the events to which you subscribed:</p>
+         * <p>*   If the value of the DeliveryChannelType parameter is MNS, take note of the following settings of the lowest risk level and resource types of the events to which you subscribed:</p>
          * <br>
-         * <p>    *   The setting of the lowest risk level of the events to which you subscribed is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`. The `value` field indicates the lowest risk level of the events to which you subscribed. Valid values: 1, 2, and 3, where 1 indicates the high risk level, 2 indicates the medium risk level, and 3 indicates the low risk level.</p>
+         * <p>    *   The lowest risk level of the events to which you want to subscribe is in the following format: `{"filterType":"RuleRiskLevel","value":"1","multiple":false}`.</p>
          * <br>
-         * <p>    *   The setting of the resource types of the events to which you subscribed is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`. The `values` field indicates the resource types of the events to which you subscribed. The value of the field is a JSON array.</p>
+         * <p>        The `value` field indicates the risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level, the value 2 indicates the medium risk level, and the value 3 indicates the low risk level.</p>
          * <br>
-         * <p>        Example: `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`.</p>
+         * <p>    *   The setting of the resource types of the events to which you want to subscribe is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.</p>
          * <br>
-         * <p>*   If the value of the DeliveryChannelType parameter is SLS, the setting of the resource types of the snapshots that you delivered is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`. The `values` field indicates the resource types of the snapshots that you delivered. The value of the field is a JSON array.</p>
+         * <p>        The `values` field indicates the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Examples:</p>
          * <br>
-         * <p>    Example: `[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`.</p>
+         * <p>`[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`</p>
+         * <br>
+         * <p>*   If you set the DeliveryChannelType parameter to SLS, the setting of the resource types of the snapshots to which you want to deliver is in the following format: `{"filterType":"ResourceType","values":["ACS::ACK::Cluster","ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage"],"multiple":true}`.</p>
+         * <br>
+         * <p>    The `values` field specifies the resource types of the snapshots to which you want to deliver. The value of the field is a JSON array. Examples:</p>
+         * <br>
+         * <p>`[{"filterType":"ResourceType","values":["ACS::ActionTrail::Trail","ACS::CBWP::CommonBandwidthPackage","ACS::CDN::Domain","ACS::CEN::CenBandwidthPackage","ACS::CEN::CenInstance","ACS::CEN::Flowlog","ACS::DdosCoo::Instance"],"multiple":true}]`</p>
          */
         @NameInMap("DeliveryChannelCondition")
         public String deliveryChannelCondition;
@@ -105,7 +111,7 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         public String deliveryChannelName;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the delivery destination.</p>
+         * <p>The ARN of the delivery destination.</p>
          * <br>
          * <p>*   If the value of the DeliveryChannelType parameter is OSS, the value of this parameter is the ARN of the destination OSS bucket.</p>
          * <p>*   If the value of the DeliveryChannelType parameter is MNS, the value of this parameter is the ARN of the destination MNS topic.</p>
@@ -125,9 +131,9 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         public String deliveryChannelType;
 
         /**
-         * <p>The time when Cloud Config delivers scheduled resource snapshots every day.</p>
+         * <p>The time when Cloud Config delivers scheduled resources snapshots every day.</p>
          * <br>
-         * <p>Format: `HH:mmZ`. The time is displayed in UTC.</p>
+         * <p>Format: `HH:mmZ`. This time is displayed in UTC.</p>
          */
         @NameInMap("DeliverySnapshotTime")
         public String deliverySnapshotTime;
@@ -139,7 +145,7 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the specified destination receives resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are considered non-compliant. Valid values:</p>
+         * <p>Indicates whether the specified destination receives resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are evaluated as non-compliant. Valid values:</p>
          * <br>
          * <p>*   true: The specified destination receives resource non-compliance events.</p>
          * <p>*   false: The specified destination does not receive resource non-compliance events.</p>
@@ -148,7 +154,7 @@ public class GetAggregateConfigDeliveryChannelResponseBody extends TeaModel {
         public Boolean nonCompliantNotification;
 
         /**
-         * <p>The ARN of the OSS bucket to which the delivery data is transferred when the size of the data exceeds the specified upper limit of the delivery channel.</p>
+         * <p>The ARN of the OSS bucket to which the delivered data is transferred when the size of the data exceeds the specified upper limit of the delivery channel.</p>
          */
         @NameInMap("OversizedDataOSSTargetArn")
         public String oversizedDataOSSTargetArn;

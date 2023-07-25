@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class StartRemediationRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The rule ID.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;

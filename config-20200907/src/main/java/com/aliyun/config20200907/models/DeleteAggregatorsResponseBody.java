@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAggregatorsResponseBody extends TeaModel {
     /**
-     * <p>The result for the account group.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("OperateAggregatorsResult")
     public DeleteAggregatorsResponseBodyOperateAggregatorsResult operateAggregatorsResult;
 
     /**
-     * <p>The results of the delete operations.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,20 +38,25 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
     }
 
     public static class DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators extends TeaModel {
+        /**
+         * <p>The ID of the account group.</p>
+         */
         @NameInMap("AggregatorId")
         public String aggregatorId;
 
         /**
-         * <p>Indicates whether the delete operation is successful. Valid values:</p>
+         * <p>The error code returned.</p>
          * <br>
-         * <p>*   true: The account group is deleted.</p>
-         * <p>*   false: The account group fails to be deleted.</p>
+         * <p>> No error code is returned for the account group if the account group is deleted.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The ID of the account group.</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The request was successful.</p>
+         * <p>*   false: The request failed.</p>
          */
         @NameInMap("Success")
         public Boolean success;
@@ -89,9 +94,7 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
 
     public static class DeleteAggregatorsResponseBodyOperateAggregatorsResult extends TeaModel {
         /**
-         * <p>The error code.</p>
-         * <br>
-         * <p>>  No error code is returned for the account group if the account group is deleted.</p>
+         * <p>The details of the account group.</p>
          */
         @NameInMap("OperateAggregators")
         public java.util.List<DeleteAggregatorsResponseBodyOperateAggregatorsResultOperateAggregators> operateAggregators;

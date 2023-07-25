@@ -17,13 +17,13 @@ public class StartAggregateConfigRuleEvaluationRequest extends TeaModel {
      * <br>
      * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).</p>
      * <br>
-     * <p>>  You must set either the `CompliancePackId` or `ConfigRuleId` parameter.</p>
+     * <p>> You must configure either the `CompliancePackId` or `ConfigRuleId` parameter.</p>
      */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
      * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
      */
@@ -31,10 +31,10 @@ public class StartAggregateConfigRuleEvaluationRequest extends TeaModel {
     public String configRuleId;
 
     /**
-     * <p>Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:</p>
+     * <p>Specifies whether to re-evaluate the ignored incompliant resource. Valid values:</p>
      * <br>
-     * <p>*   true: re-evaluates the ignored non-compliant resource based on the rule.</p>
-     * <p>*   false: continues to ignore the resource in the compliance evaluation based on the rule.</p>
+     * <p>*   true: The ignored incompliant resource based on the rule are re-evaluated.</p>
+     * <p>*   false: The ignored incompliant resource based on the rule are not re-evaluated.</p>
      */
     @NameInMap("RevertEvaluation")
     public Boolean revertEvaluation;

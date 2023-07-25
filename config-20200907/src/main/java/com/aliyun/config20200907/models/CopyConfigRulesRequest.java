@@ -7,7 +7,7 @@ public class CopyConfigRulesRequest extends TeaModel {
     /**
      * <p>The IDs of the destination account groups into which the rules are replicated. Separate multiple account group IDs with commas (,).</p>
      * <br>
-     * <p>>  If you leave this parameter empty, the compliance packages are replicated under the same account group.</p>
+     * <p>> If you leave this parameter empty, the compliance packages are replicated into the same account group.</p>
      */
     @NameInMap("DesAggregatorIds")
     public String desAggregatorIds;
@@ -21,7 +21,7 @@ public class CopyConfigRulesRequest extends TeaModel {
     public String srcAggregatorId;
 
     /**
-     * <p>The IDs of the rules. Separate multiple rule IDs with commas (,).</p>
+     * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
      */
     @NameInMap("SrcConfigRuleIds")
     public String srcConfigRuleIds;

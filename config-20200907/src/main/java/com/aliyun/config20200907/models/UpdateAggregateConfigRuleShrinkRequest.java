@@ -140,10 +140,10 @@ public class UpdateAggregateConfigRuleShrinkRequest extends TeaModel {
     public Integer riskLevel;
 
     /**
-     * <p>The logical relationship among the tag keys if you specify multiple tag keys by using the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and set the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:</p>
+     * <p>The logical relationship among the tag keys if you specify multiple tag keys for the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:</p>
      * <br>
-     * <p>*   AND: the logical relationship of AND</p>
-     * <p>*   OR: the logical relationship of OR</p>
+     * <p>*   AND</p>
+     * <p>*   OR</p>
      */
     @NameInMap("TagKeyLogicScope")
     public String tagKeyLogicScope;

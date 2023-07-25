@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachConfigRuleToCompliancePackRequest extends TeaModel {
     /**
-     * <p>The ID of the compliance package from which you want to remove the rule.</p>
+     * <p>The ID of the compliance package.</p>
      * <br>
      * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
      */
@@ -13,7 +13,7 @@ public class DetachConfigRuleToCompliancePackRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The ID of the rule to be removed from the compliance package. Separate multiple rule IDs with commas (,).</p>
+     * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
      * <br>
      * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
      */

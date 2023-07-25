@@ -11,7 +11,7 @@ public class DeleteAggregateConfigRulesResponseBody extends TeaModel {
     public DeleteAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,16 @@ public class DeleteAggregateConfigRulesResponseBody extends TeaModel {
 
     public static class DeleteAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned.</p>
          * <br>
          * <p>*   If the rule is deleted, no error code is returned.</p>
-         * <br>
-         * <p><!----></p>
-         * <br>
-         * <p>*   If the rule fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <p>*   If the rule fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;

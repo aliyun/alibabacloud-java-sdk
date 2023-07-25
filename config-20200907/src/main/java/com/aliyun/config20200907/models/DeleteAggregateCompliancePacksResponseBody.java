@@ -11,7 +11,7 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
     public DeleteAggregateCompliancePacksResponseBodyOperateCompliancePacksResult operateCompliancePacksResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,19 +45,19 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
         public String compliancePackId;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code returned.</p>
          * <br>
          * <p>*   If the compliance package is deleted, no error code is returned.</p>
-         * <p>*   If the compliance package fails to be deleted, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <p>*   If the compliance package fails to be deleted, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <br>
-         * <p>*   true: The operation is successful.</p>
-         * <p>*   false: The operation fails.</p>
+         * <p>*   true: The request was successful.</p>
+         * <p>*   false: The request failed.</p>
          */
         @NameInMap("Success")
         public Boolean success;
@@ -95,7 +95,7 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
 
     public static class DeleteAggregateCompliancePacksResponseBodyOperateCompliancePacksResult extends TeaModel {
         /**
-         * <p>The result of the delete operation.</p>
+         * <p>An array that contains the deleted compliance packages.</p>
          */
         @NameInMap("OperateCompliancePacks")
         public java.util.List<DeleteAggregateCompliancePacksResponseBodyOperateCompliancePacksResultOperateCompliancePacks> operateCompliancePacks;

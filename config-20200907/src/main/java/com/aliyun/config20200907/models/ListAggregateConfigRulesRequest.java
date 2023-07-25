@@ -15,10 +15,10 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     /**
      * <p>The compliance evaluation result. Valid values:</p>
      * <br>
-     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
-     * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
-     * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+     * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule did not apply to your resources.</p>
+     * <p>*   INSUFFICIENT_DATA: No resource data was available.</p>
      */
     @NameInMap("ComplianceType")
     public String complianceType;
@@ -51,7 +51,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     /**
      * <p>The number of the page to return.</p>
      * <br>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -59,7 +59,7 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10</p>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -68,11 +68,11 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     public String resourceTypes;
 
     /**
-     * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+     * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
      * <br>
-     * <p>*   1: high risk level</p>
-     * <p>*   2: medium risk level</p>
-     * <p>*   3: low risk level</p>
+     * <p>*   1: high</p>
+     * <p>*   2: medium</p>
+     * <p>*   3: low</p>
      */
     @NameInMap("RiskLevel")
     public Integer riskLevel;

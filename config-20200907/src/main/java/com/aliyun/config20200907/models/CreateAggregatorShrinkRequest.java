@@ -5,22 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAggregatorShrinkRequest extends TeaModel {
     /**
-     * <p>The information about the member accounts in the account group. Example:</p>
-     * <br>
-     * <p>```</p>
-     * <br>
-     * <p>[{</p>
-     * <p>	"accountId": 171322098523****,</p>
-     * <p>	"accountType":"ResourceDirectory",</p>
-     * <p>                "accountName":"Alice"</p>
-     * <p>}, {</p>
-     * <p>	"accountId": 100532098349****,</p>
-     * <p>	"accountType":"ResourceDirectory",</p>
-     * <p>                "accountName":"Tom"</p>
-     * <p>}]</p>
-     * <p>```</p>
-     * <br>
-     * <p>>  If the `AggregatorType` parameter is set to `RD`, this parameter can be left empty because all accounts in the resource directory are automatically added to the global account group.</p>
+     * <p>The type of the member account. Valid value: ResourceDirectory.</p>
      */
     @NameInMap("AggregatorAccounts")
     public String aggregatorAccountsShrink;
@@ -34,14 +19,14 @@ public class CreateAggregatorShrinkRequest extends TeaModel {
     /**
      * <p>The type of the account group. Valid values:</p>
      * <br>
-     * <p>*   RD: global account group.</p>
-     * <p>*   CUSTOM: custom account group. This is the default value.</p>
+     * <p>*   RD: global account group</p>
+     * <p>*   CUSTOM (default): custom account group</p>
      */
     @NameInMap("AggregatorType")
     public String aggregatorType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

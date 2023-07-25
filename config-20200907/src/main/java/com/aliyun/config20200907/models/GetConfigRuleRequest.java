@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetConfigRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
-     * <p>For more information about how to query the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;

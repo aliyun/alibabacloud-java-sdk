@@ -11,7 +11,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     public GetAggregateCompliancePackResponseBodyCompliancePack compliancePack;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -51,7 +51,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the input parameter is required. Valid values:</p>
+         * <p>Indicates whether the input parameter was required. Valid values:</p>
          * <br>
          * <p>*   true: required</p>
          * <p>*   false: optional</p>
@@ -121,12 +121,15 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
+        @NameInMap("ResourceTypesScope")
+        public String resourceTypesScope;
+
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that were not compliant with the rule. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -176,6 +179,14 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             return this.managedRuleIdentifier;
         }
 
+        public GetAggregateCompliancePackResponseBodyCompliancePackConfigRules setResourceTypesScope(String resourceTypesScope) {
+            this.resourceTypesScope = resourceTypesScope;
+            return this;
+        }
+        public String getResourceTypesScope() {
+            return this.resourceTypesScope;
+        }
+
         public GetAggregateCompliancePackResponseBodyCompliancePackConfigRules setRiskLevel(Integer riskLevel) {
             this.riskLevel = riskLevel;
             return this;
@@ -194,7 +205,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String excludeResourceIdsScope;
 
         /**
-         * <p>The ID of the region whose resources are evaluated by using the compliance package.</p>
+         * <p>The ID of the region whose resources were evaluated by using the compliance package.</p>
          */
         @NameInMap("RegionIdsScope")
         public String regionIdsScope;
@@ -316,9 +327,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         /**
          * <p>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</p>
          * <br>
-         * <p>*   1: high risk level</p>
-         * <p>*   2: medium risk level</p>
-         * <p>*   3: low risk level</p>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
@@ -332,8 +343,8 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         /**
          * <p>The status of the compliance package. Valid values:</p>
          * <br>
-         * <p>*   ACTIVE: The compliance package is normal.</p>
-         * <p>*   CREATING: The compliance package is being created.</p>
+         * <p>*   ACTIVE: The compliance package was normal.</p>
+         * <p>*   CREATING: The compliance package was being created.</p>
          */
         @NameInMap("Status")
         public String status;

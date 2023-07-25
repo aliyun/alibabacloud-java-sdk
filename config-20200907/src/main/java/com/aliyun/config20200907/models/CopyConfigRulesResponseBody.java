@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyConfigRulesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the rules are successfully replicated. Valid values:</p>
+     * <p>Indicates whether the rules are replicated. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -14,7 +14,7 @@ public class CopyConfigRulesResponseBody extends TeaModel {
     public Boolean copyRulesResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

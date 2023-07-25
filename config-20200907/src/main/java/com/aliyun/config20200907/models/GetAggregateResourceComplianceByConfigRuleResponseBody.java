@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaModel {
     /**
-     * <p>The number of resources that have the compliance evaluation result. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.</p>
+     * <p>The return result of the request.</p>
      */
     @NameInMap("ComplianceResult")
     public GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult complianceResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +38,20 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
     }
 
     public static class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances extends TeaModel {
+        /**
+         * <p>The compliance evaluation result of the resources. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The number of resources that have the compliance evaluation result. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
@@ -65,11 +79,14 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
     }
 
     public static class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult extends TeaModel {
+        /**
+         * <p>The compliance evaluation results returned.</p>
+         */
         @NameInMap("Compliances")
         public java.util.List<GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> compliances;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The total number of evaluated resources.</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

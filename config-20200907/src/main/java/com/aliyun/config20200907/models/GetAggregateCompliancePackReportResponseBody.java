@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateCompliancePackReportResponseBody extends TeaModel {
     /**
-     * <p>The information about the compliance evaluation report.</p>
+     * <p>The compliance evaluation report that is generated based on a compliance package.</p>
      */
     @NameInMap("CompliancePackReport")
     public GetAggregateCompliancePackReportResponseBodyCompliancePackReport compliancePackReport;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -61,7 +61,7 @@ public class GetAggregateCompliancePackReportResponseBody extends TeaModel {
          * <br>
          * <p>*   NONE: The compliance evaluation report is not generated.</p>
          * <p>*   CREATING: The compliance evaluation report is being generated.</p>
-         * <p>*   COMPLETED: The compliance evaluation report is generated.</p>
+         * <p>*   COMPLETE: The compliance evaluation report is generated.</p>
          */
         @NameInMap("ReportStatus")
         public String reportStatus;

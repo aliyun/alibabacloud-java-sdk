@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAggregateRemediationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the remediation setting.</p>
+     * <p>The ID of the remediation template.</p>
      */
     @NameInMap("RemediationId")
     public String remediationId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

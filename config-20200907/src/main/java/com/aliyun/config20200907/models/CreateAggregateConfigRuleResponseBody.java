@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class CreateAggregateConfigRuleResponseBody extends TeaModel {
+    /**
+     * <p>The rule ID.</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

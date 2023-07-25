@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachConfigRuleToCompliancePackRequest extends TeaModel {
     /**
-     * <p>The ID of the compliance package to which you want to add the rule.</p>
+     * <p>The ID of the compliance package.</p>
      * <br>
      * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
      */
@@ -13,7 +13,7 @@ public class AttachConfigRuleToCompliancePackRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The ID of the rule to be added to the compliance package. Separate multiple rule IDs with commas (,).</p>
+     * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
      * <br>
      * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
      */

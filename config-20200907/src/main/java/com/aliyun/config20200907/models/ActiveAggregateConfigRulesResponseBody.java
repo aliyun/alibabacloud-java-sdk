@@ -5,19 +5,13 @@ import com.aliyun.tea.*;
 
 public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The operation is successful.</p>
-     * <p>*   false: The operation fails.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("OperateRuleResult")
     public ActiveAggregateConfigRulesResponseBodyOperateRuleResult operateRuleResult;
 
     /**
-     * <p>The error code returned.</p>
-     * <br>
-     * <p>*   If the rule is enabled, no error code is returned.</p>
-     * <p>*   If the rule fails to be enabled, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -44,12 +38,27 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        /**
+         * <p>The rule ID.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The error code returned.</p>
+         * <br>
+         * <p>*   If the rule is enabled, no error code is returned.</p>
+         * <p>*   If the rule fails to be enabled, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <br>
+         * <p>*   true: The request was successful.</p>
+         * <p>*   false: The request failed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -86,7 +95,7 @@ public class ActiveAggregateConfigRulesResponseBody extends TeaModel {
 
     public static class ActiveAggregateConfigRulesResponseBodyOperateRuleResult extends TeaModel {
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The returned result.</p>
          */
         @NameInMap("OperateRuleItemList")
         public java.util.List<ActiveAggregateConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;

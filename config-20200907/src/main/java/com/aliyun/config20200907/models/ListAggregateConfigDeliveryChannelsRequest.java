@@ -7,13 +7,13 @@ public class ListAggregateConfigDeliveryChannelsRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The ID of the delivery channel. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the delivery channels. Separate multiple IDs with commas (,).</p>
      */
     @NameInMap("DeliveryChannelIds")
     public String deliveryChannelIds;

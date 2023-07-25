@@ -7,18 +7,21 @@ public class StartAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>You can call the [ListAggregators](~~255797~~) operation to obtain the account group ID.</p>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      * <br>
-     * <p>You can call the [ListAggregateConfigRules](~~264148~~) operation to obtain the rule ID.</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
+
+    @NameInMap("ResourceAccountId")
+    public Long resourceAccountId;
 
     public static StartAggregateRemediationRequest build(java.util.Map<String, ?> map) throws Exception {
         StartAggregateRemediationRequest self = new StartAggregateRemediationRequest();
@@ -39,6 +42,14 @@ public class StartAggregateRemediationRequest extends TeaModel {
     }
     public String getConfigRuleId() {
         return this.configRuleId;
+    }
+
+    public StartAggregateRemediationRequest setResourceAccountId(Long resourceAccountId) {
+        this.resourceAccountId = resourceAccountId;
+        return this;
+    }
+    public Long getResourceAccountId() {
+        return this.resourceAccountId;
     }
 
 }
