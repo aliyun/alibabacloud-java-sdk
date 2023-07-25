@@ -332,6 +332,103 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchCopyVpcFirewallControlPolicyWithOptions(request, runtime);
     }
 
+    public CreateNatFirewallControlPolicyResponse createNatFirewallControlPolicyWithOptions(CreateNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclAction)) {
+            query.put("AclAction", request.aclAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationNameList)) {
+            query.put("ApplicationNameList", request.applicationNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destPort)) {
+            query.put("DestPort", request.destPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destPortGroup)) {
+            query.put("DestPortGroup", request.destPortGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destPortType)) {
+            query.put("DestPortType", request.destPortType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
+            query.put("Destination", request.destination);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
+            query.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveType)) {
+            query.put("DomainResolveType", request.domainResolveType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newOrder)) {
+            query.put("NewOrder", request.newOrder);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proto)) {
+            query.put("Proto", request.proto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.release)) {
+            query.put("Release", request.release);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNatFirewallControlPolicy"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNatFirewallControlPolicyResponse());
+    }
+
+    public CreateNatFirewallControlPolicyResponse createNatFirewallControlPolicy(CreateNatFirewallControlPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNatFirewallControlPolicyWithOptions(request, runtime);
+    }
+
     public CreateTrFirewallV2Response createTrFirewallV2WithOptions(CreateTrFirewallV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -939,6 +1036,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteInstanceMembersResponse deleteInstanceMembers(DeleteInstanceMembersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteInstanceMembersWithOptions(request, runtime);
+    }
+
+    public DeleteNatFirewallControlPolicyResponse deleteNatFirewallControlPolicyWithOptions(DeleteNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclUuid)) {
+            query.put("AclUuid", request.aclUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNatFirewallControlPolicy"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNatFirewallControlPolicyResponse());
+    }
+
+    public DeleteNatFirewallControlPolicyResponse deleteNatFirewallControlPolicy(DeleteNatFirewallControlPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNatFirewallControlPolicyWithOptions(request, runtime);
     }
 
     public DeleteTrFirewallV2Response deleteTrFirewallV2WithOptions(DeleteTrFirewallV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1699,6 +1837,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInvadeEventListResponse describeInvadeEventList(DescribeInvadeEventListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInvadeEventListWithOptions(request, runtime);
+    }
+
+    public DescribeNatFirewallControlPolicyResponse describeNatFirewallControlPolicyWithOptions(DescribeNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclAction)) {
+            query.put("AclAction", request.aclAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclUuid)) {
+            query.put("AclUuid", request.aclUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
+            query.put("Destination", request.destination);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proto)) {
+            query.put("Proto", request.proto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.release)) {
+            query.put("Release", request.release);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNatFirewallControlPolicy"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNatFirewallControlPolicyResponse());
+    }
+
+    public DescribeNatFirewallControlPolicyResponse describeNatFirewallControlPolicy(DescribeNatFirewallControlPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNatFirewallControlPolicyWithOptions(request, runtime);
     }
 
     public DescribeOutgoingDestinationIPResponse describeOutgoingDestinationIPWithOptions(DescribeOutgoingDestinationIPRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -3447,6 +3658,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyInstanceMemberAttributesResponse modifyInstanceMemberAttributes(ModifyInstanceMemberAttributesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceMemberAttributesWithOptions(request, runtime);
+    }
+
+    public ModifyNatFirewallControlPolicyResponse modifyNatFirewallControlPolicyWithOptions(ModifyNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclAction)) {
+            query.put("AclAction", request.aclAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aclUuid)) {
+            query.put("AclUuid", request.aclUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationNameList)) {
+            query.put("ApplicationNameList", request.applicationNameList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destPort)) {
+            query.put("DestPort", request.destPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destPortGroup)) {
+            query.put("DestPortGroup", request.destPortGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destPortType)) {
+            query.put("DestPortType", request.destPortType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destination)) {
+            query.put("Destination", request.destination);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationType)) {
+            query.put("DestinationType", request.destinationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainResolveType)) {
+            query.put("DomainResolveType", request.domainResolveType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proto)) {
+            query.put("Proto", request.proto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.release)) {
+            query.put("Release", request.release);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyNatFirewallControlPolicy"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNatFirewallControlPolicyResponse());
+    }
+
+    public ModifyNatFirewallControlPolicyResponse modifyNatFirewallControlPolicy(ModifyNatFirewallControlPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyNatFirewallControlPolicyWithOptions(request, runtime);
+    }
+
+    public ModifyNatFirewallControlPolicyPositionResponse modifyNatFirewallControlPolicyPositionWithOptions(ModifyNatFirewallControlPolicyPositionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aclUuid)) {
+            query.put("AclUuid", request.aclUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newOrder)) {
+            query.put("NewOrder", request.newOrder);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyNatFirewallControlPolicyPosition"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNatFirewallControlPolicyPositionResponse());
+    }
+
+    public ModifyNatFirewallControlPolicyPositionResponse modifyNatFirewallControlPolicyPosition(ModifyNatFirewallControlPolicyPositionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyNatFirewallControlPolicyPositionWithOptions(request, runtime);
     }
 
     /**
