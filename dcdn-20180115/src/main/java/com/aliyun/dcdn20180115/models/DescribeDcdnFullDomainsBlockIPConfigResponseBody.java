@@ -4,12 +4,27 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnFullDomainsBlockIPConfigResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>The value of Code is not 0 in the following scenarios:</p>
+     * <br>
+     * <p>*   The format of the IP address is invalid.</p>
+     * <p>*   The number of IP addresses exceeds the limit.</p>
+     * <p>*   Other abnormal scenarios</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned results. If the operation is successful, URLs of OSS objects are returned. If the operation fails, an error message is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

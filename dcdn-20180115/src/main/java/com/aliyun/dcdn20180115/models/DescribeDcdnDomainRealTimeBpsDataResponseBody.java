@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The list of the data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeDcdnDomainRealTimeBpsDataResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {
+        /**
+         * <p>The bandwidth, in bit/s.</p>
+         */
         @NameInMap("Bps")
         public Float bps;
 
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

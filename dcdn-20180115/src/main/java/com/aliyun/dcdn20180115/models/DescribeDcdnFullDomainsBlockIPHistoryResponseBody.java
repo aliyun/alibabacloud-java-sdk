@@ -4,15 +4,33 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>The value of Code is not 0 in the following scenarios:</p>
+     * <br>
+     * <p>*   The format of the IP address is invalid.</p>
+     * <p>*   The format of the time is invalid.</p>
+     * <p>*   Other abnormal scenarios</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The description of the status returned.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The result of the operation.</p>
+     */
     @NameInMap("IPBlockInfo")
     public java.util.List<DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo> IPBlockInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +72,24 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
     }
 
     public static class DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo extends TeaModel {
+        /**
+         * <p>The blocked IP address or CIDR block.</p>
+         */
         @NameInMap("BlockIP")
         public String blockIP;
 
+        /**
+         * <p>The delivery time.</p>
+         */
         @NameInMap("DeliverTime")
         public String deliverTime;
 
+        /**
+         * <p>The delivery status.</p>
+         * <br>
+         * <p>*   Success</p>
+         * <p>*   Failed</p>
+         */
         @NameInMap("Status")
         public String status;
 

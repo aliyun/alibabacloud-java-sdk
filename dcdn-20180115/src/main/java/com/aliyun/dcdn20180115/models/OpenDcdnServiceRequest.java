@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class OpenDcdnServiceRequest extends TeaModel {
     /**
-     * <p>Activates Dynamic Route for CDN (DCDN).</p>
+     * <p>The metering method of DCDN. Valid values:</p>
+     * <br>
+     * <p>*   **PayByTraffic**: pay-by-traffic</p>
+     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
      */
     @NameInMap("BillType")
     public String billType;
@@ -17,8 +20,10 @@ public class OpenDcdnServiceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>> *   DCDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must pass real-name verification.</p>
-     * <p>>*   You can call this operation up to 5 times per second per account.</p>
+     * <p>The metering method of WebSocket. Valid values:</p>
+     * <br>
+     * <p>*   **websockettraffic**: pay-by-data-transfer</p>
+     * <p>*   **websocketbps**: pay-by-bandwidth</p>
      */
     @NameInMap("WebsocketBillType")
     public String websocketBillType;

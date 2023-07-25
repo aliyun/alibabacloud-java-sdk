@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDcdnDeliverTaskRequest extends TeaModel {
     /**
-     * <p>[](~~270043~~)</p>
+     * <p>The IDs of the tracking tasks that you want to delete. You can call the [DescribeCdnDeliverList](~~270043~~) operation to query task IDs.</p>
      */
     @NameInMap("DeliverId")
     public Long deliverId;
