@@ -120,6 +120,9 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("DeliveryMethod")
+        public String deliveryMethod;
+
         @NameInMap("Icon")
         public String icon;
 
@@ -132,8 +135,14 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("PaymentMethod")
+        public String paymentMethod;
+
         @NameInMap("Price")
         public Long price;
+
+        @NameInMap("RobotName")
+        public String robotName;
 
         @NameInMap("Status")
         public String status;
@@ -155,6 +164,14 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public ListHotelSceneItemsResponseBodyResultSceneItemList setDeliveryMethod(String deliveryMethod) {
+            this.deliveryMethod = deliveryMethod;
+            return this;
+        }
+        public String getDeliveryMethod() {
+            return this.deliveryMethod;
         }
 
         public ListHotelSceneItemsResponseBodyResultSceneItemList setIcon(String icon) {
@@ -181,12 +198,28 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListHotelSceneItemsResponseBodyResultSceneItemList setPaymentMethod(String paymentMethod) {
+            this.paymentMethod = paymentMethod;
+            return this;
+        }
+        public String getPaymentMethod() {
+            return this.paymentMethod;
+        }
+
         public ListHotelSceneItemsResponseBodyResultSceneItemList setPrice(Long price) {
             this.price = price;
             return this;
         }
         public Long getPrice() {
             return this.price;
+        }
+
+        public ListHotelSceneItemsResponseBodyResultSceneItemList setRobotName(String robotName) {
+            this.robotName = robotName;
+            return this;
+        }
+        public String getRobotName() {
+            return this.robotName;
         }
 
         public ListHotelSceneItemsResponseBodyResultSceneItemList setStatus(String status) {

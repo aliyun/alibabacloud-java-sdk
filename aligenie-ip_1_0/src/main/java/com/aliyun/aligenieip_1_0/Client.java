@@ -1143,6 +1143,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
             realHeaders = headers.commonHeaders;
@@ -1937,6 +1941,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.itemId)) {
             body.put("ItemId", request.itemId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
