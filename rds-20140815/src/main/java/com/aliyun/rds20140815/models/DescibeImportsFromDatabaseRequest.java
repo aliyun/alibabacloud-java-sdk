@@ -63,6 +63,9 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -150,6 +153,14 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescibeImportsFromDatabaseRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescibeImportsFromDatabaseRequest setResourceOwnerAccount(String resourceOwnerAccount) {

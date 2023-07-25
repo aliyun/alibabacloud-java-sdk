@@ -16,6 +16,9 @@ public class DeleteGadInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DeleteGadInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteGadInstanceRequest self = new DeleteGadInstanceRequest();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class DeleteGadInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteGadInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

@@ -19,6 +19,9 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends TeaModel 
     @NameInMap("ReadSQLReplicationTime")
     public String readSQLReplicationTime;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -52,6 +55,14 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends TeaModel 
     }
     public String getReadSQLReplicationTime() {
         return this.readSQLReplicationTime;
+    }
+
+    public ModifyReadonlyInstanceDelayReplicationTimeRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifyReadonlyInstanceDelayReplicationTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {

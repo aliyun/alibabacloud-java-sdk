@@ -22,6 +22,9 @@ public class DetachGadInstanceMemberRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static DetachGadInstanceMemberRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachGadInstanceMemberRequest self = new DetachGadInstanceMemberRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class DetachGadInstanceMemberRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DetachGadInstanceMemberRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

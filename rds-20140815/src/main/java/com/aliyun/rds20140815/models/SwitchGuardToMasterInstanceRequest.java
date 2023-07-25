@@ -16,6 +16,9 @@ public class SwitchGuardToMasterInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -49,6 +52,14 @@ public class SwitchGuardToMasterInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SwitchGuardToMasterInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public SwitchGuardToMasterInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
