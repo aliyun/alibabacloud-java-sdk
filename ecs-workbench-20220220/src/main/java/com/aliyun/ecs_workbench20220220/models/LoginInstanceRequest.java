@@ -139,6 +139,9 @@ public class LoginInstanceRequest extends TeaModel {
     }
 
     public static class LoginInstanceRequestInstanceLoginInfoOptions extends TeaModel {
+        @NameInMap("AudioMuteSeconds")
+        public Integer audioMuteSeconds;
+
         @NameInMap("ContainerInfo")
         public LoginInstanceRequestInstanceLoginInfoOptionsContainerInfo containerInfo;
 
@@ -154,12 +157,26 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("NotificationRetryLimit")
         public Integer notificationRetryLimit;
 
+        @NameInMap("OperationDisableSeconds")
+        public Integer operationDisableSeconds;
+
         @NameInMap("SessionControl")
         public String sessionControl;
+
+        @NameInMap("VideoFreezeSeconds")
+        public Integer videoFreezeSeconds;
 
         public static LoginInstanceRequestInstanceLoginInfoOptions build(java.util.Map<String, ?> map) throws Exception {
             LoginInstanceRequestInstanceLoginInfoOptions self = new LoginInstanceRequestInstanceLoginInfoOptions();
             return TeaModel.build(map, self);
+        }
+
+        public LoginInstanceRequestInstanceLoginInfoOptions setAudioMuteSeconds(Integer audioMuteSeconds) {
+            this.audioMuteSeconds = audioMuteSeconds;
+            return this;
+        }
+        public Integer getAudioMuteSeconds() {
+            return this.audioMuteSeconds;
         }
 
         public LoginInstanceRequestInstanceLoginInfoOptions setContainerInfo(LoginInstanceRequestInstanceLoginInfoOptionsContainerInfo containerInfo) {
@@ -202,12 +219,28 @@ public class LoginInstanceRequest extends TeaModel {
             return this.notificationRetryLimit;
         }
 
+        public LoginInstanceRequestInstanceLoginInfoOptions setOperationDisableSeconds(Integer operationDisableSeconds) {
+            this.operationDisableSeconds = operationDisableSeconds;
+            return this;
+        }
+        public Integer getOperationDisableSeconds() {
+            return this.operationDisableSeconds;
+        }
+
         public LoginInstanceRequestInstanceLoginInfoOptions setSessionControl(String sessionControl) {
             this.sessionControl = sessionControl;
             return this;
         }
         public String getSessionControl() {
             return this.sessionControl;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfoOptions setVideoFreezeSeconds(Integer videoFreezeSeconds) {
+            this.videoFreezeSeconds = videoFreezeSeconds;
+            return this;
+        }
+        public Integer getVideoFreezeSeconds() {
+            return this.videoFreezeSeconds;
         }
 
     }

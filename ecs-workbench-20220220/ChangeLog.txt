@@ -1,3 +1,6 @@
+2023-07-26 Version: 1.0.2
+- ECS-workbench upgrade.
+
 2023-07-19 Version: 1.0.1
 - ECS-workbench upgrade.
 
