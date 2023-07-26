@@ -2157,6 +2157,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAsrVocabWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ListBusinessSpacesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListBusinessSpacesResponse
+     */
+    // Deprecated
     public ListBusinessSpacesResponse listBusinessSpacesWithOptions(ListBusinessSpacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2181,6 +2189,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListBusinessSpacesResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request ListBusinessSpacesRequest
+      * @return ListBusinessSpacesResponse
+     */
+    // Deprecated
     public ListBusinessSpacesResponse listBusinessSpaces(ListBusinessSpacesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listBusinessSpacesWithOptions(request, runtime);
