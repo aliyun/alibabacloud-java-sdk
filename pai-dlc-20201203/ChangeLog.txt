@@ -1,3 +1,6 @@
+2023-07-26 Version: 1.2.8
+- Open the api GetToken.
+
 2023-07-21 Version: 1.2.7
 - Change the API -- GetWebTerminal.
 
