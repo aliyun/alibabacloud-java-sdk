@@ -201,6 +201,9 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("Poutput_type")
         public Integer poutputType;
 
+        @NameInMap("Pvalues")
+        public java.util.List<String> pvalues;
+
         @NameInMap("QuestionThreshold")
         public String questionThreshold;
 
@@ -550,6 +553,14 @@ public class OperatorBasicInfo extends TeaModel {
         }
         public Integer getPoutputType() {
             return this.poutputType;
+        }
+
+        public OperatorBasicInfoParam setPvalues(java.util.List<String> pvalues) {
+            this.pvalues = pvalues;
+            return this;
+        }
+        public java.util.List<String> getPvalues() {
+            return this.pvalues;
         }
 
         public OperatorBasicInfoParam setQuestionThreshold(String questionThreshold) {
