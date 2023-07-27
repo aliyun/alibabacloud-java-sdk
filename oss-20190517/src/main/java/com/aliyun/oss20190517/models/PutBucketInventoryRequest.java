@@ -4,6 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class PutBucketInventoryRequest extends TeaModel {
+    /**
+     * <p>存储清单配置信息的容器。</p>
+     */
     @NameInMap("InventoryConfiguration")
     public InventoryConfiguration inventoryConfiguration;
 

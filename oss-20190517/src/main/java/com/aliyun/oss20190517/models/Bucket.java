@@ -22,6 +22,9 @@ public class Bucket extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StorageClass")
     public String storageClass;
 
@@ -76,6 +79,14 @@ public class Bucket extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public Bucket setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public Bucket setStorageClass(String storageClass) {

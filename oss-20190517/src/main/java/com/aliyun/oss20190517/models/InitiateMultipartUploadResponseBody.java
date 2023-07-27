@@ -4,15 +4,27 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class InitiateMultipartUploadResponseBody extends TeaModel {
+    /**
+     * <p>The name of the bucket to which the object is uploaded by the multipart upload task.</p>
+     */
     @NameInMap("Bucket")
     public String bucket;
 
+    /**
+     * <p>The encoding type of the object name in the response. If the encoding-type parameter is specified in the request, the object name in the response is encoded.</p>
+     */
     @NameInMap("EncodingType")
     public String encodingType;
 
+    /**
+     * <p>The name of the object that is uploaded by the multipart upload task.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The Upload ID that uniquely identifies the multipart upload task. The Upload ID is used to call UploadPart and CompleteMultipartUpload later.</p>
+     */
     @NameInMap("UploadId")
     public String uploadId;
 

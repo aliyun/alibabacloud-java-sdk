@@ -4,8 +4,8 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ExtendBucketWormRequest extends TeaModel {
-    @NameInMap("extendWormConfiguration")
-    public ExtendWormConfiguration extendWormConfiguration;
+    @NameInMap("ExtendWormConfiguration")
+    public ExtendWormConfiguration body;
 
     @NameInMap("wormId")
     public String wormId;
@@ -15,12 +15,12 @@ public class ExtendBucketWormRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExtendBucketWormRequest setExtendWormConfiguration(ExtendWormConfiguration extendWormConfiguration) {
-        this.extendWormConfiguration = extendWormConfiguration;
+    public ExtendBucketWormRequest setBody(ExtendWormConfiguration body) {
+        this.body = body;
         return this;
     }
-    public ExtendWormConfiguration getExtendWormConfiguration() {
-        return this.extendWormConfiguration;
+    public ExtendWormConfiguration getBody() {
+        return this.body;
     }
 
     public ExtendBucketWormRequest setWormId(String wormId) {

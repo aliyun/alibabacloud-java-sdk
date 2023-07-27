@@ -4,7 +4,7 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CreateSelectObjectMetaRequest extends TeaModel {
-    @NameInMap("body")
+    @NameInMap("SelectMetaRequest")
     public SelectMetaRequest selectMetaRequest;
 
     public static CreateSelectObjectMetaRequest build(java.util.Map<String, ?> map) throws Exception {

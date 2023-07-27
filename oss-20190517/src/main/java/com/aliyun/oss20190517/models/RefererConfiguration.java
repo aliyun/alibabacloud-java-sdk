@@ -13,6 +13,9 @@ public class RefererConfiguration extends TeaModel {
     @NameInMap("RefererList")
     public RefererList refererList;
 
+    @NameInMap("TruncatePath")
+    public Boolean truncatePath;
+
     public static RefererConfiguration build(java.util.Map<String, ?> map) throws Exception {
         RefererConfiguration self = new RefererConfiguration();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class RefererConfiguration extends TeaModel {
     }
     public RefererList getRefererList() {
         return this.refererList;
+    }
+
+    public RefererConfiguration setTruncatePath(Boolean truncatePath) {
+        this.truncatePath = truncatePath;
+        return this;
+    }
+    public Boolean getTruncatePath() {
+        return this.truncatePath;
     }
 
     public static class RefererList extends TeaModel {

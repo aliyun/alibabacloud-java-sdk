@@ -16,6 +16,9 @@ public class ObjectSummary extends TeaModel {
     @NameInMap("Owner")
     public Owner owner;
 
+    @NameInMap("ResoreInfo")
+    public String resoreInfo;
+
     @NameInMap("Size")
     public Long size;
 
@@ -60,6 +63,14 @@ public class ObjectSummary extends TeaModel {
     }
     public Owner getOwner() {
         return this.owner;
+    }
+
+    public ObjectSummary setResoreInfo(String resoreInfo) {
+        this.resoreInfo = resoreInfo;
+        return this;
+    }
+    public String getResoreInfo() {
+        return this.resoreInfo;
     }
 
     public ObjectSummary setSize(Long size) {

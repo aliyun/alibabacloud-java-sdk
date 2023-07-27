@@ -3,18 +3,11 @@ package com.aliyun.oss20190517;
 
 import com.aliyun.tea.*;
 import com.aliyun.oss20190517.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.gateway.spi.*;
-import com.aliyun.gateway.oss.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
     public com.aliyun.gateway.spi.Client _client;
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._client = new com.aliyun.gateway.oss.Client();
         this._spi = _client;
@@ -22,20 +15,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
 
-    public AbortBucketWormResponse abortBucketWorm(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.abortBucketWormWithOptions(bucket, headers, runtime);
-    }
-
-    public AbortBucketWormResponse abortBucketWormWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public AbortBucketWormResponse abortBucketWormWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AbortBucketWorm"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -49,13 +36,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new AbortBucketWormResponse());
     }
 
-    public AbortMultipartUploadResponse abortMultipartUpload(String bucket, String key, AbortMultipartUploadRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public AbortBucketWormResponse abortBucketWorm(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.abortMultipartUploadWithOptions(bucket, key, request, headers, runtime);
+        return this.abortBucketWormWithOptions(bucket, headers, runtime);
     }
 
-    public AbortMultipartUploadResponse abortMultipartUploadWithOptions(String bucket, String key, AbortMultipartUploadRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public AbortMultipartUploadResponse abortMultipartUploadWithOptions(String bucket, String key, AbortMultipartUploadRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -64,12 +51,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("uploadId", request.uploadId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AbortMultipartUpload"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -83,13 +70,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new AbortMultipartUploadResponse());
     }
 
-    public AppendObjectResponse appendObject(String bucket, String key, AppendObjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        AppendObjectHeaders headers = new AppendObjectHeaders();
-        return this.appendObjectWithOptions(bucket, key, request, headers, runtime);
+    public AbortMultipartUploadResponse abortMultipartUpload(String bucket, String key, AbortMultipartUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.abortMultipartUploadWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public AppendObjectResponse appendObjectWithOptions(String bucket, String key, AppendObjectRequest request, AppendObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+    public AppendObjectResponse appendObjectWithOptions(String bucket, String key, AppendObjectRequest request, AppendObjectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -139,14 +126,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-storage-class", com.aliyun.teautil.Common.toJSONString(headers.storageClass));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body),
             new TeaPair("stream", request.body)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "AppendObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -160,13 +147,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new AppendObjectResponse());
     }
 
-    public CompleteBucketWormResponse completeBucketWorm(String bucket, CompleteBucketWormRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.completeBucketWormWithOptions(bucket, request, headers, runtime);
+    public AppendObjectResponse appendObject(String bucket, String key, AppendObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        AppendObjectHeaders headers = new AppendObjectHeaders();
+        return this.appendObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public CompleteBucketWormResponse completeBucketWormWithOptions(String bucket, CompleteBucketWormRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CompleteBucketWormResponse completeBucketWormWithOptions(String bucket, CompleteBucketWormRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -175,12 +162,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("wormId", request.wormId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CompleteBucketWorm"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -194,13 +181,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CompleteBucketWormResponse());
     }
 
-    public CompleteMultipartUploadResponse completeMultipartUpload(String bucket, String key, CompleteMultipartUploadRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        CompleteMultipartUploadHeaders headers = new CompleteMultipartUploadHeaders();
-        return this.completeMultipartUploadWithOptions(bucket, key, request, headers, runtime);
+    public CompleteBucketWormResponse completeBucketWorm(String bucket, CompleteBucketWormRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.completeBucketWormWithOptions(bucket, request, headers, runtime);
     }
 
-    public CompleteMultipartUploadResponse completeMultipartUploadWithOptions(String bucket, String key, CompleteMultipartUploadRequest request, CompleteMultipartUploadHeaders headers, RuntimeOptions runtime) throws Exception {
+    public CompleteMultipartUploadResponse completeMultipartUploadWithOptions(String bucket, String key, CompleteMultipartUploadRequest request, CompleteMultipartUploadHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -211,11 +198,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.uploadId)) {
             query.put("uploadId", request.uploadId);
-        }
-
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.completeMultipartUpload))) {
-            body.put("completeMultipartUpload", request.completeMultipartUpload);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -231,13 +213,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-forbid-overwrite", com.aliyun.teautil.Common.toJSONString(headers.forbidOverwrite));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CompleteMultipartUpload"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -251,13 +233,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CompleteMultipartUploadResponse());
     }
 
-    public CopyObjectResponse copyObject(String bucket, String key) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        CopyObjectHeaders headers = new CopyObjectHeaders();
-        return this.copyObjectWithOptions(bucket, key, headers, runtime);
+    public CompleteMultipartUploadResponse completeMultipartUpload(String bucket, String key, CompleteMultipartUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CompleteMultipartUploadHeaders headers = new CompleteMultipartUploadHeaders();
+        return this.completeMultipartUploadWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public CopyObjectResponse copyObjectWithOptions(String bucket, String key, CopyObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+    public CopyObjectResponse copyObjectWithOptions(String bucket, String key, CopyObjectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -321,11 +303,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-tagging-directive", com.aliyun.teautil.Common.toJSONString(headers.taggingDirective));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CopyObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -339,22 +321,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CopyObjectResponse());
     }
 
-    public CreateSelectObjectMetaResponse createSelectObjectMeta(String bucket, String key, CreateSelectObjectMetaRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createSelectObjectMetaWithOptions(bucket, key, request, headers, runtime);
+    public CopyObjectResponse copyObject(String bucket, String key) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CopyObjectHeaders headers = new CopyObjectHeaders();
+        return this.copyObjectWithOptions(bucket, key, headers, runtime);
     }
 
-    public CreateSelectObjectMetaResponse createSelectObjectMetaWithOptions(String bucket, String key, CreateSelectObjectMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public CreateSelectObjectMetaResponse createSelectObjectMetaWithOptions(String bucket, String key, CreateSelectObjectMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.selectMetaRequest)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.selectMetaRequest))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateSelectObjectMeta"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -368,20 +350,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateSelectObjectMetaResponse());
     }
 
-    public DeleteBucketResponse deleteBucket(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public CreateSelectObjectMetaResponse createSelectObjectMeta(String bucket, String key, CreateSelectObjectMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketWithOptions(bucket, headers, runtime);
+        return this.createSelectObjectMetaWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public DeleteBucketResponse deleteBucketWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketResponse deleteBucketWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucket"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -395,20 +377,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketResponse());
     }
 
-    public DeleteBucketCorsResponse deleteBucketCors(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketResponse deleteBucket(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketCorsWithOptions(bucket, headers, runtime);
+        return this.deleteBucketWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteBucketCorsResponse deleteBucketCorsWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketCorsResponse deleteBucketCorsWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketCors"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -422,20 +404,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketCorsResponse());
     }
 
-    public DeleteBucketEncryptionResponse deleteBucketEncryption(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketCorsResponse deleteBucketCors(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketEncryptionWithOptions(bucket, headers, runtime);
+        return this.deleteBucketCorsWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteBucketEncryptionResponse deleteBucketEncryptionWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketEncryptionResponse deleteBucketEncryptionWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketEncryption"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -449,13 +431,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketEncryptionResponse());
     }
 
-    public DeleteBucketInventoryResponse deleteBucketInventory(String bucket, DeleteBucketInventoryRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketEncryptionResponse deleteBucketEncryption(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketInventoryWithOptions(bucket, request, headers, runtime);
+        return this.deleteBucketEncryptionWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteBucketInventoryResponse deleteBucketInventoryWithOptions(String bucket, DeleteBucketInventoryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketInventoryResponse deleteBucketInventoryWithOptions(String bucket, DeleteBucketInventoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -464,12 +446,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("inventoryId", request.inventoryId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketInventory"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -483,20 +465,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketInventoryResponse());
     }
 
-    public DeleteBucketLifecycleResponse deleteBucketLifecycle(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketInventoryResponse deleteBucketInventory(String bucket, DeleteBucketInventoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketLifecycleWithOptions(bucket, headers, runtime);
+        return this.deleteBucketInventoryWithOptions(bucket, request, headers, runtime);
     }
 
-    public DeleteBucketLifecycleResponse deleteBucketLifecycleWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketLifecycleResponse deleteBucketLifecycleWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketLifecycle"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -510,20 +492,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketLifecycleResponse());
     }
 
-    public DeleteBucketLoggingResponse deleteBucketLogging(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketLifecycleResponse deleteBucketLifecycle(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketLoggingWithOptions(bucket, headers, runtime);
+        return this.deleteBucketLifecycleWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteBucketLoggingResponse deleteBucketLoggingWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketLoggingResponse deleteBucketLoggingWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketLogging"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -537,20 +519,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketLoggingResponse());
     }
 
-    public DeleteBucketPolicyResponse deleteBucketPolicy(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketLoggingResponse deleteBucketLogging(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketPolicyWithOptions(bucket, headers, runtime);
+        return this.deleteBucketLoggingWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteBucketPolicyResponse deleteBucketPolicyWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketPolicyResponse deleteBucketPolicyWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketPolicy"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -564,22 +546,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketPolicyResponse());
     }
 
-    public DeleteBucketReplicationResponse deleteBucketReplication(String bucket, DeleteBucketReplicationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketPolicyResponse deleteBucketPolicy(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketReplicationWithOptions(bucket, request, headers, runtime);
+        return this.deleteBucketPolicyWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteBucketReplicationResponse deleteBucketReplicationWithOptions(String bucket, DeleteBucketReplicationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketReplicationResponse deleteBucketReplicationWithOptions(String bucket, DeleteBucketReplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.body)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketReplication"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -593,20 +575,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketReplicationResponse());
     }
 
-    public DeleteBucketTagsResponse deleteBucketTags(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketReplicationResponse deleteBucketReplication(String bucket, DeleteBucketReplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketTagsWithOptions(bucket, headers, runtime);
+        return this.deleteBucketReplicationWithOptions(bucket, request, headers, runtime);
     }
 
-    public DeleteBucketTagsResponse deleteBucketTagsWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketTagsResponse deleteBucketTagsWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketTags"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -620,20 +602,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketTagsResponse());
     }
 
-    public DeleteBucketWebsiteResponse deleteBucketWebsite(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketTagsResponse deleteBucketTags(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteBucketWebsiteWithOptions(bucket, headers, runtime);
+        return this.deleteBucketTagsWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteBucketWebsiteResponse deleteBucketWebsiteWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteBucketWebsiteResponse deleteBucketWebsiteWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteBucketWebsite"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -647,20 +629,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteBucketWebsiteResponse());
     }
 
-    public DeleteLiveChannelResponse deleteLiveChannel(String bucket, String channel) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteBucketWebsiteResponse deleteBucketWebsite(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteLiveChannelWithOptions(bucket, channel, headers, runtime);
+        return this.deleteBucketWebsiteWithOptions(bucket, headers, runtime);
     }
 
-    public DeleteLiveChannelResponse deleteLiveChannelWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteLiveChannelResponse deleteLiveChannelWithOptions(String bucket, String channel, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteLiveChannel"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -674,13 +656,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteLiveChannelResponse());
     }
 
-    public DeleteMultipleObjectsResponse deleteMultipleObjects(String bucket, DeleteMultipleObjectsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteLiveChannelResponse deleteLiveChannel(String bucket, String channel) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteMultipleObjectsWithOptions(bucket, request, headers, runtime);
+        return this.deleteLiveChannelWithOptions(bucket, channel, headers, runtime);
     }
 
-    public DeleteMultipleObjectsResponse deleteMultipleObjectsWithOptions(String bucket, DeleteMultipleObjectsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteMultipleObjectsResponse deleteMultipleObjectsWithOptions(String bucket, DeleteMultipleObjectsRequest request, DeleteMultipleObjectsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -689,13 +671,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("encoding-type", request.encodingType);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.contentMd5)) {
+            realHeaders.put("content-md5", com.aliyun.teautil.Common.toJSONString(headers.contentMd5));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.delete)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.delete))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteMultipleObjects"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -709,13 +700,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteMultipleObjectsResponse());
     }
 
-    public DeleteObjectResponse deleteObject(String bucket, String key, DeleteObjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteObjectWithOptions(bucket, key, request, headers, runtime);
+    public DeleteMultipleObjectsResponse deleteMultipleObjects(String bucket, DeleteMultipleObjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        DeleteMultipleObjectsHeaders headers = new DeleteMultipleObjectsHeaders();
+        return this.deleteMultipleObjectsWithOptions(bucket, request, headers, runtime);
     }
 
-    public DeleteObjectResponse deleteObjectWithOptions(String bucket, String key, DeleteObjectRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteObjectResponse deleteObjectWithOptions(String bucket, String key, DeleteObjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -724,12 +715,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -743,13 +734,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteObjectResponse());
     }
 
-    public DeleteObjectTaggingResponse deleteObjectTagging(String bucket, String key, DeleteObjectTaggingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteObjectResponse deleteObject(String bucket, String key, DeleteObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteObjectTaggingWithOptions(bucket, key, request, headers, runtime);
+        return this.deleteObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public DeleteObjectTaggingResponse deleteObjectTaggingWithOptions(String bucket, String key, DeleteObjectTaggingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DeleteObjectTaggingResponse deleteObjectTaggingWithOptions(String bucket, String key, DeleteObjectTaggingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -758,12 +749,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteObjectTagging"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -777,24 +768,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DeleteObjectTaggingResponse());
     }
 
-    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DeleteObjectTaggingResponse deleteObjectTagging(String bucket, String key, DeleteObjectTaggingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeRegionsWithOptions(request, headers, runtime);
+        return this.deleteObjectTaggingWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.regions)) {
             query.put("regions", request.regions);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeRegions"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -808,13 +799,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRegionsResponse());
     }
 
-    public ExtendBucketWormResponse extendBucketWorm(String bucket, ExtendBucketWormRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.extendBucketWormWithOptions(bucket, request, headers, runtime);
+        return this.describeRegionsWithOptions(request, headers, runtime);
     }
 
-    public ExtendBucketWormResponse extendBucketWormWithOptions(String bucket, ExtendBucketWormRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ExtendBucketWormResponse extendBucketWormWithOptions(String bucket, ExtendBucketWormRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -823,18 +814,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("wormId", request.wormId);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.extendWormConfiguration))) {
-            body.put("extendWormConfiguration", request.extendWormConfiguration);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExtendBucketWorm"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -848,20 +834,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ExtendBucketWormResponse());
     }
 
-    public GetBucketAclResponse getBucketAcl(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ExtendBucketWormResponse extendBucketWorm(String bucket, ExtendBucketWormRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketAclWithOptions(bucket, headers, runtime);
+        return this.extendBucketWormWithOptions(bucket, request, headers, runtime);
     }
 
-    public GetBucketAclResponse getBucketAclWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketAclResponse getBucketAclWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketAcl"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -875,20 +861,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketAclResponse());
     }
 
-    public GetBucketCorsResponse getBucketCors(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketAclResponse getBucketAcl(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketCorsWithOptions(bucket, headers, runtime);
+        return this.getBucketAclWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketCorsResponse getBucketCorsWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketCorsResponse getBucketCorsWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketCors"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -902,20 +888,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketCorsResponse());
     }
 
-    public GetBucketEncryptionResponse getBucketEncryption(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketCorsResponse getBucketCors(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketEncryptionWithOptions(bucket, headers, runtime);
+        return this.getBucketCorsWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketEncryptionResponse getBucketEncryptionWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketEncryptionResponse getBucketEncryptionWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketEncryption"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -929,20 +915,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketEncryptionResponse());
     }
 
-    public GetBucketInfoResponse getBucketInfo(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketEncryptionResponse getBucketEncryption(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketInfoWithOptions(bucket, headers, runtime);
+        return this.getBucketEncryptionWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketInfoResponse getBucketInfoWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketInfoResponse getBucketInfoWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketInfo"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -956,13 +942,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketInfoResponse());
     }
 
-    public GetBucketInventoryResponse getBucketInventory(String bucket, GetBucketInventoryRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketInfoResponse getBucketInfo(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketInventoryWithOptions(bucket, request, headers, runtime);
+        return this.getBucketInfoWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketInventoryResponse getBucketInventoryWithOptions(String bucket, GetBucketInventoryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketInventoryResponse getBucketInventoryWithOptions(String bucket, GetBucketInventoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -971,12 +957,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("inventoryId", request.inventoryId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketInventory"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -990,20 +976,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketInventoryResponse());
     }
 
-    public GetBucketLifecycleResponse getBucketLifecycle(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketInventoryResponse getBucketInventory(String bucket, GetBucketInventoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketLifecycleWithOptions(bucket, headers, runtime);
+        return this.getBucketInventoryWithOptions(bucket, request, headers, runtime);
     }
 
-    public GetBucketLifecycleResponse getBucketLifecycleWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketLifecycleResponse getBucketLifecycleWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketLifecycle"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1017,20 +1003,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketLifecycleResponse());
     }
 
-    public GetBucketLocationResponse getBucketLocation(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketLifecycleResponse getBucketLifecycle(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketLocationWithOptions(bucket, headers, runtime);
+        return this.getBucketLifecycleWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketLocationResponse getBucketLocationWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketLocationResponse getBucketLocationWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketLocation"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1044,20 +1030,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketLocationResponse());
     }
 
-    public GetBucketLoggingResponse getBucketLogging(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketLocationResponse getBucketLocation(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketLoggingWithOptions(bucket, headers, runtime);
+        return this.getBucketLocationWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketLoggingResponse getBucketLoggingWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketLoggingResponse getBucketLoggingWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketLogging"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1071,20 +1057,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketLoggingResponse());
     }
 
-    public GetBucketPolicyResponse getBucketPolicy(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketLoggingResponse getBucketLogging(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketPolicyWithOptions(bucket, headers, runtime);
+        return this.getBucketLoggingWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketPolicyResponse getBucketPolicyWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketPolicyResponse getBucketPolicyWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketPolicy"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1098,20 +1084,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketPolicyResponse());
     }
 
-    public GetBucketRefererResponse getBucketReferer(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketPolicyResponse getBucketPolicy(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketRefererWithOptions(bucket, headers, runtime);
+        return this.getBucketPolicyWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketRefererResponse getBucketRefererWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketRefererResponse getBucketRefererWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketReferer"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1120,25 +1106,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "xml"),
-            new TeaPair("bodyType", "xml")
+            new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketRefererResponse());
     }
 
-    public GetBucketReplicationResponse getBucketReplication(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketRefererResponse getBucketReferer(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketReplicationWithOptions(bucket, headers, runtime);
+        return this.getBucketRefererWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketReplicationResponse getBucketReplicationWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketReplicationResponse getBucketReplicationWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketReplication"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1152,20 +1138,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketReplicationResponse());
     }
 
-    public GetBucketReplicationLocationResponse getBucketReplicationLocation(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketReplicationResponse getBucketReplication(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketReplicationLocationWithOptions(bucket, headers, runtime);
+        return this.getBucketReplicationWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketReplicationLocationResponse getBucketReplicationLocationWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketReplicationLocationResponse getBucketReplicationLocationWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketReplicationLocation"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1179,13 +1165,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketReplicationLocationResponse());
     }
 
-    public GetBucketReplicationProgressResponse getBucketReplicationProgress(String bucket, GetBucketReplicationProgressRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketReplicationLocationResponse getBucketReplicationLocation(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketReplicationProgressWithOptions(bucket, request, headers, runtime);
+        return this.getBucketReplicationLocationWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketReplicationProgressResponse getBucketReplicationProgressWithOptions(String bucket, GetBucketReplicationProgressRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketReplicationProgressResponse getBucketReplicationProgressWithOptions(String bucket, GetBucketReplicationProgressRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1194,12 +1180,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("rule-id", request.ruleId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketReplicationProgress"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1213,20 +1199,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketReplicationProgressResponse());
     }
 
-    public GetBucketRequestPaymentResponse getBucketRequestPayment(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketReplicationProgressResponse getBucketReplicationProgress(String bucket, GetBucketReplicationProgressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketRequestPaymentWithOptions(bucket, headers, runtime);
+        return this.getBucketReplicationProgressWithOptions(bucket, request, headers, runtime);
     }
 
-    public GetBucketRequestPaymentResponse getBucketRequestPaymentWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketRequestPaymentResponse getBucketRequestPaymentWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketRequestPayment"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1240,20 +1226,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketRequestPaymentResponse());
     }
 
-    public GetBucketTagsResponse getBucketTags(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketRequestPaymentResponse getBucketRequestPayment(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketTagsWithOptions(bucket, headers, runtime);
+        return this.getBucketRequestPaymentWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketTagsResponse getBucketTagsWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketTagsResponse getBucketTagsWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketTags"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1267,20 +1253,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketTagsResponse());
     }
 
-    public GetBucketTransferAccelerationResponse getBucketTransferAcceleration(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketTagsResponse getBucketTags(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketTransferAccelerationWithOptions(bucket, headers, runtime);
+        return this.getBucketTagsWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketTransferAccelerationResponse getBucketTransferAccelerationWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketTransferAccelerationResponse getBucketTransferAccelerationWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketTransferAcceleration"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1294,20 +1280,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketTransferAccelerationResponse());
     }
 
-    public GetBucketVersioningResponse getBucketVersioning(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketTransferAccelerationResponse getBucketTransferAcceleration(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketVersioningWithOptions(bucket, headers, runtime);
+        return this.getBucketTransferAccelerationWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketVersioningResponse getBucketVersioningWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketVersioningResponse getBucketVersioningWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketVersioning"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1321,20 +1307,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketVersioningResponse());
     }
 
-    public GetBucketWebsiteResponse getBucketWebsite(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketVersioningResponse getBucketVersioning(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketWebsiteWithOptions(bucket, headers, runtime);
+        return this.getBucketVersioningWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketWebsiteResponse getBucketWebsiteWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketWebsiteResponse getBucketWebsiteWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketWebsite"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1348,20 +1334,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketWebsiteResponse());
     }
 
-    public GetBucketWormResponse getBucketWorm(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketWebsiteResponse getBucketWebsite(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getBucketWormWithOptions(bucket, headers, runtime);
+        return this.getBucketWebsiteWithOptions(bucket, headers, runtime);
     }
 
-    public GetBucketWormResponse getBucketWormWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetBucketWormResponse getBucketWormWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetBucketWorm"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1375,20 +1361,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetBucketWormResponse());
     }
 
-    public GetLiveChannelHistoryResponse getLiveChannelHistory(String bucket, String channel) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetBucketWormResponse getBucketWorm(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getLiveChannelHistoryWithOptions(bucket, channel, headers, runtime);
+        return this.getBucketWormWithOptions(bucket, headers, runtime);
     }
 
-    public GetLiveChannelHistoryResponse getLiveChannelHistoryWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetLiveChannelHistoryResponse getLiveChannelHistoryWithOptions(String bucket, String channel, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetLiveChannelHistory"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1402,20 +1388,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLiveChannelHistoryResponse());
     }
 
-    public GetLiveChannelInfoResponse getLiveChannelInfo(String bucket, String channel) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetLiveChannelHistoryResponse getLiveChannelHistory(String bucket, String channel) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getLiveChannelInfoWithOptions(bucket, channel, headers, runtime);
+        return this.getLiveChannelHistoryWithOptions(bucket, channel, headers, runtime);
     }
 
-    public GetLiveChannelInfoResponse getLiveChannelInfoWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetLiveChannelInfoResponse getLiveChannelInfoWithOptions(String bucket, String channel, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetLiveChannelInfo"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1429,20 +1415,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLiveChannelInfoResponse());
     }
 
-    public GetLiveChannelStatResponse getLiveChannelStat(String bucket, String channel) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetLiveChannelInfoResponse getLiveChannelInfo(String bucket, String channel) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getLiveChannelStatWithOptions(bucket, channel, headers, runtime);
+        return this.getLiveChannelInfoWithOptions(bucket, channel, headers, runtime);
     }
 
-    public GetLiveChannelStatResponse getLiveChannelStatWithOptions(String bucket, String channel, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetLiveChannelStatResponse getLiveChannelStatWithOptions(String bucket, String channel, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetLiveChannelStat"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1456,13 +1442,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetLiveChannelStatResponse());
     }
 
-    public GetObjectResponse getObject(String bucket, String key, GetObjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        GetObjectHeaders headers = new GetObjectHeaders();
-        return this.getObjectWithOptions(bucket, key, request, headers, runtime);
+    public GetLiveChannelStatResponse getLiveChannelStat(String bucket, String channel) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLiveChannelStatWithOptions(bucket, channel, headers, runtime);
     }
 
-    public GetObjectResponse getObjectWithOptions(String bucket, String key, GetObjectRequest request, GetObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+    /**
+      * **Usage notes**
+      * - By default, the GetObject operation supports access over HTTP and HTTPS. To impose a limit on access to a bucket only over HTTPS, configure a bucket policy for the bucket to specify the access method. For more information, see [Configure bucket policies to authorize other users to access OSS resources](~~85111~~).
+      * - If the storage class of the object that you want to query is Archive, you must send a RestoreObject request to restore the object before you call the GetObject operation.
+      * **Versioning**
+      * By default, only the current version of an object is returned after GetObject is called. 
+      * If the version ID of the object is specified in the request, OSS returns the specified version of the object. If the version ID is set to null in the request, OSS returns the version of the object whose version ID is null.
+      *
+      * @param request GetObjectRequest
+      * @param headers GetObjectHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetObjectResponse
+     */
+    public GetObjectResponse getObjectWithOptions(String bucket, String key, GetObjectRequest request, GetObjectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1520,12 +1519,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Range", com.aliyun.teautil.Common.toJSONString(headers.range));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1539,13 +1538,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectResponse());
     }
 
-    public GetObjectAclResponse getObjectAcl(String bucket, String key, GetObjectAclRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getObjectAclWithOptions(bucket, key, request, headers, runtime);
+    /**
+      * **Usage notes**
+      * - By default, the GetObject operation supports access over HTTP and HTTPS. To impose a limit on access to a bucket only over HTTPS, configure a bucket policy for the bucket to specify the access method. For more information, see [Configure bucket policies to authorize other users to access OSS resources](~~85111~~).
+      * - If the storage class of the object that you want to query is Archive, you must send a RestoreObject request to restore the object before you call the GetObject operation.
+      * **Versioning**
+      * By default, only the current version of an object is returned after GetObject is called. 
+      * If the version ID of the object is specified in the request, OSS returns the specified version of the object. If the version ID is set to null in the request, OSS returns the version of the object whose version ID is null.
+      *
+      * @param request GetObjectRequest
+      * @return GetObjectResponse
+     */
+    public GetObjectResponse getObject(String bucket, String key, GetObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        GetObjectHeaders headers = new GetObjectHeaders();
+        return this.getObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetObjectAclResponse getObjectAclWithOptions(String bucket, String key, GetObjectAclRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetObjectAclResponse getObjectAclWithOptions(String bucket, String key, GetObjectAclRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1554,12 +1564,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetObjectAcl"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1573,13 +1583,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectAclResponse());
     }
 
-    public GetObjectMetaResponse getObjectMeta(String bucket, String key, GetObjectMetaRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetObjectAclResponse getObjectAcl(String bucket, String key, GetObjectAclRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getObjectMetaWithOptions(bucket, key, request, headers, runtime);
+        return this.getObjectAclWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetObjectMetaResponse getObjectMetaWithOptions(String bucket, String key, GetObjectMetaRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetObjectMetaResponse getObjectMetaWithOptions(String bucket, String key, GetObjectMetaRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1588,12 +1598,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetObjectMeta"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1607,13 +1617,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectMetaResponse());
     }
 
-    public GetObjectTaggingResponse getObjectTagging(String bucket, String key, GetObjectTaggingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetObjectMetaResponse getObjectMeta(String bucket, String key, GetObjectMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getObjectTaggingWithOptions(bucket, key, request, headers, runtime);
+        return this.getObjectMetaWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetObjectTaggingResponse getObjectTaggingWithOptions(String bucket, String key, GetObjectTaggingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetObjectTaggingResponse getObjectTaggingWithOptions(String bucket, String key, GetObjectTaggingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1622,12 +1632,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetObjectTagging"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1641,13 +1651,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetObjectTaggingResponse());
     }
 
-    public GetSymlinkResponse getSymlink(String bucket, String key, GetSymlinkRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetObjectTaggingResponse getObjectTagging(String bucket, String key, GetObjectTaggingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getSymlinkWithOptions(bucket, key, request, headers, runtime);
+        return this.getObjectTaggingWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetSymlinkResponse getSymlinkWithOptions(String bucket, String key, GetSymlinkRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetSymlinkResponse getSymlinkWithOptions(String bucket, String key, GetSymlinkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1656,12 +1666,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetSymlink"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1675,13 +1685,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetSymlinkResponse());
     }
 
-    public GetVodPlaylistResponse getVodPlaylist(String bucket, String channel, GetVodPlaylistRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public GetSymlinkResponse getSymlink(String bucket, String key, GetSymlinkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getVodPlaylistWithOptions(bucket, channel, request, headers, runtime);
+        return this.getSymlinkWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public GetVodPlaylistResponse getVodPlaylistWithOptions(String bucket, String channel, GetVodPlaylistRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public GetVodPlaylistResponse getVodPlaylistWithOptions(String bucket, String channel, GetVodPlaylistRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1694,12 +1704,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startTime", request.startTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetVodPlaylist"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1713,13 +1723,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new GetVodPlaylistResponse());
     }
 
-    public HeadObjectResponse headObject(String bucket, String key, HeadObjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        HeadObjectHeaders headers = new HeadObjectHeaders();
-        return this.headObjectWithOptions(bucket, key, request, headers, runtime);
+    public GetVodPlaylistResponse getVodPlaylist(String bucket, String channel, GetVodPlaylistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVodPlaylistWithOptions(bucket, channel, request, headers, runtime);
     }
 
-    public HeadObjectResponse headObjectWithOptions(String bucket, String key, HeadObjectRequest request, HeadObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+    /**
+      * - When you call this operation, the object content is not returned in the results. 
+      * - By default, you can call the HeadObject operation to query the metadata of the object of the current version. If the current version of the object is a delete marker, OSS returns 404 Not Found. If you specify a version ID in the request, OSS returns the metadata of the object of the specified version.
+      *
+      * @param request HeadObjectRequest
+      * @param headers HeadObjectHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return HeadObjectResponse
+     */
+    public HeadObjectResponse headObjectWithOptions(String bucket, String key, HeadObjectRequest request, HeadObjectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1749,12 +1768,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("If-Unmodified-Since", com.aliyun.teautil.Common.toJSONString(headers.ifUnmodifiedSince));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "HeadObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1768,22 +1787,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new HeadObjectResponse());
     }
 
-    public InitiateBucketWormResponse initiateBucketWorm(String bucket, InitiateBucketWormRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.initiateBucketWormWithOptions(bucket, request, headers, runtime);
+    /**
+      * - When you call this operation, the object content is not returned in the results. 
+      * - By default, you can call the HeadObject operation to query the metadata of the object of the current version. If the current version of the object is a delete marker, OSS returns 404 Not Found. If you specify a version ID in the request, OSS returns the metadata of the object of the specified version.
+      *
+      * @param request HeadObjectRequest
+      * @return HeadObjectResponse
+     */
+    public HeadObjectResponse headObject(String bucket, String key, HeadObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        HeadObjectHeaders headers = new HeadObjectHeaders();
+        return this.headObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public InitiateBucketWormResponse initiateBucketWormWithOptions(String bucket, InitiateBucketWormRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public InitiateBucketWormResponse initiateBucketWormWithOptions(String bucket, InitiateBucketWormRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.initiateWormConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.initiateWormConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InitiateBucketWorm"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1797,13 +1823,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new InitiateBucketWormResponse());
     }
 
-    public InitiateMultipartUploadResponse initiateMultipartUpload(String bucket, String key, InitiateMultipartUploadRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        InitiateMultipartUploadHeaders headers = new InitiateMultipartUploadHeaders();
-        return this.initiateMultipartUploadWithOptions(bucket, key, request, headers, runtime);
+    public InitiateBucketWormResponse initiateBucketWorm(String bucket, InitiateBucketWormRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.initiateBucketWormWithOptions(bucket, request, headers, runtime);
     }
 
-    public InitiateMultipartUploadResponse initiateMultipartUploadWithOptions(String bucket, String key, InitiateMultipartUploadRequest request, InitiateMultipartUploadHeaders headers, RuntimeOptions runtime) throws Exception {
+    /**
+      * - When you call the InitiateMultipartUpload operation, OSS creates and returns a unique upload ID to identify the multipart upload task. You can initiate operations such as stopping or querying the multipart upload task by using this upload ID.
+      * - When you initiate a multipart upload request to upload an object, the existing object that has the same name is not affected.
+      * - If you want to calculate the signature for authentication when you call this operation, you must add `?uploads` to `CanonicalizedResource`.
+      *
+      * @param request InitiateMultipartUploadRequest
+      * @param headers InitiateMultipartUploadHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return InitiateMultipartUploadResponse
+     */
+    public InitiateMultipartUploadResponse initiateMultipartUploadWithOptions(String bucket, String key, InitiateMultipartUploadRequest request, InitiateMultipartUploadHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1857,12 +1893,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-tagging", com.aliyun.teautil.Common.toJSONString(headers.tagging));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "InitiateMultipartUpload"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1876,13 +1912,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new InitiateMultipartUploadResponse());
     }
 
-    public ListBucketInventoryResponse listBucketInventory(String bucket, ListBucketInventoryRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listBucketInventoryWithOptions(bucket, request, headers, runtime);
+    /**
+      * - When you call the InitiateMultipartUpload operation, OSS creates and returns a unique upload ID to identify the multipart upload task. You can initiate operations such as stopping or querying the multipart upload task by using this upload ID.
+      * - When you initiate a multipart upload request to upload an object, the existing object that has the same name is not affected.
+      * - If you want to calculate the signature for authentication when you call this operation, you must add `?uploads` to `CanonicalizedResource`.
+      *
+      * @param request InitiateMultipartUploadRequest
+      * @return InitiateMultipartUploadResponse
+     */
+    public InitiateMultipartUploadResponse initiateMultipartUpload(String bucket, String key, InitiateMultipartUploadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        InitiateMultipartUploadHeaders headers = new InitiateMultipartUploadHeaders();
+        return this.initiateMultipartUploadWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public ListBucketInventoryResponse listBucketInventoryWithOptions(String bucket, ListBucketInventoryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListBucketInventoryResponse listBucketInventoryWithOptions(String bucket, ListBucketInventoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1891,12 +1935,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("continuation-token", request.continuationToken);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListBucketInventory"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1910,13 +1954,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListBucketInventoryResponse());
     }
 
-    public ListBucketsResponse listBuckets(ListBucketsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListBucketInventoryResponse listBucketInventory(String bucket, ListBucketInventoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listBucketsWithOptions(request, headers, runtime);
+        return this.listBucketInventoryWithOptions(bucket, request, headers, runtime);
     }
 
-    public ListBucketsResponse listBucketsWithOptions(ListBucketsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListBucketsResponse listBucketsWithOptions(ListBucketsRequest request, ListBucketsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
@@ -1931,11 +1975,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("prefix", request.prefix);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xOssResourceGroupId)) {
+            realHeaders.put("x-oss-resource-group-id", com.aliyun.teautil.Common.toJSONString(headers.xOssResourceGroupId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListBuckets"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1949,13 +2002,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListBucketsResponse());
     }
 
-    public ListLiveChannelResponse listLiveChannel(String bucket, ListLiveChannelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listLiveChannelWithOptions(bucket, request, headers, runtime);
+    public ListBucketsResponse listBuckets(ListBucketsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ListBucketsHeaders headers = new ListBucketsHeaders();
+        return this.listBucketsWithOptions(request, headers, runtime);
     }
 
-    public ListLiveChannelResponse listLiveChannelWithOptions(String bucket, ListLiveChannelRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListLiveChannelResponse listLiveChannelWithOptions(String bucket, ListLiveChannelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -1972,12 +2025,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("prefix", request.prefix);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListLiveChannel"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -1991,13 +2044,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListLiveChannelResponse());
     }
 
-    public ListMultipartUploadsResponse listMultipartUploads(String bucket, ListMultipartUploadsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListLiveChannelResponse listLiveChannel(String bucket, ListLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listMultipartUploadsWithOptions(bucket, request, headers, runtime);
+        return this.listLiveChannelWithOptions(bucket, request, headers, runtime);
     }
 
-    public ListMultipartUploadsResponse listMultipartUploadsWithOptions(String bucket, ListMultipartUploadsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListMultipartUploadsResponse listMultipartUploadsWithOptions(String bucket, ListMultipartUploadsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2026,12 +2079,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("upload-id-marker", request.uploadIdMarker);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListMultipartUploads"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2045,13 +2098,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListMultipartUploadsResponse());
     }
 
-    public ListObjectVersionsResponse listObjectVersions(String bucket, ListObjectVersionsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListMultipartUploadsResponse listMultipartUploads(String bucket, ListMultipartUploadsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listObjectVersionsWithOptions(bucket, request, headers, runtime);
+        return this.listMultipartUploadsWithOptions(bucket, request, headers, runtime);
     }
 
-    public ListObjectVersionsResponse listObjectVersionsWithOptions(String bucket, ListObjectVersionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListObjectVersionsResponse listObjectVersionsWithOptions(String bucket, ListObjectVersionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2080,12 +2133,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("version-id-marker", request.versionIdMarker);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListObjectVersions"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2099,13 +2152,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListObjectVersionsResponse());
     }
 
-    public ListObjectsResponse listObjects(String bucket, ListObjectsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListObjectVersionsResponse listObjectVersions(String bucket, ListObjectVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listObjectsWithOptions(bucket, request, headers, runtime);
+        return this.listObjectVersionsWithOptions(bucket, request, headers, runtime);
     }
 
-    public ListObjectsResponse listObjectsWithOptions(String bucket, ListObjectsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListObjectsResponse listObjectsWithOptions(String bucket, ListObjectsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2130,12 +2183,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("prefix", request.prefix);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListObjects"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2149,13 +2202,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListObjectsResponse());
     }
 
-    public ListObjectsV2Response listObjectsV2(String bucket, ListObjectsV2Request request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListObjectsResponse listObjects(String bucket, ListObjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listObjectsV2WithOptions(bucket, request, headers, runtime);
+        return this.listObjectsWithOptions(bucket, request, headers, runtime);
     }
 
-    public ListObjectsV2Response listObjectsV2WithOptions(String bucket, ListObjectsV2Request request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListObjectsV2Response listObjectsV2WithOptions(String bucket, ListObjectsV2Request request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2188,12 +2241,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("start-after", request.startAfter);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListObjectsV2"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2207,13 +2260,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListObjectsV2Response());
     }
 
-    public ListPartsResponse listParts(String bucket, String key, ListPartsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public ListObjectsV2Response listObjectsV2(String bucket, ListObjectsV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listPartsWithOptions(bucket, key, request, headers, runtime);
+        return this.listObjectsV2WithOptions(bucket, request, headers, runtime);
     }
 
-    public ListPartsResponse listPartsWithOptions(String bucket, String key, ListPartsRequest tmpReq, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public ListPartsResponse listPartsWithOptions(String bucket, String key, ListPartsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2240,12 +2293,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("uploadId", request.uploadId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ListParts"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2259,13 +2312,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new ListPartsResponse());
     }
 
-    public OptionObjectResponse optionObject(String bucket, String key) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        OptionObjectHeaders headers = new OptionObjectHeaders();
-        return this.optionObjectWithOptions(bucket, key, headers, runtime);
+    public ListPartsResponse listParts(String bucket, String key, ListPartsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPartsWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public OptionObjectResponse optionObjectWithOptions(String bucket, String key, OptionObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+    public OptionObjectResponse optionObjectWithOptions(String bucket, String key, OptionObjectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2285,11 +2338,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("Origin", com.aliyun.teautil.Common.toJSONString(headers.origin));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "OptionObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2303,20 +2356,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new OptionObjectResponse());
     }
 
-    public PostObjectResponse postObject(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.postObjectWithOptions(bucket, headers, runtime);
+    public OptionObjectResponse optionObject(String bucket, String key) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        OptionObjectHeaders headers = new OptionObjectHeaders();
+        return this.optionObjectWithOptions(bucket, key, headers, runtime);
     }
 
-    public PostObjectResponse postObjectWithOptions(String bucket, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    /**
+      * - 
+      *   The object that is uploaded by calling the PostObject operation cannot be
+      *   larger than 5 GB in size.
+      * - 
+      *   To initiate a PostObject request to a bucket, you must have write permissions
+      *   on the bucket. If the ACL of the bucket to which you want to initiate a
+      *   PostObject request is public-read-write, you do not need to sign the
+      *   PostObject request. In other cases, Object Storage Service (OSS) verifies the
+      *   signature information contained in the request.
+      * - 
+      *   Unlike the PutObject operation, the PostObject operation uses an AccessKey
+      *   secret to calculate the signature for the policy form field. The calculated
+      *   signature string is used as the value of the Signature form field. OSS checks
+      *   this value to verify the validity of the signature.
+      * - 
+      *   The URL of the submitted form is the domain name of the bucket. You do not
+      *   need to specify the object that you want to upload in the URL. In other words,
+      *   the request line is in the format of `POST T/ HTTP/1.1` instead of `POST
+      *   /ObjectName HTTP/1.1`.
+      * - 
+      *   OSS does not check the signature information that is contained in headers or
+      *   URLs in PostObject requests.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PostObjectResponse
+     */
+    public PostObjectResponse postObjectWithOptions(String bucket, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PostObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2330,13 +2411,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PostObjectResponse());
     }
 
-    public PostVodPlaylistResponse postVodPlaylist(String bucket, String channel, String playlist, PostVodPlaylistRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    /**
+      * - 
+      *   The object that is uploaded by calling the PostObject operation cannot be
+      *   larger than 5 GB in size.
+      * - 
+      *   To initiate a PostObject request to a bucket, you must have write permissions
+      *   on the bucket. If the ACL of the bucket to which you want to initiate a
+      *   PostObject request is public-read-write, you do not need to sign the
+      *   PostObject request. In other cases, Object Storage Service (OSS) verifies the
+      *   signature information contained in the request.
+      * - 
+      *   Unlike the PutObject operation, the PostObject operation uses an AccessKey
+      *   secret to calculate the signature for the policy form field. The calculated
+      *   signature string is used as the value of the Signature form field. OSS checks
+      *   this value to verify the validity of the signature.
+      * - 
+      *   The URL of the submitted form is the domain name of the bucket. You do not
+      *   need to specify the object that you want to upload in the URL. In other words,
+      *   the request line is in the format of `POST T/ HTTP/1.1` instead of `POST
+      *   /ObjectName HTTP/1.1`.
+      * - 
+      *   OSS does not check the signature information that is contained in headers or
+      *   URLs in PostObject requests.
+      *
+      * @return PostObjectResponse
+     */
+    public PostObjectResponse postObject(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.postVodPlaylistWithOptions(bucket, channel, playlist, request, headers, runtime);
+        return this.postObjectWithOptions(bucket, headers, runtime);
     }
 
-    public PostVodPlaylistResponse postVodPlaylistWithOptions(String bucket, String channel, String playlist, PostVodPlaylistRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PostVodPlaylistResponse postVodPlaylistWithOptions(String bucket, String channel, String playlist, PostVodPlaylistRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2349,12 +2456,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("startTime", request.startTime);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PostVodPlaylist"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2368,13 +2475,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PostVodPlaylistResponse());
     }
 
-    public PutBucketResponse putBucket(String bucket, PutBucketRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PutBucketHeaders headers = new PutBucketHeaders();
-        return this.putBucketWithOptions(bucket, request, headers, runtime);
+    public PostVodPlaylistResponse postVodPlaylist(String bucket, String channel, String playlist, PostVodPlaylistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.postVodPlaylistWithOptions(bucket, channel, playlist, request, headers, runtime);
     }
 
-    public PutBucketResponse putBucketWithOptions(String bucket, PutBucketRequest request, PutBucketHeaders headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketResponse putBucketWithOptions(String bucket, PutBucketRequest request, PutBucketHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2387,12 +2494,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-acl", com.aliyun.teautil.Common.toJSONString(headers.acl));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        if (!com.aliyun.teautil.Common.isUnset(headers.xOssResourceGroupId)) {
+            realHeaders.put("x-oss-resource-group-id", com.aliyun.teautil.Common.toJSONString(headers.xOssResourceGroupId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.createBucketConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.createBucketConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucket"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2406,13 +2517,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketResponse());
     }
 
-    public PutBucketAclResponse putBucketAcl(String bucket) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PutBucketAclHeaders headers = new PutBucketAclHeaders();
-        return this.putBucketAclWithOptions(bucket, headers, runtime);
+    public PutBucketResponse putBucket(String bucket, PutBucketRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PutBucketHeaders headers = new PutBucketHeaders();
+        return this.putBucketWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketAclResponse putBucketAclWithOptions(String bucket, PutBucketAclHeaders headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketAclResponse putBucketAclWithOptions(String bucket, PutBucketAclHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2424,11 +2535,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-acl", com.aliyun.teautil.Common.toJSONString(headers.acl));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketAcl"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2442,22 +2553,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketAclResponse());
     }
 
-    public PutBucketCorsResponse putBucketCors(String bucket, PutBucketCorsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketCorsWithOptions(bucket, request, headers, runtime);
+    public PutBucketAclResponse putBucketAcl(String bucket) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PutBucketAclHeaders headers = new PutBucketAclHeaders();
+        return this.putBucketAclWithOptions(bucket, headers, runtime);
     }
 
-    public PutBucketCorsResponse putBucketCorsWithOptions(String bucket, PutBucketCorsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketCorsResponse putBucketCorsWithOptions(String bucket, PutBucketCorsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.cORSConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.cORSConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketCors"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2471,22 +2582,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketCorsResponse());
     }
 
-    public PutBucketEncryptionResponse putBucketEncryption(String bucket, PutBucketEncryptionRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketCorsResponse putBucketCors(String bucket, PutBucketCorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketEncryptionWithOptions(bucket, request, headers, runtime);
+        return this.putBucketCorsWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketEncryptionResponse putBucketEncryptionWithOptions(String bucket, PutBucketEncryptionRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketEncryptionResponse putBucketEncryptionWithOptions(String bucket, PutBucketEncryptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.serverSideEncryptionRule)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.serverSideEncryptionRule))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketEncryption"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2500,13 +2611,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketEncryptionResponse());
     }
 
-    public PutBucketInventoryResponse putBucketInventory(String bucket, PutBucketInventoryRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketEncryptionResponse putBucketEncryption(String bucket, PutBucketEncryptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketInventoryWithOptions(bucket, request, headers, runtime);
+        return this.putBucketEncryptionWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketInventoryResponse putBucketInventoryWithOptions(String bucket, PutBucketInventoryRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketInventoryResponse putBucketInventoryWithOptions(String bucket, PutBucketInventoryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2515,13 +2626,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("inventoryId", request.inventoryId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.inventoryConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.inventoryConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketInventory"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2535,22 +2646,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketInventoryResponse());
     }
 
-    public PutBucketLifecycleResponse putBucketLifecycle(String bucket, PutBucketLifecycleRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketInventoryResponse putBucketInventory(String bucket, PutBucketInventoryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketLifecycleWithOptions(bucket, request, headers, runtime);
+        return this.putBucketInventoryWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketLifecycleResponse putBucketLifecycleWithOptions(String bucket, PutBucketLifecycleRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketLifecycleResponse putBucketLifecycleWithOptions(String bucket, PutBucketLifecycleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.lifecycleConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.lifecycleConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketLifecycle"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2564,22 +2675,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketLifecycleResponse());
     }
 
-    public PutBucketLoggingResponse putBucketLogging(String bucket, PutBucketLoggingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketLifecycleResponse putBucketLifecycle(String bucket, PutBucketLifecycleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketLoggingWithOptions(bucket, request, headers, runtime);
+        return this.putBucketLifecycleWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketLoggingResponse putBucketLoggingWithOptions(String bucket, PutBucketLoggingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketLoggingResponse putBucketLoggingWithOptions(String bucket, PutBucketLoggingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.bucketLoggingStatus)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.bucketLoggingStatus))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketLogging"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2593,22 +2704,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketLoggingResponse());
     }
 
-    public PutBucketPolicyResponse putBucketPolicy(String bucket, PutBucketPolicyRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketLoggingResponse putBucketLogging(String bucket, PutBucketLoggingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketPolicyWithOptions(bucket, request, headers, runtime);
+        return this.putBucketLoggingWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketPolicyResponse putBucketPolicyWithOptions(String bucket, PutBucketPolicyRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketPolicyResponse putBucketPolicyWithOptions(String bucket, PutBucketPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("body", request.policy)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketPolicy"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2622,22 +2733,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketPolicyResponse());
     }
 
-    public PutBucketRefererResponse putBucketReferer(String bucket, PutBucketRefererRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketPolicyResponse putBucketPolicy(String bucket, PutBucketPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketRefererWithOptions(bucket, request, headers, runtime);
+        return this.putBucketPolicyWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketRefererResponse putBucketRefererWithOptions(String bucket, PutBucketRefererRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketRefererResponse putBucketRefererWithOptions(String bucket, PutBucketRefererRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.refererConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.refererConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketReferer"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2651,22 +2762,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketRefererResponse());
     }
 
-    public PutBucketReplicationResponse putBucketReplication(String bucket, PutBucketReplicationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketRefererResponse putBucketReferer(String bucket, PutBucketRefererRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketReplicationWithOptions(bucket, request, headers, runtime);
+        return this.putBucketRefererWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketReplicationResponse putBucketReplicationWithOptions(String bucket, PutBucketReplicationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketReplicationResponse putBucketReplicationWithOptions(String bucket, PutBucketReplicationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.replicationConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.replicationConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketReplication"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2680,22 +2791,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketReplicationResponse());
     }
 
-    public PutBucketRequestPaymentResponse putBucketRequestPayment(String bucket, PutBucketRequestPaymentRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketReplicationResponse putBucketReplication(String bucket, PutBucketReplicationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketRequestPaymentWithOptions(bucket, request, headers, runtime);
+        return this.putBucketReplicationWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketRequestPaymentResponse putBucketRequestPaymentWithOptions(String bucket, PutBucketRequestPaymentRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketRequestPaymentResponse putBucketRequestPaymentWithOptions(String bucket, PutBucketRequestPaymentRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.requestPaymentConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.requestPaymentConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketRequestPayment"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2709,22 +2820,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketRequestPaymentResponse());
     }
 
-    public PutBucketTagsResponse putBucketTags(String bucket, PutBucketTagsRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketRequestPaymentResponse putBucketRequestPayment(String bucket, PutBucketRequestPaymentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketTagsWithOptions(bucket, request, headers, runtime);
+        return this.putBucketRequestPaymentWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketTagsResponse putBucketTagsWithOptions(String bucket, PutBucketTagsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketTagsResponse putBucketTagsWithOptions(String bucket, PutBucketTagsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.tagging)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.tagging))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketTags"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2738,22 +2849,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketTagsResponse());
     }
 
-    public PutBucketTransferAccelerationResponse putBucketTransferAcceleration(String bucket, PutBucketTransferAccelerationRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketTagsResponse putBucketTags(String bucket, PutBucketTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketTransferAccelerationWithOptions(bucket, request, headers, runtime);
+        return this.putBucketTagsWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketTransferAccelerationResponse putBucketTransferAccelerationWithOptions(String bucket, PutBucketTransferAccelerationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketTransferAccelerationResponse putBucketTransferAccelerationWithOptions(String bucket, PutBucketTransferAccelerationRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.transferAccelerationConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.transferAccelerationConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketTransferAcceleration"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2767,22 +2878,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketTransferAccelerationResponse());
     }
 
-    public PutBucketVersioningResponse putBucketVersioning(String bucket, PutBucketVersioningRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketTransferAccelerationResponse putBucketTransferAcceleration(String bucket, PutBucketTransferAccelerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketVersioningWithOptions(bucket, request, headers, runtime);
+        return this.putBucketTransferAccelerationWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketVersioningResponse putBucketVersioningWithOptions(String bucket, PutBucketVersioningRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketVersioningResponse putBucketVersioningWithOptions(String bucket, PutBucketVersioningRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.versioningConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.versioningConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketVersioning"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2796,22 +2907,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketVersioningResponse());
     }
 
-    public PutBucketWebsiteResponse putBucketWebsite(String bucket, PutBucketWebsiteRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketVersioningResponse putBucketVersioning(String bucket, PutBucketVersioningRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putBucketWebsiteWithOptions(bucket, request, headers, runtime);
+        return this.putBucketVersioningWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutBucketWebsiteResponse putBucketWebsiteWithOptions(String bucket, PutBucketWebsiteRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutBucketWebsiteResponse putBucketWebsiteWithOptions(String bucket, PutBucketWebsiteRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.websiteConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.websiteConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutBucketWebsite"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2825,22 +2936,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutBucketWebsiteResponse());
     }
 
-    public PutLiveChannelResponse putLiveChannel(String bucket, String channel, PutLiveChannelRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutBucketWebsiteResponse putBucketWebsite(String bucket, PutBucketWebsiteRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putLiveChannelWithOptions(bucket, channel, request, headers, runtime);
+        return this.putBucketWebsiteWithOptions(bucket, request, headers, runtime);
     }
 
-    public PutLiveChannelResponse putLiveChannelWithOptions(String bucket, String channel, PutLiveChannelRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutLiveChannelResponse putLiveChannelWithOptions(String bucket, String channel, PutLiveChannelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.liveChannelConfiguration)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.liveChannelConfiguration))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutLiveChannel"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2854,13 +2965,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutLiveChannelResponse());
     }
 
-    public PutLiveChannelStatusResponse putLiveChannelStatus(String bucket, String channel, PutLiveChannelStatusRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public PutLiveChannelResponse putLiveChannel(String bucket, String channel, PutLiveChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putLiveChannelStatusWithOptions(bucket, channel, request, headers, runtime);
+        return this.putLiveChannelWithOptions(bucket, channel, request, headers, runtime);
     }
 
-    public PutLiveChannelStatusResponse putLiveChannelStatusWithOptions(String bucket, String channel, PutLiveChannelStatusRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutLiveChannelStatusResponse putLiveChannelStatusWithOptions(String bucket, String channel, PutLiveChannelStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2869,12 +2980,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("status", request.status);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutLiveChannelStatus"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2888,13 +2999,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutLiveChannelStatusResponse());
     }
 
-    public PutObjectResponse putObject(String bucket, String key, PutObjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PutObjectHeaders headers = new PutObjectHeaders();
-        return this.putObjectWithOptions(bucket, key, request, headers, runtime);
+    public PutLiveChannelStatusResponse putLiveChannelStatus(String bucket, String channel, PutLiveChannelStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.putLiveChannelStatusWithOptions(bucket, channel, request, headers, runtime);
     }
 
-    public PutObjectResponse putObjectWithOptions(String bucket, String key, PutObjectRequest request, PutObjectHeaders headers, RuntimeOptions runtime) throws Exception {
+    public PutObjectResponse putObjectWithOptions(String bucket, String key, PutObjectRequest request, PutObjectHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2935,13 +3046,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-tagging", com.aliyun.teautil.Common.toJSONString(headers.tagging));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("body", request.body),
             new TeaPair("stream", request.body)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2955,13 +3066,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutObjectResponse());
     }
 
-    public PutObjectAclResponse putObjectAcl(String bucket, String key, PutObjectAclRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PutObjectAclHeaders headers = new PutObjectAclHeaders();
-        return this.putObjectAclWithOptions(bucket, key, request, headers, runtime);
+    public PutObjectResponse putObject(String bucket, String key, PutObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PutObjectHeaders headers = new PutObjectHeaders();
+        return this.putObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public PutObjectAclResponse putObjectAclWithOptions(String bucket, String key, PutObjectAclRequest request, PutObjectAclHeaders headers, RuntimeOptions runtime) throws Exception {
+    public PutObjectAclResponse putObjectAclWithOptions(String bucket, String key, PutObjectAclRequest request, PutObjectAclHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -2979,12 +3090,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-object-acl", com.aliyun.teautil.Common.toJSONString(headers.acl));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutObjectAcl"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -2998,13 +3109,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutObjectAclResponse());
     }
 
-    public PutObjectTaggingResponse putObjectTagging(String bucket, String key, PutObjectTaggingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.putObjectTaggingWithOptions(bucket, key, request, headers, runtime);
+    public PutObjectAclResponse putObjectAcl(String bucket, String key, PutObjectAclRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PutObjectAclHeaders headers = new PutObjectAclHeaders();
+        return this.putObjectAclWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public PutObjectTaggingResponse putObjectTaggingWithOptions(String bucket, String key, PutObjectTaggingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public PutObjectTaggingResponse putObjectTaggingWithOptions(String bucket, String key, PutObjectTaggingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -3013,13 +3124,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.tagging)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.tagging))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutObjectTagging"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -3033,13 +3144,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutObjectTaggingResponse());
     }
 
-    public PutSymlinkResponse putSymlink(String bucket, String key) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        PutSymlinkHeaders headers = new PutSymlinkHeaders();
-        return this.putSymlinkWithOptions(bucket, key, headers, runtime);
+    public PutObjectTaggingResponse putObjectTagging(String bucket, String key, PutObjectTaggingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.putObjectTaggingWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public PutSymlinkResponse putSymlinkWithOptions(String bucket, String key, PutSymlinkHeaders headers, RuntimeOptions runtime) throws Exception {
+    public PutSymlinkResponse putSymlinkWithOptions(String bucket, String key, PutSymlinkHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -3063,11 +3174,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-symlink-target", com.aliyun.teautil.Common.toJSONString(headers.symlinkTargetKey));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PutSymlink"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -3081,13 +3192,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new PutSymlinkResponse());
     }
 
-    public RestoreObjectResponse restoreObject(String bucket, String key, RestoreObjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.restoreObjectWithOptions(bucket, key, request, headers, runtime);
+    public PutSymlinkResponse putSymlink(String bucket, String key) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PutSymlinkHeaders headers = new PutSymlinkHeaders();
+        return this.putSymlinkWithOptions(bucket, key, headers, runtime);
     }
 
-    public RestoreObjectResponse restoreObjectWithOptions(String bucket, String key, RestoreObjectRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public RestoreObjectResponse restoreObjectWithOptions(String bucket, String key, RestoreObjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -3096,13 +3207,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("versionId", request.versionId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.restoreRequest)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.restoreRequest))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RestoreObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -3116,22 +3227,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new RestoreObjectResponse());
     }
 
-    public SelectObjectResponse selectObject(String bucket, String key, SelectObjectRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public RestoreObjectResponse restoreObject(String bucket, String key, RestoreObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.selectObjectWithOptions(bucket, key, request, headers, runtime);
+        return this.restoreObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public SelectObjectResponse selectObjectWithOptions(String bucket, String key, SelectObjectRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public SelectObjectResponse selectObjectWithOptions(String bucket, String key, SelectObjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(TeaModel.buildMap(request.selectRequest)))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.selectRequest))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SelectObject"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -3145,13 +3256,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new SelectObjectResponse());
     }
 
-    public UploadPartResponse uploadPart(String bucket, String key, UploadPartRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+    public SelectObjectResponse selectObject(String bucket, String key, SelectObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.uploadPartWithOptions(bucket, key, request, headers, runtime);
+        return this.selectObjectWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public UploadPartResponse uploadPartWithOptions(String bucket, String key, UploadPartRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+    public UploadPartResponse uploadPartWithOptions(String bucket, String key, UploadPartRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -3164,14 +3275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("uploadId", request.uploadId);
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body),
             new TeaPair("stream", request.body)
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UploadPart"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -3185,13 +3296,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.execute(params, req, runtime), new UploadPartResponse());
     }
 
-    public UploadPartCopyResponse uploadPartCopy(String bucket, String key, UploadPartCopyRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        UploadPartCopyHeaders headers = new UploadPartCopyHeaders();
-        return this.uploadPartCopyWithOptions(bucket, key, request, headers, runtime);
+    public UploadPartResponse uploadPart(String bucket, String key, UploadPartRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.uploadPartWithOptions(bucket, key, request, headers, runtime);
     }
 
-    public UploadPartCopyResponse uploadPartCopyWithOptions(String bucket, String key, UploadPartCopyRequest request, UploadPartCopyHeaders headers, RuntimeOptions runtime) throws Exception {
+    public UploadPartCopyResponse uploadPartCopyWithOptions(String bucket, String key, UploadPartCopyRequest request, UploadPartCopyHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("bucket", bucket);
@@ -3233,12 +3344,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             realHeaders.put("x-oss-copy-source-range", com.aliyun.teautil.Common.toJSONString(headers.copySourceRange));
         }
 
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
             new TeaPair("headers", realHeaders),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UploadPartCopy"),
             new TeaPair("version", "2019-05-17"),
             new TeaPair("protocol", "HTTPS"),
@@ -3250,5 +3361,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("bodyType", "xml")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new UploadPartCopyResponse());
+    }
+
+    public UploadPartCopyResponse uploadPartCopy(String bucket, String key, UploadPartCopyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UploadPartCopyHeaders headers = new UploadPartCopyHeaders();
+        return this.uploadPartCopyWithOptions(bucket, key, request, headers, runtime);
     }
 }
