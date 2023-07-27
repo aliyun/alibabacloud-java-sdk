@@ -7,7 +7,6 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("Amount")
     public Integer amount;
 
-    // 处理器类型：CPU、GPU
     @NameInMap("CoreType")
     public String coreType;
 
@@ -20,7 +19,6 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
-    // 资源对应的协议类型
     @NameInMap("ProtocolType")
     public String protocolType;
 
