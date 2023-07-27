@@ -4,8 +4,8 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class CompleteMultipartUploadRequest extends TeaModel {
-    @NameInMap("completeMultipartUpload")
-    public CompleteMultipartUpload completeMultipartUpload;
+    @NameInMap("CompleteMultipartUpload")
+    public CompleteMultipartUpload body;
 
     @NameInMap("encoding-type")
     public String encodingType;
@@ -18,12 +18,12 @@ public class CompleteMultipartUploadRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CompleteMultipartUploadRequest setCompleteMultipartUpload(CompleteMultipartUpload completeMultipartUpload) {
-        this.completeMultipartUpload = completeMultipartUpload;
+    public CompleteMultipartUploadRequest setBody(CompleteMultipartUpload body) {
+        this.body = body;
         return this;
     }
-    public CompleteMultipartUpload getCompleteMultipartUpload() {
-        return this.completeMultipartUpload;
+    public CompleteMultipartUpload getBody() {
+        return this.body;
     }
 
     public CompleteMultipartUploadRequest setEncodingType(String encodingType) {

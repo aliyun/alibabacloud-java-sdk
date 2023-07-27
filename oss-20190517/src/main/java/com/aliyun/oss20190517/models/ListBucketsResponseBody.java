@@ -4,25 +4,25 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class ListBucketsResponseBody extends TeaModel {
-    @NameInMap("Buckets")
-    public Buckets buckets;
+    @NameInMap("buckets")
+    public java.util.List<Bucket> buckets;
 
-    @NameInMap("IsTruncated")
+    @NameInMap("isTruncated")
     public Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @NameInMap("marker")
     public String marker;
 
-    @NameInMap("MaxKeys")
+    @NameInMap("maxKeys")
     public Long maxKeys;
 
-    @NameInMap("NextMarker")
+    @NameInMap("nextMarker")
     public String nextMarker;
 
-    @NameInMap("Owner")
+    @NameInMap("owner")
     public Owner owner;
 
-    @NameInMap("Prefix")
+    @NameInMap("prefix")
     public String prefix;
 
     public static ListBucketsResponseBody build(java.util.Map<String, ?> map) throws Exception {
@@ -30,11 +30,11 @@ public class ListBucketsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListBucketsResponseBody setBuckets(Buckets buckets) {
+    public ListBucketsResponseBody setBuckets(java.util.List<Bucket> buckets) {
         this.buckets = buckets;
         return this;
     }
-    public Buckets getBuckets() {
+    public java.util.List<Bucket> getBuckets() {
         return this.buckets;
     }
 
@@ -84,25 +84,6 @@ public class ListBucketsResponseBody extends TeaModel {
     }
     public String getPrefix() {
         return this.prefix;
-    }
-
-    public static class Buckets extends TeaModel {
-        @NameInMap("Bucket")
-        public java.util.List<Bucket> buckets;
-
-        public static Buckets build(java.util.Map<String, ?> map) throws Exception {
-            Buckets self = new Buckets();
-            return TeaModel.build(map, self);
-        }
-
-        public Buckets setBuckets(java.util.List<Bucket> buckets) {
-            this.buckets = buckets;
-            return this;
-        }
-        public java.util.List<Bucket> getBuckets() {
-            return this.buckets;
-        }
-
     }
 
 }

@@ -4,21 +4,39 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class GetObjectRequest extends TeaModel {
+    /**
+     * <p>The cache-control header in the response that OSS returns.</p>
+     */
     @NameInMap("response-cache-control")
     public String responseCacheControl;
 
+    /**
+     * <p>The content-disposition header in the response that OSS returns.</p>
+     */
     @NameInMap("response-content-disposition")
     public String responseContentDisposition;
 
+    /**
+     * <p>The content-encoding header in the response that OSS returns.</p>
+     */
     @NameInMap("response-content-encoding")
     public String responseContentEncoding;
 
+    /**
+     * <p>The content-language header in the response that OSS returns.</p>
+     */
     @NameInMap("response-content-language")
     public String responseContentLanguage;
 
+    /**
+     * <p>The content-type header in the response that OSS returns.</p>
+     */
     @NameInMap("response-content-type")
     public String responseContentType;
 
+    /**
+     * <p>The expires header in the response that OSS returns.</p>
+     */
     @NameInMap("response-expires")
     public String responseExpires;
 

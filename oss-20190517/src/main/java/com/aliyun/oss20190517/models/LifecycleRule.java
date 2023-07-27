@@ -10,6 +10,9 @@ public class LifecycleRule extends TeaModel {
     @NameInMap("Expiration")
     public LifecycleExpiration lifecycleExpiration;
 
+    @NameInMap("Filter")
+    public Filter filter;
+
     @NameInMap("ID")
     public String ID;
 
@@ -50,6 +53,14 @@ public class LifecycleRule extends TeaModel {
     }
     public LifecycleExpiration getLifecycleExpiration() {
         return this.lifecycleExpiration;
+    }
+
+    public LifecycleRule setFilter(Filter filter) {
+        this.filter = filter;
+        return this;
+    }
+    public Filter getFilter() {
+        return this.filter;
     }
 
     public LifecycleRule setID(String ID) {
@@ -179,6 +190,55 @@ public class LifecycleRule extends TeaModel {
 
     }
 
+    public static class Not extends TeaModel {
+        @NameInMap("Prefix")
+        public String prefix;
+
+        @NameInMap("Tag")
+        public Tag tag;
+
+        public static Not build(java.util.Map<String, ?> map) throws Exception {
+            Not self = new Not();
+            return TeaModel.build(map, self);
+        }
+
+        public Not setPrefix(String prefix) {
+            this.prefix = prefix;
+            return this;
+        }
+        public String getPrefix() {
+            return this.prefix;
+        }
+
+        public Not setTag(Tag tag) {
+            this.tag = tag;
+            return this;
+        }
+        public Tag getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class Filter extends TeaModel {
+        @NameInMap("Not")
+        public Not not;
+
+        public static Filter build(java.util.Map<String, ?> map) throws Exception {
+            Filter self = new Filter();
+            return TeaModel.build(map, self);
+        }
+
+        public Filter setNot(Not not) {
+            this.not = not;
+            return this;
+        }
+        public Not getNot() {
+            return this.not;
+        }
+
+    }
+
     public static class NoncurrentVersionExpiration extends TeaModel {
         @NameInMap("NoncurrentDays")
         public Integer noncurrentDays;
@@ -199,8 +259,17 @@ public class LifecycleRule extends TeaModel {
     }
 
     public static class NoncurrentVersionTransition extends TeaModel {
+        @NameInMap("AllowSmallFile")
+        public Boolean allowSmallFile;
+
+        @NameInMap("IsAccessTime")
+        public Boolean isAccessTime;
+
         @NameInMap("NoncurrentDays")
         public Integer noncurrentDays;
+
+        @NameInMap("ReturnToStdWhenVisit")
+        public Boolean returnToStdWhenVisit;
 
         @NameInMap("StorageClass")
         public String storageClass;
@@ -210,12 +279,36 @@ public class LifecycleRule extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public NoncurrentVersionTransition setAllowSmallFile(Boolean allowSmallFile) {
+            this.allowSmallFile = allowSmallFile;
+            return this;
+        }
+        public Boolean getAllowSmallFile() {
+            return this.allowSmallFile;
+        }
+
+        public NoncurrentVersionTransition setIsAccessTime(Boolean isAccessTime) {
+            this.isAccessTime = isAccessTime;
+            return this;
+        }
+        public Boolean getIsAccessTime() {
+            return this.isAccessTime;
+        }
+
         public NoncurrentVersionTransition setNoncurrentDays(Integer noncurrentDays) {
             this.noncurrentDays = noncurrentDays;
             return this;
         }
         public Integer getNoncurrentDays() {
             return this.noncurrentDays;
+        }
+
+        public NoncurrentVersionTransition setReturnToStdWhenVisit(Boolean returnToStdWhenVisit) {
+            this.returnToStdWhenVisit = returnToStdWhenVisit;
+            return this;
+        }
+        public Boolean getReturnToStdWhenVisit() {
+            return this.returnToStdWhenVisit;
         }
 
         public NoncurrentVersionTransition setStorageClass(String storageClass) {
@@ -228,42 +321,21 @@ public class LifecycleRule extends TeaModel {
 
     }
 
-    public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static Tag build(java.util.Map<String, ?> map) throws Exception {
-            Tag self = new Tag();
-            return TeaModel.build(map, self);
-        }
-
-        public Tag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public Tag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class LifecycleTransition extends TeaModel {
+        @NameInMap("AllowSmallFile")
+        public Boolean allowSmallFile;
+
         @NameInMap("CreatedBeforeDate")
         public String createdBeforeDate;
 
         @NameInMap("Days")
         public Integer days;
+
+        @NameInMap("IsAccessTime")
+        public Boolean isAccessTime;
+
+        @NameInMap("ReturnToStdWhenVisit")
+        public Boolean returnToStdWhenVisit;
 
         @NameInMap("StorageClass")
         public String storageClass;
@@ -271,6 +343,14 @@ public class LifecycleRule extends TeaModel {
         public static LifecycleTransition build(java.util.Map<String, ?> map) throws Exception {
             LifecycleTransition self = new LifecycleTransition();
             return TeaModel.build(map, self);
+        }
+
+        public LifecycleTransition setAllowSmallFile(Boolean allowSmallFile) {
+            this.allowSmallFile = allowSmallFile;
+            return this;
+        }
+        public Boolean getAllowSmallFile() {
+            return this.allowSmallFile;
         }
 
         public LifecycleTransition setCreatedBeforeDate(String createdBeforeDate) {
@@ -287,6 +367,22 @@ public class LifecycleRule extends TeaModel {
         }
         public Integer getDays() {
             return this.days;
+        }
+
+        public LifecycleTransition setIsAccessTime(Boolean isAccessTime) {
+            this.isAccessTime = isAccessTime;
+            return this;
+        }
+        public Boolean getIsAccessTime() {
+            return this.isAccessTime;
+        }
+
+        public LifecycleTransition setReturnToStdWhenVisit(Boolean returnToStdWhenVisit) {
+            this.returnToStdWhenVisit = returnToStdWhenVisit;
+            return this;
+        }
+        public Boolean getReturnToStdWhenVisit() {
+            return this.returnToStdWhenVisit;
         }
 
         public LifecycleTransition setStorageClass(String storageClass) {

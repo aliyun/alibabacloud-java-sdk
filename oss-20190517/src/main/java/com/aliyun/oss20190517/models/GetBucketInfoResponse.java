@@ -14,7 +14,7 @@ public class GetBucketInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetBucketInfoResponseBody body;
+    public BucketInfo body;
 
     public static GetBucketInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         GetBucketInfoResponse self = new GetBucketInfoResponse();
@@ -37,11 +37,11 @@ public class GetBucketInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetBucketInfoResponse setBody(GetBucketInfoResponseBody body) {
+    public GetBucketInfoResponse setBody(BucketInfo body) {
         this.body = body;
         return this;
     }
-    public GetBucketInfoResponseBody getBody() {
+    public BucketInfo getBody() {
         return this.body;
     }
 

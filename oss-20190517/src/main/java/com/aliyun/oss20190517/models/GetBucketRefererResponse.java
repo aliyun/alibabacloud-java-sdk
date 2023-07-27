@@ -14,7 +14,7 @@ public class GetBucketRefererResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetBucketRefererResponseBody body;
+    public RefererConfiguration body;
 
     public static GetBucketRefererResponse build(java.util.Map<String, ?> map) throws Exception {
         GetBucketRefererResponse self = new GetBucketRefererResponse();
@@ -37,11 +37,11 @@ public class GetBucketRefererResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetBucketRefererResponse setBody(GetBucketRefererResponseBody body) {
+    public GetBucketRefererResponse setBody(RefererConfiguration body) {
         this.body = body;
         return this;
     }
-    public GetBucketRefererResponseBody getBody() {
+    public RefererConfiguration getBody() {
         return this.body;
     }
 

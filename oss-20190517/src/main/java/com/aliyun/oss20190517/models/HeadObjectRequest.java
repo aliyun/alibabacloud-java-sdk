@@ -4,6 +4,9 @@ package com.aliyun.oss20190517.models;
 import com.aliyun.tea.*;
 
 public class HeadObjectRequest extends TeaModel {
+    /**
+     * <p>The version ID of the object for which you want to query metadata.</p>
+     */
     @NameInMap("versionId")
     public String versionId;
 
