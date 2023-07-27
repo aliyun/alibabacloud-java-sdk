@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class MigrateDesktopsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the cloud desktops. You can specify one or more cloud desktops. Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the destination workspace.</p>
+     */
     @NameInMap("TargetOfficeSiteId")
     public String targetOfficeSiteId;
 

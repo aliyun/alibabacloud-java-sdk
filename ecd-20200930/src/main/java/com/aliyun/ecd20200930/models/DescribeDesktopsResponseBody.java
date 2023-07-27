@@ -65,6 +65,80 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDesktopsResponseBodyDesktopsDesktopDurationList extends TeaModel {
+        @NameInMap("PackageCreationTime")
+        public String packageCreationTime;
+
+        @NameInMap("PackageExpiredTime")
+        public String packageExpiredTime;
+
+        @NameInMap("PackageId")
+        public String packageId;
+
+        @NameInMap("PackageStatus")
+        public String packageStatus;
+
+        @NameInMap("TotalDuration")
+        public Long totalDuration;
+
+        @NameInMap("UsedDuration")
+        public Long usedDuration;
+
+        public static DescribeDesktopsResponseBodyDesktopsDesktopDurationList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopsResponseBodyDesktopsDesktopDurationList self = new DescribeDesktopsResponseBodyDesktopsDesktopDurationList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageCreationTime(String packageCreationTime) {
+            this.packageCreationTime = packageCreationTime;
+            return this;
+        }
+        public String getPackageCreationTime() {
+            return this.packageCreationTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageExpiredTime(String packageExpiredTime) {
+            this.packageExpiredTime = packageExpiredTime;
+            return this;
+        }
+        public String getPackageExpiredTime() {
+            return this.packageExpiredTime;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageId(String packageId) {
+            this.packageId = packageId;
+            return this;
+        }
+        public String getPackageId() {
+            return this.packageId;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setPackageStatus(String packageStatus) {
+            this.packageStatus = packageStatus;
+            return this;
+        }
+        public String getPackageStatus() {
+            return this.packageStatus;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setTotalDuration(Long totalDuration) {
+            this.totalDuration = totalDuration;
+            return this;
+        }
+        public Long getTotalDuration() {
+            return this.totalDuration;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsDesktopDurationList setUsedDuration(Long usedDuration) {
+            this.usedDuration = usedDuration;
+            return this;
+        }
+        public Long getUsedDuration() {
+            return this.usedDuration;
+        }
+
+    }
+
     public static class DescribeDesktopsResponseBodyDesktopsDisks extends TeaModel {
         /**
          * <p>The ID of the disk.</p>
@@ -155,6 +229,12 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("ReleaseNote")
         public String releaseNote;
 
+        @NameInMap("ReleaseNoteEn")
+        public String releaseNoteEn;
+
+        @NameInMap("ReleaseNoteJp")
+        public String releaseNoteJp;
+
         /**
          * <p>The size of the installation package for the version to which the cloud desktop can be updated. Unit: KB.</p>
          */
@@ -188,6 +268,22 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getReleaseNote() {
             return this.releaseNote;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setReleaseNoteEn(String releaseNoteEn) {
+            this.releaseNoteEn = releaseNoteEn;
+            return this;
+        }
+        public String getReleaseNoteEn() {
+            return this.releaseNoteEn;
+        }
+
+        public DescribeDesktopsResponseBodyDesktopsFotaUpdate setReleaseNoteJp(String releaseNoteJp) {
+            this.releaseNoteJp = releaseNoteJp;
+            return this;
+        }
+        public String getReleaseNoteJp() {
+            return this.releaseNoteJp;
         }
 
         public DescribeDesktopsResponseBodyDesktopsFotaUpdate setSize(Long size) {
@@ -340,6 +436,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
+
+        @NameInMap("DesktopDurationList")
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> desktopDurationList;
 
         /**
          * <p>The ID of the group to which the cloud desktop belongs. Default value: null.</p>
@@ -716,6 +815,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public String getDataDiskSize() {
             return this.dataDiskSize;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setDesktopDurationList(java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> desktopDurationList) {
+            this.desktopDurationList = desktopDurationList;
+            return this;
+        }
+        public java.util.List<DescribeDesktopsResponseBodyDesktopsDesktopDurationList> getDesktopDurationList() {
+            return this.desktopDurationList;
         }
 
         public DescribeDesktopsResponseBodyDesktops setDesktopGroupId(String desktopGroupId) {

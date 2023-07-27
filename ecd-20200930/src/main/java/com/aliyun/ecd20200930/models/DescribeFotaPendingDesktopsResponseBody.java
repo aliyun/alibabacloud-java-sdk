@@ -4,8 +4,14 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("FotaPendingDesktops")
     public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> fotaPendingDesktops;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -18,12 +24,28 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeFotaPendingDesktopsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public DescribeFotaPendingDesktopsResponseBody setFotaPendingDesktops(java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> fotaPendingDesktops) {
         this.fotaPendingDesktops = fotaPendingDesktops;
         return this;
     }
     public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> getFotaPendingDesktops() {
         return this.fotaPendingDesktops;
+    }
+
+    public DescribeFotaPendingDesktopsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public DescribeFotaPendingDesktopsResponseBody setNextToken(String nextToken) {
@@ -42,6 +64,25 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions extends TeaModel {
+        @NameInMap("EndUserId")
+        public String endUserId;
+
+        public static DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions self = new DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
+        }
+
+    }
+
     public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops extends TeaModel {
         @NameInMap("CurrentAppVersion")
         public String currentAppVersion;
@@ -57,6 +98,12 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
         @NameInMap("OfficeSiteId")
         public String officeSiteId;
+
+        @NameInMap("Sessions")
+        public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions> sessions;
+
+        @NameInMap("Status")
+        public Long status;
 
         public static DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops build(java.util.Map<String, ?> map) throws Exception {
             DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops self = new DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops();
@@ -101,6 +148,22 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         }
         public String getOfficeSiteId() {
             return this.officeSiteId;
+        }
+
+        public DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops setSessions(java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions> sessions) {
+            this.sessions = sessions;
+            return this;
+        }
+        public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions> getSessions() {
+            return this.sessions;
+        }
+
+        public DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops setStatus(Long status) {
+            this.status = status;
+            return this;
+        }
+        public Long getStatus() {
+            return this.status;
         }
 
     }

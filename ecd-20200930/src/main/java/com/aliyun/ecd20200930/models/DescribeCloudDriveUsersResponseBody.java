@@ -46,6 +46,9 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         @NameInMap("DriveId")
         public String driveId;
 
+        @NameInMap("EndUserId")
+        public String endUserId;
+
         @NameInMap("Status")
         public String status;
 
@@ -72,6 +75,14 @@ public class DescribeCloudDriveUsersResponseBody extends TeaModel {
         }
         public String getDriveId() {
             return this.driveId;
+        }
+
+        public DescribeCloudDriveUsersResponseBodyCloudDriveUsers setEndUserId(String endUserId) {
+            this.endUserId = endUserId;
+            return this;
+        }
+        public String getEndUserId() {
+            return this.endUserId;
         }
 
         public DescribeCloudDriveUsersResponseBodyCloudDriveUsers setStatus(String status) {
