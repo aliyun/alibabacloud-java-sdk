@@ -2854,6 +2854,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceType", request.resourceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypes)) {
+            query.put("ResourceTypes", request.resourceTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.service)) {
             query.put("Service", request.service);
         }
