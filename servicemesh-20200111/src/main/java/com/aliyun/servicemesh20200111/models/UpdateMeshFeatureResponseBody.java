@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateMeshFeatureResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

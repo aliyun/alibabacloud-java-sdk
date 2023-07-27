@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
     /**
-     * <p>The namespace-level sidecar configurations.</p>
+     * <p>The namespace-level sidecar proxy configurations.</p>
      */
     @NameInMap("ConfigPatches")
     public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches configPatches;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,19 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher extends TeaModel {
         /**
-         * <p>The prefix of the monitoring metrics for data collected by Envoy proxies.</p>
+         * <p>The prefixes of the custom Envoy statistics that are reported by the sidecar proxy.</p>
          */
         @NameInMap("InclusionPrefixes")
         public java.util.List<String> inclusionPrefixes;
 
         /**
-         * <p>The regular expression of the monitoring metrics for data collected by Envoy proxies.</p>
+         * <p>The regular expressions for specifying the custom Envoy statistics that are reported by the sidecar proxy.</p>
          */
         @NameInMap("InclusionRegexps")
         public java.util.List<String> inclusionRegexps;
 
         /**
-         * <p>The suffix of the monitoring metrics for data collected by Envoy proxies.</p>
+         * <p>The suffixes of the custom Envoy statistics that are reported by the sidecar proxy.</p>
          */
         @NameInMap("InclusionSuffixes")
         public java.util.List<String> inclusionSuffixes;
@@ -296,11 +296,8 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
          * <p>The custom tags added to reported spans. The key of a tag is of the string type. The value of a tag is in the JSON format. A custom tag can belong to one of the following types:</p>
          * <br>
          * <p>*   `literal`: The tag value is a fixed value in the JSON format. This tag must contain the `value` field that specifies a literal. Example: `{"value":"test"}`.</p>
-         * <br>
-         * <p><!----></p>
-         * <br>
-         * <p>*   `header`: The tag value is a request header in the JSON format. This tag must contain the `name` field and `defaultValue` field.The name field indicates the name of the request header. The defaultValue field indicates the default value that is used when no request header is available. Example: `{"name":"test","defaultValue":"test"}`.</p>
-         * <p>*   `environment`: The tag value is an environment variable in the JSON format. This tag must contain the `name` field and `defaultValue` field. The name field indicates the name of the environment variable. The defaultValue field indicates the environment variable that is used when no environment variable is available. Example: `{"name":"test","defaultValue":"test"}`.</p>
+         * <p>*   `header`: The tag value is a request header in the JSON format. This tag must contain the `name` field and the `defaultValue` field. The name field indicates the name of the request header. The defaultValue field indicates the default value that is used when no request header is available. Example: `{"name":"test","defaultValue":"test"}`.</p>
+         * <p>*   `environment`: The tag value is an environment variable in the JSON format. This tag must contain the `name` field and the `defaultValue` field. The name field indicates the name of the environment variable. The defaultValue field indicates the environment variable that is used when no environment variable is available. Example: `{"name":"test","defaultValue":"test"}`.</p>
          */
         @NameInMap("CustomTags")
         public java.util.Map<String, ?> customTags;
@@ -350,52 +347,52 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
     public static class DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches extends TeaModel {
         /**
-         * <p>The number of worker threads running in the sidecar proxy.</p>
+         * <p>The number of worker threads to run in the istio-proxy container.</p>
          */
         @NameInMap("Concurrency")
         public Integer concurrency;
 
         /**
-         * <p>The port that the inbound traffic of the sidecar proxy does not pass through.</p>
+         * <p>The inbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
          */
         @NameInMap("ExcludeInboundPorts")
         public String excludeInboundPorts;
 
         /**
-         * <p>The IP address from which the outbound traffic does not pass through the sidecar proxy.</p>
+         * <p>The outbound IP ranges in CIDR form to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
          */
         @NameInMap("ExcludeOutboundIPRanges")
         public String excludeOutboundIPRanges;
 
         /**
-         * <p>The port that the outbound traffic of the sidecar proxy does not pass through.</p>
+         * <p>The outbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
          */
         @NameInMap("ExcludeOutboundPorts")
         public String excludeOutboundPorts;
 
         /**
-         * <p>Indicates whether applications can be started only after Istio Proxy starts. Valid values:</p>
+         * <p>Indicates whether applications can be started only after the istio-proxy container starts. Valid values:</p>
          * <br>
-         * <p>*   `true`: Applications can be started only after Istio Proxy starts.</p>
-         * <p>*   false: Applications can be started before Istio Proxy starts.</p>
+         * <p>*   `true`</p>
+         * <p>*   false</p>
          */
         @NameInMap("HoldApplicationUntilProxyStarts")
         public Boolean holdApplicationUntilProxyStarts;
 
         /**
-         * <p>The port that the inbound traffic of the sidecar proxy passes through.</p>
+         * <p>The inbound ports for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
          */
         @NameInMap("IncludeInboundPorts")
         public String includeInboundPorts;
 
         /**
-         * <p>The IP address from which the outbound traffic passes through the sidecar proxy.</p>
+         * <p>The outbound IP ranges in CIDR form for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
          */
         @NameInMap("IncludeOutboundIPRanges")
         public String includeOutboundIPRanges;
 
         /**
-         * <p>The port that the outbound traffic of the sidecar proxy passes through.</p>
+         * <p>The outbound ports for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
          */
         @NameInMap("IncludeOutboundPorts")
         public String includeOutboundPorts;
@@ -403,8 +400,8 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         /**
          * <p>The mode in which the sidecar proxy intercepts inbound traffic. Valid values:</p>
          * <br>
-         * <p>*   `REDIRECT`: The sidecar proxy intercepts inbound traffic in the REDIRECT mode.</p>
-         * <p>*   `TPROXY`: The sidecar proxy intercepts inbound traffic in the TPROXY mode.</p>
+         * <p>*   `REDIRECT` (default): In this mode, source IP addresses are lost during traffic redirection to the sidecar proxy.</p>
+         * <p>*   `TPROXY`: In this mode, both the source and destination IP addresses and ports are preserved.</p>
          */
         @NameInMap("InterceptionMode")
         public String interceptionMode;
@@ -412,8 +409,8 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the Domain Name System (DNS) proxy feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: The DNS proxy feature is enabled.</p>
-         * <p>*   `false`: The DNS proxy feature is disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("IstioDNSProxyEnabled")
         public Boolean istioDNSProxyEnabled;
@@ -434,7 +431,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         public java.util.Map<String, String> proxyMetadata;
 
         /**
-         * <p>The monitoring metrics for data collected by Envoy proxies.</p>
+         * <p>The custom Envoy statistics that are reported by the sidecar proxy.</p>
          */
         @NameInMap("ProxyStatsMatcher")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher proxyStatsMatcher;
@@ -446,13 +443,13 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitAckSloResource sidecarProxyInitAckSloResource;
 
         /**
-         * <p>The maximum size of resources that are available to the sidecar proxy init container.</p>
+         * <p>The maximum size of resources that are available to the istio-init container in the pod into which the sidecar proxy is injected. The istio-init container is used in this topic.</p>
          */
         @NameInMap("SidecarProxyInitResourceLimit")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceLimit sidecarProxyInitResourceLimit;
 
         /**
-         * <p>The minimum size of resources that are requested by the sidecar proxy init container.</p>
+         * <p>The minimum size of resources that are required by the istio-init container.</p>
          */
         @NameInMap("SidecarProxyInitResourceRequest")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyInitResourceRequest sidecarProxyInitResourceRequest;
@@ -464,13 +461,13 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceLimit sidecarProxyResourceLimit;
 
         /**
-         * <p>The minimum size of resources that are requested by the sidecar proxy container.</p>
+         * <p>The minimum size of resources that are required by the sidecar proxy container.</p>
          */
         @NameInMap("SidecarProxyResourceRequest")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyResourceRequest sidecarProxyResourceRequest;
 
         /**
-         * <p>The maximum period of time that the sidecar proxy waits for a request to end.</p>
+         * <p>The maximum period of time allowed for connections to complete on sidecar proxy shutdown.</p>
          */
         @NameInMap("TerminationDrainDuration")
         public String terminationDrainDuration;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     /**
-     * <p>The point in time when the cluster was last modified.</p>
+     * <p>The queried clusters.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<DescribeServiceMeshClustersResponseBodyClusters> clusters;
@@ -14,7 +14,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     public Long numberOfClusters;
 
     /**
-     * <p>The point in time when the cluster was created.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -50,67 +50,34 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshClustersResponseBodyClusters extends TeaModel {
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The domain name of the cluster.</p>
          */
         @NameInMap("ClusterDomain")
         public String clusterDomain;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The cluster type.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
-         * <p>The ID of the ASM instance.</p>
+         * <p>The time when the cluster was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The domain name of the cluster.</p>
+         * <p>The error message about the cluster.</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
-
-        @NameInMap("ForbiddenFlag")
-        public Long forbiddenFlag;
-
-        @NameInMap("ForbiddenInfo")
-        public String forbiddenInfo;
-
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>The name of the cluster.</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
-
-        /**
-         * <p>The type of the cluster.</p>
-         */
-        @NameInMap("ServiceMeshId")
-        public String serviceMeshId;
-
-        /**
-         * <p>The error message about the cluster.</p>
-         */
-        @NameInMap("SgId")
-        public String sgId;
-
-        /**
-         * <p>The version number of the cluster.</p>
-         */
-        @NameInMap("State")
-        public String state;
-
-        /**
-         * <p>The ID of the region in which the cluster resides.</p>
-         */
-        @NameInMap("UpdateTime")
-        public String updateTime;
 
         /**
          * <p>Indicates that the cluster is available or the reason why the cluster cannot be added to the ASM instance. Valid values:</p>
@@ -121,17 +88,62 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
          * <p>*   `3`: The CIDR block of the cluster conflicts with that of the ASM instance.</p>
          * <p>*   `4`: The cluster has a namespace that is named istio system.</p>
          */
-        @NameInMap("Version")
-        public String version;
+        @NameInMap("ForbiddenFlag")
+        public Long forbiddenFlag;
+
+        @NameInMap("ForbiddenInfo")
+        public String forbiddenInfo;
 
         /**
-         * <p>The status of the cluster. Valid values:</p>
+         * <p>The name of the cluster.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The ID of the region in which the cluster resides.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The ID of the ASM instance.</p>
+         */
+        @NameInMap("ServiceMeshId")
+        public String serviceMeshId;
+
+        /**
+         * <p>The ID of the security group.</p>
+         */
+        @NameInMap("SgId")
+        public String sgId;
+
+        /**
+         * <p>The state of the cluster. Valid values:</p>
          * <br>
          * <p>*   `running`: The cluster is running.</p>
          * <p>*   `starting`: The cluster is starting.</p>
          * <p>*   `stopping`: The cluster is being stopped.</p>
          * <p>*   `stopped`: The cluster is stopped.</p>
          * <p>*   `failed`: The cluster fails to be run.</p>
+         */
+        @NameInMap("State")
+        public String state;
+
+        /**
+         * <p>The time when the cluster was last modified.</p>
+         */
+        @NameInMap("UpdateTime")
+        public String updateTime;
+
+        /**
+         * <p>The version number of the cluster.</p>
+         */
+        @NameInMap("Version")
+        public String version;
+
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

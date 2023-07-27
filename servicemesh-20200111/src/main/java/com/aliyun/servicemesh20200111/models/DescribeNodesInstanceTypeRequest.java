@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNodesInstanceTypeRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

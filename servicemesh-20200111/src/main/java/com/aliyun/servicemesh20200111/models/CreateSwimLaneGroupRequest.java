@@ -5,25 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateSwimLaneGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the lane group.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The name of the ingress gateway.</p>
+     */
     @NameInMap("IngressGatewayName")
     public String ingressGatewayName;
 
+    /**
+     * <p>The type of the gateway for ingress traffic. Only ASM ingress gateways are supported.</p>
+     */
     @NameInMap("IngressType")
     public String ingressType;
 
     /**
-     * <p>The type of the ingress. Only ingress gateways are supported. Set the value to ASM.</p>
+     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
     /**
-     * <p>The name of the ingress gateway.</p>
+     * <p>A list of services associated with the lane group. The value is a JSON array. The format of a service is `$Cluster name/$Cluster ID/$Namespace/$Service name`.</p>
      */
     @NameInMap("ServicesList")
     public String servicesList;

@@ -3,7 +3,7 @@ package com.aliyun.servicemesh20200111.models;
 
 import com.aliyun.tea.*;
 
-public class GrantUserPermissionsRequest extends TeaModel {
+public class GrantUserPermissionsShrinkRequest extends TeaModel {
     /**
      * <p>The permissions that are granted to an entity. The content is a string that consists of JSON arrays. You must specify all permissions that you want to grant to an entity. You can add or remove permissions by modifying the content. Field definition of the sample code:</p>
      * <br>
@@ -25,14 +25,14 @@ public class GrantUserPermissionsRequest extends TeaModel {
      * <p>The ID list of the RAM user or RAM role.</p>
      */
     @NameInMap("SubAccountUserIds")
-    public java.util.List<String> subAccountUserIds;
+    public String subAccountUserIdsShrink;
 
-    public static GrantUserPermissionsRequest build(java.util.Map<String, ?> map) throws Exception {
-        GrantUserPermissionsRequest self = new GrantUserPermissionsRequest();
+    public static GrantUserPermissionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GrantUserPermissionsShrinkRequest self = new GrantUserPermissionsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GrantUserPermissionsRequest setPermissions(String permissions) {
+    public GrantUserPermissionsShrinkRequest setPermissions(String permissions) {
         this.permissions = permissions;
         return this;
     }
@@ -40,7 +40,7 @@ public class GrantUserPermissionsRequest extends TeaModel {
         return this.permissions;
     }
 
-    public GrantUserPermissionsRequest setSubAccountUserId(String subAccountUserId) {
+    public GrantUserPermissionsShrinkRequest setSubAccountUserId(String subAccountUserId) {
         this.subAccountUserId = subAccountUserId;
         return this;
     }
@@ -48,12 +48,12 @@ public class GrantUserPermissionsRequest extends TeaModel {
         return this.subAccountUserId;
     }
 
-    public GrantUserPermissionsRequest setSubAccountUserIds(java.util.List<String> subAccountUserIds) {
-        this.subAccountUserIds = subAccountUserIds;
+    public GrantUserPermissionsShrinkRequest setSubAccountUserIdsShrink(String subAccountUserIdsShrink) {
+        this.subAccountUserIdsShrink = subAccountUserIdsShrink;
         return this;
     }
-    public java.util.List<String> getSubAccountUserIds() {
-        return this.subAccountUserIds;
+    public String getSubAccountUserIdsShrink() {
+        return this.subAccountUserIdsShrink;
     }
 
 }

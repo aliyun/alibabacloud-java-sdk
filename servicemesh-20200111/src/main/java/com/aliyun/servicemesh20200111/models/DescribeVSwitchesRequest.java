@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries returned on a single page.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The list of the queried vSwitches.</p>
+     * <p>The VPC ID.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

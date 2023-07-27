@@ -64,6 +64,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addClusterIntoServiceMeshWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request AddVMIntoServiceMeshRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddVMIntoServiceMeshResponse
+     */
+    // Deprecated
     public AddVMIntoServiceMeshResponse addVMIntoServiceMeshWithOptions(AddVMIntoServiceMeshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -92,6 +100,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddVMIntoServiceMeshResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request AddVMIntoServiceMeshRequest
+      * @return AddVMIntoServiceMeshResponse
+     */
+    // Deprecated
     public AddVMIntoServiceMeshResponse addVMIntoServiceMesh(AddVMIntoServiceMeshRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addVMIntoServiceMeshWithOptions(request, runtime);
@@ -1369,31 +1384,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeImportedServicesDetailWithOptions(request, runtime);
     }
 
-    public DescribeIngressGatewaysResponse describeIngressGatewaysWithOptions(DescribeIngressGatewaysRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeIngressGateways"),
-            new TeaPair("version", "2020-01-11"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIngressGatewaysResponse());
-    }
-
-    public DescribeIngressGatewaysResponse describeIngressGateways(DescribeIngressGatewaysRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeIngressGatewaysWithOptions(request, runtime);
-    }
-
     public DescribeIstioGatewayDomainsResponse describeIstioGatewayDomainsWithOptions(DescribeIstioGatewayDomainsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1852,6 +1842,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeServiceMeshUpgradeStatusWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeServiceMeshVMsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeServiceMeshVMsResponse
+     */
+    // Deprecated
     public DescribeServiceMeshVMsResponse describeServiceMeshVMsWithOptions(DescribeServiceMeshVMsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1876,6 +1874,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeServiceMeshVMsResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeServiceMeshVMsRequest
+      * @return DescribeServiceMeshVMsResponse
+     */
+    // Deprecated
     public DescribeServiceMeshVMsResponse describeServiceMeshVMs(DescribeServiceMeshVMsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeServiceMeshVMsWithOptions(request, runtime);
@@ -1989,6 +1994,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeUsersWithPermissionsWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeVMsInServiceMeshRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeVMsInServiceMeshResponse
+     */
+    // Deprecated
     public DescribeVMsInServiceMeshResponse describeVMsInServiceMeshWithOptions(DescribeVMsInServiceMeshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2013,6 +2026,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVMsInServiceMeshResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request DescribeVMsInServiceMeshRequest
+      * @return DescribeVMsInServiceMeshResponse
+     */
+    // Deprecated
     public DescribeVMsInServiceMeshResponse describeVMsInServiceMesh(DescribeVMsInServiceMeshRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVMsInServiceMeshWithOptions(request, runtime);
@@ -2395,6 +2415,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSwimLaneListWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request GetVmAppMeshInfoRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetVmAppMeshInfoResponse
+     */
+    // Deprecated
     public GetVmAppMeshInfoResponse getVmAppMeshInfoWithOptions(GetVmAppMeshInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2415,11 +2443,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetVmAppMeshInfoResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request GetVmAppMeshInfoRequest
+      * @return GetVmAppMeshInfoResponse
+     */
+    // Deprecated
     public GetVmAppMeshInfoResponse getVmAppMeshInfo(GetVmAppMeshInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getVmAppMeshInfoWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request GetVmMetaRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetVmMetaResponse
+     */
+    // Deprecated
     public GetVmMetaResponse getVmMetaWithOptions(GetVmMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -2440,13 +2483,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetVmMetaResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request GetVmMetaRequest
+      * @return GetVmMetaResponse
+     */
+    // Deprecated
     public GetVmMetaResponse getVmMeta(GetVmMetaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getVmMetaWithOptions(request, runtime);
     }
 
-    public GrantUserPermissionsResponse grantUserPermissionsWithOptions(GrantUserPermissionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GrantUserPermissionsResponse grantUserPermissionsWithOptions(GrantUserPermissionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GrantUserPermissionsShrinkRequest request = new GrantUserPermissionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.subAccountUserIds)) {
+            request.subAccountUserIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subAccountUserIds, "SubAccountUserIds", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.permissions)) {
             body.put("Permissions", request.permissions);
@@ -2454,6 +2510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.subAccountUserId)) {
             body.put("SubAccountUserId", request.subAccountUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subAccountUserIdsShrink)) {
+            body.put("SubAccountUserIds", request.subAccountUserIdsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2631,6 +2691,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.removeClusterFromServiceMeshWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request RemoveVMFromServiceMeshRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveVMFromServiceMeshResponse
+     */
+    // Deprecated
     public RemoveVMFromServiceMeshResponse removeVMFromServiceMeshWithOptions(RemoveVMFromServiceMeshRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2659,6 +2727,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveVMFromServiceMeshResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request RemoveVMFromServiceMeshRequest
+      * @return RemoveVMFromServiceMeshResponse
+     */
+    // Deprecated
     public RemoveVMFromServiceMeshResponse removeVMFromServiceMesh(RemoveVMFromServiceMeshRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeVMFromServiceMeshWithOptions(request, runtime);
@@ -2872,6 +2947,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableSidecarSetInjection)) {
             body.put("EnableSidecarSetInjection", request.enableSidecarSetInjection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.istioRev)) {
+            body.put("IstioRev", request.istioRev);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
@@ -3185,6 +3264,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.kialiEnabled)) {
             body.put("KialiEnabled", request.kialiEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kialiServiceAnnotations)) {
+            body.put("KialiServiceAnnotations", request.kialiServiceAnnotations);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lifecycle)) {
@@ -3683,6 +3766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExpectedVersion", request.expectedVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.preCheck)) {
+            body.put("PreCheck", request.preCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
             body.put("ServiceMeshId", request.serviceMeshId);
         }
@@ -3720,6 +3807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeMeshVersionResponse upgradeMeshVersionWithOptions(UpgradeMeshVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.preCheck)) {
+            query.put("PreCheck", request.preCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
             query.put("ServiceMeshId", request.serviceMeshId);
         }

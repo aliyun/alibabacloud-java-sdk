@@ -16,6 +16,9 @@ public class UpdateIstioInjectionConfigRequest extends TeaModel {
     @NameInMap("EnableSidecarSetInjection")
     public Boolean enableSidecarSetInjection;
 
+    @NameInMap("IstioRev")
+    public String istioRev;
+
     /**
      * <p>The namespace for which you want to modify the sidecar injection setting.</p>
      */
@@ -47,6 +50,14 @@ public class UpdateIstioInjectionConfigRequest extends TeaModel {
     }
     public Boolean getEnableSidecarSetInjection() {
         return this.enableSidecarSetInjection;
+    }
+
+    public UpdateIstioInjectionConfigRequest setIstioRev(String istioRev) {
+        this.istioRev = istioRev;
+        return this;
+    }
+    public String getIstioRev() {
+        return this.istioRev;
     }
 
     public UpdateIstioInjectionConfigRequest setNamespace(String namespace) {

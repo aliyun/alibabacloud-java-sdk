@@ -4,9 +4,15 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
+    /**
+     * <p>The instance types of the nodes.</p>
+     */
     @NameInMap("InstanceTypes")
     public java.util.List<DescribeNodesInstanceTypeResponseBodyInstanceTypes> instanceTypes;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,9 +41,18 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Indicates whether the instance type supports Multi-Buffer acceleration. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         */
         @NameInMap("MultiBufferEnabled")
         public Boolean multiBufferEnabled;
 
+        /**
+         * <p>The instance type of the node.</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 

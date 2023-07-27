@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSwimLaneGroupListRequest extends TeaModel {
     /**
-     * <p>A list of services associated with the lane group.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

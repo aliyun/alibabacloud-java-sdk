@@ -5,20 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the SLB instance is reused. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The SLB instance is reused.</p>
-     * <p>*   `false`: The SLB instance is not reused.</p>
+     * <p>The status of the cluster.</p>
      */
     @NameInMap("ClusterStatus")
     public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus clusterStatus;
 
     /**
-     * <p>The check result of the number of SLB instances created for exposing the API server. Valid values:</p>
-     * <br>
-     * <p>*   `too_much`: An excessive number of SLB instances are created.</p>
-     * <p>*   `num_exact`: A proper number of SLB instances are created.</p>
-     * <p>*   `too_little`: The number of SLB instances falls short.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -46,23 +39,41 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus extends TeaModel {
         /**
-         * <p>The check result of the number of SLB instances created for exposing Istio Pilot. Valid values:</p>
+         * <p>Indicates whether the SLB instance is locked. Valid values:</p>
          * <br>
-         * <p>*   `too_much`: An excessive number of SLB instances are created.</p>
-         * <p>*   `num_exact`: A proper number of SLB instances are created.</p>
-         * <p>*   `too_little`: The number of SLB instances falls short.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Locked")
         public Boolean locked;
 
         /**
-         * <p>Indicates whether the SLB instance is reused. Valid values:</p>
+         * <p>The billing method of the SLB instance. Valid values:</p>
          * <br>
-         * <p>*   `true`: The SLB instance is reused.</p>
-         * <p>*   `false`: The SLB instance is not reused.</p>
+         * <p>*   `PrePay`: subscription</p>
+         * <p>*   `PayOnDemand`: pay-as-you-go</p>
          */
         @NameInMap("PayType")
         public String payType;
+
+        /**
+         * <p>Indicates whether the SLB instance is reused. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         */
+        @NameInMap("Reused")
+        public Boolean reused;
+
+        /**
+         * <p>The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:</p>
+         * <br>
+         * <p>*   `too_much`: An excessive number of backend servers are created.</p>
+         * <p>*   `num_exact`: A proper number of backend servers are created.</p>
+         * <p>*   `too_little`: The number of backend servers falls short.</p>
+         */
+        @NameInMap("SLBBackEndServerNumStatus")
+        public String SLBBackEndServerNumStatus;
 
         /**
          * <p>The check result of the SLB instance. Valid values:</p>
@@ -72,21 +83,6 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
          * <p>*   `conflict`: Conflicts are detected.</p>
          * <p>*   `failed`: The check fails.</p>
          * <p>*   `time_out`: The check times out.</p>
-         */
-        @NameInMap("Reused")
-        public Boolean reused;
-
-        /**
-         * <p>The check results of the SLB instances created for exposing Istio Pilot.</p>
-         */
-        @NameInMap("SLBBackEndServerNumStatus")
-        public String SLBBackEndServerNumStatus;
-
-        /**
-         * <p>The billing method of the SLB instance. Valid values:</p>
-         * <br>
-         * <p>*   `PrePay`: subscription</p>
-         * <p>*   `PayOnDemand`: pay-as-you-go</p>
          */
         @NameInMap("SLBExistStatus")
         public String SLBExistStatus;
@@ -203,47 +199,50 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus extends TeaModel {
         /**
-         * <p>The check result of control plane logs. Valid values:</p>
+         * <p>Indicates whether the SLB instance is locked. Valid values:</p>
          * <br>
-         * <p>*   `exist`: Control plane logs exist.</p>
-         * <p>*   `not_exist`: Control plane logs do not exist.</p>
-         * <p>*   `failed`: The check fails.</p>
-         * <p>*   `time_out`: The check times out.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Locked")
         public Boolean locked;
-
-        /**
-         * <p>Indicates whether the security group is reused. Valid values:</p>
-         * <br>
-         * <p>*   `reused`: The security group is reused.</p>
-         * <p>*   `not_reused`: The security group is not reused.</p>
-         * <p>*   `failed`: The check fails.</p>
-         * <p>*   `time_out`: The check times out.</p>
-         */
-        @NameInMap("PayType")
-        public String payType;
-
-        /**
-         * <p>The check results of the Logtail installation for clusters on the data plane.</p>
-         */
-        @NameInMap("Reused")
-        public Boolean reused;
-
-        /**
-         * <p>The check result of audit logs. Valid values:</p>
-         * <br>
-         * <p>*   `exist`: Audit logs exist.</p>
-         * <p>*   `not exist`: Audit logs do not exist.</p>
-         */
-        @NameInMap("SLBBackEndServerNumStatus")
-        public String SLBBackEndServerNumStatus;
 
         /**
          * <p>The billing method of the SLB instance. Valid values:</p>
          * <br>
          * <p>*   `PrePay`: subscription</p>
          * <p>*   `PayOnDemand`: pay-as-you-go</p>
+         */
+        @NameInMap("PayType")
+        public String payType;
+
+        /**
+         * <p>Indicates whether the SLB instance is reused. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         */
+        @NameInMap("Reused")
+        public Boolean reused;
+
+        /**
+         * <p>The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:</p>
+         * <br>
+         * <p>*   `too_much`: An excessive number of backend servers are created.</p>
+         * <p>*   `num_exact`: A proper number of backend servers are created.</p>
+         * <p>*   `too_little`: The number of backend servers falls short.</p>
+         */
+        @NameInMap("SLBBackEndServerNumStatus")
+        public String SLBBackEndServerNumStatus;
+
+        /**
+         * <p>The check result of the SLB instance. Valid values:</p>
+         * <br>
+         * <p>*   `exist`: The SLB instance exists.</p>
+         * <p>*   `not_exist`: The SLB instance does not exist.</p>
+         * <p>*   `conflict`: Conflicts are detected.</p>
+         * <p>*   `failed`: The check fails.</p>
+         * <p>*   `time_out`: The check times out.</p>
          */
         @NameInMap("SLBExistStatus")
         public String SLBExistStatus;
@@ -296,20 +295,16 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus extends TeaModel {
+        /**
+         * <p>Indicates whether access logs exist. Valid values:</p>
+         * <br>
+         * <p>*   `exist`: Access logs exist.</p>
+         * <p>*   `not_exist`: Access logs do not exist.</p>
+         * <p>*   `failed`: The check fails.</p>
+         * <p>*   `time_out`: The check times out.</p>
+         */
         @NameInMap("AccessLogProjectStatus")
         public String accessLogProjectStatus;
-
-        @NameInMap("ApiServerEIPStatus")
-        public String apiServerEIPStatus;
-
-        /**
-         * <p>Indicates whether the SLB instance is locked. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The SLB instance is locked.</p>
-         * <p>*   `false`: The SLB instance is not locked.</p>
-         */
-        @NameInMap("ApiServerLoadBalancerStatus")
-        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus apiServerLoadBalancerStatus;
 
         /**
          * <p>The check result of the EIP associated with the API server. Valid values:</p>
@@ -321,35 +316,61 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
          * <p>*   `not_in_use`: The EIP is not associated with the API Server.</p>
          * <p>*   `locked`: The EIP is locked.</p>
          */
+        @NameInMap("ApiServerEIPStatus")
+        public String apiServerEIPStatus;
+
+        /**
+         * <p>The check results of the SLB instance created for exposing the API server.</p>
+         */
+        @NameInMap("ApiServerLoadBalancerStatus")
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusApiServerLoadBalancerStatus apiServerLoadBalancerStatus;
+
+        /**
+         * <p>Indicates whether audit logs exist. Valid values:</p>
+         * <br>
+         * <p>*   `exist`</p>
+         * <p>*   `not exist`</p>
+         */
         @NameInMap("AuditProjectStatus")
         public String auditProjectStatus;
 
         @NameInMap("CanaryPilotLoadBalancerStatus")
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus canaryPilotLoadBalancerStatus;
 
+        /**
+         * <p>Indicates whether control plane logs exist. Valid values:</p>
+         * <br>
+         * <p>*   `exist`: Control plane logs exist.</p>
+         * <p>*   `not_exist`: Control plane logs do not exist.</p>
+         * <p>*   `failed`: The check fails.</p>
+         * <p>*   `time_out`: The check times out.</p>
+         */
         @NameInMap("ControlPlaneProjectStatus")
         public String controlPlaneProjectStatus;
 
         /**
-         * <p>The check result of access logs. Valid values:</p>
-         * <br>
-         * <p>*   `exist`: Access logs exist.</p>
-         * <p>*   `not_exist`: Access logs do not exist.</p>
-         * <p>*   `failed`: The check fails.</p>
-         * <p>*   `time_out`: The check times out.</p>
+         * <p>Indicates whether Logtail is installed in clusters on the data plane.</p>
          */
         @NameInMap("LogtailStatusRecord")
         public java.util.Map<String, ?> logtailStatusRecord;
 
         /**
-         * <p>Indicates whether the SLB instance is locked. Valid values:</p>
-         * <br>
-         * <p>*   `true`: The SLB instance is locked.</p>
-         * <p>*   `false`: The SLB instance is not locked.</p>
+         * <p>The check results of the SLB instance created for exposing Istio Pilot.</p>
          */
         @NameInMap("PilotLoadBalancerStatus")
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus pilotLoadBalancerStatus;
 
+        @NameInMap("RAMApplicationStatus")
+        public String RAMApplicationStatus;
+
+        /**
+         * <p>Indicates whether the security group is reused. Valid values:</p>
+         * <br>
+         * <p>*   `reused`: The security group is reused.</p>
+         * <p>*   `not_reused`: The security group is not reused.</p>
+         * <p>*   `failed`: The check fails.</p>
+         * <p>*   `time_out`: The check times out.</p>
+         */
         @NameInMap("SgStatus")
         public String sgStatus;
 
@@ -420,6 +441,14 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         }
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus getPilotLoadBalancerStatus() {
             return this.pilotLoadBalancerStatus;
+        }
+
+        public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setRAMApplicationStatus(String RAMApplicationStatus) {
+            this.RAMApplicationStatus = RAMApplicationStatus;
+            return this;
+        }
+        public String getRAMApplicationStatus() {
+            return this.RAMApplicationStatus;
         }
 
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatus setSgStatus(String sgStatus) {

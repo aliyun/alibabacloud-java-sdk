@@ -4,21 +4,39 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetDeploymentBySelectorRequest extends TeaModel {
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("GuestCluster")
     public String guestCluster;
 
+    /**
+     * <p>The label selector information.</p>
+     */
     @NameInMap("LabelSelector")
     public java.util.Map<String, String> labelSelector;
 
+    /**
+     * <p>The maximum number of returned data entries.</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 
+    /**
+     * <p>The marker of data queried last time.</p>
+     */
     @NameInMap("Mark")
     public String mark;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("NameSpace")
     public String nameSpace;
 
+    /**
+     * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

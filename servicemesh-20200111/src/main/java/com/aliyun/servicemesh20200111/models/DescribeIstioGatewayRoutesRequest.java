@@ -11,7 +11,7 @@ public class DescribeIstioGatewayRoutesRequest extends TeaModel {
     public String istioGatewayName;
 
     /**
-     * <p>The routing rules.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
