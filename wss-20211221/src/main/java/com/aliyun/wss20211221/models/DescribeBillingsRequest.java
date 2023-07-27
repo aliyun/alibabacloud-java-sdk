@@ -13,7 +13,6 @@ public class DescribeBillingsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    // 资源类型
     @NameInMap("ResourceType")
     public String resourceType;
 
