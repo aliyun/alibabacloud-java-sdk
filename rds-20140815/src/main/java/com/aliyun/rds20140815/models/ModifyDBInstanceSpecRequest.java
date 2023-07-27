@@ -109,6 +109,9 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    @NameInMap("TargetMinorVersion")
+    public String targetMinorVersion;
+
     /**
      * <p>The ID of the order.</p>
      */
@@ -291,6 +294,14 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
     public String getSwitchTime() {
         return this.switchTime;
+    }
+
+    public ModifyDBInstanceSpecRequest setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
     }
 
     public ModifyDBInstanceSpecRequest setUsedTime(Long usedTime) {
