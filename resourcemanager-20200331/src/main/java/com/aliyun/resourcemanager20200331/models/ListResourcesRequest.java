@@ -46,6 +46,9 @@ public class ListResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("ResourceTypes")
+    public java.util.List<ListResourcesRequestResourceTypes> resourceTypes;
+
     /**
      * <p>The ID of the Alibaba Cloud service.</p>
      * <br>
@@ -107,12 +110,50 @@ public class ListResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public ListResourcesRequest setResourceTypes(java.util.List<ListResourcesRequestResourceTypes> resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public java.util.List<ListResourcesRequestResourceTypes> getResourceTypes() {
+        return this.resourceTypes;
+    }
+
     public ListResourcesRequest setService(String service) {
         this.service = service;
         return this;
     }
     public String getService() {
         return this.service;
+    }
+
+    public static class ListResourcesRequestResourceTypes extends TeaModel {
+        @NameInMap("ResourceType")
+        public String resourceType;
+
+        @NameInMap("Service")
+        public String service;
+
+        public static ListResourcesRequestResourceTypes build(java.util.Map<String, ?> map) throws Exception {
+            ListResourcesRequestResourceTypes self = new ListResourcesRequestResourceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourcesRequestResourceTypes setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListResourcesRequestResourceTypes setService(String service) {
+            this.service = service;
+            return this;
+        }
+        public String getService() {
+            return this.service;
+        }
+
     }
 
 }
