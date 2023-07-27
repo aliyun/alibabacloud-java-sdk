@@ -15066,6 +15066,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SwitchTime", request.switchTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetMinorVersion)) {
+            query.put("TargetMinorVersion", request.targetMinorVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
             query.put("UsedTime", request.usedTime);
         }
