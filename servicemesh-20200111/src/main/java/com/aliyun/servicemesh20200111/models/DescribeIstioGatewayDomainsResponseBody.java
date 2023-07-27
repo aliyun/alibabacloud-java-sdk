@@ -56,6 +56,9 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        @NameInMap("GatewayCRName")
+        public String gatewayCRName;
+
         /**
          * <p>The namespace in which the ASM gateway resides.</p>
          */
@@ -101,6 +104,14 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         }
         public java.util.List<String> getDomains() {
             return this.domains;
+        }
+
+        public DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails setGatewayCRName(String gatewayCRName) {
+            this.gatewayCRName = gatewayCRName;
+            return this;
+        }
+        public String getGatewayCRName() {
+            return this.gatewayCRName;
         }
 
         public DescribeIstioGatewayDomainsResponseBodyGatewaySecretDetails setNamespace(String namespace) {

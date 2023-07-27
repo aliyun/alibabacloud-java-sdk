@@ -5,37 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
-     * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <p>The maximum number of entries returned.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The status of the vSwitch. Valid values:</p>
-     * <br>
-     * <p>*   `Pending`: The vSwitch is being configured.</p>
-     * <p>*   `Available`: The vSwitch is available for use.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the VPC in which the vSwitch is deployed.</p>
+     * <p>The total number of vSwitches that are deployed in the VPC in the region. This parameter is optional and is not returned by default.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The name of the vSwitch.</p>
+     * <p>The available vSwitches.</p>
      */
     @NameInMap("VSwitches")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitches> vSwitches;
@@ -86,21 +80,45 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     }
 
     public static class DescribeVSwitchesResponseBodyVSwitches extends TeaModel {
+        /**
+         * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The state of the vSwitch. Valid values:</p>
+         * <br>
+         * <p>*   `Pending`: The vSwitch is being configured.</p>
+         * <p>*   `Available`: The vSwitch is available.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the vSwitch.</p>
+         */
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
+        /**
+         * <p>The ID of the VPC to which the vSwitch belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>交换机所属的可用区。</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

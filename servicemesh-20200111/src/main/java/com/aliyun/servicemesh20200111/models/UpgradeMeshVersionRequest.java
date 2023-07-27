@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpgradeMeshVersionRequest extends TeaModel {
+    @NameInMap("PreCheck")
+    public Boolean preCheck;
+
     /**
      * <p>The ID of the ASM instance.</p>
      */
@@ -13,6 +16,14 @@ public class UpgradeMeshVersionRequest extends TeaModel {
     public static UpgradeMeshVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeMeshVersionRequest self = new UpgradeMeshVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeMeshVersionRequest setPreCheck(Boolean preCheck) {
+        this.preCheck = preCheck;
+        return this;
+    }
+    public Boolean getPreCheck() {
+        return this.preCheck;
     }
 
     public UpgradeMeshVersionRequest setServiceMeshId(String serviceMeshId) {

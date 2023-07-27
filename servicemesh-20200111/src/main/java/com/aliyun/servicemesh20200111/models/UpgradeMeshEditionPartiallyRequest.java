@@ -4,6 +4,12 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to upgrade the ASM gateways for the ASM instance. Valid values:</p>
+     * <br>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
+     */
     @NameInMap("ASMGatewayContinue")
     public Boolean ASMGatewayContinue;
 
@@ -11,14 +17,28 @@ public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
     public String expectedVersion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>执行升级检查。如果该值设置为true，则只会执行升级检查，并不会实际升级。</p>
+     */
+    @NameInMap("PreCheck")
+    public Boolean preCheck;
+
+    /**
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>*   ``</p>
+     * <p>*   ``</p>
+     */
     @NameInMap("SwitchToPro")
+    @Deprecated
     public Boolean switchToPro;
 
+    /**
+     * <p>Specifies the ASM gateways to be upgraded. Separate multiple ASM gateways with commas (,).</p>
+     */
     @NameInMap("UpgradeGatewayRecords")
     public String upgradeGatewayRecords;
 
@@ -41,6 +61,14 @@ public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
     }
     public String getExpectedVersion() {
         return this.expectedVersion;
+    }
+
+    public UpgradeMeshEditionPartiallyRequest setPreCheck(Boolean preCheck) {
+        this.preCheck = preCheck;
+        return this;
+    }
+    public Boolean getPreCheck() {
+        return this.preCheck;
     }
 
     public UpgradeMeshEditionPartiallyRequest setServiceMeshId(String serviceMeshId) {

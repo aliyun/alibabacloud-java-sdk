@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetSwimLaneGroupListResponseBody extends TeaModel {
     /**
-     * <p>The ingress type. Traffic routing rules can be configured only in an ingress gateway. Fixed value: ASM.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the lane groups.</p>
+     */
     @NameInMap("SwimLaneGroupList")
     public java.util.List<GetSwimLaneGroupListResponseBodySwimLaneGroupList> swimLaneGroupList;
 
@@ -36,17 +39,26 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
 
     public static class GetSwimLaneGroupListResponseBodySwimLaneGroupList extends TeaModel {
         /**
-         * <p>The name of the ingress gateway.</p>
+         * <p>The name of the lane group.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The name of the ingress gateway.</p>
+         */
         @NameInMap("IngressGatewayName")
         public String ingressGatewayName;
 
+        /**
+         * <p>The ingress type. Traffic routing rules can be configured only in an ingress gateway.</p>
+         */
         @NameInMap("IngressType")
         public String ingressType;
 
+        /**
+         * <p>A list of services associated with the lane group.</p>
+         */
         @NameInMap("ServiceList")
         public String serviceList;
 

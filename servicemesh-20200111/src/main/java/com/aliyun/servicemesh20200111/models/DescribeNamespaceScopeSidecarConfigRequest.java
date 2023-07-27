@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespaceScopeSidecarConfigRequest extends TeaModel {
     /**
-     * <p>The name of the namespace.</p>
+     * <p>The namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

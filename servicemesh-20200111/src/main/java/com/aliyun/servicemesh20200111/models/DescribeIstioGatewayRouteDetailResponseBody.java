@@ -4,24 +4,43 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
+    /**
+     * <p>The description of the routing rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The percentage of requests to which the delay fault is injected.</p>
+     * <p>The detailed information about the routing rule.</p>
      */
     @NameInMap("RouteDetail")
     public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail routeDetail;
 
+    /**
+     * <p>The status of the routing rule. Valid values:</p>
+     * <br>
+     * <p>*   `0`: The routing rule is valid.</p>
+     * <p>*   `1`: The routing rule is invalid.</p>
+     * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
@@ -80,13 +99,13 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsDelegate extends TeaModel {
         /**
-         * <p>The values to be added to the header key.</p>
+         * <p>The name of the virtual service.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The key to be deleted.</p>
+         * <p>The namespace to which the virtual service belongs.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
@@ -115,6 +134,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultAbortPercentage extends TeaModel {
+        /**
+         * <p>The percentage of requests that are mirrored to another destination except for the original destination, which is expressed as a decimal.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -134,9 +156,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultAbort extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         */
         @NameInMap("HttpStatus")
         public Integer httpStatus;
 
+        /**
+         * <p>The percentage of requests that are aborted with the specified error code.</p>
+         */
         @NameInMap("Percentage")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultAbortPercentage percentage;
 
@@ -164,6 +192,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultDelayPercentage extends TeaModel {
+        /**
+         * <p>The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -183,12 +214,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultDelay extends TeaModel {
+        /**
+         * <p>The duration for request delay is expressed as 2 raised to the power of x. You must specify the value of x.</p>
+         */
         @NameInMap("ExponentialDelay")
         public String exponentialDelay;
 
+        /**
+         * <p>The fixed duration for request delay.</p>
+         */
         @NameInMap("FixedDelay")
         public String fixedDelay;
 
+        /**
+         * <p>The percentage of requests to which the delay fault is injected.</p>
+         */
         @NameInMap("Percentage")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultDelayPercentage percentage;
 
@@ -224,9 +264,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFault extends TeaModel {
+        /**
+         * <p>The configurations for aborting requests with specified error codes.</p>
+         */
         @NameInMap("Abort")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultAbort abort;
 
+        /**
+         * <p>The duration to delay a request.</p>
+         */
         @NameInMap("Delay")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFaultDelay delay;
 
@@ -255,19 +301,19 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsHTTPRedirect extends TeaModel {
         /**
-         * <p>The request headers to be matched.</p>
+         * <p>The value to be used to overwrite the value of the Authority or Host header during redirection.</p>
          */
         @NameInMap("Authority")
         public String authority;
 
         /**
-         * <p>The request header to be matched.</p>
+         * <p>The HTTP status code to be used to indicate URL redirection. Default value: 301.</p>
          */
         @NameInMap("RedirectCode")
         public Integer redirectCode;
 
         /**
-         * <p>The traffic weight. Valid values: 1 to 100.</p>
+         * <p>The value to be used to overwrite the URL path during redirection.</p>
          */
         @NameInMap("Uri")
         public String uri;
@@ -304,9 +350,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsMirror extends TeaModel {
+        /**
+         * <p>The name of the service defined in the service registry.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The name of the service subset.</p>
+         */
         @NameInMap("Subset")
         public String subset;
 
@@ -334,6 +386,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsMirrorPercentage extends TeaModel {
+        /**
+         * <p>The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -353,6 +408,14 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRetriesRetryRemoteLocalities extends TeaModel {
+        /**
+         * <p>Specifies whether to allow retries to other localities. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         * <br>
+         * <p>Default value: `false`.</p>
+         */
         @NameInMap("Value")
         public Boolean value;
 
@@ -373,27 +436,26 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRetries extends TeaModel {
         /**
-         * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+         * <p>The number of retries that are allowed for a request.</p>
          */
         @NameInMap("Attempts")
         public Integer attempts;
 
         /**
-         * <p>The status of the routing rule. Valid values:</p>
-         * <br>
-         * <p>- `0`: The routing rule is valid.</p>
-         * <p>- `1`: The routing rule is invalid.</p>
-         * <p>- `2`: An error occurs during the creation or update of the routing rule.</p>
+         * <p>The timeout period for each retry.</p>
          */
         @NameInMap("PerTryTimeout")
         public String perTryTimeout;
 
         /**
-         * <p>The description of the routing rule.</p>
+         * <p>The condition for retries. Example: `connect-failure,refused-stream,503`.</p>
          */
         @NameInMap("RetryOn")
         public String retryOn;
 
+        /**
+         * <p>Specifies whether to allow retries to other localities.</p>
+         */
         @NameInMap("RetryRemoteLocalities")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRetriesRetryRemoteLocalities retryRemoteLocalities;
 
@@ -438,13 +500,13 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRewrite extends TeaModel {
         /**
-         * <p>The values to be added to the header key.</p>
+         * <p>The value to be used to overwrite the value of the Authority or Host header.</p>
          */
         @NameInMap("Authority")
         public String authority;
 
         /**
-         * <p>The header key to be used to overwrite the original header key.</p>
+         * <p>The value to be used to overwrite the path or prefix of the URI.</p>
          */
         @NameInMap("Uri")
         public String uri;
@@ -474,40 +536,49 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptions extends TeaModel {
         /**
-         * <p>The header key to be used to overwrite the original header key.</p>
+         * <p>The virtual service that defines traffic routing.</p>
          */
         @NameInMap("Delegate")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsDelegate delegate;
 
+        /**
+         * <p>The configurations of fault injection.</p>
+         */
         @NameInMap("Fault")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsFault fault;
 
         /**
-         * <p>The port of the specified host to which the traffic is routed.</p>
+         * <p>The HTTP redirection rule.</p>
          */
         @NameInMap("HTTPRedirect")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsHTTPRedirect HTTPRedirect;
 
+        /**
+         * <p>The configurations for mirroring HTTP traffic to another destination in addition to forwarding requests to the specified destination.</p>
+         */
         @NameInMap("Mirror")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsMirror mirror;
 
+        /**
+         * <p>The percentage of requests that are aborted with the specified error code.</p>
+         */
         @NameInMap("MirrorPercentage")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsMirrorPercentage mirrorPercentage;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The configurations of retries for failed requests.</p>
          */
         @NameInMap("Retries")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRetries retries;
 
         /**
-         * <p>The processing of the headers of the response that is to be returned.</p>
+         * <p>The configurations for rewriting the virtual service.</p>
          */
         @NameInMap("Rewrite")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptionsRewrite rewrite;
 
         /**
-         * <p>The key to be deleted.</p>
+         * <p>The timeout period for requests.</p>
          */
         @NameInMap("Timeout")
         public String timeout;
@@ -585,19 +656,23 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestHeaders extends TeaModel {
         /**
-         * <p>The percentage of requests that are mirrored to another destination except for the original destination, expressed as a decimal.</p>
+         * <p>The header value to be matched.</p>
          */
         @NameInMap("MatchingContent")
         public String matchingContent;
 
         /**
-         * <p>The percentage of requests that are mirrored to another destination except for the original destination.</p>
+         * <p>The matching mode for the header value. Valid values:</p>
+         * <br>
+         * <p>*   `exact`: exact match</p>
+         * <p>*   `prefix`: match by prefix</p>
+         * <p>*   `regex`: match by regular expression</p>
          */
         @NameInMap("MatchingMode")
         public String matchingMode;
 
         /**
-         * <p>The name of the service subset.</p>
+         * <p>The header key to be matched.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -635,13 +710,13 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestTLSMatchAttributes extends TeaModel {
         /**
-         * <p>The name of the service defined in the service registry.</p>
+         * <p>The Server Name Indication (SNI) values to be matched.</p>
          */
         @NameInMap("SNIHosts")
         public java.util.List<String> SNIHosts;
 
         /**
-         * <p>The unique endpoint of the service instance to which the specified requests are sent.</p>
+         * <p>The TLS port.</p>
          */
         @NameInMap("TLSPort")
         public Integer TLSPort;
@@ -671,13 +746,17 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestURI extends TeaModel {
         /**
-         * <p>The configurations for mirroring HTTP traffic to another destination in addition to forwarding requests to the specified destination.</p>
+         * <p>The content to be matched.</p>
          */
         @NameInMap("MatchingContent")
         public String matchingContent;
 
         /**
-         * <p>The percentage of requests that are aborted with the specified error code, expressed as a decimal.</p>
+         * <p>The matching mode. Valid values:</p>
+         * <br>
+         * <p>*   `exact`: exact match</p>
+         * <p>*   `prefix`: match by prefix</p>
+         * <p>*   `regex`: match by regular expression</p>
          */
         @NameInMap("MatchingMode")
         public String matchingMode;
@@ -707,25 +786,25 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequest extends TeaModel {
         /**
-         * <p>The name of the service defined in the service registry.</p>
+         * <p>The request headers to be matched.</p>
          */
         @NameInMap("Headers")
         public java.util.List<DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestHeaders> headers;
 
         /**
-         * <p>The name of the service subset.</p>
+         * <p>The ports.</p>
          */
         @NameInMap("Ports")
         public java.util.List<Integer> ports;
 
         /**
-         * <p>The endpoints of service instances for Layer 4 weighted routing.</p>
+         * <p>The matching rules for Transport Layer Security (TLS) traffic.</p>
          */
         @NameInMap("TLSMatchAttributes")
         public java.util.List<DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestTLSMatchAttributes> TLSMatchAttributes;
 
         /**
-         * <p>The percentage of requests that are aborted with the specified error code.</p>
+         * <p>The matching rule for URIs.</p>
          */
         @NameInMap("URI")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequestURI URI;
@@ -770,6 +849,9 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestinationPort extends TeaModel {
+        /**
+         * <p>The ports of the specified hosts to which the traffic is routed.</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
@@ -789,12 +871,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestination extends TeaModel {
+        /**
+         * <p>The name of the service defined in the service registry.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The ports.</p>
+         */
         @NameInMap("Port")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestinationPort port;
 
+        /**
+         * <p>The name of the service subset.</p>
+         */
         @NameInMap("Subset")
         public String subset;
 
@@ -830,12 +921,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersRequest extends TeaModel {
+        /**
+         * <p>The values to be added to the header key.</p>
+         */
         @NameInMap("Add")
         public java.util.Map<String, ?> add;
 
+        /**
+         * <p>The header value to be deleted.</p>
+         */
         @NameInMap("Remove")
         public java.util.List<String> remove;
 
+        /**
+         * <p>The header key to be used to overwrite the original header key.</p>
+         */
         @NameInMap("Set")
         public java.util.Map<String, String> set;
 
@@ -871,12 +971,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersResponse extends TeaModel {
+        /**
+         * <p>The values to be added to the header key.</p>
+         */
         @NameInMap("Add")
         public java.util.Map<String, ?> add;
 
+        /**
+         * <p>The header value to be deleted.</p>
+         */
         @NameInMap("Remove")
         public java.util.List<String> remove;
 
+        /**
+         * <p>The header key to be used to overwrite the original header key.</p>
+         */
         @NameInMap("Set")
         public java.util.Map<String, ?> set;
 
@@ -912,9 +1021,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeaders extends TeaModel {
+        /**
+         * <p>The request header to be matched.</p>
+         */
         @NameInMap("Request")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersRequest request;
 
+        /**
+         * <p>The processing of the headers of the response that is to be returned.</p>
+         */
         @NameInMap("Response")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeadersResponse response;
 
@@ -942,12 +1057,21 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinations extends TeaModel {
+        /**
+         * <p>The unique endpoint of the destination service to which the specified requests are sent.</p>
+         */
         @NameInMap("Destination")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsDestination destination;
 
+        /**
+         * <p>The request headers to be matched.</p>
+         */
         @NameInMap("Headers")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinationsHeaders headers;
 
+        /**
+         * <p>The traffic weight. Valid values: 1 to 100.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -987,28 +1111,37 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         public java.util.List<String> domains;
 
         /**
-         * <p>The ports of the specified hosts from which the traffic is routed.</p>
+         * <p>The advanced settings for routing HTTP traffic.</p>
          */
         @NameInMap("HTTPAdvancedOptions")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailHTTPAdvancedOptions HTTPAdvancedOptions;
 
+        @NameInMap("HasUnsafeFeatures")
+        public Boolean hasUnsafeFeatures;
+
         /**
-         * <p>The specified HTTP error code.</p>
+         * <p>The matching rules for traffic routing.</p>
          */
         @NameInMap("MatchRequest")
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequest matchRequest;
 
+        @NameInMap("RawVSRoute")
+        public String rawVSRoute;
+
+        /**
+         * <p>The endpoints of destination services for Layer 4 weighted routing.</p>
+         */
         @NameInMap("RouteDestinations")
         public java.util.List<DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinations> routeDestinations;
 
         /**
-         * <p>The percentage of requests that are aborted with specified error codes, expressed as a decimal.</p>
+         * <p>The name of the routing rule.</p>
          */
         @NameInMap("RouteName")
         public String routeName;
 
         /**
-         * <p>The configurations for aborting requests with specified error codes.</p>
+         * <p>The type of the traffic to be routed. Valid values: `HTTP`, `TLS`, and `TCP`.</p>
          */
         @NameInMap("RouteType")
         public String routeType;
@@ -1034,12 +1167,28 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             return this.HTTPAdvancedOptions;
         }
 
+        public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail setHasUnsafeFeatures(Boolean hasUnsafeFeatures) {
+            this.hasUnsafeFeatures = hasUnsafeFeatures;
+            return this;
+        }
+        public Boolean getHasUnsafeFeatures() {
+            return this.hasUnsafeFeatures;
+        }
+
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail setMatchRequest(DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequest matchRequest) {
             this.matchRequest = matchRequest;
             return this;
         }
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetailMatchRequest getMatchRequest() {
             return this.matchRequest;
+        }
+
+        public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail setRawVSRoute(String rawVSRoute) {
+            this.rawVSRoute = rawVSRoute;
+            return this;
+        }
+        public String getRawVSRoute() {
+            return this.rawVSRoute;
         }
 
         public DescribeIstioGatewayRouteDetailResponseBodyRouteDetail setRouteDestinations(java.util.List<DescribeIstioGatewayRouteDetailResponseBodyRouteDetailRouteDestinations> routeDestinations) {

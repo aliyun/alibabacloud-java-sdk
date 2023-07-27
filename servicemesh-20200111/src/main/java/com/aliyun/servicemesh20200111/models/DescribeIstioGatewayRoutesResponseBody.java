@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
     /**
-     * <p>The name of the routing rule.</p>
+     * <p>The routing rules.</p>
      */
     @NameInMap("ManagementRoutes")
     public java.util.List<DescribeIstioGatewayRoutesResponseBodyManagementRoutes> managementRoutes;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -36,11 +39,14 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
 
     public static class DescribeIstioGatewayRoutesResponseBodyManagementRoutes extends TeaModel {
         /**
-         * <p>The path that is used to match request URLs.</p>
+         * <p>The name of the ASM gateway.</p>
          */
         @NameInMap("ASMGatewayName")
         public String ASMGatewayName;
 
+        /**
+         * <p>The description of the routing rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -50,14 +56,29 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         @NameInMap("DestinationSubSet")
         public java.util.List<String> destinationSubSet;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
+
+        /**
+         * <p>The name of the routing rule.</p>
+         */
+        @NameInMap("RouteName")
+        public String routeName;
+
+        /**
+         * <p>The path that is used to match request URLs.</p>
+         */
+        @NameInMap("RoutePath")
+        public String routePath;
 
         /**
          * <p>The status of the routing rule. Valid values:</p>
@@ -65,18 +86,6 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
          * <p>*   `0`: The routing rule is valid.</p>
          * <p>*   `1`: The routing rule is invalid.</p>
          * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
-         */
-        @NameInMap("RouteName")
-        public String routeName;
-
-        /**
-         * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
-         */
-        @NameInMap("RoutePath")
-        public String routePath;
-
-        /**
-         * <p>The description of the routing rule.</p>
          */
         @NameInMap("Status")
         public Integer status;

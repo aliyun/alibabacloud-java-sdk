@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateServiceMeshResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the ASM instance.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 

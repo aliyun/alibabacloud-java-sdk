@@ -4,12 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetDeploymentBySelectorResponseBody extends TeaModel {
+    /**
+     * <p>The queried workloads.</p>
+     */
     @NameInMap("DeploymentNameList")
     public java.util.List<byte[]> deploymentNameList;
 
+    /**
+     * <p>The end-of-data marker.</p>
+     */
     @NameInMap("Mark")
     public String mark;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

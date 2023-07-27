@@ -4,21 +4,43 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateIstioGatewayRoutesRequest extends TeaModel {
+    /**
+     * <p>The description of the routing rule.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The information about the routing rule to be updated for the ASM gateway.</p>
+     */
     @NameInMap("GatewayRoute")
     public UpdateIstioGatewayRoutesRequestGatewayRoute gatewayRoute;
 
+    /**
+     * <p>The name of the ASM gateway.</p>
+     */
     @NameInMap("IstioGatewayName")
     public String istioGatewayName;
 
+    /**
+     * <p>The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The ASM instance ID.</p>
+     */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
 
+    /**
+     * <p>The status of the routing rule. Valid values:</p>
+     * <br>
+     * <p>*   `0`: The routing rule is valid.</p>
+     * <p>*   `1`: The routing rule is invalid.</p>
+     * <p>*   `2`: An error occurs during the creation or update of the routing rule.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
@@ -76,9 +98,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsDelegate extends TeaModel {
+        /**
+         * <p>The name of the virtual service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace to which the virtual service belongs.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
@@ -106,6 +134,9 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultAbortPercentage extends TeaModel {
+        /**
+         * <p>The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -125,9 +156,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultAbort extends TeaModel {
+        /**
+         * <p>The HTTP status code.</p>
+         */
         @NameInMap("HttpStatus")
         public Integer httpStatus;
 
+        /**
+         * <p>The percentage of requests that are aborted with the specified error code.</p>
+         */
         @NameInMap("Percentage")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultAbortPercentage percentage;
 
@@ -155,6 +192,9 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultDelayPercentage extends TeaModel {
+        /**
+         * <p>The percentage of requests to which the delay fault is injected, which is expressed as a decimal.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -174,9 +214,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultDelay extends TeaModel {
+        /**
+         * <p>The fixed duration for request delay.</p>
+         */
         @NameInMap("FixedDelay")
         public String fixedDelay;
 
+        /**
+         * <p>The percentage of requests to which the delay fault is injected.</p>
+         */
         @NameInMap("Percentage")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultDelayPercentage percentage;
 
@@ -204,9 +250,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFault extends TeaModel {
+        /**
+         * <p>The configurations for aborting requests with specified error codes.</p>
+         */
         @NameInMap("Abort")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultAbort abort;
 
+        /**
+         * <p>The duration to delay a request.</p>
+         */
         @NameInMap("Delay")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFaultDelay delay;
 
@@ -234,12 +286,21 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsHTTPRedirect extends TeaModel {
+        /**
+         * <p>The value to be used to overwrite the value of the Authority or Host header during redirection.</p>
+         */
         @NameInMap("Authority")
         public String authority;
 
+        /**
+         * <p>The HTTP status code to be used to indicate URL redirection. Default value: 301.</p>
+         */
         @NameInMap("RedirectCode")
         public Integer redirectCode;
 
+        /**
+         * <p>The value to be used to overwrite the URL path during redirection.</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -275,9 +336,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsMirror extends TeaModel {
+        /**
+         * <p>The name of the service defined in the service registry.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The name of the service subset.</p>
+         */
         @NameInMap("Subset")
         public String subset;
 
@@ -305,6 +372,9 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsMirrorPercentage extends TeaModel {
+        /**
+         * <p>The percentage of requests that are mirrored to another destination except for the original destination, which is expressed as a decimal.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
@@ -324,6 +394,14 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetriesRetryRemoteLocalities extends TeaModel {
+        /**
+         * <p>Specifies whether to allow retries to other localities. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         * <br>
+         * <p>Default value: `false`.</p>
+         */
         @NameInMap("Value")
         public Boolean value;
 
@@ -343,15 +421,27 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries extends TeaModel {
+        /**
+         * <p>The number of retries allowed for a request.</p>
+         */
         @NameInMap("Attempts")
         public Integer attempts;
 
+        /**
+         * <p>The timeout period for each retry.</p>
+         */
         @NameInMap("PerTryTimeout")
         public String perTryTimeout;
 
+        /**
+         * <p>The condition for retries. Example: `connect-failure,refused-stream,503`.</p>
+         */
         @NameInMap("RetryOn")
         public String retryOn;
 
+        /**
+         * <p>Specifies whether to allow retries to other localities.</p>
+         */
         @NameInMap("RetryRemoteLocalities")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetriesRetryRemoteLocalities retryRemoteLocalities;
 
@@ -395,9 +485,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRewrite extends TeaModel {
+        /**
+         * <p>The value to be used to overwrite the value of the Authority or Host header.</p>
+         */
         @NameInMap("Authority")
         public String authority;
 
+        /**
+         * <p>The value to be used to overwrite the path or prefix of the URI.</p>
+         */
         @NameInMap("Uri")
         public String uri;
 
@@ -425,27 +521,51 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptions extends TeaModel {
+        /**
+         * <p>The virtual service that defines traffic routing.</p>
+         */
         @NameInMap("Delegate")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsDelegate delegate;
 
+        /**
+         * <p>The configurations of fault injection.</p>
+         */
         @NameInMap("Fault")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFault fault;
 
+        /**
+         * <p>The HTTP redirection rule.</p>
+         */
         @NameInMap("HTTPRedirect")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsHTTPRedirect HTTPRedirect;
 
+        /**
+         * <p>The configurations for mirroring HTTP traffic to another destination in addition to forwarding requests to the specified destination.</p>
+         */
         @NameInMap("Mirror")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsMirror mirror;
 
+        /**
+         * <p>The percentage of requests that are mirrored to another destination except for the original destination.</p>
+         */
         @NameInMap("MirrorPercentage")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsMirrorPercentage mirrorPercentage;
 
+        /**
+         * <p>The configurations of retries for failed requests.</p>
+         */
         @NameInMap("Retries")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries retries;
 
+        /**
+         * <p>The configurations for rewriting the virtual service.</p>
+         */
         @NameInMap("Rewrite")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRewrite rewrite;
 
+        /**
+         * <p>The timeout period for requests.</p>
+         */
         @NameInMap("Timeout")
         public String timeout;
 
@@ -521,12 +641,25 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequestHeaders extends TeaModel {
+        /**
+         * <p>The header value to be matched.</p>
+         */
         @NameInMap("MatchingContent")
         public String matchingContent;
 
+        /**
+         * <p>The matching mode for the header value. Valid values:</p>
+         * <br>
+         * <p>*   `exact`: exact match</p>
+         * <p>*   `prefix`: match by prefix</p>
+         * <p>*   `regex`: match by regular expression</p>
+         */
         @NameInMap("MatchingMode")
         public String matchingMode;
 
+        /**
+         * <p>The header key to be matched.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -562,9 +695,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequestTLSMatchAttributes extends TeaModel {
+        /**
+         * <p>The Server Name Indication (SNI) values to be matched.</p>
+         */
         @NameInMap("SNIHosts")
         public java.util.List<String> SNIHosts;
 
+        /**
+         * <p>The TLS port.</p>
+         */
         @NameInMap("TLSPort")
         public Integer TLSPort;
 
@@ -592,9 +731,19 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequestURI extends TeaModel {
+        /**
+         * <p>The content to be matched.</p>
+         */
         @NameInMap("MatchingContent")
         public String matchingContent;
 
+        /**
+         * <p>The matching mode for the routing rule. Valid values:</p>
+         * <br>
+         * <p>*   `exact`: exact match</p>
+         * <p>*   `prefix`: match by prefix</p>
+         * <p>*   `regex`: match by regular expression</p>
+         */
         @NameInMap("MatchingMode")
         public String matchingMode;
 
@@ -622,15 +771,27 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequest extends TeaModel {
+        /**
+         * <p>The request headers to be matched.</p>
+         */
         @NameInMap("Headers")
         public java.util.List<UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequestHeaders> headers;
 
+        /**
+         * <p>The ports.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<Integer> ports;
 
+        /**
+         * <p>The matching rule for Transport Layer Security (TLS) traffic.</p>
+         */
         @NameInMap("TLSMatchAttributes")
         public java.util.List<UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequestTLSMatchAttributes> TLSMatchAttributes;
 
+        /**
+         * <p>The matching rule for URIs.</p>
+         */
         @NameInMap("URI")
         public UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequestURI URI;
 
@@ -693,12 +854,18 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestination extends TeaModel {
+        /**
+         * <p>The name of the service defined in the service registry.</p>
+         */
         @NameInMap("Host")
         public String host;
 
         @NameInMap("Port")
         public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort port;
 
+        /**
+         * <p>The name of the service subset.</p>
+         */
         @NameInMap("Subset")
         public String subset;
 
@@ -734,9 +901,15 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinations extends TeaModel {
+        /**
+         * <p>The unique endpoint of the destination service to which the specified requests are sent.</p>
+         */
         @NameInMap("Destination")
         public UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestination destination;
 
+        /**
+         * <p>The weight of the service subset.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 
@@ -767,21 +940,42 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
+        /**
+         * <p>The advanced settings for routing HTTP traffic.</p>
+         */
         @NameInMap("HTTPAdvancedOptions")
         public UpdateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptions HTTPAdvancedOptions;
 
+        /**
+         * <p>The matching rules for traffic routing.</p>
+         */
         @NameInMap("MatchRequest")
         public UpdateIstioGatewayRoutesRequestGatewayRouteMatchRequest matchRequest;
 
+        /**
+         * <p>The namespace in which the destination service resides.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        @NameInMap("RawVSRoute")
+        public Object rawVSRoute;
+
+        /**
+         * <p>The endpoints of destination services for Layer 4 weighted routing.</p>
+         */
         @NameInMap("RouteDestinations")
         public java.util.List<UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinations> routeDestinations;
 
+        /**
+         * <p>The name of the routing rule.</p>
+         */
         @NameInMap("RouteName")
         public String routeName;
 
+        /**
+         * <p>The type of the traffic to be routed. Valid values: `HTTP`, `TLS`, and `TCP`.</p>
+         */
         @NameInMap("RouteType")
         public String routeType;
 
@@ -820,6 +1014,14 @@ public class UpdateIstioGatewayRoutesRequest extends TeaModel {
         }
         public String getNamespace() {
             return this.namespace;
+        }
+
+        public UpdateIstioGatewayRoutesRequestGatewayRoute setRawVSRoute(Object rawVSRoute) {
+            this.rawVSRoute = rawVSRoute;
+            return this;
+        }
+        public Object getRawVSRoute() {
+            return this.rawVSRoute;
         }
 
         public UpdateIstioGatewayRoutesRequestGatewayRoute setRouteDestinations(java.util.List<UpdateIstioGatewayRoutesRequestGatewayRouteRouteDestinations> routeDestinations) {

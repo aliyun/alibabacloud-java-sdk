@@ -4,14 +4,20 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshClustersRequest extends TeaModel {
+    /**
+     * <p>The maximum number of clusters in a cluster list.</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 
+    /**
+     * <p>The position where the query starts.</p>
+     */
     @NameInMap("Offset")
     public Long offset;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the ASM instance.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;
