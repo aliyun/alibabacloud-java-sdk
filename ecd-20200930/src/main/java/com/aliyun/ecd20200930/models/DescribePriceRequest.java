@@ -22,8 +22,20 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("BundleModels")
     public java.util.List<DescribePriceRequestBundleModels> bundleModels;
 
+    @NameInMap("EduCdsSize")
+    public Integer eduCdsSize;
+
     @NameInMap("EduCommittedTime")
     public Integer eduCommittedTime;
+
+    @NameInMap("EduDesktopBundleId")
+    public String eduDesktopBundleId;
+
+    @NameInMap("EduDesktopNum")
+    public Integer eduDesktopNum;
+
+    @NameInMap("EduRoomClassify")
+    public String eduRoomClassify;
 
     @NameInMap("EduStudentBundleId")
     public String eduStudentBundleId;
@@ -214,12 +226,44 @@ public class DescribePriceRequest extends TeaModel {
         return this.bundleModels;
     }
 
+    public DescribePriceRequest setEduCdsSize(Integer eduCdsSize) {
+        this.eduCdsSize = eduCdsSize;
+        return this;
+    }
+    public Integer getEduCdsSize() {
+        return this.eduCdsSize;
+    }
+
     public DescribePriceRequest setEduCommittedTime(Integer eduCommittedTime) {
         this.eduCommittedTime = eduCommittedTime;
         return this;
     }
     public Integer getEduCommittedTime() {
         return this.eduCommittedTime;
+    }
+
+    public DescribePriceRequest setEduDesktopBundleId(String eduDesktopBundleId) {
+        this.eduDesktopBundleId = eduDesktopBundleId;
+        return this;
+    }
+    public String getEduDesktopBundleId() {
+        return this.eduDesktopBundleId;
+    }
+
+    public DescribePriceRequest setEduDesktopNum(Integer eduDesktopNum) {
+        this.eduDesktopNum = eduDesktopNum;
+        return this;
+    }
+    public Integer getEduDesktopNum() {
+        return this.eduDesktopNum;
+    }
+
+    public DescribePriceRequest setEduRoomClassify(String eduRoomClassify) {
+        this.eduRoomClassify = eduRoomClassify;
+        return this;
+    }
+    public String getEduRoomClassify() {
+        return this.eduRoomClassify;
     }
 
     public DescribePriceRequest setEduStudentBundleId(String eduStudentBundleId) {
@@ -405,6 +449,9 @@ public class DescribePriceRequest extends TeaModel {
         @NameInMap("BundleId")
         public String bundleId;
 
+        @NameInMap("Duration")
+        public Integer duration;
+
         public static DescribePriceRequestBundleModels build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceRequestBundleModels self = new DescribePriceRequestBundleModels();
             return TeaModel.build(map, self);
@@ -424,6 +471,14 @@ public class DescribePriceRequest extends TeaModel {
         }
         public String getBundleId() {
             return this.bundleId;
+        }
+
+        public DescribePriceRequestBundleModels setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
         }
 
     }

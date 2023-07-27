@@ -1,3 +1,6 @@
+2023-07-27 Version: 2.0.24
+- Add DescribeDesktopSessions.
+
 2023-06-28 Version: 2.0.23
 - Add CommonDesktopSetting.
 

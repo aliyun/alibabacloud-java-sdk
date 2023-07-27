@@ -4,11 +4,20 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeFotaPendingDesktopsRequest extends TeaModel {
+    @NameInMap("DesktopId")
+    public String desktopId;
+
+    @NameInMap("DesktopName")
+    public String desktopName;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -19,6 +28,22 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     public static DescribeFotaPendingDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFotaPendingDesktopsRequest self = new DescribeFotaPendingDesktopsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeFotaPendingDesktopsRequest setDesktopId(String desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public String getDesktopId() {
+        return this.desktopId;
+    }
+
+    public DescribeFotaPendingDesktopsRequest setDesktopName(String desktopName) {
+        this.desktopName = desktopName;
+        return this;
+    }
+    public String getDesktopName() {
+        return this.desktopName;
     }
 
     public DescribeFotaPendingDesktopsRequest setMaxResults(Integer maxResults) {
@@ -35,6 +60,14 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeFotaPendingDesktopsRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public DescribeFotaPendingDesktopsRequest setRegionId(String regionId) {

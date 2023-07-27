@@ -50,6 +50,9 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("UseDuration")
+    public Integer useDuration;
+
     public static ModifyDesktopChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDesktopChargeTypeRequest self = new ModifyDesktopChargeTypeRequest();
         return TeaModel.build(map, self);
@@ -109,6 +112,14 @@ public class ModifyDesktopChargeTypeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDesktopChargeTypeRequest setUseDuration(Integer useDuration) {
+        this.useDuration = useDuration;
+        return this;
+    }
+    public Integer getUseDuration() {
+        return this.useDuration;
     }
 
 }

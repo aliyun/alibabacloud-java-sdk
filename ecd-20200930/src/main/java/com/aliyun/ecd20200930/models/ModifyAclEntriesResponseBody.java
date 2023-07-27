@@ -3,19 +3,16 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class MigrateDesktopsResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
+public class ModifyAclEntriesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static MigrateDesktopsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        MigrateDesktopsResponseBody self = new MigrateDesktopsResponseBody();
+    public static ModifyAclEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ModifyAclEntriesResponseBody self = new ModifyAclEntriesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public MigrateDesktopsResponseBody setRequestId(String requestId) {
+    public ModifyAclEntriesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
