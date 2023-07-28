@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainUsageDataRequest extends TeaModel {
     /**
-     * <p>The ID of the billable region. Valid values:</p>
+     * <p>The billable region. Valid values:</p>
      * <br>
      * <p>*   **CN** (default): inside the Chinese mainland</p>
      * <p>*   **OverSeas**: outside the Chinese mainland</p>
@@ -24,8 +24,8 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     /**
      * <p>The protocol of the data that you want to query. Valid values:</p>
      * <br>
-     * <p>*   **http**: HTTP</p>
-     * <p>*   **https**: HTTPS</p>
+     * <p>*   **http:** HTTP</p>
+     * <p>*   **https:** HTTPS</p>
      * <p>*   **quic**: QUIC</p>
      * <p>*   **all** (default): HTTP, HTTPS, and QUIC</p>
      */
