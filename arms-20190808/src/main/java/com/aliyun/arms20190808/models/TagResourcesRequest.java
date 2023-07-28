@@ -4,12 +4,28 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>Schema of Response</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The resource type.</p>
+     * <br>
+     * <p>WEB-front-end monitoring</p>
+     * <p>APPLICATION-Application Monitoring</p>
+     * <p>PROMETHEUS-PROM monitoring</p>
+     * <p>SYNTHETICTASK-Cloud dial test</p>
+     * <p>ALERTRULE - Application Monitoring Similar</p>
+     * <p>PROMETHEUSALERTRULE - Prometheus monitoring</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -43,6 +59,9 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>http://arms.${regionId}.aliyun-inc.com:8099/tag/TagResources.json</p>
+         */
         @NameInMap("Key")
         public String key;
 
