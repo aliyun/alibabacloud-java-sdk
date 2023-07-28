@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
+    /**
+     * <p>The details of the patch baseline.</p>
+     */
     @NameInMap("PatchBaseline")
     public RegisterDefaultPatchBaselineResponseBodyPatchBaseline patchBaseline;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,63 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
     }
 
     public static class RegisterDefaultPatchBaselineResponseBodyPatchBaseline extends TeaModel {
+        /**
+         * <p>The rules of scanning and installing patches for the specified operating system.</p>
+         */
         @NameInMap("ApprovalRules")
         public String approvalRules;
 
+        /**
+         * <p>The user who created the patch baseline.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the patch baseline was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the patch baseline.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the patch baseline.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the patch baseline.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the operating system.</p>
+         */
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        /**
+         * <p>The share type of the patch baseline.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The user who last updated the patch baseline.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the patch baseline was last updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 

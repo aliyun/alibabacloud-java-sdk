@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DeployApplicationGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The deployment information about the application group.</p>
+     */
     @NameInMap("DeployParameters")
     public String deployParameters;
 
+    /**
+     * <p>The name of the application group.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region in which you want to deploy the application group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTagValuesRequest extends TeaModel {
+    /**
+     * <p>The tag key to query.</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The maximum number of results on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the tagged resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

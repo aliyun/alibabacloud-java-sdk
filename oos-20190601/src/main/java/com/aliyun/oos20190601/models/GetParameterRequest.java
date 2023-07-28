@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetParameterRequest extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to GetParameter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The time when the common parameter was updated.</p>
+     */
     @NameInMap("ParameterVersion")
     public Integer parameterVersion;
 
+    /**
+     * <p>The name of the common parameter.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The user who created the common parameter.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

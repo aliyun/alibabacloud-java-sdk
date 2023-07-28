@@ -4,27 +4,51 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListStateConfigurationsRequest extends TeaModel {
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token of the next page.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of each desired-state configuration.</p>
+     */
     @NameInMap("StateConfigurationIds")
     public String stateConfigurationIds;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>The version number. If you do not specify this parameter, the system uses the latest version.</p>
+     */
     @NameInMap("TemplateVersion")
     public String templateVersion;
 

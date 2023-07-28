@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationRequest extends TeaModel {
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The region ID. Set the value to cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -7,15 +7,27 @@ public class TriggerExecutionRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ExecutionId")
     public String executionId;
 
+    /**
+     * <p>The message body to be sent to the trigger task.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to TriggerExecution.</p>
+     */
     @NameInMap("Type")
     public String type;
 

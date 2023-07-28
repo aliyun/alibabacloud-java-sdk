@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateParameterResponseBody extends TeaModel {
+    /**
+     * <p>The information about the common parameter.</p>
+     */
     @NameInMap("Parameter")
     public CreateParameterResponseBodyParameter parameter;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,42 +38,81 @@ public class CreateParameterResponseBody extends TeaModel {
     }
 
     public static class CreateParameterResponseBodyParameter extends TeaModel {
+        /**
+         * <p>The constraints of the common parameter.</p>
+         */
         @NameInMap("Constraints")
         public String constraints;
 
+        /**
+         * <p>The user who created the common parameter.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the common parameter was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the common parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the common parameter.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the common parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version number of the common parameter.</p>
+         */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The share type of the common parameter.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The type of the common parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user who updated the common parameter.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the common parameter was updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 

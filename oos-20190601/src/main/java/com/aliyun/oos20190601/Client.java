@@ -145,11 +145,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateApplicationShrinkRequest request = new CreateApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.alarmConfig)) {
+            request.alarmConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.alarmConfig, "AlarmConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmConfigShrink)) {
+            query.put("AlarmConfig", request.alarmConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -407,11 +415,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createParameterWithOptions(request, runtime);
     }
 
-    public CreatePatchBaselineResponse createPatchBaselineWithOptions(CreatePatchBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreatePatchBaselineResponse createPatchBaselineWithOptions(CreatePatchBaselineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePatchBaselineShrinkRequest request = new CreatePatchBaselineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.approvedPatches)) {
+            request.approvedPatchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.approvedPatches, "ApprovedPatches", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rejectedPatches)) {
+            request.rejectedPatchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rejectedPatches, "RejectedPatches", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
+            request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.approvalRules)) {
             query.put("ApprovalRules", request.approvalRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvedPatchesShrink)) {
+            query.put("ApprovedPatches", request.approvedPatchesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvedPatchesEnableNonSecurity)) {
+            query.put("ApprovedPatchesEnableNonSecurity", request.approvedPatchesEnableNonSecurity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -432,6 +466,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rejectedPatchesShrink)) {
+            query.put("RejectedPatches", request.rejectedPatchesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rejectedPatchesAction)) {
+            query.put("RejectedPatchesAction", request.rejectedPatchesAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
+            query.put("Sources", request.sourcesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1055,6 +1105,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateExecutionPolicyResponse generateExecutionPolicyWithOptions(GenerateExecutionPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ramRole)) {
+            query.put("RamRole", request.ramRole);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1675,10 +1729,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
-            query.put("Product", request.product);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1726,6 +1776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationType)) {
+            query.put("ApplicationType", request.applicationType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -1772,6 +1826,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listApplicationsWithOptions(request, runtime);
     }
 
+    /**
+      * ****
+      *
+      * @param request ListExecutionLogsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListExecutionLogsResponse
+     */
     public ListExecutionLogsResponse listExecutionLogsWithOptions(ListExecutionLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1816,6 +1877,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListExecutionLogsResponse());
     }
 
+    /**
+      * ****
+      *
+      * @param request ListExecutionLogsRequest
+      * @return ListExecutionLogsResponse
+     */
     public ListExecutionLogsResponse listExecutionLogs(ListExecutionLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listExecutionLogsWithOptions(request, runtime);
@@ -1863,8 +1930,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categories)) {
+            query.put("Categories", request.categories);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.category)) {
             query.put("Category", request.category);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depth)) {
+            query.put("Depth", request.depth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endDateAfter)) {
@@ -2249,6 +2328,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.shareType)) {
+            query.put("ShareType", request.shareType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sortField)) {
             query.put("SortField", request.sortField);
         }
@@ -2287,9 +2370,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listParametersWithOptions(request, runtime);
     }
 
-    public ListPatchBaselinesResponse listPatchBaselinesWithOptions(ListPatchBaselinesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListPatchBaselinesResponse listPatchBaselinesWithOptions(ListPatchBaselinesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListPatchBaselinesShrinkRequest request = new ListPatchBaselinesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.approvedPatches)) {
+            request.approvedPatchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.approvedPatches, "ApprovedPatches", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
+            request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.approvedPatchesShrink)) {
+            query.put("ApprovedPatches", request.approvedPatchesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvedPatchesEnableNonSecurity)) {
+            query.put("ApprovedPatchesEnableNonSecurity", request.approvedPatchesEnableNonSecurity);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
@@ -2312,6 +2417,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.shareType)) {
             query.put("ShareType", request.shareType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
+            query.put("Sources", request.sourcesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2426,6 +2539,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSecretParameterVersionsWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that you have the permission to manage Key Management Service (KMS) secrets.
+      *
+      * @param tmpReq ListSecretParametersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListSecretParametersResponse
+     */
     public ListSecretParametersResponse listSecretParametersWithOptions(ListSecretParametersRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListSecretParametersShrinkRequest request = new ListSecretParametersShrinkRequest();
@@ -2492,6 +2612,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListSecretParametersResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that you have the permission to manage Key Management Service (KMS) secrets.
+      *
+      * @param request ListSecretParametersRequest
+      * @return ListSecretParametersResponse
+     */
     public ListSecretParametersResponse listSecretParameters(ListSecretParametersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSecretParametersWithOptions(request, runtime);
@@ -2930,6 +3056,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTemplatesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to notify an execution in the following scenarios:
+      * *   If a template contains a special task, such as an approval task, the Operation Orchestration Service (OOS) execution engine sets the execution state to Waiting when the approval task is being run. You can call this operation to specify whether to continue the execution.
+      * *   If you perform debugging in the debug mode, you can call this operation to notify the execution of the subsequent operations after the execution is created or a task is complete.
+      * *   If a high-risk operation task waits for approval, you can call this operation to specify whether to continue the execution.
+      *
+      * @param request NotifyExecutionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return NotifyExecutionResponse
+     */
     public NotifyExecutionResponse notifyExecutionWithOptions(NotifyExecutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2990,6 +3126,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new NotifyExecutionResponse());
     }
 
+    /**
+      * You can call this operation to notify an execution in the following scenarios:
+      * *   If a template contains a special task, such as an approval task, the Operation Orchestration Service (OOS) execution engine sets the execution state to Waiting when the approval task is being run. You can call this operation to specify whether to continue the execution.
+      * *   If you perform debugging in the debug mode, you can call this operation to notify the execution of the subsequent operations after the execution is created or a task is complete.
+      * *   If a high-risk operation task waits for approval, you can call this operation to specify whether to continue the execution.
+      *
+      * @param request NotifyExecutionRequest
+      * @return NotifyExecutionResponse
+     */
     public NotifyExecutionResponse notifyExecution(NotifyExecutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.notifyExecutionWithOptions(request, runtime);
@@ -3368,11 +3513,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateApplicationShrinkRequest request = new UpdateApplicationShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.alarmConfig)) {
+            request.alarmConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.alarmConfig, "AlarmConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
             request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alarmConfigShrink)) {
+            query.put("AlarmConfig", request.alarmConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteAlarmRulesBeforeUpdate)) {
+            query.put("DeleteAlarmRulesBeforeUpdate", request.deleteAlarmRulesBeforeUpdate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -3457,6 +3614,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.executionId)) {
@@ -3633,11 +3794,37 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateParameterWithOptions(request, runtime);
     }
 
-    public UpdatePatchBaselineResponse updatePatchBaselineWithOptions(UpdatePatchBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdatePatchBaselineResponse updatePatchBaselineWithOptions(UpdatePatchBaselineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdatePatchBaselineShrinkRequest request = new UpdatePatchBaselineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.approvedPatches)) {
+            request.approvedPatchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.approvedPatches, "ApprovedPatches", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rejectedPatches)) {
+            request.rejectedPatchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rejectedPatches, "RejectedPatches", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sources)) {
+            request.sourcesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sources, "Sources", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.approvalRules)) {
             query.put("ApprovalRules", request.approvalRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvedPatchesShrink)) {
+            query.put("ApprovedPatches", request.approvedPatchesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.approvedPatchesEnableNonSecurity)) {
+            query.put("ApprovedPatchesEnableNonSecurity", request.approvedPatchesEnableNonSecurity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -3654,6 +3841,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rejectedPatchesShrink)) {
+            query.put("RejectedPatches", request.rejectedPatchesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rejectedPatchesAction)) {
+            query.put("RejectedPatchesAction", request.rejectedPatchesAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
+            query.put("Sources", request.sourcesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

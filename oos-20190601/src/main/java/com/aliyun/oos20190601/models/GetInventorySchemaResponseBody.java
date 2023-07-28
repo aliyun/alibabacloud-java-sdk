@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetInventorySchemaResponseBody extends TeaModel {
+    /**
+     * <p>Max results.</p>
+     */
     @NameInMap("MaxResults")
     public String maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The detailed configurations of the component.</p>
+     */
     @NameInMap("Schemas")
     public java.util.List<GetInventorySchemaResponseBodySchemas> schemas;
 
@@ -54,9 +66,15 @@ public class GetInventorySchemaResponseBody extends TeaModel {
     }
 
     public static class GetInventorySchemaResponseBodySchemasAttributes extends TeaModel {
+        /**
+         * <p>The data type of the property.</p>
+         */
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The name of the property.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -84,12 +102,21 @@ public class GetInventorySchemaResponseBody extends TeaModel {
     }
 
     public static class GetInventorySchemaResponseBodySchemas extends TeaModel {
+        /**
+         * <p>The properties of component.</p>
+         */
         @NameInMap("Attributes")
         public java.util.List<GetInventorySchemaResponseBodySchemasAttributes> attributes;
 
+        /**
+         * <p>The name of the component.</p>
+         */
         @NameInMap("TypeName")
         public String typeName;
 
+        /**
+         * <p>The version of the component.</p>
+         */
         @NameInMap("Version")
         public String version;
 

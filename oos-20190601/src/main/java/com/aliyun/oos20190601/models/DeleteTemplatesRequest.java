@@ -4,12 +4,21 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplatesRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("AutoDeleteExecutions")
     public Boolean autoDeleteExecutions;
 
+    /**
+     * <p>The name list of templates to be deleted.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to delete the related executions when a template is deleted.</p>
+     */
     @NameInMap("TemplateNames")
     public String templateNames;
 

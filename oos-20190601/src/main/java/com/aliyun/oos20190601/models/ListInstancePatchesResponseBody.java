@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancePatchesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the patch.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>MTRBMDc0NjAtRUJFNy00N0NBLTk3NTctMTJDQzQ</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The level of the severity.</p>
+     */
     @NameInMap("Patches")
     public java.util.List<ListInstancePatchesResponseBodyPatches> patches;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,39 @@ public class ListInstancePatchesResponseBody extends TeaModel {
     }
 
     public static class ListInstancePatchesResponseBodyPatches extends TeaModel {
+        /**
+         * <p>Queries the patches of an instance.</p>
+         */
         @NameInMap("Classification")
         public String classification;
 
+        /**
+         * <p>The name of the patch.</p>
+         */
         @NameInMap("InstalledTime")
         public String installedTime;
 
+        /**
+         * <p>KBId</p>
+         */
         @NameInMap("KBId")
         public String KBId;
 
+        /**
+         * <p>The status of the installation.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The time when the patch was installed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The classification of the patch.</p>
+         */
         @NameInMap("Title")
         public String title;
 

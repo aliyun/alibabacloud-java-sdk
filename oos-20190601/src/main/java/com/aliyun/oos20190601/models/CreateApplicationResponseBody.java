@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The information about the application.</p>
+     */
     @NameInMap("Application")
     public CreateApplicationResponseBodyApplication application;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyApplication extends TeaModel {
+        /**
+         * <p>The time when the application was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, String> tags;
 
+        /**
+         * <p>The time when the application was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

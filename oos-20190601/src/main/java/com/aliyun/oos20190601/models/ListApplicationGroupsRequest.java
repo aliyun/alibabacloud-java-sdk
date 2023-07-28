@@ -4,30 +4,51 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationGroupsRequest extends TeaModel {
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The ID of the region in which the related resources reside.</p>
+     */
     @NameInMap("DeployRegionId")
     public String deployRegionId;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Product")
-    public String product;
-
+    /**
+     * <p>The ID of the region. Set the value to cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the cloud resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The code of the product to which the cloud resource belongs.</p>
+     */
     @NameInMap("ResourceProduct")
     public String resourceProduct;
 
+    /**
+     * <p>The type of the cloud resource.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
@@ -66,14 +87,6 @@ public class ListApplicationGroupsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListApplicationGroupsRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
     }
 
     public ListApplicationGroupsRequest setRegionId(String regionId) {

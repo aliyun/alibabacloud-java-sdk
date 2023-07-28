@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateVersionsResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of results on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The versions of the template.</p>
+     */
     @NameInMap("TemplateVersions")
     public java.util.List<ListTemplateVersionsResponseBodyTemplateVersions> templateVersions;
 
@@ -54,21 +66,39 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
     }
 
     public static class ListTemplateVersionsResponseBodyTemplateVersions extends TeaModel {
+        /**
+         * <p>The description of the version.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The format of the template content. Valid values: YAML and JSON.</p>
+         */
         @NameInMap("TemplateFormat")
         public String templateFormat;
 
+        /**
+         * <p>The number of the version.</p>
+         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
+        /**
+         * <p>The user who last updated the version.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the version was last updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
+        /**
+         * <p>The name of the version.</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 

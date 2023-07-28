@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ValidateTemplateContentResponseBody extends TeaModel {
+    /**
+     * <p>The outputs of the template.</p>
+     */
     @NameInMap("Outputs")
     public String outputs;
 
+    /**
+     * <p>The parameters of the template.</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>The RAM role.</p>
+     */
     @NameInMap("RamRole")
     public String ramRole;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task defined in the template.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ValidateTemplateContentResponseBodyTasks> tasks;
 
@@ -65,18 +80,33 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
     }
 
     public static class ValidateTemplateContentResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The description of the task.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The outputs of the task.</p>
+         */
         @NameInMap("Outputs")
         public String outputs;
 
+        /**
+         * <p>The properties of the task.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The type of the task.</p>
+         */
         @NameInMap("Type")
         public String type;
 

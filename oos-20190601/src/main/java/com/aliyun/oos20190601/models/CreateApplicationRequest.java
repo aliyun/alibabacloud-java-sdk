@@ -4,27 +4,56 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
+    @NameInMap("AlarmConfig")
+    public CreateApplicationRequestAlarmConfig alarmConfig;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the application.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The region ID. Set the value to cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateApplicationRequest setAlarmConfig(CreateApplicationRequestAlarmConfig alarmConfig) {
+        this.alarmConfig = alarmConfig;
+        return this;
+    }
+    public CreateApplicationRequestAlarmConfig getAlarmConfig() {
+        return this.alarmConfig;
     }
 
     public CreateApplicationRequest setClientToken(String clientToken) {
@@ -73,6 +102,47 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getTags() {
         return this.tags;
+    }
+
+    public static class CreateApplicationRequestAlarmConfig extends TeaModel {
+        @NameInMap("ContactGroups")
+        public java.util.List<String> contactGroups;
+
+        @NameInMap("HealthCheckUrl")
+        public String healthCheckUrl;
+
+        @NameInMap("TemplateIds")
+        public java.util.List<String> templateIds;
+
+        public static CreateApplicationRequestAlarmConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateApplicationRequestAlarmConfig self = new CreateApplicationRequestAlarmConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateApplicationRequestAlarmConfig setContactGroups(java.util.List<String> contactGroups) {
+            this.contactGroups = contactGroups;
+            return this;
+        }
+        public java.util.List<String> getContactGroups() {
+            return this.contactGroups;
+        }
+
+        public CreateApplicationRequestAlarmConfig setHealthCheckUrl(String healthCheckUrl) {
+            this.healthCheckUrl = healthCheckUrl;
+            return this;
+        }
+        public String getHealthCheckUrl() {
+            return this.healthCheckUrl;
+        }
+
+        public CreateApplicationRequestAlarmConfig setTemplateIds(java.util.List<String> templateIds) {
+            this.templateIds = templateIds;
+            return this;
+        }
+        public java.util.List<String> getTemplateIds() {
+            return this.templateIds;
+        }
+
     }
 
 }

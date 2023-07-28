@@ -4,21 +4,39 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionLogsRequest extends TeaModel {
+    /**
+     * <p>The ID of the execution.</p>
+     */
     @NameInMap("ExecutionId")
     public String executionId;
 
+    /**
+     * <p>The type of the log.</p>
+     */
     @NameInMap("LogType")
     public String logType;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region in which you want to query the logs of the execution.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The execution ID of the task.</p>
+     */
     @NameInMap("TaskExecutionId")
     public String taskExecutionId;
 

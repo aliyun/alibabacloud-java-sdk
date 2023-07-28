@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretParameterResponseBody extends TeaModel {
+    /**
+     * <p>The information about the encryption parameter.</p>
+     */
     @NameInMap("Parameter")
     public CreateSecretParameterResponseBodyParameter parameter;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,45 +38,87 @@ public class CreateSecretParameterResponseBody extends TeaModel {
     }
 
     public static class CreateSecretParameterResponseBodyParameter extends TeaModel {
+        /**
+         * <p>The constraints of the encryption parameter.</p>
+         */
         @NameInMap("Constraints")
         public String constraints;
 
+        /**
+         * <p>The user who created the encryption parameter.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the encryption parameter was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the encryption parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the encryption parameter.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The key ID of KMS that is used to encrypt the parameter.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <p>The name of the encryption parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version number of the encryption parameter.</p>
+         */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The share type of the encryption parameter.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The type of the parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user who updated the encryption parameter.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the encryption parameter was updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 

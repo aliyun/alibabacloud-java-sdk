@@ -4,33 +4,69 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListSecretParametersRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name of the parameter. **You can enter a keyword to query parameter names in fuzzy match mode.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.</p>
+     */
     @NameInMap("Recursive")
     public Boolean recursive;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The field used to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   Name</p>
+     * <p>*   CreatedDate</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
+    /**
+     * <p>The order in which the entries are sorted. Valid values:</p>
+     * <br>
+     * <p>*   Ascending</p>
+     * <p>*   Descending (Default)</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <p>The tags of the parameter.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 

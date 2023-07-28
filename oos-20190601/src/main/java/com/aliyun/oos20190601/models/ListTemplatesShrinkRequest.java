@@ -4,51 +4,120 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTemplatesShrinkRequest extends TeaModel {
+    /**
+     * <p>The type of the template. Valid values include TimerTrigger, EventTrigger, AlarmTrigger, and Other.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The creator of the template.</p>
+     * <br>
+     * <p>*   To query the template provided by Alibaba Cloud, set this parameter to **ACS**.</p>
+     * <p>*   To query the template created by a user, set this parameter to the **ID** of the template or the **name of the user** who creates the template.</p>
+     */
     @NameInMap("CreatedBy")
     public String createdBy;
 
+    /**
+     * <p>Specifies to query the template that is created at or later than the specified time.</p>
+     * <br>
+     * <p>The value must be in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     */
     @NameInMap("CreatedDateAfter")
     public String createdDateAfter;
 
+    /**
+     * <p>Specifies to query the template that is created at or before the specified time.</p>
+     * <br>
+     * <p>The value must be in the YYYY-MM-DDThh:mm::ssZ format.</p>
+     */
     @NameInMap("CreatedDateBefore")
     public String createdDateBefore;
 
+    /**
+     * <p>Specifies whether to query the template that is configured with a trigger.</p>
+     */
     @NameInMap("HasTrigger")
     public Boolean hasTrigger;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region in which you want to query templates.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The share type of the template. Valid values:</p>
+     * <br>
+     * <p>*   **Public**</p>
+     * <p>*   **Private**</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 
+    /**
+     * <p>The field that is used to sort the templates to be returned. Valid values:</p>
+     * <br>
+     * <p>*   **TotalExecutionCounts**: The system sorts the returned templates based on the total number of execution times of the template. This is the default value.</p>
+     * <p>*   **Popularity**: The system sorts the returned templates based on the popularity of the template.</p>
+     * <p>*   **TemplateName**: The system sorts the returned templates based on the name of the template.</p>
+     * <p>*   **CreatedDate**: The system sorts the returned templates based on the creation time of the template.</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
+    /**
+     * <p>The order in which you want to sort the results. Valid values:</p>
+     * <br>
+     * <p>*   **Ascending**: ascending order.</p>
+     * <p>*   **Descending**: descending order. This is the default value.</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>The format of the template. Valid values:</p>
+     * <br>
+     * <p>*   **JSON**</p>
+     * <p>*   **YAML**</p>
+     */
     @NameInMap("TemplateFormat")
     public String templateFormat;
 
+    /**
+     * <p>The name of the template. All templates whose names contain the specified template name are to be returned.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>The type of the template.</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 

@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetParameterResponseBody extends TeaModel {
+    /**
+     * <p>The description of the common parameter.</p>
+     */
     @NameInMap("Parameter")
     public GetParameterResponseBodyParameter parameter;
 
+    /**
+     * <p>The user who updated the common parameter.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -59,18 +65,33 @@ public class GetParameterResponseBody extends TeaModel {
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The region ID of the resource.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the common parameter.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The information of the common parameter.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
+        /**
+         * <p>Queries a common parameter and its value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class StartExecutionResponseBody extends TeaModel {
+    /**
+     * <p>The details of the execution.</p>
+     */
     @NameInMap("Execution")
     public StartExecutionResponseBodyExecution execution;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class StartExecutionResponseBody extends TeaModel {
     }
 
     public static class StartExecutionResponseBodyExecutionCurrentTasks extends TeaModel {
+        /**
+         * <p>The action of the task.</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 
+        /**
+         * <p>The execution ID of the task.</p>
+         */
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
@@ -73,75 +88,147 @@ public class StartExecutionResponseBody extends TeaModel {
     }
 
     public static class StartExecutionResponseBodyExecution extends TeaModel {
+        /**
+         * <p>The number of executions.</p>
+         */
         @NameInMap("Counters")
         public java.util.Map<String, ?> counters;
 
+        /**
+         * <p>The time when the execution was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The information about in-progress tasks.</p>
+         */
         @NameInMap("CurrentTasks")
         public java.util.List<StartExecutionResponseBodyExecutionCurrentTasks> currentTasks;
 
+        /**
+         * <p>The description of the execution.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the execution stopped.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The account ID of the user who started the execution of the template.</p>
+         */
         @NameInMap("ExecutedBy")
         public String executedBy;
 
+        /**
+         * <p>The GUID of the execution.</p>
+         */
         @NameInMap("ExecutionId")
         public String executionId;
 
+        /**
+         * <p>Indicates whether the execution is a parent execution.</p>
+         */
         @NameInMap("IsParent")
         public Boolean isParent;
 
+        /**
+         * <p>The loop mode.</p>
+         */
         @NameInMap("LoopMode")
         public String loopMode;
 
+        /**
+         * <p>The execution mode.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The output of the execution.</p>
+         */
         @NameInMap("Outputs")
         public String outputs;
 
+        /**
+         * <p>The input parameters of the execution.</p>
+         */
         @NameInMap("Parameters")
         public String parameters;
 
+        /**
+         * <p>The ID of the parent execution.</p>
+         */
         @NameInMap("ParentExecutionId")
         public String parentExecutionId;
 
+        /**
+         * <p>The role that started the execution of the template.</p>
+         */
         @NameInMap("RamRole")
         public String ramRole;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The security check mode.</p>
+         */
         @NameInMap("SafetyCheck")
         public String safetyCheck;
 
+        /**
+         * <p>The time when the execution was started.</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <p>The status of the execution.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The status information of the execution.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>The tags of the execution.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The version number of the template.</p>
+         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
+        /**
+         * <p>The time when the execution was last updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionRiskyTasksResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about high-risk tasks.</p>
+     */
     @NameInMap("RiskyTasks")
     public java.util.List<ListExecutionRiskyTasksResponseBodyRiskyTasks> riskyTasks;
 
@@ -32,15 +38,27 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
     }
 
     public static class ListExecutionRiskyTasksResponseBodyRiskyTasks extends TeaModel {
+        /**
+         * <p>The name of the operation that the high-risk task calls.</p>
+         */
         @NameInMap("API")
         public String API;
 
+        /**
+         * <p>The cloud service in which the high-risk task runs.</p>
+         */
         @NameInMap("Service")
         public String service;
 
+        /**
+         * <p>The details of the high-risk task.</p>
+         */
         @NameInMap("Task")
         public java.util.List<String> task;
 
+        /**
+         * <p>The details of templates to which the high-risk task belongs.</p>
+         */
         @NameInMap("Template")
         public java.util.List<String> template;
 

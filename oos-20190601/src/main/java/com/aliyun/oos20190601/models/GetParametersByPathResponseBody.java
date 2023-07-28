@@ -89,6 +89,9 @@ public class GetParametersByPathResponseBody extends TeaModel {
         @NameInMap("ShareType")
         public String shareType;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         @NameInMap("Type")
         public String type;
 
@@ -168,6 +171,14 @@ public class GetParametersByPathResponseBody extends TeaModel {
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public GetParametersByPathResponseBodyParameters setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public GetParametersByPathResponseBodyParameters setType(String type) {
