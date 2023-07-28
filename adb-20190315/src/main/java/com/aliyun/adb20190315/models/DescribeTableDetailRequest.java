@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -19,9 +22,15 @@ public class DescribeTableDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>The name of the table.</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

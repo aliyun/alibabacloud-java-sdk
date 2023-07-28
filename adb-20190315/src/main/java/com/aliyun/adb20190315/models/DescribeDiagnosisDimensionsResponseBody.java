@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisDimensionsResponseBody extends TeaModel {
+    /**
+     * <p>The source IP addresses.</p>
+     */
     @NameInMap("ClientIps")
     public java.util.List<String> clientIps;
 
+    /**
+     * <p>The databases.</p>
+     */
     @NameInMap("Databases")
     public java.util.List<String> databases;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource groups.</p>
+     */
     @NameInMap("ResourceGroups")
     public java.util.List<String> resourceGroups;
 
+    /**
+     * <p>The usernames.</p>
+     */
     @NameInMap("UserNames")
     public java.util.List<String> userNames;
 

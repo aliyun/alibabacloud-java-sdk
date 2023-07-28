@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeColumnsResponseBody extends TeaModel {
+    /**
+     * <p>The list of columns.</p>
+     */
     @NameInMap("Items")
     public DescribeColumnsResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,45 @@ public class DescribeColumnsResponseBody extends TeaModel {
     }
 
     public static class DescribeColumnsResponseBodyItemsColumn extends TeaModel {
+        /**
+         * <p>Indicates whether the columns are auto-incremented.</p>
+         */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>Indicates whether the column is a primary key.</p>
+         */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The data type of the column.</p>
+         */
         @NameInMap("Type")
         public String type;
 

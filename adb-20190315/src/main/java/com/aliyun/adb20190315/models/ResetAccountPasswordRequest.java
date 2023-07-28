@@ -4,15 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordRequest extends TeaModel {
+    /**
+     * <p>The account of the database.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The account and password of the database.</p>
+     * <br>
+     * <p>*   The password must contain uppercase letters, lowercase letters, digits, and special characters.</p>
+     * <p>*   Special characters include ! @ # $ % ^ & \* () \_ + - and =</p>
+     * <p>*   A password must be 8 to 32 characters in length.</p>
+     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
+    /**
+     * <p>Normal: standard account</p>
+     * <br>
+     * <p>Super: privileged account</p>
+     */
     @NameInMap("AccountType")
     public String accountType;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

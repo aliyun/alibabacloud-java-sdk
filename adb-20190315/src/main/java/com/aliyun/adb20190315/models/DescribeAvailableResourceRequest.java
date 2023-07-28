@@ -4,9 +4,18 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
+    /**
+     * <p>The supported mode. Valid values:</p>
+     * <br>
+     * <p>*   **flexible**: elastic mode</p>
+     * <p>*   **reserver**: reserved mode</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The resources available in the supported modes.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -19,6 +28,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The resources available in the zones.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -28,6 +40,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the zone.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

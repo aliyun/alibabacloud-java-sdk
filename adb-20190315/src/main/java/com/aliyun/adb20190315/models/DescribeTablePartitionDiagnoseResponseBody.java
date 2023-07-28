@@ -4,27 +4,51 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The information of tables.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeTablePartitionDiagnoseResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The recommended maximum number of rows in each list partition.</p>
+     */
     @NameInMap("SuggestMaxRecordsPerPartition")
     public Long suggestMaxRecordsPerPartition;
 
+    /**
+     * <p>The recommended minimum number of rows in each list partition.</p>
+     */
     @NameInMap("SuggestMinRecordsPerPartition")
     public Long suggestMinRecordsPerPartition;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,15 +122,27 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
     }
 
     public static class DescribeTablePartitionDiagnoseResponseBodyItems extends TeaModel {
+        /**
+         * <p>Details of the inappropriate partitions.</p>
+         */
         @NameInMap("PartitionDetail")
         public String partitionDetail;
 
+        /**
+         * <p>The number of partitions.</p>
+         */
         @NameInMap("PartitionNumber")
         public Integer partitionNumber;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The table name.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

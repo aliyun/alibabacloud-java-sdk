@@ -4,15 +4,27 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllDataSourceResponseBody extends TeaModel {
+    /**
+     * <p>The queried columns.</p>
+     */
     @NameInMap("Columns")
     public DescribeAllDataSourceResponseBodyColumns columns;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried databases.</p>
+     */
     @NameInMap("Schemas")
     public DescribeAllDataSourceResponseBodySchemas schemas;
 
+    /**
+     * <p>The queried tables.</p>
+     */
     @NameInMap("Tables")
     public DescribeAllDataSourceResponseBodyTables tables;
 
@@ -54,24 +66,51 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourceResponseBodyColumnsColumn extends TeaModel {
+        /**
+         * <p>Indicates whether the column is an auto-increment column. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("AutoIncrementColumn")
         public Boolean autoIncrementColumn;
 
+        /**
+         * <p>The name of the column.</p>
+         */
         @NameInMap("ColumnName")
         public String columnName;
 
+        /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>Indicates whether the column is the primary key of the table. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("PrimaryKey")
         public Boolean primaryKey;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The data type of the column.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -158,9 +197,15 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourceResponseBodySchemasSchema extends TeaModel {
+        /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
@@ -207,12 +252,21 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAllDataSourceResponseBodyTablesTable extends TeaModel {
+        /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

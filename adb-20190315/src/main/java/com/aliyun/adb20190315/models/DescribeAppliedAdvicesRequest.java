@@ -4,24 +4,58 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppliedAdvicesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end date of the time range to query. Specify the date in the yyyyMMdd format. The date must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The display language of the suggestion. Default value: zh. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: simplified Chinese</p>
+     * <p>*   **en**: English</p>
+     * <p>*   **ja**: Japanese</p>
+     * <p>*   **zh-tw**: traditional Chinese</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
+     * <br>
+     * <p>*   **30**</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The start date of the time range to query. Specify the date in the yyyyMMdd format. The date must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

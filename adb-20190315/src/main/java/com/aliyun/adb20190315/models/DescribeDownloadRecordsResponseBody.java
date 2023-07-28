@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the download tasks.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeDownloadRecordsResponseBodyRecords> records;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,37 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDownloadRecordsResponseBodyRecords extends TeaModel {
+        /**
+         * <p>The ID of the download task.</p>
+         */
         @NameInMap("DownloadId")
         public Long downloadId;
 
+        /**
+         * <p>The error message returned when the download task has failed.</p>
+         */
         @NameInMap("ExceptionMsg")
         public String exceptionMsg;
 
+        /**
+         * <p>The name of the downloaded file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The status of the download task.</p>
+         * <br>
+         * <p>*   **running**: The download task is currently in progress.</p>
+         * <p>*   **finished**: The download task is complete.</p>
+         * <p>*   **failed**: The download task has failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The download URL of the file.</p>
+         */
         @NameInMap("Url")
         public String url;
 

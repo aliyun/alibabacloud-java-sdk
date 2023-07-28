@@ -4,12 +4,25 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponseBody extends TeaModel {
+    /**
+     * <p>The resources available in elastic mode.</p>
+     */
     @NameInMap("AvailableZoneList")
     public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneList> availableZoneList;
 
+    /**
+     * <p>The resources available in the supported editions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The supported edition. Valid values:</p>
+     * <br>
+     * <p>*   **basic**: Basic Edition</p>
+     * <p>*   **cluster**: Cluster Edition</p>
+     * <p>*   **mixed_storage**: elastic mode for Cluster Edition</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -84,6 +97,9 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource extends TeaModel {
+        /**
+         * <p>The maximum number of EIUs.</p>
+         */
         @NameInMap("StorageType")
         public String storageType;
 
@@ -319,9 +335,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList extends TeaModel {
+        /**
+         * <p>The step size.</p>
+         */
         @NameInMap("Serial")
         public String serial;
 
+        /**
+         * <p>The minimum number of EIUs.</p>
+         */
         @NameInMap("SupportedFlexibleResource")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialListSupportedFlexibleResource> supportedFlexibleResource;
 
@@ -360,9 +382,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode extends TeaModel {
+        /**
+         * <p>N/A</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The available elastic I/O units (EIUs).</p>
+         */
         @NameInMap("SupportedSerialList")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedModeSupportedSerialList> supportedSerialList;
 
@@ -393,12 +421,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("SupportedComputeResource")
         public java.util.List<String> supportedComputeResource;
 
+        /**
+         * <p>The available computing resources.</p>
+         */
         @NameInMap("SupportedMode")
         public java.util.List<DescribeAvailableResourceResponseBodyAvailableZoneListSupportedMode> supportedMode;
 
         @NameInMap("SupportedStorageResource")
         public java.util.List<String> supportedStorageResource;
 
+        /**
+         * <p>The storage type. Valid values:</p>
+         * <br>
+         * <p>*   **hdd**</p>
+         * <p>*   **ssd**</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

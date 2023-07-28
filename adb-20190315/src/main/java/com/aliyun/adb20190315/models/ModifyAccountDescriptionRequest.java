@@ -4,12 +4,26 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
+    /**
+     * <p>The description of the account. The description must meet the following requirements:</p>
+     * <br>
+     * <p>*   The description must start with a letter.</p>
+     * <p>*   The description can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   The description cannot start with `http://` or `https://`.</p>
+     * <p>*   The description must be 2 to 256 characters in length.</p>
+     */
     @NameInMap("AccountDescription")
     public String accountDescription;
 
+    /**
+     * <p>The name of the account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

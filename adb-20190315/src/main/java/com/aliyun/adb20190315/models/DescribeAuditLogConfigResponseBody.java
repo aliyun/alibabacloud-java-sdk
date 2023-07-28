@@ -4,12 +4,24 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditLogConfigResponseBody extends TeaModel {
+    /**
+     * <p>The status of SQL audit. Valid values:</p>
+     * <br>
+     * <p>*   **on**: SQL audit is enabled.</p>
+     * <p>*   **off**: SQL audit is disabled.</p>
+     */
     @NameInMap("AuditLogStatus")
     public String auditLogStatus;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

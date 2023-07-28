@@ -4,15 +4,39 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * <br>
+     * <p>*   The name can be up to 255 characters in length.</p>
+     * <p>*   The name must start with a letter or a digit.</p>
+     * <p>*   The name can contain letters, digits, hyphens (\_), and underscores (\_).</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The query execution mode. Default value: batch. Valid values:</p>
+     * <br>
+     * <p>*   **interactive**</p>
+     * <p>*   **batch**</p>
+     */
     @NameInMap("GroupType")
     public String groupType;
 
+    /**
+     * <p>The number of nodes. Default value: 0.</p>
+     * <br>
+     * <p>*   Each node is configured with the resources of 16 cores and 64 GB memory.</p>
+     * <p>*   Make sure that the amount of resources of the nodes (Number of nodes × 16 cores and 64 GB memory) is less than or equal to the amount of unused resources of the cluster.</p>
+     */
     @NameInMap("NodeNum")
     public Integer nodeNum;
 

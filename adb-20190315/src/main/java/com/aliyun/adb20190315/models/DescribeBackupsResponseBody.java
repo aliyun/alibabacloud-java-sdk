@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The queried backup sets.</p>
+     */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,24 +80,48 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
+        /**
+         * <p>The end time of the backup.</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <p>The ID of the backup set.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The backup method. Only Snapshot is returned.</p>
+         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        /**
+         * <p>The backup size. Unit: bytes.</p>
+         */
         @NameInMap("BackupSize")
         public Integer backupSize;
 
+        /**
+         * <p>The start time of the backup.</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>The backup type. Valid values:</p>
+         * <br>
+         * <p>*   **FullBackup**</p>
+         * <p>*   **IncrementalBackup**</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 

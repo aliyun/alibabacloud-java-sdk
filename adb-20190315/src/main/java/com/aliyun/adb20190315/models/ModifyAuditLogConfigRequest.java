@@ -4,9 +4,18 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyAuditLogConfigRequest extends TeaModel {
+    /**
+     * <p>The status of SQL audit. Valid values:</p>
+     * <br>
+     * <p>*   **on**: SQL audit is enabled.</p>
+     * <p>*   **off**: SQL audit is disabled.</p>
+     */
     @NameInMap("AuditLogStatus")
     public String auditLogStatus;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -16,6 +25,9 @@ public class ModifyAuditLogConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

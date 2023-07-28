@@ -4,15 +4,37 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The number of days for which to retain full backup files. Valid values: 7 to 730.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the default value 7 is used.</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specifies whether to enable real-time log backup. Valid values:</p>
+     * <br>
+     * <p>*   **Enable**</p>
+     * <br>
+     * <p>*   **Disable**</p>
+     * <br>
+     * <p>> If you leave this parameter empty, the default value Enable is used.</p>
+     */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
+    /**
+     * <p>The number of days for which to retain log backup files. Valid values: 7 to 730.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the default value 7 is used.</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
@@ -22,9 +44,27 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The days of the week on which to perform full backup. Separate multiple values with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **Monday**</p>
+     * <p>*   **Tuesday**</p>
+     * <p>*   **Wednesday**</p>
+     * <p>*   **Thursday**</p>
+     * <p>*   **Friday**</p>
+     * <p>*   **Saturday**</p>
+     * <p>*   **Sunday**</p>
+     * <br>
+     * <p>>  To ensure data security, we recommend that you specify at least two values.</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The start time of the full backup within a time range. Specify the time range in the HH:mmZ-HH:mmZ format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The time range is 1 hour.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 

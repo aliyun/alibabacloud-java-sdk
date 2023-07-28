@@ -4,9 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class AllocateClusterPublicConnectionRequest extends TeaModel {
+    /**
+     * <p>The prefix of the public endpoint.</p>
+     * <br>
+     * <p>*   The prefix must contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</p>
+     * <p>*   The prefix can be up to 30 characters in length.</p>
+     * <p>*   By default, the cluster name is used as the prefix of the public endpoint.</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

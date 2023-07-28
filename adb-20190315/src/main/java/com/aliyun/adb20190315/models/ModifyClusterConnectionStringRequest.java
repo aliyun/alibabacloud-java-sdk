@@ -4,12 +4,28 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterConnectionStringRequest extends TeaModel {
+    /**
+     * <p>The prefix of public endpoints.</p>
+     * <br>
+     * <p>*   The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.</p>
+     * <p>*   The prefix can be up to 30 characters in length.</p>
+     */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
+    /**
+     * <p>The current public endpoint of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusterNetInfo](~~143384~~) operation to query the public endpoint of the cluster.</p>
+     */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -19,6 +35,9 @@ public class ModifyClusterConnectionStringRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The port number. Set the value to **3306**.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 

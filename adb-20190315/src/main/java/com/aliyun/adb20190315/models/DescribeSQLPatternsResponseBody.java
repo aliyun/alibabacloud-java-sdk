@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLPatternsResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The queried SQL patterns.</p>
+     */
     @NameInMap("PatternDetails")
     public java.util.List<DescribeSQLPatternsResponseBodyPatternDetails> patternDetails;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,54 +80,110 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     }
 
     public static class DescribeSQLPatternsResponseBodyPatternDetails extends TeaModel {
+        /**
+         * <p>The IP address of the SQL client that commits the SQL pattern.</p>
+         */
         @NameInMap("AccessIp")
         public String accessIp;
 
+        /**
+         * <p>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+         */
         @NameInMap("AverageExecutionTime")
         public Double averageExecutionTime;
 
+        /**
+         * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+         */
         @NameInMap("AveragePeakMemory")
         public Double averagePeakMemory;
 
+        /**
+         * <p>The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+         */
         @NameInMap("AverageQueryTime")
         public Double averageQueryTime;
 
+        /**
+         * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+         */
         @NameInMap("AverageScanSize")
         public Double averageScanSize;
 
+        /**
+         * <p>Indicates whether the execution of the SQL pattern can be blocked. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> Only SELECT and INSERT statements can be blocked.</p>
+         */
         @NameInMap("Blockable")
         public Boolean blockable;
 
+        /**
+         * <p>The number of failed queries executed in association with the SQL pattern within the query time range.</p>
+         */
         @NameInMap("FailedCount")
         public Long failedCount;
 
+        /**
+         * <p>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+         */
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
+        /**
+         * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.</p>
+         */
         @NameInMap("MaxPeakMemory")
         public Long maxPeakMemory;
 
+        /**
+         * <p>The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.</p>
+         */
         @NameInMap("MaxQueryTime")
         public Long maxQueryTime;
 
+        /**
+         * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.</p>
+         */
         @NameInMap("MaxScanSize")
         public Long maxScanSize;
 
+        /**
+         * <p>The earliest commit time of the SQL pattern within the query time range. Unit: milliseconds.</p>
+         */
         @NameInMap("PatternCreationTime")
         public String patternCreationTime;
 
+        /**
+         * <p>The ID of the SQL pattern.</p>
+         */
         @NameInMap("PatternId")
         public String patternId;
 
+        /**
+         * <p>The number of queries executed in association with the SQL pattern within the query time range.</p>
+         */
         @NameInMap("QueryCount")
         public Long queryCount;
 
+        /**
+         * <p>The statement of the SQL pattern.</p>
+         */
         @NameInMap("SQLPattern")
         public String SQLPattern;
 
+        /**
+         * <p>The tables scanned based on the SQL pattern.</p>
+         */
         @NameInMap("Tables")
         public String tables;
 
+        /**
+         * <p>The database username that is used to commit the SQL pattern.</p>
+         */
         @NameInMap("User")
         public String user;
 

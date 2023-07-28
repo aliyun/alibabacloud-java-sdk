@@ -4,12 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableDetailResponseBody extends TeaModel {
+    /**
+     * <p>The average number of rows in partitions.</p>
+     */
     @NameInMap("AvgSize")
     public Long avgSize;
 
+    /**
+     * <p>The list of partitions.</p>
+     */
     @NameInMap("Items")
     public DescribeTableDetailResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeTableDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeTableDetailResponseBodyItemsShard extends TeaModel {
+        /**
+         * <p>The ID of the partition. Only the numeric part of the partition name is returned.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The number of rows in the table.</p>
+         */
         @NameInMap("Size")
         public Long size;
 

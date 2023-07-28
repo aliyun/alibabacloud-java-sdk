@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeInclinedTablesResponseBody extends TeaModel {
+    /**
+     * <p>The monitoring information about tables.</p>
+     */
     @NameInMap("Items")
     public DescribeInclinedTablesResponseBodyItems items;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,18 +80,39 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeInclinedTablesResponseBodyItemsTable extends TeaModel {
+        /**
+         * <p>Indicates whether data is skewed in partitions of the table. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsIncline")
         public Boolean isIncline;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <p>The number of rows in the table.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The type of the table. Valid values:</p>
+         * <br>
+         * <p>*   **FactTable**</p>
+         * <p>*   **DimensionTable**</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskInfoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The description of the task.</p>
+     */
     @NameInMap("TaskInfo")
     public DescribeTaskInfoResponseBodyTaskInfo taskInfo;
 
@@ -32,18 +38,43 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeTaskInfoResponseBodyTaskInfo extends TeaModel {
+        /**
+         * <p>The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <p>The end time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The progress of the task. Unit: %.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The status of the task.</p>
+         * <br>
+         * <p>*   Waiting</p>
+         * <p>*   Running</p>
+         * <p>*   Finished</p>
+         * <p>*   Failed</p>
+         * <p>*   Closed</p>
+         * <p>*   Cancel</p>
+         * <p>*   Retry</p>
+         * <p>*   Pause</p>
+         * <p>*   Stop</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public Integer taskId;
 

@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The list of database accounts.</p>
+     */
     @NameInMap("AccountList")
     public DescribeAccountsResponseBodyAccountList accountList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,32 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountListDBAccount extends TeaModel {
+        /**
+         * <p>The description of the account.</p>
+         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The status of the account.</p>
+         * <br>
+         * <p>*   Creating: The account is being created.</p>
+         * <p>*   Available: The account is available.</p>
+         * <p>*   Deleting: The account is being deleted.</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>*   Normal: standard account</p>
+         * <p>*   Super: privileged account</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 

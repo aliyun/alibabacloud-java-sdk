@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The renewal information of the cluster.</p>
+     */
     @NameInMap("Items")
     public DescribeAutoRenewAttributeResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,21 +80,49 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute extends TeaModel {
+        /**
+         * <p>Indicates whether auto-renewal is enabled for the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **true**: Auto-renewal is enabled.</p>
+         * <p>*   **false**: Auto-renewal is disabled.</p>
+         */
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The renewal period.</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The unit of the renewal period. Valid values:</p>
+         * <br>
+         * <p>*   **Year**</p>
+         * <p>*   **Month**</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        /**
+         * <p>The region ID of the cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The renewal status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **AutoRenewal**: The cluster is automatically renewed.</p>
+         * <p>*   **Normal**: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.</p>
+         * <p>*   **NotRenewal**: The cluster is not renewed. Three days before the cluster expires, the system sends you a reminder by SMS message to remind you that the cluster is not renewed. However, the system does not send you a reminder when the cluster expires.</p>
+         */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
 

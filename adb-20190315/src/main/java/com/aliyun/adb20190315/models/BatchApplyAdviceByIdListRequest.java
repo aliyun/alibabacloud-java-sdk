@@ -10,9 +10,18 @@ public class BatchApplyAdviceByIdListRequest extends TeaModel {
     @NameInMap("AdviceIdList")
     public String adviceIdList;
 
+    /**
+     * <p>The message returned for the operation. Valid values:</p>
+     * <br>
+     * <p>*   **SUCCESS** is returned if the operation is successful.</p>
+     * <p>*   An error message is returned if the operation fails.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

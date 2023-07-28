@@ -4,9 +4,23 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoRenewAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The renewal duration. Default value: **1**.</p>
+     * <br>
+     * <p>*   Valid values when PeriodUnit is set to **Month**: 1 to 11. Data type: INTEGER.</p>
+     * <br>
+     * <p>*   Valid values when PeriodUnit is set to **Year**: 1, 2, 3, and 5. Data type: INTEGER.</p>
+     * <br>
+     * <p>> Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+     */
     @NameInMap("Duration")
     public String duration;
 
@@ -16,12 +30,30 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The unit of the renewal duration. Default value: **Month**. Valid values:</p>
+     * <br>
+     * <p>*   **Year**</p>
+     * <p>*   **Month**</p>
+     */
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The renewal status of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **AutoRenewal**: The cluster is automatically renewed.</p>
+     * <p>*   **Normal**: The cluster is manually renewed.</p>
+     * <p>*   **NotRenewal**: The cluster is not renewed.</p>
+     */
     @NameInMap("RenewalStatus")
     public String renewalStatus;
 

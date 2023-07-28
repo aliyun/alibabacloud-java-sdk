@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeComputeResourceResponseBody extends TeaModel {
+    /**
+     * <p>Details of computing resource specifications.</p>
+     */
     @NameInMap("ComputeResource")
     public java.util.List<DescribeComputeResourceResponseBodyComputeResource> computeResource;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeComputeResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeComputeResourceResponseBodyComputeResource extends TeaModel {
+        /**
+         * <p>The specifications of computing resources displayed in the console.</p>
+         */
         @NameInMap("DisplayValue")
         public String displayValue;
 
+        /**
+         * <p>The actual specifications of computing resources.</p>
+         */
         @NameInMap("RealValue")
         public String realValue;
 

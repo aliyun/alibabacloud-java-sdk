@@ -162,6 +162,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyAdviceByIdWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
+      *
+      * @param request AttachUserENIRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachUserENIResponse
+     */
     public AttachUserENIResponse attachUserENIWithOptions(AttachUserENIRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -202,6 +209,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachUserENIResponse());
     }
 
+    /**
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
+      *
+      * @param request AttachUserENIRequest
+      * @return AttachUserENIResponse
+     */
     public AttachUserENIResponse attachUserENI(AttachUserENIRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachUserENIWithOptions(request, runtime);
@@ -248,6 +261,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchApplyAdviceByIdListWithOptions(request, runtime);
     }
 
+    /**
+      * ## Precautions
+      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be associated with a database account.
+      *
+      * @param request BindDBResourceGroupWithUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BindDBResourceGroupWithUserResponse
+     */
     public BindDBResourceGroupWithUserResponse bindDBResourceGroupWithUserWithOptions(BindDBResourceGroupWithUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -296,11 +318,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindDBResourceGroupWithUserResponse());
     }
 
+    /**
+      * ## Precautions
+      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be associated with a database account.
+      *
+      * @param request BindDBResourceGroupWithUserRequest
+      * @return BindDBResourceGroupWithUserResponse
+     */
     public BindDBResourceGroupWithUserResponse bindDBResourceGroupWithUser(BindDBResourceGroupWithUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindDBResourceGroupWithUserWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be associated with a database account.
+      *
+      * @param request BindDBResourcePoolWithUserRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BindDBResourcePoolWithUserResponse
+     */
     public BindDBResourcePoolWithUserResponse bindDBResourcePoolWithUserWithOptions(BindDBResourcePoolWithUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -349,6 +387,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindDBResourcePoolWithUserResponse());
     }
 
+    /**
+      * *   This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be associated with a database account.
+      *
+      * @param request BindDBResourcePoolWithUserRequest
+      * @return BindDBResourcePoolWithUserResponse
+     */
     public BindDBResourcePoolWithUserResponse bindDBResourcePoolWithUser(BindDBResourcePoolWithUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindDBResourcePoolWithUserWithOptions(request, runtime);
@@ -415,6 +460,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAccountWithOptions(request, runtime);
     }
 
+    /**
+      * After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition (V3.0) clusters, see [Billable items of Data Warehouse Edition (V3.0)](~~303131~~) and [Pricing for Data Warehouse Edition (V3.0)](~~135229~~).
+      *
+      * @param request CreateDBClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDBClusterResponse
+     */
     public CreateDBClusterResponse createDBClusterWithOptions(CreateDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -555,11 +607,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBClusterResponse());
     }
 
+    /**
+      * After you create a cluster, you are billed for the cluster specifications that you select. For more information about the billable items and pricing for Data Warehouse Edition (V3.0) clusters, see [Billable items of Data Warehouse Edition (V3.0)](~~303131~~) and [Pricing for Data Warehouse Edition (V3.0)](~~135229~~).
+      *
+      * @param request CreateDBClusterRequest
+      * @return CreateDBClusterResponse
+     */
     public CreateDBClusterResponse createDBCluster(CreateDBClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBClusterWithOptions(request, runtime);
     }
 
+    /**
+      * ## Precautions
+      * This operation is applicable only for elastic clusters of 32 cores or more.
+      *
+      * @param request CreateDBResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDBResourceGroupResponse
+     */
     public CreateDBResourceGroupResponse createDBResourceGroupWithOptions(CreateDBResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -612,11 +678,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBResourceGroupResponse());
     }
 
+    /**
+      * ## Precautions
+      * This operation is applicable only for elastic clusters of 32 cores or more.
+      *
+      * @param request CreateDBResourceGroupRequest
+      * @return CreateDBResourceGroupResponse
+     */
     public CreateDBResourceGroupResponse createDBResourceGroup(CreateDBResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is applicable only for elastic clusters of 32 cores or more.
+      *
+      * @param request CreateDBResourcePoolRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDBResourcePoolResponse
+     */
     public CreateDBResourcePoolResponse createDBResourcePoolWithOptions(CreateDBResourcePoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -669,11 +749,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBResourcePoolResponse());
     }
 
+    /**
+      * This operation is applicable only for elastic clusters of 32 cores or more.
+      *
+      * @param request CreateDBResourcePoolRequest
+      * @return CreateDBResourcePoolResponse
+     */
     public CreateDBResourcePoolResponse createDBResourcePool(CreateDBResourcePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBResourcePoolWithOptions(request, runtime);
     }
 
+    /**
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request CreateElasticPlanRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateElasticPlanResponse
+     */
     public CreateElasticPlanResponse createElasticPlanWithOptions(CreateElasticPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -758,6 +852,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateElasticPlanResponse());
     }
 
+    /**
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request CreateElasticPlanRequest
+      * @return CreateElasticPlanResponse
+     */
     public CreateElasticPlanResponse createElasticPlan(CreateElasticPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createElasticPlanWithOptions(request, runtime);
@@ -816,6 +917,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteAccountWithOptions(request, runtime);
     }
 
+    /**
+      * *   Subscription clusters cannot be deleted by using API operations. After expiration, subscription clusters are automatically released. If you no longer need a cluster, you can submit a request to unsubscribe from the cluster in the Billing Management console. For more information about cluster refunds, see [Refund policy](~~471477~~).
+      * *   After you delete a cluster, resources of the cluster are immediately released, and data of the cluster is no longer retained and cannot be recovered. Proceed with caution.
+      *
+      * @param request DeleteDBClusterRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDBClusterResponse
+     */
     public DeleteDBClusterResponse deleteDBClusterWithOptions(DeleteDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -856,11 +965,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBClusterResponse());
     }
 
+    /**
+      * *   Subscription clusters cannot be deleted by using API operations. After expiration, subscription clusters are automatically released. If you no longer need a cluster, you can submit a request to unsubscribe from the cluster in the Billing Management console. For more information about cluster refunds, see [Refund policy](~~471477~~).
+      * *   After you delete a cluster, resources of the cluster are immediately released, and data of the cluster is no longer retained and cannot be recovered. Proceed with caution.
+      *
+      * @param request DeleteDBClusterRequest
+      * @return DeleteDBClusterResponse
+     */
     public DeleteDBClusterResponse deleteDBCluster(DeleteDBClusterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBClusterWithOptions(request, runtime);
     }
 
+    /**
+      * ## Precautions
+      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be deleted.
+      *
+      * @param request DeleteDBResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDBResourceGroupResponse
+     */
     public DeleteDBResourceGroupResponse deleteDBResourceGroupWithOptions(DeleteDBResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -905,11 +1030,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBResourceGroupResponse());
     }
 
+    /**
+      * ## Precautions
+      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be deleted.
+      *
+      * @param request DeleteDBResourceGroupRequest
+      * @return DeleteDBResourceGroupResponse
+     */
     public DeleteDBResourceGroupResponse deleteDBResourceGroup(DeleteDBResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * **Precautions**
+      * *   This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be deleted.
+      *
+      * @param request DeleteDBResourcePoolRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDBResourcePoolResponse
+     */
     public DeleteDBResourcePoolResponse deleteDBResourcePoolWithOptions(DeleteDBResourcePoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -954,6 +1096,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBResourcePoolResponse());
     }
 
+    /**
+      * **Precautions**
+      * *   This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * *   The default resource group USER_DEFAULT cannot be deleted.
+      *
+      * @param request DeleteDBResourcePoolRequest
+      * @return DeleteDBResourcePoolResponse
+     */
     public DeleteDBResourcePoolResponse deleteDBResourcePool(DeleteDBResourcePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBResourcePoolWithOptions(request, runtime);
@@ -1294,6 +1444,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAuditLogConfigWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the [DescribeAuditLogConfig](~~190628~~) operation to query the status of SQL audit. If SQL audit is disabled, you can call the [ModifyAuditLogConfig](~~190629~~) operation to enable SQL audit.
+      * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.
+      *
+      * @param request DescribeAuditLogRecordsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeAuditLogRecordsResponse
+     */
     public DescribeAuditLogRecordsResponse describeAuditLogRecordsWithOptions(DescribeAuditLogRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1386,6 +1544,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAuditLogRecordsResponse());
     }
 
+    /**
+      * Before you call the DescribeAuditLogRecords operation to query the SQL audit logs of an AnalyticDB for MySQL cluster, you must enable SQL audit for the cluster. You can call the [DescribeAuditLogConfig](~~190628~~) operation to query the status of SQL audit. If SQL audit is disabled, you can call the [ModifyAuditLogConfig](~~190629~~) operation to enable SQL audit.
+      * SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.
+      *
+      * @param request DescribeAuditLogRecordsRequest
+      * @return DescribeAuditLogRecordsResponse
+     */
     public DescribeAuditLogRecordsResponse describeAuditLogRecords(DescribeAuditLogRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAuditLogRecordsWithOptions(request, runtime);
@@ -1991,6 +2156,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClusterNetInfoWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query the performance data of a cluster over a time range based on its performance metrics. The data is collected every 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.
+      *
+      * @param request DescribeDBClusterPerformanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBClusterPerformanceResponse
+     */
     public DescribeDBClusterPerformanceResponse describeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2043,11 +2215,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterPerformanceResponse());
     }
 
+    /**
+      * You can call this operation to query the performance data of a cluster over a time range based on its performance metrics. The data is collected every 30 seconds. This operation allows you to query information about slow queries, such as the SQL query duration, number of scanned rows, and amount of scanned data.
+      *
+      * @param request DescribeDBClusterPerformanceRequest
+      * @return DescribeDBClusterPerformanceResponse
+     */
     public DescribeDBClusterPerformanceResponse describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterPerformanceWithOptions(request, runtime);
     }
 
+    /**
+      * > You can also view the monitoring information about resource groups within an AnalyticDB for MySQL cluster in elastic mode for Cluster Edition in the form of graphs in the console. For more information, see [View monitoring information](~~188721~~).
+      *
+      * @param request DescribeDBClusterResourcePoolPerformanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBClusterResourcePoolPerformanceResponse
+     */
     public DescribeDBClusterResourcePoolPerformanceResponse describeDBClusterResourcePoolPerformanceWithOptions(DescribeDBClusterResourcePoolPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2104,6 +2289,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterResourcePoolPerformanceResponse());
     }
 
+    /**
+      * > You can also view the monitoring information about resource groups within an AnalyticDB for MySQL cluster in elastic mode for Cluster Edition in the form of graphs in the console. For more information, see [View monitoring information](~~188721~~).
+      *
+      * @param request DescribeDBClusterResourcePoolPerformanceRequest
+      * @return DescribeDBClusterResourcePoolPerformanceResponse
+     */
     public DescribeDBClusterResourcePoolPerformanceResponse describeDBClusterResourcePoolPerformance(DescribeDBClusterResourcePoolPerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterResourcePoolPerformanceWithOptions(request, runtime);
@@ -2231,6 +2422,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClustersWithOptions(request, runtime);
     }
 
+    /**
+      * ## Precautions
+      * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request DescribeDBResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBResourceGroupResponse
+     */
     public DescribeDBResourceGroupResponse describeDBResourceGroupWithOptions(DescribeDBResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2275,11 +2474,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBResourceGroupResponse());
     }
 
+    /**
+      * ## Precautions
+      * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request DescribeDBResourceGroupRequest
+      * @return DescribeDBResourceGroupResponse
+     */
     public DescribeDBResourceGroupResponse describeDBResourceGroup(DescribeDBResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is applicable only for elastic clusters of 32 cores or more.
+      *
+      * @param request DescribeDBResourcePoolRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBResourcePoolResponse
+     */
     public DescribeDBResourcePoolResponse describeDBResourcePoolWithOptions(DescribeDBResourcePoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2324,6 +2537,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBResourcePoolResponse());
     }
 
+    /**
+      * This operation is applicable only for elastic clusters of 32 cores or more.
+      *
+      * @param request DescribeDBResourcePoolRequest
+      * @return DescribeDBResourcePoolResponse
+     */
     public DescribeDBResourcePoolResponse describeDBResourcePool(DescribeDBResourcePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBResourcePoolWithOptions(request, runtime);
@@ -2680,6 +2899,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEIURangeWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request DescribeElasticDailyPlanRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeElasticDailyPlanResponse
+     */
     public DescribeElasticDailyPlanResponse describeElasticDailyPlanWithOptions(DescribeElasticDailyPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2736,11 +2962,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeElasticDailyPlanResponse());
     }
 
+    /**
+      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request DescribeElasticDailyPlanRequest
+      * @return DescribeElasticDailyPlanResponse
+     */
     public DescribeElasticDailyPlanResponse describeElasticDailyPlan(DescribeElasticDailyPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeElasticDailyPlanWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request DescribeElasticPlanRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeElasticPlanResponse
+     */
     public DescribeElasticPlanResponse describeElasticPlanWithOptions(DescribeElasticPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2793,6 +3032,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeElasticPlanResponse());
     }
 
+    /**
+      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request DescribeElasticPlanRequest
+      * @return DescribeElasticPlanResponse
+     */
     public DescribeElasticPlanResponse describeElasticPlan(DescribeElasticPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeElasticPlanWithOptions(request, runtime);
@@ -2859,6 +3104,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInclinedTablesWithOptions(request, runtime);
     }
 
+    /**
+      * For information about how to asynchronously submit import and export tasks, see [Asynchronously submit an import or export task](~~160291~~).
+      *
+      * @param request DescribeLoadTasksRecordsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeLoadTasksRecordsResponse
+     */
     public DescribeLoadTasksRecordsResponse describeLoadTasksRecordsWithOptions(DescribeLoadTasksRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2894,6 +3146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -2927,6 +3183,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLoadTasksRecordsResponse());
     }
 
+    /**
+      * For information about how to asynchronously submit import and export tasks, see [Asynchronously submit an import or export task](~~160291~~).
+      *
+      * @param request DescribeLoadTasksRecordsRequest
+      * @return DescribeLoadTasksRecordsResponse
+     */
     public DescribeLoadTasksRecordsResponse describeLoadTasksRecords(DescribeLoadTasksRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLoadTasksRecordsWithOptions(request, runtime);
@@ -3820,6 +4082,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTablePartitionDiagnoseWithOptions(request, runtime);
     }
 
+    /**
+      * >  For more information about table statistics, see [View monitoring information of resource pools](~~188721~~).
+      *
+      * @param request DescribeTableStatisticsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeTableStatisticsResponse
+     */
     public DescribeTableStatisticsResponse describeTableStatisticsWithOptions(DescribeTableStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3872,6 +4141,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTableStatisticsResponse());
     }
 
+    /**
+      * >  For more information about table statistics, see [View monitoring information of resource pools](~~188721~~).
+      *
+      * @param request DescribeTableStatisticsRequest
+      * @return DescribeTableStatisticsResponse
+     */
     public DescribeTableStatisticsResponse describeTableStatistics(DescribeTableStatisticsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTableStatisticsWithOptions(request, runtime);
@@ -3975,6 +4250,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTaskInfoWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
+      *
+      * @param request DetachUserENIRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetachUserENIResponse
+     */
     public DetachUserENIResponse detachUserENIWithOptions(DetachUserENIRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4015,6 +4297,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachUserENIResponse());
     }
 
+    /**
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
+      *
+      * @param request DetachUserENIRequest
+      * @return DetachUserENIResponse
+     */
     public DetachUserENIResponse detachUserENI(DetachUserENIRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachUserENIWithOptions(request, runtime);
@@ -4138,6 +4426,91 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.downloadDiagnosisRecordsWithOptions(request, runtime);
     }
 
+    public DryRunClusterResponse dryRunClusterWithOptions(DryRunClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computeResource)) {
+            query.put("ComputeResource", request.computeResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
+            query.put("DBClusterDescription", request.DBClusterDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterNetworkType)) {
+            query.put("DBClusterNetworkType", request.DBClusterNetworkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterVersion)) {
+            query.put("DBClusterVersion", request.DBClusterVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableDefaultResourcePool)) {
+            query.put("EnableDefaultResourcePool", request.enableDefaultResourcePool);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
+            query.put("Operation", request.operation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
+            query.put("PayType", request.payType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageResource)) {
+            query.put("StorageResource", request.storageResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
+            query.put("UsedTime", request.usedTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
+            query.put("VSwitchId", request.vSwitchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DryRunCluster"),
+            new TeaPair("version", "2019-03-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DryRunClusterResponse());
+    }
+
+    public DryRunClusterResponse dryRunCluster(DryRunClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dryRunClusterWithOptions(request, runtime);
+    }
+
     public EnableAdviceServiceResponse enableAdviceServiceWithOptions(EnableAdviceServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4171,6 +4544,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.enableAdviceServiceWithOptions(request, runtime);
     }
 
+    /**
+      * If you need Alibaba Cloud technical support to perform operations on your AnalyticDB for MySQL cluster, you must grant permissions to the service account of your cluster. When the validity period of the authorization ends, the granted permissions are automatically revoked.
+      *
+      * @param request GrantOperatorPermissionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GrantOperatorPermissionResponse
+     */
     public GrantOperatorPermissionResponse grantOperatorPermissionWithOptions(GrantOperatorPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4219,6 +4599,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantOperatorPermissionResponse());
     }
 
+    /**
+      * If you need Alibaba Cloud technical support to perform operations on your AnalyticDB for MySQL cluster, you must grant permissions to the service account of your cluster. When the validity period of the authorization ends, the granted permissions are automatically revoked.
+      *
+      * @param request GrantOperatorPermissionRequest
+      * @return GrantOperatorPermissionResponse
+     */
     public GrantOperatorPermissionResponse grantOperatorPermission(GrantOperatorPermissionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantOperatorPermissionWithOptions(request, runtime);
@@ -4920,6 +5306,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBClusterPayTypeWithOptions(request, runtime);
     }
 
+    /**
+      * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475#concept-zyn-3p1-dhb~~ "Resource Management provides a collection of resource management services that support enterprise IT administration. The services include Resource Directory, Resource Group, and Tag. Resource Directory allows you to build an organizational structure for resources based on your business requirements. Resource Group and Tag allow you to hierarchically manage the resources. Resource Sharing allows you to share the resources among your accounts.")
+      *
+      * @param request ModifyDBClusterResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBClusterResourceGroupResponse
+     */
     public ModifyDBClusterResourceGroupResponse modifyDBClusterResourceGroupWithOptions(ModifyDBClusterResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4964,11 +5357,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterResourceGroupResponse());
     }
 
+    /**
+      * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475#concept-zyn-3p1-dhb~~ "Resource Management provides a collection of resource management services that support enterprise IT administration. The services include Resource Directory, Resource Group, and Tag. Resource Directory allows you to build an organizational structure for resources based on your business requirements. Resource Group and Tag allow you to hierarchically manage the resources. Resource Sharing allows you to share the resources among your accounts.")
+      *
+      * @param request ModifyDBClusterResourceGroupRequest
+      * @return ModifyDBClusterResourceGroupResponse
+     */
     public ModifyDBClusterResourceGroupResponse modifyDBClusterResourceGroup(ModifyDBClusterResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Precautions
+      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * *   The number of nodes cannot be changed for the default resource group USER_DEFAULT.
+      *
+      * @param request ModifyDBResourceGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBResourceGroupResponse
+     */
     public ModifyDBResourceGroupResponse modifyDBResourceGroupWithOptions(ModifyDBResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5021,11 +5429,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBResourceGroupResponse());
     }
 
+    /**
+      * ## Precautions
+      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * *   The number of nodes cannot be changed for the default resource group USER_DEFAULT.
+      *
+      * @param request ModifyDBResourceGroupRequest
+      * @return ModifyDBResourceGroupResponse
+     */
     public ModifyDBResourceGroupResponse modifyDBResourceGroup(ModifyDBResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ###
+      * *   You can call this operation only for elastic clusters of 32 cores or more.
+      * *   You cannot change the number of nodes for the USER_DEFAULT resource group.
+      *
+      * @param request ModifyDBResourcePoolRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBResourcePoolResponse
+     */
     public ModifyDBResourcePoolResponse modifyDBResourcePoolWithOptions(ModifyDBResourcePoolRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5078,11 +5503,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBResourcePoolResponse());
     }
 
+    /**
+      * ###
+      * *   You can call this operation only for elastic clusters of 32 cores or more.
+      * *   You cannot change the number of nodes for the USER_DEFAULT resource group.
+      *
+      * @param request ModifyDBResourcePoolRequest
+      * @return ModifyDBResourcePoolResponse
+     */
     public ModifyDBResourcePoolResponse modifyDBResourcePool(ModifyDBResourcePoolRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBResourcePoolWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request ModifyElasticPlanRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyElasticPlanResponse
+     */
     public ModifyElasticPlanResponse modifyElasticPlanWithOptions(ModifyElasticPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5167,6 +5607,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyElasticPlanResponse());
     }
 
+    /**
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      *
+      * @param request ModifyElasticPlanRequest
+      * @return ModifyElasticPlanResponse
+     */
     public ModifyElasticPlanResponse modifyElasticPlan(ModifyElasticPlanRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyElasticPlanWithOptions(request, runtime);

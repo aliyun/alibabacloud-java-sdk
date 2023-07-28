@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeProcessListResponseBody extends TeaModel {
+    /**
+     * <p>Details of the queries.</p>
+     */
     @NameInMap("Items")
     public DescribeProcessListResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,30 +80,57 @@ public class DescribeProcessListResponseBody extends TeaModel {
     }
 
     public static class DescribeProcessListResponseBodyItemsProcess extends TeaModel {
+        /**
+         * <p>The type of the statement. Only SELECT can be returned.</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DB")
         public String DB;
 
+        /**
+         * <p>The IP address from which the query was initiated.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The ID of the worker thread.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The SQL statement that is being executed. By default, the first 100 characters of the SQL statement are returned. If the ShowFull parameter is set to True, the complete SQL statement is returned.</p>
+         */
         @NameInMap("Info")
         public String info;
 
+        /**
+         * <p>The unique ID of the query. You must specify this parameter when you use the KILL PROCESS statement.</p>
+         */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The amount of time that has elapsed from the start time of the query. Unit: seconds.</p>
+         */
         @NameInMap("Time")
         public Integer time;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("User")
         public String user;
 

@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The list of accounts.</p>
+     */
     @NameInMap("AccountList")
     public java.util.List<DescribeAllAccountsResponseBodyAccountList> accountList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAllAccountsResponseBodyAccountList extends TeaModel {
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("User")
         public String user;
 

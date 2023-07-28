@@ -4,15 +4,30 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterPayTypeResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go.</p>
+     * <p>*   **Prepaid**: subscription.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
