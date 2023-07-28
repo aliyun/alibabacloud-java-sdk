@@ -4,6 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetPackageRequest extends TeaModel {
+    /**
+     * <p>The project to which the package belongs. This parameter is required if the package is installed in the MaxCompute project.</p>
+     */
     @NameInMap("sourceProject")
     public String sourceProject;
 

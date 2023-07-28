@@ -4,12 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
+    /**
+     * <p>Specifies the marker after which the returned list begins.</p>
+     */
     @NameInMap("marker")
     public String marker;
 
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     */
     @NameInMap("maxItem")
     public Integer maxItem;
 
+    /**
+     * <p>The names of the returned resources. The names must start with the value specified by the prefix parameter. If the prefix parameter is set to a, the names of the returned resources must start with a.</p>
+     */
     @NameInMap("prefix")
     public String prefix;
 

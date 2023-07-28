@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListResourcesResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyDataResources extends TeaModel {
+        /**
+         * <p>The time when the resource was created.</p>
+         */
         @NameInMap("creationTime")
         public Long creationTime;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The owner of the resource.</p>
+         */
         @NameInMap("owner")
         public String owner;
 
+        /**
+         * <p>The schema of the resource.</p>
+         */
         @NameInMap("schema")
         public String schema;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -95,12 +116,21 @@ public class ListResourcesResponseBody extends TeaModel {
     }
 
     public static class ListResourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates the marker after which the returned list begins.</p>
+         */
         @NameInMap("marker")
         public String marker;
 
+        /**
+         * <p>The maximum number of entries returned per page.</p>
+         */
         @NameInMap("maxItem")
         public Integer maxItem;
 
+        /**
+         * <p>The list of resources.</p>
+         */
         @NameInMap("resources")
         public java.util.List<ListResourcesResponseBodyDataResources> resources;
 

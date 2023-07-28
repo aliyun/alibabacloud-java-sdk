@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetRoleAclResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetRoleAclResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
 
     public static class GetRoleAclResponseBodyDataFunction extends TeaModel {
+        /**
+         * <p>The operations that were performed on the function.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the function.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -62,9 +74,15 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
 
     public static class GetRoleAclResponseBodyDataInstance extends TeaModel {
+        /**
+         * <p>The operations that were performed on the instance.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -92,9 +110,15 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
 
     public static class GetRoleAclResponseBodyDataPackage extends TeaModel {
+        /**
+         * <p>The operations that were performed on the package.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the package.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -122,9 +146,15 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
 
     public static class GetRoleAclResponseBodyDataProject extends TeaModel {
+        /**
+         * <p>The operations that were performed on the project.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the MaxCompute project.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -152,9 +182,15 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
 
     public static class GetRoleAclResponseBodyDataResource extends TeaModel {
+        /**
+         * <p>The operations that were performed on the resource.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -182,9 +218,15 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
 
     public static class GetRoleAclResponseBodyDataTable extends TeaModel {
+        /**
+         * <p>The operations that were performed on the table.</p>
+         */
         @NameInMap("actions")
         public java.util.List<String> actions;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -212,24 +254,39 @@ public class GetRoleAclResponseBody extends TeaModel {
     }
 
     public static class GetRoleAclResponseBodyData extends TeaModel {
+        /**
+         * <p>The function.</p>
+         */
         @NameInMap("function")
         public java.util.List<GetRoleAclResponseBodyDataFunction> function;
 
+        /**
+         * <p>The instance.</p>
+         */
         @NameInMap("instance")
         public java.util.List<GetRoleAclResponseBodyDataInstance> instance;
 
         /**
-         * <p>Package</p>
+         * <p>The package.</p>
          */
         @NameInMap("package")
         public java.util.List<GetRoleAclResponseBodyDataPackage> _package;
 
+        /**
+         * <p>The project.</p>
+         */
         @NameInMap("project")
         public java.util.List<GetRoleAclResponseBodyDataProject> project;
 
+        /**
+         * <p>The resource.</p>
+         */
         @NameInMap("resource")
         public java.util.List<GetRoleAclResponseBodyDataResource> resource;
 
+        /**
+         * <p>The table.</p>
+         */
         @NameInMap("table")
         public java.util.List<GetRoleAclResponseBodyDataTable> table;
 

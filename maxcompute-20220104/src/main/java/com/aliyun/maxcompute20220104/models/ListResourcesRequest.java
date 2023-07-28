@@ -4,12 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies the marker after which the returned list begins.</p>
+     */
     @NameInMap("marker")
     public String marker;
 
+    /**
+     * <p>The maximum number of entries to return on each page.</p>
+     */
     @NameInMap("maxItem")
     public Integer maxItem;
 
+    /**
+     * <p>The name of the resource.</p>
+     */
     @NameInMap("name")
     public String name;
 

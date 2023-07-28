@@ -4,6 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleRequest extends TeaModel {
+    /**
+     * <p>The request body parameters. For valid values, see [MaxCompute permissions](~~27935~~).</p>
+     */
     @NameInMap("body")
     public String body;
 

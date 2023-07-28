@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetRoleAclOnObjectRequest extends TeaModel {
+    /**
+     * <p>The name of the object.</p>
+     */
     @NameInMap("objectName")
     public String objectName;
 
+    /**
+     * <p>The type of the object.</p>
+     */
     @NameInMap("objectType")
     public String objectType;
 
