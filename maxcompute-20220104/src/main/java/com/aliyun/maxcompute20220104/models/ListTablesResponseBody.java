@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListTablesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListTablesResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyDataTables extends TeaModel {
+        /**
+         * <p>The time when the table was created.</p>
+         */
         @NameInMap("creationTime")
         public Long creationTime;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The owner of the table.</p>
+         */
         @NameInMap("owner")
         public String owner;
 
+        /**
+         * <p>The schema of the table.</p>
+         */
         @NameInMap("schema")
         public String schema;
 
+        /**
+         * <p>The type of the table.</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -95,12 +116,21 @@ public class ListTablesResponseBody extends TeaModel {
     }
 
     public static class ListTablesResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates the marker after which the returned list begins.</p>
+         */
         @NameInMap("marker")
         public String marker;
 
+        /**
+         * <p>The maximum number of entries returned per page.</p>
+         */
         @NameInMap("maxItem")
         public Integer maxItem;
 
+        /**
+         * <p>The information about tables.</p>
+         */
         @NameInMap("tables")
         public java.util.List<ListTablesResponseBodyDataTables> tables;
 

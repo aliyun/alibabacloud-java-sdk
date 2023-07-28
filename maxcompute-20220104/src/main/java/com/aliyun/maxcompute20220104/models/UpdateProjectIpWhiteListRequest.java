@@ -4,6 +4,9 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class UpdateProjectIpWhiteListRequest extends TeaModel {
+    /**
+     * <p>The request body parameters.</p>
+     */
     @NameInMap("body")
     public String body;
 

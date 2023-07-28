@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListUsersByRoleResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListUsersByRoleResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class ListUsersByRoleResponseBody extends TeaModel {
     }
 
     public static class ListUsersByRoleResponseBodyDataUsers extends TeaModel {
+        /**
+         * <p>The name of the user.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -51,6 +60,9 @@ public class ListUsersByRoleResponseBody extends TeaModel {
     }
 
     public static class ListUsersByRoleResponseBodyData extends TeaModel {
+        /**
+         * <p>The users.</p>
+         */
         @NameInMap("users")
         public java.util.List<ListUsersByRoleResponseBodyDataUsers> users;
 

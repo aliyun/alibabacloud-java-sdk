@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListPackagesResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListPackagesResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListPackagesResponseBody extends TeaModel {
     }
 
     public static class ListPackagesResponseBodyDataCreatedPackages extends TeaModel {
+        /**
+         * <p>The time when the package was created.</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <p>The name of the package.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -62,15 +74,27 @@ public class ListPackagesResponseBody extends TeaModel {
     }
 
     public static class ListPackagesResponseBodyDataInstalledPackages extends TeaModel {
+        /**
+         * <p>The time when the package was installed.</p>
+         */
         @NameInMap("installTime")
         public Long installTime;
 
+        /**
+         * <p>The name of the package.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The project to which the package belongs. This parameter is required if the package is installed in the MaxCompute project.</p>
+         */
         @NameInMap("sourceProject")
         public String sourceProject;
 
+        /**
+         * <p>The status of the package.</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -114,9 +138,15 @@ public class ListPackagesResponseBody extends TeaModel {
     }
 
     public static class ListPackagesResponseBodyData extends TeaModel {
+        /**
+         * <p>The packages that were created.</p>
+         */
         @NameInMap("createdPackages")
         public java.util.List<ListPackagesResponseBodyDataCreatedPackages> createdPackages;
 
+        /**
+         * <p>The packages that were installed.</p>
+         */
         @NameInMap("installedPackages")
         public java.util.List<ListPackagesResponseBodyDataInstalledPackages> installedPackages;
 

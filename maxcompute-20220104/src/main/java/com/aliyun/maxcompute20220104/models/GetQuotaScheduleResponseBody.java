@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaScheduleResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<GetQuotaScheduleResponseBodyData> data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     }
 
     public static class GetQuotaScheduleResponseBodyDataCondition extends TeaModel {
+        /**
+         * <p>The start time when the quota plan takes effect.</p>
+         */
         @NameInMap("after")
         public String after;
 
+        /**
+         * <p>The time when the quota plan takes effect.</p>
+         */
         @NameInMap("at")
         public String at;
 
@@ -62,18 +74,33 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     }
 
     public static class GetQuotaScheduleResponseBodyData extends TeaModel {
+        /**
+         * <p>The condition value.</p>
+         */
         @NameInMap("condition")
         public GetQuotaScheduleResponseBodyDataCondition condition;
 
+        /**
+         * <p>The ID of the quota plan.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the operator.</p>
+         */
         @NameInMap("operator")
         public String operator;
 
+        /**
+         * <p>The name of the quota plan.</p>
+         */
         @NameInMap("plan")
         public String plan;
 
+        /**
+         * <p>The type of the quota plan.</p>
+         */
         @NameInMap("type")
         public String type;
 

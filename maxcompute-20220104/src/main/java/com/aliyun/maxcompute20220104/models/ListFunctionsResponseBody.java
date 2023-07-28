@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public ListFunctionsResponseBodyData data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class ListFunctionsResponseBody extends TeaModel {
     }
 
     public static class ListFunctionsResponseBodyDataFunctions extends TeaModel {
+        /**
+         * <p>The class in which the function was defined.</p>
+         */
         @NameInMap("class")
         public String _class;
 
+        /**
+         * <p>The time when the function was created. Unit: milliseconds.</p>
+         */
         @NameInMap("creationTime")
         public Long creationTime;
 
+        /**
+         * <p>The name of the function.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The owner of the function.</p>
+         */
         @NameInMap("owner")
         public String owner;
 
+        /**
+         * <p>The name of the resource that was associated with the function.</p>
+         */
         @NameInMap("resources")
         public String resources;
 
+        /**
+         * <p>The schema of the function.</p>
+         */
         @NameInMap("schema")
         public String schema;
 
@@ -106,12 +130,21 @@ public class ListFunctionsResponseBody extends TeaModel {
     }
 
     public static class ListFunctionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about each function.</p>
+         */
         @NameInMap("functions")
         public java.util.List<ListFunctionsResponseBodyDataFunctions> functions;
 
+        /**
+         * <p>Indicates the marker after which the returned list begins.</p>
+         */
         @NameInMap("marker")
         public String marker;
 
+        /**
+         * <p>The maximum number of entries returned per page.</p>
+         */
         @NameInMap("maxItem")
         public Integer maxItem;
 

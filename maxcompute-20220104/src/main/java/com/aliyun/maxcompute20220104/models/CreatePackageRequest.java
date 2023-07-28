@@ -4,9 +4,15 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class CreatePackageRequest extends TeaModel {
+    /**
+     * <p>The request body parameters.</p>
+     */
     @NameInMap("body")
     public String body;
 
+    /**
+     * <p>Specifies whether to install the package.</p>
+     */
     @NameInMap("isInstall")
     public Boolean isInstall;
 

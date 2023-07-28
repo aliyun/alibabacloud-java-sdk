@@ -19,9 +19,6 @@ public class GetQuotaResponseBody extends TeaModel {
     @NameInMap("data")
     public GetQuotaResponseBodyData data;
 
-    /**
-     * <p>quota ID</p>
-     */
     @NameInMap("id")
     public String id;
 
@@ -807,9 +804,6 @@ public class GetQuotaResponseBody extends TeaModel {
         @NameInMap("groupName")
         public String groupName;
 
-        /**
-         * <p>quota ID</p>
-         */
         @NameInMap("id")
         public String id;
 

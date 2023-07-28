@@ -642,9 +642,6 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("groupName")
         public String groupName;
 
-        /**
-         * <p>quota id</p>
-         */
         @NameInMap("id")
         public String id;
 
@@ -1473,9 +1470,6 @@ public class ListQuotasResponseBody extends TeaModel {
         @NameInMap("groupName")
         public String groupName;
 
-        /**
-         * <p>quota ID</p>
-         */
         @NameInMap("id")
         public String id;
 

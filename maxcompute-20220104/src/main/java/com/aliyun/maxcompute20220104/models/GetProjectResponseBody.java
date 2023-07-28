@@ -4,12 +4,21 @@ package com.aliyun.maxcompute20220104.models;
 import com.aliyun.tea.*;
 
 public class GetProjectResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public GetProjectResponseBodyData data;
 
+    /**
+     * <p>Indicates whether the request was successful. If this parameter was not empty and the value of this parameter was not 200, the request failed.</p>
+     */
     @NameInMap("httpCode")
     public Integer httpCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataIpWhiteList extends TeaModel {
+        /**
+         * <p>The list of IP addresses.</p>
+         */
         @NameInMap("ipList")
         public String ipList;
 
+        /**
+         * <p>The list of virtual private cloud (VPC) IP addresses.</p>
+         */
         @NameInMap("vpcIpList")
         public String vpcIpList;
 
@@ -73,12 +88,21 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataPropertiesEncryption extends TeaModel {
+        /**
+         * <p>The name of the encryption algorithm.</p>
+         */
         @NameInMap("algorithm")
         public String algorithm;
 
+        /**
+         * <p>Indicates whether data encryption is enabled. Valid values: true and false.</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
+        /**
+         * <p>The key of the encryption algorithm.</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -114,9 +138,15 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataPropertiesTableLifecycle extends TeaModel {
+        /**
+         * <p>The type of the lifecycle. Valid values: -**mandatory**: The lifecycle clause is required. You must configure a lifecycle for a table. -**optional**: The lifecycle clause is optional in a table creation statement. If you do not configure a lifecycle for a table, the table does not expire. -**inherit**: If you do not configure a lifecycle for a table when you create the table, the value of the odps.table.lifecycle.value parameter is used by default.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The retention period of a table. Unit: days.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -144,36 +174,69 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataProperties extends TeaModel {
+        /**
+         * <p>Indicates whether a full table scan on the project is enabled.</p>
+         */
         @NameInMap("allowFullScan")
         public Boolean allowFullScan;
 
+        /**
+         * <p>This operation does not return a value for this parameter.</p>
+         */
         @NameInMap("elderTunnelQuota")
         public String elderTunnelQuota;
 
+        /**
+         * <p>Indicates whether the DECIMAL data type in MaxCompute V2.0 is enabled.</p>
+         */
         @NameInMap("enableDecimal2")
         public Boolean enableDecimal2;
 
+        /**
+         * <p>Indicates whether tunnel quota routing is enabled.</p>
+         */
         @NameInMap("enableTunnelQuotaRoute")
         public Boolean enableTunnelQuotaRoute;
 
+        /**
+         * <p>The encryption information.</p>
+         */
         @NameInMap("encryption")
         public GetProjectResponseBodyDataPropertiesEncryption encryption;
 
+        /**
+         * <p>The number of days for which backup data can be retained.</p>
+         */
         @NameInMap("retentionDays")
         public Long retentionDays;
 
+        /**
+         * <p>The upper limit for the resources that are consumed by an SQL statement.</p>
+         */
         @NameInMap("sqlMeteringMax")
         public String sqlMeteringMax;
 
+        /**
+         * <p>The lifecycle of the table in the project.</p>
+         */
         @NameInMap("tableLifecycle")
         public GetProjectResponseBodyDataPropertiesTableLifecycle tableLifecycle;
 
+        /**
+         * <p>The time zone of the project.</p>
+         */
         @NameInMap("timezone")
         public String timezone;
 
+        /**
+         * <p>The name of the tunnel quota.</p>
+         */
         @NameInMap("tunnelQuota")
         public String tunnelQuota;
 
+        /**
+         * <p>The data type edition. Valid values: -**1**: MaxCompute V1.0 data type edition. -**2**: MaxCompute V2.0 data type edition. -**hive**: Hive-compatible data type edition.</p>
+         */
         @NameInMap("typeSystem")
         public String typeSystem;
 
@@ -273,9 +336,15 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataSaleTag extends TeaModel {
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("resourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -303,9 +372,15 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataSecurityPropertiesProjectProtection extends TeaModel {
+        /**
+         * <p>The exception policy. If cross-project data access operations are required, the project owner must configure an exception policy in advance to allow the specified user to transfer data of a specified object from the current project to a specified project. After the exception policy is configured, data of the object can be transferred to the specified project even if the project data protection feature is enabled.</p>
+         */
         @NameInMap("exceptionPolicy")
         public String exceptionPolicy;
 
+        /**
+         * <p>Indicates whether project data protection is enabled.</p>
+         */
         @NameInMap("protected")
         public Boolean _protected;
 
@@ -333,24 +408,45 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataSecurityProperties extends TeaModel {
+        /**
+         * <p>Indicates whether Download control is enabled.</p>
+         */
         @NameInMap("enableDownloadPrivilege")
         public Boolean enableDownloadPrivilege;
 
+        /**
+         * <p>Indicates whether label-based access control is enabled.</p>
+         */
         @NameInMap("labelSecurity")
         public Boolean labelSecurity;
 
+        /**
+         * <p>Indicates whether the object creator is allowed to perform operations on objects.</p>
+         */
         @NameInMap("objectCreatorHasAccessPermission")
         public Boolean objectCreatorHasAccessPermission;
 
+        /**
+         * <p>Indicates whether the object creator is allowed to authorize other users to perform operations on objects.</p>
+         */
         @NameInMap("objectCreatorHasGrantPermission")
         public Boolean objectCreatorHasGrantPermission;
 
+        /**
+         * <p>Indicates whether project data protection is enabled.</p>
+         */
         @NameInMap("projectProtection")
         public GetProjectResponseBodyDataSecurityPropertiesProjectProtection projectProtection;
 
+        /**
+         * <p>Indicates whether ACL-based access control is enabled.</p>
+         */
         @NameInMap("usingAcl")
         public Boolean usingAcl;
 
+        /**
+         * <p>Indicates whether policy-based access control is enabled.</p>
+         */
         @NameInMap("usingPolicy")
         public Boolean usingPolicy;
 
@@ -418,39 +514,75 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyData extends TeaModel {
+        /**
+         * <p>The comment of the project.</p>
+         */
         @NameInMap("comment")
         public String comment;
 
+        /**
+         * <p>The storage usage.</p>
+         */
         @NameInMap("costStorage")
         public String costStorage;
 
+        /**
+         * <p>The default computing quota.</p>
+         */
         @NameInMap("defaultQuota")
         public String defaultQuota;
 
+        /**
+         * <p>The IP address whitelist.</p>
+         */
         @NameInMap("ipWhiteList")
         public GetProjectResponseBodyDataIpWhiteList ipWhiteList;
 
+        /**
+         * <p>The name of the MaxCompute project.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The owner of the project.</p>
+         */
         @NameInMap("owner")
         public String owner;
 
+        /**
+         * <p>The billing method of the project.</p>
+         */
         @NameInMap("productType")
         public String productType;
 
+        /**
+         * <p>The properties of the project.</p>
+         */
         @NameInMap("properties")
         public GetProjectResponseBodyDataProperties properties;
 
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("saleTag")
         public GetProjectResponseBodyDataSaleTag saleTag;
 
+        /**
+         * <p>The permission properties.</p>
+         */
         @NameInMap("securityProperties")
         public GetProjectResponseBodyDataSecurityProperties securityProperties;
 
+        /**
+         * <p>The status of the project. Valid values: -**AVAILABLE**: The project was available. -**READONLY**: The project was read only. -**FROZEN**: The project was frozen. -**DELETING**: The project was being deleted.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The type of the project. Valid values: -**managed**: The project is an internal project. -**external**: The project is an external project.</p>
+         */
         @NameInMap("type")
         public String type;
 
