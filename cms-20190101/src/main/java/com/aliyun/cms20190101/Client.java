@@ -2561,6 +2561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SendStatus", request.sendStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -2657,6 +2661,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sendStatus)) {
             query.put("SendStatus", request.sendStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -2761,6 +2769,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sendStatus)) {
             query.put("SendStatus", request.sendStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -6924,6 +6936,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifySiteMonitorWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request OpenCmsServiceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OpenCmsServiceResponse
+     */
+    // Deprecated
     public OpenCmsServiceResponse openCmsServiceWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -6940,6 +6960,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenCmsServiceResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @return OpenCmsServiceResponse
+     */
+    // Deprecated
     public OpenCmsServiceResponse openCmsService() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openCmsServiceWithOptions(runtime);

@@ -114,6 +114,9 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     @NameInMap("SendStatus")
     public String sendStatus;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
     /**
      * <p>The number of the page to return. Default value: 1</p>
      */
@@ -243,6 +246,14 @@ public class DescribeAlertLogHistogramRequest extends TeaModel {
     }
     public String getSendStatus() {
         return this.sendStatus;
+    }
+
+    public DescribeAlertLogHistogramRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public DescribeAlertLogHistogramRequest setStartTime(Long startTime) {
