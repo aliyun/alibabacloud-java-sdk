@@ -118,6 +118,9 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     @NameInMap("SendStatus")
     public String sendStatus;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
     /**
      * <p>The name of the metric.</p>
      * <br>
@@ -249,6 +252,14 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     }
     public String getSendStatus() {
         return this.sendStatus;
+    }
+
+    public DescribeAlertLogCountRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public DescribeAlertLogCountRequest setStartTime(Long startTime) {

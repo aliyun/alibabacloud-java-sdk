@@ -113,6 +113,9 @@ public class DescribeAlertLogListRequest extends TeaModel {
     @NameInMap("SendStatus")
     public String sendStatus;
 
+    @NameInMap("SourceType")
+    public String sourceType;
+
     /**
      * <p>Indicates whether the alert level was changed. Valid values:</p>
      * <br>
@@ -253,6 +256,14 @@ public class DescribeAlertLogListRequest extends TeaModel {
     }
     public String getSendStatus() {
         return this.sendStatus;
+    }
+
+    public DescribeAlertLogListRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public DescribeAlertLogListRequest setStartTime(Long startTime) {

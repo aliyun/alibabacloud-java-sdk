@@ -107,6 +107,9 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("OsMonitorConfig")
+        public String osMonitorConfig;
+
         @NameInMap("OsMonitorErrorCode")
         public String osMonitorErrorCode;
 
@@ -154,6 +157,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setOsMonitorConfig(String osMonitorConfig) {
+            this.osMonitorConfig = osMonitorConfig;
+            return this;
+        }
+        public String getOsMonitorConfig() {
+            return this.osMonitorConfig;
         }
 
         public DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus setOsMonitorErrorCode(String osMonitorErrorCode) {
