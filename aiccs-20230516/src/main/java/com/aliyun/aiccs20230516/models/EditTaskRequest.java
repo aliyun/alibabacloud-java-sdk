@@ -11,6 +11,12 @@ public class EditTaskRequest extends TeaModel {
     public java.util.List<EditTaskRequestCallTimeList> callTimeList;
 
     /**
+     * <p>回调地址</p>
+     */
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
+
+    /**
      * <p>并发数</p>
      */
     @NameInMap("MaxConcurrency")
@@ -120,6 +126,14 @@ public class EditTaskRequest extends TeaModel {
     }
     public java.util.List<EditTaskRequestCallTimeList> getCallTimeList() {
         return this.callTimeList;
+    }
+
+    public EditTaskRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+        return this;
+    }
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public EditTaskRequest setMaxConcurrency(Long maxConcurrency) {
