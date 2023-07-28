@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListActionsRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The name of the action. All actions whose names contain the specified action name are returned.</p>
+     */
     @NameInMap("OOSActionName")
     public String OOSActionName;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

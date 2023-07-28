@@ -25,6 +25,9 @@ public class ListParametersShrinkRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ShareType")
+    public String shareType;
+
     @NameInMap("SortField")
     public String sortField;
 
@@ -96,6 +99,14 @@ public class ListParametersShrinkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ListParametersShrinkRequest setShareType(String shareType) {
+        this.shareType = shareType;
+        return this;
+    }
+    public String getShareType() {
+        return this.shareType;
     }
 
     public ListParametersShrinkRequest setSortField(String sortField) {

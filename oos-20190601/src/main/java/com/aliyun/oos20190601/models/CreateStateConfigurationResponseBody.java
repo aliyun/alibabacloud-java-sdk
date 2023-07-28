@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateStateConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The configuration mode.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("StateConfiguration")
     public CreateStateConfigurationResponseBodyStateConfiguration stateConfiguration;
 
@@ -32,42 +38,75 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
     }
 
     public static class CreateStateConfigurationResponseBodyStateConfiguration extends TeaModel {
+        /**
+         * <p>The parameters.</p>
+         */
         @NameInMap("ConfigureMode")
         public String configureMode;
 
+        /**
+         * <p>The desired-state configuration.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>WB502027</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>CreateStateConfiguration</p>
+         */
         @NameInMap("Parameters")
         public java.util.Map<String, ?> parameters;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The version number. If you do not specify this parameter, the system uses the latest version.</p>
+         */
         @NameInMap("ScheduleExpression")
         public String scheduleExpression;
 
+        /**
+         * <p>Creates a desired-state configuration.</p>
+         */
         @NameInMap("ScheduleType")
         public String scheduleType;
 
+        /**
+         * <p>收集Inventory数据</p>
+         */
         @NameInMap("StateConfigurationId")
         public String stateConfigurationId;
 
+        /**
+         * <p>The required resources.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>1 hour 或 30 minutes</p>
+         */
         @NameInMap("Targets")
         public String targets;
 
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 

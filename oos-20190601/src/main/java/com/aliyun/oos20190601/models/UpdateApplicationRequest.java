@@ -4,21 +4,55 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationRequest extends TeaModel {
+    @NameInMap("AlarmConfig")
+    public UpdateApplicationRequestAlarmConfig alarmConfig;
+
+    @NameInMap("DeleteAlarmRulesBeforeUpdate")
+    public Boolean deleteAlarmRulesBeforeUpdate;
+
+    /**
+     * <p>The description to be updated for the application.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The region ID. Set the value to cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
     public static UpdateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationRequest self = new UpdateApplicationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateApplicationRequest setAlarmConfig(UpdateApplicationRequestAlarmConfig alarmConfig) {
+        this.alarmConfig = alarmConfig;
+        return this;
+    }
+    public UpdateApplicationRequestAlarmConfig getAlarmConfig() {
+        return this.alarmConfig;
+    }
+
+    public UpdateApplicationRequest setDeleteAlarmRulesBeforeUpdate(Boolean deleteAlarmRulesBeforeUpdate) {
+        this.deleteAlarmRulesBeforeUpdate = deleteAlarmRulesBeforeUpdate;
+        return this;
+    }
+    public Boolean getDeleteAlarmRulesBeforeUpdate() {
+        return this.deleteAlarmRulesBeforeUpdate;
     }
 
     public UpdateApplicationRequest setDescription(String description) {
@@ -51,6 +85,47 @@ public class UpdateApplicationRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getTags() {
         return this.tags;
+    }
+
+    public static class UpdateApplicationRequestAlarmConfig extends TeaModel {
+        @NameInMap("ContactGroups")
+        public java.util.List<String> contactGroups;
+
+        @NameInMap("HealthCheckUrl")
+        public String healthCheckUrl;
+
+        @NameInMap("TemplateIds")
+        public java.util.List<String> templateIds;
+
+        public static UpdateApplicationRequestAlarmConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApplicationRequestAlarmConfig self = new UpdateApplicationRequestAlarmConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApplicationRequestAlarmConfig setContactGroups(java.util.List<String> contactGroups) {
+            this.contactGroups = contactGroups;
+            return this;
+        }
+        public java.util.List<String> getContactGroups() {
+            return this.contactGroups;
+        }
+
+        public UpdateApplicationRequestAlarmConfig setHealthCheckUrl(String healthCheckUrl) {
+            this.healthCheckUrl = healthCheckUrl;
+            return this;
+        }
+        public String getHealthCheckUrl() {
+            return this.healthCheckUrl;
+        }
+
+        public UpdateApplicationRequestAlarmConfig setTemplateIds(java.util.List<String> templateIds) {
+            this.templateIds = templateIds;
+            return this;
+        }
+        public java.util.List<String> getTemplateIds() {
+            return this.templateIds;
+        }
+
     }
 
 }

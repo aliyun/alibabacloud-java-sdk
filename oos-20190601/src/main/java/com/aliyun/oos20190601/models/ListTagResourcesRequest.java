@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of resources. The number of resource IDs ranges from 1 to 50.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.Map<String, ?> resourceIds;
 
+    /**
+     * <p>The type of the resource. Valid values: template execution</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag keys and values. The number of key-value pairs ranges from 1 to 20.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 

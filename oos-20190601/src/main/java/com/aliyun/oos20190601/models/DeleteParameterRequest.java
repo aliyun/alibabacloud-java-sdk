@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteParameterRequest extends TeaModel {
+    /**
+     * <p>The name of the common parameter. The name can be up to 180 characters in length and can contain only letters, digits, hyphens (-), and underscores (\_). It cannot start with aliyun, acs, alibaba, alicloud, or oos.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

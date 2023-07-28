@@ -7,9 +7,15 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>Specifies whether to delete all tags. This parameter takes effect only when the TagKeys parameter is not specified. Valid values: true and false. Default value: false. The TagKeys parameter is required when this parameter is set to false.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>You can call this operation to delete tags that are attached to one or more resources.</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIdsShrink;
 

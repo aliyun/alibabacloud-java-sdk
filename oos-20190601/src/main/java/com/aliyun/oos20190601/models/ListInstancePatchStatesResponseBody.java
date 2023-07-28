@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancePatchStatesResponseBody extends TeaModel {
+    /**
+     * <p>The number of patches that are not installed.</p>
+     */
     @NameInMap("InstancePatchStates")
     public java.util.List<ListInstancePatchStatesResponseBodyInstancePatchStates> instancePatchStates;
 
+    /**
+     * <p>The details of patches of the instance.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,42 +66,81 @@ public class ListInstancePatchStatesResponseBody extends TeaModel {
     }
 
     public static class ListInstancePatchStatesResponseBodyInstancePatchStates extends TeaModel {
+        /**
+         * <p>The number of patches that have been installed but require a restart to take effect.</p>
+         */
         @NameInMap("BaselineId")
         public String baselineId;
 
+        /**
+         * <p>The ID of the patch baseline.</p>
+         */
         @NameInMap("FailedCount")
         public String failedCount;
 
+        /**
+         * <p>Queries patches of an instance.</p>
+         */
         @NameInMap("InstalledCount")
         public String installedCount;
 
+        /**
+         * <p>The ID of the ECS instance.</p>
+         */
         @NameInMap("InstalledOtherCount")
         public String installedOtherCount;
 
+        /**
+         * <p>The number of patches that are rejected by the user.</p>
+         */
         @NameInMap("InstalledPendingRebootCount")
         public String installedPendingRebootCount;
 
+        /**
+         * <p>The patch group.</p>
+         */
         @NameInMap("InstalledRejectedCount")
         public String installedRejectedCount;
 
+        /**
+         * <p>The operation type.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the operation ended.</p>
+         */
         @NameInMap("MissingCount")
         public String missingCount;
 
+        /**
+         * <p>The information about the user.</p>
+         */
         @NameInMap("OperationEndTime")
         public String operationEndTime;
 
+        /**
+         * <p>The number of patches that failed to be installed.</p>
+         */
         @NameInMap("OperationStartTime")
         public String operationStartTime;
 
+        /**
+         * <p>The time when the operation was initiated.</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The number of patches that do not meet the baseline.</p>
+         */
         @NameInMap("OwnerInformation")
         public String ownerInformation;
 
+        /**
+         * <p>The number of installed patches.</p>
+         */
         @NameInMap("PatchGroup")
         public String patchGroup;
 

@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the application group.</p>
+     */
     @NameInMap("ApplicationGroup")
     public UpdateApplicationGroupResponseBodyApplicationGroup applicationGroup;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,51 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
     }
 
     public static class UpdateApplicationGroupResponseBodyApplicationGroup extends TeaModel {
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The time when the application group was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The ID of the region in which the related resources reside.</p>
+         */
         @NameInMap("DeployRegionId")
         public String deployRegionId;
 
+        /**
+         * <p>The description of the application group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("ImportTagKey")
         public String importTagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("ImportTagValue")
         public String importTagValue;
 
+        /**
+         * <p>The name of the application group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the application group was updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 

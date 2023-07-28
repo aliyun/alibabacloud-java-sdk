@@ -4,12 +4,21 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to TagResources.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.Map<String, ?> resourceIds;
 
+    /**
+     * <p>The IDs of resources. The number of resource IDs ranges from 1 to 50.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

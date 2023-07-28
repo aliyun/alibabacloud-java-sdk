@@ -4,39 +4,81 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateStateConfigurationRequest extends TeaModel {
+    /**
+     * <p>The description of the desired-state configuration.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>收集Inventory数据</p>
+     */
     @NameInMap("ConfigureMode")
     public String configureMode;
 
+    /**
+     * <p>The configuration mode.</p>
+     * <br>
+     * <p>ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied.</p>
+     * <br>
+     * <p>ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future.</p>
+     * <br>
+     * <p>ApplyAndAutoCorrect: The configuration is always applied.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of resource group.</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>The ID of the template.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the schedule. Valid value: rate.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("ScheduleExpression")
     public String scheduleExpression;
 
+    /**
+     * <p>The schedule expression.</p>
+     */
     @NameInMap("ScheduleType")
     public String scheduleType;
 
+    /**
+     * <p>The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>The schedule expression. The interval between two schedules must be a minimum of 30 minutes.</p>
+     */
     @NameInMap("Targets")
     public String targets;
 
+    /**
+     * <p>The version of the template.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>The required resources.</p>
+     */
     @NameInMap("TemplateVersion")
     public String templateVersion;
 

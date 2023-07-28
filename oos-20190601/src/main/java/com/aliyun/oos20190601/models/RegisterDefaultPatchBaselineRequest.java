@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class RegisterDefaultPatchBaselineRequest extends TeaModel {
+    /**
+     * <p>The name of the patch baseline.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

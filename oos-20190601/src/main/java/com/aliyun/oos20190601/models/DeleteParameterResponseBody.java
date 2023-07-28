@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteParameterResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

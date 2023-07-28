@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListResourceExecutionStatusResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The execution information of the resource.</p>
+     */
     @NameInMap("ResourceExecutionStatus")
     public java.util.List<ListResourceExecutionStatusResponseBodyResourceExecutionStatus> resourceExecutionStatus;
 
@@ -54,18 +66,33 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
     }
 
     public static class ListResourceExecutionStatusResponseBodyResourceExecutionStatus extends TeaModel {
+        /**
+         * <p>The ID of the execution.</p>
+         */
         @NameInMap("ExecutionId")
         public String executionId;
 
+        /**
+         * <p>The time when the execution started running.</p>
+         */
         @NameInMap("ExecutionTime")
         public String executionTime;
 
+        /**
+         * <p>The output of the template.</p>
+         */
         @NameInMap("Outputs")
         public String outputs;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The status of the execution.</p>
+         */
         @NameInMap("Status")
         public String status;
 

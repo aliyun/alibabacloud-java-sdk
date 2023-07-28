@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateParameterResponseBody extends TeaModel {
+    /**
+     * <p>The user who created the common parameter.</p>
+     */
     @NameInMap("Parameter")
     public UpdateParameterResponseBodyParameter parameter;
 
+    /**
+     * <p>The time when the common parameter was updated.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class UpdateParameterResponseBody extends TeaModel {
     }
 
     public static class UpdateParameterResponseBodyParameter extends TeaModel {
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Constraints")
         public String constraints;
 
@@ -41,6 +50,9 @@ public class UpdateParameterResponseBody extends TeaModel {
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the common parameter. The description must be 1 to 200 characters in length.</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -53,21 +65,36 @@ public class UpdateParameterResponseBody extends TeaModel {
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
+        /**
+         * <p>Updates a common parameter.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The information of the common parameter.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The user who updated the common parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The region ID of the resource.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The description of the common parameter.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 

@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancePatchStatesRequest extends TeaModel {
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The ID of the Elastic Compute Service (ECS) instance. The value can be a JSON array that consists of up to 100 instance IDs. Separate the instance IDs with commas (,).</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

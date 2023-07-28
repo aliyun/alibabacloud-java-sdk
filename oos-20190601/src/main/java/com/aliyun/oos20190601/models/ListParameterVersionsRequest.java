@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListParameterVersionsRequest extends TeaModel {
+    /**
+     * <p>The share type of the common parameter.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The data type of the common parameter.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The pagination token.</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 

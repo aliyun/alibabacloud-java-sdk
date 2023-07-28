@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class DeleteExecutionsResponseBody extends TeaModel {
+    /**
+     * <p>Deletes multiple executions.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

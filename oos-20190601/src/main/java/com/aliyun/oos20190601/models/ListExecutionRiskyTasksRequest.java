@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionRiskyTasksRequest extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the template.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

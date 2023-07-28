@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTemplateVersionsRequest extends TeaModel {
+    /**
+     * <p>The maximum number of results on each page. Valid values: 10 to 100</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the template. Valid values: Private and Public.</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 
+    /**
+     * <p>The name of the template.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 

@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationGroupResponseBody extends TeaModel {
+    /**
+     * <p>The details of the application group.</p>
+     */
     @NameInMap("ApplicationGroup")
     public GetApplicationGroupResponseBodyApplicationGroup applicationGroup;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,45 +38,87 @@ public class GetApplicationGroupResponseBody extends TeaModel {
     }
 
     public static class GetApplicationGroupResponseBodyApplicationGroup extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The ID of the application group in CloudMonitor.</p>
+         */
         @NameInMap("CmsGroupId")
         public String cmsGroupId;
 
+        /**
+         * <p>The time when the application group was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The output of the deployment result.</p>
+         */
         @NameInMap("DeployOutputs")
         public String deployOutputs;
 
+        /**
+         * <p>The configuration information of the application group.</p>
+         */
         @NameInMap("DeployParameters")
         public String deployParameters;
 
+        /**
+         * <p>The ID of the region in which you deploy the application group.</p>
+         */
         @NameInMap("DeployRegionId")
         public String deployRegionId;
 
+        /**
+         * <p>The description of the application group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("ImportTagKey")
         public String importTagKey;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("ImportTagValue")
         public String importTagValue;
 
+        /**
+         * <p>The name of the application group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The creation progress of the application instance.</p>
+         */
         @NameInMap("Progress")
         public String progress;
 
+        /**
+         * <p>The state of the application group.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The state information of the application group.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The time when the application group was last modified.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

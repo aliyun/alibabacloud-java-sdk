@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListTaskExecutionsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the task executions.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The execution ID of the child node.</p>
+     */
     @NameInMap("TaskExecutions")
     public java.util.List<ListTaskExecutionsResponseBodyTaskExecutions> taskExecutions;
 
@@ -54,60 +66,117 @@ public class ListTaskExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListTaskExecutionsResponseBodyTaskExecutions extends TeaModel {
+        /**
+         * <p>The output of the execution.</p>
+         */
         @NameInMap("ChildExecutionId")
         public String childExecutionId;
 
+        /**
+         * <p>The ID of the execution.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The execution ID of the parent node.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The action of the task.</p>
+         */
         @NameInMap("ExecutionId")
         public String executionId;
 
+        /**
+         * <p>The Input parameters of the task execution.</p>
+         */
         @NameInMap("ExtraData")
         public java.util.Map<String, ?> extraData;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("Loop")
         public java.util.Map<String, ?> loop;
 
+        /**
+         * <p>The status information of the task execution.</p>
+         */
         @NameInMap("LoopBatchNumber")
         public Integer loopBatchNumber;
 
+        /**
+         * <p>The time when the execution was created.</p>
+         */
         @NameInMap("LoopItem")
         public String loopItem;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("Outputs")
         public String outputs;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("ParentTaskExecutionId")
         public String parentTaskExecutionId;
 
+        /**
+         * <p>Queries task executions. Multiple methods are supported to filter task executions.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The elements in the loop task.</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <p>The time when the task execution stopped running.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>The execution ID of the task.</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 
+        /**
+         * <p>The time when the execution was last updated.</p>
+         */
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
+        /**
+         * <p>The time when the execution started.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The number of times for which the loop task is run.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The configuration and statistics information of the loop task. This parameter is returned only for the parent node of the loop task.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListSecretParametersResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about the parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<ListSecretParametersResponseBodyParameters> parameters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,42 +66,81 @@ public class ListSecretParametersResponseBody extends TeaModel {
     }
 
     public static class ListSecretParametersResponseBodyParameters extends TeaModel {
+        /**
+         * <p>The user who created the parameter.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the parameter was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the parameter.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the KMS customer master key (CMK) that is used for encryption.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version number of the parameter.</p>
+         */
         @NameInMap("ParameterVersion")
         public String parameterVersion;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The share type of the parameter.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The tags of the parameter.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The type of the parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user who updated the parameter.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the parameter was updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 

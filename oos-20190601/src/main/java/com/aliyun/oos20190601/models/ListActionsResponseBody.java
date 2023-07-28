@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListActionsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the actions.</p>
+     */
     @NameInMap("Actions")
     public java.util.List<ListActionsResponseBodyActions> actions;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,62 @@ public class ListActionsResponseBody extends TeaModel {
     }
 
     public static class ListActionsResponseBodyActions extends TeaModel {
+        /**
+         * <p>The type of the action.</p>
+         * <br>
+         * <p>1.  Atomic actions</p>
+         * <br>
+         * <p>    *   Atomic.API</p>
+         * <p>    *   Atomic.Trigger</p>
+         * <p>    *   Atomic.Control</p>
+         * <p>    *   Atomic.Embedded</p>
+         * <br>
+         * <p>2.  Cloud product actions</p>
+         * <br>
+         * <p>    *   Product.ECS</p>
+         * <p>    *   Product.RDS</p>
+         * <p>    *   Product.VPC</p>
+         * <p>    *   Product.FC</p>
+         * <p>    *   ...</p>
+         */
         @NameInMap("ActionType")
         public String actionType;
 
+        /**
+         * <p>The time when the action was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the action.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the action.</p>
+         */
         @NameInMap("OOSActionName")
         public String OOSActionName;
 
+        /**
+         * <p>The number of times that the action is used.</p>
+         */
         @NameInMap("Popularity")
         public Integer popularity;
 
+        /**
+         * <p>The parameters of the action.</p>
+         */
         @NameInMap("Properties")
         public String properties;
 
+        /**
+         * <p>The version of the template that corresponds to the action.</p>
+         * <br>
+         * <p>>  For atomic actions, this parameter is not returned.</p>
+         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 

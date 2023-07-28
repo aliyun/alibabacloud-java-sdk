@@ -3,7 +3,7 @@ package com.aliyun.oos20190601.models;
 
 import com.aliyun.tea.*;
 
-public class CreatePatchBaselineRequest extends TeaModel {
+public class CreatePatchBaselineShrinkRequest extends TeaModel {
     /**
      * <p>The rules of scanning and installing patches for the specified operating system.</p>
      */
@@ -11,7 +11,7 @@ public class CreatePatchBaselineRequest extends TeaModel {
     public String approvalRules;
 
     @NameInMap("ApprovedPatches")
-    public java.util.List<String> approvedPatches;
+    public String approvedPatchesShrink;
 
     @NameInMap("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
@@ -56,23 +56,23 @@ public class CreatePatchBaselineRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("RejectedPatches")
-    public java.util.List<String> rejectedPatches;
+    public String rejectedPatchesShrink;
 
     @NameInMap("RejectedPatchesAction")
     public String rejectedPatchesAction;
 
     @NameInMap("Sources")
-    public java.util.List<String> sources;
+    public String sourcesShrink;
 
     @NameInMap("Tags")
-    public java.util.List<CreatePatchBaselineRequestTags> tags;
+    public String tagsShrink;
 
-    public static CreatePatchBaselineRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreatePatchBaselineRequest self = new CreatePatchBaselineRequest();
+    public static CreatePatchBaselineShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreatePatchBaselineShrinkRequest self = new CreatePatchBaselineShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreatePatchBaselineRequest setApprovalRules(String approvalRules) {
+    public CreatePatchBaselineShrinkRequest setApprovalRules(String approvalRules) {
         this.approvalRules = approvalRules;
         return this;
     }
@@ -80,15 +80,15 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.approvalRules;
     }
 
-    public CreatePatchBaselineRequest setApprovedPatches(java.util.List<String> approvedPatches) {
-        this.approvedPatches = approvedPatches;
+    public CreatePatchBaselineShrinkRequest setApprovedPatchesShrink(String approvedPatchesShrink) {
+        this.approvedPatchesShrink = approvedPatchesShrink;
         return this;
     }
-    public java.util.List<String> getApprovedPatches() {
-        return this.approvedPatches;
+    public String getApprovedPatchesShrink() {
+        return this.approvedPatchesShrink;
     }
 
-    public CreatePatchBaselineRequest setApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
+    public CreatePatchBaselineShrinkRequest setApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
         this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
         return this;
     }
@@ -96,7 +96,7 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.approvedPatchesEnableNonSecurity;
     }
 
-    public CreatePatchBaselineRequest setClientToken(String clientToken) {
+    public CreatePatchBaselineShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -104,7 +104,7 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreatePatchBaselineRequest setDescription(String description) {
+    public CreatePatchBaselineShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -112,7 +112,7 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.description;
     }
 
-    public CreatePatchBaselineRequest setName(String name) {
+    public CreatePatchBaselineShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -120,7 +120,7 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.name;
     }
 
-    public CreatePatchBaselineRequest setOperationSystem(String operationSystem) {
+    public CreatePatchBaselineShrinkRequest setOperationSystem(String operationSystem) {
         this.operationSystem = operationSystem;
         return this;
     }
@@ -128,7 +128,7 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.operationSystem;
     }
 
-    public CreatePatchBaselineRequest setRegionId(String regionId) {
+    public CreatePatchBaselineShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -136,15 +136,15 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreatePatchBaselineRequest setRejectedPatches(java.util.List<String> rejectedPatches) {
-        this.rejectedPatches = rejectedPatches;
+    public CreatePatchBaselineShrinkRequest setRejectedPatchesShrink(String rejectedPatchesShrink) {
+        this.rejectedPatchesShrink = rejectedPatchesShrink;
         return this;
     }
-    public java.util.List<String> getRejectedPatches() {
-        return this.rejectedPatches;
+    public String getRejectedPatchesShrink() {
+        return this.rejectedPatchesShrink;
     }
 
-    public CreatePatchBaselineRequest setRejectedPatchesAction(String rejectedPatchesAction) {
+    public CreatePatchBaselineShrinkRequest setRejectedPatchesAction(String rejectedPatchesAction) {
         this.rejectedPatchesAction = rejectedPatchesAction;
         return this;
     }
@@ -152,50 +152,20 @@ public class CreatePatchBaselineRequest extends TeaModel {
         return this.rejectedPatchesAction;
     }
 
-    public CreatePatchBaselineRequest setSources(java.util.List<String> sources) {
-        this.sources = sources;
+    public CreatePatchBaselineShrinkRequest setSourcesShrink(String sourcesShrink) {
+        this.sourcesShrink = sourcesShrink;
         return this;
     }
-    public java.util.List<String> getSources() {
-        return this.sources;
+    public String getSourcesShrink() {
+        return this.sourcesShrink;
     }
 
-    public CreatePatchBaselineRequest setTags(java.util.List<CreatePatchBaselineRequestTags> tags) {
-        this.tags = tags;
+    public CreatePatchBaselineShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<CreatePatchBaselineRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class CreatePatchBaselineRequestTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreatePatchBaselineRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            CreatePatchBaselineRequestTags self = new CreatePatchBaselineRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public CreatePatchBaselineRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreatePatchBaselineRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

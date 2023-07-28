@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the task executions.</p>
+     */
     @NameInMap("Executions")
     public java.util.List<ListExecutionsResponseBodyExecutions> executions;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,21 @@ public class ListExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListExecutionsResponseBodyExecutionsCurrentTasks extends TeaModel {
+        /**
+         * <p>The execution template of the task.</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 
+        /**
+         * <p>The ID of the task execution.</p>
+         */
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
@@ -95,96 +116,195 @@ public class ListExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListExecutionsResponseBodyExecutions extends TeaModel {
+        /**
+         * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The number of tasks that are counted by execution status.</p>
+         */
         @NameInMap("Counters")
         public java.util.Map<String, ?> counters;
 
+        /**
+         * <p>The time when the execution was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The information about the tasks that are running.</p>
+         */
         @NameInMap("CurrentTasks")
         public java.util.List<ListExecutionsResponseBodyExecutionsCurrentTasks> currentTasks;
 
+        /**
+         * <p>The description of the execution.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the execution stops running.</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The account ID of the user who started the execution of the template.</p>
+         */
         @NameInMap("ExecutedBy")
         public String executedBy;
 
+        /**
+         * <p>The unique ID of the execution.</p>
+         */
         @NameInMap("ExecutionId")
         public String executionId;
 
+        /**
+         * <p>Indicates whether the execution contains child executions.</p>
+         */
         @NameInMap("IsParent")
         public Boolean isParent;
 
+        /**
+         * <p>The time when the template was last successfully triggered.</p>
+         */
         @NameInMap("LastSuccessfulTriggerTime")
         public String lastSuccessfulTriggerTime;
 
+        @NameInMap("LastTriggerOutputs")
+        public String lastTriggerOutputs;
+
+        /**
+         * <p>The status of the execution after the template was last triggered.</p>
+         */
         @NameInMap("LastTriggerStatus")
         public String lastTriggerStatus;
 
+        @NameInMap("LastTriggerStatusMessage")
+        public String lastTriggerStatusMessage;
+
+        /**
+         * <p>The time when the template was last successfully triggered.</p>
+         */
         @NameInMap("LastTriggerTime")
         public String lastTriggerTime;
 
+        /**
+         * <p>The execution mode.</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The output of the execution.</p>
+         */
         @NameInMap("Outputs")
         public String outputs;
 
+        /**
+         * <p>The input parameters of the execution.</p>
+         */
         @NameInMap("Parameters")
         public java.util.Map<String, ?> parameters;
 
+        /**
+         * <p>The ID of the parent execution.</p>
+         */
         @NameInMap("ParentExecutionId")
         public String parentExecutionId;
 
+        /**
+         * <p>The role that started the execution of the template.</p>
+         */
         @NameInMap("RamRole")
         public String ramRole;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The status of the resource.</p>
+         */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        /**
+         * <p>The security check mode. Valid values: Skip, and ConfirmEveryHighRiskAction.</p>
+         */
         @NameInMap("SafetyCheck")
         public String safetyCheck;
 
+        /**
+         * <p>The time when the execution was started.</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <p>The status of the execution. Valid values: Started, Queued, Running, Waiting, Success, Failed, and Cancelled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The status of the task execution.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>The reason for which the status occurs.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The tags of the execution.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The target resource.</p>
+         */
         @NameInMap("Targets")
         public String targets;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The version number of the template.</p>
+         */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
+        /**
+         * <p>The time when the execution was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
+        /**
+         * <p>The Waiting state.</p>
+         */
         @NameInMap("WaitingStatus")
         public String waitingStatus;
 
@@ -273,12 +393,28 @@ public class ListExecutionsResponseBody extends TeaModel {
             return this.lastSuccessfulTriggerTime;
         }
 
+        public ListExecutionsResponseBodyExecutions setLastTriggerOutputs(String lastTriggerOutputs) {
+            this.lastTriggerOutputs = lastTriggerOutputs;
+            return this;
+        }
+        public String getLastTriggerOutputs() {
+            return this.lastTriggerOutputs;
+        }
+
         public ListExecutionsResponseBodyExecutions setLastTriggerStatus(String lastTriggerStatus) {
             this.lastTriggerStatus = lastTriggerStatus;
             return this;
         }
         public String getLastTriggerStatus() {
             return this.lastTriggerStatus;
+        }
+
+        public ListExecutionsResponseBodyExecutions setLastTriggerStatusMessage(String lastTriggerStatusMessage) {
+            this.lastTriggerStatusMessage = lastTriggerStatusMessage;
+            return this;
+        }
+        public String getLastTriggerStatusMessage() {
+            return this.lastTriggerStatusMessage;
         }
 
         public ListExecutionsResponseBodyExecutions setLastTriggerTime(String lastTriggerTime) {

@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetSecretParameterRequest extends TeaModel {
+    /**
+     * <p>The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The version number of the common parameter. Valid values: 1 to 100.</p>
+     */
     @NameInMap("ParameterVersion")
     public Integer parameterVersion;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to decrypt the parameter value. The decrypted parameter value is returned only if this parameter is set to true. Otherwise, null is returned.</p>
+     */
     @NameInMap("WithDecryption")
     public Boolean withDecryption;
 

@@ -4,27 +4,56 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
+    @NameInMap("AlarmConfig")
+    public String alarmConfigShrink;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the application.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The region ID. Set the value to cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
     public static CreateApplicationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationShrinkRequest self = new CreateApplicationShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateApplicationShrinkRequest setAlarmConfigShrink(String alarmConfigShrink) {
+        this.alarmConfigShrink = alarmConfigShrink;
+        return this;
+    }
+    public String getAlarmConfigShrink() {
+        return this.alarmConfigShrink;
     }
 
     public CreateApplicationShrinkRequest setClientToken(String clientToken) {

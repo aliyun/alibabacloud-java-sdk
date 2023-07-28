@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListResourceExecutionStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the execution.</p>
+     */
     @NameInMap("ExecutionId")
     public String executionId;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

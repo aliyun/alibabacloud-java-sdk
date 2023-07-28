@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetPatchBaselineResponseBody extends TeaModel {
+    /**
+     * <p>The details of the patch baseline.</p>
+     */
     @NameInMap("PatchBaseline")
     public GetPatchBaselineResponseBodyPatchBaseline patchBaseline;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -31,37 +37,118 @@ public class GetPatchBaselineResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetPatchBaselineResponseBodyPatchBaselineTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetPatchBaselineResponseBodyPatchBaselineTags build(java.util.Map<String, ?> map) throws Exception {
+            GetPatchBaselineResponseBodyPatchBaselineTags self = new GetPatchBaselineResponseBodyPatchBaselineTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPatchBaselineResponseBodyPatchBaselineTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetPatchBaselineResponseBodyPatchBaselineTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetPatchBaselineResponseBodyPatchBaseline extends TeaModel {
+        /**
+         * <p>The rules of scanning and installing patches for the specified operating system.</p>
+         */
         @NameInMap("ApprovalRules")
         public String approvalRules;
 
+        @NameInMap("ApprovedPatches")
+        public java.util.List<String> approvedPatches;
+
+        @NameInMap("ApprovedPatchesEnableNonSecurity")
+        public Boolean approvedPatchesEnableNonSecurity;
+
+        /**
+         * <p>The creator of the patch baseline.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the patch baseline was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the patch baseline.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the patch baseline.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>Indicates whether the patch baseline is set as the default patch baseline.</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The name of the patch baseline.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the operating system.</p>
+         */
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        @NameInMap("RejectedPatches")
+        public java.util.List<String> rejectedPatches;
+
+        @NameInMap("RejectedPatchesAction")
+        public String rejectedPatchesAction;
+
+        /**
+         * <p>The share type of the patch baseline.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        @NameInMap("Sources")
+        public java.util.List<String> sources;
+
+        @NameInMap("Tags")
+        public java.util.List<GetPatchBaselineResponseBodyPatchBaselineTags> tags;
+
+        /**
+         * <p>The user who last modified the patch baseline.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the patch baseline was last modified.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
@@ -76,6 +163,22 @@ public class GetPatchBaselineResponseBody extends TeaModel {
         }
         public String getApprovalRules() {
             return this.approvalRules;
+        }
+
+        public GetPatchBaselineResponseBodyPatchBaseline setApprovedPatches(java.util.List<String> approvedPatches) {
+            this.approvedPatches = approvedPatches;
+            return this;
+        }
+        public java.util.List<String> getApprovedPatches() {
+            return this.approvedPatches;
+        }
+
+        public GetPatchBaselineResponseBodyPatchBaseline setApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
+            this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
+            return this;
+        }
+        public Boolean getApprovedPatchesEnableNonSecurity() {
+            return this.approvedPatchesEnableNonSecurity;
         }
 
         public GetPatchBaselineResponseBodyPatchBaseline setCreatedBy(String createdBy) {
@@ -134,12 +237,44 @@ public class GetPatchBaselineResponseBody extends TeaModel {
             return this.operationSystem;
         }
 
+        public GetPatchBaselineResponseBodyPatchBaseline setRejectedPatches(java.util.List<String> rejectedPatches) {
+            this.rejectedPatches = rejectedPatches;
+            return this;
+        }
+        public java.util.List<String> getRejectedPatches() {
+            return this.rejectedPatches;
+        }
+
+        public GetPatchBaselineResponseBodyPatchBaseline setRejectedPatchesAction(String rejectedPatchesAction) {
+            this.rejectedPatchesAction = rejectedPatchesAction;
+            return this;
+        }
+        public String getRejectedPatchesAction() {
+            return this.rejectedPatchesAction;
+        }
+
         public GetPatchBaselineResponseBodyPatchBaseline setShareType(String shareType) {
             this.shareType = shareType;
             return this;
         }
         public String getShareType() {
             return this.shareType;
+        }
+
+        public GetPatchBaselineResponseBodyPatchBaseline setSources(java.util.List<String> sources) {
+            this.sources = sources;
+            return this;
+        }
+        public java.util.List<String> getSources() {
+            return this.sources;
+        }
+
+        public GetPatchBaselineResponseBodyPatchBaseline setTags(java.util.List<GetPatchBaselineResponseBodyPatchBaselineTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetPatchBaselineResponseBodyPatchBaselineTags> getTags() {
+            return this.tags;
         }
 
         public GetPatchBaselineResponseBodyPatchBaseline setUpdatedBy(String updatedBy) {

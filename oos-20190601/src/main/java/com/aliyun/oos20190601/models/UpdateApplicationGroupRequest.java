@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationGroupRequest extends TeaModel {
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>The name of the application group.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The new name of the application group.</p>
+     */
     @NameInMap("NewName")
     public String newName;
 
+    /**
+     * <p>The region ID. Set the value to cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

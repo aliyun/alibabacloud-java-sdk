@@ -4,15 +4,27 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
+    /**
+     * <p>The applications.</p>
+     */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsResponseBodyApplications> applications;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,27 +66,59 @@ public class ListApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListApplicationsResponseBodyApplications extends TeaModel {
+        /**
+         * <p>The type of the application.</p>
+         */
+        @NameInMap("ApplicationType")
+        public String applicationType;
+
+        /**
+         * <p>The time when the application was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>A tag of the resource.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The time when the application was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 
         public static ListApplicationsResponseBodyApplications build(java.util.Map<String, ?> map) throws Exception {
             ListApplicationsResponseBodyApplications self = new ListApplicationsResponseBodyApplications();
             return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsResponseBodyApplications setApplicationType(String applicationType) {
+            this.applicationType = applicationType;
+            return this;
+        }
+        public String getApplicationType() {
+            return this.applicationType;
         }
 
         public ListApplicationsResponseBodyApplications setCreateDate(String createDate) {

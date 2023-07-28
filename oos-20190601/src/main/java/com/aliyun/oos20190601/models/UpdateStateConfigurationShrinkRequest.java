@@ -4,36 +4,69 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateStateConfigurationShrinkRequest extends TeaModel {
+    /**
+     * <p>The schedule type.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the desired-state configuration.</p>
+     */
     @NameInMap("ConfigureMode")
     public String configureMode;
 
+    /**
+     * <p>The schedule expression.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("Parameters")
     public String parametersShrink;
 
+    /**
+     * <p>The configuration mode.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The parameters.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The name of the template.</p>
+     */
     @NameInMap("ScheduleExpression")
     public String scheduleExpression;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ScheduleType")
     public String scheduleType;
 
+    /**
+     * <p>The ID of the desired-state configuration.</p>
+     */
     @NameInMap("StateConfigurationId")
     public String stateConfigurationId;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>The required resources.</p>
+     */
     @NameInMap("Targets")
     public String targets;
 

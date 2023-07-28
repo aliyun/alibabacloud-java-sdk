@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetSecretParametersByPathResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The information of the encryption parameter.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<GetSecretParametersByPathResponseBodyParameters> parameters;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,42 +80,81 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
     }
 
     public static class GetSecretParametersByPathResponseBodyParameters extends TeaModel {
+        /**
+         * <p>The constraints of the encryption parameter.</p>
+         */
         @NameInMap("Constraints")
         public String constraints;
 
+        /**
+         * <p>The user who created the encryption parameter.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the encryption parameter was updated.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the encryption parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the encryption parameter.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The AccessKey ID.</p>
+         */
         @NameInMap("KeyId")
         public String keyId;
 
+        /**
+         * <p>The name of the encryption parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version number of the encryption parameter.</p>
+         */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
+        /**
+         * <p>The share type of the encryption parameter.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The data type of the encryption parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user who updated the encryption parameter.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the encryption parameter was updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
+        /**
+         * <p>The value of the encryption parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 

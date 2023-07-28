@@ -3,9 +3,9 @@ package com.aliyun.oos20190601.models;
 
 import com.aliyun.tea.*;
 
-public class ListPatchBaselinesRequest extends TeaModel {
+public class ListPatchBaselinesShrinkRequest extends TeaModel {
     @NameInMap("ApprovedPatches")
-    public java.util.List<String> approvedPatches;
+    public String approvedPatchesShrink;
 
     @NameInMap("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
@@ -55,25 +55,25 @@ public class ListPatchBaselinesRequest extends TeaModel {
     public String shareType;
 
     @NameInMap("Sources")
-    public java.util.List<String> sources;
+    public String sourcesShrink;
 
     @NameInMap("Tags")
-    public java.util.List<ListPatchBaselinesRequestTags> tags;
+    public String tagsShrink;
 
-    public static ListPatchBaselinesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListPatchBaselinesRequest self = new ListPatchBaselinesRequest();
+    public static ListPatchBaselinesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListPatchBaselinesShrinkRequest self = new ListPatchBaselinesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListPatchBaselinesRequest setApprovedPatches(java.util.List<String> approvedPatches) {
-        this.approvedPatches = approvedPatches;
+    public ListPatchBaselinesShrinkRequest setApprovedPatchesShrink(String approvedPatchesShrink) {
+        this.approvedPatchesShrink = approvedPatchesShrink;
         return this;
     }
-    public java.util.List<String> getApprovedPatches() {
-        return this.approvedPatches;
+    public String getApprovedPatchesShrink() {
+        return this.approvedPatchesShrink;
     }
 
-    public ListPatchBaselinesRequest setApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
+    public ListPatchBaselinesShrinkRequest setApprovedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
         this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
         return this;
     }
@@ -81,7 +81,7 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.approvedPatchesEnableNonSecurity;
     }
 
-    public ListPatchBaselinesRequest setMaxResults(Integer maxResults) {
+    public ListPatchBaselinesShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -89,7 +89,7 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListPatchBaselinesRequest setName(String name) {
+    public ListPatchBaselinesShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -97,7 +97,7 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.name;
     }
 
-    public ListPatchBaselinesRequest setNextToken(String nextToken) {
+    public ListPatchBaselinesShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -105,7 +105,7 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListPatchBaselinesRequest setOperationSystem(String operationSystem) {
+    public ListPatchBaselinesShrinkRequest setOperationSystem(String operationSystem) {
         this.operationSystem = operationSystem;
         return this;
     }
@@ -113,7 +113,7 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.operationSystem;
     }
 
-    public ListPatchBaselinesRequest setRegionId(String regionId) {
+    public ListPatchBaselinesShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -121,7 +121,7 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListPatchBaselinesRequest setShareType(String shareType) {
+    public ListPatchBaselinesShrinkRequest setShareType(String shareType) {
         this.shareType = shareType;
         return this;
     }
@@ -129,50 +129,20 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.shareType;
     }
 
-    public ListPatchBaselinesRequest setSources(java.util.List<String> sources) {
-        this.sources = sources;
+    public ListPatchBaselinesShrinkRequest setSourcesShrink(String sourcesShrink) {
+        this.sourcesShrink = sourcesShrink;
         return this;
     }
-    public java.util.List<String> getSources() {
-        return this.sources;
+    public String getSourcesShrink() {
+        return this.sourcesShrink;
     }
 
-    public ListPatchBaselinesRequest setTags(java.util.List<ListPatchBaselinesRequestTags> tags) {
-        this.tags = tags;
+    public ListPatchBaselinesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<ListPatchBaselinesRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class ListPatchBaselinesRequestTags extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListPatchBaselinesRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListPatchBaselinesRequestTags self = new ListPatchBaselinesRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListPatchBaselinesRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListPatchBaselinesRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

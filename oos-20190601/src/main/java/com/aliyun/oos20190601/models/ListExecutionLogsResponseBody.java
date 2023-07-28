@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionLogsResponseBody extends TeaModel {
+    /**
+     * <p>The execution logs.</p>
+     */
     @NameInMap("ExecutionLogs")
     public java.util.List<ListExecutionLogsResponseBodyExecutionLogs> executionLogs;
 
+    /**
+     * <p>Indicates whether the log is truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,15 +80,27 @@ public class ListExecutionLogsResponseBody extends TeaModel {
     }
 
     public static class ListExecutionLogsResponseBodyExecutionLogs extends TeaModel {
+        /**
+         * <p>The type of the log.</p>
+         */
         @NameInMap("LogType")
         public String logType;
 
+        /**
+         * <p>The details of the task execution.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The execution ID of the task.</p>
+         */
         @NameInMap("TaskExecutionId")
         public String taskExecutionId;
 
+        /**
+         * <p>The timestamp when the task was run.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 

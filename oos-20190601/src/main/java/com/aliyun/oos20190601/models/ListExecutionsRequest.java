@@ -4,69 +4,161 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListExecutionsRequest extends TeaModel {
+    /**
+     * <p>执行的模板类型列表。可分为Other、TimerTrigger、EventTrigger、AlarmTrigger。此参数和Categories参数只能同时传入一个，推荐使用Categories。</p>
+     */
+    @NameInMap("Categories")
+    public String categories;
+
+    /**
+     * <p>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>执行的深度，可分为RootDepth、FirstChildDepth</p>
+     * <p>RootDepth只返回主执行，FirstChildDepth只返回第一层的子执行。此参数和IncludeChildExecution参数只能同时传入一个，推荐使用Depth。</p>
+     */
+    @NameInMap("Depth")
+    public String depth;
+
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The earliest end time. The executions that stop running at or later than the specified time are queried.</p>
+     */
     @NameInMap("EndDateAfter")
     public String endDateAfter;
 
+    /**
+     * <p>The latest end time. The executions that stop running at or earlier than the specified time are queried.</p>
+     */
     @NameInMap("EndDateBefore")
     public String endDateBefore;
 
+    /**
+     * <p>The executor.</p>
+     */
     @NameInMap("ExecutedBy")
     public String executedBy;
 
+    /**
+     * <p>The ID of the execution.</p>
+     */
     @NameInMap("ExecutionId")
     public String executionId;
 
+    /**
+     * <p>Specifies whether to include child executions. Default value: False.</p>
+     */
     @NameInMap("IncludeChildExecution")
     public Boolean includeChildExecution;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The execution mode. Valid values:</p>
+     * <br>
+     * <p>*   **Automatic**</p>
+     * <p>*   **Debug**</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the parent execution.</p>
+     */
     @NameInMap("ParentExecutionId")
     public String parentExecutionId;
 
+    /**
+     * <p>The RAM role.</p>
+     */
     @NameInMap("RamRole")
     public String ramRole;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instances you want to query belong.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the Elastic Compute Service (ECS) resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The name of the resource template.</p>
+     */
     @NameInMap("ResourceTemplateName")
     public String resourceTemplateName;
 
+    /**
+     * <p>The field that is used to sort the executions to query. Valid values:</p>
+     * <br>
+     * <p>*   **StartDate**: specifies that the executions are sorted based on the time when they are created. This is the default value.</p>
+     * <p>*   **EndDate**: specifies that the executions are sorted based on the time when they stop running.</p>
+     * <p>*   **Status**: specifies that the executions are sorted based on their states.</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
+    /**
+     * <p>The order in which you want to sort the results. Valid values:</p>
+     * <br>
+     * <p>*   **Ascending**: ascending order.</p>
+     * <p>*   **Descending**: descending order. This is the default value.</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <p>The earliest start time. The executions that start to run at or later than the specified time are queried.</p>
+     */
     @NameInMap("StartDateAfter")
     public String startDateAfter;
 
+    /**
+     * <p>The latest start time. The executions that start to run at or earlier than the specified point in time are queried.</p>
+     */
     @NameInMap("StartDateBefore")
     public String startDateBefore;
 
+    /**
+     * <p>The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags for the execution.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>The name of the template. All templates whose names contain the specified template name are queried.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -75,12 +167,36 @@ public class ListExecutionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListExecutionsRequest setCategories(String categories) {
+        this.categories = categories;
+        return this;
+    }
+    public String getCategories() {
+        return this.categories;
+    }
+
     public ListExecutionsRequest setCategory(String category) {
         this.category = category;
         return this;
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public ListExecutionsRequest setDepth(String depth) {
+        this.depth = depth;
+        return this;
+    }
+    public String getDepth() {
+        return this.depth;
+    }
+
+    public ListExecutionsRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ListExecutionsRequest setEndDateAfter(String endDateAfter) {

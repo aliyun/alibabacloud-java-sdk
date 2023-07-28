@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the application group.</p>
+     */
     @NameInMap("ApplicationGroup")
     public CreateApplicationGroupResponseBodyApplicationGroup applicationGroup;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,57 @@ public class CreateApplicationGroupResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationGroupResponseBodyApplicationGroup extends TeaModel {
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>The ID of the application group in CloudMonitor.</p>
+         */
         @NameInMap("CmsGroupId")
         public String cmsGroupId;
 
+        /**
+         * <p>The time when the application group was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The ID of the region in which the related sources reside.</p>
+         */
         @NameInMap("DeployRegionId")
         public String deployRegionId;
 
+        /**
+         * <p>The description of the application group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("ImportTagKey")
         public String importTagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("ImportTagValue")
         public String importTagValue;
 
+        /**
+         * <p>The name of the application group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the application group was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

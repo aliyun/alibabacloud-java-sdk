@@ -7,12 +7,21 @@ public class SearchInventoryResponseBody extends TeaModel {
     @NameInMap("Entities")
     public java.util.List<java.util.Map<String, ?>> entities;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

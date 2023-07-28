@@ -4,27 +4,51 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListInventoryEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The time when the request was sent.</p>
+     */
     @NameInMap("CaptureTime")
     public String captureTime;
 
+    /**
+     * <p>The configurations of the component.</p>
+     */
     @NameInMap("Entries")
     public java.util.List<java.util.Map<String, ?>> entries;
 
+    /**
+     * <p>The ID of the ECS instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The version number of the component.</p>
+     */
     @NameInMap("SchemaVersion")
     public String schemaVersion;
 
+    /**
+     * <p>The name of the component.</p>
+     */
     @NameInMap("TypeName")
     public String typeName;
 
