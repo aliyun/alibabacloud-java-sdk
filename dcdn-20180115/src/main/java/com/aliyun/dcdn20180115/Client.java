@@ -387,9 +387,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   You can specify up to 50 domain names in each request.
-      * *   You can call this operation up to 30 times per second per account.
+      * > - You can specify up to 50 domain names in each request.
+      * > - You can call this operation up to 30 times per second per account.
       *
       * @param request BatchDeleteDcdnDomainConfigsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -436,9 +435,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > 
-      * *   You can specify up to 50 domain names in each request.
-      * *   You can call this operation up to 30 times per second per account.
+      * > - You can specify up to 50 domain names in each request.
+      * > - You can call this operation up to 30 times per second per account.
       *
       * @param request BatchDeleteDcdnDomainConfigsRequest
       * @return BatchDeleteDcdnDomainConfigsResponse
@@ -495,7 +493,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * You can call this operation up to 20 times per second per account.
       *
       * @param request BatchModifyDcdnWafRulesRequest
@@ -531,7 +528,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
       * You can call this operation up to 20 times per second per account.
       *
       * @param request BatchModifyDcdnWafRulesRequest
@@ -786,6 +782,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchSetDcdnWafDomainConfigsResponse batchSetDcdnWafDomainConfigs(BatchSetDcdnWafDomainConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.batchSetDcdnWafDomainConfigsWithOptions(request, runtime);
+    }
+
+    /**
+      * > 
+      * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchStartDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchStartDcdnDomainResponse
+     */
+    public BatchStartDcdnDomainResponse batchStartDcdnDomainWithOptions(BatchStartDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNames)) {
+            query.put("DomainNames", request.domainNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchStartDcdnDomain"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchStartDcdnDomainResponse());
+    }
+
+    /**
+      * > 
+      * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchStartDcdnDomainRequest
+      * @return BatchStartDcdnDomainResponse
+     */
+    public BatchStartDcdnDomainResponse batchStartDcdnDomain(BatchStartDcdnDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchStartDcdnDomainWithOptions(request, runtime);
+    }
+
+    /**
+      * > 
+      * *   After an accelerated domain name is disabled, Dynamic Content Delivery Network (DCDN) retains the domain name information. The system automatically reroutes all requests that are destined for the accelerated domain name to the origin.
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchStopDcdnDomainRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return BatchStopDcdnDomainResponse
+     */
+    public BatchStopDcdnDomainResponse batchStopDcdnDomainWithOptions(BatchStopDcdnDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNames)) {
+            query.put("DomainNames", request.domainNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchStopDcdnDomain"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchStopDcdnDomainResponse());
+    }
+
+    /**
+      * > 
+      * *   After an accelerated domain name is disabled, Dynamic Content Delivery Network (DCDN) retains the domain name information. The system automatically reroutes all requests that are destined for the accelerated domain name to the origin.
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+      * @param request BatchStopDcdnDomainRequest
+      * @return BatchStopDcdnDomainResponse
+     */
+    public BatchStopDcdnDomainResponse batchStopDcdnDomain(BatchStopDcdnDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchStopDcdnDomainWithOptions(request, runtime);
     }
 
     /**
@@ -1459,6 +1567,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDcdnKvResponse deleteDcdnKv(DeleteDcdnKvRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDcdnKvWithOptions(request, runtime);
+    }
+
+    public DeleteDcdnKvNamespaceResponse deleteDcdnKvNamespaceWithOptions(DeleteDcdnKvNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDcdnKvNamespace"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDcdnKvNamespaceResponse());
+    }
+
+    public DeleteDcdnKvNamespaceResponse deleteDcdnKvNamespace(DeleteDcdnKvNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDcdnKvNamespaceWithOptions(request, runtime);
     }
 
     /**
@@ -3696,11 +3833,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * # Usage notes
-      * *   You can call this operation up to 10 times per second per account.
-      * *   The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-      * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+      * * You can call this operation up to 10 times per second per account.
+      * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * |----|------|-----|--------|
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
       *
       * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3727,11 +3869,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * # Usage notes
-      * *   You can call this operation up to 10 times per second per account.
-      * *   The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
-      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
-      * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+      * * You can call this operation up to 10 times per second per account.
+      * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * |----|------|-----|--------|
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
       *
       * @param request DescribeDcdnDomainRealTimeByteHitRateDataRequest
       * @return DescribeDcdnDomainRealTimeByteHitRateDataResponse
@@ -3954,10 +4101,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * #
       * *   You can call this operation up to 10 times per second per account.
       * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the parameters, the request returns the data collected within the specified time range.
-      * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay | 
+      * |-----|-----|-----|--------| 
+      * | 1 minute | 1 hour | 7 days | 5 minutes | 
+      * | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
       *
       * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3996,10 +4147,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * #
       * *   You can call this operation up to 10 times per second per account.
       * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the parameters, the request returns the data collected within the specified time range.
-      * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay. | Time granularity | Maximum time range per query | Historical data available | Data delay | |---------------|--------| | 1 minute | 1 hour | 7 days | 5 minutes | | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay | 
+      * |-----|-----|-----|--------| 
+      * | 1 minute | 1 hour | 7 days | 5 minutes | 
+      * | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
       *
       * @param request DescribeDcdnDomainRealTimeSrcBpsDataRequest
       * @return DescribeDcdnDomainRealTimeSrcBpsDataResponse
@@ -5319,6 +5474,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDcdnIpaUserDomainsResponse describeDcdnIpaUserDomains(DescribeDcdnIpaUserDomainsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDcdnIpaUserDomainsWithOptions(request, runtime);
+    }
+
+    public DescribeDcdnKvAccountResponse describeDcdnKvAccountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnKvAccount"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnKvAccountResponse());
+    }
+
+    public DescribeDcdnKvAccountResponse describeDcdnKvAccount() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDcdnKvAccountWithOptions(runtime);
+    }
+
+    public DescribeDcdnKvAccountStatusResponse describeDcdnKvAccountStatusWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnKvAccountStatus"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnKvAccountStatusResponse());
+    }
+
+    public DescribeDcdnKvAccountStatusResponse describeDcdnKvAccountStatus() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDcdnKvAccountStatusWithOptions(runtime);
+    }
+
+    public DescribeDcdnKvNamespaceResponse describeDcdnKvNamespaceWithOptions(DescribeDcdnKvNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDcdnKvNamespace"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDcdnKvNamespaceResponse());
+    }
+
+    public DescribeDcdnKvNamespaceResponse describeDcdnKvNamespace(DescribeDcdnKvNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDcdnKvNamespaceWithOptions(request, runtime);
     }
 
     public DescribeDcdnL2IpsResponse describeDcdnL2IpsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -8203,6 +8425,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDcdnKvWithOptions(request, runtime);
     }
 
+    public ListDcdnKvResponse listDcdnKvWithOptions(ListDcdnKvRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDcdnKv"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDcdnKvResponse());
+    }
+
+    public ListDcdnKvResponse listDcdnKv(ListDcdnKvRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDcdnKvWithOptions(request, runtime);
+    }
+
     /**
       * > You can call this operation up to 100 times per second per account.
       *
@@ -8301,6 +8548,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDCdnDomainSchdmByPropertyResponse modifyDCdnDomainSchdmByProperty(ModifyDCdnDomainSchdmByPropertyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDCdnDomainSchdmByPropertyWithOptions(request, runtime);
+    }
+
+    public ModifyDcdnWafGroupResponse modifyDcdnWafGroupWithOptions(ModifyDcdnWafGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rules)) {
+            body.put("Rules", request.rules);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDcdnWafGroup"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDcdnWafGroupResponse());
+    }
+
+    public ModifyDcdnWafGroupResponse modifyDcdnWafGroup(ModifyDcdnWafGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDcdnWafGroupWithOptions(request, runtime);
     }
 
     /**
@@ -8760,6 +9044,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PutDcdnKvResponse putDcdnKv(PutDcdnKvRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putDcdnKvWithOptions(request, runtime);
+    }
+
+    public PutDcdnKvNamespaceResponse putDcdnKvNamespaceWithOptions(PutDcdnKvNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("Namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutDcdnKvNamespace"),
+            new TeaPair("version", "2018-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PutDcdnKvNamespaceResponse());
+    }
+
+    public PutDcdnKvNamespaceResponse putDcdnKvNamespace(PutDcdnKvNamespaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.putDcdnKvNamespaceWithOptions(request, runtime);
     }
 
     /**
