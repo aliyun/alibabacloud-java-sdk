@@ -11,6 +11,12 @@ public class AddTaskShrinkRequest extends TeaModel {
     public String callTimeListShrink;
 
     /**
+     * <p>回调地址</p>
+     */
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
+
+    /**
      * <p>并发数</p>
      */
     @NameInMap("MaxConcurrency")
@@ -120,6 +126,14 @@ public class AddTaskShrinkRequest extends TeaModel {
     }
     public String getCallTimeListShrink() {
         return this.callTimeListShrink;
+    }
+
+    public AddTaskShrinkRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+        return this;
+    }
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public AddTaskShrinkRequest setMaxConcurrency(Long maxConcurrency) {

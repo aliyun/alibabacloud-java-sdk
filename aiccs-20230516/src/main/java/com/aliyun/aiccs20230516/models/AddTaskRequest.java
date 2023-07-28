@@ -11,6 +11,12 @@ public class AddTaskRequest extends TeaModel {
     public java.util.List<AddTaskRequestCallTimeList> callTimeList;
 
     /**
+     * <p>回调地址</p>
+     */
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
+
+    /**
      * <p>并发数</p>
      */
     @NameInMap("MaxConcurrency")
@@ -120,6 +126,14 @@ public class AddTaskRequest extends TeaModel {
     }
     public java.util.List<AddTaskRequestCallTimeList> getCallTimeList() {
         return this.callTimeList;
+    }
+
+    public AddTaskRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+        return this;
+    }
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public AddTaskRequest setMaxConcurrency(Long maxConcurrency) {
@@ -293,7 +307,7 @@ public class AddTaskRequest extends TeaModel {
         public java.util.List<String> intentTags;
 
         /**
-         * <p>重呼条件</p>
+         * <p>短信模板ID</p>
          */
         @NameInMap("SmsTemplateId")
         public Long smsTemplateId;

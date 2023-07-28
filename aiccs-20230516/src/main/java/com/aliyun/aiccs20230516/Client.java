@@ -106,6 +106,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallTimeList", request.callTimeListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
+            query.put("CallbackUrl", request.callbackUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxConcurrency)) {
             query.put("MaxConcurrency", request.maxConcurrency);
         }
@@ -432,6 +436,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.callTimeListShrink)) {
             query.put("CallTimeList", request.callTimeListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
+            query.put("CallbackUrl", request.callbackUrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxConcurrency)) {
