@@ -5,16 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
     /**
-     * <p>The billable region.</p>
+     * <p>The estimated bill data.</p>
      */
     @NameInMap("BillPredictionData")
     public DescribeCdnUserBillPredictionResponseBodyBillPredictionData billPredictionData;
-
-    /**
-     * <p>The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.</p>
-     */
-    @NameInMap("BillType")
-    public String billType;
 
     /**
      * <p>The metering method.</p>
@@ -33,17 +27,23 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
      * <p>*   hour_vas: pay by value-added services per hour</p>
      * <p>*   day_count: pay by daily requests</p>
      */
+    @NameInMap("BillType")
+    public String billType;
+
+    /**
+     * <p>The end time of the estimation.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The estimated value.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The estimated bill data.</p>
+     * <p>The start time of the estimation.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -94,12 +94,21 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnUserBillPredictionResponseBodyBillPredictionDataBillPredictionDataItem extends TeaModel {
+        /**
+         * <p>The billable region.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.</p>
+         */
         @NameInMap("TimeStp")
         public String timeStp;
 
+        /**
+         * <p>The estimated value.</p>
+         */
         @NameInMap("Value")
         public Float value;
 
