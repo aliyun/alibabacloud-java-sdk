@@ -4,15 +4,51 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateRetcodeAppResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
+    @NameInMap("Data")
+    public String data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("RetcodeAppDataBean")
     public CreateRetcodeAppResponseBodyRetcodeAppDataBean retcodeAppDataBean;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static CreateRetcodeAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRetcodeAppResponseBody self = new CreateRetcodeAppResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRetcodeAppResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
+    }
+
+    public CreateRetcodeAppResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public CreateRetcodeAppResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CreateRetcodeAppResponseBody setRequestId(String requestId) {
@@ -29,6 +65,14 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     }
     public CreateRetcodeAppResponseBodyRetcodeAppDataBean getRetcodeAppDataBean() {
         return this.retcodeAppDataBean;
+    }
+
+    public CreateRetcodeAppResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBeanTagsTags extends TeaModel {
