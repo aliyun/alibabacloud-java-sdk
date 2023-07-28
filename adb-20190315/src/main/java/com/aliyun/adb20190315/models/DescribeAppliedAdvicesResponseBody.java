@@ -4,18 +4,37 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppliedAdvicesResponseBody extends TeaModel {
+    /**
+     * <p>Details of the suggestions.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAppliedAdvicesResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
+     * <br>
+     * <p>*   **30**</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,36 +84,83 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppliedAdvicesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The suggestion ID.</p>
+         */
         @NameInMap("AdviceId")
         public String adviceId;
 
+        /**
+         * <p>The benefit of the suggestion.</p>
+         */
         @NameInMap("Benefit")
         public String benefit;
 
+        /**
+         * <p>The SQL statement used to execute the BUILD task.</p>
+         */
         @NameInMap("BuildSQL")
         public String buildSQL;
 
+        /**
+         * <p>The state of the suggestion execution task.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **SUCCEED**</p>
+         * <p>*   **FAILED**</p>
+         */
         @NameInMap("JobStatus")
         public String jobStatus;
 
+        /**
+         * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
+         * <br>
+         * <p>*   **30**</p>
+         * <p>*   **50**</p>
+         * <p>*   **100**</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The SQL statement used to roll back the suggestion.</p>
+         */
         @NameInMap("RollbackSQL")
         public String rollbackSQL;
 
+        /**
+         * <p>The SQL statement used to apply the suggestion.</p>
+         */
         @NameInMap("SQL")
         public String SQL;
 
+        /**
+         * <p>The submission state of the suggestion.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   **SUCCEED**</p>
+         * <p>*   **FAILED**</p>
+         */
         @NameInMap("SubmitStatus")
         public String submitStatus;
 
+        /**
+         * <p>The time when the suggestion was submitted. The time follows the yyMMddHHmm format. The time is displayed in UTC.</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

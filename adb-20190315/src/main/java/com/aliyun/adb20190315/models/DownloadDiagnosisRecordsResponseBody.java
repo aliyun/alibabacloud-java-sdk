@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the download task.</p>
+     */
     @NameInMap("DownloadId")
     public Integer downloadId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

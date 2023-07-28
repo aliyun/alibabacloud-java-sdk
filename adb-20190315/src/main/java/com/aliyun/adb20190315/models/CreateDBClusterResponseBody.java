@@ -4,15 +4,27 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the cluster belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

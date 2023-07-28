@@ -4,12 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Details of the resource group.</p>
+     */
     @NameInMap("GroupsInfo")
     public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfo> groupsInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,44 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfo extends TeaModel {
+        /**
+         * <p>The time when the resource group was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The query execution mode. Valid values:</p>
+         * <br>
+         * <p>*   **interactive**</p>
+         * <p>*   **batch**</p>
+         * <br>
+         * <p>>  For more information, see [Query execution modes](~~189502~~).</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <p>The database accounts that are associated with the resource group.</p>
+         */
         @NameInMap("GroupUsers")
         public String groupUsers;
 
+        /**
+         * <p>The number of nodes. Each node consumes 16 cores and 64 GB memory.</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        /**
+         * <p>The time when the resource group was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyMaintenanceActionResponseBody extends TeaModel {
+    /**
+     * <p>The O\&M event ID.</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

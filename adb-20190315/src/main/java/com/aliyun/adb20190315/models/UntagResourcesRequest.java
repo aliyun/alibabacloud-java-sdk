@@ -4,6 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to detach all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,6 +21,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +36,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the cluster. Set the value to `ALIYUN::ADB::CLUSTER`.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

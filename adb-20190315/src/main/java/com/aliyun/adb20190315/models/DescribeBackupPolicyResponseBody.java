@@ -4,21 +4,50 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The number of days for which data backup files are retained.</p>
+     */
     @NameInMap("BackupRetentionPeriod")
     public Integer backupRetentionPeriod;
 
+    /**
+     * <p>Specifies whether to enable the origin protocol policy.</p>
+     * <br>
+     * <p>*   true: enabled</p>
+     * <p>*   false: disabled</p>
+     */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
+    /**
+     * <p>The number of days for which log backup files are retained.</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
+    /**
+     * <p>The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:</p>
+     * <br>
+     * <p>*   Monday</p>
+     * <p>*   Tuesday</p>
+     * <p>*   Wednesday</p>
+     * <p>*   Thursday</p>
+     * <p>*   Friday</p>
+     * <p>*   Saturday</p>
+     * <p>*   Sunday</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The backup time. Specify the time in the HH:mmZ-HH:mmZ format.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

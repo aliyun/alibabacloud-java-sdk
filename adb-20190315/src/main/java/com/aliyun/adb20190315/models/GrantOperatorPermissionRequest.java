@@ -4,9 +4,17 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class GrantOperatorPermissionRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The expiration time of the service account permissions. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
@@ -16,6 +24,12 @@ public class GrantOperatorPermissionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the permissions. Valid values:</p>
+     * <br>
+     * <p>*   **Control**: configuration permissions. The service account is granted permissions to query and modify cluster configurations.</p>
+     * <p>*   **Data**: data permissions. The service account is granted permissions to query schemas, indexes, and SQL statements.</p>
+     */
     @NameInMap("Privileges")
     public String privileges;
 

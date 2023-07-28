@@ -4,15 +4,37 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticDailyPlanRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The start date of the current-day scaling plan. Specify the date in the yyyy-MM-dd format.</p>
+     */
     @NameInMap("ElasticDailyPlanDay")
     public String elasticDailyPlanDay;
 
+    /**
+     * <p>The execution state of the current-day scaling plan. Separate multiple values with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **1**: The scaling plan is not executed.</p>
+     * <p>*   **2**: The scaling plan is being executed.</p>
+     * <p>*   **3**: The scaling plan is executed.</p>
+     * <p>*   **4**: The scaling plan fails to be executed.</p>
+     */
     @NameInMap("ElasticDailyPlanStatusList")
     public String elasticDailyPlanStatusList;
 
+    /**
+     * <p>The name of the scaling plan. Valid values:</p>
+     * <br>
+     * <p>*   The name must be 2 to 30 characters in length.</p>
+     * <p>*   The name can contain letters, digits, and underscores (\_).</p>
+     */
     @NameInMap("ElasticPlanName")
     public String elasticPlanName;
 
@@ -28,6 +50,11 @@ public class DescribeElasticDailyPlanRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.</p>
+     */
     @NameInMap("ResourcePoolName")
     public String resourcePoolName;
 

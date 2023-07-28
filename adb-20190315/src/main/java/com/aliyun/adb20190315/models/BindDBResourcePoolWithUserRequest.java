@@ -4,6 +4,11 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class BindDBResourcePoolWithUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,9 +18,15 @@ public class BindDBResourcePoolWithUserRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     */
     @NameInMap("PoolName")
     public String poolName;
 
+    /**
+     * <p>The database account with which to associate the resource group. It can be a standard account or a privileged account.</p>
+     */
     @NameInMap("PoolUser")
     public String poolUser;
 

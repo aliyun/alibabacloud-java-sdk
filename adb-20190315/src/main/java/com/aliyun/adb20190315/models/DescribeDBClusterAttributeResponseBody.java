@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The information about the cluster.</p>
+     */
     @NameInMap("Items")
     public DescribeDBClusterAttributeResponseBodyItems items;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,17 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBClusterTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * <br>
+         * <p>> You can call the [TagResources](~~179253~~) operation to add a tag to the cluster.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -81,138 +95,336 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBCluster extends TeaModel {
+        /**
+         * <p>The edition of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **BASIC**: reserved mode for Basic Edition.</p>
+         * <p>*   **CLUSTER**: reserved mode for Cluster Edition.</p>
+         * <p>*   **MIXED_STORAGE**: elastic mode for Cluster Edition.</p>
+         * <br>
+         * <p>> For more information about cluster editions, see [Editions](~~205001~~).</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **ads**: pay-as-you-go.</p>
+         * <p>*   **ads_pre**: subscription.</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The specifications of computing resources that are used by the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.</p>
+         */
         @NameInMap("ComputeResource")
         public String computeResource;
 
+        /**
+         * <p>The Virtual Private Cloud (VPC) endpoint of the cluster.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The time when the cluster was created. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
+        /**
+         * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The network type of the cluster. **VPC** is returned.</p>
+         */
         @NameInMap("DBClusterNetworkType")
         public String DBClusterNetworkType;
 
+        /**
+         * <p>The state of the cluster. For more information, see [Cluster states](~~143075~~).</p>
+         */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
+        /**
+         * <p>The type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Common**: common cluster.</p>
+         * <p>*   **RDS_ANALYSIS**: MySQL analytic instance.</p>
+         */
         @NameInMap("DBClusterType")
         public String DBClusterType;
 
+        /**
+         * <p>The instance type of the cluster.</p>
+         */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
+        /**
+         * <p>The number of node groups.</p>
+         */
         @NameInMap("DBNodeCount")
         public Long DBNodeCount;
 
+        /**
+         * <p>The storage capacity of the cluster. Unit: GB.</p>
+         */
         @NameInMap("DBNodeStorage")
         public Long DBNodeStorage;
 
+        /**
+         * <p>The version of the database engine. **3.0** is returned.</p>
+         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <p>The ESSD performance level.</p>
+         */
         @NameInMap("DiskPerformanceLevel")
         public String diskPerformanceLevel;
 
+        /**
+         * <p>The disk type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **local_ssd**: local disk.</p>
+         * <p>*   **cloud**: basic disk.</p>
+         * <p>*   **cloud_ssd**: standard SSD.</p>
+         * <p>*   **cloud_efficiency**: ultra disk.</p>
+         * <p>*   **cloud_essd**: PL1 enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_essd2**: PL2 ESSD.</p>
+         * <p>*   **cloud_essd3**: PL3 ESSD.</p>
+         * <br>
+         * <p>> For more information about ESSDs, see [ESSD specifications](~~122389~~).</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
+        /**
+         * <p>The ID of the Data Transmission Service (DTS) synchronization task. This parameter is returned only for MySQL analytic instances.</p>
+         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
+        /**
+         * <p>The number of elastic I/O units (EIUs).</p>
+         */
         @NameInMap("ElasticIOResource")
         public Integer elasticIOResource;
 
+        /**
+         * <p>The single-node specifications of an EIU. Valid values:</p>
+         * <br>
+         * <p>*   8Core64GB: If this value is returned, an EIU of the cluster has 24 cores and 192 GB memory.</p>
+         * <p>*   12Core96GB: If this value is returned, an EIU of the cluster has 36 cores and 288 GB memory.</p>
+         */
         @NameInMap("ElasticIOResourceSize")
         public String elasticIOResourceSize;
 
+        /**
+         * <p>Indicates whether an Airflow cluster was created. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("EnableAirflow")
         public Boolean enableAirflow;
 
+        /**
+         * <p>Indicates whether a Spark cluster was created. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("EnableSpark")
         public Boolean enableSpark;
 
+        /**
+         * <p>The engine of the cluster. **AnalyticDB** is returned.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The minor version of the cluster.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The number of compute nodes that are used by the cluster in elastic mode.</p>
+         */
         @NameInMap("ExecutorCount")
         public String executorCount;
 
+        /**
+         * <p>The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   If the billing method of the cluster is subscription, the actual expiration time is returned.</p>
+         * <br>
+         * <p>*   If the billing method of the cluster is pay-as-you-go, **2999-09-08T16:00:00Z** is returned.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>Indicates whether the cluster has expired. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Expired")
         public String expired;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("InnerIp")
         public String innerIp;
 
+        /**
+         * <p>The public port number.</p>
+         */
         @NameInMap("InnerPort")
         public String innerPort;
 
+        /**
+         * <p>The ID of the key that is used to encrypt disk data.</p>
+         * <br>
+         * <p>> This parameter is returned only when disk encryption is enabled.</p>
+         */
         @NameInMap("KmsId")
         public String kmsId;
 
+        /**
+         * <p>The lock mode of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Unlock**: The cluster is not locked.</p>
+         * <p>*   **ManualLock**: The cluster is manually locked.</p>
+         * <p>*   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.</p>
+         * <p>*   **LockByRestoration**: The cluster is automatically locked due to cluster restoration.</p>
+         * <p>*   **LockByDiskQuota**: The cluster is automatically locked when it has used 90% of its storage.</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The reason why the cluster is locked.</p>
+         * <br>
+         * <p>> This parameter is returned only when the cluster was locked. The value is **instance_expire**.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The maintenance window of the cluster. The window is in the *HH:mmZ-HH:mmZ* format. The time is displayed in UTC. Example: *04:00Z-05:00Z*, which indicates that routine maintenance can be performed from 04:00 to 05:00.</p>
+         * <br>
+         * <p>> For more information about maintenance windows, see [Configure a maintenance window](~~122569~~).</p>
+         */
         @NameInMap("MaintainTime")
         public String maintainTime;
 
+        /**
+         * <p>The mode of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **flexible**: elastic mode.</p>
+         * <p>*   **reserver**: reserved mode.</p>
+         * <br>
+         * <p>> For more information about cluster modes, see [Editions](~~205001~~).</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The billing method of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Postpaid**: pay-as-you-go.</p>
+         * <p>*   **Prepaid**: subscription.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The port number that is used to connect to the cluster.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the ApsaraDB RDS instance from which data is synchronized to the cluster. This parameter is returned only for MySQL analytic instances.</p>
+         */
         @NameInMap("RdsInstanceId")
         public String rdsInstanceId;
 
+        /**
+         * <p>The region ID of the cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The specifications of storage resources that are used by the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.</p>
+         */
         @NameInMap("StorageResource")
         public String storageResource;
 
+        /**
+         * <p>The tags that are added to the cluster.</p>
+         */
         @NameInMap("Tags")
         public DescribeDBClusterAttributeResponseBodyItemsDBClusterTags tags;
 
+        /**
+         * <p>Indicates whether Elastic Network Interface (ENI) is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("UserENIStatus")
         public Boolean userENIStatus;
 
+        /**
+         * <p>The ID of the cluster that resides in the VPC.</p>
+         */
         @NameInMap("VPCCloudInstanceId")
         public String VPCCloudInstanceId;
 
+        /**
+         * <p>The VPC ID of the cluster.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The vSwitch ID of the cluster.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The zone ID of the cluster.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

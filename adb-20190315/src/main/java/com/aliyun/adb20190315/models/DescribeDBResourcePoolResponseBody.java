@@ -4,12 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBResourcePoolResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Details of the resource group.</p>
+     */
     @NameInMap("PoolsInfo")
     public java.util.List<DescribeDBResourcePoolResponseBodyPoolsInfo> poolsInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,46 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
     }
 
     public static class DescribeDBResourcePoolResponseBodyPoolsInfo extends TeaModel {
+        /**
+         * <p>The time when the resource group was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The number of nodes.</p>
+         * <br>
+         * <p>>  Each node consumes 16 cores and 64 GB memory.</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("PoolName")
         public String poolName;
 
+        /**
+         * <p>The database accounts that are associated with the resource group.</p>
+         */
         @NameInMap("PoolUsers")
         public String poolUsers;
 
+        /**
+         * <p>The mode in which SQL statements are executed.</p>
+         * <br>
+         * <p>*   **batch**</p>
+         * <p>*   **interactive**</p>
+         * <br>
+         * <p>>  For more information, see [Query execution modes](~~189502~~).</p>
+         */
         @NameInMap("QueryType")
         public String queryType;
 
+        /**
+         * <p>The time when the resource group was updated.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

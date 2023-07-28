@@ -4,15 +4,35 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadTasksRecordsRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the database that is involved in the import or export task.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The order in which to sort the tasks by field. Specify the field and the sort order in the JSON format. Example: `[{"Field":"CreateTime", "Type":"desc"}]`.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   `Field` specifies the field that is used to sort the tasks. Valid values of Field: `State`, `CreateTime`, `DBName`, `ProcessID`, `UpdateTime`, `JobName`, and `ProcessRows`.</p>
+     * <br>
+     * <p>*   `Type` specifies the sort order. Valid values of Type: `Desc` and `Asc`. The values are case-insensitive.</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -22,11 +42,24 @@ public class DescribeLoadTasksRecordsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values:</p>
+     * <br>
+     * <p>*   **30** (default)</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -34,9 +67,22 @@ public class DescribeLoadTasksRecordsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.</p>
+     * <br>
+     * <p>> We recommend that you set the query start time to any point in time within 30 days.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The state of the asynchronous import or export task to be queried. Valid values:</p>
+     * <br>
+     * <p>*   **INIT**: The task is being initialized.</p>
+     * <p>*   **RUNNING**: The task is running.</p>
+     * <p>*   **FINISH**: The task is successful.</p>
+     * <p>*   **FAILED**: The task fails.</p>
+     */
     @NameInMap("State")
     public String state;
 
@@ -107,6 +153,14 @@ public class DescribeLoadTasksRecordsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLoadTasksRecordsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeLoadTasksRecordsRequest setResourceOwnerAccount(String resourceOwnerAccount) {

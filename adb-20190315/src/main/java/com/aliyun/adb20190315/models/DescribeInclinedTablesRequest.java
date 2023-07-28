@@ -4,9 +4,38 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeInclinedTablesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The order in which queries are sorted in the JSON format based on the specified fields. Specify the fields used to sort the queries and the order type.</p>
+     * <br>
+     * <p>Example:</p>
+     * <br>
+     * <p>```</p>
+     * <br>
+     * <p>[</p>
+     * <br>
+     * <p>    {</p>
+     * <br>
+     * <p>        "Field":"Name",</p>
+     * <br>
+     * <p>        "Type":"Asc"</p>
+     * <br>
+     * <p>    }</p>
+     * <br>
+     * <p>]</p>
+     * <p>```</p>
+     * <br>
+     * <p>In the preceding code, Field indicates the field used to sort queries. Set the value of Field to Name.</p>
+     * <br>
+     * <p>Type indicates the order type. Valid values of Type: Desc and Asc. A value of Desc indicates a descending order. A value of Asc indicates an ascending order.</p>
+     * <br>
+     * <p>Both fields are not case-sensitive.</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -16,9 +45,21 @@ public class DescribeInclinedTablesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   30</p>
+     * <p>*   50</p>
+     * <p>*   100</p>
+     * <br>
+     * <p>Default value: 30.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -28,6 +69,12 @@ public class DescribeInclinedTablesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the table. Valid values:</p>
+     * <br>
+     * <p>*   FactTable</p>
+     * <p>*   DimensionTable</p>
+     */
     @NameInMap("TableType")
     public String tableType;
 

@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableAccessCountResponseBody extends TeaModel {
+    /**
+     * <p>Details about the table usage.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeTableAccessCountResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeTableAccessCountResponseBody extends TeaModel {
     }
 
     public static class DescribeTableAccessCountResponseBodyItems extends TeaModel {
+        /**
+         * <p>The number of accesses to the table.</p>
+         */
         @NameInMap("AccessCount")
         public String accessCount;
 
+        /**
+         * <p>The ID of the cluster to which the table belongs.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The date when the table was used.</p>
+         */
         @NameInMap("ReportDate")
         public String reportDate;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 
+        /**
+         * <p>The database to which the table belongs.</p>
+         */
         @NameInMap("TableSchema")
         public String tableSchema;
 

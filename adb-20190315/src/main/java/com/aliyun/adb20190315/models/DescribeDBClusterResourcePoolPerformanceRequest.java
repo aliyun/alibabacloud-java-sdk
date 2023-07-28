@@ -4,12 +4,38 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterResourcePoolPerformanceRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end of the time range to monitor the resource group. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The metrics of the resource group. You can enter multiple metrics at the same time to query the monitoring information. Separate multiple metrics with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **AnalyticDB_RP_CPU**: the average CPU utilization. Unit: %.</p>
+     * <p>*   **AnalyticDB_RP_RT**: the query response time (RT). Unit: milliseconds.</p>
+     * <p>*   **AnalyticDB_RP_QPS**: the queries per second (QPS). The value of this parameter must be a numeric value.</p>
+     * <p>*   **AnalyticDB_RP_WaitTime**: the query waiting time. Unit: milliseconds.</p>
+     * <p>*   **AnalyticDB_RP_OriginalNode**: the number of basic nodes in the resource group.</p>
+     * <p>*   **AnalyticDB_RP_ActualNode**: the number of scheduled nodes that are scaled out in the resource group.</p>
+     * <p>*   **AnalyticDB_RP_PlanNode**: the number of scheduled nodes to be scaled out in the resource group.</p>
+     * <p>*   **AnalyticDB_RP_TotalNode**: the total number of nodes in the resource group. Total number of nodes = Number of basic nodes + Number of scheduled nodes that are scaled out.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you leave this parameter empty, the monitoring information about all metrics is returned.</p>
+     * <br>
+     * <p>*   For more information about scaling plans, see [Create a resource scaling plan](~~189507~~).</p>
+     */
     @NameInMap("Key")
     public String key;
 
@@ -25,9 +51,23 @@ public class DescribeDBClusterResourcePoolPerformanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The names of the resource groups that you want to query. You can enter multiple names of resource groups. Separate multiple names with commas (,).</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   The value of this parameter is case-insensitive. For example, `USER_DEFAULT` and `user_default` specify the same resource group.</p>
+     * <br>
+     * <p>*   If you leave this parameter empty, the monitoring information about the `USER_DEFAULT` resource group is returned.</p>
+     */
     @NameInMap("ResourcePools")
     public String resourcePools;
 
+    /**
+     * <p>The beginning of the time range to monitor the resource group. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
+     * <br>
+     * <p>> You can view only the monitoring information about the resource groups within the last two days.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

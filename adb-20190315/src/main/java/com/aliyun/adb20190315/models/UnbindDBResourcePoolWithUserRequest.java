@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,9 +16,15 @@ public class UnbindDBResourcePoolWithUserRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the resource pool. You cannot unbind users from the default resource pool named USER_DEFAULT.</p>
+     */
     @NameInMap("PoolName")
     public String poolName;
 
+    /**
+     * <p>The user bound to the resource pool.</p>
+     */
     @NameInMap("PoolUser")
     public String poolUser;
 

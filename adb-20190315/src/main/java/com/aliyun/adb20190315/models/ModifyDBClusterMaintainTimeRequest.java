@@ -4,9 +4,19 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterMaintainTimeRequest extends TeaModel {
+    /**
+     * <p>The ID of cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The maintenance window of the cluster. It is in the hh:mmZ-hh:mmZ format.</p>
+     * <br>
+     * <p>>  The maintenance window lasts only 1 hour. Specify the beginning and end of the time range on the hour.</p>
+     */
     @NameInMap("MaintainTime")
     public String maintainTime;
 

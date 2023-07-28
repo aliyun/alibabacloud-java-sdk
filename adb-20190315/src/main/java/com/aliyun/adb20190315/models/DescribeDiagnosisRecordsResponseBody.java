@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The queried SQL statements.</p>
+     */
     @NameInMap("Querys")
     public java.util.List<DescribeDiagnosisRecordsResponseBodyQuerys> querys;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,72 +80,154 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisRecordsResponseBodyQuerys extends TeaModel {
+        /**
+         * <p>The source IP address.</p>
+         */
         @NameInMap("ClientIp")
         public String clientIp;
 
+        /**
+         * <p>The total execution duration. Unit: milliseconds.</p>
+         * <br>
+         * <p>>  This value is the cumulative value of the `QueuedTime`, `TotalPlanningTime`, and `ExecutionTime` parameters.</p>
+         */
         @NameInMap("Cost")
         public Long cost;
 
+        /**
+         * <p>The name of the database on which the SQL statement is executed.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The number of rows written to the table by an extract, transform, and load (ETL) task.</p>
+         */
         @NameInMap("EtlWriteRows")
         public Long etlWriteRows;
 
+        /**
+         * <p>The execution duration. Unit: milliseconds.</p>
+         */
         @NameInMap("ExecutionTime")
         public Long executionTime;
 
+        /**
+         * <p>The amount of returned data. Unit: bytes.</p>
+         */
         @NameInMap("OutputDataSize")
         public Long outputDataSize;
 
+        /**
+         * <p>The number of rows returned.</p>
+         */
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        /**
+         * <p>The peak memory. Unit: bytes.</p>
+         */
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
+        /**
+         * <p>The query ID.</p>
+         */
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>The amount of time that is consumed for queuing. Unit: milliseconds.</p>
+         */
         @NameInMap("QueueTime")
         public Long queueTime;
 
+        /**
+         * <p>The IP address and port number of the AnalyticDB for MySQL frontend node on which the SQL statement is executed.</p>
+         */
         @NameInMap("RcHost")
         public String rcHost;
 
+        /**
+         * <p>The execution duration rank of operators that are used in the SQL statement.</p>
+         * <br>
+         * <p>> This field is returned only for SQL statements that have the `Status` parameter set to `running`.</p>
+         */
         @NameInMap("ResourceCostRank")
         public Integer resourceCostRank;
 
+        /**
+         * <p>The resource group to which the SQL statement belongs.</p>
+         */
         @NameInMap("ResourceGroup")
         public String resourceGroup;
 
+        /**
+         * <p>The SQL statement.</p>
+         * <br>
+         * <p>> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the [DownloadDiagnosisRecords](~~308212~~) operation to download the diagnostic information about SQL statements that meet a condition in an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+         */
         @NameInMap("SQL")
         public String SQL;
 
+        /**
+         * <p>Indicates whether the SQL statement is truncated. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("SQLTruncated")
         public Boolean SQLTruncated;
 
+        /**
+         * <p>The maximum length of the SQL statement. 5120 is returned. Unit: character. SQL statements that exceed this limit are truncated.</p>
+         */
         @NameInMap("SQLTruncatedThreshold")
         public Long SQLTruncatedThreshold;
 
+        /**
+         * <p>The number of entries scanned.</p>
+         */
         @NameInMap("ScanRows")
         public Long scanRows;
 
+        /**
+         * <p>The amount of scanned data. Unit: bytes.</p>
+         */
         @NameInMap("ScanSize")
         public Long scanSize;
 
+        /**
+         * <p>The beginning of the time range in which the SQL statement is executed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The state of the SQL statement. Valid values:</p>
+         * <br>
+         * <p>*   **running**</p>
+         * <p>*   **finished**</p>
+         * <p>*   **failed**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The amount of time that is consumed to generate an execution plan. Unit: milliseconds.</p>
+         */
         @NameInMap("TotalPlanningTime")
         public Long totalPlanningTime;
 
+        /**
+         * <p>The total number of stages generated.</p>
+         */
         @NameInMap("TotalStages")
         public Integer totalStages;
 
+        /**
+         * <p>The username that is used to execute the SQL statement.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

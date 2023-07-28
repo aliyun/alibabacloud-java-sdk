@@ -4,21 +4,39 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Details about table statistics.</p>
+     */
     @NameInMap("Items")
     public DescribeTableStatisticsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,27 +94,53 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeTableStatisticsResponseBodyItemsTableStatisticRecords extends TeaModel {
+        /**
+         * <p>The total amount of cold data. Unit: byte.</p>
+         * <br>
+         * <p>>  The parameter is returned only when the engine version of the cluster is 3.1.3.4 or later.</p>
+         */
         @NameInMap("ColdDataSize")
         public Long coldDataSize;
 
+        /**
+         * <p>The amount of data in the table. Unit: byte.</p>
+         */
         @NameInMap("DataSize")
         public Long dataSize;
 
+        /**
+         * <p>The amount of data in indexes. Unit: byte.</p>
+         */
         @NameInMap("IndexSize")
         public Long indexSize;
 
+        /**
+         * <p>The number of partitions.</p>
+         */
         @NameInMap("PartitionCount")
         public Long partitionCount;
 
+        /**
+         * <p>The amount of data in primary key indexes. Unit: byte.</p>
+         */
         @NameInMap("PrimaryKeyIndexSize")
         public Long primaryKeyIndexSize;
 
+        /**
+         * <p>The number of rows in the table.</p>
+         */
         @NameInMap("RowCount")
         public Long rowCount;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

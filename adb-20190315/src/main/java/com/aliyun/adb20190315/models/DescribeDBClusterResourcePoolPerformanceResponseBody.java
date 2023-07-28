@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The queried monitoring information about the metrics.</p>
+     */
     @NameInMap("Performances")
     public java.util.List<DescribeDBClusterResourcePoolPerformanceResponseBodyPerformances> performances;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -65,9 +80,15 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     }
 
     public static class DescribeDBClusterResourcePoolPerformanceResponseBodyPerformancesResourcePoolPerformancesResourcePoolSeries extends TeaModel {
+        /**
+         * <p>The name of the metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Values")
         public java.util.List<String> values;
 
@@ -95,9 +116,15 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     }
 
     public static class DescribeDBClusterResourcePoolPerformanceResponseBodyPerformancesResourcePoolPerformances extends TeaModel {
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("ResourcePoolName")
         public String resourcePoolName;
 
+        /**
+         * <p>The sequential monitoring information about the resource groups.</p>
+         */
         @NameInMap("ResourcePoolSeries")
         public java.util.List<DescribeDBClusterResourcePoolPerformanceResponseBodyPerformancesResourcePoolPerformancesResourcePoolSeries> resourcePoolSeries;
 
@@ -125,12 +152,21 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
     }
 
     public static class DescribeDBClusterResourcePoolPerformanceResponseBodyPerformances extends TeaModel {
+        /**
+         * <p>The metric of the resource group.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The queried monitoring information about the resource groups.</p>
+         */
         @NameInMap("ResourcePoolPerformances")
         public java.util.List<DescribeDBClusterResourcePoolPerformanceResponseBodyPerformancesResourcePoolPerformances> resourcePoolPerformances;
 
+        /**
+         * <p>The unit of the metric value.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

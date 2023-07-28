@@ -4,12 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The order ID.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

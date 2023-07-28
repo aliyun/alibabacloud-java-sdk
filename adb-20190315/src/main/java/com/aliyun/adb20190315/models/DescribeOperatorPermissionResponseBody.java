@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeOperatorPermissionResponseBody extends TeaModel {
+    /**
+     * <p>The time when the authorization takes effect.</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The time when the authorization expires.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The type of authorization. Valid values: Control | Data.</p>
+     */
     @NameInMap("Privileges")
     public String privileges;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTablesResponseBody extends TeaModel {
+    /**
+     * <p>The list of tables.</p>
+     */
     @NameInMap("Items")
     public DescribeTablesResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class DescribeTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeTablesResponseBodyItemsTable extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("SchemaName")
         public String schemaName;
 
+        /**
+         * <p>The name of the table.</p>
+         */
         @NameInMap("TableName")
         public String tableName;
 

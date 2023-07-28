@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class KillProcessRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,6 +16,9 @@ public class KillProcessRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The unique ID of the process. You can call the [DescribeProcessList](~~190092~~) operation to obtain the ID.</p>
+     */
     @NameInMap("ProcessId")
     public String processId;
 

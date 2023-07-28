@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterDescriptionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

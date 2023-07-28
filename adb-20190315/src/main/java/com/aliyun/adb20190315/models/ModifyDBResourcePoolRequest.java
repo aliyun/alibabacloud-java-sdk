@@ -4,9 +4,26 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBResourcePoolRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The number of nodes.</p>
+     * <br>
+     * <p>*   Each node provides 16 cores and 64 GB memory.</p>
+     * <p>*   The amount of resources that you want to add to or remove from the cluster cannot exceed the total amount of resources in the cluster.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you do not specify this parameter, the original value is retained.</p>
+     * <br>
+     * <p>*   You must specify at least one of the QueryType and NodeNum parameters.</p>
+     */
     @NameInMap("NodeNum")
     public Integer nodeNum;
 
@@ -16,9 +33,20 @@ public class ModifyDBResourcePoolRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     */
     @NameInMap("PoolName")
     public String poolName;
 
+    /**
+     * <p>The mode in which SQL statements are executed. Valid values:</p>
+     * <br>
+     * <p>*   **batch**</p>
+     * <p>*   **interactive**</p>
+     * <br>
+     * <p>> If you do not specify this parameter, the original value is retained.</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 

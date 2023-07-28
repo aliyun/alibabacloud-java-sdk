@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DeleteElasticPlanRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the elastic plan.</p>
+     */
     @NameInMap("ElasticPlanName")
     public String elasticPlanName;
 

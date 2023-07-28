@@ -4,42 +4,112 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterRequest extends TeaModel {
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("BackupSetID")
     public String backupSetID;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value is case-sensitive and can contain a maximum of 64 ASCII characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The computing resources of the cluster. This parameter is required if the Mode parameter is set to **Flexible**.</p>
+     * <br>
+     * <p>>  You can call the [DescribeAvailableResource](~~190632~~) operation to query the computing resources that are available within a specific region.</p>
+     */
     @NameInMap("ComputeResource")
     public String computeResource;
 
+    /**
+     * <p>The edition of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Cluster**: reserved mode for Cluster Edition</p>
+     * <br>
+     * <p><!----></p>
+     * <br>
+     * <p>*   **MixedStorage**: elastic mode for Cluster Edition</p>
+     * <br>
+     * <p>>  If the DBClusterCategory parameter is set to Cluster, you must set the Mode parameter to Reserver. If the DBClusterCategory parameter is set to MixedStorage, you must set the Mode parameter to Flexible. Otherwise, the cluster fails to be created.</p>
+     */
     @NameInMap("DBClusterCategory")
     public String DBClusterCategory;
 
+    /**
+     * <p>The specification of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **C8**</p>
+     * <p>*   **C32**</p>
+     * <br>
+     * <p>>  This parameter is required if the Mode parameter is set to Reserver.</p>
+     */
     @NameInMap("DBClusterClass")
     public String DBClusterClass;
 
+    /**
+     * <p>The description of the cluster.</p>
+     * <br>
+     * <p>*   The description cannot start with `http://` or `https`.</p>
+     * <p>*   The description must be 2 to 256 characters in length.</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
+    /**
+     * <p>The network type of the cluster. Set the value to **VPC**.</p>
+     */
     @NameInMap("DBClusterNetworkType")
     public String DBClusterNetworkType;
 
+    /**
+     * <p>The version of the cluster. Set the value to **3.0**.</p>
+     */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
+    /**
+     * <p>The number of node groups. Valid values: 1 to 200 (integer).</p>
+     * <br>
+     * <p>>  This parameter is required if the Mode parameter is set to Reserver.</p>
+     */
     @NameInMap("DBNodeGroupCount")
     public String DBNodeGroupCount;
 
+    /**
+     * <p>The storage capacity of the cluster. Unit: GB.</p>
+     * <br>
+     * <p>*   Valid values when DBClusterClass is set to C8: 100 to 1000</p>
+     * <p>*   Valid values when DBClusterClass is set to C32: 100 to 8000</p>
+     * <br>
+     * <p>> * This parameter is required if the Mode parameter is set to Reserver.</p>
+     * <p>> * 1000 The storage capacity less than 1,000 GB increases in 100 GB increments. The storage capacity greater than 1,000 GB increases in 1,000 GB increments.</p>
+     */
     @NameInMap("DBNodeStorage")
     public String DBNodeStorage;
 
+    /**
+     * <p>The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).</p>
+     */
     @NameInMap("ElasticIOResource")
     public String elasticIOResource;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("ExecutorCount")
     public String executorCount;
 
+    /**
+     * <p>The mode of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Reserver**: the reserved mode</p>
+     * <p>*   **Flexible**: the elastic mode</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the cluster is in reserved mode.</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
@@ -49,15 +119,37 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The billing method of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go</p>
+     * <p>*   **Prepaid**: subscription</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The subscription type of the subscription cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Year**: subscription on a yearly basis</p>
+     * <p>*   **Month**: subscription on a monthly basis</p>
+     * <br>
+     * <p>>  This parameter is required if the PayType parameter is set to Prepaid.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the cluster belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -67,30 +159,65 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("RestoreType")
     public String restoreType;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("StorageResource")
     public String storageResource;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The subscription period of the subscription cluster.</p>
+     * <br>
+     * <p>*   Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)</p>
+     * <p>*   Valid values when Period is set to Month: 1 to 11 (integer)</p>
+     * <br>
+     * <p>> * This parameter is required if the PayType parameter is set to Prepaid.</p>
+     * <p>> * Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+     */
     @NameInMap("UsedTime")
     public String usedTime;
 
+    /**
+     * <p>The virtual private cloud (VPC) ID of the cluster.</p>
+     */
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <p>The vSwitch ID of the cluster.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The zone ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

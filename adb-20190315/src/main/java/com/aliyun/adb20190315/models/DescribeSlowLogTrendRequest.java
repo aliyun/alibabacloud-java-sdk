@@ -4,12 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. The maximum time range that can be specified is seven days. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -25,6 +34,9 @@ public class DescribeSlowLogTrendRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

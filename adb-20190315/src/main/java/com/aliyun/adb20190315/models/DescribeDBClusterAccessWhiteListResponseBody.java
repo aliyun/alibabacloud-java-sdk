@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of the information of IP whitelists.</p>
+     */
     @NameInMap("Items")
     public DescribeDBClusterAccessWhiteListResponseBodyItems items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,26 @@ public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAccessWhiteListResponseBodyItemsIPArray extends TeaModel {
+        /**
+         * <p>The attribute of the whitelist group. It is empty by default.</p>
+         * <br>
+         * <p>>  The groups with hidden attribute are not displayed in the console. The groups with hidden attribute are used to access DTS and PolarDB-X.</p>
+         */
         @NameInMap("DBClusterIPArrayAttribute")
         public String DBClusterIPArrayAttribute;
 
+        /**
+         * <p>The name of the IP address whitelist.</p>
+         * <br>
+         * <p>*   The name of the IP address whitelist group must be 2 to 32 characters in length and can contain lowercase letters, digits, and underscores (\_). The name must start with a lowercase letter and end with a digit or lowercase letter.</p>
+         * <p>*   You can create up to 50 whitelists for a cluster.</p>
+         */
         @NameInMap("DBClusterIPArrayName")
         public String DBClusterIPArrayName;
 
+        /**
+         * <p>The IP addresses in an IP address whitelist. A maximum of 1,000 IP addresses can be returned. These addresses are separated with commas (,).</p>
+         */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 

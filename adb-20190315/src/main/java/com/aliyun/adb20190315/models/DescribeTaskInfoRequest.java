@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTaskInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -19,6 +22,9 @@ public class DescribeTaskInfoRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public Integer taskId;
 

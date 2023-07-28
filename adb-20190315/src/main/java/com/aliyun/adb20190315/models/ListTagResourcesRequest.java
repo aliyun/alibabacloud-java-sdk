@@ -4,6 +4,9 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,9 +16,17 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the cluster. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The cluster ID. You can specify multiple cluster IDs. Valid values of N: 1 to 50.</p>
+     * <br>
+     * <p>> You must specify at least one of the following parameters: ResourceId.N and Tag.N.Key.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +36,15 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **cluster**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags that are added to clusters.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -109,9 +126,17 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify multiple tag keys. The tag key cannot be an empty string. Valid values of N: 1 to 20.</p>
+         * <br>
+         * <p>> You must specify at least one of the following parameters: ResourceId.N and Tag.N.Key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify multiple tag values. The tag value can be an empty string. Valid values of N: 1 to 20.</p>
+         */
         @NameInMap("Value")
         public String value;
 

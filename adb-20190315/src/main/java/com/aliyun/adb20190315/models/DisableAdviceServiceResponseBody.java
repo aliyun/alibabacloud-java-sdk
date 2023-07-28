@@ -4,9 +4,18 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DisableAdviceServiceResponseBody extends TeaModel {
+    /**
+     * <p>The message returned for the operation. Valid values:</p>
+     * <br>
+     * <p>*   **Success** is returned if the operation is successful.</p>
+     * <p>*   An error message is returned if the operation fails.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

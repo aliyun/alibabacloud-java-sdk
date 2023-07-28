@@ -4,15 +4,27 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the client IP addresses.</p>
+     */
     @NameInMap("AccessIpRecords")
     public java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> accessIpRecords;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the users.</p>
+     */
     @NameInMap("UserRecords")
     public java.util.List<DescribeConnectionCountRecordsResponseBodyUserRecords> userRecords;
 
@@ -54,9 +66,15 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeConnectionCountRecordsResponseBodyAccessIpRecords extends TeaModel {
+        /**
+         * <p>The IP address of the client used to connect to the cluster.</p>
+         */
         @NameInMap("AccessIp")
         public String accessIp;
 
+        /**
+         * <p>The number of connections.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
@@ -84,9 +102,15 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeConnectionCountRecordsResponseBodyUserRecords extends TeaModel {
+        /**
+         * <p>The number of connections.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The name of the user used to connect to the cluster.</p>
+         */
         @NameInMap("User")
         public String user;
 

@@ -13,6 +13,11 @@ public class DescribeComputeResourceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSqlPatternResponseBody extends TeaModel {
+    /**
+     * <p>Details about the SQL pattern.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeSqlPatternResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,54 +80,103 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
     }
 
     public static class DescribeSqlPatternResponseBodyItems extends TeaModel {
+        /**
+         * <p>The IP address of the client.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the `Type` parameter is set to `accessip`.</p>
+         */
         @NameInMap("AccessIP")
         public String accessIP;
 
+        /**
+         * <p>The average CPU time. Unit: milliseconds.</p>
+         */
         @NameInMap("AvgCpuTime")
         public String avgCpuTime;
 
+        /**
+         * <p>The average peak memory. Unit: KB.</p>
+         */
         @NameInMap("AvgPeakMemory")
         public String avgPeakMemory;
 
+        /**
+         * <p>The average scan size. Unit: KB.</p>
+         */
         @NameInMap("AvgScanSize")
         public String avgScanSize;
 
+        /**
+         * <p>The average number of stages.</p>
+         */
         @NameInMap("AvgStageCount")
         public String avgStageCount;
 
+        /**
+         * <p>The average number of tasks.</p>
+         */
         @NameInMap("AvgTaskCount")
         public String avgTaskCount;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The maximum CPU time. Unit: milliseconds.</p>
+         */
         @NameInMap("MaxCpuTime")
         public String maxCpuTime;
 
+        /**
+         * <p>The maximum peak memory. Unit: KB.</p>
+         */
         @NameInMap("MaxPeakMemory")
         public String maxPeakMemory;
 
+        /**
+         * <p>The maximum scan size. Unit: KB.</p>
+         */
         @NameInMap("MaxScanSize")
         public String maxScanSize;
 
+        /**
+         * <p>The maximum number of stages.</p>
+         */
         @NameInMap("MaxStageCount")
         public String maxStageCount;
 
+        /**
+         * <p>The maximum number of tasks.</p>
+         */
         @NameInMap("MaxTaskCount")
         public String maxTaskCount;
 
         /**
-         * <p>SQL Pattern。</p>
+         * <p>The SQL pattern.</p>
          */
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>The total number of queries.</p>
+         */
         @NameInMap("QueryCount")
         public String queryCount;
 
+        /**
+         * <p>The query date.</p>
+         */
         @NameInMap("ReportDate")
         public String reportDate;
 
+        /**
+         * <p>The username.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the `Type` parameter is left empty or set to `user`.</p>
+         */
         @NameInMap("User")
         public String user;
 

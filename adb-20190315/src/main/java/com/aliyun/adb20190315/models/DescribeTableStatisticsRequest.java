@@ -4,9 +4,24 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeTableStatisticsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query details about all AnalyticDB for MySQL clusters in a specific region, including cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The order in which to sort the retrieved records by field. Specify this value in the JSON format. The value is an ordered array that uses the order of the input array and contains `Field` and `Type`. Example: `[{ "Field":"TableName", "Type":"Asc" }]`.</p>
+     * <br>
+     * <p>*   In the example, `Field` indicates the field that is used to sort the retrieved records. Set the value of Field to `TableName`.</p>
+     * <br>
+     * <p>*   `Type` indicates the sort type. Valid values (case-insensitive):</p>
+     * <br>
+     * <p>    *   **Desc**: The entries are sorted in descending order.</p>
+     * <p>    *   **Asc**: The entries are sorted in ascending order.</p>
+     */
     @NameInMap("Order")
     public String order;
 
@@ -16,9 +31,15 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

@@ -4,12 +4,26 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class ModifyLogBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specifies whether to enable log backup. Valid values:</p>
+     * <br>
+     * <p>*   **Enable**</p>
+     * <p>*   **Disable**</p>
+     */
     @NameInMap("EnableBackupLog")
     public String enableBackupLog;
 
+    /**
+     * <p>The number of days for which to retain data backup files. Valid values: 7 to 730.</p>
+     * <br>
+     * <p>>  If you leave this parameter empty, the default value 7 is used.</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public String logBackupRetentionPeriod;
 

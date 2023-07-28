@@ -4,21 +4,39 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Details of the slow query logs.</p>
+     */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries returned on the current page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,57 +94,111 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogRecordsResponseBodyItemsSlowLogRecord extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The time when the execution started. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ExecutionStartTime")
         public String executionStartTime;
 
+        /**
+         * <p>The IP address of the client that is used to connect to the database.</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        /**
+         * <p>The amount of output data in the task. Unit: bytes.</p>
+         */
         @NameInMap("OutputSize")
         public String outputSize;
 
+        /**
+         * <p>The number of rows parsed by the SQL statement.</p>
+         */
         @NameInMap("ParseRowCounts")
         public Long parseRowCounts;
 
+        /**
+         * <p>The maximum memory usage when the SQL statement is executed. Unit: KB.</p>
+         */
         @NameInMap("PeakMemoryUsage")
         public String peakMemoryUsage;
 
+        /**
+         * <p>The amount of time consumed to generate execution plans. Unit: milliseconds.</p>
+         */
         @NameInMap("PlanningTime")
         public Long planningTime;
 
+        /**
+         * <p>The ID of the process.</p>
+         */
         @NameInMap("ProcessID")
         public String processID;
 
+        /**
+         * <p>The time consumed to execute the SQL statement. Unit: milliseconds.</p>
+         */
         @NameInMap("QueryTime")
         public Long queryTime;
 
+        /**
+         * <p>The queuing duration before the query is executed. Unit: milliseconds.</p>
+         */
         @NameInMap("QueueTime")
         public Long queueTime;
 
+        /**
+         * <p>The number of rows returned by the SQL statement.</p>
+         */
         @NameInMap("ReturnRowCounts")
         public Long returnRowCounts;
 
+        /**
+         * <p>Details of the SQL statement.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The number of rows scanned from a data source in the task.</p>
+         */
         @NameInMap("ScanRows")
         public Long scanRows;
 
+        /**
+         * <p>The amount of scanned data. Unit: KB.</p>
+         */
         @NameInMap("ScanSize")
         public String scanSize;
 
+        /**
+         * <p>The total amount of time consumed to scan data. It is an accumulated value collected from multiple TableScanNode nodes. Unit: milliseconds.</p>
+         */
         @NameInMap("ScanTime")
         public Long scanTime;
 
+        /**
+         * <p>The execution state of the SQL statement.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The username.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The accumulated CPU Time value of all operators collected from all nodes. Unit: milliseconds.</p>
+         */
         @NameInMap("WallTime")
         public Long wallTime;
 

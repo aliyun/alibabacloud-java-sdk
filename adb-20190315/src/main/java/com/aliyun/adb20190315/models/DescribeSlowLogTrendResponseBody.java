@@ -4,18 +4,33 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogTrendResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end time of the query. The end time must be later than the start time. The maximum time range that can be specified is seven days. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The information about the trend of slow query logs.</p>
+     */
     @NameInMap("Items")
     public DescribeSlowLogTrendResponseBodyItems items;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -65,9 +80,15 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeriesSeriesItem extends TeaModel {
+        /**
+         * <p>The name of the performance metric.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The values of the performance metric.</p>
+         */
         @NameInMap("Values")
         public String values;
 
@@ -114,12 +135,21 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItem extends TeaModel {
+        /**
+         * <p>The trend of slow query logs. The value is AnalyticDB_SlowLogTrend.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The performance metrics.</p>
+         */
         @NameInMap("Series")
         public DescribeSlowLogTrendResponseBodyItemsSlowLogTrendItemSeries series;
 
+        /**
+         * <p>The unit of performance metrics.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 

@@ -4,12 +4,23 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class UnbindDBResourceGroupWithUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The database account with which the resource group is associated.</p>
+     */
     @NameInMap("GroupUser")
     public String groupUser;
 

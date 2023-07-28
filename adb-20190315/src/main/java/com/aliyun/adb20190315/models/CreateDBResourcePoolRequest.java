@@ -4,9 +4,20 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateDBResourcePoolRequest extends TeaModel {
+    /**
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The number of nodes. Default value: 0.</p>
+     * <br>
+     * <p>*   Each node provides 16 cores and 64 GB memory.</p>
+     * <p>*   The total amount of resources provided by the nodes (number of nodes × 16 cores, number of nodes × 64 GB memory) cannot exceed the total amount of resources in the cluster. Set this parameter to a proper value.</p>
+     */
     @NameInMap("NodeNum")
     public Integer nodeNum;
 
@@ -16,9 +27,25 @@ public class CreateDBResourcePoolRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * <br>
+     * <p>*   The name can be up to 255 characters in length.</p>
+     * <p>*   The name must start with a letter or a digit.</p>
+     * <p>*   The name can contain letters, digits, hyphens (\_), and underscores (\_).</p>
+     */
     @NameInMap("PoolName")
     public String poolName;
 
+    /**
+     * <p>The mode in which to execute SQL statements.</p>
+     * <br>
+     * <p>*   **batch**</p>
+     * <br>
+     * <p>*   **interactive**</p>
+     * <br>
+     * <p>> For more information, see [Query execution modes](~~189502~~).</p>
+     */
     @NameInMap("QueryType")
     public String queryType;
 

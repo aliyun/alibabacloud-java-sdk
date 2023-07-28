@@ -4,9 +4,15 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticPlanResponseBody extends TeaModel {
+    /**
+     * <p>Details of the scaling plans.</p>
+     */
     @NameInMap("ElasticPlanList")
     public java.util.List<DescribeElasticPlanResponseBodyElasticPlanList> elasticPlanList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,36 +38,87 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
     }
 
     public static class DescribeElasticPlanResponseBodyElasticPlanList extends TeaModel {
+        /**
+         * <p>The number of nodes involved in the scaling plan.</p>
+         * <br>
+         * <p>*   If ElasticPlanType is set to **worker**, a value of 0 or null is returned.</p>
+         * <p>*   If ElasticPlanType is set to **executorcombineworker** or **executor**, a value greater than 0 is returned.</p>
+         */
         @NameInMap("ElasticNodeNum")
         public Integer elasticNodeNum;
 
+        /**
+         * <p>The type of the scaling plan. Default value: executorcombineworker. Valid values:</p>
+         * <br>
+         * <p>*   **worker**: scales only elastic I/O resources.</p>
+         * <p>*   **executor**: scales only computing resources.</p>
+         * <p>*   **executorcombineworker**: scales both elastic I/O resources and computing resources by proportion.</p>
+         */
         @NameInMap("ElasticPlanType")
         public String elasticPlanType;
 
+        /**
+         * <p>The resource specifications that can be scaled up by the scaling plan. Default value: 8 Core 64 GB. Valid values:</p>
+         * <br>
+         * <p>*   8 Core 64 GB</p>
+         * <p>*   16 Core 64 GB</p>
+         * <p>*   32 Core 64 GB</p>
+         * <p>*   64 Core 128 GB</p>
+         * <p>*   12 Core 96 GB</p>
+         * <p>*   24 Core 96 GB</p>
+         * <p>*   52 Core 86 GB</p>
+         */
         @NameInMap("ElasticPlanWorkerSpec")
         public String elasticPlanWorkerSpec;
 
+        /**
+         * <p>Specifies whether the scaling plan takes effect. Default value: true. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The scaling plan takes effect.</p>
+         * <p>*   **false**: The scaling plan does not take effect.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The end date of the scaling plan. This parameter is returned only if the end date of the scaling plan is set. The date is in the yyyy-MM-dd format.</p>
+         */
         @NameInMap("EndDay")
         public String endDay;
 
+        /**
+         * <p>The restoration time of the scaling plan. The interval between the scale-up time and the restoration time cannot be more than 24 hours. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The name of the scaling plan.</p>
+         */
         @NameInMap("PlanName")
         public String planName;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("ResourcePoolName")
         public String resourcePoolName;
 
+        /**
+         * <p>The start date of the scaling plan. This parameter is returned only if the start date of the scaling plan is set. The date is in the yyyy-MM-dd format.</p>
+         */
         @NameInMap("StartDay")
         public String startDay;
 
+        /**
+         * <p>The scale-up time of the scaling plan. The time is in the HH:mm:ss format.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The days of the week when you want to execute the scaling plan. Valid values: 0 to 6, which indicate Sunday to Saturday. Multiple values are separated by commas (,).</p>
+         */
         @NameInMap("WeeklyRepeat")
         public String weeklyRepeat;
 

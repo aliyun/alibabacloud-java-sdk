@@ -4,6 +4,11 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>Separate multiple clusters with commas (,).</p>
+     */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
 
@@ -13,15 +18,35 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than 0.</p>
+     * <br>
+     * <p>Default value: 1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   30</p>
+     * <p>*   50</p>
+     * <p>*   100</p>
+     * <br>
+     * <p>Default value: 30</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

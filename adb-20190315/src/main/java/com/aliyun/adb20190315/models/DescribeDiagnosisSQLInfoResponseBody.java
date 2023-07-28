@@ -4,12 +4,21 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
+    /**
+     * <p>Execution details of the SQL statement, including the SQL statement text, statistics, execution plan, and operator information.</p>
+     */
     @NameInMap("DiagnosisSQLInfo")
     public String diagnosisSQLInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Execution details of the query by stage.</p>
+     */
     @NameInMap("StageInfos")
     public java.util.List<DescribeDiagnosisSQLInfoResponseBodyStageInfos> stageInfos;
 
@@ -43,33 +52,57 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisSQLInfoResponseBodyStageInfos extends TeaModel {
+        /**
+         * <p>The total amount of input data in the stage. Unit: bytes.</p>
+         */
         @NameInMap("InputDataSize")
         public Long inputDataSize;
 
+        /**
+         * <p>The total number of input rows in the stage.</p>
+         */
         @NameInMap("InputRows")
         public Long inputRows;
 
+        /**
+         * <p>The total amount of time consumed by all operators in the stage. Unit: milliseconds.</p>
+         */
         @NameInMap("OperatorCost")
         public Long operatorCost;
 
+        /**
+         * <p>The total amount of output data in the stage. Unit: bytes.</p>
+         */
         @NameInMap("OutputDataSize")
         public Long outputDataSize;
 
+        /**
+         * <p>The total number of output rows in the stage.</p>
+         */
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        /**
+         * <p>The total peak memory of the stage. Unit: bytes.</p>
+         */
         @NameInMap("PeakMemory")
         public Long peakMemory;
 
+        /**
+         * <p>The execution progress of the stage.</p>
+         */
         @NameInMap("Progress")
         public Double progress;
 
         /**
-         * <p>StageID。</p>
+         * <p>The ID of the stage.</p>
          */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The state of the stage.</p>
+         */
         @NameInMap("State")
         public String state;
 

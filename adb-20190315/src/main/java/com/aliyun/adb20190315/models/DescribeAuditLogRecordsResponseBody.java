@@ -4,21 +4,39 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditLogRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The queried SQL audit logs.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeAuditLogRecordsResponseBodyItems> items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -76,33 +94,66 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeAuditLogRecordsResponseBodyItems extends TeaModel {
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("ConnId")
         public String connId;
 
+        /**
+         * <p>The name of the database on which the SQL statement was executed.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+         */
         @NameInMap("ExecuteTime")
         public String executeTime;
 
+        /**
+         * <p>The IP address and port number of the client that is used to execute the SQL statement.</p>
+         */
         @NameInMap("HostAddress")
         public String hostAddress;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("ProcessID")
         public String processID;
 
+        /**
+         * <p>Details of the SQL statement.</p>
+         */
         @NameInMap("SQLText")
         public String SQLText;
 
+        /**
+         * <p>The type of the SQL statement.</p>
+         */
         @NameInMap("SQLType")
         public String SQLType;
 
+        /**
+         * <p>Indicates whether the SQL statement was successfully executed. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Succeed")
         public String succeed;
 
+        /**
+         * <p>The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.</p>
+         */
         @NameInMap("TotalTime")
         public String totalTime;
 
+        /**
+         * <p>The name of the user who executed the SQL statement.</p>
+         */
         @NameInMap("User")
         public String user;
 
