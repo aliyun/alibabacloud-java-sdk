@@ -20,12 +20,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     public String billingStatus;
 
     /**
-     * <p>The VPC second-level domain name.</p>
-     */
-    @NameInMap("ClassicVpcSubDomain")
-    public String classicVpcSubDomain;
-
-    /**
      * <p>The products on Alibaba Cloud Marketplace.</p>
      */
     @NameInMap("CloudMarketCommodity")
@@ -126,12 +120,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The VIP list of the instance.</p>
-     */
-    @NameInMap("InstanceVipList")
-    public String instanceVipList;
-
-    /**
      * <p>The IPv6 status.</p>
      */
     @NameInMap("Ipv6Status")
@@ -166,12 +154,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
-
-    /**
-     * <p>The RPC mode.</p>
-     */
-    @NameInMap("RpcPattern")
-    public String rpcPattern;
 
     /**
      * <p>The runtime environment information.</p>
@@ -237,14 +219,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
     public String getBillingStatus() {
         return this.billingStatus;
-    }
-
-    public DescribeApiGroupResponseBody setClassicVpcSubDomain(String classicVpcSubDomain) {
-        this.classicVpcSubDomain = classicVpcSubDomain;
-        return this;
-    }
-    public String getClassicVpcSubDomain() {
-        return this.classicVpcSubDomain;
     }
 
     public DescribeApiGroupResponseBody setCloudMarketCommodity(Boolean cloudMarketCommodity) {
@@ -375,14 +349,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         return this.instanceType;
     }
 
-    public DescribeApiGroupResponseBody setInstanceVipList(String instanceVipList) {
-        this.instanceVipList = instanceVipList;
-        return this;
-    }
-    public String getInstanceVipList() {
-        return this.instanceVipList;
-    }
-
     public DescribeApiGroupResponseBody setIpv6Status(String ipv6Status) {
         this.ipv6Status = ipv6Status;
         return this;
@@ -437,14 +403,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeApiGroupResponseBody setRpcPattern(String rpcPattern) {
-        this.rpcPattern = rpcPattern;
-        return this;
-    }
-    public String getRpcPattern() {
-        return this.rpcPattern;
     }
 
     public DescribeApiGroupResponseBody setStageItems(DescribeApiGroupResponseBodyStageItems stageItems) {
@@ -591,9 +549,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("WildcardDomainPatterns")
         public String wildcardDomainPatterns;
 
-        @NameInMap("WssEnable")
-        public String wssEnable;
-
         public static DescribeApiGroupResponseBodyCustomDomainsDomainItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiGroupResponseBodyCustomDomainsDomainItem self = new DescribeApiGroupResponseBodyCustomDomainsDomainItem();
             return TeaModel.build(map, self);
@@ -709,14 +664,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
         public String getWildcardDomainPatterns() {
             return this.wildcardDomainPatterns;
-        }
-
-        public DescribeApiGroupResponseBodyCustomDomainsDomainItem setWssEnable(String wssEnable) {
-            this.wssEnable = wssEnable;
-            return this;
-        }
-        public String getWssEnable() {
-            return this.wssEnable;
         }
 
     }

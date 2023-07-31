@@ -19,6 +19,9 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Extend")
+    public String extend;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -68,6 +71,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateAppRequest setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public CreateAppRequest setSecurityToken(String securityToken) {

@@ -19,6 +19,9 @@ public class DescribeAppAttributesRequest extends TeaModel {
     @NameInMap("EnableTagAuth")
     public Boolean enableTagAuth;
 
+    @NameInMap("Extend")
+    public String extend;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -77,6 +80,14 @@ public class DescribeAppAttributesRequest extends TeaModel {
     }
     public Boolean getEnableTagAuth() {
         return this.enableTagAuth;
+    }
+
+    public DescribeAppAttributesRequest setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public DescribeAppAttributesRequest setPageNumber(Integer pageNumber) {

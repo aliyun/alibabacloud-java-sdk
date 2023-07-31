@@ -695,6 +695,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            query.put("Extend", request.extend);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
         }
@@ -2359,7 +2363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the public key.
+      * *   This operation is intended for API providers.
       *
       * @param request DescribeApiRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2398,7 +2402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the public key.
+      * *   This operation is intended for API providers.
       *
       * @param request DescribeApiRequest
       * @return DescribeApiResponse
@@ -3523,6 +3527,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.enableTagAuth)) {
             query.put("EnableTagAuth", request.enableTagAuth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            query.put("Extend", request.extend);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -6676,6 +6684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            query.put("Extend", request.extend);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
