@@ -35,6 +35,13 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The stack ID.</p>
+     * <br>
+     * <p>This parameter is used to query the estimated price in a configuration change scenario.</p>
+     * <br>
+     * <p>Assume that the specified stack contains only one Elastic Compute Service (ECS) instance and the instance type is ecs.s6-c1m2.large. You downgrade the instance type to ecs.s6-c1m1.small and specify a new ApsaraDB RDS instance in the template that is used for the price inquiry. The queried result is the sum of the downgrade refund of the ECS instance and the price of the new ApsaraDB RDS instance.</p>
+     */
     @NameInMap("StackId")
     public String stackId;
 
@@ -56,9 +63,17 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The ID of the scenario.</p>
+     */
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
+    /**
+     * <p>The region ID of the scenario. The default value is the same as the value of the RegionId parameter.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("TemplateScratchRegionId")
     public String templateScratchRegionId;
 

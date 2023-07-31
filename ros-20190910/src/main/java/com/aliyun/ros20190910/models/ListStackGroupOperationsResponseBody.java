@@ -17,13 +17,13 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of stack group operations.</p>
+     * <p>The stack group operations.</p>
      */
     @NameInMap("StackGroupOperations")
     public java.util.List<ListStackGroupOperationsResponseBodyStackGroupOperations> stackGroupOperations;
@@ -81,7 +81,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
 
     public static class ListStackGroupOperationsResponseBodyStackGroupOperations extends TeaModel {
         /**
-         * <p>The operation that was performed.</p>
+         * <p>The operation type.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -112,7 +112,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         public String operationDescription;
 
         /**
-         * <p>The ID of the operation.</p>
+         * <p>The operation ID.</p>
          */
         @NameInMap("OperationId")
         public String operationId;
@@ -130,7 +130,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         public String stackGroupName;
 
         /**
-         * <p>The status of the operation.</p>
+         * <p>The state of the operation.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>

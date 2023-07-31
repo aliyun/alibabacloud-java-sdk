@@ -39,13 +39,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters extends TeaModel {
         /**
-         * <p>The parameter name.</p>
+         * <p>The key of the parameter.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The parameter value.</p>
+         * <p>The value of the parameter.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -81,7 +81,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The filter for resource types.</p>
+         * <p>The resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -147,13 +147,13 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchSourceTag extends TeaModel {
         /**
-         * <p>The resource tags.</p>
+         * <p>The source tags.</p>
          */
         @NameInMap("ResourceTags")
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The filter for resource types.</p>
+         * <p>The resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -225,7 +225,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
 
     public static class GetTemplateScratchResponseBodyTemplateScratchStacks extends TeaModel {
         /**
-         * <p>The ID of the region to which the stack belongs.</p>
+         * <p>The region ID of the stack.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -294,15 +294,15 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * <p>The status code of the scenario that fails to be created.</p>
          * <br>
-         * <p>>  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.</p>
+         * <p>> This parameter is returned only if you set Status to GENERATE_FAILED.</p>
          */
         @NameInMap("FailedCode")
         public String failedCode;
 
         /**
-         * <p>The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+         * <p>The policy based on which the logical ID is generated. Valid values:</p>
          * <br>
-         * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+         * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
          * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
          * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
          */
@@ -310,7 +310,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public String logicalIdStrategy;
 
         /**
-         * <p>The parameters that are configured for the scenario.</p>
+         * <p>The preference parameters of the scenario.</p>
          */
         @NameInMap("PreferenceParameters")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchPreferenceParameters> preferenceParameters;
@@ -322,7 +322,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public GetTemplateScratchResponseBodyTemplateScratchSourceResourceGroup sourceResourceGroup;
 
         /**
-         * <p>The source resource.</p>
+         * <p>The source resources.</p>
          */
         @NameInMap("SourceResources")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchSourceResources> sourceResources;
@@ -334,19 +334,19 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         public GetTemplateScratchResponseBodyTemplateScratchSourceTag sourceTag;
 
         /**
-         * <p>The preset information about the stack.</p>
+         * <p>The preset information of the stack.</p>
          */
         @NameInMap("StackProvision")
         public GetTemplateScratchResponseBodyTemplateScratchStackProvision stackProvision;
 
         /**
-         * <p>The list of stacks that are associated with the scenario.</p>
+         * <p>The stacks that are associated with the scenario.</p>
          */
         @NameInMap("Stacks")
         public java.util.List<GetTemplateScratchResponseBodyTemplateScratchStacks> stacks;
 
         /**
-         * <p>The status of the scenario. Valid values:</p>
+         * <p>The state of the scenario. Valid values:</p>
          * <br>
          * <p>*   GENERATE_IN_PROGRESS: The scenario is being created.</p>
          * <p>*   GENERATE_COMPLETE: The scenario is created.</p>
@@ -358,7 +358,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
         /**
          * <p>The reason why the scenario fails to be created.</p>
          * <br>
-         * <p>>  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.</p>
+         * <p>> This parameter is returned only if you set Status to GENERATE_FAILED.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

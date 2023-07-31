@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteStackRequest extends TeaModel {
+    /**
+     * <p>The options for deleting the stack.</p>
+     */
     @NameInMap("DeleteOptions")
     public java.util.List<String> deleteOptions;
 

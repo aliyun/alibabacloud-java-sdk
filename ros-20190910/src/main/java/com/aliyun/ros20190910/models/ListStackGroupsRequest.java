@@ -5,21 +5,36 @@ import com.aliyun.tea.*;
 
 public class ListStackGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.</p>
-     * <br>
-     * <p>>  If you want to obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View basic information about a resource group](~~151181~~).</p>
-     */
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    /**
      * <p>The number of the page to return.</p>
      * <br>
      * <p>*   Pages start from page 1.</p>
      * <p>*   Default value: 1.</p>
      */
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>*   Valid values: 1 to 50.</p>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
+
+    /**
+     * <p>The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.</p>
+     * <br>
+     * <p>> To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](~~151181~~).</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The state of the stack group. If you do not specify this parameter, the stack groups in all states in the specified region are queried.</p>
@@ -29,28 +44,11 @@ public class ListStackGroupsRequest extends TeaModel {
      * <p>*   ACTIVE</p>
      * <p>*   DELETED</p>
      */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    /**
-     * <p>The tags.</p>
-     */
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 50.</p>
-     * <p>*   Default value: 10.</p>
-     */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The key of tag N that is added to the stack group.</p>
-     * <br>
-     * <p>>  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.</p>
+     * <p>The tags that are added to the stack group.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListStackGroupsRequestTags> tags;
@@ -110,13 +108,15 @@ public class ListStackGroupsRequest extends TeaModel {
 
     public static class ListStackGroupsRequestTags extends TeaModel {
         /**
-         * <p>The value of tag N that is added to the stack group.</p>
+         * <p>The key of the tag that is added to the stack group.</p>
+         * <br>
+         * <p>> Tags is optional. If you specify Tags, you must specify Tags.N.Key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The list of stack groups.</p>
+         * <p>The value of the tag that is added to the stack group.</p>
          */
         @NameInMap("Value")
         public String value;
