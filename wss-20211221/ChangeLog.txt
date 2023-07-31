@@ -1,3 +1,6 @@
+2023-07-31 Version: 1.1.2
+- OpenAPI DescribeDeliveryAddress.
+
 2023-07-27 Version: 1.1.1
 - API DescribeDeliveryAddress.
 
