@@ -25,6 +25,9 @@ public class ValidateTemplateRequest extends TeaModel {
     @NameInMap("TemplateURL")
     public String templateURL;
 
+    @NameInMap("UpdateInfoOptions")
+    public java.util.List<String> updateInfoOptions;
+
     /**
      * <p>The DataSource resource types.</p>
      */
@@ -66,6 +69,14 @@ public class ValidateTemplateRequest extends TeaModel {
     }
     public String getTemplateURL() {
         return this.templateURL;
+    }
+
+    public ValidateTemplateRequest setUpdateInfoOptions(java.util.List<String> updateInfoOptions) {
+        this.updateInfoOptions = updateInfoOptions;
+        return this;
+    }
+    public java.util.List<String> getUpdateInfoOptions() {
+        return this.updateInfoOptions;
     }
 
     public ValidateTemplateRequest setValidationOption(String validationOption) {

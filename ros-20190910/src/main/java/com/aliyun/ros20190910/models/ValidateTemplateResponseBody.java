@@ -301,11 +301,17 @@ public class ValidateTemplateResponseBody extends TeaModel {
         @NameInMap("ParametersCauseInterruptionIfModified")
         public java.util.List<String> parametersCauseInterruptionIfModified;
 
+        @NameInMap("ParametersCauseReplacementIfModified")
+        public java.util.List<String> parametersCauseReplacementIfModified;
+
         @NameInMap("ParametersConditionallyAllowedToBeModified")
         public java.util.List<String> parametersConditionallyAllowedToBeModified;
 
         @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         public java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
+
+        @NameInMap("ParametersConditionallyCauseReplacementIfModified")
+        public java.util.List<String> parametersConditionallyCauseReplacementIfModified;
 
         @NameInMap("ParametersNotAllowedToBeModified")
         public java.util.List<String> parametersNotAllowedToBeModified;
@@ -315,6 +321,9 @@ public class ValidateTemplateResponseBody extends TeaModel {
 
         @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         public java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
+
+        @NameInMap("ParametersUncertainlyCauseReplacementIfModified")
+        public java.util.List<String> parametersUncertainlyCauseReplacementIfModified;
 
         public static ValidateTemplateResponseBodyUpdateInfo build(java.util.Map<String, ?> map) throws Exception {
             ValidateTemplateResponseBodyUpdateInfo self = new ValidateTemplateResponseBodyUpdateInfo();
@@ -337,6 +346,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
             return this.parametersCauseInterruptionIfModified;
         }
 
+        public ValidateTemplateResponseBodyUpdateInfo setParametersCauseReplacementIfModified(java.util.List<String> parametersCauseReplacementIfModified) {
+            this.parametersCauseReplacementIfModified = parametersCauseReplacementIfModified;
+            return this;
+        }
+        public java.util.List<String> getParametersCauseReplacementIfModified() {
+            return this.parametersCauseReplacementIfModified;
+        }
+
         public ValidateTemplateResponseBodyUpdateInfo setParametersConditionallyAllowedToBeModified(java.util.List<String> parametersConditionallyAllowedToBeModified) {
             this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
             return this;
@@ -351,6 +368,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
         public java.util.List<String> getParametersConditionallyCauseInterruptionIfModified() {
             return this.parametersConditionallyCauseInterruptionIfModified;
+        }
+
+        public ValidateTemplateResponseBodyUpdateInfo setParametersConditionallyCauseReplacementIfModified(java.util.List<String> parametersConditionallyCauseReplacementIfModified) {
+            this.parametersConditionallyCauseReplacementIfModified = parametersConditionallyCauseReplacementIfModified;
+            return this;
+        }
+        public java.util.List<String> getParametersConditionallyCauseReplacementIfModified() {
+            return this.parametersConditionallyCauseReplacementIfModified;
         }
 
         public ValidateTemplateResponseBodyUpdateInfo setParametersNotAllowedToBeModified(java.util.List<String> parametersNotAllowedToBeModified) {
@@ -375,6 +400,14 @@ public class ValidateTemplateResponseBody extends TeaModel {
         }
         public java.util.List<String> getParametersUncertainlyCauseInterruptionIfModified() {
             return this.parametersUncertainlyCauseInterruptionIfModified;
+        }
+
+        public ValidateTemplateResponseBodyUpdateInfo setParametersUncertainlyCauseReplacementIfModified(java.util.List<String> parametersUncertainlyCauseReplacementIfModified) {
+            this.parametersUncertainlyCauseReplacementIfModified = parametersUncertainlyCauseReplacementIfModified;
+            return this;
+        }
+        public java.util.List<String> getParametersUncertainlyCauseReplacementIfModified() {
+            return this.parametersUncertainlyCauseReplacementIfModified;
         }
 
     }

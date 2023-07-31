@@ -36,6 +36,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("DryRunOptions")
+    public java.util.List<String> dryRunOptions;
+
     /**
      * <p>The maximum number of concurrent operations that can be performed on resources.</p>
      * <br>
@@ -234,6 +237,14 @@ public class UpdateStackRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public UpdateStackRequest setDryRunOptions(java.util.List<String> dryRunOptions) {
+        this.dryRunOptions = dryRunOptions;
+        return this;
+    }
+    public java.util.List<String> getDryRunOptions() {
+        return this.dryRunOptions;
     }
 
     public UpdateStackRequest setParallelism(Long parallelism) {

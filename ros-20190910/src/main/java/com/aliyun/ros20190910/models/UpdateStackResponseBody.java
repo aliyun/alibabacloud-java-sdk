@@ -68,6 +68,9 @@ public class UpdateStackResponseBody extends TeaModel {
         @NameInMap("ParametersCauseInterruptionIfModified")
         public java.util.List<String> parametersCauseInterruptionIfModified;
 
+        @NameInMap("ParametersCauseReplacementIfModified")
+        public java.util.List<String> parametersCauseReplacementIfModified;
+
         /**
          * <p>The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.</p>
          */
@@ -83,6 +86,9 @@ public class UpdateStackResponseBody extends TeaModel {
          */
         @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         public java.util.List<String> parametersConditionallyCauseInterruptionIfModified;
+
+        @NameInMap("ParametersConditionallyCauseReplacementIfModified")
+        public java.util.List<String> parametersConditionallyCauseReplacementIfModified;
 
         /**
          * <p>The parameters that cannot be modified. If you change only values of the parameters in a stack template and use the template to update the stack, validation errors are caused.</p>
@@ -106,6 +112,9 @@ public class UpdateStackResponseBody extends TeaModel {
         @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         public java.util.List<String> parametersUncertainlyCauseInterruptionIfModified;
 
+        @NameInMap("ParametersUncertainlyCauseReplacementIfModified")
+        public java.util.List<String> parametersUncertainlyCauseReplacementIfModified;
+
         public static UpdateStackResponseBodyDryRunResult build(java.util.Map<String, ?> map) throws Exception {
             UpdateStackResponseBodyDryRunResult self = new UpdateStackResponseBodyDryRunResult();
             return TeaModel.build(map, self);
@@ -127,6 +136,14 @@ public class UpdateStackResponseBody extends TeaModel {
             return this.parametersCauseInterruptionIfModified;
         }
 
+        public UpdateStackResponseBodyDryRunResult setParametersCauseReplacementIfModified(java.util.List<String> parametersCauseReplacementIfModified) {
+            this.parametersCauseReplacementIfModified = parametersCauseReplacementIfModified;
+            return this;
+        }
+        public java.util.List<String> getParametersCauseReplacementIfModified() {
+            return this.parametersCauseReplacementIfModified;
+        }
+
         public UpdateStackResponseBodyDryRunResult setParametersConditionallyAllowedToBeModified(java.util.List<String> parametersConditionallyAllowedToBeModified) {
             this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
             return this;
@@ -141,6 +158,14 @@ public class UpdateStackResponseBody extends TeaModel {
         }
         public java.util.List<String> getParametersConditionallyCauseInterruptionIfModified() {
             return this.parametersConditionallyCauseInterruptionIfModified;
+        }
+
+        public UpdateStackResponseBodyDryRunResult setParametersConditionallyCauseReplacementIfModified(java.util.List<String> parametersConditionallyCauseReplacementIfModified) {
+            this.parametersConditionallyCauseReplacementIfModified = parametersConditionallyCauseReplacementIfModified;
+            return this;
+        }
+        public java.util.List<String> getParametersConditionallyCauseReplacementIfModified() {
+            return this.parametersConditionallyCauseReplacementIfModified;
         }
 
         public UpdateStackResponseBodyDryRunResult setParametersNotAllowedToBeModified(java.util.List<String> parametersNotAllowedToBeModified) {
@@ -165,6 +190,14 @@ public class UpdateStackResponseBody extends TeaModel {
         }
         public java.util.List<String> getParametersUncertainlyCauseInterruptionIfModified() {
             return this.parametersUncertainlyCauseInterruptionIfModified;
+        }
+
+        public UpdateStackResponseBodyDryRunResult setParametersUncertainlyCauseReplacementIfModified(java.util.List<String> parametersUncertainlyCauseReplacementIfModified) {
+            this.parametersUncertainlyCauseReplacementIfModified = parametersUncertainlyCauseReplacementIfModified;
+            return this;
+        }
+        public java.util.List<String> getParametersUncertainlyCauseReplacementIfModified() {
+            return this.parametersUncertainlyCauseReplacementIfModified;
         }
 
     }

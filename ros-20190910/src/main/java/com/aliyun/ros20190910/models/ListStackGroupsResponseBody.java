@@ -4,29 +4,32 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the stack group.</p>
+     * <p>The stack groups.</p>
      */
     @NameInMap("StackGroups")
     public java.util.List<ListStackGroupsResponseBodyStackGroups> stackGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total number of stack groups.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -78,6 +81,17 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     public static class ListStackGroupsResponseBodyStackGroupsAutoDeployment extends TeaModel {
         /**
+         * <p>Indicates whether automatic deployment is enabled.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after automatic deployment is enabled, Resource Orchestration Service (ROS) automatically adds the stack instances in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stack instances in the stack group from the specified region of the member.</p>
+         * <p>*   false: Automatic deployment is disabled. After you disable automatic deployment, the stack instances remain unchanged when you change the member in the folder.</p>
+         */
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        /**
          * <p>Indicates whether the stacks within a member are retained when you delete the member from the folder.</p>
          * <br>
          * <p>Valid values:</p>
@@ -85,13 +99,7 @@ public class ListStackGroupsResponseBody extends TeaModel {
          * <p>*   true</p>
          * <p>*   false</p>
          * <br>
-         * <p>>  This parameter is returned only if the Enabled parameter is set to true.</p>
-         */
-        @NameInMap("Enabled")
-        public Boolean enabled;
-
-        /**
-         * <p>The total number of stack groups.</p>
+         * <p>> This parameter is returned only if Enabled is set to true.</p>
          */
         @NameInMap("RetainStacksOnAccountRemoval")
         public Boolean retainStacksOnAccountRemoval;
@@ -121,13 +129,13 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     public static class ListStackGroupsResponseBodyStackGroupsTags extends TeaModel {
         /**
-         * <p>The value of the tag that is added to the stack group.</p>
+         * <p>The key of the tag that is added to the stack group.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The value of the tag that is added to the stack group.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -157,18 +165,44 @@ public class ListStackGroupsResponseBody extends TeaModel {
 
     public static class ListStackGroupsResponseBodyStackGroups extends TeaModel {
         /**
-         * <p>Indicates whether automatic deployment is enabled.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, ROS automatically adds the stacks in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stacks in the stack group from the specified region of the member.</p>
-         * <p>*   false: Automatic deployment is disabled. After you disable automatic deployment, the stacks remain unchanged when you change the member in the folder.</p>
+         * <p>The information about automatic deployment settings.</p>
          */
         @NameInMap("AutoDeployment")
         public ListStackGroupsResponseBodyStackGroupsAutoDeployment autoDeployment;
 
         /**
-         * <p>The state of the stack group on which the last successful drift detection was performed.</p>
+         * <p>The description of the stack group.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The time when the most recent successful drift detection was performed on the stack group.</p>
+         */
+        @NameInMap("DriftDetectionTime")
+        public String driftDetectionTime;
+
+        /**
+         * <p>The permission model of the stack group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SELF_MANAGED</p>
+         * <p>*   SERVICE_MANAGED</p>
+         * <br>
+         * <p>> For more information about the permission models of stack groups, see [Overview](~~154578~~).</p>
+         */
+        @NameInMap("PermissionModel")
+        public String permissionModel;
+
+        /**
+         * <p>The ID of the resource group.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The drift state of the stack group on which the most recent successful drift detection was performed.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -176,39 +210,20 @@ public class ListStackGroupsResponseBody extends TeaModel {
          * <p>*   NOT_CHECKED: No drift detection is performed on the stack group.</p>
          * <p>*   IN_SYNC: No drifts are detected on the stack group.</p>
          */
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("StackGroupDriftStatus")
+        public String stackGroupDriftStatus;
 
         /**
-         * <p>The description of the stack group.</p>
+         * <p>The ID of the stack group.</p>
          */
-        @NameInMap("DriftDetectionTime")
-        public String driftDetectionTime;
-
-        /**
-         * <p>The information about automatic deployment settings.</p>
-         */
-        @NameInMap("PermissionModel")
-        public String permissionModel;
-
-        /**
-         * <p>The permission model.</p>
-         * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   SELF_MANAGED: self-managed permission model</p>
-         * <p>*   SERVICE_MANAGED: service-managed permission model</p>
-         * <br>
-         * <p>>  For more information about the permission models of stack groups, see [Overview](~~154578~~).</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
+        @NameInMap("StackGroupId")
+        public String stackGroupId;
 
         /**
          * <p>The name of the stack group.</p>
          */
-        @NameInMap("StackGroupDriftStatus")
-        public String stackGroupDriftStatus;
+        @NameInMap("StackGroupName")
+        public String stackGroupName;
 
         /**
          * <p>The state of the stack group.</p>
@@ -218,23 +233,11 @@ public class ListStackGroupsResponseBody extends TeaModel {
          * <p>*   ACTIVE</p>
          * <p>*   DELETED</p>
          */
-        @NameInMap("StackGroupId")
-        public String stackGroupId;
-
-        /**
-         * <p>The tags that are added to the stack group.</p>
-         */
-        @NameInMap("StackGroupName")
-        public String stackGroupName;
-
-        /**
-         * <p>The time when the last successful drift detection was performed on the stack group.</p>
-         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The key of the tag that is added to the stack group.</p>
+         * <p>The tags that are added to the stack group.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListStackGroupsResponseBodyStackGroupsTags> tags;
