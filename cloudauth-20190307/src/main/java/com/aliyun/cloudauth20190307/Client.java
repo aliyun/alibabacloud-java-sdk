@@ -709,6 +709,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InitFaceVerifyResponse initFaceVerifyWithOptions(InitFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.birthday)) {
+            query.put("Birthday", request.birthday);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.callbackToken)) {
             query.put("CallbackToken", request.callbackToken);
         }
@@ -731,6 +735,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.certifyId)) {
             query.put("CertifyId", request.certifyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.certifyUrlStyle)) {
+            query.put("CertifyUrlStyle", request.certifyUrlStyle);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.certifyUrlType)) {
@@ -757,6 +765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Mobile", request.mobile);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
             query.put("OssBucketName", request.ossBucketName);
         }
@@ -777,6 +789,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductCode", request.productCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.readImg)) {
+            query.put("ReadImg", request.readImg);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.returnUrl)) {
             query.put("ReturnUrl", request.returnUrl);
         }
@@ -791,6 +807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.validityDate)) {
+            query.put("ValidityDate", request.validityDate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.voluntaryCustomizedContent)) {

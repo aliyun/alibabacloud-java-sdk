@@ -7,6 +7,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("AuthId")
     public String authId;
 
+    @NameInMap("Birthday")
+    public String birthday;
+
     @NameInMap("CallbackToken")
     public String callbackToken;
 
@@ -24,6 +27,9 @@ public class InitFaceVerifyRequest extends TeaModel {
 
     @NameInMap("CertifyId")
     public String certifyId;
+
+    @NameInMap("CertifyUrlStyle")
+    public String certifyUrlStyle;
 
     @NameInMap("CertifyUrlType")
     public String certifyUrlType;
@@ -49,6 +55,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("Mobile")
     public String mobile;
 
+    @NameInMap("Mode")
+    public String mode;
+
     @NameInMap("Model")
     public String model;
 
@@ -67,6 +76,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("ReadImg")
+    public String readImg;
+
     @NameInMap("ReturnUrl")
     public String returnUrl;
 
@@ -78,6 +90,9 @@ public class InitFaceVerifyRequest extends TeaModel {
 
     @NameInMap("UserId")
     public String userId;
+
+    @NameInMap("ValidityDate")
+    public String validityDate;
 
     @NameInMap("VoluntaryCustomizedContent")
     public String voluntaryCustomizedContent;
@@ -93,6 +108,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getAuthId() {
         return this.authId;
+    }
+
+    public InitFaceVerifyRequest setBirthday(String birthday) {
+        this.birthday = birthday;
+        return this;
+    }
+    public String getBirthday() {
+        return this.birthday;
     }
 
     public InitFaceVerifyRequest setCallbackToken(String callbackToken) {
@@ -141,6 +164,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getCertifyId() {
         return this.certifyId;
+    }
+
+    public InitFaceVerifyRequest setCertifyUrlStyle(String certifyUrlStyle) {
+        this.certifyUrlStyle = certifyUrlStyle;
+        return this;
+    }
+    public String getCertifyUrlStyle() {
+        return this.certifyUrlStyle;
     }
 
     public InitFaceVerifyRequest setCertifyUrlType(String certifyUrlType) {
@@ -207,6 +238,14 @@ public class InitFaceVerifyRequest extends TeaModel {
         return this.mobile;
     }
 
+    public InitFaceVerifyRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
     public InitFaceVerifyRequest setModel(String model) {
         this.model = model;
         return this;
@@ -255,6 +294,14 @@ public class InitFaceVerifyRequest extends TeaModel {
         return this.productCode;
     }
 
+    public InitFaceVerifyRequest setReadImg(String readImg) {
+        this.readImg = readImg;
+        return this;
+    }
+    public String getReadImg() {
+        return this.readImg;
+    }
+
     public InitFaceVerifyRequest setReturnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
         return this;
@@ -285,6 +332,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public InitFaceVerifyRequest setValidityDate(String validityDate) {
+        this.validityDate = validityDate;
+        return this;
+    }
+    public String getValidityDate() {
+        return this.validityDate;
     }
 
     public InitFaceVerifyRequest setVoluntaryCustomizedContent(String voluntaryCustomizedContent) {

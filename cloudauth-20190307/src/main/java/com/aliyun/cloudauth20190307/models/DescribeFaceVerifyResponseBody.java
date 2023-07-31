@@ -72,6 +72,9 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         @NameInMap("SubCode")
         public String subCode;
 
+        @NameInMap("Success")
+        public String success;
+
         public static DescribeFaceVerifyResponseBodyResultObject build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaceVerifyResponseBodyResultObject self = new DescribeFaceVerifyResponseBodyResultObject();
             return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
         }
         public String getSubCode() {
             return this.subCode;
+        }
+
+        public DescribeFaceVerifyResponseBodyResultObject setSuccess(String success) {
+            this.success = success;
+            return this;
+        }
+        public String getSuccess() {
+            return this.success;
         }
 
     }
