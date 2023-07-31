@@ -121,12 +121,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>弹性网卡ID</p>
-         */
-        @NameInMap("NetworkInterfaceId")
-        public String networkInterfaceId;
-
-        /**
          * <p>安全组的ID，同一个安全组内的服务可以互相访问。</p>
          */
         @NameInMap("SecurityGroupId")
@@ -155,14 +149,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getCidrBlock() {
             return this.cidrBlock;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute setNetworkInterfaceId(String networkInterfaceId) {
-            this.networkInterfaceId = networkInterfaceId;
-            return this;
-        }
-        public String getNetworkInterfaceId() {
-            return this.networkInterfaceId;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttributeNetworkInterfaceAttributesNetworkInterfaceAttribute setSecurityGroupId(String securityGroupId) {
@@ -331,9 +317,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("UserVswitchId")
         public String userVswitchId;
-
-        @NameInMap("VipTypeList")
-        public String vipTypeList;
 
         @NameInMap("VpcEgressAddress")
         public String vpcEgressAddress;
@@ -636,14 +619,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getUserVswitchId() {
             return this.userVswitchId;
-        }
-
-        public DescribeInstancesResponseBodyInstancesInstanceAttribute setVipTypeList(String vipTypeList) {
-            this.vipTypeList = vipTypeList;
-            return this;
-        }
-        public String getVipTypeList() {
-            return this.vipTypeList;
         }
 
         public DescribeInstancesResponseBodyInstancesInstanceAttribute setVpcEgressAddress(String vpcEgressAddress) {

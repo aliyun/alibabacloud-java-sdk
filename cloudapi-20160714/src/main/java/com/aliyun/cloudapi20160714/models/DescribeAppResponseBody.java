@@ -16,6 +16,9 @@ public class DescribeAppResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Extend")
+    public String extend;
+
     @NameInMap("ModifiedTime")
     public String modifiedTime;
 
@@ -57,6 +60,14 @@ public class DescribeAppResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeAppResponseBody setExtend(String extend) {
+        this.extend = extend;
+        return this;
+    }
+    public String getExtend() {
+        return this.extend;
     }
 
     public DescribeAppResponseBody setModifiedTime(String modifiedTime) {

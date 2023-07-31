@@ -49,9 +49,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
     @NameInMap("RequestParameters")
     public DescribeApiDocResponseBodyRequestParameters requestParameters;
 
-    @NameInMap("ResultDescriptions")
-    public DescribeApiDocResponseBodyResultDescriptions resultDescriptions;
-
     @NameInMap("ResultSample")
     public String resultSample;
 
@@ -187,14 +184,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
     public DescribeApiDocResponseBodyRequestParameters getRequestParameters() {
         return this.requestParameters;
-    }
-
-    public DescribeApiDocResponseBody setResultDescriptions(DescribeApiDocResponseBodyResultDescriptions resultDescriptions) {
-        this.resultDescriptions = resultDescriptions;
-        return this;
-    }
-    public DescribeApiDocResponseBodyResultDescriptions getResultDescriptions() {
-        return this.resultDescriptions;
     }
 
     public DescribeApiDocResponseBody setResultSample(String resultSample) {
@@ -576,121 +565,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApiDocResponseBodyRequestParametersRequestParameter> getRequestParameter() {
             return this.requestParameter;
-        }
-
-    }
-
-    public static class DescribeApiDocResponseBodyResultDescriptionsResultDescription extends TeaModel {
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("HasChild")
-        public Boolean hasChild;
-
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Mandatory")
-        public Boolean mandatory;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Pid")
-        public String pid;
-
-        @NameInMap("Type")
-        public String type;
-
-        public static DescribeApiDocResponseBodyResultDescriptionsResultDescription build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApiDocResponseBodyResultDescriptionsResultDescription self = new DescribeApiDocResponseBodyResultDescriptionsResultDescription();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setHasChild(Boolean hasChild) {
-            this.hasChild = hasChild;
-            return this;
-        }
-        public Boolean getHasChild() {
-            return this.hasChild;
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setMandatory(Boolean mandatory) {
-            this.mandatory = mandatory;
-            return this;
-        }
-        public Boolean getMandatory() {
-            return this.mandatory;
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setPid(String pid) {
-            this.pid = pid;
-            return this;
-        }
-        public String getPid() {
-            return this.pid;
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptionsResultDescription setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class DescribeApiDocResponseBodyResultDescriptions extends TeaModel {
-        @NameInMap("ResultDescription")
-        public java.util.List<DescribeApiDocResponseBodyResultDescriptionsResultDescription> resultDescription;
-
-        public static DescribeApiDocResponseBodyResultDescriptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeApiDocResponseBodyResultDescriptions self = new DescribeApiDocResponseBodyResultDescriptions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeApiDocResponseBodyResultDescriptions setResultDescription(java.util.List<DescribeApiDocResponseBodyResultDescriptionsResultDescription> resultDescription) {
-            this.resultDescription = resultDescription;
-            return this;
-        }
-        public java.util.List<DescribeApiDocResponseBodyResultDescriptionsResultDescription> getResultDescription() {
-            return this.resultDescription;
         }
 
     }

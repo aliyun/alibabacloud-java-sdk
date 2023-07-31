@@ -126,6 +126,9 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Extend")
+        public String extend;
+
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
@@ -167,6 +170,14 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeAppAttributesResponseBodyAppsAppAttribute setExtend(String extend) {
+            this.extend = extend;
+            return this;
+        }
+        public String getExtend() {
+            return this.extend;
         }
 
         public DescribeAppAttributesResponseBodyAppsAppAttribute setModifiedTime(String modifiedTime) {
