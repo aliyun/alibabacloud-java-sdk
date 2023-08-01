@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel {
     /**
-     * <p>Details about the maintenance attributes.</p>
+     * <p>The maintenance attributes.</p>
      */
     @NameInMap("MaintenanceAttributes")
     public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -106,7 +106,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         public String defaultValue;
 
         /**
-         * <p>Details about the supported maintenance actions.</p>
+         * <p>The supported maintenance actions.</p>
          */
         @NameInMap("SupportedValues")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
@@ -114,9 +114,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         /**
          * <p>The current maintenance action. Valid values:</p>
          * <br>
-         * <p>*   Stop: The instance goes down.</p>
-         * <p>*   AutoRecover: The instance is automatically recovered.</p>
-         * <p>*   AutoRedeploy: Failover is performed on the instance, which may damage the data disks.</p>
+         * <p>*   Stop: stops the instance.</p>
+         * <p>*   AutoRecover: automatically recovers the instance.</p>
+         * <p>*   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -215,19 +215,19 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>Details about the maintenance window.</p>
+         * <p>The maintenance windows.</p>
          */
         @NameInMap("MaintenanceWindows")
         public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;
 
         /**
-         * <p>Indicates whether an event notification was sent before instance shutdown.</p>
+         * <p>Indicates whether an event notification was sent before maintenance.</p>
          */
         @NameInMap("NotifyOnMaintenance")
         public Boolean notifyOnMaintenance;

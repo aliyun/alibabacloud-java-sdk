@@ -5,16 +5,39 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The ID of the order.</p>
+     * <br>
+     * <p>> This parameter is returned only when you resize subscription disks.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the disk. You can call the [DescribeDisks](~~25514~~) operation to query the ID of a disk.</p>
+     * <p>The method that you want to use to resize the disk. Default value: offline. Valid values:</p>
+     * <br>
+     * <p>*   offline: resizes the disk offline. After you resize a disk offline, you must restart its associated instance by using the Elastic Compute Service (ECS) console or by calling the [RebootInstance](~~25502~~) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).</p>
+     * <p>*   online: resizes the disk online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance. Ultra disks, standard SSDs, and ESSDs can be resized online.</p>
      */
     @NameInMap("DiskId")
     public String diskId;
+
+    /**
+     * <p>32768</p>
+     */
+    @NameInMap("NewSize")
+    public Integer newSize;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <p>The new disk capacity. Unit: GiB. Valid values:</p>
@@ -37,27 +60,6 @@ public class ResizeDiskRequest extends TeaModel {
      * <p>    *   Basic disk (cloud): 5 to 2000.</p>
      * <br>
      * <p>The new disk capacity must be greater than the original disk capacity.</p>
-     */
-    @NameInMap("NewSize")
-    public Integer newSize;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    /**
-     * <p>The method that you want to use to resize the disk. Default value: offline. Valid values:</p>
-     * <br>
-     * <p>*   offline: resizes the disk offline. After you resize a disk offline, you must restart its associated instance by using the Elastic Compute Service (ECS) console or by calling the [RebootInstance](~~25502~~) operation to make the resizing operation take effect. For information about how to restart an ECS instance in the ECS console, see [Restart an instance](~~25440~~).</p>
-     * <p>*   online: resizes the disk online. After you resize a disk online, the resizing operation takes effect immediately and you do not need to restart the instance. Ultra disks, standard SSDs, and ESSDs can be resized online.</p>
      */
     @NameInMap("Type")
     public String type;

@@ -5,52 +5,49 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the security group.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</p>
+     * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <br>
+     * <p>Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     * <br>
-     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter is deprecated.</p>
      */
     @NameInMap("FuzzyQuery")
     public Boolean fuzzyQuery;
 
     /**
-     * <p>The ID of the resource group to which the security groups belong. When you use this parameter to filter resources, the number of resources in the specified resource group cannot exceed 1,000. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.</p>
-     * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of how you specify this parameter.</p>
+     * <p>> This parameter is deprecated.</p>
      */
     @NameInMap("IsQueryEcsCount")
     public Boolean isQueryEcsCount;
 
     /**
-     * <p>The network type of the security group. Valid values:</p>
+     * <p>The maximum number of entries per page. If you specify this parameter, both `MaxResults` and `NextToken` are used for a paged query.</p>
      * <br>
-     * <p>*   vpc: virtual private cloud (VPC)</p>
-     * <p>*   classic: classic network</p>
+     * <p>Maximum value: 100.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The name of the security group.</p>
+     * <p>The network type of the security group. Valid values:</p>
+     * <br>
+     * <p>*   vpc</p>
+     * <p>*   classic</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
-     * <p>The maximum number of entries to return on each page. If you specify the MaxResults parameter, the `MaxResults` and `NextToken` parameters are used for a paged query.</p>
-     * <br>
-     * <p>Maximum value: 100.</p>
-     * <br>
-     * <p>Default value: 10.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -62,31 +59,39 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Maximum value: 50.</p>
+     * <p>Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 1.</p>
      * <br>
-     * <p>> This parameter will be removed in the future. We recommend that you use the NextToken and MaxResults parameters for a paged query.</p>
+     * <p>> This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     * <br>
+     * <p>> This parameter will be deprecated in the future. We recommend that you use NextToken and MaxResults for a paged query.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The IDs of security groups. The value is a JSON array that consists of up to 100 security group IDs. Separate the IDs with commas (,).</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The tags of the security group.</p>
+     * <p>The ID of the resource group to which the security group belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.</p>
+     * <br>
+     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is configured.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -98,34 +103,22 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>> This parameter is no longer used.</p>
+     * <p>The security group ID.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the security groups belong.</p>
+     * <p>The security group IDs. Set this parameter to a JSON array that consists of up to 100 security group IDs. Separate the security group IDs with commas (,).</p>
      */
     @NameInMap("SecurityGroupIds")
     public String securityGroupIds;
 
     /**
-     * <p>> This parameter is no longer used.</p>
+     * <p>The name of the security group.</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
-
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Set this parameter to the NextToken value that is returned when you called the DescribeInstanceTypes operation last time. You do not need to specify this parameter for the first request.</p>
-     */
-    @NameInMap("SecurityGroupType")
-    public String securityGroupType;
-
-    /**
-     * <p>The tags of the security group.</p>
-     */
-    @NameInMap("Tag")
-    public java.util.List<DescribeSecurityGroupsRequestTag> tag;
 
     /**
      * <p>The type of the security group. Valid values:</p>
@@ -133,7 +126,19 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
      * <p>*   normal: basic security group</p>
      * <p>*   enterprise: advanced security group</p>
      * <br>
-     * <p>> If you do not specify this parameter, basic and advanced security groups are queried.</p>
+     * <p>> If you do not specify this parameter, both basic and advanced security groups are queried.</p>
+     */
+    @NameInMap("SecurityGroupType")
+    public String securityGroupType;
+
+    /**
+     * <p>The tags to add to the security groups.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<DescribeSecurityGroupsRequestTag> tag;
+
+    /**
+     * <p>The ID of the virtual private cloud (VPC) to which the security group belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -305,15 +310,15 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     public static class DescribeSecurityGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag values of the security group. You can specify up to 20 tag values for the security group.</p>
+         * <p>The key of tag N to add to the security group. Valid values of N: 1 to 20.</p>
+         * <br>
+         * <p>Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag values of the security group.</p>
-         * <br>
-         * <p>> This parameter will be removed in the future. We recommend that you use the Tag.N.Value parameter to ensure future compatibility.</p>
+         * <p>The value of tag N to add to the security group. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

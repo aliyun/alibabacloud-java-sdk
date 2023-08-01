@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     /**
-     * <p>Details about historical system events of the instance.</p>
+     * <p>The information about instance system events.</p>
      */
     @NameInMap("InstanceSystemEventSet")
     public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSet instanceSystemEventSet;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances.</p>
+     * <p>The total number of instances returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -165,7 +165,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
          * <p>*   cloud_efficiency: ultra disk</p>
          * <p>*   cloud_ssd: standard SSD</p>
          * <p>*   cloud_essd: enhanced SSD (ESSD)</p>
-         * <p>*   local_ssd_pro: I/O-intensive local disk.</p>
+         * <p>*   local_ssd_pro: I/O-intensive local disk</p>
          * <p>*   local_hdd_pro: throughput-intensive local disk</p>
          * <p>*   ephemeral: retired local disk</p>
          * <p>*   ephemeral_ssd: retired local SSD</p>
@@ -280,9 +280,15 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute extends TeaModel {
+        /**
+         * <p>Indicates whether the event can be handled.</p>
+         */
         @NameInMap("CanAccept")
         public String canAccept;
 
+        /**
+         * <p>The code of the security violation.</p>
+         */
         @NameInMap("Code")
         public String code;
 
@@ -307,36 +313,45 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         /**
          * <p>The type of the host. Valid values:</p>
          * <br>
-         * <p>*   ddh: dedicated host</p>
-         * <p>*   managehost: physical machine in a smart hosting pool</p>
+         * <p>- ddh: dedicated host</p>
+         * <p>- managehost: physical machine in a smart hosting pool</p>
          */
         @NameInMap("HostType")
         public String hostType;
 
         /**
-         * <p>Details about the inactive disks that have been released and must be cleared.</p>
+         * <p>The information about the inactive disks that have been released and must be cleared.</p>
          */
         @NameInMap("InactiveDisks")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
         /**
-         * <p>The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.</p>
+         * <p>The migration solution of the instance. Valid value: MigrationPlan, which indicates that instances can be migrated only by using migration plans.</p>
          */
         @NameInMap("MigrationOptions")
         public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttributeMigrationOptions migrationOptions;
 
         /**
-         * <p>The online repair policy of the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.</p>
+         * <p>The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.</p>
          */
         @NameInMap("OnlineRepairPolicy")
         public String onlineRepairPolicy;
 
+        /**
+         * <p>The illegal domain name.</p>
+         */
         @NameInMap("PunishDomain")
         public String punishDomain;
 
+        /**
+         * <p>The type of the penalty.</p>
+         */
         @NameInMap("PunishType")
         public String punishType;
 
+        /**
+         * <p>The illegal URL.</p>
+         */
         @NameInMap("PunishUrl")
         public String punishUrl;
 
@@ -345,6 +360,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
          */
         @NameInMap("Rack")
         public String rack;
+
+        @NameInMap("ResponseResult")
+        public String responseResult;
 
         public static DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute self = new DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute();
@@ -455,6 +473,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.rack;
         }
 
+        public DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventTypeExtendedAttribute setResponseResult(String responseResult) {
+            this.responseResult = responseResult;
+            return this;
+        }
+        public String getResponseResult() {
+            return this.responseResult;
+        }
+
     }
 
     public static class DescribeInstanceHistoryEventsResponseBodyInstanceSystemEventSetInstanceSystemEventType extends TeaModel {
@@ -507,7 +533,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The start time of the scheduled execution of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
@@ -519,7 +545,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The type of a resource. Valid values:</p>
+         * <p>The type of the resource. Valid values:</p>
          * <br>
          * <p>*   instance: ECS instance</p>
          * <p>*   ddh: dedicated host</p>

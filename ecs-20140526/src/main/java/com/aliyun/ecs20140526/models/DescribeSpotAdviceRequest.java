@@ -11,7 +11,7 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The number of GPUs that the GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).</p>
+     * <p>The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).</p>
      */
     @NameInMap("GpuAmount")
     public Integer gpuAmount;
@@ -25,7 +25,7 @@ public class DescribeSpotAdviceRequest extends TeaModel {
      * <p>*   NVIDIA V100</p>
      * <p>*   NVIDIA A100</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).</p>
+     * <p>This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).</p>
      */
     @NameInMap("GpuSpec")
     public String gpuSpec;
@@ -33,11 +33,11 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <br>
-     * <p>*   EntryLevel: entry level.</p>
-     * <p>*   EnterpriseLevel: enterprise level.</p>
-     * <p>*   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~) of burstable instances.</p>
+     * <p>*   EntryLevel.</p>
+     * <p>*   EnterpriseLevel.</p>
+     * <p>*   CreditEntryLevel. For more information, see [Overview of burstable instances](~~59977~~).</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that instance families of all levels are queried.</p>
+     * <p>This parameter is left empty by default, which indicates that instance families at all levels are queried.</p>
      */
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
@@ -49,7 +49,7 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>The instance types. You can specify to 10 instance types.</p>
+     * <p>The instance types. You can specify up to 10 instance types.</p>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
@@ -79,7 +79,7 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -91,9 +91,9 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that all zones in the specified region are queried.</p>
+     * <p>This parameter is left empty by default, which indicates that all zones in the specified region are queried.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

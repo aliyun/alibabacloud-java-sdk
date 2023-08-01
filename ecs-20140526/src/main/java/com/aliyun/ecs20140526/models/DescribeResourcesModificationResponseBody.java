@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeResourcesModificationResponseBody extends TeaModel {
     /**
-     * <p>Details about the available zones.</p>
+     * <p>The information about the queried zones.</p>
      */
     @NameInMap("AvailableZones")
     public DescribeResourcesModificationResponseBodyAvailableZones availableZones;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,6 +38,11 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditionsCondition extends TeaModel {
+        /**
+         * <p>The condition name. Valid value:</p>
+         * <br>
+         * <p>DiskCategory, which indicates a disk category change.</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -76,24 +81,52 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResource extends TeaModel {
+        /**
+         * <p>The conditions.</p>
+         */
         @NameInMap("Conditions")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResourcesConditionSupportedResourceConditions conditions;
 
+        /**
+         * <p>The maximum resource specification value. This parameter is not returned if it has no value.</p>
+         */
         @NameInMap("Max")
         public Integer max;
 
+        /**
+         * <p>The minimum resource specification value. This parameter is not returned if it has no value.</p>
+         */
         @NameInMap("Min")
         public Integer min;
 
+        /**
+         * <p>The stock status of the resource. Valid values:</p>
+         * <br>
+         * <p>- Available</p>
+         * <p>- SoldOut</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The category of resource based on stock status. Valid values:</p>
+         * <br>
+         * <p>- WithStock: resources that are in sufficient stock</p>
+         * <p>- ClosedWithStock: resources that are in insufficient stock</p>
+         * <p>- WithoutStock: resources that are out of stock</p>
+         */
         @NameInMap("StatusCategory")
         public String statusCategory;
 
+        /**
+         * <p>The resource specification unit. This parameter is not returned if it has no value.</p>
+         */
         @NameInMap("Unit")
         public String unit;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -193,7 +226,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         public Integer min;
 
         /**
-         * <p>The state of the resource. Valid values:</p>
+         * <p>The status of the resource. Valid values:</p>
          * <br>
          * <p>*   Available</p>
          * <p>*   SoldOut</p>
@@ -205,7 +238,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
          * <p>The category of resource based on stock status. Valid values:</p>
          * <br>
          * <p>*   WithStock: resources that are in sufficient stock</p>
-         * <p>*   ClosedWithStock: resources that are ininsufficient stock</p>
+         * <p>*   ClosedWithStock: resources that are in insufficient stock</p>
          * <p>*   WithoutStock: resources that are out of stock</p>
          */
         @NameInMap("StatusCategory")
@@ -218,7 +251,7 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
         public String unit;
 
         /**
-         * <p>The resource value.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -298,11 +331,14 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
     }
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
+        /**
+         * <p>The resource types that resources can be changed to after the resources meet specified conditions.</p>
+         */
         @NameInMap("ConditionSupportedResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceConditionSupportedResources conditionSupportedResources;
 
         /**
-         * <p>Details about the resources.</p>
+         * <p>The information about the resources.</p>
          */
         @NameInMap("SupportedResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
@@ -372,19 +408,19 @@ public class DescribeResourcesModificationResponseBody extends TeaModel {
 
     public static class DescribeResourcesModificationResponseBodyAvailableZonesAvailableZone extends TeaModel {
         /**
-         * <p>Details about the resources available in the zone.</p>
+         * <p>The resources that are available in the zone.</p>
          */
         @NameInMap("AvailableResources")
         public DescribeResourcesModificationResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
 
         /**
-         * <p>The region ID of the zone.</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The state of the resource. Valid values:</p>
+         * <p>The status of the resource. Valid values:</p>
          * <br>
          * <p>*   Available</p>
          * <p>*   SoldOut</p>

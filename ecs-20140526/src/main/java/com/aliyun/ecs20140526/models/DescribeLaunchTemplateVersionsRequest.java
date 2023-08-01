@@ -13,8 +13,8 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the configurations of the launch template. Valid values:</p>
      * <br>
-     * <p>*   true: queries the basic information and other details of the launch template. The details include the image ID and the size of the system disk.</p>
-     * <p>*   false: queries only the basic information of the launch template. The basic information includes the template ID, the template name, and the default version.</p>
+     * <p>*   true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</p>
+     * <p>*   false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</p>
      * <br>
      * <p>Default value: true.</p>
      */
@@ -24,7 +24,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     /**
      * <p>The ID of the launch template.</p>
      * <br>
-     * <p>You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.</p>
+     * <p>You must set LaunchTemplateId or LaunchTemplateName to specify a launch template.</p>
      */
     @NameInMap("LaunchTemplateId")
     public String launchTemplateId;
@@ -36,7 +36,7 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     public String launchTemplateName;
 
     /**
-     * <p>The one or more versions of the launch template.</p>
+     * <p>Version N of the launch template.</p>
      */
     @NameInMap("LaunchTemplateVersion")
     public java.util.List<Long> launchTemplateVersion;

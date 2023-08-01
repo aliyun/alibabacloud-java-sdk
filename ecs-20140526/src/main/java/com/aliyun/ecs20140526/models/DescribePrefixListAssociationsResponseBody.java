@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribePrefixListAssociationsResponseBody extends TeaModel {
     /**
-     * <p>The query token that is returned in this call. If the return value is empty, no more data is returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>Details about the resources that are associated with the prefix list.</p>
+     * <p>The ID of the resource.</p>
      */
     @NameInMap("PrefixListAssociations")
     public DescribePrefixListAssociationsResponseBodyPrefixListAssociations prefixListAssociations;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Details about the resources that are associated with the prefix list.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,14 +53,11 @@ public class DescribePrefixListAssociationsResponseBody extends TeaModel {
 
     public static class DescribePrefixListAssociationsResponseBodyPrefixListAssociationsPrefixListAssociation extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The type of the resource.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
-        /**
-         * <p>The type of the resource.</p>
-         */
         @NameInMap("ResourceType")
         public String resourceType;
 

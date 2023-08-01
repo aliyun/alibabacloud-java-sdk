@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
+    /**
+     * <p>A collection of diagnostic metrics.</p>
+     */
     @NameInMap("MetricSets")
     public java.util.List<DescribeDiagnosticMetricSetsResponseBodyMetricSets> metricSets;
 

@@ -11,7 +11,7 @@ public class ModifyDiagnosticMetricSetRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The IDs of diagnostic metrics.</p>
+     * <p>The ID of diagnostic metric N.</p>
      */
     @NameInMap("MetricIds")
     public java.util.List<String> metricIds;

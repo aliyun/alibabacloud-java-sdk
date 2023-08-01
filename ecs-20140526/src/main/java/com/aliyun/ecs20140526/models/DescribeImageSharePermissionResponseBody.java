@@ -128,6 +128,9 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
         @NameInMap("AliyunId")
         public String aliyunId;
 
+        /**
+         * <p>The time when the image was shared. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("SharedTime")
         public String sharedTime;
 

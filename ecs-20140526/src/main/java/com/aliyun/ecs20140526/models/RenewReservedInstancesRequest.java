@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class RenewReservedInstancesRequest extends TeaModel {
     /**
+     * <p>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
+     * <br>
+     * <p>Valid values: 12 and 36. Default value: 12.</p>
+     */
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    /**
+     * <p>The request ID.</p>
+     */
+    @NameInMap("AutoRenewPeriod")
+    public Integer autoRenewPeriod;
+
+    /**
      * <p>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
-     */
-    @NameInMap("AutoRenew")
-    public Boolean autoRenew;
-
-    /**
-     * <p>The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.</p>
-     * <br>
-     * <p>Valid values: 12 and 36. Default value: 12.</p>
-     */
-    @NameInMap("AutoRenewPeriod")
-    public Integer autoRenewPeriod;
-
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -36,31 +36,33 @@ public class RenewReservedInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The unit of the validity period of the reserved instance.</p>
+     * <br>
+     * <p>Set the value to Year.</p>
+     */
+    @NameInMap("Period")
+    public Integer period;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
+    /**
      * <p>The validity period of the reserved instance.</p>
      * <br>
      * <p>Valid values: 1 and 3.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
-    @NameInMap("Period")
-    public Integer period;
-
-    /**
-     * <p>The unit of the validity period of the reserved instance.</p>
-     * <br>
-     * <p>Set the value to Year.</p>
-     */
-    @NameInMap("PeriodUnit")
-    public String periodUnit;
-
-    /**
-     * <p>The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of the reserved instances.</p>
+     * <p>The ID of the reserved instance. You can call the [DescribeReservedInstances](~~100065~~) operation to query the IDs of reserved instances that you purchased.</p>
+     * <br>
+     * <p>You can specify up to 10 IDs of reserved instances in a single request.</p>
      */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;

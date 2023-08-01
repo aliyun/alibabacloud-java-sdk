@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     /**
-     * <p>The IDs of instances. You can specify the IDs of up to 100 instances.</p>
+     * <p>The instance IDs. You can specify up to 100 instance IDs.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -17,7 +17,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -27,7 +27,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */

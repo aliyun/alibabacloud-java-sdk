@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeregisterManagedInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the managed instance.</p>
+     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,9 +19,7 @@ public class DeregisterManagedInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>$.parameters[1].schema.enumValueTitles</p>
      */
     @NameInMap("RegionId")
     public String regionId;

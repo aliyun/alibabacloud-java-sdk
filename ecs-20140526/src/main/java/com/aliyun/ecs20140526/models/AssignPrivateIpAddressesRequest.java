@@ -11,19 +11,19 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
      */
     @NameInMap("Ipv4Prefix")
     public java.util.List<String> ipv4Prefix;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
      */
     @NameInMap("Ipv4PrefixCount")
     public Integer ipv4PrefixCount;
 
     /**
-     * <p>The ENI ID.</p>
+     * <p>The ID of the ENI.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -35,18 +35,18 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>One or more secondary private IP addresses that are selected from the CIDR block of the vSwitch that is connected to the ENI. Valid values of the number of secondary private IP addresses:</p>
+     * <p>Secondary private IP address N to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:</p>
      * <br>
-     * <p>*   When the ENI is in the Available (`Available`) state, the valid values range from 1 to 32.</p>
-     * <p>*   When the ENI is in the InUse (`InUse`) state, the valid values are subject to the instance type. For more information, see [Instance families](~~25378~~).</p>
+     * <p>*   When the ENI is in the Available (`Available`) state, the valid values of N are 1 to 50.</p>
+     * <p>*   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Overview of instance families](~~25378~~).</p>
      * <br>
-     * <p>To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.</p>
+     * <p>To assign secondary private IP addresses to the ENI, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.</p>
      */
     @NameInMap("PrivateIpAddress")
     public java.util.List<String> privateIpAddress;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -60,7 +60,7 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     /**
      * <p>The number of private IP addresses to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI.</p>
      * <br>
-     * <p>To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.</p>
+     * <p>To assign secondary private IP addresses to the ENI, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.</p>
      */
     @NameInMap("SecondaryPrivateIpAddressCount")
     public Integer secondaryPrivateIpAddressCount;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -19,9 +19,9 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     /**
      * <p>The new private IP address of the instance.</p>
      * <br>
-     * <p>>  The `PrivateIpAddress` value depends on the `VSwitchId` value. The specified IP address must be within the CIDR block of the specified vSwitch.</p>
+     * <p>> The value of `PrivateIpAddress` depends on the value of `VSwitchId`. The specified IP address must be within the CIDR block of the specified vSwitch.</p>
      * <br>
-     * <p>By default, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</p>
+     * <p>By default, if this parameter is not specified, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -36,18 +36,18 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
      * <p>The ID of security group N to which the instance belongs after the VPC is changed. This parameter is required only when the `VpcId` parameter is specified.</p>
      * <br>
      * <p>*   The specified security groups must be of the same type.</p>
-     * <p>*   You can specify one or more security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~).</p>
+     * <p>*   You can specify one or more security groups. The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).</p>
      * <p>*   The specified security groups must belong to the VPC specified by the `VpcId` parameter.</p>
      */
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The ID of the vSwitch.</p>
      * <br>
      * <p>*   If this parameter is set to the ID of the current vSwitch, the vSwitch of the instance remains unchanged.</p>
      * <p>*   If this parameter is set to the ID of a different vSwitch and the `VpcId` parameter is not specified, the new vSwitch must belong to the same zone and VPC as the current vSwitch.</p>
-     * <p>*   If the `VpcId` parameter is specified, the vSwitch specified by this parameter must belong to the specified VPC and to the same zone as the current vSwitch.</p>
+     * <p>*   If the `VpcId` parameter is specified, the vSwitch specified by this parameter must belong to the specified VPC and the same zone as the current vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

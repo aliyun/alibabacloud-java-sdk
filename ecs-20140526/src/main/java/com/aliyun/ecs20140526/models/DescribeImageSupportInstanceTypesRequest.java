@@ -4,17 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
+    /**
+     * <p>The scenario in which you want to use the image. Valid values:</p>
+     * <br>
+     * <p>- CreateEcs (default): instance creation</p>
+     * <p>- ChangeOS: replacement of the system disk or operating system</p>
+     */
     @NameInMap("ActionType")
     public String actionType;
 
     /**
-     * <p>The filters used to filter instance types.</p>
+     * <p>The number of vCPUs of the instance type.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeImageSupportInstanceTypesRequestFilter> filter;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -23,7 +29,7 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>Details about the instance types that are supported by the image.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,16 +103,13 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
 
     public static class DescribeImageSupportInstanceTypesRequestFilter extends TeaModel {
         /**
-         * <p>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</p>
-         * <br>
-         * <p>*   imagId: image ID</p>
-         * <p>*   filter: image ID</p>
+         * <p>Filter N used to filter instance types.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of filter N.</p>
+         * <p>The ID of the image.</p>
          */
         @NameInMap("Value")
         public String value;

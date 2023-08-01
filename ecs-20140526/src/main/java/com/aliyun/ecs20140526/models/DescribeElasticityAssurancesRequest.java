@@ -16,13 +16,13 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The instance types.</p>
+     * <p>The instance type.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      * <br>
      * <p>Maximum value: 100.</p>
      * <br>
@@ -32,7 +32,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the query. Set the value to the NextToken value obtained from the response to the previous request.</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -44,21 +44,21 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>> This parameter is no longer used.</p>
+     * <p>> This parameter is deprecated.</p>
      */
     @NameInMap("Platform")
     public String platform;
 
     /**
-     * <p>The ID of the region to which the elasticity assurance belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the elasticity assurances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the snapshot belongs. When you use this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+     * <p>The ID of the resource group. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -70,13 +70,13 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The state of the elasticity assurance to query. Valid values:</p>
+     * <p>The status of the elasticity assurances. Valid values:</p>
      * <br>
-     * <p>*   All: Queries the elasticity assurances in all states.</p>
-     * <p>*   Preparing: The elasticity assurance is being prepared.</p>
-     * <p>*   Prepared: Queries the elasticity assurances that have not taken effect.</p>
-     * <p>*   Active: Queries the elasticity assurances that are in effect.</p>
-     * <p>*   Released: Queries the elasticity assurances that are released.</p>
+     * <p>*   All</p>
+     * <p>*   Preparing</p>
+     * <p>*   Prepared</p>
+     * <p>*   Active</p>
+     * <p>*   Released</p>
      * <br>
      * <p>Default value: Active.</p>
      */
@@ -84,13 +84,13 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags to use for the query.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeElasticityAssurancesRequestTag> tag;
 
     /**
-     * <p>The zone ID of the elasticity assurance.</p>
+     * <p>The zone ID of the elasticity assurances.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -222,7 +222,7 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
 
     public static class DescribeElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {
         /**
-         * <p>The IDs of elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).</p>
+         * <p>The IDs of the elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).</p>
          */
         @NameInMap("Ids")
         public String ids;
@@ -244,15 +244,15 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
 
     public static class DescribeElasticityAssurancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag N. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources with this tag are returned. If multiple tags are specified to query resources, up to 1,000 resources with all these tags are returned. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>If you specify a tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of a tag N. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupEgressResponseBody extends TeaModel {
     /**
-     * <p>GROUP_AUTH_NO_VPC</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

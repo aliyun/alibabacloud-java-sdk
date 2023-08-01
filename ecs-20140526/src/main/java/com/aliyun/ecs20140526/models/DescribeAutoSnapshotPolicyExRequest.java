@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     /**
-     * <p>The ID of the automatic snapshot policy.</p>
+     * <p>The name of the automatic snapshot policy.</p>
      */
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The name of the automatic snapshot policy.</p>
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Page start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("AutoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
@@ -23,35 +27,29 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Page start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
      * <p>The number of entries to return on each page.</p>
      * <br>
      * <p>Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the automatic snapshot policy. You can call the [DescribeRegions](~~25609~~) operation to query the current list of regions.</p>
+     * <p>The ID of the automatic snapshot policy.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
-     * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -63,7 +61,7 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeAutoSnapshotPolicyExRequestTag> tag;
@@ -163,13 +161,15 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyExRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
+         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain http:// or https://.</p>
+         * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
+         * <br>
+         * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,14 +4,11 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the diagnostic metric set, which is the unique identifier of the set.</p>
-     */
     @NameInMap("MetricSetId")
     public String metricSetId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the diagnostic metric set, which is the unique identifier of the set.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

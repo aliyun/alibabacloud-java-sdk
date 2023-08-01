@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSpecRequest extends TeaModel {
     /**
-     * <p>The new category of the disk. Default value: PL1. Valid values:</p>
+     * <p>The new category of the disk. Valid values:</p>
      * <br>
-     * <p>*   cloud_essd: ESSD.</p>
-     * <p>*   cloud_auto: ESSD AutoPL disk.</p>
-     * <p>*   cloud_ssd: The system creates an SSD.</p>
-     * <p>*   cloud_efficiency: The system creates an ultra disk.</p>
+     * <p>*   cloud_essd: ESSD</p>
+     * <p>*   cloud_auto: ESSD AutoPL disk</p>
+     * <p>*   cloud_ssd: standard SSD</p>
+     * <p>*   cloud_efficiency: ultra disk</p>
      * <br>
      * <p>This parameter is empty by default, which indicates that the disk category is not changed.</p>
      * <br>
-     * <p>> The preceding values are listed in descending order of disk performance. The performance level of a subscription cloud disk cannot be downgraded.</p>
+     * <p>>  The preceding values are listed in descending order of disk performance. Subscription disks cannot be downgraded.</p>
      */
     @NameInMap("DiskCategory")
     public String diskCategory;
@@ -26,12 +26,12 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform only a dry run without performing the actual request. Default value: PL1. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   true: performs only a dry run. The system checks the required parameters, request syntax, service limits, and available ECS resources. If the request fails the dry run, the corresponding error message is returned. If the check succeeds, the `DryRunOperation` error code is returned.</p>
-     * <p>*   false: The validity of the request is checked. If the check succeeds, a 2xx HTTP status code is returned and the request is made.</p>
+     * <p>*   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -43,20 +43,20 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>磁盘性能控制参数集合</p>
+     * <p>A collection of disk performance control parameters</p>
      */
     @NameInMap("PerformanceControlOptions")
     public ModifyDiskSpecRequestPerformanceControlOptions performanceControlOptions;
 
     /**
-     * <p>The new performance level of the ESSD. Default value: PL1. Valid values:</p>
+     * <p>The new performance level of the ESSD. Valid values:</p>
      * <br>
      * <p>*   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</p>
      * <p>*   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
      * <p>*   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</p>
      * <p>*   PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</p>
      * <br>
-     * <p>Default value: PL1</p>
+     * <p>Default value: PL1.</p>
      */
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
@@ -66,7 +66,7 @@ public class ModifyDiskSpecRequest extends TeaModel {
      * <br>
      * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
      * <br>
-     * <p>> This parameter is available only if you set DiskCategory to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+     * <p>>  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
      */
     @NameInMap("ProvisionedIops")
     public Long provisionedIops;
@@ -164,33 +164,31 @@ public class ModifyDiskSpecRequest extends TeaModel {
 
     public static class ModifyDiskSpecRequestPerformanceControlOptions extends TeaModel {
         /**
-         * <p>目标云盘IOPS。仅支持修改专属存储集群云盘IOPS。</p>
+         * <p>The new IOPS of the disk. You can modify the IOPS of only disks in dedicated block storage clusters.</p>
          * <br>
-         * <p>取值范围：900~单盘最大IOPS，步长100。</p>
+         * <p>Valid values: 900 to maximum IOPS per disk (with an increment of 100).</p>
          * <br>
-         * <br>
-         * <p>更多信息，请参见[云盘性能](~~25382~~)。</p>
+         * <p>For more information, see [EBS performance](~~25382~~).</p>
          */
         @NameInMap("IOPS")
         public Integer IOPS;
 
         /**
-         * <p>重置云盘性能，仅支持专属存储集群云盘。</p>
+         * <p>The new IOPS and throughput of the disk. This parameter is valid only when the disk is in a dedicated block storage cluster.</p>
          * <br>
-         * <p>设置该参数后，PerformanceControlOptions.IOPS和PerformanceControlOptions.Throughput参数不生效。</p>
+         * <p>After you specify this parameter, PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput do not take effect.</p>
          * <br>
-         * <br>
-         * <p>目前仅支持设置为All（重置云盘IOPS和吞吐量到初始值）。</p>
+         * <p>Set the value to All, which indicates that the IOPS and throughput of the disk is reset to the initial values.</p>
          */
         @NameInMap("Recover")
         public String recover;
 
         /**
-         * <p>目标云盘吞吐量，仅支持修改专属存储集群云盘吞吐量，单位MB/s。</p>
+         * <p>The new throughput of the disk. You can modify the throughput of only disks in dedicated block storage clusters. Unit: MB/s.</p>
          * <br>
-         * <p>取值范围：60~单盘最大吞吐量。</p>
+         * <p>Valid values: 60 to maximum throughput per disk.</p>
          * <br>
-         * <p>更多信息，请参见[云盘性能](~~25382~~)。</p>
+         * <p>For more information, see [EBS performance](~~25382~~).</p>
          */
         @NameInMap("Throughput")
         public Integer throughput;

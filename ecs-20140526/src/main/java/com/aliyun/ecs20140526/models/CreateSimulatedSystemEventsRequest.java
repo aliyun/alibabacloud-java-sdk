@@ -14,21 +14,21 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
      * <p>*   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</p>
      * <p>*   SystemFailure.Redeploy: The instance is redeployed due to a system error.</p>
      * <p>*   SystemFailure.Stop: The instance is stopped due to a system error.</p>
-     * <p>*   InstanceFailure.Reboot: The instance is restarted due to an instance error.</p>
+     * <p>*</p>
      */
     @NameInMap("EventType")
     public String eventType;
 
     /**
-     * <p>The IDs of instances. You can specify the IDs of up to 100 instances.</p>
+     * <p>The IDs of the instances. You can specify up to 100 instance IDs.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The scheduled start time of the scheduled event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The scheduled start time of the event. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> For system events that occur due to system errors or instance errors, the simulated events of such system events enter the Executing (`Executing`) state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the Executed (`Executed`) state.</p>
+     * <p>> For events that occur due to system errors or instance errors, the simulated events of such events enter the `Executing` state when the simulated events are created. The value of `NotBefore` is the time when the simulated events enter the `Executed` state.</p>
      */
     @NameInMap("NotBefore")
     public String notBefore;
@@ -40,7 +40,7 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the event. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

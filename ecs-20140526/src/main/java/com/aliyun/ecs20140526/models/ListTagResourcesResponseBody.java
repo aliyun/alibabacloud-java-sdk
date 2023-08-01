@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>A pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.</p>
+     * <p>The details about the resources and tags, such as the resource ID, the resource type, tag keys, and tag values.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -53,13 +53,13 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of the resource. Valid values:</p>
+         * <p>The type of a resource. Valid values:</p>
          * <br>
          * <p>*   instance: ECS instance</p>
          * <p>*   disk: disk</p>
@@ -76,20 +76,20 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <p>*   snapshotpolicy: automatic snapshot policy</p>
          * <p>*   elasticityassurance: elasticity assurance</p>
          * <p>*   capacityreservation: capacity reservation</p>
-         * <p>*   command: Cloud Assistant command.</p>
+         * <p>*   command: Cloud Assistant command</p>
          * <p>*   invocation: Cloud Assistant command execution result</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

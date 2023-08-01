@@ -5,31 +5,35 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     /**
-     * <p>Details about the automatic snapshot policies.</p>
+     * <p>The points in time of the day at which to create automatic snapshots.</p>
+     * <br>
+     * <p>The time is displayed in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Multiple points in time can be specified.</p>
+     * <br>
+     * <p>The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: `["0", "1", ... "23"]`.</p>
      */
     @NameInMap("AutoSnapshotPolicies")
     public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPolicies autoSnapshotPolicies;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The total number of automatic snapshot policies.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of automatic snapshot policies.</p>
+     * <p>Details about the automatic snapshot policies.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,14 +84,11 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag extends TeaModel {
-        /**
-         * <p>The tag key of the automatic snapshot policy.</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value of the automatic snapshot policy.</p>
+         * <p>The tag key of the automatic snapshot policy.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -136,67 +137,25 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
 
     public static class DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicy extends TeaModel {
         /**
-         * <p>The ID of the automatic snapshot policy.</p>
-         */
-        @NameInMap("AutoSnapshotPolicyId")
-        public String autoSnapshotPolicyId;
-
-        /**
-         * <p>The name of the automatic snapshot policy.</p>
-         */
-        @NameInMap("AutoSnapshotPolicyName")
-        public String autoSnapshotPolicyName;
-
-        /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
-         */
-        @NameInMap("CopiedSnapshotsRetentionDays")
-        public Integer copiedSnapshotsRetentionDays;
-
-        /**
-         * <p>The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
-         */
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        /**
-         * <p>The number of disks to which the automatic snapshot policy is applied.</p>
-         */
-        @NameInMap("DiskNums")
-        public Integer diskNums;
-
-        /**
-         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
-         */
-        @NameInMap("EnableCrossRegionCopy")
-        public Boolean enableCrossRegionCopy;
-
-        /**
-         * <p>The region ID of the automatic snapshot policy.</p>
-         */
-        @NameInMap("RegionId")
-        public String regionId;
-
-        /**
-         * <p>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to the days of the week. 1 indicates Monday. One or more days can be specified.</p>
-         */
-        @NameInMap("RepeatWeekdays")
-        public String repeatWeekdays;
-
-        /**
-         * <p>The ID of the resource group.</p>
-         */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        /**
          * <p>The retention period of the automatic snapshot. Unit: days. Valid values:</p>
          * <br>
          * <p>*   \-1: The automatic snapshot is retained until it is deleted.</p>
          * <p>*   1 to 65536: The automatic snapshot is retained for the specified number of days.</p>
          */
-        @NameInMap("RetentionDays")
-        public Integer retentionDays;
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        /**
+         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         */
+        @NameInMap("AutoSnapshotPolicyName")
+        public String autoSnapshotPolicyName;
+
+        /**
+         * <p>The ID of the automatic snapshot policy.</p>
+         */
+        @NameInMap("CopiedSnapshotsRetentionDays")
+        public Integer copiedSnapshotsRetentionDays;
 
         /**
          * <p>The state of the automatic snapshot policy. Valid values:</p>
@@ -204,11 +163,53 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
          * <p>*   Normal: The automatic snapshot policy is normal.</p>
          * <p>*   Expire: The automatic snapshot policy cannot be used because your account has overdue payments.</p>
          */
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        /**
+         * <p>>  This parameter is in invitational preview and unavailable for general users.</p>
+         */
+        @NameInMap("DiskNums")
+        public Integer diskNums;
+
+        /**
+         * <p>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to the days of the week. 1 indicates Monday. One or more days can be specified.</p>
+         */
+        @NameInMap("EnableCrossRegionCopy")
+        public Boolean enableCrossRegionCopy;
+
+        /**
+         * <p>The number of disks to which the automatic snapshot policy is applied.</p>
+         */
+        @NameInMap("RegionId")
+        public String regionId;
+
+        /**
+         * <p>The number of extended volumes to which the automatic snapshot policy is applied.</p>
+         */
+        @NameInMap("RepeatWeekdays")
+        public String repeatWeekdays;
+
+        /**
+         * <p>The tags of the automatic snapshot policy.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The region ID of the automatic snapshot policy.</p>
+         */
+        @NameInMap("RetentionDays")
+        public Integer retentionDays;
+
+        /**
+         * <p>The name of the automatic snapshot policy.</p>
+         */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The tags of the automatic snapshot policy.</p>
+         * <p>The tag value of the automatic snapshot policy.</p>
          */
         @NameInMap("Tags")
         public DescribeAutoSnapshotPolicyExResponseBodyAutoSnapshotPoliciesAutoSnapshotPolicyTags tags;
@@ -220,17 +221,13 @@ public class DescribeAutoSnapshotPolicyExResponseBody extends TeaModel {
         public String targetCopyRegions;
 
         /**
-         * <p>The points in time of the day at which to create automatic snapshots.</p>
-         * <br>
-         * <p>The time is displayed in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Multiple points in time can be specified.</p>
-         * <br>
-         * <p>The parameter value is a JSON array that contains up to 24 points in time separated by commas (,). Example: `["0", "1", ... "23"]`.</p>
+         * <p>The time when the automatic snapshot policy was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimePoints")
         public String timePoints;
 
         /**
-         * <p>The number of extended volumes to which the automatic snapshot policy is applied.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("VolumeNums")
         public Integer volumeNums;

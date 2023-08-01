@@ -17,9 +17,9 @@ public class DescribeTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The number of the page to return.</p>
      * <br>
-     * <p>Pages start from page 1.</p>
+     * <p>Page start from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -42,6 +42,13 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of resource N that is associated with the task. Valid values of N: 1 to 100.</p>
+     * <br>
+     * <p>*   If TaskAction is set to ImportImage or ExportImage, set the resource ID to an image ID.</p>
+     * <p>*   If TaskAction is set to RedeployInstance, set the resource ID to an Elastic Compute Service (ECS) instance ID.</p>
+     * <p>*   If TaskAction is set to ModifyDiskSpec, set the resource ID to a disk ID.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
@@ -69,19 +76,19 @@ public class DescribeTasksRequest extends TeaModel {
     public String taskAction;
 
     /**
-     * <p>The IDs of the tasks. You can specify up to 100 tasks at a time. Separate multiple task IDs with commas (,).</p>
+     * <p>The ID of the task. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).</p>
      */
     @NameInMap("TaskIds")
     public String taskIds;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The state of the task. Valid values:</p>
      * <br>
      * <p>*   Finished</p>
      * <p>*   Processing</p>
      * <p>*   Failed</p>
      * <br>
-     * <p>This parameter has no default value.</p>
+     * <p>This parameter is empty by default.</p>
      * <br>
      * <p>>  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.</p>
      */

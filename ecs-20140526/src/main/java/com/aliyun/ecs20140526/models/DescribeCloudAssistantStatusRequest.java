@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusRequest extends TeaModel {
     /**
-     * <p>The IDs of instances to be queried.</p>
+     * <p>The IDs of instances.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The operating system of the instance. Valid values:</p>
+     * <p>The operating system type of the instance. Valid values:</p>
      * <br>
      * <p>*   Windows</p>
      * <p>*   Linux</p>
@@ -26,7 +26,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -36,7 +36,7 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. If you specify the **InstanceId** parameter, this parameter does not take effect. Maximum value: 50.</p>
+     * <p>The number of entries per page. If you specify **InstanceId**, this parameter does not take effect. Valid values: 1 to 50.</p>
      * <br>
      * <p>Default value: 10.</p>
      */

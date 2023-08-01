@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsResponseBody extends TeaModel {
     /**
-     * <p>Details about the file sending records.</p>
+     * <p>The queried file sending records.</p>
      */
     @NameInMap("Invocations")
     public DescribeSendFileResultsResponseBodyInvocations invocations;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of file sending tasks.</p>
+     * <p>The total number of file sending tasks queried.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -90,14 +90,14 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
          * <p>The error code returned when the file failed to be sent to the instance. Valid values:</p>
          * <br>
          * <p>*   Null: The file is sent to the instance.</p>
-         * <p>*   InstanceNotExists: The instance does not exist or was released.</p>
-         * <p>*   InstanceReleased: The instance was released while the file was being sent.</p>
-         * <p>*   InstanceNotRunning: The instance was not running when the file sending task was being created.</p>
+         * <p>*   InstanceNotExists: The instance does not exist or has been released.</p>
+         * <p>*   InstanceReleased: The instance is released while the file is being sent.</p>
+         * <p>*   InstanceNotRunning: The instance is not running when the file sending task is being created.</p>
          * <p>*   AccountNotExists: The specified account does not exist.</p>
-         * <p>*   ClientNotRunning: The Cloud Assistant client is not running.</p>
-         * <p>*   ClientNotResponse: The Cloud Assistant client is not responding.</p>
-         * <p>*   ClientIsUpgrading: The Cloud Assistant client is being upgraded.</p>
-         * <p>*   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</p>
+         * <p>*   ClientNotRunning: Cloud Assistant Agent is not running.</p>
+         * <p>*   ClientNotResponse: Cloud Assistant Agent does not respond.</p>
+         * <p>*   ClientIsUpgrading: Cloud Assistant Agent is being upgraded.</p>
+         * <p>*   ClientNeedUpgrade: Cloud Assistant Agent needs to be upgraded.</p>
          * <p>*   DeliveryTimeout: The file sending task timed out.</p>
          * <p>*   FileCreateFail: The file failed to be created.</p>
          * <p>*   FileAlreadyExists: A file with the same name already exists in the specified directory.</p>
@@ -105,6 +105,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
          * <p>*   FileNameInvalid: The file name is invalid.</p>
          * <p>*   FilePathInvalid: The specified directory is invalid.</p>
          * <p>*   FileAuthorityInvalid: The specified permissions on the file are invalid.</p>
+         * <p>*   UserGroupNotExists: The specified user group does not exist.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
@@ -113,35 +114,37 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
          * <p>The error message returned when the file failed to be sent or the file sending task failed to be executed. Valid values:</p>
          * <br>
          * <p>*   Null: The file is sent to the instance.</p>
-         * <p>*   the specified instance does not exists: The specified instance does not exist or was released.</p>
-         * <p>*   the instance has released when create task: The specified instance was released when the file was being sent.</p>
-         * <p>*   the instance is not running when create task: The specified instance was not running when the file sending task was being created.</p>
-         * <p>*   the specified account does not exists: The specified account does not exist.</p>
-         * <p>*   the aliyun service is not running on the instance: The Cloud Assistance client is not running.</p>
-         * <p>*   the aliyun service in the instance does not response: The Cloud Assistant client is not responding.</p>
-         * <p>*   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.</p>
-         * <p>*   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.</p>
-         * <p>*   the command delivery has been timeout: The file sending task timed out.</p>
-         * <p>*   Unexpected error during creating: The file failed to be created.</p>
-         * <p>*   File already exists: A file with the same name already exists in the specified directory.</p>
-         * <p>*   File content error: The file content is invalid.</p>
-         * <p>*   File name is invalid: The file name is invalid.</p>
-         * <p>*   File path is invalid: The specified directory is invalid.</p>
-         * <p>*   Owner not exists: The owner of the file does not exist.</p>
-         * <p>*   Group not exists: The user group does not exist.</p>
-         * <p>*   Mode is invalid: The specified permissions on the file are invalid.</p>
+         * <p>*   the specified instance does not exists</p>
+         * <p>*   the specified instance has been released</p>
+         * <p>*   the instance is not running when create task</p>
+         * <p>*   the specified account does not exists</p>
+         * <p>*   the aliyun service is not running on the instance</p>
+         * <p>*   the aliyun service in the instance does not response</p>
+         * <p>*   the aliyun service in the instance is upgrading now</p>
+         * <p>*   the aliyun service in the instance need upgrade</p>
+         * <p>*   the command delivery has been timeout</p>
+         * <p>*   the file creation is failed due to unknown error</p>
+         * <p>*   the authority of file is invalid</p>
+         * <p>*   File content is empty</p>
+         * <p>*   the content of file is invalid</p>
+         * <p>*   File already exists</p>
+         * <p>*   File name is invalid</p>
+         * <p>*   File path is invalid</p>
+         * <p>*   Owner not exists</p>
+         * <p>*   Group not exists</p>
+         * <p>*   Mode is invalid</p>
          */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
         /**
-         * <p>The time when the file sending task finished being executed.</p>
+         * <p>The time when the file sending task was completed.</p>
          */
         @NameInMap("FinishTime")
         public String finishTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the instance</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -159,7 +162,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time when the execution status was last updated.</p>
+         * <p>The time when the task status was updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -255,9 +258,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocationTagsTag extends TeaModel {
+        /**
+         * <p>The tag key of the file sending task.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the file sending task.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -313,8 +322,8 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         /**
          * <p>The content type of the file. Valid values:</p>
          * <br>
-         * <p>*   PlainText: The file content is not encoded.</p>
-         * <p>*   Base64: The file content is Base64-encoded.</p>
+         * <p>*   PlainText</p>
+         * <p>*   Base64</p>
          */
         @NameInMap("ContentType")
         public String contentType;
@@ -326,7 +335,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description.</p>
+         * <p>The description of the file.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -352,21 +361,17 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         /**
          * <p>The overall sending state of the file. The overall sending state of the file depends on its sending state on all the destination instances. Valid values:</p>
          * <br>
-         * <p>*   Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</p>
-         * <br>
-         * <p>*   Running: The file creation task is running on the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</p>
-         * <br>
-         * <p>*   Success: If the sending state of the file on all the instances is Success, the overall sending state of the file is Success.</p>
-         * <br>
-         * <p>*   Failed: If the sending state of the file on all the instances is Failed, the overall sending state of the file is Failed. If the sending state of the file on one or more instances is one of the following values, the overall sending state of the file is Failed:</p>
-         * <br>
-         * <p>    *   Invalid: The file is invalid.</p>
-         * <p>    *   Aborted: The file failed to be sent.</p>
-         * <p>    *   Failed: The file failed to be created.</p>
-         * <p>    *   Timeout: The file sending task timed out.</p>
-         * <p>    *   Error: An error occurred while the file is being sent.</p>
-         * <br>
-         * <p>*   PartialFailed: The file was sent to some of the specified instances and failed to be sent to the others. The overall sending state of the file is PartialFailed only when its sending state is Success on some instances and is Failed on the others.</p>
+         * <p>*   Pending: The file is being verified or sent.</p>
+         * <p>*   Invalid: The file is invalid.</p>
+         * <p>*   Running: The file is being sent to the instances.</p>
+         * <p>*   Aborted: The file failed to be sent to the instances. To send a file to an instance, make sure that the instance is in the Running state and the file can be sent within 1 minute.</p>
+         * <p>*   Success: The file is sent.</p>
+         * <p>*   Failed: The file failed to be created on the instances.</p>
+         * <p>*   Error: An error occurs and interrupts the file sending task.</p>
+         * <p>*   Timeout: The file sending task times out.</p>
+         * <p>*   Cancelled: The file sending task is canceled.</p>
+         * <p>*   Stopping: The file sending task is being stopped.</p>
+         * <p>*   Terminated: The file sending task is terminated.</p>
          */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
@@ -378,7 +383,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String invokeId;
 
         /**
-         * <p>Details about the destination instances.</p>
+         * <p>The destination instances.</p>
          */
         @NameInMap("InvokeInstances")
         public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
@@ -395,6 +400,9 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         @NameInMap("Overwrite")
         public String overwrite;
 
+        /**
+         * <p>The tags of the file sending task.</p>
+         */
         @NameInMap("Tags")
         public DescribeSendFileResultsResponseBodyInvocationsInvocationTags tags;
 

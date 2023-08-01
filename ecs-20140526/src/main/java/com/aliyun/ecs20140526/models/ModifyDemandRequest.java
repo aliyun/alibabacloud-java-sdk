@@ -11,7 +11,7 @@ public class ModifyDemandRequest extends TeaModel {
     public Integer amount;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,7 +29,7 @@ public class ModifyDemandRequest extends TeaModel {
     public String demandId;
 
     /**
-     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
+     * <p>The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).</p>
      * <br>
      * <p>The default value is the instance type name.</p>
      */
@@ -37,28 +37,28 @@ public class ModifyDemandRequest extends TeaModel {
     public String demandName;
 
     /**
-     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
+     * <p>The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~)standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
-     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm).</p>
+     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).</p>
      * <br>
-     * <p>The value of EndTime must be later than the value of Starttime.</p>
+     * <p>The value of EndTime must be later than the value of StartTime.</p>
      * <br>
-     * <p>Typically, the interval between the two times cannot be more than 10 days.</p>
+     * <p>in most cases, the interval between StartTime and EndTime cannot be more than 10 days.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The billing method of the instance. Default value: PostPaid. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <br>
      * <p>*   PrePaid: subscription</p>
-     * <p>*   PostPaid: pay-as-you-go</p>
+     * <p>*   PostPaid (default): pay-as-you-go</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
-     * <p>The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of the filed instance type, or see [Select instance types](~~58291~~) to learn how to select instance types.</p>
+     * <p>The instance type. For more information, see [Instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of the specified instance type. To learn how to select instance types, see [Select instance types](~~58291~~).</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -70,7 +70,7 @@ public class ModifyDemandRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription period of the resource. Unit: month. You must specify the parameter. This parameter is valid only when `InstanceChargeType` is set to PrePaid. Valid values:</p>
+     * <p>The subscription period of the resource. Unit: month. You must specify this parameter. This parameter is valid only if you set `InstanceChargeType` to PrePaid. Valid values:</p>
      * <br>
      * <p>*   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.</p>
      * <p>*   Valid values when PeriodUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
@@ -79,11 +79,11 @@ public class ModifyDemandRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period of the resource. Default value: Month. Valid values:</p>
+     * <p>The unit of the subscription period of the resource. Valid values:</p>
      * <br>
      * <p>*   Day</p>
      * <p>*   Week</p>
-     * <p>*   Month</p>
+     * <p>*   Month. This is the default value.</p>
      */
     @NameInMap("PeriodUnit")
     public String periodUnit;
@@ -103,11 +103,11 @@ public class ModifyDemandRequest extends TeaModel {
     /**
      * <p>The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.</p>
      * <br>
-     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm).</p>
+     * <p>If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).</p>
      * <br>
-     * <p>The value of EndTime must be later than the value of Starttime.</p>
+     * <p>The value of EndTime must be later than the value of StartTime.</p>
      * <br>
-     * <p>Typically, the interval between the two times cannot be more than 10 days.</p>
+     * <p>In most cases, the interval between StartTime and EndTime cannot be more than 10 days.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -115,7 +115,7 @@ public class ModifyDemandRequest extends TeaModel {
     /**
      * <p>The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      * <br>
-     * <p>This parameter is empty by default. If you do not specify a zone, the system randomly selects one.</p>
+     * <p>This parameter is empty by default. If you leave this parameter empty, the system randomly selects a zone.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

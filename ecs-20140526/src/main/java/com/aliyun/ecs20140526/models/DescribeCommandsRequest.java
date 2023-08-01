@@ -5,39 +5,41 @@ import com.aliyun.tea.*;
 
 public class DescribeCommandsRequest extends TeaModel {
     /**
-     * <p>The name of the command. Partial command names are not supported.</p>
+     * <p>The command ID.</p>
      */
     @NameInMap("CommandId")
     public String commandId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:</p>
      * <br>
-     * <p>Pages start from page 1.</p>
+     * <p>*   PlainText: returns the original command content and command output.</p>
+     * <p>*   Base64: returns the Base64-encoded command content and command output.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Default value: Base64.</p>
      */
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
     /**
-     * <p>The command type. Valid values:</p>
-     * <br>
-     * <p>*   RunBatScript: batch command, applicable to Windows instances</p>
-     * <p>*   RunPowerShellScript: PowerShell command, applicable to Windows instances</p>
-     * <p>*   RunShellScript: shell command, applicable to Linux instances</p>
+     * <p>> This parameter is deprecated and does not take effect.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>Specifies whether to query only the latest version of common commands if common commands are queried. This parameter does not affect the query for private commands. Valid values:</p>
+     * <br>
+     * <p>*   true: queries only the latest version of common commands.</p>
+     * <p>*   false: queries all versions of common commands.</p>
+     * <br>
+     * <p>Default value: false.</p>
      */
     @NameInMap("Latest")
     public Boolean latest;
 
     /**
-     * <p>> This parameter is deprecated and does not take effect.</p>
+     * <p>The command name. Partial command names are not supported.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -49,31 +51,24 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Maximum value: 50.</p>
+     * <p>Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>Specifies whether to query only the latest version of common commands when common commands are queried. This parameter does not affect the query for private commands. Valid values:</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>*   true: queries only the latest version of common commands.</p>
-     * <p>*   false: queries all versions of common commands.</p>
+     * <p>Valid values: 1 to 50.</p>
      * <br>
-     * <p>Default value: false.</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
-
-    /**
-     * <p>The ID of the command.</p>
-     */
-    @NameInMap("Provider")
-    public String provider;
 
     /**
      * <p>The provider of the common command. Take note of the following items:</p>
@@ -87,6 +82,12 @@ public class DescribeCommandsRequest extends TeaModel {
      * <p>    *   If you set `Provider` to AlibabaCloud.ECS.GuestOS, all the common commands provided by `AlibabaCloud.ECS.GuestOS` are queried.</p>
      * <p>    *   If you set `Provider` to AlibabaCloud.ECS.GuestOSDiagnose, all the common commands provided by `AlibabaCloud.ECS.GuestOSDiagnose` are queried.</p>
      */
+    @NameInMap("Provider")
+    public String provider;
+
+    /**
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -97,18 +98,17 @@ public class DescribeCommandsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the command.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeCommandsRequestTag> tag;
 
     /**
-     * <p>The encoding mode of the `CommandContent` and `Output` response parameters. Valid values:</p>
+     * <p>The command type. Valid values:</p>
      * <br>
-     * <p>*   PlainText: returns the original command content and command output.</p>
-     * <p>*   Base64: returns the Base64-encoded command content and command output</p>
-     * <br>
-     * <p>Default value: Base64.</p>
+     * <p>*   RunBatScript: batch command, applicable to Windows instances.</p>
+     * <p>*   RunPowerShellScript: PowerShell command, applicable to Windows instances.</p>
+     * <p>*   RunShellScript: shell command, applicable to Linux instances.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -240,15 +240,19 @@ public class DescribeCommandsRequest extends TeaModel {
 
     public static class DescribeCommandsRequestTag extends TeaModel {
         /**
-         * <p>The value of tag N to add to the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The key of tag N of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The number of entries returned on each page.</p>
+         * <p>The value of tag N of the command. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

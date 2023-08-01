@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
     /**
-     * <p>Details of the launch template versions.</p>
+     * <p>Details about the launch template versions.</p>
      */
     @NameInMap("LaunchTemplateVersionSets")
     public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSets launchTemplateVersionSets;
@@ -216,10 +216,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String autoSnapshotPolicyId;
 
         /**
-         * <p>Indicates whether the performance burst feature is enabled. Valid values:</p>
+         * <p>Indicates whether to enable the performance burst feature. Valid values:</p>
          * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>*   true: enables the performance burst feature.</p>
+         * <p>*   false: does not enable the performance burst feature.</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -245,7 +245,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The device name of the data disk.</p>
          * <br>
-         * <p>> This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.</p>
+         * <p>>  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
          */
         @NameInMap("Device")
         public String device;
@@ -257,28 +257,28 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String diskName;
 
         /**
-         * <p>Indicates whether the data disk is encrypted.</p>
+         * <p>Indicates whether to encrypt the data disk.</p>
          */
         @NameInMap("Encrypted")
         public String encrypted;
 
         /**
-         * <p>The performance level of the ESSD used as the data disk. This parameter is returned only if `Category` is set to cloud_essd. Valid values:</p>
+         * <p>The performance level of ESSD to use as the data disk. This parameter is returned only when tne value of `Category` is cloud_essd. Valid values:</p>
          * <br>
-         * <p>*   PL0: A single ESSD can provide up to 10,000 random read/write IOPS.</p>
-         * <p>*   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
          * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
-         * <p>*   PL3: A single ESSD can deliver up to 1 million random read/write IOPS.</p>
+         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk used as the data disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}</p>
          * <br>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
          * <br>
-         * <p>> This parameter is available only if you set the Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
+         * <p>>  This parameter is available only if the corresponding disk category parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).</p>
          */
         @NameInMap("ProvisionedIops")
         public Long provisionedIops;
@@ -290,7 +290,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The ID of the snapshot used to create the data disk.</p>
+         * <p>The ID of the snapshot to use to create the data disk.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -456,10 +456,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String networkInterfaceName;
 
         /**
-         * <p>The communication mode of the primary ENI. Valid values:</p>
+         * <p>The communication mode of the ENI. Valid values:</p>
          * <br>
          * <p>*   Standard: The TCP communication mode is used.</p>
          * <p>*   HighPerformance: Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.</p>
+         * <br>
+         * <p>> This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.</p>
          */
         @NameInMap("NetworkInterfaceTrafficMode")
         public String networkInterfaceTrafficMode;
@@ -471,23 +473,23 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String primaryIpAddress;
 
         /**
-         * <p>The IDs of the security groups to which the secondary ENI is assigned. The security group and the ENI must belong to the same VPC.</p>
+         * <p>The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.</p>
          * <br>
-         * <p>> The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
+         * <p>> You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which the secondary ENI is assigned.</p>
+         * <p>The ID of security group *N* with which you want to associate the ECS instance. Valid values of *N* vary based on the maximum number of security groups with which the instance can be associated. For more information, see the "Security group limits" section in the [Limits](~~25412~~) topic.</p>
          * <br>
-         * <p>> The SecurityGroupId and SecurityGroupIds parameters are mutually exclusive in the response.</p>
+         * <p>>  You cannot specify the **SecurityGroupId** and **SecurityGroupIds.N** parameters at the same time.</p>
          */
         @NameInMap("SecurityGroupIds")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds securityGroupIds;
 
         /**
-         * <p>The ID of the vSwitch to which the ENI is connected.</p>
+         * <p>The ID of the vSwitch to which to connect the secondary ENI.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -603,13 +605,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag to add to the instance.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag to add to the instance.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -661,7 +663,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk systemDisk;
 
         /**
-         * <p>The automatic release time.</p>
+         * <p>The automatic release time of the instance.</p>
          */
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
@@ -672,6 +674,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("DataDisks")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks dataDisks;
 
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
+
         /**
          * <p>The ID of the deployment set.</p>
          */
@@ -679,13 +684,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String deploymentSetId;
 
         /**
-         * <p>The description of the system disk.</p>
+         * <p>The description of the instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the operating system configuration is enabled for the instance.</p>
+         * <p>Indicates whether to enable the operating system configuration of the instance.</p>
          */
         @NameInMap("EnableVmOsConfig")
         public Boolean enableVmOsConfig;
@@ -705,10 +710,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The source of the image. Valid values:</p>
          * <br>
-         * <p>*   system: a public image of Alibaba Cloud.</p>
-         * <p>*   self: a custom image that you created.</p>
-         * <p>*   others: a shared image from another Alibaba Cloud account.</p>
-         * <p>*   marketplace: an Alibaba Cloud Marketplace image.</p>
+         * <p>*   system: public images provided by Alibaba Cloud</p>
+         * <p>*   self: custom images that you create</p>
+         * <p>*   others: shared images from other Alibaba Cloud accounts</p>
+         * <p>*   marketplace: Alibaba Cloud Marketplace images</p>
          */
         @NameInMap("ImageOwnerAlias")
         public String imageOwnerAlias;
@@ -716,14 +721,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <br>
-         * <p>*   PrePaid: subscription.</p>
-         * <p>*   PostPaid: pay-as-you-go.</p>
+         * <p>*   PrePaid: subscription</p>
+         * <p>*   PostPaid: pay-as-you-go</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -759,7 +764,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String ioOptimized;
 
         /**
-         * <p>The number of IPv6 addresses assigned to the instance.</p>
+         * <p>The number of IPv6 addresses to assign to the instance.</p>
          */
         @NameInMap("Ipv6AddressCount")
         public Integer ipv6AddressCount;
@@ -779,32 +784,32 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <br>
-         * <p>*   classic</p>
-         * <p>*   vpc</p>
+         * <p>*   classic: classic network</p>
+         * <p>*   vpc: VPC</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
         /**
-         * <p>Indicates whether the preset password of the image is used.</p>
+         * <p>Indicates whether to use the password preset in the image.</p>
          */
         @NameInMap("PasswordInherit")
         public Boolean passwordInherit;
 
         /**
-         * <p>The subscription period of the resource.</p>
+         * <p>The subscription duration.</p>
          */
         @NameInMap("Period")
         public Integer period;
 
         /**
-         * <p>The private IP address assigned to the instance.</p>
+         * <p>The private IP address to assign to the instance.</p>
          */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
         /**
-         * <p>The name of the RAM role that is assigned to the instance.</p>
+         * <p>The name of the instance RAM role.</p>
          */
         @NameInMap("RamRoleName")
         public String ramRoleName;
@@ -816,23 +821,23 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether security hardening was enabled.</p>
+         * <p>Indicates whether to enable security hardening.</p>
          */
         @NameInMap("SecurityEnhancementStrategy")
         public String securityEnhancementStrategy;
 
         /**
-         * <p>The ID of the security group to which the instance belongs.</p>
+         * <p>The ID of the security group to which to assign the instance.</p>
          * <br>
-         * <p>> `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
+         * <p>>  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
          */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         /**
-         * <p>The IDs of the security groups to which the instance belongs.</p>
+         * <p>The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~).</p>
          * <br>
-         * <p>> `The SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.</p>
+         * <p>> You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.</p>
          */
         @NameInMap("SecurityGroupIds")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSecurityGroupIds securityGroupIds;
@@ -842,14 +847,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          * <br>
          * <p>Take note of the following items:</p>
          * <br>
-         * <p>*   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to specify one of these values, submit a ticket.</p>
-         * <p>*   A value of 0 indicates that no protection period is specified for the preemptible instance.</p>
+         * <p>*   The following protection periods are in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.</p>
+         * <p>*   A value of 0 indicates that no protection period is configured for the preemptible instance.</p>
          */
         @NameInMap("SpotDuration")
         public Integer spotDuration;
 
         /**
-         * <p>The maximum hourly price of the instance.</p>
+         * <p>The maximum hourly price of the preemptible instance.</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
@@ -857,15 +862,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
          * <br>
-         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
-         * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
+         * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
-         * <p>The tags of the instance.</p>
+         * <p>The tags to add to the instance.</p>
          */
         @NameInMap("Tags")
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags tags;
@@ -877,7 +882,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String userData;
 
         /**
-         * <p>The ID of the vSwitch to which the instance is connected.</p>
+         * <p>The ID of the vSwitch to which to connect the instance.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -889,7 +894,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The ID of the zone.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -921,6 +926,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks getDataDisks() {
             return this.dataDisks;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setDeploymentSetId(String deploymentSetId) {
@@ -1203,7 +1216,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>Indicates whether the launch template is of the default version.</p>
+         * <p>Indicates whether the launch template version is the default version.</p>
          */
         @NameInMap("DefaultVersion")
         public Boolean defaultVersion;
@@ -1239,7 +1252,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String versionDescription;
 
         /**
-         * <p>The version number of the launch template.</p>
+         * <p>The number of the launch template version.</p>
          */
         @NameInMap("VersionNumber")
         public Long versionNumber;

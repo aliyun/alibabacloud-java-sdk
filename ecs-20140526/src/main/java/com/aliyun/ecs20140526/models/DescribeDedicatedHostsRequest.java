@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
-     * <p>The ID of the dedicated host cluster.</p>
+     * <p>The ID of the dedicated host cluster to which the dedicated host belongs.</p>
      */
     @NameInMap("DedicatedHostClusterId")
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).</p>
      */
     @NameInMap("DedicatedHostIds")
     public String dedicatedHostIds;
@@ -23,7 +23,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostName;
 
     /**
-     * <p>The type of the dedicated host. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to query the most recent list of dedicated host types.</p>
+     * <p>The dedicated host type. You can call the [DescribeDedicatedHostTypes](~~134240~~) operation to obtain the most recent list of dedicated host types.</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
@@ -31,8 +31,8 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The reason why the dedicated host is locked. Valid values:</p>
      * <br>
-     * <p>*   financial: The dedicated host is locked due to overdue payments.</p>
-     * <p>*   security: The dedicated host is locked due to security reasons.</p>
+     * <p>*   financial</p>
+     * <p>*   security</p>
      */
     @NameInMap("LockReason")
     public String lockReason;
@@ -44,7 +44,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -52,9 +52,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Maximum value: 100.</p>
+     * <p>Valid values: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -62,15 +62,15 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the dedicated host resides. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the dedicated host belongs. If you specify this parameter, the details of up to 1,000 resources that belong to the specified resource group are returned.</p>
+     * <p>The ID of the resource group to which the dedicated host belongs. When this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>>  Resources in the default resource group are displayed in the response regardless of the value that you specified for this parameter.</p>
+     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -81,15 +81,21 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to display socket information. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("SocketDetails")
     public String socketDetails;
 
     /**
-     * <p>The service status of the dedicated host. Valid values:</p>
+     * <p>The service state of the dedicated host. Valid values:</p>
      * <br>
-     * <p>*   Available: The dedicated host is running as expected.</p>
-     * <p>*   UnderAssessment: The dedicated host is available. However, the dedicated host has potential risks that may cause the ECS instances on the dedicated host to fail.</p>
-     * <p>*   PermanentFailure: The dedicated host has permanent failures and cannot be used.</p>
+     * <p>*   Available: The dedicated host is running normally.</p>
+     * <p>*   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.</p>
+     * <p>*   PermanentFailure: The dedicated host encounters permanent failures and is unavailable.</p>
      * <p>*   TempUnavailable: The dedicated host is temporarily unavailable.</p>
      * <p>*   Redeploying: The dedicated host is being restored.</p>
      * <br>
@@ -99,13 +105,13 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the dedicated hosts.</p>
+     * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
 
     /**
-     * <p>The ID of the zone where the dedicated host resides. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the dedicated host. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -253,13 +259,13 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         * <p>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

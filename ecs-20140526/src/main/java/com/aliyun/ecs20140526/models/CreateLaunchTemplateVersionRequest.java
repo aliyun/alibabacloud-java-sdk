@@ -23,6 +23,9 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     @NameInMap("DataDisk")
     public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The ID of the deployment set to which to deploy the instance.</p>
      */
@@ -335,6 +338,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
     public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public CreateLaunchTemplateVersionRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public CreateLaunchTemplateVersionRequest setDeploymentSetId(String deploymentSetId) {

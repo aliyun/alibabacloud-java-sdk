@@ -5,43 +5,30 @@ import com.aliyun.tea.*;
 
 public class StopInstancesRequest extends TeaModel {
     /**
-     * <p>Specifies the batch operation mode. Valid values:</p>
-     * <br>
-     * <p>*   AllTogether: In this mode, a success message is returned if all specified instances are stopped. If one or more of the specified instances fail the check when you set the DryRun parameter to false, none of the specified instances can be stopped and an error message is returned.</p>
-     * <p>*   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.</p>
-     * <br>
-     * <p>Default value: AllTogether.</p>
+     * <p>The IDs of instances.</p>
      */
     @NameInMap("BatchOptimization")
     public String batchOptimization;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid Values:</p>
-     * <br>
-     * <p>*   true: performs a dry run, but the request is not made. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.</p>
-     * <br>
-     * <p>> If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.</p>
-     * <br>
-     * <p>*   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.</p>
-     * <br>
-     * <p>Default value: false.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to forcibly stop the instance. Valid values:</p>
+     * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
      * <br>
-     * <p>*   true: forcibly stops the instance. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage devices on the instance is lost.</p>
-     * <p>*   false: normally stops the instance.</p>
+     * <p>*   StopCharging: economical mode. For information about the conditions on which `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).</p>
+     * <p>*   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.</p>
      * <br>
-     * <p>Default value: false.</p>
+     * <p>Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.</p>
      */
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
     /**
-     * <p>The IDs of instances.</p>
+     * <p>The ID of instance N. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("InstanceId")
     public java.util.List<String> instanceId;
@@ -53,7 +40,12 @@ public class StopInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>Specifies whether to forcibly stop the instance. Valid values:</p>
+     * <br>
+     * <p>*   true: forcibly stops the instance. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage devices on the instance is lost.</p>
+     * <p>*   false: normally stops the instance.</p>
+     * <br>
+     * <p>Default value: false.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -65,12 +57,12 @@ public class StopInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
+     * <p>Specifies the batch operation mode. Valid values:</p>
      * <br>
-     * <p>*   StopCharging: economical mode. For information about the conditions on which `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).</p>
-     * <p>*   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.</p>
+     * <p>*   AllTogether: In this mode, a success message is returned if all specified instances are stopped. If one or more of the specified instances fail the check when you set the DryRun parameter to false, none of the specified instances can be stopped and an error message is returned.</p>
+     * <p>*   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.</p>
      * <br>
-     * <p>Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.</p>
+     * <p>Default value: AllTogether.</p>
      */
     @NameInMap("StoppedMode")
     public String stoppedMode;

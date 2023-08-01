@@ -11,13 +11,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
      */
     @NameInMap("Ipv4PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv4PrefixSets ipv4PrefixSets;
 
     /**
-     * <p>> This parameter is in invitational preview and is unavailable.</p>
+     * <p>> 该参数正在邀测中，暂未开放使用。</p>
      */
     @NameInMap("Ipv6PrefixSets")
     public CreateNetworkInterfaceResponseBodyIpv6PrefixSets ipv6PrefixSets;
@@ -35,7 +35,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String macAddress;
 
     /**
-     * <p>The ENI ID.</p>
+     * <p>The ID of the ENI.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -59,7 +59,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>Details about the private IP addresses.</p>
+     * <p>The private IP addresses.</p>
      */
     @NameInMap("PrivateIpSets")
     public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
@@ -113,7 +113,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The ID of the vSwitch with which the ENI is associated.</p>
+     * <p>The ID of the vSwitch to which the ENI is connected.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -125,7 +125,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The ID of the zone in which the ENI resides.</p>
+     * <p>The zone ID of the ENI.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -305,7 +305,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv4PrefixSetsIpv4PrefixSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> 该参数正在邀测中，暂未开放使用。</p>
          */
         @NameInMap("Ipv4Prefix")
         public String ipv4Prefix;
@@ -346,7 +346,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyIpv6PrefixSetsIpv6PrefixSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable.</p>
+         * <p>> 该参数正在邀测中，暂未开放使用。</p>
          */
         @NameInMap("Ipv6Prefix")
         public String ipv6Prefix;
@@ -428,7 +428,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
         /**
-         * <p>Indicates whether the private IP address is the primary private IP address.</p>
+         * <p>Indicates whether the IP address is the primary private IP address.</p>
          */
         @NameInMap("Primary")
         public Boolean primary;
@@ -502,13 +502,13 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     public static class CreateNetworkInterfaceResponseBodyTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the ENI.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the ENI.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

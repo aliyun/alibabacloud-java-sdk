@@ -11,13 +11,13 @@ public class DescribePrefixListAttributesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the prefix list.</p>
+     * <p>The time when the prefix list was created.</p>
      */
     @NameInMap("PrefixListId")
     public String prefixListId;
 
     /**
-     * <p>The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the prefix list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -11,19 +11,19 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public DescribeDisksFullStatusResponseBodyDiskFullStatusSet diskFullStatusSet;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -89,10 +89,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         /**
          * <p>The name of the event type. Valid values:</p>
          * <br>
-         * <p>*   Degraded: The performance of the EBS device was degraded.</p>
-         * <p>*   SeverelyDegraded: The performance of the EBS device was severely degraded.</p>
-         * <p>*   Stalled: The performance of the EBS device was severely affected.</p>
-         * <p>*   ErrorDetected: The local disk was damaged.</p>
+         * <p>*   Degraded: The performance of the EBS device is degraded.</p>
+         * <p>*   SeverelyDegraded: The performance of the EBS device is severely degraded.</p>
+         * <p>*   Stalled: The performance of the EBS device is severely affected.</p>
+         * <p>*   ErrorDetected: The local disk is damaged.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -307,7 +307,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet diskEventSet;
 
         /**
-         * <p>The ID of EBS device N.</p>
+         * <p>The EBS device ID.</p>
          */
         @NameInMap("DiskId")
         public String diskId;
@@ -319,7 +319,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus healthStatus;
 
         /**
-         * <p>The ID of the instance that you query.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

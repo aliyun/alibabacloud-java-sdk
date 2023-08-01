@@ -5,56 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyCommandRequest extends TeaModel {
     /**
-     * <p>The command description. The description supports all character sets and can be up to 512 characters in length.</p>
-     */
-    @NameInMap("CommandContent")
-    public String commandContent;
-
-    /**
-     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
-    @NameInMap("CommandId")
-    public String commandId;
-
-    /**
-     * <p>The command name. The name supports all character sets and can be up to 128 characters in length.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    /**
-     * <p>The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
-     */
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>You can modify a command when it is run. After the command is modified, the new command content applies to subsequent executions.</p>
-     * <br>
-     * <p>You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    /**
-     * <p>The working directory of the command.</p>
-     */
-    @NameInMap("Timeout")
-    public Long timeout;
-
-    /**
      * <p>The command content. The command content can be plaintext or Base64-encoded. Take note of the following items:</p>
      * <br>
      * <p>*   The Base64-encoded command content can be up to 16 KB in size.</p>
@@ -67,6 +17,54 @@ public class ModifyCommandRequest extends TeaModel {
      * <p>    *   You can specify up to 20 custom parameters.</p>
      * <p>    *   A custom parameter name can contain only letters, digits, underscores (\_), and hyphens (-). The name is not case-sensitive.</p>
      * <p>    *   Each custom parameter name cannot exceed 64 bytes in length.</p>
+     */
+    @NameInMap("CommandContent")
+    public String commandContent;
+
+    /**
+     * <p>The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.</p>
+     */
+    @NameInMap("CommandId")
+    public String commandId;
+
+    /**
+     * <p>The command description. The description supports all character sets and can be up to 512 characters in length.</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The command name. The name supports all character sets and can be up to 128 characters in length.</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    /**
+     * <p>The maximum timeout period for the command to be run on the instance. Unit: seconds. When a command cannot run within the specified time range, the command times out. Then, the command process is forcibly terminated by canceling the process ID (PID) of the command.</p>
+     */
+    @NameInMap("Timeout")
+    public Long timeout;
+
+    /**
+     * <p>The working directory of the command.</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;

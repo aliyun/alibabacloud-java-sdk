@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteActivationResponseBody extends TeaModel {
     /**
-     * <p>Details of the activation code and its usage information.</p>
+     * <p>The time when the activation code was created.</p>
      */
     @NameInMap("Activation")
     public DeleteActivationResponseBodyActivation activation;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Details of the activation code and its usage information.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,56 +38,53 @@ public class DeleteActivationResponseBody extends TeaModel {
     }
 
     public static class DeleteActivationResponseBodyActivation extends TeaModel {
-        /**
-         * <p>The ID of the activation code.</p>
-         */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
-         * <p>The time when the activation code was created.</p>
+         * <p>The number of instances that were deregistered.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The number of instances that were deregistered.</p>
+         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
          */
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
         /**
-         * <p>The description of the activation code.</p>
+         * <p>The number of registered instances.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         * <p>The description of the activation code.</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
-         * <p>The default instance name prefix.</p>
+         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
+         * <p>The validity period of the activation code. Unit: hours.</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
         /**
-         * <p>The number of registered instances.</p>
+         * <p>The default instance name prefix.</p>
          */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
         /**
-         * <p>The validity period of the activation code. Unit: hours.</p>
+         * <p>The ID of the activation code.</p>
          */
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;

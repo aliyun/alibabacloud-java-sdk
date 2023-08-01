@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeManagedInstancesResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the managed instance is connected. Valid values:</p>
-     * <br>
-     * <p>*   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.</p>
-     * <p>*   false: The managed instance is not connected because the managed instance is down or because the Cloud Assistant client is not installed correctly.</p>
+     * <p>The queried managed instances.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeManagedInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The queried instances.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The total number of managed instances returned.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The last Cloud Assistant task execution time.</p>
+     * <p>The total number of queried managed instances.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -83,9 +80,21 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeManagedInstancesResponseBodyInstancesTags extends TeaModel {
+        /**
+         * <p>The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -114,95 +123,94 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
 
     public static class DescribeManagedInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The version number of the Cloud Assistant client.</p>
+         * <p>The ID of the activation code.</p>
          */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
-         * <p>The name of the managed instance.</p>
+         * <p>The version number of Cloud Assistant Agent.</p>
          */
         @NameInMap("AgentVersion")
         public String agentVersion;
 
         /**
-         * <p>The hostname of the managed instance.</p>
+         * <p>Indicates whether the managed instance is connected. Valid values:</p>
+         * <br>
+         * <p>*   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.</p>
+         * <p>*   false: The managed instance is not connected because the managed instance is down or because Cloud Assistant Agent is not installed correctly.</p>
          */
         @NameInMap("Connected")
         public Boolean connected;
 
         /**
-         * <p>The ID of the activation code.</p>
+         * <p>The hostname of the managed instance.</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
-         * <p>The internal IP address of the managed instance.</p>
+         * <p>The ID of the managed instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The version information of the operating system.</p>
+         * <p>The name of the managed instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the managed instance.</p>
+         * <p>The public IP address of the managed instance.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
 
         /**
-         * <p>The time when the managed instance was registered.</p>
+         * <p>The internal IP address of the managed instance.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
         /**
-         * <p>The tags.</p>
+         * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
          */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
         /**
-         * <p>The public IP address of the managed instance.</p>
+         * <p>The time when the Cloud Assistant task was last executed.</p>
          */
         @NameInMap("LastInvokedTime")
         public String lastInvokedTime;
 
         /**
-         * <p>The tag of the managed instance.</p>
+         * <p>The machine code of the managed instance.</p>
          */
         @NameInMap("MachineId")
         public String machineId;
 
         /**
-         * <p>The number of times that Cloud Assistant tasks were executed on the managed instance.</p>
+         * <p>The operating system type of the managed instance.</p>
          */
         @NameInMap("OsType")
         public String osType;
 
         /**
-         * <p>The machine code of the managed instance.</p>
+         * <p>The version information of the operating system.</p>
          */
         @NameInMap("OsVersion")
         public String osVersion;
 
         /**
-         * <p>The operating system type of the managed instance.</p>
+         * <p>The time when the managed instance was registered.</p>
          */
         @NameInMap("RegistrationTime")
         public String registrationTime;
 
         /**
-         * <p>The tag key of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <p>The tags of the managed instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeManagedInstancesResponseBodyInstancesTags> tags;

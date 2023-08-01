@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>Details about the monitoring data of snapshot sizes.</p>
+     * <p>The monitoring data of snapshot sizes.</p>
      */
     @NameInMap("MonitorData")
     public DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData;
@@ -39,13 +39,13 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
 
     public static class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint extends TeaModel {
         /**
-         * <p>The snapshot size. Unit: bytes.</p>
+         * <p>The total size of snapshots. Unit: bytes.</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The timestamp that corresponds to the snapshot size.</p>
+         * <p>The timestamp that corresponds to a snapshot size.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

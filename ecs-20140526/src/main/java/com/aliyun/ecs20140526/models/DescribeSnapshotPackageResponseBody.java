@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotPackageResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>Details about the OSS storage plans.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The total number of returned OSS storage plans.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about the OSS storage plans.</p>
+     * <p>The time when the OSS storage plan expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("SnapshotPackages")
     public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
 
     /**
-     * <p>The total number of returned OSS storage plans.</p>
+     * <p>The name of the OSS storage plan.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,25 +81,22 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
 
     public static class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage extends TeaModel {
         /**
-         * <p>The name of the OSS storage plan.</p>
+         * <p>The time when the OSS storage plan was purchased. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The time when the OSS storage plan expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The maximum storage capacity offered by the OSS storage plan.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
-        /**
-         * <p>The maximum storage capacity offered by the OSS storage plan.</p>
-         */
         @NameInMap("InitCapacity")
         public Long initCapacity;
 
         /**
-         * <p>The time when the OSS storage plan was purchased. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>DescribeSnapshotPackage</p>
          */
         @NameInMap("StartTime")
         public String startTime;

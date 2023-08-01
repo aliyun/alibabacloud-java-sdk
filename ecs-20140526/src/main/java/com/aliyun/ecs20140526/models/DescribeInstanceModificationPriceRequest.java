@@ -8,19 +8,21 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public DescribeInstanceModificationPriceRequestSystemDisk systemDisk;
 
     /**
-     * <p>$.parameters[2].schema.description</p>
+     * <p>The information about the data disk.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
 
     /**
-     * <p>$.parameters[6].schema.description</p>
+     * <p>The ID of the instance for which you want to query pricing information for a configuration upgrade.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>$.parameters[6].schema.example</p>
+     * <p>The new instance type. We recommend that you call the [DescribeResourcesModification](~~66187~~) operation to query the instance types available for configuration upgrades in a specified zone.</p>
+     * <br>
+     * <p>> When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -32,7 +34,7 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>$.parameters[6].schema.items.enumValueTitles</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -122,7 +124,14 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
 
     public static class DescribeInstanceModificationPriceRequestSystemDisk extends TeaModel {
         /**
-         * <p>$.parameters[6].schema.enumValueTitles</p>
+         * <p>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see [Instance families](~~25378~~) and [Retired instance types](~~55263~~).</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <br>
+         * <p>This parameter is empty by default.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -144,19 +153,52 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
 
     public static class DescribeInstanceModificationPriceRequestDataDisk extends TeaModel {
         /**
-         * <p>$.parameters[4].schema.description</p>
+         * <p>The category of data disk N. You can specify this parameter if you want to query the pricing information about newly attached subscription data disks. Valid values of N: 1 to 16. Valid values:</p>
+         * <br>
+         * <p>*   cloud_efficiency: ultra disk</p>
+         * <p>*   cloud_ssd: standard SSD</p>
+         * <p>*   cloud_essd: ESSD</p>
+         * <p>*   cloud: basic disk</p>
+         * <br>
+         * <p>This parameter is empty by default.</p>
+         * <br>
+         * <p>> When you call the DescribeInstanceModificationPrice operation, you must specify at least one of the following parameters: `InstanceType` and `DataDisk.N.*`.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>$.parameters[2].schema.example</p>
+         * <p>The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in `DataDisk.N.Category` when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
+         * <br>
+         * <p>*   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</p>
+         * <p>*   PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</p>
+         * <p>*   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</p>
+         * <p>*   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</p>
+         * <br>
+         * <p>Default value: PL1.</p>
+         * <br>
+         * <p>For more information about ESSD performance levels, see [ESSDs](~~122389~~).</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
-         * <p>$.parameters[2].schema.enumValueTitles</p>
+         * <p>The capacity of data disk N. Valid values of N: 1 to 16. Unit: GiB. Valid values:</p>
+         * <br>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</p>
+         * <br>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</p>
+         * <br>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud_essd: depends on the value of `DataDisk.N.PerformanceLevel`.</p>
+         * <br>
+         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.</p>
+         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</p>
+         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</p>
+         * <p>    *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</p>
+         * <br>
+         * <p>*   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.</p>
+         * <br>
+         * <p>The default value is the minimum capacity allowed for the specified data disk category.</p>
          */
         @NameInMap("Size")
         public Integer size;

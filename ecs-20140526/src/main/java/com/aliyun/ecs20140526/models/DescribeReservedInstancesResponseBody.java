@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeReservedInstancesResponseBody extends TeaModel {
     /**
-     * <p>The returned page number.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -122,13 +122,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag extends TeaModel {
         /**
-         * <p>The key of the reserved instance tag N.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The value of the reserved instance tag N.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -177,7 +177,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance extends TeaModel {
         /**
-         * <p>Indicates the allocation status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
+         * <p>Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:</p>
          * <br>
          * <p>*   allocated: The reserved instance is allocated to another account.</p>
          * <p>*   beAllocated: The reserved instance is allocated by another account.</p>
@@ -216,7 +216,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The payment options for the reserved instance.</p>
+         * <p>The payment option.</p>
          */
         @NameInMap("OfferingType")
         public String offeringType;
@@ -230,14 +230,14 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         /**
          * <p>The operating system of the image used by the instance. Valid values:</p>
          * <br>
-         * <p>*   Windows: Windows Server operating system</p>
-         * <p>*   Linux: Linux and UNIX-like operating system</p>
+         * <p>*   Windows</p>
+         * <p>*   Linux</p>
          */
         @NameInMap("Platform")
         public String platform;
 
         /**
-         * <p>The ID of the region where the instance resides.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -261,13 +261,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates range.</p>
+         * <p>The scope.</p>
          */
         @NameInMap("Scope")
         public String scope;
 
         /**
-         * <p>The validation time.</p>
+         * <p>The effective time.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -279,7 +279,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Details about the reserved instance tags.</p>
+         * <p>Details about the tags of the reserved instance.</p>
          */
         @NameInMap("Tags")
         public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;

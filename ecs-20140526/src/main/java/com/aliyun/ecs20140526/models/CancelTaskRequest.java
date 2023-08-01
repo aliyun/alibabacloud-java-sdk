@@ -8,7 +8,7 @@ public class CancelTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -20,7 +20,7 @@ public class CancelTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

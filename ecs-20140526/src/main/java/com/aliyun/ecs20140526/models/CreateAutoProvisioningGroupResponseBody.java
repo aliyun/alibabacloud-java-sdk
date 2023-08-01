@@ -72,6 +72,12 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
     public static class CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult extends TeaModel {
         /**
+         * <p>The number of instances. Valid values: 1 to 100000.</p>
+         */
+        @NameInMap("Amount")
+        public Integer amount;
+
+        /**
          * <p>The error code returned when the instance cannot be created.</p>
          */
         @NameInMap("ErrorCode")
@@ -114,6 +120,14 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         public static CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult self = new CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setAmount(Integer amount) {
+            this.amount = amount;
+            return this;
+        }
+        public Integer getAmount() {
+            return this.amount;
         }
 
         public CreateAutoProvisioningGroupResponseBodyLaunchResultsLaunchResult setErrorCode(String errorCode) {
