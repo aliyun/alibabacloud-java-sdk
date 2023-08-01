@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateJvmConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The settings of the JVM parameters.</p>
+     */
     @NameInMap("JvmConfiguration")
     public UpdateJvmConfigurationResponseBodyJvmConfiguration jvmConfiguration;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class UpdateJvmConfigurationResponseBody extends TeaModel {
     }
 
     public static class UpdateJvmConfigurationResponseBodyJvmConfiguration extends TeaModel {
+        /**
+         * <p>The maximum size of the heap memory. Unit: MB.</p>
+         */
         @NameInMap("MaxHeapSize")
         public Integer maxHeapSize;
 
+        /**
+         * <p>The size of the permanent generation heap memory. Unit: MB.</p>
+         */
         @NameInMap("MaxPermSize")
         public Integer maxPermSize;
 
+        /**
+         * <p>The initial size of the heap memory. Unit: MB.</p>
+         */
         @NameInMap("MinHeapSize")
         public Integer minHeapSize;
 
+        /**
+         * <p>The optional parameters.</p>
+         */
         @NameInMap("Options")
         public String options;
 

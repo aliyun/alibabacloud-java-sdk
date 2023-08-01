@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceProvidersPageResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public GetServiceProvidersPageResponseBodyData data;
 
+    /**
+     * <p>The message returned for the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,21 +66,44 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceProvidersPageResponseBodyDataContent extends TeaModel {
+        @NameInMap("Iannotations")
+        public String iannotations;
+
+        /**
+         * <p>The IP address of the service provider.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The port number of the service provider.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The serialization type.</p>
+         */
         @NameInMap("SerializeType")
         public String serializeType;
 
+        /**
+         * <p>The service timeout period.</p>
+         */
         @NameInMap("Timeout")
         public String timeout;
 
         public static GetServiceProvidersPageResponseBodyDataContent build(java.util.Map<String, ?> map) throws Exception {
             GetServiceProvidersPageResponseBodyDataContent self = new GetServiceProvidersPageResponseBodyDataContent();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceProvidersPageResponseBodyDataContent setIannotations(String iannotations) {
+            this.iannotations = iannotations;
+            return this;
+        }
+        public String getIannotations() {
+            return this.iannotations;
         }
 
         public GetServiceProvidersPageResponseBodyDataContent setIp(String ip) {
@@ -106,15 +141,27 @@ public class GetServiceProvidersPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceProvidersPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The data array returned.</p>
+         */
         @NameInMap("Content")
         public java.util.List<GetServiceProvidersPageResponseBodyDataContent> content;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalElements")
         public Integer totalElements;
 
+        /**
+         * <p>The total number of returned pages.</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

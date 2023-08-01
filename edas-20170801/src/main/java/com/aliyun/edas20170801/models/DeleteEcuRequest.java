@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteEcuRequest extends TeaModel {
+    /**
+     * <p>The unique ID of the ECU to be deleted.</p>
+     */
     @NameInMap("EcuId")
     public String ecuId;
 

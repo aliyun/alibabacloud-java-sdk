@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateHookConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the mounted script.</p>
+     */
     @NameInMap("HooksConfiguration")
     public java.util.List<UpdateHookConfigurationResponseBodyHooksConfiguration> hooksConfiguration;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,24 @@ public class UpdateHookConfigurationResponseBody extends TeaModel {
     }
 
     public static class UpdateHookConfigurationResponseBodyHooksConfiguration extends TeaModel {
+        /**
+         * <p>Indicates whether a mount failure is ignored. Valid values:</p>
+         * <br>
+         * <p>*   **true**: A mount failure is ignored.</p>
+         * <p>*   **false**: A mount failure is not ignored.</p>
+         */
         @NameInMap("IgnoreFail")
         public Boolean ignoreFail;
 
+        /**
+         * <p>The name of the mounted script.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The content of the mounted script.</p>
+         */
         @NameInMap("Script")
         public String script;
 

@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryMigrateRegionListRequest extends TeaModel {
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 

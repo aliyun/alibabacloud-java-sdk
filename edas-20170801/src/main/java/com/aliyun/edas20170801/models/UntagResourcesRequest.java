@@ -4,18 +4,41 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all existing tags from the specified resources. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: removes all existing tags from the specified resources.</p>
+     * <p>*   **false**: does not remove all existing tags from the specified resources.</p>
+     * <br>
+     * <p>> All existing tags of a resource are removed only if the **tagKeys** parameter is left empty and the **DeleteAll** parameter is set to true.</p>
+     */
     @NameInMap("DeleteAll")
     public Boolean deleteAll;
 
+    /**
+     * <p>The IDs of the resources from which you want to remove tags. You can specify up to 20 IDs.</p>
+     */
     @NameInMap("ResourceIds")
     public String resourceIds;
 
+    /**
+     * <p>The region in which the resource resides.</p>
+     */
     @NameInMap("ResourceRegionId")
     public String resourceRegionId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **application**: Enterprise Distributed Application Service (EDAS) application</p>
+     * <p>*   **cluster**: EDAS cluster</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags that you want to remove. You can specify up to 20 tags. Set this parameter to a JSON array.</p>
+     */
     @NameInMap("TagKeys")
     public String tagKeys;
 

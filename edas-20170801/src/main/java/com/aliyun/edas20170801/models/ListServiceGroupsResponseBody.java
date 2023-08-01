@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListServiceGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about service groups.</p>
+     */
     @NameInMap("ServiceGroupsList")
     public ListServiceGroupsResponseBodyServiceGroupsList serviceGroupsList;
 
@@ -54,12 +66,21 @@ public class ListServiceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServiceGroupsResponseBodyServiceGroupsListListServiceGroups extends TeaModel {
+        /**
+         * <p>The time when the service group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the service group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the service group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 

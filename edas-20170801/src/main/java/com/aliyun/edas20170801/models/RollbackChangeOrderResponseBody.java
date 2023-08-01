@@ -4,21 +4,39 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class RollbackChangeOrderResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the change process.</p>
+     */
     @NameInMap("Data")
     public RollbackChangeOrderResponseBodyData data;
 
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the trace.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -75,26 +93,10 @@ public class RollbackChangeOrderResponseBody extends TeaModel {
         return this.traceId;
     }
 
-    public static class AbortAndRollbackChangeOrderResponseBodyData extends TeaModel {
-        @NameInMap("ChangeOrderId")
-        public String changeOrderId;
-
-        public static AbortAndRollbackChangeOrderResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            AbortAndRollbackChangeOrderResponseBodyData self = new AbortAndRollbackChangeOrderResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public AbortAndRollbackChangeOrderResponseBodyData setChangeOrderId(String changeOrderId) {
-            this.changeOrderId = changeOrderId;
-            return this;
-        }
-        public String getChangeOrderId() {
-            return this.changeOrderId;
-        }
-
-    }
-
     public static class RollbackChangeOrderResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the change process.</p>
+         */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 

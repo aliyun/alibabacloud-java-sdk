@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertClusterMemberRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster into which you want to import ECS instances.</p>
+     */
     @NameInMap("clusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the ECS instance that you want to import into the cluster. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("instanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The logon password of the ECS instance that you want to import into the cluster.</p>
+     */
     @NameInMap("password")
     public String password;
 

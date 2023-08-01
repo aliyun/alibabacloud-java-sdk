@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class BindSlbResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public BindSlbResponseBodyData data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,30 +66,57 @@ public class BindSlbResponseBody extends TeaModel {
     }
 
     public static class BindSlbResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Internet-facing SLB instance.</p>
+         */
         @NameInMap("ExtSlbId")
         public String extSlbId;
 
+        /**
+         * <p>The IP address of the Internet-facing SLB instance.</p>
+         */
         @NameInMap("ExtSlbIp")
         public String extSlbIp;
 
+        /**
+         * <p>The name of the Internet-facing SLB instance.</p>
+         */
         @NameInMap("ExtSlbName")
         public String extSlbName;
 
+        /**
+         * <p>The ID of the vServer group for the Internet-facing SLB instance.</p>
+         */
         @NameInMap("ExtVServerGroupId")
         public String extVServerGroupId;
 
+        /**
+         * <p>The ID of the internal-facing SLB instance.</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
+        /**
+         * <p>The IP address of the internal-facing SLB instance.</p>
+         */
         @NameInMap("SlbIp")
         public String slbIp;
 
+        /**
+         * <p>The name of the internal-facing SLB instance.</p>
+         */
         @NameInMap("SlbName")
         public String slbName;
 
+        /**
+         * <p>The listener port for the SLB instance.</p>
+         */
         @NameInMap("SlbPort")
         public Integer slbPort;
 
+        /**
+         * <p>The ID of the vServer group for the internal-facing SLB instance.</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 

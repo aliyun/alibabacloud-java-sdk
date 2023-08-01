@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListComponentsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The components.</p>
+     */
     @NameInMap("ComponentList")
     public ListComponentsResponseBodyComponentList componentList;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -43,21 +52,46 @@ public class ListComponentsResponseBody extends TeaModel {
     }
 
     public static class ListComponentsResponseBodyComponentListComponent extends TeaModel {
+        /**
+         * <p>The ID of the component.</p>
+         */
         @NameInMap("ComponentId")
         public String componentId;
 
+        /**
+         * <p>The key of the component.</p>
+         */
         @NameInMap("ComponentKey")
         public String componentKey;
 
+        /**
+         * <p>The description of the component.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>Indicates whether the component has expired. Valid values:</p>
+         * <br>
+         * <p>*   false: The component has not expired.</p>
+         * <p>*   true: The component has expired.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The type of the component. Valid values:</p>
+         * <br>
+         * <p>*   JDK</p>
+         * <p>*   TOMCAT</p>
+         * <p>*   TENGINE</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The version of the component.</p>
+         */
         @NameInMap("Version")
         public String version;
 

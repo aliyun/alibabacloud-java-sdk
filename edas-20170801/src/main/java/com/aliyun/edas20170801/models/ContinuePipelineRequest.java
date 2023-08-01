@@ -4,9 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ContinuePipelineRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to release the next batch. Valid values:</p>
+     * <br>
+     * <p>*   true: releases the next batch.</p>
+     * <p>*   false: does not release the next batch.</p>
+     */
     @NameInMap("Confirm")
     public Boolean confirm;
 
+    /**
+     * <p>The ID of the change process. You can call the GetChangeOrderInfo operation to query the ID of the change process that corresponds to a specific batch. For more information, see [GetChangeOrderInfo](~~62072~~).</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 

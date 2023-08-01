@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateIDCImportCommandRequest extends TeaModel {
+    /**
+     * <p>The cluster ID. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

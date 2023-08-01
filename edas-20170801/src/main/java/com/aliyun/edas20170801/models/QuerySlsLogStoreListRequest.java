@@ -4,15 +4,30 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QuerySlsLogStoreListRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The number of the page to return. Pages start from Page 1.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of data that is collected by Log Service. Valid values:</p>
+     * <br>
+     * <p>*   file: the file type</p>
+     * <p>*   stdout: the standard output type</p>
+     */
     @NameInMap("Type")
     public String type;
 

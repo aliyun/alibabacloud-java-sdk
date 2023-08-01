@@ -4,15 +4,29 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class RestartApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the change process.</p>
+     * <br>
+     * <p>You can call the GetChangeOrderInfo operation to query the progress of this restart. For more information, see [GetChangeOrderInfo](~~62072~~).</p>
+     */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryApplicationStatusResponseBody extends TeaModel {
+    /**
+     * <p>The information about the application.</p>
+     */
     @NameInMap("AppInfo")
     public QueryApplicationStatusResponseBodyAppInfo appInfo;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,57 +66,111 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
     }
 
     public static class QueryApplicationStatusResponseBodyAppInfoApplication extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>The build package number of Enterprise Distributed Application Service (EDAS) Container.</p>
+         */
         @NameInMap("BuildPackageId")
         public Integer buildPackageId;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The number of CPU cores used by the application.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether the application is a Docker application.</p>
+         */
         @NameInMap("Dockerize")
         public Boolean dockerize;
 
+        /**
+         * <p>The email address of the user who created the application.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The health check URL.</p>
+         */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
+        /**
+         * <p>The number of application instances.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The time when the application was launched. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("LaunchTime")
         public Long launchTime;
 
+        /**
+         * <p>The memory size.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the user who created the application.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The mobile number of the user who created the application.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The port used by the application.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of application instances that are running.</p>
+         */
         @NameInMap("RunningInstanceCount")
         public Integer runningInstanceCount;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -260,21 +326,39 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
     }
 
     public static class QueryApplicationStatusResponseBodyAppInfoDeployRecordListDeployRecord extends TeaModel {
+        /**
+         * <p>The time when the deployment record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the deployment record.</p>
+         */
         @NameInMap("DeployRecordId")
         public String deployRecordId;
 
+        /**
+         * <p>The unique ID of the ECC.</p>
+         */
         @NameInMap("EccId")
         public String eccId;
 
+        /**
+         * <p>The unique ID of the ECU.</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The MD5 hash value of the deployment package.</p>
+         */
         @NameInMap("PackageMd5")
         public String packageMd5;
 
+        /**
+         * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
+         */
         @NameInMap("PackageVersionId")
         public String packageVersionId;
 
@@ -353,36 +437,79 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
     }
 
     public static class QueryApplicationStatusResponseBodyAppInfoEccListEcc extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The status of the application instance. Valid values:</p>
+         * <br>
+         * <p>*   0: AGENT_OFF: indicates that the agent is offline.</p>
+         * <p>*   1: STOPPED: indicates that the application is stopped.</p>
+         * <p>*   3: RUNNING_BUT_URL_FAILED: indicates that the health check failed.</p>
+         * <p>*   7: RUNNING: indicates that the application is running.</p>
+         */
         @NameInMap("AppState")
         public Integer appState;
 
+        /**
+         * <p>The status of the container.</p>
+         */
         @NameInMap("ContainerStatus")
         public String containerStatus;
 
+        /**
+         * <p>The time when the ECC was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The unique ID of the ECC.</p>
+         */
         @NameInMap("EccId")
         public String eccId;
 
+        /**
+         * <p>The unique ID of the ECU.</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The ID of the instance group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The private IP address of the ECU.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The state of the latest task initiated on the application instance. Valid values:</p>
+         * <br>
+         * <p>*   0: UNKNOWN: indicates that the state of the latest task is unknown.</p>
+         * <p>*   1: PROCESSING: indicates that the latest task is being processed.</p>
+         * <p>*   2: SUCCESS: indicates that the latest task is executed.</p>
+         * <p>*   3: FAILED: indicates that the latest task failed.</p>
+         */
         @NameInMap("TaskState")
         public Integer taskState;
 
+        /**
+         * <p>The time when the ECC was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -501,51 +628,99 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
     }
 
     public static class QueryApplicationStatusResponseBodyAppInfoEcuListEcu extends TeaModel {
+        /**
+         * <p>The number of available CPU cores.</p>
+         */
         @NameInMap("AvailableCpu")
         public Integer availableCpu;
 
+        /**
+         * <p>The size of the available memory.</p>
+         */
         @NameInMap("AvailableMem")
         public Integer availableMem;
 
+        /**
+         * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether Docker is installed.</p>
+         */
         @NameInMap("DockerEnv")
         public Boolean dockerEnv;
 
+        /**
+         * <p>The unique ID of the ECU. You can run the `dmidecode` command on the ECS instance to query the ECU ID.</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("HeartbeatTime")
         public Long heartbeatTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The private IP address of the ECU.</p>
+         */
         @NameInMap("IpAddr")
         public String ipAddr;
 
+        /**
+         * <p>The name of the ECU.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the ECU is online.</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The time when the ECU was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the user associated with the ECU.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -704,30 +879,61 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
     }
 
     public static class QueryApplicationStatusResponseBodyAppInfoGroupListGroup extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The ID of the change process for application deployment in the instance group.</p>
+         */
         @NameInMap("AppVersionId")
         public String appVersionId;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The time when the instance group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the instance group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the instance group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the instance group. Valid values:</p>
+         * <br>
+         * <p>*   0: default group</p>
+         * <p>*   1: self-managed group</p>
+         * <p>*   2: canary release group</p>
+         */
         @NameInMap("GroupType")
         public Integer groupType;
 
+        /**
+         * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
+         */
         @NameInMap("PackageVersionId")
         public String packageVersionId;
 
+        /**
+         * <p>The time when the instance group was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -830,18 +1036,33 @@ public class QueryApplicationStatusResponseBody extends TeaModel {
     }
 
     public static class QueryApplicationStatusResponseBodyAppInfo extends TeaModel {
+        /**
+         * <p>The basic information about the application.</p>
+         */
         @NameInMap("Application")
         public QueryApplicationStatusResponseBodyAppInfoApplication application;
 
+        /**
+         * <p>The information about deployment records.</p>
+         */
         @NameInMap("DeployRecordList")
         public QueryApplicationStatusResponseBodyAppInfoDeployRecordList deployRecordList;
 
+        /**
+         * <p>The information about elastic compute containers (ECCs).</p>
+         */
         @NameInMap("EccList")
         public QueryApplicationStatusResponseBodyAppInfoEccList eccList;
 
+        /**
+         * <p>The information about elastic compute units (ECUs).</p>
+         */
         @NameInMap("EcuList")
         public QueryApplicationStatusResponseBodyAppInfoEcuList ecuList;
 
+        /**
+         * <p>The information about the instance groups.</p>
+         */
         @NameInMap("GroupList")
         public QueryApplicationStatusResponseBodyAppInfoGroupList groupList;
 

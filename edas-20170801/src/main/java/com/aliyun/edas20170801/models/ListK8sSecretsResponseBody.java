@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListK8sSecretsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned query results of Kubernetes Secrets.</p>
+     */
     @NameInMap("Result")
     public ListK8sSecretsResponseBodyResult result;
 
@@ -54,18 +66,39 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     }
 
     public static class ListK8sSecretsResponseBodyResultSecretsCertDetail extends TeaModel {
+        /**
+         * <p>Domain names that are associated with the SSL certificate.</p>
+         */
         @NameInMap("DomainNames")
         public java.util.List<String> domainNames;
 
+        /**
+         * <p>The time when the SSL certificate expired.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The certificate authority (CA) that issued the SSL certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The time when the SSL certificate started to take effect.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The state of the SSL certificate. Valid values:</p>
+         * <br>
+         * <p>*   normal: The SSL certificate is valid.</p>
+         * <p>*   invalid: The SSL certificate is invalid.</p>
+         * <p>*   expired: The SSL certificate has expired.</p>
+         * <p>*   not_yet_valid: The SSL certificate is currently invalid.</p>
+         * <p>*   about_to_expire: The SSL certificate is about to expire.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -117,9 +150,15 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     }
 
     public static class ListK8sSecretsResponseBodyResultSecretsData extends TeaModel {
+        /**
+         * <p>The user-defined key of the Kubernetes Secret.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The user-defined value of the Kubernetes Secret.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -147,9 +186,15 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     }
 
     public static class ListK8sSecretsResponseBodyResultSecretsRelatedApps extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -177,9 +222,15 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     }
 
     public static class ListK8sSecretsResponseBodyResultSecretsRelatedIngressRulesRelatedApps extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the EDAS application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -207,12 +258,21 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     }
 
     public static class ListK8sSecretsResponseBodyResultSecretsRelatedIngressRules extends TeaModel {
+        /**
+         * <p>The name of the rule in the Ingress.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespaces of the Kubernetes cluster.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>Aplications that are associated with the Ingress.</p>
+         */
         @NameInMap("RelatedApps")
         public java.util.List<ListK8sSecretsResponseBodyResultSecretsRelatedIngressRulesRelatedApps> relatedApps;
 
@@ -248,42 +308,87 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     }
 
     public static class ListK8sSecretsResponseBodyResultSecrets extends TeaModel {
+        /**
+         * <p>Indicates whether the data is Base64-encoded. Valid values:</p>
+         * <br>
+         * <p>*   true: The data is Base64-encoded.</p>
+         * <p>*   false: The data is not Base64-encoded.</p>
+         */
         @NameInMap("Base64Encoded")
         public Boolean base64Encoded;
 
+        /**
+         * <p>The details of the Secure Sockets Layer (SSL) certificate.</p>
+         */
         @NameInMap("CertDetail")
         public ListK8sSecretsResponseBodyResultSecretsCertDetail certDetail;
 
+        /**
+         * <p>The ID of the certificate provided by Alibaba Cloud Certificate Management Service.</p>
+         */
         @NameInMap("CertId")
         public String certId;
 
+        /**
+         * <p>The region in which the certificate is stored.</p>
+         */
         @NameInMap("CertRegionId")
         public String certRegionId;
 
+        /**
+         * <p>The ID of the cluster in Enterprise Distributed Application Service (EDAS).</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The time when the Secret was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The data of the Kubernetes Secret.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListK8sSecretsResponseBodyResultSecretsData> data;
 
+        /**
+         * <p>The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace of the Kubernetes cluster.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>Applications that use the Secret.</p>
+         */
         @NameInMap("RelatedApps")
         public java.util.List<ListK8sSecretsResponseBodyResultSecretsRelatedApps> relatedApps;
 
+        /**
+         * <p>Rules in the Ingress that is associated with the Secret.</p>
+         */
         @NameInMap("RelatedIngressRules")
         public java.util.List<ListK8sSecretsResponseBodyResultSecretsRelatedIngressRules> relatedIngressRules;
 
+        /**
+         * <p>The type of the Secret. Valid values:</p>
+         * <br>
+         * <p>*   Opaque: user-defined data</p>
+         * <p>*   kubernetes.io/tls: Transport Layer Security (TLS) certificate</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -399,9 +504,15 @@ public class ListK8sSecretsResponseBody extends TeaModel {
     }
 
     public static class ListK8sSecretsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The information about Kubernetes Secrets.</p>
+         */
         @NameInMap("Secrets")
         public java.util.List<ListK8sSecretsResponseBodyResultSecrets> secrets;
 
+        /**
+         * <p>The total number of entries that are returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

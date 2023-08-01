@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListEcsNotInClusterResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about ECS instances.</p>
+     */
     @NameInMap("EcsEntityList")
     public ListEcsNotInClusterResponseBodyEcsEntityList ecsEntityList;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,42 +66,90 @@ public class ListEcsNotInClusterResponseBody extends TeaModel {
     }
 
     public static class ListEcsNotInClusterResponseBodyEcsEntityListEcsEntity extends TeaModel {
+        /**
+         * <p>The number of CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The elastic IP address (EIP) associated with the ECS instance.</p>
+         */
         @NameInMap("Eip")
         public String eip;
 
+        /**
+         * <p>Indicates whether the ECS instance has expired. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The ECS instance has expired.</p>
+         * <p>*   **false**: The ECS instance has not expired.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The private IP address of the ECS instance.</p>
+         */
         @NameInMap("InnerIp")
         public String innerIp;
 
+        /**
+         * <p>The ID of the ECS instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the ECS instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The size of memory. Unit: bytes.</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The private IP address of the ECS instance.</p>
+         */
         @NameInMap("PrivateIp")
         public String privateIp;
 
+        /**
+         * <p>The public IP address of the ECS instance.</p>
+         */
         @NameInMap("PublicIp")
         public String publicIp;
 
+        /**
+         * <p>The ID of the region where the ECS instance is located.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   **Pending**: The ECS instance is being created.</p>
+         * <p>*   **Running**: The ECS instance is running.</p>
+         * <p>*   **Starting**: The ECS instance is being started.</p>
+         * <p>*   **Stopping**: The ECS instance is being stopped.</p>
+         * <p>*   **Stopped**: The ECS instance is stopped.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The name of the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

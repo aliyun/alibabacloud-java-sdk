@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetAppDeploymentRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

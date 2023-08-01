@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InstallAgentResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The execution result.</p>
+     */
     @NameInMap("ExecutionResultList")
     public InstallAgentResponseBodyExecutionResultList executionResultList;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,33 @@ public class InstallAgentResponseBody extends TeaModel {
     }
 
     public static class InstallAgentResponseBodyExecutionResultListExecutionResult extends TeaModel {
+        /**
+         * <p>The time when the installation was complete.</p>
+         */
         @NameInMap("FinishedTime")
         public String finishedTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The state of the installation.</p>
+         */
         @NameInMap("InvokeRecordStatus")
         public String invokeRecordStatus;
 
+        /**
+         * <p>The state of the installation command.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates whether the installation was successful.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

@@ -4,9 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetContainerConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The ID of the instance group.</p>
+     * <br>
+     * <p>*   If this parameter is specified, this operation queries the Tomcat configuration of the instance group.</p>
+     * <p>*   If this parameter is not specified, this operation queries the Tomcat configuration of the application.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetPackageStorageCredentialResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The STS credential.</p>
+     */
     @NameInMap("Credential")
     public GetPackageStorageCredentialResponseBodyCredential credential;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,33 +66,63 @@ public class GetPackageStorageCredentialResponseBody extends TeaModel {
     }
 
     public static class GetPackageStorageCredentialResponseBodyCredential extends TeaModel {
+        /**
+         * <p>The AccessKey ID of your account.</p>
+         */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
+        /**
+         * <p>The AccessKey secret of your account.</p>
+         */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
+        /**
+         * <p>The name of the OSS bucket.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The time when the STS credential expires. Example: 2019-11-10T07:20:19Z.</p>
+         */
         @NameInMap("Expiration")
         public String expiration;
 
+        /**
+         * <p>The object key prefix in Object Storage Service (OSS).</p>
+         */
         @NameInMap("KeyPrefix")
         public String keyPrefix;
 
+        /**
+         * <p>The private endpoint of OSS.</p>
+         */
         @NameInMap("OssInternalEndpoint")
         public String ossInternalEndpoint;
 
+        /**
+         * <p>The public endpoint of OSS.</p>
+         */
         @NameInMap("OssPublicEndpoint")
         public String ossPublicEndpoint;
 
+        /**
+         * <p>The VPC endpoint of OSS.</p>
+         */
         @NameInMap("OssVpcEndpoint")
         public String ossVpcEndpoint;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The security token issued by STS.</p>
+         */
         @NameInMap("SecurityToken")
         public String securityToken;
 

@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListRoleResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The roles.</p>
+     */
     @NameInMap("RoleList")
     public ListRoleResponseBodyRoleList roleList;
 
@@ -54,15 +66,27 @@ public class ListRoleResponseBody extends TeaModel {
     }
 
     public static class ListRoleResponseBodyRoleListRoleItemActionListAction extends TeaModel {
+        /**
+         * <p>The serial number of the permission that is granted to the role.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The description of the permission to be granted to the role.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the permission group to which the permission that is granted to the role belongs.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the permission to be granted to the role.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -125,21 +149,39 @@ public class ListRoleResponseBody extends TeaModel {
     }
 
     public static class ListRoleResponseBodyRoleListRoleItemRole extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AdminUserId")
         public String adminUserId;
 
+        /**
+         * <p>The timestamp when the role was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the role.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>Indicates whether the role is a default role.</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>The name of the role.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The timestamp when the role was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -199,9 +241,15 @@ public class ListRoleResponseBody extends TeaModel {
     }
 
     public static class ListRoleResponseBodyRoleListRoleItem extends TeaModel {
+        /**
+         * <p>The set of permissions to be granted to the role.</p>
+         */
         @NameInMap("ActionList")
         public ListRoleResponseBodyRoleListRoleItemActionList actionList;
 
+        /**
+         * <p>The roles.</p>
+         */
         @NameInMap("Role")
         public ListRoleResponseBodyRoleListRoleItemRole role;
 

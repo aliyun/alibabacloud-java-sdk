@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListSwimmingLaneGroupResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data of the lane group.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSwimmingLaneGroupResponseBodyData> data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class ListSwimmingLaneGroupResponseBodyDataApplicationList extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -84,12 +102,21 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class ListSwimmingLaneGroupResponseBodyDataEntryApplication extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The data source. Set the value to EDAS.</p>
+         */
         @NameInMap("Source")
         public String source;
 
@@ -125,18 +152,33 @@ public class ListSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class ListSwimmingLaneGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The applications that are related to the lane group.</p>
+         */
         @NameInMap("ApplicationList")
         public java.util.List<ListSwimmingLaneGroupResponseBodyDataApplicationList> applicationList;
 
+        /**
+         * <p>The information about the Enterprise Distributed Application Service (EDAS) ingress gateway.</p>
+         */
         @NameInMap("EntryApplication")
         public ListSwimmingLaneGroupResponseBodyDataEntryApplication entryApplication;
 
+        /**
+         * <p>The ID of the lane group.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the lane group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the microservices namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 

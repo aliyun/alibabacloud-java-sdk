@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListEcuByRegionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about ECUs.</p>
+     */
     @NameInMap("EcuEntityList")
     public ListEcuByRegionResponseBodyEcuEntityList ecuEntityList;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,54 +66,111 @@ public class ListEcuByRegionResponseBody extends TeaModel {
     }
 
     public static class ListEcuByRegionResponseBodyEcuEntityListEcuEntity extends TeaModel {
+        /**
+         * <p>The number of available CPU cores for the ECU.</p>
+         */
         @NameInMap("AvailableCpu")
         public Integer availableCpu;
 
+        /**
+         * <p>The size of available memory for the ECU. Unit: MB.</p>
+         */
         @NameInMap("AvailableMem")
         public Integer availableMem;
 
+        /**
+         * <p>The total number of CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The timestamp when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether Docker is installed. Valid values:</p>
+         * <br>
+         * <p>*   true: Docker is installed.</p>
+         * <p>*   false: Docker is not installed.</p>
+         */
         @NameInMap("DockerEnv")
         public Boolean dockerEnv;
 
+        /**
+         * <p>The unique ID of the ECU. To query the ID, you can run the `dmidecode` command on the ECS instance that corresponds to the ECU.</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The timestamp when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("HeartbeatTime")
         public Long heartbeatTime;
 
+        /**
+         * <p>The ID of the ECU.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The private IP address of the ECU.</p>
+         */
         @NameInMap("IpAddr")
         public String ipAddr;
 
+        /**
+         * <p>The total size of memory. Unit: MB.</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The name of the ECU.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the ECU is online. Valid values:</p>
+         * <br>
+         * <p>*   true: The ECU is online.</p>
+         * <p>*   false: The ECU is offline.</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <p>The ID of the region in which the ECU resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The timestamp when the ECU was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) in which the ECU resides.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone in which the ECU resides.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

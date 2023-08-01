@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListSlbResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of SLB instances.</p>
+     */
     @NameInMap("SlbList")
     public ListSlbResponseBodySlbList slbList;
 
@@ -54,45 +66,96 @@ public class ListSlbResponseBody extends TeaModel {
     }
 
     public static class ListSlbResponseBodySlbListSlbEntity extends TeaModel {
+        /**
+         * <p>The IP address of the SLB instance.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The type of the IP addresses. Valid values:</p>
+         * <br>
+         * <p>*   internet: Users can connect to the SLB instance over the Internet.</p>
+         * <p>*   intranet: Users can connect to the SLB instance over the internal network.</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 
+        /**
+         * <p>Indicates whether the SLB instance has expired. Valid values:</p>
+         * <br>
+         * <p>*   true: The SLB instance has expired.</p>
+         * <p>*   false: The SLB instance has not expired.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The ID of the resource group in Enterprise Distributed Application Service (EDAS).</p>
+         */
         @NameInMap("GroupId")
         public Integer groupId;
 
+        /**
+         * <p>The type of the network.</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether Kubernetes applications can be reused. Valid values:</p>
+         * <br>
+         * <p>*   true: Kubernetes applications can be reused.</p>
+         * <p>*   false: Kubernetes applications cannot be reused.</p>
+         */
         @NameInMap("Reusable")
         public Boolean reusable;
 
+        /**
+         * <p>The ID of the SLB instance.</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
+        /**
+         * <p>The name of the SLB instance.</p>
+         */
         @NameInMap("SlbName")
         public String slbName;
 
+        /**
+         * <p>The status of the SLB instance.</p>
+         */
         @NameInMap("SlbStatus")
         public String slbStatus;
 
+        /**
+         * <p>The tag of the SLB instance.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch in the VPC.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 

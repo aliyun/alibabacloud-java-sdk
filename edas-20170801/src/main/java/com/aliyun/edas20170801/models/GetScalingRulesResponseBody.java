@@ -4,18 +4,33 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetScalingRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public GetScalingRulesResponseBodyData data;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time when the scaling rule was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("UpdateTime")
     public Long updateTime;
 
@@ -65,66 +80,145 @@ public class GetScalingRulesResponseBody extends TeaModel {
     }
 
     public static class GetScalingRulesResponseBodyDataRuleListRule extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The relationship among the conditions that trigger the scaling rule.</p>
+         * <br>
+         * <p>*   OR: one of the conditions</p>
+         * <p>*   AND: all conditions</p>
+         */
         @NameInMap("Cond")
         public String cond;
 
+        /**
+         * <p>The minimum CPU utilization that triggers the scaling rule.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The time when the scaling rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The duration of the scaling rule. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>Indicates whether scale-ins or scale-outs are allowed. Valid values:</p>
+         * <br>
+         * <p>*   true: Scale-ins or scale-outs are allowed.</p>
+         * <p>*   false: Scale-ins or scale-outs are disallowed.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The ID of the instance group to which the application is deployed.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The maximum number of instances in the group when a scale-out is performed, or the minimum number of instances in the group when a scale-in is performed.</p>
+         */
         @NameInMap("InstNum")
         public Integer instNum;
 
+        /**
+         * <p>The system load that triggers the scaling rule. The system load is evaluated based on the number of processes that are being executed by CPUs and the number of processes that wait to be executed by CPUs.</p>
+         */
         @NameInMap("LoadNum")
         public Integer loadNum;
 
+        /**
+         * <p>The type of the metric.</p>
+         */
         @NameInMap("MetricType")
         public String metricType;
 
+        /**
+         * <p>The type of the scaling rule. Valid values:</p>
+         * <br>
+         * <p>*   SCALE_IN: scale-in rules</p>
+         * <p>*   SCALE_OUT: scale-out rules</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>The policy of auto scaling across multiple zones. Valid values:</p>
+         * <br>
+         * <p>*   PRIORITY: The vSwitch that is first selected has the highest priority.</p>
+         * <p>*   BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</p>
+         */
         @NameInMap("MultiAzPolicy")
         public String multiAzPolicy;
 
+        /**
+         * <p>The source of the instance that you want to add during a scale-out. Valid values:</p>
+         * <br>
+         * <p>*   NEW: Elastic resources are used.</p>
+         * <p>*   AVAILABLE: The existing resources are used.</p>
+         * <p>*   AVAILABLE_FIRST: The existing resources are used first.</p>
+         */
         @NameInMap("ResourceFrom")
         public String resourceFrom;
 
+        /**
+         * <p>The service latency that triggers the scaling rule. Unit: milliseconds.</p>
+         */
         @NameInMap("Rt")
         public Integer rt;
 
+        /**
+         * <p>The ID of the specification.</p>
+         */
         @NameInMap("SpecId")
         public String specId;
 
+        /**
+         * <p>The number of instances that are added during each scale-out or removed during each scale-in.</p>
+         */
         @NameInMap("Step")
         public Integer step;
 
+        /**
+         * <p>The ID of the launch template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The version of the launch template.</p>
+         */
         @NameInMap("TemplateVersion")
         public Integer templateVersion;
 
+        /**
+         * <p>The time when the scaling rule was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The IDs of the vSwitches. The IDs of multiple vSwitches are separated by commas (,).</p>
+         */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -323,18 +417,45 @@ public class GetScalingRulesResponseBody extends TeaModel {
     }
 
     public static class GetScalingRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   0: regular Docker cluster</p>
+         * <p>*   1: Swarm cluster (deprecated)</p>
+         * <p>*   2: Elastic Compute Service (ECS) cluster</p>
+         * <p>*   3: self-managed Kubernetes cluster in EDAS</p>
+         * <p>*   4: cluster in which Pandora automatically registers applications</p>
+         * <p>*   5: Container Service for Kubernetes (ACK) clusters</p>
+         */
         @NameInMap("ClusterType")
         public Integer clusterType;
 
+        /**
+         * <p>The overcommit ratio supported by a Docker cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: 1:1, which means that resources are not overcommitted.</p>
+         * <p>*   2: 1:2, which means that resources are overcommitted by 1:2.</p>
+         * <p>*   4: 1:4, which means that resources are overcommitted by 1:4.</p>
+         * <p>*   8: 1:8, which means that resources are overcommitted by 1:8.</p>
+         */
         @NameInMap("OversoldFactor")
         public Integer oversoldFactor;
 
+        /**
+         * <p>The array data of the scaling rule.</p>
+         */
         @NameInMap("RuleList")
         public GetScalingRulesResponseBodyDataRuleList ruleList;
 
+        /**
+         * <p>The time when the scaling rule was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

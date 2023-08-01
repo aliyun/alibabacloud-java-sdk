@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetChangeOrderInfoResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the change process.</p>
+     */
     @NameInMap("changeOrderInfo")
     public GetChangeOrderInfoResponseBodyChangeOrderInfo changeOrderInfo;
 
@@ -54,30 +66,72 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskListTaskInfoDTO extends TeaModel {
+        /**
+         * <p>The type of the retry policy. Value 0 indicates no retry, value 1 indicates automatic retry, and value 2 indicates manual retry.</p>
+         */
         @NameInMap("RetryType")
         public Integer retryType;
 
+        /**
+         * <p>Indicates whether errors that occur in the change process are ignored. Valid values:``</p>
+         * <br>
+         * <p>*   true: Errors that occur in the change process are ignored. This parameter can be set to true only when URL health checks are performed.</p>
+         * <p>*   false: Errors that occur in the change process are not ignored.</p>
+         */
         @NameInMap("ShowManualIgnorance")
         public Boolean showManualIgnorance;
 
+        /**
+         * <p>Error codes</p>
+         */
         @NameInMap("TaskErrorCode")
         public String taskErrorCode;
 
+        /**
+         * <p>Indicates whether the task is error-tolerant. If the task can tolerate errors, the errors that occur in the change process are ignored and the next task is executed.</p>
+         * <br>
+         * <p>*   0: The task is not error-tolerant.</p>
+         * <p>*   1: The task is error-tolerant.</p>
+         */
         @NameInMap("TaskErrorIgnorance")
         public Integer taskErrorIgnorance;
 
+        /**
+         * <p>The error message for the task.</p>
+         */
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>Task information</p>
+         */
         @NameInMap("TaskMessage")
         public String taskMessage;
 
+        /**
+         * <p>The name of the task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The state of the task. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
@@ -180,15 +234,36 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTO extends TeaModel {
+        /**
+         * <p>The ID of the stage.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The name of the stage.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The status of the stage. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("StageStatus")
         public Integer stageStatus;
 
+        /**
+         * <p>The information about the task.</p>
+         */
         @NameInMap("TaskList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailListStageDetailDTOTaskList taskList;
 
@@ -251,21 +326,48 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOListInstanceStageDTO extends TeaModel {
+        /**
+         * <p>The time when the execution stopped.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The ID of the stage.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The information about the stage.</p>
+         */
         @NameInMap("StageMessage")
         public String stageMessage;
 
+        /**
+         * <p>The name of the stage.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The time when the execution was started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The state of the stage. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -344,21 +446,48 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTO extends TeaModel {
+        /**
+         * <p>The IP address of the ECS instance.</p>
+         */
         @NameInMap("InstanceIp")
         public String instanceIp;
 
+        /**
+         * <p>The name of the ECS instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The results of the task executed on the ECS instance in each stage.</p>
+         */
         @NameInMap("InstanceStageDTOList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOListInstanceDTOInstanceStageDTOList instanceStageDTOList;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("PodName")
         public String podName;
 
+        /**
+         * <p>The state of the pod.</p>
+         */
         @NameInMap("PodStatus")
         public String podStatus;
 
+        /**
+         * <p>The running state. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -437,15 +566,36 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage extends TeaModel {
+        /**
+         * <p>The execution result in the stage.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the stage.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>Phase Name</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The running state. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -489,9 +639,15 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO extends TeaModel {
+        /**
+         * <p>The results of the task executed on each Elastic Compute Service (ECS) instance in each stage.</p>
+         */
         @NameInMap("InstanceDTOList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOInstanceDTOList instanceDTOList;
 
+        /**
+         * <p>The results of tasks executed in each service-oriented stage.</p>
+         */
         @NameInMap("ServiceStage")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTOServiceStage serviceStage;
 
@@ -519,15 +675,36 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTO extends TeaModel {
+        /**
+         * <p>The ID of the stage.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The name of the stage.</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 
+        /**
+         * <p>The results of the task executed in the stage.</p>
+         */
         @NameInMap("StageResultDTO")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageListStageInfoDTOStageResultDTO stageResultDTO;
 
+        /**
+         * <p>The state of the stage. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -590,24 +767,54 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfo extends TeaModel {
+        /**
+         * <p>The ID of each batch for the change during the phased release.</p>
+         */
         @NameInMap("PipelineId")
         public String pipelineId;
 
+        /**
+         * <p>The name of the batch.</p>
+         */
         @NameInMap("PipelineName")
         public String pipelineName;
 
+        /**
+         * <p>The state of the change task. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("PipelineStatus")
         public Integer pipelineStatus;
 
+        /**
+         * <p>The execution results in each stage.</p>
+         */
         @NameInMap("StageDetailList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageDetailList stageDetailList;
 
+        /**
+         * <p>The stages of the change process.</p>
+         */
         @NameInMap("StageList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoListPipelineInfoStageList stageList;
 
+        /**
+         * <p>The time when the change task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The time when the change task was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
@@ -713,12 +920,21 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl extends TeaModel {
+        /**
+         * <p>The route forwarding policy.</p>
+         */
         @NameInMap("Routes")
         public String routes;
 
+        /**
+         * <p>The traffic routing rules.</p>
+         */
         @NameInMap("Rules")
         public String rules;
 
+        /**
+         * <p>The description of throttling rules.</p>
+         */
         @NameInMap("Tips")
         public String tips;
 
@@ -754,42 +970,94 @@ public class GetChangeOrderInfoResponseBody extends TeaModel {
     }
 
     public static class GetChangeOrderInfoResponseBodyChangeOrderInfo extends TeaModel {
+        /**
+         * <p>The number of batches for the change.</p>
+         */
         @NameInMap("BatchCount")
         public Integer batchCount;
 
+        /**
+         * <p>Indicates whether the change for the next batch is automatically or manually triggered when phased release is performed. Valid values:</p>
+         * <br>
+         * <p>*   Automatic: The change for the next batch is automatically triggered.</p>
+         * <p>*   Manual: The change for the next batch is manually triggered.</p>
+         */
         @NameInMap("BatchType")
         public String batchType;
 
+        /**
+         * <p>The description of the change process.</p>
+         */
         @NameInMap("ChangeOrderDescription")
         public String changeOrderDescription;
 
+        /**
+         * <p>The ID of the change process.</p>
+         */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
+        /**
+         * <p>The type of the change process.</p>
+         */
         @NameInMap("CoType")
         public String coType;
 
+        /**
+         * <p>The time when the change process is created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The person in charge of the change process.</p>
+         */
         @NameInMap("CreateUserId")
         public String createUserId;
 
+        /**
+         * <p>The description of the change process.</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
+        /**
+         * <p>The information about the batches of the change task.</p>
+         */
         @NameInMap("PipelineInfoList")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoPipelineInfoList pipelineInfoList;
 
+        /**
+         * <p>The state of the change process. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   7: partially executed</p>
+         * <p>*   8: wait for manual confirmation to trigger the next batch during a manual phased release</p>
+         * <p>*   9: wait to trigger the next batch during an automatic phased release</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Indicates whether rollbacks are allowed. Valid values:</p>
+         * <br>
+         * <p>*   true: Rollbacks are allowed.</p>
+         * <p>*   false: Rollbacks are not allowed.</p>
+         */
         @NameInMap("SupportRollback")
         public Boolean supportRollback;
 
         @NameInMap("Targets")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoTargets targets;
 
+        /**
+         * <p>The throttling rules.</p>
+         */
         @NameInMap("TrafficControl")
         public GetChangeOrderInfoResponseBodyChangeOrderInfoTrafficControl trafficControl;
 

@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateContainerConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The configuration of the Tomcat container.</p>
+     */
     @NameInMap("ContainerConfiguration")
     public UpdateContainerConfigurationResponseBodyContainerConfiguration containerConfiguration;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +66,33 @@ public class UpdateContainerConfigurationResponseBody extends TeaModel {
     }
 
     public static class UpdateContainerConfigurationResponseBodyContainerConfiguration extends TeaModel {
+        /**
+         * <p>The context path of the Tomcat container.</p>
+         */
         @NameInMap("ContextPath")
         public String contextPath;
 
+        /**
+         * <p>The application port number for the Tomcat container.</p>
+         */
         @NameInMap("HttpPort")
         public Integer httpPort;
 
+        /**
+         * <p>The maximum number of threads.</p>
+         */
         @NameInMap("MaxThreads")
         public Integer maxThreads;
 
+        /**
+         * <p>The URI encoding scheme. Valid values: ISO-8859-1, GBK, GB2312, and UTF-8.</p>
+         */
         @NameInMap("URIEncoding")
         public String URIEncoding;
 
+        /**
+         * <p>Indicates whether useBodyEncodingForURI is enabled.</p>
+         */
         @NameInMap("UseBodyEncoding")
         public Boolean useBodyEncoding;
 

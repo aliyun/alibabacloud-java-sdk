@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListScaleOutEcuResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The ECUs.</p>
+     */
     @NameInMap("EcuInfoList")
     public ListScaleOutEcuResponseBodyEcuInfoList ecuInfoList;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,48 +66,99 @@ public class ListScaleOutEcuResponseBody extends TeaModel {
     }
 
     public static class ListScaleOutEcuResponseBodyEcuInfoListEcuInfo extends TeaModel {
+        /**
+         * <p>The number of available CPU cores for the ECU.</p>
+         */
         @NameInMap("AvailableCpu")
         public Integer availableCpu;
 
+        /**
+         * <p>The size of available memory for the ECU. Unit: MB.</p>
+         */
         @NameInMap("AvailableMem")
         public Integer availableMem;
 
+        /**
+         * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether Docker is installed. Valid values:</p>
+         * <br>
+         * <p>*   true: Docker is installed.</p>
+         * <p>*   false: Docker is not installed.</p>
+         */
         @NameInMap("DockerEnv")
         public Boolean dockerEnv;
 
+        /**
+         * <p>The unique ID of the ECU. To query the ID, you can run the `dmidecode` command on the ECS instance that corresponds to the ECU.</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("HeartbeatTime")
         public Long heartbeatTime;
 
+        /**
+         * <p>The ID of the ECU.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The private IP address of the ECU.</p>
+         */
         @NameInMap("IpAddr")
         public String ipAddr;
 
+        /**
+         * <p>The name of the ECU.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the ECU is online. If the ECU is online, its corresponding ECS instance is managed in EDAS. Valid values:</p>
+         * <br>
+         * <p>*   true: The ECU is online.</p>
+         * <p>*   false: The ECU is offline.</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <p>The ID of the region where the ECU is located.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The time when the ECU was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the ECU belongs.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) where the ECU is located.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone where the ECU resides.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

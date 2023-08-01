@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class StartK8sApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~149390~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The number of instances on which you want to start the application.</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
+    /**
+     * <p>The timeout period of the change process. Valid values: 1 to 1800. Default value: 600. Unit: seconds.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

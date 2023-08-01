@@ -4,9 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListSwimmingLaneGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the lane group.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     * <br>
+     * <p>The ID of a custom namespace is in the region ID:namespace identifier format. Example: cn-beijing:test.\</p>
+     * <p>The ID of the default namespace is in the region ID format. Example: cn-beijing.</p>
+     */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 

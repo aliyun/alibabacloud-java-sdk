@@ -4,21 +4,45 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationRequest extends TeaModel {
+    /**
+     * <p>The application IDs.</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
+    /**
+     * <p>The name of the application. Specify this parameter if you want to filter applications by application name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The cluster ID. Specify this parameter if you want to filter applications by cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    /**
+     * <p>The namespace ID. Specify this parameter if you want to filter applications by namespace.</p>
+     */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 
+    /**
+     * <p>The ID of the namespace that you use in the exact search to filter applications.</p>
+     */
     @NameInMap("LogicalRegionIdFilter")
     public String logicalRegionIdFilter;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The ID of the resource group. Specify this parameter if you want to filter applications by resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -51,6 +75,14 @@ public class ListApplicationRequest extends TeaModel {
         return this.clusterId;
     }
 
+    public ListApplicationRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
     public ListApplicationRequest setLogicalRegionId(String logicalRegionId) {
         this.logicalRegionId = logicalRegionId;
         return this;
@@ -65,6 +97,14 @@ public class ListApplicationRequest extends TeaModel {
     }
     public String getLogicalRegionIdFilter() {
         return this.logicalRegionIdFilter;
+    }
+
+    public ListApplicationRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListApplicationRequest setResourceGroupId(String resourceGroupId) {

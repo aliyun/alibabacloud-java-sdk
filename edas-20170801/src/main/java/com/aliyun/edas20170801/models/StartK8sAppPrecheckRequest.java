@@ -4,72 +4,187 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class StartK8sAppPrecheckRequest extends TeaModel {
+    /**
+     * <p>The annotation of an application pod.</p>
+     */
     @NameInMap("Annotations")
     public String annotations;
 
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the application. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 36 characters in length.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("ComponentIds")
+    public String componentIds;
+
+    /**
+     * <p>The configuration for mounting a Kubernetes ConfigMap or Secret to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
+     * <br>
+     * <p>*   name: the name of the Kubernetes ConfigMap or Secret.</p>
+     * <p>*   type: the type of the API object that you want to mount. You can mount a Kubernetes ConfigMap or Secret.</p>
+     * <p>*   mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</p>
+     */
     @NameInMap("ConfigMountDescs")
     public String configMountDescs;
 
+    /**
+     * <p>The configuration for mounting a Kubernetes emptyDir volume to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
+     * <br>
+     * <p>*   mountPath: The mount path in the container. This parameter is required.</p>
+     * <p>*   readOnly: (Optional) The mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</p>
+     * <p>*   subPathExpr: (Optional) The regular expression that is used to match the subdirectory.</p>
+     */
     @NameInMap("EmptyDirs")
     public String emptyDirs;
 
+    /**
+     * <p>The Kubernetes environment variables that are configured in EnvFrom mode. A ConfigMap or Secret is mounted to a directory. Each key corresponds to a file in the directory, and the content of the file is the value of the key.</p>
+     * <br>
+     * <p>The following parameters are included in the configuration:</p>
+     * <br>
+     * <p>*   configMapRef: the ConfigMap that is referenced. The following parameter is contained:</p>
+     * <br>
+     * <p>    *   name: the name of the ConfigMap.</p>
+     * <br>
+     * <p>*   secretRef: the Secret that is referenced. The following parameter is contained:</p>
+     * <br>
+     * <p>    *   name: the name of the Secret.</p>
+     */
     @NameInMap("EnvFroms")
     public String envFroms;
 
+    /**
+     * <p>The environment variables that are used to deploy the application. The value must be a JSON array. Valid values: regular environment variables, Kubernetes ConfigMap environment variables, and Kubernetes Secret environment variables. Specify regular environment variables in the following format:</p>
+     * <br>
+     * <p>`{"name":"x", "value": "y"}`</p>
+     * <br>
+     * <p>Specify Kubernetes ConfigMap environment variables in the following format to reference values from ConfigMaps:</p>
+     * <br>
+     * <p>`{ "name": "x2", "valueFrom": { "configMapKeyRef": { "name": "my-config", "key": "y2" } } }`</p>
+     * <br>
+     * <p>Specify Kubernetes Secret environment variables in the following format to reference values from Secrets:</p>
+     * <br>
+     * <p>`{ "name": "x3", "valueFrom": { "secretKeyRef": { "name": "my-secret", "key": "y3" } } }`</p>
+     * <br>
+     * <p>> If you want to cancel this configuration, set this parameter to an empty JSON array, which is in the format of "\[]".</p>
+     */
     @NameInMap("Envs")
     public String envs;
 
+    /**
+     * <p>The URL of the image.</p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>The configuration of Java startup parameters for a Java application. These startup parameters involve the memory, application, garbage collection (GC) policy, tools, service registration and discovery, and custom configurations. Proper parameter settings help reduce the GC overheads, shorten the server response time, and improve the throughput. Set this parameter to a JSON string. In the example, original indicates the configuration value, and startup indicates a startup parameter. The system automatically concatenates all startup values as the settings of Java startup parameters for the application. To delete this configuration, leave the parameter value empty by entering `""` or `"{}"`. The following parameters are included in the configuration:</p>
+     * <br>
+     * <p>*   InitialHeapSize: the initial size of the heap memory.</p>
+     * <p>*   MaxHeapSize: the maximum size of the heap memory.</p>
+     * <p>*   CustomParams: the custom parameters, such as JVM -D parameters.</p>
+     * <p>*   Other parameters: You can view the JSON structure submitted by the frontend.</p>
+     */
     @NameInMap("JavaStartUpConfig")
     public String javaStartUpConfig;
 
+    /**
+     * <p>The label of an application pod.</p>
+     */
     @NameInMap("Labels")
     public String labels;
 
+    /**
+     * <p>The maximum size of space required by ephemeral storage. Unit: GB. The value 0 indicates that no limit is set on the ephemeral storage space.</p>
+     */
     @NameInMap("LimitEphemeralStorage")
     public Integer limitEphemeralStorage;
 
+    /**
+     * <p>The maximum size of memory allowed for each application instance when the application is running. Unit: MB. The value of LimitMem must be greater than or equal to that of RequestsMem.</p>
+     */
     @NameInMap("LimitMem")
     public Integer limitMem;
 
+    /**
+     * <p>The maximum number of CPU cores allowed for each application instance when the application is running. Unit: millicores. The value 0 indicates that no limit is set on CPU cores.</p>
+     */
     @NameInMap("LimitmCpu")
     public Integer limitmCpu;
 
+    /**
+     * <p>The configurations that are used when the host files are mounted to the container on which the application is running. Example: `\[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt","mountPath":"/app/storage"}\]`. Description:</p>
+     * <br>
+     * <p>*   `nodePath`: the host path.</p>
+     * <p>*   `mountPath`: the path in the container.</p>
+     * <p>*   `type`: the mounting type.</p>
+     */
     @NameInMap("LocalVolume")
     public String localVolume;
 
+    /**
+     * <p>The namespace of the Kubernetes cluster. This parameter specifies the Kubernetes namespace in which your application is deployed. By default, the default namespace is used.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The URL of the deployment package.</p>
+     */
     @NameInMap("PackageUrl")
     public String packageUrl;
 
+    /**
+     * <p>The configuration for mounting a Kubernetes PersistentVolumeClaim (PVC) to a directory in an elastic container instance. The following parameters are included in the configuration:</p>
+     * <br>
+     * <p>*   pvcName: the name of the PVC. Make sure that the volume exists and is in the Bound state.</p>
+     * <br>
+     * <p>*   mountPaths: the directory to which you want to mount the PVC. You can configure multiple directories. You can set the following two parameters for each mount directory:</p>
+     * <br>
+     * <p>    *   mountPath: the mount path. The mount path must be an absolute path that starts with a forward slash (/).</p>
+     * <p>    *   readOnly: the mount mode. The value true indicates the read-only mode. The value false indicates the read and write mode. Default value: false.</p>
+     */
     @NameInMap("PvcMountDescs")
     public String pvcMountDescs;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The number of application instances.</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
+    /**
+     * <p>The minimum size of space required by ephemeral storage. Unit: GB. The value 0 indicates that no limit is set on the ephemeral storage space.</p>
+     */
     @NameInMap("RequestsEphemeralStorage")
     public Integer requestsEphemeralStorage;
 
+    /**
+     * <p>The maximum size of memory allowed for each application instance when the application is created. Unit: MB. The value 0 indicates that no limit is set on the memory size. The value of RequestsMem cannot be greater than that of LimitMem.</p>
+     */
     @NameInMap("RequestsMem")
     public Integer requestsMem;
 
+    /**
+     * <p>The maximum number of CPU cores allowed for each application instance when the application is created. Unit: millicores.</p>
+     */
     @NameInMap("RequestsmCpu")
     public Integer requestsmCpu;
 
@@ -108,6 +223,14 @@ public class StartK8sAppPrecheckRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public StartK8sAppPrecheckRequest setComponentIds(String componentIds) {
+        this.componentIds = componentIds;
+        return this;
+    }
+    public String getComponentIds() {
+        return this.componentIds;
     }
 
     public StartK8sAppPrecheckRequest setConfigMountDescs(String configMountDescs) {

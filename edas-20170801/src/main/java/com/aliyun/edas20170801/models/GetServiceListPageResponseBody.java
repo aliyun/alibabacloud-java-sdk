@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListPageResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetServiceListPageResponseBodyData data;
 
+    /**
+     * <p>The message that is returned for the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,27 +66,51 @@ public class GetServiceListPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceListPageResponseBodyDataContent extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("EdasAppId")
         public String edasAppId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
+        /**
+         * <p>The service group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
+        /**
+         * <p>The type of the service registry.</p>
+         */
         @NameInMap("RegisterType")
         public String registerType;
 
+        /**
+         * <p>The ID of the service.</p>
+         */
         @NameInMap("ServiceId")
         public String serviceId;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -150,15 +186,27 @@ public class GetServiceListPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceListPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The data array that is returned.</p>
+         */
         @NameInMap("Content")
         public java.util.List<GetServiceListPageResponseBodyDataContent> content;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalElements")
         public Integer totalElements;
 
+        /**
+         * <p>The total number of returned pages.</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

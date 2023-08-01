@@ -4,18 +4,33 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QuerySlsLogStoreListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The configurations of Log Service for the application.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QuerySlsLogStoreListResponseBodyResult> result;
 
+    /**
+     * <p>The number of log sources configured for the application.</p>
+     */
     @NameInMap("TotalSize")
     public Integer totalSize;
 
@@ -65,21 +80,42 @@ public class QuerySlsLogStoreListResponseBody extends TeaModel {
     }
 
     public static class QuerySlsLogStoreListResponseBodyResult extends TeaModel {
+        /**
+         * <p>The type of the logging service.</p>
+         */
         @NameInMap("ConsumerSide")
         public String consumerSide;
 
+        /**
+         * <p>The time when the logging service was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The URL of the logging service.</p>
+         */
         @NameInMap("Link")
         public String link;
 
+        /**
+         * <p>The name of the Logstore.</p>
+         */
         @NameInMap("Logstore")
         public String logstore;
 
+        /**
+         * <p>The name of the project.</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <p>The source of logs. Valid values:</p>
+         * <br>
+         * <p>*   Standard output: stdout.log</p>
+         * <p>*   File log: the directory that stores logs</p>
+         */
         @NameInMap("Source")
         public String source;
 

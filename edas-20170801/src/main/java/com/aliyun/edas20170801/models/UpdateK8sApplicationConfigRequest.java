@@ -4,36 +4,77 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateK8sApplicationConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~423162~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The ID of the cluster. You can query the cluster ID by calling the ListCluster operation. For more information, see [ListCluster](~~411844~~).</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The maximum number of CPU cores allowed for each application instance when the application is running. The value 0 indicates that no limit is set on CPU cores.</p>
+     */
     @NameInMap("CpuLimit")
     public String cpuLimit;
 
+    /**
+     * <p>The number of CPU cores requested for each application instance when the application is running. Unit: cores. We recommend that you set this parameter. The value 0 indicates that no limit is set on CPU cores.</p>
+     * <br>
+     * <p>> You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</p>
+     */
     @NameInMap("CpuRequest")
     public String cpuRequest;
 
+    /**
+     * <p>The maximum size of space required by ephemeral storage. Unit: GB. The value 0 indicates that no limit is set on the ephemeral storage space.</p>
+     */
     @NameInMap("EphemeralStorageLimit")
     public String ephemeralStorageLimit;
 
+    /**
+     * <p>The minimum size of space required by ephemeral storage. Unit: GB. The value 0 indicates that no limit is set on the ephemeral storage space.</p>
+     * <br>
+     * <p>> You must set this parameter together with the EphemeralStorageLimit parameter. Make sure that the value of this parameter does not exceed that of the EphemeralStorageLimit parameter.</p>
+     */
     @NameInMap("EphemeralStorageRequest")
     public String ephemeralStorageRequest;
 
+    /**
+     * <p>The maximum number of CPU cores allowed. The value 0 indicates that no limit is set on CPU cores.</p>
+     */
     @NameInMap("McpuLimit")
     public String mcpuLimit;
 
+    /**
+     * <p>The minimum number of CPU cores required. Unit: cores. The value 0 indicates that no limit is set on CPU cores.</p>
+     * <br>
+     * <p>> You must set this parameter together with the CpuLimit parameter. Make sure that the value of this parameter does not exceed that of the CpuLimit parameter.</p>
+     */
     @NameInMap("McpuRequest")
     public String mcpuRequest;
 
+    /**
+     * <p>The maximum size of memory allowed for each application instance when the application is running. Unit: MB. The value 0 indicates that no limit is set on the memory size.</p>
+     */
     @NameInMap("MemoryLimit")
     public String memoryLimit;
 
+    /**
+     * <p>The size of memory requested for each application instance when the application is running. Unit: MB. We recommend that you set this parameter. If you do not want to apply for a memory quota, set this parameter to 0.</p>
+     * <br>
+     * <p>> You must set this parameter together with the MemoryLimit parameter. Make sure that the value of this parameter does not exceed that of the MemoryLimit parameter.</p>
+     */
     @NameInMap("MemoryRequest")
     public String memoryRequest;
 
+    /**
+     * <p>The timeout period of the change process. Valid values: 1 to 1800. Default value: 600. Unit: seconds.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

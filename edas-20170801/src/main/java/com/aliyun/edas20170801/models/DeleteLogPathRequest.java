@@ -4,9 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteLogPathRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The absolute path of the log directory that you want to remove. The value must start and end with a forward slash (`/`) and must contain `/log` or `/logs`. The following directories are the default log directories in Enterprise Distributed Application Service (EDAS):</p>
+     * <br>
+     * <p>*   /home/admin/edas-container/logs/</p>
+     * <p>*   /home/admin/taobao-tomcat-7.0.59/logs/</p>
+     * <p>*   /home/admin/taobao-tomcat-production-7.0.59.3/logs/</p>
+     * <p>*   /home/admin/taobao-tomcat-production-7.0.70/logs/</p>
+     * <p>*   /home/admin/edas-agent/logs/</p>
+     */
     @NameInMap("Path")
     public String path;
 

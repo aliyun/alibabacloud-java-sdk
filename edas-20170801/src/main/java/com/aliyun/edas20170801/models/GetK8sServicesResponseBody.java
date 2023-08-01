@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetK8sServicesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the change process.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of services in the Kubernetes cluster.</p>
+     */
     @NameInMap("Services")
     public java.util.List<GetK8sServicesResponseBodyServices> services;
 
@@ -54,15 +66,27 @@ public class GetK8sServicesResponseBody extends TeaModel {
     }
 
     public static class GetK8sServicesResponseBodyServicesServicePorts extends TeaModel {
+        /**
+         * <p>The port of the node.</p>
+         */
         @NameInMap("NodePort")
         public Integer nodePort;
 
+        /**
+         * <p>The frontend service port.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The protocol of the service.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The backend container port.</p>
+         */
         @NameInMap("TargetPort")
         public String targetPort;
 
@@ -106,15 +130,27 @@ public class GetK8sServicesResponseBody extends TeaModel {
     }
 
     public static class GetK8sServicesResponseBodyServices extends TeaModel {
+        /**
+         * <p>The IP address of the service in the Kubernetes cluster.</p>
+         */
         @NameInMap("ClusterIP")
         public String clusterIP;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The mapping of service ports.</p>
+         */
         @NameInMap("ServicePorts")
         public java.util.List<GetK8sServicesResponseBodyServicesServicePorts> servicePorts;
 
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("Type")
         public String type;
 

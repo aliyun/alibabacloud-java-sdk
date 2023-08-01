@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateSwimmingLaneGroupRequest extends TeaModel {
+    /**
+     * <p>The list of application IDs related to the lane group.</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
+    /**
+     * <p>The ingress application. The application is in the EDAS:{application ID} format.</p>
+     */
     @NameInMap("EntryApp")
     public String entryApp;
 
+    /**
+     * <p>The ID of the lane group.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The name of the lane group.</p>
+     */
     @NameInMap("Name")
     public String name;
 

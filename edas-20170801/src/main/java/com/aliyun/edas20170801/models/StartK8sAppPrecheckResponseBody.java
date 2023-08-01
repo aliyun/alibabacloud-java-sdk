@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class StartK8sAppPrecheckResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public StartK8sAppPrecheckResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,9 @@ public class StartK8sAppPrecheckResponseBody extends TeaModel {
     }
 
     public static class StartK8sAppPrecheckResponseBodyData extends TeaModel {
+        /**
+         * <p>The jobs and the details about the jobs.</p>
+         */
         @NameInMap("Jobs")
         public java.util.List<String> jobs;
 

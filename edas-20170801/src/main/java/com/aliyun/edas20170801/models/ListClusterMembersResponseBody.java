@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListClusterMembersResponseBody extends TeaModel {
+    /**
+     * <p>The information about the ECS instances in the cluster.</p>
+     */
     @NameInMap("ClusterMemberPage")
     public ListClusterMembersResponseBodyClusterMemberPage clusterMemberPage;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,27 +66,56 @@ public class ListClusterMembersResponseBody extends TeaModel {
     }
 
     public static class ListClusterMembersResponseBodyClusterMemberPageClusterMemberListClusterMember extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The ID of the ECS instance in the cluster.</p>
+         */
         @NameInMap("ClusterMemberId")
         public String clusterMemberId;
 
+        /**
+         * <p>The timestamp when the ECS instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the ECS instance.</p>
+         */
         @NameInMap("EcsId")
         public String ecsId;
 
+        /**
+         * <p>The unique ID of the elastic compute unit (ECU). You can run the `dmidecode` command on the ECS instance to query the ECU ID.</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The private IP address for the ECS instance.</p>
+         */
         @NameInMap("PrivateIp")
         public String privateIp;
 
+        /**
+         * <p>The state of the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   1: The instance is running.</p>
+         * <p>*   0: The instance is being converted.</p>
+         * <p>*   \-1: The instance fails to be converted.</p>
+         * <p>*   \-2: The instance is offline.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The timestamp when the ECS instance was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -169,15 +210,27 @@ public class ListClusterMembersResponseBody extends TeaModel {
     }
 
     public static class ListClusterMembersResponseBodyClusterMemberPage extends TeaModel {
+        /**
+         * <p>The list of ECS instances in the cluster.</p>
+         */
         @NameInMap("ClusterMemberList")
         public ListClusterMembersResponseBodyClusterMemberPageClusterMemberList clusterMemberList;
 
+        /**
+         * <p>The page number of the returned page. If this parameter is not returned, the first page is returned.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of ECS instances returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of pages returned when all ECS instances are returned based on the specified PageSize parameter.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

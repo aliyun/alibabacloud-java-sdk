@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
+    /**
+     * <p>The auto scaling policies of the application.</p>
+     */
     @NameInMap("AppScalingRules")
     public DescribeApplicationScalingRulesResponseBodyAppScalingRules appScalingRules;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -53,10 +65,210 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies extends TeaModel {
+        @NameInMap("PeriodSeconds")
+        public Integer periodSeconds;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies self = new DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies setPeriodSeconds(Integer periodSeconds) {
+            this.periodSeconds = periodSeconds;
+            return this;
+        }
+        public Integer getPeriodSeconds() {
+            return this.periodSeconds;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown extends TeaModel {
+        @NameInMap("Policies")
+        public java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies> policies;
+
+        @NameInMap("SelectPolicy")
+        public String selectPolicy;
+
+        @NameInMap("StabilizationWindowSeconds")
+        public Integer stabilizationWindowSeconds;
+
+        public static DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown self = new DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown setPolicies(java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies> policies) {
+            this.policies = policies;
+            return this;
+        }
+        public java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDownPolicies> getPolicies() {
+            return this.policies;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown setSelectPolicy(String selectPolicy) {
+            this.selectPolicy = selectPolicy;
+            return this;
+        }
+        public String getSelectPolicy() {
+            return this.selectPolicy;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown setStabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+            this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+            return this;
+        }
+        public Integer getStabilizationWindowSeconds() {
+            return this.stabilizationWindowSeconds;
+        }
+
+    }
+
+    public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies extends TeaModel {
+        @NameInMap("PeriodSeconds")
+        public Integer periodSeconds;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies self = new DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies setPeriodSeconds(Integer periodSeconds) {
+            this.periodSeconds = periodSeconds;
+            return this;
+        }
+        public Integer getPeriodSeconds() {
+            return this.periodSeconds;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp extends TeaModel {
+        @NameInMap("Policies")
+        public java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies> policies;
+
+        @NameInMap("SelectPolicy")
+        public String selectPolicy;
+
+        @NameInMap("StabilizationWindowSeconds")
+        public Integer stabilizationWindowSeconds;
+
+        public static DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp self = new DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp setPolicies(java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies> policies) {
+            this.policies = policies;
+            return this;
+        }
+        public java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUpPolicies> getPolicies() {
+            return this.policies;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp setSelectPolicy(String selectPolicy) {
+            this.selectPolicy = selectPolicy;
+            return this;
+        }
+        public String getSelectPolicy() {
+            return this.selectPolicy;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp setStabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
+            this.stabilizationWindowSeconds = stabilizationWindowSeconds;
+            return this;
+        }
+        public Integer getStabilizationWindowSeconds() {
+            return this.stabilizationWindowSeconds;
+        }
+
+    }
+
+    public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour extends TeaModel {
+        @NameInMap("ScaleDown")
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown scaleDown;
+
+        @NameInMap("ScaleUp")
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp scaleUp;
+
+        public static DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour self = new DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour setScaleDown(DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown scaleDown) {
+            this.scaleDown = scaleDown;
+            return this;
+        }
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleDown getScaleDown() {
+            return this.scaleDown;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour setScaleUp(DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp scaleUp) {
+            this.scaleUp = scaleUp;
+            return this;
+        }
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviourScaleUp getScaleUp() {
+            return this.scaleUp;
+        }
+
+    }
+
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultMetricMetrics extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MetricTargetAverageUtilization")
         public Integer metricTargetAverageUtilization;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MetricType")
         public String metricType;
 
@@ -84,12 +296,21 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultMetric extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Metrics")
         public java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultMetricMetrics> metrics;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
@@ -125,12 +346,21 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultTriggerTriggers extends TeaModel {
+        /**
+         * <p>The metadata of the trigger.</p>
+         */
         @NameInMap("MetaData")
         public String metaData;
 
+        /**
+         * <p>The name of the trigger.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the trigger. Valid values: cron and app_metric.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -166,12 +396,21 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultTrigger extends TeaModel {
+        /**
+         * <p>The maximum number of replicas. The upper limit is 1000.</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <p>The minimum number of replicas. The lower limit is 0.</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
+        /**
+         * <p>The configurations of the trigger.</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultTriggerTriggers> triggers;
 
@@ -207,36 +446,75 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRulesResult extends TeaModel {
+        /**
+         * <p>The ID of the application to which the auto scaling policy belongs.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("Behaviour")
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour behaviour;
+
+        /**
+         * <p>The time when the auto scaling policy was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The time when the auto scaling policy was last disabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("LastDisableTime")
         public Long lastDisableTime;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Metric")
         public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultMetric metric;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
+        /**
+         * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The auto scaling policy is enabled.</p>
+         * <p>*   **false**: The auto scaling policy is disabled.</p>
+         */
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
 
+        /**
+         * <p>The name of the auto scaling policy.</p>
+         */
         @NameInMap("ScaleRuleName")
         public String scaleRuleName;
 
+        /**
+         * <p>The type of the auto scaling policy. The value is fixed to trigger.</p>
+         */
         @NameInMap("ScaleRuleType")
         public String scaleRuleType;
 
+        /**
+         * <p>The configurations of the trigger.</p>
+         */
         @NameInMap("Trigger")
         public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultTrigger trigger;
 
+        /**
+         * <p>The time when the auto scaling policy was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -251,6 +529,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResult setBehaviour(DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour behaviour) {
+            this.behaviour = behaviour;
+            return this;
+        }
+        public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResultBehaviour getBehaviour() {
+            return this.behaviour;
         }
 
         public DescribeApplicationScalingRulesResponseBodyAppScalingRulesResult setCreateTime(Long createTime) {
@@ -336,15 +622,27 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationScalingRulesResponseBodyAppScalingRules extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of auto scaling policies returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The information about auto scaling policies.</p>
+         */
         @NameInMap("Result")
         public java.util.List<DescribeApplicationScalingRulesResponseBodyAppScalingRulesResult> result;
 
+        /**
+         * <p>The total number of auto scaling policies.</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

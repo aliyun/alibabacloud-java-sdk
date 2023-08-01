@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateK8sConfigMapRequest extends TeaModel {
+    /**
+     * <p>The ID of the Kubernetes cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The data of the ConfigMap. The value must be a JSON array string.</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    /**
+     * <p>The name of the ConfigMap. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace of the Kubernetes cluster.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

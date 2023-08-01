@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DisableApplicationScalingRuleResponseBody extends TeaModel {
+    /**
+     * <p>The information about the auto scaling policy.</p>
+     */
     @NameInMap("AppScalingRule")
     public DisableApplicationScalingRuleResponseBodyAppScalingRule appScalingRule;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class DisableApplicationScalingRuleResponseBodyAppScalingRuleMetricMetrics extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MetricTargetAverageUtilization")
         public Integer metricTargetAverageUtilization;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MetricType")
         public String metricType;
 
@@ -84,12 +102,21 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class DisableApplicationScalingRuleResponseBodyAppScalingRuleMetric extends TeaModel {
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Metrics")
         public java.util.List<DisableApplicationScalingRuleResponseBodyAppScalingRuleMetricMetrics> metrics;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
@@ -125,12 +152,21 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class DisableApplicationScalingRuleResponseBodyAppScalingRuleTriggerTriggers extends TeaModel {
+        /**
+         * <p>The metadata of the trigger.</p>
+         */
         @NameInMap("MetaData")
         public String metaData;
 
+        /**
+         * <p>The name of the trigger.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the trigger. Valid values: cron and app_metric.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -166,12 +202,21 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class DisableApplicationScalingRuleResponseBodyAppScalingRuleTrigger extends TeaModel {
+        /**
+         * <p>The maximum number of replicas. The upper limit is 1000.</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <p>The minimum number of replicas. The lower limit is 0.</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
+        /**
+         * <p>The information about the trigger.</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<DisableApplicationScalingRuleResponseBodyAppScalingRuleTriggerTriggers> triggers;
 
@@ -207,36 +252,72 @@ public class DisableApplicationScalingRuleResponseBody extends TeaModel {
     }
 
     public static class DisableApplicationScalingRuleResponseBodyAppScalingRule extends TeaModel {
+        /**
+         * <p>The ID of the application to which the auto scaling policy belongs.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The time when the auto scaling policy was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The time when the auto scaling policy was last disabled.</p>
+         */
         @NameInMap("LastDisableTime")
         public Long lastDisableTime;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("Metric")
         public DisableApplicationScalingRuleResponseBodyAppScalingRuleMetric metric;
 
+        /**
+         * <p>This parameter is deprecated.</p>
+         */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
 
+        /**
+         * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The auto scaling policy is enabled.</p>
+         * <p>*   **false**: The auto scaling policy is disabled.</p>
+         */
         @NameInMap("ScaleRuleEnabled")
         public Boolean scaleRuleEnabled;
 
+        /**
+         * <p>The name of the auto scaling policy.</p>
+         */
         @NameInMap("ScaleRuleName")
         public String scaleRuleName;
 
+        /**
+         * <p>The type of the auto scaling policy. The value is fixed to trigger.</p>
+         */
         @NameInMap("ScaleRuleType")
         public String scaleRuleType;
 
+        /**
+         * <p>The configurations of the trigger.</p>
+         */
         @NameInMap("Trigger")
         public DisableApplicationScalingRuleResponseBodyAppScalingRuleTrigger trigger;
 
+        /**
+         * <p>The time when the auto scaling policy was last modified.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

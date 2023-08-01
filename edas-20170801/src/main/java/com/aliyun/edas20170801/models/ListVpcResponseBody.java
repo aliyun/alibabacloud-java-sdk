@@ -4,15 +4,29 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListVpcResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about VPCs.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The name of the VPC.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the VPC is available. Valid values:</p>
+     * <p>- true: The VPC is available.</p>
+     * <p>- false: The VPC is unavailable.</p>
+     */
     @NameInMap("VpcList")
     public ListVpcResponseBodyVpcList vpcList;
 
@@ -54,21 +68,40 @@ public class ListVpcResponseBody extends TeaModel {
     }
 
     public static class ListVpcResponseBodyVpcListVpcEntity extends TeaModel {
+        /**
+         * <p>This operation uses only common request headers. For more information, see [Common parameters for API calls](~~123488~~).</p>
+         */
         @NameInMap("EcsNum")
         public Integer ecsNum;
 
+        /**
+         * <p>The region ID of the VPC.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>No request parameters.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>GET /pop/v5/vpc_list HTTP/1.1</p>
+         * <p>Common request headers</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the VPC belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The number of ECS instances associated with the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 

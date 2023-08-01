@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class RollbackChangeOrderRequest extends TeaModel {
+    /**
+     * <p>The ID of the change process.</p>
+     */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 

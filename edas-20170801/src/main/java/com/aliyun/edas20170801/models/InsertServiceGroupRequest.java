@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertServiceGroupRequest extends TeaModel {
+    /**
+     * <p>The name of the service group that you want to create.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 

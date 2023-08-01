@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListUserDefineRegionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The namespaces.</p>
+     */
     @NameInMap("UserDefineRegionList")
     public ListUserDefineRegionResponseBodyUserDefineRegionList userDefineRegionList;
 
@@ -54,30 +66,62 @@ public class ListUserDefineRegionResponseBody extends TeaModel {
     }
 
     public static class ListUserDefineRegionResponseBodyUserDefineRegionListUserDefineRegionEntity extends TeaModel {
+        /**
+         * <p>The ID of the region to which the namespace belongs.</p>
+         */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
+        /**
+         * <p>Indicates whether remote debugging is allowed.</p>
+         */
         @NameInMap("DebugEnable")
         public Boolean debugEnable;
 
+        /**
+         * <p>The description of the namespace.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The unique identifier of the namespace.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The type of the registry. Valid values:</p>
+         * <br>
+         * <p>*   default: shared service registry of Enterprise Distributed Application Service (EDAS)</p>
+         * <p>*   exclusive_mse: Microservices Engine (MSE) Nacos registry</p>
+         */
         @NameInMap("MseInstanceId")
         public String mseInstanceId;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         * <br>
+         * <p>> The ID cannot be changed after the namespace is created. The ID is in the `Physical region ID:Logical region identifier` format .</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The ID of the MSE instance.</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the namespace belongs.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

@@ -4,15 +4,30 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class SwitchAdvancedMonitoringResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the advanced application monitoring feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   true: The advanced application monitoring feature is enabled.</p>
+     * <p>*   false: The advanced application monitoring feature is disabled.</p>
+     */
     @NameInMap("AdvancedMonitoringEnabled")
     public Boolean advancedMonitoringEnabled;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

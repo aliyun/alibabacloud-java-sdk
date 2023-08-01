@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListConfigTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Data")
     public ListConfigTemplatesResponseBodyData data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,24 +66,45 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListConfigTemplatesResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The content of the configuration template.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The description of the configuration template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The data format of the configuration template.</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The time when the configuration template was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The time when the configuration template was updated.</p>
+         */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>The ID of the configuration template.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the configuration template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -139,15 +172,27 @@ public class ListConfigTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListConfigTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The configuration templates.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListConfigTemplatesResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of configuration templates.</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 

@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetSecureTokenRequest extends TeaModel {
+    /**
+     * <p>The ID of the namespace, such as cn-beijing or cn-beijing:prod````.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 

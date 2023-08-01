@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertOrUpdateRegionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the custom namespace.</p>
+     */
     @NameInMap("UserDefineRegionEntity")
     public InsertOrUpdateRegionResponseBodyUserDefineRegionEntity userDefineRegionEntity;
 
@@ -54,24 +66,51 @@ public class InsertOrUpdateRegionResponseBody extends TeaModel {
     }
 
     public static class InsertOrUpdateRegionResponseBodyUserDefineRegionEntity extends TeaModel {
+        /**
+         * <p>The ID of the region to which the namespace belongs.</p>
+         */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
+        /**
+         * <p>Indicates whether remote debugging is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: Remote debugging is enabled.</p>
+         * <p>*   false: Remote debugging is disabled.</p>
+         */
         @NameInMap("DebugEnable")
         public Boolean debugEnable;
 
+        /**
+         * <p>The description of the namespace.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Indicates whether the namespace is created or modified. If this parameter is left empty or 0 is returned, the namespace is created. Otherwise, the namespace is modified.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         * <br>
+         * <p>*   The ID of a custom namespace is in the `region ID:namespace identifier` format. Example: cn-beijing:tdy218.</p>
+         * <p>*   The ID of the default namespace is in the `region ID` format. Example: cn-beijing.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the custom namespace belongs.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

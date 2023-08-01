@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateSwimmingLaneResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public UpdateSwimmingLaneResponseBodyData data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class UpdateSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of the lane.</p>
+         */
         @NameInMap("LaneId")
         public Long laneId;
 
+        /**
+         * <p>The association rule.</p>
+         */
         @NameInMap("Rules")
         public String rules;
 
@@ -106,24 +130,45 @@ public class UpdateSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class UpdateSwimmingLaneResponseBodyData extends TeaModel {
+        /**
+         * <p>The rule of the lane.</p>
+         */
         @NameInMap("EntryRule")
         public String entryRule;
 
+        /**
+         * <p>The ID of the lane group.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The ID of the lane.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the lane.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The list of associations between the lane and the related application.</p>
+         */
         @NameInMap("SwimmingLaneAppRelationShipList")
         public java.util.List<UpdateSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList> swimmingLaneAppRelationShipList;
 
+        /**
+         * <p>The tag of the lane.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

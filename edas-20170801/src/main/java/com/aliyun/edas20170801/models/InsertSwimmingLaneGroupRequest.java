@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertSwimmingLaneGroupRequest extends TeaModel {
+    /**
+     * <p>IDs of all applications that are related to the lane group. Separate multiple applications with commas (,).</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
+    /**
+     * <p>The ingress application. The application is in the EDAS:{application ID} format.</p>
+     */
     @NameInMap("EntryApp")
     public String entryApp;
 
+    /**
+     * <p>The ID of the custom namespace. The ID is in the physical region ID:custom namespace identifier format. Example: cn-hangzhou:test.</p>
+     */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 
+    /**
+     * <p>The name of the lane group.</p>
+     */
     @NameInMap("Name")
     public String name;
 

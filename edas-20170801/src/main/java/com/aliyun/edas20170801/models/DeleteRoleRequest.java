@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteRoleRequest extends TeaModel {
+    /**
+     * <p>The ID of the RAM role.</p>
+     */
     @NameInMap("RoleId")
     public Integer roleId;
 

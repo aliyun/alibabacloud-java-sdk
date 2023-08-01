@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ScaleK8sApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The expected number of application instances after the scale-out or scale-in. The minimum number is 0.</p>
+     */
     @NameInMap("Replicas")
     public Integer replicas;
 
+    /**
+     * <p>The timeout period of the change process. Unit: seconds.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

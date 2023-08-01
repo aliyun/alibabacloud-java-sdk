@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListK8sConfigMapsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The query results that are returned.</p>
+     */
     @NameInMap("Result")
     public ListK8sConfigMapsResponseBodyResult result;
 
@@ -54,9 +66,15 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
     }
 
     public static class ListK8sConfigMapsResponseBodyResultConfigMapsData extends TeaModel {
+        /**
+         * <p>The user-defined key that is stored in the ConfigMap.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The user-defined value that is stored in the ConfigMap.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -84,9 +102,15 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
     }
 
     public static class ListK8sConfigMapsResponseBodyResultConfigMapsRelatedApps extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -114,24 +138,45 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
     }
 
     public static class ListK8sConfigMapsResponseBodyResultConfigMaps extends TeaModel {
+        /**
+         * <p>The ID of the Kubernetes cluster. You can obtain the cluster ID by calling the GetK8sCluster operation. For more information, see [GetK8sCluster](~~181437~~).</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The time when the ConfigMaps were created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The information about ConfigMaps.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListK8sConfigMapsResponseBodyResultConfigMapsData> data;
 
+        /**
+         * <p>The name of the ConfigMap.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace of the Kubernetes cluster.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The related applications.</p>
+         */
         @NameInMap("RelatedApps")
         public java.util.List<ListK8sConfigMapsResponseBodyResultConfigMapsRelatedApps> relatedApps;
 
@@ -199,9 +244,15 @@ public class ListK8sConfigMapsResponseBody extends TeaModel {
     }
 
     public static class ListK8sConfigMapsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The information about ConfigMaps.</p>
+         */
         @NameInMap("ConfigMaps")
         public java.util.List<ListK8sConfigMapsResponseBodyResultConfigMaps> configMaps;
 
+        /**
+         * <p>The total number of entries that are returned.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

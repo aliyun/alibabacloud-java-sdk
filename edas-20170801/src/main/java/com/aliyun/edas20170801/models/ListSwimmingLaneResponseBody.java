@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListSwimmingLaneResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListSwimmingLaneResponseBodyData> data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,30 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class ListSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("Extra")
+        public String extra;
+
+        /**
+         * <p>The ID of the lane.</p>
+         */
         @NameInMap("LaneId")
         public Long laneId;
 
+        /**
+         * <p>The association rule.</p>
+         */
         @NameInMap("Rules")
         public String rules;
 
@@ -87,6 +114,14 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
+        }
+
         public ListSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList setLaneId(Long laneId) {
             this.laneId = laneId;
             return this;
@@ -106,30 +141,57 @@ public class ListSwimmingLaneResponseBody extends TeaModel {
     }
 
     public static class ListSwimmingLaneResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the throttling rule is enabled.</p>
+         */
         @NameInMap("EnableRules")
         public Boolean enableRules;
 
+        /**
+         * <p>The conditions.</p>
+         */
         @NameInMap("EntryRule")
         public String entryRule;
 
+        /**
+         * <p>The ID of the lane group.</p>
+         */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The ID of the lane.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the lane.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the microservices namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The expected tag.</p>
+         */
         @NameInMap("ScenarioSign")
         public String scenarioSign;
 
+        /**
+         * <p>The applications that are related to the lane.</p>
+         */
         @NameInMap("SwimmingLaneAppRelationShipList")
         public java.util.List<ListSwimmingLaneResponseBodyDataSwimmingLaneAppRelationShipList> swimmingLaneAppRelationShipList;
 
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

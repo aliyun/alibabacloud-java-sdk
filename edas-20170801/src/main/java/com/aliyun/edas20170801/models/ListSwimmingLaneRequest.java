@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListSwimmingLaneRequest extends TeaModel {
+    /**
+     * <p>The ID of the lane group.</p>
+     */
     @NameInMap("GroupId")
     public Long groupId;
 
