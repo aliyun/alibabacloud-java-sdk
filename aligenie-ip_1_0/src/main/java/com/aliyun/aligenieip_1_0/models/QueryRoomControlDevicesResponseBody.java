@@ -53,18 +53,123 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DeviceIndex")
+        public Integer deviceIndex;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("DeviceStatus")
+        public String deviceStatus;
+
+        @NameInMap("ElementCode")
+        public String elementCode;
+
+        @NameInMap("Location")
+        public String location;
+
+        public static QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList build(java.util.Map<String, ?> map) throws Exception {
+            QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList self = new QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setDeviceIndex(Integer deviceIndex) {
+            this.deviceIndex = deviceIndex;
+            return this;
+        }
+        public Integer getDeviceIndex() {
+            return this.deviceIndex;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setDeviceStatus(String deviceStatus) {
+            this.deviceStatus = deviceStatus;
+            return this;
+        }
+        public String getDeviceStatus() {
+            return this.deviceStatus;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setElementCode(String elementCode) {
+            this.elementCode = elementCode;
+            return this;
+        }
+        public String getElementCode() {
+            return this.elementCode;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+    }
+
+    public static class QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt extends TeaModel {
+        @NameInMap("SwitchList")
+        public java.util.List<QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList> switchList;
+
+        public static QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt build(java.util.Map<String, ?> map) throws Exception {
+            QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt self = new QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt setSwitchList(java.util.List<QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList> switchList) {
+            this.switchList = switchList;
+            return this;
+        }
+        public java.util.List<QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList> getSwitchList() {
+            return this.switchList;
+        }
+
+    }
+
     public static class QueryRoomControlDevicesResponseBodyResultDevices extends TeaModel {
         @NameInMap("ConnectType")
         public String connectType;
 
+        @NameInMap("DN")
+        public String DN;
+
         @NameInMap("DeviceName")
         public String deviceName;
+
+        @NameInMap("DeviceStatus")
+        public String deviceStatus;
+
+        @NameInMap("MultiKeySwitchExt")
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt multiKeySwitchExt;
 
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Number")
         public String number;
+
+        @NameInMap("PK")
+        public String PK;
 
         public static QueryRoomControlDevicesResponseBodyResultDevices build(java.util.Map<String, ?> map) throws Exception {
             QueryRoomControlDevicesResponseBodyResultDevices self = new QueryRoomControlDevicesResponseBodyResultDevices();
@@ -79,12 +184,36 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
             return this.connectType;
         }
 
+        public QueryRoomControlDevicesResponseBodyResultDevices setDN(String DN) {
+            this.DN = DN;
+            return this;
+        }
+        public String getDN() {
+            return this.DN;
+        }
+
         public QueryRoomControlDevicesResponseBodyResultDevices setDeviceName(String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevices setDeviceStatus(String deviceStatus) {
+            this.deviceStatus = deviceStatus;
+            return this;
+        }
+        public String getDeviceStatus() {
+            return this.deviceStatus;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevices setMultiKeySwitchExt(QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt multiKeySwitchExt) {
+            this.multiKeySwitchExt = multiKeySwitchExt;
+            return this;
+        }
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExt getMultiKeySwitchExt() {
+            return this.multiKeySwitchExt;
         }
 
         public QueryRoomControlDevicesResponseBodyResultDevices setName(String name) {
@@ -101,6 +230,14 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         }
         public String getNumber() {
             return this.number;
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevices setPK(String PK) {
+            this.PK = PK;
+            return this;
+        }
+        public String getPK() {
+            return this.PK;
         }
 
     }

@@ -7,6 +7,9 @@ public class ControlRoomDeviceRequest extends TeaModel {
     @NameInMap("Cmd")
     public String cmd;
 
+    @NameInMap("DeviceIndex")
+    public Integer deviceIndex;
+
     @NameInMap("DeviceNumber")
     public String deviceNumber;
 
@@ -30,6 +33,14 @@ public class ControlRoomDeviceRequest extends TeaModel {
     }
     public String getCmd() {
         return this.cmd;
+    }
+
+    public ControlRoomDeviceRequest setDeviceIndex(Integer deviceIndex) {
+        this.deviceIndex = deviceIndex;
+        return this;
+    }
+    public Integer getDeviceIndex() {
+        return this.deviceIndex;
     }
 
     public ControlRoomDeviceRequest setDeviceNumber(String deviceNumber) {
