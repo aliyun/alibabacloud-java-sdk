@@ -378,6 +378,9 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
 
+        @NameInMap("arr_city_ad_code")
+        public String arrCityAdCode;
+
         @NameInMap("arr_station")
         public String arrStation;
 
@@ -401,6 +404,9 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_city")
         public String depCity;
+
+        @NameInMap("dep_city_ad_code")
+        public String depCityAdCode;
 
         @NameInMap("dep_station")
         public String depStation;
@@ -501,6 +507,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             return this.arrCity;
         }
 
+        public TrainOrderListQueryResponseBodyModule setArrCityAdCode(String arrCityAdCode) {
+            this.arrCityAdCode = arrCityAdCode;
+            return this;
+        }
+        public String getArrCityAdCode() {
+            return this.arrCityAdCode;
+        }
+
         public TrainOrderListQueryResponseBodyModule setArrStation(String arrStation) {
             this.arrStation = arrStation;
             return this;
@@ -563,6 +577,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         }
         public String getDepCity() {
             return this.depCity;
+        }
+
+        public TrainOrderListQueryResponseBodyModule setDepCityAdCode(String depCityAdCode) {
+            this.depCityAdCode = depCityAdCode;
+            return this;
+        }
+        public String getDepCityAdCode() {
+            return this.depCityAdCode;
         }
 
         public TrainOrderListQueryResponseBodyModule setDepStation(String depStation) {

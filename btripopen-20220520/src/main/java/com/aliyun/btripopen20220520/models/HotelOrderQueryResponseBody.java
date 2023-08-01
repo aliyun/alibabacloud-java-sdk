@@ -94,6 +94,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("city")
         public String city;
 
+        @NameInMap("city_ad_code")
+        public String cityAdCode;
+
         @NameInMap("hotel_name")
         public String hotelName;
 
@@ -136,6 +139,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
         public String getCity() {
             return this.city;
+        }
+
+        public HotelOrderQueryResponseBodyModuleHotelInfo setCityAdCode(String cityAdCode) {
+            this.cityAdCode = cityAdCode;
+            return this;
+        }
+        public String getCityAdCode() {
+            return this.cityAdCode;
         }
 
         public HotelOrderQueryResponseBodyModuleHotelInfo setHotelName(String hotelName) {
