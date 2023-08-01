@@ -74,9 +74,6 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUserId")
-        public String externUserId;
-
         @NameInMap("id")
         public Long id;
 
@@ -110,14 +107,6 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
-        }
-
-        public AddRepositoryMemberResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
         }
 
         public AddRepositoryMemberResponseBodyResult setId(Long id) {

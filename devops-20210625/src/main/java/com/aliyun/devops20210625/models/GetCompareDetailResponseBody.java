@@ -71,9 +71,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -85,9 +82,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
 
         @NameInMap("username")
         public String username;
-
-        @NameInMap("websiteUrl")
-        public String websiteUrl;
 
         public static GetCompareDetailResponseBodyResultCommitsAuthor build(java.util.Map<String, ?> map) throws Exception {
             GetCompareDetailResponseBodyResultCommitsAuthor self = new GetCompareDetailResponseBodyResultCommitsAuthor();
@@ -108,14 +102,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
-        }
-
-        public GetCompareDetailResponseBodyResultCommitsAuthor setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
         }
 
         public GetCompareDetailResponseBodyResultCommitsAuthor setId(Long id) {
@@ -150,14 +136,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
             return this.username;
         }
 
-        public GetCompareDetailResponseBodyResultCommitsAuthor setWebsiteUrl(String websiteUrl) {
-            this.websiteUrl = websiteUrl;
-            return this;
-        }
-        public String getWebsiteUrl() {
-            return this.websiteUrl;
-        }
-
     }
 
     public static class GetCompareDetailResponseBodyResultCommitsCommitter extends TeaModel {
@@ -166,9 +144,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
 
         @NameInMap("email")
         public String email;
-
-        @NameInMap("externUid")
-        public String externUid;
 
         @NameInMap("id")
         public Long id;
@@ -181,9 +156,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
 
         @NameInMap("username")
         public String username;
-
-        @NameInMap("websiteUrl")
-        public String websiteUrl;
 
         public static GetCompareDetailResponseBodyResultCommitsCommitter build(java.util.Map<String, ?> map) throws Exception {
             GetCompareDetailResponseBodyResultCommitsCommitter self = new GetCompareDetailResponseBodyResultCommitsCommitter();
@@ -204,14 +176,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
-        }
-
-        public GetCompareDetailResponseBodyResultCommitsCommitter setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
         }
 
         public GetCompareDetailResponseBodyResultCommitsCommitter setId(Long id) {
@@ -244,14 +208,6 @@ public class GetCompareDetailResponseBody extends TeaModel {
         }
         public String getUsername() {
             return this.username;
-        }
-
-        public GetCompareDetailResponseBodyResultCommitsCommitter setWebsiteUrl(String websiteUrl) {
-            this.websiteUrl = websiteUrl;
-            return this;
-        }
-        public String getWebsiteUrl() {
-            return this.websiteUrl;
         }
 
     }

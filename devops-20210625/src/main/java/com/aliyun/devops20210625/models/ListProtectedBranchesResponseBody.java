@@ -77,9 +77,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
-        @NameInMap("tbUserId")
-        public String tbUserId;
-
         @NameInMap("username")
         public String username;
 
@@ -120,14 +117,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListProtectedBranchesResponseBodyResultAllowMergeUsers setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
         public ListProtectedBranchesResponseBodyResultAllowMergeUsers setUsername(String username) {
             this.username = username;
             return this;
@@ -150,9 +139,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
 
         @NameInMap("name")
         public String name;
-
-        @NameInMap("tbUserId")
-        public String tbUserId;
 
         @NameInMap("username")
         public String username;
@@ -194,14 +180,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListProtectedBranchesResponseBodyResultAllowPushUsers setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
         public ListProtectedBranchesResponseBodyResultAllowPushUsers setUsername(String username) {
             this.username = username;
             return this;
@@ -224,9 +202,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
 
         @NameInMap("name")
         public String name;
-
-        @NameInMap("tbUserId")
-        public String tbUserId;
 
         @NameInMap("username")
         public String username;
@@ -266,14 +241,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public ListProtectedBranchesResponseBodyResultMergeRequestSettingDefaultAssignees setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
         }
 
         public ListProtectedBranchesResponseBodyResultMergeRequestSettingDefaultAssignees setUsername(String username) {

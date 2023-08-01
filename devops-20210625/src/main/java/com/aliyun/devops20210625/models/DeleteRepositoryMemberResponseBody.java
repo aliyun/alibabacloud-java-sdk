@@ -71,9 +71,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("createAt")
         public String createAt;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -108,14 +105,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         }
         public String getCreateAt() {
             return this.createAt;
-        }
-
-        public DeleteRepositoryMemberResponseBodyResult setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
         }
 
         public DeleteRepositoryMemberResponseBodyResult setId(Long id) {

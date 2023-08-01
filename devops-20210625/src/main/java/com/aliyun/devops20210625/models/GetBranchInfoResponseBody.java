@@ -71,9 +71,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -82,9 +79,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("tbUserId")
-        public String tbUserId;
 
         @NameInMap("username")
         public String username;
@@ -108,14 +102,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
-        }
-
-        public GetBranchInfoResponseBodyResultCommitAuthor setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
         }
 
         public GetBranchInfoResponseBodyResultCommitAuthor setId(Long id) {
@@ -142,14 +128,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
             return this.state;
         }
 
-        public GetBranchInfoResponseBodyResultCommitAuthor setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
         public GetBranchInfoResponseBodyResultCommitAuthor setUsername(String username) {
             this.username = username;
             return this;
@@ -167,9 +145,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -178,9 +153,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("tbUserId")
-        public String tbUserId;
 
         @NameInMap("username")
         public String username;
@@ -206,14 +178,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
             return this.email;
         }
 
-        public GetBranchInfoResponseBodyResultCommitCommitter setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
-        }
-
         public GetBranchInfoResponseBodyResultCommitCommitter setId(Long id) {
             this.id = id;
             return this;
@@ -236,14 +200,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public GetBranchInfoResponseBodyResultCommitCommitter setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
         }
 
         public GetBranchInfoResponseBodyResultCommitCommitter setUsername(String username) {

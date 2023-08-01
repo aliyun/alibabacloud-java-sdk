@@ -77,9 +77,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("expireAt")
         public String expireAt;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -100,9 +97,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("tbUserId")
-        public String tbUserId;
 
         @NameInMap("username")
         public String username;
@@ -148,14 +142,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         }
         public String getExpireAt() {
             return this.expireAt;
-        }
-
-        public UpdateRepositoryMemberResponseBodyResult setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
         }
 
         public UpdateRepositoryMemberResponseBodyResult setId(Long id) {
@@ -212,14 +198,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public UpdateRepositoryMemberResponseBodyResult setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
         }
 
         public UpdateRepositoryMemberResponseBodyResult setUsername(String username) {

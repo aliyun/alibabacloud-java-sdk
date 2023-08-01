@@ -71,9 +71,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
-        @NameInMap("externUserId")
-        public String externUserId;
-
         @NameInMap("id")
         public Long id;
 
@@ -99,14 +96,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
         }
         public String getAvatarUrl() {
             return this.avatarUrl;
-        }
-
-        public GetProjectMemberResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
         }
 
         public GetProjectMemberResponseBodyResult setId(Long id) {
