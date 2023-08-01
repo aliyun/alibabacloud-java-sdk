@@ -17,7 +17,7 @@ public class CreateTrainingJobRequest extends TeaModel {
     public String algorithmVersion;
 
     @NameInMap("CodeDir")
-    public CreateTrainingJobRequestCodeDir codeDir;
+    public Location codeDir;
 
     @NameInMap("ComputeResource")
     public CreateTrainingJobRequestComputeResource computeResource;
@@ -33,6 +33,9 @@ public class CreateTrainingJobRequest extends TeaModel {
 
     @NameInMap("OutputChannels")
     public java.util.List<CreateTrainingJobRequestOutputChannels> outputChannels;
+
+    @NameInMap("RoleArn")
+    public String roleArn;
 
     @NameInMap("Scheduler")
     public CreateTrainingJobRequestScheduler scheduler;
@@ -83,11 +86,11 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.algorithmVersion;
     }
 
-    public CreateTrainingJobRequest setCodeDir(CreateTrainingJobRequestCodeDir codeDir) {
+    public CreateTrainingJobRequest setCodeDir(Location codeDir) {
         this.codeDir = codeDir;
         return this;
     }
-    public CreateTrainingJobRequestCodeDir getCodeDir() {
+    public Location getCodeDir() {
         return this.codeDir;
     }
 
@@ -131,6 +134,14 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.outputChannels;
     }
 
+    public CreateTrainingJobRequest setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
     public CreateTrainingJobRequest setScheduler(CreateTrainingJobRequestScheduler scheduler) {
         this.scheduler = scheduler;
         return this;
@@ -163,42 +174,15 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.workspaceId;
     }
 
-    public static class CreateTrainingJobRequestCodeDir extends TeaModel {
-        @NameInMap("LocationType")
-        public String locationType;
-
-        @NameInMap("LocationValue")
-        public java.util.Map<String, ?> locationValue;
-
-        public static CreateTrainingJobRequestCodeDir build(java.util.Map<String, ?> map) throws Exception {
-            CreateTrainingJobRequestCodeDir self = new CreateTrainingJobRequestCodeDir();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateTrainingJobRequestCodeDir setLocationType(String locationType) {
-            this.locationType = locationType;
-            return this;
-        }
-        public String getLocationType() {
-            return this.locationType;
-        }
-
-        public CreateTrainingJobRequestCodeDir setLocationValue(java.util.Map<String, ?> locationValue) {
-            this.locationValue = locationValue;
-            return this;
-        }
-        public java.util.Map<String, ?> getLocationValue() {
-            return this.locationValue;
-        }
-
-    }
-
     public static class CreateTrainingJobRequestComputeResource extends TeaModel {
         @NameInMap("EcsCount")
         public Long ecsCount;
 
         @NameInMap("EcsSpec")
         public String ecsSpec;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         public static CreateTrainingJobRequestComputeResource build(java.util.Map<String, ?> map) throws Exception {
             CreateTrainingJobRequestComputeResource self = new CreateTrainingJobRequestComputeResource();
@@ -219,6 +203,14 @@ public class CreateTrainingJobRequest extends TeaModel {
         }
         public String getEcsSpec() {
             return this.ecsSpec;
+        }
+
+        public CreateTrainingJobRequestComputeResource setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

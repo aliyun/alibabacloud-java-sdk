@@ -10,8 +10,14 @@ public class HyperParameterDefinition extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DisplayName")
+    public String displayName;
+
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Range")
+    public HyperParameterRange range;
 
     @NameInMap("Required")
     public Boolean required;
@@ -40,12 +46,28 @@ public class HyperParameterDefinition extends TeaModel {
         return this.description;
     }
 
+    public HyperParameterDefinition setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
     public HyperParameterDefinition setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public HyperParameterDefinition setRange(HyperParameterRange range) {
+        this.range = range;
+        return this;
+    }
+    public HyperParameterRange getRange() {
+        return this.range;
     }
 
     public HyperParameterDefinition setRequired(Boolean required) {

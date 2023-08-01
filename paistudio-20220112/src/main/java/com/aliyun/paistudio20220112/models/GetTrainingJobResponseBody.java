@@ -13,6 +13,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    @NameInMap("AlgorithmSpec")
+    public AlgorithmSpec algorithmSpec;
+
     @NameInMap("AlgorithmVersion")
     public String algorithmVersion;
 
@@ -34,6 +37,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("Instances")
     public java.util.List<GetTrainingJobResponseBodyInstances> instances;
 
+    @NameInMap("IsTempAlgo")
+    public Boolean isTempAlgo;
+
     @NameInMap("Labels")
     public java.util.List<GetTrainingJobResponseBodyLabels> labels;
 
@@ -51,6 +57,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("RoleArn")
+    public String roleArn;
 
     @NameInMap("Scheduler")
     public GetTrainingJobResponseBodyScheduler scheduler;
@@ -106,6 +115,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public String getAlgorithmProvider() {
         return this.algorithmProvider;
+    }
+
+    public GetTrainingJobResponseBody setAlgorithmSpec(AlgorithmSpec algorithmSpec) {
+        this.algorithmSpec = algorithmSpec;
+        return this;
+    }
+    public AlgorithmSpec getAlgorithmSpec() {
+        return this.algorithmSpec;
     }
 
     public GetTrainingJobResponseBody setAlgorithmVersion(String algorithmVersion) {
@@ -164,6 +181,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         return this.instances;
     }
 
+    public GetTrainingJobResponseBody setIsTempAlgo(Boolean isTempAlgo) {
+        this.isTempAlgo = isTempAlgo;
+        return this;
+    }
+    public Boolean getIsTempAlgo() {
+        return this.isTempAlgo;
+    }
+
     public GetTrainingJobResponseBody setLabels(java.util.List<GetTrainingJobResponseBodyLabels> labels) {
         this.labels = labels;
         return this;
@@ -210,6 +235,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetTrainingJobResponseBody setRoleArn(String roleArn) {
+        this.roleArn = roleArn;
+        return this;
+    }
+    public String getRoleArn() {
+        return this.roleArn;
     }
 
     public GetTrainingJobResponseBody setScheduler(GetTrainingJobResponseBodyScheduler scheduler) {

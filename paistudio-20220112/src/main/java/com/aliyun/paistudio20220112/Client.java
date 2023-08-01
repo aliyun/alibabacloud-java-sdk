@@ -55,6 +55,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlgorithmName", request.algorithmName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -123,12 +127,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateResourceGroupResponse createResourceGroupWithOptions(CreateResourceGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computingResourceProvider)) {
+            body.put("ComputingResourceProvider", request.computingResourceProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userVpc)) {
@@ -200,6 +212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.outputChannels)) {
             body.put("OutputChannels", request.outputChannels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleArn)) {
+            body.put("RoleArn", request.roleArn);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scheduler)) {
@@ -433,9 +449,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getNodeMetricsWithOptions(ResourceGroupID, MetricType, request, headers, runtime);
     }
 
-    public GetResourceGroupResponse getResourceGroupWithOptions(String ResourceGroupID, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetResourceGroupResponse getResourceGroupWithOptions(String ResourceGroupID, GetResourceGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isAIWorkspaceDataEnabled)) {
+            query.put("IsAIWorkspaceDataEnabled", request.isAIWorkspaceDataEnabled);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetResourceGroup"),
@@ -451,10 +474,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceGroupResponse());
     }
 
-    public GetResourceGroupResponse getResourceGroup(String ResourceGroupID) throws Exception {
+    public GetResourceGroupResponse getResourceGroup(String ResourceGroupID, GetResourceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getResourceGroupWithOptions(ResourceGroupID, headers, runtime);
+        return this.getResourceGroupWithOptions(ResourceGroupID, request, headers, runtime);
     }
 
     public GetResourceGroupMachineGroupResponse getResourceGroupMachineGroupWithOptions(String MachineGroupID, String ResourceGroupID, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -786,6 +809,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListResourceGroupsResponse listResourceGroupsWithOptions(ListResourceGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.computingResourceProvider)) {
+            query.put("ComputingResourceProvider", request.computingResourceProvider);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
@@ -800,6 +827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showAll)) {
@@ -1054,6 +1085,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.algorithmDescription)) {
             body.put("AlgorithmDescription", request.algorithmDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("DisplayName", request.displayName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
