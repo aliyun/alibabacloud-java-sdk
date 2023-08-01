@@ -713,6 +713,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Cmd", request.cmd);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceIndex)) {
+            body.put("DeviceIndex", request.deviceIndex);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deviceNumber)) {
             body.put("DeviceNumber", request.deviceNumber);
         }
@@ -2377,6 +2381,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         ImportRoomControlDevicesHeaders headers = new ImportRoomControlDevicesHeaders();
         return this.importRoomControlDevicesWithOptions(request, headers, runtime);
+    }
+
+    public ImportRoomGenieScenesResponse importRoomGenieScenesWithOptions(ImportRoomGenieScenesRequest tmpReq, ImportRoomGenieScenesHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ImportRoomGenieScenesShrinkRequest request = new ImportRoomGenieScenesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sceneList)) {
+            request.sceneListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sceneList, "SceneList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelId)) {
+            body.put("HotelId", request.hotelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roomNo)) {
+            body.put("RoomNo", request.roomNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneListShrink)) {
+            body.put("SceneList", request.sceneListShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportRoomGenieScenes"),
+            new TeaPair("version", "ip_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ip/importRoomGenieScenes"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportRoomGenieScenesResponse());
+    }
+
+    public ImportRoomGenieScenesResponse importRoomGenieScenes(ImportRoomGenieScenesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ImportRoomGenieScenesHeaders headers = new ImportRoomGenieScenesHeaders();
+        return this.importRoomGenieScenesWithOptions(request, headers, runtime);
     }
 
     public InsertHotelSceneBookItemResponse insertHotelSceneBookItemWithOptions(InsertHotelSceneBookItemRequest tmpReq, InsertHotelSceneBookItemHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

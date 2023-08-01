@@ -53,6 +53,77 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         return this.roomNo;
     }
 
+    public static class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DeviceIndex")
+        public Integer deviceIndex;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("Location")
+        public String location;
+
+        public static ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList build(java.util.Map<String, ?> map) throws Exception {
+            ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList self = new ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList setDeviceIndex(Integer deviceIndex) {
+            this.deviceIndex = deviceIndex;
+            return this;
+        }
+        public Integer getDeviceIndex() {
+            return this.deviceIndex;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+    }
+
+    public static class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt extends TeaModel {
+        @NameInMap("SwitchList")
+        public java.util.List<ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList> switchList;
+
+        public static ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt build(java.util.Map<String, ?> map) throws Exception {
+            ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt self = new ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt setSwitchList(java.util.List<ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList> switchList) {
+            this.switchList = switchList;
+            return this;
+        }
+        public java.util.List<ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList> getSwitchList() {
+            return this.switchList;
+        }
+
+    }
+
     public static class ImportRoomControlDevicesRequestLocationDevicesDevices extends TeaModel {
         @NameInMap("Brand")
         public String brand;
@@ -66,6 +137,9 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
 
+        @NameInMap("Dn")
+        public String dn;
+
         @NameInMap("InfraredId")
         public String infraredId;
 
@@ -75,11 +149,17 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         @NameInMap("InfraredVersion")
         public String infraredVersion;
 
+        @NameInMap("MultiKeySwitchExt")
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt multiKeySwitchExt;
+
         @NameInMap("Name")
         public String name;
 
         @NameInMap("Number")
         public String number;
+
+        @NameInMap("Pk")
+        public String pk;
 
         @NameInMap("Province")
         public String province;
@@ -124,6 +204,14 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
             return this.deviceName;
         }
 
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setDn(String dn) {
+            this.dn = dn;
+            return this;
+        }
+        public String getDn() {
+            return this.dn;
+        }
+
         public ImportRoomControlDevicesRequestLocationDevicesDevices setInfraredId(String infraredId) {
             this.infraredId = infraredId;
             return this;
@@ -148,6 +236,14 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
             return this.infraredVersion;
         }
 
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setMultiKeySwitchExt(ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt multiKeySwitchExt) {
+            this.multiKeySwitchExt = multiKeySwitchExt;
+            return this;
+        }
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExt getMultiKeySwitchExt() {
+            return this.multiKeySwitchExt;
+        }
+
         public ImportRoomControlDevicesRequestLocationDevicesDevices setName(String name) {
             this.name = name;
             return this;
@@ -162,6 +258,14 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         }
         public String getNumber() {
             return this.number;
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setPk(String pk) {
+            this.pk = pk;
+            return this;
+        }
+        public String getPk() {
+            return this.pk;
         }
 
         public ImportRoomControlDevicesRequestLocationDevicesDevices setProvince(String province) {
