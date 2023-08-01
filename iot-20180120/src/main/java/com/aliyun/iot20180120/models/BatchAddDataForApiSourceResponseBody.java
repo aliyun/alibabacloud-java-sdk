@@ -7,9 +7,6 @@ public class BatchAddDataForApiSourceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Data")
-    public java.util.Map<String, ?> data;
-
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
@@ -30,14 +27,6 @@ public class BatchAddDataForApiSourceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public BatchAddDataForApiSourceResponseBody setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
     }
 
     public BatchAddDataForApiSourceResponseBody setErrorMessage(String errorMessage) {

@@ -323,21 +323,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.attachParserDataSourceWithOptions(request, runtime);
     }
 
-    public BatchAddDataForApiSourceResponse batchAddDataForApiSourceWithOptions(BatchAddDataForApiSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        BatchAddDataForApiSourceShrinkRequest request = new BatchAddDataForApiSourceShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.contentList)) {
-            request.contentListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.contentList, "ContentList", "json");
-        }
-
+    public BatchAddDataForApiSourceResponse batchAddDataForApiSourceWithOptions(BatchAddDataForApiSourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
             query.put("ApiId", request.apiId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.contentListShrink)) {
-            query.put("ContentList", request.contentListShrink);
+        if (!com.aliyun.teautil.Common.isUnset(request.contentList)) {
+            query.put("ContentList", request.contentList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.iotInstanceId)) {
