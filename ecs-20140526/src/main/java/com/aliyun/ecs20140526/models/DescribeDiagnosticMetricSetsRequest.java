@@ -15,6 +15,9 @@ public class DescribeDiagnosticMetricSetsRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The ID of diagnostic metric set N.</p>
+     */
     @NameInMap("MetricSetIds")
     public java.util.List<String> metricSetIds;
 

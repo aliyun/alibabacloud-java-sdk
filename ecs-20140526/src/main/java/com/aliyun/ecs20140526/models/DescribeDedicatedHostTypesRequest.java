@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostTypesRequest extends TeaModel {
     /**
-     * <p>The dedicated host type. For more information, see [Dedicated host types](~~68564~~).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DedicatedHostType")
     public String dedicatedHostType;
@@ -17,7 +17,7 @@ public class DescribeDedicatedHostTypesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ECS instance family supported by the dedicated host type.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,7 +29,7 @@ public class DescribeDedicatedHostTypesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ECS instance family supported by the dedicated host type.</p>
+     * <p>The information about the dedicated host type.</p>
      */
     @NameInMap("SupportedInstanceTypeFamily")
     public String supportedInstanceTypeFamily;

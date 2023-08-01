@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,13 +29,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Details about the snapshots.</p>
+     * <p>The details about the snapshots.</p>
      */
     @NameInMap("Snapshots")
     public DescribeSnapshotsResponseBodySnapshots snapshots;
 
     /**
-     * <p>The total number of snapshots.</p>
+     * <p>The total number of snapshots returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -150,9 +150,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
         /**
-         * <p>The snapshot type.</p>
+         * <p>The type of the snapshot.</p>
          * <br>
-         * <p>>  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.</p>
+         * <p>>  This parameter will be deprecated in the future. We recommend that you use `InstantAccess` to ensure future compatibility.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -178,8 +178,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instant access feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
-         * <p>*   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
+         * <p>*   true. This feature can be enabled only for enhanced SSDs (ESSDs).</p>
+         * <p>*   false. The snapshot is a normal snapshot for which the instant access feature is disabled.</p>
          */
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
@@ -217,19 +217,19 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
+         * <p>The remaining time that is required to create the snapshot. Unit: seconds.</p>
          */
         @NameInMap("RemainTime")
         public Integer remainTime;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The retention period of the automatic snapshot. Unit: days.</p>
+         * <p>The retention period of the automatic snapshot. Unit: day.</p>
          */
         @NameInMap("RetentionDays")
         public Integer retentionDays;
@@ -241,7 +241,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.</p>
+         * <p>The display name of the snapshot. This parameter is returned only if a snapshot display name was specified when the snapshot was created.</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
@@ -253,23 +253,23 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotSN;
 
         /**
-         * <p>The type of snapshot. Valid values:</p>
+         * <p>The type of the snapshot. Valid values:</p>
          * <br>
-         * <p>*   auto or timer: automatic snapshot.</p>
-         * <p>*   user: manual snapshot.</p>
-         * <p>*   all: all snapshot types.</p>
+         * <p>*   auto or timer: automatic snapshot</p>
+         * <p>*   user: manual snapshot</p>
+         * <p>*   all: all snapshot types</p>
          */
         @NameInMap("SnapshotType")
         public String snapshotType;
 
         /**
-         * <p>The ID of the source disk. This parameter is retained even after the source disk is released.</p>
+         * <p>The source disk ID. This parameter is retained even after the source disk is released.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
 
         /**
-         * <p>The capacity of the source disk for which the snapshot was created. Unit: GiB.</p>
+         * <p>The capacity of the source disk. Unit: GiB.</p>
          */
         @NameInMap("SourceDiskSize")
         public String sourceDiskSize;
@@ -290,7 +290,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceRegionId;
 
         /**
-         * <p>The ID of the source snapshot.</p>
+         * <p>The source snapshot ID.</p>
          */
         @NameInMap("SourceSnapshotId")
         public String sourceSnapshotId;
@@ -298,13 +298,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The type of the source disk.</p>
          * <br>
-         * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+         * <p>> This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.</p>
          */
         @NameInMap("SourceStorageType")
         public String sourceStorageType;
 
         /**
-         * <p>The snapshot status. Valid values:</p>
+         * <p>The status of the snapshot. Valid values:</p>
          * <br>
          * <p>*   progressing</p>
          * <p>*   accomplished</p>
@@ -314,7 +314,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tags of the snapshot.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;

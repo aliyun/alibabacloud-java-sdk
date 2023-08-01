@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance whose records you want to query.</p>
+     * <p>The ID of the instance for which you want to query file sending records.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,7 +17,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>The name of the file whose records you want to query.</p>
+     * <p>The name of the file whose sending records you want to query.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -29,7 +29,7 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -39,9 +39,9 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>Maximum value: 50.</p>
+     * <p>Valid values: 1 to 50.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -49,13 +49,13 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. After you set this parameter, you need to specify ResourceGroupId when you send files to query the file sending results in the specified resource group.</p>
+     * <p>The ID of the resource group. After you set this parameter, file sending results in the specified resource group are queried.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -66,6 +66,9 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags list.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeSendFileResultsRequestTag> tag;
 
@@ -171,9 +174,21 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     }
 
     public static class DescribeSendFileResultsRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

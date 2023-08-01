@@ -5,31 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeKeyPairsResponseBody extends TeaModel {
     /**
-     * <p>Details about the key pairs.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("KeyPairs")
     public DescribeKeyPairsResponseBodyKeyPairs keyPairs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The tags of the key pair.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The tag value of the key pair.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of key pairs.</p>
+     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,15 +82,9 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     }
 
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPairTagsTag extends TeaModel {
-        /**
-         * <p>The tag key of the key pair.</p>
-         */
         @NameInMap("TagKey")
         public String tagKey;
 
-        /**
-         * <p>The tag value of the key pair.</p>
-         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -136,32 +132,26 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     public static class DescribeKeyPairsResponseBodyKeyPairsKeyPair extends TeaModel {
         /**
-         * <p>The time when the key pair was created.</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The fingerprint of the key pair.</p>
+         * <p>Queries one or more key pairs.</p>
          */
         @NameInMap("KeyPairFingerPrint")
         public String keyPairFingerPrint;
 
         /**
-         * <p>The name of the key pair.</p>
+         * <p>The ID of the request.</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
-        /**
-         * <p>The ID of the resource group.</p>
-         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
-        /**
-         * <p>The tags of the key pair.</p>
-         */
         @NameInMap("Tags")
         public DescribeKeyPairsResponseBodyKeyPairsKeyPairTags tags;
 

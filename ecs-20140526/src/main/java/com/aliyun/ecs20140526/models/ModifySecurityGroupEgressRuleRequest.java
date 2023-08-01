@@ -11,21 +11,21 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of security group rule. The description must be 1 to 512 characters in length.</p>
+     * <p>The description of the security group rule. The description must be 1 to 512 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The destination IPv4 CIDR block. IPv4 CIDR blocks and addresses are supported.</p>
+     * <p>The destination IPv4 CIDR block. CIDR blocks and IPv4 addresses are supported.</p>
      * <br>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("DestCidrIp")
     public String destCidrIp;
 
     /**
-     * <p>The ID of the destination security group. You must specify at least one of the `DestGroupId` and `DestCidrIp` parameters.</p>
+     * <p>The ID of the destination security group. You must specify at least one of `DestGroupId` and `DestCidrIp`.</p>
      * <br>
      * <p>*   At least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId must be specified.</p>
      * <p>*   If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</p>
@@ -35,13 +35,13 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String destGroupId;
 
     /**
-     * <p>The Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.</p>
+     * <p>The Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.</p>
      */
     @NameInMap("DestGroupOwnerAccount")
     public String destGroupOwnerAccount;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.</p>
+     * <p>The ID of the Alibaba Cloud account that manages the destination security group when you set security group rule N across accounts.</p>
      */
     @NameInMap("DestGroupOwnerId")
     public Long destGroupOwnerId;
@@ -49,29 +49,29 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     /**
      * <p>The ID of the destination prefix list. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.</p>
      * <br>
-     * <p>If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, DestPrefixListId is ignored.</p>
+     * <p>If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, this parameter is ignored.</p>
      */
     @NameInMap("DestPrefixListId")
     public String destPrefixListId;
 
     /**
-     * <p>The transport layer protocol. The value of this parameter is not case-sensitive. Valid values:</p>
+     * <p>The transport layer protocol. The values of this parameter are case-insensitive. Valid values:</p>
      * <br>
      * <p>*   ICMP</p>
      * <p>*   GRE</p>
      * <p>*   TCP</p>
      * <p>*   UDP</p>
-     * <p>*   ALL</p>
+     * <p>*   ALL: all protocols are supported.</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
     /**
-     * <p>The destination IPv6 CIDR block. IPv6 CIDR blocks and addresses are supported.</p>
+     * <p>The destination IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.</p>
      * <br>
-     * <p>> Only the IP addresses of the Virtual Private Cloud (VPC) are supported. You cannot specify both the Ipv6DestCidrIp parameter and the `DestCidrIp` parameter.</p>
+     * <p>> Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and `DestCidrIp`.</p>
      * <br>
-     * <p>By default, this header is left empty.</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("Ipv6DestCidrIp")
     public String ipv6DestCidrIp;
@@ -79,16 +79,16 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     /**
      * <p>The source IPv6 CIDR block. IPv6 CIDR blocks and addresses are supported.</p>
      * <br>
-     * <p>> Only the IP addresses of the VPC type are supported. You cannot specify both the Ipv6SourceCidrIp parameter and the `SourceCidrIp` parameter.</p>
+     * <p>> Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and `SourceCidrIp`.</p>
      * <br>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("Ipv6SourceCidrIp")
     public String ipv6SourceCidrIp;
 
     /**
-     * <p>The network type. You cannot modify this parameter when you modify a security group rule by specifying its ID.\</p>
-     * <p>You can add a new rule that meets your requirements and delete the original rule.</p>
+     * <p>You cannot modify this parameter when you modify a security group rule by specifying its ID.\</p>
+     * <p>You can add a new rule that meets your business requirements and delete the original rule.</p>
      */
     @NameInMap("NicType")
     public String nicType;
@@ -100,10 +100,10 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The action of the security group rule that determines whether to allow access. Valid values:</p>
+     * <p>The action of a security group rule that determines whether to allow inbound access. Valid values:</p>
      * <br>
-     * <p>*   accept: allows access.</p>
-     * <p>*   drop: denies access and returns no responses.</p>
+     * <p>*   accept: allows inbound access.</p>
+     * <p>*   drop: denies inbound access and does not return responses.</p>
      * <br>
      * <p>Default value: accept.</p>
      */
@@ -111,12 +111,12 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String policy;
 
     /**
-     * <p>The range of available ports of the transport layer protocol in the destination security group. Valid values:</p>
+     * <p>The range of destination ports that correspond to the transport layer protocol for the security group rule. Valid values:</p>
      * <br>
-     * <p>*   If the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
-     * <p>*   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.</p>
-     * <p>*   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.</p>
-     * <p>*   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.</p>
+     * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</p>
+     * <p>*   If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
+     * <p>*   If you set IpProtocol to GRE, the port number range is -1/-1.</p>
+     * <p>*   If you set IpProtocol to ALL, the port number range is -1/-1.</p>
      */
     @NameInMap("PortRange")
     public String portRange;
@@ -130,7 +130,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The region ID of the source security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -149,7 +149,7 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
 
     /**
      * <p>The ID of the security group rule.\</p>
-     * <p>This parameter is required when you modify a security group rule based on the ID of the security group rule.</p>
+     * <p>This parameter is required when you modify a security group rule based on the security group rule ID.</p>
      */
     @NameInMap("SecurityGroupRuleId")
     public String securityGroupRuleId;
@@ -157,18 +157,18 @@ public class ModifySecurityGroupEgressRuleRequest extends TeaModel {
     /**
      * <p>The source IPv4 CIDR block. IPv4 CIDR blocks and addresses are supported.</p>
      * <br>
-     * <p>By default, this parameter is left empty.</p>
+     * <p>This parameter is empty by default.</p>
      */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
     /**
-     * <p>The range of available ports of the transport layer protocol in the source security group. Valid values:</p>
+     * <p>The range of source ports that correspond to the transport layer protocol for the security group rule. Valid values:</p>
      * <br>
-     * <p>*   If the IpProtocol parameter is set to tcp or udp, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</p>
-     * <p>*   If the IpProtocol parameter is set to icmp, the port number range is -1/-1, which indicates all ports.</p>
-     * <p>*   If the IpProtocol parameter is set to gre, the port number range is -1/-1, which indicates all ports.</p>
-     * <p>*   If the IpProtocol parameter is set to all, the port number range is -1/-1, which indicates all ports.</p>
+     * <p>*   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. The start port number and the end port number are separated by a forward slash (/). Example: 1/200.</p>
+     * <p>*   If you set IpProtocol to ICMP, the port number range is -1/-1.</p>
+     * <p>*   If you set IpProtocol to GRE, the port number range is -1/-1.</p>
+     * <p>*   If you set IpProtocol to ALL, the port number range is -1/-1.</p>
      */
     @NameInMap("SourcePortRange")
     public String sourcePortRange;

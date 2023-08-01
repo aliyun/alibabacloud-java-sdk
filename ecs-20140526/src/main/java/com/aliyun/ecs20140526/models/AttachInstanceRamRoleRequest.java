@@ -4,30 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceRamRoleRequest extends TeaModel {
-    /**
-     * <p>The IDs of the instances. The value can be a JSON array that consists of up to 100 instance IDs. Separate the IDs with commas (,).</p>
-     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The policy. The policy document must be 1 to 1,024 characters in length. When you attach an instance RAM role to one or more instances, you can specify an additional policy to further limit the permissions of the role. For more information, see [Policy overview](~~93732~~).</p>
-     */
     @NameInMap("Policy")
     public String policy;
 
-    /**
-     * <p>The name of the instance RAM role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created.</p>
-     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
-    /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 

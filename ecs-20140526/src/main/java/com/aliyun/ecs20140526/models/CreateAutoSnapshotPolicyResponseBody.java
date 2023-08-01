@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyResponseBody extends TeaModel {
     /**
-     * <p>The ID of the automatic snapshot policy.</p>
+     * <p>The automatic snapshot policy ID.</p>
      */
     @NameInMap("AutoSnapshotPolicyId")
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,29 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("Currency")
+    public String currency;
+
+    /**
      * <p>The currency unit of the price.</p>
      * <br>
      * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
      * <br>
      * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
      */
-    @NameInMap("Currency")
-    public String currency;
-
-    /**
-     * <p>The start line of the next page. It is the value of the `Offset` request parameter.</p>
-     */
     @NameInMap("NextOffset")
     public Integer nextOffset;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The line from which the next query starts.</p>
+     * <br>
+     * <p>Default value: 0.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about the price history of the preemptible instance.</p>
+     * <p>The start line of the next page. It is the value of the `Offset` request parameter.</p>
      */
     @NameInMap("SpotPrices")
     public DescribeSpotPriceHistoryResponseBodySpotPrices spotPrices;
@@ -70,44 +72,38 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeSpotPriceHistoryResponseBodySpotPricesSpotPriceType extends TeaModel {
-        /**
-         * <p>The instance type of the preemptible instance.</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>Indicates whether the preemptible instance is I/O optimized.</p>
+         * <p>Details about the price history of the preemptible instance.</p>
          */
         @NameInMap("IoOptimized")
         public String ioOptimized;
 
         /**
-         * <p>The network type of the preemptible instance.</p>
+         * <p>The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
 
-        /**
-         * <p>The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.</p>
-         */
         @NameInMap("OriginPrice")
         public Float originPrice;
 
         /**
-         * <p>The spot price (market price) of the preemptible instance.</p>
+         * <p>The zone ID of the preemptible instance.</p>
          */
         @NameInMap("SpotPrice")
         public Float spotPrice;
 
         /**
-         * <p>The time that corresponds to the queried spot price. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         * <p>The spot price (market price) of the preemptible instance.</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
 
         /**
-         * <p>The zone ID of the preemptible instance.</p>
+         * <p>Indicates whether the preemptible instance is I/O optimized.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

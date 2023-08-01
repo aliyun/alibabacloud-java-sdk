@@ -17,7 +17,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String imagePipelineId;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries per page. Valid values: 1 to 500.</p>
      * <br>
      * <p>Default value: 50.</p>
      */
@@ -25,7 +25,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
+     * <p>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -37,7 +37,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -49,7 +49,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the image creation task. You can specify multiple values at the same time. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:</p>
+     * <p>The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:</p>
      * <br>
      * <p>*   BUILDING</p>
      * <p>*   DISTRIBUTING</p>
@@ -65,7 +65,7 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>> This parameter is unavailable.</p>
+     * <p>> This parameter is not publicly available.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelineExecutionsRequestTag> tag;
@@ -165,13 +165,13 @@ public class DescribeImagePipelineExecutionsRequest extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsRequestTag extends TeaModel {
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("Value")
         public String value;

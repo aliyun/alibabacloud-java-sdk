@@ -8,17 +8,17 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public java.util.List<DescribeSnapshotsRequestFilter> filter;
 
     /**
-     * <p>The snapshot type. Valid values:</p>
+     * <p>The type of the snapshot. Valid values:</p>
      * <br>
-     * <p>*   Standard: the normal snapshot.</p>
-     * <p>*   Flash: the local snapshot.</p>
+     * <p>*   Standard: normal snapshot</p>
+     * <p>*   Flash: local snapshot</p>
      * <br>
-     * <p>The local snapshot feature is replaced by the instant access feature. When you specify this parameter, take note of the following items:</p>
+     * <p>The local snapshot feature is replaced by the instant access feature. When you configure this parameter, take note of the following items:</p>
      * <br>
      * <p>*   If you have used local snapshots before December 14, 2020, you can use this parameter.</p>
      * <p>*   If you have not used local snapshots before December 14, 2020, you cannot use this parameter.</p>
      * <br>
-     * <p>> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
+     * <p>> This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -32,7 +32,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</p>
+     * <p>*   true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</p>
      * <p>*   false (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
@@ -57,7 +57,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String KMSKeyId;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries per page. Maximum value: 1 to 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -99,9 +99,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the snapshot belongs. When you use this property to filter resources, the number of resources that are contained in the specified resource group cannot exceed 1,000.</p>
+     * <p>The resource group ID. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -113,38 +113,38 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IDs of snapshots. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
+     * <p>The IDs of snapshots. You can specify a JSON array that consists of up to 100 snapshot IDs. Separate the snapshot IDs with commas (,).</p>
      */
     @NameInMap("SnapshotIds")
     public String snapshotIds;
 
     /**
-     * <p>The ID of the snapshot chain.</p>
+     * <p>The snapshot chain ID. You can specify a JSON array that contains up to 100 snapshot chain IDs. Separate the snapshot chain IDs with commas (,).</p>
      */
     @NameInMap("SnapshotLinkId")
     public String snapshotLinkId;
 
     /**
-     * <p>The snapshot name.</p>
+     * <p>The name of the snapshot.</p>
      */
     @NameInMap("SnapshotName")
     public String snapshotName;
 
     /**
-     * <p>The snapshot type. Valid values:</p>
+     * <p>The type of the snapshot. Valid values:</p>
      * <br>
-     * <p>*   auto: automatic snapshot.</p>
-     * <p>*   user: manual snapshot.</p>
-     * <p>*   all (default): This parameter indicates all snapshot types.</p>
+     * <p>*   auto: automatic snapshot</p>
+     * <p>*   user: manual snapshot</p>
+     * <p>*   all (default): all snapshot types</p>
      */
     @NameInMap("SnapshotType")
     public String snapshotType;
 
     /**
-     * <p>The type of the source disk for which you want to create the snapshot. Valid values:</p>
+     * <p>The type of the source disk. Valid values:</p>
      * <br>
-     * <p>*   System: the system disk.</p>
-     * <p>*   data: the data disk.</p>
+     * <p>*   System: system disk</p>
+     * <p>*   data: data disk</p>
      * <br>
      * <p>> The value of this parameter is case-insensitive.</p>
      */
@@ -152,12 +152,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String sourceDiskType;
 
     /**
-     * <p>The snapshot status. Valid values:</p>
+     * <p>The status of the snapshot. Valid values:</p>
      * <br>
      * <p>*   progressing: The snapshot is being created.</p>
      * <p>*   accomplished: The snapshot is created.</p>
      * <p>*   failed: The snapshot fails to be created.</p>
-     * <p>*   all (default): This parameter indicates all snapshot states.</p>
+     * <p>*   all (default): This value indicates all snapshot states.</p>
      */
     @NameInMap("Status")
     public String status;
@@ -386,13 +386,13 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     public static class DescribeSnapshotsRequestFilter extends TeaModel {
         /**
-         * <p>The key of filter 1 that is used to query resources. Set the value to `CreationStartTime`. You can specify a time by setting both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.</p>
+         * <p>The key of filter 1 that is used to query resources. Set the value to `CreationStartTime`. You can specify a time by configuring both `Filter.1.Key` and `Filter.1.Value` to query resources that were created after the time.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the filter that is used to query resources. If you specify this parameter, you must also specify the `Filter.1.Key` parameter. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+         * <p>The value of filter 1 that is used to query resources. Set the value to a time. If you configure this parameter, you must also configure `Filter.1.Key`. Specify the time in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -422,15 +422,15 @@ public class DescribeSnapshotsRequest extends TeaModel {
 
     public static class DescribeSnapshotsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the snapshot. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N to add to the snapshot. Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>Up to 1,000 resources that match the tags specified can be returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the snapshot. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N to add to the snapshot. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

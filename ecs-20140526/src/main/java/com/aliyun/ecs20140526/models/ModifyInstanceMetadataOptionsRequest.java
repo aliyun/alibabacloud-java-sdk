@@ -24,10 +24,10 @@ public class ModifyInstanceMetadataOptionsRequest extends TeaModel {
     public Integer httpPutResponseHopLimit;
 
     /**
-     * <p>Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</p>
+     * <p>Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:</p>
      * <br>
-     * <p>*   optional: does not forcibly use the security hardening mode (IMDSv2).</p>
-     * <p>*   required: forcibly uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
+     * <p>*   optional: does not forcefully use the security-enhanced mode (IMDSv2).</p>
+     * <p>*   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</p>
      * <br>
      * <p>Default value: optional.</p>
      * <br>

@@ -5,48 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateDeploymentSetRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("DeploymentSetName")
     public String deploymentSetName;
-
-    /**
-     * <p>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    /**
-     * <p>The deployment domain. Set the value to Default.</p>
-     * <br>
-     * <p>Default: Instances in the deployment set are distributed only within the current zone.</p>
-     */
-    @NameInMap("Domain")
-    public String domain;
-
-    /**
-     * <p>The deployment granularity. Set the value to host.</p>
-     * <br>
-     * <p>host: Instances in the deployment set are dispersed at the granularity of hosts.</p>
-     */
-    @NameInMap("Granularity")
-    public String granularity;
-
-    /**
-     * <p>The number of deployment set groups in the deployment set. Valid values: 1 to 7.</p>
-     * <br>
-     * <p>Default value: 3.</p>
-     * <br>
-     * <p>> This parameter takes effect only when `Strategy` is set to AvailabilityGroup.</p>
-     */
-    @NameInMap("GroupCount")
-    public Long groupCount;
 
     /**
      * <p>The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:</p>
@@ -55,6 +23,37 @@ public class CreateDeploymentSetRequest extends TeaModel {
      * <p>*   KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.</p>
      * <br>
      * <p>Default value: CancelMembershipAndStart.</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).</p>
+     */
+    @NameInMap("Domain")
+    public String domain;
+
+    /**
+     * <p>The deployment domain. Set the value to Default.</p>
+     * <br>
+     * <p>Default: Instances in the deployment set are distributed only within the current zone.</p>
+     */
+    @NameInMap("Granularity")
+    public String granularity;
+
+    /**
+     * <p>The deployment strategy. Valid values:</p>
+     * <br>
+     * <p>*   Availability: high availability strategy.</p>
+     * <p>*   AvailabilityGroup: high availability group strategy.</p>
+     * <br>
+     * <p>Default value: Availability.</p>
+     */
+    @NameInMap("GroupCount")
+    public Long groupCount;
+
+    /**
+     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
      */
     @NameInMap("OnUnableToRedeployFailedInstance")
     public String onUnableToRedeployFailedInstance;
@@ -66,7 +65,7 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>Creates a deployment set in a specific region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -78,12 +77,9 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The deployment strategy. Valid values:</p>
+     * <p>The deployment granularity. Set the value to host.</p>
      * <br>
-     * <p>*   Availability: high availability strategy.</p>
-     * <p>*   AvailabilityGroup: high availability group strategy.</p>
-     * <br>
-     * <p>Default value: Availability.</p>
+     * <p>host: Instances in the deployment set are dispersed at the granularity of hosts.</p>
      */
     @NameInMap("Strategy")
     public String strategy;

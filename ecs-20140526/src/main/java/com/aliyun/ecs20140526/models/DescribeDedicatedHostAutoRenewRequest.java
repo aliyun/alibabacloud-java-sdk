@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostAutoRenewRequest extends TeaModel {
     /**
-     * <p>The IDs of the dedicated hosts. You can specify up to 100 subscription dedicated host IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The region ID of the dedicated host.</p>
      */
     @NameInMap("DedicatedHostIds")
     public String dedicatedHostIds;
@@ -17,7 +17,7 @@ public class DescribeDedicatedHostAutoRenewRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the dedicated host.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

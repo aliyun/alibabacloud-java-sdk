@@ -8,13 +8,13 @@ public class RemoveTagsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The key of tag N of the resource. Valid values of N: 1 to 20. It cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+     * <p>The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -26,15 +26,28 @@ public class RemoveTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The key of tag N of the resource.</p>
+     * <p>The type of the resource. Valid values:</p>
      * <br>
-     * <p>>  We recommend that you use the Tag.N.Key parameter to ensure future compatibility.</p>
+     * <p>*   instance</p>
+     * <p>*   disk</p>
+     * <p>*   snapshot</p>
+     * <p>*   image</p>
+     * <p>*   securitygroup</p>
+     * <p>*   volume</p>
+     * <p>*   eni</p>
+     * <p>*   ddh</p>
+     * <p>*   keypair</p>
+     * <p>*   launchtemplate</p>
+     * <p>*   reservedinstance</p>
+     * <p>*   snapshotpolicy</p>
+     * <br>
+     * <p>All values must be in lowercase.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
@@ -102,15 +115,13 @@ public class RemoveTagsRequest extends TeaModel {
 
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
-         * <p>The value of tag N of the resource.</p>
-         * <br>
-         * <p>>  We recommend that you use the Tag.N.Value parameter to ensure future compatibility.</p>
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs: or aliyun.</p>
          */
         @NameInMap("Value")
         public String value;

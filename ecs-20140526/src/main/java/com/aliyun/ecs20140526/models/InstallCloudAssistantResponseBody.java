@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class InstallCloudAssistantResponseBody extends TeaModel {
-    /**
-     * <p>The request ID.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelinesRequest extends TeaModel {
     /**
-     * <p>The IDs of the image templates. You can specify at most 20 IDs.</p>
+     * <p>The ID of image template N. Valid values of N: 1 to 20.</p>
      */
     @NameInMap("ImagePipelineId")
     public java.util.List<String> imagePipelineId;
@@ -45,7 +45,7 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     /**
      * <p>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</p>
      * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
+     * <p>>  Resources in the default resource group are displayed in the response regardless of how this parameter is set.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -56,6 +56,9 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The key of tag N of the image template. Valid values of N: 1 to 20.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeImagePipelinesRequestTag> tag;
 

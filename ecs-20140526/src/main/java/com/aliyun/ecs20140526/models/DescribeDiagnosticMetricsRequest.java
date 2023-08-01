@@ -5,6 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricsRequest extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     */
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    /**
+     * <p>The ID of diagnostic metric.</p>
+     */
+    @NameInMap("MetricIds")
+    public java.util.List<String> metricIds;
+
+    /**
      * <p>The maximum number of entries to return on each page. Maximum value: 100.</p>
      * <br>
      * <p>Default value:</p>
@@ -12,29 +24,17 @@ public class DescribeDiagnosticMetricsRequest extends TeaModel {
      * <p>*   If this parameter is left empty, the default value is 10.</p>
      * <p>*   If this parameter is set to a value greater than 100, the default value is 100.</p>
      */
-    @NameInMap("MaxResults")
-    public Integer maxResults;
-
-    /**
-     * <p>The IDs of diagnostic metrics.</p>
-     */
-    @NameInMap("MetricIds")
-    public java.util.List<String> metricIds;
-
-    /**
-     * <p>The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The region ID of the diagnostic metric. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The IDs of diagnostic metrics.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The resource type supported by the diagnostic metric.</p>
+     * <p>The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartTerminalSessionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -17,7 +17,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the session.</p>
+     * <p>The session ID.</p>
      */
     @NameInMap("SessionId")
     public String sessionId;

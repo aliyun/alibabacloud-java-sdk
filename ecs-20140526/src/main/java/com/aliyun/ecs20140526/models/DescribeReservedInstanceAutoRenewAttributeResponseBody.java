@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -47,13 +47,13 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         /**
          * <p>The unit of the auto-renewal duration.</p>
          * <br>
-         * <p>Valid value: Year.</p>
+         * <p>Valid values: Year and Month.</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
-         * <p>The auto-renewal state of the reserved instance. Valid values:</p>
+         * <p>The auto-renewal status of the reserved instance. Valid values:</p>
          * <br>
          * <p>*   AutoRenewal: The reserved instance is automatically renewed.</p>
          * <p>*   Normal: You must manually renew the reserved instance.</p>

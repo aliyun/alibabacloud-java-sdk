@@ -106,6 +106,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("FinishedTime")
         public String finishedTime;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
@@ -128,7 +131,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The state of the task.</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;

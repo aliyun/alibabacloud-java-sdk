@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details about the ClassicLink connections between the instances located in the classic network and the VPCs.</p>
+     * <p>The details of the ClassicLink connections between the instances reside in the classic network and VPCs.</p>
      */
     @NameInMap("Links")
     public DescribeClassicLinkInstancesResponseBodyLinks links;
@@ -87,7 +87,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiskResponseBody extends TeaModel {
     /**
-     * <p>The cloud disk ID.</p>
+     * <p>The disk ID.</p>
      */
     @NameInMap("DiskId")
     public String diskId;

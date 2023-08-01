@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     /**
-     * <p>Details about the ENI.</p>
+     * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
      */
     @NameInMap("AssignedPrivateIpAddressesSet")
     public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -77,7 +77,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
         /**
-         * <p>> This parameter is in invitational preview and is unavailable for general users.</p>
+         * <p>> 该参数正在邀测中，暂未开放使用。</p>
          */
         @NameInMap("Ipv4PrefixSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetIpv4PrefixSet ipv4PrefixSet;
@@ -89,7 +89,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>The private IP addresses assigned to the ENI.</p>
+         * <p>The secondary private IP addresses that are assigned to the ENI.</p>
          */
         @NameInMap("PrivateIpSet")
         public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet privateIpSet;

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class JoinSecurityGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>> If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.</p>
+     * <p>> If you configure this parameter, you cannot configure `NetworkInterfaceId`.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ENI ID.</p>
      * <br>
-     * <p>> If this parameter is specified, the `InstanceId` parameter cannot be specified.</p>
+     * <p>> If you configure this parameter, you cannot configure `InstanceId`.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -27,10 +27,10 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance or ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      * <br>
-     * <p>*   You do not need to specify a region ID when you add an instance to a security group.</p>
-     * <p>*   You must specify a region ID when you add an ENI to a security group.</p>
+     * <p>*   If you want to add an instance to a security group, you do not need to specify a region ID.</p>
+     * <p>*   If you want to add an ENI to a security group, you must specify the region ID of the ENI.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,7 +42,7 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the security group to which you want to add the instance or ENI. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.</p>
+     * <p>The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) operation to query the most recent security group list.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

@@ -5,19 +5,58 @@ import com.aliyun.tea.*;
 
 public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the image.</p>
+     * <p>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</p>
+     * <br>
+     * <p>*   imagId: image ID</p>
+     * <p>*   filter: image ID</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>Details about the instance types that are supported by the image.</p>
+     * <p>{</p>
+     * <p>    "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",</p>
+     * <p>    "RegionId": "cn-hangzhou",</p>
+     * <p>    "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",</p>
+     * <p>    "InstanceTypes": {</p>
+     * <p>        "InstanceType": [{</p>
+     * <p>            "InstanceTypeId": "ecs.t1.xsmall",</p>
+     * <p>            "CpuCoreCount": 1,</p>
+     * <p>            "MemorySize": 0.5,</p>
+     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
+     * <p>        },</p>
+     * <p>        {</p>
+     * <p>            "InstanceTypeId": "ecs.t1.small",</p>
+     * <p>            "CpuCoreCount": 1,</p>
+     * <p>            "MemorySize": 1,</p>
+     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
+     * <p>        }]</p>
+     * <p>    }</p>
+     * <p>}</p>
      */
     @NameInMap("InstanceTypes")
     public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
     /**
-     * <p>The region ID of the image.</p>
+     * <p>{</p>
+     * <p>    "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",</p>
+     * <p>    "RegionId": "cn-hangzhou",</p>
+     * <p>    "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",</p>
+     * <p>    "InstanceTypes": {</p>
+     * <p>        "InstanceType": [{</p>
+     * <p>            "InstanceTypeId": "ecs.t1.xsmall",</p>
+     * <p>            "CpuCoreCount": 1,</p>
+     * <p>            "MemorySize": 0.5,</p>
+     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
+     * <p>        },</p>
+     * <p>        {</p>
+     * <p>            "InstanceTypeId": "ecs.t1.small",</p>
+     * <p>            "CpuCoreCount": 1,</p>
+     * <p>            "MemorySize": 1,</p>
+     * <p>            "InstanceTypeFamily": "ecs.t1"</p>
+     * <p>        }]</p>
+     * <p>    }</p>
+     * <p>}</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -73,13 +112,13 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         public Integer cpuCoreCount;
 
         /**
-         * <p>The instance family.</p>
+         * <p>DescribeImageSupportInstanceTypes</p>
          */
         @NameInMap("InstanceTypeFamily")
         public String instanceTypeFamily;
 
         /**
-         * <p>The ID of the instance type.</p>
+         * <p>Queries the instance types supported by an image.</p>
          */
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;

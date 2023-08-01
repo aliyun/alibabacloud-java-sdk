@@ -11,7 +11,7 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the elasticity assurance.</p>
+     * <p>The elasticity assurance ID.</p>
      */
     @NameInMap("PrivatePoolOptionsId")
     public String privatePoolOptionsId;

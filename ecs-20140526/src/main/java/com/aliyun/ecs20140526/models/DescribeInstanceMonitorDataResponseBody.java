@@ -63,7 +63,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Float CPUAdvanceCreditBalance;
 
         /**
-         * <p>The total CPU credits of the burstable instance.</p>
+         * <p>The total number of CPU credits of the burstable instance.</p>
          */
         @NameInMap("CPUCreditBalance")
         public Float CPUCreditBalance;
@@ -93,7 +93,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Integer IOPSWrite;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -105,13 +105,13 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Integer internetBandwidth;
 
         /**
-         * <p>The public data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The Internet traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.</p>
          */
         @NameInMap("InternetRX")
         public Integer internetRX;
 
         /**
-         * <p>The public data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The Internet traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.</p>
          */
         @NameInMap("InternetTX")
         public Integer internetTX;
@@ -123,13 +123,13 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         public Integer intranetBandwidth;
 
         /**
-         * <p>The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.</p>
          */
         @NameInMap("IntranetRX")
         public Integer intranetRX;
 
         /**
-         * <p>The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.</p>
+         * <p>The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.</p>
          */
         @NameInMap("IntranetTX")
         public Integer intranetTX;

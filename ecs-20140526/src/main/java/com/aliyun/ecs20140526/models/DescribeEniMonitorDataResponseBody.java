@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeEniMonitorDataResponseBody extends TeaModel {
     /**
-     * <p>Details about the monitored data of the ENI.</p>
+     * <p>The details about the monitoring data of the secondary ENI.</p>
      */
     @NameInMap("MonitorData")
     public DescribeEniMonitorDataResponseBodyMonitorData monitorData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -65,19 +65,19 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         public String dropPacketTx;
 
         /**
-         * <p>The ID of the secondary ENI.</p>
+         * <p>The secondary ENI ID.</p>
          */
         @NameInMap("EniId")
         public String eniId;
 
         /**
-         * <p>The average rate of data traffic received by the secondary ENI over the internal network. Unit: Kbit/s.</p>
+         * <p>The average rate of data received by the secondary ENI over the internal network. Unit: Kbit/s.</p>
          */
         @NameInMap("IntranetRx")
         public String intranetRx;
 
         /**
-         * <p>The average rate of data traffic sent by the secondary ENI over the internal network. Unit: Kbit/s.</p>
+         * <p>The average rate of data sent by the secondary ENI over the internal network. Unit: Kbit/s.</p>
          */
         @NameInMap("IntranetTx")
         public String intranetTx;
@@ -95,7 +95,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         public String packetTx;
 
         /**
-         * <p>The timestamp of the monitored data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The timestamp to query the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

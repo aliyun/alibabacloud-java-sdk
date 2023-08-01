@@ -797,9 +797,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Usage notes
       * *   The ENI to which you want to assign secondary private IP addresses must be in the Available (Available) or InUse (InUse) state.
       * *   When you assign secondary private IP addresses to a primary ENI, the instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
-      * *   When an ENI is in the Available (Available) state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](~~25378~~).
+      * *   When an ENI is in the Available state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](~~25378~~).
       * *   After you call this operation for an ENI, you can obtain the secondary private IP addresses that are assigned to the ENI from the response.
       *
       * @param request AssignPrivateIpAddressesRequest
@@ -875,9 +876,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Usage notes
       * *   The ENI to which you want to assign secondary private IP addresses must be in the Available (Available) or InUse (InUse) state.
       * *   When you assign secondary private IP addresses to a primary ENI, the instance to which the ENI is attached must be in the Running (Running) or Stopped (Stopped) state.
-      * *   When an ENI is in the Available (Available) state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](~~25378~~).
+      * *   When an ENI is in the Available state, you can assign up to 50 secondary private IP addresses to it. When an ENI is attached to an instance, the number of secondary private IP addresses that can be assigned to the ENI is subject to the instance type. For more information, see [Overview of instance families](~~25378~~).
       * *   After you call this operation for an ENI, you can obtain the secondary private IP addresses that are assigned to the ENI from the response.
       *
       * @param request AssignPrivateIpAddressesRequest
@@ -1102,16 +1104,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   The disk to be attached must be in the **Unattached** (`Available`) state.
+      * *   The disk that you want to attach must be in the **Available** state.``
       * *   When the disk is attached as a data disk, take note of the following items:
-      *     *   The instance must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
+      *     *   The instance must be in the **Running** or **Stopped** state.````
       *     *   If the disk was separately purchased, the billing method of the disk must be pay-as-you-go.
       *     *   If the disk is a system disk detached from an instance, no limits apply to the billing method of the disk.
       * *   When the disk is attached as a system disk, take note of the following items:
       *     *   The instance must be the original instance from which the system disk was detached.
       *     *   The instance must be in the **Stopped** state.``
       *     *   The logon credentials must be configured.
-      * *   If a response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query instance information, the instance is locked for security reasons and all operations are prohibited on it.
+      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on the instance.
       *
       * @param request AttachDiskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1183,16 +1185,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   The disk to be attached must be in the **Unattached** (`Available`) state.
+      * *   The disk that you want to attach must be in the **Available** state.``
       * *   When the disk is attached as a data disk, take note of the following items:
-      *     *   The instance must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
+      *     *   The instance must be in the **Running** or **Stopped** state.````
       *     *   If the disk was separately purchased, the billing method of the disk must be pay-as-you-go.
       *     *   If the disk is a system disk detached from an instance, no limits apply to the billing method of the disk.
       * *   When the disk is attached as a system disk, take note of the following items:
       *     *   The instance must be the original instance from which the system disk was detached.
       *     *   The instance must be in the **Stopped** state.``
       *     *   The logon credentials must be configured.
-      * *   If a response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query instance information, the instance is locked for security reasons and all operations are prohibited on it.
+      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on the instance.
       *
       * @param request AttachDiskRequest
       * @return AttachDiskResponse
@@ -1256,11 +1258,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   SSH key pairs are not supported on Windows instances.
       * *   If an SSH key pair is bound to an instance, authentication by using the username and password is disabled for the instance.
-      * *   If you bind an SSH key pair to an instance in the **Running** (Running) state, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the key pair to take effect.
-      * *   If you bind an SSH key pair to an instance in the **Stopped** state, you must call the [StartInstance](~~25500~~) operation to start the instance for the key pair to take effect.
+      * *   If you bind an SSH key pair to an instance in the **running** state, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the key pair to take effect.
+      * *   If you bind an SSH key pair to an instance in the **stopped** state, you must call the [StartInstance](~~25500~~) operation to start the instance for the key pair to take effect.
       * *   If an instance is already bound to an SSH key pair, the new SSH key pair will replace the original one.
       *
       * @param request AttachKeyPairRequest
@@ -1312,11 +1314,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   SSH key pairs are not supported on Windows instances.
       * *   If an SSH key pair is bound to an instance, authentication by using the username and password is disabled for the instance.
-      * *   If you bind an SSH key pair to an instance in the **Running** (Running) state, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the key pair to take effect.
-      * *   If you bind an SSH key pair to an instance in the **Stopped** state, you must call the [StartInstance](~~25500~~) operation to start the instance for the key pair to take effect.
+      * *   If you bind an SSH key pair to an instance in the **running** state, you must call the [RebootInstance](~~25502~~) operation to restart the instance for the key pair to take effect.
+      * *   If you bind an SSH key pair to an instance in the **stopped** state, you must call the [StartInstance](~~25500~~) operation to start the instance for the key pair to take effect.
       * *   If an instance is already bound to an SSH key pair, the new SSH key pair will replace the original one.
       *
       * @param request AttachKeyPairRequest
@@ -1428,18 +1430,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In security group-related API documents, traffic is sent from the source to the destination.
+      * In security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.
       * When you call this operation, take note of the following items:
-      * *   The total number of outbound and inbound rules of each security group cannot exceed 200. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
-      * *   The valid values of Priority range from 1 to 100. A smaller value specifies a higher priority.
+      * *   The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the "Security group limits" section of the [Limits](~~25412#SecurityGroupQuota1~~) topic.
+      * *   The valid value of Priority ranges from 1 to 100. A smaller value specifies a higher priority.
       * *   If several security group rules have the same priority, drop rules take precedence.
       * *   The source can be a CIDR block that is specified by SourceCidrIp, Ipv6SourceCidrIp, or SourcePrefixListId. The source can also be Elastic Compute Service (ECS) instances in a security group that is specified by SourceGroupId.
       * *   You cannot reference security groups as sources or destinations in the rules of advanced security groups.
       * *   You can reference up to 20 security groups as sources or destinations in the rules of each basic security group.
-      * *   If the specified security group rule exists in the security group, the operation is successful but no security group rule is added to the security group.
-      * *   The `Permissions.N` prefix is added to specific parameters to generate new parameters. You cannot specify the original parameters and the parameters that contain the Permissions.N prefix at the same time. We recommend that you use the parameters that contain the `Permissions.N` prefix.
+      * *   If the specified security group rule already exists in the security group, the call is successful but no security group rule is created.
+      * *   The `Permissions.N` prefix is added to specific parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be specified together. We recommend that you use parameters prefixed with `Permissions.N`.
       * *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
-      *     *   Parameters that are used to specify an inbound security group rule that manages access from a specific CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set NicType to intranet. For a security group of the classic network type, you can set NicType to internet or intranet. Sample request:
+      *     *   Parameters used to determine an inbound security group rule that controls access from a specific CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set the NicType parameter to intranet. For a security group of the classic network type, you can set the NicType parameter to either internet or intranet. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourceCidrIp=10.0.0.0/8
@@ -1448,7 +1450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *             &Permissions.1.NicType=intranet
       *             &Permissions.1.Policy=Accept
       *             &<Common request parameters>
-      *     *   Parameters that are used to specify an inbound security group rule that manages access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. If you specify this group of parameters, you must set NicType to intranet. To manage access between security groups in the classic network, you can allow or deny access from another security group within the same region to your security group. The security group that is allowed to access your security group can belong to your Alibaba Cloud account or another Alibaba Cloud account that is specified by SourceGroupOwnerAccount. To manage access between security groups in VPCs, you can allow or deny access from another security group within the same VPC to your security group. Sample request:
+      *     *   Parameters used to determine an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. In this case, you must set the NicType parameter to intranet. To manage access between security groups in the classic network, you can allow or deny access from another security group within the same region to your security group. The security group that is allowed to access your security group can belong to your Alibaba Cloud account or another Alibaba Cloud account that is specified by SourceGroupOwnerAccount. To manage access between security groups in VPCs, you can allow or deny access from another security group within the same VPC to your security group. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourceGroupId=sg-1651FBB**
@@ -1458,7 +1460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *             &Permissions.1.NicType=intranet
       *             &Permissions.1.Policy=Drop
       *             &<Common request parameters>
-      *     *   Parameters that are used to specify an inbound security group rule that manages access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourcePrefixListId. If you specify this group of parameters, prefix lists support only security groups in VPCs. You must specify NicType to intranet. Sample request:
+      *     *   Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourcePrefixListId. If you specify this group of parameters, prefix lists support only security groups in VPCs. You must set NicType to intranet. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
@@ -1603,18 +1605,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In security group-related API documents, traffic is sent from the source to the destination.
+      * In security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.
       * When you call this operation, take note of the following items:
-      * *   The total number of outbound and inbound rules of each security group cannot exceed 200. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
-      * *   The valid values of Priority range from 1 to 100. A smaller value specifies a higher priority.
+      * *   The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the "Security group limits" section of the [Limits](~~25412#SecurityGroupQuota1~~) topic.
+      * *   The valid value of Priority ranges from 1 to 100. A smaller value specifies a higher priority.
       * *   If several security group rules have the same priority, drop rules take precedence.
       * *   The source can be a CIDR block that is specified by SourceCidrIp, Ipv6SourceCidrIp, or SourcePrefixListId. The source can also be Elastic Compute Service (ECS) instances in a security group that is specified by SourceGroupId.
       * *   You cannot reference security groups as sources or destinations in the rules of advanced security groups.
       * *   You can reference up to 20 security groups as sources or destinations in the rules of each basic security group.
-      * *   If the specified security group rule exists in the security group, the operation is successful but no security group rule is added to the security group.
-      * *   The `Permissions.N` prefix is added to specific parameters to generate new parameters. You cannot specify the original parameters and the parameters that contain the Permissions.N prefix at the same time. We recommend that you use the parameters that contain the `Permissions.N` prefix.
+      * *   If the specified security group rule already exists in the security group, the call is successful but no security group rule is created.
+      * *   The `Permissions.N` prefix is added to specific parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be specified together. We recommend that you use parameters prefixed with `Permissions.N`.
       * *   You can determine a security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
-      *     *   Parameters that are used to specify an inbound security group rule that manages access from a specific CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set NicType to intranet. For a security group of the classic network type, you can set NicType to internet or intranet. Sample request:
+      *     *   Parameters used to determine an inbound security group rule that controls access from a specific CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourceCidrIp. For a security group of the Virtual Private Cloud (VPC) type, you must set the NicType parameter to intranet. For a security group of the classic network type, you can set the NicType parameter to either internet or intranet. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourceCidrIp=10.0.0.0/8
@@ -1623,7 +1625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *             &Permissions.1.NicType=intranet
       *             &Permissions.1.Policy=Accept
       *             &<Common request parameters>
-      *     *   Parameters that are used to specify an inbound security group rule that manages access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. If you specify this group of parameters, you must set NicType to intranet. To manage access between security groups in the classic network, you can allow or deny access from another security group within the same region to your security group. The security group that is allowed to access your security group can belong to your Alibaba Cloud account or another Alibaba Cloud account that is specified by SourceGroupOwnerAccount. To manage access between security groups in VPCs, you can allow or deny access from another security group within the same VPC to your security group. Sample request:
+      *     *   Parameters used to determine an inbound security group rule that controls access from a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, SourceGroupOwnerAccount, and SourceGroupId. In this case, you must set the NicType parameter to intranet. To manage access between security groups in the classic network, you can allow or deny access from another security group within the same region to your security group. The security group that is allowed to access your security group can belong to your Alibaba Cloud account or another Alibaba Cloud account that is specified by SourceGroupOwnerAccount. To manage access between security groups in VPCs, you can allow or deny access from another security group within the same VPC to your security group. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourceGroupId=sg-1651FBB**
@@ -1633,7 +1635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *             &Permissions.1.NicType=intranet
       *             &Permissions.1.Policy=Drop
       *             &<Common request parameters>
-      *     *   Parameters that are used to specify an inbound security group rule that manages access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourcePrefixListId. If you specify this group of parameters, prefix lists support only security groups in VPCs. You must specify NicType to intranet. Sample request:
+      *     *   Parameters used to determine an inbound security group rule that controls access from a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and SourcePrefixListId. If you specify this group of parameters, prefix lists support only security groups in VPCs. You must set NicType to intranet. Sample request:
       *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroup
       *             &SecurityGroupId=sg-bp67acfmxazb4p****
       *             &Permissions.1.SourcePrefixListId=pl-x1j1k5ykzqlixdcy****
@@ -1654,7 +1656,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region ID of the source security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.
+      * When you call this operation, take note of the following items:
+      * *   The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the "Security group limits" section in [](~~25412#SecurityGroupQuota1~~).
+      * *   You can set Policy to accept or drop for each security group rule to allow or deny access.
+      * *   The valid value of Priority ranges from 1 to 100. A smaller value indicates a higher priority.
+      * *   When several security group rules have the same priority, drop rules take precedence.
+      * *   The destination can be a CIDR block specified by DestCidrIp, Ipv6DestCidrIp, or DestPrefixListId or can be Elastic Compute Service (ECS) instances in a security group specified by DestGroupId.
+      * *   For advanced security groups, security groups cannot be used as authorization objects.
+      * *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
+      * *   If the specified security group rule exists in the security group, the call is successful but no security group rule is created.
+      * *   The `Permissions.N` prefix is added to some parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be configured together. We recommend that you use parameters prefixed with `Permissions.N`.
+      * *   You can determine a security group rule by configuring one of the following groups of parameters. You cannot determine a security group rule by configuring only one parameter.
+      *     *   Parameters used to specify a security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestCidrIp. Sample request:
+      *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
+      *             &SecurityGroupId=sg-bp67acfmxazb4ph***
+      *             &Permissions.1.IpProtocol=ICMP
+      *             &Permissions.1.DestCidrIp=10.0.0.0/8
+      *             &Permissions.1.PortRange=-1/-1
+      *             &Permissions.1.NicType=intranet
+      *             &Permissions.1.Policy=Accept
+      *             &<Common request parameters>
+      *     *   Parameters used to specify a security group rule that controls access to a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestGroupOwnerAccount, and DestGroupId. Sample request:
+      *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
+      *             &SecurityGroupId=sg-bp67acfmxazb4ph***
+      *             &Permissions.1.DestGroupId=sg-bp67acfmxazb4pi***
+      *             &Permissions.1.DestGroupOwnerAccount=Test@aliyun.com
+      *             &Permissions.1.IpProtocol=TCP
+      *             &Permissions.1.PortRange=22/22
+      *             &Permissions.1.NicType=intranet
+      *             &Permissions.1.Policy=Drop
+      *             &<Common request parameters>
+      *     *   Parameters used to specify a security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestPrefixListId. In this case, prefix lists support only security groups in virtual private clouds (VPCs). NicType must be set to intranet. Sample request:
+      *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
+      *             &SecurityGroupId=sg-bp67acfmxazb4ph***
+      *             &Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
+      *             &Permissions.1.DestGroupOwnerAccount=Test@aliyun.com
+      *             &Permissions.1.IpProtocol=TCP
+      *             &Permissions.1.PortRange=22/22
+      *             &Permissions.1.NicType=intranet
+      *             &Permissions.1.Policy=Drop
+      *             &<Common request parameters>
       *
       * @param request AuthorizeSecurityGroupEgressRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1789,7 +1831,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region ID of the source security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.
+      * When you call this operation, take note of the following items:
+      * *   The total number of inbound and outbound security group rules in each security group cannot exceed 200. For more information, see the "Security group limits" section in [](~~25412#SecurityGroupQuota1~~).
+      * *   You can set Policy to accept or drop for each security group rule to allow or deny access.
+      * *   The valid value of Priority ranges from 1 to 100. A smaller value indicates a higher priority.
+      * *   When several security group rules have the same priority, drop rules take precedence.
+      * *   The destination can be a CIDR block specified by DestCidrIp, Ipv6DestCidrIp, or DestPrefixListId or can be Elastic Compute Service (ECS) instances in a security group specified by DestGroupId.
+      * *   For advanced security groups, security groups cannot be used as authorization objects.
+      * *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
+      * *   If the specified security group rule exists in the security group, the call is successful but no security group rule is created.
+      * *   The `Permissions.N` prefix is added to some parameters to generate new parameters. Original parameters and corresponding parameters prefixed with Permissions.N cannot be configured together. We recommend that you use parameters prefixed with `Permissions.N`.
+      * *   You can determine a security group rule by configuring one of the following groups of parameters. You cannot determine a security group rule by configuring only one parameter.
+      *     *   Parameters used to specify a security group rule that controls access to a specified CIDR block: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestCidrIp. Sample request:
+      *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
+      *             &SecurityGroupId=sg-bp67acfmxazb4ph***
+      *             &Permissions.1.IpProtocol=ICMP
+      *             &Permissions.1.DestCidrIp=10.0.0.0/8
+      *             &Permissions.1.PortRange=-1/-1
+      *             &Permissions.1.NicType=intranet
+      *             &Permissions.1.Policy=Accept
+      *             &<Common request parameters>
+      *     *   Parameters used to specify a security group rule that controls access to a security group: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, DestGroupOwnerAccount, and DestGroupId. Sample request:
+      *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
+      *             &SecurityGroupId=sg-bp67acfmxazb4ph***
+      *             &Permissions.1.DestGroupId=sg-bp67acfmxazb4pi***
+      *             &Permissions.1.DestGroupOwnerAccount=Test@aliyun.com
+      *             &Permissions.1.IpProtocol=TCP
+      *             &Permissions.1.PortRange=22/22
+      *             &Permissions.1.NicType=intranet
+      *             &Permissions.1.Policy=Drop
+      *             &<Common request parameters>
+      *     *   Parameters used to specify a security group rule that controls access to a prefix list: IpProtocol, PortRange, SourcePortRange (optional), NicType, Policy, and DestPrefixListId. In this case, prefix lists support only security groups in virtual private clouds (VPCs). NicType must be set to intranet. Sample request:
+      *             http(s)://ecs.aliyuncs.com/?Action=AuthorizeSecurityGroupEgress
+      *             &SecurityGroupId=sg-bp67acfmxazb4ph***
+      *             &Permissions.1.DestPrefixListId=pl-x1j1k5ykzqlixdcy****
+      *             &Permissions.1.DestGroupOwnerAccount=Test@aliyun.com
+      *             &Permissions.1.IpProtocol=TCP
+      *             &Permissions.1.PortRange=22/22
+      *             &Permissions.1.NicType=intranet
+      *             &Permissions.1.Policy=Drop
+      *             &<Common request parameters>
       *
       * @param request AuthorizeSecurityGroupEgressRequest
       * @return AuthorizeSecurityGroupEgressResponse
@@ -2489,8 +2571,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region in which you want to create the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use a variety of online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, Operation Orchestration Service (OOS), and Apsara Devops.
+      * A server that is not provided by Alibaba Cloud can be registered as an Alibaba Cloud managed instance only when the server can access the Internet and runs an operating system of one of the following versions:
+      * *   Alibaba Cloud Linux 2, Alibaba Cloud Linux 3, and later
+      * *   CentOS 6, CentOS 7, CentOS 8, and later
+      * *   Debian 8, Debian 9, Debian 10, and later
+      * *   Ubuntu 12, Ubuntu 14, Ubuntu 16, Ubuntu 18, and later
+      * *   CoreOS
+      * *   OpenSUSE
+      * *   Red Hat 5, Red Hat 6, Red Hat 7, and later
+      * *   SUSE Linux Enterprise Server (SLES) 11, SLES 12, SLES 15, and later
+      * *   Windows Server 2012, Windows Server 2016, Windows Server 2019, and later
+      * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can proceed to create more activation codes.
+      * > To view the usage of activation codes, click **Activation Code** on the **Manage Instances** tab of the **Cloud Assistant** page in the Elastic Compute Service (ECS) console.
       *
       * @param request CreateActivationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2565,8 +2658,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the region in which you want to create the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use a variety of online services provided by Alibaba Cloud in the managed instance, such as Cloud Assistant, Operation Orchestration Service (OOS), and Apsara Devops.
+      * A server that is not provided by Alibaba Cloud can be registered as an Alibaba Cloud managed instance only when the server can access the Internet and runs an operating system of one of the following versions:
+      * *   Alibaba Cloud Linux 2, Alibaba Cloud Linux 3, and later
+      * *   CentOS 6, CentOS 7, CentOS 8, and later
+      * *   Debian 8, Debian 9, Debian 10, and later
+      * *   Ubuntu 12, Ubuntu 14, Ubuntu 16, Ubuntu 18, and later
+      * *   CoreOS
+      * *   OpenSUSE
+      * *   Red Hat 5, Red Hat 6, Red Hat 7, and later
+      * *   SUSE Linux Enterprise Server (SLES) 11, SLES 12, SLES 15, and later
+      * *   Windows Server 2012, Windows Server 2016, Windows Server 2019, and later
+      * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can proceed to create more activation codes.
+      * > To view the usage of activation codes, click **Activation Code** on the **Manage Instances** tab of the **Cloud Assistant** page in the Elastic Compute Service (ECS) console.
       *
       * @param request CreateActivationRequest
       * @return CreateActivationResponse
@@ -2749,10 +2853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation to create an automatic snapshot policy, you can specify the days of the week on which to create automatic snapshots, the retention period of the automatic snapshots, and cross-region replication for snapshots in the policy to meet your diverse data backup requirements. After you create an automatic snapshot policy, you must call the [ApplyAutoSnapshotPolicy](~~25531~~) operation to apply it to disks. If you want to modify the automatic snapshot policy, you must call the [ModifyAutoSnapshotPolicyEx](~~25529~~) operation.
-      * When you call this operation, take note of the following items:
-      * *   You can create a maximum of 100 automatic snapshot policies within each region for a single Alibaba Cloud account.
-      * *   If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you have scheduled snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a disk. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.
+      * When you call this operation to create an automatic snapshot policy, you can specify the days of the week on which to create automatic snapshots, the retention period of the automatic snapshots, and whether to enable cross-region replication for the snapshots in the policy to meet your diverse data backup requirements. After you create an automatic snapshot policy, you must call the [ApplyAutoSnapshotPolicy](~~25531~~) operation to apply it to disks. If you want to modify the automatic snapshot policy, you must call the [ModifyAutoSnapshotPolicyEx](~~25529~~) operation.
+      * Take note of the following items:
+      * *   You can create a maximum of 100 automatic snapshot policies per region for a single Alibaba Cloud account.
+      * *   If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you have scheduled snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a disk. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.
       * *   For information about how to copy a snapshot from one region to another, see the "Background information" section in [Copy a snapshot](~~159441~~).
       *
       * @param request CreateAutoSnapshotPolicyRequest
@@ -2836,10 +2940,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation to create an automatic snapshot policy, you can specify the days of the week on which to create automatic snapshots, the retention period of the automatic snapshots, and cross-region replication for snapshots in the policy to meet your diverse data backup requirements. After you create an automatic snapshot policy, you must call the [ApplyAutoSnapshotPolicy](~~25531~~) operation to apply it to disks. If you want to modify the automatic snapshot policy, you must call the [ModifyAutoSnapshotPolicyEx](~~25529~~) operation.
-      * When you call this operation, take note of the following items:
-      * *   You can create a maximum of 100 automatic snapshot policies within each region for a single Alibaba Cloud account.
-      * *   If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you have scheduled snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a disk. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.
+      * When you call this operation to create an automatic snapshot policy, you can specify the days of the week on which to create automatic snapshots, the retention period of the automatic snapshots, and whether to enable cross-region replication for the snapshots in the policy to meet your diverse data backup requirements. After you create an automatic snapshot policy, you must call the [ApplyAutoSnapshotPolicy](~~25531~~) operation to apply it to disks. If you want to modify the automatic snapshot policy, you must call the [ModifyAutoSnapshotPolicyEx](~~25529~~) operation.
+      * Take note of the following items:
+      * *   You can create a maximum of 100 automatic snapshot policies per region for a single Alibaba Cloud account.
+      * *   If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you have scheduled snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a disk. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.
       * *   For information about how to copy a snapshot from one region to another, see the "Background information" section in [Copy a snapshot](~~159441~~).
       *
       * @param request CreateAutoSnapshotPolicyRequest
@@ -2967,19 +3071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can create commands of the following types:
-      *     *   RunBatScript: batch commands. These commands are applicable to Windows instances.
-      *     *   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.
-      *     *   RunShellScript: shell commands. These commands are applicable to Linux instances.
-      * *   You can specify the TimeOut parameter to set the maximum timeout period for executions of a command on Elastic Compute Service (ECS) instances. If an execution times out, the Cloud Assistant client forcefully terminates the command process by canceling the process ID (PID) of the command. For more information, see [Install the Cloud Assistant client](~~64921~~).
-      *     *   When the one-time execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
-      *     *   For a scheduled task, take note of the following items:
-      *         *   The timeout period takes effect on each execution of the command.
-      *         *   When a scheduled execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
-      *         *   The timeout of one execution does not affect the subsequent executions of the command.
-      * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region.
-      * *   You can use the WorkingDir parameter to specify the working directory of a Cloud Assistant command. For Linux instances, the default working directory of a command is the home directory of the root user, which is `/root`. For Windows instances, the default working directory of a command is the directory where the Cloud Assistant client process resides, such as `C:\\Windows\\System32`.
-      * *   You can enable the custom parameter feature for a Cloud Assistant command by setting EnableParameter to true when you create the command. When you configure the CommandContent parameter, you can define custom parameters in the {{parameter}} format. Then, when the [InvokeCommand](~~64841~~) operation is called, the key-value pairs of custom parameters are passed in. For example, assume that the command content is `echo {{name}}`. You can use the Parameters parameter to pass in the `<name, Jack>` key-value pair when the InvokeCommand operation is called. The name key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. Therefore, the `echo Jack` command is actually run.
+      * The ID of the region in which to create the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request CreateCommandRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3066,19 +3158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can create commands of the following types:
-      *     *   RunBatScript: batch commands. These commands are applicable to Windows instances.
-      *     *   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.
-      *     *   RunShellScript: shell commands. These commands are applicable to Linux instances.
-      * *   You can specify the TimeOut parameter to set the maximum timeout period for executions of a command on Elastic Compute Service (ECS) instances. If an execution times out, the Cloud Assistant client forcefully terminates the command process by canceling the process ID (PID) of the command. For more information, see [Install the Cloud Assistant client](~~64921~~).
-      *     *   When the one-time execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
-      *     *   For a scheduled task, take note of the following items:
-      *         *   The timeout period takes effect on each execution of the command.
-      *         *   When a scheduled execution of a command times out, the execution state ([InvokeRecordStatus](~~64845~~)) of the command becomes Failed.
-      *         *   The timeout of one execution does not affect the subsequent executions of the command.
-      * *   You can retain up to 500 to 10,000 Cloud Assistant commands in each region.
-      * *   You can use the WorkingDir parameter to specify the working directory of a Cloud Assistant command. For Linux instances, the default working directory of a command is the home directory of the root user, which is `/root`. For Windows instances, the default working directory of a command is the directory where the Cloud Assistant client process resides, such as `C:\\Windows\\System32`.
-      * *   You can enable the custom parameter feature for a Cloud Assistant command by setting EnableParameter to true when you create the command. When you configure the CommandContent parameter, you can define custom parameters in the {{parameter}} format. Then, when the [InvokeCommand](~~64841~~) operation is called, the key-value pairs of custom parameters are passed in. For example, assume that the command content is `echo {{name}}`. You can use the Parameters parameter to pass in the `<name, Jack>` key-value pair when the InvokeCommand operation is called. The name key of the custom parameter is automatically replaced by the paired Jack value to generate a new command. Therefore, the `echo Jack` command is actually run.
+      * The ID of the region in which to create the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request CreateCommandRequest
       * @return CreateCommandResponse
@@ -3431,12 +3511,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   When you create a disk, the multi-attach (`MultiAttach`) feature can be enabled. Before you enable the multi-attach feature, we recommend that you get familiar with the multi-attach feature and its limits. For more information, see [NVMe protocol](~~256487~~) and [Use the multi-attach feature](~~262105~~).
+      * *   When you create a disk, you can enable the multi-attach (`MultiAttach`) feature for the disk. We recommend that you familiarize yourself with the multi-attach feature and its limits before you enable it. For more information, see [NVMe protocol](~~256487~~) and [Use the multi-attach feature](~~262105~~).
       * *   The disk can be a basic disk, an ultra disk, a standard SSD, or an enhanced SSD (ESSD).
       * *   When you create disks, you may be charged for the resources used. We recommend that you get familiar with the Elastic Compute Service (ECS) billing methods before you create a disk. For more information, see [Billing overview](~~25398~~).
-      * *   By default, the `DeleteAutoSnapshot` parameter is set to `true` when a disk is created. This specifies that the automatic snapshots be deleted when the disk is released. You can call the [ModifyDiskAttribute](~~25517~~) operation to modify the parameter.
-      * *   If you do not specify the performance level when you create an ESSD, the disk is created as a PL1 ESSD by default. You can call the [ModifyDiskSpec](~~123780~~) operation to change the performance level of the ESSD.
-      * *   Disks that are created by calling this operation have their `Portable` attribute set to `true` and the billing method set to pay-as-you-go.
+      * *   By default, `DeleteAutoSnapshot` is set to `true` when a disk is created. This indicates that when the disk is released, the automatic snapshots of the disk are also deleted. You can call the [ModifyDiskAttribute](~~25517~~) operation to modify the parameter.
+      * *   If you do not configure the performance level when you create an ESSD, the performance level for the ESSD is PL1 by default. You can call the [ModifyDiskSpec](~~123780~~) operation to modify the performance level of the ESSD.
+      * *   By default, for a disk that is created by calling this operation, the `Portable` attribute is set to `true` and the billing method is pay-as-you-go.
       *
       * @param request CreateDiskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3571,12 +3651,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   When you create a disk, the multi-attach (`MultiAttach`) feature can be enabled. Before you enable the multi-attach feature, we recommend that you get familiar with the multi-attach feature and its limits. For more information, see [NVMe protocol](~~256487~~) and [Use the multi-attach feature](~~262105~~).
+      * *   When you create a disk, you can enable the multi-attach (`MultiAttach`) feature for the disk. We recommend that you familiarize yourself with the multi-attach feature and its limits before you enable it. For more information, see [NVMe protocol](~~256487~~) and [Use the multi-attach feature](~~262105~~).
       * *   The disk can be a basic disk, an ultra disk, a standard SSD, or an enhanced SSD (ESSD).
       * *   When you create disks, you may be charged for the resources used. We recommend that you get familiar with the Elastic Compute Service (ECS) billing methods before you create a disk. For more information, see [Billing overview](~~25398~~).
-      * *   By default, the `DeleteAutoSnapshot` parameter is set to `true` when a disk is created. This specifies that the automatic snapshots be deleted when the disk is released. You can call the [ModifyDiskAttribute](~~25517~~) operation to modify the parameter.
-      * *   If you do not specify the performance level when you create an ESSD, the disk is created as a PL1 ESSD by default. You can call the [ModifyDiskSpec](~~123780~~) operation to change the performance level of the ESSD.
-      * *   Disks that are created by calling this operation have their `Portable` attribute set to `true` and the billing method set to pay-as-you-go.
+      * *   By default, `DeleteAutoSnapshot` is set to `true` when a disk is created. This indicates that when the disk is released, the automatic snapshots of the disk are also deleted. You can call the [ModifyDiskAttribute](~~25517~~) operation to modify the parameter.
+      * *   If you do not configure the performance level when you create an ESSD, the performance level for the ESSD is PL1 by default. You can call the [ModifyDiskSpec](~~123780~~) operation to modify the performance level of the ESSD.
+      * *   By default, for a disk that is created by calling this operation, the `Portable` attribute is set to `true` and the billing method is pay-as-you-go.
       *
       * @param request CreateDiskRequest
       * @return CreateDiskResponse
@@ -3587,7 +3667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Elasticity Assurance provides a new method to purchase and use resources with flexibility and assurance. It offers assured resource reservations for pay-as-you-go Elastic Compute Service (ECS) instances. For more information, see [Overview of Elasticity Assurance](~~193630~~).
+      * Elasticity Assurance provides a new way to purchase and use resources with flexibility and assurance. It offers assured resource reservations for pay-as-you-go Elastic Compute Service (ECS) instances. For more information, see [Overview of Elasticity Assurance](~~193630~~).
       * *   Elasticity assurances are not refundable after purchase.
       * *   Elasticity assurances are applicable to only pay-as-you-go ECS instances.
       * *   Elasticity assurances only support unlimited mode. Therefore, you must set `AssuranceTimes` to `Unlimited`. Elasticity assurances in unlimited mode can be applied an unlimited number of times within their effective period and take effect immediately after they are purchased.
@@ -3689,7 +3769,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Elasticity Assurance provides a new method to purchase and use resources with flexibility and assurance. It offers assured resource reservations for pay-as-you-go Elastic Compute Service (ECS) instances. For more information, see [Overview of Elasticity Assurance](~~193630~~).
+      * Elasticity Assurance provides a new way to purchase and use resources with flexibility and assurance. It offers assured resource reservations for pay-as-you-go Elastic Compute Service (ECS) instances. For more information, see [Overview of Elasticity Assurance](~~193630~~).
       * *   Elasticity assurances are not refundable after purchase.
       * *   Elasticity assurances are applicable to only pay-as-you-go ECS instances.
       * *   Elasticity assurances only support unlimited mode. Therefore, you must set `AssuranceTimes` to `Unlimited`. Elasticity assurances in unlimited mode can be applied an unlimited number of times within their effective period and take effect immediately after they are purchased.
@@ -4059,6 +4139,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createImageWithOptions(request, runtime);
     }
 
+    /**
+      * Take note of the following items:
+      * *   Only custom image components can be created.
+      * *   The images must run Linux operating systems. This indicates that you must set `SystemType` to Linux.
+      * *   You must set the image component type to image build component by setting the `ComponentType` parameter to Build.
+      * *   You can use Dockerfile to edit the content of image components, and then pass the edited content into the `Content` parameter. The content size must not be greater than 16 KB. `FROM` commands cannot be used in image components. An image component supports up to 127 commands. For information about supported commands, see [Description of commands supported by Image Builder](~~200206~~).
+      * You can use image components to create image templates in the Elastic Compute Service (ECS) console, but cannot call API operations to use image components to create image templates. For more information, see [Overview of Image Builder](~~197410~~).
+      *
+      * @param request CreateImageComponentRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateImageComponentResponse
+     */
     public CreateImageComponentResponse createImageComponentWithOptions(CreateImageComponentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4139,6 +4231,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateImageComponentResponse());
     }
 
+    /**
+      * Take note of the following items:
+      * *   Only custom image components can be created.
+      * *   The images must run Linux operating systems. This indicates that you must set `SystemType` to Linux.
+      * *   You must set the image component type to image build component by setting the `ComponentType` parameter to Build.
+      * *   You can use Dockerfile to edit the content of image components, and then pass the edited content into the `Content` parameter. The content size must not be greater than 16 KB. `FROM` commands cannot be used in image components. An image component supports up to 127 commands. For information about supported commands, see [Description of commands supported by Image Builder](~~200206~~).
+      * You can use image components to create image templates in the Elastic Compute Service (ECS) console, but cannot call API operations to use image components to create image templates. For more information, see [Overview of Image Builder](~~197410~~).
+      *
+      * @param request CreateImageComponentRequest
+      * @return CreateImageComponentResponse
+     */
     public CreateImageComponentResponse createImageComponent(CreateImageComponentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createImageComponentWithOptions(request, runtime);
@@ -4736,6 +4839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DataDisk", request.dataDisk);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
             query.put("DeploymentSetId", request.deploymentSetId);
         }
@@ -4962,6 +5069,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataDisk)) {
             query.put("DataDisk", request.dataDisk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
@@ -5245,11 +5356,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   This operation is a synchronous operation. After an ENI is created, it immediately enters the Available state and can be attached to an Elastic Compute Service (ECS) instance.
-      * *   If the NetworkInterfaceId parameter is empty in the response, it indicates that no ENI is created. Call the operation again to create an ENI.
+      * ## Usage notes
+      * Take note of the following items:
+      * *   CreateNetworkInterface is a synchronous operation. After an ENI is created, the ENI immediately enters the Available state and can be attached to an Elastic Compute Service (ECS) instance.
+      * *   If NetworkInterfaceId is empty in the response, no ENI is created. Call the operation again to create an ENI.
       * *   An ENI can be attached only to a single instance that resides in a virtual private cloud (VPC).
-      * *   When an ENI is detached from an instance and then attached to another instance, the attributes of the ENI remain unchanged and network traffic is directed to the new instance.
+      * *   When an ENI is detached from an instance and attached to another instance, the attributes of the ENI remain unchanged and network traffic is redirected to the new instance.
       * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 has been enabled for the vSwitch with which to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
       * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota in the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
       * **For information about examples on how to call this operation, see **[Create an ENI](~~471552~~).
@@ -5395,11 +5507,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   This operation is a synchronous operation. After an ENI is created, it immediately enters the Available state and can be attached to an Elastic Compute Service (ECS) instance.
-      * *   If the NetworkInterfaceId parameter is empty in the response, it indicates that no ENI is created. Call the operation again to create an ENI.
+      * ## Usage notes
+      * Take note of the following items:
+      * *   CreateNetworkInterface is a synchronous operation. After an ENI is created, the ENI immediately enters the Available state and can be attached to an Elastic Compute Service (ECS) instance.
+      * *   If NetworkInterfaceId is empty in the response, no ENI is created. Call the operation again to create an ENI.
       * *   An ENI can be attached only to a single instance that resides in a virtual private cloud (VPC).
-      * *   When an ENI is detached from an instance and then attached to another instance, the attributes of the ENI remain unchanged and network traffic is directed to the new instance.
+      * *   When an ENI is detached from an instance and attached to another instance, the attributes of the ENI remain unchanged and network traffic is redirected to the new instance.
       * *   If you want to assign IPv6 addresses when you create an ENI, make sure that IPv6 has been enabled for the vSwitch with which to associate the ENI. For more information, see [What is an IPv6 gateway?](~~98896~~)
       * *   A quota is imposed on the number of ENIs that can be created per Alibaba Cloud region per account. You can view the quota in the ECS console. For more information, see [View and increase resource quotas](~~184115~~).
       * **For information about examples on how to call this operation, see **[Create an ENI](~~471552~~).
@@ -5905,7 +6018,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   You can create up to 100 security groups within a single Alibaba Cloud region.
+      * *   You can create up to 100 security groups in a single Alibaba Cloud region.
       * *   To create a security group of the Virtual Private Cloud (VPC) type, you must specify the VpcId parameter.
       *
       * @param request CreateSecurityGroupRequest
@@ -5986,7 +6099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   You can create up to 100 security groups within a single Alibaba Cloud region.
+      * *   You can create up to 100 security groups in a single Alibaba Cloud region.
       * *   To create a security group of the Virtual Private Cloud (VPC) type, you must specify the VpcId parameter.
       *
       * @param request CreateSecurityGroupRequest
@@ -5999,7 +6112,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You can use the ECS console, call [ECS API](~~63962~~) operations, or use CloudMonitor to view the scheduled simulated system events.
-      * A simulated system event can transition between the following lifecycle states:
+      * The following descriptions provide the lifecycle of a simulated system event:
       * *   Scheduled: The state of the simulated system event is automatically changed to Scheduled after it is scheduled.
       * *   Executed: The state of the simulated system event is automatically changed to Executed at the time specified by the NotBefore parameter if no manual intervention is involved.
       * *   Canceled: The state of the simulated system event is changed to Canceled if you cancel the event by calling the [CancelSimulatedSystemEvents](~~88808~~) operation.
@@ -6067,7 +6180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You can use the ECS console, call [ECS API](~~63962~~) operations, or use CloudMonitor to view the scheduled simulated system events.
-      * A simulated system event can transition between the following lifecycle states:
+      * The following descriptions provide the lifecycle of a simulated system event:
       * *   Scheduled: The state of the simulated system event is automatically changed to Scheduled after it is scheduled.
       * *   Executed: The state of the simulated system event is automatically changed to Executed at the time specified by the NotBefore parameter if no manual intervention is involved.
       * *   Canceled: The state of the simulated system event is changed to Canceled if you cancel the event by calling the [CancelSimulatedSystemEvents](~~88808~~) operation.
@@ -6082,21 +6195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The local snapshot feature is replaced by the instant access feature. Parameter description:
-      * *   If you used the local snapshot feature before December 14, 2020, you can use the `Category` or `InstantAccess` parameter as expected and must take note of the following items:
-      *     *   The `Category` and `InstantAccess` parameters cannot be specified at the same time.
-      *     *   If neither the `Category` nor `InstantAccess` parameters is specified, normal snapshots are created.
-      * *   If you did not use the local snapshot feature before December 14, 2020, you can use the `InstantAccess` parameter but cannot use the `Category` parameter.
-      * You cannot create snapshots for a disk in the following scenarios:
-      * *   The number of manual snapshots of the disk has reached 256.
-      * *   A snapshot is being created for the disk.
-      * *   The instance to which the disk is attached has never been started.
-      * *   The ECS instance to which the disk is attached is not in the **Stopped** or **Running** state.````
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.
-      * When you create a snapshot, take note of the following items:
-      * *   If a snapshot is being created, you cannot use this snapshot to create a custom image by calling the [CreateImage](~~25535~~) operation.
-      * *   When a snapshot is being created for a disk that is attached to an instance, do not change the instance state.
-      * *   You can create snapshots for a disk that is in the **Expired** state.`` If the release time scheduled for a disk arrives while a snapshot is being created for the disk, the snapshot is in the **Creating** state and is deleted when the disk is released.``
+      * The request ID.
       *
       * @param request CreateSnapshotRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6183,21 +6282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The local snapshot feature is replaced by the instant access feature. Parameter description:
-      * *   If you used the local snapshot feature before December 14, 2020, you can use the `Category` or `InstantAccess` parameter as expected and must take note of the following items:
-      *     *   The `Category` and `InstantAccess` parameters cannot be specified at the same time.
-      *     *   If neither the `Category` nor `InstantAccess` parameters is specified, normal snapshots are created.
-      * *   If you did not use the local snapshot feature before December 14, 2020, you can use the `InstantAccess` parameter but cannot use the `Category` parameter.
-      * You cannot create snapshots for a disk in the following scenarios:
-      * *   The number of manual snapshots of the disk has reached 256.
-      * *   A snapshot is being created for the disk.
-      * *   The instance to which the disk is attached has never been started.
-      * *   The ECS instance to which the disk is attached is not in the **Stopped** or **Running** state.````
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.
-      * When you create a snapshot, take note of the following items:
-      * *   If a snapshot is being created, you cannot use this snapshot to create a custom image by calling the [CreateImage](~~25535~~) operation.
-      * *   When a snapshot is being created for a disk that is attached to an instance, do not change the instance state.
-      * *   You can create snapshots for a disk that is in the **Expired** state.`` If the release time scheduled for a disk arrives while a snapshot is being created for the disk, the snapshot is in the **Creating** state and is deleted when the disk is released.``
+      * The request ID.
       *
       * @param request CreateSnapshotRequest
       * @return CreateSnapshotResponse
@@ -6742,8 +6827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * Before you call this operation to delete an activation code, make sure that the activation code has never been used to register managed instances.
+      * $.parameters[4].schema.description
       *
       * @param request DeleteActivationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6798,8 +6882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * Before you call this operation to delete an activation code, make sure that the activation code has never been used to register managed instances.
+      * $.parameters[4].schema.description
       *
       * @param request DeleteActivationRequest
       * @return DeleteActivationResponse
@@ -7798,14 +7881,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
+      * *   After an Elastic Compute Service (ECS) instance is released, all the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
       * *   Disks attached to the instance:
-      *     *   If `DeleteWithInstance` is set to false for disks that are attached to the instance, the disks are retained as pay-as-you-go disks.
-      *     *   If `DeleteWithInstance` is set to true for disks that are attached to the instance, the disks are released along with the instance.
-      *     *   If `DeleteAutoSnapshot` is set to false for disks that are attached to the instance, the automatic snapshots of the disks are retained.
-      *     *   If `DeleteAutoSnapshot` is set to true for disks that are attached to the instance, the automatic snapshots of the disks are released.
+      *     *   The disks for which `DeleteWithInstance` is set to false are retained as pay-as-you-go disks.
+      *     *   The disks for which `DeleteWithInstance` is set to true are released together with the instance.
+      *     *   For disks for which `DeleteAutoSnapshot` is set to false, the automatic snapshots of the disks are retained.
+      *     *   For disks for which `DeleteAutoSnapshot` is set to true, the automatic snapshots of the disks are released.
       *     *   Manual snapshots of the disks are retained.
-      *     *   If `OperationLocks` in the DeleteInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons. Even if `DeleteWithInstance` is set to `false` for disks that are attached to the instance, the parameter is ignored and the disks are released along with the instance. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
+      *     *   If `OperationLocks` in the response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~). Even if `DeleteWithInstance` is set to `false` for the data disks that are attached to the instance, this parameter is ignored and the data disks are released along with the instance.
       *
       * @param request DeleteInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7872,14 +7955,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
+      * *   After an Elastic Compute Service (ECS) instance is released, all the physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.
       * *   Disks attached to the instance:
-      *     *   If `DeleteWithInstance` is set to false for disks that are attached to the instance, the disks are retained as pay-as-you-go disks.
-      *     *   If `DeleteWithInstance` is set to true for disks that are attached to the instance, the disks are released along with the instance.
-      *     *   If `DeleteAutoSnapshot` is set to false for disks that are attached to the instance, the automatic snapshots of the disks are retained.
-      *     *   If `DeleteAutoSnapshot` is set to true for disks that are attached to the instance, the automatic snapshots of the disks are released.
+      *     *   The disks for which `DeleteWithInstance` is set to false are retained as pay-as-you-go disks.
+      *     *   The disks for which `DeleteWithInstance` is set to true are released together with the instance.
+      *     *   For disks for which `DeleteAutoSnapshot` is set to false, the automatic snapshots of the disks are retained.
+      *     *   For disks for which `DeleteAutoSnapshot` is set to true, the automatic snapshots of the disks are released.
       *     *   Manual snapshots of the disks are retained.
-      *     *   If `OperationLocks` in the DeleteInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons. Even if `DeleteWithInstance` is set to `false` for disks that are attached to the instance, the parameter is ignored and the disks are released along with the instance. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
+      *     *   If `OperationLocks` in the response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~). Even if `DeleteWithInstance` is set to `false` for the data disks that are attached to the instance, this parameter is ignored and the data disks are released along with the instance.
       *
       * @param request DeleteInstancesRequest
       * @return DeleteInstancesResponse
@@ -8126,19 +8209,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
+      * ##
       * *   The ENI must be in the Available state.
-      * *   If the ENI is bound to an ECS instance, you must unbind the ENI from the ECS instance ([DetachNetworkInterface](~~58514~~)) before you can delete the ENI.
-      * *   After an ENI is deleted:
-      *     *   All the private IP addresses (including primary and secondary private IP addresses) of the ENI are automatically released. 
+      * *   If the ENI is attached to an Elastic Compute Service (ECS) instance, you must call [DetachNetworkInterface](~~58514~~) to detach the ENI from the instance before you can delete the ENI.
+      * *   After an ENI is deleted, the following situations occur:
+      *     *   All the private IP addresses (including primary and secondary private IP addresses) of the ENI are automatically released.
       *     *   The ENI is automatically removed from its security groups.
       * *   This operation is an asynchronous operation. After this operation is called to delete an ENI, you can check the state or events of the ENI to determine whether the ENI is deleted. The following figure shows the transitions between the states of the ENI.
-      *     
-      *     ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/krcd/DeleteNetworkInterface.png)
-      *     *   If the ENI is in the Deleting state, the ENI deletion request is sent and the ENI is being deleted.
-      *     *   If the ENI is not found, the ENI is deleted.
-      *     *   If the ENI is stuck in the Deleting state, the ENI fails to be deleted and you can re-initiate the request to delete the ENI. 
-      * For information about examples on how to call this operation, see [Delete an ENI](~~471553~~).
+      * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/zh-CN/20221208/xual/DeleteNetworkInterface.jpg) - If the ENI is in the Deleting state, the ENI deletion request is sent, and the ENI is being deleted. - If the ENI is not found, the ENI is deleted. - If the ENI is stuck in the Deleting state, the ENI fails to be deleted, and you can re-initiate the request to delete the ENI.
+      * **For information about examples on how to call this operation, see **[Delete an ENI](~~471553~~).
       *
       * @param request DeleteNetworkInterfaceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8193,19 +8272,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
+      * ##
       * *   The ENI must be in the Available state.
-      * *   If the ENI is bound to an ECS instance, you must unbind the ENI from the ECS instance ([DetachNetworkInterface](~~58514~~)) before you can delete the ENI.
-      * *   After an ENI is deleted:
-      *     *   All the private IP addresses (including primary and secondary private IP addresses) of the ENI are automatically released. 
+      * *   If the ENI is attached to an Elastic Compute Service (ECS) instance, you must call [DetachNetworkInterface](~~58514~~) to detach the ENI from the instance before you can delete the ENI.
+      * *   After an ENI is deleted, the following situations occur:
+      *     *   All the private IP addresses (including primary and secondary private IP addresses) of the ENI are automatically released.
       *     *   The ENI is automatically removed from its security groups.
       * *   This operation is an asynchronous operation. After this operation is called to delete an ENI, you can check the state or events of the ENI to determine whether the ENI is deleted. The following figure shows the transitions between the states of the ENI.
-      *     
-      *     ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/krcd/DeleteNetworkInterface.png)
-      *     *   If the ENI is in the Deleting state, the ENI deletion request is sent and the ENI is being deleted.
-      *     *   If the ENI is not found, the ENI is deleted.
-      *     *   If the ENI is stuck in the Deleting state, the ENI fails to be deleted and you can re-initiate the request to delete the ENI. 
-      * For information about examples on how to call this operation, see [Delete an ENI](~~471553~~).
+      * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/zh-CN/20221208/xual/DeleteNetworkInterface.jpg) - If the ENI is in the Deleting state, the ENI deletion request is sent, and the ENI is being deleted. - If the ENI is not found, the ENI is deleted. - If the ENI is stuck in the Deleting state, the ENI fails to be deleted, and you can re-initiate the request to delete the ENI.
+      * **For information about examples on how to call this operation, see **[Delete an ENI](~~471553~~).
       *
       * @param request DeleteNetworkInterfaceRequest
       * @return DeleteNetworkInterfaceResponse
@@ -8569,6 +8644,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteRouterInterfaceWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete a security group, make sure that the security group does not contain instances and is not referenced by other security groups. Otherwise, the DeleteSecurityGroup request fails. You can call the [DescribeSecurityGroupReferences](~~57320~~) operation to query the reference details of the security group.
+      *
+      * @param request DeleteSecurityGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteSecurityGroupResponse
+     */
     public DeleteSecurityGroupResponse deleteSecurityGroupWithOptions(DeleteSecurityGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8613,6 +8695,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSecurityGroupResponse());
     }
 
+    /**
+      * Before you delete a security group, make sure that the security group does not contain instances and is not referenced by other security groups. Otherwise, the DeleteSecurityGroup request fails. You can call the [DescribeSecurityGroupReferences](~~57320~~) operation to query the reference details of the security group.
+      *
+      * @param request DeleteSecurityGroupRequest
+      * @return DeleteSecurityGroupResponse
+     */
     public DeleteSecurityGroupResponse deleteSecurityGroup(DeleteSecurityGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSecurityGroupWithOptions(request, runtime);
@@ -9931,10 +10019,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   This operation applies only to instances that reside in the classic network.
-      * *   You can query up to 100 instances that reside in the classic network at a time.
-      * *   At least the `VpcId` or `InstanceId` parameter is specified.
+      * *   You can query a maximum of 100 instances that reside in the classic network at a time.
+      * *   At least one of the `VpcId` and `InstanceId` parameters must be configured.
       *
       * @param request DescribeClassicLinkInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9993,10 +10081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   This operation applies only to instances that reside in the classic network.
-      * *   You can query up to 100 instances that reside in the classic network at a time.
-      * *   At least the `VpcId` or `InstanceId` parameter is specified.
+      * *   You can query a maximum of 100 instances that reside in the classic network at a time.
+      * *   At least one of the `VpcId` and `InstanceId` parameters must be configured.
       *
       * @param request DescribeClassicLinkInstancesRequest
       * @return DescribeClassicLinkInstancesResponse
@@ -10132,7 +10220,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * If you specify only `Action` and `RegionId` to call this operation, all the available commands (`CommandId`) that you created in the specified region are queried by default.
       *
       * @param request DescribeCommandsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10223,7 +10311,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * If you specify only `Action` and `RegionId` to call this operation, all the available commands (`CommandId`) that you created in the specified region are queried by default.
       *
       * @param request DescribeCommandsRequest
       * @return DescribeCommandsResponse
@@ -10430,9 +10518,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use one of the following methods to query the details of one or more dedicated hosts:
-      * *   Specify the `DedicatedHostIds` parameter to query the details of specific dedicated hosts.
-      * *   Specify the `DedicatedHostClusterId` parameter to query the details of the dedicated hosts in a specific dedicated host cluster.
+      * ## Usage notes
+      * You can use one of the following methods to query the details of dedicated hosts:
+      * *   Specify `DedicatedHostIds` to query the details of dedicated hosts.
+      * *   Specify `DedicatedHostClusterId` to query the details of the dedicated hosts in a dedicated host cluster.
       *
       * @param request DescribeDedicatedHostsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10527,9 +10616,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can use one of the following methods to query the details of one or more dedicated hosts:
-      * *   Specify the `DedicatedHostIds` parameter to query the details of specific dedicated hosts.
-      * *   Specify the `DedicatedHostClusterId` parameter to query the details of the dedicated hosts in a specific dedicated host cluster.
+      * ## Usage notes
+      * You can use one of the following methods to query the details of dedicated hosts:
+      * *   Specify `DedicatedHostIds` to query the details of dedicated hosts.
+      * *   Specify `DedicatedHostClusterId` to query the details of the dedicated hosts in a dedicated host cluster.
       *
       * @param request DescribeDedicatedHostsRequest
       * @return DescribeDedicatedHostsResponse
@@ -10540,7 +10630,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The end time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+      * You can call this operation to query the details of resources you filed with Alibaba Cloud, including the types, delivery status, and consumption details of the resources.
+      * By default, the filing tickets of I/O optimized VPC-type instances are queried.
+      * For information about how to create (CreateDemand), modify (ModifyDemand), and delete (DeleteDemand) filing tickets on ECS resources, contact your account manager.
       *
       * @param request DescribeDemandsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10635,7 +10727,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The end time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+      * You can call this operation to query the details of resources you filed with Alibaba Cloud, including the types, delivery status, and consumption details of the resources.
+      * By default, the filing tickets of I/O optimized VPC-type instances are queried.
+      * For information about how to create (CreateDemand), modify (ModifyDemand), and delete (DeleteDemand) filing tickets on ECS resources, contact your account manager.
       *
       * @param request DescribeDemandsRequest
       * @return DescribeDemandsResponse
@@ -10646,7 +10740,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about instance families, see [Instance families](~~25378~~).
+      * ## Usage notes
+      * For more information about instance families, see [Overview of instance families](~~25378~~).
       *
       * @param request DescribeDeploymentSetSupportedInstanceTypeFamilyRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10697,7 +10792,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about instance families, see [Instance families](~~25378~~).
+      * ## Usage notes
+      * For more information about instance families, see [Overview of instance families](~~25378~~).
       *
       * @param request DescribeDeploymentSetSupportedInstanceTypeFamilyRequest
       * @return DescribeDeploymentSetSupportedInstanceTypeFamilyResponse
@@ -11235,7 +11331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The full status information of an EBS device includes the lifecycle status provided by the `Status` parameter, health status provided by the `HealthStatus` parameter, and event type provided by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
+      * *   The full status information about an EBS device includes the lifecycle status specified by the `Status` parameter, health status specified by the `HealthStatus` parameter, and event type specified by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
       * *   The release time, scheduled execution time, and actual execution time of each EBS device event are identical. If you specify a period of time by using the `EventTime.Start` and `EventTime.End` parameters, all events that occurred within this period are queried. You can query events that occurred within the last seven days.
       *
       * @param request DescribeDisksFullStatusRequest
@@ -11327,7 +11423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The full status information of an EBS device includes the lifecycle status provided by the `Status` parameter, health status provided by the `HealthStatus` parameter, and event type provided by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
+      * *   The full status information about an EBS device includes the lifecycle status specified by the `Status` parameter, health status specified by the `HealthStatus` parameter, and event type specified by the `EventType` parameter of the EBS device. You can filter the results based on these parameters.
       * *   The release time, scheduled execution time, and actual execution time of each EBS device event are identical. If you specify a period of time by using the `EventTime.Start` and `EventTime.End` parameters, all events that occurred within this period are queried. You can query events that occurred within the last seven days.
       *
       * @param request DescribeDisksFullStatusRequest
@@ -11674,10 +11770,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * The monitored data includes traffic sent and received over the internal network, the number of packets sent and received by the secondary ENI, and the number of dropped packets sent and received by the secondary ENI. Specific information may be missing from the returned monitored data. This is because the system cannot obtain the relevant information. For example, if the instance to which the secondary ENI is bound is in the Stopped state, or if the secondary ENI is not bound to an instance and is in the Available state, the monitored data of the secondary ENI cannot be obtained. When you call this operation, take note of the following items:
-      * *   Up to 400 monitored data entries can be returned at a time. If the value calculated by using the (EndTime - StartTime)/Period formula is greater than 400, an error is returned.
-      * *   Only the monitored data within the last 30 days can be queried. If the value of the StartTime parameter is earlier than 30 days from the time when you call this operation, an error is returned.
+      * The monitoring data includes traffic sent and received over the internal network, the number of packets sent and received by the secondary ENI, and the number of dropped packets sent and received by the secondary ENI. Specific information may be missing from the returned monitoring data. This is because the system cannot obtain the relevant information. For example, if the instance to which the secondary ENI is bound is in the Stopped state, or if the secondary ENI is not bound to an instance and is in the Available state, the monitoring data of the secondary ENI cannot be obtained. When you call this operation, take note of the following items:
+      * *   Up to 400 monitoring data entries can be returned at a time. If the value that is calculated by using the following formula is greater than 400: (EndTime − StartTime)/Period, an error is returned.
+      * *   Only the monitoring data within the last 30 days can be queried. If the value of StartTime is more than 30 days earlier than the time when you call this operation, an error is returned.
       *
       * @param request DescribeEniMonitorDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -11744,10 +11839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * The monitored data includes traffic sent and received over the internal network, the number of packets sent and received by the secondary ENI, and the number of dropped packets sent and received by the secondary ENI. Specific information may be missing from the returned monitored data. This is because the system cannot obtain the relevant information. For example, if the instance to which the secondary ENI is bound is in the Stopped state, or if the secondary ENI is not bound to an instance and is in the Available state, the monitored data of the secondary ENI cannot be obtained. When you call this operation, take note of the following items:
-      * *   Up to 400 monitored data entries can be returned at a time. If the value calculated by using the (EndTime - StartTime)/Period formula is greater than 400, an error is returned.
-      * *   Only the monitored data within the last 30 days can be queried. If the value of the StartTime parameter is earlier than 30 days from the time when you call this operation, an error is returned.
+      * The monitoring data includes traffic sent and received over the internal network, the number of packets sent and received by the secondary ENI, and the number of dropped packets sent and received by the secondary ENI. Specific information may be missing from the returned monitoring data. This is because the system cannot obtain the relevant information. For example, if the instance to which the secondary ENI is bound is in the Stopped state, or if the secondary ENI is not bound to an instance and is in the Available state, the monitoring data of the secondary ENI cannot be obtained. When you call this operation, take note of the following items:
+      * *   Up to 400 monitoring data entries can be returned at a time. If the value that is calculated by using the following formula is greater than 400: (EndTime − StartTime)/Period, an error is returned.
+      * *   Only the monitoring data within the last 30 days can be queried. If the value of StartTime is more than 30 days earlier than the time when you call this operation, an error is returned.
       *
       * @param request DescribeEniMonitorDataRequest
       * @return DescribeEniMonitorDataResponse
@@ -12133,7 +12227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   The image template that is specified by the `ImagePipelineId` parameter cannot be a deleted image template. When an image template is deleted, the corresponding image creation task is deleted.
       * *   You must specify `ImagePipelineId` or `ExecutionId`.
-      * *   You can configure the query token by using the `NextToken` parameter. Set the value of the query token to the value of `NextToken` that was returned the last time you called the `DescribeImagePipelineExecutions` operation. Then, use the `MaxResults` parameter to specify the maximum number of entries to return on each page to query the details of the image creation task.
+      * *   You can configure the query token by using the `NextToken` parameter. Set the value of NextToken to the value of `NextToken` that was returned the last time you called the `DescribeImagePipelineExecutions` operation. Then, use the `MaxResults` parameter to specify the maximum number of entries to return on each page to query the details of the image creation task.
       *
       * @param request DescribeImagePipelineExecutionsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -12210,7 +12304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * *   The image template that is specified by the `ImagePipelineId` parameter cannot be a deleted image template. When an image template is deleted, the corresponding image creation task is deleted.
       * *   You must specify `ImagePipelineId` or `ExecutionId`.
-      * *   You can configure the query token by using the `NextToken` parameter. Set the value of the query token to the value of `NextToken` that was returned the last time you called the `DescribeImagePipelineExecutions` operation. Then, use the `MaxResults` parameter to specify the maximum number of entries to return on each page to query the details of the image creation task.
+      * *   You can configure the query token by using the `NextToken` parameter. Set the value of NextToken to the value of `NextToken` that was returned the last time you called the `DescribeImagePipelineExecutions` operation. Then, use the `MaxResults` parameter to specify the maximum number of entries to return on each page to query the details of the image creation task.
       *
       * @param request DescribeImagePipelineExecutionsRequest
       * @return DescribeImagePipelineExecutionsResponse
@@ -12221,6 +12315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the `DescribeImagePipelines` operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
       *
       * @param request DescribeImagePipelinesRequest
@@ -12300,6 +12395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * You can use `NextToken` to configure the query token. Set the value to the `NextToken` value that is returned in the last call to the `DescribeImagePipelines` operation. Then, use `MaxResults` to specify the maximum number of entries to return on each page.
       *
       * @param request DescribeImagePipelinesRequest
@@ -12764,8 +12860,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can query system events that were finished within the last 30 days. The time range for querying unfinished system events is unlimited.
-      * *   You can also specify the InstanceEventCycleStatus.N parameter to filter the system events in the Scheduled, Executing, or Inquiring state.
+      * *   You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.
+      * *   You can also specify InstanceEventCycleStatus to query the system events that are in the Scheduled, Executing, or Inquiring state.
       *
       * @param request DescribeInstanceHistoryEventsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -12876,8 +12972,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can query system events that were finished within the last 30 days. The time range for querying unfinished system events is unlimited.
-      * *   You can also specify the InstanceEventCycleStatus.N parameter to filter the system events in the Scheduled, Executing, or Inquiring state.
+      * *   You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.
+      * *   You can also specify InstanceEventCycleStatus to query the system events that are in the Scheduled, Executing, or Inquiring state.
       *
       * @param request DescribeInstanceHistoryEventsRequest
       * @return DescribeInstanceHistoryEventsResponse
@@ -12890,7 +12986,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * This operation is used to query the specified maintenance policy of an instance, which contains the following maintenance attributes:
       * *   Maintenance window: the time period that you specify for maintenance.
-      * *   Maintenance action: the policy that you specify in response to instance shutdown.
+      * *   Maintenance action: the action that you specify in response to instance shutdown.
       *
       * @param request DescribeInstanceMaintenanceAttributesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -12951,7 +13047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * This operation is used to query the specified maintenance policy of an instance, which contains the following maintenance attributes:
       * *   Maintenance window: the time period that you specify for maintenance.
-      * *   Maintenance action: the policy that you specify in response to instance shutdown.
+      * *   Maintenance action: the action that you specify in response to instance shutdown.
       *
       * @param request DescribeInstanceMaintenanceAttributesRequest
       * @return DescribeInstanceMaintenanceAttributesResponse
@@ -12962,7 +13058,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The price.
+      * *   Pricing information can be queried for unexpired subscription ECS instances only when you upgrade their configurations. The pricing information cannot be queried when the instance configurations are downgraded.
+      * *   Pricing information cannot be queried for pay-as-you-go ECS instances when you change their configurations. Prices of existing pay-as-you-go ECS instances whose configurations are changed are the same as those of new pay-as-you-go instances. You can call the [DescribePrice](~~107829~~) operation to query the latest prices of ECS instances.
+      * *   Before you upgrade the configurations of an instance, we recommend that you call the [DescribeResourcesModification](~~66187~~) operation to query the instance types available for configuration upgrades in a specified zone.
       *
       * @param request DescribeInstanceModificationPriceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -13025,7 +13123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The price.
+      * *   Pricing information can be queried for unexpired subscription ECS instances only when you upgrade their configurations. The pricing information cannot be queried when the instance configurations are downgraded.
+      * *   Pricing information cannot be queried for pay-as-you-go ECS instances when you change their configurations. Prices of existing pay-as-you-go ECS instances whose configurations are changed are the same as those of new pay-as-you-go instances. You can call the [DescribePrice](~~107829~~) operation to query the latest prices of ECS instances.
+      * *   Before you upgrade the configurations of an instance, we recommend that you call the [DescribeResourcesModification](~~66187~~) operation to query the instance types available for configuration upgrades in a specified zone.
       *
       * @param request DescribeInstanceModificationPriceRequest
       * @return DescribeInstanceModificationPriceResponse
@@ -13036,7 +13136,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value that is calculated by using the following formula is greater than 400: `(EndTime − StartTime)/Period`.
       * *   You can query the monitoring data of the last 30 days. If the value of the `StartTime` parameter is more than 30 days earlier than the current time, an error is returned.
       * *   In some scenarios, such as when the instance is in the Stopped state, the system cannot obtain the relevant information and a portion may be missing from the returned monitoring data.
@@ -13098,7 +13198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   Up to 400 monitoring data entries can be returned at a time. An error is returned if the value that is calculated by using the following formula is greater than 400: `(EndTime − StartTime)/Period`.
       * *   You can query the monitoring data of the last 30 days. If the value of the `StartTime` parameter is more than 30 days earlier than the current time, an error is returned.
       * *   In some scenarios, such as when the instance is in the Stopped state, the system cannot obtain the relevant information and a portion may be missing from the returned monitoring data.
@@ -13111,6 +13211,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceMonitorDataWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in required formats. For more information, see [Parameter format overview](~~110340~~).
+      *
+      * @param request DescribeInstanceRamRoleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceRamRoleResponse
+     */
     public DescribeInstanceRamRoleResponse describeInstanceRamRoleWithOptions(DescribeInstanceRamRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13163,6 +13271,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceRamRoleResponse());
     }
 
+    /**
+      * ## Description
+      * When you call an API operation by using Alibaba Cloud CLI, you must specify request parameter values of different data types in required formats. For more information, see [Parameter format overview](~~110340~~).
+      *
+      * @param request DescribeInstanceRamRoleRequest
+      * @return DescribeInstanceRamRoleResponse
+     */
     public DescribeInstanceRamRoleResponse describeInstanceRamRole(DescribeInstanceRamRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceRamRoleWithOptions(request, runtime);
@@ -13631,6 +13746,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInstanceVncPasswdWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * When you call this operation, take note of the following items:
+      * *   The URL returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful query, the URL expires and you must query it again.
+      * *   The **KeepAlive** time of a connection to a VNC management terminal is 60 seconds. If you do not interact with the VNC management terminal for 60 seconds, the VNC management terminal is automatically disconnected.
+      * *   When you disconnect from the VNC management terminal, you can reconnect to the VNC management terminal up to 30 times a minute.
+      * *   You must append the following parameters to the end of the `https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?` URL: `vncUrl`, `instanceId`, `isWindows` (True or False), and `password`. Connect these parameters with ampersands (`&`).
+      *     *   `vncUrl:` the `VncUrl` value returned after a successful query.
+      *     *   `instanceId:` the ID of your instance.
+      *     *   `isWindows:` specifies whether the operating system of the instance is Windows. Set the parameter to `true` if the operating system is Windows. Set the parameter to `false` if the operating system is not Windows.
+      *     *   `password:` Optional. A six-character password used to connect to the VNC management terminal. It can contain digits and letters. You do not need to enter your password again when the connection is being established if you set this parameter.
+      *         Example:
+      *         ```
+      *         https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true
+      *                 
+      *         ```
+      *         Or:
+      *         ```
+      *         https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true&password=****
+      *                
+      *         ```
+      *
+      * @param request DescribeInstanceVncUrlRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeInstanceVncUrlResponse
+     */
     public DescribeInstanceVncUrlResponse describeInstanceVncUrlWithOptions(DescribeInstanceVncUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -13675,6 +13816,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInstanceVncUrlResponse());
     }
 
+    /**
+      * ## Description
+      * When you call this operation, take note of the following items:
+      * *   The URL returned is valid only for 15 seconds. If a connection is not established within 15 seconds after a successful query, the URL expires and you must query it again.
+      * *   The **KeepAlive** time of a connection to a VNC management terminal is 60 seconds. If you do not interact with the VNC management terminal for 60 seconds, the VNC management terminal is automatically disconnected.
+      * *   When you disconnect from the VNC management terminal, you can reconnect to the VNC management terminal up to 30 times a minute.
+      * *   You must append the following parameters to the end of the `https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?` URL: `vncUrl`, `instanceId`, `isWindows` (True or False), and `password`. Connect these parameters with ampersands (`&`).
+      *     *   `vncUrl:` the `VncUrl` value returned after a successful query.
+      *     *   `instanceId:` the ID of your instance.
+      *     *   `isWindows:` specifies whether the operating system of the instance is Windows. Set the parameter to `true` if the operating system is Windows. Set the parameter to `false` if the operating system is not Windows.
+      *     *   `password:` Optional. A six-character password used to connect to the VNC management terminal. It can contain digits and letters. You do not need to enter your password again when the connection is being established if you set this parameter.
+      *         Example:
+      *         ```
+      *         https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true
+      *                 
+      *         ```
+      *         Or:
+      *         ```
+      *         https://g.alicdn.com/aliyun/ecs-console-vnc2/0.0.8/index.html?vncUrl=ws%3A%2F%****&instanceId=i-wz9hhwq5a6tm****&isWindows=true&password=****
+      *                
+      *         ```
+      *
+      * @param request DescribeInstanceVncUrlRequest
+      * @return DescribeInstanceVncUrlResponse
+     */
     public DescribeInstanceVncUrlResponse describeInstanceVncUrl(DescribeInstanceVncUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceVncUrlWithOptions(request, runtime);
@@ -14003,7 +14169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
+      * The number of times that the command is run on the instance.
+      * *   If the command is set to run only once on the instance, the value is 0 or 1.
+      * *   If the command is set to run on a schedule on the instance, the value is the number of times that the command is run.
       *
       * @param request DescribeInvocationResultsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -14094,7 +14262,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the resource group. After you set this parameter, command execution results in the specified resource group are queried.
+      * The number of times that the command is run on the instance.
+      * *   If the command is set to run only once on the instance, the value is 0 or 1.
+      * *   If the command is set to run on a schedule on the instance, the value is the number of times that the command is run.
       *
       * @param request DescribeInvocationResultsRequest
       * @return DescribeInvocationResultsResponse
@@ -14289,6 +14459,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeKeyPairsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=DescribeLaunchTemplateVersions\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request DescribeLaunchTemplateVersionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeLaunchTemplateVersionsResponse
+     */
     public DescribeLaunchTemplateVersionsResponse describeLaunchTemplateVersionsWithOptions(DescribeLaunchTemplateVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -14365,6 +14543,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLaunchTemplateVersionsResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=DescribeLaunchTemplateVersions\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request DescribeLaunchTemplateVersionsRequest
+      * @return DescribeLaunchTemplateVersionsResponse
+     */
     public DescribeLaunchTemplateVersionsResponse describeLaunchTemplateVersions(DescribeLaunchTemplateVersionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeLaunchTemplateVersionsWithOptions(request, runtime);
@@ -15916,6 +16101,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeResourceByTagsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=DescribeResourcesModification\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request DescribeResourcesModificationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeResourcesModificationResponse
+     */
     public DescribeResourcesModificationResponse describeResourcesModificationWithOptions(DescribeResourcesModificationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15992,6 +16185,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeResourcesModificationResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=DescribeResourcesModification\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request DescribeResourcesModificationRequest
+      * @return DescribeResourcesModificationResponse
+     */
     public DescribeResourcesModificationResponse describeResourcesModification(DescribeResourcesModificationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeResourcesModificationWithOptions(request, runtime);
@@ -16279,7 +16479,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region ID of the security groups. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * Take note of the following items:
+      * *   The basic information about security groups includes their IDs and descriptions. The response returns security groups ordered in descending order based on their IDs.
+      * *   We recommend that you use NextToken and MaxResults for a paged query. We recommend that you use MaxResults to specify the maximum number of entries to return in each request. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you perform the next request, set NextToken to the value that is returned for NextToken in the previous call and use MaxResults to specify the maximum number of entries to return in this call. If the return value of NextToken is empty, the current page of results is the last page and no more results are to be returned.
+      * *   When you use Alibaba Cloud CLI to call an API operation, you must specify values for request parameters of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
       *
       * @param request DescribeSecurityGroupsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16386,7 +16589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region ID of the security groups. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+      * Take note of the following items:
+      * *   The basic information about security groups includes their IDs and descriptions. The response returns security groups ordered in descending order based on their IDs.
+      * *   We recommend that you use NextToken and MaxResults for a paged query. We recommend that you use MaxResults to specify the maximum number of entries to return in each request. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you perform the next request, set NextToken to the value that is returned for NextToken in the previous call and use MaxResults to specify the maximum number of entries to return in this call. If the return value of NextToken is empty, the current page of results is the last page and no more results are to be returned.
+      * *   When you use Alibaba Cloud CLI to call an API operation, you must specify values for request parameters of different data types in the required formats. For more information, see [Parameter format overview](~~110340~~).
       *
       * @param request DescribeSecurityGroupsRequest
       * @return DescribeSecurityGroupsResponse
@@ -16398,8 +16604,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Usage notes
-      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check whether the file is successfully sent.
-      * *   You can call this operation to query the records of files sent in the last six weeks.
+      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.
+      * *   You can call this operation to query the file sending records within the last six weeks.
       *
       * @param request DescribeSendFileResultsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16479,8 +16685,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Usage notes
-      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check whether the file is successfully sent.
-      * *   You can call this operation to query the records of files sent in the last six weeks.
+      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.
+      * *   You can call this operation to query the file sending records within the last six weeks.
       *
       * @param request DescribeSendFileResultsRequest
       * @return DescribeSendFileResultsResponse
@@ -16669,7 +16875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * Take note of the following items:
       * *   Up to 400 entries of monitoring data can be returned at a time. If the result of the `(EndTime - StartTime)/Period` formula is greater than 400, an error is returned.
-      * *   Only the monitoring data within the last 30 days can be queried. If the value of `StartTime` is more than 30 days earlier than the time when you call this operation, an error is returned.
+      * *   Only the monitored data within the last 30 days can be queried. If the value of `StartTime` is more than 30 days earlier than the time when you call this operation, an error is returned.
       *
       * @param request DescribeSnapshotMonitorDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -16734,7 +16940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
       * Take note of the following items:
       * *   Up to 400 entries of monitoring data can be returned at a time. If the result of the `(EndTime - StartTime)/Period` formula is greater than 400, an error is returned.
-      * *   Only the monitoring data within the last 30 days can be queried. If the value of `StartTime` is more than 30 days earlier than the time when you call this operation, an error is returned.
+      * *   Only the monitored data within the last 30 days can be queried. If the value of `StartTime` is more than 30 days earlier than the time when you call this operation, an error is returned.
       *
       * @param request DescribeSnapshotMonitorDataRequest
       * @return DescribeSnapshotMonitorDataResponse
@@ -16798,8 +17004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+      * You can configure multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Configured parameters have logical AND relations. Only the configured parameters are included in the filter conditions.
       * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see [Parameter format overview](~~110340~~).
       *
       * @param request DescribeSnapshotsRequest
@@ -16927,8 +17132,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Usage notes
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+      * You can configure multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Configured parameters have logical AND relations. Only the configured parameters are included in the filter conditions.
       * When you use Alibaba Cloud CLI to call an API operation, you must specify request parameter values of different data types in required formats. For more information, see [Parameter format overview](~~110340~~).
       *
       * @param request DescribeSnapshotsRequest
@@ -17002,15 +17206,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call this operation to query information that is generated for preemptible instances in the last 30 days and select suitable instance types based on the returned results. The information that you can query by calling this operation includes:
-      *     *   Average release rate of preemptible instances.
-      *     *   The discount rate of the average preemptible instance price relative to the pay-as-you-go instance price.
-      *     *   Average preemptible instance price that is calculated based on the preceding percentage.
-      * *   This operation is applicable only to I/O optimized preemptible instances that are located in virtual private clouds (VPCs).
-      * *   You can use one of the following methods to specify instance types:
-      *     *   Set the `Cores` and `Memory` parameters or the `MinCores` and `MinMemory` parameters to query information of instance types that have the specified number of vCPUs and memory size.
-      *     *   Set the `InstanceTypes.N parameter` to query information of the specified instance types.
-      *     *   Set the `Cores` and `Memory` parameters or the `MinCores` and `MinMemory` parameters, and set the `InstanceTypeFamily` or `InstanceFamilyLevel` parameter to query information of the instance types that have the specified number of vCPUs and memory size within the specified instance family or at the specified instance family level.
+      * *   You can call this operation to query information that is generated for preemptible instances in the last 30 days and select suitable instance types based on the query results. The information that you can query includes:
+      *     *   Average release rate of preemptible instances
+      *     *   Percentage of the average preemptible instance price relative to the pay-as-you-go instance price
+      *     *   Average preemptible instance price that is calculated based on the preceding percentage
+      * *   This operation is applicable only to I/O optimized preemptible instances that reside in virtual private clouds (VPCs).
+      * *   You can use one of the following methods to query information that is generated for preemptible instances in the last 30 days:
+      *     *   Configure `Cores` and `Memory` or `MinCores` and `MinMemory` to query information about an instance type that meets the specified vCPU and memory requirements.
+      *     *   Configure the `InstanceTypes.N` parameter to query information about a specified instance type.
+      *     *   Configure `Cores` and `Memory` or `MinCores` and `MinMemory`, and then configure `InstanceTypeFamily` or `InstanceFamilyLevel` to query information about an instance type that meets the specified vCPU and memory requirements within the specified instance family or at a specified instance family level.
       *
       * @param request DescribeSpotAdviceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -17097,15 +17301,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call this operation to query information that is generated for preemptible instances in the last 30 days and select suitable instance types based on the returned results. The information that you can query by calling this operation includes:
-      *     *   Average release rate of preemptible instances.
-      *     *   The discount rate of the average preemptible instance price relative to the pay-as-you-go instance price.
-      *     *   Average preemptible instance price that is calculated based on the preceding percentage.
-      * *   This operation is applicable only to I/O optimized preemptible instances that are located in virtual private clouds (VPCs).
-      * *   You can use one of the following methods to specify instance types:
-      *     *   Set the `Cores` and `Memory` parameters or the `MinCores` and `MinMemory` parameters to query information of instance types that have the specified number of vCPUs and memory size.
-      *     *   Set the `InstanceTypes.N parameter` to query information of the specified instance types.
-      *     *   Set the `Cores` and `Memory` parameters or the `MinCores` and `MinMemory` parameters, and set the `InstanceTypeFamily` or `InstanceFamilyLevel` parameter to query information of the instance types that have the specified number of vCPUs and memory size within the specified instance family or at the specified instance family level.
+      * *   You can call this operation to query information that is generated for preemptible instances in the last 30 days and select suitable instance types based on the query results. The information that you can query includes:
+      *     *   Average release rate of preemptible instances
+      *     *   Percentage of the average preemptible instance price relative to the pay-as-you-go instance price
+      *     *   Average preemptible instance price that is calculated based on the preceding percentage
+      * *   This operation is applicable only to I/O optimized preemptible instances that reside in virtual private clouds (VPCs).
+      * *   You can use one of the following methods to query information that is generated for preemptible instances in the last 30 days:
+      *     *   Configure `Cores` and `Memory` or `MinCores` and `MinMemory` to query information about an instance type that meets the specified vCPU and memory requirements.
+      *     *   Configure the `InstanceTypes.N` parameter to query information about a specified instance type.
+      *     *   Configure `Cores` and `Memory` or `MinCores` and `MinMemory`, and then configure `InstanceTypeFamily` or `InstanceFamilyLevel` to query information about an instance type that meets the specified vCPU and memory requirements within the specified instance family or at a specified instance family level.
       *
       * @param request DescribeSpotAdviceRequest
       * @return DescribeSpotAdviceResponse
@@ -17538,6 +17742,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTaskAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=DescribeTasks\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request DescribeTasksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeTasksResponse
+     */
     public DescribeTasksResponse describeTasksWithOptions(DescribeTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -17610,6 +17822,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTasksResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=DescribeTasks\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request DescribeTasksRequest
+      * @return DescribeTasksResponse
+     */
     public DescribeTasksResponse describeTasks(DescribeTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTasksWithOptions(request, runtime);
@@ -18428,17 +18647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * When you call this operation, take note of the following items:
-      * *   Primary ENIs cannot be detached from ECS instances.
-      * *   The ENI must be in the Detaching (Detaching) or InUse (InUse) state.
-      * *   The instance must be in the Running (Running) or Stopped (Stopped) state.
-      * *   This operation is an asynchronous operation. After this operation is called to detach an ENI, you can check the state or events of the ENI to determine whether the ENI is detached. The following figure shows the transitions between the states of the ENI.
-      * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/uemr/DetachNetworkInterface.png)
-      *     *   If the ENI is in the Detaching state, the ENI detachment request is sent and the ENI is being detached from its associated instance.
-      *     *   If the ENI is in the Available state, the ENI is detached from its associated instance.
-      *     *   If the ENI is stuck in the Detaching state, the ENI may fail to be detached from the associated instance due to specific reasons. For example, the ENI may fail to be detached because the operating system did not respond to the ENI detachment request. If this occurs, you can re-initiate the request to detach the ENI. If the problem persists, restart the instance.
-      * **For information about examples on how to call this operation, see **[Detach an ENI](~~471551~~).
+      * The operation that you want to perform. Set the value to **DetachNetworkInterface**.
       *
       * @param request DetachNetworkInterfaceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -18501,17 +18710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * When you call this operation, take note of the following items:
-      * *   Primary ENIs cannot be detached from ECS instances.
-      * *   The ENI must be in the Detaching (Detaching) or InUse (InUse) state.
-      * *   The instance must be in the Running (Running) or Stopped (Stopped) state.
-      * *   This operation is an asynchronous operation. After this operation is called to detach an ENI, you can check the state or events of the ENI to determine whether the ENI is detached. The following figure shows the transitions between the states of the ENI.
-      * ![](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/file-manage-files/en-US/20230223/uemr/DetachNetworkInterface.png)
-      *     *   If the ENI is in the Detaching state, the ENI detachment request is sent and the ENI is being detached from its associated instance.
-      *     *   If the ENI is in the Available state, the ENI is detached from its associated instance.
-      *     *   If the ENI is stuck in the Detaching state, the ENI may fail to be detached from the associated instance due to specific reasons. For example, the ENI may fail to be detached because the operating system did not respond to the ENI detachment request. If this occurs, you can re-initiate the request to detach the ENI. If the problem persists, restart the instance.
-      * **For information about examples on how to call this operation, see **[Detach an ENI](~~471551~~).
+      * The operation that you want to perform. Set the value to **DetachNetworkInterface**.
       *
       * @param request DetachNetworkInterfaceRequest
       * @return DetachNetworkInterfaceResponse
@@ -18522,7 +18721,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.
+      * The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request DisableActivationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -18577,7 +18777,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * To prevent an activation code from being leaked, you can call the DisableActivation operation to disable the activation code. Disabled activation codes cannot be used to register new managed instances. However, managed instances that are already registered are not affected.
+      * The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request DisableActivationRequest
       * @return DisableActivationResponse
@@ -18867,7 +19068,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you export a custom image, complete the following operations:
       * *   Understand the prerequisites and precautions. For more information, see [Export images](~~58181~~).
       * *   Use Resource Access Management (RAM) to grant Elastic Compute Service (ECS) the permissions to write data to OSS. To complete the authorization, perform the following operations:
-      *     1.  Create a role named `AliyunECSImageExportDefaultRole`. Configure the following policy for the role:
+      *     1.  Create a role named `AliyunECSImageExportDefaultRole`, and attach the following policy to the role:
       *         ```json
       *          {
       *            "Statement": [
@@ -18884,7 +19085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *            "Version": "1"
       *          }
       *         ```
-      *     2.  Attach the `AliyunECSImageExportRolePolicy` system policy to the `AliyunECSImageExportDefaultRole` role. This policy is the default policy that grants ECS the permissions to export images. For more information, go to the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101.0.0.64c64df5dfpmdY#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunECSImageImportDefaultRole%22,%20%22TemplateId%22:%20%22ECSImportRole%22%7D,%20%22request2%22:%20%7B%22RoleName%22:%20%22AliyunECSImageExportDefaultRole%22,%20%22TemplateId%22:%20%22ECSExportRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fecs.console.aliyun.com%2F%22,%20%22Service%22:%20%22ECS%22%7D) page. You can also create a custom policy that contains the following document and attach the policy to the role:
+      *     2.  Attach the `AliyunECSImageExportRolePolicy` system policy to the `AliyunECSImageExportDefaultRole` role. This policy is the default policy that grants ECS the permissions to export images. For more information, go to the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101.0.0.64c64df5dfpmdY#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunECSImageImportDefaultRole%22,%20%22TemplateId%22:%20%22ECSImportRole%22%7D,%20%22request2%22:%20%7B%22RoleName%22:%20%22AliyunECSImageExportDefaultRole%22,%20%22TemplateId%22:%20%22ECSExportRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fecs.console.aliyun.com%2F%22,%20%22Service%22:%20%22ECS%22%7D) page. You can also create a custom policy that contains the following content and attach the policy to the role:
       *         ```json
       *          {
       *            "Version": "1",
@@ -18973,7 +19174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you export a custom image, complete the following operations:
       * *   Understand the prerequisites and precautions. For more information, see [Export images](~~58181~~).
       * *   Use Resource Access Management (RAM) to grant Elastic Compute Service (ECS) the permissions to write data to OSS. To complete the authorization, perform the following operations:
-      *     1.  Create a role named `AliyunECSImageExportDefaultRole`. Configure the following policy for the role:
+      *     1.  Create a role named `AliyunECSImageExportDefaultRole`, and attach the following policy to the role:
       *         ```json
       *          {
       *            "Statement": [
@@ -18990,7 +19191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       *            "Version": "1"
       *          }
       *         ```
-      *     2.  Attach the `AliyunECSImageExportRolePolicy` system policy to the `AliyunECSImageExportDefaultRole` role. This policy is the default policy that grants ECS the permissions to export images. For more information, go to the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101.0.0.64c64df5dfpmdY#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunECSImageImportDefaultRole%22,%20%22TemplateId%22:%20%22ECSImportRole%22%7D,%20%22request2%22:%20%7B%22RoleName%22:%20%22AliyunECSImageExportDefaultRole%22,%20%22TemplateId%22:%20%22ECSExportRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fecs.console.aliyun.com%2F%22,%20%22Service%22:%20%22ECS%22%7D) page. You can also create a custom policy that contains the following document and attach the policy to the role:
+      *     2.  Attach the `AliyunECSImageExportRolePolicy` system policy to the `AliyunECSImageExportDefaultRole` role. This policy is the default policy that grants ECS the permissions to export images. For more information, go to the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101.0.0.64c64df5dfpmdY#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunECSImageImportDefaultRole%22,%20%22TemplateId%22:%20%22ECSImportRole%22%7D,%20%22request2%22:%20%7B%22RoleName%22:%20%22AliyunECSImageExportDefaultRole%22,%20%22TemplateId%22:%20%22ECSExportRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fecs.console.aliyun.com%2F%22,%20%22Service%22:%20%22ECS%22%7D) page. You can also create a custom policy that contains the following content and attach the policy to the role:
       *         ```json
       *          {
       *            "Version": "1",
@@ -19091,15 +19292,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.exportSnapshotWithOptions(request, runtime);
     }
 
-    /**
-      * *   ECS is a virtualized cloud-based service and cannot be connected to display devices. Alibaba Cloud caches system command outputs for the last start, restart, or shutdown of ECS instances. You can call the GetInstanceConsoleOutput operation to query the command outputs.
-      * *   For instances of the retired instance types, you cannot obtain command outputs. For more information, see [Retired instance types](~~55263~~).
-      * *   You cannot obtain the command outputs of Windows instances.
-      *
-      * @param request GetInstanceConsoleOutputRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return GetInstanceConsoleOutputResponse
-     */
     public GetInstanceConsoleOutputResponse getInstanceConsoleOutputWithOptions(GetInstanceConsoleOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -19152,14 +19344,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceConsoleOutputResponse());
     }
 
-    /**
-      * *   ECS is a virtualized cloud-based service and cannot be connected to display devices. Alibaba Cloud caches system command outputs for the last start, restart, or shutdown of ECS instances. You can call the GetInstanceConsoleOutput operation to query the command outputs.
-      * *   For instances of the retired instance types, you cannot obtain command outputs. For more information, see [Retired instance types](~~55263~~).
-      * *   You cannot obtain the command outputs of Windows instances.
-      *
-      * @param request GetInstanceConsoleOutputRequest
-      * @return GetInstanceConsoleOutputResponse
-     */
     public GetInstanceConsoleOutputResponse getInstanceConsoleOutput(GetInstanceConsoleOutputRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceConsoleOutputWithOptions(request, runtime);
@@ -19442,9 +19626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   A maximum of 500 key pairs can be created in each region.
-      * *   The key pair that you want to import must support one of the following encryption methods:
+      * *   The key pair to be imported must support one of the following encryption methods:
       *     *   rsa
       *     *   dsa
       *     *   ssh-rsa
@@ -19515,9 +19699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * Take note of the following items:
       * *   A maximum of 500 key pairs can be created in each region.
-      * *   The key pair that you want to import must support one of the following encryption methods:
+      * *   The key pair to be imported must support one of the following encryption methods:
       *     *   rsa
       *     *   dsa
       *     *   ssh-rsa
@@ -19612,7 +19796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call the InstallCloudAssistant operation and then the [RebootInstance](~~25502~~) operation, the Cloud Assistant client is installed and takes effect.
+      * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request InstallCloudAssistantRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -19667,7 +19851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you call the InstallCloudAssistant operation and then the [RebootInstance](~~25502~~) operation, the Cloud Assistant client is installed and takes effect.
+      * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request InstallCloudAssistantRequest
       * @return InstallCloudAssistantResponse
@@ -19899,16 +20083,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Usage notes
-      * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add instances to or remove instances from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add ENIs to or remove ENIs from a security group.
-      * When you call this operation, take note of the following items:
+      * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add an instance to or remove an instance from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add an ENI to or remove an ENI from a security group.
+      * Take note of the following items:
       * *   Before you add an instance to a security group, the instance must be in the **Stopped** or **Running** state.
-      * *   Each instance can be added to up to five security groups by default.
+      * *   An instance can be added to up to five security groups.
       * *
       * You can increase this number to 16 by [submitting a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
       * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
       * *   The security group and the instance must reside in the same region.
-      * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must be in the same VPC.
-      * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
+      * *   The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must be in the same VPC.
+      * *   An instance and an ENI cannot be added to a security group at the same time. You cannot configure the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
       *
       * @param request JoinSecurityGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -19968,16 +20152,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * ## Usage notes
-      * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add instances to or remove instances from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add ENIs to or remove ENIs from a security group.
-      * When you call this operation, take note of the following items:
+      * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add an instance to or remove an instance from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add an ENI to or remove an ENI from a security group.
+      * Take note of the following items:
       * *   Before you add an instance to a security group, the instance must be in the **Stopped** or **Running** state.
-      * *   Each instance can be added to up to five security groups by default.
+      * *   An instance can be added to up to five security groups.
       * *
       * You can increase this number to 16 by [submitting a ticket](https://workorder-intl.console.aliyun.com/#/ticket/createIndex).
       * *   A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.
       * *   The security group and the instance must reside in the same region.
-      * *   The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must be in the same VPC.
-      * *   An instance and an ENI cannot be added to a security group at the same time. You cannot specify the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
+      * *   The security group and the instance must be of the same network type. If the network type is virtual private cloud (VPC), the security group and the instance must be in the same VPC.
+      * *   An instance and an ENI cannot be added to a security group at the same time. You cannot configure the `InstanceId` and `NetworkInterfaceId` parameters at the same time.
       *
       * @param request JoinSecurityGroupRequest
       * @return JoinSecurityGroupResponse
@@ -20148,7 +20332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
       * *   `TagFilter.N`
@@ -20225,7 +20409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
       * *   `TagFilter.N`
@@ -20646,7 +20830,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Modifies the parameters and content of a Cloud Assistant command.
+      * You can modify a command when it is run. After the command is modified, the new command content applies to subsequent executions.
+      * You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).
       *
       * @param request ModifyCommandRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -20721,7 +20906,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Modifies the parameters and content of a Cloud Assistant command.
+      * You can modify a command when it is run. After the command is modified, the new command content applies to subsequent executions.
+      * You cannot modify the command type. For example, you cannot change a shell command (RunShellScript) to a batch command (RunBatScript).
       *
       * @param request ModifyCommandRequest
       * @return ModifyCommandResponse
@@ -20826,7 +21012,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The pay-as-you-go dedicated host is automatically released at the specified time. Before you release a dedicated host, make sure that it is no longer in use and you have backed up all the necessary application data.
+      * ## Usage notes
+      * A pay-as-you-go dedicated host can be automatically released at the specified time. Before you release a pay-as-you-go dedicated host, make sure that the host is no longer required and all necessary application data is backed up.
       *
       * @param request ModifyDedicatedHostAutoReleaseTimeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -20881,7 +21068,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The pay-as-you-go dedicated host is automatically released at the specified time. Before you release a dedicated host, make sure that it is no longer in use and you have backed up all the necessary application data.
+      * ## Usage notes
+      * A pay-as-you-go dedicated host can be automatically released at the specified time. Before you release a pay-as-you-go dedicated host, make sure that the host is no longer required and all necessary application data is backed up.
       *
       * @param request ModifyDedicatedHostAutoReleaseTimeRequest
       * @return ModifyDedicatedHostAutoReleaseTimeResponse
@@ -21110,8 +21298,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the demand information about instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
-      * > This operation is in internal preview and has not been officially released. We recommend that you do not use this operation.
+      * You can call this operation to modify the demand information of instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
+      * > This operation is in invitational preview and is not publicly available.
       *
       * @param request ModifyDemandRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -21206,8 +21394,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to modify the demand information about instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
-      * > This operation is in internal preview and has not been officially released. We recommend that you do not use this operation.
+      * You can call this operation to modify the demand information of instance types. Alibaba Cloud provides the requested resources based on your demand. You can file demands only for I/O optimized instance types and instances of the virtual private cloud (VPC) type. Parameters except `DemandName` and `DemandDescription` can be modified only for demands that are in the Rejected state.
+      * > This operation is in invitational preview and is not publicly available.
       *
       * @param request ModifyDemandRequest
       * @return ModifyDemandResponse
@@ -21422,7 +21610,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
       * *   The instance cannot be in the Stopped state due to overdue payments.
       * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-      * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are nonrefundable.
+      * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
       * *   You cannot change the billing method again within 5 minutes of a successful change.
       *
       * @param request ModifyDiskChargeTypeRequest
@@ -21496,7 +21684,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * *   You can change the billing method from pay-as-you-go to subscription for data disks that are attached to a subscription or pay-as-you-go instance.
       * *   The instance cannot be in the Stopped state due to overdue payments.
       * *   You can change the billing method of each disk up to three times. Up to three refunds can be made for the price differences for each disk.
-      * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are nonrefundable.
+      * *   The price difference is refunded to the payment account that you used. Vouchers that have been redeemed are not refundable.
       * *   You cannot change the billing method again within 5 minutes of a successful change.
       *
       * @param request ModifyDiskChargeTypeRequest
@@ -21569,15 +21757,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * ## Usage notes
+      * Take note of the following items:
       * *   To modify the performance level of an ESSD, take note of the following items:
       *     *   For a subscription ESSD, you can only upgrade its performance level.
-      *     *   For a pay-as-you-go ESSD, You can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
-      *     *   The ESSD must be in the **In Use** or **Unattached** (Available) state.
-      *     *   If the ESSD is attached to an Elastic Compute Service (ECS) instance, the instance must be in the **Running** or **Stopped** state. The instance cannot be in the Expired state or stopped due to an overdue payment.
+      *     *   For a pay-as-you-go ESSD, you can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
+      *     *   The ESSD must be in the **In Use** (In_Use) or **Unattached** (Available) state.
+      *     *   If the ESSD is attached to an Elastic Compute Service (ECS) instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.
       *     *   If you cannot upgrade the performance level of the ESSD due to the capacity limit, resize the ESSD by calling the [ResizeDisk](~~25522~~) operation and then try again. For more information, see [ESSDs](~~122389~~).
-      * *   For information about the limits on changing the category of a cloud disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
-      * The new cloud disk category or performance level takes effect immediately after this operation is performed. Alibaba Cloud charges you based on the new disk category and performance level.
+      * *   For information about the limits on changing the category of a disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
+      * The new disk category or performance level takes effect immediately after this operation is performed. Alibaba Cloud calculates the bill based on the new disk category and performance level.
       *
       * @param request ModifyDiskSpecRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -21644,15 +21833,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
+      * ## Usage notes
+      * Take note of the following items:
       * *   To modify the performance level of an ESSD, take note of the following items:
       *     *   For a subscription ESSD, you can only upgrade its performance level.
-      *     *   For a pay-as-you-go ESSD, You can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
-      *     *   The ESSD must be in the **In Use** or **Unattached** (Available) state.
-      *     *   If the ESSD is attached to an Elastic Compute Service (ECS) instance, the instance must be in the **Running** or **Stopped** state. The instance cannot be in the Expired state or stopped due to an overdue payment.
+      *     *   For a pay-as-you-go ESSD, you can upgrade or downgrade its performance level. However, you cannot downgrade the performance level to PL0.
+      *     *   The ESSD must be in the **In Use** (In_Use) or **Unattached** (Available) state.
+      *     *   If the ESSD is attached to an Elastic Compute Service (ECS) instance, the instance must be in the **Running** (Running) or **Stopped** (Stopped) state. The instance cannot be in the Expired state or stopped due to an overdue payment.
       *     *   If you cannot upgrade the performance level of the ESSD due to the capacity limit, resize the ESSD by calling the [ResizeDisk](~~25522~~) operation and then try again. For more information, see [ESSDs](~~122389~~).
-      * *   For information about the limits on changing the category of a cloud disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
-      * The new cloud disk category or performance level takes effect immediately after this operation is performed. Alibaba Cloud charges you based on the new disk category and performance level.
+      * *   For information about the limits on changing the category of a disk, see the "Limits" section of the [Change the category of a disk](~~161980~~) topic.
+      * The new disk category or performance level takes effect immediately after this operation is performed. Alibaba Cloud calculates the bill based on the new disk category and performance level.
       *
       * @param request ModifyDiskSpecRequest
       * @return ModifyDiskSpecResponse
@@ -22158,7 +22348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Take note of the following items:
+      * When you call this operation, take note of the following items:
       * *   You can share only your own custom images with other Alibaba Cloud accounts.
       * *   You can share a custom image with up to 10 Alibaba Cloud accounts at a time. You can specify up to 10 Alibaba Cloud account IDs by using the AddAccount.N or RemoveAccount.N parameter. If you specify more than 10 account IDs, the parameter will be ignored.
       * *   You can share a custom image with up to 50 Alibaba Cloud accounts.
@@ -22235,7 +22425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Take note of the following items:
+      * When you call this operation, take note of the following items:
       * *   You can share only your own custom images with other Alibaba Cloud accounts.
       * *   You can share a custom image with up to 10 Alibaba Cloud accounts at a time. You can specify up to 10 Alibaba Cloud account IDs by using the AddAccount.N or RemoveAccount.N parameter. If you specify more than 10 account IDs, the parameter will be ignored.
       * *   You can share a custom image with up to 50 Alibaba Cloud accounts.
@@ -22336,23 +22526,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, this indicates that the instance is locked for security reasons and all operations on it are prohibited.
-      * When you call this operation, take note of the following items:
-      * *   Modify the hostname (`HostName`): After you modify the hostname, you need to restart the instance for the changes to take effect. You can do this by following the instructions in [Restart an instance](~~25440~~) or by calling the [RebootInstance](~~25502~~) operation. The new hostname does not take effect if you restart the instance from within the operating system.
+      * If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.
+      * Take note of the following items:
+      * *   Modify the hostname (`HostName`): After you modify the hostname, you need to restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. For information about how to restart an instance in the ECS console, see [Restart instances](~~25440~~). The new hostname does not take effect if you restart the instance from within the operating system.
       * *   Reset the password (`Password`):
-      *     *   The instance can not be in the **Starting** state.``
-      *     *   After you reset the password, you need to restart the instance for the changes to take effect., You can do this by following the instructions in [Restart an instance](~~25440~~) or by calling the [RebootInstance](~~25502~~) operation. The new password does not take effect if you restart the instance from within the operating system.
+      *     *   The instance must not be in the **Starting** state.``
+      *     *   After you reset the password, you need to restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. For information about how to restart an instance in the ECS console, see [Restart instances](~~25440~~). The new password does not take effect if you restart the instance from within the operating system.
       * *   Modify user data (`UserData`):
       *     *   The instance must be in the **Stopped** state.``
-      *     *   The instance must meet the required conditions on user data. For more information, see [Prepare user data](~~49121~~).
+      *     *   The instance must support user data. For more information, see [Prepare user data](~~49121~~).
       * *   Change the security group (`SecurityGroupIds.N`):
-      *     *   You can move an instance to a security group of a different type. If you want to switch an instance to a security group of a different type, we recommend that you familiarize yourself with the differences between the rule configurations of the two security group types to avoid impacts on the instance network.
-      *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of the `SecurityGroupIds.N` parameter.
+      *     *   You can move an instance to a security group of a different type. If you want to move an instance to a security group of a different type, you must be familiar with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.
+      *     *   Security groups of instances that reside in the classic network cannot be changed. For more information, see the description of `SecurityGroupIds.N`.
       * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
       *     *   The instance must be in the `Stopped` state.
-      *     *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI. The number varies with the instance type.
+      *     *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI. The maximum number of queues vary with the instance type.
       *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation. The results are returned in the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` parameters.
-      *     *   If you set this parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation. The result is returned in the `PrimaryEniQueueNumber` parameter.
+      *     *   If you set this parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` parameter.
       *
       * @param request ModifyInstanceAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -22447,23 +22637,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, this indicates that the instance is locked for security reasons and all operations on it are prohibited.
-      * When you call this operation, take note of the following items:
-      * *   Modify the hostname (`HostName`): After you modify the hostname, you need to restart the instance for the changes to take effect. You can do this by following the instructions in [Restart an instance](~~25440~~) or by calling the [RebootInstance](~~25502~~) operation. The new hostname does not take effect if you restart the instance from within the operating system.
+      * If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance.
+      * Take note of the following items:
+      * *   Modify the hostname (`HostName`): After you modify the hostname, you need to restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. For information about how to restart an instance in the ECS console, see [Restart instances](~~25440~~). The new hostname does not take effect if you restart the instance from within the operating system.
       * *   Reset the password (`Password`):
-      *     *   The instance can not be in the **Starting** state.``
-      *     *   After you reset the password, you need to restart the instance for the changes to take effect., You can do this by following the instructions in [Restart an instance](~~25440~~) or by calling the [RebootInstance](~~25502~~) operation. The new password does not take effect if you restart the instance from within the operating system.
+      *     *   The instance must not be in the **Starting** state.``
+      *     *   After you reset the password, you need to restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. For information about how to restart an instance in the ECS console, see [Restart instances](~~25440~~). The new password does not take effect if you restart the instance from within the operating system.
       * *   Modify user data (`UserData`):
       *     *   The instance must be in the **Stopped** state.``
-      *     *   The instance must meet the required conditions on user data. For more information, see [Prepare user data](~~49121~~).
+      *     *   The instance must support user data. For more information, see [Prepare user data](~~49121~~).
       * *   Change the security group (`SecurityGroupIds.N`):
-      *     *   You can move an instance to a security group of a different type. If you want to switch an instance to a security group of a different type, we recommend that you familiarize yourself with the differences between the rule configurations of the two security group types to avoid impacts on the instance network.
-      *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of the `SecurityGroupIds.N` parameter.
+      *     *   You can move an instance to a security group of a different type. If you want to move an instance to a security group of a different type, you must be familiar with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.
+      *     *   Security groups of instances that reside in the classic network cannot be changed. For more information, see the description of `SecurityGroupIds.N`.
       * *   Modify the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`):
       *     *   The instance must be in the `Stopped` state.
-      *     *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI. The number varies with the instance type.
+      *     *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI. The maximum number of queues vary with the instance type.
       *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To obtain the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation. The results are returned in the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` parameters.
-      *     *   If you set this parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation. The result is returned in the `PrimaryEniQueueNumber` parameter.
+      *     *   If you set this parameter to -1, the value is reset to the default value for the instance type. To obtain the default number of queues supported by the primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `PrimaryEniQueueNumber` parameter.
       *
       * @param request ModifyInstanceAttributeRequest
       * @return ModifyInstanceAttributeResponse
@@ -22976,7 +23166,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the instance for which you want to modify bandwidth configurations.
+      * Take note of the following items:
+      * *   From November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to the throttling policy for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
+      *     *   Within a single region, the sum of actual peak bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
+      *     *   Within a single region, the sum of actual peak bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
+      * *   If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, a public IP address is automatically assigned to the instance.
+      * *   If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, no public IP address is assigned to the instance. You must call the [AllocatePublicIpAddress](~~25544~~) operation to assign a public IP address to the instance.
+      * *   An instance in the classic network must be in the Stopped state before you can upgrade its outbound public bandwidth (InternetMaxBandwidthOut) from 0 Mbit/s.
+      * *   After the bandwidth is upgraded, AutoPay is set to true by default and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.
+      * *   The price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed cannot be returned.
       *
       * @param request ModifyInstanceNetworkSpecRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -23059,7 +23257,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the instance for which you want to modify bandwidth configurations.
+      * Take note of the following items:
+      * *   From November 27, 2020, the maximum bandwidth value available for you to create ECS instances or to change ECS instance configurations is subject to the throttling policy for your account. To increase the maximum bandwidth value, submit a ticket. The following throttling policies apply:
+      *     *   Within a single region, the sum of actual peak bandwidths of all ECS instances that use the pay-by-traffic billing method for network usage cannot exceed 5 Gbit/s.
+      *     *   Within a single region, the sum of actual peak bandwidths of all ECS instances that use the pay-by-bandwidth billing method for network usage cannot exceed 50 Gbit/s.
+      * *   If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a subscription (PrePaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, a public IP address is automatically assigned to the instance.
+      * *   If you upgrade the outbound public bandwidth (InternetMaxBandwidthOut) of a pay-as-you-go (PostPaid) instance from 0 Mbit/s when you modify the bandwidth configurations of the instance, no public IP address is assigned to the instance. You must call the [AllocatePublicIpAddress](~~25544~~) operation to assign a public IP address to the instance.
+      * *   An instance in the classic network must be in the Stopped state before you can upgrade its outbound public bandwidth (InternetMaxBandwidthOut) from 0 Mbit/s.
+      * *   After the bandwidth is upgraded, AutoPay is set to true by default and the payment is automatically made. Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false. In this case, when you call the ModifyInstanceNetworkSpec operation, an unpaid order is generated. Then, you can log on to the ECS console to pay for the order.
+      * *   The price difference is refunded to the payment account that you used. Vouchers or coupons that have been redeemed cannot be returned.
       *
       * @param request ModifyInstanceNetworkSpecRequest
       * @return ModifyInstanceNetworkSpecResponse
@@ -23259,30 +23465,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * The instance must be in the **Stopped** state.``
-      * *   When you call this operation to modify the private IP address or vSwitch of an instance, take note of the following items:
-      *     *   If the instance is newly created, you must restart the instance before you call this operation.
-      *     *   After you modify the private IP address or vSwitch of an instance, you must restart the instance before you call this operation again.
-      * *   When you call this operation to modify the VPC of an instance, take note of the following items:
+      * *   When you call this operation to change the private IP address or vSwitch of an instance, take note of the following items:
+      *     *   If the instance is a new instance, you must restart the instance before you call this operation.
+      *     *   After the private IP address or vSwitch of the instance is changed, you must restart the instance before you call this operation again.
+      * *   When you call this operation to change the VPC of an instance, take note of the following items:
       *     *   **Instance:**
       *         *   The instance cannot be associated with Server Load Balancer (SLB) instances.
       *         *   The instance cannot be in the Locked, To Be Released, Expired, Expired and Being Recycled, or Overdue and Being Recycled state. For more information, see [ECS instance lifecycle](~~25380~~).
-      *         *   The instance cannot be in-use or used in conjunction with other cloud services. For example, the instance cannot be in the process of being migrated or having its VPC changed, or the databases deployed on the instance cannot be managed by Data Transmission Service (DTS).
+      *         *   The instance cannot be used in other Alibaba Cloud services. For example, the instance cannot be in the process of being migrated or having its VPC changed, or the databases deployed on the instance cannot be managed by Data Transmission Service (DTS).
       *     *   **Network:**
-      *         *   The cut-through mode or multi-elastic IP address (EIP) to elastic network interface (ENI) mode must be disabled.
+      *         *   The cut-through mode or the multi-EIP-to-ENI mode cannot be enabled for the instance.
       *         *   The instance cannot be associated with a high-availability virtual IP address (HAVIP).
       *         *   The vSwitch of the instance cannot be associated with a custom route table.
-      *         *   The instance cannot have Global Accelerator (GA) activated.
-      *         *   The instance cannot have secondary ENIs bound.
-      *         *   The instance cannot have IPv6 addresses assigned.
+      *         *   Global Accelerator (GA) cannot be activated for the instance.
+      *         *   The instance cannot have secondary ENIs.
+      *         *   The instance cannot be assigned an IPv6 address.
       *         *   The primary ENI of the instance cannot be associated with multiple IP addresses.
-      *         *   The vSwitch specified by the VSwitchId parameter must belong to the new VPC.
-      *         *   The new and original vSwitches must reside within the same zone.
-      *         *   If the private IP address of the primary ENI is specified, the private IP address must be available and within the CIDR block of the vSwitch. If the private IP address is not specified, the system randomly assigns one. The new vSwitch must have a sufficient amount of available IP addresses in the CIDR block.
-      *         *   If advanced features are enabled in the new VPC, take note of the instance families that do not support advanced VPC features. For more information, see [Instance families that do not support advanced VPC features](~~163466~~).
+      *         *   The new vSwitch that you specify must belong to the new VPC.
+      *         *   The original and new vSwitches must reside in the same zone.
+      *         *   If you assign a private IP address to the primary ENI of the instance, the private IP address must an idle IP address within the CIDR block of the new vSwitch. If you do not assign a private IP address to the primary ENI of the instance, a private IP address is randomly assigned to the ENI. Sufficient IP addresses must be available in the CIDR block of the new vSwitch.
+      *         *   If advanced features are enabled for the new VPC, take note of the instance families that do not support advanced VPC features. For more information, see [Instance families that do not support advanced VPC features](~~163466~~).
       *         *   The Alibaba Cloud account that owns the new VPC cannot share the VPC with other accounts.
       *     *   **Security group (SecurityGroupId.N):**
       *         *   All security groups must be of the same type.
-      *         *   The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~).
+      *         *   The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).
       *         *   The security groups that you specify must belong to the new VPC.
       *         *   You can switch the instance to a security group of a different type. If you want to switch an instance to a security group of a different type, we recommend that you familiarize yourself with the differences between the rule configurations of the two security group types to avoid impacts on the instance network. For more information, see [Overview](~~25387~~).
       *
@@ -23348,30 +23554,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * The instance must be in the **Stopped** state.``
-      * *   When you call this operation to modify the private IP address or vSwitch of an instance, take note of the following items:
-      *     *   If the instance is newly created, you must restart the instance before you call this operation.
-      *     *   After you modify the private IP address or vSwitch of an instance, you must restart the instance before you call this operation again.
-      * *   When you call this operation to modify the VPC of an instance, take note of the following items:
+      * *   When you call this operation to change the private IP address or vSwitch of an instance, take note of the following items:
+      *     *   If the instance is a new instance, you must restart the instance before you call this operation.
+      *     *   After the private IP address or vSwitch of the instance is changed, you must restart the instance before you call this operation again.
+      * *   When you call this operation to change the VPC of an instance, take note of the following items:
       *     *   **Instance:**
       *         *   The instance cannot be associated with Server Load Balancer (SLB) instances.
       *         *   The instance cannot be in the Locked, To Be Released, Expired, Expired and Being Recycled, or Overdue and Being Recycled state. For more information, see [ECS instance lifecycle](~~25380~~).
-      *         *   The instance cannot be in-use or used in conjunction with other cloud services. For example, the instance cannot be in the process of being migrated or having its VPC changed, or the databases deployed on the instance cannot be managed by Data Transmission Service (DTS).
+      *         *   The instance cannot be used in other Alibaba Cloud services. For example, the instance cannot be in the process of being migrated or having its VPC changed, or the databases deployed on the instance cannot be managed by Data Transmission Service (DTS).
       *     *   **Network:**
-      *         *   The cut-through mode or multi-elastic IP address (EIP) to elastic network interface (ENI) mode must be disabled.
+      *         *   The cut-through mode or the multi-EIP-to-ENI mode cannot be enabled for the instance.
       *         *   The instance cannot be associated with a high-availability virtual IP address (HAVIP).
       *         *   The vSwitch of the instance cannot be associated with a custom route table.
-      *         *   The instance cannot have Global Accelerator (GA) activated.
-      *         *   The instance cannot have secondary ENIs bound.
-      *         *   The instance cannot have IPv6 addresses assigned.
+      *         *   Global Accelerator (GA) cannot be activated for the instance.
+      *         *   The instance cannot have secondary ENIs.
+      *         *   The instance cannot be assigned an IPv6 address.
       *         *   The primary ENI of the instance cannot be associated with multiple IP addresses.
-      *         *   The vSwitch specified by the VSwitchId parameter must belong to the new VPC.
-      *         *   The new and original vSwitches must reside within the same zone.
-      *         *   If the private IP address of the primary ENI is specified, the private IP address must be available and within the CIDR block of the vSwitch. If the private IP address is not specified, the system randomly assigns one. The new vSwitch must have a sufficient amount of available IP addresses in the CIDR block.
-      *         *   If advanced features are enabled in the new VPC, take note of the instance families that do not support advanced VPC features. For more information, see [Instance families that do not support advanced VPC features](~~163466~~).
+      *         *   The new vSwitch that you specify must belong to the new VPC.
+      *         *   The original and new vSwitches must reside in the same zone.
+      *         *   If you assign a private IP address to the primary ENI of the instance, the private IP address must an idle IP address within the CIDR block of the new vSwitch. If you do not assign a private IP address to the primary ENI of the instance, a private IP address is randomly assigned to the ENI. Sufficient IP addresses must be available in the CIDR block of the new vSwitch.
+      *         *   If advanced features are enabled for the new VPC, take note of the instance families that do not support advanced VPC features. For more information, see [Instance families that do not support advanced VPC features](~~163466~~).
       *         *   The Alibaba Cloud account that owns the new VPC cannot share the VPC with other accounts.
       *     *   **Security group (SecurityGroupId.N):**
       *         *   All security groups must be of the same type.
-      *         *   The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~).
+      *         *   The valid values of N depend on the maximum number of security groups to which an instance can belong. For more information, see [Limits](~~25412~~).
       *         *   The security groups that you specify must belong to the new VPC.
       *         *   You can switch the instance to a security group of a different type. If you want to switch an instance to a security group of a different type, we recommend that you familiarize yourself with the differences between the rule configurations of the two security group types to avoid impacts on the instance network. For more information, see [Overview](~~25387~~).
       *
@@ -23383,6 +23589,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyInstanceVpcAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=ModifyLaunchTemplateDefaultVersion\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request ModifyLaunchTemplateDefaultVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyLaunchTemplateDefaultVersionResponse
+     */
     public ModifyLaunchTemplateDefaultVersionResponse modifyLaunchTemplateDefaultVersionWithOptions(ModifyLaunchTemplateDefaultVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -23435,13 +23649,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyLaunchTemplateDefaultVersionResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ecs\\&api=ModifyLaunchTemplateDefaultVersion\\&type=RPC\\&version=2014-05-26)
+      *
+      * @param request ModifyLaunchTemplateDefaultVersionRequest
+      * @return ModifyLaunchTemplateDefaultVersionResponse
+     */
     public ModifyLaunchTemplateDefaultVersionResponse modifyLaunchTemplateDefaultVersion(ModifyLaunchTemplateDefaultVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyLaunchTemplateDefaultVersionWithOptions(request, runtime);
     }
 
     /**
-      * You can call the ModifyManagedInstance operation to change only the name of a managed instance.
+      * The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request ModifyManagedInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -23500,7 +23722,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the ModifyManagedInstance operation to change only the name of a managed instance.
+      * The region ID. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request ModifyManagedInstanceRequest
       * @return ModifyManagedInstanceResponse
@@ -24028,12 +24251,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * When you call this operation, take note of the following items:
-      * *   For information about limits on reserved instances, see the "Limits" section in [Overview](~~100370~~).
-      * *   Before you call this operation to split a reserved instance, make sure that you are familiar with the limits on splitting a reserved instance. For more information, see [Split a reserved instance](~~100375~~).
-      * *   Before you call this operation to merge reserved instances, make sure that you are familiar with the limits on merging reserved instances. For more information, see [Merge reserved instances](~~132229~~).
-      * *   Before you call this operation to modify a reserved instance, make sure that you are familiar with the limits and methods of modifying a reserved instance. For more information, see [Modify a reserved instance](~~132230~~).
+      * The region ID of the reserved instance.
+      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
       *
       * @param request ModifyReservedInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -24088,12 +24307,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * When you call this operation, take note of the following items:
-      * *   For information about limits on reserved instances, see the "Limits" section in [Overview](~~100370~~).
-      * *   Before you call this operation to split a reserved instance, make sure that you are familiar with the limits on splitting a reserved instance. For more information, see [Split a reserved instance](~~100375~~).
-      * *   Before you call this operation to merge reserved instances, make sure that you are familiar with the limits on merging reserved instances. For more information, see [Merge reserved instances](~~132229~~).
-      * *   Before you call this operation to modify a reserved instance, make sure that you are familiar with the limits and methods of modifying a reserved instance. For more information, see [Modify a reserved instance](~~132230~~).
+      * The region ID of the reserved instance.
+      * You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
       *
       * @param request ModifyReservedInstancesRequest
       * @return ModifyReservedInstancesResponse
@@ -24329,12 +24544,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In the security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-      * Take note of the following items:
-      * *   An authorization object in a security group rule can be one of the following types: IP address or CIDR block, security group, or prefix list. The type of an existing security group authorization object cannot be modified. If the original authorization object is an IP address, you can change it to another IP address or a CIDR block, but not to a security group or prefix list.
-      * *   The IP address family of the authorization object cannot be changed. For example, if the original authorization object is an IPv4 CIDR block, you cannot change it to an IPv6 CIDR block. If the original authorization object is an IPv4 prefix list, you cannot change it to an IPv6 prefix list.
-      * *   The new security group rule after modification cannot be the same as other existing rules.
-      * *   You cannot delete the value of a non-empty parameter in a security group rule. We recommend that you create a rule that has the same parameter configurations as the original rule, except that the specified parameters are left empty, and then delete the original rule.
+      * In security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
+      * When you modify the rules of a security group by specifying the rule IDs, take note of the following limits:
+      * *   A security group authorization object can be one of the following types: IP address or CIDR block, security group, and prefix list. The type of an existing security group authorization object cannot be modified. If the original authorization object is an IP address, you can change the authorization object to a different IP address or CIDR block, but you cannot change the authorization object to a security group or a prefix list.
+      * *   The IP address family of the authorization object cannot be changed. For example, if the original authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If the original authorization object is a prefix list of an IPv4 address family, you cannot change the authorization object to a prefix list of an IPv6 address family.
+      * *   The modified security group rule cannot be the same as other existing rules.
+      * *   You cannot delete the value of a non-empty parameter. We recommend that you create a new rule and delete the original rule.
       *
       * @param request ModifySecurityGroupEgressRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -24457,12 +24672,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In the security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
-      * Take note of the following items:
-      * *   An authorization object in a security group rule can be one of the following types: IP address or CIDR block, security group, or prefix list. The type of an existing security group authorization object cannot be modified. If the original authorization object is an IP address, you can change it to another IP address or a CIDR block, but not to a security group or prefix list.
-      * *   The IP address family of the authorization object cannot be changed. For example, if the original authorization object is an IPv4 CIDR block, you cannot change it to an IPv6 CIDR block. If the original authorization object is an IPv4 prefix list, you cannot change it to an IPv6 prefix list.
-      * *   The new security group rule after modification cannot be the same as other existing rules.
-      * *   You cannot delete the value of a non-empty parameter in a security group rule. We recommend that you create a rule that has the same parameter configurations as the original rule, except that the specified parameters are left empty, and then delete the original rule.
+      * In security group-related API documents, inbound traffic refers to the traffic that is sent by the source device and received at the destination device.
+      * When you modify the rules of a security group by specifying the rule IDs, take note of the following limits:
+      * *   A security group authorization object can be one of the following types: IP address or CIDR block, security group, and prefix list. The type of an existing security group authorization object cannot be modified. If the original authorization object is an IP address, you can change the authorization object to a different IP address or CIDR block, but you cannot change the authorization object to a security group or a prefix list.
+      * *   The IP address family of the authorization object cannot be changed. For example, if the original authorization object is an IPv4 CIDR block, you cannot change the authorization object to an IPv6 CIDR block. If the original authorization object is a prefix list of an IPv4 address family, you cannot change the authorization object to a prefix list of an IPv6 address family.
+      * *   The modified security group rule cannot be the same as other existing rules.
+      * *   You cannot delete the value of a non-empty parameter. We recommend that you create a new rule and delete the original rule.
       *
       * @param request ModifySecurityGroupEgressRuleRequest
       * @return ModifySecurityGroupEgressRuleResponse
@@ -25437,7 +25652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you are familiar with the billing and pricing plans of SCUs. For more information, see [Storage capacity units](~~137897~~).
+      * Before you call this operation, make sure that you are familiar with the billing and pricing of SCUs. For more information, see [Storage capacity units](~~137897~~).
       *
       * @param request PurchaseStorageCapacityUnitRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -25524,7 +25739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you are familiar with the billing and pricing plans of SCUs. For more information, see [Storage capacity units](~~137897~~).
+      * Before you call this operation, make sure that you are familiar with the billing and pricing of SCUs. For more information, see [Storage capacity units](~~137897~~).
       *
       * @param request PurchaseStorageCapacityUnitRequest
       * @return PurchaseStorageCapacityUnitResponse
@@ -25765,10 +25980,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The ECS instances are in the **Running** state.``
-      * *   You can use the `BatchOptimization` parameter to enable the batch operation mode and restart multiple instances at a time.
-      * *   Instances can be forcibly restarted by calling the `ForceReboot` operation. A forced restart is equivalent to a power-off restart for a traditional server. If data in the instance operating system is not written to block-storage devices when the instance is forcibly restarted, the data is lost.
-      * *   If a response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query instance information, the instance is locked for security reasons and all operations are prohibited on it.
+      * *   The ECS instances must be in the `Running` state.****
+      * *   You can use the `BatchOptimization` parameter to specify the batch operation mode and restart multiple instances at a time.
+      * *   Instances can be forcefully restarted. A forced restart (`ForceReboot`) is equivalent to powering off a traditional server and then restarting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data may be lost.
+      * *   If OperationLocks in the response of the DescribeInstances operation contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and all operations are prohibited on it.
       *
       * @param request RebootInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -25831,10 +26046,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The ECS instances are in the **Running** state.``
-      * *   You can use the `BatchOptimization` parameter to enable the batch operation mode and restart multiple instances at a time.
-      * *   Instances can be forcibly restarted by calling the `ForceReboot` operation. A forced restart is equivalent to a power-off restart for a traditional server. If data in the instance operating system is not written to block-storage devices when the instance is forcibly restarted, the data is lost.
-      * *   If a response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query instance information, the instance is locked for security reasons and all operations are prohibited on it.
+      * *   The ECS instances must be in the `Running` state.****
+      * *   You can use the `BatchOptimization` parameter to specify the batch operation mode and restart multiple instances at a time.
+      * *   Instances can be forcefully restarted. A forced restart (`ForceReboot`) is equivalent to powering off a traditional server and then restarting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data may be lost.
+      * *   If OperationLocks in the response of the DescribeInstances operation contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and all operations are prohibited on it.
       *
       * @param request RebootInstancesRequest
       * @return RebootInstancesResponse
@@ -25979,13 +26194,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the Running (`Running`) state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before redeployment.
-      * When you call this operation, take note of the following items:
-      * * The instance must be in the Running (Running) or Stopped (Stopped) state. After the instance is redeployed, the following changes occur to the status of the instance:
-      *   * If the instance is in the Running (`Running`) state, the instance enters the Stopping (`Stopping`) state.
-      *   * If the instance is in the Stopped (`Stopped`) state, the instance enters the Starting (`Starting`) state.
+      * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the `Running` state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before redeployment.
+      * Take note of the following items:
+      * * The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:
+      *   * If the instance is in the `Running` state before redeployment, the instance enters the `Stopping` state.
+      *   * If the instance is in the `Stopped` state before redeployment, the instance enters the `Starting` state.
       * * If an instance is deployed on a dedicated host, you cannot redeploy the instance.
-      * * If the `OperationLocks` parameter in the DescribeInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
+      * * If the `OperationLocks` parameter in the response of the DescribeInstances operation contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
       * * If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.
       * * If the damaged local disk is isolated but the **SystemMaintenance.RebootAndReInitErrorDisk** event is not sent when you handle a local disk-related system event for an instance, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see [System events for ECS instances equipped with local disks](~~107693~~).
       * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides possible event status.
@@ -26050,13 +26265,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the Running (`Running`) state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before redeployment.
-      * When you call this operation, take note of the following items:
-      * * The instance must be in the Running (Running) or Stopped (Stopped) state. After the instance is redeployed, the following changes occur to the status of the instance:
-      *   * If the instance is in the Running (`Running`) state, the instance enters the Stopping (`Stopping`) state.
-      *   * If the instance is in the Stopped (`Stopped`) state, the instance enters the Starting (`Starting`) state.
+      * RedeployInstance is an asynchronous operation. This operation migrates data before it restarts the instance. After the instance is redeployed, the instance enters the `Running` state. If the instance fails to be redeployed, the instance returns to the original physical server and the state before redeployment.
+      * Take note of the following items:
+      * * The instance must be in the Running or Stopped state. After the instance is redeployed, the following changes occur to the status of the instance:
+      *   * If the instance is in the `Running` state before redeployment, the instance enters the `Stopping` state.
+      *   * If the instance is in the `Stopped` state before redeployment, the instance enters the `Starting` state.
       * * If an instance is deployed on a dedicated host, you cannot redeploy the instance.
-      * * If the `OperationLocks` parameter in the DescribeInstances response contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
+      * * If the `OperationLocks` parameter in the response of the DescribeInstances operation contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and cannot be redeployed.
       * * If you receive notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for an instance, you cannot redeploy the instance.
       * * If the damaged local disk is isolated but the **SystemMaintenance.RebootAndReInitErrorDisk** event is not sent when you handle a local disk-related system event for an instance, you can still call the RedeployInstance operation to redeploy the instance. The SystemMaintenance.RebootAndReInitErrorDisk event indicates that the instance is restarted and the damaged disks are reinitialized due to system maintenance. For more information, see [System events for ECS instances equipped with local disks](~~107693~~).
       * The following table describes the system events that you can handle by calling the RedeployInstance operation. The table also provides possible event status.
@@ -26147,7 +26362,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you release a pay-as-you-go dedicated host, make sure that no Elastic Compute Service (ECS) instances are deployed on the dedicated host.
+      * ## Usage notes
+      * Before you release a pay-as-you-go dedicated host, make sure that no ECS instances are deployed on the dedicated host.
       *
       * @param request ReleaseDedicatedHostRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -26198,7 +26414,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you release a pay-as-you-go dedicated host, make sure that no Elastic Compute Service (ECS) instances are deployed on the dedicated host.
+      * ## Usage notes
+      * Before you release a pay-as-you-go dedicated host, make sure that no ECS instances are deployed on the dedicated host.
       *
       * @param request ReleaseDedicatedHostRequest
       * @return ReleaseDedicatedHostResponse
@@ -26439,7 +26656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Valid vouchers can be applied when you renew the subscription plan dedicated hosts. In order to use vouchers, make sure that your account supports the credit card payment method.
+      * The IDs of dedicated hosts. You can specify the IDs of up to 100 subscription dedicated hosts. Specify the dedicated host IDs in a JSON array. Example: `["dh-xxxxxxxxx", "dh-yyyyyyyyy", … "dh-zzzzzzzzz"]`. Separate the IDs with commas (,).
       *
       * @param request RenewDedicatedHostsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -26502,7 +26719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Valid vouchers can be applied when you renew the subscription plan dedicated hosts. In order to use vouchers, make sure that your account supports the credit card payment method.
+      * The IDs of dedicated hosts. You can specify the IDs of up to 100 subscription dedicated hosts. Specify the dedicated host IDs in a JSON array. Example: `["dh-xxxxxxxxx", "dh-yyyyyyyyy", … "dh-zzzzzzzzz"]`. Separate the IDs with commas (,).
       *
       * @param request RenewDedicatedHostsRequest
       * @return RenewDedicatedHostsResponse
@@ -26593,8 +26810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
-      * *   You can call the [DescribeReservedInstances](~~100065~~) operation to query the reserved instances that you purchased.
+      * The IDs of the reserved instances.
       *
       * @param request RenewReservedInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -26665,8 +26881,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   Before you call this operation, make sure that you are familiar with the billing method of reserved instances. For more information, see [Reserved instances](~~100371~~).
-      * *   You can call the [DescribeReservedInstances](~~100065~~) operation to query the reserved instances that you purchased.
+      * The IDs of the reserved instances.
       *
       * @param request RenewReservedInstancesRequest
       * @return RenewReservedInstancesResponse
@@ -27044,12 +27259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation to resize a disk, you must check the partition format of the disk. A master boot record (MBR) disk cannot be resized to a size that is larger than 2 TiB. If an MBR disk is resized to a size that is larger than 2 TiB, data may be lost. To resize an MBR disk to a size that is larger than 2 TiB, we recommend that you create and attach a new data disk. Then, you can partition and format the new data disk to GUID partition table (GPT), and then copy data from the MBR disk to the new GPT data disk. For more information, see [Resize disks offline for Linux and Windows instances](~~44986~~).
-      * *   You can resize the following categories of disks: basic disks (`cloud`), ultra disks (`cloud_efficiency`), standard SSDs (`cloud_ssd`), and enhanced SSDs (ESSDs) (`cloud_essd`).
-      * *   A disk cannot be resized when a snapshot is being created for the disk.
-      * *   The instance to which the disk is attached must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
-      * *   After you resize a disk, the partitions and file systems are not changed. You must allocate the storage space on the disk after the disk is resized.
-      * *   Disks for which the multi-attach feature is enabled can only be resized offline. Before you resize the disks, make sure that instances to which the disks are attached are in the **Stopped** (`Stopped`) state.
+      * The ID of the disk. You can call the [DescribeDisks](~~25514~~) operation to query the ID of a disk.
       *
       * @param request ResizeDiskRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -27108,12 +27318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > Before you call this operation to resize a disk, you must check the partition format of the disk. A master boot record (MBR) disk cannot be resized to a size that is larger than 2 TiB. If an MBR disk is resized to a size that is larger than 2 TiB, data may be lost. To resize an MBR disk to a size that is larger than 2 TiB, we recommend that you create and attach a new data disk. Then, you can partition and format the new data disk to GUID partition table (GPT), and then copy data from the MBR disk to the new GPT data disk. For more information, see [Resize disks offline for Linux and Windows instances](~~44986~~).
-      * *   You can resize the following categories of disks: basic disks (`cloud`), ultra disks (`cloud_efficiency`), standard SSDs (`cloud_ssd`), and enhanced SSDs (ESSDs) (`cloud_essd`).
-      * *   A disk cannot be resized when a snapshot is being created for the disk.
-      * *   The instance to which the disk is attached must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
-      * *   After you resize a disk, the partitions and file systems are not changed. You must allocate the storage space on the disk after the disk is resized.
-      * *   Disks for which the multi-attach feature is enabled can only be resized offline. Before you resize the disks, make sure that instances to which the disks are attached are in the **Stopped** (`Stopped`) state.
+      * The ID of the disk. You can call the [DescribeDisks](~~25514~~) operation to query the ID of a disk.
       *
       * @param request ResizeDiskRequest
       * @return ResizeDiskResponse
@@ -27705,6 +27910,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Arn", request.arn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            query.put("AutoPay", request.autoPay);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoReleaseTime)) {
             query.put("AutoReleaseTime", request.autoReleaseTime);
         }
@@ -28046,13 +28255,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * * The instances to which to send a file must be in the Running (`Running`) state.
-      * * The Cloud Assistant client must be installed on the instances. For information about how to install the Cloud Assistant client, see [InstallCloudAssistant](~~85916~~).
-      * * Only the Cloud Assistant client versions that are later than the following ones support file sending. If the `ClientNeedUpgrade` error code is returned, you must upgrade the Cloud Assistant client to the latest version. For more information, see [Update or disable updates for the Cloud Assistant client](~~134383~~).
-      *     * For Linux instances, the version of the Cloud Assistant client must be later than 1.0.2.569.
-      *     * For Windows instances, the version of the Cloud Assistant client must be later than 1.0.0.149.
-      * * The file to be sent must not exceed 32 KB in size after it is encoded in Base64.
-      * * The file may fail to be sent due to exceptions on the instances, network, or the Cloud Assistance client. Call the [DescribeSendFileResults](~~~~) operation to troubleshoot the issues.
+      * ## Usage notes
+      * *   The instances to which to send a file must be in the Running (`Running`) state.
+      * *   [Cloud Assistant Agent must be installed on the instances.](~~64921~~)
+      * *   Only Cloud Assistant Agent versions that are later than the following ones support file sending. If the `ClientNeedUpgrade` error code is returned, update Cloud Assistant Agent to the latest version.
+      *     *   For Linux instances, the version of Cloud Assistant Agent must be later than 1.0.2.569.
+      *     *   For Windows instances, the version of Cloud Assistant Agent must be later than 1.0.0.149.
+      * *   The file that you want to send must not exceed 32 KB in size after it is encoded in Base64.
+      * *   The file may fail to be sent due to instance exceptions, network exceptions, or exceptions on Cloud Assistant Agent. Call the [DescribeSendFileResults](~~184117~~) operation or see [Check execution results and troubleshoot common issues](~~87029~~) for troubleshooting.
       *
       * @param request SendFileRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -28155,13 +28365,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * * The instances to which to send a file must be in the Running (`Running`) state.
-      * * The Cloud Assistant client must be installed on the instances. For information about how to install the Cloud Assistant client, see [InstallCloudAssistant](~~85916~~).
-      * * Only the Cloud Assistant client versions that are later than the following ones support file sending. If the `ClientNeedUpgrade` error code is returned, you must upgrade the Cloud Assistant client to the latest version. For more information, see [Update or disable updates for the Cloud Assistant client](~~134383~~).
-      *     * For Linux instances, the version of the Cloud Assistant client must be later than 1.0.2.569.
-      *     * For Windows instances, the version of the Cloud Assistant client must be later than 1.0.0.149.
-      * * The file to be sent must not exceed 32 KB in size after it is encoded in Base64.
-      * * The file may fail to be sent due to exceptions on the instances, network, or the Cloud Assistance client. Call the [DescribeSendFileResults](~~~~) operation to troubleshoot the issues.
+      * ## Usage notes
+      * *   The instances to which to send a file must be in the Running (`Running`) state.
+      * *   [Cloud Assistant Agent must be installed on the instances.](~~64921~~)
+      * *   Only Cloud Assistant Agent versions that are later than the following ones support file sending. If the `ClientNeedUpgrade` error code is returned, update Cloud Assistant Agent to the latest version.
+      *     *   For Linux instances, the version of Cloud Assistant Agent must be later than 1.0.2.569.
+      *     *   For Windows instances, the version of Cloud Assistant Agent must be later than 1.0.0.149.
+      * *   The file that you want to send must not exceed 32 KB in size after it is encoded in Base64.
+      * *   The file may fail to be sent due to instance exceptions, network exceptions, or exceptions on Cloud Assistant Agent. Call the [DescribeSendFileResults](~~184117~~) operation or see [Check execution results and troubleshoot common issues](~~87029~~) for troubleshooting.
       *
       * @param request SendFileRequest
       * @return SendFileResponse
@@ -28312,9 +28523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   Before the instances are started, they must first be in the `Stopped` state.****
-      * *   If `OperationLocks` in the response to the query for the instance information contains `"LockReason" : "security"`, the instance is [locked for security reasons](~~25695~~) and cannot be started.
+      * $.parameters[2].schema.example
       *
       * @param request StartInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -28369,9 +28578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   Before the instances are started, they must first be in the `Stopped` state.****
-      * *   If `OperationLocks` in the response to the query for the instance information contains `"LockReason" : "security"`, the instance is [locked for security reasons](~~25695~~) and cannot be started.
+      * $.parameters[2].schema.example
       *
       * @param request StartInstanceRequest
       * @return StartInstanceResponse
@@ -28382,10 +28589,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   The ECS instances that you want to start must be in the **Stopped** state.``
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.
-      * *   You can start multiple ECS instances at the same time and use the `BatchOptimization` parameter to specify the batch operation mode.
+      * Specifies whether to perform a dry run. Valid values:
+      * *   true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
+      * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
+      * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
+      * Default value: false.
       *
       * @param request StartInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -28444,10 +28652,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   The ECS instances that you want to start must be in the **Stopped** state.``
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the ECS instance is locked to ensure security. No operations are allowed on the ECS instance.
-      * *   You can start multiple ECS instances at the same time and use the `BatchOptimization` parameter to specify the batch operation mode.
+      * Specifies whether to perform a dry run. Valid values:
+      * *   true: performs only a dry run. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, `DRYRUN.SUCCESS` is returned.
+      * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
+      * *   false: performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
+      * Default value: false.
       *
       * @param request StartInstancesRequest
       * @return StartInstancesResponse
@@ -28458,15 +28667,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * The session management feature is in public preview. To use this feature, log on with your Alibaba Cloud account and activate this feature.  
-      * When you use custom code to connect to an ECS instance that serves as a client, you can call this operation to obtain the WebSocket URL that is used to connect to the instance. Before you call this operation to create a session to an ECS instance, take note of the following items: 
-      * - The ECS instance must be in the Running (Running) state.
-      * - The Cloud Assistant client must be installed on the ECS instance. You can call the [DescribeCloudAssistantStatus](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/describecloudassistantstatus) operation to check whether the Cloud Assistant client is installed on the ECS instance and query the version number of the installed Cloud Assistant client.    - If the Cloud Assistant client is not installed on the ECS instance, call the [InstallCloudAssistant](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/installcloudassistant) operation to install the client.
-      *   - Only the Cloud Assistant client versions that are later than the following ones support the session management feature. You can upgrade your Cloud Assistant client. For information about how to upgrade the Cloud Assistant client, see [Update or disable updates for the Cloud Assistant client](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/update-or-disable-updates-for-the-cloud-assistant-client).      - For Linux operating systems: V2.2.3.256
-      *     - For Windows operating systems: V2.1.3.256
-      * - Each WebSocket URL returned by the StartTerminalSession operation remains valid for 10 minutes.
-      * - Up to 1,000 sessions can be created and available per region. Each ECS instance can have up to 10 sessions in the connected state.
+      * The session management feature is in public preview. To use this feature, log on to the ECS console with your Alibaba Cloud account and enable this feature.
+      * When you use custom code to connect to an ECS instance that serves as a client, you can call this operation to obtain the WebSocket URL that is used to connect to the instance. Take note of the following items:
+      * *   The ECS instance must be in the Running (Running) state.
+      * *   Cloud Assistant Agent must be installed on the ECS instance. You can call the [DescribeCloudAssistantStatus](~~87346~~) operation to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of the installed Cloud Assistant Agent.
+      *     *   If Cloud Assistant Agent is not installed on the ECS instance, call the [InstallCloudAssistant](~~85916~~) operation to install Cloud Assistant Agent.
+      *     *   Only the Cloud Assistant Agent versions that are later than the following ones support the session management feature. You can upgrade Cloud Assistant Agent. For information about how to upgrade Cloud Assistant Agent, see [Update or disable updates for Cloud Assistant Agent](~~134383~~).
+      *         *   For Linux operating systems: 2.2.3.256
+      *         *   For Windows operating systems: 2.1.3.256
+      * *   Each WebSocket URL returned by the StartTerminalSession operation remains valid for 10 minutes.
+      * *   Up to 1,000 sessions can be created and available per region. Each ECS instance can have up to 10 sessions in the connected state.
       *
       * @param request StartTerminalSessionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -28525,15 +28735,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
-      * The session management feature is in public preview. To use this feature, log on with your Alibaba Cloud account and activate this feature.  
-      * When you use custom code to connect to an ECS instance that serves as a client, you can call this operation to obtain the WebSocket URL that is used to connect to the instance. Before you call this operation to create a session to an ECS instance, take note of the following items: 
-      * - The ECS instance must be in the Running (Running) state.
-      * - The Cloud Assistant client must be installed on the ECS instance. You can call the [DescribeCloudAssistantStatus](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/describecloudassistantstatus) operation to check whether the Cloud Assistant client is installed on the ECS instance and query the version number of the installed Cloud Assistant client.    - If the Cloud Assistant client is not installed on the ECS instance, call the [InstallCloudAssistant](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/installcloudassistant) operation to install the client.
-      *   - Only the Cloud Assistant client versions that are later than the following ones support the session management feature. You can upgrade your Cloud Assistant client. For information about how to upgrade the Cloud Assistant client, see [Update or disable updates for the Cloud Assistant client](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/update-or-disable-updates-for-the-cloud-assistant-client).      - For Linux operating systems: V2.2.3.256
-      *     - For Windows operating systems: V2.1.3.256
-      * - Each WebSocket URL returned by the StartTerminalSession operation remains valid for 10 minutes.
-      * - Up to 1,000 sessions can be created and available per region. Each ECS instance can have up to 10 sessions in the connected state.
+      * The session management feature is in public preview. To use this feature, log on to the ECS console with your Alibaba Cloud account and enable this feature.
+      * When you use custom code to connect to an ECS instance that serves as a client, you can call this operation to obtain the WebSocket URL that is used to connect to the instance. Take note of the following items:
+      * *   The ECS instance must be in the Running (Running) state.
+      * *   Cloud Assistant Agent must be installed on the ECS instance. You can call the [DescribeCloudAssistantStatus](~~87346~~) operation to check whether Cloud Assistant Agent is installed on the ECS instance and query the version number of the installed Cloud Assistant Agent.
+      *     *   If Cloud Assistant Agent is not installed on the ECS instance, call the [InstallCloudAssistant](~~85916~~) operation to install Cloud Assistant Agent.
+      *     *   Only the Cloud Assistant Agent versions that are later than the following ones support the session management feature. You can upgrade Cloud Assistant Agent. For information about how to upgrade Cloud Assistant Agent, see [Update or disable updates for Cloud Assistant Agent](~~134383~~).
+      *         *   For Linux operating systems: 2.2.3.256
+      *         *   For Windows operating systems: 2.1.3.256
+      * *   Each WebSocket URL returned by the StartTerminalSession operation remains valid for 10 minutes.
+      * *   Up to 1,000 sessions can be created and available per region. Each ECS instance can have up to 10 sessions in the connected state.
       *
       * @param request StartTerminalSessionRequest
       * @return StartTerminalSessionResponse
@@ -28544,8 +28755,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance. ``For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
-      * *   If economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
+      * *   If you call the DescribeInstances operation to query the details of an instance and `OperationLocks` in the response contains `"LockReason": "security"`, the instance is locked for security reasons and cannot be stopped. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
+      * *   If the economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
       *
       * @param request StopInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -28612,8 +28823,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}`, the instance is locked for security reasons. No operations are allowed on the instance. ``For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
-      * *   If economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
+      * *   If you call the DescribeInstances operation to query the details of an instance and `OperationLocks` in the response contains `"LockReason": "security"`, the instance is locked for security reasons and cannot be stopped. For more information, see [API behavior when an instance is locked for security reasons](~~25695~~).
+      * *   If the economical mode is enabled, you can set `StoppedMode` to KeepCharging to switch to the standard mode. This allows an instance that is stopped in standard mode to retain its instance type resources and public IP address. However, you continue to be charged for the instance.
       *
       * @param request StopInstanceRequest
       * @return StopInstanceResponse
@@ -28624,9 +28835,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, this indicates that the instance is locked for security reasons and all operations on it are prohibited.
-      * *   Once economy mode is enabled for pay-as-you-go instances, you can then switch `StoppedMode` to KeepCharging, which enables standard mode for the instances. In standard mode, you continue to be charged for the instances are stopped, and the resources of the instance type as well as public IP addresses of the instances are retained.
-      * *   Batch operations are supported. You can use the `BatchOptimization` parameter to specify the batch operation mode.
+      * Specifies whether to perform only a dry run, without performing the actual request. Valid Values:
+      * *   true: performs a dry run, but the request is not made. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.
+      * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
+      * *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+      * Default value: false.
       *
       * @param request StopInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -28693,9 +28906,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, this indicates that the instance is locked for security reasons and all operations on it are prohibited.
-      * *   Once economy mode is enabled for pay-as-you-go instances, you can then switch `StoppedMode` to KeepCharging, which enables standard mode for the instances. In standard mode, you continue to be charged for the instances are stopped, and the resources of the instance type as well as public IP addresses of the instances are retained.
-      * *   Batch operations are supported. You can use the `BatchOptimization` parameter to specify the batch operation mode.
+      * Specifies whether to perform only a dry run, without performing the actual request. Valid Values:
+      * *   true: performs a dry run, but the request is not made. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.
+      * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
+      * *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+      * Default value: false.
       *
       * @param request StopInstancesRequest
       * @return StopInstancesResponse
@@ -28706,8 +28921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
-      * *   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.
+      * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request StopInvocationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -28766,8 +28980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   If you stop the process of a command that runs only once, the executions that have started are not interrupted. The executions that have not started are canceled.
-      * *   If you stop the process of a scheduled invocation command, the executions that have started are not interrupted. However, the execution does not start in the next period.
+      * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request StopInvocationRequest
       * @return StopInvocationResponse
@@ -29070,8 +29283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The ENI from which to unassign secondary private IP addresses must be in the **Available** (Available) or **InUse** (InUse) state.
-      * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+      * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request UnassignPrivateIpAddressesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -29134,8 +29346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The ENI from which to unassign secondary private IP addresses must be in the **Available** (Available) or **InUse** (InUse) state.
-      * *   If the ENI is a primary ENI, the Elastic Compute Service (ECS) instance to which the ENI is attached must be in the **Running** (Running) or **Stopped** (Stopped) state.
+      * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
       *
       * @param request UnassignPrivateIpAddressesRequest
       * @return UnassignPrivateIpAddressesResponse

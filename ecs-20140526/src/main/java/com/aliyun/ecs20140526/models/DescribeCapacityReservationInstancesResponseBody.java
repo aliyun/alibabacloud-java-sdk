@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details about the instances that match the capacity reservation.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("CapacityReservationItem")
     public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>Details about the instances that match the capacity reservation.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token used to start the next query.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The maximum number of entries returned per page.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,9 +80,6 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet extends TeaModel {
-        /**
-         * <p>The instance ID.</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 

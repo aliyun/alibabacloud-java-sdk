@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     /**
-     * <p>The information about Cloud Assistant on the instances.</p>
+     * <p>The installation states of Cloud Assistant Agent on the instances.</p>
      */
     @NameInMap("InstanceCloudAssistantStatusSet")
     public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -29,7 +29,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances.</p>
+     * <p>The total number of queried instances.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -81,7 +81,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
 
     public static class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus extends TeaModel {
         /**
-         * <p>The number of tasks that were run by Cloud Assistant on the instance.</p>
+         * <p>The number of tasks that Cloud Assistant was running on the instance.</p>
          */
         @NameInMap("ActiveTaskCount")
         public Long activeTaskCount;
@@ -96,25 +96,25 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         public String cloudAssistantStatus;
 
         /**
-         * <p>The version number of the Cloud Assistant client. If the Cloud Assistant client is not installed or is not running, this parameter is left empty.</p>
+         * <p>The version number of Cloud Assistant Agent. If Cloud Assistant Agent is not installed or is not running, this parameter is left empty.</p>
          */
         @NameInMap("CloudAssistantVersion")
         public String cloudAssistantVersion;
 
         /**
-         * <p>The instance ID</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The number of tasks that were completed by Cloud Assistant on the instance.</p>
+         * <p>The number of tasks that Cloud Assistant completed on the instance.</p>
          */
         @NameInMap("InvocationCount")
         public Long invocationCount;
 
         /**
-         * <p>The most recent heartbeat time value of Cloud Assistant. The value is updated once every minute.</p>
+         * <p>The last heartbeat time of Cloud Assistant. The value is updated once every minute.</p>
          */
         @NameInMap("LastHeartbeatTime")
         public String lastHeartbeatTime;
@@ -126,7 +126,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         public String lastInvokedTime;
 
         /**
-         * <p>The operating system of the instance. Valid values:</p>
+         * <p>The operating system type of the instance. Valid values:</p>
          * <br>
          * <p>*   Windows</p>
          * <p>*   Linux</p>

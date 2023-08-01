@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeActivationsResponseBody extends TeaModel {
     /**
-     * <p>The number of instances that were deregistered.</p>
+     * <p>The activation codes and their usage information.</p>
      */
     @NameInMap("ActivationList")
     public java.util.List<DescribeActivationsResponseBodyActivationList> activationList;
 
     /**
-     * <p>Details about the activation code and its usage information.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the activation code was created.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -80,9 +80,15 @@ public class DescribeActivationsResponseBody extends TeaModel {
     }
 
     public static class DescribeActivationsResponseBodyActivationListTags extends TeaModel {
+        /**
+         * <p>The tag key of the activation code.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the activation code.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -111,67 +117,67 @@ public class DescribeActivationsResponseBody extends TeaModel {
 
     public static class DescribeActivationsResponseBodyActivationList extends TeaModel {
         /**
-         * <p>Information about the tags of the activation code.</p>
+         * <p>The ID of the activation code.</p>
          */
         @NameInMap("ActivationId")
         public String activationId;
 
         /**
-         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
+         * <p>The time when the activation code was created.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The description of the activation code.</p>
+         * <p>The number of instances that were deregistered.</p>
          */
         @NameInMap("DeregisteredCount")
         public Integer deregisteredCount;
 
         /**
-         * <p>The default instance name prefix.</p>
+         * <p>The description of the activation code.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The validity period of the activation code. Unit: hours.</p>
+         * <p>Indicates whether the activation code is disabled.</p>
          */
         @NameInMap("Disabled")
         public Boolean disabled;
 
         /**
-         * <p>The number of registered instances.</p>
+         * <p>The maximum number of times that the activation code can be used to register managed instances.</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
-         * <p>The IP addresses of the hosts that can use the activation code.</p>
+         * <p>The default instance name prefix.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the activation code.</p>
+         * <p>The IP addresses of hosts that are allowed to use the activation code.</p>
          */
         @NameInMap("IpAddressRange")
         public String ipAddressRange;
 
         /**
-         * <p>Indicates whether the activation code is disabled.</p>
+         * <p>The number of instances that were registered.</p>
          */
         @NameInMap("RegisteredCount")
         public Integer registeredCount;
 
         /**
-         * <p>The key of tag N of the activation code.</p>
+         * <p>The tags of the activation code.</p>
          */
         @NameInMap("Tags")
         public java.util.List<DescribeActivationsResponseBodyActivationListTags> tags;
 
         /**
-         * <p>An array that consists of the tags of the activation code.</p>
+         * <p>The validity period of the activation code. Unit: hours.</p>
          */
         @NameInMap("TimeToLiveInHours")
         public Long timeToLiveInHours;

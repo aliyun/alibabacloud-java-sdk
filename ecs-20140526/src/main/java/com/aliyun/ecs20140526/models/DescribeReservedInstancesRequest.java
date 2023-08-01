@@ -28,16 +28,16 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public String instanceTypeFamily;
 
     /**
-     * <p>The locked mode of the instance. Valid values:</p>
+     * <p>The reason why the instance is locked. Valid values:</p>
      * <br>
-     * <p>*   financial: Your account has one or more overdue payments or the reserved instance has expired.</p>
+     * <p>*   financial: You have an overdue payment in your account, or the reserved instance has expired.</p>
      * <p>*   security: The reserved instance is locked for security reasons.</p>
      */
     @NameInMap("LockReason")
     public String lockReason;
 
     /**
-     * <p>The payment option for the reserved instance. Valid values:</p>
+     * <p>The payment option of the reserved instances. Valid values:</p>
      * <br>
      * <p>*   No Upfront</p>
      * <p>*   Partial Upfront</p>
@@ -53,7 +53,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number to return. Pages start from page 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -61,7 +61,7 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -69,19 +69,19 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The IDs of the reserved instances. Valid values of N: 1 to 100.</p>
+     * <p>The ID of reserved instance N. Valid values of N: 1 to 100.</p>
      */
     @NameInMap("ReservedInstanceId")
     public java.util.List<String> reservedInstanceId;
 
     /**
-     * <p>The reserved instance name.</p>
+     * <p>The name of the reserved instance.</p>
      */
     @NameInMap("ReservedInstanceName")
     public String reservedInstanceName;
@@ -93,10 +93,10 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scope of reserved instance N. Valid values:</p>
+     * <p>The scope of the reserved instances. Valid values:</p>
      * <br>
-     * <p>*   Region: regional</p>
-     * <p>*   Zone: zonal</p>
+     * <p>*   Region</p>
+     * <p>*   Zone</p>
      * <br>
      * <p>Default value: Region.</p>
      */
@@ -115,13 +115,13 @@ public class DescribeReservedInstancesRequest extends TeaModel {
     public java.util.List<String> status;
 
     /**
-     * <p>The tags list.</p>
+     * <p>The tags to add to the instances.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeReservedInstancesRequestTag> tag;
 
     /**
-     * <p>The zone ID of the reserved instance is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -277,15 +277,15 @@ public class DescribeReservedInstancesRequest extends TeaModel {
 
     public static class DescribeReservedInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the reserved instance. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.</p>
          * <br>
-         * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that belongs to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)</p>
+         * <p>The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.</p>
          */
         @NameInMap("Value")
         public String value;

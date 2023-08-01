@@ -23,23 +23,23 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
+     * <p>The number of entries to return on each page.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
      * <br>
-     * <p>Default value: 10.</p>
+     * <p>> Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The tags of the launch template.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -51,15 +51,13 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
-     * <br>
-     * <p>> Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+     * <p>The IDs of launch templates. You can specify up to 100 launch template IDs. You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.</p>
      */
     @NameInMap("TemplateResourceGroupId")
     public String templateResourceGroupId;
 
     /**
-     * <p>The tags of the launch template.</p>
+     * <p>The tag of the launch template.</p>
      */
     @NameInMap("TemplateTag")
     public java.util.List<DescribeLaunchTemplatesRequestTemplateTag> templateTag;
@@ -159,15 +157,15 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
 
     public static class DescribeLaunchTemplatesRequestTemplateTag extends TeaModel {
         /**
-         * <p>The key of tag N of the launch template. Valid values of N: 1 to 20.</p>
-         * <br>
-         * <p>Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.</p>
+         * <p>The value of tag N of the launch template. Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the launch template. Valid values of N: 1 to 20.</p>
+         * <p>The number of the page to return. Pages start from page 1.</p>
+         * <br>
+         * <p>Default value: 1.</p>
          */
         @NameInMap("Value")
         public String value;

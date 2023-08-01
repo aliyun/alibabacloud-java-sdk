@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClassicLinkInstancesRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can specify up to 100 instance IDs in a single request. Separate the instance IDs with commas (,).</p>
+     * <p>The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -30,7 +30,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -42,7 +42,7 @@ public class DescribeClassicLinkInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPC. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).</p>
+     * <p>The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

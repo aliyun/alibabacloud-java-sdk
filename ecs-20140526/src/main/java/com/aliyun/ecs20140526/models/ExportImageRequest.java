@@ -31,7 +31,7 @@ public class ExportImageRequest extends TeaModel {
     public String OSSBucket;
 
     /**
-     * <p>The prefix for the name of the OSS object in which you want to store the exported custom image. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
+     * <p>The prefix for the name of the OSS object. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
      */
     @NameInMap("OSSPrefix")
     public String OSSPrefix;

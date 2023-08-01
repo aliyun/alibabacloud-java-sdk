@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
     /**
-     * <p>The IDs of the simulated system events.</p>
+     * <p>The IDs of the simulated events.</p>
      */
     @NameInMap("EventIdSet")
     public CreateSimulatedSystemEventsResponseBodyEventIdSet eventIdSet;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
      * <p>*   true (default): The payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</p>
      * <p>*   false: An order is generated but no payment is made. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
@@ -14,7 +14,7 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -22,20 +22,20 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     /**
      * <p>The new billing method of the disk. Valid values:</p>
      * <br>
-     * <p>*   PrePaid (default): subscription.</p>
-     * <p>*   PostPaid: pay-as-you-go.</p>
+     * <p>*   PrePaid (default): changes the billing method from pay-as-you-go to subscription.</p>
+     * <p>*   PostPaid: changes the billing method from subscription to pay-as-you-go.</p>
      */
     @NameInMap("DiskChargeType")
     public String diskChargeType;
 
     /**
-     * <p>The IDs of disks. The value is a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</p>
+     * <p>The disk IDs. Set this parameter to a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).</p>
      */
     @NameInMap("DiskIds")
     public String diskIds;
 
     /**
-     * <p>The ID of the instance to which the disk is attached.</p>
+     * <p>The ID of the instance to which disks are attached.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

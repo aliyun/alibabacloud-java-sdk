@@ -11,7 +11,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the secondary ENI. By default, all secondary ENIs that are bound to the specified instance are queried.</p>
+     * <p>The secondary ENI ID. By default, all secondary ENIs that are bound to the specified instance are queried.</p>
      */
     @NameInMap("EniId")
     public String eniId;
@@ -29,7 +29,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The interval at which to retrieve monitored data. Unit: seconds. Valid values:</p>
+     * <p>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</p>
      * <br>
      * <p>*   60</p>
      * <p>*   600</p>
@@ -41,7 +41,7 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The region ID of the secondary ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

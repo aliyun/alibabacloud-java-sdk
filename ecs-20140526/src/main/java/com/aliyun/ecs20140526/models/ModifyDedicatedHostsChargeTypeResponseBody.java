@@ -11,13 +11,13 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
     public ModifyDedicatedHostsChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -55,21 +55,21 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         /**
          * <p>The unit of currency for the bill.</p>
          * <br>
-         * <p>Alibaba Cloud China site (aliyun.com): CNY.</p>
+         * <p>Alibaba Cloud China site (aliyun.com): CNY</p>
          * <br>
-         * <p>Alibaba Cloud International site (alibabacloud.com): USD.</p>
+         * <p>Alibaba Cloud International site (alibabacloud.com): USD</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>The cost value.</p>
+         * <p>The charged amount.</p>
          */
         @NameInMap("Fee")
         public String fee;
 
         /**
-         * <p>The ID of the dedicated host.</p>
+         * <p>The IDs of the dedicated hosts.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

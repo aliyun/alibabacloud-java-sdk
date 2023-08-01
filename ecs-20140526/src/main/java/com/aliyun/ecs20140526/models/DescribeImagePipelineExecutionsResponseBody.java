@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     /**
-     * <p>The details of the image creation task.</p>
+     * <p>Details of the image creation task.</p>
      */
     @NameInMap("ImagePipelineExecution")
     public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecution imagePipelineExecution;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -23,7 +23,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,13 +81,13 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
 
     public static class DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTagsTag extends TeaModel {
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -160,7 +160,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         public String imagePipelineId;
 
         /**
-         * <p>The data that is returned.</p>
+         * <p>The data returned.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -186,13 +186,13 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
          * <p>*   SUCCESS</p>
          * <p>*   FAILED</p>
          * <p>*   CANCELLING</p>
-         * <p>*   CANCELED</p>
+         * <p>*   CANCELLED</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("Tags")
         public DescribeImagePipelineExecutionsResponseBodyImagePipelineExecutionImagePipelineExecutionSetTags tags;

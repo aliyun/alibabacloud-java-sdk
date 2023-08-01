@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
     /**
-     * <p>The list of diagnostic metrics.</p>
+     * <p>The ID of the diagnostic metric.</p>
      */
     @NameInMap("Metrics")
     public java.util.List<DescribeDiagnosticMetricsResponseBodyMetrics> metrics;
 
     /**
-     * <p>The query token returned in this call.</p>
+     * <p>The list of diagnostic metrics.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The query token returned in this call.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,40 +53,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
 
     public static class DescribeDiagnosticMetricsResponseBodyMetrics extends TeaModel {
         /**
-         * <p>The description of the diagnostic metric.</p>
+         * <p>CPU diagnostic</p>
          */
         @NameInMap("Description")
         public String description;
-
-        /**
-         * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
-         */
-        @NameInMap("GuestMetric")
-        public Boolean guestMetric;
-
-        /**
-         * <p>The category of the diagnostic metric.</p>
-         */
-        @NameInMap("MetricCategory")
-        public String metricCategory;
-
-        /**
-         * <p>The ID of the diagnostic metric.</p>
-         */
-        @NameInMap("MetricId")
-        public String metricId;
-
-        /**
-         * <p>The name of the diagnostic metric.</p>
-         */
-        @NameInMap("MetricName")
-        public String metricName;
-
-        /**
-         * <p>The resource type supported by the diagnostic metric.</p>
-         */
-        @NameInMap("ResourceType")
-        public String resourceType;
 
         /**
          * <p>The operating system type supported by the diagnostic metric. Valid values:</p>
@@ -95,6 +65,33 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
          * <p>*   Linux</p>
          * <p>*   All: both Windows and Linux</p>
          */
+        @NameInMap("GuestMetric")
+        public Boolean guestMetric;
+
+        /**
+         * <p>The description of the diagnostic metric.</p>
+         */
+        @NameInMap("MetricCategory")
+        public String metricCategory;
+
+        /**
+         * <p>The name of the diagnostic metric.</p>
+         */
+        @NameInMap("MetricId")
+        public String metricId;
+
+        /**
+         * <p>CPU diagnostic</p>
+         */
+        @NameInMap("MetricName")
+        public String metricName;
+
+        /**
+         * <p>Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.</p>
+         */
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         @NameInMap("SupportedOperatingSystem")
         public String supportedOperatingSystem;
 

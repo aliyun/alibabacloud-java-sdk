@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DetachNetworkInterfaceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance</p>
+     * <p>The ID of the trunk ENI.</p>
+     * <br>
+     * <p>>  This parameter is unavailable for use.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the instance</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
@@ -23,7 +25,7 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the ENI.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,9 +37,7 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the trunk ENI.</p>
-     * <br>
-     * <p>>  This parameter is unavailable for use.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("TrunkNetworkInstanceId")
     public String trunkNetworkInstanceId;

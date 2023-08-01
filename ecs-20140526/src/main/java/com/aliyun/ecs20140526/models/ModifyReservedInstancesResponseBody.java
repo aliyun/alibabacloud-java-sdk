@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyReservedInstancesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Details about the reserved instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details about the reserved instance.</p>
+     * <p>The ID of the reserved instance.</p>
      */
     @NameInMap("ReservedInstanceIdSets")
     public ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;

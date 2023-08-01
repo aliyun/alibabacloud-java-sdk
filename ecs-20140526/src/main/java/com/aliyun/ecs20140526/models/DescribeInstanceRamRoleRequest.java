@@ -4,21 +4,44 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceRamRoleRequest extends TeaModel {
+    /**
+     * <p>The IDs of instances. You can specify up to 100 instance IDs in a single request. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the instance RAM role. You can call the [ListRoles](~~28713~~) operation provided by RAM to query the instance RAM roles that you created. You must specify at least one of the `InstanceIds` and `RamRoleName` parameters.</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    /**
+     * <p>The region ID of the instance RAM role. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

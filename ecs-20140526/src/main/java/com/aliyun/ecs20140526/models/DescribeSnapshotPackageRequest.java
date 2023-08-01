@@ -11,23 +11,19 @@ public class DescribeSnapshotPackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1.</p>
-     * <br>
-     * <p>Default value: 1.</p>
+     * <p>The region ID of the snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
-     * <br>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

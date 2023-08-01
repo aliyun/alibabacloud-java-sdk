@@ -5,6 +5,84 @@ import com.aliyun.tea.*;
 
 public class CreateCommandRequest extends TeaModel {
     /**
+     * <p>The working directory of the command on the instance.</p>
+     * <br>
+     * <p>Default value:</p>
+     * <br>
+     * <p>*   For Linux instances, the default value is the home directory of the root user, which is the `/root` directory.</p>
+     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32\`.</p>
+     */
+    @NameInMap("CommandContent")
+    public String commandContent;
+
+    /**
+     * <p>The tags to add to the command.</p>
+     */
+    @NameInMap("ContentEncoding")
+    public String contentEncoding;
+
+    /**
+     * <p>The command type. Valid values:</p>
+     * <br>
+     * <p>*   RunBatScript: batch commands. These commands are applicable to Windows instances.</p>
+     * <p>*   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</p>
+     * <p>*   RunShellScript: shell commands. These commands are applicable to Linux instances.</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The encoding mode of the command content (CommandContent). Valid values:</p>
+     * <br>
+     * <p>*   PlainText: The command content is not encoded.</p>
+     * <p>*   Base64: The command content is Base64-encoded.</p>
+     * <br>
+     * <p>Default value: Base64.</p>
+     * <br>
+     * <p>> If the specified value of this parameter is invalid, Base64 is used by default.</p>
+     */
+    @NameInMap("EnableParameter")
+    public Boolean enableParameter;
+
+    /**
+     * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
+     */
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    /**
+     * <p>Tag N to add to the command.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateCommandRequestTag> tag;
+
+    /**
+     * <p>Specifies whether to use custom parameters in the command.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
+    @NameInMap("Timeout")
+    public Long timeout;
+
+    /**
      * <p>The Base64-encoded content of the command.</p>
      * <br>
      * <p>*   The parameter value must be Base64-encoded and cannot exceed 18 KB in size.</p>
@@ -42,91 +120,11 @@ public class CreateCommandRequest extends TeaModel {
      * <p>        *   Linux: 2.2.3.309</p>
      * <p>        *   Windows: 2.1.3.309</p>
      */
-    @NameInMap("CommandContent")
-    public String commandContent;
-
-    /**
-     * <p>The encoding mode of the command content (CommandContent). Valid values:</p>
-     * <br>
-     * <p>*   PlainText: The command content is not encoded.</p>
-     * <p>*   Base64: The command content is Base64-encoded.</p>
-     * <br>
-     * <p>Default value: Base64.</p>
-     * <br>
-     * <p>> If the specified value of this parameter is invalid, Base64 is used by default.</p>
-     */
-    @NameInMap("ContentEncoding")
-    public String contentEncoding;
-
-    /**
-     * <p>The description of the command. The description supports all character sets and can be up to 512 characters in length.</p>
-     */
-    @NameInMap("Description")
-    public String description;
-
-    /**
-     * <p>Specifies whether to use custom parameters in the command.</p>
-     * <br>
-     * <p>Default value: false.</p>
-     */
-    @NameInMap("EnableParameter")
-    public Boolean enableParameter;
-
-    /**
-     * <p>The name of the command. The name supports all character sets and can be up to 128 characters in length.</p>
-     */
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    /**
-     * <p>The ID of the region in which to create the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    /**
-     * <p>The tags to add to the command.</p>
-     */
-    @NameInMap("Tag")
-    public java.util.List<CreateCommandRequestTag> tag;
-
-    /**
-     * <p>The maximum timeout period for the command execution on the instance. Unit: seconds. When a command cannot be run, a timeout error occurs. After that, the command process is forcefully terminated by canceling the PID of the command.</p>
-     * <br>
-     * <p>Default value: 60.</p>
-     */
-    @NameInMap("Timeout")
-    public Long timeout;
-
-    /**
-     * <p>The command type. Valid values:</p>
-     * <br>
-     * <p>*   RunBatScript: batch commands. These commands are applicable to Windows instances.</p>
-     * <p>*   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</p>
-     * <p>*   RunShellScript: shell commands. These commands are applicable to Linux instances.</p>
-     */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The working directory of the command on the instance.</p>
-     * <br>
-     * <p>Default value:</p>
-     * <br>
-     * <p>*   For Linux instances, the default value is the home directory of the root user, which is the `/root` directory.</p>
-     * <p>*   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32\`.</p>
+     * <p>/root/</p>
      */
     @NameInMap("WorkingDir")
     public String workingDir;
@@ -250,19 +248,15 @@ public class CreateCommandRequest extends TeaModel {
 
     public static class CreateCommandRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.</p>
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
          * <br>
-         * <p>If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.</p>
-         * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
-         * <br>
-         * <p>It can be up to 128 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The ID of the command.</p>
          */
         @NameInMap("Value")
         public String value;

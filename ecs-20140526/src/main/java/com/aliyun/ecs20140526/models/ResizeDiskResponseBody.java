@@ -5,16 +5,11 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
-     * <br>
-     * <p>> This parameter is returned only when you resize subscription disks.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
