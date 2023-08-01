@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListClusterMembersRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The number of the page to return. If you do not specify this parameter, the first page is returned.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The number of ECS instances.</p>
+     */
     @NameInMap("EcsList")
     public String ecsList;
 
+    /**
+     * <p>The number of ECS instances to return on each page. If you do not specify this parameter, all ECS instances in the specified cluster are returned on one page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

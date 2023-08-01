@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListBuildPackResponseBody extends TeaModel {
+    /**
+     * <p>The returned versions of EDAS Container.</p>
+     */
     @NameInMap("BuildPackList")
     public ListBuildPackResponseBodyBuildPackList buildPackList;
 
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,63 +66,123 @@ public class ListBuildPackResponseBody extends TeaModel {
     }
 
     public static class ListBuildPackResponseBodyBuildPackListBuildPack extends TeaModel {
+        /**
+         * <p>The build package number of EDAS Container.</p>
+         */
         @NameInMap("ConfigId")
         public Long configId;
 
+        /**
+         * <p>Indicates whether the EDAS Container version is disabled. A disabled version cannot be configured for use.</p>
+         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>The features of the EDAS Container version, which are released for public preview.</p>
+         */
         @NameInMap("Feature")
         public String feature;
 
+        /**
+         * <p>The ID of the base image that corresponds to EDAS Container.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>Indicates whether EDAS Container supports multitenancy.</p>
+         */
         @NameInMap("MultipleTenant")
         public Boolean multipleTenant;
 
+        /**
+         * <p>The version of the application.</p>
+         */
         @NameInMap("PackVersion")
         public String packVersion;
 
+        /**
+         * <p>The description of the Pandora container.</p>
+         */
         @NameInMap("PandoraDesc")
         public String pandoraDesc;
 
+        /**
+         * <p>The download URL of the Pandora installer.</p>
+         */
         @NameInMap("PandoraDownloadUrl")
         public String pandoraDownloadUrl;
 
+        /**
+         * <p>The version of the Pandora container.</p>
+         */
         @NameInMap("PandoraVersion")
         public String pandoraVersion;
 
+        /**
+         * <p>The description of the plug-in.</p>
+         */
         @NameInMap("PluginInfo")
         public String pluginInfo;
 
+        /**
+         * <p>The name of the Shell script that runs EDAS Container.</p>
+         */
         @NameInMap("ScriptName")
         public String scriptName;
 
+        /**
+         * <p>The version of the Shell script that runs EDAS Container.</p>
+         */
         @NameInMap("ScriptVersion")
         public String scriptVersion;
 
+        /**
+         * <p>The features supported by EDAS Container.</p>
+         */
         @NameInMap("SupportFeatures")
         public String supportFeatures;
 
+        /**
+         * <p>The download URL of the Tengine installer.</p>
+         */
         @NameInMap("TengineDownloadUrl")
         public String tengineDownloadUrl;
 
+        /**
+         * <p>The ID of the Tengine image that corresponds to EDAS Container.</p>
+         */
         @NameInMap("TengineImageId")
         public String tengineImageId;
 
+        /**
+         * <p>The description of the Tomcat container.</p>
+         */
         @NameInMap("TomcatDesc")
         public String tomcatDesc;
 
+        /**
+         * <p>The download URL of the Tomcat installer.</p>
+         */
         @NameInMap("TomcatDownloadUrl")
         public String tomcatDownloadUrl;
 
+        /**
+         * <p>The directory of the Tomcat container.</p>
+         */
         @NameInMap("TomcatPath")
         public String tomcatPath;
 
+        /**
+         * <p>The version of the Tomcat container.</p>
+         */
         @NameInMap("TomcatVersion")
         public String tomcatVersion;
 
+        /**
+         * <p>Indicates whether EDAS Container supports traffic management.</p>
+         */
         @NameInMap("WithTengine")
         public Boolean withTengine;
 

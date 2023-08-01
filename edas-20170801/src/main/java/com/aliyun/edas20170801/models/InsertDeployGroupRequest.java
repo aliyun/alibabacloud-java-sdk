@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertDeployGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the instance group. The name can be up to 64 characters in length.</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The version of the initial deployment package associated with the instance group. You can call the ListHistoryDeployVersion operation to query the version. For more information, see [ListHistoryDeployVersion](~~149392~~).</p>
+     */
     @NameInMap("InitPackageVersionId")
     public String initPackageVersionId;
 

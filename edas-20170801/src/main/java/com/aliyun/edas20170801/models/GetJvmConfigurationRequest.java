@@ -4,9 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetJvmConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The ID of the instance group.</p>
+     * <br>
+     * <p>*   If an ID is specified, this operation queries the JVM configuration information of the instance group.</p>
+     * <p>*   If an ID is not specified, this operation queries the JVM configuration information of the application.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

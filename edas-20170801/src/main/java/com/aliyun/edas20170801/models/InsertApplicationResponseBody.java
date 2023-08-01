@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class InsertApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The information about the created application.</p>
+     */
     @NameInMap("ApplicationInfo")
     public InsertApplicationResponseBodyApplicationInfo applicationInfo;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,27 +66,54 @@ public class InsertApplicationResponseBody extends TeaModel {
     }
 
     public static class InsertApplicationResponseBodyApplicationInfo extends TeaModel {
+        /**
+         * <p>The ID of the application. The ID is the unique identifier of the application in EDAS.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The ID of the change process.</p>
+         */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
+        /**
+         * <p>Indicates whether the application is a Docker application. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The application is a Docker application.</p>
+         * <p>*   **false**: The application is not a Docker application.</p>
+         */
         @NameInMap("Dockerize")
         public Boolean dockerize;
 
+        /**
+         * <p>The owner of the application. The owner is the user who created the application.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The port used by the created application. Default value: 8080. You can call the UpdateContainerConfiguration operation to change the port. For more information, see [UpdateContainerConfiguration](~~149403~~).</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The ID of the user who created the application.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

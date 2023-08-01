@@ -4,9 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class StopK8sApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can query the application ID by calling the ListApplication operation. For more information, see [ListApplication](~~149390~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The timeout period of the change process. Unit: seconds.</p>
+     */
     @NameInMap("Timeout")
     public Integer timeout;
 

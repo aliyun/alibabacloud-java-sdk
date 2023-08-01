@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetClusterResponseBody extends TeaModel {
+    /**
+     * <p>The information about the cluster.</p>
+     */
     @NameInMap("Cluster")
     public GetClusterResponseBodyCluster cluster;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The detailed information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,60 +66,138 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodyCluster extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The import status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: The cluster is imported.</p>
+         * <p>*   2: The cluster fails to be imported.</p>
+         * <p>*   3: The cluster is being imported.</p>
+         * <p>*   4: The cluster is deleted.</p>
+         * <p>*   0: The cluster is not imported.</p>
+         */
         @NameInMap("ClusterImportStatus")
         public Integer clusterImportStatus;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   0: regular Docker cluster</p>
+         * <p>*   1: Swarm cluster</p>
+         * <p>*   2: Elastic Compute Service (ECS) cluster</p>
+         * <p>*   3: self-managed Kubernetes cluster in EDAS</p>
+         * <p>*   4: cluster in which Pandora automatically registers applications</p>
+         * <p>*   5: ACK cluster</p>
+         */
         @NameInMap("ClusterType")
         public Integer clusterType;
 
+        /**
+         * <p>The total number of CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The number of used CPU cores.</p>
+         */
         @NameInMap("CpuUsed")
         public Integer cpuUsed;
 
+        /**
+         * <p>The time when the cluster was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+         */
         @NameInMap("CsClusterId")
         public String csClusterId;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The provider of Infrastructure as a Service (IaaS) resources used in the cluster.</p>
+         */
         @NameInMap("IaasProvider")
         public String iaasProvider;
 
+        /**
+         * <p>The total size of memory. Unit: MB.</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The size of used memory. Unit: MB.</p>
+         */
         @NameInMap("MemUsed")
         public Integer memUsed;
 
+        /**
+         * <p>The network type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: classic network</p>
+         * <p>*   2: virtual private cloud (VPC)</p>
+         */
         @NameInMap("NetworkMode")
         public Integer networkMode;
 
+        /**
+         * <p>The number of ECS instances.</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        /**
+         * <p>The overcommit ratio supported by a Docker cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: 1:1, which means that resources are not overcommitted.</p>
+         * <p>*   2: 1:2, which means that resources are overcommitted by 1:2.</p>
+         * <p>*   4: 1:4, which means that resources are overcommitted by 1:4.</p>
+         * <p>*   8: 1:8, which means that resources are overcommitted by 1:8.</p>
+         */
         @NameInMap("OversoldFactor")
         public Integer oversoldFactor;
 
+        /**
+         * <p>The ID of the region where the cluster resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The subtype of the Kubernetes cluster. Valid values: ManagedKubernetes, Ask, and ExternalKubernetes. ManagedKubernetes refers to the ACK cluster. Ask refers to the Serverless Kubernetes (ASK) cluster. ExternalKubernetes refers to the external cluster.</p>
+         */
         @NameInMap("SubClusterType")
         public String subClusterType;
 
+        /**
+         * <p>The time when the cluster was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

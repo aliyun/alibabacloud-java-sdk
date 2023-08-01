@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryRegionConfigResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The information about region configurations.</p>
+     */
     @NameInMap("RegionConfig")
     public QueryRegionConfigResponseBodyRegionConfig regionConfig;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class QueryRegionConfigResponseBody extends TeaModel {
     }
 
     public static class QueryRegionConfigResponseBodyRegionConfigFileServerConfig extends TeaModel {
+        /**
+         * <p>The Object Storage Service (OSS) bucket of the file server.</p>
+         */
         @NameInMap("Bucket")
         public String bucket;
 
+        /**
+         * <p>The internal endpoint of the file server.</p>
+         */
         @NameInMap("InternalUrl")
         public String internalUrl;
 
+        /**
+         * <p>The public endpoint of the file server.</p>
+         */
         @NameInMap("PublicUrl")
         public String publicUrl;
 
+        /**
+         * <p>The virtual private cloud (VPC) endpoint of the file server.</p>
+         */
         @NameInMap("VpcUrl")
         public String vpcUrl;
 
@@ -106,30 +130,57 @@ public class QueryRegionConfigResponseBody extends TeaModel {
     }
 
     public static class QueryRegionConfigResponseBodyRegionConfig extends TeaModel {
+        /**
+         * <p>The domain name of Address Server.</p>
+         */
         @NameInMap("AddressServerHost")
         public String addressServerHost;
 
+        /**
+         * <p>The installation path of the script for EDAS Agent.</p>
+         */
         @NameInMap("AgentInstallScript")
         public String agentInstallScript;
 
+        /**
+         * <p>The information about the file server.</p>
+         */
         @NameInMap("FileServerConfig")
         public QueryRegionConfigResponseBodyRegionConfigFileServerConfig fileServerConfig;
 
+        /**
+         * <p>The type of the file server.</p>
+         */
         @NameInMap("FileServerType")
         public String fileServerType;
 
+        /**
+         * <p>The configured ID of the region.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the official image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The configured name of the region.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The serial number of the region. This parameter is deprecated.</p>
+         */
         @NameInMap("No")
         public Integer no;
 
+        /**
+         * <p>The tag of the region. The value is fixed to `ALIYUN_SHARE`.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

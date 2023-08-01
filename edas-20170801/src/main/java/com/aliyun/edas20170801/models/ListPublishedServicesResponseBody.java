@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListPublishedServicesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The published services.</p>
+     */
     @NameInMap("PublishedServicesList")
     public ListPublishedServicesResponseBodyPublishedServicesList publishedServicesList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -92,12 +104,24 @@ public class ListPublishedServicesResponseBody extends TeaModel {
     }
 
     public static class ListPublishedServicesResponseBodyPublishedServicesListListPublishedServices extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>Indicates whether the application runs in a Docker container. Valid values:</p>
+         * <br>
+         * <p>*   true: The application runs in a Docker container.</p>
+         * <p>*   false: The application does not run in a Docker container.</p>
+         */
         @NameInMap("DockerApplication")
         public Boolean dockerApplication;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("Group2Ip")
         public String group2Ip;
 
@@ -107,12 +131,21 @@ public class ListPublishedServicesResponseBody extends TeaModel {
         @NameInMap("Ips")
         public ListPublishedServicesResponseBodyPublishedServicesListListPublishedServicesIps ips;
 
+        /**
+         * <p>The name of the published service.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the published service.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The version of the published services.</p>
+         */
         @NameInMap("Version")
         public String version;
 

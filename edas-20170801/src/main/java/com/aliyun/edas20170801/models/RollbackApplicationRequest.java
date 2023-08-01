@@ -4,18 +4,35 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class RollbackApplicationRequest extends TeaModel {
+    /**
+     * <p>The application ID. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~423162~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The number of batches for the rollback. Default value: 1. Valid values: 1 to 5.</p>
+     */
     @NameInMap("Batch")
     public Integer batch;
 
+    /**
+     * <p>The wait time between batches. Default value: 0. The default value indicates no wait time. Valid values: 0 to 5. Unit: minutes.</p>
+     */
     @NameInMap("BatchWaitTime")
     public Integer batchWaitTime;
 
+    /**
+     * <p>The application group ID. You can call the ListDeployGroup operation to query the application group ID. For more information, see [ListDeployGroup](~~423184~~).</p>
+     * <br>
+     * <p>If you need to roll back the application in all application groups, set this parameter to `all`.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The historical version to which you want to roll back the application. Call the ListHistoryDeployVersion operation to query the historical versions of the application. Then, set this parameter based on the returned value of `PackageVersion`. For more information, see [ListHistoryDeployVersion](~~423163~~).</p>
+     */
     @NameInMap("HistoryVersion")
     public String historyVersion;
 

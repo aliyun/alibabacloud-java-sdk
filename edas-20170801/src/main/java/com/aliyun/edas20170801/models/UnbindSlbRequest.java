@@ -4,15 +4,33 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UnbindSlbRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Specifies whether to remove the configured listeners. Valid values:</p>
+     * <br>
+     * <p>*   true: removes the configured listeners.</p>
+     * <p>*   false: does not remove the configured listeners.</p>
+     */
     @NameInMap("DeleteListener")
     public String deleteListener;
 
+    /**
+     * <p>The ID of the SLB instance.</p>
+     */
     @NameInMap("SlbId")
     public String slbId;
 
+    /**
+     * <p>The network type of the SLB instance. Valid values:</p>
+     * <br>
+     * <p>*   **internet**: Internet-facing SLB instance</p>
+     * <p>*   **intranet**: internal-facing SLB instance</p>
+     */
     @NameInMap("Type")
     public String type;
 

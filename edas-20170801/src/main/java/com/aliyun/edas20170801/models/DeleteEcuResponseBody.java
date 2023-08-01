@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteEcuResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned data that indicates whether the ECU is deleted. A value of `OK` indicates that the ECU is deleted.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

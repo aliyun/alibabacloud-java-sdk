@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateAccountInfoRequest extends TeaModel {
+    /**
+     * <p>The email address of the account.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The name of the account.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The contact information of the account.</p>
+     */
     @NameInMap("Telephone")
     public String telephone;
 

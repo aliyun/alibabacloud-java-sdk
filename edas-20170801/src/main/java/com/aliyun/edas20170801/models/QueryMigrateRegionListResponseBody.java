@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryMigrateRegionListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The namespaces.</p>
+     */
     @NameInMap("RegionEntityList")
     public QueryMigrateRegionListResponseBodyRegionEntityList regionEntityList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class QueryMigrateRegionListResponseBody extends TeaModel {
     }
 
     public static class QueryMigrateRegionListResponseBodyRegionEntityListRegionEntity extends TeaModel {
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("RegionNo")
         public String regionNo;
 

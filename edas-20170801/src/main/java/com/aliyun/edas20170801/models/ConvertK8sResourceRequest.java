@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ConvertK8sResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster. You can call the ListCluster operation to query the cluster ID. For more information, see [ListCluster](~~154995~~).</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The name of the resource.</p>
+     */
     @NameInMap("ResourceName")
     public String resourceName;
 
+    /**
+     * <p>The type of the resource that is used. Set the value to deployment.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

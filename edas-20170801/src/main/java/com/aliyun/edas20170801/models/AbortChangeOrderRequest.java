@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AbortChangeOrderRequest extends TeaModel {
+    /**
+     * <p>The ID of the change process. You can call the [GetChangeOrderInfo](~~62072~~) operation to query the change process ID.</p>
+     */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 

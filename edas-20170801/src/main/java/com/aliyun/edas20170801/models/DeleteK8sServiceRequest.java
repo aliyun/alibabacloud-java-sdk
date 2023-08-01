@@ -4,9 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteK8sServiceRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("Name")
     public String name;
 

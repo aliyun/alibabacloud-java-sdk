@@ -4,30 +4,76 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListPageRequest extends TeaModel {
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the data. Valid values:</p>
+     * <br>
+     * <p>*   `agent`: Use this value if you use the service query feature of the latest version to pass the query result.</p>
+     * <p>*   `registry`: Use this value if you use the service query feature of the earlier version to pass the query result.</p>
+     */
     @NameInMap("origin")
     public String origin;
 
+    /**
+     * <p>The number of the page to return. Pages start from Page 0.</p>
+     */
     @NameInMap("page")
     public Integer page;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("region")
     public String region;
 
+    /**
+     * <p>The type of the service. Valid values:</p>
+     * <br>
+     * <p>*   `app`: searches by application.</p>
+     * <p>*   `service`: searches by service.</p>
+     * <p>*   `providerIp`: searches by IP address.</p>
+     */
     @NameInMap("searchType")
     public String searchType;
 
+    /**
+     * <p>The keyword used for the search.</p>
+     * <br>
+     * <p>*   Set this parameter to the ID of the application if you set the searchType parameter to app.``</p>
+     * <p>*   Set this parameter to the name of the service if you set the serachType parameter to service.``</p>
+     * <p>*   Set this parameter to the IP address of the application if you set the searchType parameter to providerIp.</p>
+     */
     @NameInMap("searchValue")
     public String searchValue;
 
+    /**
+     * <p>The type of the service. Valid values:</p>
+     * <br>
+     * <p>*   `dubbo`</p>
+     * <p>*   `springCloud`</p>
+     * <p>*   `hsf`</p>
+     * <p>*   `istio`</p>
+     */
     @NameInMap("serviceType")
     public String serviceType;
 
+    /**
+     * <p>Specifies the provider side or the consumer side. Valid values:</p>
+     * <br>
+     * <p>*   provider</p>
+     * <p>*   consumer</p>
+     */
     @NameInMap("side")
     public String side;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("size")
     public Integer size;
 

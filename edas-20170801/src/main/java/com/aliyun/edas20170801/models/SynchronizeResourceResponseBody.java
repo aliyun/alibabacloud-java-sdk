@@ -4,18 +4,36 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class SynchronizeResourceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned for the request.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the resources are synchronized. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The resources are synchronized.</p>
+     * <p>*   **false**: The resources fail to be synchronized.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -1,3 +1,6 @@
+2023-08-01 Version: 1.0.12
+- Add TerminateGracePeriod parameter for InsertK8sApplication API.
+
 2022-11-09 Version: 1.0.11
 - Modify ListApplication API.
 

@@ -4,42 +4,105 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ScaleoutApplicationWithNewInstancesRequest extends TeaModel {
+    /**
+     * <p>The ID of the application that you want to scale out. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when the InstanceChargeType parameter is set to PrePaid. Valid values:</p>
+     * <br>
+     * <p>*   true: enables auto-renewal.</p>
+     * <p>*   false: does not enable auto-renewal. This is the default value.</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>The auto-renewal period. Valid values:</p>
+     * <br>
+     * <p>*   If the InstanceChargePeriodUnit parameter is set to Week, the valid values of the AutoRenewPeriod parameter are 1, 2, and 3.</p>
+     * <p>*   If the InstanceChargePeriodUnit parameter is set to Month, the valid values of the AutoRenewPeriod parameter are 1, 2, 3, 6, 12, 24, 36, 48, and 60.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("AutoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    /**
+     * <p>The ID of the cluster to which you want to add ECS instances. If the application and application instance group for the scale-out are specified, this parameter is ignored.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the instance group that you want to scale out. You can call the ListDeployGroup operation to query the group ID. For more information, see [ListDeployGroup](~~62077~~).</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The duration of the subscription. The unit of the subscription duration is specified by the InstanceChargePeriodUnit parameter. This parameter takes effect only when the InstanceChargeType parameter is set to PrePaid.</p>
+     * <br>
+     * <p>*   If the InstanceChargePeriodUnit parameter is set to Week, the valid values of the InstanceChargePeriod parameter are 1, 2, 3, and 4.</p>
+     * <p>*   If the InstanceChargePeriodUnit parameter is set to Month, the valid values of the InstanceChargePeriod parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     */
     @NameInMap("InstanceChargePeriod")
     public Integer instanceChargePeriod;
 
+    /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <br>
+     * <p>*   Week: billed on a weekly basis.</p>
+     * <p>*   Month: billed on a monthly basis. This is the default value.</p>
+     */
     @NameInMap("InstanceChargePeriodUnit")
     public String instanceChargePeriodUnit;
 
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   PrePaid: subscription.</p>
+     * <p>*   PostPaid: pay-as-you-go. This is the default value.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The number of instances to be added for the scale-out.</p>
+     */
     @NameInMap("ScalingNum")
     public Integer scalingNum;
 
+    /**
+     * <p>The instance reclaim mode of the scaling group. Valid values:</p>
+     * <br>
+     * <p>*   recycle: economical mode</p>
+     * <p>*   release: release mode</p>
+     * <br>
+     * <p>For more information about how to remove instances from a specified scaling group, see [RemoveInstances](~~25955~~).</p>
+     */
     @NameInMap("ScalingPolicy")
     public String scalingPolicy;
 
+    /**
+     * <p>The ID of the ECS instance launch template. You can call the DescribeLaunchTemplates operation to query the launch template ID. For more information, see [DescribeLaunchTemplates](~~73759~~).</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The ID of the existing ECS instance used for the scale-out. If this parameter is specified, the specifications and configurations of the specified ECS instance are used as a template to purchase new instances.</p>
+     */
     @NameInMap("TemplateInstanceId")
     public String templateInstanceId;
 
+    /**
+     * <p>The version of the ECS instance launch template. You can call the DescribeLaunchTemplateVersions operation to query the launch template version. For more information, see [DescribeLaunchTemplateVersions](~~73761~~).</p>
+     * <br>
+     * <p>> If you set this parameter to `-1`, the default launch template version is used.</p>
+     */
     @NameInMap("TemplateVersion")
     public String templateVersion;
 

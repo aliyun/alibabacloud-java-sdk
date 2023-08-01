@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListRecentChangeOrderResponseBody extends TeaModel {
+    /**
+     * <p>The information about change processes.</p>
+     */
     @NameInMap("ChangeOrderList")
     public ListRecentChangeOrderResponseBodyChangeOrderList changeOrderList;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,45 +66,102 @@ public class ListRecentChangeOrderResponseBody extends TeaModel {
     }
 
     public static class ListRecentChangeOrderResponseBodyChangeOrderListChangeOrder extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The number of batches for the change. Valid values: 1 to 5.</p>
+         */
         @NameInMap("BatchCount")
         public Integer batchCount;
 
+        /**
+         * <p>The way in which the next batch is triggered during a phased release. Valid values:</p>
+         * <br>
+         * <p>*   Automatic</p>
+         * <p>*   Manual</p>
+         */
         @NameInMap("BatchType")
         public String batchType;
 
+        /**
+         * <p>The description of the change process.</p>
+         */
         @NameInMap("ChangeOrderDescription")
         public String changeOrderDescription;
 
+        /**
+         * <p>The unique ID of the change process.</p>
+         */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 
+        /**
+         * <p>The type of the change process.</p>
+         */
         @NameInMap("CoType")
         public String coType;
 
+        /**
+         * <p>The type of the change process.</p>
+         */
         @NameInMap("CoTypeCode")
         public String coTypeCode;
 
+        /**
+         * <p>The time when the change process was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The user who created the change process.</p>
+         */
         @NameInMap("CreateUserId")
         public String createUserId;
 
+        /**
+         * <p>The time when the change process ended.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The ID of the application instance group on which the change was performed.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The source of the change. Valid values:</p>
+         * <br>
+         * <p>*   console: the Enterprise Distributed Application Service (EDAS) console</p>
+         * <p>*   pop: the POP API or tool</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The state of the change process. Valid values:</p>
+         * <br>
+         * <p>*   0: ready to start execution</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   8: waiting for manual confirmation (You can see the state when you manually confirm the execution of the next batch of the change.)</p>
+         * <p>*   9: waiting for automatic execution</p>
+         * <p>*   10: failed due to a system error</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The ID of the user who created the change process.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

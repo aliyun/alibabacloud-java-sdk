@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListK8sNamespacesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListK8sNamespacesResponseBodyData> data;
 
+    /**
+     * <p>The message returned for the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,9 @@ public class ListK8sNamespacesResponseBody extends TeaModel {
     }
 
     public static class ListK8sNamespacesResponseBodyData extends TeaModel {
+        /**
+         * <p>The namespaces of the Kubernetes cluster.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 

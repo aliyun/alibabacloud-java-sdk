@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserDefineRegionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The custom namespace.</p>
+     */
     @NameInMap("RegionDefine")
     public DeleteUserDefineRegionResponseBodyRegionDefine regionDefine;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,21 +66,39 @@ public class DeleteUserDefineRegionResponseBody extends TeaModel {
     }
 
     public static class DeleteUserDefineRegionResponseBodyRegionDefine extends TeaModel {
+        /**
+         * <p>The ID of the region to which the custom namespace belongs.</p>
+         */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
+        /**
+         * <p>The description of the custom namespace.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The unique identifier of the custom namespace.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the custom namespace. The ID cannot be changed after the custom namespace is created. The format is `region ID:custom namespace ID`.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the custom namespace.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the custom namespace belongs.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

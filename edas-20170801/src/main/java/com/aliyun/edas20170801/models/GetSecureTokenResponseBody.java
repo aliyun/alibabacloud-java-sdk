@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetSecureTokenResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The message returned for the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned security token.</p>
+     */
     @NameInMap("SecureToken")
     public GetSecureTokenResponseBodySecureToken secureToken;
 
@@ -54,48 +66,96 @@ public class GetSecureTokenResponseBody extends TeaModel {
     }
 
     public static class GetSecureTokenResponseBodySecureToken extends TeaModel {
+        /**
+         * <p>The AccessKey ID used in the namespace.</p>
+         */
         @NameInMap("AccessKey")
         public String accessKey;
 
+        /**
+         * <p>The address of Address Server associated with the namespace.</p>
+         */
         @NameInMap("AddressServerHost")
         public String addressServerHost;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("BelongRegion")
         public String belongRegion;
 
+        /**
+         * <p>The description of the namespace.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that activated Enterprise Distributed Application Service (EDAS).</p>
+         */
         @NameInMap("EdasId")
         public String edasId;
 
+        /**
+         * <p>The ID of the security token.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The ID of the MSE instance.</p>
+         */
         @NameInMap("MseInstanceId")
         public String mseInstanceId;
 
+        /**
+         * <p>The public endpoint of the MSE registry.</p>
+         */
         @NameInMap("MseInternetAddress")
         public String mseInternetAddress;
 
+        /**
+         * <p>The private endpoint of the MSE registry.</p>
+         */
         @NameInMap("MseIntranetAddress")
         public String mseIntranetAddress;
 
+        /**
+         * <p>The type of the Microservices Engine (MSE) registry.</p>
+         * <br>
+         * <p>*   default: the shared registry of EDAS</p>
+         * <p>*   exclusive_mse: MSE Nacos registry</p>
+         */
         @NameInMap("MseRegistryType")
         public String mseRegistryType;
 
+        /**
+         * <p>The ID of the region where the namespace resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the region where the namespace resides.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
+        /**
+         * <p>The AccessKey secret used in the namespace.</p>
+         */
         @NameInMap("SecretKey")
         public String secretKey;
 
+        /**
+         * <p>The tenant ID of the namespace.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

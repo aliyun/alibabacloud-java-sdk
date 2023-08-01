@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListDeployGroupResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the instance group in which the application is deployed.</p>
+     */
     @NameInMap("DeployGroupList")
     public ListDeployGroupResponseBodyDeployGroupList deployGroupList;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,105 +66,218 @@ public class ListDeployGroupResponseBody extends TeaModel {
     }
 
     public static class ListDeployGroupResponseBodyDeployGroupListDeployGroup extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The ID of the change process for application deployment in the instance group.</p>
+         */
         @NameInMap("AppVersionId")
         public String appVersionId;
 
+        /**
+         * <p>The name of the basic component.</p>
+         */
         @NameInMap("BaseComponentMetaName")
         public String baseComponentMetaName;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The maximum number of CPU cores allowed for each application instance when the application is running.</p>
+         */
         @NameInMap("CpuLimit")
         public String cpuLimit;
 
+        /**
+         * <p>The number of CPU cores requested for each application instance when the application is running. Unit: cores. Value 0 indicates that no limit is set on CPU cores.</p>
+         */
         @NameInMap("CpuRequest")
         public String cpuRequest;
 
+        /**
+         * <p>The time when the application was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the Container Service for Kubernetes (ACK) cluster.</p>
+         */
         @NameInMap("CsClusterId")
         public String csClusterId;
 
+        /**
+         * <p>The name of the deployment.</p>
+         */
         @NameInMap("DeploymentName")
         public String deploymentName;
 
+        /**
+         * <p>The ID of the ACK cluster.</p>
+         */
         @NameInMap("Env")
         public String env;
 
+        /**
+         * <p>The maximum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+         */
         @NameInMap("EphemeralStorageLimit")
         public String ephemeralStorageLimit;
 
+        /**
+         * <p>The minimum size of space required by ephemeral storage. Unit: GB. Value 0 indicates that no limit is set on the space size.</p>
+         */
         @NameInMap("EphemeralStorageRequest")
         public String ephemeralStorageRequest;
 
+        /**
+         * <p>The ID of the instance group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the instance group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the instance group. Valid values:</p>
+         * <br>
+         * <p>*   0: default group.</p>
+         * <p>*   1: Canary release is disabled for traffic management.</p>
+         * <p>*   2: Canary release is enabled for traffic management.</p>
+         */
         @NameInMap("GroupType")
         public Integer groupType;
 
+        /**
+         * <p>The tag.</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <p>The time when the application was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("LastUpdateTime")
         public Long lastUpdateTime;
 
+        /**
+         * <p>The maximum size of memory allowed for each application instance when the application is running. Unit: MB. Value 0 indicates that no limit is set on the memory size.</p>
+         */
         @NameInMap("MemoryLimit")
         public String memoryLimit;
 
+        /**
+         * <p>The size of memory requested for each application instance when the application is running. Unit: MB. Value 0 indicates that no limit is set on the memory size.</p>
+         */
         @NameInMap("MemoryRequest")
         public String memoryRequest;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("NameSpace")
         public String nameSpace;
 
+        /**
+         * <p>The external download URL of the deployment package.</p>
+         */
         @NameInMap("PackagePublicUrl")
         public String packagePublicUrl;
 
+        /**
+         * <p>The URL of the deployment package.</p>
+         */
         @NameInMap("PackageUrl")
         public String packageUrl;
 
+        /**
+         * <p>The version of the deployment package.</p>
+         */
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        /**
+         * <p>The version of the deployment package that was used to deploy an application in the instance group.</p>
+         */
         @NameInMap("PackageVersionId")
         public String packageVersionId;
 
+        /**
+         * <p>The post-start script.</p>
+         */
         @NameInMap("PostStart")
         public String postStart;
 
+        /**
+         * <p>The pre-stop script.</p>
+         */
         @NameInMap("PreStop")
         public String preStop;
 
+        /**
+         * <p>The version of the application. The value progressively increases in the range of 0 to 7.</p>
+         */
         @NameInMap("Reversion")
         public String reversion;
 
+        /**
+         * <p>The ID of the application deployed in the ACK cluster in Enterprise Distributed Application Service (EDAS).</p>
+         */
         @NameInMap("Selector")
         public String selector;
 
+        /**
+         * <p>The state of the application instance group. Valid values:</p>
+         * <br>
+         * <p>*   0: ready</p>
+         * <p>*   1: in progress</p>
+         * <p>*   2: successful</p>
+         * <p>*   3: failed</p>
+         * <p>*   6: terminated</p>
+         * <p>*   10: failed due to a system exception</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The throttling policy. This parameter is reserved.</p>
+         */
         @NameInMap("Strategy")
         public String strategy;
 
+        /**
+         * <p>The time when the application was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the vServer group of the Internet-facing SLB instance associated with the instance group.</p>
+         */
         @NameInMap("VExtServerGroupId")
         public String VExtServerGroupId;
 
+        /**
+         * <p>The ID of the vServer group of the internal-facing Server Load Balancer (SLB) instance associated with the instance group.</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 

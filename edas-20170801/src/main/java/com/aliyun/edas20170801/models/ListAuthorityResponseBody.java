@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListAuthorityResponseBody extends TeaModel {
+    /**
+     * <p>The permissions.</p>
+     */
     @NameInMap("AuthorityList")
     public ListAuthorityResponseBodyAuthorityList authorityList;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class ListAuthorityResponseBody extends TeaModel {
     }
 
     public static class ListAuthorityResponseBodyAuthorityListAuthorityActionListAction extends TeaModel {
+        /**
+         * <p>The code of the permission.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The description of the permission.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the permission group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the permission.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -125,15 +149,27 @@ public class ListAuthorityResponseBody extends TeaModel {
     }
 
     public static class ListAuthorityResponseBodyAuthorityListAuthority extends TeaModel {
+        /**
+         * <p>The set of permissions.</p>
+         */
         @NameInMap("ActionList")
         public ListAuthorityResponseBodyAuthorityListAuthorityActionList actionList;
 
+        /**
+         * <p>The description of the permission group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the permission group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the permission group.</p>
+         */
         @NameInMap("Name")
         public String name;
 

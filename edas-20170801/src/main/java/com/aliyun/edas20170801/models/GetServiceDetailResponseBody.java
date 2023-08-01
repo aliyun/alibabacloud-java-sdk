@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceDetailResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public GetServiceDetailResponseBodyData data;
 
+    /**
+     * <p>The message returned for the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,9 +66,15 @@ public class GetServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetServiceDetailResponseBodyDataMethodsReturnDefinition extends TeaModel {
+        /**
+         * <p>The ID of the return value.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -84,39 +102,75 @@ public class GetServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetServiceDetailResponseBodyDataMethods extends TeaModel {
+        /**
+         * <p>The controllers.</p>
+         */
         @NameInMap("MethodController")
         public String methodController;
 
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The specific name.</p>
+         */
         @NameInMap("NameDetail")
         public String nameDetail;
 
+        /**
+         * <p>The definition of the parameter.</p>
+         */
         @NameInMap("ParameterDefinitions")
         public String parameterDefinitions;
 
+        /**
+         * <p>The details of the parameters.</p>
+         */
         @NameInMap("ParameterDetails")
         public String parameterDetails;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterNames")
         public String parameterNames;
 
+        /**
+         * <p>The data type of the parameter.</p>
+         */
         @NameInMap("ParameterTypes")
         public String parameterTypes;
 
+        /**
+         * <p>The method path.</p>
+         */
         @NameInMap("Paths")
         public String paths;
 
+        /**
+         * <p>The request method.</p>
+         */
         @NameInMap("RequestMethods")
         public String requestMethods;
 
+        /**
+         * <p>The definition of the value returned by the method.</p>
+         */
         @NameInMap("ReturnDefinition")
         public GetServiceDetailResponseBodyDataMethodsReturnDefinition returnDefinition;
 
+        /**
+         * <p>The details of the response.</p>
+         */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
+        /**
+         * <p>The data format of the response.</p>
+         */
         @NameInMap("ReturnType")
         public String returnType;
 
@@ -224,33 +278,63 @@ public class GetServiceDetailResponseBody extends TeaModel {
     }
 
     public static class GetServiceDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the Dubbo application.</p>
+         */
         @NameInMap("DubboApplicationName")
         public String dubboApplicationName;
 
+        /**
+         * <p>The name of the Enterprise Distributed Application Service (EDAS) application.</p>
+         */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
+        /**
+         * <p>The group to which the service belongs.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The metadata.</p>
+         */
         @NameInMap("Metadata")
         public String metadata;
 
+        /**
+         * <p>The methods.</p>
+         */
         @NameInMap("Methods")
         public java.util.List<GetServiceDetailResponseBodyDataMethods> methods;
 
+        /**
+         * <p>The type of the service registry.</p>
+         */
         @NameInMap("RegistryType")
         public String registryType;
 
+        /**
+         * <p>The name of the service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The type of the service.</p>
+         */
         @NameInMap("ServiceType")
         public String serviceType;
 
+        /**
+         * <p>The name of the Spring application.</p>
+         */
         @NameInMap("SpringApplicationName")
         public String springApplicationName;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("Version")
         public String version;
 

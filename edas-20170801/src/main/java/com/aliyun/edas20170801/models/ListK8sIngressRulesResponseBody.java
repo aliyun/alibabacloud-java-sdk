@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListK8sIngressRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListK8sIngressRulesResponseBodyData> data;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     }
 
     public static class ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend extends TeaModel {
+        /**
+         * <p>The name of the backend service.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The port of the backend service.</p>
+         */
         @NameInMap("ServicePort")
         public String servicePort;
 
@@ -84,21 +102,48 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     }
 
     public static class ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths extends TeaModel {
+        /**
+         * <p>The ID of the EDAS application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the EDAS application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The configuration of the backend service.</p>
+         */
         @NameInMap("Backend")
         public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPathsBackend backend;
 
+        /**
+         * <p>The collection rate that is set based on the trace query feature. You can add a TraceID to a gateway to use the trace query feature of EDAS.</p>
+         */
         @NameInMap("CollectRate")
         public Integer collectRate;
 
+        /**
+         * <p>The path to be accessed.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        @NameInMap("PathType")
+        public String pathType;
+
+        /**
+         * <p>The status of the Ingress. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: The Ingress works properly.</p>
+         * <p>*   **ServiceNotFound**: The backend service does not exist.</p>
+         * <p>*   **InvalidServicePort**: The service port is invalid.</p>
+         * <p>*   **NotManagedService**: The service is not managed by EDAS.</p>
+         * <p>*   **Unknown**: An unknown error occurred.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -147,6 +192,14 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
             return this.path;
         }
 
+        public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths setPathType(String pathType) {
+            this.pathType = pathType;
+            return this;
+        }
+        public String getPathType() {
+            return this.pathType;
+        }
+
         public ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths setStatus(String status) {
             this.status = status;
             return this;
@@ -158,15 +211,30 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     }
 
     public static class ListK8sIngressRulesResponseBodyDataIngressConfsRules extends TeaModel {
+        /**
+         * <p>Indicates whether TLS is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: TLS is enabled.</p>
+         * <p>*   false: TLS is disabled.</p>
+         */
         @NameInMap("EnableTls")
         public Boolean enableTls;
 
+        /**
+         * <p>The domain name to be accessed.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The list of paths to be accessed.</p>
+         */
         @NameInMap("Paths")
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRulesPaths> paths;
 
+        /**
+         * <p>The name of the Secret that stores the information about the Transport Layer Security (TLS) certificate.</p>
+         */
         @NameInMap("SecretName")
         public String secretName;
 
@@ -210,48 +278,101 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     }
 
     public static class ListK8sIngressRulesResponseBodyDataIngressConfs extends TeaModel {
+        /**
+         * <p>The ID of the Application Load Balancer (ALB) instance.</p>
+         */
         @NameInMap("AlbId")
         public String albId;
 
+        /**
+         * <p>The annotations.</p>
+         */
         @NameInMap("Annotations")
         public String annotations;
 
+        /**
+         * <p>The time when the Ingress was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The monitoring URL of the Ingress.</p>
+         */
         @NameInMap("DashboardUrl")
         public String dashboardUrl;
 
+        /**
+         * <p>The IP address of the Ingress.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The type of the Ingress. Valid values:</p>
+         * <br>
+         * <p>*   **NginxIngress**: NGINX Ingress controller</p>
+         * <p>*   **AlbIngress**: ALB Ingress controller</p>
+         * <br>
+         * <p>Default value: NginxIngress.</p>
+         */
         @NameInMap("IngressType")
         public String ingressType;
 
+        /**
+         * <p>The labels.</p>
+         */
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <p>The ID of the Microservices Engine (MSE) gateway.</p>
+         */
         @NameInMap("MseGatewayId")
         public String mseGatewayId;
 
+        /**
+         * <p>The name of the MSE gateway.</p>
+         */
         @NameInMap("MseGatewayName")
         public String mseGatewayName;
 
+        /**
+         * <p>The name of the Ingress.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The Kubernetes namespace to which the Ingress belongs.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The URL used for basic monitoring of the open source version.</p>
+         */
         @NameInMap("OfficalBasicUrl")
         public String officalBasicUrl;
 
+        /**
+         * <p>The URL used for request performance monitoring of the open source version.</p>
+         */
         @NameInMap("OfficalRequestUrl")
         public String officalRequestUrl;
 
+        /**
+         * <p>The list of routing rules.</p>
+         */
         @NameInMap("Rules")
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfsRules> rules;
 
+        /**
+         * <p>Indicates whether SSL redirect is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: SSL redirect is enabled.</p>
+         * <p>*   false: SSL redirect is disabled.</p>
+         */
         @NameInMap("SslRedirect")
         public Boolean sslRedirect;
 
@@ -383,15 +504,27 @@ public class ListK8sIngressRulesResponseBody extends TeaModel {
     }
 
     public static class ListK8sIngressRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the Kubernetes cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the Kubernetes cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The Ingresses.</p>
+         */
         @NameInMap("IngressConfs")
         public java.util.List<ListK8sIngressRulesResponseBodyDataIngressConfs> ingressConfs;
 
+        /**
+         * <p>The ID of the region where the cluster resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

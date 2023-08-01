@@ -4,9 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class RetryChangeOrderTaskRequest extends TeaModel {
+    /**
+     * <p>The retry status.</p>
+     */
     @NameInMap("RetryStatus")
     public Boolean retryStatus;
 
+    /**
+     * <p>The ID of the process.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

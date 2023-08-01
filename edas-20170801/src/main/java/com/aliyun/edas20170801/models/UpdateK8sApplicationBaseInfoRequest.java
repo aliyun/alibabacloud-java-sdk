@@ -4,18 +4,33 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateK8sApplicationBaseInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the application that you want to modify.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The description of the application. The description can be up to 256 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The email address of the application owner.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The owner of the application. The value can be up to 128 characters in length.</p>
+     */
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The phone number of the application owner.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

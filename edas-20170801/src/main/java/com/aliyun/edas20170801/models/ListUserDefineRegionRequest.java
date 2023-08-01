@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListUserDefineRegionRequest extends TeaModel {
+    /**
+     * <p>Specifies whether remote debugging is allowed.</p>
+     */
     @NameInMap("DebugEnable")
     public Boolean debugEnable;
 

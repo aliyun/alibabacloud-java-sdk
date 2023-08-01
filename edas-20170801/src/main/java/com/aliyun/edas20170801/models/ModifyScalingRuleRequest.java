@@ -4,93 +4,203 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyScalingRuleRequest extends TeaModel {
+    /**
+     * <p>Set the value to true if scale-outs are allowed.</p>
+     */
     @NameInMap("AcceptEULA")
     public Boolean acceptEULA;
 
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The ID of the instance group to which the application is deployed.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The relationship among the conditions that trigger a scale-in.</p>
+     * <br>
+     * <p>*   OR: one of the conditions</p>
+     * <p>*   AND: all conditions</p>
+     */
     @NameInMap("InCondition")
     public String inCondition;
 
+    /**
+     * <p>The CPU utilization that triggers a scale-in.</p>
+     */
     @NameInMap("InCpu")
     public Integer inCpu;
 
+    /**
+     * <p>The duration in which the metric threshold is exceeded. Unit: minutes.</p>
+     */
     @NameInMap("InDuration")
     public Integer inDuration;
 
+    /**
+     * <p>Specifies whether to allow scale-ins.</p>
+     * <br>
+     * <p>*   true: allows scale-ins.</p>
+     * <p>*   false: does not allow scale-ins.</p>
+     */
     @NameInMap("InEnable")
     public Boolean inEnable;
 
+    /**
+     * <p>The minimum number of instances that must be retained in each group when a scale-in is performed.</p>
+     */
     @NameInMap("InInstanceNum")
     public Integer inInstanceNum;
 
+    /**
+     * <p>The system load that triggers a scale-in.</p>
+     */
     @NameInMap("InLoad")
     public Integer inLoad;
 
+    /**
+     * <p>The minimum service latency that triggers a scale-in. The lower limit is 0. Unit: milliseconds.</p>
+     */
     @NameInMap("InRT")
     public Integer inRT;
 
+    /**
+     * <p>The number of instances that are removed during each scale-in.</p>
+     */
     @NameInMap("InStep")
     public Integer inStep;
 
+    /**
+     * <p>The key pair that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The multi-zone scaling policy. Valid values:</p>
+     * <br>
+     * <p>*   PRIORITY: The vSwitch that is first selected has the highest priority.</p>
+     * <p>*   BALANCE: This policy evenly distributes instances across zones in which the vSwitches reside.</p>
+     */
     @NameInMap("MultiAzPolicy")
     public String multiAzPolicy;
 
+    /**
+     * <p>The CPU utilization that triggers a scale-out.</p>
+     */
     @NameInMap("OutCPU")
     public Integer outCPU;
 
+    /**
+     * <p>The relationship among the conditions that trigger a scale-out.</p>
+     * <br>
+     * <p>*   OR: one of the conditions</p>
+     * <p>*   AND: all conditions</p>
+     */
     @NameInMap("OutCondition")
     public String outCondition;
 
+    /**
+     * <p>The duration in which the metric threshold is exceeded. Unit: minutes.</p>
+     */
     @NameInMap("OutDuration")
     public Integer outDuration;
 
+    /**
+     * <p>Specifies whether to allow scale-outs.</p>
+     */
     @NameInMap("OutEnable")
     public Boolean outEnable;
 
+    /**
+     * <p>The maximum number of instances in each group when a scale-out is performed.</p>
+     */
     @NameInMap("OutInstanceNum")
     public Integer outInstanceNum;
 
+    /**
+     * <p>The system load that triggers a scale-out.</p>
+     */
     @NameInMap("OutLoad")
     public Integer outLoad;
 
+    /**
+     * <p>The minimum service latency that triggers a scale-out. The lower limit is 0. Unit: milliseconds.</p>
+     */
     @NameInMap("OutRT")
     public Integer outRT;
 
+    /**
+     * <p>The number of instances that are added during each scale-out.</p>
+     */
     @NameInMap("OutStep")
     public Integer outStep;
 
+    /**
+     * <p>The password that is used to log on to the instance. This parameter takes effect only if you choose to create instances based on the specifications of an existing instance during a scale-out.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The source of the instance to be added during a scale-out. Valid values:</p>
+     * <br>
+     * <p>*   NEW: elastic resources</p>
+     * <p>*   AVAILABLE: existing resources If you prefer existing resources to elastic resources, set this parameter to AVAILABLE_FIRST.</p>
+     * <br>
+     * <p>If you set this parameter to NEW or AVAILABLE_FIRST, you must specify the auto-scaling parameters. If you set this parameter to NEW, instances are created based on a launch template or the specifications of an existing instance.</p>
+     */
     @NameInMap("ResourceFrom")
     public String resourceFrom;
 
+    /**
+     * <p>The instance handling mode during a scale-in. Valid values:</p>
+     * <br>
+     * <p>*   release: When a scale-in is performed, instances that are no longer used are released.</p>
+     * <p>*   recycle: When a scale-in is performed, instances that are no longer used are stopped and reclaimed.</p>
+     */
     @NameInMap("ScalingPolicy")
     public String scalingPolicy;
 
+    /**
+     * <p>The ID of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. This parameter takes precedence over the TemplateInstanceId parameter.</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
+    /**
+     * <p>The ID of the instance whose specifications are used to create instances during a scale-out. This parameter is valid only when you set the OutEnable parameter to true.</p>
+     */
     @NameInMap("TemplateInstanceId")
     public String templateInstanceId;
 
+    /**
+     * <p>The name of the instance whose specifications are used to create instances during a scale-out. This parameter takes effect only if you specify the TemplateInstanceId parameter.</p>
+     */
     @NameInMap("TemplateInstanceName")
     public String templateInstanceName;
 
+    /**
+     * <p>The version of the launch template that is used to create instances during a scale-out. This parameter takes effect only if you set the OutEnable parameter to true. To use the default template version, set this parameter to `-1`. Otherwise, set this parameter to the version that you want to use.</p>
+     */
     @NameInMap("TemplateVersion")
     public Integer templateVersion;
 
+    /**
+     * <p>The IDs of the vSwitches that are associated with the VPC. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) that is associated with the instances created based on a launch template or the specifications of an existing instance.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

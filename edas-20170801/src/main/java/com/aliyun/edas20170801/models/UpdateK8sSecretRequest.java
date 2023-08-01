@@ -4,27 +4,57 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateK8sSecretRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the data has been encoded in Base64.</p>
+     */
     @NameInMap("Base64Encoded")
     public Boolean base64Encoded;
 
+    /**
+     * <p>The ID of the certificate.</p>
+     */
     @NameInMap("CertId")
     public String certId;
 
+    /**
+     * <p>The region ID of the certificate.</p>
+     */
     @NameInMap("CertRegionId")
     public String certRegionId;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The data of the Secret. The value must be a JSON array that contains the following information:</p>
+     * <br>
+     * <p>*   Key: Secret key</p>
+     * <p>*   Value: Secret value</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The name of the Secret. The name must start with a letter, and can contain digits, letters, and hyphens (-). It can be up to 63 characters in length.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace of the Kubernetes cluster.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The type of the Secret. Valid values:</p>
+     * <br>
+     * <p>*   Opaque: user-defined data type</p>
+     * <p>*   kubernetes.io/tls: Transport Layer Security (TLS) certificate type</p>
+     */
     @NameInMap("Type")
     public String type;
 

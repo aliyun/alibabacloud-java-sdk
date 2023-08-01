@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteK8sIngressRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the Kubernetes cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the Ingress. The name can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter but cannot end with a hyphen (-). The name can be up to 63 characters in length.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace of the Kubernetes cluster.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

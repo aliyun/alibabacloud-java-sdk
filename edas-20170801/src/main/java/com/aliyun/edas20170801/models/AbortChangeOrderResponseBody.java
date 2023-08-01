@@ -4,21 +4,39 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AbortChangeOrderResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The change process.</p>
+     */
     @NameInMap("Data")
     public AbortChangeOrderResponseBodyData data;
 
+    /**
+     * <p>The error code that is returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the trace.</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -76,6 +94,9 @@ public class AbortChangeOrderResponseBody extends TeaModel {
     }
 
     public static class AbortChangeOrderResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the change process.</p>
+         */
         @NameInMap("ChangeOrderId")
         public String changeOrderId;
 

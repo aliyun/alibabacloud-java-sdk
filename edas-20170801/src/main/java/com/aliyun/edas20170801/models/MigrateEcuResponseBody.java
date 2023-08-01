@@ -4,15 +4,30 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class MigrateEcuResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The request is successful.</p>
+     * <p>*   false: The request fails.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

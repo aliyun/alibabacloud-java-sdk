@@ -4,21 +4,39 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceMethodPageResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public GetServiceMethodPageResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +94,15 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceMethodPageResponseBodyDataResultReturnDefinition extends TeaModel {
+        /**
+         * <p>The ID of the return value.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The data format of the response.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,39 +130,75 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceMethodPageResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The method.</p>
+         */
         @NameInMap("MethodController")
         public String methodController;
 
+        /**
+         * <p>The name of the method.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The details of the method.</p>
+         */
         @NameInMap("NameDetail")
         public String nameDetail;
 
+        /**
+         * <p>The definition of the parameter.</p>
+         */
         @NameInMap("ParameterDefinitions")
         public String parameterDefinitions;
 
+        /**
+         * <p>The details of the parameters.</p>
+         */
         @NameInMap("ParameterDetails")
         public String parameterDetails;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterNames")
         public String parameterNames;
 
+        /**
+         * <p>The data type of the parameter.</p>
+         */
         @NameInMap("ParameterTypes")
         public String parameterTypes;
 
+        /**
+         * <p>The method path.</p>
+         */
         @NameInMap("Paths")
         public String paths;
 
+        /**
+         * <p>The request method.</p>
+         */
         @NameInMap("RequestMethods")
         public String requestMethods;
 
+        /**
+         * <p>The return value.</p>
+         */
         @NameInMap("ReturnDefinition")
         public GetServiceMethodPageResponseBodyDataResultReturnDefinition returnDefinition;
 
+        /**
+         * <p>The details of the response.</p>
+         */
         @NameInMap("ReturnDetails")
         public String returnDetails;
 
+        /**
+         * <p>The data format of the response.</p>
+         */
         @NameInMap("ReturnType")
         public String returnType;
 
@@ -246,15 +306,27 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceMethodPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The data about the method.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetServiceMethodPageResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

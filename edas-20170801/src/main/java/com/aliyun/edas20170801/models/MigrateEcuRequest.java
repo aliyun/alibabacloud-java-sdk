@@ -4,9 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class MigrateEcuRequest extends TeaModel {
+    /**
+     * <p>The ID of the ECS instance. Separate multiple IDs with commas (,).</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
+    /**
+     * <p>The ID of the custom namespace.</p>
+     * <br>
+     * <p>*   The ID of a custom namespace is in the `region ID:custom namespace ID` format. Example: cn-beijing:tdy218.</p>
+     * <p>*   The ID of the default namespace is in the `region ID` format. Example: cn-beijing.</p>
+     */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 

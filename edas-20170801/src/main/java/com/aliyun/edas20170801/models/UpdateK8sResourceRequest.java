@@ -4,12 +4,21 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateK8sResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the namespace to which the Kubernetes resource belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The description of the resource in the YAML format.</p>
+     */
     @NameInMap("ResourceContent")
     public String resourceContent;
 

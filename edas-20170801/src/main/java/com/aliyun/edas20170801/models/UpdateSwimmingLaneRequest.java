@@ -4,18 +4,33 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateSwimmingLaneRequest extends TeaModel {
+    /**
+     * <p>The list of applications that are related to the lane.</p>
+     */
     @NameInMap("AppInfos")
     public String appInfos;
 
+    /**
+     * <p>Specifies whether to enable the throttling rule.</p>
+     */
     @NameInMap("EnableRules")
     public Boolean enableRules;
 
+    /**
+     * <p>The configuration of the throttling rule.</p>
+     */
     @NameInMap("EntryRules")
     public String entryRules;
 
+    /**
+     * <p>The ID of the lane.</p>
+     */
     @NameInMap("LaneId")
     public Long laneId;
 
+    /**
+     * <p>The name of the lane.</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -4,9 +4,18 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetK8sApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The source from which data is queried.</p>
+     * <br>
+     * <p>*   If you leave this parameter empty, a common query is performed.</p>
+     * <p>*   If you set the value to deploy, you query application information from the deployment page.</p>
+     */
     @NameInMap("From")
     public String from;
 

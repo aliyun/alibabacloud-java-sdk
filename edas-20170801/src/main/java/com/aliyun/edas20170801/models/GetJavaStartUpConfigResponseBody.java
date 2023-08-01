@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetJavaStartUpConfigResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The configuration of Java startup parameters.</p>
+     */
     @NameInMap("JavaStartUpConfig")
     public GetJavaStartUpConfigResponseBodyJavaStartUpConfig javaStartUpConfig;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class GetJavaStartUpConfigResponseBody extends TeaModel {
     }
 
     public static class GetJavaStartUpConfigResponseBodyJavaStartUpConfig extends TeaModel {
+        /**
+         * <p>The displayed startup parameter configuration.</p>
+         */
         @NameInMap("OriginalConfigs")
         public String originalConfigs;
 
+        /**
+         * <p>The effective startup parameter configuration.</p>
+         */
         @NameInMap("StartUpArgs")
         public String startUpArgs;
 

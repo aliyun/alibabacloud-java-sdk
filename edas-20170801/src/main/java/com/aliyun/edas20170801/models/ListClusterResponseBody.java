@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListClusterResponseBody extends TeaModel {
+    /**
+     * <p>The clusters.</p>
+     */
     @NameInMap("ClusterList")
     public ListClusterResponseBodyClusterList clusterList;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,57 +66,126 @@ public class ListClusterResponseBody extends TeaModel {
     }
 
     public static class ListClusterResponseBodyClusterListCluster extends TeaModel {
+        /**
+         * <p>The ID of the cluster in EDAS.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   0: regular Docker cluster</p>
+         * <p>*   1: Swarm cluster</p>
+         * <p>*   2: Elastic Compute Service (ECS) cluster</p>
+         * <p>*   3: self-managed Kubernetes cluster in Enterprise Distributed Application Service (EDAS)</p>
+         * <p>*   4: cluster in which Pandora automatically registers applications</p>
+         * <p>*   5: ACK cluster</p>
+         */
         @NameInMap("ClusterType")
         public Integer clusterType;
 
+        /**
+         * <p>The total number of CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The number of used CPU cores.</p>
+         */
         @NameInMap("CpuUsed")
         public Integer cpuUsed;
 
+        /**
+         * <p>The timestamp when the cluster was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the cluster in Container Service for Kubernetes (ACK).</p>
+         */
         @NameInMap("CsClusterId")
         public String csClusterId;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The provider of the cluster.</p>
+         */
         @NameInMap("IaasProvider")
         public String iaasProvider;
 
+        /**
+         * <p>The total size of memory. Unit: MB.</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The size of used memory. Unit: MB.</p>
+         */
         @NameInMap("MemUsed")
         public Integer memUsed;
 
+        /**
+         * <p>The network type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: classic network</p>
+         * <p>*   2: virtual private cloud (VPC)</p>
+         */
         @NameInMap("NetworkMode")
         public Integer networkMode;
 
+        /**
+         * <p>The number of instances.</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        /**
+         * <p>The CPU overcommit ratio that is supported by a Docker cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: 1:1, which means that CPU resources are not overcommitted.</p>
+         * <p>*   2: 1:2, which means that CPU resources are overcommitted by 1:2.</p>
+         * <p>*   4: 1:4, which means that CPU resources are overcommitted by 1:4.</p>
+         * <p>*   8: 1:8, which means that CPU resources are overcommitted by 1:8.</p>
+         */
         @NameInMap("OversoldFactor")
         public Integer oversoldFactor;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The timestamp when the cluster was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>VPC ID</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

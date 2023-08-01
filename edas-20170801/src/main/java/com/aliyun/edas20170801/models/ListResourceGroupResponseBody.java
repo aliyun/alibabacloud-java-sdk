@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>For more information about how to define a resource group, see ResGroupEntity.</p>
+     */
     @NameInMap("ResourceGroupList")
     public ListResourceGroupResponseBodyResourceGroupList resourceGroupList;
 
@@ -54,39 +66,84 @@ public class ListResourceGroupResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupResponseBodyResourceGroupListResGroupEntitySlbListSlbEntity extends TeaModel {
+        /**
+         * <p>The IP address of the SLB instance.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The type of the IP address of the SLB instance. Valid values:</p>
+         * <br>
+         * <p>*   Internet: Users can connect to the SLB instance over the Internet.</p>
+         * <p>*   Intranet: Users can connect to the SLB instance over the internal network.</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 
+        /**
+         * <p>Indicates whether the SLB instance has expired. Valid values:</p>
+         * <br>
+         * <p>*   true: The SLB instance has expired.</p>
+         * <p>*   false: The SLB instance has not expired.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The ID of the group to which the SLB instance belongs.</p>
+         */
         @NameInMap("GroupId")
         public Integer groupId;
 
+        /**
+         * <p>The network type of the SLB instance. Valid values:</p>
+         * <br>
+         * <p>*   Classic network</p>
+         * <p>*   VPC</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The unique ID of the SLB instance.</p>
+         */
         @NameInMap("SlbId")
         public String slbId;
 
+        /**
+         * <p>The name of the SLB instance.</p>
+         */
         @NameInMap("SlbName")
         public String slbName;
 
+        /**
+         * <p>The status of the SLB instance.</p>
+         */
         @NameInMap("SlbStatus")
         public String slbStatus;
 
+        /**
+         * <p>The UID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
@@ -213,54 +270,111 @@ public class ListResourceGroupResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupResponseBodyResourceGroupListResGroupEntityEcsListEcsEntityEcuEntity extends TeaModel {
+        /**
+         * <p>The number of available CPUs.</p>
+         */
         @NameInMap("AvailableCpu")
         public Integer availableCpu;
 
+        /**
+         * <p>The size of the available memory.</p>
+         */
         @NameInMap("AvailableMem")
         public Integer availableMem;
 
+        /**
+         * <p>The total number of CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The time when the ECU was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>Indicates whether Docker is installed. Valid values:</p>
+         * <br>
+         * <p>*   true: Docker is installed.</p>
+         * <p>*   false: Docker is not installed.</p>
+         */
         @NameInMap("DockerEnv")
         public Boolean dockerEnv;
 
+        /**
+         * <p>The unique ID of the elastic compute unit (ECU). You can run the `dmidecode` command on the ECS instance to query the ECU ID.</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The time when the last heartbeat detection was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("HeartbeatTime")
         public Long heartbeatTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The private IP address of the ECU.</p>
+         */
         @NameInMap("IpAddr")
         public String ipAddr;
 
+        /**
+         * <p>The total size of memory. Unit: MB.</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The name of the ECU.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the ECU is online. Valid values:</p>
+         * <br>
+         * <p>*   true: The ECU is online.</p>
+         * <p>*   false: The ECU is offline.</p>
+         */
         @NameInMap("Online")
         public Boolean online;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The time when the ECU was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the user associated with the ECU.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -408,30 +522,60 @@ public class ListResourceGroupResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupResponseBodyResourceGroupListResGroupEntityEcsListEcsEntityVpcEntity extends TeaModel {
+        /**
+         * <p>The IPv4 CIDR block of the vSwitch.</p>
+         */
         @NameInMap("Cidrblock")
         public String cidrblock;
 
+        /**
+         * <p>The description of the VPC.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The number of ECS instances that run in the VPC.</p>
+         */
         @NameInMap("EcsNum")
         public Integer ecsNum;
 
+        /**
+         * <p>Indicates whether the VPC has expired. Valid values:</p>
+         * <br>
+         * <p>*   true: The VPC has expired.</p>
+         * <p>*   false: The VPC has not expired.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the VPC.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The unique ID of the VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The name of the VPC.</p>
+         */
         @NameInMap("VpcName")
         public String vpcName;
 
@@ -515,66 +659,138 @@ public class ListResourceGroupResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupResponseBodyResourceGroupListResGroupEntityEcsListEcsEntity extends TeaModel {
+        /**
+         * <p>The total number of CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The description of the ECS instance.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The elastic compute unit (ECU) that corresponds to the ECS instance.</p>
+         */
         @NameInMap("EcuEntity")
         public ListResourceGroupResponseBodyResourceGroupListResGroupEntityEcsListEcsEntityEcuEntity ecuEntity;
 
+        /**
+         * <p>The elastic IP address (EIP).</p>
+         */
         @NameInMap("Eip")
         public String eip;
 
+        /**
+         * <p>Indicates whether the ECS instance has expired. Valid values:</p>
+         * <br>
+         * <p>*   true: The ECS instance has expired.</p>
+         * <p>*   false: The ECS instance has not expired.</p>
+         */
         @NameInMap("Expired")
         public Boolean expired;
 
+        /**
+         * <p>The ID of the resource group in Enterprise Distributed Application Service (EDAS).</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the host.</p>
+         */
         @NameInMap("HostName")
         public String hostName;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("InnerIp")
         public String innerIp;
 
+        /**
+         * <p>The ID of the ECS instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the ECS instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The total size of memory. Unit: MB.</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The private IP address of the ECS instance.</p>
+         */
         @NameInMap("PrivateIp")
         public String privateIp;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("PublicIp")
         public String publicIp;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The serial number of the ECS instance.</p>
+         */
         @NameInMap("SerialNum")
         public String serialNum;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SgId")
         public String sgId;
 
+        /**
+         * <p>The status of the ECS instance. Valid values:</p>
+         * <br>
+         * <p>*   Pending: The ECS instance is being created.</p>
+         * <p>*   Running: The ECS instance is running.</p>
+         * <p>*   Starting: The ECS instance is being started.</p>
+         * <p>*   Stopping: The ECS instance is being stopped.</p>
+         * <p>*   Stopped: The ECS instance is stopped.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the user account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The VPCs.</p>
+         */
         @NameInMap("VpcEntity")
         public ListResourceGroupResponseBodyResourceGroupListResGroupEntityEcsListEcsEntityVpcEntity vpcEntity;
 
+        /**
+         * <p>The unique ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -773,30 +989,57 @@ public class ListResourceGroupResponseBody extends TeaModel {
     }
 
     public static class ListResourceGroupResponseBodyResourceGroupListResGroupEntity extends TeaModel {
+        /**
+         * <p>The UID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("AdminUserId")
         public String adminUserId;
 
+        /**
+         * <p>The time when the resource group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the resource group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the resource group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the region where the resource group belongs.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The Server Load Balancer (SLB) instances.</p>
+         */
         @NameInMap("SlbList")
         public ListResourceGroupResponseBodyResourceGroupListResGroupEntitySlbList slbList;
 
+        /**
+         * <p>The time when the resource group was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>The Elastic Compute Service (ECS) instances.</p>
+         */
         @NameInMap("ecsList")
         public ListResourceGroupResponseBodyResourceGroupListResGroupEntityEcsList ecsList;
 

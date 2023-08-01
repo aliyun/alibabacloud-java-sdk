@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetK8sClusterResponseBody extends TeaModel {
+    /**
+     * <p>The cluster data that is returned by page.</p>
+     */
     @NameInMap("ClusterPage")
     public GetK8sClusterResponseBodyClusterPage clusterPage;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,54 +66,135 @@ public class GetK8sClusterResponseBody extends TeaModel {
     }
 
     public static class GetK8sClusterResponseBodyClusterPageClusterListCluster extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The import state of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   0: The cluster is not imported.</p>
+         * <p>*   1: The cluster is imported.</p>
+         * <p>*   2: The cluster fails to be imported.</p>
+         * <p>*   3: The cluster is being imported.</p>
+         * <p>*   4: The cluster is deleted.</p>
+         */
         @NameInMap("ClusterImportStatus")
         public Integer clusterImportStatus;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: The cluster runs as expected.</p>
+         * <p>*   2: The cluster does not run as expected.</p>
+         * <p>*   3: The cluster is offline.</p>
+         */
         @NameInMap("ClusterStatus")
         public Integer clusterStatus;
 
+        /**
+         * <p>The type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   2: Elastic Compute Service (ECS) cluster</p>
+         * <p>*   5: ACK cluster or Serverless Kubernetes cluster</p>
+         */
         @NameInMap("ClusterType")
         public Integer clusterType;
 
+        /**
+         * <p>The total number of CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The ID of the ACK cluster.</p>
+         */
         @NameInMap("CsClusterId")
         public String csClusterId;
 
+        /**
+         * <p>The state of the ACK cluster. Valid values:</p>
+         * <br>
+         * <p>*   initial: The cluster is being initialized.</p>
+         * <p>*   failed: The cluster fails to be created.</p>
+         * <p>*   running: The cluster is running.</p>
+         * <p>*   updating: The cluster is being updated.</p>
+         * <p>*   scaling: The cluster is being scaled out.</p>
+         * <p>*   removing: Nodes are being removed from the cluster.</p>
+         * <p>*   upgrading: The cluster is being upgraded.</p>
+         * <p>*   deleting: The cluster is being deleted.</p>
+         * <p>*   delete_failed: The cluster fails to be deleted.</p>
+         * <p>*   deleted: The cluster is deleted. The deleted cluster is invisible to users.</p>
+         */
         @NameInMap("CsClusterStatus")
         public String csClusterStatus;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The total size of memory. Unit: MB.</p>
+         */
         @NameInMap("Mem")
         public Integer mem;
 
+        /**
+         * <p>The network type of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   1: classic network</p>
+         * <p>*   2: VPC</p>
+         */
         @NameInMap("NetworkMode")
         public Integer networkMode;
 
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The subtype of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   Ask: Serverless Kubernetes cluster</p>
+         * <p>*   ManagedKubernetes: ACK cluster</p>
+         */
         @NameInMap("SubClusterType")
         public String subClusterType;
 
+        /**
+         * <p>The CIDR block of the subnet.</p>
+         */
         @NameInMap("SubNetCidr")
         public String subNetCidr;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
@@ -268,15 +361,27 @@ public class GetK8sClusterResponseBody extends TeaModel {
     }
 
     public static class GetK8sClusterResponseBodyClusterPage extends TeaModel {
+        /**
+         * <p>The list of clusters.</p>
+         */
         @NameInMap("ClusterList")
         public GetK8sClusterResponseBodyClusterPageClusterList clusterList;
 
+        /**
+         * <p>The number of the returned page. Default value: 1.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page. Default value: 1000.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of pages that are returned.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

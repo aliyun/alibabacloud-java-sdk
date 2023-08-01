@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryEccInfoResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The information about the ECC.</p>
+     */
     @NameInMap("EccInfo")
     public QueryEccInfoResponseBodyEccInfo eccInfo;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,27 +66,51 @@ public class QueryEccInfoResponseBody extends TeaModel {
     }
 
     public static class QueryEccInfoResponseBodyEccInfo extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>ECC ID</p>
+         */
         @NameInMap("EccId")
         public String eccId;
 
+        /**
+         * <p>ECU ID</p>
+         */
         @NameInMap("EcuId")
         public String ecuId;
 
+        /**
+         * <p>The ID of the ECC group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the ECC group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The MD5 hash value of the deployment package version.</p>
+         */
         @NameInMap("PackageMd5")
         public String packageMd5;
 
+        /**
+         * <p>The version of the deployment package.</p>
+         */
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        /**
+         * <p>VPC ID</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

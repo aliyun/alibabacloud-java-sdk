@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteSwimmingLaneRequest extends TeaModel {
+    /**
+     * <p>The ID of the lane.</p>
+     */
     @NameInMap("LaneId")
     public Long laneId;
 

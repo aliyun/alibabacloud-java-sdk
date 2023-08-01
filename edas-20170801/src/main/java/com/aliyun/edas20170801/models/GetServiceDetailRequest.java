@@ -4,39 +4,83 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("appId")
     public String appId;
 
+    /**
+     * <p>The group to which the service belongs.</p>
+     */
     @NameInMap("group")
     public String group;
 
+    /**
+     * <p>The IP address of the service provider. Fuzzy searches are supported.</p>
+     */
     @NameInMap("ip")
     public String ip;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The source of the data. Valid values:</p>
+     * <br>
+     * <p>*   agent: Use this value if you use the service query feature of the latest version to pass the query result.</p>
+     * <p>*   registry: Use this value if you use the service query feature of the earlier version to pass the query result.</p>
+     */
     @NameInMap("origin")
     public String origin;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("region")
     public String region;
 
+    /**
+     * <p>The type of the service registry. This parameter is deprecated. You can ignore it.</p>
+     */
     @NameInMap("registryType")
     public String registryType;
 
+    /**
+     * <p>The ID of the service. This parameter is deprecated. You can ignore it.</p>
+     */
     @NameInMap("serviceId")
     public String serviceId;
 
+    /**
+     * <p>The name of the service.</p>
+     */
     @NameInMap("serviceName")
     public String serviceName;
 
+    /**
+     * <p>The type of the service. Valid values:</p>
+     * <br>
+     * <p>*   dubbo</p>
+     * <p>*   springCloud</p>
+     * <p>*   hsf</p>
+     * <p>*   istio</p>
+     */
     @NameInMap("serviceType")
     public String serviceType;
 
+    /**
+     * <p>The version of the service.</p>
+     */
     @NameInMap("serviceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>The source of the service. Set the value to edas.</p>
+     */
     @NameInMap("source")
     public String source;
 

@@ -4,9 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application. You can specify multiple IDs. Separate multiple IDs with semicolons (;). If you leave this parameter empty, the permissions on the application are revoked.</p>
+     */
     @NameInMap("AppIds")
     public String appIds;
 
+    /**
+     * <p>The ID of the RAM user to be authorized. The value of the parameter is in the `sub-account name@primary account UID` format.</p>
+     */
     @NameInMap("TargetUserId")
     public String targetUserId;
 

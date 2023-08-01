@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppInstanceListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The application instances.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<DescribeAppInstanceListResponseBodyInstanceList> instanceList;
 
+    /**
+     * <p>The message that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,27 +66,54 @@ public class DescribeAppInstanceListResponseBody extends TeaModel {
     }
 
     public static class DescribeAppInstanceListResponseBodyInstanceList extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>Indicates whether the application was released in canary release mode.</p>
+         * <br>
+         * <p>*   `true`: The application was released in canary release mode.</p>
+         * <p>*   `false`: The application was not released in canary release mode</p>
+         */
         @NameInMap("Canary")
         public Boolean canary;
 
+        /**
+         * <p>The ID of the instance group to which the application is deployed.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the instance group to which the application is deployed.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The labels of the node. The value is a JSON string.</p>
+         */
         @NameInMap("NodeLabels")
         public String nodeLabels;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The information about the pod. The value is a JSON string.</p>
+         */
         @NameInMap("PodRaw")
         public String podRaw;
 
+        /**
+         * <p>The deployment package version of the node.</p>
+         */
         @NameInMap("Version")
         public String version;
 

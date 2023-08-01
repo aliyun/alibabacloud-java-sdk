@@ -4,9 +4,15 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationEcuRequest extends TeaModel {
+    /**
+     * <p>The ID of the application whose ECUs you want to query. You can call the ListApplication operation to query the application ID. For more information, see [ListApplication](~~149390~~).</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The ID of the microservices namespace.</p>
+     */
     @NameInMap("LogicalRegionId")
     public String logicalRegionId;
 

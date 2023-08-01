@@ -4,24 +4,45 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class ListK8sConfigMapsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The filter conditions. Set this parameter to a JSON string in the format of {"field":"Name", "pattern":"configmap-"}.</p>
+     */
     @NameInMap("Condition")
     public java.util.Map<String, ?> condition;
 
+    /**
+     * <p>The namespace of the Kubernetes cluster.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The number of the page to return. Pages start from Page 0.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to return a list of applications that use a ConfigMap. Valid values: true and false.</p>
+     */
     @NameInMap("ShowRelatedApps")
     public Boolean showRelatedApps;
 

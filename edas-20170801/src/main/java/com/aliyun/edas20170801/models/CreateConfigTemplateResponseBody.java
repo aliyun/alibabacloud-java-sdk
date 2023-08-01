@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateConfigTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreateConfigTemplateResponseBodyData data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,9 @@ public class CreateConfigTemplateResponseBody extends TeaModel {
     }
 
     public static class CreateConfigTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("Id")
         public Long id;
 

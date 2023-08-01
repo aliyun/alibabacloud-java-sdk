@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class UpdateSwimmingLaneGroupResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public UpdateSwimmingLaneGroupResponseBodyData data;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class UpdateSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class UpdateSwimmingLaneGroupResponseBodyDataApplicationList extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -84,9 +102,15 @@ public class UpdateSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class UpdateSwimmingLaneGroupResponseBodyDataEntryApplication extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
@@ -114,18 +138,33 @@ public class UpdateSwimmingLaneGroupResponseBody extends TeaModel {
     }
 
     public static class UpdateSwimmingLaneGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of applications related to the lane group.</p>
+         */
         @NameInMap("ApplicationList")
         public java.util.List<UpdateSwimmingLaneGroupResponseBodyDataApplicationList> applicationList;
 
+        /**
+         * <p>The EDAS ingress gateway information.</p>
+         */
         @NameInMap("EntryApplication")
         public UpdateSwimmingLaneGroupResponseBodyDataEntryApplication entryApplication;
 
+        /**
+         * <p>The ID of the lane group.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the lane group.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 

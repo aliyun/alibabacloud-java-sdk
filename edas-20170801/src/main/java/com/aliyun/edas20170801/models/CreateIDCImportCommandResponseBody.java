@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateIDCImportCommandResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The generated import command.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

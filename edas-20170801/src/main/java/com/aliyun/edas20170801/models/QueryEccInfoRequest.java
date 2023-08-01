@@ -4,6 +4,9 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class QueryEccInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the ECC.</p>
+     */
     @NameInMap("EccId")
     public String eccId;
 

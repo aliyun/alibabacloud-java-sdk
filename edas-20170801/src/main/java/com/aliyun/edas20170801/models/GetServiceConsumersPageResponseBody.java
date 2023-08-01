@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class GetServiceConsumersPageResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Data")
     public GetServiceConsumersPageResponseBodyData data;
 
+    /**
+     * <p>The message that is returned for the request.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,12 +66,21 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceConsumersPageResponseBodyDataContent extends TeaModel {
+        /**
+         * <p>The name of the service consumer.</p>
+         */
         @NameInMap("EdasAppName")
         public String edasAppName;
 
+        /**
+         * <p>The ID of the service consumer.</p>
+         */
         @NameInMap("EdassAppId")
         public String edassAppId;
 
+        /**
+         * <p>The IP address of the service consumer.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -95,15 +116,27 @@ public class GetServiceConsumersPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceConsumersPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The data array that is returned.</p>
+         */
         @NameInMap("Content")
         public java.util.List<GetServiceConsumersPageResponseBodyDataContent> content;
 
+        /**
+         * <p>The number of entries to return on each page.</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("TotalElements")
         public Integer totalElements;
 
+        /**
+         * <p>The total number of returned pages.</p>
+         */
         @NameInMap("TotalPages")
         public Integer totalPages;
 

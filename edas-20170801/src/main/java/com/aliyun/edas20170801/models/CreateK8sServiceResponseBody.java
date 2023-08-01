@@ -4,15 +4,27 @@ package com.aliyun.edas20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateK8sServiceResponseBody extends TeaModel {
+    /**
+     * <p>The change process ID.</p>
+     */
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The additional information returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
