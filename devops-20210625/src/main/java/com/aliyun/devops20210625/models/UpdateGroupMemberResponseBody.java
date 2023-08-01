@@ -74,9 +74,6 @@ public class UpdateGroupMemberResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -122,14 +119,6 @@ public class UpdateGroupMemberResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
-        }
-
-        public UpdateGroupMemberResponseBodyResult setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
         }
 
         public UpdateGroupMemberResponseBodyResult setId(Long id) {

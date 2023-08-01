@@ -82,9 +82,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -93,9 +90,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("tbUserId")
-        public String tbUserId;
 
         @NameInMap("username")
         public String username;
@@ -124,14 +118,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
             return this.email;
         }
 
-        public ListRepositoryCommitsResponseBodyResultAuthor setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
-        }
-
         public ListRepositoryCommitsResponseBodyResultAuthor setId(Long id) {
             this.id = id;
             return this;
@@ -154,14 +140,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public ListRepositoryCommitsResponseBodyResultAuthor setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
         }
 
         public ListRepositoryCommitsResponseBodyResultAuthor setUsername(String username) {
@@ -189,9 +167,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -200,9 +175,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
 
         @NameInMap("state")
         public String state;
-
-        @NameInMap("tbUserId")
-        public String tbUserId;
 
         @NameInMap("username")
         public String username;
@@ -231,14 +203,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
             return this.email;
         }
 
-        public ListRepositoryCommitsResponseBodyResultCommitter setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
-        }
-
         public ListRepositoryCommitsResponseBodyResultCommitter setId(Long id) {
             this.id = id;
             return this;
@@ -261,14 +225,6 @@ public class ListRepositoryCommitsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public ListRepositoryCommitsResponseBodyResultCommitter setTbUserId(String tbUserId) {
-            this.tbUserId = tbUserId;
-            return this;
-        }
-        public String getTbUserId() {
-            return this.tbUserId;
         }
 
         public ListRepositoryCommitsResponseBodyResultCommitter setUsername(String username) {

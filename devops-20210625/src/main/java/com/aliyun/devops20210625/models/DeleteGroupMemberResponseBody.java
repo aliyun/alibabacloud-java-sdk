@@ -71,9 +71,6 @@ public class DeleteGroupMemberResponseBody extends TeaModel {
         @NameInMap("avatarUrl")
         public String avatarUrl;
 
-        @NameInMap("externUid")
-        public String externUid;
-
         @NameInMap("id")
         public Long id;
 
@@ -111,14 +108,6 @@ public class DeleteGroupMemberResponseBody extends TeaModel {
         }
         public String getAvatarUrl() {
             return this.avatarUrl;
-        }
-
-        public DeleteGroupMemberResponseBodyResult setExternUid(String externUid) {
-            this.externUid = externUid;
-            return this;
-        }
-        public String getExternUid() {
-            return this.externUid;
         }
 
         public DeleteGroupMemberResponseBodyResult setId(Long id) {

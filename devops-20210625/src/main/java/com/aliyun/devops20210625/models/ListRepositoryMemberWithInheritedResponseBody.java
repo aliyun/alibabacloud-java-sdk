@@ -162,9 +162,6 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         @NameInMap("email")
         public String email;
 
-        @NameInMap("externUserId")
-        public String externUserId;
-
         @NameInMap("id")
         public Long id;
 
@@ -207,14 +204,6 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
-        }
-
-        public ListRepositoryMemberWithInheritedResponseBodyResult setExternUserId(String externUserId) {
-            this.externUserId = externUserId;
-            return this;
-        }
-        public String getExternUserId() {
-            return this.externUserId;
         }
 
         public ListRepositoryMemberWithInheritedResponseBodyResult setId(Long id) {
