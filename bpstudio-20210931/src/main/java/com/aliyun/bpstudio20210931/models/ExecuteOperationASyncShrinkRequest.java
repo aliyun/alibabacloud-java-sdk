@@ -4,6 +4,9 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ExecuteOperationASyncShrinkRequest extends TeaModel {
+    @NameInMap("ApplicationId")
+    public String applicationId;
+
     @NameInMap("Attributes")
     public String attributesShrink;
 
@@ -22,6 +25,14 @@ public class ExecuteOperationASyncShrinkRequest extends TeaModel {
     public static ExecuteOperationASyncShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteOperationASyncShrinkRequest self = new ExecuteOperationASyncShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ExecuteOperationASyncShrinkRequest setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    public String getApplicationId() {
+        return this.applicationId;
     }
 
     public ExecuteOperationASyncShrinkRequest setAttributesShrink(String attributesShrink) {

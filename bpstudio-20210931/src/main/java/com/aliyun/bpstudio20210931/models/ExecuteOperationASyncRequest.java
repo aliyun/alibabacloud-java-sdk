@@ -4,8 +4,11 @@ package com.aliyun.bpstudio20210931.models;
 import com.aliyun.tea.*;
 
 public class ExecuteOperationASyncRequest extends TeaModel {
+    @NameInMap("ApplicationId")
+    public String applicationId;
+
     @NameInMap("Attributes")
-    public java.util.Map<String, String> attributes;
+    public java.util.Map<String, ?> attributes;
 
     @NameInMap("Operation")
     public String operation;
@@ -24,11 +27,19 @@ public class ExecuteOperationASyncRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExecuteOperationASyncRequest setAttributes(java.util.Map<String, String> attributes) {
+    public ExecuteOperationASyncRequest setApplicationId(String applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    public String getApplicationId() {
+        return this.applicationId;
+    }
+
+    public ExecuteOperationASyncRequest setAttributes(java.util.Map<String, ?> attributes) {
         this.attributes = attributes;
         return this;
     }
-    public java.util.Map<String, String> getAttributes() {
+    public java.util.Map<String, ?> getAttributes() {
         return this.attributes;
     }
 

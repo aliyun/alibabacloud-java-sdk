@@ -224,6 +224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            body.put("ApplicationId", request.applicationId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.attributesShrink)) {
             body.put("Attributes", request.attributesShrink);
         }

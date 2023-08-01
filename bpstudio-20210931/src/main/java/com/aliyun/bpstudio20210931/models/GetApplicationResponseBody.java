@@ -207,7 +207,7 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>The original price.</p>
          */
         @NameInMap("Count")
-        public Long count;
+        public Integer count;
 
         /**
          * <p>The ID of the resource group to which the application belongs.</p>
@@ -225,25 +225,25 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>The service code.</p>
          */
         @NameInMap("OnePrice")
-        public Float onePrice;
+        public Double onePrice;
 
         /**
          * <p>The billing results.</p>
          */
         @NameInMap("OriginalPrice")
-        public Float originalPrice;
+        public Double originalPrice;
 
         /**
          * <p>The name of the instance.</p>
          */
         @NameInMap("Period")
-        public Float period;
+        public Integer period;
 
         /**
          * <p>The quantity.</p>
          */
         @NameInMap("Price")
-        public Float price;
+        public Double price;
 
         /**
          * <p>The unit price.</p>
@@ -296,11 +296,11 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.chargeType;
         }
 
-        public GetApplicationResponseBodyDataPriceList setCount(Long count) {
+        public GetApplicationResponseBodyDataPriceList setCount(Integer count) {
             this.count = count;
             return this;
         }
-        public Long getCount() {
+        public Integer getCount() {
             return this.count;
         }
 
@@ -320,35 +320,35 @@ public class GetApplicationResponseBody extends TeaModel {
             return this.lifecycle;
         }
 
-        public GetApplicationResponseBodyDataPriceList setOnePrice(Float onePrice) {
+        public GetApplicationResponseBodyDataPriceList setOnePrice(Double onePrice) {
             this.onePrice = onePrice;
             return this;
         }
-        public Float getOnePrice() {
+        public Double getOnePrice() {
             return this.onePrice;
         }
 
-        public GetApplicationResponseBodyDataPriceList setOriginalPrice(Float originalPrice) {
+        public GetApplicationResponseBodyDataPriceList setOriginalPrice(Double originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
-        public Float getOriginalPrice() {
+        public Double getOriginalPrice() {
             return this.originalPrice;
         }
 
-        public GetApplicationResponseBodyDataPriceList setPeriod(Float period) {
+        public GetApplicationResponseBodyDataPriceList setPeriod(Integer period) {
             this.period = period;
             return this;
         }
-        public Float getPeriod() {
+        public Integer getPeriod() {
             return this.period;
         }
 
-        public GetApplicationResponseBodyDataPriceList setPrice(Float price) {
+        public GetApplicationResponseBodyDataPriceList setPrice(Double price) {
             this.price = price;
             return this;
         }
-        public Float getPrice() {
+        public Double getPrice() {
             return this.price;
         }
 
