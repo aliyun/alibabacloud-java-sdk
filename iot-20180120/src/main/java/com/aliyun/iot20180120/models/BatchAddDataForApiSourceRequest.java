@@ -8,7 +8,7 @@ public class BatchAddDataForApiSourceRequest extends TeaModel {
     public String apiId;
 
     @NameInMap("ContentList")
-    public java.util.Map<String, ?> contentList;
+    public String contentList;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
@@ -26,11 +26,11 @@ public class BatchAddDataForApiSourceRequest extends TeaModel {
         return this.apiId;
     }
 
-    public BatchAddDataForApiSourceRequest setContentList(java.util.Map<String, ?> contentList) {
+    public BatchAddDataForApiSourceRequest setContentList(String contentList) {
         this.contentList = contentList;
         return this;
     }
-    public java.util.Map<String, ?> getContentList() {
+    public String getContentList() {
         return this.contentList;
     }
 
