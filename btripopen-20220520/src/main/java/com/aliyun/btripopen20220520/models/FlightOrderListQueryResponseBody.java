@@ -411,6 +411,9 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
 
+        @NameInMap("arr_city_ad_code")
+        public String arrCityAdCode;
+
         @NameInMap("btrip_title")
         public String btripTitle;
 
@@ -434,6 +437,9 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_city")
         public String depCity;
+
+        @NameInMap("dep_city_ad_code")
+        public String depCityAdCode;
 
         @NameInMap("dep_date")
         public String depDate;
@@ -539,6 +545,14 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             return this.arrCity;
         }
 
+        public FlightOrderListQueryResponseBodyModule setArrCityAdCode(String arrCityAdCode) {
+            this.arrCityAdCode = arrCityAdCode;
+            return this;
+        }
+        public String getArrCityAdCode() {
+            return this.arrCityAdCode;
+        }
+
         public FlightOrderListQueryResponseBodyModule setBtripTitle(String btripTitle) {
             this.btripTitle = btripTitle;
             return this;
@@ -601,6 +615,14 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         }
         public String getDepCity() {
             return this.depCity;
+        }
+
+        public FlightOrderListQueryResponseBodyModule setDepCityAdCode(String depCityAdCode) {
+            this.depCityAdCode = depCityAdCode;
+            return this;
+        }
+        public String getDepCityAdCode() {
+            return this.depCityAdCode;
         }
 
         public FlightOrderListQueryResponseBodyModule setDepDate(String depDate) {

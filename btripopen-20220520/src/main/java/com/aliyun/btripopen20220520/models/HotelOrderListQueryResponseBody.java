@@ -321,6 +321,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @NameInMap("city")
         public String city;
 
+        @NameInMap("city_ad_code")
+        public String cityAdCode;
+
         @NameInMap("contact_name")
         public String contactName;
 
@@ -457,6 +460,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         }
         public String getCity() {
             return this.city;
+        }
+
+        public HotelOrderListQueryResponseBodyModule setCityAdCode(String cityAdCode) {
+            this.cityAdCode = cityAdCode;
+            return this;
+        }
+        public String getCityAdCode() {
+            return this.cityAdCode;
         }
 
         public HotelOrderListQueryResponseBodyModule setContactName(String contactName) {

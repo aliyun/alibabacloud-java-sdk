@@ -427,6 +427,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
     }
 
     public static class ApplyListQueryResponseBodyModuleListTravelerList extends TeaModel {
+        @NameInMap("job_no")
+        public String jobNo;
+
         @NameInMap("user_id")
         public String userId;
 
@@ -436,6 +439,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         public static ApplyListQueryResponseBodyModuleListTravelerList build(java.util.Map<String, ?> map) throws Exception {
             ApplyListQueryResponseBodyModuleListTravelerList self = new ApplyListQueryResponseBodyModuleListTravelerList();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyListQueryResponseBodyModuleListTravelerList setJobNo(String jobNo) {
+            this.jobNo = jobNo;
+            return this;
+        }
+        public String getJobNo() {
+            return this.jobNo;
         }
 
         public ApplyListQueryResponseBodyModuleListTravelerList setUserId(String userId) {

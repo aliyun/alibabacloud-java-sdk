@@ -109,6 +109,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @NameInMap("from_address")
         public String fromAddress;
 
+        @NameInMap("from_city_ad_code")
+        public String fromCityAdCode;
+
         @NameInMap("from_city_name")
         public String fromCityName;
 
@@ -127,11 +130,17 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @NameInMap("real_from_address")
         public String realFromAddress;
 
+        @NameInMap("real_from_city_ad_code")
+        public String realFromCityAdCode;
+
         @NameInMap("real_from_city_name")
         public String realFromCityName;
 
         @NameInMap("real_to_address")
         public String realToAddress;
+
+        @NameInMap("real_to_city_ad_code")
+        public String realToCityAdCode;
 
         @NameInMap("real_to_city_name")
         public String realToCityName;
@@ -147,6 +156,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
 
         @NameInMap("to_address")
         public String toAddress;
+
+        @NameInMap("to_city_ad_code")
+        public String toCityAdCode;
 
         @NameInMap("to_city_name")
         public String toCityName;
@@ -231,6 +243,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
             return this.fromAddress;
         }
 
+        public CarOrderQueryResponseBodyModuleCarInfo setFromCityAdCode(String fromCityAdCode) {
+            this.fromCityAdCode = fromCityAdCode;
+            return this;
+        }
+        public String getFromCityAdCode() {
+            return this.fromCityAdCode;
+        }
+
         public CarOrderQueryResponseBodyModuleCarInfo setFromCityName(String fromCityName) {
             this.fromCityName = fromCityName;
             return this;
@@ -279,6 +299,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
             return this.realFromAddress;
         }
 
+        public CarOrderQueryResponseBodyModuleCarInfo setRealFromCityAdCode(String realFromCityAdCode) {
+            this.realFromCityAdCode = realFromCityAdCode;
+            return this;
+        }
+        public String getRealFromCityAdCode() {
+            return this.realFromCityAdCode;
+        }
+
         public CarOrderQueryResponseBodyModuleCarInfo setRealFromCityName(String realFromCityName) {
             this.realFromCityName = realFromCityName;
             return this;
@@ -293,6 +321,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
         public String getRealToAddress() {
             return this.realToAddress;
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfo setRealToCityAdCode(String realToCityAdCode) {
+            this.realToCityAdCode = realToCityAdCode;
+            return this;
+        }
+        public String getRealToCityAdCode() {
+            return this.realToCityAdCode;
         }
 
         public CarOrderQueryResponseBodyModuleCarInfo setRealToCityName(String realToCityName) {
@@ -333,6 +369,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
         public String getToAddress() {
             return this.toAddress;
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfo setToCityAdCode(String toCityAdCode) {
+            this.toCityAdCode = toCityAdCode;
+            return this;
+        }
+        public String getToCityAdCode() {
+            return this.toCityAdCode;
         }
 
         public CarOrderQueryResponseBodyModuleCarInfo setToCityName(String toCityName) {
