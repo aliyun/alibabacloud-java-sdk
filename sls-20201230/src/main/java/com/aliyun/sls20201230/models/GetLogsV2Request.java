@@ -28,6 +28,9 @@ public class GetLogsV2Request extends TeaModel {
     @NameInMap("session")
     public String session;
 
+    /**
+     * <p>Shard ID。</p>
+     */
     @NameInMap("shard")
     public Integer shard;
 

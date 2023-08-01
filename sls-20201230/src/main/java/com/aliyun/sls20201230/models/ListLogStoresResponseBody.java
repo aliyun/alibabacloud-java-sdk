@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListLogStoresResponseBody extends TeaModel {
+    @NameInMap("count")
+    public Integer count;
+
     @NameInMap("logstores")
     public java.util.List<String> logstores;
 
@@ -13,6 +16,14 @@ public class ListLogStoresResponseBody extends TeaModel {
     public static ListLogStoresResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListLogStoresResponseBody self = new ListLogStoresResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListLogStoresResponseBody setCount(Integer count) {
+        this.count = count;
+        return this;
+    }
+    public Integer getCount() {
+        return this.count;
     }
 
     public ListLogStoresResponseBody setLogstores(java.util.List<String> logstores) {
