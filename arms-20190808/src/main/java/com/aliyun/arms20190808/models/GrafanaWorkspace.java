@@ -49,6 +49,12 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("personalDomainPrefix")
     public String personalDomainPrefix;
 
+    @NameInMap("privateDomain")
+    public String privateDomain;
+
+    @NameInMap("privateIp")
+    public String privateIp;
+
     @NameInMap("protocol")
     public String protocol;
 
@@ -199,6 +205,22 @@ public class GrafanaWorkspace extends TeaModel {
     }
     public String getPersonalDomainPrefix() {
         return this.personalDomainPrefix;
+    }
+
+    public GrafanaWorkspace setPrivateDomain(String privateDomain) {
+        this.privateDomain = privateDomain;
+        return this;
+    }
+    public String getPrivateDomain() {
+        return this.privateDomain;
+    }
+
+    public GrafanaWorkspace setPrivateIp(String privateIp) {
+        this.privateIp = privateIp;
+        return this;
+    }
+    public String getPrivateIp() {
+        return this.privateIp;
     }
 
     public GrafanaWorkspace setProtocol(String protocol) {
