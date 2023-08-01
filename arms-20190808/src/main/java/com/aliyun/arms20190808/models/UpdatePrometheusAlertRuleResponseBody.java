@@ -4,15 +4,40 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Long code;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("PrometheusAlertRule")
     public UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRule prometheusAlertRule;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     public static UpdatePrometheusAlertRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdatePrometheusAlertRuleResponseBody self = new UpdatePrometheusAlertRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdatePrometheusAlertRuleResponseBody setCode(Long code) {
+        this.code = code;
+        return this;
+    }
+    public Long getCode() {
+        return this.code;
+    }
+
+    public UpdatePrometheusAlertRuleResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public UpdatePrometheusAlertRuleResponseBody setPrometheusAlertRule(UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRule prometheusAlertRule) {
@@ -29,6 +54,14 @@ public class UpdatePrometheusAlertRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdatePrometheusAlertRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class UpdatePrometheusAlertRuleResponseBodyPrometheusAlertRuleAnnotations extends TeaModel {
