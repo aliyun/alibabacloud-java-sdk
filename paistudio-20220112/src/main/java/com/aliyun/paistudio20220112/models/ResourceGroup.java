@@ -16,6 +16,9 @@ public class ResourceGroup extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("NodeCount")
+    public Integer nodeCount;
+
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
@@ -60,6 +63,14 @@ public class ResourceGroup extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ResourceGroup setNodeCount(Integer nodeCount) {
+        this.nodeCount = nodeCount;
+        return this;
+    }
+    public Integer getNodeCount() {
+        return this.nodeCount;
     }
 
     public ResourceGroup setResourceGroupID(String resourceGroupID) {

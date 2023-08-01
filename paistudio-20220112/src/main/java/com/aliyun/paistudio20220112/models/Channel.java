@@ -11,7 +11,7 @@ public class Channel extends TeaModel {
     public String name;
 
     @NameInMap("Properties")
-    public java.util.List<ChannelProperty> properties;
+    public java.util.Map<String, ?> properties;
 
     @NameInMap("Required")
     public Boolean required;
@@ -40,11 +40,11 @@ public class Channel extends TeaModel {
         return this.name;
     }
 
-    public Channel setProperties(java.util.List<ChannelProperty> properties) {
+    public Channel setProperties(java.util.Map<String, ?> properties) {
         this.properties = properties;
         return this;
     }
-    public java.util.List<ChannelProperty> getProperties() {
+    public java.util.Map<String, ?> getProperties() {
         return this.properties;
     }
 

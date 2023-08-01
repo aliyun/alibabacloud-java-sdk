@@ -321,6 +321,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("InputChannels")
         public java.util.List<ListTrainingJobsResponseBodyTrainingJobsInputChannels> inputChannels;
 
+        @NameInMap("IsTempAlgo")
+        public Boolean isTempAlgo;
+
         @NameInMap("Labels")
         public java.util.List<ListTrainingJobsResponseBodyTrainingJobsLabels> labels;
 
@@ -332,6 +335,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
         @NameInMap("ReasonMessage")
         public String reasonMessage;
+
+        @NameInMap("RoleArn")
+        public String roleArn;
 
         @NameInMap("Scheduler")
         public ListTrainingJobsResponseBodyTrainingJobsScheduler scheduler;
@@ -426,6 +432,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             return this.inputChannels;
         }
 
+        public ListTrainingJobsResponseBodyTrainingJobs setIsTempAlgo(Boolean isTempAlgo) {
+            this.isTempAlgo = isTempAlgo;
+            return this;
+        }
+        public Boolean getIsTempAlgo() {
+            return this.isTempAlgo;
+        }
+
         public ListTrainingJobsResponseBodyTrainingJobs setLabels(java.util.List<ListTrainingJobsResponseBodyTrainingJobsLabels> labels) {
             this.labels = labels;
             return this;
@@ -456,6 +470,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public String getReasonMessage() {
             return this.reasonMessage;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobs setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
         }
 
         public ListTrainingJobsResponseBodyTrainingJobs setScheduler(ListTrainingJobsResponseBodyTrainingJobsScheduler scheduler) {

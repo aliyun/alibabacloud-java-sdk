@@ -10,6 +10,9 @@ public class CreateAlgorithmRequest extends TeaModel {
     @NameInMap("AlgorithmName")
     public String algorithmName;
 
+    @NameInMap("DisplayName")
+    public String displayName;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -32,6 +35,14 @@ public class CreateAlgorithmRequest extends TeaModel {
     }
     public String getAlgorithmName() {
         return this.algorithmName;
+    }
+
+    public CreateAlgorithmRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public CreateAlgorithmRequest setWorkspaceId(String workspaceId) {

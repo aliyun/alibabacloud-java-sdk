@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlgorithmSpec extends TeaModel {
     @NameInMap("CodeDir")
-    public AlgorithmSpecCodeDir codeDir;
+    public Location codeDir;
 
     @NameInMap("Command")
     public java.util.List<String> command;
@@ -34,7 +34,14 @@ public class AlgorithmSpec extends TeaModel {
     @NameInMap("OutputChannels")
     public java.util.List<Channel> outputChannels;
 
+    @NameInMap("ProgressDefinitions")
+    public AlgorithmSpecProgressDefinitions progressDefinitions;
+
+    @NameInMap("ResourceRequirements")
+    public java.util.List<ConditionExpression> resourceRequirements;
+
     @NameInMap("SupportedInstanceTypes")
+    @Deprecated
     public java.util.List<String> supportedInstanceTypes;
 
     @NameInMap("SupportsDistributedTraining")
@@ -45,11 +52,11 @@ public class AlgorithmSpec extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AlgorithmSpec setCodeDir(AlgorithmSpecCodeDir codeDir) {
+    public AlgorithmSpec setCodeDir(Location codeDir) {
         this.codeDir = codeDir;
         return this;
     }
-    public AlgorithmSpecCodeDir getCodeDir() {
+    public Location getCodeDir() {
         return this.codeDir;
     }
 
@@ -125,6 +132,22 @@ public class AlgorithmSpec extends TeaModel {
         return this.outputChannels;
     }
 
+    public AlgorithmSpec setProgressDefinitions(AlgorithmSpecProgressDefinitions progressDefinitions) {
+        this.progressDefinitions = progressDefinitions;
+        return this;
+    }
+    public AlgorithmSpecProgressDefinitions getProgressDefinitions() {
+        return this.progressDefinitions;
+    }
+
+    public AlgorithmSpec setResourceRequirements(java.util.List<ConditionExpression> resourceRequirements) {
+        this.resourceRequirements = resourceRequirements;
+        return this;
+    }
+    public java.util.List<ConditionExpression> getResourceRequirements() {
+        return this.resourceRequirements;
+    }
+
     public AlgorithmSpec setSupportedInstanceTypes(java.util.List<String> supportedInstanceTypes) {
         this.supportedInstanceTypes = supportedInstanceTypes;
         return this;
@@ -139,36 +162,6 @@ public class AlgorithmSpec extends TeaModel {
     }
     public Boolean getSupportsDistributedTraining() {
         return this.supportsDistributedTraining;
-    }
-
-    public static class AlgorithmSpecCodeDir extends TeaModel {
-        @NameInMap("LocationType")
-        public String locationType;
-
-        @NameInMap("LocationValue")
-        public java.util.Map<String, ?> locationValue;
-
-        public static AlgorithmSpecCodeDir build(java.util.Map<String, ?> map) throws Exception {
-            AlgorithmSpecCodeDir self = new AlgorithmSpecCodeDir();
-            return TeaModel.build(map, self);
-        }
-
-        public AlgorithmSpecCodeDir setLocationType(String locationType) {
-            this.locationType = locationType;
-            return this;
-        }
-        public String getLocationType() {
-            return this.locationType;
-        }
-
-        public AlgorithmSpecCodeDir setLocationValue(java.util.Map<String, ?> locationValue) {
-            this.locationValue = locationValue;
-            return this;
-        }
-        public java.util.Map<String, ?> getLocationValue() {
-            return this.locationValue;
-        }
-
     }
 
     public static class AlgorithmSpecComputeResourcePolicy extends TeaModel {
@@ -235,6 +228,96 @@ public class AlgorithmSpec extends TeaModel {
         }
         public Boolean getCodeDir() {
             return this.codeDir;
+        }
+
+    }
+
+    public static class AlgorithmSpecProgressDefinitionsOverallProgress extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Regex")
+        public String regex;
+
+        public static AlgorithmSpecProgressDefinitionsOverallProgress build(java.util.Map<String, ?> map) throws Exception {
+            AlgorithmSpecProgressDefinitionsOverallProgress self = new AlgorithmSpecProgressDefinitionsOverallProgress();
+            return TeaModel.build(map, self);
+        }
+
+        public AlgorithmSpecProgressDefinitionsOverallProgress setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public AlgorithmSpecProgressDefinitionsOverallProgress setRegex(String regex) {
+            this.regex = regex;
+            return this;
+        }
+        public String getRegex() {
+            return this.regex;
+        }
+
+    }
+
+    public static class AlgorithmSpecProgressDefinitionsRemainingTime extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Regex")
+        public String regex;
+
+        public static AlgorithmSpecProgressDefinitionsRemainingTime build(java.util.Map<String, ?> map) throws Exception {
+            AlgorithmSpecProgressDefinitionsRemainingTime self = new AlgorithmSpecProgressDefinitionsRemainingTime();
+            return TeaModel.build(map, self);
+        }
+
+        public AlgorithmSpecProgressDefinitionsRemainingTime setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public AlgorithmSpecProgressDefinitionsRemainingTime setRegex(String regex) {
+            this.regex = regex;
+            return this;
+        }
+        public String getRegex() {
+            return this.regex;
+        }
+
+    }
+
+    public static class AlgorithmSpecProgressDefinitions extends TeaModel {
+        @NameInMap("OverallProgress")
+        public AlgorithmSpecProgressDefinitionsOverallProgress overallProgress;
+
+        @NameInMap("RemainingTime")
+        public AlgorithmSpecProgressDefinitionsRemainingTime remainingTime;
+
+        public static AlgorithmSpecProgressDefinitions build(java.util.Map<String, ?> map) throws Exception {
+            AlgorithmSpecProgressDefinitions self = new AlgorithmSpecProgressDefinitions();
+            return TeaModel.build(map, self);
+        }
+
+        public AlgorithmSpecProgressDefinitions setOverallProgress(AlgorithmSpecProgressDefinitionsOverallProgress overallProgress) {
+            this.overallProgress = overallProgress;
+            return this;
+        }
+        public AlgorithmSpecProgressDefinitionsOverallProgress getOverallProgress() {
+            return this.overallProgress;
+        }
+
+        public AlgorithmSpecProgressDefinitions setRemainingTime(AlgorithmSpecProgressDefinitionsRemainingTime remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public AlgorithmSpecProgressDefinitionsRemainingTime getRemainingTime() {
+            return this.remainingTime;
         }
 
     }

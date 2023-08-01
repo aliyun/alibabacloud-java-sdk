@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
+    @NameInMap("ComputingResourceProvider")
+    public String computingResourceProvider;
+
     @NameInMap("Name")
     public String name;
 
@@ -15,6 +18,9 @@ public class ListResourceGroupsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     @NameInMap("ShowAll")
     public Boolean showAll;
@@ -28,6 +34,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     public static ListResourceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsRequest self = new ListResourceGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourceGroupsRequest setComputingResourceProvider(String computingResourceProvider) {
+        this.computingResourceProvider = computingResourceProvider;
+        return this;
+    }
+    public String getComputingResourceProvider() {
+        return this.computingResourceProvider;
     }
 
     public ListResourceGroupsRequest setName(String name) {
@@ -60,6 +74,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListResourceGroupsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ListResourceGroupsRequest setShowAll(Boolean showAll) {

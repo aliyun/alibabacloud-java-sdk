@@ -16,6 +16,9 @@ public class GetAlgorithmResponseBody extends TeaModel {
     @NameInMap("AlgorithmProvider")
     public String algorithmProvider;
 
+    @NameInMap("DisplayName")
+    public String displayName;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -69,6 +72,14 @@ public class GetAlgorithmResponseBody extends TeaModel {
     }
     public String getAlgorithmProvider() {
         return this.algorithmProvider;
+    }
+
+    public GetAlgorithmResponseBody setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
     }
 
     public GetAlgorithmResponseBody setGmtCreateTime(String gmtCreateTime) {
