@@ -10,6 +10,9 @@ public class DeleteCollectionDataRequest extends TeaModel {
     @NameInMap("CollectionData")
     public String collectionData;
 
+    @NameInMap("CollectionDataFilter")
+    public String collectionDataFilter;
+
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -44,6 +47,14 @@ public class DeleteCollectionDataRequest extends TeaModel {
     }
     public String getCollectionData() {
         return this.collectionData;
+    }
+
+    public DeleteCollectionDataRequest setCollectionDataFilter(String collectionDataFilter) {
+        this.collectionDataFilter = collectionDataFilter;
+        return this;
+    }
+    public String getCollectionDataFilter() {
+        return this.collectionDataFilter;
     }
 
     public DeleteCollectionDataRequest setDBInstanceId(String DBInstanceId) {

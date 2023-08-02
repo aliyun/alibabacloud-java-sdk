@@ -812,6 +812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CollectionData", request.collectionData);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.collectionDataFilter)) {
+            query.put("CollectionDataFilter", request.collectionDataFilter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }
@@ -1806,6 +1810,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDBInstanceNetInfoResponse describeDBInstanceNetInfoWithOptions(DescribeDBInstanceNetInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionString)) {
+            query.put("ConnectionString", request.connectionString);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
             query.put("DBInstanceId", request.DBInstanceId);
         }
@@ -3778,6 +3786,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GrantCollectionResponse grantCollection(GrantCollectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantCollectionWithOptions(request, runtime);
+    }
+
+    public InitVectorDatabaseResponse initVectorDatabaseWithOptions(InitVectorDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerAccount)) {
+            query.put("ManagerAccount", request.managerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerAccountPassword)) {
+            query.put("ManagerAccountPassword", request.managerAccountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InitVectorDatabase"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InitVectorDatabaseResponse());
+    }
+
+    public InitVectorDatabaseResponse initVectorDatabase(InitVectorDatabaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.initVectorDatabaseWithOptions(request, runtime);
     }
 
     public ListCollectionsResponse listCollectionsWithOptions(ListCollectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
