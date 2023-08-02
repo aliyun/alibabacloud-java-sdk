@@ -7,7 +7,6 @@ public class SetSwitchValueResponseBody extends TeaModel {
     @NameInMap("Data")
     public Boolean data;
 
-    // Id of the request
     @NameInMap("RequestId")
     public String requestId;
 
