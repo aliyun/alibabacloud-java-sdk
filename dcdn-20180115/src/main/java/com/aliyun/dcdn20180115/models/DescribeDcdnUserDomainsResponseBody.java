@@ -247,6 +247,9 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("Sandbox")
         public String sandbox;
 
+        @NameInMap("Scene")
+        public String scene;
+
         /**
          * <p>The information about the origin server.</p>
          */
@@ -336,6 +339,14 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
         public String getSandbox() {
             return this.sandbox;
+        }
+
+        public DescribeDcdnUserDomainsResponseBodyDomainsPageData setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
         }
 
         public DescribeDcdnUserDomainsResponseBodyDomainsPageData setSources(DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources sources) {

@@ -30,6 +30,9 @@ public class AddDcdnDomainRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Scene")
+    public String scene;
+
     /**
      * <p>The acceleration region. Valid values:</p>
      * <br>
@@ -106,6 +109,14 @@ public class AddDcdnDomainRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public AddDcdnDomainRequest setScene(String scene) {
+        this.scene = scene;
+        return this;
+    }
+    public String getScene() {
+        return this.scene;
     }
 
     public AddDcdnDomainRequest setScope(String scope) {

@@ -217,6 +217,9 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         @NameInMap("SSLPub")
         public String SSLPub;
 
+        @NameInMap("Scene")
+        public String scene;
+
         /**
          * <p>The acceleration region. Default value: domestic. Valid values:</p>
          * <br>
@@ -308,6 +311,14 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         }
         public String getSSLPub() {
             return this.SSLPub;
+        }
+
+        public DescribeDcdnDomainDetailResponseBodyDomainDetail setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
         }
 
         public DescribeDcdnDomainDetailResponseBodyDomainDetail setScope(String scope) {
