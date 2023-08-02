@@ -7,6 +7,9 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     @NameInMap("Matches")
     public QueryCollectionDataResponseBodyMatches matches;
 
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,6 +27,14 @@ public class QueryCollectionDataResponseBody extends TeaModel {
     }
     public QueryCollectionDataResponseBodyMatches getMatches() {
         return this.matches;
+    }
+
+    public QueryCollectionDataResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryCollectionDataResponseBody setRequestId(String requestId) {
@@ -68,6 +79,9 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
+        @NameInMap("Similarity")
+        public Double similarity;
+
         @NameInMap("Values")
         public QueryCollectionDataResponseBodyMatchesMatchValues values;
 
@@ -90,6 +104,14 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getMetadata() {
             return this.metadata;
+        }
+
+        public QueryCollectionDataResponseBodyMatchesMatch setSimilarity(Double similarity) {
+            this.similarity = similarity;
+            return this;
+        }
+        public Double getSimilarity() {
+            return this.similarity;
         }
 
         public QueryCollectionDataResponseBodyMatchesMatch setValues(QueryCollectionDataResponseBodyMatchesMatchValues values) {

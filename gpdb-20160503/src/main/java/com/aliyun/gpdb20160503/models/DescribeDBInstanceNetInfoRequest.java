@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoRequest extends TeaModel {
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
     /**
      * <p>The ID of the instance.</p>
      * <br>
@@ -15,6 +18,14 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public static DescribeDBInstanceNetInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceNetInfoRequest self = new DescribeDBInstanceNetInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstanceNetInfoRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
     }
 
     public DescribeDBInstanceNetInfoRequest setDBInstanceId(String DBInstanceId) {
