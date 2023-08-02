@@ -253,10 +253,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         public Boolean isAlpha;
 
         @NameInMap("IsSubtitles")
+        @Deprecated
         public Boolean isSubtitles;
 
         @NameInMap("Resolution")
         public Integer resolution;
+
+        @NameInMap("SubtitleEmbedded")
+        public Boolean subtitleEmbedded;
 
         public static SubmitTextTo3DAvatarVideoTaskRequestVideoInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitTextTo3DAvatarVideoTaskRequestVideoInfo self = new SubmitTextTo3DAvatarVideoTaskRequestVideoInfo();
@@ -301,6 +305,14 @@ public class SubmitTextTo3DAvatarVideoTaskRequest extends TeaModel {
         }
         public Integer getResolution() {
             return this.resolution;
+        }
+
+        public SubmitTextTo3DAvatarVideoTaskRequestVideoInfo setSubtitleEmbedded(Boolean subtitleEmbedded) {
+            this.subtitleEmbedded = subtitleEmbedded;
+            return this;
+        }
+        public Boolean getSubtitleEmbedded() {
+            return this.subtitleEmbedded;
         }
 
     }

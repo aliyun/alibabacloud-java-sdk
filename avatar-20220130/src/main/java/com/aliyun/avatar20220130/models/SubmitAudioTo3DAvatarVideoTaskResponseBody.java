@@ -17,7 +17,7 @@ public class SubmitAudioTo3DAvatarVideoTaskResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Success")
-    public String success;
+    public Boolean success;
 
     public static SubmitAudioTo3DAvatarVideoTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitAudioTo3DAvatarVideoTaskResponseBody self = new SubmitAudioTo3DAvatarVideoTaskResponseBody();
@@ -56,11 +56,11 @@ public class SubmitAudioTo3DAvatarVideoTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SubmitAudioTo3DAvatarVideoTaskResponseBody setSuccess(String success) {
+    public SubmitAudioTo3DAvatarVideoTaskResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
