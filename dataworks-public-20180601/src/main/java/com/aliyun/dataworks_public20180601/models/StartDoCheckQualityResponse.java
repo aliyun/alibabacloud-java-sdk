@@ -3,7 +3,7 @@ package com.aliyun.dataworks_public20180601.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteFileResponse extends TeaModel {
+public class StartDoCheckQualityResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteFileResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteFileResponseBody body;
+    public StartDoCheckQualityResponseBody body;
 
-    public static DeleteFileResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteFileResponse self = new DeleteFileResponse();
+    public static StartDoCheckQualityResponse build(java.util.Map<String, ?> map) throws Exception {
+        StartDoCheckQualityResponse self = new StartDoCheckQualityResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteFileResponse setHeaders(java.util.Map<String, String> headers) {
+    public StartDoCheckQualityResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteFileResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteFileResponse setStatusCode(Integer statusCode) {
+    public StartDoCheckQualityResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteFileResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteFileResponse setBody(DeleteFileResponseBody body) {
+    public StartDoCheckQualityResponse setBody(StartDoCheckQualityResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteFileResponseBody getBody() {
+    public StartDoCheckQualityResponseBody getBody() {
         return this.body;
     }
 
