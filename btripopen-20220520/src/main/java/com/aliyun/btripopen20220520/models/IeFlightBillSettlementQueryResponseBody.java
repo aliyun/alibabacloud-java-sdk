@@ -99,6 +99,18 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        @NameInMap("apply_arr_city_code")
+        public String applyArrCityCode;
+
+        @NameInMap("apply_arr_city_name")
+        public String applyArrCityName;
+
+        @NameInMap("apply_dep_city_code")
+        public String applyDepCityCode;
+
+        @NameInMap("apply_dep_city_name")
+        public String applyDepCityName;
+
         /**
          * <p>审批扩展自定义字段</p>
          */
@@ -113,6 +125,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("arr_city")
         public String arrCity;
+
+        @NameInMap("arr_city_code")
+        public String arrCityCode;
 
         @NameInMap("arr_date")
         public String arrDate;
@@ -173,6 +188,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_airport_code")
         public String depAirportCode;
+
+        @NameInMap("dep_city_code")
+        public String depCityCode;
 
         @NameInMap("department")
         public String department;
@@ -297,6 +315,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         public String taxRate;
 
+        @NameInMap("third_itinerary_id")
+        public String thirdItineraryId;
+
         @NameInMap("ticket_id")
         public String ticketId;
 
@@ -352,6 +373,38 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.alipayTradeNo;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setApplyArrCityCode(String applyArrCityCode) {
+            this.applyArrCityCode = applyArrCityCode;
+            return this;
+        }
+        public String getApplyArrCityCode() {
+            return this.applyArrCityCode;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setApplyArrCityName(String applyArrCityName) {
+            this.applyArrCityName = applyArrCityName;
+            return this;
+        }
+        public String getApplyArrCityName() {
+            return this.applyArrCityName;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setApplyDepCityCode(String applyDepCityCode) {
+            this.applyDepCityCode = applyDepCityCode;
+            return this;
+        }
+        public String getApplyDepCityCode() {
+            return this.applyDepCityCode;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setApplyDepCityName(String applyDepCityName) {
+            this.applyDepCityName = applyDepCityName;
+            return this;
+        }
+        public String getApplyDepCityName() {
+            return this.applyDepCityName;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setApplyExtendField(String applyExtendField) {
             this.applyExtendField = applyExtendField;
             return this;
@@ -382,6 +435,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getArrCity() {
             return this.arrCity;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setArrCityCode(String arrCityCode) {
+            this.arrCityCode = arrCityCode;
+            return this;
+        }
+        public String getArrCityCode() {
+            return this.arrCityCode;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setArrDate(String arrDate) {
@@ -542,6 +603,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getDepAirportCode() {
             return this.depAirportCode;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setDepCityCode(String depCityCode) {
+            this.depCityCode = depCityCode;
+            return this;
+        }
+        public String getDepCityCode() {
+            return this.depCityCode;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setDepartment(String department) {
@@ -862,6 +931,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTaxRate() {
             return this.taxRate;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setThirdItineraryId(String thirdItineraryId) {
+            this.thirdItineraryId = thirdItineraryId;
+            return this;
+        }
+        public String getThirdItineraryId() {
+            return this.thirdItineraryId;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setTicketId(String ticketId) {
