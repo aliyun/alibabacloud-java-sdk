@@ -19,6 +19,9 @@ public class CreateFineTuneJobShrinkRequest extends TeaModel {
     @NameInMap("TrainingFiles")
     public String trainingFilesShrink;
 
+    @NameInMap("TrainingType")
+    public String trainingType;
+
     @NameInMap("ValidationFiles")
     public String validationFilesShrink;
 
@@ -65,6 +68,14 @@ public class CreateFineTuneJobShrinkRequest extends TeaModel {
     }
     public String getTrainingFilesShrink() {
         return this.trainingFilesShrink;
+    }
+
+    public CreateFineTuneJobShrinkRequest setTrainingType(String trainingType) {
+        this.trainingType = trainingType;
+        return this;
+    }
+    public String getTrainingType() {
+        return this.trainingType;
     }
 
     public CreateFineTuneJobShrinkRequest setValidationFilesShrink(String validationFilesShrink) {

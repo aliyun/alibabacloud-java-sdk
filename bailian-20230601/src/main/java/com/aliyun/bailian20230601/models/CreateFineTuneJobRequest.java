@@ -19,6 +19,9 @@ public class CreateFineTuneJobRequest extends TeaModel {
     @NameInMap("TrainingFiles")
     public java.util.List<String> trainingFiles;
 
+    @NameInMap("TrainingType")
+    public String trainingType;
+
     @NameInMap("ValidationFiles")
     public java.util.List<String> validationFiles;
 
@@ -65,6 +68,14 @@ public class CreateFineTuneJobRequest extends TeaModel {
     }
     public java.util.List<String> getTrainingFiles() {
         return this.trainingFiles;
+    }
+
+    public CreateFineTuneJobRequest setTrainingType(String trainingType) {
+        this.trainingType = trainingType;
+        return this;
+    }
+    public String getTrainingType() {
+        return this.trainingType;
     }
 
     public CreateFineTuneJobRequest setValidationFiles(java.util.List<String> validationFiles) {
