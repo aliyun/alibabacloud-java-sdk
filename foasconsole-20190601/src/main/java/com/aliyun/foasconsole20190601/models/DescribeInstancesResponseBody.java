@@ -86,6 +86,36 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.totalPage;
     }
 
+    public static class DescribeInstancesResponseBodyInstancesHostAliases extends TeaModel {
+        @NameInMap("HostNames")
+        public java.util.List<String> hostNames;
+
+        @NameInMap("Ip")
+        public String ip;
+
+        public static DescribeInstancesResponseBodyInstancesHostAliases build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesHostAliases self = new DescribeInstancesResponseBodyInstancesHostAliases();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesHostAliases setHostNames(java.util.List<String> hostNames) {
+            this.hostNames = hostNames;
+            return this;
+        }
+        public java.util.List<String> getHostNames() {
+            return this.hostNames;
+        }
+
+        public DescribeInstancesResponseBodyInstancesHostAliases setIp(String ip) {
+            this.ip = ip;
+            return this;
+        }
+        public String getIp() {
+            return this.ip;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesResourceSpec extends TeaModel {
         @NameInMap("Cpu")
         public Integer cpu;
@@ -154,12 +184,48 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeInstancesResponseBodyInstancesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesTags self = new DescribeInstancesResponseBodyInstancesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeInstancesResponseBodyInstancesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("AskClusterId")
+        public String askClusterId;
+
         @NameInMap("ChargeType")
         public String chargeType;
 
         @NameInMap("ClusterStatus")
         public String clusterStatus;
+
+        @NameInMap("HostAliases")
+        public java.util.List<DescribeInstancesResponseBodyInstancesHostAliases> hostAliases;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -176,9 +242,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceCreateTime")
         public Long resourceCreateTime;
 
-        // 超期时间
         @NameInMap("ResourceExpiredTime")
         public Long resourceExpiredTime;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("ResourceId")
         public String resourceId;
@@ -188,6 +256,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("Storage")
         public DescribeInstancesResponseBodyInstancesStorage storage;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeInstancesResponseBodyInstancesTags> tags;
 
         @NameInMap("Uid")
         public String uid;
@@ -206,6 +277,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstancesResponseBodyInstances setAskClusterId(String askClusterId) {
+            this.askClusterId = askClusterId;
+            return this;
+        }
+        public String getAskClusterId() {
+            return this.askClusterId;
+        }
+
         public DescribeInstancesResponseBodyInstances setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
@@ -220,6 +299,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getClusterStatus() {
             return this.clusterStatus;
+        }
+
+        public DescribeInstancesResponseBodyInstances setHostAliases(java.util.List<DescribeInstancesResponseBodyInstancesHostAliases> hostAliases) {
+            this.hostAliases = hostAliases;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesHostAliases> getHostAliases() {
+            return this.hostAliases;
         }
 
         public DescribeInstancesResponseBodyInstances setInstanceId(String instanceId) {
@@ -270,6 +357,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.resourceExpiredTime;
         }
 
+        public DescribeInstancesResponseBodyInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeInstancesResponseBodyInstances setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
@@ -292,6 +387,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesStorage getStorage() {
             return this.storage;
+        }
+
+        public DescribeInstancesResponseBodyInstances setTags(java.util.List<DescribeInstancesResponseBodyInstancesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesTags> getTags() {
+            return this.tags;
         }
 
         public DescribeInstancesResponseBodyInstances setUid(String uid) {

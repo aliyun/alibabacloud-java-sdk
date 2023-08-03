@@ -98,18 +98,23 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("Duration")
         public Integer duration;
 
+        @NameInMap("Extra")
+        public String extra;
+
         @NameInMap("InstanceName")
         public String instanceName;
 
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
-        // 优惠券code
         @NameInMap("PromotionCode")
         public String promotionCode;
 
         @NameInMap("Region")
         public String region;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         @NameInMap("ResourceSpec")
         public CreateInstanceRequestCreateInstanceRequestResourceSpec resourceSpec;
@@ -117,13 +122,15 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("Storage")
         public CreateInstanceRequestCreateInstanceRequestStorage storage;
 
-        // 是否使用优惠券
         @NameInMap("UsePromotionCode")
         public Boolean usePromotionCode;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -159,6 +166,14 @@ public class CreateInstanceRequest extends TeaModel {
             return this.duration;
         }
 
+        public CreateInstanceRequestCreateInstanceRequest setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
+        }
+
         public CreateInstanceRequestCreateInstanceRequest setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
@@ -189,6 +204,14 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public CreateInstanceRequestCreateInstanceRequest setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public CreateInstanceRequestCreateInstanceRequest setResourceSpec(CreateInstanceRequestCreateInstanceRequestResourceSpec resourceSpec) {

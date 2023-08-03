@@ -98,13 +98,15 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         @NameInMap("Duration")
         public Integer duration;
 
+        @NameInMap("Extra")
+        public String extra;
+
         @NameInMap("InstanceName")
         public String instanceName;
 
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
-        // 优惠券code
         @NameInMap("PromotionCode")
         public String promotionCode;
 
@@ -117,13 +119,15 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         @NameInMap("Storage")
         public QueryCreateInstancePriceRequestCreateInstanceRequestStorage storage;
 
-        // 是否使用优惠券
         @NameInMap("UsePromotionCode")
         public Boolean usePromotionCode;
 
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -157,6 +161,14 @@ public class QueryCreateInstancePriceRequest extends TeaModel {
         }
         public Integer getDuration() {
             return this.duration;
+        }
+
+        public QueryCreateInstancePriceRequestCreateInstanceRequest setExtra(String extra) {
+            this.extra = extra;
+            return this;
+        }
+        public String getExtra() {
+            return this.extra;
         }
 
         public QueryCreateInstancePriceRequestCreateInstanceRequest setInstanceName(String instanceName) {

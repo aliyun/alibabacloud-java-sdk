@@ -13,11 +13,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -122,6 +120,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Float cpu;
 
+        @NameInMap("Cu")
+        public Float cu;
+
         @NameInMap("MemoryGB")
         public Float memoryGB;
 
@@ -138,12 +139,50 @@ public class DescribeNamespacesResponseBody extends TeaModel {
             return this.cpu;
         }
 
+        public DescribeNamespacesResponseBodyNamespacesResourceUsed setCu(Float cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Float getCu() {
+            return this.cu;
+        }
+
         public DescribeNamespacesResponseBodyNamespacesResourceUsed setMemoryGB(Float memoryGB) {
             this.memoryGB = memoryGB;
             return this;
         }
         public Float getMemoryGB() {
             return this.memoryGB;
+        }
+
+    }
+
+    public static class DescribeNamespacesResponseBodyNamespacesTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNamespacesResponseBodyNamespacesTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespacesResponseBodyNamespacesTags self = new DescribeNamespacesResponseBodyNamespacesTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNamespacesResponseBodyNamespacesTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -166,6 +205,9 @@ public class DescribeNamespacesResponseBody extends TeaModel {
 
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeNamespacesResponseBodyNamespacesTags> tags;
 
         public static DescribeNamespacesResponseBodyNamespaces build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesResponseBodyNamespaces self = new DescribeNamespacesResponseBodyNamespaces();
@@ -218,6 +260,14 @@ public class DescribeNamespacesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeNamespacesResponseBodyNamespaces setTags(java.util.List<DescribeNamespacesResponseBodyNamespacesTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeNamespacesResponseBodyNamespacesTags> getTags() {
+            return this.tags;
         }
 
     }
