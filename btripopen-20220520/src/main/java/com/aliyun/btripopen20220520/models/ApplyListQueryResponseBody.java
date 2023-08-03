@@ -510,6 +510,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_set_list")
         public java.util.List<ApplyListQueryResponseBodyModuleListItinerarySetList> itinerarySetList;
 
+        @NameInMap("job_no")
+        public String jobNo;
+
         @NameInMap("status")
         public Integer status;
 
@@ -661,6 +664,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
         public java.util.List<ApplyListQueryResponseBodyModuleListItinerarySetList> getItinerarySetList() {
             return this.itinerarySetList;
+        }
+
+        public ApplyListQueryResponseBodyModuleList setJobNo(String jobNo) {
+            this.jobNo = jobNo;
+            return this;
+        }
+        public String getJobNo() {
+            return this.jobNo;
         }
 
         public ApplyListQueryResponseBodyModuleList setStatus(Integer status) {

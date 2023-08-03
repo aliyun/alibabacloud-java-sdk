@@ -79,6 +79,18 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         public String alipayTradeNo;
 
+        @NameInMap("apply_arr_city_code")
+        public String applyArrCityCode;
+
+        @NameInMap("apply_arr_city_name")
+        public String applyArrCityName;
+
+        @NameInMap("apply_dep_city_code")
+        public String applyDepCityCode;
+
+        @NameInMap("apply_dep_city_name")
+        public String applyDepCityName;
+
         /**
          * <p>审批扩展自定义字段</p>
          */
@@ -87,6 +99,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("apply_id")
         public String applyId;
+
+        @NameInMap("arr_city_code")
+        public String arrCityCode;
 
         @NameInMap("arr_date")
         public String arrDate;
@@ -129,6 +144,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("coupon")
         public Double coupon;
+
+        @NameInMap("dep_city_code")
+        public String depCityCode;
 
         @NameInMap("department")
         public String department;
@@ -211,6 +229,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         public String taxRate;
 
+        @NameInMap("third_itinerary_id")
+        public String thirdItineraryId;
+
         @NameInMap("ticket_no")
         public String ticketNo;
 
@@ -248,6 +269,38 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.alipayTradeNo;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setApplyArrCityCode(String applyArrCityCode) {
+            this.applyArrCityCode = applyArrCityCode;
+            return this;
+        }
+        public String getApplyArrCityCode() {
+            return this.applyArrCityCode;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setApplyArrCityName(String applyArrCityName) {
+            this.applyArrCityName = applyArrCityName;
+            return this;
+        }
+        public String getApplyArrCityName() {
+            return this.applyArrCityName;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setApplyDepCityCode(String applyDepCityCode) {
+            this.applyDepCityCode = applyDepCityCode;
+            return this;
+        }
+        public String getApplyDepCityCode() {
+            return this.applyDepCityCode;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setApplyDepCityName(String applyDepCityName) {
+            this.applyDepCityName = applyDepCityName;
+            return this;
+        }
+        public String getApplyDepCityName() {
+            return this.applyDepCityName;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setApplyExtendField(String applyExtendField) {
             this.applyExtendField = applyExtendField;
             return this;
@@ -262,6 +315,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getApplyId() {
             return this.applyId;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setArrCityCode(String arrCityCode) {
+            this.arrCityCode = arrCityCode;
+            return this;
+        }
+        public String getArrCityCode() {
+            return this.arrCityCode;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setArrDate(String arrDate) {
@@ -374,6 +435,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getCoupon() {
             return this.coupon;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setDepCityCode(String depCityCode) {
+            this.depCityCode = depCityCode;
+            return this;
+        }
+        public String getDepCityCode() {
+            return this.depCityCode;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setDepartment(String department) {
@@ -582,6 +651,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTaxRate() {
             return this.taxRate;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setThirdItineraryId(String thirdItineraryId) {
+            this.thirdItineraryId = thirdItineraryId;
+            return this;
+        }
+        public String getThirdItineraryId() {
+            return this.thirdItineraryId;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setTicketNo(String ticketNo) {

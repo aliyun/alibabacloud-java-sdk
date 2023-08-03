@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>btripopen20220520</artifactId>
-  <version>1.1.11</version>
+  <version>1.1.12</version>
   <packaging>jar</packaging>
   <name>btripopen20220520</name>
   <description>Alibaba Cloud btripOpen (20220520) SDK for Java
