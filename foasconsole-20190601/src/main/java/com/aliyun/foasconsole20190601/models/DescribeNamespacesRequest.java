@@ -20,26 +20,54 @@ public class DescribeNamespacesRequest extends TeaModel {
         return this.describeNamespacesRequest;
     }
 
+    public static class DescribeNamespacesRequestDescribeNamespacesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeNamespacesRequestDescribeNamespacesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNamespacesRequestDescribeNamespacesRequestTags self = new DescribeNamespacesRequestDescribeNamespacesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNamespacesRequestDescribeNamespacesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeNamespacesRequestDescribeNamespacesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeNamespacesRequestDescribeNamespacesRequest extends TeaModel {
-        // 实例id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 命名空间名称
         @NameInMap("Namespace")
         public String namespace;
 
-        // 当前页数
         @NameInMap("PageIndex")
         public Integer pageIndex;
 
-        // 每页大小
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        // regionId
         @NameInMap("Region")
         public String region;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeNamespacesRequestDescribeNamespacesRequestTags> tags;
 
         public static DescribeNamespacesRequestDescribeNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {
             DescribeNamespacesRequestDescribeNamespacesRequest self = new DescribeNamespacesRequestDescribeNamespacesRequest();
@@ -84,6 +112,14 @@ public class DescribeNamespacesRequest extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public DescribeNamespacesRequestDescribeNamespacesRequest setTags(java.util.List<DescribeNamespacesRequestDescribeNamespacesRequestTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeNamespacesRequestDescribeNamespacesRequestTags> getTags() {
+            return this.tags;
         }
 
     }

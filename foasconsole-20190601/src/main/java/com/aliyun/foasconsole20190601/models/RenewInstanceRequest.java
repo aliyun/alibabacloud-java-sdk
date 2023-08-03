@@ -21,19 +21,15 @@ public class RenewInstanceRequest extends TeaModel {
     }
 
     public static class RenewInstanceRequestRenewInstanceRequest extends TeaModel {
-        // 订购周期数量
         @NameInMap("Duration")
         public Integer duration;
 
-        // 实例id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 订购周期
         @NameInMap("PricingCycle")
         public String pricingCycle;
 
-        // 地域id
         @NameInMap("Region")
         public String region;
 

@@ -3,7 +3,7 @@ package com.aliyun.foasconsole20190601.models;
 
 import com.aliyun.tea.*;
 
-public class RenewInstanceResponseBody extends TeaModel {
+public class ConvertPrepayInstanceResponseBody extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
@@ -13,12 +13,12 @@ public class RenewInstanceResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static RenewInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        RenewInstanceResponseBody self = new RenewInstanceResponseBody();
+    public static ConvertPrepayInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ConvertPrepayInstanceResponseBody self = new ConvertPrepayInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public RenewInstanceResponseBody setOrderId(Long orderId) {
+    public ConvertPrepayInstanceResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -26,7 +26,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public RenewInstanceResponseBody setRequestId(String requestId) {
+    public ConvertPrepayInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -34,7 +34,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RenewInstanceResponseBody setSuccess(Boolean success) {
+    public ConvertPrepayInstanceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

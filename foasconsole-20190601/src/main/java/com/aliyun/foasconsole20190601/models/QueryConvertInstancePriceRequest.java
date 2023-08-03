@@ -21,11 +21,9 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecsResourceSpec extends TeaModel {
-        // cpu数量。
         @NameInMap("Cpu")
         public Integer cpu;
 
-        // 内存大小。
         @NameInMap("MemoryGB")
         public Integer memoryGB;
 
@@ -53,11 +51,9 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecs extends TeaModel {
-        // namespace名称，
         @NameInMap("Namespace")
         public String namespace;
 
-        // 资源规格。
         @NameInMap("ResourceSpec")
         public QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecsResourceSpec resourceSpec;
 
@@ -85,22 +81,18 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
     }
 
     public static class QueryConvertInstancePriceRequestConvertPostpayInstanceRequest extends TeaModel {
-        // 订购周期数量
         @NameInMap("Duration")
         public Integer duration;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 是否自动续费
         @NameInMap("IsAutoRenew")
         public Boolean isAutoRenew;
 
-        // 项目空间资源规格。
         @NameInMap("NamespaceResourceSpecs")
         public java.util.List<QueryConvertInstancePriceRequestConvertPostpayInstanceRequestNamespaceResourceSpecs> namespaceResourceSpecs;
 
-        // 订购周期
         @NameInMap("PricingCycle")
         public String pricingCycle;
 

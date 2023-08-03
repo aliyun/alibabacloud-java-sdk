@@ -3,7 +3,7 @@ package com.aliyun.foasconsole20190601.models;
 
 import com.aliyun.tea.*;
 
-public class ConvertInstanceResponse extends TeaModel {
+public class ListTagResourcesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ConvertInstanceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public ConvertInstanceResponseBody body;
+    public ListTagResourcesResponseBody body;
 
-    public static ConvertInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        ConvertInstanceResponse self = new ConvertInstanceResponse();
+    public static ListTagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListTagResourcesResponse self = new ListTagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ConvertInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListTagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ConvertInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public ConvertInstanceResponse setStatusCode(Integer statusCode) {
+    public ListTagResourcesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ConvertInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ConvertInstanceResponse setBody(ConvertInstanceResponseBody body) {
+    public ListTagResourcesResponse setBody(ListTagResourcesResponseBody body) {
         this.body = body;
         return this;
     }
-    public ConvertInstanceResponseBody getBody() {
+    public ListTagResourcesResponseBody getBody() {
         return this.body;
     }
 

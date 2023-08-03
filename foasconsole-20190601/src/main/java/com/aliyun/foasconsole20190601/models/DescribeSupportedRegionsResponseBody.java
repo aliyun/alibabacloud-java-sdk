@@ -7,11 +7,9 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     @NameInMap("Regions")
     public java.util.List<DescribeSupportedRegionsResponseBodyRegions> regions;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -45,11 +43,9 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeSupportedRegionsResponseBodyRegions extends TeaModel {
-        // regionId
         @NameInMap("Region")
         public String region;
 
-        // region名称
         @NameInMap("RegionName")
         public String regionName;
 

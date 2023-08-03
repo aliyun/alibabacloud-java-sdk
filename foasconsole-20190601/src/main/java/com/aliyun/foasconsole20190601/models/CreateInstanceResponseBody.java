@@ -4,15 +4,12 @@ package com.aliyun.foasconsole20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
-    // 订单信息
     @NameInMap("OrderInfo")
     public CreateInstanceResponseBodyOrderInfo orderInfo;
 
-    // 请求id
     @NameInMap("RequestId")
     public String requestId;
 
-    // 是否成功
     @NameInMap("Success")
     public Boolean success;
 
@@ -46,11 +43,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyOrderInfo extends TeaModel {
-        // 实例id
         @NameInMap("InstanceId")
         public String instanceId;
 
-        // 订单id
         @NameInMap("OrderId")
         public Long orderId;
 

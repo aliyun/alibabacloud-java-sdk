@@ -1,3 +1,6 @@
+2023-08-03 Version: 1.0.4
+- Support tag and RG.
+
 2022-01-27 Version: 1.0.3
 - Query price and convert.
 
