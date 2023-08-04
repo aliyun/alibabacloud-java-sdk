@@ -218,8 +218,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.resultSetOptions))) {
-            request.resultSetOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.resultSetOptions), "ResultSetOptions", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resultSetOptions)) {
+            request.resultSetOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resultSetOptions, "ResultSetOptions", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
