@@ -7,7 +7,7 @@ public class DescribeExposedInstanceDetailRequest extends TeaModel {
     /**
      * <p>The UUID of the server that is exposed on the Internet.</p>
      * <br>
-     * <p>>  You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.</p>
+     * <p>> You can call the [DescribeExposedInstanceList](~~DescribeExposedInstanceList~~) operation to query the UUIDs of servers.</p>
      */
     @NameInMap("Uuid")
     public String uuid;

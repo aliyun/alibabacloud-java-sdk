@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetInterceptionRuleDetailResponseBody extends TeaModel {
+    /**
+     * <p>The details of the rule.</p>
+     */
     @NameInMap("InterceptionRuleDetail")
     public GetInterceptionRuleDetailResponseBodyInterceptionRuleDetail interceptionRuleDetail;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,57 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterceptionRuleDetailResponseBodyInterceptionRuleDetailDstTarget extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>An array that consists of the name of the image specified for the network object.</p>
+         */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
 
+        /**
+         * <p>The namespace to which the network object belongs.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>An array that consists of the port range of the destination network object.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<String> ports;
 
+        /**
+         * <p>The type of the rule.</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>An array that consists of the labels specified for the network object.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 
+        /**
+         * <p>The ID of the network object.</p>
+         */
         @NameInMap("TargetId")
         public Integer targetId;
 
+        /**
+         * <p>The name of the object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the network object.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -139,27 +172,51 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterceptionRuleDetailResponseBodyInterceptionRuleDetailSrcTarget extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The images of the network object.</p>
+         */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
 
+        /**
+         * <p>The namespace to which the network object belongs.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The type of the rule.</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>The labels specified for the network object.</p>
+         */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
 
+        /**
+         * <p>The ID of the network object.</p>
+         */
         @NameInMap("TargetId")
         public Integer targetId;
 
+        /**
+         * <p>The name of the object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the network object.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -235,27 +292,62 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterceptionRuleDetailResponseBodyInterceptionRuleDetail extends TeaModel {
+        /**
+         * <p>The destination network object.</p>
+         */
         @NameInMap("DstTarget")
         public GetInterceptionRuleDetailResponseBodyInterceptionRuleDetailDstTarget dstTarget;
 
+        /**
+         * <p>The interception mode. Valid values:</p>
+         * <br>
+         * <p>*   **0**: monitor</p>
+         * <p>*   **1**: block</p>
+         * <p>*   **2**: alert</p>
+         * <p>*   **3**: allow</p>
+         */
         @NameInMap("InterceptType")
         public Long interceptType;
 
+        /**
+         * <p>The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.</p>
+         */
         @NameInMap("OrderIndex")
         public Long orderIndex;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The status of the defense rule. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The rule is enabled.</p>
+         * <p>*   **0**: The rule is disabled.</p>
+         */
         @NameInMap("RuleSwitch")
         public Integer ruleSwitch;
 
+        /**
+         * <p>The type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   **suggest**: a suggestion rule</p>
+         * <p>*   **customize**: a custom rule</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
+        /**
+         * <p>The source network object.</p>
+         */
         @NameInMap("SrcTarget")
         public GetInterceptionRuleDetailResponseBodyInterceptionRuleDetailSrcTarget srcTarget;
 

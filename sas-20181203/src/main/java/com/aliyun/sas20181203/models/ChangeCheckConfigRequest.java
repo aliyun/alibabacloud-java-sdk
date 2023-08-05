@@ -7,6 +7,12 @@ public class ChangeCheckConfigRequest extends TeaModel {
     @NameInMap("AddedCheck")
     public java.util.List<ChangeCheckConfigRequestAddedCheck> addedCheck;
 
+    @NameInMap("ConfigRequirementIds")
+    public ChangeCheckConfigRequestConfigRequirementIds configRequirementIds;
+
+    @NameInMap("ConfigStandardIds")
+    public ChangeCheckConfigRequestConfigStandardIds configStandardIds;
+
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
@@ -61,6 +67,22 @@ public class ChangeCheckConfigRequest extends TeaModel {
     }
     public java.util.List<ChangeCheckConfigRequestAddedCheck> getAddedCheck() {
         return this.addedCheck;
+    }
+
+    public ChangeCheckConfigRequest setConfigRequirementIds(ChangeCheckConfigRequestConfigRequirementIds configRequirementIds) {
+        this.configRequirementIds = configRequirementIds;
+        return this;
+    }
+    public ChangeCheckConfigRequestConfigRequirementIds getConfigRequirementIds() {
+        return this.configRequirementIds;
+    }
+
+    public ChangeCheckConfigRequest setConfigStandardIds(ChangeCheckConfigRequestConfigStandardIds configStandardIds) {
+        this.configStandardIds = configStandardIds;
+        return this;
+    }
+    public ChangeCheckConfigRequestConfigStandardIds getConfigStandardIds() {
+        return this.configStandardIds;
     }
 
     public ChangeCheckConfigRequest setCycleDays(java.util.List<Integer> cycleDays) {
@@ -153,6 +175,66 @@ public class ChangeCheckConfigRequest extends TeaModel {
         }
         public Long getSectionId() {
             return this.sectionId;
+        }
+
+    }
+
+    public static class ChangeCheckConfigRequestConfigRequirementIds extends TeaModel {
+        @NameInMap("AddIds")
+        public java.util.List<Long> addIds;
+
+        @NameInMap("RemoveIds")
+        public java.util.List<Long> removeIds;
+
+        public static ChangeCheckConfigRequestConfigRequirementIds build(java.util.Map<String, ?> map) throws Exception {
+            ChangeCheckConfigRequestConfigRequirementIds self = new ChangeCheckConfigRequestConfigRequirementIds();
+            return TeaModel.build(map, self);
+        }
+
+        public ChangeCheckConfigRequestConfigRequirementIds setAddIds(java.util.List<Long> addIds) {
+            this.addIds = addIds;
+            return this;
+        }
+        public java.util.List<Long> getAddIds() {
+            return this.addIds;
+        }
+
+        public ChangeCheckConfigRequestConfigRequirementIds setRemoveIds(java.util.List<Long> removeIds) {
+            this.removeIds = removeIds;
+            return this;
+        }
+        public java.util.List<Long> getRemoveIds() {
+            return this.removeIds;
+        }
+
+    }
+
+    public static class ChangeCheckConfigRequestConfigStandardIds extends TeaModel {
+        @NameInMap("AddIds")
+        public java.util.List<Long> addIds;
+
+        @NameInMap("RemoveIds")
+        public java.util.List<Long> removeIds;
+
+        public static ChangeCheckConfigRequestConfigStandardIds build(java.util.Map<String, ?> map) throws Exception {
+            ChangeCheckConfigRequestConfigStandardIds self = new ChangeCheckConfigRequestConfigStandardIds();
+            return TeaModel.build(map, self);
+        }
+
+        public ChangeCheckConfigRequestConfigStandardIds setAddIds(java.util.List<Long> addIds) {
+            this.addIds = addIds;
+            return this;
+        }
+        public java.util.List<Long> getAddIds() {
+            return this.addIds;
+        }
+
+        public ChangeCheckConfigRequestConfigStandardIds setRemoveIds(java.util.List<Long> removeIds) {
+            this.removeIds = removeIds;
+            return this;
+        }
+        public java.util.List<Long> getRemoveIds() {
+            return this.removeIds;
         }
 
     }

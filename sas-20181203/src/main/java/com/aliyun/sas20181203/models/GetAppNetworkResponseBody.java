@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAppNetworkResponseBody extends TeaModel {
+    /**
+     * <p>The information about the application network topology.</p>
+     */
     @NameInMap("AppNetwork")
     public GetAppNetworkResponseBodyAppNetwork appNetwork;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,45 @@ public class GetAppNetworkResponseBody extends TeaModel {
     }
 
     public static class GetAppNetworkResponseBodyAppNetworkEdge extends TeaModel {
+        /**
+         * <p>The ID of the destination node.</p>
+         */
         @NameInMap("DstNodeId")
         public String dstNodeId;
 
+        /**
+         * <p>The type of the destination node. Valid values:</p>
+         * <br>
+         * <p>*   **app**: an application</p>
+         * <p>*   **internet**: a network node in another cluster</p>
+         */
         @NameInMap("DstNodeType")
         public String dstNodeType;
 
+        /**
+         * <p>The ID of the edge.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The number of the destination port.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The ID of the source node.</p>
+         */
         @NameInMap("SrcNodeId")
         public String srcNodeId;
 
+        /**
+         * <p>The type of the source node. Valid values:</p>
+         * <br>
+         * <p>*   **app**: an application</p>
+         * <p>*   **internet**: a network node in another cluster</p>
+         */
         @NameInMap("SrcNodeType")
         public String srcNodeType;
 
@@ -106,9 +136,15 @@ public class GetAppNetworkResponseBody extends TeaModel {
     }
 
     public static class GetAppNetworkResponseBodyAppNetworkNamespace extends TeaModel {
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the custom namespace.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -136,21 +172,48 @@ public class GetAppNetworkResponseBody extends TeaModel {
     }
 
     public static class GetAppNetworkResponseBodyAppNetworkNode extends TeaModel {
+        /**
+         * <p>The list of the container IDs.</p>
+         */
         @NameInMap("ContainerIds")
         public java.util.List<String> containerIds;
 
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The risk level. Valid values:</p>
+         * <br>
+         * <p>*   **3**: high</p>
+         * <p>*   **2**: medium</p>
+         * <p>*   **1**: low</p>
+         * <p>*   **0**: warning</p>
+         * <p>*   **-1**: unknown</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The type of the node. Valid values:</p>
+         * <br>
+         * <p>*   **app**: an application</p>
+         * <p>*   **internet**: a network node in another cluster</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -210,12 +273,21 @@ public class GetAppNetworkResponseBody extends TeaModel {
     }
 
     public static class GetAppNetworkResponseBodyAppNetwork extends TeaModel {
+        /**
+         * <p>The information about the topology edge.</p>
+         */
         @NameInMap("Edge")
         public java.util.List<GetAppNetworkResponseBodyAppNetworkEdge> edge;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public java.util.List<GetAppNetworkResponseBodyAppNetworkNamespace> namespace;
 
+        /**
+         * <p>The information about the application node.</p>
+         */
         @NameInMap("Node")
         public java.util.List<GetAppNetworkResponseBodyAppNetworkNode> node;
 

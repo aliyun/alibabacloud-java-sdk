@@ -124,6 +124,9 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         @NameInMap("Progress")
         public Integer progress;
 
+        @NameInMap("RaspDefend")
+        public Integer raspDefend;
+
         /**
          * <p>The detection status of the urgent vulnerability. Valid values:</p>
          * <br>
@@ -202,6 +205,14 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
         public Integer getProgress() {
             return this.progress;
+        }
+
+        public DescribeEmgVulItemResponseBodyGroupedVulItems setRaspDefend(Integer raspDefend) {
+            this.raspDefend = raspDefend;
+            return this;
+        }
+        public Integer getRaspDefend() {
+            return this.raspDefend;
         }
 
         public DescribeEmgVulItemResponseBodyGroupedVulItems setStatus(Integer status) {
