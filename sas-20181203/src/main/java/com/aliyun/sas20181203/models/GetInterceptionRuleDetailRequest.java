@@ -4,9 +4,19 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetInterceptionRuleDetailRequest extends TeaModel {
+    /**
+     * <p>The ID of the container cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>> You can call the [ListInterceptionRulePage](~~ListInterceptionRulePage~~) operation to query the IDs of rules.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

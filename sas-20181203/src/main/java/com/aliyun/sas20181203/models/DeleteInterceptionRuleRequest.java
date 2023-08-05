@@ -4,9 +4,17 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteInterceptionRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster that you want to query.</p>
+     * <br>
+     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The IDs of the rules that you want to delete.</p>
+     */
     @NameInMap("RuleIds")
     public java.util.List<Long> ruleIds;
 

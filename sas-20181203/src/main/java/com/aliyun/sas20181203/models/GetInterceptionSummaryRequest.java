@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetInterceptionSummaryRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeGroupedContainerInstances](~~421736~~) operation to query the IDs of clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 

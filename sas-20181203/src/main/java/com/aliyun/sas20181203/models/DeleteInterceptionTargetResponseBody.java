@@ -4,9 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteInterceptionTargetResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the network objects are removed. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The network objects are removed.</p>
+     * <p>*   **false**: The network objects fail to be removed.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
