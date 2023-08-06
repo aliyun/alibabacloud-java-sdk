@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class AssociateMembersResponseBody extends TeaModel {
+    /**
+     * <p>The time when the contact was bound to the object.</p>
+     */
     @NameInMap("Members")
     public java.util.List<AssociateMembersResponseBodyMembers> members;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,25 @@ public class AssociateMembersResponseBody extends TeaModel {
     }
 
     public static class AssociateMembersResponseBodyMembers extends TeaModel {
+        /**
+         * <p>The ID of the contact.</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>The ID of the object. Valid values:</p>
+         * <br>
+         * <p>- ID of the resource directory</p>
+         * <p>- ID of the folder</p>
+         * <p>- ID of the member</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <p>The time when the contact was bound to the object.</p>
+         */
         @NameInMap("ModifyDate")
         public String modifyDate;
 

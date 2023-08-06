@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class AssociateMembersRequest extends TeaModel {
+    /**
+     * <p>The ID of the contact.</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>The IDs of objects to which you want to bind the contact.</p>
+     */
     @NameInMap("Members")
     public java.util.List<String> members;
 

@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class AddMessageContactResponseBody extends TeaModel {
+    /**
+     * <p>The information about the contact.</p>
+     */
     @NameInMap("Contact")
     public AddMessageContactResponseBodyContact contact;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class AddMessageContactResponseBody extends TeaModel {
     }
 
     public static class AddMessageContactResponseBodyContact extends TeaModel {
+        /**
+         * <p>The ID of the contact.</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>The time when the contact was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 

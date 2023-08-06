@@ -4,12 +4,23 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class CancelMessageContactUpdateRequest extends TeaModel {
+    /**
+     * <p>The ID of the contact.</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>The email address of the contact.</p>
+     */
     @NameInMap("EmailAddress")
     public String emailAddress;
 
+    /**
+     * <p>The mobile phone number of the contact.</p>
+     * <br>
+     * <p>Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

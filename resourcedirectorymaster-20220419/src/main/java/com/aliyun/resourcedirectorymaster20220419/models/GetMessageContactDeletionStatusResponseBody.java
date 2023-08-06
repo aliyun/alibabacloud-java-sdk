@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
+    /**
+     * <p>The deletion information of the contact.</p>
+     */
     @NameInMap("ContactDeletionStatus")
     public GetMessageContactDeletionStatusResponseBodyContactDeletionStatus contactDeletionStatus;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
     }
 
     public static class GetMessageContactDeletionStatusResponseBodyContactDeletionStatusFailReasonList extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The types of messages received by the contact.</p>
+         */
         @NameInMap("MessageTypes")
         public java.util.List<String> messageTypes;
 
@@ -62,12 +74,24 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
     }
 
     public static class GetMessageContactDeletionStatusResponseBodyContactDeletionStatus extends TeaModel {
+        /**
+         * <p>The ID of the contact.</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>The types of messages received by the contact.</p>
+         */
         @NameInMap("FailReasonList")
         public java.util.List<GetMessageContactDeletionStatusResponseBodyContactDeletionStatusFailReasonList> failReasonList;
 
+        /**
+         * <p>The deletion status of the contact. Valid values:</p>
+         * <br>
+         * <p>*   Deleting</p>
+         * <p>*   Failed</p>
+         */
         @NameInMap("Status")
         public String status;
 

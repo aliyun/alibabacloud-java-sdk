@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class DisassociateMembersResponseBody extends TeaModel {
+    /**
+     * <p>The time when the contact was unbound from the object.</p>
+     */
     @NameInMap("Members")
     public java.util.List<DisassociateMembersResponseBodyMembers> members;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,25 @@ public class DisassociateMembersResponseBody extends TeaModel {
     }
 
     public static class DisassociateMembersResponseBodyMembers extends TeaModel {
+        /**
+         * <p>The ID of the contact.</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>The ID of the object. Valid values:</p>
+         * <br>
+         * <p>- ID of the resource directory</p>
+         * <p>- ID of the folder</p>
+         * <p>- ID of the member</p>
+         */
         @NameInMap("MemberId")
         public String memberId;
 
+        /**
+         * <p>The time when the contact was unbound from the object.</p>
+         */
         @NameInMap("ModifyDate")
         public String modifyDate;
 

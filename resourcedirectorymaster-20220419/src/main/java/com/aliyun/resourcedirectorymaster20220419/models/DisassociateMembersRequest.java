@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class DisassociateMembersRequest extends TeaModel {
+    /**
+     * <p>The ID of the contact.</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>The IDs of objects from which you want to unbind the contact.</p>
+     */
     @NameInMap("Members")
     public java.util.List<String> members;
 

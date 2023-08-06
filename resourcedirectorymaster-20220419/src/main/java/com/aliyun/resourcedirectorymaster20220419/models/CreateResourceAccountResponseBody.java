@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class CreateResourceAccountResponseBody extends TeaModel {
+    /**
+     * <p>The information of the member.</p>
+     */
     @NameInMap("Account")
     public CreateResourceAccountResponseBodyAccount account;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +38,66 @@ public class CreateResourceAccountResponseBody extends TeaModel {
     }
 
     public static class CreateResourceAccountResponseBodyAccount extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The Alibaba Cloud account name of the member.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The display name of the member.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The ID of the folder.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The way in which the member joins the resource directory. Valid values:</p>
+         * <br>
+         * <p>*   invited: The member is invited to join the resource directory.</p>
+         * <p>*   created: The member is directly created in the resource directory.</p>
+         */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
+        /**
+         * <p>The time when the member joined the resource directory. The time is displayed in UTC.</p>
+         */
         @NameInMap("JoinTime")
         public String joinTime;
 
+        /**
+         * <p>The time when the member was modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
+        /**
+         * <p>The status of the member. The value CreateSuccess indicates that the member is created.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the member. The value ResourceAccount indicates that the member is a resource account.</p>
+         */
         @NameInMap("Type")
         public String type;
 
