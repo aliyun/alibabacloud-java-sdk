@@ -4,6 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class SendPhoneVerificationForMessageContactResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

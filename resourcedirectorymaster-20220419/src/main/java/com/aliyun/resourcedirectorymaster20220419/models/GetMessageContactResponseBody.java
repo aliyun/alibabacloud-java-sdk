@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetMessageContactResponseBody extends TeaModel {
+    /**
+     * <p>The information about the contact.</p>
+     */
     @NameInMap("Contact")
     public GetMessageContactResponseBodyContact contact;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,61 @@ public class GetMessageContactResponseBody extends TeaModel {
     }
 
     public static class GetMessageContactResponseBodyContact extends TeaModel {
+        /**
+         * <p>The ID of the contact.</p>
+         */
         @NameInMap("ContactId")
         public String contactId;
 
+        /**
+         * <p>The time when the contact was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The email address of the contact.</p>
+         */
         @NameInMap("EmailAddress")
         public String emailAddress;
 
+        /**
+         * <p>The IDs of objects to which the contact is bound.</p>
+         */
         @NameInMap("Members")
         public java.util.List<String> members;
 
+        /**
+         * <p>The types of messages received by the contact.</p>
+         */
         @NameInMap("MessageTypes")
         public java.util.List<String> messageTypes;
 
+        /**
+         * <p>The name of the contact.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The mobile phone number of the contact.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The status of the contact. Valid values:</p>
+         * <br>
+         * <p>*   Verifying</p>
+         * <p>*   Active</p>
+         * <p>*   Deleting</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The job title of the contact.</p>
+         */
         @NameInMap("Title")
         public String title;
 

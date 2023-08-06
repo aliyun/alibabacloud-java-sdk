@@ -4,6 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetMessageContactRequest extends TeaModel {
+    /**
+     * <p>The ID of the contact.</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 

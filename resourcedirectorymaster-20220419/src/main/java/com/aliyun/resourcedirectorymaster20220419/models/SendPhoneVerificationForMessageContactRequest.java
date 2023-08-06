@@ -4,9 +4,19 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class SendPhoneVerificationForMessageContactRequest extends TeaModel {
+    /**
+     * <p>The ID of the contact.</p>
+     */
     @NameInMap("ContactId")
     public String contactId;
 
+    /**
+     * <p>The mobile phone number of the contact.</p>
+     * <br>
+     * <p>The value must be in the `<Country code>-<Mobile phone number>` format.</p>
+     * <br>
+     * <p>The specified mobile phone number must be the one you specify when you call the [AddMessageContact](~~AddMessageContact~~) operation.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 

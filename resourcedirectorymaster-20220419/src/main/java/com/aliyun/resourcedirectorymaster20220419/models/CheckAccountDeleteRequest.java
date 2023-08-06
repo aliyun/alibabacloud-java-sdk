@@ -4,6 +4,9 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class CheckAccountDeleteRequest extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud account ID of the member that you want to delete.</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 

@@ -4,9 +4,15 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class GetAccountResponseBody extends TeaModel {
+    /**
+     * <p>The information of the member.</p>
+     */
     @NameInMap("Account")
     public GetAccountResponseBodyAccount account;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetAccountResponseBody extends TeaModel {
     }
 
     public static class GetAccountResponseBodyAccountTags extends TeaModel {
+        /**
+         * <p>A tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>A tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,48 +74,112 @@ public class GetAccountResponseBody extends TeaModel {
     }
 
     public static class GetAccountResponseBodyAccount extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud account ID of the member.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The Alibaba Cloud account name of the member.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The display name of the member.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The status of the modification for the email address bound to the member. Valid values:</p>
+         * <br>
+         * <p>*   If the value of this parameter is empty, no modification is performed for the email address.</p>
+         * <p>*   WAIT_MODIFY: The modification is being performed.</p>
+         * <p>*   CANCELLED: The modification is canceled.</p>
+         * <p>*   EXPIRED: The modification expires.</p>
+         */
         @NameInMap("EmailStatus")
         public String emailStatus;
 
+        /**
+         * <p>The ID of the folder.</p>
+         */
         @NameInMap("FolderId")
         public String folderId;
 
+        /**
+         * <p>The real-name verification information.</p>
+         */
         @NameInMap("IdentityInformation")
         public String identityInformation;
 
+        /**
+         * <p>The way in which the member joins the resource directory. Valid values:</p>
+         * <br>
+         * <p>*   invited: The member is invited to join the resource directory.</p>
+         * <p>*   created: The member is directly created in the resource directory.</p>
+         */
         @NameInMap("JoinMethod")
         public String joinMethod;
 
+        /**
+         * <p>The time when the member joined the resource directory.</p>
+         */
         @NameInMap("JoinTime")
         public String joinTime;
 
+        /**
+         * <p>The location of the member in the resource directory.</p>
+         */
         @NameInMap("Location")
         public String location;
 
+        /**
+         * <p>The time when the member was modified.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
+        /**
+         * <p>The path of the member in the resource directory.</p>
+         */
         @NameInMap("ResourceDirectoryPath")
         public String resourceDirectoryPath;
 
+        /**
+         * <p>The status of the member. Valid values:</p>
+         * <br>
+         * <p>*   CreateSuccess: The member is created.</p>
+         * <p>*   PromoteVerifying: The upgrade of the member is being confirmed.</p>
+         * <p>*   PromoteFailed: The upgrade of the member fails.</p>
+         * <p>*   PromoteExpired: The upgrade of the member expires.</p>
+         * <p>*   PromoteCancelled: The upgrade of the member is canceled.</p>
+         * <p>*   PromoteSuccess: The member is upgraded.</p>
+         * <p>*   InviteSuccess: The member accepts the invitation.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the member.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetAccountResponseBodyAccountTags> tags;
 
+        /**
+         * <p>The type of the member. Valid values:</p>
+         * <br>
+         * <p>*   CloudAccount: cloud account</p>
+         * <p>*   ResourceAccount: resource account</p>
+         */
         @NameInMap("Type")
         public String type;
 
