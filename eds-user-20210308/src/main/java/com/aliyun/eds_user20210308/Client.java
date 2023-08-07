@@ -135,7 +135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The mobile number of the end user.
+      * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
       *
       * @param request CreateUsersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -170,7 +170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The mobile number of the end user.
+      * Convenience users are dedicated Elastic Desktop Service (EDS) user accounts and are suitable for scenarios in which you do not need to connect to enterprise Active Directory (AD) systems. The information about a convenience user includes the username, email address, and mobile number. You must specify the username or email address.
       *
       * @param request CreateUsersRequest
       * @return CreateUsersResponse
