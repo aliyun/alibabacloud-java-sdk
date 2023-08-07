@@ -55,6 +55,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        @NameInMap("NickName")
+        public String nickName;
+
         @NameInMap("OrgId")
         public String orgId;
 
@@ -108,6 +111,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public Boolean getIsTenantManager() {
             return this.isTenantManager;
+        }
+
+        public DescribeUsersResponseBodyUsers setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
         }
 
         public DescribeUsersResponseBodyUsers setOrgId(String orgId) {
