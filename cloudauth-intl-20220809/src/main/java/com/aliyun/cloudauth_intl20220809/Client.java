@@ -555,6 +555,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CertifyId", request.certifyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extParams)) {
+            query.put("ExtParams", request.extParams);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resultCode)) {
             query.put("ResultCode", request.resultCode);
         }

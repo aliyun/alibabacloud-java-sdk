@@ -7,6 +7,9 @@ public class FraudResultCallBackRequest extends TeaModel {
     @NameInMap("CertifyId")
     public String certifyId;
 
+    @NameInMap("ExtParams")
+    public String extParams;
+
     @NameInMap("ResultCode")
     public String resultCode;
 
@@ -24,6 +27,14 @@ public class FraudResultCallBackRequest extends TeaModel {
     }
     public String getCertifyId() {
         return this.certifyId;
+    }
+
+    public FraudResultCallBackRequest setExtParams(String extParams) {
+        this.extParams = extParams;
+        return this;
+    }
+    public String getExtParams() {
+        return this.extParams;
     }
 
     public FraudResultCallBackRequest setResultCode(String resultCode) {
