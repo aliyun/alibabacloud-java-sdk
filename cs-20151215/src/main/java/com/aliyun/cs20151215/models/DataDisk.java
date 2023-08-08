@@ -7,6 +7,9 @@ public class DataDisk extends TeaModel {
     @NameInMap("auto_snapshot_policy_id")
     public String autoSnapshotPolicyId;
 
+    @NameInMap("bursting_enabled")
+    public Boolean burstingEnabled;
+
     @NameInMap("category")
     public String category;
 
@@ -15,6 +18,9 @@ public class DataDisk extends TeaModel {
 
     @NameInMap("performance_level")
     public String performanceLevel;
+
+    @NameInMap("provisioned_iops")
+    public Long provisionedIops;
 
     @NameInMap("size")
     public Long size;
@@ -30,6 +36,14 @@ public class DataDisk extends TeaModel {
     }
     public String getAutoSnapshotPolicyId() {
         return this.autoSnapshotPolicyId;
+    }
+
+    public DataDisk setBurstingEnabled(Boolean burstingEnabled) {
+        this.burstingEnabled = burstingEnabled;
+        return this;
+    }
+    public Boolean getBurstingEnabled() {
+        return this.burstingEnabled;
     }
 
     public DataDisk setCategory(String category) {
@@ -54,6 +68,14 @@ public class DataDisk extends TeaModel {
     }
     public String getPerformanceLevel() {
         return this.performanceLevel;
+    }
+
+    public DataDisk setProvisionedIops(Long provisionedIops) {
+        this.provisionedIops = provisionedIops;
+        return this;
+    }
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
     }
 
     public DataDisk setSize(Long size) {
