@@ -21,6 +21,9 @@ public class CreateSiteMonitorRequest extends TeaModel {
     @NameInMap("AlertIds")
     public String alertIds;
 
+    @NameInMap("CustomSchedule")
+    public String customSchedule;
+
     /**
      * <p>The operation that you want to perform. Set the value to **CreateSiteMonitor**.</p>
      */
@@ -81,6 +84,14 @@ public class CreateSiteMonitorRequest extends TeaModel {
     }
     public String getAlertIds() {
         return this.alertIds;
+    }
+
+    public CreateSiteMonitorRequest setCustomSchedule(String customSchedule) {
+        this.customSchedule = customSchedule;
+        return this;
+    }
+    public String getCustomSchedule() {
+        return this.customSchedule;
     }
 
     public CreateSiteMonitorRequest setInterval(String interval) {

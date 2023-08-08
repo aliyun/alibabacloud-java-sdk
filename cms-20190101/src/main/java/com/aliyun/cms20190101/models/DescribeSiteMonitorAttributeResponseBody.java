@@ -375,6 +375,77 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays extends TeaModel {
+        @NameInMap("days")
+        public java.util.List<Integer> days;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays setDays(java.util.List<Integer> days) {
+            this.days = days;
+            return this;
+        }
+        public java.util.List<Integer> getDays() {
+            return this.days;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule extends TeaModel {
+        @NameInMap("days")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays days;
+
+        @NameInMap("end_hour")
+        public Integer endHour;
+
+        @NameInMap("start_hour")
+        public Integer startHour;
+
+        @NameInMap("time_zone")
+        public String timeZone;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule setDays(DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays days) {
+            this.days = days;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays getDays() {
+            return this.days;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule setEndHour(Integer endHour) {
+            this.endHour = endHour;
+            return this;
+        }
+        public Integer getEndHour() {
+            return this.endHour;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule setStartHour(Integer startHour) {
+            this.startHour = startHour;
+            return this;
+        }
+        public Integer getStartHour() {
+            return this.startHour;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+    }
+
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity extends TeaModel {
         /**
          * <p>The ID of the carrier.</p>
@@ -855,6 +926,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("AgentGroup")
         public String agentGroup;
 
+        @NameInMap("CustomSchedule")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule customSchedule;
+
         /**
          * <p>The name of the site monitoring task.</p>
          */
@@ -916,6 +990,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getAgentGroup() {
             return this.agentGroup;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitors setCustomSchedule(DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule customSchedule) {
+            this.customSchedule = customSchedule;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule getCustomSchedule() {
+            return this.customSchedule;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitors setInterval(String interval) {
