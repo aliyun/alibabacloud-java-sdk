@@ -1,3 +1,6 @@
+2023-08-08 Version: 1.0.4
+- Generated java 2022-09-30 for tingwu.
+
 2023-05-17 Version: 1.0.3
 - Support meeting realtime translate and role separation after meeting.
 

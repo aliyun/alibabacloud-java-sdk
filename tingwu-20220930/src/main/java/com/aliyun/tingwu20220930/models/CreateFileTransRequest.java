@@ -52,6 +52,15 @@ public class CreateFileTransRequest extends TeaModel {
     @NameInMap("TransResultOssPath")
     public String transResultOssPath;
 
+    @NameInMap("VideoOutputEnabled")
+    public Boolean videoOutputEnabled;
+
+    @NameInMap("VideoOutputOssBucket")
+    public String videoOutputOssBucket;
+
+    @NameInMap("VideoOutputOssPath")
+    public String videoOutputOssPath;
+
     public static CreateFileTransRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileTransRequest self = new CreateFileTransRequest();
         return TeaModel.build(map, self);
@@ -183,6 +192,30 @@ public class CreateFileTransRequest extends TeaModel {
     }
     public String getTransResultOssPath() {
         return this.transResultOssPath;
+    }
+
+    public CreateFileTransRequest setVideoOutputEnabled(Boolean videoOutputEnabled) {
+        this.videoOutputEnabled = videoOutputEnabled;
+        return this;
+    }
+    public Boolean getVideoOutputEnabled() {
+        return this.videoOutputEnabled;
+    }
+
+    public CreateFileTransRequest setVideoOutputOssBucket(String videoOutputOssBucket) {
+        this.videoOutputOssBucket = videoOutputOssBucket;
+        return this;
+    }
+    public String getVideoOutputOssBucket() {
+        return this.videoOutputOssBucket;
+    }
+
+    public CreateFileTransRequest setVideoOutputOssPath(String videoOutputOssPath) {
+        this.videoOutputOssPath = videoOutputOssPath;
+        return this;
+    }
+    public String getVideoOutputOssPath() {
+        return this.videoOutputOssPath;
     }
 
 }

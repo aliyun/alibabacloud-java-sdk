@@ -93,6 +93,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TransResultOssPath", request.transResultOssPath);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.videoOutputEnabled)) {
+            body.put("VideoOutputEnabled", request.videoOutputEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoOutputOssBucket)) {
+            body.put("VideoOutputOssBucket", request.videoOutputOssBucket);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoOutputOssPath)) {
+            body.put("VideoOutputOssPath", request.videoOutputOssPath);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
