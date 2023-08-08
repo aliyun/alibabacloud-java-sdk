@@ -7,8 +7,8 @@ public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
      * <br>
-     * <p>*   **true**: removes all tags from the specified resource.</p>
-     * <p>*   **false**: does not remove all tags from the specified resource. This is the default value.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -20,13 +20,16 @@ public class UnTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the resource belongs.</p>
+     * <p>The region ID of the resource.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -39,17 +42,22 @@ public class UnTagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <br>
-     * <p>*   **VPC**: a virtual private cloud (VPC)</p>
-     * <p>*   **VSWITCH**: a vSwitch</p>
-     * <p>*   **ROUTETABLE**: a route table</p>
-     * <p>*   **EIP**: an elastic IP address (EIP)</p>
-     * <p>*   **VpnGateway**: a VPN gateway</p>
-     * <p>*   **NATGATEWAY**: a NAT gateway</p>
-     * <p>*   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan</p>
+     * <p>*   **VPC**</p>
+     * <p>*   **VSWITCH**</p>
+     * <p>*   **ROUTETABLE**</p>
+     * <p>*   **EIP**</p>
+     * <p>*   **VpnGateway**</p>
+     * <p>*   **NATGATEWAY**</p>
+     * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</p>
+     * <br>
+     * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

@@ -407,9 +407,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         @NameInMap("Remote")
         public String remote;
 
-        @NameInMap("RightCaCert")
-        public String rightCaCert;
-
         @NameInMap("TunnelId")
         public String tunnelId;
 
@@ -448,14 +445,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         }
         public String getRemote() {
             return this.remote;
-        }
-
-        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setRightCaCert(String rightCaCert) {
-            this.rightCaCert = rightCaCert;
-            return this;
-        }
-        public String getRightCaCert() {
-            return this.rightCaCert;
         }
 
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig setTunnelId(String tunnelId) {

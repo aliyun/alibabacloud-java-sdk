@@ -17,13 +17,13 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     public String clientCert;
 
     /**
-     * <p>The configuration of the client.</p>
+     * <p>The client configuration.</p>
      */
     @NameInMap("ClientConfig")
     public String clientConfig;
 
     /**
-     * <p>The key of the client.</p>
+     * <p>The client key.</p>
      */
     @NameInMap("ClientKey")
     public String clientKey;
@@ -57,7 +57,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -77,9 +77,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     /**
      * <p>The status of the SSL client certificate. Valid values:</p>
      * <br>
-     * <p>*   **expiring-soon**: The certificate expires in one week.</p>
-     * <p>*   **normal**: The certificate is active.</p>
-     * <p>*   **expired**: The certificate has expired.</p>
+     * <p>*   **expiring-soon**</p>
+     * <p>*   **normal**</p>
+     * <p>*   **expired**</p>
      */
     @NameInMap("Status")
     public String status;

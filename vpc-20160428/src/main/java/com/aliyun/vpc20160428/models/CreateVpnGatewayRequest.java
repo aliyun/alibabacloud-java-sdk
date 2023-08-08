@@ -7,8 +7,8 @@ public class CreateVpnGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment for the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -19,7 +19,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
      * <p>*   If you want to create a public VPN gateway, valid values are **10**, **100**, **200**, **500**, and **1000**.</p>
      * <p>*   If you want to create a private VPN gateway, valid values are **200** and **1000**.</p>
      * <br>
-     * <p>>  In some regions, the maximum bandwidth supported by a VPN gateway is 200 Mbit/s. For more information, see [Limits on VPN gateways](~~65290~~).</p>
+     * <p>>  The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see [VPN gateway limits](~~65290~~).</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -27,21 +27,30 @@ public class CreateVpnGatewayRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>指定VPN网关实例关联的第二个交换机实例。</p>
+     * <br>
+     * <p>- 如果当前地域支持创建双隧道模式的IPsec-VPN连接，则本参数必填。</p>
+     * <p>- 您需要从VPN网关实例关联的VPC实例下指定两个分布在不同可用区的交换机实例，以实现IPsec-VPN连接可用区级别的容灾。</p>
+     * <p>- 对于仅支持一个可用区的地域 ，不支持可用区级别的容灾，建议您在该可用区下指定两个不同的交换机实例以实现IPsec-VPN连接的高可用，支持指定相同的交换机实例。</p>
+     * <br>
+     * <p>关于支持双隧道模式IPsec-VPN连接的地域和可用区的信息，请参见[IPsec-VPN连接升级为双隧道模式](~~2358946~~)。</p>
+     */
     @NameInMap("DisasterRecoveryVSwitchId")
     public String disasterRecoveryVSwitchId;
 
     /**
      * <p>Specifies whether to enable the IPsec-VPN feature. Valid values:</p>
      * <br>
-     * <p>*   **true** (default): yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true** (default)</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableIpsec")
     public Boolean enableIpsec;
@@ -49,14 +58,16 @@ public class CreateVpnGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the SSL-VPN feature for the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("EnableSsl")
     public Boolean enableSsl;
 
     /**
      * <p>The billing method of the VPN gateway. Set the value to **POSTPAY**, which specifies the pay-as-you-go billing method.</p>
+     * <br>
+     * <p>>  This parameter is required when you create a VPN gateway.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -72,8 +83,8 @@ public class CreateVpnGatewayRequest extends TeaModel {
     /**
      * <p>The network type of the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **public** (default): public VPN gateway</p>
-     * <p>*   **private**: private VPN gateway</p>
+     * <p>*   **public** (default)</p>
+     * <p>*   **private**</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -85,7 +96,7 @@ public class CreateVpnGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration. Unit: months. Valid values: **1** to **9**, **12**, **24**, and **36**.</p>
+     * <p>The subscription duration. Unit: month. Valid values: **1** to **9**, **12**, **24**, and **36**.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -121,9 +132,9 @@ public class CreateVpnGatewayRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The type of the VPN gateway. Valid values:</p>
+     * <p>The type of the VPN gateway.</p>
      * <br>
-     * <p>*   **Normal** (default): standard</p>
+     * <p>Set the value to **Normal** (default), which specifies a standard NAT gateway.</p>
      */
     @NameInMap("VpnType")
     public String vpnType;

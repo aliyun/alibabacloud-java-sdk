@@ -25,7 +25,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The static public IP address of the gateway device in the data center.</p>
+     * <p>The public IP address of the gateway device in the data center.</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
@@ -37,7 +37,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

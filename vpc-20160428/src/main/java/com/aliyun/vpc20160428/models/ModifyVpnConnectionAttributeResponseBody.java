@@ -473,12 +473,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig extends TeaModel {
-        @NameInMap("BgpStatus")
-        public String bgpStatus;
-
-        @NameInMap("EnableBgp")
-        public Boolean enableBgp;
-
         @NameInMap("LocalAsn")
         public Long localAsn;
 
@@ -497,22 +491,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public static ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig self = new ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig setBgpStatus(String bgpStatus) {
-            this.bgpStatus = bgpStatus;
-            return this;
-        }
-        public String getBgpStatus() {
-            return this.bgpStatus;
-        }
-
-        public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig setEnableBgp(Boolean enableBgp) {
-            this.enableBgp = enableBgp;
-            return this;
-        }
-        public Boolean getEnableBgp() {
-            return this.enableBgp;
         }
 
         public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig setLocalAsn(Long localAsn) {
@@ -738,9 +716,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        @NameInMap("Status")
-        public String status;
-
         @NameInMap("TunnelBgpConfig")
         public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig;
 
@@ -815,14 +790,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
-        }
-
-        public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptions setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
         }
 
         public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptions setTunnelBgpConfig(ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig) {

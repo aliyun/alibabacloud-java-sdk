@@ -7,17 +7,17 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     /**
      * <p>The payment status of the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **Normal:** The VPN gateway is running as expected.</p>
-     * <p>*   **FinancialLocked**: The VPN gateway is locked due to overdue payments.</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
      */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
     /**
-     * <p>Specifies whether to return information about the pending orders. Valid values:</p>
+     * <p>Specifies whether to return information about pending orders. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
@@ -43,7 +43,7 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -55,17 +55,24 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the VPN gateway. Valid values: </p>
+     * <p>The status of the VPN gateway. Valid values:</p>
      * <br>
-     * <p>- **init**: The VPN gateway is being initialized.</p>
-     * <p>- **provisioning**: The VPN gateway is being prepared.</p>
-     * <p>- **active**: The VPN gateway is running as expected.</p>
-     * <p>- **updating**: The VPN gateway is being updated.</p>
-     * <p>- **deleting**: The VPN gateway is being deleted.</p>
+     * <p>*   **init**</p>
+     * <p>*   **provisioning**</p>
+     * <p>*   **active**</p>
+     * <p>*   **updating**</p>
+     * <p>*   **deleting**</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The value of tag N to add to the resource.</p>
+     * <br>
+     * <p>The value of this parameter can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+     * <br>
+     * <p>Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeVpnGatewaysRequestTag> tag;
 

@@ -66,6 +66,9 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeVpcsRequestTag> tag;
+
     /**
      * <p>The ID of the VPC.</p>
      * <br>
@@ -179,6 +182,14 @@ public class DescribeVpcsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
+    public DescribeVpcsRequest setTag(java.util.List<DescribeVpcsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeVpcsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeVpcsRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -201,6 +212,36 @@ public class DescribeVpcsRequest extends TeaModel {
     }
     public Long getVpcOwnerId() {
         return this.vpcOwnerId;
+    }
+
+    public static class DescribeVpcsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVpcsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcsRequestTag self = new DescribeVpcsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVpcsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

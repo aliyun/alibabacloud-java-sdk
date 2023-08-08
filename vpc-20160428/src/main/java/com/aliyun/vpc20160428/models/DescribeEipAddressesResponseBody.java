@@ -234,6 +234,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("BandwidthPackageType")
         public String bandwidthPackageType;
 
+        @NameInMap("BizType")
+        public String bizType;
+
         /**
          * <p>The service status of the EIP. Valid values:</p>
          * <br>
@@ -548,6 +551,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
         public String getBandwidthPackageType() {
             return this.bandwidthPackageType;
+        }
+
+        public DescribeEipAddressesResponseBodyEipAddressesEipAddress setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
         }
 
         public DescribeEipAddressesResponseBodyEipAddressesEipAddress setBusinessStatus(String businessStatus) {

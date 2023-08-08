@@ -68,6 +68,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("RouteTableId")
     public String routeTableId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeVSwitchesRequestTag> tag;
+
     /**
      * <p>The ID of the vSwitch that you want to query.</p>
      */
@@ -195,6 +198,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return this.routeTableId;
     }
 
+    public DescribeVSwitchesRequest setTag(java.util.List<DescribeVSwitchesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeVSwitchesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeVSwitchesRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -233,6 +244,36 @@ public class DescribeVSwitchesRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribeVSwitchesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeVSwitchesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchesRequestTag self = new DescribeVSwitchesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVSwitchesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -7,7 +7,7 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     /**
      * <p>The ID of the customer gateway.</p>
      * <br>
-     * <p>>  If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.</p>
+     * <p>> If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
@@ -31,7 +31,7 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the customer gateway.</p>
+     * <p>The ID of the region where the customer gateway is deployed.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -44,6 +44,13 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag value.</p>
+     * <br>
+     * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+     * <br>
+     * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCustomerGatewaysRequestTag> tag;
 

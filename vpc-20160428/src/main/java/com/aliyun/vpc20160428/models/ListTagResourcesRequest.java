@@ -11,10 +11,10 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned in the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,13 +26,16 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the resource belongs.</p>
+     * <p>The region ID of the resource.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -43,19 +46,26 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <br>
-     * <p>*   **VPC**: virtual private cloud (VPC)</p>
-     * <p>*   **VSWITCH**: vSwitch</p>
-     * <p>*   **ROUTETABLE**: route table</p>
-     * <p>*   **EIP**: EIP</p>
-     * <p>*   **VpnGateWay**: VPN gateway</p>
-     * <p>*   **NATGATEWAY**: NAT gateway</p>
+     * <p>*   **VPC**</p>
+     * <p>*   **VSWITCH**</p>
+     * <p>*   **ROUTETABLE**</p>
+     * <p>*   **EIP**</p>
+     * <p>*   **VpnGateway**</p>
+     * <p>*   **NATGATEWAY**</p>
      * <p>*   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag value. You can specify up to 20 tag values. It can be an empty string.</p>
+     * <br>
+     * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+     * <br>
+     * <p>>  You must specify at least one of **ResourceId.N** and **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 

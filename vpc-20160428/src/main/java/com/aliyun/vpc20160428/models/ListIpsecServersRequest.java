@@ -4,13 +4,16 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListIpsecServersRequest extends TeaModel {
+    /**
+     * <p>The ID of the IPsec server.</p>
+     */
     @NameInMap("IpsecServerId")
     public java.util.List<String> ipsecServerId;
 
     /**
      * <p>The name of the IPsec server.</p>
      * <br>
-     * <p>The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("IpsecServerName")
     public String ipsecServerName;
@@ -22,10 +25,10 @@ public class ListIpsecServersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

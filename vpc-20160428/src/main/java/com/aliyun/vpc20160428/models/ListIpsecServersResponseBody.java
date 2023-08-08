@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListIpsecServersResponseBody extends TeaModel {
     /**
-     * <p>The list of IPsec servers.</p>
+     * <p>The Diffie-Hellman key exchange algorithm.</p>
      */
     @NameInMap("IpsecServers")
     public java.util.List<ListIpsecServersResponseBodyIpsecServers> ipsecServers;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If a value of **NextToken** is not returned, it indicates that no subsequent query is to be sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.</p>
+     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
+     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

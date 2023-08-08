@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnConnectionsResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -29,7 +29,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the IPsec-VPN connection.</p>
+     * <p>The tag value.</p>
      */
     @NameInMap("VpnConnections")
     public DescribeVpnConnectionsResponseBodyVpnConnections vpnConnections;
@@ -341,24 +341,42 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig extends TeaModel {
+        /**
+         * <p>BGP的协商状态。</p>
+         * <br>
+         * <p>- **success**：正常。</p>
+         * <p>- **false**：异常。</p>
+         */
         @NameInMap("BgpStatus")
         public String bgpStatus;
 
-        @NameInMap("EnableBgp")
-        public String enableBgp;
-
+        /**
+         * <p>隧道本端（阿里云侧）的自治系统号。</p>
+         */
         @NameInMap("LocalAsn")
         public String localAsn;
 
+        /**
+         * <p>隧道本端（阿里云侧）的BGP地址。</p>
+         */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
+        /**
+         * <p>隧道对端的自治系统号。</p>
+         */
         @NameInMap("PeerAsn")
         public String peerAsn;
 
+        /**
+         * <p>隧道对端的BGP地址。</p>
+         */
         @NameInMap("PeerBgpIp")
         public String peerBgpIp;
 
+        /**
+         * <p>隧道的BGP网段。</p>
+         */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;
 
@@ -373,14 +391,6 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
         public String getBgpStatus() {
             return this.bgpStatus;
-        }
-
-        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig setEnableBgp(String enableBgp) {
-            this.enableBgp = enableBgp;
-            return this;
-        }
-        public String getEnableBgp() {
-            return this.enableBgp;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig setLocalAsn(String localAsn) {
@@ -426,30 +436,60 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig extends TeaModel {
+        /**
+         * <p>IKE阶段认证算法。</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>IKE阶段加密算法。</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>IKE阶段生存时间。单位：秒。</p>
+         */
         @NameInMap("IkeLifetime")
         public String ikeLifetime;
 
+        /**
+         * <p>IKE协商模式。</p>
+         * <br>
+         * <p>- **main**：主模式，协商过程安全性高。</p>
+         * <p>- **aggressive**：野蛮模式，协商快速且协商成功率高。</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>IKE阶段DH分组。</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>IKE协议版本。</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>隧道本端（阿里云侧）的标识。</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>预共享密钥。</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>隧道对端的标识。</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -533,15 +573,27 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig extends TeaModel {
+        /**
+         * <p>IPsec阶段认证算法。</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>IPsec阶段加密算法。</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>IPsec阶段生存时间。单位：秒。</p>
+         */
         @NameInMap("IpsecLifetime")
         public String ipsecLifetime;
 
+        /**
+         * <p>IPsec阶段DH分组。</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -585,42 +637,110 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptions extends TeaModel {
+        /**
+         * <p>隧道关联的用户网关ID。</p>
+         */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
+        /**
+         * <p>隧道是否已开启DPD（对等体存活检测）功能。</p>
+         * <p>- **false**：未开启。</p>
+         * <p>- **true**：已开启。</p>
+         */
         @NameInMap("EnableDpd")
         public String enableDpd;
 
+        /**
+         * <p>隧道是否已开启NAT穿越功能。</p>
+         * <br>
+         * <p>- **false**：未开启。</p>
+         * <p>- **true**：已开启。</p>
+         */
         @NameInMap("EnableNatTraversal")
         public String enableNatTraversal;
 
+        /**
+         * <p>隧道的IP地址。</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>隧道对端的CA证书。</p>
+         * <br>
+         * <p>仅VPN网关实例的类型为国密型时才会返回当前参数。</p>
+         */
         @NameInMap("RemoteCaCertificate")
         public String remoteCaCertificate;
 
+        /**
+         * <p>隧道的角色。</p>
+         * <br>
+         * <p>- **master**：表示当前隧道为主隧道。</p>
+         * <p>- **slave**：表示当前隧道为备隧道。</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>IPsec连接与转发路由器实例的绑定状态。</p>
+         * <br>
+         * <p>- **active**：IPsec连接已与VPN网关实例绑定，状态正常。</p>
+         * <p>- **init**：IPsec连接未绑定任何资源，IPsec连接初始化。</p>
+         * <p>- **attaching**：IPsec连接与转发路由器实例绑定中。</p>
+         * <p>- **attached**：IPsec连接已与转发路由器实例绑定。</p>
+         * <p>- **detaching**：IPsec连接与转发路由器实例解绑中。</p>
+         * <p>- **financialLocked**：欠费锁定。</p>
+         * <p>- **provisioning**：资源准备中。</p>
+         * <p>- **updating**：更新中。</p>
+         * <p>- **upgrading**：升级中。</p>
+         * <p>- **deleted**：已删除。</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>IPsec连接的状态。</p>
+         * <br>
+         * <p>- **ike_sa_not_established**：第一阶段协商失败。</p>
+         * <br>
+         * <p>- **ike_sa_established**：第一阶段协商成功。</p>
+         * <br>
+         * <p>- **ipsec_sa_not_established**：第二阶段协商失败。</p>
+         * <br>
+         * <p>- **ipsec_sa_established**：第二阶段协商成功。</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>隧道的BGP配置信息。</p>
+         */
         @NameInMap("TunnelBgpConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig;
 
+        /**
+         * <p>隧道ID。</p>
+         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
+        /**
+         * <p>第一阶段协商的配置。</p>
+         */
         @NameInMap("TunnelIkeConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig tunnelIkeConfig;
 
+        /**
+         * <p>第二阶段协商的配置。</p>
+         */
         @NameInMap("TunnelIpsecConfig")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig tunnelIpsecConfig;
 
+        /**
+         * <p>隧道部署的可用区。</p>
+         */
         @NameInMap("ZoneNo")
         public String zoneNo;
 
@@ -1163,6 +1283,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("TransitRouterName")
         public String transitRouterName;
 
+        /**
+         * <p>IPsec连接的隧道配置信息。</p>
+         * <br>
+         * <p>仅查询双隧道模式的IPsec连接会返回**TunnelOptionsSpecification**数组下的参数。</p>
+         */
         @NameInMap("TunnelOptionsSpecification")
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnectionTunnelOptionsSpecification tunnelOptionsSpecification;
 

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether BGP routes are automatically advertised to VPCs. Valid values:</p>
+     * <p>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("AutoPropagate")
     public Boolean autoPropagate;
@@ -16,22 +16,22 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The payment status of the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **Normal**: The VPN gateway is normal.</p>
-     * <p>*   **FinancialLocked**: The VPN gateway is locked due to overdue payments.</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
      */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
     /**
-     * <p>The billing method of the VPN gateway. Valid values:</p>
+     * <p>The billing method. Valid value:</p>
      * <br>
-     * <p>Only **POSTPAY** is returned, which indicates the pay-as-you-go billing method.</p>
+     * <p>**POSTPAY**: pay-as-you-go</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The timestamp that indicates when the VPN gateway was created. Unit: milliseconds.</p>
+     * <p>The timestamp when the VPN gateway was created. Unit: milliseconds.</p>
      * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      */
@@ -44,23 +44,33 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>系统为VPN网关实例分配的用于创建IPsec-VPN连接的第二个IP地址。</p>
+     * <br>
+     * <p>仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。</p>
+     */
     @NameInMap("DisasterRecoveryInternetIp")
     public String disasterRecoveryInternetIp;
 
+    /**
+     * <p>VPN网关实例关联的第二个交换机ID。</p>
+     * <br>
+     * <p>仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。</p>
+     */
     @NameInMap("DisasterRecoveryVSwitchId")
     public String disasterRecoveryVSwitchId;
 
     /**
      * <p>Indicates whether BGP is enabled for the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableBgp")
     public Boolean enableBgp;
 
     /**
-     * <p>The timestamp that indicates when the VPN gateway expires. Unit: milliseconds.</p>
+     * <p>The timestamp when the VPN gateway expires. Unit: milliseconds.</p>
      * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      */
@@ -76,8 +86,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the IPsec-VPN feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **enable**: enabled</p>
-     * <p>*   **disable**: disabled</p>
+     * <p>*   **enable**</p>
+     * <p>*   **disable**</p>
      */
     @NameInMap("IpsecVpn")
     public String ipsecVpn;
@@ -89,16 +99,16 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The network type of the VPN gateway. </p>
+     * <p>The network type of the VPN gateway.</p>
      * <br>
-     * <p>- **public**: public VPN gateway</p>
-     * <p>- **private**: private VPN gateway</p>
+     * <p>*   **public**</p>
+     * <p>*   **private**</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -106,7 +116,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The information about pending orders.</p>
      * <br>
-     * <p>>  This parameter is returned only when **IncludeReservationData** is set to **true**.</p>
+     * <p>> This set of parameters is returned only when **IncludeReservationData** is set to **true**.</p>
      */
     @NameInMap("ReservationData")
     public DescribeVpnGatewayResponseBodyReservationData reservationData;
@@ -126,23 +136,28 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The status of the SSL-VPN feature. Valid values:</p>
      * <br>
-     * <p>*   **enable**: enabled</p>
-     * <p>*   **disable**: disabled</p>
+     * <p>*   **enable**</p>
+     * <p>*   **disable**</p>
      */
     @NameInMap("SslVpn")
     public String sslVpn;
 
+    /**
+     * <p>SSL-VPN连接的IP地址。</p>
+     * <br>
+     * <p>仅支持创建双隧道模式IPsec-VPN连接的公网网络类型的VPN网关实例开启SSL-VPN功能后，才会返回当前参数。</p>
+     */
     @NameInMap("SslVpnInternetIp")
     public String sslVpnInternetIp;
 
     /**
      * <p>The status of the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **init**: being initialized</p>
-     * <p>*   **provisioning**: being prepared</p>
-     * <p>*   **active**: active</p>
-     * <p>*   **updating**: being updated</p>
-     * <p>*   **deleting**: being deleted</p>
+     * <p>*   **init**</p>
+     * <p>*   **provisioning**</p>
+     * <p>*   **active**</p>
+     * <p>*   **updating**</p>
+     * <p>*   **deleting**</p>
      */
     @NameInMap("Status")
     public String status;
@@ -152,33 +167,33 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
      * <br>
      * <p>*   **VpnEnableBgp**: indicates whether the VPN gateway supports BGP. Valid values:</p>
      * <br>
-     * <p>    *   **true**: yes</p>
-     * <p>    *   **false**: no</p>
+     * <p>    *   **true**</p>
+     * <p>    *   **false**</p>
      * <br>
      * <p>*   **VisuallySsl**: indicates whether the VPN gateway allows you to view information about connected SSL clients.</p>
      * <br>
-     * <p>    *   **true**: yes</p>
-     * <p>    *   **false**: no</p>
+     * <p>    *   **true**</p>
+     * <p>    *   **false**</p>
      * <br>
      * <p>*   **PbrPriority**: indicates whether the VPN gateway allows you to configure priorities for policy-based routes.</p>
      * <br>
-     * <p>    *   **true**: yes</p>
-     * <p>    *   **false**: no</p>
+     * <p>    *   **true**</p>
+     * <p>    *   **false**</p>
      * <br>
      * <p>*   **VpnNewImage**: indicates whether the VPN gateway is upgraded.</p>
      * <br>
-     * <p>    *   **true**: yes</p>
-     * <p>    *   **false**: no</p>
+     * <p>    *   **true**</p>
+     * <p>    *   **false**</p>
      * <br>
-     * <p>*   **description**: the description of the VPN gateway. This parameter is for internal system use only.</p>
+     * <p>*   **description**</p>
      * <br>
-     * <p>*   **VpnVersion**: the version of the VPN gateway.</p>
+     * <p>*   **VpnVersion**</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
-     * <p>The custom tag of the VPN gateway.</p>
+     * <p>The tag value.</p>
      */
     @NameInMap("Tags")
     public DescribeVpnGatewayResponseBodyTags tags;
@@ -190,7 +205,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.</p>
+     * <p>The ID of the VPC to which the VPN gateway belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -204,7 +219,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
     /**
      * <p>The type of the VPN gateway.</p>
      * <br>
-     * <p>The value is set to **Normal**, which indicates a standard NAT gateway.</p>
+     * <p>Only **Normal** may be returned, which indicates a standard NAT gateway.</p>
      */
     @NameInMap("VpnType")
     public String vpnType;
@@ -424,9 +439,9 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
 
     public static class DescribeVpnGatewayResponseBodyReservationData extends TeaModel {
         /**
-         * <p>If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter indicates the time when the temporary upgrade expires.</p>
+         * <p>If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</p>
          * <br>
-         * <p>If the order type is **RENEWCHANGE** (specification change) or **RENEW** (renewal), this parameter indicates the time when the renewal or specification change takes effect.</p>
+         * <p>If the order type is **RENEWCHANGE** (renewal with a specification change) or **RENEW** (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.</p>
          */
         @NameInMap("ReservationEndTime")
         public String reservationEndTime;
@@ -434,14 +449,14 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         /**
          * <p>The IPsec-VPN status of the pending order. Valid values:</p>
          * <br>
-         * <p>*   **enable**: enabled</p>
-         * <p>*   **disable**: disabled</p>
+         * <p>*   **enable**</p>
+         * <p>*   **disable**</p>
          */
         @NameInMap("ReservationIpsec")
         public String reservationIpsec;
 
         /**
-         * <p>The maximum number of concurrent SSL-VPN connections for the pending order.</p>
+         * <p>The maximum number of concurrent SSL-VPN connections of the pending order.</p>
          */
         @NameInMap("ReservationMaxConnections")
         public Integer reservationMaxConnections;
@@ -457,7 +472,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         public String reservationOrderType;
 
         /**
-         * <p>The bandwidth specification of the pending order. Unit: Mbit/s.</p>
+         * <p>The bandwidth of the pending order. Unit: Mbit/s.</p>
          */
         @NameInMap("ReservationSpec")
         public String reservationSpec;
@@ -465,8 +480,8 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         /**
          * <p>The SSL-VPN status of the pending order. Valid values:</p>
          * <br>
-         * <p>*   **enable**: enabled</p>
-         * <p>*   **disable**: disabled</p>
+         * <p>*   **enable**</p>
+         * <p>*   **disable**</p>
          */
         @NameInMap("ReservationSsl")
         public String reservationSsl;
@@ -475,7 +490,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
          * <p>The status of the pending order. Valid values:</p>
          * <br>
          * <p>*   **1**: indicates that the order of the renewal or specification change has not taken effect.</p>
-         * <p>*   **2**: indicates that the order of the temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specification. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specifications.</p>
+         * <p>*   **2**: indicates that the order is an order for temporary upgrade and the order has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.</p>
          */
         @NameInMap("Status")
         public String status;
