@@ -3840,6 +3840,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteBackupFileWithOptions(request, runtime);
     }
 
+    /**
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### References
+      * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Release an ApsaraDB RDS for MySQL instance](~~96057~~)
+      * *   [Release an ApsaraDB RDS for PostgreSQL instance](~~96749~~)
+      * *   [Release an ApsaraDB RDS for SQL Server instance](~~95662~~)
+      * *   [Release an ApsaraDB RDS for MariaDB instance](~~97128~~)
+      *
+      * @param request DeleteDBInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDBInstanceResponse
+     */
     public DeleteDBInstanceResponse deleteDBInstanceWithOptions(DeleteDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3884,6 +3901,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBInstanceResponse());
     }
 
+    /**
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### References
+      * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Release an ApsaraDB RDS for MySQL instance](~~96057~~)
+      * *   [Release an ApsaraDB RDS for PostgreSQL instance](~~96749~~)
+      * *   [Release an ApsaraDB RDS for SQL Server instance](~~95662~~)
+      * *   [Release an ApsaraDB RDS for MariaDB instance](~~97128~~)
+      *
+      * @param request DeleteDBInstanceRequest
+      * @return DeleteDBInstanceResponse
+     */
     public DeleteDBInstanceResponse deleteDBInstance(DeleteDBInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBInstanceWithOptions(request, runtime);
@@ -4072,6 +4105,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDBNodesWithOptions(request, runtime);
     }
 
+    /**
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * ### References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+      * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
+      *
+      * @param request DeleteDBProxyEndpointAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDBProxyEndpointAddressResponse
+     */
     public DeleteDBProxyEndpointAddressResponse deleteDBProxyEndpointAddressWithOptions(DeleteDBProxyEndpointAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4116,6 +4162,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBProxyEndpointAddressResponse());
     }
 
+    /**
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * ### References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+      * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
+      *
+      * @param request DeleteDBProxyEndpointAddressRequest
+      * @return DeleteDBProxyEndpointAddressResponse
+     */
     public DeleteDBProxyEndpointAddressResponse deleteDBProxyEndpointAddress(DeleteDBProxyEndpointAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBProxyEndpointAddressWithOptions(request, runtime);
@@ -8351,7 +8409,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  If the specified request parameters are invalid, no database information is returned.
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
       * @param request DescribeDatabasesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8418,7 +8480,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  If the specified request parameters are invalid, no database information is returned.
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
       * @param request DescribeDatabasesRequest
       * @return DescribeDatabasesResponse

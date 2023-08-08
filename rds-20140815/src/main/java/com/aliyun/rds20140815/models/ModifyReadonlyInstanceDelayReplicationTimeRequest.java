@@ -19,6 +19,9 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends TeaModel 
     @NameInMap("ReadSQLReplicationTime")
     public String readSQLReplicationTime;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
