@@ -131,6 +131,12 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
         @NameInMap("Device")
         public ImportRoomGenieScenesRequestSceneListActionsDevice device;
 
+        @NameInMap("Reply")
+        public String reply;
+
+        @NameInMap("Type")
+        public Integer type;
+
         public static ImportRoomGenieScenesRequestSceneListActions build(java.util.Map<String, ?> map) throws Exception {
             ImportRoomGenieScenesRequestSceneListActions self = new ImportRoomGenieScenesRequestSceneListActions();
             return TeaModel.build(map, self);
@@ -152,11 +158,104 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
             return this.device;
         }
 
+        public ImportRoomGenieScenesRequestSceneListActions setReply(String reply) {
+            this.reply = reply;
+            return this;
+        }
+        public String getReply() {
+            return this.reply;
+        }
+
+        public ImportRoomGenieScenesRequestSceneListActions setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ImportRoomGenieScenesRequestSceneListTriggersAttributeValues extends TeaModel {
+        @NameInMap("AttributeName")
+        public String attributeName;
+
+        @NameInMap("AttributeValue")
+        public String attributeValue;
+
+        public static ImportRoomGenieScenesRequestSceneListTriggersAttributeValues build(java.util.Map<String, ?> map) throws Exception {
+            ImportRoomGenieScenesRequestSceneListTriggersAttributeValues self = new ImportRoomGenieScenesRequestSceneListTriggersAttributeValues();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportRoomGenieScenesRequestSceneListTriggersAttributeValues setAttributeName(String attributeName) {
+            this.attributeName = attributeName;
+            return this;
+        }
+        public String getAttributeName() {
+            return this.attributeName;
+        }
+
+        public ImportRoomGenieScenesRequestSceneListTriggersAttributeValues setAttributeValue(String attributeValue) {
+            this.attributeValue = attributeValue;
+            return this;
+        }
+        public String getAttributeValue() {
+            return this.attributeValue;
+        }
+
+    }
+
+    public static class ImportRoomGenieScenesRequestSceneListTriggersDevice extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DeviceIndex")
+        public String deviceIndex;
+
+        @NameInMap("DeviceNumber")
+        public String deviceNumber;
+
+        public static ImportRoomGenieScenesRequestSceneListTriggersDevice build(java.util.Map<String, ?> map) throws Exception {
+            ImportRoomGenieScenesRequestSceneListTriggersDevice self = new ImportRoomGenieScenesRequestSceneListTriggersDevice();
+            return TeaModel.build(map, self);
+        }
+
+        public ImportRoomGenieScenesRequestSceneListTriggersDevice setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ImportRoomGenieScenesRequestSceneListTriggersDevice setDeviceIndex(String deviceIndex) {
+            this.deviceIndex = deviceIndex;
+            return this;
+        }
+        public String getDeviceIndex() {
+            return this.deviceIndex;
+        }
+
+        public ImportRoomGenieScenesRequestSceneListTriggersDevice setDeviceNumber(String deviceNumber) {
+            this.deviceNumber = deviceNumber;
+            return this;
+        }
+        public String getDeviceNumber() {
+            return this.deviceNumber;
+        }
+
     }
 
     public static class ImportRoomGenieScenesRequestSceneListTriggers extends TeaModel {
+        @NameInMap("AttributeValues")
+        public java.util.List<ImportRoomGenieScenesRequestSceneListTriggersAttributeValues> attributeValues;
+
         @NameInMap("CorpusList")
         public java.util.List<String> corpusList;
+
+        @NameInMap("Device")
+        public ImportRoomGenieScenesRequestSceneListTriggersDevice device;
 
         @NameInMap("Type")
         public Integer type;
@@ -166,12 +265,28 @@ public class ImportRoomGenieScenesRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ImportRoomGenieScenesRequestSceneListTriggers setAttributeValues(java.util.List<ImportRoomGenieScenesRequestSceneListTriggersAttributeValues> attributeValues) {
+            this.attributeValues = attributeValues;
+            return this;
+        }
+        public java.util.List<ImportRoomGenieScenesRequestSceneListTriggersAttributeValues> getAttributeValues() {
+            return this.attributeValues;
+        }
+
         public ImportRoomGenieScenesRequestSceneListTriggers setCorpusList(java.util.List<String> corpusList) {
             this.corpusList = corpusList;
             return this;
         }
         public java.util.List<String> getCorpusList() {
             return this.corpusList;
+        }
+
+        public ImportRoomGenieScenesRequestSceneListTriggers setDevice(ImportRoomGenieScenesRequestSceneListTriggersDevice device) {
+            this.device = device;
+            return this;
+        }
+        public ImportRoomGenieScenesRequestSceneListTriggersDevice getDevice() {
+            return this.device;
         }
 
         public ImportRoomGenieScenesRequestSceneListTriggers setType(Integer type) {
