@@ -4,6 +4,9 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBInstanceRequest extends TeaModel {
+    /**
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -13,6 +16,15 @@ public class DeleteDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:</p>
+     * <br>
+     * <p>*   **None**: No archived backup files are retained.</p>
+     * <p>*   **Lastest**: Only the last archived backup file is retained.</p>
+     * <p>*   **All**: All archived backup files are retained.</p>
+     * <br>
+     * <p>> This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.</p>
+     */
     @NameInMap("ReleasedKeepPolicy")
     public String releasedKeepPolicy;
 

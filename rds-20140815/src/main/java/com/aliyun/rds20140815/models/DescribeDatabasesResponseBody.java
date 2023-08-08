@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDatabasesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about databases.</p>
+     * <p>The information about databases.</p>
      */
     @NameInMap("Databases")
     public DescribeDatabasesResponseBodyDatabases databases;
@@ -175,9 +175,19 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("Accounts")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
 
+        /**
+         * <p>The advanced information about the database.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("AdvancedInfo")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAdvancedInfo advancedInfo;
 
+        /**
+         * <p>The basic information of the database.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("BasicInfo")
         public DescribeDatabasesResponseBodyDatabasesDatabaseBasicInfo basicInfo;
 
@@ -190,7 +200,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * <p>The collation of the character set. The example value C stands for localization.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("Collate")
         public String collate;
@@ -198,7 +208,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * <p>The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("ConnLimit")
         public String connLimit;
@@ -206,7 +216,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         /**
          * <p>The type of the character set.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("Ctype")
         public String ctype;
@@ -240,16 +250,19 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public String DBStatus;
 
         /**
-         * <p>The database engine of the instance to which the database belongs.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The reserved parameter.</p>
+         * <p>A reserved parameter.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -260,13 +273,18 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The running of the database.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
+         */
         @NameInMap("RuntimeInfo")
         public DescribeDatabasesResponseBodyDatabasesDatabaseRuntimeInfo runtimeInfo;
 
         /**
          * <p>The tablespace of the database.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run PostgreSQL.</p>
+         * <p>> This parameter is returned only for instances that run PostgreSQL.</p>
          */
         @NameInMap("Tablespace")
         public String tablespace;

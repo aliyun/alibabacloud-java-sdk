@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeActionEventPolicyResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the event history feature is enabled.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeActionEventPolicy**.</p>
      */
     @NameInMap("EnableEventLog")
     public String enableEventLog;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>Indicates whether the event history feature is enabled.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

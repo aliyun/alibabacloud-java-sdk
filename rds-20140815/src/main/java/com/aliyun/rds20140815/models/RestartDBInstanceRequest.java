@@ -16,6 +16,9 @@ public class RestartDBInstanceRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The unique ID of the secondary instance. You can call [DescribeDBInstanceHAConfig](~~26244~~) to query the secondary instance ID.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

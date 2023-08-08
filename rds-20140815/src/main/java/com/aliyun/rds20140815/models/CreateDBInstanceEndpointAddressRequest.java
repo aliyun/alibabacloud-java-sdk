@@ -42,6 +42,9 @@ public class CreateDBInstanceEndpointAddressRequest extends TeaModel {
     @NameInMap("Port")
     public String port;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
