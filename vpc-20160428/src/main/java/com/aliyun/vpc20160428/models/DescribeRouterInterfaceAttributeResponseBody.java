@@ -74,6 +74,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("FastLinkMode")
+    public String fastLinkMode;
+
     /**
      * <p>The time when the router interface was modified.</p>
      */
@@ -427,6 +430,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeRouterInterfaceAttributeResponseBody setFastLinkMode(String fastLinkMode) {
+        this.fastLinkMode = fastLinkMode;
+        return this;
+    }
+    public String getFastLinkMode() {
+        return this.fastLinkMode;
     }
 
     public DescribeRouterInterfaceAttributeResponseBody setGmtModified(String gmtModified) {

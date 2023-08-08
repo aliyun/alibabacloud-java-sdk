@@ -105,6 +105,9 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     }
 
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList extends TeaModel {
+        @NameInMap("BizType")
+        public String bizType;
+
         /**
          * <p>The region ID of the IP address pool.</p>
          */
@@ -218,9 +221,20 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("UserType")
         public Boolean userType;
 
+        @NameInMap("Zones")
+        public java.util.List<String> zones;
+
         public static ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList build(java.util.Map<String, ?> map) throws Exception {
             ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList self = new ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList();
             return TeaModel.build(map, self);
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
         }
 
         public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setCreationTime(String creationTime) {
@@ -341,6 +355,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         }
         public Boolean getUserType() {
             return this.userType;
+        }
+
+        public ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList setZones(java.util.List<String> zones) {
+            this.zones = zones;
+            return this;
+        }
+        public java.util.List<String> getZones() {
+            return this.zones;
         }
 
     }

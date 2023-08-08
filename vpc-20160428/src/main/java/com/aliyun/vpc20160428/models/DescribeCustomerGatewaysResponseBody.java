@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     /**
-     * <p>The list of customer gateways.</p>
+     * <p>The tag value.</p>
      */
     @NameInMap("CustomerGateways")
     public DescribeCustomerGatewaysResponseBodyCustomerGateways customerGateways;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,13 +23,13 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

@@ -20,6 +20,9 @@ public class ListFullNatEntriesRequest extends TeaModel {
     @NameInMap("FullNatEntryId")
     public String fullNatEntryId;
 
+    /**
+     * <p>The name of the FULLNAT entry.</p>
+     */
     @NameInMap("FullNatEntryNames")
     public java.util.List<String> fullNatEntryNames;
 
@@ -54,6 +57,9 @@ public class ListFullNatEntriesRequest extends TeaModel {
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The IDs of ENIs.</p>
+     */
     @NameInMap("NetworkInterfaceIds")
     public java.util.List<String> networkInterfaceIds;
 

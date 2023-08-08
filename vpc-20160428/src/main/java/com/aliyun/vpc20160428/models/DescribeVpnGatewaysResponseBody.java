@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewaysResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,19 +17,21 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The list of VPN gateways.</p>
+     * <p>If the order type is **TEMP_UPGRADE** (temporary upgrade), this parameter specifies the time when the temporary upgrade expires.</p>
+     * <br>
+     * <p>If the order type is **RENEWCHANGE** (renewal with a specification change) or **RENEW** (renewal), this parameter indicates the time when the renewal or renewal with a specification change takes effect.</p>
      */
     @NameInMap("VpnGateways")
     public DescribeVpnGatewaysResponseBodyVpnGateways vpnGateways;
@@ -296,9 +298,19 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>系统为VPN网关实例分配的用于创建IPsec-VPN连接的第二个IP地址。</p>
+         * <br>
+         * <p>仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。</p>
+         */
         @NameInMap("DisasterRecoveryInternetIp")
         public String disasterRecoveryInternetIp;
 
+        /**
+         * <p>VPN网关实例关联的第二个交换机ID。</p>
+         * <br>
+         * <p>仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。</p>
+         */
         @NameInMap("DisasterRecoveryVSwitchId")
         public String disasterRecoveryVSwitchId;
 
@@ -378,6 +390,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("SslVpn")
         public String sslVpn;
 
+        /**
+         * <p>SSL-VPN连接的IP地址。</p>
+         * <br>
+         * <p>仅支持创建双隧道模式IPsec-VPN连接的公网网络类型的VPN网关实例开启SSL-VPN功能后，才会返回当前参数。</p>
+         */
         @NameInMap("SslVpnInternetIp")
         public String sslVpnInternetIp;
 

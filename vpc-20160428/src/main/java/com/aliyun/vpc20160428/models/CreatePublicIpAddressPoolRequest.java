@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreatePublicIpAddressPoolRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
     /**
      * <p>The client token that you want to use to ensure the idempotence of the request.</p>
      * <br>
@@ -88,9 +91,20 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreatePublicIpAddressPoolRequestTag> tag;
 
+    @NameInMap("Zones")
+    public java.util.List<String> zones;
+
     public static CreatePublicIpAddressPoolRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePublicIpAddressPoolRequest self = new CreatePublicIpAddressPoolRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreatePublicIpAddressPoolRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public CreatePublicIpAddressPoolRequest setClientToken(String clientToken) {
@@ -187,6 +201,14 @@ public class CreatePublicIpAddressPoolRequest extends TeaModel {
     }
     public java.util.List<CreatePublicIpAddressPoolRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreatePublicIpAddressPoolRequest setZones(java.util.List<String> zones) {
+        this.zones = zones;
+        return this;
+    }
+    public java.util.List<String> getZones() {
+        return this.zones;
     }
 
     public static class CreatePublicIpAddressPoolRequestTag extends TeaModel {

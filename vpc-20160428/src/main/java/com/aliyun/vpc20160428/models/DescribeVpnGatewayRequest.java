@@ -7,8 +7,8 @@ public class DescribeVpnGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to return information about pending orders. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;

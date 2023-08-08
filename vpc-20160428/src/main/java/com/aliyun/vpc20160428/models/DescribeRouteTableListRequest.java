@@ -69,6 +69,9 @@ public class DescribeRouteTableListRequest extends TeaModel {
     @NameInMap("RouterType")
     public String routerType;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeRouteTableListRequestTag> tag;
+
     /**
      * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
      * <br>
@@ -178,12 +181,28 @@ public class DescribeRouteTableListRequest extends TeaModel {
         return this.routerType;
     }
 
+    public DescribeRouteTableListRequest setTag(java.util.List<DescribeRouteTableListRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeRouteTableListRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeRouteTableListRequest setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeRouteTableListRequestTag extends TeaModel {
+        public static DescribeRouteTableListRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouteTableListRequestTag self = new DescribeRouteTableListRequestTag();
+            return TeaModel.build(map, self);
+        }
+
     }
 
 }

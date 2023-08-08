@@ -31,7 +31,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,8 +39,8 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the current operation is successful.</p>
      * <br>
-     * <p>*   **true**: The operation is successful.</p>
-     * <p>*   **false**: The operation failed.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;

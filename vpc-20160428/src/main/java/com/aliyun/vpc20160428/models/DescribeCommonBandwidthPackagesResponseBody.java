@@ -232,6 +232,9 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        @NameInMap("BizType")
+        public String bizType;
+
         /**
          * <p>The service state of the EIP bandwidth plan.</p>
          * <br>
@@ -406,6 +409,9 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageTags tags;
 
+        @NameInMap("Zone")
+        public String zone;
+
         public static DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage self = new DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage();
             return TeaModel.build(map, self);
@@ -425,6 +431,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
         }
 
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setBusinessStatus(String businessStatus) {
@@ -601,6 +615,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageTags getTags() {
             return this.tags;
+        }
+
+        public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage setZone(String zone) {
+            this.zone = zone;
+            return this;
+        }
+        public String getZone() {
+            return this.zone;
         }
 
     }

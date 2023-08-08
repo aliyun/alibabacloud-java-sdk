@@ -25,9 +25,9 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -41,7 +41,7 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The static public IP address of the gateway device in the data center.</p>
+     * <p>The public IP address of the gateway device in the data center.</p>
      */
     @NameInMap("IpAddress")
     public String ipAddress;
@@ -74,6 +74,13 @@ public class CreateCustomerGatewayRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag value.</p>
+     * <br>
+     * <p>The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+     * <br>
+     * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateCustomerGatewayRequestTags> tags;
 

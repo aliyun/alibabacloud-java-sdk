@@ -11,7 +11,7 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      * <br>
      * <p>If automatic payment is disabled, you must manually complete the payment for the VPN gateway in the [Alibaba Cloud Management console](https://usercenter2-intl.aliyun.com/billing/#/account/overview).</p>
      */
@@ -19,7 +19,7 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
