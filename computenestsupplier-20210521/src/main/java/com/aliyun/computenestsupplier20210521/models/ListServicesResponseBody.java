@@ -17,7 +17,7 @@ public class ListServicesResponseBody extends TeaModel {
     public java.util.List<ListServicesResponseBodyServices> services;
 
     @NameInMap("TotalCount")
-    public String totalCount;
+    public Integer totalCount;
 
     public static ListServicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListServicesResponseBody self = new ListServicesResponseBody();
@@ -56,11 +56,11 @@ public class ListServicesResponseBody extends TeaModel {
         return this.services;
     }
 
-    public ListServicesResponseBody setTotalCount(String totalCount) {
+    public ListServicesResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public String getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
     }
 

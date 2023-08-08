@@ -8,7 +8,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     public java.util.List<ListArtifactVersionsResponseBodyArtifacts> artifacts;
 
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -17,7 +17,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("TotalCount")
-    public String totalCount;
+    public Integer totalCount;
 
     public static ListArtifactVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListArtifactVersionsResponseBody self = new ListArtifactVersionsResponseBody();
@@ -32,11 +32,11 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         return this.artifacts;
     }
 
-    public ListArtifactVersionsResponseBody setMaxResults(String maxResults) {
+    public ListArtifactVersionsResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -56,11 +56,11 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListArtifactVersionsResponseBody setTotalCount(String totalCount) {
+    public ListArtifactVersionsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
-    public String getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
     }
 

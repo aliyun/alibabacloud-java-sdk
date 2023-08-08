@@ -11,7 +11,7 @@ public class ListServicesRequest extends TeaModel {
     public java.util.List<ListServicesRequestFilter> filter;
 
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -46,11 +46,11 @@ public class ListServicesRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListServicesRequest setMaxResults(String maxResults) {
+    public ListServicesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 

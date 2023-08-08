@@ -8,7 +8,7 @@ public class ListArtifactsRequest extends TeaModel {
     public java.util.List<ListArtifactsRequestFilter> filter;
 
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,11 +26,11 @@ public class ListArtifactsRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListArtifactsRequest setMaxResults(String maxResults) {
+    public ListArtifactsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 

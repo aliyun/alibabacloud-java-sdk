@@ -28,6 +28,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("LicenseMetadata")
     public String licenseMetadata;
 
+    @NameInMap("LogMetadata")
+    public String logMetadata;
+
     @NameInMap("OperationMetadata")
     public String operationMetadata;
 
@@ -134,6 +137,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getLicenseMetadata() {
         return this.licenseMetadata;
+    }
+
+    public CreateServiceRequest setLogMetadata(String logMetadata) {
+        this.logMetadata = logMetadata;
+        return this;
+    }
+    public String getLogMetadata() {
+        return this.logMetadata;
     }
 
     public CreateServiceRequest setOperationMetadata(String operationMetadata) {
@@ -247,6 +258,9 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("Locale")
         public String locale;
 
+        @NameInMap("LongDescriptionUrl")
+        public String longDescriptionUrl;
+
         @NameInMap("Name")
         public String name;
 
@@ -272,6 +286,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public String getLocale() {
             return this.locale;
+        }
+
+        public CreateServiceRequestServiceInfo setLongDescriptionUrl(String longDescriptionUrl) {
+            this.longDescriptionUrl = longDescriptionUrl;
+            return this;
+        }
+        public String getLongDescriptionUrl() {
+            return this.longDescriptionUrl;
         }
 
         public CreateServiceRequestServiceInfo setName(String name) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServiceInstancesResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
@@ -24,11 +24,11 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServiceInstancesResponseBody setMaxResults(String maxResults) {
+    public ListServiceInstancesResponseBody setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -320,6 +320,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Progress")
         public Long progress;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Service")
         public ListServiceInstancesResponseBodyServiceInstancesService service;
 
@@ -441,6 +444,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public Long getProgress() {
             return this.progress;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setService(ListServiceInstancesResponseBodyServiceInstancesService service) {

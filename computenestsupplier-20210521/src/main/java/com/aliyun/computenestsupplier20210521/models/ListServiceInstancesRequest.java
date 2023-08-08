@@ -8,13 +8,16 @@ public class ListServiceInstancesRequest extends TeaModel {
     public java.util.List<ListServiceInstancesRequestFilter> filter;
 
     @NameInMap("MaxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ShowDeleted")
     public Boolean showDeleted;
@@ -35,11 +38,11 @@ public class ListServiceInstancesRequest extends TeaModel {
         return this.filter;
     }
 
-    public ListServiceInstancesRequest setMaxResults(String maxResults) {
+    public ListServiceInstancesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -57,6 +60,14 @@ public class ListServiceInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListServiceInstancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListServiceInstancesRequest setShowDeleted(Boolean showDeleted) {

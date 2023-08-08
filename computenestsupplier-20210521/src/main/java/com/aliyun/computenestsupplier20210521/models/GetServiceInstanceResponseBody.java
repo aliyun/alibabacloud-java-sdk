@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceInstanceResponseBody extends TeaModel {
+    @NameInMap("BizStatus")
+    public String bizStatus;
+
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -46,6 +49,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("PredefinedParameterName")
+    public String predefinedParameterName;
+
     @NameInMap("Progress")
     public Long progress;
 
@@ -54,6 +60,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("Resources")
     public String resources;
@@ -94,6 +103,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     public static GetServiceInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceInstanceResponseBody self = new GetServiceInstanceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceInstanceResponseBody setBizStatus(String bizStatus) {
+        this.bizStatus = bizStatus;
+        return this;
+    }
+    public String getBizStatus() {
+        return this.bizStatus;
     }
 
     public GetServiceInstanceResponseBody setCreateTime(String createTime) {
@@ -208,6 +225,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         return this.payType;
     }
 
+    public GetServiceInstanceResponseBody setPredefinedParameterName(String predefinedParameterName) {
+        this.predefinedParameterName = predefinedParameterName;
+        return this;
+    }
+    public String getPredefinedParameterName() {
+        return this.predefinedParameterName;
+    }
+
     public GetServiceInstanceResponseBody setProgress(Long progress) {
         this.progress = progress;
         return this;
@@ -230,6 +255,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetServiceInstanceResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetServiceInstanceResponseBody setResources(String resources) {
