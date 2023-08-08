@@ -7,11 +7,26 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     @NameInMap("CenId")
     public String cenId;
 
+    @NameInMap("MaxResults")
+    public Long maxResults;
+
+    @NameInMap("NetworkInterfaceId")
+    public java.util.List<String> networkInterfaceId;
+
+    @NameInMap("NetworkInterfaceName")
+    public String networkInterfaceName;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PrimaryIpAddress")
+    public String primaryIpAddress;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -38,6 +53,38 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
         return this.cenId;
     }
 
+    public ListGrantVSwitchEnisRequest setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListGrantVSwitchEnisRequest setNetworkInterfaceId(java.util.List<String> networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public java.util.List<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public ListGrantVSwitchEnisRequest setNetworkInterfaceName(String networkInterfaceName) {
+        this.networkInterfaceName = networkInterfaceName;
+        return this;
+    }
+    public String getNetworkInterfaceName() {
+        return this.networkInterfaceName;
+    }
+
+    public ListGrantVSwitchEnisRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public ListGrantVSwitchEnisRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -52,6 +99,14 @@ public class ListGrantVSwitchEnisRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListGrantVSwitchEnisRequest setPrimaryIpAddress(String primaryIpAddress) {
+        this.primaryIpAddress = primaryIpAddress;
+        return this;
+    }
+    public String getPrimaryIpAddress() {
+        return this.primaryIpAddress;
     }
 
     public ListGrantVSwitchEnisRequest setResourceOwnerAccount(String resourceOwnerAccount) {

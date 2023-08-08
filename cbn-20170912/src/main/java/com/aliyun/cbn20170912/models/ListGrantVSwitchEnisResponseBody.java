@@ -7,6 +7,12 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     @NameInMap("GrantVSwitchEnis")
     public java.util.List<ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis> grantVSwitchEnis;
 
+    @NameInMap("MaxResults")
+    public Long maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,6 +30,22 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     }
     public java.util.List<ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis> getGrantVSwitchEnis() {
         return this.grantVSwitchEnis;
+    }
+
+    public ListGrantVSwitchEnisResponseBody setMaxResults(Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListGrantVSwitchEnisResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListGrantVSwitchEnisResponseBody setRequestId(String requestId) {
@@ -48,6 +70,12 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
 
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
+
+        @NameInMap("NetworkInterfaceName")
+        public String networkInterfaceName;
+
+        @NameInMap("PrimaryIpAddress")
+        public String primaryIpAddress;
 
         @NameInMap("TransitRouterFlag")
         public Boolean transitRouterFlag;
@@ -77,6 +105,22 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
         public String getNetworkInterfaceId() {
             return this.networkInterfaceId;
+        }
+
+        public ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
+        }
+
+        public ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis setPrimaryIpAddress(String primaryIpAddress) {
+            this.primaryIpAddress = primaryIpAddress;
+            return this;
+        }
+        public String getPrimaryIpAddress() {
+            return this.primaryIpAddress;
         }
 
         public ListGrantVSwitchEnisResponseBodyGrantVSwitchEnis setTransitRouterFlag(Boolean transitRouterFlag) {
