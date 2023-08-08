@@ -4,6 +4,9 @@ package com.aliyun.computenestsupplier20210521.models;
 import com.aliyun.tea.*;
 
 public class GetServiceRequest extends TeaModel {
+    @NameInMap("FilterAliUid")
+    public Boolean filterAliUid;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -13,9 +16,20 @@ public class GetServiceRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    @NameInMap("ShowDetail")
+    public java.util.List<String> showDetail;
+
     public static GetServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetServiceRequest self = new GetServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetServiceRequest setFilterAliUid(Boolean filterAliUid) {
+        this.filterAliUid = filterAliUid;
+        return this;
+    }
+    public Boolean getFilterAliUid() {
+        return this.filterAliUid;
     }
 
     public GetServiceRequest setRegionId(String regionId) {
@@ -40,6 +54,14 @@ public class GetServiceRequest extends TeaModel {
     }
     public String getServiceVersion() {
         return this.serviceVersion;
+    }
+
+    public GetServiceRequest setShowDetail(java.util.List<String> showDetail) {
+        this.showDetail = showDetail;
+        return this;
+    }
+    public java.util.List<String> getShowDetail() {
+        return this.showDetail;
     }
 
 }

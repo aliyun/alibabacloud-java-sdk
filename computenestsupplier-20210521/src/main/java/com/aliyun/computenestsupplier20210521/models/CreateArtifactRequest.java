@@ -102,8 +102,17 @@ public class CreateArtifactRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("RepoId")
+        public String repoId;
+
+        @NameInMap("RepoName")
+        public String repoName;
+
         @NameInMap("ScriptMetadata")
         public String scriptMetadata;
+
+        @NameInMap("Tag")
+        public String tag;
 
         @NameInMap("Url")
         public String url;
@@ -153,12 +162,36 @@ public class CreateArtifactRequest extends TeaModel {
             return this.regionId;
         }
 
+        public CreateArtifactRequestArtifactProperty setRepoId(String repoId) {
+            this.repoId = repoId;
+            return this;
+        }
+        public String getRepoId() {
+            return this.repoId;
+        }
+
+        public CreateArtifactRequestArtifactProperty setRepoName(String repoName) {
+            this.repoName = repoName;
+            return this;
+        }
+        public String getRepoName() {
+            return this.repoName;
+        }
+
         public CreateArtifactRequestArtifactProperty setScriptMetadata(String scriptMetadata) {
             this.scriptMetadata = scriptMetadata;
             return this;
         }
         public String getScriptMetadata() {
             return this.scriptMetadata;
+        }
+
+        public CreateArtifactRequestArtifactProperty setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
         public CreateArtifactRequestArtifactProperty setUrl(String url) {

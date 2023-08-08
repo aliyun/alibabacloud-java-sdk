@@ -1,3 +1,6 @@
+2023-08-08 Version: 3.0.0
+- Change type of MaxResults and TotalCount to int32.
+
 2023-05-23 Version: 2.1.5
 - Add UpdateService GetService DeleteService.
 

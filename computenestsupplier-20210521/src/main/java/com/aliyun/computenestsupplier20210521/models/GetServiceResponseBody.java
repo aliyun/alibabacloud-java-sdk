@@ -40,6 +40,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("LicenseMetadata")
     public String licenseMetadata;
 
+    @NameInMap("LogMetadata")
+    public String logMetadata;
+
     @NameInMap("OperationMetadata")
     public String operationMetadata;
 
@@ -87,6 +90,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("ShareType")
     public String shareType;
+
+    @NameInMap("Statistic")
+    public GetServiceResponseBodyStatistic statistic;
 
     @NameInMap("Status")
     public String status;
@@ -228,6 +234,14 @@ public class GetServiceResponseBody extends TeaModel {
         return this.licenseMetadata;
     }
 
+    public GetServiceResponseBody setLogMetadata(String logMetadata) {
+        this.logMetadata = logMetadata;
+        return this;
+    }
+    public String getLogMetadata() {
+        return this.logMetadata;
+    }
+
     public GetServiceResponseBody setOperationMetadata(String operationMetadata) {
         this.operationMetadata = operationMetadata;
         return this;
@@ -354,6 +368,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getShareType() {
         return this.shareType;
+    }
+
+    public GetServiceResponseBody setStatistic(GetServiceResponseBodyStatistic statistic) {
+        this.statistic = statistic;
+        return this;
+    }
+    public GetServiceResponseBodyStatistic getStatistic() {
+        return this.statistic;
     }
 
     public GetServiceResponseBody setStatus(String status) {
@@ -549,6 +571,9 @@ public class GetServiceResponseBody extends TeaModel {
         @NameInMap("Locale")
         public String locale;
 
+        @NameInMap("LongDescriptionUrl")
+        public String longDescriptionUrl;
+
         @NameInMap("Name")
         public String name;
 
@@ -576,6 +601,14 @@ public class GetServiceResponseBody extends TeaModel {
             return this.locale;
         }
 
+        public GetServiceResponseBodyServiceInfos setLongDescriptionUrl(String longDescriptionUrl) {
+            this.longDescriptionUrl = longDescriptionUrl;
+            return this;
+        }
+        public String getLongDescriptionUrl() {
+            return this.longDescriptionUrl;
+        }
+
         public GetServiceResponseBodyServiceInfos setName(String name) {
             this.name = name;
             return this;
@@ -590,6 +623,113 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getShortDescription() {
             return this.shortDescription;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyStatistic extends TeaModel {
+        @NameInMap("AccumulativeInstanceCount")
+        public Integer accumulativeInstanceCount;
+
+        @NameInMap("AccumulativePocAmount")
+        public Double accumulativePocAmount;
+
+        @NameInMap("AccumulativeUserCount")
+        public Integer accumulativeUserCount;
+
+        @NameInMap("AveragePocAmount")
+        public Double averagePocAmount;
+
+        @NameInMap("AveragePocDuration")
+        public Double averagePocDuration;
+
+        @NameInMap("AveragePocUnitAmount")
+        public Double averagePocUnitAmount;
+
+        @NameInMap("DeployedServiceInstanceCount")
+        public Integer deployedServiceInstanceCount;
+
+        @NameInMap("DeployedUserCount")
+        public Integer deployedUserCount;
+
+        @NameInMap("SubmittedUsageCount")
+        public Integer submittedUsageCount;
+
+        public static GetServiceResponseBodyStatistic build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyStatistic self = new GetServiceResponseBodyStatistic();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyStatistic setAccumulativeInstanceCount(Integer accumulativeInstanceCount) {
+            this.accumulativeInstanceCount = accumulativeInstanceCount;
+            return this;
+        }
+        public Integer getAccumulativeInstanceCount() {
+            return this.accumulativeInstanceCount;
+        }
+
+        public GetServiceResponseBodyStatistic setAccumulativePocAmount(Double accumulativePocAmount) {
+            this.accumulativePocAmount = accumulativePocAmount;
+            return this;
+        }
+        public Double getAccumulativePocAmount() {
+            return this.accumulativePocAmount;
+        }
+
+        public GetServiceResponseBodyStatistic setAccumulativeUserCount(Integer accumulativeUserCount) {
+            this.accumulativeUserCount = accumulativeUserCount;
+            return this;
+        }
+        public Integer getAccumulativeUserCount() {
+            return this.accumulativeUserCount;
+        }
+
+        public GetServiceResponseBodyStatistic setAveragePocAmount(Double averagePocAmount) {
+            this.averagePocAmount = averagePocAmount;
+            return this;
+        }
+        public Double getAveragePocAmount() {
+            return this.averagePocAmount;
+        }
+
+        public GetServiceResponseBodyStatistic setAveragePocDuration(Double averagePocDuration) {
+            this.averagePocDuration = averagePocDuration;
+            return this;
+        }
+        public Double getAveragePocDuration() {
+            return this.averagePocDuration;
+        }
+
+        public GetServiceResponseBodyStatistic setAveragePocUnitAmount(Double averagePocUnitAmount) {
+            this.averagePocUnitAmount = averagePocUnitAmount;
+            return this;
+        }
+        public Double getAveragePocUnitAmount() {
+            return this.averagePocUnitAmount;
+        }
+
+        public GetServiceResponseBodyStatistic setDeployedServiceInstanceCount(Integer deployedServiceInstanceCount) {
+            this.deployedServiceInstanceCount = deployedServiceInstanceCount;
+            return this;
+        }
+        public Integer getDeployedServiceInstanceCount() {
+            return this.deployedServiceInstanceCount;
+        }
+
+        public GetServiceResponseBodyStatistic setDeployedUserCount(Integer deployedUserCount) {
+            this.deployedUserCount = deployedUserCount;
+            return this;
+        }
+        public Integer getDeployedUserCount() {
+            return this.deployedUserCount;
+        }
+
+        public GetServiceResponseBodyStatistic setSubmittedUsageCount(Integer submittedUsageCount) {
+            this.submittedUsageCount = submittedUsageCount;
+            return this;
+        }
+        public Integer getSubmittedUsageCount() {
+            return this.submittedUsageCount;
         }
 
     }
