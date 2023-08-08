@@ -16,6 +16,9 @@ public class ModifySiteMonitorRequest extends TeaModel {
     @NameInMap("AlertIds")
     public String alertIds;
 
+    @NameInMap("CustomSchedule")
+    public String customSchedule;
+
     /**
      * <p>The HTTP status code.</p>
      * <br>
@@ -78,6 +81,14 @@ public class ModifySiteMonitorRequest extends TeaModel {
     }
     public String getAlertIds() {
         return this.alertIds;
+    }
+
+    public ModifySiteMonitorRequest setCustomSchedule(String customSchedule) {
+        this.customSchedule = customSchedule;
+        return this;
+    }
+    public String getCustomSchedule() {
+        return this.customSchedule;
     }
 
     public ModifySiteMonitorRequest setInterval(String interval) {

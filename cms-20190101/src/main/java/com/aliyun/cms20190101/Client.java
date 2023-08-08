@@ -1431,6 +1431,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AlertIds", request.alertIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.customSchedule)) {
+            query.put("CustomSchedule", request.customSchedule);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
             query.put("Interval", request.interval);
         }
@@ -6882,6 +6886,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.alertIds)) {
             query.put("AlertIds", request.alertIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customSchedule)) {
+            query.put("CustomSchedule", request.customSchedule);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.interval)) {
