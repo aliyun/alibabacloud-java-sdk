@@ -25,6 +25,12 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("DomainList")
     public String domainList;
 
+    @NameInMap("DomainResolveRule")
+    public java.util.List<ModifyPolicyGroupRequestDomainResolveRule> domainResolveRule;
+
+    @NameInMap("DomainResolveRuleType")
+    public String domainResolveRuleType;
+
     @NameInMap("EndUserApplyAdminCoordinate")
     public String endUserApplyAdminCoordinate;
 
@@ -207,6 +213,22 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getDomainList() {
         return this.domainList;
+    }
+
+    public ModifyPolicyGroupRequest setDomainResolveRule(java.util.List<ModifyPolicyGroupRequestDomainResolveRule> domainResolveRule) {
+        this.domainResolveRule = domainResolveRule;
+        return this;
+    }
+    public java.util.List<ModifyPolicyGroupRequestDomainResolveRule> getDomainResolveRule() {
+        return this.domainResolveRule;
+    }
+
+    public ModifyPolicyGroupRequest setDomainResolveRuleType(String domainResolveRuleType) {
+        this.domainResolveRuleType = domainResolveRuleType;
+        return this;
+    }
+    public String getDomainResolveRuleType() {
+        return this.domainResolveRuleType;
     }
 
     public ModifyPolicyGroupRequest setEndUserApplyAdminCoordinate(String endUserApplyAdminCoordinate) {
@@ -678,6 +700,47 @@ public class ModifyPolicyGroupRequest extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class ModifyPolicyGroupRequestDomainResolveRule extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Domain")
+        public String domain;
+
+        @NameInMap("Policy")
+        public String policy;
+
+        public static ModifyPolicyGroupRequestDomainResolveRule build(java.util.Map<String, ?> map) throws Exception {
+            ModifyPolicyGroupRequestDomainResolveRule self = new ModifyPolicyGroupRequestDomainResolveRule();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyPolicyGroupRequestDomainResolveRule setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ModifyPolicyGroupRequestDomainResolveRule setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public ModifyPolicyGroupRequestDomainResolveRule setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
     }

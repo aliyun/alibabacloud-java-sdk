@@ -6,8 +6,6 @@ import com.aliyun.tea.*;
 public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     /**
      * <p>The ID of the policy template that you want to manage.</p>
-     * <br>
-     * <p>> You can call the [ListDefensePolicies](~~195814~~) operation to query the IDs of all policy templates.</p>
      */
     @NameInMap("PolicyId")
     public java.util.List<String> policyId;

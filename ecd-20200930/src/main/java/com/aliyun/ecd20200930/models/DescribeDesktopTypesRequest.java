@@ -10,6 +10,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
+    @NameInMap("DesktopGroupIdForModify")
+    public String desktopGroupIdForModify;
+
     @NameInMap("DesktopIdForModify")
     public String desktopIdForModify;
 
@@ -50,6 +53,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public Integer getCpuCount() {
         return this.cpuCount;
+    }
+
+    public DescribeDesktopTypesRequest setDesktopGroupIdForModify(String desktopGroupIdForModify) {
+        this.desktopGroupIdForModify = desktopGroupIdForModify;
+        return this;
+    }
+    public String getDesktopGroupIdForModify() {
+        return this.desktopGroupIdForModify;
     }
 
     public DescribeDesktopTypesRequest setDesktopIdForModify(String desktopIdForModify) {

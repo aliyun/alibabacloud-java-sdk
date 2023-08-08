@@ -51,6 +51,36 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus extends TeaModel {
+        @NameInMap("Count")
+        public Integer count;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus self = new DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeDesktopGroupsResponseBodyDesktopGroups extends TeaModel {
         /**
          * <p>The number of sessions that are allowed for each cloud desktop in the multi-session desktop group.</p>
@@ -75,6 +105,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         @NameInMap("ConnectDuration")
         public Long connectDuration;
+
+        @NameInMap("CountPerStatus")
+        public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus> countPerStatus;
 
         /**
          * <p>The number of vCPUs.</p>
@@ -144,6 +177,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("DataDiskSize")
         public String dataDiskSize;
 
+        @NameInMap("DesktopCount")
+        public Integer desktopCount;
+
         /**
          * <p>The desktop group ID.</p>
          */
@@ -155,6 +191,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         @NameInMap("DesktopGroupName")
         public String desktopGroupName;
+
+        @NameInMap("DesktopType")
+        public String desktopType;
 
         /**
          * <p>The number of users that are authorized to use the desktop group.</p>
@@ -173,6 +212,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         @NameInMap("GpuCount")
         public Float gpuCount;
+
+        @NameInMap("GpuDriverVersion")
+        public String gpuDriverVersion;
 
         /**
          * <p>The GPU memory.</p>
@@ -538,6 +580,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("StopDuration")
         public Long stopDuration;
 
+        @NameInMap("SubnetId")
+        public String subnetId;
+
         /**
          * <p>The category of the system disk.</p>
          * <br>
@@ -643,6 +688,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return this.connectDuration;
         }
 
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setCountPerStatus(java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus> countPerStatus) {
+            this.countPerStatus = countPerStatus;
+            return this;
+        }
+        public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsCountPerStatus> getCountPerStatus() {
+            return this.countPerStatus;
+        }
+
         public DescribeDesktopGroupsResponseBodyDesktopGroups setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
@@ -683,6 +736,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return this.dataDiskSize;
         }
 
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setDesktopCount(Integer desktopCount) {
+            this.desktopCount = desktopCount;
+            return this;
+        }
+        public Integer getDesktopCount() {
+            return this.desktopCount;
+        }
+
         public DescribeDesktopGroupsResponseBodyDesktopGroups setDesktopGroupId(String desktopGroupId) {
             this.desktopGroupId = desktopGroupId;
             return this;
@@ -697,6 +758,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getDesktopGroupName() {
             return this.desktopGroupName;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setDesktopType(String desktopType) {
+            this.desktopType = desktopType;
+            return this;
+        }
+        public String getDesktopType() {
+            return this.desktopType;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setEndUserCount(Integer endUserCount) {
@@ -721,6 +790,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public Float getGpuCount() {
             return this.gpuCount;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setGpuDriverVersion(String gpuDriverVersion) {
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setGpuSpec(String gpuSpec) {
@@ -905,6 +982,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public Long getStopDuration() {
             return this.stopDuration;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setSubnetId(String subnetId) {
+            this.subnetId = subnetId;
+            return this;
+        }
+        public String getSubnetId() {
+            return this.subnetId;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setSystemDiskCategory(String systemDiskCategory) {
