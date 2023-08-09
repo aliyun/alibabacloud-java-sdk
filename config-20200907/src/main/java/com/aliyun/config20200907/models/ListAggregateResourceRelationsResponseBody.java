@@ -179,19 +179,53 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
 
     public static class ListAggregateResourceRelationsResponseBodyResourceRelations extends TeaModel {
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The maximum number of entries returned on each page.</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
-         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * <p>The token that was used to initiate the next request.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
-         * <p>An array that contains the relationships.</p>
+         * <p>The type of the relationship between the resource and the object.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   IsContained: The object is included as part of the resource.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   IsAttachedTo: The object is added to the resource.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   IsAssociatedIn: The object is associated with the resource.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Contains: The actual value contains the expected value.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("ResourceRelationList")
         public java.util.List<ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList> resourceRelationList;

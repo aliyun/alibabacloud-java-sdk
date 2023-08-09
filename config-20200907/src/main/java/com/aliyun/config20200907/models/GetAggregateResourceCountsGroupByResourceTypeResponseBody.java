@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceCountsGroupByResourceTypeResponseBody extends TeaModel {
     /**
-     * <p>The statistics on the resources.</p>
+     * <p>The resource type by which the statistics are collected.</p>
      */
     @NameInMap("DiscoveredResourceCountsSummary")
     public java.util.List<GetAggregateResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

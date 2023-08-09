@@ -12,9 +12,15 @@ public class ListRemediationTemplatesRequest extends TeaModel {
     @NameInMap("ManagedRuleIdentifier")
     public String managedRuleIdentifier;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

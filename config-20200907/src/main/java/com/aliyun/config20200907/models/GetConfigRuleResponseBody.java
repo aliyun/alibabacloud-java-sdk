@@ -366,7 +366,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public java.util.Map<String, ?> optionalInputParameterDetails;
 
         /**
-         * <p>The details of the source of the managed rule.</p>
+         * <p>The interval at which the rule is triggered. Valid values:</p>
+         * <br>
+         * <p>*   One_Hour: 1 hour</p>
+         * <p>*   Three_Hours: 3 hours</p>
+         * <p>*   Six_Hours: 6 hours</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
+         * <br>
+         * <p>> This parameter is returned if the rule is periodically triggered.</p>
          */
         @NameInMap("SourceDetails")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleManagedRuleSourceDetails> sourceDetails;
@@ -435,6 +443,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
     }
 
     public static class GetConfigRuleResponseBodyConfigRuleScope extends TeaModel {
+        /**
+         * <p>The types of the resources to be evaluated against the rule. You can also view the resource types by using the ResourceTypesScope parameter.</p>
+         */
         @NameInMap("ComplianceResourceTypes")
         public java.util.List<String> complianceResourceTypes;
 
@@ -536,7 +547,15 @@ public class GetConfigRuleResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The details of how the rule was created.</p>
+         * <p>The interval at which the rule is triggered. Valid values:</p>
+         * <br>
+         * <p>*   One_Hour: 1 hour</p>
+         * <p>*   Three_Hours: 3 hours</p>
+         * <p>*   Six_Hours: 6 hours</p>
+         * <p>*   Twelve_Hours: 12 hours</p>
+         * <p>*   TwentyFour_Hours: 24 hours</p>
+         * <br>
+         * <p>> This parameter is returned if the rule is periodically triggered.</p>
          */
         @NameInMap("SourceDetails")
         public java.util.List<GetConfigRuleResponseBodyConfigRuleSourceSourceDetails> sourceDetails;
@@ -713,6 +732,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The effective scope of the rule.</p>
+         */
         @NameInMap("Scope")
         public GetConfigRuleResponseBodyConfigRuleScope scope;
 

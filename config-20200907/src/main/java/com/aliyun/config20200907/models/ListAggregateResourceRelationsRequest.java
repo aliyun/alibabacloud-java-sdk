@@ -23,7 +23,7 @@ public class ListAggregateResourceRelationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the resource resides.</p>
+     * <p>The ID of the region in which the resource resides.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -57,7 +57,7 @@ public class ListAggregateResourceRelationsRequest extends TeaModel {
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>*   Contains: The object contains the resource.</p>
+     * <p>*   Contains: The actual value contains the expected value.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>
@@ -69,7 +69,7 @@ public class ListAggregateResourceRelationsRequest extends TeaModel {
     public String relationType;
 
     /**
-     * <p>The ID of the Alibaba Cloud account to which the resource in the account group belongs.</p>
+     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
      */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;

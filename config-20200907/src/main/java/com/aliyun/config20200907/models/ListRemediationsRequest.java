@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRemediationsRequest extends TeaModel {
     /**
-     * <p>The rule ID. Separate multiple rule IDs with commas (,).</p>
+     * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
      * <br>
      * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
      */
@@ -13,13 +13,13 @@ public class ListRemediationsRequest extends TeaModel {
     public String configRuleIds;
 
     /**
-     * <p>资源列表的页码。起始值：1。</p>
+     * <p>The page number. Pages start from page 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>分页查询时设置的每页行数。取值范围：1~50。</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

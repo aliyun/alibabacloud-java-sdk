@@ -17,7 +17,7 @@ public class ListResourceRelationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where the resource resides.</p>
+     * <p>The ID of the region in which the resource resides.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -51,7 +51,7 @@ public class ListResourceRelationsRequest extends TeaModel {
      * <br>
      * <p>    <!-- --></p>
      * <br>
-     * <p>*   Contains: The object contains the resource.</p>
+     * <p>*   Contains: The actual value contains the expected value.</p>
      * <br>
      * <p>    <!-- --></p>
      * <br>

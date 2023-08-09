@@ -4,14 +4,20 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The details of the remediation template.</p>
+     * <p>The description of the remediation template.</p>
      */
     @NameInMap("RemediationTemplates")
     public java.util.List<ListRemediationTemplatesResponseBodyRemediationTemplates> remediationTemplates;
@@ -22,6 +28,9 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of remediation templates.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
