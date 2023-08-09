@@ -164,6 +164,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        @NameInMap("OtherId")
+        public String otherId;
+
         /**
          * <p>The POC content.</p>
          */
@@ -338,6 +341,14 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         }
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        public DescribeVulDetailsResponseBodyCves setOtherId(String otherId) {
+            this.otherId = otherId;
+            return this;
+        }
+        public String getOtherId() {
+            return this.otherId;
         }
 
         public DescribeVulDetailsResponseBodyCves setPoc(String poc) {
