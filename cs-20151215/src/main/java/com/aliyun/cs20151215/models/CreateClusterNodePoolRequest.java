@@ -675,11 +675,17 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("spot_strategy")
         public String spotStrategy;
 
+        @NameInMap("system_disk_bursting_enabled")
+        public Boolean systemDiskBurstingEnabled;
+
         @NameInMap("system_disk_category")
         public String systemDiskCategory;
 
         @NameInMap("system_disk_performance_level")
         public String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        public Long systemDiskProvisionedIops;
 
         @NameInMap("system_disk_size")
         public Long systemDiskSize;
@@ -927,6 +933,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.spotStrategy;
         }
 
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+            this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+            return this;
+        }
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
         public CreateClusterNodePoolRequestScalingGroup setSystemDiskCategory(String systemDiskCategory) {
             this.systemDiskCategory = systemDiskCategory;
             return this;
@@ -941,6 +955,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getSystemDiskPerformanceLevel() {
             return this.systemDiskPerformanceLevel;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSystemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+            this.systemDiskProvisionedIops = systemDiskProvisionedIops;
+            return this;
+        }
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setSystemDiskSize(Long systemDiskSize) {
