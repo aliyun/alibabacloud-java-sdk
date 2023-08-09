@@ -43,7 +43,7 @@ public class OperationSuspEventsRequest extends TeaModel {
     /**
      * <p>The IDs of alert events.</p>
      * <br>
-     * <p>>  You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.</p>
+     * <p>>  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.</p>
      */
     @NameInMap("SuspiciousEventIds")
     public String suspiciousEventIds;
