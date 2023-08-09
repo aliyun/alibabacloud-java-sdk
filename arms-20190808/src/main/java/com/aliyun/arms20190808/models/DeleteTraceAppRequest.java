@@ -10,6 +10,9 @@ public class DeleteTraceAppRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("DeleteReason")
+    public DeleteTraceAppRequestDeleteReason deleteReason;
+
     /**
      * <p>The PID of the application that you want to delete. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
      */
@@ -44,6 +47,14 @@ public class DeleteTraceAppRequest extends TeaModel {
         return this.appId;
     }
 
+    public DeleteTraceAppRequest setDeleteReason(DeleteTraceAppRequestDeleteReason deleteReason) {
+        this.deleteReason = deleteReason;
+        return this;
+    }
+    public DeleteTraceAppRequestDeleteReason getDeleteReason() {
+        return this.deleteReason;
+    }
+
     public DeleteTraceAppRequest setPid(String pid) {
         this.pid = pid;
         return this;
@@ -66,6 +77,66 @@ public class DeleteTraceAppRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class DeleteTraceAppRequestDeleteReasonReasonIds extends TeaModel {
+        @NameInMap("Id")
+        public Integer id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DeleteTraceAppRequestDeleteReasonReasonIds build(java.util.Map<String, ?> map) throws Exception {
+            DeleteTraceAppRequestDeleteReasonReasonIds self = new DeleteTraceAppRequestDeleteReasonReasonIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteTraceAppRequestDeleteReasonReasonIds setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+        public Integer getId() {
+            return this.id;
+        }
+
+        public DeleteTraceAppRequestDeleteReasonReasonIds setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class DeleteTraceAppRequestDeleteReason extends TeaModel {
+        @NameInMap("ReasonIds")
+        public java.util.List<DeleteTraceAppRequestDeleteReasonReasonIds> reasonIds;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        public static DeleteTraceAppRequestDeleteReason build(java.util.Map<String, ?> map) throws Exception {
+            DeleteTraceAppRequestDeleteReason self = new DeleteTraceAppRequestDeleteReason();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteTraceAppRequestDeleteReason setReasonIds(java.util.List<DeleteTraceAppRequestDeleteReasonReasonIds> reasonIds) {
+            this.reasonIds = reasonIds;
+            return this;
+        }
+        public java.util.List<DeleteTraceAppRequestDeleteReasonReasonIds> getReasonIds() {
+            return this.reasonIds;
+        }
+
+        public DeleteTraceAppRequestDeleteReason setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
     }
 
 }

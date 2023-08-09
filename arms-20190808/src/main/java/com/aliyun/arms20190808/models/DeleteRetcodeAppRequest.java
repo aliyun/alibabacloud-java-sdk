@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteRetcodeAppRequest extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The process identifier (PID) of the application.</p>
+     */
     @NameInMap("Pid")
     public String pid;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

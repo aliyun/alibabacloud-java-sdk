@@ -7,6 +7,12 @@ public class ListTraceAppsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      */
+    @NameInMap("Region")
+    public String region;
+
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -25,6 +31,14 @@ public class ListTraceAppsRequest extends TeaModel {
     public static ListTraceAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTraceAppsRequest self = new ListTraceAppsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTraceAppsRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public ListTraceAppsRequest setRegionId(String regionId) {

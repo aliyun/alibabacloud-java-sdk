@@ -16,6 +16,12 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("GroupName")
+    public String groupName;
+
+    @NameInMap("MostRegionId")
+    public String mostRegionId;
+
     /**
      * <p>The region ID.</p>
      */
@@ -53,6 +59,22 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public UpdatePrometheusGlobalViewRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public UpdatePrometheusGlobalViewRequest setMostRegionId(String mostRegionId) {
+        this.mostRegionId = mostRegionId;
+        return this;
+    }
+    public String getMostRegionId() {
+        return this.mostRegionId;
     }
 
     public UpdatePrometheusGlobalViewRequest setRegionId(String regionId) {
