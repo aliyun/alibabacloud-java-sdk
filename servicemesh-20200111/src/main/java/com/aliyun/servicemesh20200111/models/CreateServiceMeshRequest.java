@@ -323,6 +323,9 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("GatewayAPIEnabled")
     public Boolean gatewayAPIEnabled;
 
+    @NameInMap("GuestCluster")
+    public String guestCluster;
+
     /**
      * <p>The IP ranges in CIDR form for which traffic is to be redirected to the sidecar proxy in the ASM instance.</p>
      */
@@ -888,6 +891,14 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getGatewayAPIEnabled() {
         return this.gatewayAPIEnabled;
+    }
+
+    public CreateServiceMeshRequest setGuestCluster(String guestCluster) {
+        this.guestCluster = guestCluster;
+        return this;
+    }
+    public String getGuestCluster() {
+        return this.guestCluster;
     }
 
     public CreateServiceMeshRequest setIncludeIPRanges(String includeIPRanges) {
