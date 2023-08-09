@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribePrometheusAlertRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.</p>
+     */
     @NameInMap("AlertId")
     public Long alertId;
 
