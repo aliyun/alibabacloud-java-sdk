@@ -65,10 +65,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DomainName", request.domainName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.globalResourcePlan)) {
-            query.put("GlobalResourcePlan", request.globalResourcePlan);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -3356,68 +3352,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDomainDetailDataByLayerResponse describeDomainDetailDataByLayer(DescribeDomainDetailDataByLayerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainDetailDataByLayerWithOptions(request, runtime);
-    }
-
-    /**
-      * > 
-      * *   If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify both StartTime and EndTime, the request returns the data collected within the specified time range.
-      * *   You can call this operation up to 10 times per second per account.
-      *
-      * @param request DescribeDomainFileSizeProportionDataRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeDomainFileSizeProportionDataResponse
-     */
-    public DescribeDomainFileSizeProportionDataResponse describeDomainFileSizeProportionDataWithOptions(DescribeDomainFileSizeProportionDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
-            query.put("DomainName", request.domainName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
-            query.put("EndTime", request.endTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
-            query.put("SecurityToken", request.securityToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
-            query.put("StartTime", request.startTime);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeDomainFileSizeProportionData"),
-            new TeaPair("version", "2018-05-10"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainFileSizeProportionDataResponse());
-    }
-
-    /**
-      * > 
-      * *   If you do not specify StartTime or EndTime, the request returns the data collected in the last 24 hours. If you specify both StartTime and EndTime, the request returns the data collected within the specified time range.
-      * *   You can call this operation up to 10 times per second per account.
-      *
-      * @param request DescribeDomainFileSizeProportionDataRequest
-      * @return DescribeDomainFileSizeProportionDataResponse
-     */
-    public DescribeDomainFileSizeProportionDataResponse describeDomainFileSizeProportionData(DescribeDomainFileSizeProportionDataRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDomainFileSizeProportionDataWithOptions(request, runtime);
     }
 
     /**
@@ -8435,10 +8369,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.globalResourcePlan)) {
-            query.put("GlobalResourcePlan", request.globalResourcePlan);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.verifyType)) {
