@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRulesResponseBody extends TeaModel {
+    /**
+     * <p>The queried rules.</p>
+     */
     @NameInMap("ConfigRules")
     public ListConfigRulesResponseBodyConfigRules configRules;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -284,15 +290,27 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRules extends TeaModel {
+        /**
+         * <p>The types of resources evaluated by the rule. Separate multiple resource types with commas (,).</p>
+         */
         @NameInMap("ConfigRuleList")
         public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleList> configRuleList;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of rules.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

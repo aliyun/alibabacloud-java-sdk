@@ -307,7 +307,11 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String compliancePackTemplateId;
 
         /**
-         * <p>The rules in the compliance package.</p>
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <br>
+         * <p>*   1: high</p>
+         * <p>*   2: medium</p>
+         * <p>*   3: low</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRules> configRules;

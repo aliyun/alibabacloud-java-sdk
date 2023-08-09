@@ -198,7 +198,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     public static class ListManagedRulesResponseBodyManagedRules extends TeaModel {
         /**
-         * <p>The details of the managed rules.</p>
+         * <p>The name of the remediation template.</p>
          */
         @NameInMap("ManagedRuleList")
         public java.util.List<ListManagedRulesResponseBodyManagedRulesManagedRuleList> managedRuleList;

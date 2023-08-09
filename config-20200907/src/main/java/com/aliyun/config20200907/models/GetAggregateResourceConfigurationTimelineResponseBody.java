@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information about the configuration timeline.</p>
+     * <p>The configuration timeline of the resource.</p>
      */
     @NameInMap("ResourceConfigurationTimeline")
     public GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline resourceConfigurationTimeline;
@@ -211,7 +211,7 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
 
     public static class GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline extends TeaModel {
         /**
-         * <p>The configuration changes on the configuration timeline.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ConfigurationList")
         public java.util.List<GetAggregateResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList;

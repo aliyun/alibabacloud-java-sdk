@@ -21,11 +21,16 @@ public class GetAggregateResourceCountsGroupByResourceTypeRequest extends TeaMod
     public String folderId;
 
     /**
-     * <p>The ID of the region in which the resource resides.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+     * <br>
+     * <p>> You can specify either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you specify the ResourceAccountId parameter.</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 

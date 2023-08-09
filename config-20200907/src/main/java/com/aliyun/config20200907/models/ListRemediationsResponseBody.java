@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListRemediationsResponseBody extends TeaModel {
     /**
-     * <p>修正列表的页码。起始值：1。</p>
+     * <p>The page number. Pages start from page 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>分页查询时设置的每页行数。取值范围：1~50。</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>An array that contains the remediation templates.</p>
+     * <p>The converted configuration of the remediation template. This parameter is returned only for an OOS remediation template.</p>
      */
     @NameInMap("Remediations")
     public java.util.List<ListRemediationsResponseBodyRemediations> remediations;
@@ -29,7 +29,7 @@ public class ListRemediationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>修正设置总数。</p>
+     * <p>The total number of remediation settings.</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;

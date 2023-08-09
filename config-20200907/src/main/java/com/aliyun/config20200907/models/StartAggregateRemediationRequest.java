@@ -7,7 +7,7 @@ public class StartAggregateRemediationRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -20,6 +20,11 @@ public class StartAggregateRemediationRequest extends TeaModel {
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resources to be remediated belong. If this parameter is left empty, non-compliant resources of all accounts in the account group are remediated.</p>
+     * <br>
+     * <p>> You must specify the ID of the current management account or a member account in the account group of the management account.</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
