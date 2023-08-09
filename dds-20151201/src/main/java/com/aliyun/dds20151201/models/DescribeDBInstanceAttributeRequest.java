@@ -5,21 +5,24 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>Specifies whether the instance is deleted. Valid values:</p>
+     * <br>
+     * <p>*   **false**: queries details about running instances.</p>
+     * <p>*   **true**: queries details about deleted instances.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The database engine of the instance. Set the value to **MongoDB**.</p>
+     * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).</p>
+     * <br>
+     * <p>> This parameter is available only if you use the China site (aliyun.com).</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>实例是否已删除，取值说明： </p>
-     * <p>- **false**：实例正常运行，查询运行中实例信息。</p>
-     * <p>- **true**：实例已删除，查询被删除实例的信息。</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("IsDelete")
     public Boolean isDelete;
@@ -31,9 +34,7 @@ public class DescribeDBInstanceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).</p>
-     * <br>
-     * <p>> This parameter is available only if you use the China site (aliyun.com).</p>
+     * <p>Details of the instance.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

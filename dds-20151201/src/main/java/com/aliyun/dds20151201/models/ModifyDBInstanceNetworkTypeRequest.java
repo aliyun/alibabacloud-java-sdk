@@ -70,6 +70,9 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    @NameInMap("ZoneId")
+    public String zoneId;
+
     public static ModifyDBInstanceNetworkTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceNetworkTypeRequest self = new ModifyDBInstanceNetworkTypeRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public ModifyDBInstanceNetworkTypeRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

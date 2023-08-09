@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAuthModeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to enable authentication to allow access within a VPC. Valid values:</p>
+     * <br>
+     * <p>*   **Open**: enables password-free access.</p>
+     * <p>*   **Close**: disables password-free access.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

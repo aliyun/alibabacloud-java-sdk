@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class CheckRecoveryConditionResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>Indicates whether the recovery conditions are met. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The recovery conditions are met.</p>
-     * <p>*   **false**: The recovery conditions are not met.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("IsValid")
     public Boolean isValid;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

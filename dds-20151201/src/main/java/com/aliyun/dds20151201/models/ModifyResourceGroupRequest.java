@@ -17,7 +17,7 @@ public class ModifyResourceGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
