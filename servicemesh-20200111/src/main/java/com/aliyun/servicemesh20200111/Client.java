@@ -465,6 +465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("GatewayAPIEnabled", request.gatewayAPIEnabled);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.guestCluster)) {
+            body.put("GuestCluster", request.guestCluster);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.includeIPRanges)) {
             body.put("IncludeIPRanges", request.includeIPRanges);
         }
