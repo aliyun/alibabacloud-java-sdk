@@ -79,6 +79,55 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags self = new DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags extends TeaModel {
+        @NameInMap("tags")
+        public java.util.List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags> tags;
+
+        public static DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags self = new DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags setTags(java.util.List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTagsTags> getTags() {
+            return this.tags;
+        }
+
+    }
+
     public static class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType extends TeaModel {
         /**
          * <p>The ID of the access point.</p>
@@ -327,6 +376,9 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags tags;
 
         /**
          * <p>The type of the Express Connect circuit. The value is set to **VPC**.</p>
@@ -615,6 +667,14 @@ public class DescribePhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setTags(DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeTags getTags() {
+            return this.tags;
         }
 
         public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionType setType(String type) {

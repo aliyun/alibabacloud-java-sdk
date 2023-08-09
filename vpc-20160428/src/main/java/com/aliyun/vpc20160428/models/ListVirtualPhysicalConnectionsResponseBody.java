@@ -82,6 +82,36 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         return this.virtualPhysicalConnections;
     }
 
+    public static class ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags self = new ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections extends TeaModel {
         /**
          * <p>The ID of the access point that is associated with the Express Connect circuit.</p>
@@ -293,6 +323,9 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags> tags;
 
         /**
          * <p>The type of Express Connect circuit. Default value: **VPC**.</p>
@@ -535,6 +568,14 @@ public class ListVirtualPhysicalConnectionsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections setTags(java.util.List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags> getTags() {
+            return this.tags;
         }
 
         public ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnections setType(String type) {

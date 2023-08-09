@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class EnablePhysicalConnectionRequest extends TeaModel {
+    @NameInMap("ByPassSp")
+    public Boolean byPassSp;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
@@ -41,6 +44,14 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public static EnablePhysicalConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         EnablePhysicalConnectionRequest self = new EnablePhysicalConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EnablePhysicalConnectionRequest setByPassSp(Boolean byPassSp) {
+        this.byPassSp = byPassSp;
+        return this;
+    }
+    public Boolean getByPassSp() {
+        return this.byPassSp;
     }
 
     public EnablePhysicalConnectionRequest setClientToken(String clientToken) {

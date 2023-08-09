@@ -4,15 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
-    /**
-     * <p>The bandwidth of the ECC instance.</p>
-     */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
-    /**
-     * <p>The ID of the ECC instance.</p>
-     */
     @NameInMap("EccId")
     public String eccId;
 
@@ -22,9 +16,6 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID.</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
