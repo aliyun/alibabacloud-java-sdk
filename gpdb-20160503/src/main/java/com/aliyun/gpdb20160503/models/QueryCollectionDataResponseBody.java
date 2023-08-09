@@ -79,8 +79,8 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
-        @NameInMap("Similarity")
-        public Double similarity;
+        @NameInMap("Score")
+        public Double score;
 
         @NameInMap("Values")
         public QueryCollectionDataResponseBodyMatchesMatchValues values;
@@ -106,12 +106,12 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             return this.metadata;
         }
 
-        public QueryCollectionDataResponseBodyMatchesMatch setSimilarity(Double similarity) {
-            this.similarity = similarity;
+        public QueryCollectionDataResponseBodyMatchesMatch setScore(Double score) {
+            this.score = score;
             return this;
         }
-        public Double getSimilarity() {
-            return this.similarity;
+        public Double getScore() {
+            return this.score;
         }
 
         public QueryCollectionDataResponseBodyMatchesMatch setValues(QueryCollectionDataResponseBodyMatchesMatchValues values) {

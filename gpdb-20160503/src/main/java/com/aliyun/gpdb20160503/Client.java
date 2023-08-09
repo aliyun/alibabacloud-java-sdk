@@ -231,6 +231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FullTextRetrievalFields", request.fullTextRetrievalFields);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hnswM)) {
+            query.put("HnswM", request.hnswM);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.managerAccount)) {
             query.put("ManagerAccount", request.managerAccount);
         }
@@ -243,6 +247,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Metadata", request.metadata);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
+            query.put("Metrics", request.metrics);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("Namespace", request.namespace);
         }
@@ -253,6 +261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.parser)) {
             query.put("Parser", request.parser);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pqEnable)) {
+            query.put("PqEnable", request.pqEnable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -706,6 +718,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Dimension", request.dimension);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hnswM)) {
+            query.put("HnswM", request.hnswM);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.managerAccount)) {
             query.put("ManagerAccount", request.managerAccount);
         }
@@ -724,6 +740,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pqEnable)) {
+            query.put("PqEnable", request.pqEnable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

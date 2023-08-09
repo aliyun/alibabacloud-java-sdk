@@ -16,6 +16,9 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("FullTextRetrievalFields")
     public String fullTextRetrievalFields;
 
+    @NameInMap("HnswM")
+    public Integer hnswM;
+
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
@@ -25,6 +28,9 @@ public class CreateCollectionRequest extends TeaModel {
     @NameInMap("Metadata")
     public String metadata;
 
+    @NameInMap("Metrics")
+    public String metrics;
+
     @NameInMap("Namespace")
     public String namespace;
 
@@ -33,6 +39,9 @@ public class CreateCollectionRequest extends TeaModel {
 
     @NameInMap("Parser")
     public String parser;
+
+    @NameInMap("PqEnable")
+    public Integer pqEnable;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -74,6 +83,14 @@ public class CreateCollectionRequest extends TeaModel {
         return this.fullTextRetrievalFields;
     }
 
+    public CreateCollectionRequest setHnswM(Integer hnswM) {
+        this.hnswM = hnswM;
+        return this;
+    }
+    public Integer getHnswM() {
+        return this.hnswM;
+    }
+
     public CreateCollectionRequest setManagerAccount(String managerAccount) {
         this.managerAccount = managerAccount;
         return this;
@@ -98,6 +115,14 @@ public class CreateCollectionRequest extends TeaModel {
         return this.metadata;
     }
 
+    public CreateCollectionRequest setMetrics(String metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    public String getMetrics() {
+        return this.metrics;
+    }
+
     public CreateCollectionRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -120,6 +145,14 @@ public class CreateCollectionRequest extends TeaModel {
     }
     public String getParser() {
         return this.parser;
+    }
+
+    public CreateCollectionRequest setPqEnable(Integer pqEnable) {
+        this.pqEnable = pqEnable;
+        return this;
+    }
+    public Integer getPqEnable() {
+        return this.pqEnable;
     }
 
     public CreateCollectionRequest setRegionId(String regionId) {

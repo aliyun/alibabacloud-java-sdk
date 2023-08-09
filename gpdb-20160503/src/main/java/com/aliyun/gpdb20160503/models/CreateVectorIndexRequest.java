@@ -13,6 +13,9 @@ public class CreateVectorIndexRequest extends TeaModel {
     @NameInMap("Dimension")
     public Integer dimension;
 
+    @NameInMap("HnswM")
+    public Integer hnswM;
+
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
@@ -30,6 +33,9 @@ public class CreateVectorIndexRequest extends TeaModel {
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("PqEnable")
+    public Integer pqEnable;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -61,6 +67,14 @@ public class CreateVectorIndexRequest extends TeaModel {
     }
     public Integer getDimension() {
         return this.dimension;
+    }
+
+    public CreateVectorIndexRequest setHnswM(Integer hnswM) {
+        this.hnswM = hnswM;
+        return this;
+    }
+    public Integer getHnswM() {
+        return this.hnswM;
     }
 
     public CreateVectorIndexRequest setManagerAccount(String managerAccount) {
@@ -101,6 +115,14 @@ public class CreateVectorIndexRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateVectorIndexRequest setPqEnable(Integer pqEnable) {
+        this.pqEnable = pqEnable;
+        return this;
+    }
+    public Integer getPqEnable() {
+        return this.pqEnable;
     }
 
     public CreateVectorIndexRequest setRegionId(String regionId) {
