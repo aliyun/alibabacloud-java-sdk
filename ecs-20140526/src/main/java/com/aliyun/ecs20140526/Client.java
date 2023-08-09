@@ -2499,6 +2499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationSnapshotName", request.destinationSnapshotName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationStorageLocationArn)) {
+            query.put("DestinationStorageLocationArn", request.destinationStorageLocationArn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.encrypted)) {
             query.put("Encrypted", request.encrypted);
         }

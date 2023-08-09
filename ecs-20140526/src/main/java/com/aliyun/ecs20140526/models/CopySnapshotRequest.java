@@ -32,6 +32,9 @@ public class CopySnapshotRequest extends TeaModel {
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
 
+    @NameInMap("DestinationStorageLocationArn")
+    public String destinationStorageLocationArn;
+
     /**
      * <p>Specifies whether to encrypt the disk. Valid values:</p>
      * <br>
@@ -125,6 +128,14 @@ public class CopySnapshotRequest extends TeaModel {
     }
     public String getDestinationSnapshotName() {
         return this.destinationSnapshotName;
+    }
+
+    public CopySnapshotRequest setDestinationStorageLocationArn(String destinationStorageLocationArn) {
+        this.destinationStorageLocationArn = destinationStorageLocationArn;
+        return this;
+    }
+    public String getDestinationStorageLocationArn() {
+        return this.destinationStorageLocationArn;
     }
 
     public CopySnapshotRequest setEncrypted(Boolean encrypted) {
