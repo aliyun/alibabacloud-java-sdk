@@ -7,11 +7,14 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>Specifies whether to remove all tags from the instances. Valid values:</p>
      * <br>
-     * <p>*   **true**: Remove all tags from the instances.</p>
-     * <p>*   **false**: Do not remove all tags from the instances.</p>
+     * <p>*   **true**: removes all tags from the instances.</p>
+     * <p>*   **false**: does not remove all tags from the instances.</p>
      * <br>
-     * <p>> * Default value: **false**.</p>
-     * <p>> * If you specify the **TagKey** parameter together with this parameter, this parameter does not take effect.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   Default value: **false**.</p>
+     * <br>
+     * <p>*   If you specify the **TagKey** parameter together with this parameter, this parameter does not take effect.</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -29,13 +32,13 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instances you want to query belong.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The list of resource IDs.</p>
+     * <p>The resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;

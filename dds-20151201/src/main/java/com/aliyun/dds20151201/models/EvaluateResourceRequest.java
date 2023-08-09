@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EvaluateResourceRequest extends TeaModel {
     /**
-     * <p>The instance type.</p>
+     * <p>The stype of the instance.</p>
      * <br>
      * <p>> This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).</p>
      */
@@ -25,13 +25,13 @@ public class EvaluateResourceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The major engine version of the instance. Valid values:</p>
+     * <p>The version of the database engine. Valid values:</p>
      * <br>
-     * <p>*   **6.0**</p>
      * <p>*   **5.0**</p>
      * <p>*   **4.4**</p>
      * <p>*   **4.2**</p>
      * <p>*   **4.0**</p>
+     * <p>*   **3.4**</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -43,7 +43,7 @@ public class EvaluateResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of read-only nodes. Valid values: **1** to **5**.</p>
+     * <p>The number of read-only nodes in the instance. Valid values: **1** to **5**.</p>
      * <br>
      * <p>> This parameter is not required for standalone or serverless instances.</p>
      */
@@ -51,7 +51,7 @@ public class EvaluateResourceRequest extends TeaModel {
     public String readonlyReplicas;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,7 +59,7 @@ public class EvaluateResourceRequest extends TeaModel {
     /**
      * <p>The number of nodes in the instance.</p>
      * <br>
-     * <p>*   Valid values for standalone instances: **1**</p>
+     * <p>*   Set the value to **1** for standalone instances.</p>
      * <p>*   Valid values for replica set instances: **3**, **5**, and **7**</p>
      * <br>
      * <p>> This parameter is not required for serverless instances.</p>
@@ -77,7 +77,7 @@ public class EvaluateResourceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The node information. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.</p>
+     * <p>The node information about the sharded cluster instance. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.</p>
      * <br>
      * <p>To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:</p>
      * <br>
@@ -98,7 +98,7 @@ public class EvaluateResourceRequest extends TeaModel {
      * <p>*   Storage: the storage space of the node.</p>
      * <p>*   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).</p>
      * <br>
-     * <p>To check whether resources are sufficient for upgrading a node of a sharded cluster instance, specify only the information of the node to be upgraded. The value must be a JSON string. Example:</p>
+     * <p>To check whether resources are sufficient for upgrading a single node of a sharded cluster instance, specify only the information about the node to be upgraded. The value must be a JSON string. Example:</p>
      * <br>
      * <p>    {</p>
      * <p>         "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"</p>
@@ -113,15 +113,14 @@ public class EvaluateResourceRequest extends TeaModel {
     public String shardsInfo;
 
     /**
-     * <p>The storage capacity of the replica set instance. Unit: GB.</p>
-     * <br>
-     * <p>> This parameter is required for the instances that use cloud disks.</p>
+     * <p>副本集的存储空间，单位为GB。</p>
+     * <p>> 实例规格为云盘型时，该参数必填。</props></p>
      */
     @NameInMap("Storage")
     public String storage;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

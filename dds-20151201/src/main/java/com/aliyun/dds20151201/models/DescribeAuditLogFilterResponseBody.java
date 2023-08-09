@@ -4,29 +4,12 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditLogFilterResponseBody extends TeaModel {
-    /**
-     * <p>The type of the audit log entries. Valid values:</p>
-     * <br>
-     * <p>*   **admin**: O\&M and management operations</p>
-     * <p>*   **slow**: slow query logs</p>
-     * <p>*   **query**: query operations</p>
-     * <p>*   **insert**: insert operations</p>
-     * <p>*   **update**: update operations</p>
-     * <p>*   **delete**: delete operations</p>
-     * <p>*   **command**: protocol commands such as the aggregate method</p>
-     */
     @NameInMap("Filter")
     public String filter;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The role of the node.</p>
-     */
     @NameInMap("RoleType")
     public String roleType;
 

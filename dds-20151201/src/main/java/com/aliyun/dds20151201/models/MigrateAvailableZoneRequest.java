@@ -7,7 +7,7 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.</p>
+     * <p>> If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -38,7 +38,7 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     /**
      * <p>The ID of the vSwitch in the destination zone.</p>
      * <br>
-     * <p>>  If the instance is deployed in a VPC, you must specify this parameter.</p>
+     * <p>> If the instance is deployed in a VPC, you must specify this parameter.</p>
      */
     @NameInMap("Vswitch")
     public String vswitch;
@@ -46,8 +46,11 @@ public class MigrateAvailableZoneRequest extends TeaModel {
     /**
      * <p>The ID of the destination zone.</p>
      * <br>
-     * <p>> * The source zone and the destination zone belong to the same region.</p>
-     * <p>> * You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   The source zone and the destination zone belong to the same region.</p>
+     * <br>
+     * <p>*   You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

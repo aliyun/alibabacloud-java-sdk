@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance</p>
+     * <p>data.dbInstanceId</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,7 +17,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

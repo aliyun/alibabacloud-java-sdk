@@ -26,6 +26,10 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("NewConnectionString")
     public String newConnectionString;
 
+    /**
+     * <p>this parameter can be used. The new port should be within the range of 1000 to 65535.</p>
+     * <p>>When the DBInstanceId parameter is passed in as a cloud disk instance ID</p>
+     */
     @NameInMap("NewPort")
     public Integer newPort;
 

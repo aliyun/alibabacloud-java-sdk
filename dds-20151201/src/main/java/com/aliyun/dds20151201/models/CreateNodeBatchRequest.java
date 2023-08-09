@@ -4,79 +4,33 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateNodeBatchRequest extends TeaModel {
-    /**
-     * <p>The username of the account. The username must meet the following requirements:</p>
-     * <br>
-     * <p>* The username starts with a lowercase letter.</p>
-     * <p>* The username contains lowercase letters, digits, and underscores (\_).</p>
-     * <p>* The username is 4 to 16 characters in length.</p>
-     * <br>
-     * <p>> * Keywords cannot be used as account usernames.</p>
-     * <p>> * The permissions of this account are fixed at read-only.</p>
-     * <p>> * The username and password are required to be set only when you apply for an endpoint for the shard node for the first time.</p>
-     */
     @NameInMap("AccountName")
     public String accountName;
 
-    /**
-     * <p>The password of the account. The password must meet the following requirements:</p>
-     * <br>
-     * <p>*   The password contains at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters.</p>
-     * <p>*   These special characters include ! @ # $ % ^ & \* ( ) \_ + - =</p>
-     * <p>*   The password is 8 to 32 characters in length.</p>
-     * <br>
-     * <p>>  The account password of the shard node cannot be reset.</p>
-     */
     @NameInMap("AccountPassword")
     public String accountPassword;
 
-    /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
-     * <br>
-     * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > **Orders**. On the Orders page, find the order and complete the payment.</p>
-     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    /**
-     * <p>The business information.</p>
-     */
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The ID of the added mongos or shard node.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
-    /**
-     * <p>The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.</p>
-     */
     @NameInMap("CouponNo")
     public String couponNo;
 
-    /**
-     * <p>The ID of the instance for which you want to add nodes.</p>
-     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
-    /**
-     * <p>The source of the request. Valid values:</p>
-     * <br>
-     * <p>*   **OpenApi**: ApsaraDB for MongoDB API</p>
-     * <p>*   **mongo_buy**: ApsaraDB for MongoDB console</p>
-     */
     @NameInMap("FromApp")
     public String fromApp;
 
-    /**
-     * <p>The specifications of the mongos or shard node that you want to add. For more information, see [Instance types](~~57141~~).</p>
-     * <br>
-     * <p>>  Up to 32 mongos or shard nodes are supported for each sharded cluster instance.</p>
-     */
     @NameInMap("NodesInfo")
     public String nodesInfo;
 
@@ -95,12 +49,6 @@ public class CreateNodeBatchRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    /**
-     * <p>Specifies whether to apply for an endpoint for the shard node. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   **true**: applies for an endpoint for the shard node.</p>
-     * <p>*   **false**: does not apply for an endpoint for the shard node.</p>
-     */
     @NameInMap("ShardDirect")
     public Boolean shardDirect;
 

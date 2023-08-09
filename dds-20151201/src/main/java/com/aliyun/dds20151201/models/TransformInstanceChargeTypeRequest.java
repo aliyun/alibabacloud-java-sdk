@@ -10,18 +10,18 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>> The default value is **true**.</p>
+     * <p>> Default value: **true**.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal for the instance. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <br>
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>> The default value is **false**.</p>
+     * <p>> Default value: **false**.</p>
      */
     @NameInMap("AutoRenew")
     public String autoRenew;
@@ -60,7 +60,7 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration of the instance. Unit: months. Valid values: **1**\~ **9**, **12**, **24**, and **36**.</p>
+     * <p>The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.</p>
      */
     @NameInMap("Period")
     public Long period;

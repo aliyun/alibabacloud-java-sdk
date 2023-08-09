@@ -4,18 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEInfoResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The TDE status. Valid values:</p>
-     * <br>
-     * <p>*   **enabled**</p>
-     * <p>*   **disabled**</p>
-     */
     @NameInMap("TDEStatus")
     public String TDEStatus;
 

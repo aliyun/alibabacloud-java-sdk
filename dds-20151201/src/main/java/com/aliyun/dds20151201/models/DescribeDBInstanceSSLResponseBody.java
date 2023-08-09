@@ -11,13 +11,13 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String certCommonName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the SSL certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in Coordinated Universal Time (UTC).</p>
      */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;

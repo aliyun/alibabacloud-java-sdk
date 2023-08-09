@@ -14,13 +14,13 @@ public class EvaluateResourceResponseBody extends TeaModel {
     public String DBInstanceAvailable;
 
     /**
-     * <p>The database engine of the instance. The returned value is MongoDB.</p>
+     * <p>The database engine of the instance. Only MongoDB is returned.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The major engine version of the instance.</p>
+     * <p>The version of the database engine.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;

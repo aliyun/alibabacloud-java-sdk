@@ -29,7 +29,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
+     * <p>The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -50,7 +50,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.</p>
+     * <p>The ID of the zone. You can call the [DescribeRegions](~~61933~~) operation to query the available zones.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
