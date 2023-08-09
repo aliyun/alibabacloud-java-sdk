@@ -28,9 +28,6 @@ public class AddCdnDomainRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("GlobalResourcePlan")
-    public String globalResourcePlan;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -103,14 +100,6 @@ public class AddCdnDomainRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public AddCdnDomainRequest setGlobalResourcePlan(String globalResourcePlan) {
-        this.globalResourcePlan = globalResourcePlan;
-        return this;
-    }
-    public String getGlobalResourcePlan() {
-        return this.globalResourcePlan;
     }
 
     public AddCdnDomainRequest setOwnerAccount(String ownerAccount) {

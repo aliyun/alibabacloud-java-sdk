@@ -10,9 +10,6 @@ public class VerifyDomainOwnerRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("GlobalResourcePlan")
-    public String globalResourcePlan;
-
     /**
      * <p>The verification method. Valid values:</p>
      * <br>
@@ -33,14 +30,6 @@ public class VerifyDomainOwnerRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public VerifyDomainOwnerRequest setGlobalResourcePlan(String globalResourcePlan) {
-        this.globalResourcePlan = globalResourcePlan;
-        return this;
-    }
-    public String getGlobalResourcePlan() {
-        return this.globalResourcePlan;
     }
 
     public VerifyDomainOwnerRequest setVerifyType(String verifyType) {
