@@ -148,7 +148,11 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("node_port_range")
     public String nodePortRange;
 
+    @NameInMap("nodepools")
+    public java.util.List<Nodepool> nodepools;
+
     @NameInMap("num_of_nodes")
+    @Deprecated
     public Long numOfNodes;
 
     @NameInMap("os_type")
@@ -230,39 +234,51 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<String> vswitchIds;
 
     @NameInMap("worker_auto_renew")
+    @Deprecated
     public Boolean workerAutoRenew;
 
     @NameInMap("worker_auto_renew_period")
+    @Deprecated
     public Long workerAutoRenewPeriod;
 
     @NameInMap("worker_data_disks")
+    @Deprecated
     public java.util.List<CreateClusterRequestWorkerDataDisks> workerDataDisks;
 
     @NameInMap("worker_instance_charge_type")
+    @Deprecated
     public String workerInstanceChargeType;
 
     @NameInMap("worker_instance_types")
+    @Deprecated
     public java.util.List<String> workerInstanceTypes;
 
     @NameInMap("worker_period")
+    @Deprecated
     public Long workerPeriod;
 
     @NameInMap("worker_period_unit")
+    @Deprecated
     public String workerPeriodUnit;
 
     @NameInMap("worker_system_disk_category")
+    @Deprecated
     public String workerSystemDiskCategory;
 
     @NameInMap("worker_system_disk_performance_level")
+    @Deprecated
     public String workerSystemDiskPerformanceLevel;
 
     @NameInMap("worker_system_disk_size")
+    @Deprecated
     public Long workerSystemDiskSize;
 
     @NameInMap("worker_system_disk_snapshot_policy_id")
+    @Deprecated
     public String workerSystemDiskSnapshotPolicyId;
 
     @NameInMap("worker_vswitch_ids")
+    @Deprecated
     public java.util.List<String> workerVswitchIds;
 
     @NameInMap("zone_id")
@@ -655,6 +671,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getNodePortRange() {
         return this.nodePortRange;
+    }
+
+    public CreateClusterRequest setNodepools(java.util.List<Nodepool> nodepools) {
+        this.nodepools = nodepools;
+        return this;
+    }
+    public java.util.List<Nodepool> getNodepools() {
+        return this.nodepools;
     }
 
     public CreateClusterRequest setNumOfNodes(Long numOfNodes) {

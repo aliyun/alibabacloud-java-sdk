@@ -586,6 +586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("node_port_range", request.nodePortRange);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodepools)) {
+            body.put("nodepools", request.nodepools);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.numOfNodes)) {
             body.put("num_of_nodes", request.numOfNodes);
         }
