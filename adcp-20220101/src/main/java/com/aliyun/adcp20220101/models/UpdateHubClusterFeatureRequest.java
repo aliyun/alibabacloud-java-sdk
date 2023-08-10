@@ -4,6 +4,9 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateHubClusterFeatureRequest extends TeaModel {
+    @NameInMap("AccessControlList")
+    public java.util.List<String> accessControlList;
+
     /**
      * <p>The ID of the EIP.</p>
      */
@@ -13,11 +16,11 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
     @NameInMap("ArgoCDEnabled")
     public Boolean argoCDEnabled;
 
+    @NameInMap("ArgoCDHAEnabled")
+    public Boolean argoCDHAEnabled;
+
     @NameInMap("ArgoServerEnabled")
     public Boolean argoServerEnabled;
-
-    @NameInMap("ArmsEnabled")
-    public Boolean armsEnabled;
 
     /**
      * <p>Specifies whether to enable the audit logging feature. Valid values:</p>
@@ -51,6 +54,9 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
     @NameInMap("EnableMesh")
     public Boolean enableMesh;
 
+    @NameInMap("MonitorEnabled")
+    public Boolean monitorEnabled;
+
     /**
      * <p>The name of the cluster. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).</p>
      */
@@ -62,6 +68,9 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
      */
     @NameInMap("PriceLimit")
     public String priceLimit;
+
+    @NameInMap("PublicAccessEnabled")
+    public Boolean publicAccessEnabled;
 
     /**
      * <p>Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:</p>
@@ -83,6 +92,14 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateHubClusterFeatureRequest setAccessControlList(java.util.List<String> accessControlList) {
+        this.accessControlList = accessControlList;
+        return this;
+    }
+    public java.util.List<String> getAccessControlList() {
+        return this.accessControlList;
+    }
+
     public UpdateHubClusterFeatureRequest setApiServerEipId(String apiServerEipId) {
         this.apiServerEipId = apiServerEipId;
         return this;
@@ -99,20 +116,20 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
         return this.argoCDEnabled;
     }
 
+    public UpdateHubClusterFeatureRequest setArgoCDHAEnabled(Boolean argoCDHAEnabled) {
+        this.argoCDHAEnabled = argoCDHAEnabled;
+        return this;
+    }
+    public Boolean getArgoCDHAEnabled() {
+        return this.argoCDHAEnabled;
+    }
+
     public UpdateHubClusterFeatureRequest setArgoServerEnabled(Boolean argoServerEnabled) {
         this.argoServerEnabled = argoServerEnabled;
         return this;
     }
     public Boolean getArgoServerEnabled() {
         return this.argoServerEnabled;
-    }
-
-    public UpdateHubClusterFeatureRequest setArmsEnabled(Boolean armsEnabled) {
-        this.armsEnabled = armsEnabled;
-        return this;
-    }
-    public Boolean getArmsEnabled() {
-        return this.armsEnabled;
     }
 
     public UpdateHubClusterFeatureRequest setAuditLogEnabled(Boolean auditLogEnabled) {
@@ -147,6 +164,14 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
         return this.enableMesh;
     }
 
+    public UpdateHubClusterFeatureRequest setMonitorEnabled(Boolean monitorEnabled) {
+        this.monitorEnabled = monitorEnabled;
+        return this;
+    }
+    public Boolean getMonitorEnabled() {
+        return this.monitorEnabled;
+    }
+
     public UpdateHubClusterFeatureRequest setName(String name) {
         this.name = name;
         return this;
@@ -161,6 +186,14 @@ public class UpdateHubClusterFeatureRequest extends TeaModel {
     }
     public String getPriceLimit() {
         return this.priceLimit;
+    }
+
+    public UpdateHubClusterFeatureRequest setPublicAccessEnabled(Boolean publicAccessEnabled) {
+        this.publicAccessEnabled = publicAccessEnabled;
+        return this;
+    }
+    public Boolean getPublicAccessEnabled() {
+        return this.publicAccessEnabled;
     }
 
     public UpdateHubClusterFeatureRequest setPublicApiServerEnabled(Boolean publicApiServerEnabled) {

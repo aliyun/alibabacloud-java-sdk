@@ -4,6 +4,9 @@ package com.aliyun.adcp20220101.models;
 import com.aliyun.tea.*;
 
 public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
+    @NameInMap("AccessControlList")
+    public String accessControlListShrink;
+
     /**
      * <p>The ID of the EIP.</p>
      */
@@ -13,11 +16,11 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
     @NameInMap("ArgoCDEnabled")
     public Boolean argoCDEnabled;
 
+    @NameInMap("ArgoCDHAEnabled")
+    public Boolean argoCDHAEnabled;
+
     @NameInMap("ArgoServerEnabled")
     public Boolean argoServerEnabled;
-
-    @NameInMap("ArmsEnabled")
-    public Boolean armsEnabled;
 
     /**
      * <p>Specifies whether to enable the audit logging feature. Valid values:</p>
@@ -51,6 +54,9 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
     @NameInMap("EnableMesh")
     public Boolean enableMesh;
 
+    @NameInMap("MonitorEnabled")
+    public Boolean monitorEnabled;
+
     /**
      * <p>The name of the cluster. The name must be 1 to 63 characters in length. It must start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).</p>
      */
@@ -62,6 +68,9 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
      */
     @NameInMap("PriceLimit")
     public String priceLimit;
+
+    @NameInMap("PublicAccessEnabled")
+    public Boolean publicAccessEnabled;
 
     /**
      * <p>Specifies whether to associate an elastic IP address (EIP) with the API server. Valid values:</p>
@@ -83,6 +92,14 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateHubClusterFeatureShrinkRequest setAccessControlListShrink(String accessControlListShrink) {
+        this.accessControlListShrink = accessControlListShrink;
+        return this;
+    }
+    public String getAccessControlListShrink() {
+        return this.accessControlListShrink;
+    }
+
     public UpdateHubClusterFeatureShrinkRequest setApiServerEipId(String apiServerEipId) {
         this.apiServerEipId = apiServerEipId;
         return this;
@@ -99,20 +116,20 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
         return this.argoCDEnabled;
     }
 
+    public UpdateHubClusterFeatureShrinkRequest setArgoCDHAEnabled(Boolean argoCDHAEnabled) {
+        this.argoCDHAEnabled = argoCDHAEnabled;
+        return this;
+    }
+    public Boolean getArgoCDHAEnabled() {
+        return this.argoCDHAEnabled;
+    }
+
     public UpdateHubClusterFeatureShrinkRequest setArgoServerEnabled(Boolean argoServerEnabled) {
         this.argoServerEnabled = argoServerEnabled;
         return this;
     }
     public Boolean getArgoServerEnabled() {
         return this.argoServerEnabled;
-    }
-
-    public UpdateHubClusterFeatureShrinkRequest setArmsEnabled(Boolean armsEnabled) {
-        this.armsEnabled = armsEnabled;
-        return this;
-    }
-    public Boolean getArmsEnabled() {
-        return this.armsEnabled;
     }
 
     public UpdateHubClusterFeatureShrinkRequest setAuditLogEnabled(Boolean auditLogEnabled) {
@@ -147,6 +164,14 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
         return this.enableMesh;
     }
 
+    public UpdateHubClusterFeatureShrinkRequest setMonitorEnabled(Boolean monitorEnabled) {
+        this.monitorEnabled = monitorEnabled;
+        return this;
+    }
+    public Boolean getMonitorEnabled() {
+        return this.monitorEnabled;
+    }
+
     public UpdateHubClusterFeatureShrinkRequest setName(String name) {
         this.name = name;
         return this;
@@ -161,6 +186,14 @@ public class UpdateHubClusterFeatureShrinkRequest extends TeaModel {
     }
     public String getPriceLimit() {
         return this.priceLimit;
+    }
+
+    public UpdateHubClusterFeatureShrinkRequest setPublicAccessEnabled(Boolean publicAccessEnabled) {
+        this.publicAccessEnabled = publicAccessEnabled;
+        return this;
+    }
+    public Boolean getPublicAccessEnabled() {
+        return this.publicAccessEnabled;
     }
 
     public UpdateHubClusterFeatureShrinkRequest setPublicApiServerEnabled(Boolean publicApiServerEnabled) {
