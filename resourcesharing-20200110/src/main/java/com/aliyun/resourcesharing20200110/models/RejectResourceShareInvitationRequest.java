@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class RejectResourceShareInvitationRequest extends TeaModel {
     /**
-     * <p>The ID of the invitation.</p>
+     * <p>The ID of the resource sharing invitation.</p>
+     * <br>
+     * <p>You can call the [ListResourceShareInvitations](~~450564~~) operation to obtain the ID of a resource sharing invitation.</p>
      */
     @NameInMap("ResourceShareInvitationId")
     public String resourceShareInvitationId;

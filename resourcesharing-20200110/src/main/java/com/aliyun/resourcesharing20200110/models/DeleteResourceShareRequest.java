@@ -4,6 +4,9 @@ package com.aliyun.resourcesharing20200110.models;
 import com.aliyun.tea.*;
 
 public class DeleteResourceShareRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource share.</p>
+     */
     @NameInMap("ResourceShareId")
     public String resourceShareId;
 

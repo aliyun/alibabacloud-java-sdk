@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListPermissionVersionsRequest extends TeaModel {
     /**
-     * <p>The information about the permission.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 20.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The name of the permission.</p>
+     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the permission.</p>
      */
     @NameInMap("PermissionName")
     public String permissionName;

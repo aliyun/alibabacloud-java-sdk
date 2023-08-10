@@ -5,19 +5,13 @@ import com.aliyun.tea.*;
 
 public class AssociateResourceShareResponseBody extends TeaModel {
     /**
-     * <p>The time when the association of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:</p>
-     * <br>
-     * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the association of the shared resource was updated.</p>
-     * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the association of the principal was updated.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
-     * <br>
-     * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the ID of the shared resource.</p>
-     * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the ID of the principal.</p>
+     * <p>The information of the entities that are associated with the resource share.</p>
      */
     @NameInMap("ResourceShareAssociations")
     public java.util.List<AssociateResourceShareResponseBodyResourceShareAssociations> resourceShareAssociations;
@@ -44,9 +38,6 @@ public class AssociateResourceShareResponseBody extends TeaModel {
     }
 
     public static class AssociateResourceShareResponseBodyResourceShareAssociations extends TeaModel {
-        @NameInMap("AssociationStatus")
-        public String associationStatus;
-
         /**
          * <p>The association status. Valid values:</p>
          * <br>
@@ -58,32 +49,14 @@ public class AssociateResourceShareResponseBody extends TeaModel {
          * <br>
          * <p>>  The system deletes the records of entities in the `Failed` or `Disassociated` state within 48 hours to 96 hours.</p>
          */
-        @NameInMap("AssociationStatusMessage")
-        public String associationStatusMessage;
-
-        @NameInMap("AssociationType")
-        public String associationType;
-
-        /**
-         * <p>The ID of the resource share.</p>
-         */
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        /**
-         * <p>The time when the association of the entity was created. The value of this parameter depends on the value of the AssociationType parameter:</p>
-         * <br>
-         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the shared resource was associated with the resource share.</p>
-         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the principal was associated with the resource share.</p>
-         */
-        @NameInMap("EntityId")
-        public String entityId;
+        @NameInMap("AssociationStatus")
+        public String associationStatus;
 
         /**
          * <p>The cause of the association failure.</p>
          */
-        @NameInMap("EntityType")
-        public String entityType;
+        @NameInMap("AssociationStatusMessage")
+        public String associationStatusMessage;
 
         /**
          * <p>The association type. Valid values:</p>
@@ -91,8 +64,26 @@ public class AssociateResourceShareResponseBody extends TeaModel {
          * <p>*   Resource</p>
          * <p>*   Target</p>
          */
-        @NameInMap("ResourceShareId")
-        public String resourceShareId;
+        @NameInMap("AssociationType")
+        public String associationType;
+
+        /**
+         * <p>The time when the association of the entity was created. The value of this parameter depends on the value of the AssociationType parameter:</p>
+         * <br>
+         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the shared resource was associated with the resource share.</p>
+         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the principal was associated with the resource share.</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
+         * <br>
+         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the ID of the shared resource.</p>
+         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the ID of the principal.</p>
+         */
+        @NameInMap("EntityId")
+        public String entityId;
 
         /**
          * <p>The type of the entity. The value of this parameter depends on the value of the AssociationType parameter:</p>
@@ -100,11 +91,26 @@ public class AssociateResourceShareResponseBody extends TeaModel {
          * <p>*   If the value of AssociationType is Resource, the value of this parameter is the type of the shared resource. For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
          * <p>*   If the value of AssociationType is Target, the value of this parameter is `Account`.</p>
          */
+        @NameInMap("EntityType")
+        public String entityType;
+
+        /**
+         * <p>The ID of the resource share.</p>
+         */
+        @NameInMap("ResourceShareId")
+        public String resourceShareId;
+
+        /**
+         * <p>The name of the resource share.</p>
+         */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
 
         /**
-         * <p>The name of the resource share.</p>
+         * <p>The time when the association of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:</p>
+         * <br>
+         * <p>*   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the association of the shared resource was updated.</p>
+         * <p>*   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the association of the principal was updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

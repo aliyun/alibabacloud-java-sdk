@@ -5,22 +5,42 @@ import com.aliyun.tea.*;
 
 public class ListResourceSharesRequest extends TeaModel {
     /**
-     * <p>The ID of a resource share.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 20.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The name of the permission. For more information, see [Permission library](~~465474~~).</p>
+     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the permission. For more information, see [Permission library](~~465474~~).</p>
      */
     @NameInMap("PermissionName")
     public String permissionName;
+
+    /**
+     * <p>The owner of the resource shares. Valid values:</p>
+     * <br>
+     * <p>*   Self: the current account</p>
+     * <p>*   OtherAccounts: an account other than the current account</p>
+     */
+    @NameInMap("ResourceOwner")
+    public String resourceOwner;
+
+    @NameInMap("ResourceShareIds")
+    public java.util.List<String> resourceShareIds;
+
+    /**
+     * <p>The name of the resource share.</p>
+     */
+    @NameInMap("ResourceShareName")
+    public String resourceShareName;
 
     /**
      * <p>The status of the resource share. Valid values:</p>
@@ -31,23 +51,6 @@ public class ListResourceSharesRequest extends TeaModel {
      * <p>*   Deleted: The resource share is deleted.</p>
      * <br>
      * <p>>  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
-     */
-    @NameInMap("ResourceOwner")
-    public String resourceOwner;
-
-    @NameInMap("ResourceShareIds")
-    public java.util.List<String> resourceShareIds;
-
-    /**
-     * <p>The maximum number of entries to return for a single request.</p>
-     * <br>
-     * <p>Valid values: 1 to 100. Default value: 20.</p>
-     */
-    @NameInMap("ResourceShareName")
-    public String resourceShareName;
-
-    /**
-     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
      */
     @NameInMap("ResourceShareStatus")
     public String resourceShareStatus;
