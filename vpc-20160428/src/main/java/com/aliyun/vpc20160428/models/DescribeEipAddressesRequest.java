@@ -185,6 +185,9 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeEipAddressesRequestTag> tag;
+
     public static DescribeEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesRequest self = new DescribeEipAddressesRequest();
         return TeaModel.build(map, self);
@@ -374,6 +377,14 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.status;
     }
 
+    public DescribeEipAddressesRequest setTag(java.util.List<DescribeEipAddressesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeEipAddressesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class DescribeEipAddressesRequestFilter extends TeaModel {
         /**
          * <p>The filter key used to query resources. Set the value to **CreationStartTime**, which indicates the time when the system started to create the resource.</p>
@@ -401,6 +412,36 @@ public class DescribeEipAddressesRequest extends TeaModel {
         }
 
         public DescribeEipAddressesRequestFilter setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeEipAddressesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeEipAddressesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEipAddressesRequestTag self = new DescribeEipAddressesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEipAddressesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeEipAddressesRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

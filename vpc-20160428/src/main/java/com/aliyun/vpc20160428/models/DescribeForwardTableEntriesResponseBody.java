@@ -138,6 +138,9 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        @NameInMap("NatGatewayId")
+        public String natGatewayId;
+
         /**
          * <p>The status of the DNAT entry. Valid values:</p>
          * <br>
@@ -215,6 +218,14 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
         public String getIpProtocol() {
             return this.ipProtocol;
+        }
+
+        public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setNatGatewayId(String natGatewayId) {
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+        public String getNatGatewayId() {
+            return this.natGatewayId;
         }
 
         public DescribeForwardTableEntriesResponseBodyForwardTableEntriesForwardTableEntry setStatus(String status) {
