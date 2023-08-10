@@ -7,14 +7,23 @@ public class ChannelProperties extends TeaModel {
     @NameInMap("channelActivity")
     public String channelActivity;
 
+    @NameInMap("channelFcm")
+    public String channelFcm;
+
+    @NameInMap("huaweiChannelCategory")
+    public String huaweiChannelCategory;
+
+    @NameInMap("huaweiChannelImportance")
+    public String huaweiChannelImportance;
+
     @NameInMap("mainActivity")
     public String mainActivity;
 
     @NameInMap("oppoChannelId")
     public String oppoChannelId;
 
-    @NameInMap("vivoClassification")
-    public String vivoClassification;
+    @NameInMap("vivoCategory")
+    public String vivoCategory;
 
     @NameInMap("xiaomiChannelId")
     public String xiaomiChannelId;
@@ -30,6 +39,30 @@ public class ChannelProperties extends TeaModel {
     }
     public String getChannelActivity() {
         return this.channelActivity;
+    }
+
+    public ChannelProperties setChannelFcm(String channelFcm) {
+        this.channelFcm = channelFcm;
+        return this;
+    }
+    public String getChannelFcm() {
+        return this.channelFcm;
+    }
+
+    public ChannelProperties setHuaweiChannelCategory(String huaweiChannelCategory) {
+        this.huaweiChannelCategory = huaweiChannelCategory;
+        return this;
+    }
+    public String getHuaweiChannelCategory() {
+        return this.huaweiChannelCategory;
+    }
+
+    public ChannelProperties setHuaweiChannelImportance(String huaweiChannelImportance) {
+        this.huaweiChannelImportance = huaweiChannelImportance;
+        return this;
+    }
+    public String getHuaweiChannelImportance() {
+        return this.huaweiChannelImportance;
     }
 
     public ChannelProperties setMainActivity(String mainActivity) {
@@ -48,12 +81,12 @@ public class ChannelProperties extends TeaModel {
         return this.oppoChannelId;
     }
 
-    public ChannelProperties setVivoClassification(String vivoClassification) {
-        this.vivoClassification = vivoClassification;
+    public ChannelProperties setVivoCategory(String vivoCategory) {
+        this.vivoCategory = vivoCategory;
         return this;
     }
-    public String getVivoClassification() {
-        return this.vivoClassification;
+    public String getVivoCategory() {
+        return this.vivoCategory;
     }
 
     public ChannelProperties setXiaomiChannelId(String xiaomiChannelId) {
