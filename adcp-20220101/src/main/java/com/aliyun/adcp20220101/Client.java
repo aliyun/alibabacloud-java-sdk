@@ -809,11 +809,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateHubClusterFeatureShrinkRequest request = new UpdateHubClusterFeatureShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.accessControlList)) {
+            request.accessControlListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accessControlList, "AccessControlList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.vSwitches)) {
             request.vSwitchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitches, "VSwitches", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessControlListShrink)) {
+            query.put("AccessControlList", request.accessControlListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.apiServerEipId)) {
             query.put("ApiServerEipId", request.apiServerEipId);
         }
@@ -822,12 +830,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ArgoCDEnabled", request.argoCDEnabled);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.argoServerEnabled)) {
-            query.put("ArgoServerEnabled", request.argoServerEnabled);
+        if (!com.aliyun.teautil.Common.isUnset(request.argoCDHAEnabled)) {
+            query.put("ArgoCDHAEnabled", request.argoCDHAEnabled);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.armsEnabled)) {
-            query.put("ArmsEnabled", request.armsEnabled);
+        if (!com.aliyun.teautil.Common.isUnset(request.argoServerEnabled)) {
+            query.put("ArgoServerEnabled", request.argoServerEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.auditLogEnabled)) {
@@ -846,12 +854,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableMesh", request.enableMesh);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.monitorEnabled)) {
+            query.put("MonitorEnabled", request.monitorEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.priceLimit)) {
             query.put("PriceLimit", request.priceLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publicAccessEnabled)) {
+            query.put("PublicAccessEnabled", request.publicAccessEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.publicApiServerEnabled)) {
