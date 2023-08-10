@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAppGroupResponseBody extends TeaModel {
     /**
-     * <p>The timestamp when the application was created.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
     /**
-     * <p>The ID of the created rough sort expression.</p>
+     * <p>N/A</p>
      */
     @NameInMap("result")
     public CreateAppGroupResponseBodyResult result;
@@ -38,14 +38,28 @@ public class CreateAppGroupResponseBody extends TeaModel {
     }
 
     public static class CreateAppGroupResponseBodyResultQuota extends TeaModel {
+        /**
+         * <p>The computing resources. Unit: logical computing units (LCUs).</p>
+         */
         @NameInMap("computeResource")
         public Integer computeResource;
 
+        /**
+         * <p>The storage capacity. Unit: GB.</p>
+         */
         @NameInMap("docSize")
         public Integer docSize;
 
         /**
-         * <p>The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.</p>
+         * <p>The specifications of the application. Valid values:</p>
+         * <br>
+         * <p>*   opensearch.share.junior: basic</p>
+         * <p>*   opensearch.share.common: shared general-purpose</p>
+         * <p>*   opensearch.share.compute: shared computing</p>
+         * <p>*   opensearch.share.storage: shared storage</p>
+         * <p>*   opensearch.private.common: exclusive general-purpose</p>
+         * <p>*   opensearch.private.compute: exclusive computing</p>
+         * <p>*   opensearch.private.storage: exclusive storage</p>
          */
         @NameInMap("spec")
         public String spec;
@@ -83,35 +97,37 @@ public class CreateAppGroupResponseBody extends TeaModel {
 
     public static class CreateAppGroupResponseBodyResult extends TeaModel {
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The billing method of the application. Valid values:</p>
+         * <br>
+         * <p>*   POSTPAY: pay-as-you-go</p>
+         * <p>*   PREPAY: subscription</p>
          */
         @NameInMap("chargeType")
         public String chargeType;
 
         /**
-         * <p>The ID of the created fine sort expression.</p>
+         * <p>The billing model. Valid values:</p>
+         * <br>
+         * <p>*   1: computing resources</p>
+         * <p>*   2: queries per second (QPS)</p>
          */
         @NameInMap("chargingWay")
         public Integer chargingWay;
 
         /**
-         * <p>The type of the application. Valid values:</p>
-         * <br>
-         * <p>*   standard: a standard application.</p>
-         * <p>*   advance: an advanced application which is of an old application type. New applications cannot be of this type.</p>
-         * <p>*   enhanced: an advanced application which is of a new application type.</p>
+         * <p>The code of the commodity.</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
 
         /**
-         * <p>The ID of the current online version.</p>
+         * <p>The timestamp when the application was created.</p>
          */
         @NameInMap("created")
         public Integer created;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The ID of the current online version.</p>
          */
         @NameInMap("currentVersion")
         public String currentVersion;
@@ -126,46 +142,16 @@ public class CreateAppGroupResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The ID of the fine sort expression that is being created.</p>
+         * <p>The expiration time.</p>
          */
         @NameInMap("expireOn")
         public String expireOn;
 
         /**
-         * <p>The timestamp when the current online version was published.</p>
+         * <p>The ID of the created rough sort expression.</p>
          */
         @NameInMap("firstRankAlgoDeploymentId")
         public Integer firstRankAlgoDeploymentId;
-
-        /**
-         * <p>The ID of the application.</p>
-         */
-        @NameInMap("hasPendingQuotaReviewTask")
-        public Integer hasPendingQuotaReviewTask;
-
-        /**
-         * <p>The billing method of the application. Valid values:</p>
-         * <br>
-         * <p>*   POSTPAY: pay-as-you-go</p>
-         * <p>*   PREPAY: subscription</p>
-         */
-        @NameInMap("id")
-        public String id;
-
-        /**
-         * <p>The billing model. Valid values:</p>
-         * <br>
-         * <p>*   1: computing resources</p>
-         * <p>*   2: queries per second (QPS)</p>
-         */
-        @NameInMap("instanceId")
-        public String instanceId;
-
-        /**
-         * <p>The code of the commodity.</p>
-         */
-        @NameInMap("lockMode")
-        public String lockMode;
 
         /**
          * <p>The approval status of the quotas. Valid values:</p>
@@ -173,8 +159,20 @@ public class CreateAppGroupResponseBody extends TeaModel {
          * <p>*   0: The quotas are approved.</p>
          * <p>*   1: The quotas are being approved.</p>
          */
-        @NameInMap("lockedByExpiration")
-        public Integer lockedByExpiration;
+        @NameInMap("hasPendingQuotaReviewTask")
+        public Integer hasPendingQuotaReviewTask;
+
+        /**
+         * <p>The ID of the application.</p>
+         */
+        @NameInMap("id")
+        public String id;
+
+        /**
+         * <p>The ID of the instance.</p>
+         */
+        @NameInMap("instanceId")
+        public String instanceId;
 
         /**
          * <p>The lock mode of the instance. Valid values:</p>
@@ -183,8 +181,59 @@ public class CreateAppGroupResponseBody extends TeaModel {
          * <p>*   LockByExpiration: The instance is automatically locked after it expires.</p>
          * <p>*   ManualLock: The instance is manually locked.</p>
          */
+        @NameInMap("lockMode")
+        public String lockMode;
+
+        /**
+         * <p>Indicates whether the instance is automatically locked after it expires.</p>
+         */
+        @NameInMap("lockedByExpiration")
+        public Integer lockedByExpiration;
+
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("name")
         public String name;
+
+        /**
+         * <p>The ID of the fine sort expression that is being created.</p>
+         */
+        @NameInMap("pendingSecondRankAlgoDeploymentId")
+        public Integer pendingSecondRankAlgoDeploymentId;
+
+        /**
+         * <p>The ID of the order that is not complete for the instance. For example, an order is one that is initiated to create the instance or change the quotas or billing method.</p>
+         */
+        @NameInMap("processingOrderId")
+        public String processingOrderId;
+
+        /**
+         * <p>Indicates whether the order is complete. Valid values:</p>
+         * <br>
+         * <p>*   0: The order is in progress.</p>
+         * <p>*   1: The order is complete.</p>
+         */
+        @NameInMap("produced")
+        public Integer produced;
+
+        /**
+         * <p>The name of the A/B test group.</p>
+         */
+        @NameInMap("projectId")
+        public String projectId;
+
+        /**
+         * <p>The information about the quotas of the application.</p>
+         */
+        @NameInMap("quota")
+        public CreateAppGroupResponseBodyResultQuota quota;
+
+        /**
+         * <p>The ID of the created fine sort expression.</p>
+         */
+        @NameInMap("secondRankAlgoDeploymentId")
+        public Integer secondRankAlgoDeploymentId;
 
         /**
          * <p>The status of the application. Valid values:</p>
@@ -195,70 +244,27 @@ public class CreateAppGroupResponseBody extends TeaModel {
          * <p>*   normal</p>
          * <p>*   frozen</p>
          */
-        @NameInMap("pendingSecondRankAlgoDeploymentId")
-        public Integer pendingSecondRankAlgoDeploymentId;
-
-        /**
-         * <p>The ID of the request.</p>
-         */
-        @NameInMap("processingOrderId")
-        public String processingOrderId;
-
-        /**
-         * <p>The computing resources. Unit: logical computing units (LCUs).</p>
-         */
-        @NameInMap("produced")
-        public Integer produced;
-
-        /**
-         * <p>N/A</p>
-         */
-        @NameInMap("projectId")
-        public String projectId;
-
-        /**
-         * <p>Indicates whether the order is complete. Valid values:</p>
-         * <br>
-         * <p>*   0: The order is in progress.</p>
-         * <p>*   1: The order is complete.</p>
-         */
-        @NameInMap("quota")
-        public CreateAppGroupResponseBodyResultQuota quota;
-
-        /**
-         * <p>The name of the application.</p>
-         */
-        @NameInMap("secondRankAlgoDeploymentId")
-        public Integer secondRankAlgoDeploymentId;
-
-        /**
-         * <p>The specifications of the application. Valid values:</p>
-         * <br>
-         * <p>*   opensearch.share.junior: basic</p>
-         * <p>*   opensearch.share.common: shared general-purpose</p>
-         * <p>*   opensearch.share.compute: shared computing</p>
-         * <p>*   opensearch.share.storage: shared storage</p>
-         * <p>*   opensearch.private.common: exclusive general-purpose</p>
-         * <p>*   opensearch.private.compute: exclusive computing</p>
-         * <p>*   opensearch.private.storage: exclusive storage</p>
-         */
         @NameInMap("status")
         public String status;
 
         /**
-         * <p>The timestamp when the application was last updated.</p>
+         * <p>The timestamp when the current online version was published.</p>
          */
         @NameInMap("switchedTime")
         public Integer switchedTime;
 
         /**
-         * <p>The information about the quotas of the application.</p>
+         * <p>The type of the application. Valid values:</p>
+         * <br>
+         * <p>*   standard: a standard application.</p>
+         * <p>*   advance: an advanced application which is of an old application type. New applications cannot be of this type.</p>
+         * <p>*   enhanced: an advanced application which is of a new application type.</p>
          */
         @NameInMap("type")
         public String type;
 
         /**
-         * <p>Indicates whether the instance is automatically locked after it expires.</p>
+         * <p>The timestamp when the application was last updated.</p>
          */
         @NameInMap("updated")
         public Integer updated;

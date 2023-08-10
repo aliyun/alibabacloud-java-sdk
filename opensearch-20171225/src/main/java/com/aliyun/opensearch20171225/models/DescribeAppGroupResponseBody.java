@@ -259,6 +259,9 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         @NameInMap("quota")
         public DescribeAppGroupResponseBodyResultQuota quota;
 
+        @NameInMap("resourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The ID of the created fine sort expression.</p>
          */
@@ -465,6 +468,14 @@ public class DescribeAppGroupResponseBody extends TeaModel {
         }
         public DescribeAppGroupResponseBodyResultQuota getQuota() {
             return this.quota;
+        }
+
+        public DescribeAppGroupResponseBodyResult setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeAppGroupResponseBodyResult setSecondRankAlgoDeploymentId(Integer secondRankAlgoDeploymentId) {

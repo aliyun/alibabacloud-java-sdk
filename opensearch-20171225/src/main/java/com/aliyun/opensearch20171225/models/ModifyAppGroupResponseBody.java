@@ -140,6 +140,13 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The type of the industry. Valid values:</p>
+         * <br>
+         * <p>*   GENERAL</p>
+         * <p>*   ECOMMERCE</p>
+         * <p>*   IT_CONTENT</p>
+         */
         @NameInMap("domain")
         public String domain;
 
@@ -186,6 +193,9 @@ public class ModifyAppGroupResponseBody extends TeaModel {
         @NameInMap("lockMode")
         public String lockMode;
 
+        /**
+         * <p>Indicates whether the instance is automatically locked after it expires.</p>
+         */
         @NameInMap("lockedByExpiration")
         public Integer lockedByExpiration;
 

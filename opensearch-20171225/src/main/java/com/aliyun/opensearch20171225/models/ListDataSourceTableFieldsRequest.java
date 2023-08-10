@@ -10,6 +10,9 @@ public class ListDataSourceTableFieldsRequest extends TeaModel {
     @NameInMap("params")
     public String params;
 
+    /**
+     * <p>Whether to return the original field type of the data source</p>
+     */
     @NameInMap("rawType")
     public Boolean rawType;
 
