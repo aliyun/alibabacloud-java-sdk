@@ -1610,6 +1610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MergeVideoFaceResponse mergeVideoFaceWithOptions(MergeVideoFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addWatermark)) {
+            body.put("AddWatermark", request.addWatermark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.referenceURL)) {
             body.put("ReferenceURL", request.referenceURL);
         }
@@ -1743,6 +1747,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MergeVideoModelFaceResponse mergeVideoModelFaceWithOptions(MergeVideoModelFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addWatermark)) {
+            body.put("AddWatermark", request.addWatermark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.faceImageURL)) {
             body.put("FaceImageURL", request.faceImageURL);
         }

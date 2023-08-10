@@ -4,6 +4,9 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class MergeVideoModelFaceRequest extends TeaModel {
+    @NameInMap("AddWatermark")
+    public Boolean addWatermark;
+
     @NameInMap("FaceImageURL")
     public String faceImageURL;
 
@@ -16,6 +19,14 @@ public class MergeVideoModelFaceRequest extends TeaModel {
     public static MergeVideoModelFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoModelFaceRequest self = new MergeVideoModelFaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public MergeVideoModelFaceRequest setAddWatermark(Boolean addWatermark) {
+        this.addWatermark = addWatermark;
+        return this;
+    }
+    public Boolean getAddWatermark() {
+        return this.addWatermark;
     }
 
     public MergeVideoModelFaceRequest setFaceImageURL(String faceImageURL) {
