@@ -1,3 +1,6 @@
+2023-08-10 Version: 2.2.0
+- Generated java 2020-02-02 for polardbx.
+
 2023-05-11 Version: 2.1.5
 - Support 3azone instance creation.
 - Updated DescribeLogicDBInstanceTopology return value to support 3 azone topology.

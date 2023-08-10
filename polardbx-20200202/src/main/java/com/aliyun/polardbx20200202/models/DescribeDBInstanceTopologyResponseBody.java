@@ -31,6 +31,102 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems extends TeaModel {
+        @NameInMap("Activated")
+        public Boolean activated;
+
+        @NameInMap("Azone")
+        public String azone;
+
+        @NameInMap("CharacterType")
+        public String characterType;
+
+        @NameInMap("DBInstanceId")
+        public String DBInstanceId;
+
+        @NameInMap("DBInstanceName")
+        public String DBInstanceName;
+
+        @NameInMap("PhyInstanceName")
+        public String phyInstanceName;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Role")
+        public String role;
+
+        public static DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems self = new DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setActivated(Boolean activated) {
+            this.activated = activated;
+            return this;
+        }
+        public Boolean getActivated() {
+            return this.activated;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setAzone(String azone) {
+            this.azone = azone;
+            return this;
+        }
+        public String getAzone() {
+            return this.azone;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setCharacterType(String characterType) {
+            this.characterType = characterType;
+            return this;
+        }
+        public String getCharacterType() {
+            return this.characterType;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setDBInstanceName(String DBInstanceName) {
+            this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+        public String getDBInstanceName() {
+            return this.DBInstanceName;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setPhyInstanceName(String phyInstanceName) {
+            this.phyInstanceName = phyInstanceName;
+            return this;
+        }
+        public String getPhyInstanceName() {
+            return this.phyInstanceName;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+    }
+
     public static class DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItemsAzoneRoleList extends TeaModel {
         @NameInMap("Azone")
         public String azone;
@@ -168,6 +264,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
         @NameInMap("NodeClass")
         public String nodeClass;
+
+        @NameInMap("PhyInstanceName")
+        public String phyInstanceName;
 
         @NameInMap("Region")
         public String region;
@@ -362,6 +461,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             return this.nodeClass;
         }
 
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setPhyInstanceName(String phyInstanceName) {
+            this.phyInstanceName = phyInstanceName;
+            return this;
+        }
+        public String getPhyInstanceName() {
+            return this.phyInstanceName;
+        }
+
         public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems setRegion(String region) {
             this.region = region;
             return this;
@@ -426,6 +533,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
         @NameInMap("EngineVersion")
         public String engineVersion;
+
+        @NameInMap("HistoryItems")
+        public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems> historyItems;
 
         @NameInMap("Items")
         public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> items;
@@ -525,6 +635,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopology setHistoryItems(java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems> historyItems) {
+            this.historyItems = historyItems;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyHistoryItems> getHistoryItems() {
+            return this.historyItems;
         }
 
         public DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopology setItems(java.util.List<DescribeDBInstanceTopologyResponseBodyDataLogicInstanceTopologyItems> items) {

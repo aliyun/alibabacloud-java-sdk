@@ -7,6 +7,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MustHasCdc")
+    public Boolean mustHasCdc;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -36,6 +39,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeDBInstancesRequest setMustHasCdc(Boolean mustHasCdc) {
+        this.mustHasCdc = mustHasCdc;
+        return this;
+    }
+    public Boolean getMustHasCdc() {
+        return this.mustHasCdc;
     }
 
     public DescribeDBInstancesRequest setPageNumber(Integer pageNumber) {
