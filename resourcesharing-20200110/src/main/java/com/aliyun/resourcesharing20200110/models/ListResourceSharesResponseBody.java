@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListResourceSharesResponseBody extends TeaModel {
     /**
-     * <p>The information of the resource shares.</p>
+     * <p>The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The time when the resource share was updated.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the resource share.</p>
+     * <p>The information of the resource shares.</p>
      */
     @NameInMap("ResourceShares")
     public java.util.List<ListResourceSharesResponseBodyResourceShares> resourceShares;
@@ -52,8 +52,38 @@ public class ListResourceSharesResponseBody extends TeaModel {
     }
 
     public static class ListResourceSharesResponseBodyResourceShares extends TeaModel {
+        /**
+         * <p>Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
+         * <br>
+         * <p>*   false: Resources in the resource share can be shared only with accounts in the resource directory.</p>
+         * <p>*   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</p>
+         */
         @NameInMap("AllowExternalTargets")
         public Boolean allowExternalTargets;
+
+        /**
+         * <p>The time when the resource share was created.</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>The ID of the resource share.</p>
+         */
+        @NameInMap("ResourceShareId")
+        public String resourceShareId;
+
+        /**
+         * <p>The name of the resource share.</p>
+         */
+        @NameInMap("ResourceShareName")
+        public String resourceShareName;
+
+        /**
+         * <p>The owner of the resource share.</p>
+         */
+        @NameInMap("ResourceShareOwner")
+        public String resourceShareOwner;
 
         /**
          * <p>The status of the resource share. Valid values:</p>
@@ -65,35 +95,11 @@ public class ListResourceSharesResponseBody extends TeaModel {
          * <br>
          * <p>>  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.</p>
          */
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        /**
-         * <p>Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
-         * <br>
-         * <p>*   false: Resources in the resource share can be shared only with accounts in the resource directory.</p>
-         * <p>*   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</p>
-         */
-        @NameInMap("ResourceShareId")
-        public String resourceShareId;
-
-        /**
-         * <p>The time when the resource share was created.</p>
-         */
-        @NameInMap("ResourceShareName")
-        public String resourceShareName;
-
-        /**
-         * <p>The ID of the resource share.</p>
-         */
-        @NameInMap("ResourceShareOwner")
-        public String resourceShareOwner;
-
         @NameInMap("ResourceShareStatus")
         public String resourceShareStatus;
 
         /**
-         * <p>The owner of the resource share.</p>
+         * <p>The time when the resource share was updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RejectResourceShareInvitationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the resource share.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the resource share.</p>
+     * <p>The information of the resource sharing invitation.</p>
      */
     @NameInMap("ResourceShareInvitation")
     public RejectResourceShareInvitationResponseBodyResourceShareInvitation resourceShareInvitation;
@@ -38,29 +38,41 @@ public class RejectResourceShareInvitationResponseBody extends TeaModel {
     }
 
     public static class RejectResourceShareInvitationResponseBodyResourceShareInvitation extends TeaModel {
+        /**
+         * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The Alibaba Cloud account ID of the invitee.</p>
+         */
         @NameInMap("ReceiverAccountId")
         public String receiverAccountId;
 
         /**
-         * <p>The Alibaba Cloud account ID of the invitee.</p>
+         * <p>The ID of the resource share.</p>
          */
         @NameInMap("ResourceShareId")
         public String resourceShareId;
 
         /**
-         * <p>The Alibaba Cloud account ID of the inviter.</p>
+         * <p>The ID of the invitation.</p>
          */
         @NameInMap("ResourceShareInvitationId")
         public String resourceShareInvitationId;
 
         /**
-         * <p>The time when the invitation was created. The time is displayed in UTC.</p>
+         * <p>The name of the resource share.</p>
          */
         @NameInMap("ResourceShareName")
         public String resourceShareName;
+
+        /**
+         * <p>The Alibaba Cloud account ID of the inviter.</p>
+         */
+        @NameInMap("SenderAccountId")
+        public String senderAccountId;
 
         /**
          * <p>The status of the invitation. Valid values:</p>
@@ -71,9 +83,6 @@ public class RejectResourceShareInvitationResponseBody extends TeaModel {
          * <p>*   Rejected: The invitation is rejected.</p>
          * <p>*   Expired: The invitation has expired.</p>
          */
-        @NameInMap("SenderAccountId")
-        public String senderAccountId;
-
         @NameInMap("Status")
         public String status;
 

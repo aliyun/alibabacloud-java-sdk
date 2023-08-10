@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListResourceShareInvitationsRequest extends TeaModel {
     /**
-     * <p>The IDs of the resource sharing invitations.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 20.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

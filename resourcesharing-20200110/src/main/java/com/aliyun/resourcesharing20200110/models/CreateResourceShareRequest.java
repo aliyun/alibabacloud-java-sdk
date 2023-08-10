@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateResourceShareRequest extends TeaModel {
     /**
-     * <p>The information of the resource share.</p>
+     * <p>Specifies whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:</p>
+     * <br>
+     * <p>*   false: Resources in the resource share can be shared only with accounts in the resource directory. This is the default value.</p>
+     * <p>*   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.</p>
      */
     @NameInMap("AllowExternalTargets")
     public Boolean allowExternalTargets;
@@ -14,11 +17,11 @@ public class CreateResourceShareRequest extends TeaModel {
     public java.util.List<String> permissionNames;
 
     /**
-     * <p>The ID of a shared resource.</p>
+     * <p>The name of the resource share.</p>
      * <br>
-     * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
+     * <p>The name must be 1 to 50 characters in length.</p>
      * <br>
-     * <p>>  `Resources.N.ResourceId` and `Resources.N.ResourceType` must be used in pairs.</p>
+     * <p>The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("ResourceShareName")
     public String resourceShareName;
@@ -76,20 +79,23 @@ public class CreateResourceShareRequest extends TeaModel {
 
     public static class CreateResourceShareRequestResources extends TeaModel {
         /**
-         * <p>The name of a permission. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).</p>
+         * <p>The ID of a shared resource.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
+         * <br>
+         * <p>>  `Resources.N.ResourceId` and `Resources.N.ResourceType` must be used in pairs.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The ID of a principal. Valid values:</p>
+         * <p>The type of a shared resource.</p>
          * <br>
-         * <p>*   If you set `AllowExternalTargets` to `false`, set this parameter to the ID of a resource directory, ID of a folder in a resource directory, or ID of a member in a resource directory.</p>
-         * <p>*   If you set `AllowExternalTargets` to `true`, set this parameter to the ID of an independent Alibaba Cloud account, ID of a resource directory, ID of a folder in a resource directory, or ID of a member in a resource directory.</p>
+         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
          * <br>
-         * <p>For more information, see [Resource sharing modes](~~160622~~), [View the ID of a resource directory](~~111217~~), [View the ID of a folder](~~111223~~), or [View the ID of a member](~~111624~~).</p>
+         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
          * <br>
-         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five principals can be specified at a time.</p>
+         * <p>>  `Resources.N.ResourceId` and `Resources.N.ResourceType` must be used in pairs.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

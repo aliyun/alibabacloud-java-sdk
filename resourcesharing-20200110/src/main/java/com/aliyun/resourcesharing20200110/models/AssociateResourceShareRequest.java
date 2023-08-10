@@ -8,11 +8,7 @@ public class AssociateResourceShareRequest extends TeaModel {
     public java.util.List<String> permissionNames;
 
     /**
-     * <p>The ID of a shared resource.</p>
-     * <br>
-     * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
-     * <br>
-     * <p>>  Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.</p>
+     * <p>The ID of the resource share.</p>
      */
     @NameInMap("ResourceShareId")
     public String resourceShareId;
@@ -62,20 +58,23 @@ public class AssociateResourceShareRequest extends TeaModel {
 
     public static class AssociateResourceShareRequestResources extends TeaModel {
         /**
-         * <p>The name of a permission. If you do not configure this parameter, the system automatically associates the default permission for the specified resource type with the resource share. For more information, see [Permission library](~~465474~~).</p>
+         * <p>The ID of a shared resource.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
+         * <br>
+         * <p>>  Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The ID of a principal.</p>
+         * <p>The type of a shared resource.</p>
          * <br>
-         * <p>*   If the value of `AllowExternalTargets` for the resource share is `false` in the response of the ListResourceShares operation, the resource share supports only resource sharing within a resource directory. In this case, you can set this parameter to the ID of the resource directory, ID of a folder in the resource directory, or ID of a member in the resource directory.</p>
-         * <p>*   If the value of `AllowExternalTargets` for the resource share is `true` in the response of the ListResourceShares operation, the resource share supports both resource sharing within a resource directory and resource sharing outside a resource directory. In this case, you can set this parameter to the ID of an independent Alibaba Cloud account, ID of the resource directory, ID of a folder in the resource directory, or ID of a member in the resource directory.</p>
+         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.</p>
          * <br>
-         * <p>For more information, see [Resource sharing modes](~~160622~~), [View the ID of a resource directory](~~111217~~), [View the ID of a folder](~~111223~~), or [View the ID of a member](~~111624~~).</p>
+         * <p>For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).</p>
          * <br>
-         * <p>Valid values of N: 1 to 5. This indicates that a maximum of five principals can be specified at a time.</p>
+         * <p>>  `Resources.N.ResourceId` and `Resources.N.ResourceType` must be used in pairs.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

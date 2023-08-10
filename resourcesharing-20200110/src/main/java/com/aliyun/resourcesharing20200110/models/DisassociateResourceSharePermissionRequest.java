@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DisassociateResourceSharePermissionRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the permission. For more information, see [Permission library](~~465474~~).</p>
      */
     @NameInMap("PermissionName")
     public String permissionName;
 
     /**
-     * <p>The name of the permission. For more information, see [Permission library](~~465474~~).</p>
+     * <p>The ID of the resource share.</p>
      */
     @NameInMap("ResourceShareId")
     public String resourceShareId;
