@@ -80,6 +80,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     }
 
     public static class DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry extends TeaModel {
+        @NameInMap("NatGatewayId")
+        public String natGatewayId;
+
         /**
          * <p>The ID of the SNAT entry.</p>
          */
@@ -131,6 +134,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         public static DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry self = new DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setNatGatewayId(String natGatewayId) {
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+        public String getNatGatewayId() {
+            return this.natGatewayId;
         }
 
         public DescribeSnatTableEntriesResponseBodySnatTableEntriesSnatTableEntry setSnatEntryId(String snatEntryId) {
