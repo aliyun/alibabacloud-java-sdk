@@ -31,6 +31,9 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SchemaName")
+    public String schemaName;
+
     /**
      * <p>The status of data verification results. Valid values:</p>
      * <br>
@@ -81,6 +84,14 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDataCheckTableDetailsRequest setSchemaName(String schemaName) {
+        this.schemaName = schemaName;
+        return this;
+    }
+    public String getSchemaName() {
+        return this.schemaName;
     }
 
     public DescribeDataCheckTableDetailsRequest setStatus(String status) {

@@ -54,6 +54,9 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     @NameInMap("JobProgress")
     public java.util.List<DescribePreCheckStatusResponseBodyJobProgress> jobProgress;
 
+    @NameInMap("NetworkDiagnosisResult")
+    public DescribePreCheckStatusResponseBodyNetworkDiagnosisResult networkDiagnosisResult;
+
     /**
      * <p>The number of the page returned. The value is an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.</p>
      */
@@ -185,6 +188,14 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     }
     public java.util.List<DescribePreCheckStatusResponseBodyJobProgress> getJobProgress() {
         return this.jobProgress;
+    }
+
+    public DescribePreCheckStatusResponseBody setNetworkDiagnosisResult(DescribePreCheckStatusResponseBodyNetworkDiagnosisResult networkDiagnosisResult) {
+        this.networkDiagnosisResult = networkDiagnosisResult;
+        return this;
+    }
+    public DescribePreCheckStatusResponseBodyNetworkDiagnosisResult getNetworkDiagnosisResult() {
+        return this.networkDiagnosisResult;
     }
 
     public DescribePreCheckStatusResponseBody setPageNumber(Long pageNumber) {
@@ -1518,6 +1529,99 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         }
         public Integer getTotal() {
             return this.total;
+        }
+
+    }
+
+    public static class DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis extends TeaModel {
+        @NameInMap("CnDocUrl")
+        public String cnDocUrl;
+
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("EndpointType")
+        public String endpointType;
+
+        @NameInMap("InternationalDocUrl")
+        public String internationalDocUrl;
+
+        @NameInMap("Result")
+        public String result;
+
+        public static DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis build(java.util.Map<String, ?> map) throws Exception {
+            DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis self = new DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis setCnDocUrl(String cnDocUrl) {
+            this.cnDocUrl = cnDocUrl;
+            return this;
+        }
+        public String getCnDocUrl() {
+            return this.cnDocUrl;
+        }
+
+        public DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis setEndpointType(String endpointType) {
+            this.endpointType = endpointType;
+            return this;
+        }
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
+        public DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis setInternationalDocUrl(String internationalDocUrl) {
+            this.internationalDocUrl = internationalDocUrl;
+            return this;
+        }
+        public String getInternationalDocUrl() {
+            return this.internationalDocUrl;
+        }
+
+        public DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+    }
+
+    public static class DescribePreCheckStatusResponseBodyNetworkDiagnosisResult extends TeaModel {
+        @NameInMap("Diagnosis")
+        public java.util.List<DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis> diagnosis;
+
+        @NameInMap("ModelVersion")
+        public String modelVersion;
+
+        public static DescribePreCheckStatusResponseBodyNetworkDiagnosisResult build(java.util.Map<String, ?> map) throws Exception {
+            DescribePreCheckStatusResponseBodyNetworkDiagnosisResult self = new DescribePreCheckStatusResponseBodyNetworkDiagnosisResult();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePreCheckStatusResponseBodyNetworkDiagnosisResult setDiagnosis(java.util.List<DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis> diagnosis) {
+            this.diagnosis = diagnosis;
+            return this;
+        }
+        public java.util.List<DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis> getDiagnosis() {
+            return this.diagnosis;
+        }
+
+        public DescribePreCheckStatusResponseBodyNetworkDiagnosisResult setModelVersion(String modelVersion) {
+            this.modelVersion = modelVersion;
+            return this;
+        }
+        public String getModelVersion() {
+            return this.modelVersion;
         }
 
     }
