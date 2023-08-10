@@ -327,7 +327,9 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfigCallbackProvisioningConfig callbackProvisioningConfig;
 
         /**
-         * <p>账户同步页面渲染方式</p>
+         * <p>Client-side rendering, Valid values: </p>
+         * <p>- standard：standard mode.</p>
+         * <p>- template：template mode.</p>
          */
         @NameInMap("ConfigOperateMode")
         public String configOperateMode;
