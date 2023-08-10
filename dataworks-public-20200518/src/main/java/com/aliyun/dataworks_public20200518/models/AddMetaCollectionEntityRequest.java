@@ -18,6 +18,9 @@ public class AddMetaCollectionEntityRequest extends TeaModel {
     @NameInMap("EntityQualifiedName")
     public String entityQualifiedName;
 
+    @NameInMap("Remark")
+    public String remark;
+
     public static AddMetaCollectionEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMetaCollectionEntityRequest self = new AddMetaCollectionEntityRequest();
         return TeaModel.build(map, self);
@@ -37,6 +40,14 @@ public class AddMetaCollectionEntityRequest extends TeaModel {
     }
     public String getEntityQualifiedName() {
         return this.entityQualifiedName;
+    }
+
+    public AddMetaCollectionEntityRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
 }
