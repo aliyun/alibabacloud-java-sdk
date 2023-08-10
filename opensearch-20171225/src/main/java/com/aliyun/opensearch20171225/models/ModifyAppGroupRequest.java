@@ -4,18 +4,37 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppGroupRequest extends TeaModel {
+    /**
+     * <p>currentVersion</p>
+     */
     @NameInMap("currentVersion")
     public String currentVersion;
 
+    /**
+     * <p>The description of the instance.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The type of the industry. Valid values:</p>
+     * <br>
+     * <p>*   GENERAL</p>
+     * <p>*   ECOMMERCE</p>
+     * <p>*   IT_CONTENT</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>true</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 
