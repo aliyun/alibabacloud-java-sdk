@@ -87,6 +87,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         @NameInMap("LocalLogRetention")
         public Integer localLogRetention;
 
+        @NameInMap("LocalLogRetentionNumber")
+        public Integer localLogRetentionNumber;
+
         @NameInMap("LogLocalRetentionSpace")
         public Integer logLocalRetentionSpace;
 
@@ -184,6 +187,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
         public Integer getLocalLogRetention() {
             return this.localLogRetention;
+        }
+
+        public DescribeBackupPolicyResponseBodyData setLocalLogRetentionNumber(Integer localLogRetentionNumber) {
+            this.localLogRetentionNumber = localLogRetentionNumber;
+            return this;
+        }
+        public Integer getLocalLogRetentionNumber() {
+            return this.localLogRetentionNumber;
         }
 
         public DescribeBackupPolicyResponseBodyData setLogLocalRetentionSpace(Integer logLocalRetentionSpace) {
