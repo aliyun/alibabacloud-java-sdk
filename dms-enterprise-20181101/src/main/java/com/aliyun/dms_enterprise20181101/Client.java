@@ -4400,7 +4400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
       * @param request GetSQLReviewOptimizeDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4435,7 +4435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
       * @param request GetSQLReviewOptimizeDetailRequest
       * @return GetSQLReviewOptimizeDetailResponse
@@ -7659,6 +7659,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RefundPayAsYouGoOrderResponse refundPayAsYouGoOrderWithOptions(RefundPayAsYouGoOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
             query.put("OrderId", request.orderId);
         }
