@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aliding20230426</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>aliding20230426</name>
   <description>Alibaba Cloud aliding (20230426) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.18</version>
+      <version>0.2.20</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -57,6 +57,11 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>1.2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.2.1</version>
     </dependency>
   </dependencies>
   <build>
