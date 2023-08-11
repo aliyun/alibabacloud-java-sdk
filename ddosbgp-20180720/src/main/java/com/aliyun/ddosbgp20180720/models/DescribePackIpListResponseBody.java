@@ -85,6 +85,9 @@ public class DescribePackIpListResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("MemberUid")
+        public String memberUid;
+
         @NameInMap("Product")
         public String product;
 
@@ -108,6 +111,14 @@ public class DescribePackIpListResponseBody extends TeaModel {
         }
         public String getIp() {
             return this.ip;
+        }
+
+        public DescribePackIpListResponseBodyIpList setMemberUid(String memberUid) {
+            this.memberUid = memberUid;
+            return this;
+        }
+        public String getMemberUid() {
+            return this.memberUid;
         }
 
         public DescribePackIpListResponseBodyIpList setProduct(String product) {
