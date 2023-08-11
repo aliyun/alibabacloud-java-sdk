@@ -7,6 +7,9 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("Name")
     public String name;
 
@@ -48,6 +51,14 @@ public class CreateServiceInstanceShrinkRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateServiceInstanceShrinkRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateServiceInstanceShrinkRequest setName(String name) {
