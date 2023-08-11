@@ -11,7 +11,7 @@ public class RemoveFingerprintFromOIDCProviderResponseBody extends TeaModel {
     public RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider OIDCProvider;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -79,6 +79,9 @@ public class RemoveFingerprintFromOIDCProviderResponseBody extends TeaModel {
          */
         @NameInMap("GmtModified")
         public String gmtModified;
+
+        @NameInMap("IssuanceLimitTime")
+        public Long issuanceLimitTime;
 
         /**
          * <p>The URL of the issuer.</p>
@@ -157,6 +160,14 @@ public class RemoveFingerprintFromOIDCProviderResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider setIssuanceLimitTime(Long issuanceLimitTime) {
+            this.issuanceLimitTime = issuanceLimitTime;
+            return this;
+        }
+        public Long getIssuanceLimitTime() {
+            return this.issuanceLimitTime;
         }
 
         public RemoveFingerprintFromOIDCProviderResponseBodyOIDCProvider setIssuerUrl(String issuerUrl) {

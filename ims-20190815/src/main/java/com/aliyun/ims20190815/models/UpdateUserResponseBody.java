@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the RAM user.</p>
+     * <p>The information about the RAM user.</p>
      */
     @NameInMap("User")
     public UpdateUserResponseBodyUser user;
@@ -39,7 +39,7 @@ public class UpdateUserResponseBody extends TeaModel {
 
     public static class UpdateUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The description of the RAM user.</p>
+         * <p>The description.</p>
          */
         @NameInMap("Comments")
         public String comments;
@@ -59,13 +59,13 @@ public class UpdateUserResponseBody extends TeaModel {
         /**
          * <p>The email address of the RAM user.</p>
          * <br>
-         * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
-         * <p>The last time when the RAM user logged on to the console.</p>
+         * <p>The last time when the RAM user logged on to the Alibaba Cloud Management Console.</p>
          */
         @NameInMap("LastLoginDate")
         public String lastLoginDate;
@@ -73,16 +73,23 @@ public class UpdateUserResponseBody extends TeaModel {
         /**
          * <p>The mobile phone number of the RAM user.</p>
          * <br>
-         * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
+        /**
+         * <p>The source of the RAM user. Valid values:</p>
+         * <br>
+         * <p>- Manual: The RAM user is manually created in the RAM console.</p>
+         * <p>- SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
+         * <p>- CloudSSO: The RAM user is mapped from a CloudSSO user.</p>
+         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
-         * <p>The time when the information of the RAM user was updated.</p>
+         * <p>The time when the information about the RAM user was updated.</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

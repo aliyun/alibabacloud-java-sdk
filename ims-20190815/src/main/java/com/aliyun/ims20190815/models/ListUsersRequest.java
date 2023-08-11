@@ -18,6 +18,9 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("MaxItems")
     public Integer maxItems;
 
+    /**
+     * <p>The tag value.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListUsersRequestTag> tag;
 

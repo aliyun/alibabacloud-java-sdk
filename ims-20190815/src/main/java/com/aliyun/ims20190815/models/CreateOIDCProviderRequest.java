@@ -32,6 +32,9 @@ public class CreateOIDCProviderRequest extends TeaModel {
     @NameInMap("Fingerprints")
     public String fingerprints;
 
+    @NameInMap("IssuanceLimitTime")
+    public Long issuanceLimitTime;
+
     /**
      * <p>The URL of the issuer, which is provided by the external IdP Okta. The URL of the issuer must be unique within an Alibaba Cloud account.</p>
      * <br>
@@ -45,7 +48,7 @@ public class CreateOIDCProviderRequest extends TeaModel {
     /**
      * <p>The name of the OIDC IdP.</p>
      * <br>
-     * <p>The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are `periods, (.), hyphens (-), and underscores (_)`.</p>
+     * <p>The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are `periods, (.), hyphens (-), and underscores (_)`.``</p>
      * <br>
      * <p>The name can be up to 128 characters in length.</p>
      */
@@ -79,6 +82,14 @@ public class CreateOIDCProviderRequest extends TeaModel {
     }
     public String getFingerprints() {
         return this.fingerprints;
+    }
+
+    public CreateOIDCProviderRequest setIssuanceLimitTime(Long issuanceLimitTime) {
+        this.issuanceLimitTime = issuanceLimitTime;
+        return this;
+    }
+    public Long getIssuanceLimitTime() {
+        return this.issuanceLimitTime;
     }
 
     public CreateOIDCProviderRequest setIssuerUrl(String issuerUrl) {

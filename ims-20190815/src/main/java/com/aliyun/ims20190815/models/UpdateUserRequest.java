@@ -23,7 +23,7 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The new email address of the RAM user.</p>
      * <br>
-     * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+     * <p>> This parameter is valid only on the China site (aliyun.com).</p>
      */
     @NameInMap("NewEmail")
     public String newEmail;
@@ -31,9 +31,9 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The new mobile phone number of the RAM user.</p>
      * <br>
-     * <p>Format: Country calling code-Mobile phone number.</p>
+     * <p>Format: \<Country code>-\<Mobile phone number>.</p>
      * <br>
-     * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+     * <p>> This parameter is valid only on the China site (aliyun.com).</p>
      */
     @NameInMap("NewMobilePhone")
     public String newMobilePhone;
@@ -41,7 +41,7 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The new logon name of the RAM user.</p>
      * <br>
-     * <p>The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` is the name of the RAM user. `<AccountAlias>.onaliyun.com` is the default domain name.</p>
+     * <p>The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name.</p>
      * <br>
      * <p>The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.</p>
      */
@@ -51,7 +51,7 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The ID of the RAM user.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
+     * <p>> You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
      */
     @NameInMap("UserId")
     public String userId;
@@ -59,7 +59,7 @@ public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The logon name of the RAM user.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
+     * <p>> You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.</p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

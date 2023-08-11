@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListAppSecretIdsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the application secret.</p>
+     */
     @NameInMap("AppSecrets")
     public ListAppSecretIdsResponseBodyAppSecrets appSecrets;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
     }
 
     public static class ListAppSecretIdsResponseBodyAppSecretsAppSecret extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The ID of the application secret.</p>
+         */
         @NameInMap("AppSecretId")
         public String appSecretId;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 

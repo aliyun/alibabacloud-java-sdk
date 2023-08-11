@@ -7,26 +7,26 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated. Valid values:</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.</p>
+     * <p>The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
-     * <p>The information about the OIDC IdP.</p>
+     * <p>The timestamp when the OIDC IdP was modified.</p>
      */
     @NameInMap("OIDCProviders")
     public ListOIDCProvidersResponseBodyOIDCProviders OIDCProviders;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -111,6 +111,9 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        @NameInMap("IssuanceLimitTime")
+        public Long issuanceLimitTime;
+
         /**
          * <p>The URL of the issuer.</p>
          */
@@ -188,6 +191,14 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public ListOIDCProvidersResponseBodyOIDCProvidersOIDCProvider setIssuanceLimitTime(Long issuanceLimitTime) {
+            this.issuanceLimitTime = issuanceLimitTime;
+            return this;
+        }
+        public Long getIssuanceLimitTime() {
+            return this.issuanceLimitTime;
         }
 
         public ListOIDCProvidersResponseBodyOIDCProvidersOIDCProvider setIssuerUrl(String issuerUrl) {

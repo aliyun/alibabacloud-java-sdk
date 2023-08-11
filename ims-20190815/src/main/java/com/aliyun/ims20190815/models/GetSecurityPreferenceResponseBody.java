@@ -218,6 +218,9 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference extends TeaModel {
+        /**
+         * <p>The MFA method.</p>
+         */
         @NameInMap("VerificationTypes")
         public java.util.List<String> verificationTypes;
 
@@ -261,6 +264,9 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("PersonalInfoPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference;
 
+        /**
+         * <p>The MFA method preference.</p>
+         */
         @NameInMap("VerificationPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference;
 

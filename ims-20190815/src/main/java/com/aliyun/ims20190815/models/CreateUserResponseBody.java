@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -114,7 +114,7 @@ public class CreateUserResponseBody extends TeaModel {
         /**
          * <p>The email address of the RAM user.</p>
          * <br>
-         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("Email")
         public String email;
@@ -128,7 +128,7 @@ public class CreateUserResponseBody extends TeaModel {
         /**
          * <p>The mobile phone number of the RAM user.</p>
          * <br>
-         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
@@ -144,7 +144,7 @@ public class CreateUserResponseBody extends TeaModel {
         public String provisionType;
 
         /**
-         * <p>An array that consists of the details of the returned tags.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Tags")
         public CreateUserResponseBodyUserTags tags;
