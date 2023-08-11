@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The name of the region where the cloud assets reside.</p>
+     * <p>The information about regions of the cloud assets that are supported by the Anti-DDoS Origin instance. The information includes region IDs and names.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The information about regions of the cloud assets that are supported by the Anti-DDoS Origin instance. The information includes region IDs and names.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The English name of the region where the cloud assets reside.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -70,18 +70,19 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The English name of the region where the cloud assets reside.</p>
          */
         @NameInMap("RegionEnName")
         public String regionEnName;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).</p>
-         * <br>
-         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
+         * <p>The name of the region where the cloud assets reside.</p>
          */
         @NameInMap("RegionName")
         public String regionName;

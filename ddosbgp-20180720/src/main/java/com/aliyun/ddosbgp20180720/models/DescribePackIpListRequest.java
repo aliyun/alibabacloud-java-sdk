@@ -18,6 +18,9 @@ public class DescribePackIpListRequest extends TeaModel {
     @NameInMap("Ip")
     public String ip;
 
+    @NameInMap("MemberUid")
+    public String memberUid;
+
     /**
      * <p>The operation that you want to perform. Set the value to **DescribePackIpList**.</p>
      */
@@ -77,6 +80,14 @@ public class DescribePackIpListRequest extends TeaModel {
     }
     public String getIp() {
         return this.ip;
+    }
+
+    public DescribePackIpListRequest setMemberUid(String memberUid) {
+        this.memberUid = memberUid;
+        return this;
+    }
+    public String getMemberUid() {
+        return this.memberUid;
     }
 
     public DescribePackIpListRequest setPageNo(Integer pageNo) {
