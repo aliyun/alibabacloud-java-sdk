@@ -217,6 +217,9 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("Edition")
     public String edition;
 
+    @NameInMap("EnableAmbient")
+    public Boolean enableAmbient;
+
     /**
      * <p>Specifies whether to enable the mesh audit feature. To enable this feature, make sure that you have activated [Log Service](https://sls.console.aliyun.com/). Valid values:</p>
      * <br>
@@ -323,6 +326,10 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("GatewayAPIEnabled")
     public Boolean gatewayAPIEnabled;
 
+    /**
+     * <p>After this ASM instance is successfully created, automatically add an ACK cluster to it. </p>
+     * <p>Make sure this ASM instance and ACK cluster have same VPC, VSwitch, cluster domain.</p>
+     */
     @NameInMap("GuestCluster")
     public String guestCluster;
 
@@ -787,6 +794,14 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public String getEdition() {
         return this.edition;
+    }
+
+    public CreateServiceMeshRequest setEnableAmbient(Boolean enableAmbient) {
+        this.enableAmbient = enableAmbient;
+        return this;
+    }
+    public Boolean getEnableAmbient() {
+        return this.enableAmbient;
     }
 
     public CreateServiceMeshRequest setEnableAudit(Boolean enableAudit) {
