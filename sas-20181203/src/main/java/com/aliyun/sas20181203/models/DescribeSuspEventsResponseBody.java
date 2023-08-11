@@ -465,6 +465,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("K8sPodName")
         public String k8sPodName;
 
+        @NameInMap("LargeModel")
+        public Boolean largeModel;
+
         /**
          * <p>The time when the alert event was last generated.</p>
          */
@@ -858,6 +861,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
         public String getK8sPodName() {
             return this.k8sPodName;
+        }
+
+        public DescribeSuspEventsResponseBodySuspEvents setLargeModel(Boolean largeModel) {
+            this.largeModel = largeModel;
+            return this;
+        }
+        public Boolean getLargeModel() {
+            return this.largeModel;
         }
 
         public DescribeSuspEventsResponseBodySuspEvents setLastTime(String lastTime) {
