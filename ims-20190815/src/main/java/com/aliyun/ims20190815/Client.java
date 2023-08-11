@@ -27,6 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request AddClientIdToOIDCProviderRequest
@@ -62,6 +63,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request AddClientIdToOIDCProviderRequest
@@ -73,6 +75,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request AddFingerprintToOIDCProviderRequest
@@ -108,6 +111,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request AddFingerprintToOIDCProviderRequest
@@ -440,13 +444,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
-      * ## Prerequisites
+      * ### Prerequisites
       * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-      * ## Limits
-      * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
-      * - You can add a maximum of 20 client IDs to an OIDC IdP.
-      * - You can add a maximum of five fingerprints to an OIDC IdP.
+      * ### Limits
+      * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+      * *   You can add a maximum of 20 client IDs to an OIDC IdP.
+      * *   You can add a maximum of five fingerprints to an OIDC IdP.
+      * ###
+      * ``
       *
       * @param request CreateOIDCProviderRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -465,6 +470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fingerprints)) {
             query.put("Fingerprints", request.fingerprints);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.issuanceLimitTime)) {
+            query.put("IssuanceLimitTime", request.issuanceLimitTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.issuerUrl)) {
@@ -493,13 +502,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
-      * ## Prerequisites
+      * ### Prerequisites
       * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-      * ## Limits
-      * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
-      * - You can add a maximum of 20 client IDs to an OIDC IdP.
-      * - You can add a maximum of five fingerprints to an OIDC IdP.
+      * ### Limits
+      * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+      * *   You can add a maximum of 20 client IDs to an OIDC IdP.
+      * *   You can add a maximum of five fingerprints to an OIDC IdP.
+      * ###
+      * ``
       *
       * @param request CreateOIDCProviderRequest
       * @return CreateOIDCProviderResponse
@@ -804,6 +814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request DeleteOIDCProviderRequest
@@ -835,6 +846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request DeleteOIDCProviderRequest
@@ -1115,6 +1127,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAppSecretWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the configurations of an application named `472457090344041****`.
+      *
+      * @param request GetApplicationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetApplicationResponse
+     */
     public GetApplicationResponse getApplicationWithOptions(GetApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1139,6 +1158,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetApplicationResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the configurations of an application named `472457090344041****`.
+      *
+      * @param request GetApplicationRequest
+      * @return GetApplicationResponse
+     */
     public GetApplicationResponse getApplication(GetApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getApplicationWithOptions(request, runtime);
@@ -1245,7 +1270,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+      * ###
+      * This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named `TestOIDCProvider`.
       *
       * @param request GetOIDCProviderRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1276,7 +1302,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+      * ###
+      * This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named `TestOIDCProvider`.
       *
       * @param request GetOIDCProviderRequest
       * @return GetOIDCProviderResponse
@@ -1515,6 +1542,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAppSecretIdsWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named `myapp` belongs to the current account.
+      *
+      * @param request ListApplicationsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListApplicationsResponse
+     */
     public ListApplicationsResponse listApplicationsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1531,6 +1565,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListApplicationsResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named `myapp` belongs to the current account.
+      *
+      * @return ListApplicationsResponse
+     */
     public ListApplicationsResponse listApplications() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listApplicationsWithOptions(runtime);
@@ -1599,7 +1638,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+      * ###
+      * This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
       *
       * @param request ListOIDCProvidersRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1634,7 +1674,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+      * ###
+      * This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
       *
       * @param request ListOIDCProvidersRequest
       * @return ListOIDCProvidersResponse
@@ -1707,6 +1748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N.Key`
@@ -1761,6 +1803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N.Key`
@@ -1829,6 +1872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * You can call the following API operations to query the information about all RAM users:
       * *   ListUsers: queries the details of all RAM users.
       * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
@@ -1870,6 +1914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * You can call the following API operations to query the information about all RAM users:
       * *   ListUsers: queries the details of all RAM users.
       * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
@@ -1953,6 +1998,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request RemoveClientIdFromOIDCProviderRequest
@@ -1988,6 +2034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request RemoveClientIdFromOIDCProviderRequest
@@ -1999,6 +2046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request RemoveFingerprintFromOIDCProviderRequest
@@ -2034,6 +2082,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
       *
       * @param request RemoveFingerprintFromOIDCProviderRequest
@@ -2176,6 +2225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
       *
       * @param tmpReq SetSecurityPreferenceRequest
@@ -2249,6 +2299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
       *
       * @param request SetSecurityPreferenceRequest
@@ -2592,6 +2643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
       *
       * @param request UpdateOIDCProviderRequest
@@ -2603,6 +2655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientIds)) {
             query.put("ClientIds", request.clientIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.issuanceLimitTime)) {
+            query.put("IssuanceLimitTime", request.issuanceLimitTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.newDescription)) {
@@ -2631,6 +2687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ###
       * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
       *
       * @param request UpdateOIDCProviderRequest

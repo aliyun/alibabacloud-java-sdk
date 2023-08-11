@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListPredefinedScopesResponseBody extends TeaModel {
+    /**
+     * <p>The information of application permissions.</p>
+     */
     @NameInMap("PredefinedScopes")
     public ListPredefinedScopesResponseBodyPredefinedScopes predefinedScopes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
     }
 
     public static class ListPredefinedScopesResponseBodyPredefinedScopesPredefinedScope extends TeaModel {
+        /**
+         * <p>The description of the permission scope.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the scope.</p>
+         */
         @NameInMap("Name")
         public String name;
 

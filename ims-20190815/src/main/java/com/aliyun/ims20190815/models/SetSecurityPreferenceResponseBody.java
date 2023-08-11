@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetSecurityPreferenceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -196,6 +196,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     }
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference extends TeaModel {
+        /**
+         * <p>The MFA methods.</p>
+         */
         @NameInMap("VerificationTypes")
         public java.util.List<String> verificationTypes;
 
@@ -239,6 +242,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("PersonalInfoPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferencePersonalInfoPreference personalInfoPreference;
 
+        /**
+         * <p>The MFA method preference.</p>
+         */
         @NameInMap("VerificationPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceVerificationPreference verificationPreference;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserBasicInfosResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <p>Indicates whether the response is truncated. Valid value:</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -14,7 +14,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.</p>
+     * <p>The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
      */
     @NameInMap("Marker")
     public String marker;

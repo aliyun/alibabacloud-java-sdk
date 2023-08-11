@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The information of the application.</p>
+     */
     @NameInMap("Application")
     public CreateApplicationResponseBodyApplication application;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope extends TeaModel {
+        /**
+         * <p>The description of the permission scope.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the scope.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -81,6 +93,9 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
+        /**
+         * <p>The information of application permissions.</p>
+         */
         @NameInMap("PredefinedScopes")
         public CreateApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -119,42 +134,81 @@ public class CreateApplicationResponseBody extends TeaModel {
     }
 
     public static class CreateApplicationResponseBodyApplication extends TeaModel {
+        /**
+         * <p>The validity period of the access token. Unit: seconds.</p>
+         */
         @NameInMap("AccessTokenValidity")
         public Integer accessTokenValidity;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The type of the application.</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The information of application permissions.</p>
+         */
         @NameInMap("DelegatedScope")
         public CreateApplicationResponseBodyApplicationDelegatedScope delegatedScope;
 
+        /**
+         * <p>The display name of the application.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         */
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
+        /**
+         * <p>The callback URL.</p>
+         */
         @NameInMap("RedirectUris")
         public CreateApplicationResponseBodyApplicationRedirectUris redirectUris;
 
+        /**
+         * <p>The validity period of the refreshed token. Unit: seconds.</p>
+         */
         @NameInMap("RefreshTokenValidity")
         public Integer refreshTokenValidity;
 
+        /**
+         * <p>Indicates whether a secret is required.</p>
+         */
         @NameInMap("SecretRequired")
         public Boolean secretRequired;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

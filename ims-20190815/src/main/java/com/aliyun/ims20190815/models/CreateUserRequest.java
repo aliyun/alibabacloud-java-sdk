@@ -23,21 +23,26 @@ public class CreateUserRequest extends TeaModel {
     /**
      * <p>The email address of the RAM user.</p>
      * <br>
-     * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+     * <p>> This parameter is valid only on the China site (aliyun.com).</p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
-     * <p>The mobile phone number of the RAM user.</p>
+     * <p>The mobile number of the RAM user.</p>
      * <br>
      * <p>Format: Country code-Mobile phone number.</p>
      * <br>
-     * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+     * <p>> This parameter is valid only on the China site (aliyun.com).</p>
      */
     @NameInMap("MobilePhone")
     public String mobilePhone;
 
+    /**
+     * <p>The tag value.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateUserRequestTag> tag;
 
@@ -46,7 +51,7 @@ public class CreateUserRequest extends TeaModel {
      * <br>
      * <p>The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name. For more information about how to obtain the default domain name, see [GetDefaultDomain](~~186720~~).</p>
      * <br>
-     * <p>The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<AccountAlias>.onaliyun.com` must be 1 to 64 characters in length.</p>
+     * <p>The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.</p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

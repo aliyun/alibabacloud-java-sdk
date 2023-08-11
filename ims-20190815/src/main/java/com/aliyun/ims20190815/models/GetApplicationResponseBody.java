@@ -4,9 +4,15 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The information about the application.</p>
+     */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopesPredefinedScope extends TeaModel {
+        /**
+         * <p>The description of the permission.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the permission.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -81,6 +93,9 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
+        /**
+         * <p>An array consisting of the information about the permissions that are granted on the application.</p>
+         */
         @NameInMap("PredefinedScopes")
         public GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
 
@@ -119,42 +134,85 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static class GetApplicationResponseBodyApplication extends TeaModel {
+        /**
+         * <p>The validity period of the access token. Unit: seconds.</p>
+         */
         @NameInMap("AccessTokenValidity")
         public Integer accessTokenValidity;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the application belongs.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The type of the application. Valid values:</p>
+         * <br>
+         * <p>*   WebApp: a web application.</p>
+         * <p>*   NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.</p>
+         * <p>*   ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.</p>
+         */
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The creation time.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The information about the permissions that are granted on the application.</p>
+         */
         @NameInMap("DelegatedScope")
         public GetApplicationResponseBodyApplicationDelegatedScope delegatedScope;
 
+        /**
+         * <p>The display name of the application.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>Indicates whether the application can be installed by using other Alibaba Cloud accounts.</p>
+         */
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
+        /**
+         * <p>The callback URL.</p>
+         */
         @NameInMap("RedirectUris")
         public GetApplicationResponseBodyApplicationRedirectUris redirectUris;
 
+        /**
+         * <p>The validity period of the refresh token. Unit: seconds.</p>
+         */
         @NameInMap("RefreshTokenValidity")
         public Integer refreshTokenValidity;
 
+        /**
+         * <p>Indicates whether a secret is required.</p>
+         */
         @NameInMap("SecretRequired")
         public Boolean secretRequired;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

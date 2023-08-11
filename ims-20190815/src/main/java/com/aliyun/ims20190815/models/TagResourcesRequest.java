@@ -4,9 +4,23 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>The ID of resource N.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.</p>
+     * <br>
+     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The name of resource N.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.</p>
+     * <br>
+     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     */
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
@@ -18,6 +32,9 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag value.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 

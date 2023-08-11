@@ -4,6 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteApplicationRequest extends TeaModel {
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

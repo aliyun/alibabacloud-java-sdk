@@ -7,8 +7,8 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether RAM users can change their passwords. Valid values:</p>
      * <br>
-     * <p>*   true: yes. This is the default value.</p>
-     * <p>*   false: no.</p>
+     * <p>*   true (default)</p>
+     * <p>*   false</p>
      */
     @NameInMap("AllowUserToChangePassword")
     public Boolean allowUserToChangePassword;
@@ -16,8 +16,8 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether RAM users can manage their AccessKey pairs. Valid values:</p>
      * <br>
-     * <p>*   true: yes.</p>
-     * <p>*   false: no. This is the default value.</p>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
      */
     @NameInMap("AllowUserToManageAccessKeys")
     public Boolean allowUserToManageAccessKeys;
@@ -25,8 +25,8 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether RAM users can manage their MFA devices. Valid values:</p>
      * <br>
-     * <p>*   true: yes. This is the default value.</p>
-     * <p>*   false: no.</p>
+     * <p>*   true (default)</p>
+     * <p>*   false</p>
      */
     @NameInMap("AllowUserToManageMFADevices")
     public Boolean allowUserToManageMFADevices;
@@ -34,17 +34,17 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:</p>
      * <br>
-     * <p>*   true: yes. This is the default value.</p>
-     * <p>*   false: no.</p>
+     * <p>*   true (default)</p>
+     * <p>*   false</p>
      */
     @NameInMap("AllowUserToManagePersonalDingTalk")
     public Boolean allowUserToManagePersonalDingTalk;
 
     /**
-     * <p>Specifies whether to remember the MFA devices for seven days. Valid values:</p>
+     * <p>Specifies whether RAM users can remember the MFA devices for seven days. Valid values:</p>
      * <br>
-     * <p>*   true: yes.</p>
-     * <p>*   false: no. This is the default value.</p>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
      */
     @NameInMap("EnableSaveMFATicket")
     public Boolean enableSaveMFATicket;
@@ -73,10 +73,10 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     public Integer loginSessionDuration;
 
     /**
-     * <p>Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace the EnforceMFAForLogin parameter. The EnforceMFAForLogin parameter is still valid. However, we recommend that you use the MFAOperationForLogin parameter. Valid values:</p>
+     * <p>Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace EnforceMFAForLogin. EnforceMFAForLogin is still valid. However, we recommend that you use MFAOperationForLogin. Valid values:</p>
      * <br>
-     * <p>*   mandatory: MFA is required for all RAM users. If you use the EnforceMFAForLogin parameter, set the value to true.</p>
-     * <p>*   independent: User-specific settings are applied. This is the default value. If you use the EnforceMFAForLogin parameter, set the value to false.</p>
+     * <p>*   mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.</p>
+     * <p>*   independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.</p>
      * <p>*   adaptive: MFA is required only for RAM users who initiated unusual logons.</p>
      */
     @NameInMap("MFAOperationForLogin")
@@ -85,12 +85,15 @@ public class SetSecurityPreferenceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:</p>
      * <br>
-     * <p>*   autonomous: yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA. This is the default value.</p>
-     * <p>*   enforceVerify: no.</p>
+     * <p>*   autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.</p>
+     * <p>*   enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.</p>
      */
     @NameInMap("OperationForRiskLogin")
     public String operationForRiskLogin;
 
+    /**
+     * <p>The MFA methods.</p>
+     */
     @NameInMap("VerificationTypes")
     public String verificationTypesShrink;
 

@@ -13,7 +13,7 @@ public class GetAccessKeyLastUsedRequest extends TeaModel {
     /**
      * <p>The logon name of the RAM user.</p>
      * <br>
-     * <p>If this parameter is empty, the AccessKey pair of the current user is queried.</p>
+     * <p>If you do not specify this parameter, the AccessKey pair of the current user is queried.</p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

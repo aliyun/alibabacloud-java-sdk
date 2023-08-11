@@ -11,7 +11,7 @@ public class GetOIDCProviderResponseBody extends TeaModel {
     public GetOIDCProviderResponseBodyOIDCProvider OIDCProvider;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -79,6 +79,9 @@ public class GetOIDCProviderResponseBody extends TeaModel {
          */
         @NameInMap("GmtModified")
         public String gmtModified;
+
+        @NameInMap("IssuanceLimitTime")
+        public Long issuanceLimitTime;
 
         /**
          * <p>The URL of the issuer.</p>
@@ -157,6 +160,14 @@ public class GetOIDCProviderResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public GetOIDCProviderResponseBodyOIDCProvider setIssuanceLimitTime(Long issuanceLimitTime) {
+            this.issuanceLimitTime = issuanceLimitTime;
+            return this;
+        }
+        public Long getIssuanceLimitTime() {
+            return this.issuanceLimitTime;
         }
 
         public GetOIDCProviderResponseBodyOIDCProvider setIssuerUrl(String issuerUrl) {

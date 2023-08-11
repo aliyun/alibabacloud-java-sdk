@@ -5,16 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateOIDCProviderRequest extends TeaModel {
     /**
-     * <p>The ID of the client. If you want to specify multiple fingerprints, separate the fingerprints with commas (,).</p>
+     * <p>The ID of the client. If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
      * <br>
-     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are `periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)`.</p>
+     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are `periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)`.``</p>
      * <br>
      * <p>The client ID can be up to 64 characters in length.</p>
      * <br>
-     * <p>>  If you specify this parameter, all the client IDs of the OIDC IdP are replaced. If you need to only add or remove a client ID, call the AddClientIdToOIDCProvider or RemoveClientIdFromOIDCProvider operation. For more information, see [AddClientIdToOIDCProvider](~~332057~~) or [RemoveClientIdFromOIDCProvider](~~332058~~).</p>
+     * <p>> If you specify this parameter, all the client IDs of the OIDC IdP are replaced. If you need to only add or remove a client ID, call the AddClientIdToOIDCProvider or RemoveClientIdFromOIDCProvider operation. For more information, see [AddClientIdToOIDCProvider](~~332057~~) or [RemoveClientIdFromOIDCProvider](~~332058~~).</p>
      */
     @NameInMap("ClientIds")
     public String clientIds;
+
+    @NameInMap("IssuanceLimitTime")
+    public Long issuanceLimitTime;
 
     /**
      * <p>The description of the OIDC IdP.</p>
@@ -41,6 +44,14 @@ public class UpdateOIDCProviderRequest extends TeaModel {
     }
     public String getClientIds() {
         return this.clientIds;
+    }
+
+    public UpdateOIDCProviderRequest setIssuanceLimitTime(Long issuanceLimitTime) {
+        this.issuanceLimitTime = issuanceLimitTime;
+        return this;
+    }
+    public Long getIssuanceLimitTime() {
+        return this.issuanceLimitTime;
     }
 
     public UpdateOIDCProviderRequest setNewDescription(String newDescription) {

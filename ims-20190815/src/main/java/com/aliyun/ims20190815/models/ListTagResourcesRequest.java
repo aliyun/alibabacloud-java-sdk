@@ -11,27 +11,44 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries to return. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true.</p>
-     * <br>
-     * <p>Valid values: 1 to 100. Default value: 100.</p>
+     * <p>The number of entries per page. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true. Valid values: 1 to 100. Default value: 100.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of resource N.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.</p>
+     * <br>
+     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The name of resource N.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.</p>
+     * <br>
+     * <p>> You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.</p>
+     */
     @NameInMap("ResourcePrincipalName")
     public java.util.List<String> resourcePrincipalName;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The type of the resource. Valid value:</p>
      * <br>
      * <p>*   user: a RAM user</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tag value.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 20. N must be consecutive.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 

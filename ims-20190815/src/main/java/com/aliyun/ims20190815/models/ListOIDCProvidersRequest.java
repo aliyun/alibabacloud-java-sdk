@@ -11,7 +11,7 @@ public class ListOIDCProvidersRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.</p>
+     * <p>The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.</p>
      * <br>
      * <p>Valid values: 1 to 100. Default value: 100.</p>
      */
