@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateIstioInjectionConfigRequest extends TeaModel {
+    @NameInMap("DataPlaneMode")
+    public String dataPlaneMode;
+
     /**
      * <p>Specifies whether to enable Istio automatic sidecar injection.</p>
      */
@@ -34,6 +37,14 @@ public class UpdateIstioInjectionConfigRequest extends TeaModel {
     public static UpdateIstioInjectionConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIstioInjectionConfigRequest self = new UpdateIstioInjectionConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateIstioInjectionConfigRequest setDataPlaneMode(String dataPlaneMode) {
+        this.dataPlaneMode = dataPlaneMode;
+        return this;
+    }
+    public String getDataPlaneMode() {
+        return this.dataPlaneMode;
     }
 
     public UpdateIstioInjectionConfigRequest setEnableIstioInjection(Boolean enableIstioInjection) {

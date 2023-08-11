@@ -413,6 +413,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Edition", request.edition);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAmbient)) {
+            body.put("EnableAmbient", request.enableAmbient);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableAudit)) {
             body.put("EnableAudit", request.enableAudit);
         }
@@ -2945,6 +2949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateIstioInjectionConfigResponse updateIstioInjectionConfigWithOptions(UpdateIstioInjectionConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataPlaneMode)) {
+            body.put("DataPlaneMode", request.dataPlaneMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enableIstioInjection)) {
             body.put("EnableIstioInjection", request.enableIstioInjection);
         }
