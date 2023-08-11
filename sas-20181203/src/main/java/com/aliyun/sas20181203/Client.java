@@ -13763,6 +13763,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCheckSummaryWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : GetClientInstallationStatistic is deprecated, please use Sas::2018-12-03::GetClientRatioStatistic instead.
+      *
+      * @param request GetClientInstallationStatisticRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetClientInstallationStatisticResponse
+     */
+    // Deprecated
+    public GetClientInstallationStatisticResponse getClientInstallationStatisticWithOptions(GetClientInstallationStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.timeEnd)) {
+            query.put("TimeEnd", request.timeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeStart)) {
+            query.put("TimeStart", request.timeStart);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClientInstallationStatistic"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClientInstallationStatisticResponse());
+    }
+
+    /**
+      * @deprecated : GetClientInstallationStatistic is deprecated, please use Sas::2018-12-03::GetClientRatioStatistic instead.
+      *
+      * @param request GetClientInstallationStatisticRequest
+      * @return GetClientInstallationStatisticResponse
+     */
+    // Deprecated
+    public GetClientInstallationStatisticResponse getClientInstallationStatistic(GetClientInstallationStatisticRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getClientInstallationStatisticWithOptions(request, runtime);
+    }
+
     public GetClientRatioStatisticResponse getClientRatioStatisticWithOptions(GetClientRatioStatisticRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15437,6 +15485,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCheckInstanceResultResponse listCheckInstanceResult(ListCheckInstanceResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCheckInstanceResultWithOptions(request, runtime);
+    }
+
+    public ListCheckItemResponse listCheckItemWithOptions(ListCheckItemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCheckItem"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCheckItemResponse());
+    }
+
+    public ListCheckItemResponse listCheckItem(ListCheckItemRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCheckItemWithOptions(request, runtime);
     }
 
     public ListCheckItemWarningMachineResponse listCheckItemWarningMachineWithOptions(ListCheckItemWarningMachineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
