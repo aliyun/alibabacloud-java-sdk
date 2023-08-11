@@ -3,7 +3,7 @@ package com.aliyun.umeng_apm20220214.models;
 
 import com.aliyun.tea.*;
 
-public class GetSymUploadParamRequest extends TeaModel {
+public class UploadSymbolFileAdvanceRequest extends TeaModel {
     @NameInMap("appVersion")
     public String appVersion;
 
@@ -19,12 +19,15 @@ public class GetSymUploadParamRequest extends TeaModel {
     @NameInMap("flutterName")
     public String flutterName;
 
-    public static GetSymUploadParamRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetSymUploadParamRequest self = new GetSymUploadParamRequest();
+    @NameInMap("ossUrl")
+    public java.io.InputStream ossUrlObject;
+
+    public static UploadSymbolFileAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        UploadSymbolFileAdvanceRequest self = new UploadSymbolFileAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetSymUploadParamRequest setAppVersion(String appVersion) {
+    public UploadSymbolFileAdvanceRequest setAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
@@ -32,7 +35,7 @@ public class GetSymUploadParamRequest extends TeaModel {
         return this.appVersion;
     }
 
-    public GetSymUploadParamRequest setDataSourceId(String dataSourceId) {
+    public UploadSymbolFileAdvanceRequest setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
@@ -40,7 +43,7 @@ public class GetSymUploadParamRequest extends TeaModel {
         return this.dataSourceId;
     }
 
-    public GetSymUploadParamRequest setFileName(String fileName) {
+    public UploadSymbolFileAdvanceRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -48,7 +51,7 @@ public class GetSymUploadParamRequest extends TeaModel {
         return this.fileName;
     }
 
-    public GetSymUploadParamRequest setFileType(Integer fileType) {
+    public UploadSymbolFileAdvanceRequest setFileType(Integer fileType) {
         this.fileType = fileType;
         return this;
     }
@@ -56,12 +59,20 @@ public class GetSymUploadParamRequest extends TeaModel {
         return this.fileType;
     }
 
-    public GetSymUploadParamRequest setFlutterName(String flutterName) {
+    public UploadSymbolFileAdvanceRequest setFlutterName(String flutterName) {
         this.flutterName = flutterName;
         return this;
     }
     public String getFlutterName() {
         return this.flutterName;
+    }
+
+    public UploadSymbolFileAdvanceRequest setOssUrlObject(java.io.InputStream ossUrlObject) {
+        this.ossUrlObject = ossUrlObject;
+        return this;
+    }
+    public java.io.InputStream getOssUrlObject() {
+        return this.ossUrlObject;
     }
 
 }
