@@ -31,6 +31,9 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
+    @NameInMap("ParamJson")
+    public String paramJson;
+
     /**
      * <p>The region ID. If you create a Prometheus instance for cloud services in China, set the value to cn-shanghai.</p>
      */
@@ -116,6 +119,14 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     }
     public String getGrafanaInstanceId() {
         return this.grafanaInstanceId;
+    }
+
+    public CreatePrometheusInstanceRequest setParamJson(String paramJson) {
+        this.paramJson = paramJson;
+        return this;
+    }
+    public String getParamJson() {
+        return this.paramJson;
     }
 
     public CreatePrometheusInstanceRequest setRegionId(String regionId) {
