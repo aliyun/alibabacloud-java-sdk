@@ -1485,6 +1485,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GrafanaInstanceId", request.grafanaInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.paramJson)) {
+            query.put("ParamJson", request.paramJson);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -7626,6 +7630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mostRegionId)) {
             query.put("MostRegionId", request.mostRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramJson)) {
+            query.put("ParamJson", request.paramJson);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
