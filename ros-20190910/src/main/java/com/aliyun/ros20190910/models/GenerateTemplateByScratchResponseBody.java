@@ -11,15 +11,15 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources that you want to import to a stack in the scenario of the Resource Management type.</p>
+     * <p>The resources that you want to import into a stack in the scenario.</p>
      * <br>
-     * <p>>  This parameter is returned only for scenarios of the Resource Management type.</p>
+     * <p>> This parameter is returned only if the scenario is of the Resource Management type.</p>
      */
     @NameInMap("ResourcesToImport")
     public java.util.List<GenerateTemplateByScratchResponseBodyResourcesToImport> resourcesToImport;
 
     /**
-     * <p>The content of the template that is created for the scenario.</p>
+     * <p>The template content of the scenario.</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -55,14 +55,13 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
 
     public static class GenerateTemplateByScratchResponseBodyResourcesToImport extends TeaModel {
         /**
-         * <p>The ID of the logical resource.</p>
+         * <p>The logical ID of the resource.</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
         /**
-         * <p>The key-value mappings from string to string. The parameter value is a JSON string that identifies the resource that is imported.</p>
-         * <br>
+         * <p>The key-value mapping between strings. The value is a JSON string that identifies the resource that you want to import into a stack.\</p>
          * <p>A key is an identifier for a resource, and a value is an assignment of data to the key. For example, VpcId is a key that indicates the ID of a virtual private cloud (VPC), and `vpc-bp1m6fww66xbntjyc****"` is a value that is assigned to VpcId.</p>
          */
         @NameInMap("ResourceIdentifier")

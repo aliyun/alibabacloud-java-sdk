@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTemplateScratchRequest extends TeaModel {
     /**
-     * <p>The ID of the region in which the scenario is created.</p>
+     * <p>The region ID of the scenario.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */

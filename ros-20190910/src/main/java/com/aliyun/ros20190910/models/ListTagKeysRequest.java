@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

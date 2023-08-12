@@ -81,7 +81,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
 
     public static class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The key of the parameter.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -123,7 +123,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The filter for resource types.</p>
+         * <p>The resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -159,7 +159,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -195,7 +195,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The filter for resource types.</p>
+         * <p>The resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -277,15 +277,15 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * <p>The status code of the scenario that fails to be created.</p>
          * <br>
-         * <p>>  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.</p>
+         * <p>> This parameter is returned only if you set Status to GENERATE_FAILED.</p>
          */
         @NameInMap("FailedCode")
         public String failedCode;
 
         /**
-         * <p>The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+         * <p>The policy based on which the logical ID is generated. Valid values:</p>
          * <br>
-         * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+         * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
          * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
          * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
          */
@@ -293,7 +293,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public String logicalIdStrategy;
 
         /**
-         * <p>The parameters that are configured for the scenario.</p>
+         * <p>The preference parameters of the scenario.</p>
          */
         @NameInMap("PreferenceParameters")
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> preferenceParameters;
@@ -317,7 +317,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         public ListTemplateScratchesResponseBodyTemplateScratchesSourceTag sourceTag;
 
         /**
-         * <p>The state of the scenario.</p>
+         * <p>The status of the scenario.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -325,7 +325,7 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         /**
          * <p>The reason why the scenario fails to be created.</p>
          * <br>
-         * <p>>  This parameter is returned only if the Status parameter is set to GENERATE_FAILED.</p>
+         * <p>> This parameter is returned only if you set Status to GENERATE_FAILED.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

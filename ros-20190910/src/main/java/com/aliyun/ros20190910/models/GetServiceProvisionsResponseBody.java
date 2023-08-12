@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetServiceProvisionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the service.</p>
+     * <p>The information about the services.</p>
      */
     @NameInMap("ServiceProvisions")
     public java.util.List<GetServiceProvisionsResponseBodyServiceProvisions> serviceProvisions;
@@ -51,12 +51,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public String apiProductId;
 
         /**
-         * <p>The type of the API operation.</p>
+         * <p>The type of the API operation. Valid values:</p>
          * <br>
-         * <p>Valid values:</p>
-         * <br>
-         * <p>*   Open: public API operation</p>
-         * <p>*   Inner: private API operation</p>
+         * <p>*   Open: public</p>
+         * <p>*   Inner: private</p>
          */
         @NameInMap("ApiType")
         public String apiType;
@@ -123,15 +121,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public Boolean created;
 
         /**
-         * <p>The purpose for which the RAM role is used.</p>
-         * <br>
-         * <p>Default value: Default. This value indicates that the RAM role is the default role of the service.</p>
+         * <p>The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
-         * <p>The name of the RAM role.</p>
+         * <p>The name of the role.</p>
          */
         @NameInMap("RoleName")
         public String roleName;
@@ -179,7 +175,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * <p>The authorization URL of the RAM role.</p>
          * <br>
-         * <p>>  This parameter is returned if the Created parameter is set to false.</p>
+         * <p>> This parameter is returned if Created is set to false.</p>
          */
         @NameInMap("AuthorizationURL")
         public String authorizationURL;
@@ -224,7 +220,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         public Boolean autoEnableService;
 
         /**
-         * <p>The names of Alibaba Cloud services on which the service depends.</p>
+         * <p>The names of the services on which the service that is queried depends.</p>
          */
         @NameInMap("DependentServiceNames")
         public java.util.List<String> dependentServiceNames;
@@ -232,19 +228,19 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * <p>The URL that points to the activation page of the service.</p>
          * <br>
-         * <p>>  This parameter is returned if the Status parameter is set to Disabled.</p>
+         * <p>> This parameter is returned if Status is set to Disabled.</p>
          */
         @NameInMap("EnableURL")
         public String enableURL;
 
         /**
-         * <p>The information about the RAM role of the service. If this parameter is empty, no RAM role is associated with the service.</p>
+         * <p>The information about the RAM roles of the service. If this parameter is empty, no RAM role is associated with the service.</p>
          */
         @NameInMap("RoleProvision")
         public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvision roleProvision;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The service name.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
@@ -262,7 +258,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         /**
          * <p>The reason why the service is in the Disabled or Unknown state.</p>
          * <br>
-         * <p>>  This parameter is returned if the Status parameter is set to Disabled or Unknown.</p>
+         * <p>> This parameter is returned if Status is set to Disabled or Unknown.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

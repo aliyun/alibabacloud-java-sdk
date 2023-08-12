@@ -13,25 +13,23 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String changeSetId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.</p>
-     * <br>
-     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
-     * <br>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\</p>
+     * <p>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).\</p>
      * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The parameters.</p>
+     * <p>The parameters that are defined in the template.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetTemplateSummaryRequestParameters> parameters;
 
     /**
-     * <p>The ID of the region to which the stack or stack group in the template belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      * <br>
-     * <p>This parameter takes effect only when you specify the StackId, ChangeSetId, or StackGroupName parameter.</p>
+     * <p>This parameter takes effect only when one of the following parameters are specified: StackId, ChangeSetId, and StackGroupName.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -45,7 +43,7 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String stackGroupName;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The stack ID.</p>
      * <br>
      * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
      */
@@ -53,17 +51,15 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.</p>
-     * <br>
-     * <p>If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
-     * <br>
+     * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\</p>
+     * <p>If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\</p>
      * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
-     * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <p>The template ID. This parameter applies to shared and private templates.</p>
      * <br>
      * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
      */
@@ -71,9 +67,9 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</p>
      * <br>
-     * <p>>  If you do not specify the region of the OSS bucket, the value of the RegionId parameter is used.</p>
+     * <p>> If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
      * <br>
      * <p>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, StackId, ChangeSetId, and StackGroupName.</p>
      * <br>
@@ -83,7 +79,7 @@ public class GetTemplateSummaryRequest extends TeaModel {
     public String templateURL;
 
     /**
-     * <p>The version of the template. This parameter takes effect when you specify the TemplateId parameter.</p>
+     * <p>The version of the template. This parameter takes effect when TemplateId is specified.</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -175,11 +171,11 @@ public class GetTemplateSummaryRequest extends TeaModel {
 
     public static class GetTemplateSummaryRequestParameters extends TeaModel {
         /**
-         * <p>The name of parameter N that is defined in the template. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value in the template.</p>
+         * <p>The name of parameter N that is defined in the template. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are defined in the template.</p>
          * <br>
          * <p>Maximum value of N: 200.</p>
          * <br>
-         * <p>>  The Parameters parameter is optional. If you need to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -189,7 +185,7 @@ public class GetTemplateSummaryRequest extends TeaModel {
          * <br>
          * <p>Maximum value of N: 200.</p>
          * <br>
-         * <p>>  The Parameters parameter is optional. If you need to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
+         * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

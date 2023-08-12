@@ -5,51 +5,47 @@ import com.aliyun.tea.*;
 
 public class ListStackEventsRequest extends TeaModel {
     /**
-     * <p>The logical ID of the resource that is defined in the template.</p>
+     * <p>The logical IDs of the resources.</p>
      */
     @NameInMap("LogicalResourceId")
     public java.util.List<String> logicalResourceId;
 
     /**
-     * <p>The page number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
+     * <p>The number of the page to return.\</p>
+     * <p>Pages start from page 1.\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return per page.</p>
-     * <br>
-     * <p>Maximum value: 50.</p>
-     * <br>
+     * <p>The number of entries to return on each page.\</p>
+     * <p>Maximum value: 50.\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the region in which the stack resides. You can call the [DescribeRegions](~~131035~~) operation to query the most recent list of Alibaba Cloud regions.</p>
+     * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The list of resource types.</p>
+     * <p>The resource types.</p>
      */
     @NameInMap("ResourceType")
     public java.util.List<String> resourceType;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The stack ID.</p>
      */
     @NameInMap("StackId")
     public String stackId;
 
     /**
-     * <p>The state of the resource.</p>
+     * <p>The status of the resource.</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;

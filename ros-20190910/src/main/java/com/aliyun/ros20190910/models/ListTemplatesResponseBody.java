@@ -5,27 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
-     * <br>
+     * <p>The page number.\</p>
      * <p>Pages start from page 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of templates.</p>
+     * <p>The templates.</p>
      */
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
@@ -145,7 +144,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         /**
          * <p>The sharing type of the template.</p>
          * <br>
-         * <p>Default value: Private. Valid values:</p>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   Private: The template belongs to the template owner.</p>
          * <p>*   Shared: The template is shared with other users.</p>
@@ -166,13 +165,13 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateARN;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The template ID.</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
-         * <p>The name of the template.</p>
+         * <p>The template name.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

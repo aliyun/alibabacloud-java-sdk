@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetStackResponseBody extends TeaModel {
+    @NameInMap("CheckedStackResourceCount")
+    public Integer checkedStackResourceCount;
+
     /**
      * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
      */
@@ -53,6 +56,9 @@ public class GetStackResponseBody extends TeaModel {
      */
     @NameInMap("Log")
     public GetStackResponseBodyLog log;
+
+    @NameInMap("NotCheckedStackResourceCount")
+    public Integer notCheckedStackResourceCount;
 
     /**
      * <p>The callback URLs that are used to receive stack events.</p>
@@ -283,6 +289,14 @@ public class GetStackResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackResponseBody setCheckedStackResourceCount(Integer checkedStackResourceCount) {
+        this.checkedStackResourceCount = checkedStackResourceCount;
+        return this;
+    }
+    public Integer getCheckedStackResourceCount() {
+        return this.checkedStackResourceCount;
+    }
+
     public GetStackResponseBody setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -337,6 +351,14 @@ public class GetStackResponseBody extends TeaModel {
     }
     public GetStackResponseBodyLog getLog() {
         return this.log;
+    }
+
+    public GetStackResponseBody setNotCheckedStackResourceCount(Integer notCheckedStackResourceCount) {
+        this.notCheckedStackResourceCount = notCheckedStackResourceCount;
+        return this;
+    }
+    public Integer getNotCheckedStackResourceCount() {
+        return this.notCheckedStackResourceCount;
     }
 
     public GetStackResponseBody setNotificationURLs(java.util.List<String> notificationURLs) {

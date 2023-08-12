@@ -5,30 +5,30 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The region ID of the tag. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the tag that you want to create. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The IDs of the resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource to which you want to add the tag. Valid values:</p>
+     * <p>The type of the resource. Valid values:</p>
      * <br>
      * <p>*   stack: stack</p>
      * <p>*   stackgroup: stack group</p>
      * <p>*   template: template</p>
-     * <p>*   TemplateScratch: scenario</p>
+     * <p>*   templatescratch: scenario</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the resource. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -72,17 +72,17 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the resource. You can specify up to 20 tag keys.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys.</p>
          * <br>
-         * <p>The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the resource. You can specify up to 20 tag values.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;

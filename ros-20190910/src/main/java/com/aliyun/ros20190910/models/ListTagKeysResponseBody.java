@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
     /**
-     * <p>The list of tag keys. Separate multiple tag keys with commas (,).</p>
+     * <p>The tag keys.</p>
      */
     @NameInMap("Keys")
     public java.util.List<String> keys;
 
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

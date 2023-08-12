@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateScratchRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -19,20 +19,20 @@ public class CreateTemplateScratchRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution mode. Default value: Async. Valid values:</p>
+     * <p>The execution mode. Valid values:</p>
      * <br>
-     * <p>*   Async: asynchronous mode</p>
-     * <p>*   Sync: synchronous mode</p>
+     * <p>*   Async (default)</p>
+     * <p>*   Sync</p>
      * <br>
-     * <p>>  If a wide scope of resources exist, the synchronous mode takes a longer period of time than the asynchronous mode. If you set the ExecutionMode parameter to Sync, we recommend that you configure the ClientToken parameter to prevent a timeout error.</p>
+     * <p>> If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
     /**
-     * <p>The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+     * <p>The policy based on which the logical ID is generated. Valid values:</p>
      * <br>
-     * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+     * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
      * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
      * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
      */
@@ -40,13 +40,13 @@ public class CreateTemplateScratchRequest extends TeaModel {
     public String logicalIdStrategy;
 
     /**
-     * <p>The parameters that you want to configure for the scenario.</p>
+     * <p>The preference parameters of the scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public java.util.List<CreateTemplateScratchRequestPreferenceParameters> preferenceParameters;
 
     /**
-     * <p>The ID of the region in which you want to create the scenario.</p>
+     * <p>The region ID of the scenario.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
@@ -72,7 +72,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
     public CreateTemplateScratchRequestSourceTag sourceTag;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the scenario.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateTemplateScratchRequestTags> tags;
@@ -182,23 +182,21 @@ public class CreateTemplateScratchRequest extends TeaModel {
 
     public static class CreateTemplateScratchRequestPreferenceParameters extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The key of the parameter.</p>
          * <br>
-         * <p>For more information about the valid values of the ParameterKey parameter, see the "**Additional information about request parameters**" section of this topic.</p>
-         * <br>
-         * <p>> </p>
-         * <p>*   The PreferenceParameters parameter is optional. If you want to specify the PreferenceParameters parameter, you must specify both the ParameterKey and ParameterValue parameters.</p>
-         * <p>*   If you set the TemplateScratchType parameter to ResourceImport, you must set the ParameterKey parameter to DeletionPolicy.</p>
+         * <p>For information about the valid values of ParameterKey, see the **Additional information about request parameters** section of this topic.</p>
+         * <p>> - PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</p>
+         * <p>> -  If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The value of the parameter. The value of the ParameterValue parameter varies based on the value of the ParameterKey parameter.</p>
+         * <p>The value of the parameter. The value of ParameterValue varies based on the value of ParameterKey.</p>
          * <br>
-         * <p>For more information about the valid values of the ParameterValue parameter, see the "**Additional information about request parameters**" section of this topic.</p>
+         * <p>For information about the valid values of ParameterValue, see the **Additional information about request parameters** section of this topic.</p>
          * <br>
-         * <p>>  The PreferenceParameters parameter is optional. If you want to specify the PreferenceParameters parameter, you must specify both the ParameterKey and ParameterValue parameters.</p>
+         * <p>> PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -234,9 +232,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The filter for resource types. If you specify this parameter, only the resources of the specified types and in the specified resource groups are scanned. If you do not specify this parameter, all resources in the specified resource groups are scanned.</p>
-         * <br>
-         * <p>You can specify up to 20 resource types.</p>
+         * <p>The resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -272,7 +268,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource type.</p>
+         * <p>The type of the resource.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -302,9 +298,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
 
     public static class CreateTemplateScratchRequestSourceTag extends TeaModel {
         /**
-         * <p>The source tags that consist of key-value pairs.</p>
-         * <br>
-         * <p>If you want to specify only the tag key, you must leave the tag value empty. Example: `{"TagKey": ""}`.</p>
+         * <p>The source tags that consist of key-value pairs. If you want to specify only the tag key, you must leave the tag value empty. Example: `{"TagKey": ""}`.</p>
          * <br>
          * <p>You can add up to 10 source tags.</p>
          */
@@ -312,9 +306,7 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public java.util.Map<String, ?> resourceTags;
 
         /**
-         * <p>The filter for resource types. If you specify this parameter, only the resources of the specified types and have the specified tags are scanned. If you do not specify this parameter, all resources that have the specified tags are scanned.</p>
-         * <br>
-         * <p>You can specify up to 20 resource types.</p>
+         * <p>The resource types.</p>
          */
         @NameInMap("ResourceTypeFilter")
         public java.util.List<String> resourceTypeFilter;
@@ -344,15 +336,15 @@ public class CreateTemplateScratchRequest extends TeaModel {
 
     public static class CreateTemplateScratchRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the scenario.</p>
+         * <p>The tag key of the scenario.</p>
          * <br>
-         * <p>>  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.</p>
+         * <p>> Tags is optional. If you want to specify Tags, you must specify Key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the scenario.</p>
+         * <p>The tag value of the scenario.</p>
          */
         @NameInMap("Value")
         public String value;

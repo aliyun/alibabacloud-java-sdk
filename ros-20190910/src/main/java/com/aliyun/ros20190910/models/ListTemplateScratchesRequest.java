@@ -9,7 +9,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1.</p>
+     * <p>Default value: 1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -25,7 +25,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the scenario is created.</p>
+     * <p>The region ID of the scenario.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
@@ -33,7 +33,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The state of the scenario. Valid values:</p>
+     * <p>The status of the scenario. Valid values:</p>
      * <br>
      * <p>*   GENERATE_IN_PROGRESS: The scenario is being created.</p>
      * <p>*   GENERATE_COMPLETE: The scenario is created.</p>
@@ -43,7 +43,7 @@ public class ListTemplateScratchesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the scenario.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListTemplateScratchesRequestTags> tags;
@@ -126,15 +126,15 @@ public class ListTemplateScratchesRequest extends TeaModel {
 
     public static class ListTemplateScratchesRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N that is added to the scenario.</p>
+         * <p>The tag key of the scenario.</p>
          * <br>
-         * <p>>  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.</p>
+         * <p>> Tags is optional. If you want to specify Tags, you must specify Key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that is added to the scenario.</p>
+         * <p>The tag value of the scenario.</p>
          */
         @NameInMap("Value")
         public String value;

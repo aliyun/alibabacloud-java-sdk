@@ -202,6 +202,9 @@ public class ListStacksResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DeletionProtection")
+        public String deletionProtection;
+
         /**
          * <p>The state of the stack on which the last successful drift detection was performed. Valid values:</p>
          * <br>
@@ -315,6 +318,14 @@ public class ListStacksResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListStacksResponseBodyStacks setDeletionProtection(String deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public String getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public ListStacksResponseBodyStacks setDisableRollback(Boolean disableRollback) {

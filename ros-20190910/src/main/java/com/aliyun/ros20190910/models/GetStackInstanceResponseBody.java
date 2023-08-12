@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetStackInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the stack.</p>
+     * <p>The information about the stack.</p>
      */
     @NameInMap("StackInstance")
     public GetStackInstanceResponseBodyStackInstance stackInstance;
@@ -75,15 +75,15 @@ public class GetStackInstanceResponseBody extends TeaModel {
 
     public static class GetStackInstanceResponseBodyStackInstance extends TeaModel {
         /**
-         * <p>The ID of the account to which the stack belongs.</p>
+         * <p>The ID of the destination account to which the stack belongs.</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
-         * <p>The time when the last drift detection was performed on the stack group.</p>
+         * <p>The time when the most recent successful drift detection was performed on the stack group.</p>
          * <br>
-         * <p>>  This parameter is returned only if drift detection is performed on the stack group.</p>
+         * <p>> This parameter is returned only if drift detection is performed on the stack group.</p>
          */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
@@ -97,19 +97,19 @@ public class GetStackInstanceResponseBody extends TeaModel {
         /**
          * <p>The ID of the folder in the resource directory.</p>
          * <br>
-         * <p>>  This parameter is returned only if the stack group is granted service-managed permissions.</p>
+         * <p>> This parameter is returned only if the stack group is granted service-managed permissions.</p>
          */
         @NameInMap("RdFolderId")
         public String rdFolderId;
 
         /**
-         * <p>The ID of the region to which the stack belongs.</p>
+         * <p>The region ID of the stack.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The state of the stack when the last successful drift detection was performed on the stack group.</p>
+         * <p>The state of the stack when the most recent successful drift detection was performed on the stack group.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -117,7 +117,7 @@ public class GetStackInstanceResponseBody extends TeaModel {
          * <p>*   NOT_CHECKED: No successful drift detection is performed on the stack.</p>
          * <p>*   IN_SYNC: The stack is being synchronized.</p>
          * <br>
-         * <p>>  This parameter is returned only if drift detection is performed on the stack group.</p>
+         * <p>> This parameter is returned only if drift detection is performed on the stack group.</p>
          */
         @NameInMap("StackDriftStatus")
         public String stackDriftStatus;
@@ -135,9 +135,9 @@ public class GetStackInstanceResponseBody extends TeaModel {
         public String stackGroupName;
 
         /**
-         * <p>The ID of the stack.</p>
+         * <p>The stack ID.</p>
          * <br>
-         * <p>>  This parameter is returned only if the stack is in the CURRENT state.</p>
+         * <p>> This parameter is returned only if the stack is in the CURRENT state.</p>
          */
         @NameInMap("StackId")
         public String stackId;
@@ -147,21 +147,21 @@ public class GetStackInstanceResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   CURRENT: The stack is up to date with the stack group.</p>
+         * <p>*   CURRENT: The stack is up-to-date with the stack group.</p>
          * <br>
-         * <p>*   OUTDATED: The stack is not up to date with the stack group. Stacks may be in the OUTDATED state due to the following reasons:</p>
+         * <p>*   OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:</p>
          * <br>
-         * <p>    *   When you call the CreateStackInstances operation to create stacks, the stacks fail to be created.</p>
-         * <p>    *   When you call the UpdateStackInstances or UpdateStackGroup operation to update stacks, the stacks fail to be updated or only specific stacks are updated.</p>
+         * <p>    *   When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</p>
+         * <p>    *   When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</p>
          * <p>    *   The creation or update operation is not complete.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The reason why the stack is in the OUTDATED state.</p>
+         * <p>The reason why the stack instance is in the OUTDATED state.</p>
          * <br>
-         * <p>>  This parameter is returned only if the stack is in the OUTDATED state.</p>
+         * <p>> This parameter is returned only if the stack instance is in the OUTDATED state.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

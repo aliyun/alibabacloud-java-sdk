@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListTemplateVersionsResponseBody extends TeaModel {
     /**
-     * <p>The query token that is returned in this call.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of versions.</p>
+     * <p>The versions.</p>
      */
     @NameInMap("Versions")
     public java.util.List<ListTemplateVersionsResponseBodyVersions> versions;
@@ -65,7 +65,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the template. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.</p>
+         * <p>The template ID. This parameter applies to shared and private templates. For a shared template, the template ID is the same as the Alibaba Cloud Resource Name (ARN) of the template.</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
@@ -79,7 +79,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         /**
          * <p>The version number.</p>
          * <br>
-         * <p>For a shared template, this parameter is returned only if the VersionOption parameter is set to AllVersions.</p>
+         * <p>For a shared template, this parameter is returned only if VersionOption is set to AllVersions.</p>
          * <br>
          * <p>Valid values: v1 to v100.</p>
          */

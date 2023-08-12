@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateScratchShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
-     * <p>For more information, see [Ensure idempotence](~~134212~~).</p>
+     * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -19,20 +19,20 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution mode. Default value: Async. Valid values:</p>
+     * <p>The execution mode. Valid values:</p>
      * <br>
-     * <p>*   Async: asynchronous mode</p>
-     * <p>*   Sync: synchronous mode</p>
+     * <p>*   Async (default)</p>
+     * <p>*   Sync</p>
      * <br>
-     * <p>>  If a wide scope of resources exist, the synchronous mode takes a longer period of time than the asynchronous mode. If you set the ExecutionMode parameter to Sync, we recommend that you configure the ClientToken parameter to prevent a timeout error.</p>
+     * <p>> If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
     /**
-     * <p>The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+     * <p>The policy based on which the logical ID is generated. Valid values:</p>
      * <br>
-     * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+     * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
      * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
      * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
      */
@@ -40,13 +40,13 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     public String logicalIdStrategy;
 
     /**
-     * <p>The parameters that you want to configure for the scenario.</p>
+     * <p>The preference parameters of the scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public String preferenceParametersShrink;
 
     /**
-     * <p>The ID of the region in which you want to create the scenario.</p>
+     * <p>The region ID of the scenario.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
@@ -72,7 +72,7 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
     public String sourceTagShrink;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags of the scenario.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateTemplateScratchShrinkRequestTags> tags;
@@ -182,15 +182,15 @@ public class CreateTemplateScratchShrinkRequest extends TeaModel {
 
     public static class CreateTemplateScratchShrinkRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N that you want to add to the scenario.</p>
+         * <p>The tag key of the scenario.</p>
          * <br>
-         * <p>>  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.</p>
+         * <p>> Tags is optional. If you want to specify Tags, you must specify Key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N that you want to add to the scenario.</p>
+         * <p>The tag value of the scenario.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,33 +5,29 @@ import com.aliyun.tea.*;
 
 public class ListStackEventsResponseBody extends TeaModel {
     /**
-     * <p>The list of events.</p>
+     * <p>The events.</p>
      */
     @NameInMap("Events")
     public java.util.List<ListStackEventsResponseBodyEvents> events;
 
     /**
-     * <p>The page number of the returned page.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
+     * <p>The page number of the returned page.\</p>
+     * <p>Pages start from page 1.\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
-     * <br>
-     * <p>Maximum value: 50.</p>
-     * <br>
+     * <p>The number of entries returned per page.\</p>
+     * <p>Maximum value: 50.\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -89,19 +85,19 @@ public class ListStackEventsResponseBody extends TeaModel {
 
     public static class ListStackEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The time when the resource was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+         * <p>The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
          */
         @NameInMap("EventId")
         public String eventId;
 
         /**
-         * <p>The logical ID of the resource that is defined in the template.</p>
+         * <p>The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
@@ -119,13 +115,13 @@ public class ListStackEventsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The ID of the stack.</p>
+         * <p>The stack ID.</p>
          */
         @NameInMap("StackId")
         public String stackId;
 
         /**
-         * <p>The name of the stack.</p>
+         * <p>The stack name.</p>
          */
         @NameInMap("StackName")
         public String stackName;
@@ -137,7 +133,7 @@ public class ListStackEventsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the resource is in its current state.</p>
+         * <p>The reason why the resource is in the current state.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

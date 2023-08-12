@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetServiceProvisionsRequest extends TeaModel {
     /**
-     * <p>The list of parameters.</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetServiceProvisionsRequestParameters> parameters;
 
     /**
-     * <p>The ID of the region.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -27,23 +25,23 @@ public class GetServiceProvisionsRequest extends TeaModel {
     /**
      * <p>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</p>
      * <br>
-     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.</p>
+     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
-     * <p>The ID of the template. This parameter applies to shared and private templates.</p>
+     * <p>The template ID. This parameter applies to shared and private templates.</p>
      * <br>
-     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.</p>
+     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</p>
+     * <p>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</p>
      * <br>
-     * <p>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.N.ServiceName.</p>
+     * <p>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</p>
      */
     @NameInMap("TemplateURL")
     public String templateURL;
@@ -51,7 +49,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
     /**
      * <p>The version of the template. If you do not specify this parameter, the latest version is used.</p>
      * <br>
-     * <p>This parameter takes effect only when the TemplateId parameter is specified.</p>
+     * <p>This parameter takes effect only when TemplateId is specified.</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;
@@ -119,17 +117,17 @@ public class GetServiceProvisionsRequest extends TeaModel {
 
     public static class GetServiceProvisionsRequestParameters extends TeaModel {
         /**
-         * <p>The name of parameter N. If you do not specify the name and the value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</p>
+         * <p>The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</p>
          * <br>
-         * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</p>
+         * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The value of parameter N.</p>
+         * <p>The value of the parameter.</p>
          * <br>
-         * <p>>  The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</p>
+         * <p>> The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -159,7 +157,7 @@ public class GetServiceProvisionsRequest extends TeaModel {
 
     public static class GetServiceProvisionsRequestServices extends TeaModel {
         /**
-         * <p>The name of service N or feature N. Valid values:</p>
+         * <p>The service or feature name. Valid values:</p>
          * <br>
          * <p>*   AHAS: Application High Availability Service</p>
          * <p>*   ARMS: Application Real-Time Monitoring Service (ARMS)</p>
@@ -170,11 +168,11 @@ public class GetServiceProvisionsRequest extends TeaModel {
          * <p>*   CMS: CloudMonitor</p>
          * <p>*   CR: Container Registry</p>
          * <p>*   CS: Container Service for Kubernetes (ACK)</p>
-         * <p>*   DCDN: Dynamic Route for CDN (DCDN)</p>
+         * <p>*   DCDN: Dynamic Content Delivery Network (DCDN)</p>
          * <p>*   DataHub: DataHub</p>
          * <p>*   DataWorks: DataWorks</p>
          * <p>*   EDAS: Enterprise Distributed Application Service (EDAS)</p>
-         * <p>*   E-HPC: Elastic High Performance Computing (E-HPC)</p>
+         * <p>*   EHPC: Elastic High Performance Computing (E-HPC)</p>
          * <p>*   EMAS: Enterprise Mobile Application Studio (EMAS)</p>
          * <p>*   FC: Function Compute</p>
          * <p>*   FNF: Serverless Workflow (SWF)</p>
@@ -190,12 +188,12 @@ public class GetServiceProvisionsRequest extends TeaModel {
          * <p>*   OTS: Tablestore</p>
          * <p>*   PrivateLink: PrivateLink</p>
          * <p>*   PrivateZone: Alibaba Cloud DNS PrivateZone</p>
-         * <p>*   RocketMQ: Message Queue for Apache RocketMQ</p>
+         * <p>*   RocketMQ: ApsaraMQ for RocketMQ</p>
          * <p>*   SAE: Serverless App Engine (SAE)</p>
          * <p>*   SLS: Log Service</p>
          * <p>*   TrafficMirror: the traffic mirroring feature</p>
          * <p>*   VS: Video Surveillance System</p>
-         * <p>*   Xtrace: Tracing Analysis</p>
+         * <p>*   Xtrace: Managed Service for OpenTelemetry</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;

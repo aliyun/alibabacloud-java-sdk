@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStackGroupOperationRequest extends TeaModel {
     /**
-     * <p>The ID of the operation that you want to query. You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation.</p>
+     * <p>The operation ID. You can call the [ListStackGroupOperations](~~151342~~) operation to query the operation ID.</p>
      */
     @NameInMap("OperationId")
     public String operationId;
