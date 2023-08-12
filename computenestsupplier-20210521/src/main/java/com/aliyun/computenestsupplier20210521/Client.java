@@ -201,6 +201,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ShareType", request.shareType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceServiceId)) {
+            query.put("SourceServiceId", request.sourceServiceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceServiceVersion)) {
+            query.put("SourceServiceVersion", request.sourceServiceVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -520,6 +528,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceVersion)) {
             query.put("ServiceVersion", request.serviceVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sharedAccountType)) {
+            query.put("SharedAccountType", request.sharedAccountType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showDetail)) {

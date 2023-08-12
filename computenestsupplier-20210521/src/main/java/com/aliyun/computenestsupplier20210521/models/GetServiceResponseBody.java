@@ -91,6 +91,15 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("ShareType")
     public String shareType;
 
+    @NameInMap("SourceServiceId")
+    public String sourceServiceId;
+
+    @NameInMap("SourceServiceVersion")
+    public String sourceServiceVersion;
+
+    @NameInMap("SourceSupplierName")
+    public String sourceSupplierName;
+
     @NameInMap("Statistic")
     public GetServiceResponseBodyStatistic statistic;
 
@@ -368,6 +377,30 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getShareType() {
         return this.shareType;
+    }
+
+    public GetServiceResponseBody setSourceServiceId(String sourceServiceId) {
+        this.sourceServiceId = sourceServiceId;
+        return this;
+    }
+    public String getSourceServiceId() {
+        return this.sourceServiceId;
+    }
+
+    public GetServiceResponseBody setSourceServiceVersion(String sourceServiceVersion) {
+        this.sourceServiceVersion = sourceServiceVersion;
+        return this;
+    }
+    public String getSourceServiceVersion() {
+        return this.sourceServiceVersion;
+    }
+
+    public GetServiceResponseBody setSourceSupplierName(String sourceSupplierName) {
+        this.sourceSupplierName = sourceSupplierName;
+        return this;
+    }
+    public String getSourceSupplierName() {
+        return this.sourceSupplierName;
     }
 
     public GetServiceResponseBody setStatistic(GetServiceResponseBodyStatistic statistic) {
