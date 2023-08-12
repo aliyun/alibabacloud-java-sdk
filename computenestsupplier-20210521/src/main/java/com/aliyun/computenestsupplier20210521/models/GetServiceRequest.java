@@ -16,6 +16,9 @@ public class GetServiceRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    @NameInMap("SharedAccountType")
+    public String sharedAccountType;
+
     @NameInMap("ShowDetail")
     public java.util.List<String> showDetail;
 
@@ -54,6 +57,14 @@ public class GetServiceRequest extends TeaModel {
     }
     public String getServiceVersion() {
         return this.serviceVersion;
+    }
+
+    public GetServiceRequest setSharedAccountType(String sharedAccountType) {
+        this.sharedAccountType = sharedAccountType;
+        return this;
+    }
+    public String getSharedAccountType() {
+        return this.sharedAccountType;
     }
 
     public GetServiceRequest setShowDetail(java.util.List<String> showDetail) {

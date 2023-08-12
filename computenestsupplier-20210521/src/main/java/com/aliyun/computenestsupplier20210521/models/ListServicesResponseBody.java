@@ -168,11 +168,17 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("DeployType")
         public String deployType;
 
+        @NameInMap("LatestResellSourceServiceVersion")
+        public String latestResellSourceServiceVersion;
+
         @NameInMap("PublishTime")
         public String publishTime;
 
         @NameInMap("RelationType")
         public String relationType;
+
+        @NameInMap("ResellServiceId")
+        public String resellServiceId;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -191,6 +197,15 @@ public class ListServicesResponseBody extends TeaModel {
 
         @NameInMap("SourceImage")
         public String sourceImage;
+
+        @NameInMap("SourceServiceId")
+        public String sourceServiceId;
+
+        @NameInMap("SourceServiceVersion")
+        public String sourceServiceVersion;
+
+        @NameInMap("SourceSupplierName")
+        public String sourceSupplierName;
 
         @NameInMap("Status")
         public String status;
@@ -280,6 +295,14 @@ public class ListServicesResponseBody extends TeaModel {
             return this.deployType;
         }
 
+        public ListServicesResponseBodyServices setLatestResellSourceServiceVersion(String latestResellSourceServiceVersion) {
+            this.latestResellSourceServiceVersion = latestResellSourceServiceVersion;
+            return this;
+        }
+        public String getLatestResellSourceServiceVersion() {
+            return this.latestResellSourceServiceVersion;
+        }
+
         public ListServicesResponseBodyServices setPublishTime(String publishTime) {
             this.publishTime = publishTime;
             return this;
@@ -294,6 +317,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getRelationType() {
             return this.relationType;
+        }
+
+        public ListServicesResponseBodyServices setResellServiceId(String resellServiceId) {
+            this.resellServiceId = resellServiceId;
+            return this;
+        }
+        public String getResellServiceId() {
+            return this.resellServiceId;
         }
 
         public ListServicesResponseBodyServices setResourceGroupId(String resourceGroupId) {
@@ -342,6 +373,30 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getSourceImage() {
             return this.sourceImage;
+        }
+
+        public ListServicesResponseBodyServices setSourceServiceId(String sourceServiceId) {
+            this.sourceServiceId = sourceServiceId;
+            return this;
+        }
+        public String getSourceServiceId() {
+            return this.sourceServiceId;
+        }
+
+        public ListServicesResponseBodyServices setSourceServiceVersion(String sourceServiceVersion) {
+            this.sourceServiceVersion = sourceServiceVersion;
+            return this;
+        }
+        public String getSourceServiceVersion() {
+            return this.sourceServiceVersion;
+        }
+
+        public ListServicesResponseBodyServices setSourceSupplierName(String sourceSupplierName) {
+            this.sourceSupplierName = sourceSupplierName;
+            return this;
+        }
+        public String getSourceSupplierName() {
+            return this.sourceSupplierName;
         }
 
         public ListServicesResponseBodyServices setStatus(String status) {

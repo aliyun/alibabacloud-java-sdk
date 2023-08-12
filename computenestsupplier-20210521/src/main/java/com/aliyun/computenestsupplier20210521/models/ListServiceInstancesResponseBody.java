@@ -138,6 +138,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("ServiceType")
         public String serviceType;
 
+        @NameInMap("SourceSupplierName")
+        public String sourceSupplierName;
+
         @NameInMap("Status")
         public String status;
 
@@ -212,6 +215,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public String getServiceType() {
             return this.serviceType;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstancesService setSourceSupplierName(String sourceSupplierName) {
+            this.sourceSupplierName = sourceSupplierName;
+            return this;
+        }
+        public String getSourceSupplierName() {
+            return this.sourceSupplierName;
         }
 
         public ListServiceInstancesResponseBodyServiceInstancesService setStatus(String status) {

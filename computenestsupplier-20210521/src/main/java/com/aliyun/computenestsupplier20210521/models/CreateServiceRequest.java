@@ -55,6 +55,12 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("ShareType")
     public String shareType;
 
+    @NameInMap("SourceServiceId")
+    public String sourceServiceId;
+
+    @NameInMap("SourceServiceVersion")
+    public String sourceServiceVersion;
+
     @NameInMap("Tag")
     public java.util.List<CreateServiceRequestTag> tag;
 
@@ -209,6 +215,22 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getShareType() {
         return this.shareType;
+    }
+
+    public CreateServiceRequest setSourceServiceId(String sourceServiceId) {
+        this.sourceServiceId = sourceServiceId;
+        return this;
+    }
+    public String getSourceServiceId() {
+        return this.sourceServiceId;
+    }
+
+    public CreateServiceRequest setSourceServiceVersion(String sourceServiceVersion) {
+        this.sourceServiceVersion = sourceServiceVersion;
+        return this;
+    }
+    public String getSourceServiceVersion() {
+        return this.sourceServiceVersion;
     }
 
     public CreateServiceRequest setTag(java.util.List<CreateServiceRequestTag> tag) {
