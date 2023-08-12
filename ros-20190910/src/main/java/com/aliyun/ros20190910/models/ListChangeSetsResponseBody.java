@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListChangeSetsResponseBody extends TeaModel {
     /**
-     * <p>The list of change sets.</p>
+     * <p>The change sets.</p>
      */
     @NameInMap("ChangeSets")
     public java.util.List<ListChangeSetsResponseBodyChangeSets> changeSets;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of queried entries.</p>
+     * <p>The total number of change sets returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -99,7 +99,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String changeSetType;
 
         /**
-         * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -117,7 +117,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String executionStatus;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the change set.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -141,7 +141,7 @@ public class ListChangeSetsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason why the change set is in its current status.</p>
+         * <p>The reason why the change set is in its current state.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;

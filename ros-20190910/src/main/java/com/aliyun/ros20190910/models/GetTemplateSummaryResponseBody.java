@@ -23,15 +23,14 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
     public java.util.List<java.util.Map<String, ?>> parameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The resource identifier summaries that describe the resources that you want to import and the properties that are used to identify the resources during the import.</p>
-     * <br>
-     * <p>For example, VpcId is an identifier property for ALIYUN::ECS::VPC resources.</p>
+     * <p>The resource identifier summaries.\</p>
+     * <p>A summary describes the resource that you want to import and the properties that are used to identify the resource during the import. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.</p>
      */
     @NameInMap("ResourceIdentifierSummaries")
     public java.util.List<GetTemplateSummaryResponseBodyResourceIdentifierSummaries> resourceIdentifierSummaries;
@@ -111,13 +110,13 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
 
     public static class GetTemplateSummaryResponseBodyResourceIdentifierSummaries extends TeaModel {
         /**
-         * <p>The logical IDs of all resources of the type that is specified by the ResouceType parameter in the template.</p>
+         * <p>The logical IDs of all resources of the type that is specified by ResouceType in the template.</p>
          */
         @NameInMap("LogicalResourceIds")
         public java.util.List<String> logicalResourceIds;
 
         /**
-         * <p>The resource properties. You can use a resource property to identify the resources that you want to manage. For example, VpcId is an identifier property for ALIYUN::ECS::VPC resources.</p>
+         * <p>The resource properties. You can use a resource property to identify the resource that you want to manage. For example, VpcId is an identifier property of ALIYUN::ECS::VPC.</p>
          */
         @NameInMap("ResourceIdentifiers")
         public java.util.List<String> resourceIdentifiers;
@@ -125,7 +124,7 @@ public class GetTemplateSummaryResponseBody extends TeaModel {
         /**
          * <p>The resource type.</p>
          * <br>
-         * <p>>  You can import resources of the type that is specified by the ResouceType parameter.</p>
+         * <p>> The resource import feature is supported for the resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

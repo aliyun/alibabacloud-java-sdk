@@ -17,10 +17,10 @@ public class GetChangeSetRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to show the template. Default value: false. Valid values:</p>
+     * <p>Specifies whether to obtain the template. Valid values:</p>
      * <br>
-     * <p>*   true: shows the template.</p>
-     * <p>*   false: does not show the template.</p>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
      */
     @NameInMap("ShowTemplate")
     public Boolean showTemplate;

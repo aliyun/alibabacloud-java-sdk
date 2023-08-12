@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GenerateTemplateByScratchRequest extends TeaModel {
     /**
-     * <p>The ID of the region to which the new node belongs.</p>
+     * <p>The region ID of the new node.</p>
      */
     @NameInMap("ProvisionRegionId")
     public String provisionRegionId;
 
     /**
-     * <p>The ID of the region in which the scenario is created.</p>
+     * <p>The region ID of the scenario.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */

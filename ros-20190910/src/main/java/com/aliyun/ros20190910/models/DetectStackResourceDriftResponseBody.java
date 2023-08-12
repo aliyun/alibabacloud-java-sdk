@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DetectStackResourceDriftResponseBody extends TeaModel {
     /**
-     * <p>The actual resource properties in JSON format.</p>
+     * <p>The actual JSON-formatted resource properties.</p>
      */
     @NameInMap("ActualProperties")
     public String actualProperties;
 
     /**
-     * <p>The time at which the resource drift detection operation was initiated.</p>
+     * <p>The time when the resource drift detection was initiated.</p>
      */
     @NameInMap("DriftDetectionTime")
     public String driftDetectionTime;
 
     /**
-     * <p>The resource properties as defined in the template, in JSON format.</p>
+     * <p>The JSON-formatted resource properties that are defined in the template.</p>
      */
     @NameInMap("ExpectedProperties")
     public String expectedProperties;
 
     /**
-     * <p>The logical ID of the resource as defined in the template.</p>
+     * <p>The logical ID of the resource that is defined in the template.</p>
      */
     @NameInMap("LogicalResourceId")
     public String logicalResourceId;
@@ -35,7 +35,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
     public String physicalResourceId;
 
     /**
-     * <p>The property differences of the resource.</p>
+     * <p>The property drifts of the resource.</p>
      */
     @NameInMap("PropertyDifferences")
     public java.util.List<DetectStackResourceDriftResponseBodyPropertyDifferences> propertyDifferences;
@@ -47,9 +47,9 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource drift status. Valid values:</p>
+     * <p>The drift status of the resource. Valid values:</p>
      * <br>
-     * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource has been deleted.</p>
+     * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</p>
      * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
      * <p>*   NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
      * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
@@ -58,7 +58,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
     public String resourceDriftStatus;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The type of the resource.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -164,7 +164,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         /**
          * <p>The drift type of the resource property. Valid values:</p>
          * <br>
-         * <p>*   ADD: The value has been added to a resource property whose data type is Array or List.</p>
+         * <p>*   ADD: The property value has been added to a resource property whose data type was Array or List.</p>
          * <p>*   REMOVE: The property has been deleted from the current resource configuration.</p>
          * <p>*   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.</p>
          */
@@ -172,7 +172,7 @@ public class DetectStackResourceDriftResponseBody extends TeaModel {
         public String differenceType;
 
         /**
-         * <p>The expected value of the resource property as defined in the template.</p>
+         * <p>The expected value of the resource property that is defined in the template.</p>
          */
         @NameInMap("ExpectedValue")
         public String expectedValue;

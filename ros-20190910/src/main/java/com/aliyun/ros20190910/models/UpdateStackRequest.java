@@ -36,6 +36,11 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The dry run option in the list format. You can specify only one dry run option.</p>
+     * <br>
+     * <p>> This parameter takes effect only when DryRun is set to true.</p>
+     */
     @NameInMap("DryRunOptions")
     public java.util.List<String> dryRunOptions;
 
@@ -44,11 +49,10 @@ public class UpdateStackRequest extends TeaModel {
      * <br>
      * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
      * <br>
-     * <p>> </p>
-     * <p>*   If you set this parameter to an integer that is greater than 0, the integer is used.</p>
-     * <p>*   If you set this parameter to 0, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</p>
-     * <p>*   If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</p>
-     * <p>*   If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.</p>
+     * <p>> - If you set this parameter to an integer that is greater than 0, the integer is used.</p>
+     * <p>> -  If you set this parameter to 0, no limit is imposed on Resource Orchestration Service (ROS) stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</p>
+     * <p>> -  If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</p>
+     * <p>> - If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.</p>
      */
     @NameInMap("Parallelism")
     public Long parallelism;
@@ -439,9 +443,8 @@ public class UpdateStackRequest extends TeaModel {
          * <br>
          * <p>Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>> </p>
-         * <p>*   The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</p>
-         * <p>*   The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
+         * <p>> - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</p>
+         * <p>> - The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
          */
         @NameInMap("Key")
         public String key;

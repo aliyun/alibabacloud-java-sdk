@@ -89,11 +89,10 @@ public class CreateStackRequest extends TeaModel {
      * <br>
      * <p>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</p>
      * <br>
-     * <p>> </p>
      * <br>
-     * <p>*   If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</p>
      * <br>
-     * <p>*   If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</p>
+     * <p>> -  If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</p>
+     * <p>> -  If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</p>
      */
     @NameInMap("Parallelism")
     public Long parallelism;
@@ -451,11 +450,8 @@ public class CreateStackRequest extends TeaModel {
          * <br>
          * <p>Valid values of N: 1 to 20.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</p>
-         * <br>
-         * <p>*   The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
+         * <p>> - The Tags parameter is optional. If you specify Tags, you must specify Tags.N.Key.</p>
+         * <p>> -  The tag of a stack is propagated to each resource that supports the tag feature in the stack. For more information, see [Propagate tags](~~201421~~).</p>
          */
         @NameInMap("Key")
         public String key;

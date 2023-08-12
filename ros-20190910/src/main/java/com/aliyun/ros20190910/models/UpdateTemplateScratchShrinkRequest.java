@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among the different requests. The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <br>
      * <p>For more information, see [How to ensure idempotence](~~134212~~).</p>
      */
@@ -19,20 +19,20 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The execution mode. Default value: Async. Valid values:</p>
+     * <p>The execution mode. Valid values:</p>
      * <br>
-     * <p>*   Async: asynchronous mode</p>
-     * <p>*   Sync: synchronous mode</p>
+     * <p>*   Async (default)</p>
+     * <p>*   Sync</p>
      * <br>
-     * <p>>  If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you set ClientToken to prevent the execution from timing out.</p>
+     * <p>> If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</p>
      */
     @NameInMap("ExecutionMode")
     public String executionMode;
 
     /**
-     * <p>The generation policy of the logical ID. Default value: LongTypePrefixAndIndexSuffix. Valid values:</p>
+     * <p>The policy based on which the logical ID is generated. Valid values:</p>
      * <br>
-     * <p>*   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</p>
+     * <p>*   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</p>
      * <p>*   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</p>
      * <p>*   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</p>
      */
@@ -40,13 +40,13 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     public String logicalIdStrategy;
 
     /**
-     * <p>The parameters that are configured in the scenario.</p>
+     * <p>The preference parameters of the scenario.</p>
      */
     @NameInMap("PreferenceParameters")
     public String preferenceParametersShrink;
 
     /**
-     * <p>The ID of the region in which the scenario is created.</p>
+     * <p>The region ID of the scenario.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
@@ -60,7 +60,7 @@ public class UpdateTemplateScratchShrinkRequest extends TeaModel {
     public String sourceResourceGroupShrink;
 
     /**
-     * <p>The source resource.</p>
+     * <p>The source resources.</p>
      */
     @NameInMap("SourceResources")
     public String sourceResourcesShrink;

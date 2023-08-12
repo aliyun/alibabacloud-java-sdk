@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the resources. This parameter takes effect when the TagKey.N parameter is not specified in the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to remove all tags from the resource. This parameter takes effect when TagKey is not specified in the request. Valid values:</p>
      * <br>
-     * <p>*   true: removes all tags from the resources.</p>
-     * <p>*   false: removes the specified tags from the resources.</p>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
      */
     @NameInMap("All")
     public Boolean all;
@@ -20,7 +20,9 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A list of resource IDs.</p>
+     * <p>The IDs of the resource.</p>
+     * <br>
+     * <p>> If you set ResourceType to stackgroup, you must set ResourceId to the name of the stack group.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -37,7 +39,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag keys of the resource.</p>
+     * <p>The tag keys of the resource. You can specify up to 20 tag keys.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

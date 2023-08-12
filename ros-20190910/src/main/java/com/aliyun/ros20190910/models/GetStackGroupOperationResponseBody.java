@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetStackGroupOperationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The details of the operation on the stack group.</p>
+     * <p>The information about the stack group operation.</p>
      */
     @NameInMap("StackGroupOperation")
     public GetStackGroupOperationResponseBodyStackGroupOperation stackGroupOperation;
@@ -39,15 +39,15 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     public static class GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets extends TeaModel {
         /**
-         * <p>The IDs of the member accounts in the resource directory.</p>
+         * <p>The IDs of the members in the resource directory.</p>
          * <br>
-         * <p>>  This parameter is returned only if the AccountIds request parameter is specified in the [UpdateStackInstances](~~151716~~) operation to update stack instances.</p>
+         * <p>> This parameter is returned only if AccountIds is specified when the [UpdateStackInstances](~~151716~~) operation is called to update stack instances.</p>
          */
         @NameInMap("AccountIds")
         public java.util.List<String> accountIds;
 
         /**
-         * <p>The folder IDs of the resource directory.</p>
+         * <p>The IDs of the folders in the resource directory.</p>
          */
         @NameInMap("RdFolderIds")
         public java.util.List<String> rdFolderIds;
@@ -77,47 +77,47 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     public static class GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences extends TeaModel {
         /**
-         * <p>The maximum number of stack operation failures that can occur within the accounts in each region. When the value is exceeded, the operation fails to be performed in the region. If the operation fails to be performed in one region, the operation fails to be performed in other regions.</p>
+         * <p>The number of accounts within which stack operation failures are allowed to occur in each region. If the value of this parameter is exceeded in a region, Resource Orchestration Service (ROS) stops the operation in the region. If the operation is stopped in one region, the operation is no longer performed in other regions.</p>
          * <br>
          * <p>Valid values: 0 to 20.</p>
          * <br>
-         * <p>>  Only one of the FailureToleranceCount and FailureTolerancePercentage parameters is returned.</p>
+         * <p>> Only one of FailureToleranceCount and FailureTolerancePercentage can be returned.</p>
          */
         @NameInMap("FailureToleranceCount")
         public Integer failureToleranceCount;
 
         /**
-         * <p>The percentage of the total number of accounts within which stack operation failures can occur to the total number of accounts in each region. When the value is exceeded, the operation fails to be performed in the region.</p>
+         * <p>The percentage of the number of accounts within which stack operation failures are allowed to occur to the total number of accounts in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region.</p>
          * <br>
          * <p>Valid values: 0 to 100.</p>
          * <br>
-         * <p>>  Only one of the FailureToleranceCount and FailureTolerancePercentage parameters is returned.</p>
+         * <p>> Only one of FailureToleranceCount and FailureTolerancePercentage can be returned.</p>
          */
         @NameInMap("FailureTolerancePercentage")
         public Integer failureTolerancePercentage;
 
         /**
-         * <p>The maximum number of accounts within which operations are performed on stacks concurrently in each region.</p>
+         * <p>The maximum number of accounts within which stacks are deployed at the same time in each region.</p>
          * <br>
          * <p>Valid values: 1 to 20.</p>
          * <br>
-         * <p>>  Only one of the MaxConcurrentCount and MaxConcurrentPercentage parameters is returned.</p>
+         * <p>> Only one of MaxConcurrentCount and MaxConcurrentPercentage can be returned.</p>
          */
         @NameInMap("MaxConcurrentCount")
         public Integer maxConcurrentCount;
 
         /**
-         * <p>The percentage of the total number of accounts within which operations are performed on stacks concurrently to the total number of accounts in each region.</p>
+         * <p>The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.</p>
          * <br>
          * <p>Valid values: 1 to 100.</p>
          * <br>
-         * <p>>  Only one of the MaxConcurrentCount and MaxConcurrentPercentage parameters is returned.</p>
+         * <p>> Only one of MaxConcurrentCount and MaxConcurrentPercentage can be returned.</p>
          */
         @NameInMap("MaxConcurrentPercentage")
         public Integer maxConcurrentPercentage;
 
         /**
-         * <p>The regions in the order of which the operation is performed.</p>
+         * <p>The regions in the order of operation execution.</p>
          */
         @NameInMap("RegionIdsOrder")
         public java.util.List<String> regionIdsOrder;
@@ -171,45 +171,45 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     public static class GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail extends TeaModel {
         /**
-         * <p>The number of stack instances for which the drift detection was canceled.</p>
+         * <p>The number of stack instances for which drift detection was canceled.</p>
          */
         @NameInMap("CancelledStackInstancesCount")
         public Integer cancelledStackInstancesCount;
 
         /**
-         * <p>The status of the drift detection.</p>
+         * <p>The drift detection state.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   COMPLETED: The drift detection is performed and completed on all stack instances.</p>
-         * <p>*   FAILED: The drift detection is performed. The number of stack instances that failed the drift detection exceeds the specified threshold.</p>
-         * <p>*   PARTIAL_SUCCESS: The drift detection is performed. The number of stack instances that failed the drift detection does not exceed the specified threshold.</p>
-         * <p>*   IN_PROGRESS: The drift detection is being performed on the stack group.</p>
-         * <p>*   STOPPED: The drift detection is canceled for the stack group.</p>
+         * <p>*   COMPLETED: Drift detection is performed on the stack group and all stack instances passed the drift detection.</p>
+         * <p>*   FAILED: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection exceeds the specified threshold.</p>
+         * <p>*   PARTIAL_SUCCESS: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection does not exceed the specified threshold.</p>
+         * <p>*   IN_PROGRESS: Drift detection is being performed on the stack group.</p>
+         * <p>*   STOPPED: Drift detection is canceled for the stack group.</p>
          */
         @NameInMap("DriftDetectionStatus")
         public String driftDetectionStatus;
 
         /**
-         * <p>The time when the drift detection was initiated.</p>
+         * <p>The time when drift detection was performed.</p>
          */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
         /**
-         * <p>The number of stack instances that were drifted.</p>
+         * <p>The number of stack instances that have drifted.</p>
          */
         @NameInMap("DriftedStackInstancesCount")
         public Integer driftedStackInstancesCount;
 
         /**
-         * <p>The number of stack instances that failed the drift detection.</p>
+         * <p>The number of stack instances that failed drift detection.</p>
          */
         @NameInMap("FailedStackInstancesCount")
         public Integer failedStackInstancesCount;
 
         /**
-         * <p>The number of stack instances on which the drift detection was being performed.</p>
+         * <p>The number of stack instances on which drift detection was being performed.</p>
          */
         @NameInMap("InProgressStackInstancesCount")
         public Integer inProgressStackInstancesCount;
@@ -221,12 +221,12 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         public Integer inSyncStackInstancesCount;
 
         /**
-         * <p>The drift status of the stack group.</p>
+         * <p>The drift state of the stack group.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   DRIFTED: At least one stack instance in the stack group is drifted.</p>
-         * <p>*   NOT_CHECKED: No drift detection is completed in the stack group.</p>
+         * <p>*   DRIFTED: At least one stack instance in the stack group has drifted.</p>
+         * <p>*   NOT_CHECKED: No successful drift detection is performed in the stack group.</p>
          * <p>*   IN_SYNC: All the stack instances in the stack group are being synchronized.</p>
          */
         @NameInMap("StackGroupDriftStatus")
@@ -319,7 +319,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
 
     public static class GetStackGroupOperationResponseBodyStackGroupOperation extends TeaModel {
         /**
-         * <p>The operation that was performed.</p>
+         * <p>The operation type.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -332,7 +332,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The name of the RAM role that is specified for the administrator account in Resource Orchestration Service (ROS) when you create the stack group that is granted self-managed permissions. If this parameter is not specified, the default value AliyunROSStackGroupAdministrationRole is returned.</p>
+         * <p>The name of the RAM role that you specify for the administrator account when you create the self-managed stack group. ROS assumes the administrator role to perform operations. If this parameter is not specified, the default value AliyunROSStackGroupAdministrationRole is returned.</p>
          */
         @NameInMap("AdministrationRoleName")
         public String administrationRoleName;
@@ -344,7 +344,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The folders in which you want to deploy the stack instances that are granted service-managed permissions.</p>
+         * <p>The destinations to deploy stack instances when the stack is granted service-managed permissions.</p>
          */
         @NameInMap("DeploymentTargets")
         public GetStackGroupOperationResponseBodyStackGroupOperationDeploymentTargets deploymentTargets;
@@ -356,7 +356,7 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The name of the RAM role that is specified for the execution account when you create the stack group that is granted self-managed permissions. The administrator account whose RAM role is AliyunROSStackGroupAdministrationRole assumes this RAM role. If this parameter is not specified, the default value AliyunROSStackGroupExecutionRole is returned.</p>
+         * <p>The name of the RAM role that you specify for the execution account when you create the self-managed stack group. The administrator role AliyunROSStackGroupAdministrationRole assumes the execution role to perform operations. If this parameter is not specified, the default value AliyunROSStackGroupExecutionRole is returned.</p>
          */
         @NameInMap("ExecutionRoleName")
         public String executionRoleName;
@@ -364,40 +364,40 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         /**
          * <p>The description of the operation.</p>
          * <br>
-         * <p>>  This parameter is returned only if the OperationDescription request parameter is specified in the [CreateStackInstances](~~151338~~) operation to create stack instances.</p>
+         * <p>> This parameter is returned only if OperationDescription is specified when the [CreateStackInstances](~~151338~~) operation is called to create stack instances.</p>
          */
         @NameInMap("OperationDescription")
         public String operationDescription;
 
         /**
-         * <p>The ID of the operation that was performed on the stack group.</p>
+         * <p>The operation ID.</p>
          */
         @NameInMap("OperationId")
         public String operationId;
 
         /**
-         * <p>The operation preferences.</p>
+         * <p>The operation settings.</p>
          */
         @NameInMap("OperationPreferences")
         public GetStackGroupOperationResponseBodyStackGroupOperationOperationPreferences operationPreferences;
 
         /**
-         * <p>Indicates whether the relevant stacks are retained when stack instances are deleted in the stack group.</p>
+         * <p>Indicates whether stacks are retained when the associated stack instances are deleted. When you delete a stack instance, you can choose to delete or retain the stack with which the stack instance is associated.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   true: The stacks are retained.</p>
-         * <p>*   false: The stacks are deleted. Proceed with caution.</p>
+         * <p>*   true: Stacks are retained when the associated stack instances are deleted.</p>
+         * <p>*   false: Stacks are deleted when the associated stack instances are deleted. Proceed with caution.</p>
          * <br>
-         * <p>>  This parameter is returned only when the stack instances are deleted.</p>
+         * <p>> This parameter is returned only if you delete stack instances.</p>
          */
         @NameInMap("RetainStacks")
         public Boolean retainStacks;
 
         /**
-         * <p>The details of the drift detection.</p>
+         * <p>The information about drift detection.</p>
          * <br>
-         * <p>>  This parameter is returned only when the drift detection is performed on the stack group.</p>
+         * <p>> This parameter is returned only if drift detection is performed.</p>
          */
         @NameInMap("StackGroupDriftDetectionDetail")
         public GetStackGroupOperationResponseBodyStackGroupOperationStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail;
@@ -415,15 +415,15 @@ public class GetStackGroupOperationResponseBody extends TeaModel {
         public String stackGroupName;
 
         /**
-         * <p>The status of the operation.</p>
+         * <p>The state of the operation.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   RUNNING: The operation is being performed.</p>
-         * <p>*   SUCCEEDED: The operation succeeded.</p>
-         * <p>*   FAILED: The operation failed.</p>
-         * <p>*   STOPPING: The operation is being stopped.</p>
-         * <p>*   STOPPED: The operation is stopped.</p>
+         * <p>*   RUNNING</p>
+         * <p>*   SUCCEEDED</p>
+         * <p>*   FAILED</p>
+         * <p>*   STOPPING</p>
+         * <p>*   STOPPED</p>
          */
         @NameInMap("Status")
         public String status;

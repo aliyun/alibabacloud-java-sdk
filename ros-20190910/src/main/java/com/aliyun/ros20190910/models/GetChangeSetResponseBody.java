@@ -24,14 +24,12 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     /**
      * <p>The changes of the change set.</p>
-     * <br>
-     * <p>For more information, see [Data structure](~~155988~~).</p>
      */
     @NameInMap("Changes")
     public java.util.List<java.util.Map<String, ?>> changes;
 
     /**
-     * <p>The time when the resource was created. The time is displayed in UTC.</p>
+     * <p>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
@@ -43,7 +41,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether rollback was performed.</p>
+     * <p>Indicates whether rollback was performed when the stack failed to be created or updated.</p>
      */
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
@@ -55,7 +53,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public String executionStatus;
 
     /**
-     * <p>The logs of the change set.</p>
+     * <p>The output logs of the change set.</p>
      */
     @NameInMap("Log")
     public GetChangeSetResponseBodyLog log;
@@ -67,7 +65,7 @@ public class GetChangeSetResponseBody extends TeaModel {
     public java.util.List<GetChangeSetResponseBodyParameters> parameters;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the change set.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -105,13 +103,13 @@ public class GetChangeSetResponseBody extends TeaModel {
     /**
      * <p>The template body of the change set.</p>
      * <br>
-     * <p>>  This parameter takes effect only when the ShowTemplate parameter is set to true.</p>
+     * <p>> This parameter takes effect only if you set ShowTemplate to true.</p>
      */
     @NameInMap("TemplateBody")
     public String templateBody;
 
     /**
-     * <p>The timeout period that is specified for the stack creation or update request.</p>
+     * <p>The timeout period that is specified for the stack creation or update operation.</p>
      */
     @NameInMap("TimeoutInMinutes")
     public Integer timeoutInMinutes;
@@ -267,20 +265,20 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     public static class GetChangeSetResponseBodyLogTerraformLogs extends TeaModel {
         /**
-         * <p>The name of the Terraform command. Valid values:</p>
+         * <p>The name of the Terraform command that is run. Valid values:</p>
          * <br>
          * <p>*   apply</p>
          * <p>*   plan</p>
          * <p>*   destroy</p>
          * <p>*   version</p>
          * <br>
-         * <p>For more information about the Terraform commands, see [Provisioning Infrastructure with Terraform](https://www.terraform.io/cli/commands).</p>
+         * <p>For more information about Terraform commands, see [Command](https://www.terraform.io/cli/commands).</p>
          */
         @NameInMap("Command")
         public String command;
 
         /**
-         * <p>The content of the output stream.</p>
+         * <p>The content of the output stream that is returned after the command is run.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -288,8 +286,8 @@ public class GetChangeSetResponseBody extends TeaModel {
         /**
          * <p>The output stream. Valid values:</p>
          * <br>
-         * <p>*   stdout: the standard output stream.</p>
-         * <p>*   stderr: the standard error stream.</p>
+         * <p>*   stdout: standard output stream</p>
+         * <p>*   stderr: standard error stream</p>
          */
         @NameInMap("Stream")
         public String stream;
@@ -327,9 +325,9 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     public static class GetChangeSetResponseBodyLog extends TeaModel {
         /**
-         * <p>The logs of the Terraform stack. This parameter is returned only for the change set of a Terraform stack.</p>
+         * <p>The Terraform logs. This parameter is returned only for change sets of Terraform stacks.</p>
          * <br>
-         * <p>>  This parameter is not returned for change sets that are in the creating state. This parameter indicates the change set creation logs of the Terraform stack.</p>
+         * <p>> This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.</p>
          */
         @NameInMap("TerraformLogs")
         public java.util.List<GetChangeSetResponseBodyLogTerraformLogs> terraformLogs;
@@ -351,7 +349,7 @@ public class GetChangeSetResponseBody extends TeaModel {
 
     public static class GetChangeSetResponseBodyParameters extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The key of the parameter.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;

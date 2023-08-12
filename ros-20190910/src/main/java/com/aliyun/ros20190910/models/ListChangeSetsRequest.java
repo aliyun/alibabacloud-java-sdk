@@ -11,32 +11,35 @@ public class ListChangeSetsRequest extends TeaModel {
     public String changeSetId;
 
     /**
-     * <p>The name of change set.</p>
+     * <p>The name of change set N. Maximum value of N: 5. You can use an asterisk (\*) as a wildcard for fuzzy search.</p>
      */
     @NameInMap("ChangeSetName")
     public java.util.List<String> changeSetName;
 
     /**
-     * <p>The execution status of change set.</p>
+     * <p>The execution status of change set N. Maximum value of N: 5. Valid values:</p>
+     * <br>
+     * <p>*   UNAVAILABLE</p>
+     * <p>*   AVAILABLE</p>
+     * <p>*   EXECUTE_IN_PROGRESS</p>
+     * <p>*   EXECUTE_COMPLETE</p>
+     * <p>*   EXECUTE_FAILED</p>
+     * <p>*   OBSOLETE</p>
      */
     @NameInMap("ExecutionStatus")
     public java.util.List<String> executionStatus;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
+     * <p>The page number.\</p>
+     * <p>Pages start from page 1.\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Valid values: 1 to 50.</p>
-     * <br>
+     * <p>The number of entries per page.\</p>
+     * <p>Valid values: 1 to 50.\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
@@ -55,7 +58,14 @@ public class ListChangeSetsRequest extends TeaModel {
     public String stackId;
 
     /**
-     * <p>The status of change set.</p>
+     * <p>The status of change set N. Maximum value of N: 5. Valid values:</p>
+     * <br>
+     * <p>*   CREATE_PENDING</p>
+     * <p>*   CREATE_IN_PROGRESS</p>
+     * <p>*   CREATE_COMPLETE</p>
+     * <p>*   CREATE_FAILED</p>
+     * <p>*   DELETE_FAILED</p>
+     * <p>*   DELETE_COMPLETE</p>
      */
     @NameInMap("Status")
     public java.util.List<String> status;

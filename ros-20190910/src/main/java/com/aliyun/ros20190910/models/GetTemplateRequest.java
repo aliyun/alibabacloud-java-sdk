@@ -7,35 +7,35 @@ public class GetTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the change set.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+     * <p>> You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
      */
     @NameInMap("ChangeSetId")
     public String changeSetId;
 
     /**
-     * <p>Specifies whether to query the template sharing information. Default value: Disabled. Valid values:</p>
+     * <p>Specifies whether to query the shared information about the template. Valid values:</p>
      * <br>
      * <p>*   Enabled</p>
-     * <p>*   Disabled</p>
+     * <p>*   Disabled (default)</p>
      * <br>
-     * <p>>  Only the template owner can query the template sharing information.</p>
+     * <p>> Only the template owner can query the shared information of a template.</p>
      */
     @NameInMap("IncludePermission")
     public String includePermission;
 
     /**
-     * <p>Specifies whether to query the information about tags. Default value: Disabled. Valid values:</p>
+     * <p>Specifies whether to query the information about tags. Valid values:</p>
      * <br>
      * <p>*   Enabled</p>
-     * <p>*   Disabled</p>
+     * <p>*   Disabled (default)</p>
      * <br>
-     * <p>>  This parameter only takes effect when you specify the TemplateId parameter.</p>
+     * <p>> This parameter takes effect only if you specify TemplateId.</p>
      */
     @NameInMap("IncludeTags")
     public String includeTags;
 
     /**
-     * <p>The ID of the region to which the stack or stack group defined in the template belongs. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the stack or stack group that uses the template. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -43,7 +43,7 @@ public class GetTemplateRequest extends TeaModel {
     /**
      * <p>The name of the stack group.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+     * <p>> You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
      */
     @NameInMap("StackGroupName")
     public String stackGroupName;
@@ -51,7 +51,7 @@ public class GetTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the stack.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+     * <p>> You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -59,28 +59,27 @@ public class GetTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the template.</p>
      * <br>
-     * <p>This parameter applies to shared and private templates. If the template is a shared template, the value of the TemplateId parameter is the same as the value of the TemplateARN parameter. You can use the template ID to query a shared template.</p>
+     * <p>This parameter applies to shared and private templates. If the template is a shared template, the value of TemplateId is the same as the value of TemplateARN. You can use the template ID to query a shared template.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
+     * <p>> You must specify one of the following parameters: StackId, ChangeSetId, StackGroupName, and TemplateId.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The stage of the template. This parameter only takes effect when you specify the StackId, ChangeSetId, or StackGroupName parameter.</p>
+     * <p>The stage of the template. This parameter takes effect only if you specify StackId, ChangeSetId, or StackGroupName.</p>
      * <br>
-     * <p>Default value: Processed. Valid values:</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>*   Processed: returns the processed template that contains transforms.</p>
-     * <p>*   Original: returns the original template that you specify.</p>
+     * <p>*   Processed (default): returns the processed template.</p>
+     * <p>*   Original: returns the original template.</p>
      */
     @NameInMap("TemplateStage")
     public String templateStage;
 
     /**
-     * <p>The version of the template. This parameter only takes effect when you specify the TemplateId parameter.</p>
-     * <br>
-     * <p>If the template is a shared template, you can specify this parameter only if you set the VersionOption parameter to AllVersions.</p>
+     * <p>The version of the template. This parameter takes effect only if you specify TemplateId.\</p>
+     * <p>If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see [SetTemplatePermission](~~194768~~).</p>
      * <br>
      * <p>Valid values: v1 to v100.</p>
      */

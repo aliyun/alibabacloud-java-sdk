@@ -5,38 +5,33 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to query the information about tags. Default value: Disabled. Valid values:</p>
+     * <p>Specifies whether to query the tag information. Valid values:</p>
      * <br>
      * <p>*   Enabled</p>
-     * <p>*   Disabled</p>
+     * <p>*   Disabled (default)</p>
      */
     @NameInMap("IncludeTags")
     public String includeTags;
 
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1.</p>
-     * <br>
+     * <p>The page number.\</p>
+     * <p>Pages start from page 1.\</p>
      * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Valid values: 1 to 50.</p>
-     * <br>
+     * <p>The number of entries per page.\</p>
+     * <p>Valid values: 1 to 50.\</p>
      * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The ID of the resource group.</p>
-     * <br>
-     * <p>For more information about resource groups, see the "Resource Group" section of the [What is Resource Management?](~~94475~~) topic.</p>
+     * <p>The ID of the resource group.\</p>
+     * <p>For more information about resource groups, see the "Resource Group" section of [What is Resource Management?](~~94475~~)</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -44,9 +39,9 @@ public class ListTemplatesRequest extends TeaModel {
     /**
      * <p>The sharing type of the template.</p>
      * <br>
-     * <p>Default value: Private. Valid values:</p>
+     * <p>Valid values:</p>
      * <br>
-     * <p>*   Private: The template belongs to the template owner.</p>
+     * <p>*   Private (default): The template belongs to the template owner.</p>
      * <p>*   Shared: The template is shared with other users.</p>
      * <p>*   Official: The template is the shared template of the official version.</p>
      */
@@ -54,15 +49,13 @@ public class ListTemplatesRequest extends TeaModel {
     public String shareType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTemplatesRequestTag> tag;
 
     /**
-     * <p>The name of the template. This parameter takes effect only when the ShareType parameter is set to Private.</p>
-     * <br>
-     * <p>The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
+     * <p>The template name. This parameter takes effect only when ShareType is set to Private. The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (\_). The name must start with a digit or letter.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
@@ -130,7 +123,7 @@ public class ListTemplatesRequest extends TeaModel {
 
     public static class ListTemplatesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. This parameter takes effect only when the ShareType parameter is set to Private.</p>
+         * <p>The key of the tag. This parameter takes effect only when ShareType is set to Private.</p>
          * <br>
          * <p>You can specify up to 20 tag keys.</p>
          */
@@ -138,7 +131,7 @@ public class ListTemplatesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag N. This parameter takes effect only when the ShareType parameter is set to Private.</p>
+         * <p>The value of the tag. This parameter takes effect only when ShareType is set to Private.</p>
          * <br>
          * <p>You can specify up to 20 tag values.</p>
          */
