@@ -83,6 +83,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public CreateAsyncTranslateResponse createAsyncTranslateWithOptions(CreateAsyncTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiType)) {
+            body.put("ApiType", request.apiType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.formatType)) {
+            body.put("FormatType", request.formatType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("Scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceText)) {
+            body.put("SourceText", request.sourceText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("TargetLanguage", request.targetLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAsyncTranslate"),
+            new TeaPair("version", "2018-10-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAsyncTranslateResponse());
+    }
+
+    public CreateAsyncTranslateResponse createAsyncTranslate(CreateAsyncTranslateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAsyncTranslateWithOptions(request, runtime);
+    }
+
     public CreateDocTranslateTaskResponse createDocTranslateTaskWithOptions(CreateDocTranslateTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -249,6 +298,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateImageTranslateTaskResponse createImageTranslateTask(CreateImageTranslateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createImageTranslateTaskWithOptions(request, runtime);
+    }
+
+    public GetAsyncTranslateResponse getAsyncTranslateWithOptions(GetAsyncTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            body.put("JobId", request.jobId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAsyncTranslate"),
+            new TeaPair("version", "2018-10-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAsyncTranslateResponse());
+    }
+
+    public GetAsyncTranslateResponse getAsyncTranslate(GetAsyncTranslateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAsyncTranslateWithOptions(request, runtime);
     }
 
     public GetBatchTranslateResponse getBatchTranslateWithOptions(GetBatchTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
