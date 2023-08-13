@@ -4,12 +4,21 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeHotBigKeysRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
+    /**
+     * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the data shard on the ApsaraDB for Redis instance. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the ID.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 

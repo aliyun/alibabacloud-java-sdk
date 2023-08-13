@@ -4,24 +4,48 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetFullRequestSampleByInstanceIdRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The interval between the start time and the end time must be equal to or greater than 1 hour.</p>
+     */
     @NameInMap("End")
     public Long end;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The role of the PolarDB-X 2.0 node. Valid values:</p>
+     * <br>
+     * <p>*   **polarx_cn**: compute node.</p>
+     * <p>*   **polarx_en**: data node.</p>
+     */
     @NameInMap("Role")
     public String role;
 
     /**
-     * <p>SQL ID。</p>
+     * <p>The SQL statement ID.</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
+    /**
+     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>>  The start time must be within the storage duration of the SQL Explorer feature of the database instance, and can be up to 90 days earlier than the current time.</p>
+     */
     @NameInMap("Start")
     public Long start;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+     * <br>
+     * <p>>  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

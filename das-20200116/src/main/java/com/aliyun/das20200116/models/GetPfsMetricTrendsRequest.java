@@ -4,18 +4,42 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetPfsMetricTrendsRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. You can view the data of up to seven days within the last month.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The metric whose trend you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **count**: the number of executions.</p>
+     * <p>*   **avgRt**: the average execution duration.</p>
+     * <p>*   **rtRate**: the execution duration percentage.</p>
+     * <p>*   **rowsExamined**: the total number of scanned rows.</p>
+     */
     @NameInMap("Metric")
     public String metric;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  You must specify this parameter for an ApsaraDB RDS for MySQL Cluster Edition instance and a PolarDB for MySQL cluster.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

@@ -4,9 +4,15 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetRedisAllSessionRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
+    /**
+     * <p>The database instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

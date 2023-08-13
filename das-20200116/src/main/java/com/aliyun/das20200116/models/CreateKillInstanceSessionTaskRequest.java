@@ -4,24 +4,56 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateKillInstanceSessionTaskRequest extends TeaModel {
+    /**
+     * <p>The database account that has the permissions to terminate sessions.</p>
+     */
     @NameInMap("DbUser")
     public String dbUser;
 
+    /**
+     * <p>The password of the database account.</p>
+     */
     @NameInMap("DbUserPassword")
     public String dbUserPassword;
 
+    /**
+     * <p>The account whose sessions do not need to be terminated.</p>
+     * <br>
+     * <p>>  Set this parameter to a JSON array. Separate database accounts with commas (,). Example: \[\"Database account 1\",\"Database account 2\"].</p>
+     */
     @NameInMap("IgnoredUsers")
     public String ignoredUsers;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether to terminate all sessions.</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>>  If you set this parameter to **true**, sessions of the accounts that are specified by **IgnoredUsers**, sessions of internal O\&M accounts of Alibaba Cloud, and **Binlog Dump** sessions are not terminated.</p>
+     */
     @NameInMap("KillAllSessions")
     public Boolean killAllSessions;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  This parameter must be specified if the database instance is a PolarDB for MySQL cluster. If you do not specify a node ID and set **KillAllSessions** to **true**, the system traverses all nodes in the PolarDB for MySQL cluster and terminates the active sessions on each node.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The IDs of sessions that need to be terminated.</p>
+     * <br>
+     * <p>>  Set this parameter to a JSON array. Separate session IDs with commas (,). Example: \[\"Session ID1\",\"Session ID2\"]. If **KillAllSessions** is set to **true**, this parameter does not take effect.</p>
+     */
     @NameInMap("SessionIds")
     public String sessionIds;
 

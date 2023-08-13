@@ -4,12 +4,25 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeTagRequest extends TeaModel {
+    /**
+     * <p>The database engine. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
+     * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
+     * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The SQL template ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the SQL template ID.</p>
+     */
     @NameInMap("SqlId")
     public String sqlId;
 

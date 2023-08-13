@@ -4,15 +4,31 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeExecErrorSampleRequest extends TeaModel {
+    /**
+     * <p>The database engine. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**</p>
+     * <p>*   **PolarDBMySQL**</p>
+     * <p>*   **PostgreSQL**</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The SQL template ID. You can call the [GetQueryOptimizeExecErrorStats](~~405235~~) operation to obtain the SQL template ID.</p>
+     */
     @NameInMap("SqlId")
     public String sqlId;
 
+    /**
+     * <p>The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("Time")
     public String time;
 

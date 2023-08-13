@@ -4,12 +4,21 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAutonomousNotifyEventContentRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The unique identifier of the event. You can call the [GetAutonomousNotifyEventsInRange](~~288371~~) operation to query the unique identifier returned by the SpanId response parameter.</p>
+     */
     @NameInMap("SpanId")
     public String spanId;
 
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("__context")
     public String context;
 

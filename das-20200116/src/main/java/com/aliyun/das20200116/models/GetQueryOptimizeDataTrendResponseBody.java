@@ -4,18 +4,36 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("Data")
     public GetQueryOptimizeDataTrendResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,12 +83,30 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeDataTrendResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The name of the metric. Valid values:</p>
+         * <br>
+         * <p>* **sqlExecuteCount**: the number of executions of slow SQL queries.</p>
+         * <p>* **sqlExecuteCountDiff**: the difference in the number of executions of slow SQL queries compared to the previous day.</p>
+         * <p>* **sqlCount**: the number of slow SQL templates.</p>
+         * <p>* **sqlCountDiff**: the difference in the number of slow SQL templates compared to the previous day.</p>
+         * <p>* **optimizedSqlExecuteCount**: the number of optimizable executions of slow SQL queries.</p>
+         * <p>* **optimizedSqlExecuteCountDiff**: the difference in the number of optimizable executions of slow SQL queries compared to the previous day.</p>
+         * <p>* **optimizedSqlCount**: the number of optimizable slow SQL templates.</p>
+         * <p>* **optimizedSqlCountDiff**: the difference in the number of optimizable slow SQL templates compared to the previous day.</p>
+         */
         @NameInMap("Kpi")
         public String kpi;
 
+        /**
+         * <p>The data timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public Double value;
 
@@ -106,18 +142,33 @@ public class GetQueryOptimizeDataTrendResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeDataTrendResponseBodyData extends TeaModel {
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The details of the trend data.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetQueryOptimizeDataTrendResponseBodyDataList> list;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

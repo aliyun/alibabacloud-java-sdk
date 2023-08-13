@@ -4,21 +4,39 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetPfsSqlSampleRequest extends TeaModel {
+    /**
+     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. You can query the data of up to seven days within the last month.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>>  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  This parameter must be specified for ApsaraDB RDS for MySQL Cluster Edition instances and PolarDB for MySQL clusters.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
     /**
-     * <p>SQL ID。</p>
+     * <p>The SQL ID.</p>
      */
     @NameInMap("SqlId")
     public String sqlId;
 
+    /**
+     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

@@ -4,21 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeTagResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>SqlTag</p>
+     * <p>The returned SQL tag data.</p>
      */
     @NameInMap("Data")
     public GetQueryOptimizeTagResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -68,12 +85,21 @@ public class GetQueryOptimizeTagResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeTagResponseBodyData extends TeaModel {
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("Comments")
         public String comments;
 
+        /**
+         * <p>The SQL template ID.</p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The SQL tags. Multiple tags are separated by commas (,).</p>
+         */
         @NameInMap("Tags")
         public String tags;
 

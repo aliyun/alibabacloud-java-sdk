@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateCacheAnalysisJobResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("Data")
     public CreateCacheAnalysisJobResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,27 +85,51 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class CreateCacheAnalysisJobResponseBodyDataBigKeysKeyInfo extends TeaModel {
+        /**
+         * <p>The number of bytes that are occupied by the key.</p>
+         */
         @NameInMap("Bytes")
         public Long bytes;
 
+        /**
+         * <p>The number of elements in the key.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Db")
         public Integer db;
 
+        /**
+         * <p>The data type of the key.</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
+        /**
+         * <p>The name of the key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the data node on the instance.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The data type of the ApsaraDB for Redis instance.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -180,21 +224,48 @@ public class CreateCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class CreateCacheAnalysisJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of elements in the key.</p>
+         */
         @NameInMap("BigKeys")
         public CreateCacheAnalysisJobResponseBodyDataBigKeys bigKeys;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the cache analysis task.</p>
+         * <br>
+         * <p>>  This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the [DescribeCacheAnalysisJob](~~180983~~) operation to query the analysis results of the specified cache analysis task.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The returned message.</p>
+         * <br>
+         * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the data node on the instance.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The state of the cache analysis task. Valid values:</p>
+         * <br>
+         * <p>*   **BACKUP**: The data is being backed up.</p>
+         * <p>*   **ANALYZING**: The data is being analyzed.</p>
+         * <p>*   **FINISHED**: The data is analyzed.</p>
+         * <p>*   **FAILED**: An error occurred.</p>
+         */
         @NameInMap("TaskState")
         public String taskState;
 

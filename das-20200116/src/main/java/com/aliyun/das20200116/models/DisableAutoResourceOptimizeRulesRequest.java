@@ -4,9 +4,17 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DisableAutoResourceOptimizeRulesRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
+    /**
+     * <p>The database instance ID.</p>
+     * <br>
+     * <p>>  Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: `[\"Instance ID1\", \"Instance ID2\"]`.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIds;
 

@@ -4,9 +4,17 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetDasProServiceUsageRequest extends TeaModel {
+    /**
+     * <p>The database instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+     * <br>
+     * <p>>  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

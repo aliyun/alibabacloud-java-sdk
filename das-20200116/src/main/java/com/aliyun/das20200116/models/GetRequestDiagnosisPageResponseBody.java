@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetRequestDiagnosisPageResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetRequestDiagnosisPageResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,36 +85,117 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
     }
 
     public static class GetRequestDiagnosisPageResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The user ID.</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("dbSchema")
         public String dbSchema;
 
+        /**
+         * <p>The database engine. Valid values:</p>
+         * <br>
+         * <p>* **MySQL**</p>
+         * <p>* **PostgreSQL**</p>
+         * <p>* **SQLServer**</p>
+         * <p>* **PolarDBMySQL**</p>
+         * <p>* **PolarDBOracle**</p>
+         * <p>* **MongoDB**</p>
+         */
         @NameInMap("engine")
         public String engine;
 
+        /**
+         * <p>The time when the SQL diagnostics task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the SQL diagnostics task was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("gmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The unique ID of the diagnostics task.</p>
+         */
         @NameInMap("messageId")
         public String messageId;
 
+        /**
+         * <p>Additional information.</p>
+         */
         @NameInMap("param")
         public String param;
 
+        /**
+         * <p>The result of the SQL diagnostics task. The result includes the following information:</p>
+         * <br>
+         * <p>* **endTime**: the end time of the SQL diagnostics task.</p>
+         * <p>* **errorCode**: indicates whether the SQL diagnostics task is complete. Valid values:</p>
+         * <p>  * **0001**: The SQL diagnostics task is complete.</p>
+         * <p>  * **0003**: The SQL diagnostics task failed.</p>
+         * <br>
+         * <p>* **errorMessage**: the error message.</p>
+         * <p>* **estimateCost**: the estimated cost.</p>
+         * <p>  * **cpu**: the estimated CPU utilization of the index.</p>
+         * <p>  * **io**: the estimated I/O usage of the index.</p>
+         * <p>  * **rows**: the estimated values of the rows returned for the index.</p>
+         * <p>* **improvement**: the performance improvement ratio.</p>
+         * <p>* **indexAdvices**: the index recommendations, which include the following information:</p>
+         * <p>  * **columns**: the index columns.</p>
+         * <p>  * **ddlAddIndex**: the DDL statement for the index.</p>
+         * <p>  * **indexName**: the name of the index.</p>
+         * <p>  * **schemaName**: the name of the database.</p>
+         * <p>  * **tableName**: the name of the table.</p>
+         * <p>  * **unique**: indicates whether the index is unique.</p>
+         * <br>
+         * <p>* **ip**: the IP address of the instance.</p>
+         * <p>* **messageId**: the ID of the diagnostics task.</p>
+         * <p>* **port**: the port used to connect to the instance.</p>
+         * <p>* **sqlTag**: the SQL tag.</p>
+         * <p>* **startTime**: the start time of the SQL diagnostics task.</p>
+         * <p>* **success**: indicates whether the request was successful.</p>
+         * <p>* **support**: indicates whether the SQL statement can be diagnosed. Valid values:</p>
+         * <p>  * **true**: The SQL statement can be diagnosed.</p>
+         * <p>  * **false**: The SQL statement cannot be diagnosed.</p>
+         * <br>
+         * <p>* **tuningAdvices**: the SQL rewrite suggestions.</p>
+         */
         @NameInMap("result")
         public String result;
 
+        /**
+         * <p>The SQL template ID.</p>
+         */
         @NameInMap("sqlId")
         public String sqlId;
 
+        /**
+         * <p>The status of the diagnostics task. Valid values:</p>
+         * <br>
+         * <p>* **0**: The diagnostics task is in progress.</p>
+         * <br>
+         * <p>* **1**: A diagnostics error occurred.</p>
+         * <br>
+         * <p>* **2**: The diagnostics task is complete.</p>
+         * <br>
+         * <p>* **3**: An SQL error occurred.</p>
+         * <br>
+         * <p>* **4**: An engine error occurred.</p>
+         */
         @NameInMap("state")
         public Integer state;
 
+        /**
+         * <p>The unique ID of the diagnostics instance.</p>
+         */
         @NameInMap("uuid")
         public String uuid;
 
@@ -194,18 +295,33 @@ public class GetRequestDiagnosisPageResponseBody extends TeaModel {
     }
 
     public static class GetRequestDiagnosisPageResponseBodyData extends TeaModel {
+        /**
+         * <p>Additional information.</p>
+         */
         @NameInMap("extra")
         public String extra;
 
+        /**
+         * <p>The SQL diagnostics records returned.</p>
+         */
         @NameInMap("list")
         public java.util.List<GetRequestDiagnosisPageResponseBodyDataList> list;
 
+        /**
+         * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+         */
         @NameInMap("pageNo")
         public Long pageNo;
 
+        /**
+         * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
+         */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("total")
         public Long total;
 

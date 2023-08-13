@@ -4,15 +4,29 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateRequestDiagnosisRequest extends TeaModel {
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("Database")
     public String database;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  This parameter must be specified for PolarDB for MySQL, PolarDB for PostgreSQL (Compatible with Oracle), and ApsaraDB for MongoDB instances.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The SQL statement that you want to diagnose.</p>
+     */
     @NameInMap("Sql")
     public String sql;
 

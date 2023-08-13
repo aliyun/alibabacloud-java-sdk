@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetMySQLAllSessionAsyncResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +85,35 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     }
 
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataClientStats extends TeaModel {
+        /**
+         * <p>The number of active sessions that belong to the client IP address.</p>
+         * <br>
+         * <p>> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The IDs of the sessions that belong to the client IP address.</p>
+         */
         @NameInMap("ThreadIdList")
         public java.util.List<Long> threadIdList;
 
+        /**
+         * <p>The total number of sessions that belong to the client IP address.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The database accounts to which the sessions belong.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<String> userList;
 
@@ -128,18 +165,35 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     }
 
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataDbStats extends TeaModel {
+        /**
+         * <p>The number of active sessions of the database.</p>
+         * <br>
+         * <p>> If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The IDs of the sessions of the database.</p>
+         */
         @NameInMap("ThreadIdList")
         public java.util.List<Long> threadIdList;
 
+        /**
+         * <p>The total number of sessions of the database.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The database accounts to which the sessions belong.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<String> userList;
 
@@ -191,36 +245,69 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     }
 
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataSessionList extends TeaModel {
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("Client")
         public String client;
 
+        /**
+         * <p>The type of the command executed in the session.</p>
+         */
         @NameInMap("Command")
         public String command;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DbName")
         public String dbName;
 
+        /**
+         * <p>The session ID.</p>
+         */
         @NameInMap("SessionId")
         public Long sessionId;
 
+        /**
+         * <p>The SQL statement executed in the session.</p>
+         */
         @NameInMap("SqlText")
         public String sqlText;
 
+        /**
+         * <p>The status of the session.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The execution duration of the session. Unit: seconds.</p>
+         */
         @NameInMap("Time")
         public Long time;
 
+        /**
+         * <p>The duration of the transaction. Unit: seconds.</p>
+         */
         @NameInMap("TrxDuration")
         public Long trxDuration;
 
+        /**
+         * <p>The ID of the transaction to which the session belongs.</p>
+         */
         @NameInMap("TrxId")
         public String trxId;
 
+        /**
+         * <p>The username of the database.</p>
+         */
         @NameInMap("User")
         public String user;
 
+        /**
+         * <p>The alias of the IP address of the client.</p>
+         */
         @NameInMap("UserClientAlias")
         public String userClientAlias;
 
@@ -320,18 +407,35 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     }
 
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionDataUserStats extends TeaModel {
+        /**
+         * <p>The number of active sessions within the account.</p>
+         * <br>
+         * <p> > If the type of the command executed in the session is Query or Execute and the session in the transaction is not terminated, the session is active.</p>
+         */
         @NameInMap("ActiveCount")
         public Long activeCount;
 
+        /**
+         * <p>The account of the database.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The IDs of the sessions within the account.</p>
+         */
         @NameInMap("ThreadIdList")
         public java.util.List<Long> threadIdList;
 
+        /**
+         * <p>The total number of sessions within the account.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        /**
+         * <p>The database accounts to which the sessions belong.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<String> userList;
 
@@ -383,27 +487,51 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     }
 
     public static class GetMySQLAllSessionAsyncResponseBodyDataSessionData extends TeaModel {
+        /**
+         * <p>The total number of active sessions.</p>
+         */
         @NameInMap("ActiveSessionCount")
         public Long activeSessionCount;
 
+        /**
+         * <p>The sessions that are counted by client IP address.</p>
+         */
         @NameInMap("ClientStats")
         public java.util.List<GetMySQLAllSessionAsyncResponseBodyDataSessionDataClientStats> clientStats;
 
+        /**
+         * <p>The sessions that are counted by database.</p>
+         */
         @NameInMap("DbStats")
         public java.util.List<GetMySQLAllSessionAsyncResponseBodyDataSessionDataDbStats> dbStats;
 
+        /**
+         * <p>The maximum execution duration of an active session. Unit: seconds.</p>
+         */
         @NameInMap("MaxActiveTime")
         public Long maxActiveTime;
 
+        /**
+         * <p>The list of sessions.</p>
+         */
         @NameInMap("SessionList")
         public java.util.List<GetMySQLAllSessionAsyncResponseBodyDataSessionDataSessionList> sessionList;
 
+        /**
+         * <p>The time when the session was queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public Long timeStamp;
 
+        /**
+         * <p>The total number of sessions.</p>
+         */
         @NameInMap("TotalSessionCount")
         public Long totalSessionCount;
 
+        /**
+         * <p>The sessions that are counted by database account.</p>
+         */
         @NameInMap("UserStats")
         public java.util.List<GetMySQLAllSessionAsyncResponseBodyDataSessionDataUserStats> userStats;
 
@@ -479,24 +607,58 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
     }
 
     public static class GetMySQLAllSessionAsyncResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Complete")
         public Boolean complete;
 
+        /**
+         * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Fail")
         public Boolean fail;
 
+        /**
+         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsFinish")
         public Boolean isFinish;
 
+        /**
+         * <p>The ID of the asynchronous request.</p>
+         */
         @NameInMap("ResultId")
         public String resultId;
 
+        /**
+         * <p>The session data.</p>
+         */
         @NameInMap("SessionData")
         public GetMySQLAllSessionAsyncResponseBodyDataSessionData sessionData;
 
+        /**
+         * <p>The state of the asynchronous request. Valid values:</p>
+         * <br>
+         * <p>*   **RUNNING**</p>
+         * <p>*   **SUCCESS**</p>
+         * <p>*   **FAIL**</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

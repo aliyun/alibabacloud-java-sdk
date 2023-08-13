@@ -4,18 +4,39 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetRequestDiagnosisResultRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The unique ID of the diagnostics task. You can call the [CreateRequestDiagnosis](~~341609~~) operation to query the diagnostics task ID.</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  You must specify the node ID if your database instance is a PolarDB for MySQL cluster, a PolarDB for PostgreSQL (compatible with Oracle) instance, or an ApsaraDB for MongoDB database.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The source of the task.</p>
+     * <br>
+     * <p>>  This parameter is required if you call this operation in the DAS console. You do not need to specify this parameter when you call this operation.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The SQL template ID.</p>
+     * <br>
+     * <p>>  This parameter is required if you call this operation in the DAS console. You do not need to specify this parameter when you call this operation.</p>
+     */
     @NameInMap("SqlId")
     public String sqlId;
 

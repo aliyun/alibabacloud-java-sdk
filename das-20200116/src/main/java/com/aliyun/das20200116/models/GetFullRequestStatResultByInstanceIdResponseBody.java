@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetFullRequestStatResultByInstanceIdResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message that contains information such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,104 +85,200 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
     }
 
     public static class GetFullRequestStatResultByInstanceIdResponseBodyDataResultList extends TeaModel {
+        /**
+         * <p>The average number of scanned rows.</p>
+         * <br>
+         * <p>> This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+         */
         @NameInMap("AvgExaminedRows")
         public Double avgExaminedRows;
 
+        /**
+         * <p>The average number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</p>
+         */
         @NameInMap("AvgFetchRows")
         public Long avgFetchRows;
 
+        /**
+         * <p>The average lock wait latency. Unit: seconds.</p>
+         */
         @NameInMap("AvgLockWaitTime")
         public Double avgLockWaitTime;
 
+        /**
+         * <p>The average number of logical reads.</p>
+         */
         @NameInMap("AvgLogicalRead")
         public Double avgLogicalRead;
 
+        /**
+         * <p>The average number of physical asynchronous reads.</p>
+         */
         @NameInMap("AvgPhysicalAsyncRead")
         public Long avgPhysicalAsyncRead;
 
+        /**
+         * <p>The average number of physical synchronous reads.</p>
+         */
         @NameInMap("AvgPhysicalSyncRead")
         public Long avgPhysicalSyncRead;
 
+        /**
+         * <p>The average number of returned rows.</p>
+         */
         @NameInMap("AvgReturnedRows")
         public Double avgReturnedRows;
 
+        /**
+         * <p>The average execution duration.</p>
+         */
         @NameInMap("AvgRt")
         public Double avgRt;
 
+        /**
+         * <p>The average number of SQL statements.</p>
+         */
         @NameInMap("AvgSqlCount")
         public Long avgSqlCount;
 
+        /**
+         * <p>The average number of updated rows.</p>
+         * <br>
+         * <p> > This parameter is returned only for ApsaraDB RDS for MySQL and PolarDB-X 2.0 databases.</p>
+         */
         @NameInMap("AvgUpdatedRows")
         public Long avgUpdatedRows;
 
+        /**
+         * <p>The total number of executions.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The percentage of the total number of executions.</p>
+         */
         @NameInMap("CountRate")
         public Double countRate;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The number of failed executions.</p>
+         */
         @NameInMap("ErrorCount")
         public Long errorCount;
 
+        /**
+         * <p>The total number of scanned rows.</p>
+         * <br>
+         * <p>> This parameter is returned only for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL databases.</p>
+         */
         @NameInMap("ExaminedRows")
         public Long examinedRows;
 
+        /**
+         * <p>The number of rows that are fetched by compute nodes from data nodes on the PolarDB-X 2.0 instance.</p>
+         */
         @NameInMap("FetchRows")
         public Long fetchRows;
 
+        /**
+         * <p>The IP address of the database instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The lock wait latency. Unit: seconds.</p>
+         */
         @NameInMap("LockWaitTime")
         public Double lockWaitTime;
 
+        /**
+         * <p>The number of logical reads.</p>
+         */
         @NameInMap("LogicalRead")
         public Long logicalRead;
 
+        /**
+         * <p>The number of physical asynchronous reads.</p>
+         */
         @NameInMap("PhysicalAsyncRead")
         public Long physicalAsyncRead;
 
+        /**
+         * <p>The number of physical synchronous reads.</p>
+         */
         @NameInMap("PhysicalSyncRead")
         public Long physicalSyncRead;
 
+        /**
+         * <p>The port number that is used to connect to the database instance.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <p>The SQL template.</p>
+         */
         @NameInMap("Psql")
         public String psql;
 
+        /**
+         * <p>The total number of rows updated or returned by the compute nodes of the PolarDB-X 2.0 instance.</p>
+         */
         @NameInMap("Rows")
         public Long rows;
 
+        /**
+         * <p>The number of SQL statements that take longer than 1 second to execute.</p>
+         */
         @NameInMap("RtGreaterThanOneSecondCount")
         public Long rtGreaterThanOneSecondCount;
 
+        /**
+         * <p>The execution duration percentage.</p>
+         */
         @NameInMap("RtRate")
         public Double rtRate;
 
+        /**
+         * <p>The number of SQL statements.</p>
+         */
         @NameInMap("SqlCount")
         public Long sqlCount;
 
         /**
-         * <p>SQL ID。</p>
+         * <p>The SQL ID.</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The total number of updated rows.</p>
+         */
         @NameInMap("SumUpdatedRows")
         public Long sumUpdatedRows;
 
+        /**
+         * <p>The names of tables in the database.</p>
+         */
         @NameInMap("Tables")
         public java.util.List<String> tables;
 
+        /**
+         * <p>The version number.</p>
+         */
         @NameInMap("Version")
         public Long version;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -431,9 +547,15 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
     }
 
     public static class GetFullRequestStatResultByInstanceIdResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The full request data.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetFullRequestStatResultByInstanceIdResponseBodyDataResultList> list;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
@@ -461,21 +583,49 @@ public class GetFullRequestStatResultByInstanceIdResponseBody extends TeaModel {
     }
 
     public static class GetFullRequestStatResultByInstanceIdResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Fail")
         public Boolean fail;
 
+        /**
+         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsFinish")
         public Boolean isFinish;
 
+        /**
+         * <p>The returned full request data.</p>
+         */
         @NameInMap("Result")
         public GetFullRequestStatResultByInstanceIdResponseBodyDataResult result;
 
+        /**
+         * <p>The request ID.</p>
+         */
         @NameInMap("ResultId")
         public String resultId;
 
+        /**
+         * <p>The state of the asynchronous request. Valid values:</p>
+         * <br>
+         * <p>*   **RUNNING**</p>
+         * <p>*   **SUCCESS**</p>
+         * <p>*   **FAIL**</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The time when the asynchronous request was sent. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DeleteCloudBenchTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the stress testing task. You can call the [DescribeCloudBenchTasks](~~230670~~) operation to query the ID.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceSqlOptimizeStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the automatic SQL optimization events.</p>
+     */
     @NameInMap("Data")
     public GetInstanceSqlOptimizeStatisticResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,9 +85,15 @@ public class GetInstanceSqlOptimizeStatisticResponseBody extends TeaModel {
     }
 
     public static class GetInstanceSqlOptimizeStatisticResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of automatic SQL optimization events.</p>
+         */
         @NameInMap("count")
         public Integer count;
 
+        /**
+         * <p>The multiple of the maximum improvement for returned automatic SQL optimization events.</p>
+         */
         @NameInMap("improvement")
         public Double improvement;
 

@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeHotKeysResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the hot keys.</p>
+     */
     @NameInMap("Data")
     public DescribeHotKeysResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,18 +85,33 @@ public class DescribeHotKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeHotKeysResponseBodyDataHotKey extends TeaModel {
+        /**
+         * <p>The database in which the key is stored.</p>
+         */
         @NameInMap("Db")
         public Integer db;
 
+        /**
+         * <p>The frequency at which the key is accessed, which indicates the queries per second (QPS) of the key.</p>
+         */
         @NameInMap("Hot")
         public String hot;
 
+        /**
+         * <p>The name of the key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The type of the key.</p>
+         */
         @NameInMap("KeyType")
         public String keyType;
 
+        /**
+         * <p>The number of elements in the key.</p>
+         */
         @NameInMap("Size")
         public Long size;
 

@@ -4,21 +4,44 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class AddHDMInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     */
     @NameInMap("Data")
     public AddHDMInstanceResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("Synchro")
     public String synchro;
 
@@ -76,41 +99,74 @@ public class AddHDMInstanceResponseBody extends TeaModel {
     }
 
     public static class AddHDMInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The user ID of the caller.</p>
+         */
         @NameInMap("CallerUid")
         public String callerUid;
 
+        /**
+         * <p>The HTTP status code returned.</p>
+         */
         @NameInMap("Code")
         public Integer code;
 
+        /**
+         * <p>The error message returned if the request failed.</p>
+         */
         @NameInMap("Error")
         public String error;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The endpoint of the instance.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The ID of the instance owner.</p>
+         */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The port number of the instance that you want to access.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The role of the current API caller.</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The tenant ID.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         */
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <p>The unique identifier of the instance.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

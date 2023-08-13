@@ -4,12 +4,25 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DisableInstanceDasConfigRequest extends TeaModel {
+    /**
+     * <p>The database engine. Set the value to Redis.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The database instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of auto scaling. Valid values:</p>
+     * <br>
+     * <p>*   **specScale**: The specifications of a database instance are automatically scaled up or down.</p>
+     * <p>*   **shardScale**: The number of shards for a database instance is automatically increased or decreased.</p>
+     * <p>*   **bandwidthScale**: The bandwidth of a database instance is automatically increased or decreased.</p>
+     */
     @NameInMap("ScaleType")
     public String scaleType;
 

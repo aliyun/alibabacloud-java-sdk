@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public UpdateAutoThrottleRulesAsyncResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +85,25 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     }
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList extends TeaModel {
+        /**
+         * <p>Indicates whether the parameters are configured. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <br>
+         * <p>* **false**</p>
+         */
         @NameInMap("ConfigSuccess")
         public Boolean configSuccess;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The database instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -106,9 +139,19 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     }
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList extends TeaModel {
+        /**
+         * <p>Indicates whether the parameters are configured. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <br>
+         * <p>* **false**</p>
+         */
         @NameInMap("ConfigSuccess")
         public Boolean configSuccess;
 
+        /**
+         * <p>The database instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -136,18 +179,33 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     }
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse extends TeaModel {
+        /**
+         * <p>The number of database instances for which the parameters failed to be configured.</p>
+         */
         @NameInMap("ConfigFailInstanceCount")
         public Long configFailInstanceCount;
 
+        /**
+         * <p>The database instances for which the parameters failed to be configured.</p>
+         */
         @NameInMap("ConfigFailInstanceList")
         public java.util.List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList> configFailInstanceList;
 
+        /**
+         * <p>The number of database instances for which the parameters are configured.</p>
+         */
         @NameInMap("ConfigSuccessInstanceCount")
         public Long configSuccessInstanceCount;
 
+        /**
+         * <p>The database instances for which the parameters are configured.</p>
+         */
         @NameInMap("ConfigSuccessInstanceList")
         public java.util.List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList> configSuccessInstanceList;
 
+        /**
+         * <p>The total number of database instances.</p>
+         */
         @NameInMap("TotalInstanceCount")
         public Long totalInstanceCount;
 
@@ -199,24 +257,60 @@ public class UpdateAutoThrottleRulesAsyncResponseBody extends TeaModel {
     }
 
     public static class UpdateAutoThrottleRulesAsyncResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Complete")
         public Boolean complete;
 
+        /**
+         * <p>The returned data of the configuration.</p>
+         * <br>
+         * <p>>  The data is returned only if the value of isFinish is **true**. This value indicates that the asynchronous request is complete.</p>
+         */
         @NameInMap("ConfigResponse")
         public UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse configResponse;
 
+        /**
+         * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Fail")
         public Boolean fail;
 
+        /**
+         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsFinish")
         public Boolean isFinish;
 
+        /**
+         * <p>The ID of the asynchronous request.</p>
+         */
         @NameInMap("ResultId")
         public String resultId;
 
+        /**
+         * <p>The state of the asynchronous request. Valid values:</p>
+         * <br>
+         * <p>*   **RUNNING**</p>
+         * <p>*   **SUCCESS**</p>
+         * <p>*   **FAIL**</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

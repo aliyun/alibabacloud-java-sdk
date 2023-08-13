@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     */
     @NameInMap("Data")
     public GetSqlOptimizeAdviceResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,21 +85,50 @@ public class GetSqlOptimizeAdviceResponseBody extends TeaModel {
     }
 
     public static class GetSqlOptimizeAdviceResponseBodyData extends TeaModel {
+        /**
+         * <p>The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The URL that is used to download the file.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The time when the file expires. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <br>
+         * <p>>  The file expires three days after the task is created.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **INIT**: The task is being initialized.</p>
+         * <p>*   **RUNNING**: The task is running.</p>
+         * <p>*   **FINISH**: The task is complete.</p>
+         * <p>*   **FAILED**: The task failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The status code of the task. Valid values:</p>
+         * <br>
+         * <p>*   **NO_DATA**: No data is returned.</p>
+         * <p>*   **INTERNAL_ERROR**: An internal error occurred.</p>
+         * <p>*   **SUCCESS**: The task is successful.</p>
+         */
         @NameInMap("StatusCode")
         public String statusCode;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

@@ -4,12 +4,23 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetKillInstanceSessionTaskResultRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  You must specify this parameter if your database instance is a PolarDB for MySQL cluster.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The task ID. You can obtain the task ID from the response parameters of the [CreateKillInstanceSessionTask](~~609246~~) operation.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

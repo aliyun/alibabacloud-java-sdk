@@ -4,18 +4,36 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("Data")
     public GetQueryOptimizeDataTopResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,12 +83,24 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeDataTopResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The metric name. Valid values:</p>
+         * <br>
+         * <p>* **sqlExecuteCount**: the number of slow SQL executions.</p>
+         * <p>* **optimizedSqlExecuteCount**: the number of slow SQL executions that need to be optimized.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The metric value.</p>
+         */
         @NameInMap("Value")
         public Double value;
 
@@ -106,18 +136,33 @@ public class GetQueryOptimizeDataTopResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeDataTopResponseBodyData extends TeaModel {
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The information about the instances.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetQueryOptimizeDataTopResponseBodyDataList> list;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

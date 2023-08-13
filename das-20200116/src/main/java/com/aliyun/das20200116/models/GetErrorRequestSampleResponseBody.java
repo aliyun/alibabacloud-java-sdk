@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetErrorRequestSampleResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetErrorRequestSampleResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,33 +85,57 @@ public class GetErrorRequestSampleResponseBody extends TeaModel {
     }
 
     public static class GetErrorRequestSampleResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("database")
         public String database;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("errorCode")
         public String errorCode;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The IP address of the client that executes the SQL statement.</p>
+         */
         @NameInMap("originHost")
         public String originHost;
 
+        /**
+         * <p>The SQL statement.</p>
+         */
         @NameInMap("sql")
         public String sql;
 
         /**
-         * <p>SQL ID。</p>
+         * <p>The ID of the SQL query.</p>
          */
         @NameInMap("sqlId")
         public String sqlId;
 
+        /**
+         * <p>The table information.</p>
+         */
         @NameInMap("tables")
         public java.util.List<String> tables;
 
+        /**
+         * <p>The time when the SQL query was executed. The value of this parameter is a UNIX timestamp. Unit: ms.</p>
+         */
         @NameInMap("timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The username of the account that is used to log on to the database.</p>
+         */
         @NameInMap("user")
         public String user;
 

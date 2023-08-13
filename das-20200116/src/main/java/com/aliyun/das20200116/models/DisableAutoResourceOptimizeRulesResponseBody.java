@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DisableAutoResourceOptimizeRulesResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +85,25 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
     }
 
     public static class DisableAutoResourceOptimizeRulesResponseBodyDataConfigFailInstanceList extends TeaModel {
+        /**
+         * <p>Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <br>
+         * <p>* **false**</p>
+         */
         @NameInMap("ConfigSuccess")
         public Boolean configSuccess;
 
+        /**
+         * <p>The error message returned if the request failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The database instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -106,9 +139,19 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
     }
 
     public static class DisableAutoResourceOptimizeRulesResponseBodyDataConfigSuccessInstanceList extends TeaModel {
+        /**
+         * <p>Indicates whether the automatic tablespace fragment recycling feature is disabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <br>
+         * <p>* **false**</p>
+         */
         @NameInMap("ConfigSuccess")
         public Boolean configSuccess;
 
+        /**
+         * <p>The database instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -136,18 +179,33 @@ public class DisableAutoResourceOptimizeRulesResponseBody extends TeaModel {
     }
 
     public static class DisableAutoResourceOptimizeRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.</p>
+         */
         @NameInMap("ConfigFailInstanceCount")
         public Long configFailInstanceCount;
 
+        /**
+         * <p>The list of database instances for which the automatic tablespace fragment recycling feature failed to be disabled.</p>
+         */
         @NameInMap("ConfigFailInstanceList")
         public java.util.List<DisableAutoResourceOptimizeRulesResponseBodyDataConfigFailInstanceList> configFailInstanceList;
 
+        /**
+         * <p>The number of database instances for which the automatic tablespace fragment recycling feature is disabled.</p>
+         */
         @NameInMap("ConfigSuccessInstanceCount")
         public Long configSuccessInstanceCount;
 
+        /**
+         * <p>The list of database instances for which the automatic tablespace fragment recycling feature is disabled.</p>
+         */
         @NameInMap("ConfigSuccessInstanceList")
         public java.util.List<DisableAutoResourceOptimizeRulesResponseBodyDataConfigSuccessInstanceList> configSuccessInstanceList;
 
+        /**
+         * <p>The total number of database instances.</p>
+         */
         @NameInMap("TotalInstanceCount")
         public Long totalInstanceCount;
 

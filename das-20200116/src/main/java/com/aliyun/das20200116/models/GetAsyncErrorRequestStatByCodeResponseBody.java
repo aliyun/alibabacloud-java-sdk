@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetAsyncErrorRequestStatByCodeResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +85,21 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     }
 
     public static class GetAsyncErrorRequestStatByCodeResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The number of SQL queries corresponding to the error code.</p>
+         */
         @NameInMap("count")
         public Integer count;
 
+        /**
+         * <p>The error code returned if the request failed.</p>
+         */
         @NameInMap("errorCode")
         public String errorCode;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
@@ -106,24 +135,58 @@ public class GetAsyncErrorRequestStatByCodeResponseBody extends TeaModel {
     }
 
     public static class GetAsyncErrorRequestStatByCodeResponseBodyData extends TeaModel {
+        /**
+         * <p>Indicates whether the asynchronous request was complete.</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("complete")
         public Boolean complete;
 
+        /**
+         * <p>Indicates whether the asynchronous request failed. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("fail")
         public Boolean fail;
 
+        /**
+         * <p>Indicates whether the asynchronous request was complete. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("isFinish")
         public Boolean isFinish;
 
+        /**
+         * <p>The number of SQL queries corresponding to the error code.</p>
+         */
         @NameInMap("result")
         public java.util.List<GetAsyncErrorRequestStatByCodeResponseBodyDataResult> result;
 
+        /**
+         * <p>The ID of the asynchronous request.</p>
+         */
         @NameInMap("resultId")
         public String resultId;
 
+        /**
+         * <p>The state of the asynchronous request. Valid values:</p>
+         * <br>
+         * <p>*   **RUNNING**</p>
+         * <p>*   **SUCCESS**</p>
+         * <p>*   **FAIL**</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("timestamp")
         public Long timestamp;
 

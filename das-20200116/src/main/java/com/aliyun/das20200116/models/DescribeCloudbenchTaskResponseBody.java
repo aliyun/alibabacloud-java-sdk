@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudbenchTaskResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     */
     @NameInMap("Data")
     public DescribeCloudbenchTaskResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,126 +85,342 @@ public class DescribeCloudbenchTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudbenchTaskResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the archiving task.</p>
+         */
         @NameInMap("ArchiveJobId")
         public String archiveJobId;
 
+        /**
+         * <p>The name of the table that was archived to Object Storage Service (OSS).</p>
+         */
         @NameInMap("ArchiveOssTableName")
         public String archiveOssTableName;
 
+        /**
+         * <p>The archiving state of the file that stores the analysis result of full SQL statistics. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The file archiving is not started.</p>
+         * <p>*   **1**: The file is archived.</p>
+         * <p>*   **2**: An error occurred.</p>
+         * <p>*   **3**: The file is being archived.</p>
+         * <p>*   **4**: The archived file does not need to be downloaded.</p>
+         */
         @NameInMap("ArchiveState")
         public Integer archiveState;
 
+        /**
+         * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The backup type. Valid values:</p>
+         * <br>
+         * <p>*   **TIMESTAMP**</p>
+         * <p>*   **BACKUPID**</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>The substep in the stress testing task. Valid values:</p>
+         * <br>
+         * <p>*   **NEW**: initializes the stress testing task.</p>
+         * <p>*   **WAIT_BUY_ECS**: purchases an ECS instance.</p>
+         * <p>*   **WAIT_START_ECS**: starts an ECS instance.</p>
+         * <p>*   **WAIT_INSTALL_JDK**: installs the Java Development Kit (JDK).</p>
+         * <p>*   **WAIT_INSTALL_DBGATEWAY**: installs the database gateway (DBGateway).</p>
+         * <p>*   **ADD_SECURITY_IPS_STEP**: configure a security group whitelist.</p>
+         * <p>*   **ARCHIVE**: archives the full SQL statistics.</p>
+         * <p>*   **DOWNLOAD**: downloads the file that stores the analysis result of full SQL statistics.</p>
+         * <p>*   **PROCEED**: preprocesses the file that stores the analysis result of full SQL statistics.</p>
+         * <p>*   **PRE_LOAD**: preloads the file that stores the analysis result of full SQL statistics.</p>
+         * <p>*   **VALIDATE**: verifies the functionality of stress testing.</p>
+         * <p>*   **PRESSURE**: starts the stress testing task.</p>
+         */
         @NameInMap("BenchStep")
         public String benchStep;
 
+        /**
+         * <p>The status that indicates the substep performed on the stress testing task. Valid values:</p>
+         * <br>
+         * <p>*   **NEW**: The task is being initialized.</p>
+         * <p>*   **RUNNING**: The task is running.</p>
+         * <p>*   **FAILED**: The task failed.</p>
+         * <p>*   **FINISHED**: The task is complete.</p>
+         * <p>*   **Terminated**: The task is terminated.</p>
+         * <p>*   **Deleted**: The task is deleted.</p>
+         */
         @NameInMap("BenchStepStatus")
         public String benchStepStatus;
 
+        /**
+         * <p>The DBGateway ID of the stress testing client.</p>
+         */
         @NameInMap("ClientGatewayId")
         public String clientGatewayId;
 
+        /**
+         * <p>The type of the stress testing client. Valid values:</p>
+         * <br>
+         * <p>*   **ECS**: indicates that you must create the [DBGateway](~~64905~~).</p>
+         * <p>*   **DAS_ECS**: indicates that DAS automatically purchases and deploys an ECS instance for stress testing.</p>
+         */
         @NameInMap("ClientType")
         public String clientType;
 
+        /**
+         * <p>The description of the stress testing task.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The UUID of the destination instance.</p>
+         */
         @NameInMap("DstInstanceUuid")
         public String dstInstanceUuid;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("DstIp")
         public String dstIp;
 
+        /**
+         * <p>The port number of the destination instance.</p>
+         */
         @NameInMap("DstPort")
         public Integer dstPort;
 
+        /**
+         * <p>The type of the identifier that is used to indicate the destination instance. Valid values:</p>
+         * <br>
+         * <p>*   **Instance** (default): the instance ID.</p>
+         * <p>*   **ConnectionString**: the endpoint of the instance.</p>
+         */
         @NameInMap("DstType")
         public String dstType;
 
+        /**
+         * <p>The specification of the DTS task.</p>
+         */
         @NameInMap("DtsJobClass")
         public String dtsJobClass;
 
+        /**
+         * <p>The ID of the DTS migration task.</p>
+         */
         @NameInMap("DtsJobId")
         public String dtsJobId;
 
+        /**
+         * <p>The name of the Data Transmission Service (DTS) task.</p>
+         */
         @NameInMap("DtsJobName")
         public String dtsJobName;
 
+        /**
+         * <p>The state of the DTS task. Valid values:</p>
+         * <br>
+         * <p>*   **NOT_STARTED**: The task is not started.</p>
+         * <p>*   **PRE_CHECKING**: The task is in precheck.</p>
+         * <p>*   **PRE_CHECK_FAILED**: The precheck failed.</p>
+         * <p>*   **CHECKING**: The task is being checked.</p>
+         * <p>*   **MIGRATING**: The data is being migrated.</p>
+         * <p>*   **CATCHED**: The data is migrated from the source instance to the destination instance.</p>
+         * <p>*   **SUSPENDING**: The task is suspended.</p>
+         * <p>*   **MIGRATION_FAILED**: The data failed to be migrated.</p>
+         * <p>*   **FINISHED**: The task is complete.</p>
+         * <p>*   **INITIALIZING**: The synchronization is being initialized.</p>
+         * <p>*   **INITIALIZE_FAILED**: The synchronization failed to be initialized.</p>
+         * <p>*   **SYNCHRONIZING**: The data is being synchronized.</p>
+         * <p>*   **MODIFYING**: The objects to be synchronized are being changed.</p>
+         * <p>*   **SWITCHING**: The roles of the instances are being switched.</p>
+         * <p>*   **FAILED**: The task failed.</p>
+         */
         @NameInMap("DtsJobState")
         public Integer dtsJobState;
 
+        /**
+         * <p>The state of the DTS task. Valid values:</p>
+         * <br>
+         * <p>*   **NOT_STARTED**: The task is not started.</p>
+         * <p>*   **PRE_CHECKING**: The task is in precheck.</p>
+         * <p>*   **PRE_CHECK_FAILED**: The precheck failed.</p>
+         * <p>*   **CHECKING**: The task is being checked.</p>
+         * <p>*   **MIGRATING**: The data is being migrated.</p>
+         * <p>*   **CATCHED**: The data is migrated from the source instance to the destination instance.</p>
+         * <p>*   **SUSPENDING**: The task is suspended.</p>
+         * <p>*   **MIGRATION_FAILED**: The data failed to be migrated.</p>
+         * <p>*   **FINISHED**: The task is complete.</p>
+         * <p>*   **INITIALIZING**: The synchronization is being initialized.</p>
+         * <p>*   **INITIALIZE_FAILED**: The synchronization failed to be initialized.</p>
+         * <p>*   **SYNCHRONIZING**: The data is being synchronized.</p>
+         * <p>*   **MODIFYING**: The objects to be synchronized are being changed.</p>
+         * <p>*   **SWITCHING**: The roles of the instances are being switched.</p>
+         * <p>*   **FAILED**: The task failed.</p>
+         */
         @NameInMap("DtsJobStatus")
         public String dtsJobStatus;
 
+        /**
+         * <p>The ID of the Elastic Compute Service (ECS) instance.</p>
+         */
         @NameInMap("EcsInstanceId")
         public String ecsInstanceId;
 
+        /**
+         * <p>The state that specifies the last operation that is performed for the stress testing task. Valid values:</p>
+         * <br>
+         * <p>*   **WAIT_TARGET**: prepares the destination instance.</p>
+         * <p>*   **WAIT_DBGATEWAY**: prepares the DBGateway.</p>
+         * <p>*   **WAIT_SQL**: prepares the full SQL statistics.</p>
+         * <p>*   **WAIT_LOGIC**: prepares to replay the traffic.</p>
+         * <br>
+         * <p>>  When the state of a stress testing task changes to the state that is specified by the EndState parameter, the stress testing task becomes completed.</p>
+         */
         @NameInMap("EndState")
         public String endState;
 
+        /**
+         * <p>The error code returned for the substep of the stress testing task.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned if the request failed.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The additional information.</p>
+         */
         @NameInMap("External")
         public String external;
 
+        /**
+         * <p>The rate at which the stress testing task replayed the traffic. The value is a positive integer. Valid values:**1** to **30**. Default value: **1**.</p>
+         */
         @NameInMap("Rate")
         public Long rate;
 
+        /**
+         * <p>The duration of the stress testing task for which traffic was captured from the source instance.</p>
+         */
         @NameInMap("RequestDuration")
         public Long requestDuration;
 
+        /**
+         * <p>The duration of the stress testing task for which the traffic was generated on the destination instance. Unit: milliseconds.</p>
+         */
         @NameInMap("SmartPressureTime")
         public Integer smartPressureTime;
 
+        /**
+         * <p>The source of the task. Valid values:</p>
+         * <br>
+         * <p>*   **DAS**</p>
+         * <p>*   **OPEN_API**</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The reuse information about the analysis result of full SQL statistics.</p>
+         */
         @NameInMap("SqlCompleteReuse")
         public String sqlCompleteReuse;
 
+        /**
+         * <p>The database type of the source instance. Valid values:</p>
+         */
         @NameInMap("SrcInstanceArea")
         public String srcInstanceArea;
 
+        /**
+         * <p>The UUID of the source instance.</p>
+         */
         @NameInMap("SrcInstanceUuid")
         public String srcInstanceUuid;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("SrcPublicIp")
         public String srcPublicIp;
 
+        /**
+         * <p>The state that indicates the operation performed for the stress testing task. Valid values:</p>
+         * <br>
+         * <p>*   **WAIT_TARGET**: prepares the destination instance.</p>
+         * <p>*   **WAIT_DBGATEWAY**: prepares the DBGateway.</p>
+         * <p>*   **WAIT_SQL**: prepares the full SQL statistics.</p>
+         * <p>*   **WAIT_LOGIC**: prepares to replay the traffic.</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The state of the stress testing task. Valid values:</p>
+         * <br>
+         * <p>*   **SUCCESS**: The task is successful.</p>
+         * <p>*   **IGNORED**: The task is ignored.</p>
+         * <p>*   **RUNNING**: The task is running.</p>
+         * <p>*   **EXCEPTION**: An error occurred.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the table that is used for stress testing.</p>
+         */
         @NameInMap("TableSchema")
         public String tableSchema;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The type of the stress testing task. Valid values:</p>
+         * <br>
+         * <p>*   **pressure test** (default): A task of this type replays the traffic that is captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</p>
+         * <p>*   **smart pressure test**: A task of this type analyzes the traffic that is captured from the source instance over a short period of time and generates traffic on the destination instance for continuous stress testing. The business model based on which the traffic is generated on the destination instance and the traffic distribution are consistent with those on the source instance. Stress testing tasks of this type can help you reduce the amount of time that is consumed to collect data from the source instance and reduce storage costs and performance overheads.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
+        /**
+         * <p>The topic that contains the consumed data. This topic is a topic in Message Queue for Apache Kafka.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The version of the stress testing task. Valid values:</p>
+         * <br>
+         * <p>*   **V2.0**</p>
+         * <p>*   **V3.0**</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The temporary directory generated for stress testing.</p>
+         */
         @NameInMap("WorkDir")
         public String workDir;
 

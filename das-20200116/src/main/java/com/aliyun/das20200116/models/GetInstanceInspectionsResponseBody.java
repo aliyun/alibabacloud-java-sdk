@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceInspectionsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The inspection and scoring results.</p>
+     */
     @NameInMap("Data")
     public GetInstanceInspectionsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,18 +85,53 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceInspectionsResponseBodyDataListAutoFunction extends TeaModel {
+        /**
+         * <p>Indicates whether the feature of automatically creating and deleting indexes is enabled. Valid values:</p>
+         * <br>
+         * <p>* **0**: disabled.</p>
+         * <p>* **1**: enabled.</p>
+         * <p>* **2**: not supported.</p>
+         */
         @NameInMap("AutoIndex")
         public Integer autoIndex;
 
+        /**
+         * <p>Indicates whether the automatic throttling feature is enabled. Valid values:</p>
+         * <br>
+         * <p>* **0**: disabled.</p>
+         * <p>* **1**: enabled.</p>
+         * <p>* **2**: not supported.</p>
+         */
         @NameInMap("AutoLimitedSql")
         public Integer autoLimitedSql;
 
+        /**
+         * <p>Indicates whether automatic reclamation of fragments is enabled. Valid values:</p>
+         * <br>
+         * <p>* **0**: disabled.</p>
+         * <p>* **1**: enabled.</p>
+         * <p>* **2**: not supported.</p>
+         */
         @NameInMap("AutoResourceOptimize")
         public Integer autoResourceOptimize;
 
+        /**
+         * <p>Indicates whether the auto scaling feature is enabled. Valid values:</p>
+         * <br>
+         * <p>* **0**: disabled.</p>
+         * <p>* **1**: enabled.</p>
+         * <p>* **2**: not supported.</p>
+         */
         @NameInMap("AutoScale")
         public Integer autoScale;
 
+        /**
+         * <p>Indicates whether the event subscription feature is enabled. Valid values:</p>
+         * <br>
+         * <p>* **0**: disabled.</p>
+         * <p>* **1**: enabled.</p>
+         * <p>* **2**: not supported.</p>
+         */
         @NameInMap("EventSubscription")
         public Integer eventSubscription;
 
@@ -128,51 +183,112 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceInspectionsResponseBodyDataListInstance extends TeaModel {
+        /**
+         * <p>The account ID. You can obtain the account ID on the **Security Settings** page in the Alibaba Cloud **account management center**.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The connection mode of the instance. Valid values:</p>
+         * <br>
+         * <p>* **standard**: standard mode.</p>
+         * <p>* **safe**: database proxy mode.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The CPU specification of the instance. For example, if a value of 8 is returned, the instance has eight CPU cores.</p>
+         */
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <p>The database engine. Valid values:</p>
+         * <br>
+         * <p>* **MySQL**</p>
+         * <p>* **Redis**</p>
+         * <p>* **PolarDBMySQL**</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The version number of the database engine.</p>
+         */
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("InstanceAlias")
         public String instanceAlias;
 
+        /**
+         * <p>The type of the instance on which the database is deployed. Valid values:</p>
+         * <br>
+         * <p>* **RDS**: an Alibaba Cloud database instance.</p>
+         * <p>* **ECS**: an ECS instance on which a self-managed database is deployed.</p>
+         * <p>* **IDC**: a self-managed database instance that is not deployed on Alibaba Cloud.</p>
+         * <br>
+         * <p>> The value IDC indicates that the instance is deployed in a data center.</p>
+         */
         @NameInMap("InstanceArea")
         public String instanceArea;
 
+        /**
+         * <p>The instance type.</p>
+         */
         @NameInMap("InstanceClass")
         public String instanceClass;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The memory capacity of the database that is deployed on the instance. Unit: MB.</p>
+         */
         @NameInMap("Memory")
         public Integer memory;
 
+        /**
+         * <p>The network type of the instance.</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The ID of the node on the instance.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The storage space of the instance. Unit: GB.</p>
+         */
         @NameInMap("Storage")
         public Integer storage;
 
+        /**
+         * <p>The unique identifier of the instance.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) in which the instance is deployed.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -312,36 +428,82 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceInspectionsResponseBodyDataList extends TeaModel {
+        /**
+         * <p>Indicates whether the autonomy service is enabled.</p>
+         */
         @NameInMap("AutoFunction")
         public GetInstanceInspectionsResponseBodyDataListAutoFunction autoFunction;
 
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Data")
         public java.util.Map<String, ?> data;
 
+        /**
+         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <br>
+         * <p>* **0**: disabled.</p>
+         * <p>* **1**: enabled.</p>
+         * <p>* **2**: not supported.</p>
+         */
         @NameInMap("EnableDasPro")
         public Integer enableDasPro;
 
+        /**
+         * <p>The end time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <br>
+         * <p>> The end time must be later than the start time.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The details of the instance.</p>
+         */
         @NameInMap("Instance")
         public GetInstanceInspectionsResponseBodyDataListInstance instance;
 
+        /**
+         * <p>The inspection scores of the instance.</p>
+         */
         @NameInMap("Score")
         public Integer score;
 
+        /**
+         * <p>The scores that are deducted for the instance.</p>
+         */
         @NameInMap("ScoreMap")
         public java.util.Map<String, ?> scoreMap;
 
+        /**
+         * <p>The start time of the inspection and scoring task. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The state of the inspection and scoring task. Valid values:</p>
+         * <br>
+         * <p>* **0**: The task is waiting for execution.</p>
+         * <p>* **1**: The task is in progress.</p>
+         * <p>* **2**: The task is complete.</p>
+         */
         @NameInMap("State")
         public Integer state;
 
+        /**
+         * <p>The mode in which the inspection and scoring task was initiated. Valid values:</p>
+         * <br>
+         * <p>* **0**: automatic mode</p>
+         * <p>* **1**: manual mode</p>
+         */
         @NameInMap("TaskType")
         public Integer taskType;
 
@@ -441,15 +603,30 @@ public class GetInstanceInspectionsResponseBody extends TeaModel {
     }
 
     public static class GetInstanceInspectionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The mode in which the inspection and scoring task was initiated. Valid values:</p>
+         * <br>
+         * <p>*   **0**: automatic mode</p>
+         * <p>*   **1**: manual mode</p>
+         */
         @NameInMap("List")
         public java.util.List<GetInstanceInspectionsResponseBodyDataList> list;
 
+        /**
+         * <p>The page number. The value returned is a positive integer. Default value: 1.</p>
+         */
         @NameInMap("PageNo")
         public Long pageNo;
 
+        /**
+         * <p>The number of entries per page. Default value: 10.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 
