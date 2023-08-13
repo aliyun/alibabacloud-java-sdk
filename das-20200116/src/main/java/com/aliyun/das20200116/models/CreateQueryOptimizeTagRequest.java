@@ -4,21 +4,53 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateQueryOptimizeTagRequest extends TeaModel {
+    /**
+     * <p>The remarks.</p>
+     * <br>
+     * <p>The remarks can be 1 to 300 characters in length.</p>
+     */
     @NameInMap("Comments")
     public String comments;
 
+    /**
+     * <p>The database engine. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**: ApsaraDB RDS for MySQL</p>
+     * <p>*   **PolarDBMySQL**: PolarDB for MySQL</p>
+     * <p>*   **PostgreSQL**: ApsaraDB RDS for PostgreSQL</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The SQL template IDs. You can call the [GetQueryOptimizeExecErrorStats](~~405261~~) operation to obtain the SQL template ID. Separate multiple SQL template IDs with commas (,).</p>
+     */
     @NameInMap("SqlIds")
     public String sqlIds;
 
+    /**
+     * <p>The status of **Tags**. Valid values:</p>
+     * <br>
+     * <p>*   **0**: removes all tags added to the SQL templates that are specified by **SqlIds** and leaves **Tags** empty.</p>
+     * <p>*   **1**: adds the tags specified by **Tags** to the SQL templates that are specified by **SqlIds**.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>The SQL tags. Separate multiple SQL tags with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **DAS_IMPORTANT**: The SQL template is important.</p>
+     * <p>*   **DAS_NOT_IMPORTANT**: The SQL template is unimportant.</p>
+     * <p>*   **USER_IGNORE**: The scheduling of the SQL template does not need to be optimized.</p>
+     * <p>*   **DAS_IN_PLAN**: The scheduling of the SQL template needs to be optimized.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

@@ -4,18 +4,36 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("Data")
     public GetQueryOptimizeExecErrorSampleResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,24 +83,45 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeExecErrorSampleResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Dbname")
         public String dbname;
 
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The IP address of the client that executes the SQL statement.</p>
+         */
         @NameInMap("OrigHost")
         public String origHost;
 
+        /**
+         * <p>The SQL template ID.</p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The content of the SQL statement that failed to be executed.</p>
+         */
         @NameInMap("SqlText")
         public String sqlText;
 
+        /**
+         * <p>The point in time when the failed SQL statement was executed. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The username of the client that executes the SQL statement.</p>
+         */
         @NameInMap("User")
         public String user;
 
@@ -150,18 +189,33 @@ public class GetQueryOptimizeExecErrorSampleResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeExecErrorSampleResponseBodyData extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The queried data.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetQueryOptimizeExecErrorSampleResponseBodyDataList> list;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

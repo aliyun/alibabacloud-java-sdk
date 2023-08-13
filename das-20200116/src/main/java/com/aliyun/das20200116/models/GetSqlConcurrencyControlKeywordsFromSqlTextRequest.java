@@ -4,12 +4,21 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetSqlConcurrencyControlKeywordsFromSqlTextRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The SQL statement based on which a throttling keyword string is to be generated.</p>
+     */
     @NameInMap("SqlText")
     public String sqlText;
 

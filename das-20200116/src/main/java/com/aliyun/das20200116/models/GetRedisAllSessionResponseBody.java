@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetRedisAllSessionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The session data.</p>
+     */
     @NameInMap("Data")
     public GetRedisAllSessionResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,66 +85,146 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
     }
 
     public static class GetRedisAllSessionResponseBodyDataSessions extends TeaModel {
+        /**
+         * <p>The IP address and port number of the client.</p>
+         */
         @NameInMap("Addr")
         public String addr;
 
+        /**
+         * <p>The connection duration of the session. Unit: seconds.</p>
+         */
         @NameInMap("Age")
         public String age;
 
+        /**
+         * <p>The IP address of the client.</p>
+         */
         @NameInMap("Client")
         public String client;
 
+        /**
+         * <p>The alias of the client.</p>
+         */
         @NameInMap("ClientDesc")
         public String clientDesc;
 
+        /**
+         * <p>The command that is last executed.</p>
+         */
         @NameInMap("Cmd")
         public String cmd;
 
+        /**
+         * <p>The ID of the database that the client is using.</p>
+         */
         @NameInMap("Db")
         public Long db;
 
+        /**
+         * <p>The file descriptor event. Valid values:</p>
+         * <br>
+         * <p>* **r**: Client sockets are readable in the event loop.</p>
+         * <p>* **w**: Client sockets are writable in the event loop.</p>
+         */
         @NameInMap("Events")
         public String events;
 
+        /**
+         * <p>The file descriptor that is used by sockets.</p>
+         */
         @NameInMap("Fd")
         public Long fd;
 
+        /**
+         * <p>The client flag. Valid values:</p>
+         * <br>
+         * <p>* **A**: The connection needs to be closed at the earliest opportunity.</p>
+         * <p>* **b**: The client is waiting for blocked events.</p>
+         * <p>* **c**: The connection is closed after all replies are written.</p>
+         * <p>* **d**: The monitored keys have been modified, and the *`EXEC`* command is about to fail.</p>
+         * <p>* **i**: The client is waiting for VM I/O operations. This value is deprecated.</p>
+         * <p>* **M**: The client is the primary node.</p>
+         * <p>* **N**: Special flags are not configured.</p>
+         * <p>* **O**: The client is in monitor mode.</p>
+         * <p>* **r**: The client is a cluster node in read-only mode.</p>
+         * <p>* **S**: The client is a replica node in normal mode.</p>
+         * <p>* **u**: The client is not blocked.</p>
+         * <p>* **U**: The client is connected by using UNIX domain sockets.</p>
+         * <p>* **x**: The client is executing a transaction.</p>
+         */
         @NameInMap("Flags")
         public String flags;
 
+        /**
+         * <p>The client ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The duration during which the session is in the idle state. Unit: seconds.</p>
+         */
         @NameInMap("Idle")
         public Long idle;
 
+        /**
+         * <p>The number of commands in *`MULTI`* or *`EXEC`*.</p>
+         */
         @NameInMap("Multi")
         public Long multi;
 
+        /**
+         * <p>The name of the client.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The node ID.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The size of the fixed output buffer. Unit: bytes.</p>
+         */
         @NameInMap("Obl")
         public Long obl;
 
+        /**
+         * <p>The number of objects contained in the output list.</p>
+         */
         @NameInMap("Oll")
         public Long oll;
 
+        /**
+         * <p>The size of the output buffer. Unit: bytes.</p>
+         */
         @NameInMap("Omem")
         public Long omem;
 
+        /**
+         * <p>The number of subscriptions that match the pattern.</p>
+         */
         @NameInMap("Psub")
         public Long psub;
 
+        /**
+         * <p>The size of the input buffer. Unit: bytes.</p>
+         */
         @NameInMap("Qbuf")
         public Long qbuf;
 
+        /**
+         * <p>The remaining size of the input buffer. Unit: bytes.</p>
+         */
         @NameInMap("QbufFree")
         public Long qbufFree;
 
+        /**
+         * <p>The number of subscribed channels.</p>
+         */
         @NameInMap("Sub")
         public Long sub;
 
@@ -304,12 +404,21 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
     }
 
     public static class GetRedisAllSessionResponseBodyDataSourceStats extends TeaModel {
+        /**
+         * <p>The total number of sessions from the access source.</p>
+         */
         @NameInMap("Count")
         public String count;
 
+        /**
+         * <p>The client ID data.</p>
+         */
         @NameInMap("Ids")
         public java.util.List<Long> ids;
 
+        /**
+         * <p>The access source.</p>
+         */
         @NameInMap("Key")
         public String key;
 
@@ -345,15 +454,27 @@ public class GetRedisAllSessionResponseBody extends TeaModel {
     }
 
     public static class GetRedisAllSessionResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the sessions.</p>
+         */
         @NameInMap("Sessions")
         public java.util.List<GetRedisAllSessionResponseBodyDataSessions> sessions;
 
+        /**
+         * <p>The statistics on the access source.</p>
+         */
         @NameInMap("SourceStats")
         public java.util.List<GetRedisAllSessionResponseBodyDataSourceStats> sourceStats;
 
+        /**
+         * <p>The time when the instance sessions were returned. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The total number of sessions.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

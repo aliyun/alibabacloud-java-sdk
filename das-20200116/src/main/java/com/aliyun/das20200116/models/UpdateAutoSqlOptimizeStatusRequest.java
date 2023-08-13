@@ -4,9 +4,21 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class UpdateAutoSqlOptimizeStatusRequest extends TeaModel {
+    /**
+     * <p>The database instance IDs. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>>  You can specify up to 50 instance IDs.</p>
+     */
     @NameInMap("Instances")
     public String instances;
 
+    /**
+     * <p>The status of the automatic SQL optimization feature. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The automatic SQL optimization feature is disabled.</p>
+     * <p>*   **1**: **SQL diagnosis and automatic index creation** is specified.</p>
+     * <p>*   **3**: **SQL diagnosis only** is specified.</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

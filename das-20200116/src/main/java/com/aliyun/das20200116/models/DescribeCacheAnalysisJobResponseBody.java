@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the task.</p>
+     */
     @NameInMap("Data")
     public DescribeCacheAnalysisJobResponseBodyData data;
 
+    /**
+     * <p>The message that is returned for the request.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,27 +85,51 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisJobResponseBodyDataBigKeysKeyInfo extends TeaModel {
+        /**
+         * <p>The number of bytes that are occupied by the key.</p>
+         */
         @NameInMap("Bytes")
         public Long bytes;
 
+        /**
+         * <p>The number of elements in the key.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Db")
         public Integer db;
 
+        /**
+         * <p>The data type of the key.</p>
+         */
         @NameInMap("Encoding")
         public String encoding;
 
+        /**
+         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
+         */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
+        /**
+         * <p>The name of the key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the data node on the instance.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The data type of the instance.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -181,49 +225,49 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     public static class DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNumKeyInfo extends TeaModel {
         /**
-         * <p>Key占用字节数。</p>
+         * <p>The number of bytes that are occupied by the key.</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
-         * <p>Key的元素个数。</p>
+         * <p>The number of elements in the key.</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>数据库名称。</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
-         * <p>Key内部数据类型。</p>
+         * <p>The data type of the key.</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
-         * <p>Key过期时间，单位：毫秒（ms），0表示不过期。</p>
+         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
          */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
         /**
-         * <p>Key的名称。</p>
+         * <p>The name of the key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>实例的数据节点ID。</p>
+         * <p>The ID of the data node on the instance.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>Redis数据结构类型。</p>
+         * <p>The data type of the instance.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -319,18 +363,33 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisJobResponseBodyDataKeyPrefixesPrefix extends TeaModel {
+        /**
+         * <p>The number of bytes that are occupied by the key.</p>
+         */
         @NameInMap("Bytes")
         public Long bytes;
 
+        /**
+         * <p>The number of elements in the key.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The number of keys that contain the prefix.</p>
+         */
         @NameInMap("KeyNum")
         public Long keyNum;
 
+        /**
+         * <p>The prefix of the key.</p>
+         */
         @NameInMap("Prefix")
         public String prefix;
 
+        /**
+         * <p>The data type of the instance.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -402,49 +461,49 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     public static class DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfBytesKeyInfo extends TeaModel {
         /**
-         * <p>Key占用字节数。</p>
+         * <p>The number of bytes that are occupied by the key.</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
-         * <p>Key的元素个数。</p>
+         * <p>The number of elements in the key.</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>数据库名称。</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
-         * <p>Key内部数据类型。</p>
+         * <p>The data type of the key.</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
-         * <p>Key过期时间，单位：毫秒（ms），0表示不过期。</p>
+         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
          */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
         /**
-         * <p>Key的名称。</p>
+         * <p>The name of the key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>实例的数据节点ID</p>
+         * <p>The ID of the data node on the instance.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>Redis数据结构类型。</p>
+         * <p>The data type of the instance.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -541,49 +600,49 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
 
     public static class DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfNumKeyInfo extends TeaModel {
         /**
-         * <p>Key占用字节数。</p>
+         * <p>The number of bytes that are occupied by the key.</p>
          */
         @NameInMap("Bytes")
         public Long bytes;
 
         /**
-         * <p>Key的元素个数。</p>
+         * <p>The number of elements in the key.</p>
          */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>数据库名称。</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("Db")
         public Integer db;
 
         /**
-         * <p>Key内部数据类型。</p>
+         * <p>The data type of the key.</p>
          */
         @NameInMap("Encoding")
         public String encoding;
 
         /**
-         * <p>Key过期时间，单位：毫秒（ms），0表示不过期。</p>
+         * <p>The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.</p>
          */
         @NameInMap("ExpirationTimeMillis")
         public Long expirationTimeMillis;
 
         /**
-         * <p>Key的名称。</p>
+         * <p>The name of the key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>实例的数据节点ID。</p>
+         * <p>The ID of the data node on the instance.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>Redis数据结构类型。</p>
+         * <p>The data type of the instance.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -679,41 +738,69 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisJobResponseBodyData extends TeaModel {
+        /**
+         * <p>The details of the large keys. The returned large keys are sorted in descending order based on the number of bytes occupied by the keys.</p>
+         */
         @NameInMap("BigKeys")
         public DescribeCacheAnalysisJobResponseBodyDataBigKeys bigKeys;
 
         /**
-         * <p>大Key详细信息，根据Key数量降序排列。</p>
+         * <p>The details of the large keys. The returned large keys are sorted in descending order based on the number of keys.</p>
          */
         @NameInMap("BigKeysOfNum")
         public DescribeCacheAnalysisJobResponseBodyDataBigKeysOfNum bigKeysOfNum;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the cache analysis task.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The prefixes of the keys.</p>
+         */
         @NameInMap("KeyPrefixes")
         public DescribeCacheAnalysisJobResponseBodyDataKeyPrefixes keyPrefixes;
 
+        /**
+         * <p>The message that is returned for the request.</p>
+         * <br>
+         * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the data node on the instance.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The state of the cache analysis task. Valid values:</p>
+         * <br>
+         * <p>*   **BACKUP**: The data is being backed up.</p>
+         * <p>*   **ANALYZING**: The data is being analyzed.</p>
+         * <p>*   **FINISHED**: The data is analyzed.</p>
+         * <p>*   **FAILED**: An error occurred.</p>
+         */
         @NameInMap("TaskState")
         public String taskState;
 
         /**
-         * <p>永不过期Key的详细信息，根据Key占用字节数降序排列。</p>
+         * <p>The details of permanent keys. The returned keys are sorted in descending order based on the number of bytes occupied by the keys.</p>
          */
         @NameInMap("UnexBigKeysOfBytes")
         public DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfBytes unexBigKeysOfBytes;
 
         /**
-         * <p>永不过期Key的详细信息，根据Key数量降序排列。</p>
+         * <p>The details of permanent keys. The returned keys are sorted in descending order based on the number of keys.</p>
          */
         @NameInMap("UnexBigKeysOfNum")
         public DescribeCacheAnalysisJobResponseBodyDataUnexBigKeysOfNum unexBigKeysOfNum;

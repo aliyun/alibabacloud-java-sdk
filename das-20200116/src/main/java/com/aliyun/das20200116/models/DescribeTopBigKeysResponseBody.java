@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeTopBigKeysResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information about the large keys.</p>
+     * <br>
+     * <p>> This parameter is left empty If no large keys exist within the specified time range.</p>
+     */
     @NameInMap("Data")
     public DescribeTopBigKeysResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,18 +85,33 @@ public class DescribeTopBigKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeTopBigKeysResponseBodyDataBigKey extends TeaModel {
+        /**
+         * <p>The database in which the key is stored.</p>
+         */
         @NameInMap("Db")
         public Integer db;
 
+        /**
+         * <p>The key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The type of the key.</p>
+         */
         @NameInMap("KeyType")
         public String keyType;
 
+        /**
+         * <p>The ID of the data shard on the ApsaraDB for Redis instance.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The number of elements in the key.</p>
+         */
         @NameInMap("Size")
         public Long size;
 

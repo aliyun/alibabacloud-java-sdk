@@ -4,18 +4,36 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     */
     @NameInMap("Data")
     public GetQueryOptimizeExecErrorStatsResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,24 +83,45 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeExecErrorStatsResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("Dbname")
         public String dbname;
 
+        /**
+         * <p>The error code returned if the request failed.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The number of errors.</p>
+         */
         @NameInMap("ErrorCount")
         public Long errorCount;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The alias of the database instance.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The SQL template ID.</p>
+         */
         @NameInMap("SqlId")
         public String sqlId;
 
+        /**
+         * <p>The content of the SQL template.</p>
+         */
         @NameInMap("SqlText")
         public String sqlText;
 
@@ -150,18 +189,33 @@ public class GetQueryOptimizeExecErrorStatsResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeExecErrorStatsResponseBodyData extends TeaModel {
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The information about the SQL templates that failed to execute.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetQueryOptimizeExecErrorStatsResponseBodyDataList> list;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

@@ -4,15 +4,29 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetSqlConcurrencyControlRulesHistoryRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
+    /**
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>>  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>The number of entries per page. The value must be an integer that is greater than 0. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

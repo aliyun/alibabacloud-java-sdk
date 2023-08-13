@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceDasProRequest extends TeaModel {
+    /**
+     * <p>The database instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

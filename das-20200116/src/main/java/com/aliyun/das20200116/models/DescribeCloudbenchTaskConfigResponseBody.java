@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information, including the error codes and the number of entries that are returned.</p>
+     */
     @NameInMap("Data")
     public DescribeCloudbenchTaskConfigResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,54 +85,105 @@ public class DescribeCloudbenchTaskConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudbenchTaskConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The path in which the files are archived.</p>
+         */
         @NameInMap("ArchiveFolder")
         public String archiveFolder;
 
+        /**
+         * <p>The command that was run to start the stress testing task.</p>
+         */
         @NameInMap("BenchCmd")
         public String benchCmd;
 
+        /**
+         * <p>The path to the JAR file that is used for stress testing.</p>
+         */
         @NameInMap("ClientJarPath")
         public String clientJarPath;
 
+        /**
+         * <p>The path to the JAR file that is stored in OSS. The JAR file is used for stress testing.</p>
+         */
         @NameInMap("JarOnOss")
         public String jarOnOss;
 
+        /**
+         * <p>The command that was run to preload the file that stores the analysis result of full SQL statistics.</p>
+         */
         @NameInMap("LoadCmd")
         public String loadCmd;
 
+        /**
+         * <p>The name of the metadata file.</p>
+         */
         @NameInMap("MetaFileName")
         public String metaFileName;
 
+        /**
+         * <p>The name of the metadata file stored in Object Storage Service (OSS).</p>
+         */
         @NameInMap("MetaFileOnOss")
         public String metaFileOnOss;
 
+        /**
+         * <p>The path to the metadata file.</p>
+         */
         @NameInMap("MetaFilePath")
         public String metaFilePath;
 
+        /**
+         * <p>The command that was run to parse the file that stores the analysis result of full SQL statistics.</p>
+         */
         @NameInMap("ParseCmd")
         public String parseCmd;
 
+        /**
+         * <p>The path to the file that is parsed. The file stores the analysis result of full SQL statistics.</p>
+         */
         @NameInMap("ParseFilePath")
         public String parseFilePath;
 
+        /**
+         * <p>The location where the RocksDB storage system is deployed in the stress testing client.</p>
+         */
         @NameInMap("RocksDbPath")
         public String rocksDbPath;
 
+        /**
+         * <p>The name of the file that stores the analysis result of full SQL statistics.</p>
+         */
         @NameInMap("SqlFileName")
         public String sqlFileName;
 
+        /**
+         * <p>The name of the file that stores the analysis result of full SQL statistics and that is stored in OSS.</p>
+         */
         @NameInMap("SqlFileOnOss")
         public String sqlFileOnOss;
 
+        /**
+         * <p>The path to the file that stores the analysis result of full SQL statistics.</p>
+         */
         @NameInMap("SqlFilePath")
         public String sqlFilePath;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The Alibaba Cloud account ID.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The path of the temporary directory that is generated for stress testing.</p>
+         */
         @NameInMap("WorkDir")
         public String workDir;
 

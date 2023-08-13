@@ -4,18 +4,36 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The detailed information.</p>
+     */
     @NameInMap("Data")
     public GetQueryOptimizeRuleListResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,12 +83,21 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeRuleListResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The name of the tag.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The type of the tag. **Predefined** is returned, which indicates that the tag is added by the system.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,18 +133,33 @@ public class GetQueryOptimizeRuleListResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeRuleListResponseBodyData extends TeaModel {
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The information about tags.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetQueryOptimizeRuleListResponseBodyDataList> list;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

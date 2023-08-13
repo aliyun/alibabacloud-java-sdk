@@ -4,36 +4,89 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetFullRequestOriginStatByInstanceIdRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to sort the results in ascending order. By default, the results are not sorted in ascending order.</p>
+     */
     @NameInMap("Asc")
     public Boolean asc;
 
+    /**
+     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+     */
     @NameInMap("End")
     public Long end;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  This parameter must be specified if the database instance is a PolarDB for MySQL cluster.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The field by which the results to be returned are sorted. Default value: **count**. Valid values:</p>
+     * <br>
+     * <p>*   **count**: the number of executions.</p>
+     * <p>*   **avgRt**: the average execution duration.</p>
+     * <p>*   **rtRate**: the execution duration percentage.</p>
+     * <p>*   **rowsExamined**: the total number of scanned rows.</p>
+     * <p>*   **avgRowsExamined**: the average number of scanned rows.</p>
+     * <p>*   **avgRowsReturned**: the average number of returned rows.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries per page. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The role of the PolarDB-X 2.0 node. Valid values:</p>
+     * <br>
+     * <p>*   **polarx_cn**: compute node.</p>
+     * <p>*   **polarx_en**: data node.</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>The type of the SQL statement. Valid values: **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **LOGIN**, **LOGOUT**, **MERGE**, **ALTER**, **CREATEINDEX**, **DROPINDEX**, **CREATE**, **DROP**, **SET**, **DESC**, **REPLACE**, **CALL**, **BEGIN**, **DESCRIBE**, **ROLLBACK**, **FLUSH**, **USE**, **SHOW**, **START**, **COMMIT**, and **RENAME**.</p>
+     * <br>
+     * <p>>  If the database instance is an ApsaraDB RDS for MySQL instance, a PolarDB for MySQL cluster, or a PolarDB-X 2.0 instance, the statistics can be collected based on the SQL statement type.</p>
+     */
     @NameInMap("SqlType")
     public String sqlType;
 
+    /**
+     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>>  The start time must be within the storage duration of the SQL Explorer of the database instance, and can be up to 90 days earlier than the current time.</p>
+     */
     @NameInMap("Start")
     public Long start;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+     * <br>
+     * <p>>  This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

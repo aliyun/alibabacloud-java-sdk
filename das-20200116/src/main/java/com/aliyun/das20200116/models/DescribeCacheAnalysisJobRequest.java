@@ -4,9 +4,15 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the cache analysis task. You can obtain the task ID from the response parameters of the [CreateCacheAnalysisJob](~~180982~~) operation.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 

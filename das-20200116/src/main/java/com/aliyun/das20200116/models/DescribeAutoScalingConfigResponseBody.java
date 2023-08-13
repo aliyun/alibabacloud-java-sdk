@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoScalingConfigResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The configurations of the auto scaling feature.</p>
+     */
     @NameInMap("Data")
     public DescribeAutoScalingConfigResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,18 +85,46 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingConfigResponseBodyDataBandwidth extends TeaModel {
+        /**
+         * <p>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %.</p>
+         */
         @NameInMap("BandwidthUsageLowerThreshold")
         public Integer bandwidthUsageLowerThreshold;
 
+        /**
+         * <p>The average bandwidth usage threshold that triggers automatic bandwidth adjustment. Unit: %.</p>
+         */
         @NameInMap("BandwidthUsageUpperThreshold")
         public Integer bandwidthUsageUpperThreshold;
 
+        /**
+         * <p>Indicates whether the automatic bandwidth downgrade feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Downgrade")
         public Boolean downgrade;
 
+        /**
+         * <p>The observation window of the automatic bandwidth adjustment feature. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+         * <br>
+         * <p>*   **s**: seconds.</p>
+         * <p>*   **m**: minutes.</p>
+         * <p>*   **h**: hours.</p>
+         * <p>*   **d**: days.</p>
+         * <br>
+         * <p>>  A value of **5m** indicates 5 minutes.</p>
+         */
         @NameInMap("ObservationWindowSize")
         public String observationWindowSize;
 
+        /**
+         * <p>Indicates whether the automatic bandwidth adjustment feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
@@ -128,18 +176,50 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingConfigResponseBodyDataResource extends TeaModel {
+        /**
+         * <p>The scale-out step size of CPU.</p>
+         */
         @NameInMap("CpuStep")
         public Integer cpuStep;
 
+        /**
+         * <p>The average CPU utilization threshold that triggers automatic scale-out of local resources. Unit: %.</p>
+         */
         @NameInMap("CpuUsageUpperThreshold")
         public Integer cpuUsageUpperThreshold;
 
+        /**
+         * <p>The observation window of the automatic scale-in feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+         * <br>
+         * <p>*   **s**: seconds.</p>
+         * <p>*   **m**: minutes.</p>
+         * <p>*   **h**: hours.</p>
+         * <p>*   **d**: days.</p>
+         * <br>
+         * <p>>  A value of **5m** indicates 5 minutes.</p>
+         */
         @NameInMap("DowngradeObservationWindowSize")
         public String downgradeObservationWindowSize;
 
+        /**
+         * <p>Indicates whether the auto scaling feature is enabled for local resources. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The observation window of the automatic scale-out feature for local resources. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+         * <br>
+         * <p>*   **s**: seconds.</p>
+         * <p>*   **m**: minutes.</p>
+         * <p>*   **h**: hours.</p>
+         * <p>*   **d**: days.</p>
+         * <br>
+         * <p>>  A value of **5m** indicates 5 minutes.</p>
+         */
         @NameInMap("UpgradeObservationWindowSize")
         public String upgradeObservationWindowSize;
 
@@ -191,27 +271,71 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingConfigResponseBodyDataShard extends TeaModel {
+        /**
+         * <p>Indicates whether the feature of automatically removing shards is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Downgrade")
         public Boolean downgrade;
 
+        /**
+         * <p>The observation window of the feature of automatically removing shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+         * <br>
+         * <p>*   **s**: seconds.</p>
+         * <p>*   **m**: minutes.</p>
+         * <p>*   **h**: hours.</p>
+         * <p>*   **d**: days.</p>
+         * <br>
+         * <p>>  A value of **1d** indicates one day.</p>
+         */
         @NameInMap("DowngradeObservationWindowSize")
         public String downgradeObservationWindowSize;
 
+        /**
+         * <p>The maximum number of shards in the instance.</p>
+         */
         @NameInMap("MaxShards")
         public Integer maxShards;
 
+        /**
+         * <p>The average memory usage threshold that triggers automatic removal of shards. Unit: %.</p>
+         */
         @NameInMap("MemUsageLowerThreshold")
         public Integer memUsageLowerThreshold;
 
+        /**
+         * <p>The average memory usage threshold that triggers automatic adding of shards. Unit: %.</p>
+         */
         @NameInMap("MemUsageUpperThreshold")
         public Integer memUsageUpperThreshold;
 
+        /**
+         * <p>The minimum number of shards in the instance.</p>
+         */
         @NameInMap("MinShards")
         public Integer minShards;
 
+        /**
+         * <p>Indicates whether the feature of automatically adding shards is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
+        /**
+         * <p>The observation window of the feature of automatically adding shards. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+         * <br>
+         * <p>*   **s**: seconds.</p>
+         * <p>*   **m**: minutes.</p>
+         * <p>*   **h**: hours.</p>
+         * <p>*   **d**: days.</p>
+         * <br>
+         * <p>>  A value of **5m** indicates 5 minutes.</p>
+         */
         @NameInMap("UpgradeObservationWindowSize")
         public String upgradeObservationWindowSize;
 
@@ -287,27 +411,74 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingConfigResponseBodyDataSpec extends TeaModel {
+        /**
+         * <p>The quiescent period. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+         * <br>
+         * <p>*   **s**: seconds.</p>
+         * <p>*   **m**: minutes.</p>
+         * <p>*   **h**: hours.</p>
+         * <p>*   **d**: days.</p>
+         * <br>
+         * <p>>  A value of **5m** indicates 5 minutes.</p>
+         */
         @NameInMap("CoolDownTime")
         public String coolDownTime;
 
+        /**
+         * <p>The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %.</p>
+         */
         @NameInMap("CpuUsageUpperThreshold")
         public Integer cpuUsageUpperThreshold;
 
+        /**
+         * <p>Indicates whether the automatic specification scale-down feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Downgrade")
         public Boolean downgrade;
 
+        /**
+         * <p>The maximum number of read-only nodes of the instance.</p>
+         */
         @NameInMap("MaxReadOnlyNodes")
         public Integer maxReadOnlyNodes;
 
+        /**
+         * <p>The maximum specifications to which the database instance can be upgraded. For more information about the specifications of each type of supported database instances, see the following topics:</p>
+         * <br>
+         * <p>*   PolarDB for MySQL Cluster Edition instances: [Specifications of compute nodes](~~102542~~).</p>
+         * <p>*   ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or enhanced SSDs (ESSDs): [Specifications](~~276974~~).</p>
+         */
         @NameInMap("MaxSpec")
         public String maxSpec;
 
+        /**
+         * <p>The average memory usage threshold that triggers automatic specification scale-up. Unit: %.</p>
+         */
         @NameInMap("MemUsageUpperThreshold")
         public Integer memUsageUpperThreshold;
 
+        /**
+         * <p>The observation window. The return value consists of a numeric value and a time unit suffix. Valid values of the time unit suffix:</p>
+         * <br>
+         * <p>*   **s**: seconds.</p>
+         * <p>*   **m**: minutes.</p>
+         * <p>*   **h**: hours.</p>
+         * <p>*   **d**: days.</p>
+         * <br>
+         * <p>>  A value of **5m** indicates 5 minutes.</p>
+         */
         @NameInMap("ObservationWindowSize")
         public String observationWindowSize;
 
+        /**
+         * <p>Indicates whether the automatic specification scale-up feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
@@ -383,12 +554,24 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingConfigResponseBodyDataStorage extends TeaModel {
+        /**
+         * <p>The average storage usage threshold that triggers automatic storage expansion. Unit: %.</p>
+         */
         @NameInMap("DiskUsageUpperThreshold")
         public Integer diskUsageUpperThreshold;
 
+        /**
+         * <p>The maximum storage size. Unit: GB.</p>
+         */
         @NameInMap("MaxStorage")
         public Integer maxStorage;
 
+        /**
+         * <p>Indicates whether the automatic storage expansion feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
@@ -424,18 +607,33 @@ public class DescribeAutoScalingConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoScalingConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The configurations of the automatic bandwidth adjustment feature.</p>
+         */
         @NameInMap("Bandwidth")
         public DescribeAutoScalingConfigResponseBodyDataBandwidth bandwidth;
 
+        /**
+         * <p>The configurations of the auto scaling feature for local resources.</p>
+         */
         @NameInMap("Resource")
         public DescribeAutoScalingConfigResponseBodyDataResource resource;
 
+        /**
+         * <p>The configurations of the auto scaling feature for shards.</p>
+         */
         @NameInMap("Shard")
         public DescribeAutoScalingConfigResponseBodyDataShard shard;
 
+        /**
+         * <p>The configurations of the auto scaling feature for specifications.</p>
+         */
         @NameInMap("Spec")
         public DescribeAutoScalingConfigResponseBodyDataSpec spec;
 
+        /**
+         * <p>The configurations of the automatic storage expansion feature.</p>
+         */
         @NameInMap("Storage")
         public DescribeAutoScalingConfigResponseBodyDataStorage storage;
 

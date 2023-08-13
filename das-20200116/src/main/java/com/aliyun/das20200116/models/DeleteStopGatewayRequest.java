@@ -4,6 +4,9 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DeleteStopGatewayRequest extends TeaModel {
+    /**
+     * <p>The ID that can uniquely identify the DBGateway. You can obtain the DBGateway ID by calling the [DescribeCloudbenchTask](~~230669~~) operation. The DBGateway ID is the value of the **ClientGatewayId** field in the response.</p>
+     */
     @NameInMap("GatewayId")
     public String gatewayId;
 

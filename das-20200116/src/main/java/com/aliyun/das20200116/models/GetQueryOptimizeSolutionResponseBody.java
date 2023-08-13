@@ -4,18 +4,36 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetQueryOptimizeSolutionResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -65,15 +83,30 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeSolutionResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The severity level. Valid values:</p>
+         * <br>
+         * <p>* **INFO**</p>
+         * <p>* **WARN**</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The tag ID.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The suggestion.</p>
+         */
         @NameInMap("Solution")
         public String solution;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("SolutionExt")
         public String solutionExt;
 
@@ -117,18 +150,33 @@ public class GetQueryOptimizeSolutionResponseBody extends TeaModel {
     }
 
     public static class GetQueryOptimizeSolutionResponseBodyData extends TeaModel {
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The optimization suggestions.</p>
+         */
         @NameInMap("List")
         public java.util.List<GetQueryOptimizeSolutionResponseBodyDataList> list;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        /**
+         * <p>The reserved parameter.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

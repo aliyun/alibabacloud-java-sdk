@@ -4,18 +4,44 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class DeleteStopGatewayResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of the DeleteStopGateway operation. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The metadata of the DBGateway is deleted.</p>
+     * <p>*   **-1**: A system error occurs.</p>
+     * <p>*   **-2**: The DBGateway does not exist.</p>
+     * <p>*   **-3**: The DBGateway is not stopped and the metadata cannot be deleted.</p>
+     * <p>*   **-4**: The metadata of the DBGateway fails to be deleted.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 

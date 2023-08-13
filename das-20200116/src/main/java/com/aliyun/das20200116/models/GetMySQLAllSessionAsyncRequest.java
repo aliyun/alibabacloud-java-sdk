@@ -4,12 +4,27 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetMySQLAllSessionAsyncRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>>  Only ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters are supported.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The node ID.</p>
+     * <br>
+     * <p>>  You must specify this parameter for PolarDB for MySQL clusters. If you do not specify a node ID, the session data of the primary node is returned by default.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The ID of the asynchronous request.</p>
+     * <br>
+     * <p>>  You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</p>
+     */
     @NameInMap("ResultId")
     public String resultId;
 

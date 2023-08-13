@@ -4,15 +4,31 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetQueryOptimizeSolutionRequest extends TeaModel {
+    /**
+     * <p>The database engine. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**</p>
+     * <p>*   **PolarDBMySQL**</p>
+     * <p>*   **PostgreSQL**</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The instance ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The tag ID. For more information, see [Query governance](~~290038~~).</p>
+     */
     @NameInMap("RuleIds")
     public String ruleIds;
 
+    /**
+     * <p>The SQL template ID. You can call the [GetQueryOptimizeDataStats](~~405261~~) operation to query the SQL template ID.</p>
+     */
     @NameInMap("SqlId")
     public String sqlId;
 

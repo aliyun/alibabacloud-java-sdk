@@ -4,15 +4,29 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetRunningSqlConcurrencyControlRulesRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("ConsoleContext")
     public String consoleContext;
 
+    /**
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>>  You must specify this parameter only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The page number. The value must be a positive integer. Default value: 1.</p>
+     */
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <p>The number of entries per page. The value must be a positive integer. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

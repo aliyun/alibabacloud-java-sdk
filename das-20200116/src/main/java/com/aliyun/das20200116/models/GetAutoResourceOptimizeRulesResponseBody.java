@@ -4,18 +4,38 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetAutoResourceOptimizeRulesResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     * <br>
+     * <p>>  If the request was successful, **Successful** is returned. If the request failed, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +85,45 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
     }
 
     public static class GetAutoResourceOptimizeRulesResponseBodyDataEnableAutoResourceOptimizeList extends TeaModel {
+        /**
+         * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("AutoDefragment")
         public Boolean autoDefragment;
 
+        /**
+         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("DasProOn")
         public Boolean dasProOn;
 
+        /**
+         * <p>The database instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.</p>
+         */
         @NameInMap("TableFragmentationRatio")
         public Double tableFragmentationRatio;
 
+        /**
+         * <p>The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.</p>
+         */
         @NameInMap("TableSpaceSize")
         public Double tableSpaceSize;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -139,21 +183,45 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
     }
 
     public static class GetAutoResourceOptimizeRulesResponseBodyDataHasEnableRuleButNotDasProList extends TeaModel {
+        /**
+         * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("AutoDefragment")
         public Boolean autoDefragment;
 
+        /**
+         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("DasProOn")
         public Boolean dasProOn;
 
+        /**
+         * <p>The database instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.</p>
+         */
         @NameInMap("TableFragmentationRatio")
         public Double tableFragmentationRatio;
 
+        /**
+         * <p>The minimum storage usage of a single physical table for which the automatic fragment recycling feature is enabled. Unit: GB.</p>
+         */
         @NameInMap("TableSpaceSize")
         public Double tableSpaceSize;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -213,21 +281,48 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
     }
 
     public static class GetAutoResourceOptimizeRulesResponseBodyDataTurnOffAutoResourceOptimizeList extends TeaModel {
+        /**
+         * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("AutoDefragment")
         public Boolean autoDefragment;
 
+        /**
+         * <p>Indicates whether DAS Professional Edition is enabled. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("DasProOn")
         public Boolean dasProOn;
 
+        /**
+         * <p>The database instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The fragmentation rate of a single physical table for which the automatic fragment recycling feature is enabled.</p>
+         */
         @NameInMap("TableFragmentationRatio")
         public Double tableFragmentationRatio;
 
+        /**
+         * <p>Indicates whether the automatic fragment recycling feature is enabled. Valid values:</p>
+         * <br>
+         * <p>true</p>
+         * <p>false</p>
+         */
         @NameInMap("TableSpaceSize")
         public Double tableSpaceSize;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -287,30 +382,61 @@ public class GetAutoResourceOptimizeRulesResponseBody extends TeaModel {
     }
 
     public static class GetAutoResourceOptimizeRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of database instances for which the automatic fragment recycling feature is currently enabled.</p>
+         */
         @NameInMap("EnableAutoResourceOptimizeCount")
         public Long enableAutoResourceOptimizeCount;
 
+        /**
+         * <p>The database instances for which the automatic fragment recycling feature is currently enabled.</p>
+         */
         @NameInMap("EnableAutoResourceOptimizeList")
         public java.util.List<GetAutoResourceOptimizeRulesResponseBodyDataEnableAutoResourceOptimizeList> enableAutoResourceOptimizeList;
 
+        /**
+         * <p>The number of database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.</p>
+         */
         @NameInMap("HasEnableRuleButNotDasProCount")
         public Long hasEnableRuleButNotDasProCount;
 
+        /**
+         * <p>The database instances for which the automatic fragment recycling feature is enabled and DAS Professional Edition is disabled.</p>
+         * <br>
+         * <p>> This type of database instance does not perform automatic fragment recycling tasks until DAS Professional Edition is enabled for the instances again.</p>
+         */
         @NameInMap("HasEnableRuleButNotDasProList")
         public java.util.List<GetAutoResourceOptimizeRulesResponseBodyDataHasEnableRuleButNotDasProList> hasEnableRuleButNotDasProList;
 
+        /**
+         * <p>The number of database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.</p>
+         * <br>
+         * <p>>  If a database instance does not exist, the instance has been released or the specified instance ID is invalid.</p>
+         */
         @NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceCount")
         public Long neverEnableAutoResourceOptimizeOrReleasedInstanceCount;
 
+        /**
+         * <p>The database instances that do not exist or for which the automatic fragment recycling feature has never been enabled.</p>
+         */
         @NameInMap("NeverEnableAutoResourceOptimizeOrReleasedInstanceIdList")
         public java.util.List<String> neverEnableAutoResourceOptimizeOrReleasedInstanceIdList;
 
+        /**
+         * <p>The number of database instances for which the automatic fragment recycling feature has been enabled.</p>
+         */
         @NameInMap("TotalAutoResourceOptimizeRulesCount")
         public Long totalAutoResourceOptimizeRulesCount;
 
+        /**
+         * <p>The number of database instances for which the automatic fragment recycling feature was once enabled but is currently disabled.</p>
+         */
         @NameInMap("TurnOffAutoResourceOptimizeCount")
         public Long turnOffAutoResourceOptimizeCount;
 
+        /**
+         * <p>The database instances for which the automatic fragment recycling feature was once enabled but is currently disabled.</p>
+         */
         @NameInMap("TurnOffAutoResourceOptimizeList")
         public java.util.List<GetAutoResourceOptimizeRulesResponseBodyDataTurnOffAutoResourceOptimizeList> turnOffAutoResourceOptimizeList;
 

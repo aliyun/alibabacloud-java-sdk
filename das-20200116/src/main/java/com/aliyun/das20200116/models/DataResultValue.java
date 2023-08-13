@@ -5,14 +5,20 @@ import com.aliyun.tea.*;
 
 public class DataResultValue extends TeaModel {
     /**
-     * <p>SQL ID。</p>
+     * <p>The SQL ID.</p>
      */
     @NameInMap("sqlId")
     public String sqlId;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of failed executions.</p>
+     */
     @NameInMap("count")
     public Integer count;
 

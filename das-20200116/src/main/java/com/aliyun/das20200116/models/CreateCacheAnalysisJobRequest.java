@@ -4,15 +4,32 @@ package com.aliyun.das20200116.models;
 import com.aliyun.tea.*;
 
 public class CreateCacheAnalysisJobRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup file. You can call the [DescribeBackups](~~61081~~) operation to query the ID.</p>
+     * <br>
+     * <p>*   If you need to specify multiple backup file IDs, separate them with commas (,). For example, you can set this parameter to `12345,67890`.</p>
+     * <p>*   If you do not specify this parameter, the system automatically backs up the task and performs cache analysis on the backup file.</p>
+     */
     @NameInMap("BackupSetId")
     public String backupSetId;
 
+    /**
+     * <p>The ID of the ApsaraDB for Redis instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the data node on the instance. You can specify this parameter to query the monitoring information about the specified node.</p>
+     * <br>
+     * <p>>  If you specify the BackupSetId parameter, the system ignores the NodeId parameter. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the node ID.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The delimiters used to identify the prefixes of keys. You do not need to specify this parameter if one or more of the following default delimiters are used: `: ; , _ - + @ = | #`</p>
+     */
     @NameInMap("Separators")
     public String separators;
 
