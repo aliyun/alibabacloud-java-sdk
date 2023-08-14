@@ -7,6 +7,9 @@ public class GetTensorboardRequest extends TeaModel {
     @NameInMap("JodId")
     public String jodId;
 
+    @NameInMap("Token")
+    public String token;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -21,6 +24,14 @@ public class GetTensorboardRequest extends TeaModel {
     }
     public String getJodId() {
         return this.jodId;
+    }
+
+    public GetTensorboardRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
     }
 
     public GetTensorboardRequest setWorkspaceId(String workspaceId) {
