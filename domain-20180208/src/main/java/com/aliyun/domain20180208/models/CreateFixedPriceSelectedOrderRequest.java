@@ -13,6 +13,9 @@ public class CreateFixedPriceSelectedOrderRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("ExpectedPrice")
+    public Double expectedPrice;
+
     @NameInMap("Source")
     public String source;
 
@@ -43,6 +46,14 @@ public class CreateFixedPriceSelectedOrderRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public CreateFixedPriceSelectedOrderRequest setExpectedPrice(Double expectedPrice) {
+        this.expectedPrice = expectedPrice;
+        return this;
+    }
+    public Double getExpectedPrice() {
+        return this.expectedPrice;
     }
 
     public CreateFixedPriceSelectedOrderRequest setSource(String source) {
