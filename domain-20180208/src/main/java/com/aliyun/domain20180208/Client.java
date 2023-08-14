@@ -235,6 +235,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DomainName", request.domainName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedPrice)) {
+            query.put("ExpectedPrice", request.expectedPrice);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
