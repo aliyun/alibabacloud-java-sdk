@@ -22,6 +22,9 @@ public class ListTensorboardsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ShowOwn")
+    public Boolean showOwn;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -97,6 +100,14 @@ public class ListTensorboardsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTensorboardsRequest setShowOwn(Boolean showOwn) {
+        this.showOwn = showOwn;
+        return this;
+    }
+    public Boolean getShowOwn() {
+        return this.showOwn;
     }
 
     public ListTensorboardsRequest setSortBy(String sortBy) {

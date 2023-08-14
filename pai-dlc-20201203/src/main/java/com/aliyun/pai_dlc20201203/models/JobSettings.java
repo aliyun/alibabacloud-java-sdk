@@ -13,6 +13,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("Caller")
     public String caller;
 
+    @NameInMap("Driver")
+    public String driver;
+
     @NameInMap("EnableErrorMonitoringInAIMaster")
     public Boolean enableErrorMonitoringInAIMaster;
 
@@ -64,6 +67,14 @@ public class JobSettings extends TeaModel {
     }
     public String getCaller() {
         return this.caller;
+    }
+
+    public JobSettings setDriver(String driver) {
+        this.driver = driver;
+        return this;
+    }
+    public String getDriver() {
+        return this.driver;
     }
 
     public JobSettings setEnableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {
