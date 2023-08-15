@@ -46,6 +46,9 @@ public class UpdatePatchBaselineShrinkRequest extends TeaModel {
     @NameInMap("RejectedPatchesAction")
     public String rejectedPatchesAction;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Sources")
     public String sourcesShrink;
 
@@ -127,6 +130,14 @@ public class UpdatePatchBaselineShrinkRequest extends TeaModel {
     }
     public String getRejectedPatchesAction() {
         return this.rejectedPatchesAction;
+    }
+
+    public UpdatePatchBaselineShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public UpdatePatchBaselineShrinkRequest setSourcesShrink(String sourcesShrink) {

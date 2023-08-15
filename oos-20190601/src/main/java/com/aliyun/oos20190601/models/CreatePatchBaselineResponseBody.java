@@ -122,6 +122,9 @@ public class CreatePatchBaselineResponseBody extends TeaModel {
         @NameInMap("RejectedPatchesAction")
         public String rejectedPatchesAction;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The share type of the patch baseline.</p>
          */
@@ -237,6 +240,14 @@ public class CreatePatchBaselineResponseBody extends TeaModel {
         }
         public String getRejectedPatchesAction() {
             return this.rejectedPatchesAction;
+        }
+
+        public CreatePatchBaselineResponseBodyPatchBaseline setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public CreatePatchBaselineResponseBodyPatchBaseline setShareType(String shareType) {
