@@ -4,24 +4,45 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeSslVpnClientsResponseBody extends TeaModel {
+    /**
+     * <p>The list of clients.</p>
+     */
     @NameInMap("ClientInfoList")
     public java.util.List<DescribeSslVpnClientsResponseBodyClientInfoList> clientInfoList;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the VPN gateway.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The ID of the VPN gateway.</p>
+     */
     @NameInMap("VpnGatewayId")
     public String vpnGatewayId;
 
@@ -87,27 +108,53 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     }
 
     public static class DescribeSslVpnClientsResponseBodyClientInfoList extends TeaModel {
+        /**
+         * <p>The SSL client certificate used by the client.</p>
+         * <br>
+         * <p>> If the client uses two-factor authentication to establish an SSL-VPN connection to Alibaba Cloud, the value is the username of the client.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The timestamp that indicates when the client connected to Alibaba Cloud through an SSL-VPN connection. Unit: milliseconds. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ConnectedTime")
         public Long connectedTime;
 
+        /**
+         * <p>The actual public IP address used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The port used by the client when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The private IP address allocated to the client by the VPN gateway when the client established an SSL-VPN connection to Alibaba Cloud.</p>
+         */
         @NameInMap("PrivateIp")
         public String privateIp;
 
+        /**
+         * <p>The amount of data transferred from the client to the VPN gateway through the SSL-VPN connection. Unit: bytes.</p>
+         */
         @NameInMap("ReceiveBytes")
         public Long receiveBytes;
 
+        /**
+         * <p>The amount of data transferred from the VPN gateway to the client through the SSL-VPN connection. Unit: bytes.</p>
+         */
         @NameInMap("SendBytes")
         public Long sendBytes;
 
+        /**
+         * <p>The status of the SSL-VPN connection. The value is set to **online**, which indicates that the client has connected to Alibaba Cloud through an SSL-VPN connection.</p>
+         */
         @NameInMap("Status")
         public String status;
 

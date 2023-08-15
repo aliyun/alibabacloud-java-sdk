@@ -35,13 +35,14 @@ public class CreateVpnGatewayRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>指定VPN网关实例关联的第二个交换机实例。</p>
+     * <p>The second vSwitch with which you want to associate the VPN gateway.</p>
      * <br>
-     * <p>- 如果当前地域支持创建双隧道模式的IPsec-VPN连接，则本参数必填。</p>
-     * <p>- 您需要从VPN网关实例关联的VPC实例下指定两个分布在不同可用区的交换机实例，以实现IPsec-VPN连接可用区级别的容灾。</p>
-     * <p>- 对于仅支持一个可用区的地域 ，不支持可用区级别的容灾，建议您在该可用区下指定两个不同的交换机实例以实现IPsec-VPN连接的高可用，支持指定相同的交换机实例。</p>
+     * <p>-  If you call this operation in a region that supports the dual-tunnel mode, this parameter is required. </p>
+     * <p>- You need to specify two vSwitches in different zones from the VPC associated with the VPN gateway to implement disaster recovery across zones. </p>
+     * <p>- For a region that supports only one zone, disaster recovery across zones is not supported. We recommend that you specify two vSwitches in the zone to implement high availability. You can specify the same vSwitch. </p>
      * <br>
-     * <p>关于支持双隧道模式IPsec-VPN连接的地域和可用区的信息，请参见[IPsec-VPN连接升级为双隧道模式](~~2358946~~)。</p>
+     * <br>
+     * <p>> For more information about the regions and zones that support the dual-tunnel mode, see [Upgrade a VPN gateway to enable the dual-tunnel mode](~~2358946~~).</p>
      */
     @NameInMap("DisasterRecoveryVSwitchId")
     public String disasterRecoveryVSwitchId;

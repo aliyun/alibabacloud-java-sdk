@@ -236,30 +236,60 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm in the IKE phase.</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The encryption algorithm in the IKE phase.</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
+        /**
+         * <p>The IKE negotiation mode. Valid values: </p>
+         * <br>
+         * <p>- **main**: This mode offers higher security during negotiations. </p>
+         * <p>- **aggressive**: This mode is faster and has a higher success rate.</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The DH group in the IKE phase.</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The IKE version.</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The identifier of the tunnel on the data center side.</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key.</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -343,15 +373,27 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm in the IPsec phase.</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The encryption algorithm in the IPsec phase.</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
+        /**
+         * <p>The DH group in the IPsec phase.</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -395,18 +437,33 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfig extends TeaModel {
+        /**
+         * <p>The configurations of Phase 1 negotiations.</p>
+         */
         @NameInMap("IkeConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIkeConfig ikeConfig;
 
+        /**
+         * <p>The configurations of Phase 2 negotiations.</p>
+         */
         @NameInMap("IpsecConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfigTunnelConfigIpsecConfig ipsecConfig;
 
+        /**
+         * <p>The identifier of the tunnel on the data center side.</p>
+         */
         @NameInMap("Local")
         public String local;
 
+        /**
+         * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
+         */
         @NameInMap("Remote")
         public String remote;
 
+        /**
+         * <p>The tunnel ID.</p>
+         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
@@ -513,6 +570,9 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
 
+        /**
+         * <p>The tunnel configuration of the peer gateway device. Parameters in TunnelsConfig are returned only if the IPsec-VPN connection is in dual-tunnel mode.</p>
+         */
         @NameInMap("TunnelsConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig tunnelsConfig;
 

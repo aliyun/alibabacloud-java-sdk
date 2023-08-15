@@ -104,6 +104,12 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The ID of the tunnel associated with the next hop. </p>
+         * <br>
+         * <br>
+         * <p>> This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
+         */
         @NameInMap("NextHopTunnelId")
         public String nextHopTunnelId;
 

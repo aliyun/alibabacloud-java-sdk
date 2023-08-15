@@ -36,9 +36,15 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The second IP address assigned by the system to create an IPsec-VPN connection. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+     */
     @NameInMap("DisasterRecoveryInternetIp")
     public String disasterRecoveryInternetIp;
 
+    /**
+     * <p>The ID of the second vSwitch associated with the VPN gateway. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+     */
     @NameInMap("DisasterRecoveryVSwitchId")
     public String disasterRecoveryVSwitchId;
 
@@ -60,7 +66,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The public IP address of the VPN gateway.</p>
+     * <p>- If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. </p>
+     * <p>- If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;
@@ -89,6 +96,9 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     @NameInMap("Spec")
     public String spec;
 
+    /**
+     * <p>The IP address of the SSL-VPN connection. This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.</p>
+     */
     @NameInMap("SslVpnInternetIp")
     public String sslVpnInternetIp;
 

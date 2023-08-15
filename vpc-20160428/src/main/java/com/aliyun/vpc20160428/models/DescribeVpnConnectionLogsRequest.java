@@ -60,6 +60,9 @@ public class DescribeVpnConnectionLogsRequest extends TeaModel {
     @NameInMap("To")
     public Integer to;
 
+    /**
+     * <p>The tunnel ID of the IPsec-VPN connection. You can specify this parameter only for IPsec-VPN connections in dual-tunnel mode.</p>
+     */
     @NameInMap("TunnelId")
     public String tunnelId;
 

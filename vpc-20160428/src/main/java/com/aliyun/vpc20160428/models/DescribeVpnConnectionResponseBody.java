@@ -74,6 +74,12 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
+    /**
+     * <p>The BGP status of the tunnel. Valid values: </p>
+     * <br>
+     * <p>- **true** </p>
+     * <p>- **false**</p>
+     */
     @NameInMap("EnableTunnelsBgp")
     public Boolean enableTunnelsBgp;
 
@@ -190,6 +196,9 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     @NameInMap("TransitRouterName")
     public String transitRouterName;
 
+    /**
+     * <p>The tunnel configuration of the IPsec-VPN connection. Parameters in** TunnelOptionsSpecification** are returned only if you query IPsec-VPN connections in dual-tunnel mode.</p>
+     */
     @NameInMap("TunnelOptionsSpecification")
     public DescribeVpnConnectionResponseBodyTunnelOptionsSpecification tunnelOptionsSpecification;
 
@@ -732,21 +741,42 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig extends TeaModel {
+        /**
+         * <p>The negotiation status of BGP. Valid values: </p>
+         * <br>
+         * <p>- **success** </p>
+         * <p>- **false**</p>
+         */
         @NameInMap("BgpStatus")
         public String bgpStatus;
 
+        /**
+         * <p>The ASN on the Alibaba Cloud side.</p>
+         */
         @NameInMap("LocalAsn")
         public String localAsn;
 
+        /**
+         * <p>The BGP IP address on the Alibaba Cloud side.</p>
+         */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
+        /**
+         * <p>The peer ASN.</p>
+         */
         @NameInMap("PeerAsn")
         public String peerAsn;
 
+        /**
+         * <p>The peer BGP IP address.</p>
+         */
         @NameInMap("PeerBgpIp")
         public String peerBgpIp;
 
+        /**
+         * <p>The BGP CIDR block of the tunnel.</p>
+         */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;
 
@@ -806,30 +836,60 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm in the IKE phase.</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The encryption algorithm in the IKE phase.</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
+         */
         @NameInMap("IkeLifetime")
         public String ikeLifetime;
 
+        /**
+         * <p>The IKE negotiation mode. Valid values: </p>
+         * <br>
+         * <p>- **main**: This mode offers higher security during negotiations. </p>
+         * <p>- **aggressive**: This mode is faster and has a higher success rate.</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The DH group in the IKE phase.</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The IKE version.</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The identifier on the Alibaba Cloud side.</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key.</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The peer identifier.</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -913,15 +973,27 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm in the IPsec phase.</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The encryption algorithm in the IPsec phase.</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
+         */
         @NameInMap("IpsecLifetime")
         public String ipsecLifetime;
 
+        /**
+         * <p>The DH group in the IPsec phase.</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -965,42 +1037,99 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
     }
 
     public static class DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptions extends TeaModel {
+        /**
+         * <p>The ID of the customer gateway associated with the tunnel.</p>
+         */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
+        /**
+         * <p>Indicates whether DPD is enabled for the tunnel. Valid values: </p>
+         * <br>
+         * <p>- **false** </p>
+         * <p>- **true**</p>
+         */
         @NameInMap("EnableDpd")
         public String enableDpd;
 
+        /**
+         * <p>Indicates whether NAT traversal is enabled for the tunnel.</p>
+         * <br>
+         * <p>- **false** </p>
+         * <p>- **true**</p>
+         */
         @NameInMap("EnableNatTraversal")
         public String enableNatTraversal;
 
+        /**
+         * <p>The tunnel IP address.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The CA certificate of the tunnel peer. This parameter is returned only if the VPN gateway is of the ShangMi (SM) type.</p>
+         */
         @NameInMap("RemoteCaCertificate")
         public String remoteCaCertificate;
 
+        /**
+         * <p>The tunnel role. Valid values:</p>
+         * <br>
+         * <p>- **false** </p>
+         * <p>- **true**</p>
+         */
         @NameInMap("Role")
         public String role;
 
+        /**
+         * <p>The tunnel status. Valid values: </p>
+         * <br>
+         * <p>- **active** </p>
+         * <p>- **updating** </p>
+         * <p>- **deleting**</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The status of the IPsec-VPN connection. Valid values:</p>
+         * <br>
+         * <p>*   **ike_sa_not_established**: Phase 1 negotiations failed.</p>
+         * <p>*   **ike_sa_established**: Phase 1 negotiations were successful.</p>
+         * <p>*   **ipsec_sa_not_established**: Phase 2 negotiations failed.</p>
+         * <p>*   **ipsec_sa_established**: Phase 2 negotiations were successful.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The BGP configurations.</p>
+         */
         @NameInMap("TunnelBgpConfig")
         public DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig;
 
+        /**
+         * <p>The tunnel ID.</p>
+         */
         @NameInMap("TunnelId")
         public String tunnelId;
 
+        /**
+         * <p>The configurations of Phase 1 negotiations.</p>
+         */
         @NameInMap("TunnelIkeConfig")
         public DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig tunnelIkeConfig;
 
+        /**
+         * <p>The configurations of Phase 2 negotiations.</p>
+         */
         @NameInMap("TunnelIpsecConfig")
         public DescribeVpnConnectionResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIpsecConfig tunnelIpsecConfig;
 
+        /**
+         * <p>The zone where the tunnel is deployed. You can call [DescribeZones](~~36064~~) to query zone IDs.</p>
+         */
         @NameInMap("ZoneNo")
         public String zoneNo;
 
