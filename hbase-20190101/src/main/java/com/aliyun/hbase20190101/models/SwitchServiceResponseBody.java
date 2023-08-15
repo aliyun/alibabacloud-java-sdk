@@ -3,16 +3,16 @@ package com.aliyun.hbase20190101.models;
 
 import com.aliyun.tea.*;
 
-public class TagResourcesResponseBody extends TeaModel {
+public class SwitchServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static TagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        TagResourcesResponseBody self = new TagResourcesResponseBody();
+    public static SwitchServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SwitchServiceResponseBody self = new SwitchServiceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public TagResourcesResponseBody setRequestId(String requestId) {
+    public SwitchServiceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

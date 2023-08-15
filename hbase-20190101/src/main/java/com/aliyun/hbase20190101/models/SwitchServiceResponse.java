@@ -3,7 +3,7 @@ package com.aliyun.hbase20190101.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteUserHdfsInfoResponse extends TeaModel {
+public class SwitchServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DeleteUserHdfsInfoResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteUserHdfsInfoResponseBody body;
+    public SwitchServiceResponseBody body;
 
-    public static DeleteUserHdfsInfoResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteUserHdfsInfoResponse self = new DeleteUserHdfsInfoResponse();
+    public static SwitchServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        SwitchServiceResponse self = new SwitchServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteUserHdfsInfoResponse setHeaders(java.util.Map<String, String> headers) {
+    public SwitchServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DeleteUserHdfsInfoResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteUserHdfsInfoResponse setStatusCode(Integer statusCode) {
+    public SwitchServiceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DeleteUserHdfsInfoResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DeleteUserHdfsInfoResponse setBody(DeleteUserHdfsInfoResponseBody body) {
+    public SwitchServiceResponse setBody(SwitchServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteUserHdfsInfoResponseBody getBody() {
+    public SwitchServiceResponseBody getBody() {
         return this.body;
     }
 

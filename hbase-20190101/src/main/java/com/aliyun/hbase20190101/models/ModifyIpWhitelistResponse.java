@@ -8,6 +8,10 @@ public class ModifyIpWhitelistResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("statusCode")
+    @Validation(required = true)
+    public Integer statusCode;
+
     @NameInMap("body")
     @Validation(required = true)
     public ModifyIpWhitelistResponseBody body;
@@ -23,6 +27,14 @@ public class ModifyIpWhitelistResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ModifyIpWhitelistResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
     public ModifyIpWhitelistResponse setBody(ModifyIpWhitelistResponseBody body) {

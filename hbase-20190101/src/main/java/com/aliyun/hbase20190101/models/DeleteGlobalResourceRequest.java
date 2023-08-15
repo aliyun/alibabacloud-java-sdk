@@ -7,6 +7,9 @@ public class DeleteGlobalResourceRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceName")
     public String resourceName;
 
@@ -24,6 +27,14 @@ public class DeleteGlobalResourceRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DeleteGlobalResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteGlobalResourceRequest setResourceName(String resourceName) {
