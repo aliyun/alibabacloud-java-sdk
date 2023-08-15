@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class ReleaseLindormInstanceRequest extends TeaModel {
+    @NameInMap("Immediately")
+    public Boolean immediately;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -25,6 +28,14 @@ public class ReleaseLindormInstanceRequest extends TeaModel {
     public static ReleaseLindormInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseLindormInstanceRequest self = new ReleaseLindormInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReleaseLindormInstanceRequest setImmediately(Boolean immediately) {
+        this.immediately = immediately;
+        return this;
+    }
+    public Boolean getImmediately() {
+        return this.immediately;
     }
 
     public ReleaseLindormInstanceRequest setInstanceId(String instanceId) {

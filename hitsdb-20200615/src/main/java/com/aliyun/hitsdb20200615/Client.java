@@ -9,55 +9,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("cn-qingdao", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "hitsdb.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("us-west-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("us-east-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-fujian", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhangbei", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "hitsdb.aliyuncs.com"),
-            new TeaPair("me-east-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "hitsdb.aliyuncs.com")
-        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("hitsdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -214,6 +165,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StandbyZoneId", request.standbyZoneId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.streamNum)) {
+            query.put("StreamNum", request.streamNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamSpec)) {
+            query.put("StreamSpec", request.streamSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tsdbNum)) {
             query.put("TsdbNum", request.tsdbNum);
         }
@@ -356,6 +315,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetInstanceIpWhiteListResponse getInstanceIpWhiteList(GetInstanceIpWhiteListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getInstanceIpWhiteListWithOptions(request, runtime);
+    }
+
+    public GetLdpsResourceCostResponse getLdpsResourceCostWithOptions(GetLdpsResourceCostRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLdpsResourceCost"),
+            new TeaPair("version", "2020-06-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLdpsResourceCostResponse());
+    }
+
+    public GetLdpsResourceCostResponse getLdpsResourceCost(GetLdpsResourceCostRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLdpsResourceCostWithOptions(request, runtime);
     }
 
     public GetLindormInstanceResponse getLindormInstanceWithOptions(GetLindormInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -602,6 +626,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
+      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn) of Lindorm.
+      *
+      * @param request ModifyInstancePayTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyInstancePayTypeResponse
+     */
     public ModifyInstancePayTypeResponse modifyInstancePayTypeWithOptions(ModifyInstancePayTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -658,6 +690,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstancePayTypeResponse());
     }
 
+    /**
+      * You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
+      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn) of Lindorm.
+      *
+      * @param request ModifyInstancePayTypeRequest
+      * @return ModifyInstancePayTypeResponse
+     */
     public ModifyInstancePayTypeResponse modifyInstancePayType(ModifyInstancePayTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstancePayTypeWithOptions(request, runtime);
@@ -666,6 +705,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ReleaseLindormInstanceResponse releaseLindormInstanceWithOptions(ReleaseLindormInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
+            query.put("Immediately", request.immediately);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -712,6 +755,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.releaseLindormInstanceWithOptions(request, runtime);
     }
 
+    /**
+      * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+      *
+      * @param request RenewLindormInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RenewLindormInstanceResponse
+     */
     public RenewLindormInstanceResponse renewLindormInstanceWithOptions(RenewLindormInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -768,6 +818,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RenewLindormInstanceResponse());
     }
 
+    /**
+      * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+      *
+      * @param request RenewLindormInstanceRequest
+      * @return RenewLindormInstanceResponse
+     */
     public RenewLindormInstanceResponse renewLindormInstance(RenewLindormInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.renewLindormInstanceWithOptions(request, runtime);
@@ -895,6 +951,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * ***
+      *
+      * @param request UpdateInstanceIpWhiteListRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateInstanceIpWhiteListResponse
+     */
     public UpdateInstanceIpWhiteListResponse updateInstanceIpWhiteListWithOptions(UpdateInstanceIpWhiteListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -947,11 +1010,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceIpWhiteListResponse());
     }
 
+    /**
+      * ***
+      *
+      * @param request UpdateInstanceIpWhiteListRequest
+      * @return UpdateInstanceIpWhiteListResponse
+     */
     public UpdateInstanceIpWhiteListResponse updateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateInstanceIpWhiteListWithOptions(request, runtime);
     }
 
+    /**
+      * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+      *
+      * @param request UpgradeLindormInstanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradeLindormInstanceResponse
+     */
     public UpgradeLindormInstanceResponse upgradeLindormInstanceWithOptions(UpgradeLindormInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1047,6 +1123,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SolrSpec", request.solrSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.streamNum)) {
+            query.put("StreamNum", request.streamNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamSpec)) {
+            query.put("StreamSpec", request.streamSpec);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tsdbNum)) {
             query.put("TsdbNum", request.tsdbNum);
         }
@@ -1080,6 +1164,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeLindormInstanceResponse());
     }
 
+    /**
+      * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+      *
+      * @param request UpgradeLindormInstanceRequest
+      * @return UpgradeLindormInstanceResponse
+     */
     public UpgradeLindormInstanceResponse upgradeLindormInstance(UpgradeLindormInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeLindormInstanceWithOptions(request, runtime);

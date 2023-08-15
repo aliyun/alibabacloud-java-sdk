@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

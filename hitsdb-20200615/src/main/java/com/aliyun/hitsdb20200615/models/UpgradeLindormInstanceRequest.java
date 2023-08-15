@@ -73,6 +73,22 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     @NameInMap("SolrSpec")
     public String solrSpec;
 
+    /**
+     * <p>变配后实例的流引擎节点数量，取值：**0**~**90**。</p>
+     */
+    @NameInMap("StreamNum")
+    public Integer streamNum;
+
+    /**
+     * <p>变配后实例的流引擎节点规格，取值：</p>
+     * <br>
+     * <p>- **lindorm.c.2xlarge**：表示8核16GB（独享规格）。</p>
+     * <p>- **lindorm.c.4xlarge**：表示16核32GB（独享规格）。</p>
+     * <p>- **lindorm.c.8xlarge**：表示32核64GB（独享规格）。</p>
+     */
+    @NameInMap("StreamSpec")
+    public String streamSpec;
+
     @NameInMap("TsdbNum")
     public Integer tsdbNum;
 
@@ -272,6 +288,22 @@ public class UpgradeLindormInstanceRequest extends TeaModel {
     }
     public String getSolrSpec() {
         return this.solrSpec;
+    }
+
+    public UpgradeLindormInstanceRequest setStreamNum(Integer streamNum) {
+        this.streamNum = streamNum;
+        return this;
+    }
+    public Integer getStreamNum() {
+        return this.streamNum;
+    }
+
+    public UpgradeLindormInstanceRequest setStreamSpec(String streamSpec) {
+        this.streamSpec = streamSpec;
+        return this;
+    }
+    public String getStreamSpec() {
+        return this.streamSpec;
     }
 
     public UpgradeLindormInstanceRequest setTsdbNum(Integer tsdbNum) {

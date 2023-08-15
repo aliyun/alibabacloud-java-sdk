@@ -4,12 +4,23 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The token used to start the next query.</p>
+     * <br>
+     * <p>> If not all results are returned in the first query, this parameter is returned. You can pass in the returned value of this parameter for the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of resources.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
 
@@ -43,15 +54,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        /**
+         * <p>The ID of the resource, which is the ID of the instance.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resources. The returned value is fixed to **ALIYUN::HITSDB::INSTANCE**.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The key of the tag associated with the instance.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag associated with the instance.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
