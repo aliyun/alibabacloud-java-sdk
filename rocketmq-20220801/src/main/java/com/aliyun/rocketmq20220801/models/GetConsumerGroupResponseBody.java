@@ -4,27 +4,51 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class GetConsumerGroupResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The result data that is returned.</p>
+     */
     @NameInMap("data")
     public GetConsumerGroupResponseBodyData data;
 
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message.</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -98,12 +122,53 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     }
 
     public static class GetConsumerGroupResponseBodyDataConsumeRetryPolicy extends TeaModel {
+        /**
+         * <p>The dead-letter topic.</p>
+         * <br>
+         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).</p>
+         */
         @NameInMap("deadLetterTargetTopic")
         public String deadLetterTargetTopic;
 
+        /**
+         * <p>The maximum number of retries.</p>
+         */
         @NameInMap("maxRetryTimes")
         public Integer maxRetryTimes;
 
+        /**
+         * <p>The retry policy.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   FixedRetryPolicy</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Failed messages are retried at a fixed interval</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   DefaultRetryPolicy</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    Failed messages are retried at incremental intervals as the number of retries increases</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("retryPolicy")
         public String retryPolicy;
 
@@ -139,30 +204,113 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     }
 
     public static class GetConsumerGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).</p>
+         */
         @NameInMap("consumeRetryPolicy")
         public GetConsumerGroupResponseBodyDataConsumeRetryPolicy consumeRetryPolicy;
 
+        /**
+         * <p>The ID of the consumer group.</p>
+         */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <p>The time when the consumer group was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The message delivery order of the consumer group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   Concurrently</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    concurrent delivery</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Orderly</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    ordered delivery</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("deliveryOrderType")
         public String deliveryOrderType;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The remarks on the consumer group.</p>
+         */
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <p>The state of the consumer group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   RUNNING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    : The consumer group is</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    running</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         * <br>
+         * <p>*   CREATING</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    : The consumer group is</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    being created</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    .</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The time when the consumer group was last updated.</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 

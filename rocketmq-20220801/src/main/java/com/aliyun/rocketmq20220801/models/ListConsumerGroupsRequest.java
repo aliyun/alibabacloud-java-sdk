@@ -4,12 +4,21 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListConsumerGroupsRequest extends TeaModel {
+    /**
+     * <p>The condition that you want to use to filter consumer groups in the instance. If you leave this parameter empty, all consumer groups in the instance are queried.</p>
+     */
     @NameInMap("filter")
     public String filter;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

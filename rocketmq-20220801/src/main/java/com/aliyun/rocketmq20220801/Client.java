@@ -69,6 +69,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.changeResourceGroupWithOptions(request, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request CreateConsumerGroupRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroupWithOptions(String instanceId, String consumerGroupId, CreateConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -102,12 +110,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConsumerGroupResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request CreateConsumerGroupRequest
+      * @return CreateConsumerGroupResponse
+     */
     public CreateConsumerGroupResponse createConsumerGroup(String instanceId, String consumerGroupId, CreateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request CreateInstanceRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateInstanceResponse
+     */
     public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -187,6 +209,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateInstanceResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request CreateInstanceRequest
+      * @return CreateInstanceResponse
+     */
     public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -228,6 +256,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTopicWithOptions(instanceId, topicName, request, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroupWithOptions(String instanceId, String consumerGroupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -246,12 +282,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConsumerGroupResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      * After you delete a consumer group, the consumer client associated with the consumer group cannot consume messages. Exercise caution when you call this operation.
+      *
+      * @return DeleteConsumerGroupResponse
+     */
     public DeleteConsumerGroupResponse deleteConsumerGroup(String instanceId, String consumerGroupId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
+      * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstanceWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -270,12 +321,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstanceResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
+      * *   This operation is used to delete a pay-as-you-go instance. A subscription instance is automatically released after it expires. You do not need to manually delete a subscription instance.
+      *
+      * @return DeleteInstanceResponse
+     */
     public DeleteInstanceResponse deleteInstance(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteInstanceWithOptions(instanceId, headers, runtime);
     }
 
+    /**
+      * If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteTopicResponse
+     */
     public DeleteTopicResponse deleteTopicWithOptions(String instanceId, String topicName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -294,12 +359,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTopicResponse());
     }
 
+    /**
+      * If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
+      *
+      * @return DeleteTopicResponse
+     */
     public DeleteTopicResponse deleteTopic(String instanceId, String topicName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteTopicWithOptions(instanceId, topicName, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetConsumerGroupResponse
+     */
     public GetConsumerGroupResponse getConsumerGroupWithOptions(String instanceId, String consumerGroupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -318,12 +395,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConsumerGroupResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @return GetConsumerGroupResponse
+     */
     public GetConsumerGroupResponse getConsumerGroup(String instanceId, String consumerGroupId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getConsumerGroupWithOptions(instanceId, consumerGroupId, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetInstanceResponse
+     */
     public GetInstanceResponse getInstanceWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -342,6 +431,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstanceResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @return GetInstanceResponse
+     */
     public GetInstanceResponse getInstance(String instanceId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -372,6 +466,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTopicWithOptions(instanceId, topicName, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request ListConsumerGroupsRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListConsumerGroupsResponse
+     */
     public ListConsumerGroupsResponse listConsumerGroupsWithOptions(String instanceId, ListConsumerGroupsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -405,12 +507,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerGroupsResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request ListConsumerGroupsRequest
+      * @return ListConsumerGroupsResponse
+     */
     public ListConsumerGroupsResponse listConsumerGroups(String instanceId, ListConsumerGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listConsumerGroupsWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request ListInstancesRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListInstancesResponse
+     */
     public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -428,6 +544,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -448,6 +568,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListInstancesResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request ListInstancesRequest
+      * @return ListInstancesResponse
+     */
     public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -503,6 +629,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listTopicsWithOptions(instanceId, request, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request UpdateConsumerGroupRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateConsumerGroupResponse
+     */
     public UpdateConsumerGroupResponse updateConsumerGroupWithOptions(String instanceId, String consumerGroupId, UpdateConsumerGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -536,12 +670,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConsumerGroupResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request UpdateConsumerGroupRequest
+      * @return UpdateConsumerGroupResponse
+     */
     public UpdateConsumerGroupResponse updateConsumerGroup(String instanceId, String consumerGroupId, UpdateConsumerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateConsumerGroupWithOptions(instanceId, consumerGroupId, request, headers, runtime);
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request UpdateInstanceRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateInstanceResponse
+     */
     public UpdateInstanceResponse updateInstanceWithOptions(String instanceId, UpdateInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -579,6 +727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateInstanceResponse());
     }
 
+    /**
+      * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
+      *
+      * @param request UpdateInstanceRequest
+      * @return UpdateInstanceResponse
+     */
     public UpdateInstanceResponse updateInstance(String instanceId, UpdateInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();

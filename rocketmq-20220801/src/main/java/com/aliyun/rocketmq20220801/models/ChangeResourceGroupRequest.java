@@ -4,15 +4,31 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the region in which the instance resides.</p>
+     */
     @NameInMap("regionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the instance is changed.</p>
+     * <br>
+     * <p>You can call the [ListResourceGroups](https://www.alibabacloud.com/help/resource-management/latest/listresourcegroups) operation to query existing resource groups.</p>
+     */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the resource. Set this parameter to the ID of the ApsaraMQ for RocketMQ instance whose resource group you want to change.</p>
+     */
     @NameInMap("resourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of resource.</p>
+     * <br>
+     * <p>Set this parameter to **instance**. The value of this parameter cannot be changed.</p>
+     */
     @NameInMap("resourceType")
     public String resourceType;
 

@@ -4,27 +4,51 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupResponseBody extends TeaModel {
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The result data that is returned.</p>
+     */
     @NameInMap("data")
     public Boolean data;
 
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message.</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The ID of the request. The system generates a unique ID for each request. You can troubleshoot issues based on the request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

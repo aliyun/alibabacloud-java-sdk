@@ -4,27 +4,51 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public ListInstancesResponseBodyData data;
 
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message.</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -97,61 +121,175 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListInstancesResponseBodyDataListTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListInstancesResponseBodyDataListTags build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyDataListTags self = new ListInstancesResponseBodyDataListTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyDataListTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListInstancesResponseBodyDataListTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyDataList extends TeaModel {
+        /**
+         * <p>The commodity code of the instance. The commodity code of a ApsaraMQ for RocketMQ 5.0 instance has a similar format as ons_rmqsub_public_cn.</p>
+         */
         @NameInMap("commodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         */
         @NameInMap("expireTime")
         public String expireTime;
 
+        /**
+         * <p>The number of consumer groups created in the instance.</p>
+         */
         @NameInMap("groupCount")
         public Long groupCount;
 
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("instanceName")
         public String instanceName;
 
+        /**
+         * <p>The billing method of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PayAsYouGo: pay-as-you-go</p>
+         * <p>*   Subscription</p>
+         */
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The time when the instance was released.</p>
+         */
         @NameInMap("releaseTime")
         public String releaseTime;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The primary edition of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   standard: Standard Edition</p>
+         * <p>*   ultimate: Enterprise Platinum Edition</p>
+         * <p>*   professional: Professional Edition</p>
+         */
         @NameInMap("seriesCode")
         public String seriesCode;
 
+        /**
+         * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
+         */
         @NameInMap("serviceCode")
         public String serviceCode;
 
+        /**
+         * <p>The time when the instance was started.</p>
+         */
         @NameInMap("startTime")
         public String startTime;
 
+        /**
+         * <p>The status of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   RELEASED</p>
+         * <p>*   RUNNING</p>
+         * <p>*   STOPPED</p>
+         * <p>*   CHANGING</p>
+         * <p>*   CREATING</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The sub-category edition of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   cluster_ha: Cluster High-availability Edition</p>
+         * <p>*   single_node: Standalone Edition</p>
+         */
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
 
+        @NameInMap("tags")
+        public java.util.List<ListInstancesResponseBodyDataListTags> tags;
+
+        /**
+         * <p>The number of topics created in the instance.</p>
+         */
         @NameInMap("topicCount")
         public Long topicCount;
 
+        /**
+         * <p>The time when the instance was last modified.</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <p>The ID of the user who owns the instance.</p>
+         */
         @NameInMap("userId")
         public String userId;
 
@@ -288,6 +426,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.subSeriesCode;
         }
 
+        public ListInstancesResponseBodyDataList setTags(java.util.List<ListInstancesResponseBodyDataListTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyDataListTags> getTags() {
+            return this.tags;
+        }
+
         public ListInstancesResponseBodyDataList setTopicCount(Long topicCount) {
             this.topicCount = topicCount;
             return this;
@@ -315,15 +461,27 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("list")
         public java.util.List<ListInstancesResponseBodyDataList> list;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("pageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("pageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("totalCount")
         public Long totalCount;
 

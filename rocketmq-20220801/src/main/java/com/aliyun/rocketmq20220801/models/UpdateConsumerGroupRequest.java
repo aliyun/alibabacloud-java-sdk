@@ -4,12 +4,26 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class UpdateConsumerGroupRequest extends TeaModel {
+    /**
+     * <p>The new consumption retry policy that you want to configure for the consumer group. For more information, see [Consumption retry](~~440356~~).</p>
+     */
     @NameInMap("consumeRetryPolicy")
     public UpdateConsumerGroupRequestConsumeRetryPolicy consumeRetryPolicy;
 
+    /**
+     * <p>The new message delivery order of the consumer group.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Concurrently: concurrent delivery</p>
+     * <p>*   Orderly: ordered delivery</p>
+     */
     @NameInMap("deliveryOrderType")
     public String deliveryOrderType;
 
+    /**
+     * <p>The new remarks on the consumer group.</p>
+     */
     @NameInMap("remark")
     public String remark;
 
@@ -43,12 +57,28 @@ public class UpdateConsumerGroupRequest extends TeaModel {
     }
 
     public static class UpdateConsumerGroupRequestConsumeRetryPolicy extends TeaModel {
+        /**
+         * <p>The dead-letter topic.</p>
+         * <br>
+         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see [Consumption retry and dead-letter messages](~~440356~~).</p>
+         */
         @NameInMap("deadLetterTargetTopic")
         public String deadLetterTargetTopic;
 
+        /**
+         * <p>The maximum number of retries.</p>
+         */
         @NameInMap("maxRetryTimes")
         public Integer maxRetryTimes;
 
+        /**
+         * <p>The retry policy. For more information, see [Message retry](~~440356~~).</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   FixedRetryPolicy: Failed messages are retried at a fixed interval.</p>
+         * <p>*   DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.</p>
+         */
         @NameInMap("retryPolicy")
         public String retryPolicy;
 
