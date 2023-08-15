@@ -4,6 +4,12 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetLindormInstanceRequest extends TeaModel {
+    /**
+     * <p>The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:</p>
+     * <br>
+     * <p>*   **cloud_efficiency**: The nodes use the Standard type of storage.</p>
+     * <p>*   **cloud_ssd**: The nodes use the Performance type of storage.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

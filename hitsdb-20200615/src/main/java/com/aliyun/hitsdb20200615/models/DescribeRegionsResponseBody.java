@@ -4,9 +4,15 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>China (Hangzhou)</p>
+     */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,6 +41,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>Queries the regions where Lindorm is available.</p>
+         */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 

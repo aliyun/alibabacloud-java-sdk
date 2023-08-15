@@ -4,9 +4,18 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstancePayTypeRequest extends TeaModel {
+    /**
+     * <p>The subscription duration of the instance. The parameter is required if the instance is an subscription instance.</p>
+     * <br>
+     * <p>*   If PricingCycle is set to Month, set this parameter to an integer that ranges from 1 to 9.</p>
+     * <p>*   If PricingCycle is set to Year, set this parameter to an integer that ranges from 1 to 3.</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,9 +25,21 @@ public class ModifyInstancePayTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The billing method of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **PREPAY**: subscription.</p>
+     * <p>*   **POSTPAY**: pay-as-you-go.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The unit of the subscription duration for the instance. Valid values:</p>
+     * <br>
+     * <p>*   Month</p>
+     * <p>*   Year</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 

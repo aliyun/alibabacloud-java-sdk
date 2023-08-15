@@ -4,6 +4,11 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token used to start the next query to retrieve more results.</p>
+     * <br>
+     * <p>> This parameter is not required in the first query. If not all results are returned in one query, you can pass in the **NextToken** value returned for the query to perform the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,9 +18,15 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region in which the instances whose tags you want to query are located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,12 +36,18 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The list of tags associated with the instances you want to query.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -120,9 +137,19 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The keys of the tags associated with the instances you want to query.</p>
+         * <br>
+         * <p>> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The values of the tags associated with the instances you want to query.</p>
+         * <br>
+         * <p>> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         */
         @NameInMap("Value")
         public String value;
 

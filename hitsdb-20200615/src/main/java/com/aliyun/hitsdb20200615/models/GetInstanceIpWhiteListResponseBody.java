@@ -4,12 +4,18 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceIpWhiteListResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Lindorm instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("IpList")
     public java.util.List<String> ipList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

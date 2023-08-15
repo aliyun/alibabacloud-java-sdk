@@ -4,9 +4,15 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceIpWhiteListRequest extends TeaModel {
+    /**
+     * <p>The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>The ID of the instance whose whitelist you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to query the instance ID.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

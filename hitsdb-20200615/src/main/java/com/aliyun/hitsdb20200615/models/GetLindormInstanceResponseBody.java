@@ -13,6 +13,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("ArbiterZoneId")
     public String arbiterZoneId;
 
+    @NameInMap("ArchVersion")
+    public String archVersion;
+
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -34,6 +37,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("CreateMilliseconds")
     public Long createMilliseconds;
 
+    /**
+     * <p>The storage capacity of the disk of a single log node. This parameter is returned only for multi-zone instances.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -49,6 +55,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("DiskUsage")
     public String diskUsage;
 
+    @NameInMap("EnableBlob")
+    public Boolean enableBlob;
+
     @NameInMap("EnableCdc")
     public Boolean enableCdc;
 
@@ -57,6 +66,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
     @NameInMap("EnableKms")
     public Boolean enableKms;
+
+    @NameInMap("EnableLTS")
+    public Boolean enableLTS;
+
+    @NameInMap("EnableMLCtrl")
+    public Boolean enableMLCtrl;
 
     @NameInMap("EnableSSL")
     public Boolean enableSSL;
@@ -115,6 +130,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>400</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
@@ -142,9 +160,15 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("StandbyZoneId")
     public String standbyZoneId;
 
+    /**
+     * <p>The type of the log nodes. This parameter is returned only for multi-zone instances.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The number of the log nodes. This parameter is returned only for multi-zone instances.</p>
+     */
     @NameInMap("VswitchId")
     public String vswitchId;
 
@@ -178,6 +202,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public String getArbiterZoneId() {
         return this.arbiterZoneId;
+    }
+
+    public GetLindormInstanceResponseBody setArchVersion(String archVersion) {
+        this.archVersion = archVersion;
+        return this;
+    }
+    public String getArchVersion() {
+        return this.archVersion;
     }
 
     public GetLindormInstanceResponseBody setAutoRenew(Boolean autoRenew) {
@@ -276,6 +308,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         return this.diskUsage;
     }
 
+    public GetLindormInstanceResponseBody setEnableBlob(Boolean enableBlob) {
+        this.enableBlob = enableBlob;
+        return this;
+    }
+    public Boolean getEnableBlob() {
+        return this.enableBlob;
+    }
+
     public GetLindormInstanceResponseBody setEnableCdc(Boolean enableCdc) {
         this.enableCdc = enableCdc;
         return this;
@@ -298,6 +338,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
     public Boolean getEnableKms() {
         return this.enableKms;
+    }
+
+    public GetLindormInstanceResponseBody setEnableLTS(Boolean enableLTS) {
+        this.enableLTS = enableLTS;
+        return this;
+    }
+    public Boolean getEnableLTS() {
+        return this.enableLTS;
+    }
+
+    public GetLindormInstanceResponseBody setEnableMLCtrl(Boolean enableMLCtrl) {
+        this.enableMLCtrl = enableMLCtrl;
+        return this;
+    }
+    public Boolean getEnableMLCtrl() {
+        return this.enableMLCtrl;
     }
 
     public GetLindormInstanceResponseBody setEnableSSL(Boolean enableSSL) {

@@ -106,6 +106,26 @@ public class CreateLindormInstanceRequest extends TeaModel {
     @NameInMap("StandbyZoneId")
     public String standbyZoneId;
 
+    /**
+     * <p>实例的流引擎节点数量，取值：**0**~**60**。</p>
+     */
+    @NameInMap("StreamNum")
+    public Integer streamNum;
+
+    /**
+     * <p>实例的流引擎节点规格，取值：</p>
+     * <br>
+     * <p>- **lindorm.g.xlarge**：表示4核16GB（独享规格）。</p>
+     * <p>- **lindorm.c.2xlarge**：表示8核16GB（独享规格）。</p>
+     * <p>- **lindorm.g.2xlarge**：表示8核32GB（独享规格）。</p>
+     * <p>- **lindorm.c.4xlarge**：表示16核32GB（独享规格）。</p>
+     * <p>- **lindorm.g.4xlarge**：表示16核64GB（独享规格）。</p>
+     * <p>- **lindorm.c.8xlarge**：表示32核64GB（独享规格）。</p>
+     * <p>- **lindorm.g.8xlarge**：表示32核128GB（独享规格）。</p>
+     */
+    @NameInMap("StreamSpec")
+    public String streamSpec;
+
     @NameInMap("TsdbNum")
     public Integer tsdbNum;
 
@@ -396,6 +416,22 @@ public class CreateLindormInstanceRequest extends TeaModel {
     }
     public String getStandbyZoneId() {
         return this.standbyZoneId;
+    }
+
+    public CreateLindormInstanceRequest setStreamNum(Integer streamNum) {
+        this.streamNum = streamNum;
+        return this;
+    }
+    public Integer getStreamNum() {
+        return this.streamNum;
+    }
+
+    public CreateLindormInstanceRequest setStreamSpec(String streamSpec) {
+        this.streamSpec = streamSpec;
+        return this;
+    }
+    public String getStreamSpec() {
+        return this.streamSpec;
     }
 
     public CreateLindormInstanceRequest setTsdbNum(Integer tsdbNum) {

@@ -10,9 +10,15 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region in which the instances you want to associate tags with are located. You can call the [DescribeRegions](~~426062~~) operation to query the region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -22,12 +28,18 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tags that you want to associate with the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -108,40 +120,20 @@ public class TagResourcesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ListTagResourcesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag that you want to associate with the resource.</p>
+         * <br>
+         * <p>> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag that you want to associate with the resource.</p>
+         * <br>
+         * <p>> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         */
         @NameInMap("Value")
         public String value;
 

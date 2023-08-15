@@ -4,6 +4,18 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all tags from the instance. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Remove all tags from the instances.</p>
+     * <p>*   **false**: Do not remove all tags from the instances.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   The default value of this parameter is false.</p>
+     * <br>
+     * <p>*   If you specify the TagKey parameter together with this parameter, this parameter does not take effect.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,6 +25,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IDs of instances.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -22,12 +37,18 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The resource type. Set the value to **INSTANCE**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The list of keys of the tags that you want to remove.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 
