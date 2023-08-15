@@ -476,6 +476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RejectedPatchesAction", request.rejectedPatchesAction);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {
             query.put("Sources", request.sourcesShrink);
         }
@@ -3849,6 +3853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.rejectedPatchesAction)) {
             query.put("RejectedPatchesAction", request.rejectedPatchesAction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourcesShrink)) {

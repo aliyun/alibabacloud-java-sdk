@@ -80,6 +80,9 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The share type of the patch baseline.</p>
          */
@@ -157,6 +160,14 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         }
         public String getOperationSystem() {
             return this.operationSystem;
+        }
+
+        public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public RegisterDefaultPatchBaselineResponseBodyPatchBaseline setShareType(String shareType) {

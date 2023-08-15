@@ -46,6 +46,9 @@ public class UpdatePatchBaselineRequest extends TeaModel {
     @NameInMap("RejectedPatchesAction")
     public String rejectedPatchesAction;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Sources")
     public java.util.List<String> sources;
 
@@ -127,6 +130,14 @@ public class UpdatePatchBaselineRequest extends TeaModel {
     }
     public String getRejectedPatchesAction() {
         return this.rejectedPatchesAction;
+    }
+
+    public UpdatePatchBaselineRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public UpdatePatchBaselineRequest setSources(java.util.List<String> sources) {
