@@ -4,27 +4,51 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public Boolean data;
 
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message.</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 

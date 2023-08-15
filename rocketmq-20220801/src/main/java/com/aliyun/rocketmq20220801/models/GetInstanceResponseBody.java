@@ -4,27 +4,51 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The error code returned if the call failed.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("data")
     public GetInstanceResponseBodyData data;
 
+    /**
+     * <p>The dynamic error code.</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The dynamic error message.</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -98,6 +122,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataAccountInfo extends TeaModel {
+        /**
+         * <p>The username of the instance. If you access a ApsaraMQ for RocketMQ instance over the Internet, you must configure the username and password of the instance in the SDK code for authentication.</p>
+         */
         @NameInMap("username")
         public String username;
 
@@ -117,6 +144,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataAclInfo extends TeaModel {
+        /**
+         * <p>The authentication type of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   default: intelligent authentication</p>
+         */
         @NameInMap("aclType")
         public String aclType;
 
@@ -136,30 +170,94 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataExtConfig extends TeaModel {
+        /**
+         * <p>The authentication type of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   default: intelligent authentication</p>
+         */
         @NameInMap("aclType")
         public String aclType;
 
+        /**
+         * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: enable</p>
+         * <p>*   false: disable</p>
+         * <br>
+         * <p>This parameter is valid only when the supportAutoScaling parameter is set to enable.</p>
+         */
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
+        /**
+         * <p>The Internet bandwidth. Unit: MB/s.</p>
+         */
         @NameInMap("flowOutBandwidth")
         public Integer flowOutBandwidth;
 
+        /**
+         * <p>The metering method for Internet usage.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PayByTraffic: pay-by-traffic</p>
+         * <p>*   paybybandwidth: pay-by-bandwidth</p>
+         * <p>*   uninvolved: N/A</p>
+         */
         @NameInMap("flowOutType")
         public String flowOutType;
 
+        /**
+         * <p>Specifies whether to enable the Internet access feature.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   enable</p>
+         * <p>*   disable</p>
+         * <br>
+         * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).</p>
+         */
         @NameInMap("internetSpec")
         public String internetSpec;
 
+        /**
+         * <p>The retention period of messages. Unit: hours.</p>
+         * <br>
+         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).</p>
+         * <br>
+         * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).</p>
+         */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
+        /**
+         * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).</p>
+         */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;
 
+        /**
+         * <p>The ratio between sent messages and received messages in the instance.</p>
+         */
         @NameInMap("sendReceiveRatio")
         public Float sendReceiveRatio;
 
+        /**
+         * <p>Specifies whether the elastic TPS feature is supported by the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: enable</p>
+         * <p>*   false: disable</p>
+         * <br>
+         * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).</p>
+         * <br>
+         * <p>> The elastic TPS feature is supported only by specific instance editions. For more information, see [Instance specifications](~~444715~~).</p>
+         */
         @NameInMap("supportAutoScaling")
         public Boolean supportAutoScaling;
 
@@ -243,15 +341,31 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataInstanceQuotas extends TeaModel {
+        /**
+         * <p>The number of free topics in the instance.</p>
+         */
         @NameInMap("freeCount")
         public Double freeCount;
 
+        /**
+         * <p>The name of the quota.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   TOPIC_COUNT: the number of topics that you can create in the instance</p>
+         */
         @NameInMap("quotaName")
         public String quotaName;
 
+        /**
+         * <p>The total number of topics in the instance.</p>
+         */
         @NameInMap("totalCount")
         public Double totalCount;
 
+        /**
+         * <p>The number of used topics in the instance.</p>
+         */
         @NameInMap("usedCount")
         public Double usedCount;
 
@@ -295,12 +409,31 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNetworkInfoEndpoints extends TeaModel {
+        /**
+         * <p>The type of the endpoint that is used to access the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   TCP_VPC: VPC endpoint</p>
+         * <p>*   TCP_INTERNET: public endpoint</p>
+         */
         @NameInMap("endpointType")
         public String endpointType;
 
+        /**
+         * <p>The endpoint that is used to access the instance.</p>
+         */
         @NameInMap("endpointUrl")
         public String endpointUrl;
 
+        /**
+         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only when you use a public endpoint to access the ApsaraMQ for RocketMQ broker.</p>
+         * <br>
+         * <p>*   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <br>
+         * <p>We recommend that you configure the internetInfo.ipWhitelist parameter instead of this parameter.</p>
+         */
         @NameInMap("ipWhitelist")
         public java.util.List<String> ipWhitelist;
 
@@ -336,15 +469,42 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNetworkInfoInternetInfo extends TeaModel {
+        /**
+         * <p>The Internet bandwidth. Unit: MB/s.</p>
+         */
         @NameInMap("flowOutBandwidth")
         public Integer flowOutBandwidth;
 
+        /**
+         * <p>The metering method for Internet usage.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PayByBandwidth: pay-by-bandwidth. If the Internet access feature is enabled, specify this value for the parameter.</p>
+         * <p>*   uninvolved: N/A. If the Internet access feature is not enabled, specify this value for the parameter.</p>
+         */
         @NameInMap("flowOutType")
         public String flowOutType;
 
+        /**
+         * <p>Specifies whether to enable the Internet access feature.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   enable</p>
+         * <p>*   disable</p>
+         * <br>
+         * <p>By default, ApsaraMQ for RocketMQ instances are accessed in virtual private clouds (VPCs). If you enable the Internet access feature, you are charged for Internet outbound bandwidth. For more information, see [Internet access fee](~~427240~~).</p>
+         */
         @NameInMap("internetSpec")
         public String internetSpec;
 
+        /**
+         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker.</p>
+         * <br>
+         * <p>*   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         */
         @NameInMap("ipWhitelist")
         public java.util.List<String> ipWhitelist;
 
@@ -388,9 +548,15 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNetworkInfoVpcInfo extends TeaModel {
+        /**
+         * <p>The ID of the vSwitch with which the instance is associated.</p>
+         */
         @NameInMap("vSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the VPC with which the instance is associated.</p>
+         */
         @NameInMap("vpcId")
         public String vpcId;
 
@@ -418,12 +584,21 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNetworkInfo extends TeaModel {
+        /**
+         * <p>The information about endpoints.</p>
+         */
         @NameInMap("endpoints")
         public java.util.List<GetInstanceResponseBodyDataNetworkInfoEndpoints> endpoints;
 
+        /**
+         * <p>The information about the Internet.</p>
+         */
         @NameInMap("internetInfo")
         public GetInstanceResponseBodyDataNetworkInfoInternetInfo internetInfo;
 
+        /**
+         * <p>The information about the VPC.</p>
+         */
         @NameInMap("vpcInfo")
         public GetInstanceResponseBodyDataNetworkInfoVpcInfo vpcInfo;
 
@@ -459,18 +634,53 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataProductInfo extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: enable</p>
+         * <p>*   false: disable</p>
+         * <br>
+         * <p>This parameter is valid only when the supportAutoScaling parameter is set to enable.</p>
+         */
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
+        /**
+         * <p>The retention period of messages. Unit: hours.</p>
+         * <br>
+         * <p>For information about the valid values of this parameter, see the "Limits on resource quotas" section in [Usage limits](~~440347~~).</p>
+         * <br>
+         * <p>The storage of messages in ApsaraMQ for RocketMQ is serverless and scalable. You are charged for message storage based on your actual usage. You can change the retention period of messages to adjust storage capacity. For more information, see [Storage fee](~~427238~~).</p>
+         */
         @NameInMap("messageRetentionTime")
         public Integer messageRetentionTime;
 
+        /**
+         * <p>The computing specification that is used to send and receive messages. For information about the upper limit of TPS, see [Instance specifications](~~444715~~).</p>
+         */
         @NameInMap("msgProcessSpec")
         public String msgProcessSpec;
 
+        /**
+         * <p>The ratio between sent messages and received messages in the instance.</p>
+         */
         @NameInMap("sendReceiveRatio")
         public Float sendReceiveRatio;
 
+        /**
+         * <p>Specifies whether to enable the elastic TPS feature for the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: enable</p>
+         * <p>*   false: disable</p>
+         * <br>
+         * <p>After you enable the elastic TPS feature for a ApsaraMQ for RocketMQ instance, you can use a specific amount of TPS that exceeds the specification limit. You are charged for the elastic TPS feature. For more information, see [Computing fee](~~427237~~).</p>
+         * <br>
+         * <p>> The elastic TPS feature is supported by only specific instance editions. For more information, see [Instance specifications](~~444715~~).</p>
+         */
         @NameInMap("supportAutoScaling")
         public Boolean supportAutoScaling;
 
@@ -562,85 +772,214 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyDataTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static GetInstanceResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyDataTags self = new GetInstanceResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetInstanceResponseBodyDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The account information.</p>
+         */
         @NameInMap("accountInfo")
         public GetInstanceResponseBodyDataAccountInfo accountInfo;
 
+        /**
+         * <p>The information about access control.</p>
+         */
         @NameInMap("aclInfo")
         public GetInstanceResponseBodyDataAclInfo aclInfo;
 
+        /**
+         * <p>The business ID (BID) of the commodity.</p>
+         */
         @NameInMap("bid")
         public String bid;
 
+        /**
+         * <p>The commodity code of the instance. The commodity code of a ApsaraMQ for RocketMQ 5.0 instance has a similar format as ons_rmqsub_public_cn.</p>
+         */
         @NameInMap("commodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         */
         @NameInMap("expireTime")
         public String expireTime;
 
+        /**
+         * <p>The extended configurations. We recommend you configure the productInfo, internetInfo, or aclInfo parameter instead of this parameter.</p>
+         */
         @NameInMap("extConfig")
         public GetInstanceResponseBodyDataExtConfig extConfig;
 
         @NameInMap("groupCount")
         public Long groupCount;
 
+        /**
+         * <p>The ID of the instance</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the instance.</p>
+         */
         @NameInMap("instanceName")
         public String instanceName;
 
+        /**
+         * <p>The quotas in the instance.</p>
+         */
         @NameInMap("instanceQuotas")
         public java.util.List<GetInstanceResponseBodyDataInstanceQuotas> instanceQuotas;
 
+        /**
+         * <p>The network information.</p>
+         */
         @NameInMap("networkInfo")
         public GetInstanceResponseBodyDataNetworkInfo networkInfo;
 
+        /**
+         * <p>The billing method of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   PayAsYouGo: pay-as-you-go</p>
+         * <p>*   Subscription</p>
+         */
         @NameInMap("paymentType")
         public String paymentType;
 
+        /**
+         * <p>The extended configurations of the instance.</p>
+         */
         @NameInMap("productInfo")
         public GetInstanceResponseBodyDataProductInfo productInfo;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("regionId")
         public String regionId;
 
+        /**
+         * <p>The time when the instance was released.</p>
+         */
         @NameInMap("releaseTime")
         public String releaseTime;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("remark")
         public String remark;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The primary edition of the instance. For information about the differences between primary edition instances, see [Instance selection](~~444722~~).</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   standard: Standard Edition</p>
+         * <p>*   ultimate: Enterprise Platinum Edition</p>
+         * <p>*   professional: Professional Edition</p>
+         */
         @NameInMap("seriesCode")
         public String seriesCode;
 
+        /**
+         * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
+         */
         @NameInMap("serviceCode")
         public String serviceCode;
 
         @NameInMap("software")
         public GetInstanceResponseBodyDataSoftware software;
 
+        /**
+         * <p>The time when the instance was started.</p>
+         */
         @NameInMap("startTime")
         public String startTime;
 
+        /**
+         * <p>The status of the instance.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   RELEASED</p>
+         * <p>*   RUNNING</p>
+         * <p>*   STOPPED</p>
+         * <p>*   CHANGING</p>
+         * <p>*   CREATING</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The sub-category edition of the instance. For information about the differences between sub-category edition instances, see [Instance selection](~~444722~~).</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   cluster_ha: Cluster High-availability Edition</p>
+         * <p>*   single_node: Standalone Edition</p>
+         */
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
+
+        @NameInMap("tags")
+        public java.util.List<GetInstanceResponseBodyDataTags> tags;
 
         @NameInMap("topicCount")
         public Long topicCount;
 
+        /**
+         * <p>The time when the instance was last modified.</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <p>The ID of the user who owns the instance.</p>
+         */
         @NameInMap("userId")
         public String userId;
 
@@ -839,6 +1178,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getSubSeriesCode() {
             return this.subSeriesCode;
+        }
+
+        public GetInstanceResponseBodyData setTags(java.util.List<GetInstanceResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetInstanceResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public GetInstanceResponseBodyData setTopicCount(Long topicCount) {

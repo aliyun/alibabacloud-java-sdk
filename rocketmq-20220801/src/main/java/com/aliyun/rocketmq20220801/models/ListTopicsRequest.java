@@ -4,15 +4,27 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListTopicsRequest extends TeaModel {
+    /**
+     * <p>The condition that you want to use to filter topics in the instance. If you leave this parameter empty, all topics in the instance are queried.</p>
+     */
     @NameInMap("filter")
     public String filter;
 
+    /**
+     * <p>The message types of the topics.</p>
+     */
     @NameInMap("messageTypes")
     public java.util.List<String> messageTypes;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 

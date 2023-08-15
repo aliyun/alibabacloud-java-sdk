@@ -4,6 +4,9 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class UpdateTopicRequest extends TeaModel {
+    /**
+     * <p>The new remarks on the topic.</p>
+     */
     @NameInMap("remark")
     public String remark;
 
