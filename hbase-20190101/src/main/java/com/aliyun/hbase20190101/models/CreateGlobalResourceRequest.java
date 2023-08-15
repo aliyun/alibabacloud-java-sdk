@@ -10,6 +10,9 @@ public class CreateGlobalResourceRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ResourceName")
     public String resourceName;
 
@@ -35,6 +38,14 @@ public class CreateGlobalResourceRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public CreateGlobalResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateGlobalResourceRequest setResourceName(String resourceName) {

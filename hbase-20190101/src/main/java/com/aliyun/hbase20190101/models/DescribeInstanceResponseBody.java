@@ -52,6 +52,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     @NameInMap("Duration")
     public Integer duration;
 
+    @NameInMap("EnableHbaseProxy")
+    public Boolean enableHbaseProxy;
+
     @NameInMap("EncryptionKey")
     public String encryptionKey;
 
@@ -84,6 +87,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     @NameInMap("IsMultiModel")
     public Boolean isMultiModel;
+
+    @NameInMap("LproxyMinorVersion")
+    public String lproxyMinorVersion;
 
     @NameInMap("MaintainEndTime")
     public String maintainEndTime;
@@ -290,6 +296,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         return this.duration;
     }
 
+    public DescribeInstanceResponseBody setEnableHbaseProxy(Boolean enableHbaseProxy) {
+        this.enableHbaseProxy = enableHbaseProxy;
+        return this;
+    }
+    public Boolean getEnableHbaseProxy() {
+        return this.enableHbaseProxy;
+    }
+
     public DescribeInstanceResponseBody setEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -376,6 +390,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
     public Boolean getIsMultiModel() {
         return this.isMultiModel;
+    }
+
+    public DescribeInstanceResponseBody setLproxyMinorVersion(String lproxyMinorVersion) {
+        this.lproxyMinorVersion = lproxyMinorVersion;
+        return this;
+    }
+    public String getLproxyMinorVersion() {
+        return this.lproxyMinorVersion;
     }
 
     public DescribeInstanceResponseBody setMaintainEndTime(String maintainEndTime) {

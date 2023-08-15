@@ -128,6 +128,9 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
         @NameInMap("ActiveName")
         public String activeName;
 
+        /**
+         * <p>bdsId</p>
+         */
         @NameInMap("BdsName")
         public String bdsName;
 
