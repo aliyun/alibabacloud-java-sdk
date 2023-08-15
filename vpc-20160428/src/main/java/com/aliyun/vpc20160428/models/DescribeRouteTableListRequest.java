@@ -198,9 +198,31 @@ public class DescribeRouteTableListRequest extends TeaModel {
     }
 
     public static class DescribeRouteTableListRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeRouteTableListRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTableListRequestTag self = new DescribeRouteTableListRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteTableListRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeRouteTableListRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

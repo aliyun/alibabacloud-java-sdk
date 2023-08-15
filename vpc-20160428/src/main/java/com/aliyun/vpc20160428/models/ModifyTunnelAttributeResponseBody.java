@@ -4,42 +4,94 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyTunnelAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the customer gateway associated with the customer gateway.</p>
+     */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
+    /**
+     * <p>Indicates whether DPD is enabled. Valid values:</p>
+     * <br>
+     * <p>- **true** </p>
+     * <p>- **false**</p>
+     */
     @NameInMap("EnableDpd")
     public Boolean enableDpd;
 
+    /**
+     * <p>Indicates whether BAT traversal is enabled. Valid values:</p>
+     * <br>
+     * <p>- **true** </p>
+     * <p>- **false**</p>
+     */
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
+    /**
+     * <p>The tunnel IP address.</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 
+    /**
+     * <p>The peer CA certificate when a ShangMi (SM) VPN gateway is associated with the IPsec connection.</p>
+     */
     @NameInMap("RemoteCaCertificate")
     public String remoteCaCertificate;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tunnel role. Valid values: </p>
+     * <br>
+     * <p>- **master**</p>
+     * <p>- **slave**</p>
+     */
     @NameInMap("Role")
     public String role;
 
+    /**
+     * <p>The tunnel status. Valid values: </p>
+     * <br>
+     * <p>- **active** </p>
+     * <p>- **updating** </p>
+     * <p>- d**eleting**</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>The BGP configurations.</p>
+     */
     @NameInMap("TunnelBgpConfig")
     public ModifyTunnelAttributeResponseBodyTunnelBgpConfig tunnelBgpConfig;
 
+    /**
+     * <p>The tunnel ID.</p>
+     */
     @NameInMap("TunnelId")
     public String tunnelId;
 
+    /**
+     * <p>The IKE settings for Phase 1 negotiations.</p>
+     */
     @NameInMap("TunnelIkeConfig")
     public ModifyTunnelAttributeResponseBodyTunnelIkeConfig tunnelIkeConfig;
 
+    /**
+     * <p>The IPsec settings for Phase 2 negotiations.</p>
+     */
     @NameInMap("TunnelIpsecConfig")
     public ModifyTunnelAttributeResponseBodyTunnelIpsecConfig tunnelIpsecConfig;
 
+    /**
+     * <p>The tunnel zone.</p>
+     */
     @NameInMap("ZoneNo")
     public String zoneNo;
 
@@ -153,21 +205,42 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeResponseBodyTunnelBgpConfig extends TeaModel {
+        /**
+         * <p>Indicates whether BGP is enabled. Valid values: </p>
+         * <br>
+         * <p>- **true** </p>
+         * <p>- **false**</p>
+         */
         @NameInMap("EnableBgp")
         public Boolean enableBgp;
 
+        /**
+         * <p>The local ASN.</p>
+         */
         @NameInMap("LocalAsn")
         public Long localAsn;
 
+        /**
+         * <p>The BGP IP address of the tunnel.</p>
+         */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
+        /**
+         * <p>The peer ASN.</p>
+         */
         @NameInMap("PeerAsn")
         public Long peerAsn;
 
+        /**
+         * <p>The BGP IP address of the peer.</p>
+         */
         @NameInMap("PeerBgpIp")
         public String peerBgpIp;
 
+        /**
+         * <p>The CIDR block to which the tunnel BGP IP address belongs.</p>
+         */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;
 
@@ -227,30 +300,65 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeResponseBodyTunnelIkeConfig extends TeaModel {
+        /**
+         * <p>The IKE authentication algorithm.</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The IKE encryption algorithm.</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The IKE lifetime. Unit: seconds.</p>
+         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
+        /**
+         * <p>The IKE negotiation mode. Valid values: </p>
+         * <br>
+         * <p>- **main**: This mode offers higher security during negotiations. </p>
+         * <p>- **aggressive**: This mode is faster and has a higher success rate.</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The Diffie-Hellman group.</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The version of the IKE protocol. </p>
+         * <br>
+         * <p>- **ikev1**</p>
+         * <p>- **ikev2**</p>
+         * <br>
+         * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The tunnel identifier. The identifier supports FQDNs and IP addresses. The default identifier is the tunnel IP address.</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key.</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The peer identifier. The identifier supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -334,15 +442,27 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeResponseBodyTunnelIpsecConfig extends TeaModel {
+        /**
+         * <p>The IPsec authentication algorithm.</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The IPsec encryption algorithm.</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The IPsec lifetime. Unit: seconds.</p>
+         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
+        /**
+         * <p>The Diffie-Hellman group.</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 

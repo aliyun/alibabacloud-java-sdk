@@ -4,6 +4,11 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyTunnelAttributeRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. </p>
+     * <br>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +18,9 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the IPsec connection. You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -22,12 +30,21 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tunnel ID.</p>
+     */
     @NameInMap("TunnelId")
     public String tunnelId;
 
+    /**
+     * <p>The tunnel configurations.</p>
+     */
     @NameInMap("TunnelOptionsSpecification")
     public ModifyTunnelAttributeRequestTunnelOptionsSpecification tunnelOptionsSpecification;
 
+    /**
+     * <p>The ID of the IPsec connection.</p>
+     */
     @NameInMap("VpnConnectionId")
     public String vpnConnectionId;
 
@@ -109,12 +126,21 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig extends TeaModel {
+        /**
+         * <p>The local autonomous system number (ASN). Valid values: **1** to **4294967295**.</p>
+         */
         @NameInMap("LocalAsn")
         public Long localAsn;
 
+        /**
+         * <p>The BGP IP address of the tunnel. The IP address must fall into the **CIDR block** of the tunnel.</p>
+         */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
+        /**
+         * <p>The CIDR block of the tunnel. The CIDR block must fall into 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.</p>
+         */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;
 
@@ -150,30 +176,72 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm that is used in Phase 1 negotiations. </p>
+         * <br>
+         * <p>- If the IPsec connection is attached to a standard VPN gateway, the valid values are **md5**, **sha1**, **sha256**, **sha384**, and **sha512**. </p>
+         * <p>- If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm3**.</p>
+         */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
+        /**
+         * <p>The encryption algorithm that is used in Phase 1 negotiations. </p>
+         * <br>
+         * <p>- If the IPsec connection is attached to a standard VPN gateway, the valid values are **aes**, **aes192**, **sha256**, **des**, and **3des**. </p>
+         * <p>- If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm4**.</p>
+         */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
+        /**
+         * <p>The SA lifetime that is determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**.</p>
+         */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
+        /**
+         * <p>The IKE negotiation mode. Valid values:</p>
+         * <br>
+         * <p>- **main**: This mode offers higher security during negotiations. </p>
+         * <p>- **aggressive**: This mode is faster and has a higher success rate.</p>
+         */
         @NameInMap("IkeMode")
         public String ikeMode;
 
+        /**
+         * <p>The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: **group1**, **group2**, **group5**, and **group14**.</p>
+         */
         @NameInMap("IkePfs")
         public String ikePfs;
 
+        /**
+         * <p>The version of the IKE protocol. Valid values: **ikev1** and **ikev2**.</p>
+         */
         @NameInMap("IkeVersion")
         public String ikeVersion;
 
+        /**
+         * <p>The tunnel identifier. The identifier can be up to 100 characters in length, and supports fully qualified domain names (FQDNs) and IP addresses. The default identifier is the tunnel IP address.</p>
+         */
         @NameInMap("LocalId")
         public String localId;
 
+        /**
+         * <p>The pre-shared key that is used to verify identities between the tunnel and peer. </p>
+         * <br>
+         * <br>
+         * <p>- The key must be 1 to 100 characters in length, and can contain digits, letters, and the following characters: ```~!`@#$%^&*()_-+={}[]|;:\",.<>/?```</p>
+         * <p>- If you do not specify a pre-shared key, the system generates a random 16-bit string as the pre-shared key. You can call the DescribeVpnConnection operation to query the pre-shared key that is generated by the system. </p>
+         * <br>
+         * <p>> The tunnel and the peer must use the same pre-shared key. Otherwise, tunnel communication cannot be established.</p>
+         */
         @NameInMap("Psk")
         public String psk;
 
+        /**
+         * <p>The peer identifier. The identifier can be up to 100 characters in length, and supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.</p>
+         */
         @NameInMap("RemoteId")
         public String remoteId;
 
@@ -257,15 +325,33 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig extends TeaModel {
+        /**
+         * <p>The authentication algorithm that is used in Phase 2 negotiations. </p>
+         * <br>
+         * <p>- If the IPsec connection is attached to a standard VPN gateway, the valid values are **md5**, **sha1**, **sha256**, **sha384,** and **sha512**. </p>
+         * <p>- If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm3**.</p>
+         */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
+        /**
+         * <p>The encryption algorithm that is used in Phase 2 negotiations. </p>
+         * <br>
+         * <p>- If the IPsec connection is attached to a standard VPN gateway, the valid values are **aes**, **aes192**, **sha256**, **des**, and **3des**. </p>
+         * <p>- If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm4**.</p>
+         */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
+        /**
+         * <p>The SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**.</p>
+         */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
+        /**
+         * <p>The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**.</p>
+         */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
 
@@ -309,21 +395,47 @@ public class ModifyTunnelAttributeRequest extends TeaModel {
     }
 
     public static class ModifyTunnelAttributeRequestTunnelOptionsSpecification extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the dead peer detection (DPD) feature. Valid values:</p>
+         * <p>- **true**: DPD is enabled. The IPsec initiator sends DPD packets to verify the existence and availability of the IPsec peer. If no response is received from the peer within a specified period of time, the IPsec peer is considered disconnected. Then, the ISAKMP SA, IPsec SA, and IPsec tunnel are deleted. </p>
+         * <br>
+         * <p>- **false**: DPD is disabled. The IPsec initiator does not send DPD packets.</p>
+         */
         @NameInMap("EnableDpd")
         public Boolean enableDpd;
 
+        /**
+         * <p>Specifies whether to enable NAT traversal. Valid values:</p>
+         * <br>
+         * <p>- **true** </p>
+         * <br>
+         * <p>    After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel. </p>
+         * <p>- **false**</p>
+         */
         @NameInMap("EnableNatTraversal")
         public Boolean enableNatTraversal;
 
+        /**
+         * <p>If you want to attach the IPsec connection to a VPN gateway that uses a ShangMi (SM) certificate, set the value to the peer CA certificate.</p>
+         */
         @NameInMap("RemoteCaCertificate")
         public String remoteCaCertificate;
 
+        /**
+         * <p>The BGP configurations.</p>
+         */
         @NameInMap("TunnelBgpConfig")
         public ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig;
 
+        /**
+         * <p>The IKE settings for Phase 1 negotiations.</p>
+         */
         @NameInMap("TunnelIkeConfig")
         public ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIkeConfig tunnelIkeConfig;
 
+        /**
+         * <p>The IPsec settings for Phase 2 negotiations.</p>
+         */
         @NameInMap("TunnelIpsecConfig")
         public ModifyTunnelAttributeRequestTunnelOptionsSpecificationTunnelIpsecConfig tunnelIpsecConfig;
 
