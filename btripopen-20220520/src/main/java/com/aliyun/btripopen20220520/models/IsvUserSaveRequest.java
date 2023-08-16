@@ -20,12 +20,84 @@ public class IsvUserSaveRequest extends TeaModel {
         return this.userList;
     }
 
+    public static class IsvUserSaveRequestUserListCertList extends TeaModel {
+        @NameInMap("cert_expired_time")
+        public String certExpiredTime;
+
+        @NameInMap("cert_nation")
+        public String certNation;
+
+        @NameInMap("cert_no")
+        public String certNo;
+
+        @NameInMap("cert_type")
+        public Integer certType;
+
+        @NameInMap("nationality")
+        public String nationality;
+
+        public static IsvUserSaveRequestUserListCertList build(java.util.Map<String, ?> map) throws Exception {
+            IsvUserSaveRequestUserListCertList self = new IsvUserSaveRequestUserListCertList();
+            return TeaModel.build(map, self);
+        }
+
+        public IsvUserSaveRequestUserListCertList setCertExpiredTime(String certExpiredTime) {
+            this.certExpiredTime = certExpiredTime;
+            return this;
+        }
+        public String getCertExpiredTime() {
+            return this.certExpiredTime;
+        }
+
+        public IsvUserSaveRequestUserListCertList setCertNation(String certNation) {
+            this.certNation = certNation;
+            return this;
+        }
+        public String getCertNation() {
+            return this.certNation;
+        }
+
+        public IsvUserSaveRequestUserListCertList setCertNo(String certNo) {
+            this.certNo = certNo;
+            return this;
+        }
+        public String getCertNo() {
+            return this.certNo;
+        }
+
+        public IsvUserSaveRequestUserListCertList setCertType(Integer certType) {
+            this.certType = certType;
+            return this;
+        }
+        public Integer getCertType() {
+            return this.certType;
+        }
+
+        public IsvUserSaveRequestUserListCertList setNationality(String nationality) {
+            this.nationality = nationality;
+            return this;
+        }
+        public String getNationality() {
+            return this.nationality;
+        }
+
+    }
+
     public static class IsvUserSaveRequestUserList extends TeaModel {
+        @NameInMap("birthday")
+        public String birthday;
+
+        @NameInMap("cert_list")
+        public java.util.List<IsvUserSaveRequestUserListCertList> certList;
+
         @NameInMap("depart_id")
         public Long departId;
 
         @NameInMap("email")
         public String email;
+
+        @NameInMap("gender")
+        public String gender;
 
         @NameInMap("job_no")
         public String jobNo;
@@ -65,6 +137,22 @@ public class IsvUserSaveRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public IsvUserSaveRequestUserList setBirthday(String birthday) {
+            this.birthday = birthday;
+            return this;
+        }
+        public String getBirthday() {
+            return this.birthday;
+        }
+
+        public IsvUserSaveRequestUserList setCertList(java.util.List<IsvUserSaveRequestUserListCertList> certList) {
+            this.certList = certList;
+            return this;
+        }
+        public java.util.List<IsvUserSaveRequestUserListCertList> getCertList() {
+            return this.certList;
+        }
+
         public IsvUserSaveRequestUserList setDepartId(Long departId) {
             this.departId = departId;
             return this;
@@ -79,6 +167,14 @@ public class IsvUserSaveRequest extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public IsvUserSaveRequestUserList setGender(String gender) {
+            this.gender = gender;
+            return this;
+        }
+        public String getGender() {
+            return this.gender;
         }
 
         public IsvUserSaveRequestUserList setJobNo(String jobNo) {
