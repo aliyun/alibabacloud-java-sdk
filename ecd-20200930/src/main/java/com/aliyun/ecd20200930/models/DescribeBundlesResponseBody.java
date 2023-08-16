@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBundlesResponseBody extends TeaModel {
+    /**
+     * <p>Details about the cloud desktop templates.</p>
+     */
     @NameInMap("Bundles")
     public java.util.List<DescribeBundlesResponseBodyBundles> bundles;
 
+    /**
+     * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundlesDesktopTypeAttribute extends TeaModel {
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("CpuCount")
         public Integer cpuCount;
 
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("GpuCount")
         public Float gpuCount;
 
+        /**
+         * <p>The GPU type.</p>
+         */
         @NameInMap("GpuSpec")
         public String gpuSpec;
 
+        /**
+         * <p>The memory size. Unit: MB.</p>
+         */
         @NameInMap("MemorySize")
         public Integer memorySize;
 
@@ -95,12 +116,24 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundlesDisks extends TeaModel {
+        /**
+         * <p>The performance level (PL) of the disk.</p>
+         */
         @NameInMap("DiskPerformanceLevel")
         public String diskPerformanceLevel;
 
+        /**
+         * <p>The size of the disk. Unit: GiB.</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <p>The disk type. Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: the system disk</p>
+         * <p>*   DATA: the data disk</p>
+         */
         @NameInMap("DiskType")
         public String diskType;
 
@@ -136,63 +169,142 @@ public class DescribeBundlesResponseBody extends TeaModel {
     }
 
     public static class DescribeBundlesResponseBodyBundles extends TeaModel {
+        /**
+         * <p>The ID of the cloud desktop template.</p>
+         */
         @NameInMap("BundleId")
         public String bundleId;
 
+        /**
+         * <p>The name of the cloud desktop template.</p>
+         */
         @NameInMap("BundleName")
         public String bundleName;
 
+        /**
+         * <p>The type of the cloud desktop template. Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: the system template</p>
+         * <p>*   CUSTOM: the custom template</p>
+         */
         @NameInMap("BundleType")
         public String bundleType;
 
+        /**
+         * <p>The time when the cloud desktop template was created.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the cloud desktop template.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The type of the cloud desktop.</p>
+         */
         @NameInMap("DesktopType")
         public String desktopType;
 
+        /**
+         * <p>Details about the cloud desktop type.</p>
+         */
         @NameInMap("DesktopTypeAttribute")
         public DescribeBundlesResponseBodyBundlesDesktopTypeAttribute desktopTypeAttribute;
 
+        /**
+         * <p>The family of the cloud desktop type. Valid values:</p>
+         * <br>
+         * <p>*   eds.general: General Office</p>
+         * <p>*   eds.hf: High Frequency</p>
+         * <p>*   eds.graphics: Graphics</p>
+         */
         @NameInMap("DesktopTypeFamily")
         public String desktopTypeFamily;
 
+        /**
+         * <p>Details about the disks.</p>
+         */
         @NameInMap("Disks")
         public java.util.List<DescribeBundlesResponseBodyBundlesDisks> disks;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The name of the image.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The status of the image.</p>
+         */
         @NameInMap("ImageStatus")
         public String imageStatus;
 
+        /**
+         * <p>The OS language of the image.</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>The OS type.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
+        /**
+         * <p>The information about the OS platform. Valid values:</p>
+         * <br>
+         * <p>* CentOS</p>
+         * <p>* Ubuntu</p>
+         * <p>* Windows Server 2016</p>
+         * <p>* Windows Server 2019</p>
+         * <p>* UOS</p>
+         */
         @NameInMap("Platform")
         public String platform;
 
+        /**
+         * <p>The protocol type.</p>
+         * <br>
+         * <p>*   HDX</p>
+         * <p>*   ASP (Recommend)</p>
+         */
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        /**
+         * <p>The session type. Valid values:</p>
+         * <br>
+         * <p>*   0: single_session</p>
+         * <p>*   1: multiple_session</p>
+         */
         @NameInMap("SessionType")
         public String sessionType;
 
+        /**
+         * <p>The inventory status of the cloud desktop type, which is returned when the CheckStock parameter is set to true.</p>
+         */
         @NameInMap("StockState")
         public String stockState;
 
+        /**
+         * <p>Indicates whether disk encryption is enabled.</p>
+         */
         @NameInMap("VolumeEncryptionEnabled")
         public Boolean volumeEncryptionEnabled;
 
+        /**
+         * <p>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</p>
+         */
         @NameInMap("VolumeEncryptionKey")
         public String volumeEncryptionKey;
 
