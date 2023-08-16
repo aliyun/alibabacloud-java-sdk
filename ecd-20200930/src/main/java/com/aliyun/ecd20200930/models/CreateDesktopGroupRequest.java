@@ -29,7 +29,25 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>是否自动续费。</p>
+     * <p>Specifies whether to enable auto-renewal.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
@@ -113,7 +131,7 @@ public class CreateDesktopGroupRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>桌面组版本。</p>
+     * <p>The desktop group version.</p>
      */
     @NameInMap("GroupVersion")
     public Integer groupVersion;

@@ -4,6 +4,9 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
+    /**
+     * <p>The user who creates the snapshot.</p>
+     */
     @NameInMap("Creator")
     public String creator;
 

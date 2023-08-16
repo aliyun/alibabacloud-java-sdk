@@ -10,6 +10,39 @@ public class ConfigADConnectorTrustRequest extends TeaModel {
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
+    /**
+     * <p>Specifies whether to configure the trust password for the RDS license domain of the AD workspace.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    configures the trust password</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    for the RDS license domain of the AD workspace.</p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    configures the trust password</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    for common AD workspaces.</p>
+     */
     @NameInMap("RdsLicenseDomain")
     public Boolean rdsLicenseDomain;
 
