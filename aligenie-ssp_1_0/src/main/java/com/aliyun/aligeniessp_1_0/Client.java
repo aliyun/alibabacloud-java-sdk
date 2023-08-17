@@ -494,6 +494,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkAuthCodeBindForExtWithOptions(request, headers, runtime);
     }
 
+    public CloudPlayerResponse cloudPlayerWithOptions(CloudPlayerRequest tmpReq, CloudPlayerHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CloudPlayerShrinkRequest request = new CloudPlayerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.songIdList)) {
+            request.songIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.songIdList, "SongIdList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.userInfo)) {
+            request.userInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.userInfo, "UserInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.curPlayIndex)) {
+            query.put("CurPlayIndex", request.curPlayIndex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceInfoShrink)) {
+            query.put("DeviceInfo", request.deviceInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.playMode)) {
+            query.put("PlayMode", request.playMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.songId)) {
+            query.put("SongId", request.songId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.songIdListShrink)) {
+            query.put("SongIdList", request.songIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userInfoShrink)) {
+            query.put("UserInfo", request.userInfoShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CloudPlayer"),
+            new TeaPair("version", "ssp_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ssp/cloud/player"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloudPlayerResponse());
+    }
+
+    public CloudPlayerResponse cloudPlayer(CloudPlayerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        CloudPlayerHeaders headers = new CloudPlayerHeaders();
+        return this.cloudPlayerWithOptions(request, headers, runtime);
+    }
+
     public CreateAlarmResponse createAlarmWithOptions(CreateAlarmRequest tmpReq, CreateAlarmHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateAlarmShrinkRequest request = new CreateAlarmShrinkRequest();
@@ -3530,6 +3612,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         QueryMusicTypeHeaders headers = new QueryMusicTypeHeaders();
         return this.queryMusicTypeWithOptions(request, headers, runtime);
+    }
+
+    public QueryUserDeviceListByTmeUserIdResponse queryUserDeviceListByTmeUserIdWithOptions(QueryUserDeviceListByTmeUserIdRequest request, QueryUserDeviceListByTmeUserIdHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sp)) {
+            query.put("Sp", request.sp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tmeUserId)) {
+            query.put("TmeUserId", request.tmeUserId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryUserDeviceListByTmeUserId"),
+            new TeaPair("version", "ssp_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ssp/queryUserDeviceListByTmeUserId"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryUserDeviceListByTmeUserIdResponse());
+    }
+
+    public QueryUserDeviceListByTmeUserIdResponse queryUserDeviceListByTmeUserId(QueryUserDeviceListByTmeUserIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        QueryUserDeviceListByTmeUserIdHeaders headers = new QueryUserDeviceListByTmeUserIdHeaders();
+        return this.queryUserDeviceListByTmeUserIdWithOptions(request, headers, runtime);
     }
 
     public ReadMessageResponse readMessageWithOptions(ReadMessageRequest tmpReq, ReadMessageHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
