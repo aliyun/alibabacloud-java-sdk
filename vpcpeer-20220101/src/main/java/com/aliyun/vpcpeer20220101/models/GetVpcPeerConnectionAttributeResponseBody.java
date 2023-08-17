@@ -4,57 +4,134 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the accepter VPC belongs.</p>
+     */
     @NameInMap("AcceptingOwnerUid")
     public Long acceptingOwnerUid;
 
+    /**
+     * <p>The region ID of the accepter VPC.</p>
+     */
     @NameInMap("AcceptingRegionId")
     public String acceptingRegionId;
 
+    /**
+     * <p>The details of the accepter VPC.</p>
+     */
     @NameInMap("AcceptingVpc")
     public AcceptingVpc acceptingVpc;
 
+    /**
+     * <p>The bandwidth of the VPC peering connection. Unit: Mbit/s. The value must be an integer greater than 0.</p>
+     * <br>
+     * <p>>  If the value is set to **-1**, it indicates that no limit is imposed on the bandwidth.</p>
+     * <br>
+     * <p>Default value:</p>
+     * <br>
+     * <p>*   The default bandwidth of an inter-region VPC peering connection is **1024** Mbit/s.</p>
+     * <p>*   The default bandwidth of an intra-region VPC peering connection is **-1** Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The business status of the VPC peering connection. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
+     */
     @NameInMap("BizStatus")
     public String bizStatus;
 
+    /**
+     * <p>The description of the VPC peering connection.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The time when the VPC peering connection was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
+     */
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    /**
+     * <p>The expiration time of the VPC peering connection.</p>
+     * <br>
+     * <p>The expiration time is returned only when the **Status** of the VPC peering connection is **Accepting** or **Expired**. Otherwise, **null** is returned.</p>
+     */
     @NameInMap("GmtExpired")
     public String gmtExpired;
 
+    /**
+     * <p>The time when the VPC peering connection was modified. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format in UTC.</p>
+     */
     @NameInMap("GmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The ID of the VPC peering connection.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the VPC peering connection.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the requester VPC belongs.</p>
+     */
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the requester VPC.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The status of the VPC peering connection. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**</p>
+     * <p>*   **Accepting**</p>
+     * <p>*   **Updating**</p>
+     * <p>*   **Rejected**</p>
+     * <p>*   **Expired**</p>
+     * <p>*   **Activated**</p>
+     * <p>*   **Deleting**</p>
+     * <p>*   **Deleted**</p>
+     * <br>
+     * <p>For more information about the status of VPC peering connections, see [Overview of VPC peering connections](~~418507~~).</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<Tags> tags;
 
+    /**
+     * <p>The details of the requester VPC.</p>
+     */
     @NameInMap("Vpc")
     public Vpc vpc;
 
@@ -208,12 +285,21 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     }
 
     public static class AcceptingVpc extends TeaModel {
+        /**
+         * <p>The CIDR block of the accepter VPC.</p>
+         */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
+        /**
+         * <p>The IPv6 CIDR block of the accepter VPC.</p>
+         */
         @NameInMap("Ipv6Cidrs")
         public java.util.List<String> ipv6Cidrs;
 
+        /**
+         * <p>The ID of the accepter VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -249,9 +335,15 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     }
 
     public static class Tags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -279,12 +371,21 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     }
 
     public static class Vpc extends TeaModel {
+        /**
+         * <p>The CIDR block of the requester VPC.</p>
+         */
         @NameInMap("Ipv4Cidrs")
         public java.util.List<String> ipv4Cidrs;
 
+        /**
+         * <p>The IPv6 CIDR block of the requester VPC.</p>
+         */
         @NameInMap("Ipv6Cidrs")
         public java.util.List<String> ipv6Cidrs;
 
+        /**
+         * <p>The ID of the requester VPC.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

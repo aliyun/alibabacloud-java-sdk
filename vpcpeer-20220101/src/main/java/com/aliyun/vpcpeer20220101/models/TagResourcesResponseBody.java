@@ -4,9 +4,18 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: yes</p>
+     * <p>*   **false**: no</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

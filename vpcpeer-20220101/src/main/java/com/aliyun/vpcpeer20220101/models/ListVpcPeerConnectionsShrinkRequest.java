@@ -4,27 +4,58 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class ListVpcPeerConnectionsShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the VPC peering connection that you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name of the VPC peering connection that you want to query.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the region where you want to query VPC peering connections.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * <br>
+     * <p>For more information about resource groups, see [What is a resource group?](~~94475~~)</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<Tags> tags;
 
+    /**
+     * <p>The ID of the requester VPC or accepter VPC of the VPC peering connection that you want to query.</p>
+     */
     @NameInMap("VpcId")
     public String vpcIdShrink;
 
@@ -98,9 +129,19 @@ public class ListVpcPeerConnectionsShrinkRequest extends TeaModel {
     }
 
     public static class Tags extends TeaModel {
+        /**
+         * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag key can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
