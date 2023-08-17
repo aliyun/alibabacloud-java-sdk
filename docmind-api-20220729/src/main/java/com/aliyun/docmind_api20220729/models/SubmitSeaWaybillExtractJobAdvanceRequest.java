@@ -13,6 +13,9 @@ public class SubmitSeaWaybillExtractJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("ParserConfigId")
+    public Integer parserConfigId;
+
     public static SubmitSeaWaybillExtractJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSeaWaybillExtractJobAdvanceRequest self = new SubmitSeaWaybillExtractJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SubmitSeaWaybillExtractJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public SubmitSeaWaybillExtractJobAdvanceRequest setParserConfigId(Integer parserConfigId) {
+        this.parserConfigId = parserConfigId;
+        return this;
+    }
+    public Integer getParserConfigId() {
+        return this.parserConfigId;
     }
 
 }

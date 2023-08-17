@@ -13,6 +13,9 @@ public class SubmitContainerLoadPlanExtractJobAdvanceRequest extends TeaModel {
     @NameInMap("FileUrl")
     public java.io.InputStream fileUrlObject;
 
+    @NameInMap("ParserConfigId")
+    public Integer parserConfigId;
+
     public static SubmitContainerLoadPlanExtractJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitContainerLoadPlanExtractJobAdvanceRequest self = new SubmitContainerLoadPlanExtractJobAdvanceRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SubmitContainerLoadPlanExtractJobAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getFileUrlObject() {
         return this.fileUrlObject;
+    }
+
+    public SubmitContainerLoadPlanExtractJobAdvanceRequest setParserConfigId(Integer parserConfigId) {
+        this.parserConfigId = parserConfigId;
+        return this;
+    }
+    public Integer getParserConfigId() {
+        return this.parserConfigId;
     }
 
 }

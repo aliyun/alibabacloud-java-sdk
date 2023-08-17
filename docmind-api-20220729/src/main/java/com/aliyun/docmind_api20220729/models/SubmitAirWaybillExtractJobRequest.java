@@ -13,6 +13,9 @@ public class SubmitAirWaybillExtractJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("ParserConfigId")
+    public Integer parserConfigId;
+
     public static SubmitAirWaybillExtractJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAirWaybillExtractJobRequest self = new SubmitAirWaybillExtractJobRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SubmitAirWaybillExtractJobRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public SubmitAirWaybillExtractJobRequest setParserConfigId(Integer parserConfigId) {
+        this.parserConfigId = parserConfigId;
+        return this;
+    }
+    public Integer getParserConfigId() {
+        return this.parserConfigId;
     }
 
 }
