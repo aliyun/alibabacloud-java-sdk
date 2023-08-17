@@ -4,9 +4,15 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcPeerConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the VPC peering connection.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

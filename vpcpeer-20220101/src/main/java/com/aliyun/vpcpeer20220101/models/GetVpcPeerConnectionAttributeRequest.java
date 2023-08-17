@@ -4,6 +4,9 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class GetVpcPeerConnectionAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the VPC peering connection that you want to query.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

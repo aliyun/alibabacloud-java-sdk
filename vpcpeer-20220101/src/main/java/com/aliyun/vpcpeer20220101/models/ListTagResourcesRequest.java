@@ -4,22 +4,45 @@ package com.aliyun.vpcpeer20220101.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used for the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned in the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID of the resource.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("ResourceId")
     @Deprecated
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Set the value to **PeerConnection**, which specifies a VPC peering connection.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     @Deprecated
     public java.util.List<Tag> tag;
@@ -78,9 +101,23 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class Tag extends TeaModel {
+        /**
+         * <p>The key of the tag that is added to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>>  Specify at least one of the **ResourceId.N** and **Tag.N** parameters (**Tag.N.Key** and **Tag.N.Value**).</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag that is added to the resource. You can specify up to 20 tag values. It can be an empty string.</p>
+         * <br>
+         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>>  Specify at least one of the **ResourceId.N** and **Tag.N** parameters (**Tag.N.Key** and **Tag.N.Value**).</p>
+         */
         @NameInMap("Value")
         public String value;
 

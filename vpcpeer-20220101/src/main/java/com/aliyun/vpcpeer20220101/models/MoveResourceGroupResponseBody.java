@@ -3,28 +3,28 @@ package com.aliyun.vpcpeer20220101.models;
 
 import com.aliyun.tea.*;
 
-public class UnTagResourcesResponseBody extends TeaModel {
+public class MoveResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the tags are removed. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static UnTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UnTagResourcesResponseBody self = new UnTagResourcesResponseBody();
+    public static MoveResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        MoveResourceGroupResponseBody self = new MoveResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UnTagResourcesResponseBody setRequestId(String requestId) {
+    public MoveResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -32,7 +32,7 @@ public class UnTagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UnTagResourcesResponseBody setSuccess(Boolean success) {
+    public MoveResourceGroupResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
