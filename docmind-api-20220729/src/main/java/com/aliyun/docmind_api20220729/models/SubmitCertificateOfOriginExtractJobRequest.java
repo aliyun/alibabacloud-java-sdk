@@ -13,6 +13,9 @@ public class SubmitCertificateOfOriginExtractJobRequest extends TeaModel {
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    @NameInMap("ParserConfigId")
+    public Integer parserConfigId;
+
     public static SubmitCertificateOfOriginExtractJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCertificateOfOriginExtractJobRequest self = new SubmitCertificateOfOriginExtractJobRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SubmitCertificateOfOriginExtractJobRequest extends TeaModel {
     }
     public String getFileUrl() {
         return this.fileUrl;
+    }
+
+    public SubmitCertificateOfOriginExtractJobRequest setParserConfigId(Integer parserConfigId) {
+        this.parserConfigId = parserConfigId;
+        return this;
+    }
+    public Integer getParserConfigId() {
+        return this.parserConfigId;
     }
 
 }
