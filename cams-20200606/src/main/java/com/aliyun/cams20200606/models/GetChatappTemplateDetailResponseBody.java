@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public String code;
 
@@ -19,6 +22,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     public static GetChatappTemplateDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetChatappTemplateDetailResponseBody self = new GetChatappTemplateDetailResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetChatappTemplateDetailResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetChatappTemplateDetailResponseBody setCode(String code) {
@@ -482,8 +493,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("MessageSendTtlSeconds")
+        public Integer messageSendTtlSeconds;
+
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("QualityScore")
+        public String qualityScore;
 
         @NameInMap("TemplateCode")
         public String templateCode;
@@ -536,12 +553,28 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             return this.language;
         }
 
+        public GetChatappTemplateDetailResponseBodyData setMessageSendTtlSeconds(Integer messageSendTtlSeconds) {
+            this.messageSendTtlSeconds = messageSendTtlSeconds;
+            return this;
+        }
+        public Integer getMessageSendTtlSeconds() {
+            return this.messageSendTtlSeconds;
+        }
+
         public GetChatappTemplateDetailResponseBodyData setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetChatappTemplateDetailResponseBodyData setQualityScore(String qualityScore) {
+            this.qualityScore = qualityScore;
+            return this;
+        }
+        public String getQualityScore() {
+            return this.qualityScore;
         }
 
         public GetChatappTemplateDetailResponseBodyData setTemplateCode(String templateCode) {

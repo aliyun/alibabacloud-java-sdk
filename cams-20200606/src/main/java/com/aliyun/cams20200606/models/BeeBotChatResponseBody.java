@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class BeeBotChatResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>If OK is returned, the request is successful.</p>
      */
@@ -31,6 +34,14 @@ public class BeeBotChatResponseBody extends TeaModel {
     public static BeeBotChatResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BeeBotChatResponseBody self = new BeeBotChatResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public BeeBotChatResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public BeeBotChatResponseBody setCode(String code) {

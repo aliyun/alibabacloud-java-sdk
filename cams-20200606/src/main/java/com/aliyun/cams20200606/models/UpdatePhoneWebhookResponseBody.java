@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class UpdatePhoneWebhookResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public String code;
 
@@ -16,6 +19,14 @@ public class UpdatePhoneWebhookResponseBody extends TeaModel {
     public static UpdatePhoneWebhookResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhoneWebhookResponseBody self = new UpdatePhoneWebhookResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UpdatePhoneWebhookResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public UpdatePhoneWebhookResponseBody setCode(String code) {

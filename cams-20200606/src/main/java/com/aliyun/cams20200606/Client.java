@@ -610,6 +610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Language", request.language);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.messageSendTtlSeconds)) {
+            body.put("MessageSendTtlSeconds", request.messageSendTtlSeconds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
@@ -960,8 +964,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getPhoneNumberVerificationStatusWithOptions(request, runtime);
     }
 
+    public GetPreValidatePhoneIdResponse getPreValidatePhoneIdWithOptions(GetPreValidatePhoneIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
+            body.put("PhoneNumber", request.phoneNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyCode)) {
+            body.put("VerifyCode", request.verifyCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPreValidatePhoneId"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPreValidatePhoneIdResponse());
+    }
+
+    public GetPreValidatePhoneIdResponse getPreValidatePhoneId(GetPreValidatePhoneIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPreValidatePhoneIdWithOptions(request, runtime);
+    }
+
     /**
-      * The message ID.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request IsvGetAppIdRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -992,7 +1029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The message ID.
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request IsvGetAppIdRequest
       * @return IsvGetAppIdResponse
@@ -1128,6 +1165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Language", request.language);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.messageSendTtlSeconds)) {
+            body.put("MessageSendTtlSeconds", request.messageSendTtlSeconds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
             body.put("TemplateCode", request.templateCode);
         }
@@ -1165,7 +1206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * ModifyPhoneBusinessProfile
       *
       * @param tmpReq ModifyPhoneBusinessProfileRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1230,7 +1271,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * ModifyPhoneBusinessProfile
       *
       * @param request ModifyPhoneBusinessProfileRequest
       * @return ModifyPhoneBusinessProfileResponse
@@ -1545,6 +1586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.payloadShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.payload, "Payload", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.productAction)) {
+            request.productActionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.productAction, "ProductAction", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateParams)) {
             request.templateParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateParams, "TemplateParams", "json");
         }
@@ -1605,6 +1650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
             body.put("MessageType", request.messageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productActionShrink)) {
+            body.put("ProductAction", request.productActionShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {

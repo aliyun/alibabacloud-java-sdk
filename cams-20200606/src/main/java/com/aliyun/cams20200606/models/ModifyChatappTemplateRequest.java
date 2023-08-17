@@ -26,6 +26,9 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("MessageSendTtlSeconds")
+    public Integer messageSendTtlSeconds;
+
     @NameInMap("TemplateCode")
     public String templateCode;
 
@@ -91,6 +94,14 @@ public class ModifyChatappTemplateRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public ModifyChatappTemplateRequest setMessageSendTtlSeconds(Integer messageSendTtlSeconds) {
+        this.messageSendTtlSeconds = messageSendTtlSeconds;
+        return this;
+    }
+    public Integer getMessageSendTtlSeconds() {
+        return this.messageSendTtlSeconds;
     }
 
     public ModifyChatappTemplateRequest setTemplateCode(String templateCode) {

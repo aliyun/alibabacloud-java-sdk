@@ -146,6 +146,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("Payload")
     public String payloadShrink;
 
+    @NameInMap("ProductAction")
+    public String productActionShrink;
+
     /**
      * <p>The tag information of the Viber message.</p>
      */
@@ -312,6 +315,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getPayloadShrink() {
         return this.payloadShrink;
+    }
+
+    public SendChatappMessageShrinkRequest setProductActionShrink(String productActionShrink) {
+        this.productActionShrink = productActionShrink;
+        return this;
+    }
+    public String getProductActionShrink() {
+        return this.productActionShrink;
     }
 
     public SendChatappMessageShrinkRequest setTag(String tag) {

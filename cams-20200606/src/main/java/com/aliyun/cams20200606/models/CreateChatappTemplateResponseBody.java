@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public String code;
 
@@ -13,12 +16,23 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     public static CreateChatappTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateChatappTemplateResponseBody self = new CreateChatappTemplateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateChatappTemplateResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public CreateChatappTemplateResponseBody setCode(String code) {

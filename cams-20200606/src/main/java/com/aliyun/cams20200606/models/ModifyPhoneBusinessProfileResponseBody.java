@@ -4,23 +4,23 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
-     * <p>The HTTP status code returned.</p>
-     * <br>
-     * <p>*   A value of OK indicates that the call is successful.</p>
-     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     * <p>The URL of the website.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The websites.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -28,6 +28,14 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
     public static ModifyPhoneBusinessProfileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyPhoneBusinessProfileResponseBody self = new ModifyPhoneBusinessProfileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPhoneBusinessProfileResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ModifyPhoneBusinessProfileResponseBody setCode(String code) {

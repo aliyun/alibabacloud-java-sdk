@@ -146,6 +146,9 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("Payload")
     public java.util.List<String> payload;
 
+    @NameInMap("ProductAction")
+    public SendChatappMessageRequestProductAction productAction;
+
     /**
      * <p>The tag information of the Viber message.</p>
      */
@@ -314,6 +317,14 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.payload;
     }
 
+    public SendChatappMessageRequest setProductAction(SendChatappMessageRequestProductAction productAction) {
+        this.productAction = productAction;
+        return this;
+    }
+    public SendChatappMessageRequestProductAction getProductAction() {
+        return this.productAction;
+    }
+
     public SendChatappMessageRequest setTag(String tag) {
         this.tag = tag;
         return this;
@@ -376,6 +387,85 @@ public class SendChatappMessageRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class SendChatappMessageRequestProductActionSectionsProductItems extends TeaModel {
+        @NameInMap("ProductRetailerId")
+        public String productRetailerId;
+
+        public static SendChatappMessageRequestProductActionSectionsProductItems build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMessageRequestProductActionSectionsProductItems self = new SendChatappMessageRequestProductActionSectionsProductItems();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMessageRequestProductActionSectionsProductItems setProductRetailerId(String productRetailerId) {
+            this.productRetailerId = productRetailerId;
+            return this;
+        }
+        public String getProductRetailerId() {
+            return this.productRetailerId;
+        }
+
+    }
+
+    public static class SendChatappMessageRequestProductActionSections extends TeaModel {
+        @NameInMap("ProductItems")
+        public java.util.List<SendChatappMessageRequestProductActionSectionsProductItems> productItems;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static SendChatappMessageRequestProductActionSections build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMessageRequestProductActionSections self = new SendChatappMessageRequestProductActionSections();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMessageRequestProductActionSections setProductItems(java.util.List<SendChatappMessageRequestProductActionSectionsProductItems> productItems) {
+            this.productItems = productItems;
+            return this;
+        }
+        public java.util.List<SendChatappMessageRequestProductActionSectionsProductItems> getProductItems() {
+            return this.productItems;
+        }
+
+        public SendChatappMessageRequestProductActionSections setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class SendChatappMessageRequestProductAction extends TeaModel {
+        @NameInMap("Sections")
+        public java.util.List<SendChatappMessageRequestProductActionSections> sections;
+
+        @NameInMap("ThumbnailProductRetailerId")
+        public String thumbnailProductRetailerId;
+
+        public static SendChatappMessageRequestProductAction build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMessageRequestProductAction self = new SendChatappMessageRequestProductAction();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMessageRequestProductAction setSections(java.util.List<SendChatappMessageRequestProductActionSections> sections) {
+            this.sections = sections;
+            return this;
+        }
+        public java.util.List<SendChatappMessageRequestProductActionSections> getSections() {
+            return this.sections;
+        }
+
+        public SendChatappMessageRequestProductAction setThumbnailProductRetailerId(String thumbnailProductRetailerId) {
+            this.thumbnailProductRetailerId = thumbnailProductRetailerId;
+            return this;
+        }
+        public String getThumbnailProductRetailerId() {
+            return this.thumbnailProductRetailerId;
+        }
+
     }
 
 }
