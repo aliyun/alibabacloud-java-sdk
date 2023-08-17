@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetMigrationVerifyCodeResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("Code")
     public String code;
 
@@ -19,6 +22,14 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
     public static GetMigrationVerifyCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMigrationVerifyCodeResponseBody self = new GetMigrationVerifyCodeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMigrationVerifyCodeResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetMigrationVerifyCodeResponseBody setCode(String code) {

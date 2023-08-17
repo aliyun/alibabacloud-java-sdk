@@ -5,23 +5,44 @@ import com.aliyun.tea.*;
 
 public class CreateChatappTemplateRequest extends TeaModel {
     /**
-     * <p>是否允许facebook自动变更模板的目录（这样能提高模板的审核通过率）此属性只对TemplateType=WHATSAPP有效</p>
+     * <p>Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only if TemplateType is set to WHATSAPP.</p>
      */
     @NameInMap("AllowCategoryChange")
     public Boolean allowCategoryChange;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The category of the template if TemplateType is set to WHATSAPP. Valid values:</p>
+     * <br>
+     * <p>*   **UTILITY**: the transaction template</p>
+     * <p>*   **MARKETING**: the marketing template</p>
+     * <p>*   **AUTHENTICATION**: the authentication template</p>
+     * <br>
+     * <p>The category of the template if TemplateType is set to VIBER. Valid values:</p>
+     * <br>
+     * <p>*   **text**: the template that contains only text</p>
+     * <p>*   **image**: the template that contains only images</p>
+     * <p>*   **text_image_button**: the template that contains text, images, and buttons</p>
+     * <p>*   **text_button**: the template that contains text and buttons</p>
+     * <p>*   **document**: the template that contains only documents</p>
+     * <p>*   **video**: the template that contains only videos</p>
+     * <p>*   **text_video**: the template that contains text and videos</p>
+     * <p>*   **text_video_button**: the template that contains text, videos, and buttons</p>
+     * <p>*   **text_image**: the template that contains text and images</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The name of the message template.</p>
+     * <p>The components of the message template.</p>
+     * <br>
+     * <p>> If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the value of Type is BODY or FOOTER, the Text sub-parameter of the Components parameter is empty.</p>
      */
     @NameInMap("Components")
     public java.util.List<CreateChatappTemplateRequestComponents> components;
 
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
@@ -29,6 +50,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
     @Deprecated
     public String custWabaId;
 
+    /**
+     * <p>The examples of variables that are used when you create the message template.</p>
+     */
     @NameInMap("Example")
     public java.util.Map<String, String> example;
 
@@ -37,6 +61,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     @NameInMap("Language")
     public String language;
+
+    @NameInMap("MessageSendTtlSeconds")
+    public Integer messageSendTtlSeconds;
 
     @NameInMap("Name")
     public String name;
@@ -113,6 +140,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         return this.language;
     }
 
+    public CreateChatappTemplateRequest setMessageSendTtlSeconds(Integer messageSendTtlSeconds) {
+        this.messageSendTtlSeconds = messageSendTtlSeconds;
+        return this;
+    }
+    public Integer getMessageSendTtlSeconds() {
+        return this.messageSendTtlSeconds;
+    }
+
     public CreateChatappTemplateRequest setName(String name) {
         this.name = name;
         return this;
@@ -130,30 +165,71 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
 
     public static class CreateChatappTemplateRequestComponentsButtons extends TeaModel {
+        /**
+         * <p>The text of the one-tap autofill button. AutofillText is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.</p>
+         */
         @NameInMap("AutofillText")
         public String autofillText;
 
+        /**
+         * <p>The unsubscribe button in a WhatsApp marketing template. This parameter is valid if Category is set to MARKETING in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY. After you tap this button and customers configure the feature for unsubscribing from a WhatsApp marketing template in the ChatAPP console, subsequent marketing messages are not sent to you.</p>
+         */
         @NameInMap("IsOptOut")
         public Boolean isOptOut;
 
+        /**
+         * <p>The package name of the app. PackageName is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.</p>
+         */
         @NameInMap("PackageName")
         public String packageName;
 
+        /**
+         * <p>The phone number. This parameter is valid only if the Type sub-parameter of the Buttons parameter is set to **PHONE_NUMBER**.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>The hash value of the app signing key. SignatureHash is required if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Buttons parameter is set to ONE_TAP.</p>
+         */
         @NameInMap("SignatureHash")
         public String signatureHash;
 
+        /**
+         * <p>The display name of the button.</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The type of the button. Valid values:</p>
+         * <br>
+         * <p>*   **PHONE_NUMBER**: the phone call button</p>
+         * <p>*   **URL**: the URL button</p>
+         * <p>*   **QUICK_REPLY**: the quick reply button</p>
+         * <p>*   **COPY_CODE**: the copy code button if Category is set to AUTHENTICATION</p>
+         * <p>*   **ONE_TAP**: the one-tap autofill button if Category is set to AUTHENTICATION</p>
+         * <br>
+         * <p>> - In a WhatsApp message template, the quick reply button cannot be used together with the phone call button or the URL button.</p>
+         * <p>> - You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a WhatsApp message template.</p>
+         * <p>> -  If Category is set to AUTHENTICATION in a WhatsApp message template, you can add only one button to the WhatsApp message template and you must set the Type sub-parameter of the Buttons parameter to COPY_CODE or ONE_TAP. If the Type sub-parameter of the Buttons parameter is set to COPY_CODE, the Text sub-parameter of the Buttons parameter is required. If the Type sub-parameter of the Buttons parameter is set to ONE_TAP, the Text, SignatureHash, PackageName, and AutofillText sub-parameters of the Buttons parameter are required. The value of Text is displayed if the desired app is not installed on the terminal. It indicates that you must manually copy the verification code.</p>
+         * <p>> - You can add only one button to a Viber message template, and you must set the Type sub-parameter of the Buttons parameter to URL.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The URL to be accessed when you click the URL button.</p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <p>The type of the URL. Valid values:</p>
+         * <br>
+         * <p>*   **static**</p>
+         * <p>*   **dynamic**</p>
+         */
         @NameInMap("UrlType")
         public String urlType;
 
@@ -237,39 +313,92 @@ public class CreateChatappTemplateRequest extends TeaModel {
     }
 
     public static class CreateChatappTemplateRequestComponents extends TeaModel {
+        /**
+         * <p>The prompt message indicating that the verification code must be kept secret. This parameter is valid if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Components parameter is set to BODY. The prompt message is displayed in the BODY component.</p>
+         */
         @NameInMap("AddSecretRecommendation")
         public Boolean addSecretRecommendation;
 
+        /**
+         * <p>The buttons. This parameter applies only to **BUTTONS** components.</p>
+         */
         @NameInMap("Buttons")
         public java.util.List<CreateChatappTemplateRequestComponentsButtons> buttons;
 
+        /**
+         * <p>The description of the document.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
+        /**
+         * <p>The validity period of the verification code in a WhatsApp message template. Unit: minutes. This parameter is valid if Category is set to AUTHENTICATION in a WhatsApp message template and the Type sub-parameter of the Components parameter is set to FOOTER. The value of CodeExpirationMinutes is displayed in the FOOTER component.</p>
+         */
         @NameInMap("CodeExpirationMinutes")
         public Integer codeExpirationMinutes;
 
+        /**
+         * <p>The length of the video in the Viber message template. Valid values: 0 to 600. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The name of the document.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The type of the document attached in the Viber message template.</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The type of the media resources that are included in the message. Valid values:</p>
+         * <br>
+         * <p>*   **TEXT**</p>
+         * <p>*   **IMAGE**</p>
+         * <p>*   **DOCUMENT**</p>
+         * <p>*   **VIDEO**</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The text of the message that you want to send.</p>
+         * <br>
+         * <p>> If Category is set to AUTHENTICATION, the Text sub-parameter of the Components parameter is empty.</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The thumbnail URL of the video in the Viber message template.</p>
+         */
         @NameInMap("ThumbUrl")
         public String thumbUrl;
 
+        /**
+         * <p>The type of the component. Valid values:</p>
+         * <br>
+         * <p>*   **BODY**</p>
+         * <p>*   **HEADER**</p>
+         * <p>*   **FOOTER**</p>
+         * <p>*   **BUTTONS**</p>
+         * <p>> - The following limits apply to components in WhatsApp message templates: A **BODY** component cannot exceed 1,024 characters in length. A **HEADER** or **FOOTER** component cannot exceed 60 characters in length.</p>
+         * <p>> - **FOOTER** components are not supported in Viber message templates.</p>
+         * <p>> - In a Viber message template, a media resource, such as an image, a video, or a document, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a terminal.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The URL of the media resource.</p>
+         * <br>
+         * <p>> We recommend that the resolution of the image in the Viber message template is 800 × 800.</p>
+         */
         @NameInMap("Url")
         public String url;
 

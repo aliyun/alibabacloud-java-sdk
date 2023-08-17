@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class SendChatappMassMessageResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The HTTP status code returned.</p>
      * <br>
@@ -34,6 +37,14 @@ public class SendChatappMassMessageResponseBody extends TeaModel {
     public static SendChatappMassMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendChatappMassMessageResponseBody self = new SendChatappMassMessageResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SendChatappMassMessageResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public SendChatappMassMessageResponseBody setCode(String code) {

@@ -220,12 +220,94 @@ public class SendChatappMassMessageRequest extends TeaModel {
         return this.ttl;
     }
 
+    public static class SendChatappMassMessageRequestSenderListProductActionSectionsProductItems extends TeaModel {
+        @NameInMap("ProductRetailerId")
+        public String productRetailerId;
+
+        public static SendChatappMassMessageRequestSenderListProductActionSectionsProductItems build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMassMessageRequestSenderListProductActionSectionsProductItems self = new SendChatappMassMessageRequestSenderListProductActionSectionsProductItems();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMassMessageRequestSenderListProductActionSectionsProductItems setProductRetailerId(String productRetailerId) {
+            this.productRetailerId = productRetailerId;
+            return this;
+        }
+        public String getProductRetailerId() {
+            return this.productRetailerId;
+        }
+
+    }
+
+    public static class SendChatappMassMessageRequestSenderListProductActionSections extends TeaModel {
+        @NameInMap("ProductItems")
+        public java.util.List<SendChatappMassMessageRequestSenderListProductActionSectionsProductItems> productItems;
+
+        @NameInMap("Title")
+        public String title;
+
+        public static SendChatappMassMessageRequestSenderListProductActionSections build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMassMessageRequestSenderListProductActionSections self = new SendChatappMassMessageRequestSenderListProductActionSections();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMassMessageRequestSenderListProductActionSections setProductItems(java.util.List<SendChatappMassMessageRequestSenderListProductActionSectionsProductItems> productItems) {
+            this.productItems = productItems;
+            return this;
+        }
+        public java.util.List<SendChatappMassMessageRequestSenderListProductActionSectionsProductItems> getProductItems() {
+            return this.productItems;
+        }
+
+        public SendChatappMassMessageRequestSenderListProductActionSections setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
+    public static class SendChatappMassMessageRequestSenderListProductAction extends TeaModel {
+        @NameInMap("Sections")
+        public java.util.List<SendChatappMassMessageRequestSenderListProductActionSections> sections;
+
+        @NameInMap("ThumbnailProductRetailerId")
+        public String thumbnailProductRetailerId;
+
+        public static SendChatappMassMessageRequestSenderListProductAction build(java.util.Map<String, ?> map) throws Exception {
+            SendChatappMassMessageRequestSenderListProductAction self = new SendChatappMassMessageRequestSenderListProductAction();
+            return TeaModel.build(map, self);
+        }
+
+        public SendChatappMassMessageRequestSenderListProductAction setSections(java.util.List<SendChatappMassMessageRequestSenderListProductActionSections> sections) {
+            this.sections = sections;
+            return this;
+        }
+        public java.util.List<SendChatappMassMessageRequestSenderListProductActionSections> getSections() {
+            return this.sections;
+        }
+
+        public SendChatappMassMessageRequestSenderListProductAction setThumbnailProductRetailerId(String thumbnailProductRetailerId) {
+            this.thumbnailProductRetailerId = thumbnailProductRetailerId;
+            return this;
+        }
+        public String getThumbnailProductRetailerId() {
+            return this.thumbnailProductRetailerId;
+        }
+
+    }
+
     public static class SendChatappMassMessageRequestSenderList extends TeaModel {
         /**
          * <p>payload</p>
          */
         @NameInMap("Payload")
         public java.util.List<String> payload;
+
+        @NameInMap("ProductAction")
+        public SendChatappMassMessageRequestSenderListProductAction productAction;
 
         /**
          * <p>The parameters of the message template.</p>
@@ -250,6 +332,14 @@ public class SendChatappMassMessageRequest extends TeaModel {
         }
         public java.util.List<String> getPayload() {
             return this.payload;
+        }
+
+        public SendChatappMassMessageRequestSenderList setProductAction(SendChatappMassMessageRequestSenderListProductAction productAction) {
+            this.productAction = productAction;
+            return this;
+        }
+        public SendChatappMassMessageRequestSenderListProductAction getProductAction() {
+            return this.productAction;
         }
 
         public SendChatappMassMessageRequestSenderList setTemplateParams(java.util.Map<String, String> templateParams) {

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The HTTP status code returned.</p>
      * <br>
@@ -34,6 +37,14 @@ public class QueryPhoneBusinessProfileResponseBody extends TeaModel {
     public static QueryPhoneBusinessProfileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPhoneBusinessProfileResponseBody self = new QueryPhoneBusinessProfileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPhoneBusinessProfileResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryPhoneBusinessProfileResponseBody setCode(String code) {

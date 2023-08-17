@@ -5,23 +5,44 @@ import com.aliyun.tea.*;
 
 public class CreateChatappTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>是否允许facebook自动变更模板的目录（这样能提高模板的审核通过率）此属性只对TemplateType=WHATSAPP有效</p>
+     * <p>Specifies whether to allow Facebook to automatically change the directory of the template. If you set this parameter to true, the review success rate of the template is improved. This parameter is valid only if TemplateType is set to WHATSAPP.</p>
      */
     @NameInMap("AllowCategoryChange")
     public Boolean allowCategoryChange;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The category of the template if TemplateType is set to WHATSAPP. Valid values:</p>
+     * <br>
+     * <p>*   **UTILITY**: the transaction template</p>
+     * <p>*   **MARKETING**: the marketing template</p>
+     * <p>*   **AUTHENTICATION**: the authentication template</p>
+     * <br>
+     * <p>The category of the template if TemplateType is set to VIBER. Valid values:</p>
+     * <br>
+     * <p>*   **text**: the template that contains only text</p>
+     * <p>*   **image**: the template that contains only images</p>
+     * <p>*   **text_image_button**: the template that contains text, images, and buttons</p>
+     * <p>*   **text_button**: the template that contains text and buttons</p>
+     * <p>*   **document**: the template that contains only documents</p>
+     * <p>*   **video**: the template that contains only videos</p>
+     * <p>*   **text_video**: the template that contains text and videos</p>
+     * <p>*   **text_video_button**: the template that contains text, videos, and buttons</p>
+     * <p>*   **text_image**: the template that contains text and images</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The name of the message template.</p>
+     * <p>The components of the message template.</p>
+     * <br>
+     * <p>> If Category is set to AUTHENTICATION, the Type sub-parameter of the Components parameter cannot be set to HEADER. If the value of Type is BODY or FOOTER, the Text sub-parameter of the Components parameter is empty.</p>
      */
     @NameInMap("Components")
     public String componentsShrink;
 
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
@@ -29,6 +50,9 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     @Deprecated
     public String custWabaId;
 
+    /**
+     * <p>The examples of variables that are used when you create the message template.</p>
+     */
     @NameInMap("Example")
     public String exampleShrink;
 
@@ -37,6 +61,9 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
 
     @NameInMap("Language")
     public String language;
+
+    @NameInMap("MessageSendTtlSeconds")
+    public Integer messageSendTtlSeconds;
 
     @NameInMap("Name")
     public String name;
@@ -111,6 +138,14 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public CreateChatappTemplateShrinkRequest setMessageSendTtlSeconds(Integer messageSendTtlSeconds) {
+        this.messageSendTtlSeconds = messageSendTtlSeconds;
+        return this;
+    }
+    public Integer getMessageSendTtlSeconds() {
+        return this.messageSendTtlSeconds;
     }
 
     public CreateChatappTemplateShrinkRequest setName(String name) {
