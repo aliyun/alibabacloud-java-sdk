@@ -35,6 +35,9 @@ public class BlurFaceResponseBody extends TeaModel {
         @NameInMap("ImageURL")
         public String imageURL;
 
+        @NameInMap("MaskURL")
+        public String maskURL;
+
         public static BlurFaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             BlurFaceResponseBodyData self = new BlurFaceResponseBodyData();
             return TeaModel.build(map, self);
@@ -46,6 +49,14 @@ public class BlurFaceResponseBody extends TeaModel {
         }
         public String getImageURL() {
             return this.imageURL;
+        }
+
+        public BlurFaceResponseBodyData setMaskURL(String maskURL) {
+            this.maskURL = maskURL;
+            return this;
+        }
+        public String getMaskURL() {
+            return this.maskURL;
         }
 
     }
