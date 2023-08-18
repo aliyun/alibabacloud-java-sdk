@@ -186,7 +186,7 @@ public class DetectFaceResponseBody extends TeaModel {
          * <p>1</p>
          */
         @NameInMap("Pupils")
-        public java.util.List<Float> pupils;
+        public java.util.List<Double> pupils;
 
         @NameInMap("Qualities")
         public DetectFaceResponseBodyDataQualities qualities;
@@ -244,11 +244,11 @@ public class DetectFaceResponseBody extends TeaModel {
             return this.poseList;
         }
 
-        public DetectFaceResponseBodyData setPupils(java.util.List<Float> pupils) {
+        public DetectFaceResponseBodyData setPupils(java.util.List<Double> pupils) {
             this.pupils = pupils;
             return this;
         }
-        public java.util.List<Float> getPupils() {
+        public java.util.List<Double> getPupils() {
             return this.pupils;
         }
 
