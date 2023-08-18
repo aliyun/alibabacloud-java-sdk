@@ -13,6 +13,9 @@ public class SearchMediaResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ScrollToken")
+    public String scrollToken;
+
     @NameInMap("Success")
     public String success;
 
@@ -46,6 +49,14 @@ public class SearchMediaResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SearchMediaResponseBody setScrollToken(String scrollToken) {
+        this.scrollToken = scrollToken;
+        return this;
+    }
+    public String getScrollToken() {
+        return this.scrollToken;
     }
 
     public SearchMediaResponseBody setSuccess(String success) {

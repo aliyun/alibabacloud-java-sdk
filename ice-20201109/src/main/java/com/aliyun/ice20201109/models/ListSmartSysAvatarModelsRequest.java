@@ -10,6 +10,9 @@ public class ListSmartSysAvatarModelsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("SdkVersion")
+    public String sdkVersion;
+
     public static ListSmartSysAvatarModelsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSmartSysAvatarModelsRequest self = new ListSmartSysAvatarModelsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListSmartSysAvatarModelsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListSmartSysAvatarModelsRequest setSdkVersion(String sdkVersion) {
+        this.sdkVersion = sdkVersion;
+        return this;
+    }
+    public String getSdkVersion() {
+        return this.sdkVersion;
     }
 
 }

@@ -16,6 +16,9 @@ public class SearchMediaRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("ScrollToken")
+    public String scrollToken;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -54,6 +57,14 @@ public class SearchMediaRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchMediaRequest setScrollToken(String scrollToken) {
+        this.scrollToken = scrollToken;
+        return this;
+    }
+    public String getScrollToken() {
+        return this.scrollToken;
     }
 
     public SearchMediaRequest setSortBy(String sortBy) {
