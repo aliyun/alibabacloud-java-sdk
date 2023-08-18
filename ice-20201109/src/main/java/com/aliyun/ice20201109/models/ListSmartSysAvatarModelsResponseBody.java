@@ -49,11 +49,23 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
         @NameInMap("AvatarName")
         public String avatarName;
 
+        @NameInMap("Bitrate")
+        public Integer bitrate;
+
         @NameInMap("CoverUrl")
         public String coverUrl;
 
+        @NameInMap("Height")
+        public Integer height;
+
+        @NameInMap("OutputMask")
+        public Boolean outputMask;
+
         @NameInMap("VideoUrl")
         public String videoUrl;
+
+        @NameInMap("Width")
+        public Integer width;
 
         public static ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList build(java.util.Map<String, ?> map) throws Exception {
             ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList self = new ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList();
@@ -76,6 +88,14 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             return this.avatarName;
         }
 
+        public ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList setBitrate(Integer bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public Integer getBitrate() {
+            return this.bitrate;
+        }
+
         public ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList setCoverUrl(String coverUrl) {
             this.coverUrl = coverUrl;
             return this;
@@ -84,12 +104,36 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
             return this.coverUrl;
         }
 
+        public ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList setOutputMask(Boolean outputMask) {
+            this.outputMask = outputMask;
+            return this;
+        }
+        public Boolean getOutputMask() {
+            return this.outputMask;
+        }
+
         public ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList setVideoUrl(String videoUrl) {
             this.videoUrl = videoUrl;
             return this;
         }
         public String getVideoUrl() {
             return this.videoUrl;
+        }
+
+        public ListSmartSysAvatarModelsResponseBodySmartSysAvatarModelList setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
         }
 
     }
