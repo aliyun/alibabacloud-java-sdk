@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ecs_workbench20220220</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>ecs_workbench20220220</name>
   <description>Alibaba Cloud ecs-workbench (20220220) SDK for Java
