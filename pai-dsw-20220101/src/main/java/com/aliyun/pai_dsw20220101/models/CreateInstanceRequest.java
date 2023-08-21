@@ -7,6 +7,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    @NameInMap("CloudDisks")
+    public java.util.List<CreateInstanceRequestCloudDisks> cloudDisks;
+
     @NameInMap("Datasets")
     public java.util.List<CreateInstanceRequestDatasets> datasets;
 
@@ -37,11 +40,17 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("UserId")
+    public String userId;
+
     @NameInMap("UserVpc")
     public CreateInstanceRequestUserVpc userVpc;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
+
+    @NameInMap("WorkspaceSource")
+    public String workspaceSource;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
@@ -54,6 +63,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    public CreateInstanceRequest setCloudDisks(java.util.List<CreateInstanceRequestCloudDisks> cloudDisks) {
+        this.cloudDisks = cloudDisks;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestCloudDisks> getCloudDisks() {
+        return this.cloudDisks;
     }
 
     public CreateInstanceRequest setDatasets(java.util.List<CreateInstanceRequestDatasets> datasets) {
@@ -136,6 +153,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.resourceId;
     }
 
+    public CreateInstanceRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
     public CreateInstanceRequest setUserVpc(CreateInstanceRequestUserVpc userVpc) {
         this.userVpc = userVpc;
         return this;
@@ -150,6 +175,66 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public CreateInstanceRequest setWorkspaceSource(String workspaceSource) {
+        this.workspaceSource = workspaceSource;
+        return this;
+    }
+    public String getWorkspaceSource() {
+        return this.workspaceSource;
+    }
+
+    public static class CreateInstanceRequestCloudDisks extends TeaModel {
+        @NameInMap("Capacity")
+        public String capacity;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("SubType")
+        public String subType;
+
+        public static CreateInstanceRequestCloudDisks build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestCloudDisks self = new CreateInstanceRequestCloudDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestCloudDisks setCapacity(String capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public String getCapacity() {
+            return this.capacity;
+        }
+
+        public CreateInstanceRequestCloudDisks setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public CreateInstanceRequestCloudDisks setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public CreateInstanceRequestCloudDisks setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
+        }
+
     }
 
     public static class CreateInstanceRequestDatasets extends TeaModel {
@@ -276,6 +361,9 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
@@ -285,15 +373,20 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>Vpc Id。</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
         public static CreateInstanceRequestUserVpc build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestUserVpc self = new CreateInstanceRequestUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
         }
 
         public CreateInstanceRequestUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
