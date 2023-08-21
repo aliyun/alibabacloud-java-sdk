@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -218,7 +218,10 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
 
     public static class GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimeline extends TeaModel {
         /**
-         * <p>The compliance evaluation records on the compliance timeline.</p>
+         * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</p>
+         * <br>
+         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
+         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</p>
          */
         @NameInMap("ComplianceList")
         public java.util.List<GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimelineComplianceList> complianceList;
@@ -230,7 +233,7 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
         public Integer maxResults;
 
         /**
-         * <p>The token that is used to initiate the next request.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;

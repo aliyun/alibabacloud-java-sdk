@@ -17,7 +17,7 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The description of the remediation template.</p>
+     * <p>The queried remediation templates.</p>
      */
     @NameInMap("RemediationTemplates")
     public java.util.List<ListRemediationTemplatesResponseBodyRemediationTemplates> remediationTemplates;
@@ -81,22 +81,25 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
 
     public static class ListRemediationTemplatesResponseBodyRemediationTemplates extends TeaModel {
         /**
-         * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
+         * <p>The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.</p>
          */
         @NameInMap("RemediationType")
         public String remediationType;
 
         /**
-         * <p>The configuration of the remediation template.</p>
+         * <p>The definition of the remediation template.</p>
          */
         @NameInMap("TemplateDefinition")
         public String templateDefinition;
 
+        /**
+         * <p>The description of the remediation template.</p>
+         */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
         /**
-         * <p>The identifier of the remediation template.</p>
+         * <p>The ID of the remediation template.</p>
          */
         @NameInMap("TemplateIdentifier")
         public String templateIdentifier;

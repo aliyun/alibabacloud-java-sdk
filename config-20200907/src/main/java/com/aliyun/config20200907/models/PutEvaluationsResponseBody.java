@@ -4,9 +4,18 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class PutEvaluationsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The submission status of the evaluation results of the custom rule. Valid values:</p>
+     * <br>
+     * <p>*   true: The evaluation results are submitted.</p>
+     * <p>*   false: The evaluation results failed to be submitted.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 
