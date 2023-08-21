@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DeleteSandboxInstanceResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -41,7 +41,7 @@ public class DeleteSandboxInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public String success;

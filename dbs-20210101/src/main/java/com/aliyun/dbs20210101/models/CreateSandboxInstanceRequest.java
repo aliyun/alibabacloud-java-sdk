@@ -7,7 +7,7 @@ public class CreateSandboxInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.</p>
      * <br>
-     * <p>>  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+     * <p>> If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
@@ -15,7 +15,7 @@ public class CreateSandboxInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the backup set to be restored, which is the point in time when a snapshot was created. You can call the [DescribeSandboxBackupSets](~~437256~~) operation to obtain the ID.</p>
      * <br>
-     * <p>>  You need to specify only one of the **BackupSetId** and **RestoreTime** parameters.</p>
+     * <p>> You need to specify only one of the **BackupSetId** and **RestoreTime** parameters.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
@@ -27,7 +27,7 @@ public class CreateSandboxInstanceRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>The name of the sandbox instance.</p>
+     * <p>The custom name of the sandbox instance.</p>
      */
     @NameInMap("SandboxInstanceName")
     public String sandboxInstanceName;
@@ -50,7 +50,7 @@ public class CreateSandboxInstanceRequest extends TeaModel {
      * <p>*   **MYSQL\_8C\_16M_SD**: 8 CPU cores and 16 GB of memory.</p>
      * <p>*   **MYSQL\_8C\_32M_SD**: 8 CPU cores and 32 GB of memory.</p>
      * <br>
-     * <p>>  Different specifications have little impact on the recovery speed. High-specification instances provide better performance after restoration. For more information, see [Sandbox instance fees](~~201466~~).</p>
+     * <p>> Different specifications have little impact on the recovery speed. High-specification instances provide better performance after restoration. For more information, see [DBS sandbox fees](~~201466~~).</p>
      */
     @NameInMap("SandboxSpecification")
     public String sandboxSpecification;
@@ -64,7 +64,7 @@ public class CreateSandboxInstanceRequest extends TeaModel {
     /**
      * <p>The privileged account created in the sandbox instance.</p>
      * <br>
-     * <p>*   After you specify this parameter, the system creates a privileged account in the sandbox instance. The account has the permissions on all databases in the instance.</p>
+     * <p>*   After you specify this parameter, the system creates a privileged account in the sandbox instance. The account is granted the permissions on all databases in the instance.</p>
      * <br>
      * <p>The account of the source database is retained in the sandbox instance.</p>
      * <br>
@@ -76,7 +76,7 @@ public class CreateSandboxInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the virtual private cloud (VPC) that is used to connect to the sandbox instance. If you want to connect to the sandbox instance by using Elastic Compute Service (ECS) instances, you must set this parameter to the VPC in which the ECS instances reside.</p>
      * <br>
-     * <p>>  You can set this parameter if you want to use it in a recovery drill scenario.</p>
+     * <p>> You can set this parameter if you want to use it in a recovery drill scenario.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -86,6 +86,9 @@ public class CreateSandboxInstanceRequest extends TeaModel {
      */
     @NameInMap("VpcSwitchId")
     public String vpcSwitchId;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static CreateSandboxInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSandboxInstanceRequest self = new CreateSandboxInstanceRequest();
@@ -170,6 +173,14 @@ public class CreateSandboxInstanceRequest extends TeaModel {
     }
     public String getVpcSwitchId() {
         return this.vpcSwitchId;
+    }
+
+    public CreateSandboxInstanceRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSandboxInstancesResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request fails.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -29,19 +29,19 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request fails.</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -53,7 +53,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public String success;

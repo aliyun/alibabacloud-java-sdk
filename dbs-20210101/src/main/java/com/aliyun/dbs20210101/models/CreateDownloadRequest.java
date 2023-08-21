@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.</p>
+     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.</p>
      * <br>
-     * <p>>  This parameter is required if the BakSetType parameter is set to full.</p>
+     * <p>> This parameter is required if the BakSetType parameter is set to full.</p>
      */
     @NameInMap("BakSetId")
     public String bakSetId;
 
     /**
-     * <p>The size of the full backup set. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set. Unit: bytes.</p>
+     * <p>The size of the full backup set. Unit: bytes. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set.</p>
      */
     @NameInMap("BakSetSize")
     public String bakSetSize;
@@ -28,19 +28,21 @@ public class CreateDownloadRequest extends TeaModel {
     public String bakSetType;
 
     /**
-     * <p>The point in time at which the backup set is downloaded. The UNIX timestamp of the LONG type. Unit: milliseconds.</p>
+     * <p>The point in time at which the backup set is downloaded. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * <br>
-     * <p>>  This parameter is required if the BakSetType parameter is set to pitr.</p>
+     * <p>> This parameter is required if the BakSetType parameter is set to pitr.</p>
      */
     @NameInMap("DownloadPointInTime")
     public String downloadPointInTime;
 
     /**
-     * <p>The destination format to which the downloaded backup set is converted. Valid values:</p>
+     * <p>The format to which the downloaded backup set is converted. Valid values:</p>
      * <br>
-     * <p>*   **csv**</p>
+     * <p>*   **CSV**</p>
      * <p>*   **SQL**</p>
      * <p>*   **Parquet**</p>
+     * <br>
+     * <p>> This parameter is required.</p>
      */
     @NameInMap("FormatType")
     public String formatType;
@@ -61,7 +63,7 @@ public class CreateDownloadRequest extends TeaModel {
      * <p>The name of the OSS bucket that is used to store the backup set.</p>
      * <br>
      * <p>*   This parameter is required if the TargetType parameter is set to OSS.</p>
-     * <p>*   Make sure that your account has the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the RAM console.</p>
+     * <p>*   Make sure that your account is granted the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the Resource Access Management (RAM) console.</p>
      */
     @NameInMap("TargetBucket")
     public String targetBucket;
@@ -69,21 +71,21 @@ public class CreateDownloadRequest extends TeaModel {
     /**
      * <p>The region in which the OSS bucket resides.</p>
      * <br>
-     * <p>>  This parameter is required if the TargetType parameter is set to OSS.</p>
+     * <p>> This parameter is required if the TargetType parameter is set to OSS.</p>
      */
     @NameInMap("TargetOssRegion")
     public String targetOssRegion;
 
     /**
-     * <p>The destination path of the downloaded data.</p>
+     * <p>The destination path to which the backup set is downloaded.</p>
      * <br>
-     * <p>>  This parameter is required if the TargetType parameter is set to OSS.</p>
+     * <p>> This parameter is required if the TargetType parameter is set to OSS.</p>
      */
     @NameInMap("TargetPath")
     public String targetPath;
 
     /**
-     * <p>The type of the method in which the backup set is downloaded. Valid values:</p>
+     * <p>The type of the destination to which the backup set is downloaded. Valid values:</p>
      * <br>
      * <p>*   **OSS**</p>
      * <p>*   **URL**</p>

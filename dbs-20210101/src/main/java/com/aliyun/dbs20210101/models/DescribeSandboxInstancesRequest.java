@@ -7,13 +7,13 @@ public class DescribeSandboxInstancesRequest extends TeaModel {
     /**
      * <p>The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.</p>
      * <br>
-     * <p>>  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
+     * <p>> If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.</p>
      */
     @NameInMap("BackupPlanId")
     public String backupPlanId;
 
     /**
-     * <p>The ID of the sandbox instance. You can call the [CreateSandboxInstance](~~437252~~) parameter to obtain the ID of the sandbox instance.</p>
+     * <p>The ID of the sandbox instance. You can call the [CreateSandboxInstance](~~437252~~) operation to obtain the ID of the sandbox instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -27,7 +27,7 @@ public class DescribeSandboxInstancesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values:</p>
      * <br>
-     * <p>*   30 (default value)</p>
+     * <p>*   30\. This is the default value.</p>
      * <p>*   50</p>
      * <p>*   100</p>
      */

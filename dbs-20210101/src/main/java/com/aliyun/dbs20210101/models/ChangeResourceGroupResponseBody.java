@@ -4,24 +4,51 @@ package com.aliyun.dbs20210101.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the resource was successfully moved. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The resource was successfully moved.</p>
+     * <p>*   **false**: The resource failed to be moved.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
     @NameInMap("ErrCode")
     public String errCode;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("ErrMessage")
     public String errMessage;
 
+    /**
+     * <p>The additional information.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request fails.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The details of the download tasks.</p>
+     * <p>The details of the download task.</p>
      */
     @NameInMap("Data")
     public DescribeDownloadTaskResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request fails.</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request fails.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -41,10 +41,10 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public String success;
@@ -124,20 +124,20 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         public String bakSetId;
 
         /**
-         * <p>The details of the databases.</p>
+         * <p>The databases.</p>
          */
         @NameInMap("DbList")
         public String dbList;
 
         /**
-         * <p>The status of the download task. Valid values:</p>
+         * <p>The state of the download task. Valid values:</p>
          * <br>
-         * <p>*   **Initializing**: The download task is being initialized.</p>
-         * <p>*   **queuing**: The download task is queuing.</p>
-         * <p>*   **running**: The download task is running.</p>
-         * <p>*   **failed**: The download task fails.</p>
-         * <p>*   **finished**: The download task is complete.</p>
-         * <p>*   **expired**: The download task expires.</p>
+         * <p>*   **Initializing**: The download task was being initialized.</p>
+         * <p>*   **queuing**: The download task was queuing.</p>
+         * <p>*   **running**: The download task was running.</p>
+         * <p>*   **failed**: The download task failed.</p>
+         * <p>*   **finished**: The download task was complete.</p>
+         * <p>*   **expired**: The download task expired.</p>
          */
         @NameInMap("DownloadStatus")
         public String downloadStatus;
@@ -335,23 +335,32 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
 
     public static class DescribeDownloadTaskResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the download tasks.</p>
+         * <p>The details of the download task.</p>
          */
         @NameInMap("Content")
         public DescribeDownloadTaskResponseBodyDataContent content;
 
         /**
-         * <p>The extra description of the download task.</p>
+         * <p>The extra description of the download tasks.</p>
          */
         @NameInMap("Extra")
         public String extra;
 
+        /**
+         * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+         */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The total number of full backup tasks.</p>
+         */
         @NameInMap("TotalElements")
         public Long totalElements;
 
