@@ -978,9 +978,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### Limits
+      * You can use an ordinary account to create up to 200 rules.
+      * ### Usage notes
       * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
-      * ## Limits
-      * You can use a common account to create up to 200 rules.
       *
       * @param tmpReq CreateConfigRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1081,9 +1082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### Limits
+      * You can use an ordinary account to create up to 200 rules.
+      * ### Usage notes
       * This topic provides an example on how to create a managed rule named required-tags. The returned result indicates that the rule is created and the ID of the rule is `cr-5772ba41209e007b****`.
-      * ## Limits
-      * You can use a common account to create up to 200 rules.
       *
       * @param request CreateConfigRuleRequest
       * @return CreateConfigRuleResponse
@@ -1751,6 +1753,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteRemediationsResponse deleteRemediations(DeleteRemediationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRemediationsWithOptions(request, runtime);
+    }
+
+    public DescribeRemediationResponse describeRemediationWithOptions(DescribeRemediationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeRemediation"),
+            new TeaPair("version", "2020-09-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRemediationResponse());
+    }
+
+    public DescribeRemediationResponse describeRemediation(DescribeRemediationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRemediationWithOptions(request, runtime);
     }
 
     /**

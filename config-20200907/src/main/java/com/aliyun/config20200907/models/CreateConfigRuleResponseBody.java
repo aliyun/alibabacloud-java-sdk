@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateConfigRuleResponseBody extends TeaModel {
     /**
-     * <p>The ID of the rule.</p>
+     * <p>The rule ID.</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

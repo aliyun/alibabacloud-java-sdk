@@ -7,44 +7,49 @@ public class GetAggregateResourceComplianceTimelineRequest extends TeaModel {
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
     /**
-     * <p>The timestamp that specifies the end of the time range to query. The default value indicates the time when the GetAggregateResourceComplianceTimeline operation is called. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. The default value indicates the time when the GetAggregateResourceConfigurationTimeline operation is called. Unit: milliseconds.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The maximum number of entries to return for a single request. Valid values: 1 to 100.</p>
+     * <p>The maximum number of entries returned for a single request. Valid values: 1 to 100.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.</p>
+     * <p>The `token` that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region in which the resource resides.</p>
+     * <p>The ID of the region where the resource resides.</p>
      * <br>
      * <p>For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).</p>
      */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+     * <br>
+     * <p>> You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource ID.</p>
      * <br>
-     * <p>For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     * <p>For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;
@@ -54,7 +59,7 @@ public class GetAggregateResourceComplianceTimelineRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * <br>
      * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
      */
@@ -62,7 +67,7 @@ public class GetAggregateResourceComplianceTimelineRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The timestamp that specifies the beginning of the time range to query. By default, Cloud Config retrieves the compliance evaluations in the last 30 days for the specified resource. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. By default, Cloud Config retrieves the configuration changes in the last 30 days for the specified resource. Unit: milliseconds.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

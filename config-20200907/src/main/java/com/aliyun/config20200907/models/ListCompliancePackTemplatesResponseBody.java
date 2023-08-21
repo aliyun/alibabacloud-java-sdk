@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCompliancePackTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The information about the compliance package templates returned.</p>
+     * <p>The information about the compliance package templates.</p>
      */
     @NameInMap("CompliancePackTemplatesResult")
     public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult compliancePackTemplatesResult;
@@ -53,7 +53,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the input parameter is required. Valid values:</p>
          * <br>
-         * <p>*   true: The input parameter is required.</p>
+         * <p>*   true: The parameter is required.</p>
          * <p>*   false: The input parameter is optional.</p>
          */
         @NameInMap("Required")
@@ -127,7 +127,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the managed rule.</p>
+         * <p>The identifier of the managed rule.</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
@@ -139,7 +139,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public String managedRuleName;
 
         /**
-         * <p>规则评估的资源类型。</p>
+         * <p>The type of the resource evaluated based on the rule.</p>
          */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
@@ -247,7 +247,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         public String compliancePackTemplateName;
 
         /**
-         * <p>An array that contains the managed rules in the compliance package.</p>
+         * <p>The information about managed rules in the compliance package.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules> configRules;
@@ -345,7 +345,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     public static class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult extends TeaModel {
         /**
-         * <p>An array that contains the compliance package templates.</p>
+         * <p>The compliance package templates.</p>
          */
         @NameInMap("CompliancePackTemplates")
         public java.util.List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates> compliancePackTemplates;

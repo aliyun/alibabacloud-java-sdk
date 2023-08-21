@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggregateConfigRulesResponseBody extends TeaModel {
     /**
-     * <p>The rules.</p>
+     * <p>The queried rules.</p>
      */
     @NameInMap("ConfigRules")
     public ListAggregateConfigRulesResponseBodyConfigRules configRules;
@@ -39,18 +39,18 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     public static class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleListCompliance extends TeaModel {
         /**
-         * <p>The summary result of the rule compliance evaluation. Valid values:</p>
+         * <p>The compliance evaluation result. Valid values:</p>
          * <br>
-         * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule did not apply to your resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data was available.</p>
+         * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
-         * <p>The number of evaluation resources that correspond to the summary result of the rule compliance evaluation.</p>
+         * <p>The number of evaluated resources.</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -116,7 +116,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The type of the creator of the rule. The value is fixed to AGGREGATOR, which indicates an account group.</p>
+         * <p>The type of the creator of the rule. Valid value: AGGREGATOR, which indicates an account group.</p>
          */
         @NameInMap("CreatorType")
         public String creatorType;
@@ -222,13 +222,13 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     public static class ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
         /**
-         * <p>The ID of the management account to which the rules belong.</p>
+         * <p>The ID of the management account to which the rule belongs.</p>
          */
         @NameInMap("AccountId")
         public Long accountId;
 
         /**
-         * <p>The type of the remediation template. Valid value: OOS, which stands for Operation Orchestration Service.</p>
+         * <p>The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.</p>
          */
         @NameInMap("AutomationType")
         public String automationType;
@@ -252,7 +252,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -260,7 +260,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         /**
          * <p>The status of the rule. Valid values:</p>
          * <br>
-         * <p>*   ACTIVE: The rule is being used to monitor resource configurations.</p>
+         * <p>*   ACTIVE: The rule is enabled.</p>
          * <p>*   DELETING: The rule is being deleted.</p>
          * <p>*   EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
          * <p>*   INACTIVE: The rule is disabled.</p>
@@ -280,11 +280,14 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The types of resources evaluated by the rule. Multiple resource types are separated with commas (,).</p>
+         */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that do not comply with the rule. Valid values:</p>
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
          * <br>
          * <p>*   1: high</p>
          * <p>*   2: medium</p>
@@ -294,19 +297,19 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The identifier of the rule.</p>
+         * <p>The ID of the rule.</p>
          * <br>
-         * <p>*   If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.</p>
+         * <p>*   If the rule is a managed rule, the value of this parameter is the name of the managed rule.</p>
          * <p>*   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</p>
          */
         @NameInMap("SourceIdentifier")
         public String sourceIdentifier;
 
         /**
-         * <p>The method that is used to create the rule. Valid values:</p>
+         * <p>The type of the rule. Valid values:</p>
          * <br>
-         * <p>*   CUSTOM_FC: a custom rule.</p>
-         * <p>*   ALIYUN: a managed rule.</p>
+         * <p>*   CUSTOM_FC: custom rule</p>
+         * <p>*   ALIYUN: managed rule</p>
          */
         @NameInMap("SourceOwner")
         public String sourceOwner;
@@ -438,7 +441,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     public static class ListAggregateConfigRulesResponseBodyConfigRules extends TeaModel {
         /**
-         * <p>The details of the rules.</p>
+         * <p>The details of the rule.</p>
          */
         @NameInMap("ConfigRuleList")
         public java.util.List<ListAggregateConfigRulesResponseBodyConfigRulesConfigRuleList> configRuleList;
