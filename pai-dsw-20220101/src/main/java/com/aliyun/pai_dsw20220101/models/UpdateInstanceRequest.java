@@ -31,8 +31,14 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("RequestedResource")
     public UpdateInstanceRequestRequestedResource requestedResource;
 
+    @NameInMap("UserId")
+    public String userId;
+
     @NameInMap("UserVpc")
     public UpdateInstanceRequestUserVpc userVpc;
+
+    @NameInMap("WorkspaceSource")
+    public String workspaceSource;
 
     public static UpdateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceRequest self = new UpdateInstanceRequest();
@@ -111,12 +117,28 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.requestedResource;
     }
 
+    public UpdateInstanceRequest setUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    public String getUserId() {
+        return this.userId;
+    }
+
     public UpdateInstanceRequest setUserVpc(UpdateInstanceRequestUserVpc userVpc) {
         this.userVpc = userVpc;
         return this;
     }
     public UpdateInstanceRequestUserVpc getUserVpc() {
         return this.userVpc;
+    }
+
+    public UpdateInstanceRequest setWorkspaceSource(String workspaceSource) {
+        this.workspaceSource = workspaceSource;
+        return this;
+    }
+    public String getWorkspaceSource() {
+        return this.workspaceSource;
     }
 
     public static class UpdateInstanceRequestDatasets extends TeaModel {
@@ -213,6 +235,9 @@ public class UpdateInstanceRequest extends TeaModel {
     }
 
     public static class UpdateInstanceRequestUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
@@ -222,15 +247,20 @@ public class UpdateInstanceRequest extends TeaModel {
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>Vpc Id。</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
         public static UpdateInstanceRequestUserVpc build(java.util.Map<String, ?> map) throws Exception {
             UpdateInstanceRequestUserVpc self = new UpdateInstanceRequestUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
         }
 
         public UpdateInstanceRequestUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {

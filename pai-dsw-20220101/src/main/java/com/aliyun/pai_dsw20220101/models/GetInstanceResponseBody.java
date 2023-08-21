@@ -13,6 +13,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("AccumulatedRunningTimeInMs")
     public Long accumulatedRunningTimeInMs;
 
+    @NameInMap("CloudDisks")
+    public java.util.List<GetInstanceResponseBodyCloudDisks> cloudDisks;
+
     @NameInMap("Code")
     public String code;
 
@@ -130,6 +133,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("WorkspaceName")
     public String workspaceName;
 
+    @NameInMap("WorkspaceSource")
+    public String workspaceSource;
+
     public static GetInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceResponseBody self = new GetInstanceResponseBody();
         return TeaModel.build(map, self);
@@ -157,6 +163,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public Long getAccumulatedRunningTimeInMs() {
         return this.accumulatedRunningTimeInMs;
+    }
+
+    public GetInstanceResponseBody setCloudDisks(java.util.List<GetInstanceResponseBodyCloudDisks> cloudDisks) {
+        this.cloudDisks = cloudDisks;
+        return this;
+    }
+    public java.util.List<GetInstanceResponseBodyCloudDisks> getCloudDisks() {
+        return this.cloudDisks;
     }
 
     public GetInstanceResponseBody setCode(String code) {
@@ -455,6 +469,66 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.workspaceName;
     }
 
+    public GetInstanceResponseBody setWorkspaceSource(String workspaceSource) {
+        this.workspaceSource = workspaceSource;
+        return this;
+    }
+    public String getWorkspaceSource() {
+        return this.workspaceSource;
+    }
+
+    public static class GetInstanceResponseBodyCloudDisks extends TeaModel {
+        @NameInMap("Capacity")
+        public String capacity;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("SubType")
+        public String subType;
+
+        public static GetInstanceResponseBodyCloudDisks build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyCloudDisks self = new GetInstanceResponseBodyCloudDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyCloudDisks setCapacity(String capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public String getCapacity() {
+            return this.capacity;
+        }
+
+        public GetInstanceResponseBodyCloudDisks setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public GetInstanceResponseBodyCloudDisks setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public GetInstanceResponseBodyCloudDisks setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyDatasets extends TeaModel {
         @NameInMap("DatasetId")
         public String datasetId;
@@ -612,30 +686,57 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyInstanceSnapshotList extends TeaModel {
+        /**
+         * <p>快照创建时间</p>
+         */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
+        /**
+         * <p>快照修改时间</p>
+         */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
 
+        /**
+         * <p>镜像Id</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>镜像名称</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>镜像Url</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <p>实例快照错误代码</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <p>实例快照错误消息</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
+        /**
+         * <p>镜像仓库Url</p>
+         */
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
 
+        /**
+         * <p>实例快照状态</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -764,15 +865,24 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <p>实例快照错误代码</p>
+         */
         @NameInMap("ReasonCode")
         public String reasonCode;
 
+        /**
+         * <p>实例快照错误消息</p>
+         */
         @NameInMap("ReasonMessage")
         public String reasonMessage;
 
         @NameInMap("RepositoryUrl")
         public String repositoryUrl;
 
+        /**
+         * <p>实例快照状态</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -919,6 +1029,12 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
+        @NameInMap("ExtendedCIDRs")
+        public java.util.List<String> extendedCIDRs;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -934,6 +1050,22 @@ public class GetInstanceResponseBody extends TeaModel {
         public static GetInstanceResponseBodyUserVpc build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyUserVpc self = new GetInstanceResponseBodyUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        public GetInstanceResponseBodyUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
+            this.extendedCIDRs = extendedCIDRs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCIDRs() {
+            return this.extendedCIDRs;
         }
 
         public GetInstanceResponseBodyUserVpc setSecurityGroupId(String securityGroupId) {

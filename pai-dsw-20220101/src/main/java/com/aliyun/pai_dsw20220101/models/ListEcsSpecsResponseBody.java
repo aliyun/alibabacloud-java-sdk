@@ -86,6 +86,36 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListEcsSpecsResponseBodyEcsSpecsLabels extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEcsSpecsResponseBodyEcsSpecsLabels build(java.util.Map<String, ?> map) throws Exception {
+            ListEcsSpecsResponseBodyEcsSpecsLabels self = new ListEcsSpecsResponseBodyEcsSpecsLabels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEcsSpecsResponseBodyEcsSpecsLabels setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListEcsSpecsResponseBodyEcsSpecsLabels setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListEcsSpecsResponseBodyEcsSpecs extends TeaModel {
         @NameInMap("AcceleratorType")
         public String acceleratorType;
@@ -107,6 +137,12 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("IsAvailable")
+        public Boolean isAvailable;
+
+        @NameInMap("Labels")
+        public java.util.List<ListEcsSpecsResponseBodyEcsSpecsLabels> labels;
 
         @NameInMap("Memory")
         public Float memory;
@@ -176,6 +212,22 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public ListEcsSpecsResponseBodyEcsSpecs setIsAvailable(Boolean isAvailable) {
+            this.isAvailable = isAvailable;
+            return this;
+        }
+        public Boolean getIsAvailable() {
+            return this.isAvailable;
+        }
+
+        public ListEcsSpecsResponseBodyEcsSpecs setLabels(java.util.List<ListEcsSpecsResponseBodyEcsSpecsLabels> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.List<ListEcsSpecsResponseBodyEcsSpecsLabels> getLabels() {
+            return this.labels;
         }
 
         public ListEcsSpecsResponseBodyEcsSpecs setMemory(Float memory) {

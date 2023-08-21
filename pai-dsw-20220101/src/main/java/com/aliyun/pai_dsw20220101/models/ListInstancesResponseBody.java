@@ -86,6 +86,58 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListInstancesResponseBodyInstancesCloudDisks extends TeaModel {
+        @NameInMap("Capacity")
+        public String capacity;
+
+        @NameInMap("MountPath")
+        public String mountPath;
+
+        @NameInMap("Path")
+        public String path;
+
+        @NameInMap("SubType")
+        public String subType;
+
+        public static ListInstancesResponseBodyInstancesCloudDisks build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesCloudDisks self = new ListInstancesResponseBodyInstancesCloudDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesCloudDisks setCapacity(String capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+        public String getCapacity() {
+            return this.capacity;
+        }
+
+        public ListInstancesResponseBodyInstancesCloudDisks setMountPath(String mountPath) {
+            this.mountPath = mountPath;
+            return this;
+        }
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        public ListInstancesResponseBodyInstancesCloudDisks setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public ListInstancesResponseBodyInstancesCloudDisks setSubType(String subType) {
+            this.subType = subType;
+            return this;
+        }
+        public String getSubType() {
+            return this.subType;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesDatasets extends TeaModel {
         @NameInMap("DatasetId")
         public String datasetId;
@@ -550,21 +602,40 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
+        @NameInMap("ExtendedCIDRs")
+        public java.util.List<String> extendedCIDRs;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
-        /**
-         * <p>Vpc Id。</p>
-         */
         @NameInMap("VpcId")
         public String vpcId;
 
         public static ListInstancesResponseBodyInstancesUserVpc build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstancesUserVpc self = new ListInstancesResponseBodyInstancesUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        public ListInstancesResponseBodyInstancesUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
+            this.extendedCIDRs = extendedCIDRs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCIDRs() {
+            return this.extendedCIDRs;
         }
 
         public ListInstancesResponseBodyInstancesUserVpc setSecurityGroupId(String securityGroupId) {
@@ -602,6 +673,9 @@ public class ListInstancesResponseBody extends TeaModel {
 
         @NameInMap("AccumulatedRunningTimeInMs")
         public Long accumulatedRunningTimeInMs;
+
+        @NameInMap("CloudDisks")
+        public java.util.List<ListInstancesResponseBodyInstancesCloudDisks> cloudDisks;
 
         @NameInMap("Datasets")
         public java.util.List<ListInstancesResponseBodyInstancesDatasets> datasets;
@@ -705,6 +779,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
+        @NameInMap("WorkspaceSource")
+        public String workspaceSource;
+
         public static ListInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstances self = new ListInstancesResponseBodyInstances();
             return TeaModel.build(map, self);
@@ -732,6 +809,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Long getAccumulatedRunningTimeInMs() {
             return this.accumulatedRunningTimeInMs;
+        }
+
+        public ListInstancesResponseBodyInstances setCloudDisks(java.util.List<ListInstancesResponseBodyInstancesCloudDisks> cloudDisks) {
+            this.cloudDisks = cloudDisks;
+            return this;
+        }
+        public java.util.List<ListInstancesResponseBodyInstancesCloudDisks> getCloudDisks() {
+            return this.cloudDisks;
         }
 
         public ListInstancesResponseBodyInstances setDatasets(java.util.List<ListInstancesResponseBodyInstancesDatasets> datasets) {
@@ -988,6 +1073,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getWorkspaceName() {
             return this.workspaceName;
+        }
+
+        public ListInstancesResponseBodyInstances setWorkspaceSource(String workspaceSource) {
+            this.workspaceSource = workspaceSource;
+            return this;
+        }
+        public String getWorkspaceSource() {
+            return this.workspaceSource;
         }
 
     }
