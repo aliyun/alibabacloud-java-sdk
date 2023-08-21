@@ -738,6 +738,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteFolderWithOptions(request, runtime);
     }
 
+    public DeleteInvalidCloudAccountRecordResponse deleteInvalidCloudAccountRecordWithOptions(DeleteInvalidCloudAccountRecordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.recordId)) {
+            query.put("RecordId", request.recordId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInvalidCloudAccountRecord"),
+            new TeaPair("version", "2022-04-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInvalidCloudAccountRecordResponse());
+    }
+
+    public DeleteInvalidCloudAccountRecordResponse deleteInvalidCloudAccountRecord(DeleteInvalidCloudAccountRecordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteInvalidCloudAccountRecordWithOptions(request, runtime);
+    }
+
     public DeleteMessageContactResponse deleteMessageContactWithOptions(DeleteMessageContactRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2143,6 +2172,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MoveAccountResponse moveAccount(MoveAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.moveAccountWithOptions(request, runtime);
+    }
+
+    public PrecheckForConsolidatedBillingAccountResponse precheckForConsolidatedBillingAccountWithOptions(PrecheckForConsolidatedBillingAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billingAccountId)) {
+            query.put("BillingAccountId", request.billingAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PrecheckForConsolidatedBillingAccount"),
+            new TeaPair("version", "2022-04-19"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PrecheckForConsolidatedBillingAccountResponse());
+    }
+
+    public PrecheckForConsolidatedBillingAccountResponse precheckForConsolidatedBillingAccount(PrecheckForConsolidatedBillingAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.precheckForConsolidatedBillingAccountWithOptions(request, runtime);
     }
 
     /**

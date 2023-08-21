@@ -4,12 +4,24 @@ package com.aliyun.resourcedirectorymaster20220419.models;
 import com.aliyun.tea.*;
 
 public class ListTagValuesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the next query is required.</p>
+     * <br>
+     * <p>*   If the value of this parameter is empty (`"NextToken": ""`), all results are returned, and the next query is not required.</p>
+     * <p>*   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the tag values.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListTagValuesResponseBodyTags> tags;
 
@@ -43,6 +55,9 @@ public class ListTagValuesResponseBody extends TeaModel {
     }
 
     public static class ListTagValuesResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
