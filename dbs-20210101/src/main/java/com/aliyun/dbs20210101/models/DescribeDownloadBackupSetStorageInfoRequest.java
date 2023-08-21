@@ -11,11 +11,11 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>Set this parameter if the Download Destination parameter is set to URL.</p>
+     * <p>The validity period of the URL that is used as the download destination. Take note of the following items:</p>
      * <br>
-     * <p>*   By default, a URL is valid for 2 hours, which is equal to 7,200 seconds.</p>
-     * <p>*   The valid duration is 5 minutes (300 seconds) to 1 day (86,400 seconds).</p>
-     * <p>*   Before you set this parameter, convert the time to seconds. For example, if you want to set the validity period of the link to 5 minutes, enter 300.</p>
+     * <p>*   Default value: 7200. This means that the URL is valid for 2 hours by default.</p>
+     * <p>*   Valid values: 300 to 86400. Unit: seconds. This means that you can specify a validity period in the range of 5 minutes to 1 day.</p>
+     * <p>*   Before you specify this parameter, convert the validity period to seconds. For example, if you want to set the validity period of the URL to 5 minutes, enter 300.</p>
      */
     @NameInMap("Duration")
     public String duration;
@@ -23,13 +23,13 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends TeaModel {
     /**
      * <p>The ID of the instance.</p>
      * <br>
-     * <p>>  The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.</p>
+     * <p>> The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
+     * <p>The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.</p>
      */
     @NameInMap("RegionCode")
     public String regionCode;
@@ -38,7 +38,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends TeaModel {
      * <p>The ID of the download task.</p>
      * <br>
      * <p>*   The **BackupSetId** and **InstanceName** parameters are required if you do not specify the **TaskId** parameter.</p>
-     * <p>*   You can find the instance and click **Backup and Restoration**. On the **Backup Download** tab, view the **task ID**.</p>
+     * <p>*   You can go to the instance details page in the Alibaba Cloud Management Console and click **Backup and Restoration** in the left-side navigation pane. On the **Backup Download** tab, view the task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

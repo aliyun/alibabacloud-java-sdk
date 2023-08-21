@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeDownloadBackupSetStorageInfoResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -43,8 +43,8 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: the request is successful.</p>
-     * <p>*   **false**: the request fails.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public String success;
@@ -112,9 +112,9 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
 
     public static class DescribeDownloadBackupSetStorageInfoResponseBodyData extends TeaModel {
         /**
-         * <p>The expiration time of the URL.</p>
+         * <p>The validity period of the URL.</p>
          * <br>
-         * <p>>  The return value is in the timestamp format.</p>
+         * <p>> This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ExpirationTime")
         public Long expirationTime;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set generated when you create the download task. You can call the [DescribeBackups](~~26273~~) operation to query the backup set ID. Unit: bytes.</p>
+     * <p>The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](~~26273~~) operation to query the ID.</p>
      */
     @NameInMap("BackupSetId")
     public String backupSetId;
@@ -30,12 +30,14 @@ public class DescribeDownloadTaskRequest extends TeaModel {
 
     /**
      * <p>The ID of the instance.</p>
+     * <br>
+     * <p>> This parameter is required.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The column based on which the entries are sorted. By default, the entries are sorted by the creation time. Set the value to **gmt_create**.</p>
+     * <p>The column based on which the entries are sorted. By default, the entries are sorted by the time when the download task was created. Set the value to **gmt_create**.</p>
      */
     @NameInMap("OrderColumn")
     public String orderColumn;
@@ -43,8 +45,8 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     /**
      * <p>The order in which you want to sort the entries. Valid values:</p>
      * <br>
-     * <p>*   **asc**: sorts the retrieved entries by time in ascending order.</p>
-     * <p>*   **desc**: sorts the retrieved entries by time in descending order. This is the default value.</p>
+     * <p>*   **asc**: the ascending order.</p>
+     * <p>*   **desc**: the descending order. This is the default value.</p>
      */
     @NameInMap("OrderDirect")
     public String orderDirect;
@@ -68,13 +70,14 @@ public class DescribeDownloadTaskRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the download task. Valid values:</p>
+     * <p>The state of the download task. Valid values:</p>
      * <br>
      * <p>*   **Initializing**: The download task is being initialized.</p>
      * <p>*   **queuing**: The download task is queuing.</p>
      * <p>*   **running**: The download task is running.</p>
      * <p>*   **failed**: The download task fails.</p>
      * <p>*   **finished**: The download task is complete.</p>
+     * <p>*   **expired**: The download task expires.</p>
      */
     @NameInMap("State")
     public String state;

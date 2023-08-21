@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The status code returned.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The response parameters.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateDownloadResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -41,10 +41,10 @@ public class CreateDownloadResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public String success;
@@ -112,7 +112,7 @@ public class CreateDownloadResponseBody extends TeaModel {
 
     public static class CreateDownloadResponseBodyData extends TeaModel {
         /**
-         * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp.</p>
+         * <p>The point in time of the backup set if the task is used to download a backup set at a specific point in time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("BackupSetTime")
         public Long backupSetTime;
@@ -124,28 +124,28 @@ public class CreateDownloadResponseBody extends TeaModel {
         public String bakSetId;
 
         /**
-         * <p>The database and table information that is returned if the download task is a database and table filtering task.</p>
+         * <p>The database and table information that is returned if databases and tables are filtered by the download task.</p>
          */
         @NameInMap("DbList")
         public String dbList;
 
         /**
-         * <p>The status of the download task. Valid values:</p>
+         * <p>The state of the download task. Valid values:</p>
          * <br>
-         * <p>*   Initializing: The download task is being initialized.</p>
-         * <p>*   queuing: The download task is queuing.</p>
-         * <p>*   running: The download task is running.</p>
-         * <p>*   failed: The download task fails.</p>
-         * <p>*   finished: The download task is complete.</p>
-         * <p>*   expired: The download task expires.</p>
+         * <p>*   initializing: The download task was being initialized.</p>
+         * <p>*   queuing: The download task was queuing.</p>
+         * <p>*   running: The download task was running.</p>
+         * <p>*   failed: The download task failed.</p>
+         * <p>*   finished: The download task was complete.</p>
+         * <p>*   expired: The download task expired.</p>
          * <br>
-         * <p>>  The download task expires in three days after the task is complete if the TargetType parameter is set to URL.</p>
+         * <p>> If the TargetType parameter is set to URL, the download task expires in three days after the task is complete.</p>
          */
         @NameInMap("DownloadStatus")
         public String downloadStatus;
 
         /**
-         * <p>The amount of output data. Unit: bytes.</p>
+         * <p>The size of the downloaded data. Unit: bytes.</p>
          */
         @NameInMap("ExportDataSize")
         public Long exportDataSize;
@@ -157,13 +157,13 @@ public class CreateDownloadResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The time when the download task was created. The value is a timestamp.</p>
+         * <p>The time when the download task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>The amount of data that is processed. Unit: bytes.</p>
+         * <p>The size of the processed data. Unit: bytes.</p>
          */
         @NameInMap("ImportDataSize")
         public Long importDataSize;
@@ -171,7 +171,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         /**
          * <p>The number of tables that have been downloaded and the total number of tables to be downloaded.</p>
          * <br>
-         * <p>>  If the task is in the preparation stage, 0/0 is returned.</p>
+         * <p>> If the task is in the preparation stage, 0/0 is returned.</p>
          */
         @NameInMap("Progress")
         public String progress;
@@ -183,15 +183,15 @@ public class CreateDownloadResponseBody extends TeaModel {
         public String regionCode;
 
         /**
-         * <p>The destination path of the downloaded data.</p>
+         * <p>The destination path to which the backup set is downloaded.</p>
          * <br>
-         * <p>>  This parameter is returned if the TargetType parameter is set to OSS.</p>
+         * <p>> This parameter is returned if the TargetType parameter is set to OSS.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
-         * <p>The type of the method in which the backup set is downloaded.</p>
+         * <p>The type of the destination to which the backup set is downloaded.</p>
          */
         @NameInMap("TargetType")
         public String targetType;

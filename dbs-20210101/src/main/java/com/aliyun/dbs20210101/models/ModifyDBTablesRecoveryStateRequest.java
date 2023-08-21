@@ -13,9 +13,6 @@ public class ModifyDBTablesRecoveryStateRequest extends TeaModel {
     @NameInMap("RegionCode")
     public String regionCode;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("Retention")
     public String retention;
 
@@ -46,14 +43,6 @@ public class ModifyDBTablesRecoveryStateRequest extends TeaModel {
     }
     public String getRegionCode() {
         return this.regionCode;
-    }
-
-    public ModifyDBTablesRecoveryStateRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifyDBTablesRecoveryStateRequest setRetention(String retention) {

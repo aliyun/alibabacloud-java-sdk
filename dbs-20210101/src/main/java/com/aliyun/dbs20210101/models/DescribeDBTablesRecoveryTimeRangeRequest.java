@@ -10,9 +10,6 @@ public class DescribeDBTablesRecoveryTimeRangeRequest extends TeaModel {
     @NameInMap("RegionCode")
     public String regionCode;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     public static DescribeDBTablesRecoveryTimeRangeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBTablesRecoveryTimeRangeRequest self = new DescribeDBTablesRecoveryTimeRangeRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DescribeDBTablesRecoveryTimeRangeRequest extends TeaModel {
     }
     public String getRegionCode() {
         return this.regionCode;
-    }
-
-    public DescribeDBTablesRecoveryTimeRangeRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
 }

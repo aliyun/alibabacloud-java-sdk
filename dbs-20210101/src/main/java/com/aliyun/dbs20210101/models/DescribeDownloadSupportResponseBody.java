@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadSupportResponseBody extends TeaModel {
     /**
-     * <p>The error code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -20,19 +20,19 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error code returned if the request fails.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("ErrCode")
     public String errCode;
 
     /**
-     * <p>The error message returned if the request fails.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("ErrMessage")
     public String errMessage;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -44,10 +44,10 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: The request is successful.</p>
-     * <p>*   **false**: The request fails.</p>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
      */
     @NameInMap("Success")
     public String success;
