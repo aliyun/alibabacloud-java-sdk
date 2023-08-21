@@ -145,6 +145,12 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("ContainerInfo")
         public LoginInstanceRequestInstanceLoginInfoOptionsContainerInfo containerInfo;
 
+        @NameInMap("FixedHeight")
+        public Integer fixedHeight;
+
+        @NameInMap("FixedWidth")
+        public Integer fixedWidth;
+
         @NameInMap("NotificationEventTypes")
         public String notificationEventTypes;
 
@@ -185,6 +191,22 @@ public class LoginInstanceRequest extends TeaModel {
         }
         public LoginInstanceRequestInstanceLoginInfoOptionsContainerInfo getContainerInfo() {
             return this.containerInfo;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfoOptions setFixedHeight(Integer fixedHeight) {
+            this.fixedHeight = fixedHeight;
+            return this;
+        }
+        public Integer getFixedHeight() {
+            return this.fixedHeight;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfoOptions setFixedWidth(Integer fixedWidth) {
+            this.fixedWidth = fixedWidth;
+            return this;
+        }
+        public Integer getFixedWidth() {
+            return this.fixedWidth;
         }
 
         public LoginInstanceRequestInstanceLoginInfoOptions setNotificationEventTypes(String notificationEventTypes) {
