@@ -77,17 +77,26 @@ public class QueryCostCurveContrastResponseBody extends TeaModel {
         @NameInMap("realCost")
         public Double realCost;
 
+        @NameInMap("realSoc")
+        public Double realSoc;
+
         @NameInMap("selfUseBuy")
         public Double selfUseBuy;
 
         @NameInMap("selfUseCost")
         public Double selfUseCost;
 
+        @NameInMap("selfUseSoc")
+        public Double selfUseSoc;
+
         @NameInMap("strategyBuy")
         public Double strategyBuy;
 
         @NameInMap("strategyBuyCost")
         public Double strategyBuyCost;
+
+        @NameInMap("strategySoc")
+        public Double strategySoc;
 
         public static QueryCostCurveContrastResponseBodyDataRecordList build(java.util.Map<String, ?> map) throws Exception {
             QueryCostCurveContrastResponseBodyDataRecordList self = new QueryCostCurveContrastResponseBodyDataRecordList();
@@ -126,6 +135,14 @@ public class QueryCostCurveContrastResponseBody extends TeaModel {
             return this.realCost;
         }
 
+        public QueryCostCurveContrastResponseBodyDataRecordList setRealSoc(Double realSoc) {
+            this.realSoc = realSoc;
+            return this;
+        }
+        public Double getRealSoc() {
+            return this.realSoc;
+        }
+
         public QueryCostCurveContrastResponseBodyDataRecordList setSelfUseBuy(Double selfUseBuy) {
             this.selfUseBuy = selfUseBuy;
             return this;
@@ -142,6 +159,14 @@ public class QueryCostCurveContrastResponseBody extends TeaModel {
             return this.selfUseCost;
         }
 
+        public QueryCostCurveContrastResponseBodyDataRecordList setSelfUseSoc(Double selfUseSoc) {
+            this.selfUseSoc = selfUseSoc;
+            return this;
+        }
+        public Double getSelfUseSoc() {
+            return this.selfUseSoc;
+        }
+
         public QueryCostCurveContrastResponseBodyDataRecordList setStrategyBuy(Double strategyBuy) {
             this.strategyBuy = strategyBuy;
             return this;
@@ -156,6 +181,14 @@ public class QueryCostCurveContrastResponseBody extends TeaModel {
         }
         public Double getStrategyBuyCost() {
             return this.strategyBuyCost;
+        }
+
+        public QueryCostCurveContrastResponseBodyDataRecordList setStrategySoc(Double strategySoc) {
+            this.strategySoc = strategySoc;
+            return this;
+        }
+        public Double getStrategySoc() {
+            return this.strategySoc;
         }
 
     }
