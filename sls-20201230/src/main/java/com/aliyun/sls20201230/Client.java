@@ -602,6 +602,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateProjectResponse createProjectWithOptions(CreateProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataRedundancyType)) {
+            body.put("dataRedundancyType", request.dataRedundancyType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }
@@ -627,7 +631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.execute(params, req, runtime), new CreateProjectResponse());
     }

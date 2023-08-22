@@ -4,6 +4,9 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
+    @NameInMap("dataRedundancyType")
+    public String dataRedundancyType;
+
     @NameInMap("description")
     public String description;
 
@@ -16,6 +19,14 @@ public class CreateProjectRequest extends TeaModel {
     public static CreateProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProjectRequest self = new CreateProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateProjectRequest setDataRedundancyType(String dataRedundancyType) {
+        this.dataRedundancyType = dataRedundancyType;
+        return this;
+    }
+    public String getDataRedundancyType() {
+        return this.dataRedundancyType;
     }
 
     public CreateProjectRequest setDescription(String description) {
