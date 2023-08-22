@@ -100,6 +100,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("average_nights")
+        public String averageNights;
+
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
@@ -211,6 +214,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("remark")
         public String remark;
 
+        @NameInMap("reserve_rule")
+        public String reserveRule;
+
+        @NameInMap("room_no")
+        public String roomNo;
+
         @NameInMap("room_number")
         public Integer roomNumber;
 
@@ -321,6 +330,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getApplyId() {
             return this.applyId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setAverageNights(String averageNights) {
+            this.averageNights = averageNights;
+            return this;
+        }
+        public String getAverageNights() {
+            return this.averageNights;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setBillRecordTime(String billRecordTime) {
@@ -617,6 +634,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setReserveRule(String reserveRule) {
+            this.reserveRule = reserveRule;
+            return this;
+        }
+        public String getReserveRule() {
+            return this.reserveRule;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setRoomNo(String roomNo) {
+            this.roomNo = roomNo;
+            return this;
+        }
+        public String getRoomNo() {
+            return this.roomNo;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setRoomNumber(Integer roomNumber) {

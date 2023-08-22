@@ -118,6 +118,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("book_model")
+        public String bookModel;
+
         @NameInMap("book_time")
         public String bookTime;
 
@@ -265,6 +268,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("third_itinerary_id")
         public String thirdItineraryId;
 
+        @NameInMap("time_type")
+        public String timeType;
+
         @NameInMap("traveler_id")
         public String travelerId;
 
@@ -387,6 +393,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setBookModel(String bookModel) {
+            this.bookModel = bookModel;
+            return this;
+        }
+        public String getBookModel() {
+            return this.bookModel;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setBookTime(String bookTime) {
@@ -771,6 +785,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getThirdItineraryId() {
             return this.thirdItineraryId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setTimeType(String timeType) {
+            this.timeType = timeType;
+            return this;
+        }
+        public String getTimeType() {
+            return this.timeType;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {
