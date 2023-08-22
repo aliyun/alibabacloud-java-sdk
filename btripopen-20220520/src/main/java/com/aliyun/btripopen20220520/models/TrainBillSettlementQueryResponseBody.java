@@ -136,6 +136,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("change_fee")
         public Double changeFee;
 
+        @NameInMap("coach_no")
+        public String coachNo;
+
         @NameInMap("cost_center")
         public String costCenter;
 
@@ -219,6 +222,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("settlement_type")
         public String settlementType;
+
+        @NameInMap("short_ticket_no")
+        public String shortTicketNo;
 
         @NameInMap("status")
         public Integer status;
@@ -411,6 +417,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getChangeFee() {
             return this.changeFee;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setCoachNo(String coachNo) {
+            this.coachNo = coachNo;
+            return this;
+        }
+        public String getCoachNo() {
+            return this.coachNo;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setCostCenter(String costCenter) {
@@ -635,6 +649,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getSettlementType() {
             return this.settlementType;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setShortTicketNo(String shortTicketNo) {
+            this.shortTicketNo = shortTicketNo;
+            return this;
+        }
+        public String getShortTicketNo() {
+            return this.shortTicketNo;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setStatus(Integer status) {

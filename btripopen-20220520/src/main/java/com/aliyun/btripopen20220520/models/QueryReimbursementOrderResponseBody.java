@@ -418,6 +418,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("gmt_modified")
         public String gmtModified;
 
+        @NameInMap("is_deleted")
+        public String isDeleted;
+
         @NameInMap("itineraries")
         public java.util.List<QueryReimbursementOrderResponseBodyModuleItineraries> itineraries;
 
@@ -499,6 +502,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setIsDeleted(String isDeleted) {
+            this.isDeleted = isDeleted;
+            return this;
+        }
+        public String getIsDeleted() {
+            return this.isDeleted;
         }
 
         public QueryReimbursementOrderResponseBodyModule setItineraries(java.util.List<QueryReimbursementOrderResponseBodyModuleItineraries> itineraries) {
