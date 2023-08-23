@@ -87,6 +87,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.entElementVerifyWithOptions(request, runtime);
     }
 
+    public EntRiskQueryResponse entRiskQueryWithOptions(EntRiskQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            query.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            query.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramValue)) {
+            query.put("ParamValue", request.paramValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sceneCode)) {
+            query.put("SceneCode", request.sceneCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAuthorization)) {
+            query.put("UserAuthorization", request.userAuthorization);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EntRiskQuery"),
+            new TeaPair("version", "2022-11-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EntRiskQueryResponse());
+    }
+
+    public EntRiskQueryResponse entRiskQuery(EntRiskQueryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.entRiskQueryWithOptions(request, runtime);
+    }
+
     public EntVerifyResponse entVerifyWithOptions(EntVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
