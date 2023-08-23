@@ -144,6 +144,9 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        @NameInMap("ResourceGroupld")
+        public String resourceGroupld;
+
         /**
          * <p>Queries the details of patch baselines.</p>
          */
@@ -243,6 +246,14 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
         public String getOperationSystem() {
             return this.operationSystem;
+        }
+
+        public ListPatchBaselinesResponseBodyPatchBaselines setResourceGroupld(String resourceGroupld) {
+            this.resourceGroupld = resourceGroupld;
+            return this;
+        }
+        public String getResourceGroupld() {
+            return this.resourceGroupld;
         }
 
         public ListPatchBaselinesResponseBodyPatchBaselines setShareType(String shareType) {
