@@ -2419,6 +2419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupld)) {
+            query.put("ResourceGroupld", request.resourceGroupld);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.shareType)) {
             query.put("ShareType", request.shareType);
         }

@@ -48,6 +48,9 @@ public class ListPatchBaselinesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupld")
+    public String resourceGroupld;
+
     /**
      * <p>The token that is used to retrieve the next page of results.</p>
      */
@@ -119,6 +122,14 @@ public class ListPatchBaselinesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListPatchBaselinesRequest setResourceGroupld(String resourceGroupld) {
+        this.resourceGroupld = resourceGroupld;
+        return this;
+    }
+    public String getResourceGroupld() {
+        return this.resourceGroupld;
     }
 
     public ListPatchBaselinesRequest setShareType(String shareType) {
