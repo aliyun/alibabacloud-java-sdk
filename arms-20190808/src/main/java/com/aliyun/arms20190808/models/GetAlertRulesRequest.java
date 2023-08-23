@@ -4,30 +4,75 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRulesRequest extends TeaModel {
+    /**
+     * <p>The unique IDs of alert rules.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.</p>
+     * <p>*   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</p>
+     * <br>
+     * <p>> When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.</p>
+     */
     @NameInMap("AlertIds")
     public String alertIds;
 
+    /**
+     * <p>The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the **AlertName** parameter does not uniquely identify an alert rule.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, the API operation does not filter alert rules based on their names.</p>
+     * <p>*   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.</p>
+     */
     @NameInMap("AlertNames")
     public String alertNames;
 
+    /**
+     * <p>The status of the alert rule. Valid values:</p>
+     * <br>
+     * <p>*   RUNNING</p>
+     * <p>*   STOPPED</p>
+     * <p>*   PAUSED</p>
+     * <br>
+     * <p>> The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
+     */
     @NameInMap("AlertStatus")
     public String alertStatus;
 
+    /**
+     * <p>The type of the alert rule.</p>
+     * <br>
+     * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
+     * <p>*   BROWSER_MONITORING_ALERT_RULE: an alert rule for Browser Monitoring.</p>
+     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus.</p>
+     */
     @NameInMap("AlertType")
     public String alertType;
 
+    /**
+     * <p>The ID of the monitored cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <p>You do not need to configure this parameter.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The number of alert rules to return on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 

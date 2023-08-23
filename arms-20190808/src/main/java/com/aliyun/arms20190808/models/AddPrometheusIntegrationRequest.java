@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddPrometheusIntegrationRequest extends TeaModel {
     /**
-     * <p>The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.</p>
+     * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The integration type.</p>
+     * <p>The type of the integration.</p>
      */
     @NameInMap("IntegrationType")
     public String integrationType;

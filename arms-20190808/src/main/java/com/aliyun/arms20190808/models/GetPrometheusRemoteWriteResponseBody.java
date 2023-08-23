@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The queried remote write configuration.</p>
+     * <p>The details of the remote write configuration item.</p>
      */
     @NameInMap("Data")
     public GetPrometheusRemoteWriteResponseBodyData data;
@@ -90,13 +90,13 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the remote write configuration.</p>
+         * <p>The name of the remote write configuration item.</p>
          */
         @NameInMap("RemoteWriteName")
         public String remoteWriteName;
 
         /**
-         * <p>The remote write configuration. The configuration is displayed in the YAML format.</p>
+         * <p>The details of the remote write configuration item. The value is in the YAML format.</p>
          */
         @NameInMap("RemoteWriteYaml")
         public String remoteWriteYaml;

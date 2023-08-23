@@ -11,7 +11,7 @@ public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful.</p>
      * <br>
      * <p>*   true</p>
      * <p>*   false</p>
@@ -20,7 +20,7 @@ public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

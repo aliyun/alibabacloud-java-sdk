@@ -510,17 +510,17 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
          * <p>*   STOPPED</p>
          * <p>*   PAUSED</p>
          * <br>
-         * <p>> The **PAUSED** status indicates that the alert rule was abnormal and was paused by the system. The alert rule might be paused because it was not unique or the associated cluster was deleted.</p>
+         * <p>> The PAUSED status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
          */
         @NameInMap("AlertStatus")
         public String alertStatus;
 
         /**
-         * <p>The type of the alert rule.</p>
+         * <p>The type of the alert rule. Valid values:</p>
          * <br>
-         * <p>*   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring</p>
-         * <p>*   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring</p>
-         * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service</p>
+         * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
+         * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
+         * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service</p>
          */
         @NameInMap("AlertType")
         public String alertType;
@@ -534,14 +534,14 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:</p>
          * <br>
-         * <p>*   `true`: yes</p>
-         * <p>*   `false`: no</p>
+         * <p>*   `true`: enables the health check feature.</p>
+         * <p>*   `false`: disables the automatic backup feature.</p>
          */
         @NameInMap("AutoAddNewApplication")
         public Boolean autoAddNewApplication;
 
         /**
-         * <p>The cluster ID of the Prometheus alert rule.</p>
+         * <p>The ID of the monitored cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

@@ -11,13 +11,13 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The struct returned.</p>
      */
     @NameInMap("Data")
     public GetPrometheusIntegrationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -73,7 +73,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>Indicates whether the exporter can be edited.</p>
+         * <p>Indicates whether the exporter can be modified.</p>
          */
         @NameInMap("CanEditor")
         public Boolean canEditor;
@@ -85,7 +85,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the container.</p>
+         * <p>The container name.</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
@@ -115,7 +115,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The integration type.</p>
+         * <p>The type of the integration.</p>
          */
         @NameInMap("IntegrationType")
         public String integrationType;
@@ -163,7 +163,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The version number.</p>
+         * <p>The version information.</p>
          */
         @NameInMap("Version")
         public String version;

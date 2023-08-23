@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusIntegrationResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -23,7 +23,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -157,7 +157,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         public Boolean showLog;
 
         /**
-         * <p>The status of the exporter.</p>
+         * <p>The state of the exporter.</p>
          */
         @NameInMap("Status")
         public String status;

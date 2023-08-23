@@ -440,6 +440,9 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy extends TeaModel {
+        @NameInMap("DirectedMode")
+        public Boolean directedMode;
+
         /**
          * <p>The ID of the escalation policy.</p>
          */
@@ -515,6 +518,14 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         public static CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy self = new CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy setDirectedMode(Boolean directedMode) {
+            this.directedMode = directedMode;
+            return this;
+        }
+        public Boolean getDirectedMode() {
+            return this.directedMode;
         }
 
         public CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy setEscalationPolicyId(Long escalationPolicyId) {

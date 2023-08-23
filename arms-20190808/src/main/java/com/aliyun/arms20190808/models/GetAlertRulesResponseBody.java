@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetAlertRulesResponseBody extends TeaModel {
+    /**
+     * <p>The pages returned.</p>
+     */
     @NameInMap("PageBean")
     public GetAlertRulesResponseBodyPageBean pageBean;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,47 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesAlertRuleContentAlertRuleItems extends TeaModel {
+        /**
+         * <p>The aggregation method of the alert condition. Valid values:</p>
+         * <br>
+         * <p>*   AVG: calculates the average value</p>
+         * <p>*   SUM: calculates the total value</p>
+         * <p>*   MAX: selects the maximum value</p>
+         * <p>*   MIN: selects the minimum value</p>
+         */
         @NameInMap("Aggregate")
         public String aggregate;
 
+        /**
+         * <p>The metric of the alert condition.</p>
+         */
         @NameInMap("MetricKey")
         public String metricKey;
 
+        /**
+         * <p>Indicates the last N minutes.</p>
+         */
         @NameInMap("N")
         public Float n;
 
+        /**
+         * <p>The comparison operator that was used to compare the metric value with the threshold. Valid values:</p>
+         * <br>
+         * <p>*   CURRENT_GTE: greater than or equal to</p>
+         * <p>*   CURRENT_LTE: less than or equal to</p>
+         * <p>*   PREVIOUS_UP: the increase percentage compared with the last period</p>
+         * <p>*   PREVIOUS_DOWN: the decrease percentage compared with the last period</p>
+         * <p>*   HOH_UP: the increase percentage compared with the last hour</p>
+         * <p>*   HOH_DOWN: the decrease percentage compared with the last hour</p>
+         * <p>*   DOD_UP: the increase percentage compared with the last day</p>
+         * <p>*   DOD_DOWN: the decrease percentage compared with the last day</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The threshold of the alert condition.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,9 +130,18 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesAlertRuleContent extends TeaModel {
+        /**
+         * <p>The trigger conditions of the Application Monitoring or Browser Monitoring alert rule.</p>
+         */
         @NameInMap("AlertRuleItems")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesAlertRuleContentAlertRuleItems> alertRuleItems;
 
+        /**
+         * <p>The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:</p>
+         * <br>
+         * <p>*   OR: meets any of the specified conditions.</p>
+         * <p>*   AND: meets all the specified conditions.</p>
+         */
         @NameInMap("Condition")
         public String condition;
 
@@ -125,9 +169,15 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesAnnotations extends TeaModel {
+        /**
+         * <p>The key of the annotation.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the annotation.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -155,18 +205,36 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesFiltersCustomSLSFilters extends TeaModel {
+        /**
+         * <p>The key of the filter condition.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The logical operator of the filter condition. Valid values:</p>
+         * <br>
+         * <p>*   \=: equal to</p>
+         * <p>*   not: not equal to</p>
+         */
         @NameInMap("Opt")
         public String opt;
 
+        /**
+         * <p>Indicates whether this filter condition was displayed on the frontend.</p>
+         */
         @NameInMap("Show")
         public Boolean show;
 
+        /**
+         * <p>Indicates the log type of Browser Monitoring. This field was not included in other filter conditions.</p>
+         */
         @NameInMap("T")
         public String t;
 
+        /**
+         * <p>The value of the filter condition.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -218,12 +286,21 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesFiltersDimFilters extends TeaModel {
+        /**
+         * <p>The key of the filter condition.</p>
+         */
         @NameInMap("FilterKey")
         public String filterKey;
 
+        /**
+         * <p>The logical operator of the filter condition.</p>
+         */
         @NameInMap("FilterOpt")
         public String filterOpt;
 
+        /**
+         * <p>The details of the filter condition.</p>
+         */
         @NameInMap("FilterValues")
         public java.util.List<String> filterValues;
 
@@ -259,15 +336,27 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesFilters extends TeaModel {
+        /**
+         * <p>The custom filter condition of the Browser Monitoring alert rule.</p>
+         */
         @NameInMap("CustomSLSFilters")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesFiltersCustomSLSFilters> customSLSFilters;
 
+        /**
+         * <p>The information of the aggregation dimension.</p>
+         */
         @NameInMap("CustomSLSGroupByDimensions")
         public java.util.List<String> customSLSGroupByDimensions;
 
+        /**
+         * <p>The details of the custom filter condition.</p>
+         */
         @NameInMap("CustomSLSWheres")
         public java.util.List<String> customSLSWheres;
 
+        /**
+         * <p>The information about each filter condition of the Application Monitoring or Browser Monitoring alert rule.</p>
+         */
         @NameInMap("DimFilters")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesFiltersDimFilters> dimFilters;
 
@@ -311,9 +400,15 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesLabels extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -371,78 +466,178 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRules extends TeaModel {
+        /**
+         * <p>The alert check type of the Prometheus alert rule. Valid values:</p>
+         * <br>
+         * <p>*   STATIC: static threshold value</p>
+         * <p>*   CUSTOM: custom PromQL statement</p>
+         */
         @NameInMap("AlertCheckType")
         public String alertCheckType;
 
+        /**
+         * <p>The ID of the alert contact group to which the alert rule belongs. Valid values:</p>
+         * <br>
+         * <p>*   \-1: custom PromQL</p>
+         * <p>*   1: Kubernetes load</p>
+         * <p>*   15: Kubernetes node</p>
+         */
         @NameInMap("AlertGroup")
         public Long alertGroup;
 
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("AlertId")
         public Float alertId;
 
+        /**
+         * <p>The name of the alert rule.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
+        /**
+         * <p>The content of the Application Monitoring or Browser Monitoring alert rule.</p>
+         */
         @NameInMap("AlertRuleContent")
         public GetAlertRulesResponseBodyPageBeanAlertRulesAlertRuleContent alertRuleContent;
 
+        /**
+         * <p>The status of the alert rule. Valid values:</p>
+         * <br>
+         * <p>*   RUNNING</p>
+         * <p>*   STOPPED</p>
+         * <p>*   PAUSED</p>
+         * <br>
+         * <p>> The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.</p>
+         */
         @NameInMap("AlertStatus")
         public String alertStatus;
 
+        /**
+         * <p>The type of the alert rule.</p>
+         * <br>
+         * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
+         * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
+         * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</p>
+         */
         @NameInMap("AlertType")
         public String alertType;
 
+        /**
+         * <p>The annotations of the Prometheus alert rule.</p>
+         */
         @NameInMap("Annotations")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesAnnotations> annotations;
 
+        /**
+         * <p>Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:</p>
+         * <br>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
+         */
         @NameInMap("AutoAddNewApplication")
         public Boolean autoAddNewApplication;
 
+        /**
+         * <p>The cluster ID of the Prometheus alert rule.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The time when the alert rule was created. The value is a timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The duration of the Prometheus alert rule.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The extended fields.</p>
+         * <br>
+         * <p>> For existing Application Monitoring alert rules, the fields contained information such as contacts, alert template, and notification content.</p>
+         */
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule.</p>
+         */
         @NameInMap("Filters")
         public GetAlertRulesResponseBodyPageBeanAlertRulesFilters filters;
 
+        /**
+         * <p>The tags of the Prometheus alert rule.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesLabels> labels;
 
+        /**
+         * <p>The severity level of the Prometheus alert rule.</p>
+         * <br>
+         * <p>*   P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.</p>
+         * <p>*   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.</p>
+         * <p>*   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.</p>
+         * <p>*   P4: Alert notifications are sent for low-priority issues that do not affect your business.</p>
+         * <p>*   Default: Alert notifications are sent regardless of alert levels.</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The alert message of the Prometheus alert rule.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The metric type of the Application Monitoring or Browser Monitoring alert rule.</p>
+         */
         @NameInMap("MetricsType")
         public String metricsType;
 
+        /**
+         * <p>The name of the notification policy.</p>
+         */
         @NameInMap("NotifyStrategy")
         public String notifyStrategy;
 
+        /**
+         * <p>The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.</p>
+         */
         @NameInMap("Pids")
         public java.util.List<String> pids;
 
+        /**
+         * <p>The PromQL statement of the Prometheus alert rule.</p>
+         */
         @NameInMap("PromQL")
         public String promQL;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("Tags")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesTags> tags;
 
+        /**
+         * <p>The time when the alert rule was updated. The value is a timestamp. Unit: milliseconds.</p>
+         */
         @NameInMap("UpdatedTime")
         public Long updatedTime;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -654,15 +849,27 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBean extends TeaModel {
+        /**
+         * <p>The list of alert rules.</p>
+         */
         @NameInMap("AlertRules")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRules> alertRules;
 
+        /**
+         * <p>The number of pages returned.</p>
+         */
         @NameInMap("Page")
         public Long page;
 
+        /**
+         * <p>The number of alert rules returned per page.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The total number of queried alert rules.</p>
+         */
         @NameInMap("Total")
         public Long total;
 

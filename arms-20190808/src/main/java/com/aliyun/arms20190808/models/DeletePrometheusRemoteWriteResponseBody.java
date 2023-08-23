@@ -11,7 +11,7 @@ public class DeletePrometheusRemoteWriteResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The number of remote write configuration items that are deleted, or an error message.</p>
+     * <p>The remote write configuration items. If the request fails, an error message is returned.</p>
      */
     @NameInMap("Data")
     public String data;

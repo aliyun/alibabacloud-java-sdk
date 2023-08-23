@@ -128,6 +128,9 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         @NameInMap("AppId")
         public Long appId;
 
+        /**
+         * <p>PID。</p>
+         */
         @NameInMap("Pid")
         public String pid;
 

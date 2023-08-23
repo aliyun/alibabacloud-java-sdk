@@ -11,13 +11,13 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The queried remote write configurations.</p>
+     * <p>The remote write configuration items returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListPrometheusRemoteWritesResponseBodyData> data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -87,13 +87,13 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the remote write configuration.</p>
+         * <p>The name of the remote write configuration item.</p>
          */
         @NameInMap("RemoteWriteName")
         public String remoteWriteName;
 
         /**
-         * <p>The remote write configuration. The configuration is displayed in the YAML format.</p>
+         * <p>The information about the queried remote write configuration item of the Prometheus instance. The information is displayed in the YAML format.</p>
          */
         @NameInMap("RemoteWriteYaml")
         public String remoteWriteYaml;

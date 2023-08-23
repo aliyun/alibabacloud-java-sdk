@@ -1221,6 +1221,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOrUpdateNotificationPolicyResponse createOrUpdateNotificationPolicyWithOptions(CreateOrUpdateNotificationPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directedMode)) {
+            body.put("DirectedMode", request.directedMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.escalationPolicyId)) {
             body.put("EscalationPolicyId", request.escalationPolicyId);
         }
@@ -1483,10 +1487,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.grafanaInstanceId)) {
             query.put("GrafanaInstanceId", request.grafanaInstanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.paramJson)) {
-            query.put("ParamJson", request.paramJson);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -3588,7 +3588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * None.
       *
       * @param request GetPrometheusApiTokenRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3619,7 +3619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the request.
+      * None.
       *
       * @param request GetPrometheusApiTokenRequest
       * @return GetPrometheusApiTokenResponse
@@ -4459,7 +4459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * $.parameters[5].schema.example
+      * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
       *
       * @param request InstallManagedPrometheusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4526,7 +4526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * $.parameters[5].schema.example
+      * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
       *
       * @param request InstallManagedPrometheusRequest
       * @return InstallManagedPrometheusResponse
@@ -4651,6 +4651,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.page)) {
             query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.severity)) {
@@ -5056,6 +5060,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNotificationPoliciesResponse listNotificationPoliciesWithOptions(ListNotificationPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directedMode)) {
+            query.put("DirectedMode", request.directedMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ids)) {
             query.put("Ids", request.ids);
         }
@@ -5746,6 +5754,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.openArmsDefaultSLRWithOptions(request, runtime);
     }
 
+    /**
+      * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
+      * *   Application Monitoring: Basic Edition
+      * *   Browser Monitoring: Basic Edition
+      * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
+      * *   Prometheus Service: Pro Edition
+      *
+      * @param request OpenArmsServiceSecondVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return OpenArmsServiceSecondVersionResponse
+     */
     public OpenArmsServiceSecondVersionResponse openArmsServiceSecondVersionWithOptions(OpenArmsServiceSecondVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5774,6 +5793,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OpenArmsServiceSecondVersionResponse());
     }
 
+    /**
+      * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
+      * *   Application Monitoring: Basic Edition
+      * *   Browser Monitoring: Basic Edition
+      * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
+      * *   Prometheus Service: Pro Edition
+      *
+      * @param request OpenArmsServiceSecondVersionRequest
+      * @return OpenArmsServiceSecondVersionResponse
+     */
     public OpenArmsServiceSecondVersionResponse openArmsServiceSecondVersion(OpenArmsServiceSecondVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openArmsServiceSecondVersionWithOptions(request, runtime);
@@ -7135,7 +7164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+      * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
       *
       * @param request UninstallManagedPrometheusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -7182,7 +7211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+      * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
       *
       * @param request UninstallManagedPrometheusRequest
       * @return UninstallManagedPrometheusResponse
@@ -7630,10 +7659,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mostRegionId)) {
             query.put("MostRegionId", request.mostRegionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.paramJson)) {
-            query.put("ParamJson", request.paramJson);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

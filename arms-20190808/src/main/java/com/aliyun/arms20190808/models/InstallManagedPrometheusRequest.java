@@ -5,61 +5,61 @@ import com.aliyun.tea.*;
 
 public class InstallManagedPrometheusRequest extends TeaModel {
     /**
-     * <p>The response object.</p>
+     * <p>The ID of the ACK cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The response content. In most cases, the installation status of the Prometheus agent is returned.</p>
+     * <p>The type of the monitoring object. Valid values: ask and ecs.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>success=false</p>
+     * <p>The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.</p>
      */
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
     /**
-     * <p>__null__</p>
+     * <p>This parameter is not supported.</p>
      */
     @NameInMap("KubeConfig")
     public String kubeConfig;
 
     /**
-     * <p>The parameter is not supported.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Prometheus实例的资源组ID。</p>
+     * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     * <p>The security group of the ASK cluster or ECS instance.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The error message returned if the Prometheus agent failed to be installed.</p>
+     * <p>The vSwitch used by the ASK cluster or ECS instance.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>Indicates whether the Prometheus agent was installed.</p>
+     * <p>The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

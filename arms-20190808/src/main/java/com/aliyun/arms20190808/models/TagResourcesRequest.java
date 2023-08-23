@@ -5,26 +5,19 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>Schema of Response</p>
+     * <p>The resource IDs. You can specify a maximum of 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
-     * <br>
-     * <p>WEB-front-end monitoring</p>
-     * <p>APPLICATION-Application Monitoring</p>
-     * <p>PROMETHEUS-PROM monitoring</p>
-     * <p>SYNTHETICTASK-Cloud dial test</p>
-     * <p>ALERTRULE - Application Monitoring Similar</p>
-     * <p>PROMETHEUSALERTRULE - Prometheus monitoring</p>
+     * <p>The type of the ARMS resources for which you want to modify tags. Valid values: WEB: Browser Monitoring APPLICATION: Application Monitoring PROMETHEUS: Managed Service for Prometheus SYNTHETICTASK: Synthetic Monitoring ALERTRULE: Application Monitoring alert rules PROMETHEUSALERTRULE: Prometheus alert rules</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The tags to add to the resource. You can specify a maximum of 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -60,11 +53,14 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>http://arms.${regionId}.aliyun-inc.com:8099/tag/TagResources.json</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

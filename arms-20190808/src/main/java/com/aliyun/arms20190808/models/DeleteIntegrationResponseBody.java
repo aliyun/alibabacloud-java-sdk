@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteIntegrationResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
@@ -13,6 +16,9 @@ public class DeleteIntegrationResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 

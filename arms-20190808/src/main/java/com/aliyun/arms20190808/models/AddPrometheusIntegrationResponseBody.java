@@ -11,13 +11,13 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned struct.</p>
+     * <p>The struct returned.</p>
      */
     @NameInMap("Data")
     public AddPrometheusIntegrationResponseBodyData data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -67,13 +67,13 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
 
     public static class AddPrometheusIntegrationResponseBodyData extends TeaModel {
         /**
-         * <p>The exporter ID.</p>
+         * <p>The ID of the exporter.</p>
          */
         @NameInMap("InstanceId")
         public Long instanceId;
 
         /**
-         * <p>The exporter name.</p>
+         * <p>The name of the exporter.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;

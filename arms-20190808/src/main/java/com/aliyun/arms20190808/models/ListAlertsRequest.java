@@ -19,6 +19,9 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("Page")
     public Long page;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Severity")
     public String severity;
 
@@ -80,6 +83,14 @@ public class ListAlertsRequest extends TeaModel {
     }
     public Long getPage() {
         return this.page;
+    }
+
+    public ListAlertsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListAlertsRequest setSeverity(String severity) {

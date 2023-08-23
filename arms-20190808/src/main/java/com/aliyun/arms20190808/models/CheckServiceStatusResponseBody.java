@@ -7,14 +7,14 @@ public class CheckServiceStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>*   true.</p>
+     * <p>*   false.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to find logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

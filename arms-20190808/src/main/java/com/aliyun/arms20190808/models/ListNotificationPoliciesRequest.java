@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListNotificationPoliciesRequest extends TeaModel {
+    @NameInMap("DirectedMode")
+    public Boolean directedMode;
+
     /**
      * <p>The ID of the notification policy.</p>
      */
@@ -46,6 +49,14 @@ public class ListNotificationPoliciesRequest extends TeaModel {
     public static ListNotificationPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNotificationPoliciesRequest self = new ListNotificationPoliciesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListNotificationPoliciesRequest setDirectedMode(Boolean directedMode) {
+        this.directedMode = directedMode;
+        return this;
+    }
+    public Boolean getDirectedMode() {
+        return this.directedMode;
     }
 
     public ListNotificationPoliciesRequest setIds(String ids) {
