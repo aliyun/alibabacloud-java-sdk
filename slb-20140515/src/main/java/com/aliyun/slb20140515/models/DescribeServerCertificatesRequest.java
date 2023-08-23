@@ -11,7 +11,11 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the server certificate.</p>
+     * <p>The region where the CLB instances are deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
+     * <br>
+     * <p>>  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -29,10 +33,13 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The domain name of the certificate. The domain name is specified in the `CommonName` field.</p>
+     * <p>The ID of the server certificate.</p>
      */
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeServerCertificatesRequestTag> tag;
 
     public static DescribeServerCertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeServerCertificatesRequest self = new DescribeServerCertificatesRequest();
@@ -93,6 +100,44 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     }
     public String getServerCertificateId() {
         return this.serverCertificateId;
+    }
+
+    public DescribeServerCertificatesRequest setTag(java.util.List<DescribeServerCertificatesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeServerCertificatesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeServerCertificatesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeServerCertificatesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServerCertificatesRequestTag self = new DescribeServerCertificatesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServerCertificatesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeServerCertificatesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -38,9 +38,31 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
         public static DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag self = new DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificateTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

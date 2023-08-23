@@ -120,9 +120,31 @@ public class DescribeLoadBalancerListenersRequest extends TeaModel {
     }
 
     public static class DescribeLoadBalancerListenersRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeLoadBalancerListenersRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeLoadBalancerListenersRequestTag self = new DescribeLoadBalancerListenersRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerListenersRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeLoadBalancerListenersRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

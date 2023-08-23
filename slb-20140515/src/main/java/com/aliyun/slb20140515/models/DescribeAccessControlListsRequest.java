@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeAccessControlLists**.</p>
+     * <p>The name of the network ACL. The name of the network ACL. The name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), hyphens (-), forward slashes (/), and underscores (\_). The name of the network ACL must be unique within each region. Fuzzy match is supported.</p>
      */
     @NameInMap("AclName")
     public String aclName;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The IP version of the Classic Load Balancer (CLB) instance with which the network ACL is associated. Valid values:</p>
+     * <br>
+     * <p>*   **ipv4**</p>
+     * <p>*   **ipv6**</p>
      */
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
@@ -23,27 +26,27 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the network ACL.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The IP version that is used by the associated CLB instance.</p>
+     * <p>The ID of the region where the ACL is created.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the region where the network ACL is created.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~27584~~) operation to query the IDs of regions.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -53,6 +56,9 @@ public class DescribeAccessControlListsRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeAccessControlListsRequestTag> tag;
 
     public static DescribeAccessControlListsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessControlListsRequest self = new DescribeAccessControlListsRequest();
@@ -137,6 +143,44 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeAccessControlListsRequest setTag(java.util.List<DescribeAccessControlListsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeAccessControlListsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeAccessControlListsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAccessControlListsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessControlListsRequestTag self = new DescribeAccessControlListsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessControlListsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAccessControlListsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

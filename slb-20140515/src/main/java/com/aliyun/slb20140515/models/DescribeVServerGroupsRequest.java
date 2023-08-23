@@ -123,9 +123,31 @@ public class DescribeVServerGroupsRequest extends TeaModel {
     }
 
     public static class DescribeVServerGroupsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
         public static DescribeVServerGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeVServerGroupsRequestTag self = new DescribeVServerGroupsRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVServerGroupsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeVServerGroupsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
