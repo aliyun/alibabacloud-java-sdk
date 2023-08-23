@@ -22,9 +22,15 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
+    /**
+     * <p>The maximum number of ignore params that can be refreshed.</p>
+     */
     @NameInMap("IgnoreParamsQuota")
     public Integer ignoreParamsQuota;
 
+    /**
+     * <p>The remaining number of ignore params that can be refreshed.</p>
+     */
     @NameInMap("IgnoreParamsRemain")
     public Integer ignoreParamsRemain;
 

@@ -236,9 +236,6 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        @NameInMap("GlobalResourcePlan")
-        public String globalResourcePlan;
-
         /**
          * <p>The time when the accelerated domain name was added.</p>
          */
@@ -337,14 +334,6 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         }
         public String getDomainStatus() {
             return this.domainStatus;
-        }
-
-        public DescribeUserDomainsResponseBodyDomainsPageData setGlobalResourcePlan(String globalResourcePlan) {
-            this.globalResourcePlan = globalResourcePlan;
-            return this;
-        }
-        public String getGlobalResourcePlan() {
-            return this.globalResourcePlan;
         }
 
         public DescribeUserDomainsResponseBodyDomainsPageData setGmtCreated(String gmtCreated) {

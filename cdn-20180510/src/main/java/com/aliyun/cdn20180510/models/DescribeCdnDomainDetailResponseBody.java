@@ -197,9 +197,6 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
-        @NameInMap("GlobalResourcePlan")
-        public String globalResourcePlan;
-
         /**
          * <p>The time when the domain name was created.</p>
          */
@@ -288,14 +285,6 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         }
         public String getDomainStatus() {
             return this.domainStatus;
-        }
-
-        public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setGlobalResourcePlan(String globalResourcePlan) {
-            this.globalResourcePlan = globalResourcePlan;
-            return this;
-        }
-        public String getGlobalResourcePlan() {
-            return this.globalResourcePlan;
         }
 
         public DescribeCdnDomainDetailResponseBodyGetDomainDetailModel setGmtCreated(String gmtCreated) {
