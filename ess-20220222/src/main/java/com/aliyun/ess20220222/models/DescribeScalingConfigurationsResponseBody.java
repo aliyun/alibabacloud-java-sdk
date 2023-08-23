@@ -621,6 +621,9 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
+
         /**
          * <p>The ID of the deployment set to which the Elastic Compute Service (ECS) instance belongs.</p>
          */
@@ -1065,6 +1068,14 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getDedicatedHostId() {
             return this.dedicatedHostId;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setDeploymentSetId(String deploymentSetId) {

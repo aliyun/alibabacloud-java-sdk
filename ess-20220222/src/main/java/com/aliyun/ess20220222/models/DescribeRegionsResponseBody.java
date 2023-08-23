@@ -11,7 +11,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>Details of the regions.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,31 +39,37 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The endpoint of the region.</p>
+         * <p>Indicates whether the region supports scaling groups of the classic network type. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("ClassicUnavailable")
         public Boolean classicUnavailable;
 
         /**
-         * <p>China (Beijing)</p>
+         * <p>The name of the region.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The endpoint of the region.</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
-         * <p>auditing</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>Indicates whether the region supports scaling groups of the virtual private cloud (VPC) type. Valid values:</p>
+         * <br>
+         * <p>*   true: The region does not support scaling groups of the VPC type.</p>
+         * <p>*   false: The region supports scaling groups of the VPC type.</p>
          */
         @NameInMap("VpcUnavailable")
         public Boolean vpcUnavailable;
