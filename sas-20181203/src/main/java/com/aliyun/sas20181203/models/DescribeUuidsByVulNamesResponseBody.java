@@ -16,6 +16,9 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of vulnerabilities on the server.</p>
+     */
     @NameInMap("VulCount")
     public Integer vulCount;
 
@@ -50,7 +53,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
 
     public static class DescribeUuidsByVulNamesResponseBodyMachineInfoStatistics extends TeaModel {
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("MachineInstanceId")
         public String machineInstanceId;
@@ -68,7 +71,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         public String machineName;
 
         /**
-         * <p>The name of the operating system that the server runs.</p>
+         * <p>The operating system that the server runs.</p>
          */
         @NameInMap("Os")
         public String os;

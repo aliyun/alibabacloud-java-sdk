@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
+    /**
+     * <p>Returns the response body.</p>
+     */
     @NameInMap("Data")
     public GetFileDetectApiInvokeInfoResponseBodyData data;
 
+    /**
+     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,45 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
     }
 
     public static class GetFileDetectApiInvokeInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The total number of authorizations.</p>
+         */
         @NameInMap("AuthCount")
         public Long authCount;
 
+        /**
+         * <p>The timestamp of the expiration date of the authorization number.</p>
+         */
         @NameInMap("Expire")
         public Long expire;
 
+        /**
+         * <p>The frequency of calls.</p>
+         */
         @NameInMap("FlowRate")
         public Integer flowRate;
 
+        /**
+         * <p>The number of remaining authorizations.</p>
+         */
         @NameInMap("RemainAuthCount")
         public Long remainAuthCount;
 
+        /**
+         * <p>The Authorized Version. Valid values include:</p>
+         * <br>
+         * <p>* **1:** trial version</p>
+         * <p>* **2:** Enterprise Edition</p>
+         */
         @NameInMap("SaleVersion")
         public Integer saleVersion;
 
+        /**
+         * <p>The time unit of the frequency limit. Value:</p>
+         * <br>
+         * <p>* **SECONDS**</p>
+         * <p>* **MINUTES**</p>
+         */
         @NameInMap("TimeUnit")
         public String timeUnit;
 

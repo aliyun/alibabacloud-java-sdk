@@ -21,6 +21,9 @@ public class SaveImageBaselineStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("Source")
+    public String source;
+
     /**
      * <p>The ID of the baseline check policy.</p>
      * <br>
@@ -54,6 +57,14 @@ public class SaveImageBaselineStrategyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public SaveImageBaselineStrategyRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public SaveImageBaselineStrategyRequest setStrategyId(Long strategyId) {

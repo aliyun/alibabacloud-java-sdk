@@ -4,15 +4,28 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetClientRatioStatisticRequest extends TeaModel {
+    /**
+     * <p>The ID of the primary account of the Resource Directory member account.</p>
+     * <p>> call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) interface to obtain this parameter.</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
+    /**
+     * <p>An array that consists of the details of a statistical type.</p>
+     */
     @NameInMap("StatisticTypes")
     public java.util.List<String> statisticTypes;
 
+    /**
+     * <p>The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.</p>
+     */
     @NameInMap("TimeEnd")
     public Long timeEnd;
 
+    /**
+     * <p>The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.</p>
+     */
     @NameInMap("TimeStart")
     public Long timeStart;
 

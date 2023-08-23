@@ -3,7 +3,13 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRiskTypeRequest extends TeaModel {
+public class QueryAttackCountRequest extends TeaModel {
+    /**
+     * <p>The ID of the request source. Set the value to sas.</p>
+     */
+    @NameInMap("From")
+    public String from;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
@@ -13,21 +19,26 @@ public class DescribeRiskTypeRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("Source")
-    public String source;
-
     /**
      * <p>The source IP address of the request.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
-    public static DescribeRiskTypeRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRiskTypeRequest self = new DescribeRiskTypeRequest();
+    public static QueryAttackCountRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryAttackCountRequest self = new QueryAttackCountRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRiskTypeRequest setLang(String lang) {
+    public QueryAttackCountRequest setFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    public String getFrom() {
+        return this.from;
+    }
+
+    public QueryAttackCountRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
@@ -35,15 +46,7 @@ public class DescribeRiskTypeRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeRiskTypeRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
-    }
-
-    public DescribeRiskTypeRequest setSourceIp(String sourceIp) {
+    public QueryAttackCountRequest setSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
     }

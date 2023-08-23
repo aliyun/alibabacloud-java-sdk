@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessRiskUuidRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The public IP address of the asset that you want to query.</p>
+     */
     @NameInMap("InternetIp")
     public String internetIp;
 
+    /**
+     * <p>The private IP address of the asset that you want to query.</p>
+     */
     @NameInMap("IntranetIp")
     public String intranetIp;
 
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("MachineName")
     public String machineName;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Specifies whether risks exist. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Risks exist.</p>
+     * <p>*   **false**: Risks do not exist.</p>
+     */
     @NameInMap("Risk")
     public Boolean risk;
 
+    /**
+     * <p>The name of the detection object.</p>
+     */
     @NameInMap("TargetName")
     public String targetName;
 

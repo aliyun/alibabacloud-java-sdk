@@ -4,15 +4,27 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetClientRatioStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on the client installation rate.</p>
+     */
     @NameInMap("ClientInstallRatio")
     public GetClientRatioStatisticResponseBodyClientInstallRatio clientInstallRatio;
 
+    /**
+     * <p>The statistics on the client online rate.</p>
+     */
     @NameInMap("ClientOnlineRatio")
     public GetClientRatioStatisticResponseBodyClientOnlineRatio clientOnlineRatio;
 
+    /**
+     * <p>The list of time when statistics were collected.</p>
+     */
     @NameInMap("Dates")
     public java.util.List<Long> dates;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,27 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientInstallRatioCurrentItemsItems extends TeaModel {
+        /**
+         * <p>The total number of assets.</p>
+         */
         @NameInMap("AssetTotalCount")
         public Integer assetTotalCount;
 
+        /**
+         * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+         */
         @NameInMap("CalculateTime")
         public Long calculateTime;
 
+        /**
+         * <p>The installation rate. Unit: %.</p>
+         */
         @NameInMap("InstallRatio")
         public Double installRatio;
 
+        /**
+         * <p>The number of assets on which the client is installed.</p>
+         */
         @NameInMap("InstalledAssetCount")
         public Integer installedAssetCount;
 
@@ -106,9 +130,21 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientInstallRatioCurrentItems extends TeaModel {
+        /**
+         * <p>The list of the statistics on the installation rate of the client by vendor.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GetClientRatioStatisticResponseBodyClientInstallRatioCurrentItemsItems> items;
 
+        /**
+         * <p>The type of the server. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+         * <p>*   **8**: a lightweight asset</p>
+         */
         @NameInMap("Vendor")
         public Long vendor;
 
@@ -136,15 +172,27 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientInstallRatioHistoryItemsItems extends TeaModel {
+        /**
+         * <p>The total number of assets.</p>
+         */
         @NameInMap("AssetTotalCount")
         public Integer assetTotalCount;
 
+        /**
+         * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+         */
         @NameInMap("CalculateTime")
         public Long calculateTime;
 
+        /**
+         * <p>The installation rate. Unit: %.</p>
+         */
         @NameInMap("InstallRatio")
         public Double installRatio;
 
+        /**
+         * <p>The number of assets on which the client is installed.</p>
+         */
         @NameInMap("InstalledAssetCount")
         public Integer installedAssetCount;
 
@@ -188,9 +236,21 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientInstallRatioHistoryItems extends TeaModel {
+        /**
+         * <p>The list of statistics on the client installation rate.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GetClientRatioStatisticResponseBodyClientInstallRatioHistoryItemsItems> items;
 
+        /**
+         * <p>The type of the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+         * <p>*   **8**: a simple application server</p>
+         */
         @NameInMap("Vendor")
         public Long vendor;
 
@@ -218,9 +278,15 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientInstallRatio extends TeaModel {
+        /**
+         * <p>The list of current statistics on the installation rate of the client.</p>
+         */
         @NameInMap("CurrentItems")
         public java.util.List<GetClientRatioStatisticResponseBodyClientInstallRatioCurrentItems> currentItems;
 
+        /**
+         * <p>The list of historical statistics on the installation rate of the client.</p>
+         */
         @NameInMap("HistoryItems")
         public java.util.List<GetClientRatioStatisticResponseBodyClientInstallRatioHistoryItems> historyItems;
 
@@ -248,15 +314,27 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientOnlineRatioCurrentItemsItems extends TeaModel {
+        /**
+         * <p>The number of assets on which the client is installed.</p>
+         */
         @NameInMap("AssetInstallCount")
         public Integer assetInstallCount;
 
+        /**
+         * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+         */
         @NameInMap("CalculateTime")
         public Long calculateTime;
 
+        /**
+         * <p>The number of online assets.</p>
+         */
         @NameInMap("OnlineAssetCount")
         public Integer onlineAssetCount;
 
+        /**
+         * <p>The online rate. Unit: %.</p>
+         */
         @NameInMap("OnlineRatio")
         public Double onlineRatio;
 
@@ -300,9 +378,21 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientOnlineRatioCurrentItems extends TeaModel {
+        /**
+         * <p>The list of current statistics on the online rate of the client by vendor.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GetClientRatioStatisticResponseBodyClientOnlineRatioCurrentItemsItems> items;
 
+        /**
+         * <p>The type of the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+         * <p>*   **8**: a simple application server</p>
+         */
         @NameInMap("Vendor")
         public Long vendor;
 
@@ -330,15 +420,27 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientOnlineRatioHistoryItemsItems extends TeaModel {
+        /**
+         * <p>The number of assets on which the client is installed.</p>
+         */
         @NameInMap("AssetInstallCount")
         public Integer assetInstallCount;
 
+        /**
+         * <p>The timestamp of the calculation. Unit: milliseconds.</p>
+         */
         @NameInMap("CalculateTime")
         public Long calculateTime;
 
+        /**
+         * <p>The number of online assets.</p>
+         */
         @NameInMap("OnlineAssetCount")
         public Integer onlineAssetCount;
 
+        /**
+         * <p>The online rate. Unit: %.</p>
+         */
         @NameInMap("OnlineRatio")
         public Double onlineRatio;
 
@@ -382,9 +484,21 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientOnlineRatioHistoryItems extends TeaModel {
+        /**
+         * <p>The list of historical statistics on the online rate of the client by vendor.</p>
+         */
         @NameInMap("Items")
         public java.util.List<GetClientRatioStatisticResponseBodyClientOnlineRatioHistoryItemsItems> items;
 
+        /**
+         * <p>The type of the server. Valid values:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+         * <p>*   **8**: a lightweight asset</p>
+         */
         @NameInMap("Vendor")
         public Long vendor;
 
@@ -412,9 +526,15 @@ public class GetClientRatioStatisticResponseBody extends TeaModel {
     }
 
     public static class GetClientRatioStatisticResponseBodyClientOnlineRatio extends TeaModel {
+        /**
+         * <p>The list of current statistics on the online rate of the client.</p>
+         */
         @NameInMap("CurrentItems")
         public java.util.List<GetClientRatioStatisticResponseBodyClientOnlineRatioCurrentItems> currentItems;
 
+        /**
+         * <p>The list of historical statistics on the online rate of the client.</p>
+         */
         @NameInMap("HistoryItems")
         public java.util.List<GetClientRatioStatisticResponseBodyClientOnlineRatioHistoryItems> historyItems;
 

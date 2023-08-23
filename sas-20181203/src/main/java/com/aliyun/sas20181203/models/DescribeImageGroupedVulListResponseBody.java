@@ -93,9 +93,10 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
         public Integer asapCount;
 
         /**
-         * <p>是否可支持修复。取值：</p>
-         * <p>- **yes**：支持修复</p>
-         * <p>- **no**： 不支持修复</p>
+         * <p>Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:</p>
+         * <br>
+         * <p>*   **yes**</p>
+         * <p>*   **no**</p>
          */
         @NameInMap("CanFix")
         public String canFix;

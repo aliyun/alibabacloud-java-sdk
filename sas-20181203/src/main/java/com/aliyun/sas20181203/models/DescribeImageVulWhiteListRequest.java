@@ -16,6 +16,9 @@ public class DescribeImageVulWhiteListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Source")
+    public String source;
+
     public static DescribeImageVulWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageVulWhiteListRequest self = new DescribeImageVulWhiteListRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeImageVulWhiteListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeImageVulWhiteListRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

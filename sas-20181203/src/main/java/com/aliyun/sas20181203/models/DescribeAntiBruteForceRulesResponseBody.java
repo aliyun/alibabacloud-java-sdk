@@ -17,7 +17,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the defense rules.</p>
+     * <p>An array that consists of the details of the defense rule.</p>
      */
     @NameInMap("Rules")
     public java.util.List<DescribeAntiBruteForceRulesResponseBodyRules> rules;
@@ -116,14 +116,17 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeAntiBruteForceRulesResponseBodyRules extends TeaModel {
+        /**
+         * <p>The timestamp when the rule was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
         /**
          * <p>Indicates whether the defense rule is the default rule. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**: The defense rule is the default rule.</p>
+         * <p>*   **false**: The defense rule is not the default rule.</p>
          * <br>
          * <p>> The default rule takes effect on all servers that are not protected by defense rules against brute-force attacks.</p>
          */
@@ -137,7 +140,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         public Boolean enableSmartRule;
 
         /**
-         * <p>The threshold of logon failures that you specify.</p>
+         * <p>The threshold of logon failures that is specified in the defense rule.</p>
          */
         @NameInMap("FailCount")
         public Integer failCount;
@@ -167,7 +170,7 @@ public class DescribeAntiBruteForceRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP addresses of attackers cannot be used to log on to the server within the specified period of time.</p>
+         * <p>The period of time during which logon failures from an account are measured. Unit: minutes. If **Span** is set to 10, the defense rule takes effect when the logon failures measured within 10 minutes reaches the specified threshold. The IP address of attackers cannot be used to log on to the server in the specified period of time.</p>
          */
         @NameInMap("Span")
         public Integer span;

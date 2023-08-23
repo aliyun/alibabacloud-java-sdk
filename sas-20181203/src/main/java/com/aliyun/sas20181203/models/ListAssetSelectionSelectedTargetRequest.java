@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAssetSelectionSelectedTargetRequest extends TeaModel {
+    /**
+     * <p>The unique ID of the asset.</p>
+     */
     @NameInMap("SelectionKey")
     public String selectionKey;
 
+    /**
+     * <p>The details of queries.</p>
+     */
     @NameInMap("TargetList")
     public java.util.List<String> targetList;
 

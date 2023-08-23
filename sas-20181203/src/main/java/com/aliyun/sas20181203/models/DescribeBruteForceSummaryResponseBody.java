@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeBruteForceSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of IP address blocking policies.</p>
+     */
     @NameInMap("BruteForceSummary")
     public DescribeBruteForceSummaryResponseBodyBruteForceSummary bruteForceSummary;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,45 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeBruteForceSummaryResponseBodyBruteForceSummary extends TeaModel {
+        /**
+         * <p>The number of anti-brute force IP blocking policies.</p>
+         */
         @NameInMap("AllStrategyCount")
         public Integer allStrategyCount;
 
+        /**
+         * <p>The number of defense policies.</p>
+         */
         @NameInMap("AntiBruteForceRuleCount")
         public String antiBruteForceRuleCount;
 
+        /**
+         * <p>The number of custom blocking rules that are in effect.</p>
+         */
         @NameInMap("CustomEffectiveCount")
         public String customEffectiveCount;
 
+        /**
+         * <p>The number of custom blocking rules.</p>
+         */
         @NameInMap("CustomRecordCount")
         public String customRecordCount;
 
+        /**
+         * <p>The number of anti-brute force IP blocking policies enabled.</p>
+         */
         @NameInMap("EffectiveCount")
         public Integer effectiveCount;
 
+        /**
+         * <p>The number of system blocking rules that are in effect.</p>
+         */
         @NameInMap("SystemEffectiveCount")
         public String systemEffectiveCount;
 
+        /**
+         * <p>The number of system blocking rules.</p>
+         */
         @NameInMap("SystemRecordCount")
         public String systemRecordCount;
 

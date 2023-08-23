@@ -13,6 +13,10 @@ public class DescribeAssetDetailByUuidsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>资源目录成员账号主账号ID。</p>
+     * <p>>调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

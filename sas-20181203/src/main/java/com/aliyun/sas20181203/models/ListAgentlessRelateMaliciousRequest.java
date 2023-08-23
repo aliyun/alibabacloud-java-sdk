@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessRelateMaliciousRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The ID of the event.</p>
+     */
     @NameInMap("EventId")
     public Long eventId;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 

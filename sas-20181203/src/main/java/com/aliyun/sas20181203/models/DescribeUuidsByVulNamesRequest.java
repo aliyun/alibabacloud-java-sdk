@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeUuidsByVulNamesRequest extends TeaModel {
     /**
-     * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+     * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
      * <br>
-     * <p>**y**: The vulnerability is handled. **n**: The vulnerability is not handled.</p>
+     * <p>*   **y**: the vulnerability is fixed.</p>
+     * <p>*   **n**: the vulnerability is not fixed.</p>
      */
     @NameInMap("Dealed")
     public String dealed;

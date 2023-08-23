@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessTaskResponseBody extends TeaModel {
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListAgentlessTaskResponseBodyList> list;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListAgentlessTaskResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,42 +52,89 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessTaskResponseBodyList extends TeaModel {
+        /**
+         * <p>The end timestamp of the task. Unit: milliseconds.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The progress of the task.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The result of the detection.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The start timestamp of the task. Unit: milliseconds.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the detection task.</p>
+         * <br>
+         * <p>*   **1**: The detection task is in progress.</p>
+         * <p>*   **2**: The detection task is complete.</p>
+         * <p>*   **3**: The detection task fails.</p>
+         * <p>*   **4**: The detection task times out.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The name of the asset that is detected.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the asset that is detected. Valid values:</p>
+         * <br>
+         * <p>*   **1**: snapshot</p>
+         * <p>*   **2**: image</p>
+         */
         @NameInMap("TargetType")
         public Integer targetType;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The name of the detection task.</p>
+         */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -194,12 +250,21 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessTaskResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

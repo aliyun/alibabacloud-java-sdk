@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessRiskUuidResponseBody extends TeaModel {
+    /**
+     * <p>The information about the hosts.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListAgentlessRiskUuidResponseBodyList> list;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListAgentlessRiskUuidResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +52,63 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessRiskUuidResponseBodyList extends TeaModel {
+        /**
+         * <p>The number of baseline risks.</p>
+         */
         @NameInMap("BaselineCount")
         public Integer baselineCount;
 
+        /**
+         * <p>The instance name of the asset.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The number of malicious samples.</p>
+         */
         @NameInMap("MaliciousCount")
         public Integer maliciousCount;
 
+        /**
+         * <p>The timestamp of the detection. Unit: milliseconds.</p>
+         */
         @NameInMap("ScanTime")
         public Long scanTime;
 
+        /**
+         * <p>The ID of the asset that is detected.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset that is detected.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
+        /**
+         * <p>The number of detected vulnerabilities.</p>
+         */
         @NameInMap("VulCount")
         public Integer vulCount;
 
@@ -161,12 +200,21 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessRiskUuidResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

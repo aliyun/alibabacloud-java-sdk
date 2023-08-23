@@ -81,6 +81,9 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
+    @NameInMap("StatusList")
+    public String statusList;
+
     /**
      * <p>The type of the vulnerability. Valid values:</p>
      * <br>
@@ -197,6 +200,14 @@ public class DescribeVulListRequest extends TeaModel {
     }
     public Long getResourceDirectoryAccountId() {
         return this.resourceDirectoryAccountId;
+    }
+
+    public DescribeVulListRequest setStatusList(String statusList) {
+        this.statusList = statusList;
+        return this;
+    }
+    public String getStatusList() {
+        return this.statusList;
     }
 
     public DescribeVulListRequest setType(String type) {

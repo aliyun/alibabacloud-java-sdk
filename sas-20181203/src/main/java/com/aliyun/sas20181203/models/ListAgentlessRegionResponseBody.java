@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessRegionResponseBody extends TeaModel {
+    /**
+     * <p>The information about the regions.</p>
+     */
     @NameInMap("RegionList")
     public java.util.List<String> regionList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

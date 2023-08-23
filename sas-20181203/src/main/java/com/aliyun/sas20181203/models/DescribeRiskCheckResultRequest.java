@@ -32,7 +32,7 @@ public class DescribeRiskCheckResultRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the check item. For more information about the check item, see the check item table in the "Response parameters" section of this topic.</p>
+     * <p>An array that consists of the IDs of check items. For more information about the check item, see the check item table in the "Response parameters" section of this topic.</p>
      */
     @NameInMap("ItemIds")
     public java.util.List<String> itemIds;
