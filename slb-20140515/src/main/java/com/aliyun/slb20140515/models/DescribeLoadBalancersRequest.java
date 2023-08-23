@@ -149,6 +149,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeLoadBalancersRequestTag> tag;
+
     /**
      * <p>The tags that are added to the CLB instance. The tags must be key-value pairs that are contained in a JSON dictionary.</p>
      * <br>
@@ -342,6 +345,14 @@ public class DescribeLoadBalancersRequest extends TeaModel {
         return this.slaveZoneId;
     }
 
+    public DescribeLoadBalancersRequest setTag(java.util.List<DescribeLoadBalancersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeLoadBalancersRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeLoadBalancersRequest setTags(String tags) {
         this.tags = tags;
         return this;
@@ -364,6 +375,36 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class DescribeLoadBalancersRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeLoadBalancersRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancersRequestTag self = new DescribeLoadBalancersRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancersRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeLoadBalancersRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

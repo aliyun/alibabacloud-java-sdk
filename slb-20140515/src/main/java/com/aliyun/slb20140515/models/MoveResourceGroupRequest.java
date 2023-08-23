@@ -4,6 +4,9 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group to which you want to move the resource.</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
@@ -13,12 +16,21 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the Classic Load Balancer (CLB) instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
@@ -28,9 +40,19 @@ public class MoveResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **loadbalancer**: a CLB instance</p>
+     * <p>*   **certificate**: a certificate</p>
+     * <p>*   **acl**: an access control list (ACL)</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The AccessKey ID provided by Alibaba Cloud.</p>
+     */
     @NameInMap("access_key_id")
     public String accessKeyId;
 

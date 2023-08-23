@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServerCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The timestamp generated when the server certificate is uploaded.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,9 +57,31 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
         public static DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag self = new DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
@@ -84,38 +106,53 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     }
 
     public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate extends TeaModel {
+        /**
+         * <p>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         */
         @NameInMap("AliCloudCertificateId")
         public String aliCloudCertificateId;
 
         /**
-         * <p>The time when the server certificate is uploaded.</p>
+         * <p>The name of the server certificate from Alibaba Cloud Certificate Management Service.</p>
          */
         @NameInMap("AliCloudCertificateName")
         public String aliCloudCertificateName;
 
         /**
-         * <p>The ID of the server certificate from Alibaba Cloud Certificate Management Service.</p>
+         * <p>The domain name of the certificate. The domain name is specified in the `CommonName` field.</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The ID of the region where the server certificate is created.</p>
+         * <p>The time when the server certificate is uploaded.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeServerCertificates**.</p>
+         * <p>The timestamp generated when the server certificate is uploaded.</p>
          */
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The expiration time.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        /**
+         * <p>The timestamp that indicates when the certificate expires.</p>
+         */
+        @NameInMap("ExpireTimeStamp")
+        public Long expireTimeStamp;
+
+        /**
+         * <p>The fingerprint of the server certificate.</p>
+         */
+        @NameInMap("Fingerprint")
+        public String fingerprint;
 
         /**
          * <p>Indicates whether the server certificate is from Alibaba Cloud Certificate Management Service. Valid values:</p>
@@ -123,46 +160,36 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
          * <p>*   **1**: yes</p>
          * <p>*   **0**: no</p>
          */
-        @NameInMap("ExpireTimeStamp")
-        public Long expireTimeStamp;
-
-        /**
-         * <p>The name of the server certificate from Alibaba Cloud Certificate Management Service.</p>
-         */
-        @NameInMap("Fingerprint")
-        public String fingerprint;
-
         @NameInMap("IsAliCloudCertificate")
         public Integer isAliCloudCertificate;
 
         /**
-         * <p>The ID of the server certificate.</p>
+         * <p>The ID of the region where the server certificate is created.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The region where the CLB instances are deployed.</p>
-         * <br>
-         * <p>You can call the [DescribeRegions](~~27584~~) operation to query the most recent region list.</p>
-         * <br>
-         * <p>>  If the endpoint of the region is slb.aliyuncs.com, you must specify the `RegionId` parameter.</p>
+         * <p>The ID of the server certificate.</p>
          */
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
 
         /**
-         * <p>The timestamp that indicates when the certificate expires.</p>
+         * <p>The name of the server certificate.</p>
          */
         @NameInMap("ServerCertificateName")
         public String serverCertificateName;
 
+        /**
+         * <p>The list of alternative domain names of the server certificate. The alternative domain names are specified in the `Subject Alternative Name` field of the server certificate.</p>
+         */
         @NameInMap("SubjectAlternativeNames")
         public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames;
 

@@ -2375,6 +2375,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -2564,6 +2568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3340,6 +3348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SlaveZoneId", request.slaveZoneId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
             query.put("Tags", request.tags);
         }
@@ -3636,7 +3648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the server certificate.
+      * >  For security reasons, only fingerprints and names of the server certificates are returned. The content of the server certificates and private keys is not returned.
       *
       * @param request DescribeServerCertificatesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3673,6 +3685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServerCertificateId", request.serverCertificateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3691,7 +3707,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The name of the server certificate.
+      * >  For security reasons, only fingerprints and names of the server certificates are returned. The content of the server certificates and private keys is not returned.
       *
       * @param request DescribeServerCertificatesRequest
       * @return DescribeServerCertificatesResponse
