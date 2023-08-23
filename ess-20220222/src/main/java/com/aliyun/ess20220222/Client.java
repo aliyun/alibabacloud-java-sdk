@@ -1021,6 +1021,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DedicatedHostId", request.dedicatedHostId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
             query.put("DeploymentSetId", request.deploymentSetId);
         }
@@ -3703,13 +3707,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.executeScalingRuleWithOptions(request, runtime);
     }
 
-    /**
-      * The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
-      *
-      * @param request ExitStandbyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return ExitStandbyResponse
-     */
     public ExitStandbyResponse exitStandbyWithOptions(ExitStandbyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3758,12 +3755,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExitStandbyResponse());
     }
 
-    /**
-      * The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
-      *
-      * @param request ExitStandbyRequest
-      * @return ExitStandbyResponse
-     */
     public ExitStandbyResponse exitStandby(ExitStandbyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.exitStandbyWithOptions(request, runtime);
@@ -4441,6 +4432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dedicatedHostId)) {
             query.put("DedicatedHostId", request.dedicatedHostId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentSetId)) {
@@ -5321,6 +5316,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setGroupDeletionProtectionWithOptions(request, runtime);
     }
 
+    /**
+      * Configures the health check feature for Elastic Compute Service (ECS) instances.
+      *
+      * @param request SetInstanceHealthRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetInstanceHealthResponse
+     */
     public SetInstanceHealthResponse setInstanceHealthWithOptions(SetInstanceHealthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5357,11 +5359,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetInstanceHealthResponse());
     }
 
+    /**
+      * Configures the health check feature for Elastic Compute Service (ECS) instances.
+      *
+      * @param request SetInstanceHealthRequest
+      * @return SetInstanceHealthResponse
+     */
     public SetInstanceHealthResponse setInstanceHealth(SetInstanceHealthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setInstanceHealthWithOptions(request, runtime);
     }
 
+    /**
+      * Puts one or more Elastic Compute Service (ECS) instances into the Protected state.
+      *
+      * @param request SetInstancesProtectionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return SetInstancesProtectionResponse
+     */
     public SetInstancesProtectionResponse setInstancesProtectionWithOptions(SetInstancesProtectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5402,6 +5417,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SetInstancesProtectionResponse());
     }
 
+    /**
+      * Puts one or more Elastic Compute Service (ECS) instances into the Protected state.
+      *
+      * @param request SetInstancesProtectionRequest
+      * @return SetInstancesProtectionResponse
+     */
     public SetInstancesProtectionResponse setInstancesProtection(SetInstancesProtectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.setInstancesProtectionWithOptions(request, runtime);

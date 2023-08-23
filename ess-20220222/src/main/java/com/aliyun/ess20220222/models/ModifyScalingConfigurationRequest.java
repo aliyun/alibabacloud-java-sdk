@@ -55,6 +55,9 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The ID of the deployment set of the ECS instances that are created by using the scaling configuration.</p>
      */
@@ -397,6 +400,14 @@ public class ModifyScalingConfigurationRequest extends TeaModel {
     }
     public String getDedicatedHostId() {
         return this.dedicatedHostId;
+    }
+
+    public ModifyScalingConfigurationRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public ModifyScalingConfigurationRequest setDeploymentSetId(String deploymentSetId) {
