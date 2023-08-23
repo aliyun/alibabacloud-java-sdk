@@ -54,6 +54,9 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
     }
 
     public static class QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList extends TeaModel {
+        @NameInMap("AliasList")
+        public java.util.List<String> aliasList;
+
         @NameInMap("Category")
         public String category;
 
@@ -75,6 +78,14 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         public static QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList build(java.util.Map<String, ?> map) throws Exception {
             QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList self = new QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList();
             return TeaModel.build(map, self);
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setAliasList(java.util.List<String> aliasList) {
+            this.aliasList = aliasList;
+            return this;
+        }
+        public java.util.List<String> getAliasList() {
+            return this.aliasList;
         }
 
         public QueryRoomControlDevicesResponseBodyResultDevicesMultiKeySwitchExtSwitchList setCategory(String category) {
@@ -147,6 +158,9 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
     }
 
     public static class QueryRoomControlDevicesResponseBodyResultDevices extends TeaModel {
+        @NameInMap("AliasList")
+        public java.util.List<String> aliasList;
+
         @NameInMap("ConnectType")
         public String connectType;
 
@@ -174,6 +188,14 @@ public class QueryRoomControlDevicesResponseBody extends TeaModel {
         public static QueryRoomControlDevicesResponseBodyResultDevices build(java.util.Map<String, ?> map) throws Exception {
             QueryRoomControlDevicesResponseBodyResultDevices self = new QueryRoomControlDevicesResponseBodyResultDevices();
             return TeaModel.build(map, self);
+        }
+
+        public QueryRoomControlDevicesResponseBodyResultDevices setAliasList(java.util.List<String> aliasList) {
+            this.aliasList = aliasList;
+            return this;
+        }
+        public java.util.List<String> getAliasList() {
+            return this.aliasList;
         }
 
         public QueryRoomControlDevicesResponseBodyResultDevices setConnectType(String connectType) {

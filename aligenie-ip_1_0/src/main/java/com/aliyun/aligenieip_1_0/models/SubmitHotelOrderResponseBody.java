@@ -16,6 +16,9 @@ public class SubmitHotelOrderResponseBody extends TeaModel {
     @NameInMap("Result")
     public String result;
 
+    @NameInMap("StatusCode")
+    public Integer statusCode;
+
     public static SubmitHotelOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitHotelOrderResponseBody self = new SubmitHotelOrderResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SubmitHotelOrderResponseBody extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public SubmitHotelOrderResponseBody setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
     }
 
 }
