@@ -143,6 +143,9 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         @NameInMap("Price")
         public Long price;
 
+        @NameInMap("ResidueLimit")
+        public Long residueLimit;
+
         @NameInMap("Status")
         public String status;
 
@@ -192,6 +195,14 @@ public class ListHotelSceneItemResponseBody extends TeaModel {
         }
         public Long getPrice() {
             return this.price;
+        }
+
+        public ListHotelSceneItemResponseBodyResultSecondCategoryListItemList setResidueLimit(Long residueLimit) {
+            this.residueLimit = residueLimit;
+            return this;
+        }
+        public Long getResidueLimit() {
+            return this.residueLimit;
         }
 
         public ListHotelSceneItemResponseBodyResultSecondCategoryListItemList setStatus(String status) {

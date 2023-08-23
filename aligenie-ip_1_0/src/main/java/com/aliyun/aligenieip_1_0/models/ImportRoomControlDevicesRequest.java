@@ -54,6 +54,9 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
     }
 
     public static class ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList extends TeaModel {
+        @NameInMap("AliasList")
+        public java.util.List<String> aliasList;
+
         @NameInMap("Category")
         public String category;
 
@@ -69,6 +72,14 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         public static ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList build(java.util.Map<String, ?> map) throws Exception {
             ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList self = new ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList();
             return TeaModel.build(map, self);
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList setAliasList(java.util.List<String> aliasList) {
+            this.aliasList = aliasList;
+            return this;
+        }
+        public java.util.List<String> getAliasList() {
+            return this.aliasList;
         }
 
         public ImportRoomControlDevicesRequestLocationDevicesDevicesMultiKeySwitchExtSwitchList setCategory(String category) {
@@ -125,6 +136,9 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
     }
 
     public static class ImportRoomControlDevicesRequestLocationDevicesDevices extends TeaModel {
+        @NameInMap("AliasList")
+        public java.util.List<String> aliasList;
+
         @NameInMap("Brand")
         public String brand;
 
@@ -170,6 +184,14 @@ public class ImportRoomControlDevicesRequest extends TeaModel {
         public static ImportRoomControlDevicesRequestLocationDevicesDevices build(java.util.Map<String, ?> map) throws Exception {
             ImportRoomControlDevicesRequestLocationDevicesDevices self = new ImportRoomControlDevicesRequestLocationDevicesDevices();
             return TeaModel.build(map, self);
+        }
+
+        public ImportRoomControlDevicesRequestLocationDevicesDevices setAliasList(java.util.List<String> aliasList) {
+            this.aliasList = aliasList;
+            return this;
+        }
+        public java.util.List<String> getAliasList() {
+            return this.aliasList;
         }
 
         public ImportRoomControlDevicesRequestLocationDevicesDevices setBrand(String brand) {

@@ -117,6 +117,9 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
     }
 
     public static class ListHotelSceneItemsResponseBodyResultSceneItemList extends TeaModel {
+        @NameInMap("BeyondLimitReply")
+        public String beyondLimitReply;
+
         @NameInMap("Category")
         public String category;
 
@@ -131,6 +134,12 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
          */
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("LimitNumber")
+        public Integer limitNumber;
+
+        @NameInMap("LimitSwitch")
+        public Integer limitSwitch;
 
         @NameInMap("Name")
         public String name;
@@ -156,6 +165,14 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         public static ListHotelSceneItemsResponseBodyResultSceneItemList build(java.util.Map<String, ?> map) throws Exception {
             ListHotelSceneItemsResponseBodyResultSceneItemList self = new ListHotelSceneItemsResponseBodyResultSceneItemList();
             return TeaModel.build(map, self);
+        }
+
+        public ListHotelSceneItemsResponseBodyResultSceneItemList setBeyondLimitReply(String beyondLimitReply) {
+            this.beyondLimitReply = beyondLimitReply;
+            return this;
+        }
+        public String getBeyondLimitReply() {
+            return this.beyondLimitReply;
         }
 
         public ListHotelSceneItemsResponseBodyResultSceneItemList setCategory(String category) {
@@ -188,6 +205,22 @@ public class ListHotelSceneItemsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListHotelSceneItemsResponseBodyResultSceneItemList setLimitNumber(Integer limitNumber) {
+            this.limitNumber = limitNumber;
+            return this;
+        }
+        public Integer getLimitNumber() {
+            return this.limitNumber;
+        }
+
+        public ListHotelSceneItemsResponseBodyResultSceneItemList setLimitSwitch(Integer limitSwitch) {
+            this.limitSwitch = limitSwitch;
+            return this;
+        }
+        public Integer getLimitSwitch() {
+            return this.limitSwitch;
         }
 
         public ListHotelSceneItemsResponseBodyResultSceneItemList setName(String name) {

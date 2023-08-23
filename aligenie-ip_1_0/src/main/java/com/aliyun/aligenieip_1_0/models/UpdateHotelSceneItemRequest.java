@@ -181,6 +181,9 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
     }
 
     public static class UpdateHotelSceneItemRequestUpdateHotelSceneReq extends TeaModel {
+        @NameInMap("BeyondLimitReply")
+        public String beyondLimitReply;
+
         @NameInMap("DeliveryMethod")
         public String deliveryMethod;
 
@@ -198,6 +201,12 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
          */
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("LimitNumber")
+        public Long limitNumber;
+
+        @NameInMap("LimitSwitch")
+        public Integer limitSwitch;
 
         @NameInMap("Name")
         public String name;
@@ -217,6 +226,14 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         public static UpdateHotelSceneItemRequestUpdateHotelSceneReq build(java.util.Map<String, ?> map) throws Exception {
             UpdateHotelSceneItemRequestUpdateHotelSceneReq self = new UpdateHotelSceneItemRequestUpdateHotelSceneReq();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateHotelSceneItemRequestUpdateHotelSceneReq setBeyondLimitReply(String beyondLimitReply) {
+            this.beyondLimitReply = beyondLimitReply;
+            return this;
+        }
+        public String getBeyondLimitReply() {
+            return this.beyondLimitReply;
         }
 
         public UpdateHotelSceneItemRequestUpdateHotelSceneReq setDeliveryMethod(String deliveryMethod) {
@@ -249,6 +266,22 @@ public class UpdateHotelSceneItemRequest extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public UpdateHotelSceneItemRequestUpdateHotelSceneReq setLimitNumber(Long limitNumber) {
+            this.limitNumber = limitNumber;
+            return this;
+        }
+        public Long getLimitNumber() {
+            return this.limitNumber;
+        }
+
+        public UpdateHotelSceneItemRequestUpdateHotelSceneReq setLimitSwitch(Integer limitSwitch) {
+            this.limitSwitch = limitSwitch;
+            return this;
+        }
+        public Integer getLimitSwitch() {
+            return this.limitSwitch;
         }
 
         public UpdateHotelSceneItemRequestUpdateHotelSceneReq setName(String name) {
