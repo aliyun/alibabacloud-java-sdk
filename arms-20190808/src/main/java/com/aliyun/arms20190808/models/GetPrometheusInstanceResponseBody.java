@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -67,13 +67,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     public static class GetPrometheusInstanceResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the instance.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the instance.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -109,13 +109,18 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The name of the monitoring object.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>The instance type. Valid values: remote-write (Prometheus instance for Remote Write), ecs (Prometheus instance for ECS), cloud-monitor (Prometheus instance for Alibaba Cloud services in China), cloud-product (Prometheus instance for Alibaba Cloud services outside China), global-view (Prometheus instance for GlobalView), aliyun-cs (Prometheus instance for Container Service).</p>
+         * <p>*   remote-write: Prometheus instance for Remote Write</p>
+         * <p>*   ecs: Prometheus instances for ECS</p>
+         * <p>*   cloud-monitor: Prometheus instance for cloud services (Chinese mainland)</p>
+         * <p>*   cloud-monitor: Prometheus instance for cloud services (regions outside the Chinese mainland)</p>
+         * <p>*   global-view: Prometheus instance for GlobalView</p>
+         * <p>*   aliyun-cs: Prometheus instance for Container Service</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
@@ -127,7 +132,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String grafanaInstanceId;
 
         /**
-         * <p>The billing method. Valid values: PREPAY (subscription) and POSTPAY (pay-as-you-go).</p>
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   PREPAY: subscription</p>
+         * <p>*   POSTPAY: pay-as-you-go</p>
          */
         @NameInMap("PaymentType")
         public String paymentType;
@@ -145,7 +153,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The type of the resource. Valid value: PROMETHEUS.</p>
+         * <p>The type of the resource. Set the value to PROMETHEUS.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -157,13 +165,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
+         * <p>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</p>
          */
         @NameInMap("SubClustersJson")
         public String subClustersJson;
 
         /**
-         * <p>The tags that are bound to the instance.</p>
+         * <p>The tags of the instance.</p>
          */
         @NameInMap("Tags")
         public java.util.List<GetPrometheusInstanceResponseBodyDataTags> tags;
@@ -175,13 +183,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The ID of the VSwitch.</p>
+         * <p>The ID of the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the instance resides.</p>
+         * <p>The virtual private cloud (VPC) where the monitoring object resides.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

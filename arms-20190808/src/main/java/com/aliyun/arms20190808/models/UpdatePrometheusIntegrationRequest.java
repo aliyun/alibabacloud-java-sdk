@@ -5,22 +5,31 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusIntegrationRequest extends TeaModel {
     /**
-     * <p>arms-hz-central</p>
+     * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The exporter ID.</p>
+     */
     @NameInMap("InstanceId")
     public Long instanceId;
 
+    /**
+     * <p>The type of the integration.</p>
+     */
     @NameInMap("IntegrationType")
     public String integrationType;
 
+    /**
+     * <p>The configurations of the exporter. The value is a JSON string.</p>
+     */
     @NameInMap("Param")
     public String param;
 
     /**
-     * <p>success=false</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

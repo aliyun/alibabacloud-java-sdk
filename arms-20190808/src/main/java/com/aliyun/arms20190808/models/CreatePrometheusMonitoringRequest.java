@@ -23,9 +23,7 @@ public class CreatePrometheusMonitoringRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The status of the monitoring configuration. Valid values: run and stop. </p>
-     * <p>When not transmitted, the default value: run.</p>
-     * <p>Probe does not support status, this field set empty.</p>
+     * <p>The status of the monitoring configuration. Valid values: run and stop. Default value: run. This parameter is not available if the Type parameter is set to Probe.</p>
      */
     @NameInMap("Status")
     public String status;

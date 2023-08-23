@@ -22,11 +22,8 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     @NameInMap("MostRegionId")
     public String mostRegionId;
 
-    @NameInMap("ParamJson")
-    public String paramJson;
-
     /**
-     * <p>The region ID.</p>
+     * <p>The ID of the region in which the Prometheus instance resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -38,7 +35,7 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The data sources of the global aggregation instance.</p>
+     * <p>The data sources of the Prometheus instance for GlobalView.</p>
      */
     @NameInMap("SubClustersJson")
     public String subClustersJson;
@@ -78,14 +75,6 @@ public class UpdatePrometheusGlobalViewRequest extends TeaModel {
     }
     public String getMostRegionId() {
         return this.mostRegionId;
-    }
-
-    public UpdatePrometheusGlobalViewRequest setParamJson(String paramJson) {
-        this.paramJson = paramJson;
-        return this;
-    }
-    public String getParamJson() {
-        return this.paramJson;
     }
 
     public UpdatePrometheusGlobalViewRequest setRegionId(String regionId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusRemoteWritesRequest extends TeaModel {
     /**
-     * <p>The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.</p>
+     * <p>The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

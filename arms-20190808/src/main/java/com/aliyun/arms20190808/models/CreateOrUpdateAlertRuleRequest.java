@@ -70,11 +70,11 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public String alertStatus;
 
     /**
-     * <p>The type of the alert rule.</p>
+     * <p>The type of the alert rule. Valid values:</p>
      * <br>
-     * <p>*   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring</p>
-     * <p>*   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring</p>
-     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service</p>
+     * <p>*   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</p>
+     * <p>*   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</p>
+     * <p>*   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
@@ -97,14 +97,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     /**
      * <p>Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:</p>
      * <br>
-     * <p>*   `true`: yes</p>
-     * <p>*   `false`: no</p>
+     * <p>*   `true`: enables the health check feature.</p>
+     * <p>*   `false`: disables the automatic backup feature.</p>
      */
     @NameInMap("AutoAddNewApplication")
     public Boolean autoAddNewApplication;
 
     /**
-     * <p>The cluster ID of the Prometheus alert rule.</p>
+     * <p>The ID of the monitored cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -116,7 +116,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     public Long duration;
 
     /**
-     * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The name must meet the following format requirements:</p>
+     * <p>The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The following code shows the format of matching rules:</p>
      * <br>
      * <p>    "DimFilters": [ </p>
      * <p>    { </p>
@@ -176,7 +176,7 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     /**
      * <p>The notification policy.</p>
      * <br>
-     * <p>*   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. If the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</p>
+     * <p>*   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.</p>
      * <p>*   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.</p>
      */
     @NameInMap("NotifyStrategy")

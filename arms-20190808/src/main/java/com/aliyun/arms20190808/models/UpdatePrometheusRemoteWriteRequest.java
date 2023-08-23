@@ -17,7 +17,7 @@ public class UpdatePrometheusRemoteWriteRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the remote write configuration.</p>
+     * <p>The name of the remote write configuration item.</p>
      */
     @NameInMap("RemoteWriteName")
     public String remoteWriteName;

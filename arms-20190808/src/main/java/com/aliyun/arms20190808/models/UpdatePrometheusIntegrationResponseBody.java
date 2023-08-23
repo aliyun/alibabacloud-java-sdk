@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
+    /**
+     * <p>The status code or error code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public UpdatePrometheusIntegrationResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
     }
 
     public static class UpdatePrometheusIntegrationResponseBodyData extends TeaModel {
+        /**
+         * <p>The exporter ID.</p>
+         */
         @NameInMap("InstanceId")
         public Long instanceId;
 
+        /**
+         * <p>The exporter name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 

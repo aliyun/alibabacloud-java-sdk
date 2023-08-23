@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,13 +17,13 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
     public UpdatePrometheusGlobalViewResponseBodyData data;
 
     /**
-     * <p>The error message returned if the Prometheus agent failed to be installed.</p>
+     * <p>The error message that is returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -79,11 +79,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         public String sourceName;
 
         /**
-         * <p>The type of the data source. Valid values:</p>
-         * <br>
-         * <p>*   AlibabaPrometheus</p>
-         * <p>*   MetricStore</p>
-         * <p>*   CustomPrometheus</p>
+         * <p>The type of the data source. AlibabaPrometheus MetricStore CustomPrometheus</p>
          */
         @NameInMap("SourceType")
         public String sourceType;
@@ -135,7 +131,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
 
     public static class UpdatePrometheusGlobalViewResponseBodyData extends TeaModel {
         /**
-         * <p>The Prometheus instances or data sources that failed to be updated.</p>
+         * <p>The data sources that failed to be updated.</p>
          */
         @NameInMap("FailedInstances")
         public java.util.List<UpdatePrometheusGlobalViewResponseBodyDataFailedInstances> failedInstances;

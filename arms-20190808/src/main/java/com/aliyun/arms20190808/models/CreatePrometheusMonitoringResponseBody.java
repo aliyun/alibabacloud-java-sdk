@@ -11,7 +11,7 @@ public class CreatePrometheusMonitoringResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The name of the remote write configuration that was added, or the exception information.</p>
+     * <p>The name of the monitoring configuration that was added, or the exception information.</p>
      */
     @NameInMap("Data")
     public String data;

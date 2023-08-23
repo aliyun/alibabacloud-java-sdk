@@ -5,17 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends TeaModel {
     /**
-     * <p>code!=200</p>
+     * <p>The region ID of the Prometheus instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>http://arms.${regionId}.aliyun-inc.com:8099/prometheus/ListPrometheusInstanceByTagAndResourceGroupId.json</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListPrometheusInstanceByTagAndResourceGroupIdRequestTag> tag;
 
@@ -49,9 +52,15 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends TeaMod
     }
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallPromClusterResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,13 +17,13 @@ public class UninstallPromClusterResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>The request ID. You can use the ID to find logs and troubleshoot issues.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

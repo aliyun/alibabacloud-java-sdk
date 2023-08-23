@@ -4,18 +4,41 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class GetManagedPrometheusStatusResponseBody extends TeaModel {
+    /**
+     * <p>The status code or error code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The status of the Prometheus instance.</p>
+     * <br>
+     * <p>*   Installing: The Prometheus instance is created and the Prometheus agent has no registration information.</p>
+     * <p>*   Succeed: The Prometheus instance is created and the Prometheus agent is registered.</p>
+     * <p>*   Failure: The Prometheus instance failed to be created or the Prometheus agent failed to be registered.</p>
+     * <p>*   Unknown: No status of the Prometheus instance is available.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

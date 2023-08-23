@@ -4,74 +4,74 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceRequest extends TeaModel {
+    /**
+     * <p>创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。</p>
+     */
     @NameInMap("AllSubClustersSuccess")
     public Boolean allSubClustersSuccess;
 
     /**
-     * <p>The cluster ID. This parameter is required if you set the ClusterType parameter to aliyun-cs��.</p>
+     * <p>The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs��.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The name of the cluster. This parameter is required if you set the ClusterType parameter to remote-write, ecs, or global-view.</p>
+     * <p>The name of the cluster. This parameter is required if you set ClusterType to remote-write, ecs, or global-view.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The type of the Prometheus instance. The following types are provided: remote-write (Prometheus instance for Remote Write) ecs (Prometheus instance for ECS) cloud-monitor� (Prometheus instance for Alibaba Cloud services in China) cloud-product (Prometheus instance for Alibaba Cloud services outside China) global-view (Prometheus instance for GlobalView) aliyun-cs�� (Prometheus instances for Container Service)</p>
+     * <p>The type of the Prometheus instance. Valid values: remote-write: Prometheus instance for remote write. ecs: Prometheus instance for ECS. cloud-monitor�: Prometheus instance for cloud services in China. cloud-product: Prometheus instance for Alibaba Cloud services outside China. global-view: Prometheus instance for GlobalView. aliyun-cs��: Prometheus instance for Container Service.</p>
      */
     @NameInMap("ClusterType")
     public String clusterType;
 
     /**
-     * <p>The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.</p>
+     * <p>The ID of the Grafana dedicated instance. This parameter is available if you set ClusterType to ecs.</p>
      */
     @NameInMap("GrafanaInstanceId")
     public String grafanaInstanceId;
 
-    @NameInMap("ParamJson")
-    public String paramJson;
-
     /**
-     * <p>The region ID. If you create a Prometheus instance for cloud services in China, set the value to cn-shanghai.</p>
+     * <p>The region ID. If you create a Prometheus instance for a cloud service in China, set this parameter to cn-shanghai.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.</p>
+     * <p>The ID of the custom resource group. You can specify this parameter to bind the instance to the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The security group. This parameter is required if you set the clusterType parameter to ecs or create an ASK managed cluster.</p>
+     * <p>The ID of the security group. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
+     * <p>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</p>
      */
     @NameInMap("SubClustersJson")
     public String subClustersJson;
 
     /**
-     * <p>The tags of the instance. You can configure this parameter to manage tags for the instance.</p>
+     * <p>The tags of the instance. You can specify this parameter to manage tags for the instance.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreatePrometheusInstanceRequestTags> tags;
 
     /**
-     * <p>The vSwitch. This parameter is required if you set the clusterType parameter to ecs or create an ASK managed cluster.</p>
+     * <p>The ID of the vSwitch. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The virtual private cloud (VPC). This parameter is required if you set the clusterType parameter to ecs or create a serverless Kubernetes (ASK) managed cluster.</p>
+     * <p>The ID of the virtual private cloud (VPC). This parameter is required if you set ClusterType to ecs or create a serverless Kubernetes (ASK) managed cluster.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -119,14 +119,6 @@ public class CreatePrometheusInstanceRequest extends TeaModel {
     }
     public String getGrafanaInstanceId() {
         return this.grafanaInstanceId;
-    }
-
-    public CreatePrometheusInstanceRequest setParamJson(String paramJson) {
-        this.paramJson = paramJson;
-        return this;
-    }
-    public String getParamJson() {
-        return this.paramJson;
     }
 
     public CreatePrometheusInstanceRequest setRegionId(String regionId) {

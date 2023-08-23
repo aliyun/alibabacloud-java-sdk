@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <p>The status code that is returned. Valid values:</p>
      * <br>
-     * <p>*   `2XX`: The request is successful.</p>
-     * <p>*   `3XX`: A redirection message is returned.</p>
-     * <p>*   `4XX`: The request is invalid.</p>
-     * <p>*   `5XX`: A server error occurs.</p>
+     * <p>*   `2XX: The request is successful.`</p>
+     * <p>*   `3XX: A redirection message is returned.`</p>
+     * <p>*   `4XX: The request is invalid.`</p>
+     * <p>*   `5XX: A server error occurred.`</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -22,7 +22,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message returned if the call fails.</p>
+     * <p>The error message that is returned if the request failed.</p>
      */
     @NameInMap("Message")
     public String message;

@@ -349,7 +349,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public String httpsUrl;
 
         /**
-         * <p>The information about the Grafana dashboards.</p>
+         * <p>The information about the Grafana dashboard.</p>
          */
         @NameInMap("I18nChild")
         public ListDashboardsResponseBodyDashboardVosI18nChild i18nChild;
@@ -400,7 +400,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         public java.util.List<String> tags;
 
         /**
-         * <p>The timestamp generated when the Grafana dashboard was created. Unit: seconds</p>
+         * <p>The timestamp when the Grafana dashboard was created. Unit: seconds.</p>
          */
         @NameInMap("Time")
         public String time;

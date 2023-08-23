@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
+    @NameInMap("DirectedMode")
+    public Boolean directedMode;
+
     /**
      * <p>The ID of the escalation policy.</p>
      */
@@ -133,6 +136,14 @@ public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
     public static CreateOrUpdateNotificationPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrUpdateNotificationPolicyRequest self = new CreateOrUpdateNotificationPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateOrUpdateNotificationPolicyRequest setDirectedMode(Boolean directedMode) {
+        this.directedMode = directedMode;
+        return this;
+    }
+    public Boolean getDirectedMode() {
+        return this.directedMode;
     }
 
     public CreateOrUpdateNotificationPolicyRequest setEscalationPolicyId(Long escalationPolicyId) {

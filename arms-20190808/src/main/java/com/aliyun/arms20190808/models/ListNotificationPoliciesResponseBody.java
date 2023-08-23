@@ -434,6 +434,9 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies extends TeaModel {
+        @NameInMap("DirectedMode")
+        public Boolean directedMode;
+
         /**
          * <p>The ID of the escalation rule.</p>
          */
@@ -509,6 +512,14 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public static ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies self = new ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies setDirectedMode(Boolean directedMode) {
+            this.directedMode = directedMode;
+            return this;
+        }
+        public Boolean getDirectedMode() {
+            return this.directedMode;
         }
 
         public ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies setEscalationPolicyId(Long escalationPolicyId) {

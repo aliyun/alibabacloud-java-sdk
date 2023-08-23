@@ -11,13 +11,13 @@ public class DeletePrometheusIntegrationResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The success or failure information.</p>
+     * <p>success or an error message.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

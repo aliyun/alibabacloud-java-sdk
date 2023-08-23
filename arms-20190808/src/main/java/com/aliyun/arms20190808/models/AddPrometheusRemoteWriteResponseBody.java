@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddPrometheusRemoteWriteResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The name of the remote write configuration that was added, or the exception information.</p>
+     * <p>The name of the remote write configuration item. If the request fails, an error message is returned.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;

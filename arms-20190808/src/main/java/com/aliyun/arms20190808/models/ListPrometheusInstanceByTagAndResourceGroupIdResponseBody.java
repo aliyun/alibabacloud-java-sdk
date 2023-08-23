@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
     }
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstancesTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -84,24 +102,54 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
     }
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances extends TeaModel {
+        /**
+         * <p>The ID of the Prometheus instance.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the Prometheus instance.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The type of the cluster. Valid values: remote-write: Prometheus instance for remote write.</p>
+         * <br>
+         * <p>*   ecs: Prometheus instances for ECS.</p>
+         * <p>*   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland.</p>
+         * <p>*   cloud-product: Prometheus instance for Alibaba Cloud services outside China.</p>
+         * <p>*   global-view: Prometheus instance for GlobalView.</p>
+         * <p>*   aliyun-cs: Prometheus instance for Container Service.</p>
+         */
         @NameInMap("ClusterType")
         public String clusterType;
 
+        /**
+         * <p>The ID of the Grafana workspace.</p>
+         */
         @NameInMap("GrafanaInstanceId")
         public String grafanaInstanceId;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   PREPAY: subscription.</p>
+         * <p>*   POSTPAY: pay-as-you-go.</p>
+         */
         @NameInMap("PaymentType")
         public String paymentType;
 
+        /**
+         * <p>The region ID of the Prometheus instance.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the Prometheus instance belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -111,21 +159,39 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The ID of the security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The child instances of the Prometheus instance for GlobalView instance. The value is a JSON string.</p>
+         */
         @NameInMap("SubClustersJson")
         public String subClustersJson;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstancesTags> tags;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -249,6 +315,9 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
     }
 
     public static class ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyData extends TeaModel {
+        /**
+         * <p>The queried Prometheus instances.</p>
+         */
         @NameInMap("PrometheusInstances")
         public java.util.List<ListPrometheusInstanceByTagAndResourceGroupIdResponseBodyDataPrometheusInstances> prometheusInstances;
 
