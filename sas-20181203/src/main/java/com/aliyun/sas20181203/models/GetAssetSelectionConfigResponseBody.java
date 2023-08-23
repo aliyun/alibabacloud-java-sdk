@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAssetSelectionConfigResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetAssetSelectionConfigResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,19 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
     }
 
     public static class GetAssetSelectionConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the current asset selection. It can be used to query and modify the asset that is selected.</p>
+         */
         @NameInMap("SelectionKey")
         public String selectionKey;
 
+        /**
+         * <p>The dimension based on which the asset is selected. Valid values:</p>
+         * <br>
+         * <p>*   **instance**: The asset is selected by server.</p>
+         * <p>*   **group**: The asset is selected by group.</p>
+         * <p>*   **vpc**: The asset is selected by VPC.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 

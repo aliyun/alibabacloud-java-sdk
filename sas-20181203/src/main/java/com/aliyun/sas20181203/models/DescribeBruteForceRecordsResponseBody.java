@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBruteForceRecordsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the IP addresses.</p>
+     * <p>The IP addresses.</p>
      */
     @NameInMap("MachineList")
     public java.util.List<DescribeBruteForceRecordsResponseBodyMachineList> machineList;
@@ -52,6 +52,12 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeBruteForceRecordsResponseBodyMachineList extends TeaModel {
+        /**
+         * <p>The status of the host network extension. Valid values:</p>
+         * <br>
+         * <p>*   **true**: online</p>
+         * <p>*   **false**: offline</p>
+         */
         @NameInMap("AliNetOnline")
         public Boolean aliNetOnline;
 
@@ -62,11 +68,17 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         public Long blockExpireDate;
 
         /**
-         * <p>The blocked IP address.</p>
+         * <p>The IP address that is blocked.</p>
          */
         @NameInMap("BlockIp")
         public String blockIp;
 
+        /**
+         * <p>The blocking type. Valid values:</p>
+         * <br>
+         * <p>*   **group**: security group</p>
+         * <p>*   **alinet**: host network extension</p>
+         */
         @NameInMap("BlockType")
         public String blockType;
 
@@ -77,13 +89,13 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The ID of the primary key in the table of records on the blocked IP address.</p>
+         * <p>The ID of the primary key that is recorded in the defense rule.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The instance name of the server.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -132,7 +144,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The UUID of the server on which access from the IP address is blocked.</p>
+         * <p>The UUID of the server on which the defense rule takes effect.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

@@ -107,7 +107,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         public String cnvdId;
 
         /**
-         * <p>The difficulty level of exploiting the vulnerability. Valid values:</p>
+         * <p>The difficulty level of exploiting the vulnerability. Valid value:</p>
          * <br>
          * <p>*   **LOW**</p>
          * <p>*   **MEDIUM**</p>
@@ -143,7 +143,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         /**
          * <p>The instance name of the server.</p>
          * <br>
-         * <p>> This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
+         * <p>>  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
@@ -151,7 +151,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         /**
          * <p>The public IP address of the server.</p>
          * <br>
-         * <p>> This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
+         * <p>>  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
          */
         @NameInMap("InternetIp")
         public String internetIp;
@@ -159,11 +159,14 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         /**
          * <p>The private IP address of the server.</p>
          * <br>
-         * <p>> This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
+         * <p>>  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.</p>
          */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The ID of the vulnerability.</p>
+         */
         @NameInMap("OtherId")
         public String otherId;
 
@@ -216,13 +219,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         public String summary;
 
         /**
-         * <p>The ID of the asset on which the vulnerability is detected.</p>
+         * <p>The ID of the asset on which the malicious image sample is detected.</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
-         * <p>The name of the asset on which the vulnerability is detected.</p>
+         * <p>The name of the asset on which the malicious image sample is detected.</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -240,7 +243,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         public String vendor;
 
         /**
-         * <p>The severity of the vulnerability. Valid values:</p>
+         * <p>The severity of the vulnerability. Valid value:</p>
          * <br>
          * <p>*   **serious**</p>
          * <p>*   **high**</p>

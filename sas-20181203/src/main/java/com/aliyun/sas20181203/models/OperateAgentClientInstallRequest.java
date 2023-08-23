@@ -7,7 +7,7 @@ public class OperateAgentClientInstallRequest extends TeaModel {
     /**
      * <p>The IDs of the servers on which you want to install the Security Center agent. Separate multiple IDs with commas (,).</p>
      * <br>
-     * <p>> You must specify at least one of the **InstanceIds** and **Uuids** parameters before you can call this operation.</p>
+     * <p>> : You must specify at least one of **InstanceIds** and **Uuids**. If you specify **InstanceIds**, you must also specify **Region** and **Os**.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
@@ -21,9 +21,24 @@ public class OperateAgentClientInstallRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The operating system of the servers. Valid values:</p>
+     * <br>
+     * <p>*   **linux**</p>
+     * <p>*   **windows**</p>
+     */
     @NameInMap("Os")
     public String os;
 
+    /**
+     * <p>The region where the servers reside. Valid values include the following regions:</p>
+     * <br>
+     * <p>*   cn-hangzhou: China (Hangzhou)</p>
+     * <p>*   cn-beijing: China (Beijing)</p>
+     * <p>*   cn-shanghai: China (Shanghai)</p>
+     * <p>*   cn-zhangjiakou: China (Zhangjiakou)</p>
+     * <p>*   cn-shenzhen: China (Shenzhen)</p>
+     */
     @NameInMap("Region")
     public String region;
 

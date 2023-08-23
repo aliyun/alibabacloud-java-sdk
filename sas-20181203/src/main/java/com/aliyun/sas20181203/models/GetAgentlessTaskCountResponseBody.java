@@ -28,6 +28,9 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     @NameInMap("ScanMachine")
     public Integer scanMachine;
 
+    @NameInMap("SysVulCount")
+    public String sysVulCount;
+
     @NameInMap("Vulnerability")
     public Integer vulnerability;
 
@@ -98,6 +101,14 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     }
     public Integer getScanMachine() {
         return this.scanMachine;
+    }
+
+    public GetAgentlessTaskCountResponseBody setSysVulCount(String sysVulCount) {
+        this.sysVulCount = sysVulCount;
+        return this;
+    }
+    public String getSysVulCount() {
+        return this.sysVulCount;
     }
 
     public GetAgentlessTaskCountResponseBody setVulnerability(Integer vulnerability) {

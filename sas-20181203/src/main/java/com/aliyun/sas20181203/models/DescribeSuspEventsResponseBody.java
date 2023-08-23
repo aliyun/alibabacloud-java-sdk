@@ -29,7 +29,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the information about the alert event.</p>
+     * <p>The information about the alert event.</p>
      */
     @NameInMap("SuspEvents")
     public java.util.List<DescribeSuspEventsResponseBodySuspEvents> suspEvents;
@@ -402,6 +402,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The UUID of the image.</p>
+         */
         @NameInMap("ImageUuid")
         public String imageUuid;
 
@@ -465,6 +468,12 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("K8sPodName")
         public String k8sPodName;
 
+        /**
+         * <p>Indicates whether the alert event can be detected by the cloud sandbox feature. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("LargeModel")
         public Boolean largeModel;
 

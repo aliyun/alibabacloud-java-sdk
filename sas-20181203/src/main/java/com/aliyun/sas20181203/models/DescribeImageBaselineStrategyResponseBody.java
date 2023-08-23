@@ -88,6 +88,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     }
 
     public static class DescribeImageBaselineStrategyResponseBodyStrategy extends TeaModel {
+        @NameInMap("BaselineItem")
+        public String baselineItem;
+
         /**
          * <p>An array that contains the baselines.</p>
          */
@@ -131,6 +134,14 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         public static DescribeImageBaselineStrategyResponseBodyStrategy build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageBaselineStrategyResponseBodyStrategy self = new DescribeImageBaselineStrategyResponseBodyStrategy();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageBaselineStrategyResponseBodyStrategy setBaselineItem(String baselineItem) {
+            this.baselineItem = baselineItem;
+            return this;
+        }
+        public String getBaselineItem() {
+            return this.baselineItem;
         }
 
         public DescribeImageBaselineStrategyResponseBodyStrategy setBaselineItemList(java.util.List<DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList> baselineItemList) {

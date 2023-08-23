@@ -25,6 +25,9 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    @NameInMap("Source")
+    public String source;
+
     /**
      * <p>The operation that you want to perform on the risk item.Valid values:</p>
      * <p>*  **1**: adds the risk item to the whitelist</p>
@@ -68,6 +71,14 @@ public class IgnoreCheckItemsRequest extends TeaModel {
     }
     public String getReason() {
         return this.reason;
+    }
+
+    public IgnoreCheckItemsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public IgnoreCheckItemsRequest setType(Integer type) {

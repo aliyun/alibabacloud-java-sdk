@@ -10,6 +10,9 @@ public class AddImageVulWhiteListRequest extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("Target")
     public String target;
 
@@ -38,6 +41,14 @@ public class AddImageVulWhiteListRequest extends TeaModel {
     }
     public String getReason() {
         return this.reason;
+    }
+
+    public AddImageVulWhiteListRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public AddImageVulWhiteListRequest setTarget(String target) {

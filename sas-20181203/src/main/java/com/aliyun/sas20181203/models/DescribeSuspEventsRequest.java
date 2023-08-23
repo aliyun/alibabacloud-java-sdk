@@ -7,13 +7,13 @@ public class DescribeSuspEventsRequest extends TeaModel {
     /**
      * <p>The ID of the alert event.</p>
      * <br>
-     * <p>>  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.</p>
+     * <p>> To query the details of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.</p>
      */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;
 
     /**
-     * <p>The types of assets.</p>
+     * <p>The types of the assets.</p>
      */
     @NameInMap("AssetsTypeList")
     public java.util.List<String> assetsTypeList;
@@ -132,7 +132,7 @@ public class DescribeSuspEventsRequest extends TeaModel {
     public String operateTimeStart;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     * <p>The number of entries to return on each page. Default value: **20**. Maximum value: 100.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -175,6 +175,11 @@ public class DescribeSuspEventsRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

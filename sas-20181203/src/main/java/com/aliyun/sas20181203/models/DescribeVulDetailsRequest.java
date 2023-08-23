@@ -27,6 +27,11 @@ public class DescribeVulDetailsRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

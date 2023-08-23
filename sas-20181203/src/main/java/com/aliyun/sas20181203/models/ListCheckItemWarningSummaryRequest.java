@@ -82,6 +82,9 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     @NameInMap("RiskType")
     public String riskType;
 
+    @NameInMap("Source")
+    public String source;
+
     public static ListCheckItemWarningSummaryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCheckItemWarningSummaryRequest self = new ListCheckItemWarningSummaryRequest();
         return TeaModel.build(map, self);
@@ -173,6 +176,14 @@ public class ListCheckItemWarningSummaryRequest extends TeaModel {
     }
     public String getRiskType() {
         return this.riskType;
+    }
+
+    public ListCheckItemWarningSummaryRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

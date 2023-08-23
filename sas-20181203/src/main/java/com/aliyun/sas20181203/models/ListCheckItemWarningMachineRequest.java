@@ -65,6 +65,9 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     @NameInMap("RiskType")
     public String riskType;
 
+    @NameInMap("Source")
+    public String source;
+
     /**
      * <p>The status of the check item. Valid values:</p>
      * <br>
@@ -156,6 +159,14 @@ public class ListCheckItemWarningMachineRequest extends TeaModel {
     }
     public String getRiskType() {
         return this.riskType;
+    }
+
+    public ListCheckItemWarningMachineRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ListCheckItemWarningMachineRequest setStatus(Integer status) {

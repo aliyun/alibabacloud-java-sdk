@@ -21,8 +21,6 @@ public class InstallPmAgentRequest extends TeaModel {
 
     /**
      * <p>The type of the client.</p>
-     * <br>
-     * <p>*   **aliyun_assist**: Cloud Assistant client</p>
      * <p>*   **aliyun_monitor**: CloudMonitor client</p>
      */
     @NameInMap("Type")

@@ -4,15 +4,50 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class AdvanceSecurityEventOperationsRequest extends TeaModel {
+    /**
+     * <p>The alert name.</p>
+     */
     @NameInMap("EventName")
     public String eventName;
 
+    /**
+     * <p>The alert event type. Valid values:</p>
+     * <br>
+     * <p>*   Suspicious process</p>
+     * <p>*   Webshell</p>
+     * <p>*   Unusual logon</p>
+     * <p>*   Exception</p>
+     * <p>*   Sensitive file tampering</p>
+     * <p>*   Malicious process (cloud threat detection)</p>
+     * <p>*   Unusual network connection</p>
+     * <p>*   Abnormal account</p>
+     * <p>*   Application intrusion event</p>
+     * <p>*   Cloud threat detection</p>
+     * <p>*   Precision defense</p>
+     * <p>*   Application whitelist</p>
+     * <p>*   Persistent webshell</p>
+     * <p>*   Web application threat detection</p>
+     * <p>*   Malicious script</p>
+     * <p>*   Threat intelligence</p>
+     * <p>*   Malicious network activity</p>
+     * <p>*   Cluster exception</p>
+     * <p>*   Webshell (on-premises threat detection)</p>
+     * <p>*   Vulnerability exploitation</p>
+     * <p>*   Malicious process (on-premises threat detection)</p>
+     * <p>*   Trusted exception</p>
+     * <p>*   Others</p>
+     * <br>
+     * <p>For more information about alert types, see [Alerts](~~68388~~).</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The rule ID.</p>
+     */
     @NameInMap("RuleId")
     public Integer ruleId;
 

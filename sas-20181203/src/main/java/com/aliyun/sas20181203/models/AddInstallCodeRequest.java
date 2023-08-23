@@ -13,9 +13,9 @@ public class AddInstallCodeRequest extends TeaModel {
     public Long expiredDate;
 
     /**
-     * <p>The ID of the asset group to which the you want to add the asset.</p>
+     * <p>The ID of the asset group to which you want to add the asset.</p>
      * <br>
-     * <p>>  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.</p>
+     * <p>> You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -39,6 +39,9 @@ public class AddInstallCodeRequest extends TeaModel {
     @NameInMap("Os")
     public String os;
 
+    /**
+     * <p>The name of the proxy cluster.</p>
+     */
     @NameInMap("ProxyCluster")
     public String proxyCluster;
 

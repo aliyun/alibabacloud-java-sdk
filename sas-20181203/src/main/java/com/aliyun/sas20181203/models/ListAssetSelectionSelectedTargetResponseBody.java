@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAssetSelectionSelectedTargetResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
     }
 
     public static class ListAssetSelectionSelectedTargetResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the asset.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 

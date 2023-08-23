@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
+    /**
+     * <p>The list of hosts that are associated with the risk.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListAgentlessRelateMaliciousResponseBodyList> list;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListAgentlessRelateMaliciousResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +52,45 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessRelateMaliciousResponseBodyList extends TeaModel {
+        /**
+         * <p>The file path.</p>
+         */
         @NameInMap("FilePath")
         public String filePath;
 
+        /**
+         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
+        /**
+         * <p>The UUID of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -128,15 +158,27 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessRelateMaliciousResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteSuspEventNodeRequest extends TeaModel {
+    /**
+     * <p>The ID of the description.</p>
+     * <br>
+     * <p>> You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the ID of the description by using the EventNotes field.</p>
+     */
     @NameInMap("NoteId")
     public Long noteId;
 

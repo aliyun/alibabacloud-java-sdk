@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAssetSelectionTargetResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAssetSelectionTargetResponseBodyData> data;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListAssetSelectionTargetResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
     }
 
     public static class ListAssetSelectionTargetResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the asset.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
@@ -73,12 +88,21 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
     }
 
     public static class ListAssetSelectionTargetResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

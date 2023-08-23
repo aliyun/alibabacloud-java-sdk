@@ -16,6 +16,9 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
     @NameInMap("RiskId")
     public String riskId;
 
+    @NameInMap("Source")
+    public String source;
+
     @NameInMap("SourceIp")
     public String sourceIp;
 
@@ -57,6 +60,14 @@ public class IgnoreHcCheckWarningsRequest extends TeaModel {
     }
     public String getRiskId() {
         return this.riskId;
+    }
+
+    public IgnoreHcCheckWarningsRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public IgnoreHcCheckWarningsRequest setSourceIp(String sourceIp) {

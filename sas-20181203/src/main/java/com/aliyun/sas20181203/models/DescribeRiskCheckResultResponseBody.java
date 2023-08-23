@@ -17,7 +17,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the check items.</p>
+     * <p>The check items.</p>
      */
     @NameInMap("List")
     public java.util.List<DescribeRiskCheckResultResponseBodyList> list;

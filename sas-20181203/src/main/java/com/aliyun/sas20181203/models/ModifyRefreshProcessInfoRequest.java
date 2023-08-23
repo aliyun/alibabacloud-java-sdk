@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyRefreshProcessInfoRequest extends TeaModel {
+    /**
+     * <p>The UUID of the server.</p>
+     * <br>
+     * <p>> You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

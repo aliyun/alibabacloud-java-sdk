@@ -58,6 +58,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @NameInMap("AsapVulInstanceCount")
         public Long asapVulInstanceCount;
 
+        /**
+         * <p>The number of assets that are protected by the specified edition.</p>
+         */
         @NameInMap("AuthVersionCheckCount")
         public Integer authVersionCheckCount;
 
@@ -84,6 +87,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceCount")
         public String instanceCount;
 
+        /**
+         * <p>The operating system type of the asset. Valid values:</p>
+         * <br>
+         * <p>* **windows**</p>
+         * <p>* **linux**</p>
+         * <br>
+         * <p>> This parameter is returned only when Lang is set to zh.</p>
+         */
         @NameInMap("Os")
         public String os;
 

@@ -188,6 +188,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        @NameInMap("LastScanTime")
+        public Long lastScanTime;
+
         /**
          * <p>Indicates whether a port on the server is accessible over the Internet. Valid values:</p>
          * <br>
@@ -224,6 +227,15 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("TargetId")
+        public String targetId;
+
+        @NameInMap("TargetName")
+        public String targetName;
+
+        @NameInMap("TargetType")
+        public String targetType;
 
         /**
          * <p>The UUID of the server.</p>
@@ -314,6 +326,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
+        public ListCheckItemWarningMachineResponseBodyList setLastScanTime(Long lastScanTime) {
+            this.lastScanTime = lastScanTime;
+            return this;
+        }
+        public Long getLastScanTime() {
+            return this.lastScanTime;
+        }
+
         public ListCheckItemWarningMachineResponseBodyList setPortOpen(Boolean portOpen) {
             this.portOpen = portOpen;
             return this;
@@ -344,6 +364,30 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListCheckItemWarningMachineResponseBodyList setTargetId(String targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        public ListCheckItemWarningMachineResponseBodyList setTargetName(String targetName) {
+            this.targetName = targetName;
+            return this;
+        }
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        public ListCheckItemWarningMachineResponseBodyList setTargetType(String targetType) {
+            this.targetType = targetType;
+            return this;
+        }
+        public String getTargetType() {
+            return this.targetType;
         }
 
         public ListCheckItemWarningMachineResponseBodyList setUuid(String uuid) {

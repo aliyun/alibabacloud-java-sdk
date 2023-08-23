@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeAntiBruteForceRulesRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Default value: **1**.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -15,9 +18,15 @@ public class DescribeAntiBruteForceRulesRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
