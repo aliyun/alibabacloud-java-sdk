@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuditLogFilterRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -19,6 +22,13 @@ public class DescribeAuditLogFilterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The role of the node in the instance. Valid values:</p>
+     * <br>
+     * <p>* **mongos**: mongos node.</p>
+     * <p>* **db** : shard node.</p>
+     * <p>* **logic** : logical instance.</p>
+     */
     @NameInMap("RoleType")
     public String roleType;
 

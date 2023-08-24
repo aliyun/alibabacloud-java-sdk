@@ -469,6 +469,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Period", request.period);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedIops)) {
+            query.put("ProvisionedIops", request.provisionedIops);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.readonlyReplicas)) {
             query.put("ReadonlyReplicas", request.readonlyReplicas);
         }
@@ -912,6 +916,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProtocolType", request.protocolType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.provisionedIops)) {
+            query.put("ProvisionedIops", request.provisionedIops);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1214,7 +1222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This operation can query only the information of the root account.
+      * >  You can call this operation to query only the information of the root account.
       *
       * @param request DescribeAccountsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1269,7 +1277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  This operation can query only the information of the root account.
+      * >  You can call this operation to query only the information of the root account.
       *
       * @param request DescribeAccountsRequest
       * @return DescribeAccountsResponse
@@ -1382,9 +1390,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The role of the node in the instance. Valid values:
-      * *   **primary**
-      * *   **secondary**
+      * *   The instance must be in the running state when you call this operation.
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
       *
       * @param request DescribeAuditLogFilterRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1439,9 +1447,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The role of the node in the instance. Valid values:
-      * *   **primary**
-      * *   **secondary**
+      * *   The instance must be in the running state when you call this operation.
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
       *
       * @param request DescribeAuditLogFilterRequest
       * @return DescribeAuditLogFilterResponse
@@ -4903,10 +4911,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  operation is currently unavailable.
+      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the frequency at which the monitoring data of an ApsaraDB for MongoDB instance is collected.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   A replica set or sharded cluster instance is used.
-      * *   MongoDB 3.4 (the latest minor version) or 4.0 must be selected.
+      * *   The instance is a replica set or sharded cluster instance.
+      * *   The instance runs MongoDB 3.4 (the latest minor version) or 4.0.
       *
       * @param request ModifyDBInstanceMonitorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4961,10 +4969,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  operation is currently unavailable.
+      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the frequency at which the monitoring data of an ApsaraDB for MongoDB instance is collected.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   A replica set or sharded cluster instance is used.
-      * *   MongoDB 3.4 (the latest minor version) or 4.0 must be selected.
+      * *   The instance is a replica set or sharded cluster instance.
+      * *   The instance runs MongoDB 3.4 (the latest minor version) or 4.0.
       *
       * @param request ModifyDBInstanceMonitorRequest
       * @return ModifyDBInstanceMonitorResponse
