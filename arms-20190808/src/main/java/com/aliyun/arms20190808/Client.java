@@ -942,6 +942,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Level", request.level);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.markTags)) {
+            body.put("MarkTags", request.markTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.message)) {
             body.put("Message", request.message);
         }
@@ -2744,6 +2748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
