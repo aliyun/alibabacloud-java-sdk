@@ -1157,6 +1157,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listBatchOperateCardsTasksWithOptions(request, runtime);
     }
 
+    public ListCardAreaLimitSupportAreaResponse listCardAreaLimitSupportAreaWithOptions(ListCardAreaLimitSupportAreaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCardAreaLimitSupportArea"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCardAreaLimitSupportAreaResponse());
+    }
+
+    public ListCardAreaLimitSupportAreaResponse listCardAreaLimitSupportArea(ListCardAreaLimitSupportAreaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCardAreaLimitSupportAreaWithOptions(request, runtime);
+    }
+
     public ListCardDayUsagesResponse listCardDayUsagesWithOptions(ListCardDayUsagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1684,6 +1709,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveWirelessCloudConnectorFromGroupResponse removeWirelessCloudConnectorFromGroup(RemoveWirelessCloudConnectorFromGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeWirelessCloudConnectorFromGroupWithOptions(request, runtime);
+    }
+
+    public ResetAreaLimitCardsResponse resetAreaLimitCardsWithOptions(ResetAreaLimitCardsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iccids)) {
+            query.put("Iccids", request.iccids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.province)) {
+            query.put("Province", request.province);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetAreaLimitCards"),
+            new TeaPair("version", "2022-03-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetAreaLimitCardsResponse());
+    }
+
+    public ResetAreaLimitCardsResponse resetAreaLimitCards(ResetAreaLimitCardsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetAreaLimitCardsWithOptions(request, runtime);
     }
 
     public ResumeCardsResponse resumeCardsWithOptions(ResumeCardsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
