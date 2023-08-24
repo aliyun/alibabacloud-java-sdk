@@ -153,6 +153,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("Level")
     public String level;
 
+    @NameInMap("MarkTags")
+    public java.util.List<CreateOrUpdateAlertRuleRequestMarkTags> markTags;
+
     /**
      * <p>The alert message of the Prometheus alert rule.</p>
      */
@@ -320,6 +323,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
         return this.level;
     }
 
+    public CreateOrUpdateAlertRuleRequest setMarkTags(java.util.List<CreateOrUpdateAlertRuleRequestMarkTags> markTags) {
+        this.markTags = markTags;
+        return this;
+    }
+    public java.util.List<CreateOrUpdateAlertRuleRequestMarkTags> getMarkTags() {
+        return this.markTags;
+    }
+
     public CreateOrUpdateAlertRuleRequest setMessage(String message) {
         this.message = message;
         return this;
@@ -382,6 +393,36 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public java.util.List<CreateOrUpdateAlertRuleRequestTags> getTags() {
         return this.tags;
+    }
+
+    public static class CreateOrUpdateAlertRuleRequestMarkTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateOrUpdateAlertRuleRequestMarkTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateOrUpdateAlertRuleRequestMarkTags self = new CreateOrUpdateAlertRuleRequestMarkTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateOrUpdateAlertRuleRequestMarkTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateOrUpdateAlertRuleRequestMarkTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class CreateOrUpdateAlertRuleRequestTags extends TeaModel {

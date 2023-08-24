@@ -7,6 +7,9 @@ public class DeleteTimingSyntheticTaskRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("TaskId")
     public String taskId;
 
@@ -21,6 +24,14 @@ public class DeleteTimingSyntheticTaskRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteTimingSyntheticTaskRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DeleteTimingSyntheticTaskRequest setTaskId(String taskId) {
