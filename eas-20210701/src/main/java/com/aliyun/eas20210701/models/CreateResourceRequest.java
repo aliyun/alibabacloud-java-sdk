@@ -16,6 +16,21 @@ public class CreateResourceRequest extends TeaModel {
     @NameInMap("EcsInstanceType")
     public String ecsInstanceType;
 
+    @NameInMap("ExternalClusterId")
+    public String externalClusterId;
+
+    @NameInMap("NodeMatchLabels")
+    public java.util.Map<String, String> nodeMatchLabels;
+
+    @NameInMap("NodeTolerations")
+    public java.util.List<CreateResourceRequestNodeTolerations> nodeTolerations;
+
+    @NameInMap("ResourceType")
+    public String resourceType;
+
+    @NameInMap("RoleName")
+    public String roleName;
+
     @NameInMap("SystemDiskSize")
     public Integer systemDiskSize;
 
@@ -59,6 +74,46 @@ public class CreateResourceRequest extends TeaModel {
         return this.ecsInstanceType;
     }
 
+    public CreateResourceRequest setExternalClusterId(String externalClusterId) {
+        this.externalClusterId = externalClusterId;
+        return this;
+    }
+    public String getExternalClusterId() {
+        return this.externalClusterId;
+    }
+
+    public CreateResourceRequest setNodeMatchLabels(java.util.Map<String, String> nodeMatchLabels) {
+        this.nodeMatchLabels = nodeMatchLabels;
+        return this;
+    }
+    public java.util.Map<String, String> getNodeMatchLabels() {
+        return this.nodeMatchLabels;
+    }
+
+    public CreateResourceRequest setNodeTolerations(java.util.List<CreateResourceRequestNodeTolerations> nodeTolerations) {
+        this.nodeTolerations = nodeTolerations;
+        return this;
+    }
+    public java.util.List<CreateResourceRequestNodeTolerations> getNodeTolerations() {
+        return this.nodeTolerations;
+    }
+
+    public CreateResourceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public CreateResourceRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
     public CreateResourceRequest setSystemDiskSize(Integer systemDiskSize) {
         this.systemDiskSize = systemDiskSize;
         return this;
@@ -73,6 +128,58 @@ public class CreateResourceRequest extends TeaModel {
     }
     public String getZone() {
         return this.zone;
+    }
+
+    public static class CreateResourceRequestNodeTolerations extends TeaModel {
+        @NameInMap("effect")
+        public String effect;
+
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("value")
+        public String value;
+
+        public static CreateResourceRequestNodeTolerations build(java.util.Map<String, ?> map) throws Exception {
+            CreateResourceRequestNodeTolerations self = new CreateResourceRequestNodeTolerations();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateResourceRequestNodeTolerations setEffect(String effect) {
+            this.effect = effect;
+            return this;
+        }
+        public String getEffect() {
+            return this.effect;
+        }
+
+        public CreateResourceRequestNodeTolerations setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateResourceRequestNodeTolerations setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public CreateResourceRequestNodeTolerations setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
