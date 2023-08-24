@@ -7347,6 +7347,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DbId", request.dbId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isDefault)) {
+            query.put("IsDefault", request.isDefault);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isLogic)) {
             query.put("IsLogic", request.isLogic);
         }

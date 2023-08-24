@@ -18,6 +18,9 @@ public class ModifyDesensitizationStrategyRequest extends TeaModel {
     @NameInMap("DbId")
     public Integer dbId;
 
+    @NameInMap("IsDefault")
+    public Boolean isDefault;
+
     /**
      * <p>Specifies whether the database is a logical database. Valid values:</p>
      * <br>
@@ -86,6 +89,14 @@ public class ModifyDesensitizationStrategyRequest extends TeaModel {
     }
     public Integer getDbId() {
         return this.dbId;
+    }
+
+    public ModifyDesensitizationStrategyRequest setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
     }
 
     public ModifyDesensitizationStrategyRequest setIsLogic(Boolean isLogic) {
