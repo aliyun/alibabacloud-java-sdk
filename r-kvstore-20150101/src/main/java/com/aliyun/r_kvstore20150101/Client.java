@@ -572,7 +572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the existing instance.
+      * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+      * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
+      * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
+      * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
       *
       * @param request CreateGlobalDistributeCacheRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -587,6 +590,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
@@ -623,7 +630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the existing instance.
+      * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+      * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
+      * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
+      * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
       *
       * @param request CreateGlobalDistributeCacheRequest
       * @return CreateGlobalDistributeCacheResponse
@@ -784,6 +794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
             query.put("NetworkType", request.networkType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -1082,6 +1096,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramGroupId)) {
+            query.put("ParamGroupId", request.paramGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
@@ -1763,6 +1781,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceScene)) {
+            query.put("InstanceScene", request.instanceScene);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
@@ -5892,6 +5914,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyInstanceNetExpireTimeWithOptions(request, runtime);
     }
 
+    public ModifyInstanceParameterResponse modifyInstanceParameterWithOptions(ModifyInstanceParameterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameterGroupId)) {
+            query.put("ParameterGroupId", request.parameterGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceParameter"),
+            new TeaPair("version", "2015-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceParameterResponse());
+    }
+
+    public ModifyInstanceParameterResponse modifyInstanceParameter(ModifyInstanceParameterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceParameterWithOptions(request, runtime);
+    }
+
     /**
       * Modifies SSL encryption configurations. Valid values:
       * *   **Disable**: The SSL encryption is disabled.
@@ -6083,8 +6162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The encryption algorithm. Default value: AES-CTR-256. 
-      * >  This parameter takes effect only if the **TDEStatus** parameter is set to **Enabled**.
+      * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
       *
       * @param request ModifyInstanceTDERequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6151,8 +6229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The encryption algorithm. Default value: AES-CTR-256. 
-      * >  This parameter takes effect only if the **TDEStatus** parameter is set to **Enabled**.
+      * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
       *
       * @param request ModifyInstanceTDERequest
       * @return ModifyInstanceTDEResponse

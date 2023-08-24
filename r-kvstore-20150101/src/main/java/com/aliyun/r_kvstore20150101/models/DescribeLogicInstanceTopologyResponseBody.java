@@ -175,6 +175,9 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("NodeType")
         public String nodeType;
 
+        @NameInMap("SubInstanceType")
+        public String subInstanceType;
+
         public static DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo self = new DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo();
             return TeaModel.build(map, self);
@@ -218,6 +221,14 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
         public String getNodeType() {
             return this.nodeType;
+        }
+
+        public DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo setSubInstanceType(String subInstanceType) {
+            this.subInstanceType = subInstanceType;
+            return this;
+        }
+        public String getSubInstanceType() {
+            return this.subInstanceType;
         }
 
     }

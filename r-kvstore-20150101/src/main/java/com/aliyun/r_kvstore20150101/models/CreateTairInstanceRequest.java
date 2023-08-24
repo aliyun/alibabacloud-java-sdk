@@ -133,6 +133,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ParamGroupId")
+    public String paramGroupId;
+
     /**
      * <p>The password that is used to connect to the instance. The password must meet the following requirements:</p>
      * <br>
@@ -423,6 +426,14 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateTairInstanceRequest setParamGroupId(String paramGroupId) {
+        this.paramGroupId = paramGroupId;
+        return this;
+    }
+    public String getParamGroupId() {
+        return this.paramGroupId;
     }
 
     public CreateTairInstanceRequest setPassword(String password) {
