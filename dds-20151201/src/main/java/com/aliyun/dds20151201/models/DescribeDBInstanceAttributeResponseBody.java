@@ -749,6 +749,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance extends TeaModel {
+        @NameInMap("BurstingEnabled")
+        public Boolean burstingEnabled;
+
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
@@ -994,6 +997,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         public String protocolType;
 
+        @NameInMap("ProvisionedIops")
+        public Long provisionedIops;
+
         /**
          * <p>The kind code of the instance. Valid values:</p>
          * <br>
@@ -1149,6 +1155,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public static DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance self = new DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setBurstingEnabled(Boolean burstingEnabled) {
+            this.burstingEnabled = burstingEnabled;
+            return this;
+        }
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setCapacityUnit(String capacityUnit) {
@@ -1389,6 +1403,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setProvisionedIops(Long provisionedIops) {
+            this.provisionedIops = provisionedIops;
+            return this;
+        }
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setReadonlyReplicas(String readonlyReplicas) {

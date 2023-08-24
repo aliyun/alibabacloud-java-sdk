@@ -172,6 +172,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("Period")
     public Integer period;
 
+    @NameInMap("ProvisionedIops")
+    public Long provisionedIops;
+
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <br>
@@ -500,6 +503,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public Integer getPeriod() {
         return this.period;
+    }
+
+    public CreateDBInstanceRequest setProvisionedIops(Long provisionedIops) {
+        this.provisionedIops = provisionedIops;
+        return this;
+    }
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
     }
 
     public CreateDBInstanceRequest setReadonlyReplicas(String readonlyReplicas) {

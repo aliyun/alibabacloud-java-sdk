@@ -178,6 +178,9 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     @NameInMap("ProtocolType")
     public String protocolType;
 
+    @NameInMap("ProvisionedIops")
+    public Long provisionedIops;
+
     /**
      * <p>The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.</p>
      */
@@ -466,6 +469,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     }
     public String getProtocolType() {
         return this.protocolType;
+    }
+
+    public CreateShardingDBInstanceRequest setProvisionedIops(Long provisionedIops) {
+        this.provisionedIops = provisionedIops;
+        return this;
+    }
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
     }
 
     public CreateShardingDBInstanceRequest setRegionId(String regionId) {

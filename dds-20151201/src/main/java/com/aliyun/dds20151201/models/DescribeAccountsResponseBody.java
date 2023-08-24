@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
     /**
-     * <p>Details about the accounts.</p>
+     * <p>The username of the account.</p>
      */
     @NameInMap("Accounts")
     public DescribeAccountsResponseBodyAccounts accounts;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +40,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
         /**
          * <p>The description of the account.</p>
+         * <br>
+         * <p>> This parameter is returned only after you configure the description of the account by calling the [ModifyAccountDescription](~~468391~~) operation.</p>
          */
         @NameInMap("AccountDescription")
         public String accountDescription;
@@ -53,8 +55,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The status of the account.</p>
          * <br>
-         * <p>*   Unavailable</p>
-         * <p>*   Available</p>
+         * <p>*   **Unavailable**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("AccountStatus")
         public String accountStatus;
@@ -62,11 +64,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
         /**
          * <p>The role of the account. Valid values:</p>
          * <br>
-         * <p>*   db: shard</p>
-         * <p>*   cs: Configserver</p>
-         * <p>*   mongos: mongos</p>
-         * <p>*   logic: sharded cluster instance</p>
-         * <p>*   normal: replica set instance</p>
+         * <p>*   **db**: shard</p>
+         * <p>*   **cs**: Configserver</p>
+         * <p>*   **mongos**: mongos</p>
+         * <p>*   **logic:** sharded cluster instance</p>
+         * <p>*   **normal:** replica set instance</p>
          */
         @NameInMap("CharacterType")
         public String characterType;
