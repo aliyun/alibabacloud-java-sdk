@@ -41,6 +41,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InstanceScene")
+    public String instanceScene;
+
     /**
      * <p>The ID of the data node for which you want to query available resources that can be created. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the ID of the data node. Remove the number sign (`#`) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\*\*\*\*-db-0.</p>
      * <br>
@@ -141,6 +144,14 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeAvailableResourceRequest setInstanceScene(String instanceScene) {
+        this.instanceScene = instanceScene;
+        return this;
+    }
+    public String getInstanceScene() {
+        return this.instanceScene;
     }
 
     public DescribeAvailableResourceRequest setNodeId(String nodeId) {

@@ -10,6 +10,9 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -20,7 +23,7 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the existing instance.</p>
      */
     @NameInMap("SeedSubInstanceId")
     public String seedSubInstanceId;
@@ -44,6 +47,14 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateGlobalDistributeCacheRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateGlobalDistributeCacheRequest setResourceOwnerAccount(String resourceOwnerAccount) {

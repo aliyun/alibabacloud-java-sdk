@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceTDEResponseBody extends TeaModel {
     /**
-     * <p>$.parameters[2].schema.enumValueTitles</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

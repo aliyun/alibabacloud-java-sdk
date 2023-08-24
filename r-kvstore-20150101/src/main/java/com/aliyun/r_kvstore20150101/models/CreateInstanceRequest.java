@@ -160,6 +160,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -442,6 +445,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getNetworkType() {
         return this.networkType;
+    }
+
+    public CreateInstanceRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public CreateInstanceRequest setOwnerAccount(String ownerAccount) {
