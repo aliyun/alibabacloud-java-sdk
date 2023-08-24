@@ -2327,17 +2327,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public FlightCancelOrderV2Response flightCancelOrderV2WithOptions(FlightCancelOrderV2Request request, FlightCancelOrderV2Headers headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
-            body.put("isv_name", request.isvName);
+            query.put("isv_name", request.isvName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
-            body.put("order_id", request.orderId);
+            query.put("order_id", request.orderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
-            body.put("out_order_id", request.outOrderId);
+            query.put("out_order_id", request.outOrderId);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2351,7 +2351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "FlightCancelOrderV2"),
@@ -2361,7 +2361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new FlightCancelOrderV2Response());
@@ -2915,25 +2915,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public FlightModifyCancelV2Response flightModifyCancelV2WithOptions(FlightModifyCancelV2Request request, FlightModifyCancelV2Headers headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.isvName)) {
-            body.put("isv_name", request.isvName);
+            query.put("isv_name", request.isvName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
-            body.put("order_id", request.orderId);
+            query.put("order_id", request.orderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outOrderId)) {
-            body.put("out_order_id", request.outOrderId);
+            query.put("out_order_id", request.outOrderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.outSubOrderId)) {
-            body.put("out_sub_order_id", request.outSubOrderId);
+            query.put("out_sub_order_id", request.outSubOrderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.subOrderId)) {
-            body.put("sub_order_id", request.subOrderId);
+            query.put("sub_order_id", request.subOrderId);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -2947,7 +2947,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "FlightModifyCancelV2"),
@@ -2957,7 +2957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new FlightModifyCancelV2Response());
