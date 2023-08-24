@@ -112,6 +112,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EcsInstanceType", request.ecsInstanceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.externalClusterId)) {
+            body.put("ExternalClusterId", request.externalClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeMatchLabels)) {
+            body.put("NodeMatchLabels", request.nodeMatchLabels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeTolerations)) {
+            body.put("NodeTolerations", request.nodeTolerations);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            body.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
+            body.put("RoleName", request.roleName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
             body.put("SystemDiskSize", request.systemDiskSize);
         }
@@ -1370,6 +1390,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceName", request.resourceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -1801,6 +1825,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateResourceResponse updateResourceWithOptions(String ClusterId, String ResourceId, UpdateResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeMatchLabels)) {
+            body.put("NodeMatchLabels", request.nodeMatchLabels);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeTolerations)) {
+            body.put("NodeTolerations", request.nodeTolerations);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
             body.put("ResourceName", request.resourceName);
         }

@@ -43,6 +43,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("ResourceName")
     public String resourceName;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("Status")
     public String status;
 
@@ -156,6 +159,14 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
     public String getResourceName() {
         return this.resourceName;
+    }
+
+    public DescribeResourceResponseBody setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public DescribeResourceResponseBody setStatus(String status) {
