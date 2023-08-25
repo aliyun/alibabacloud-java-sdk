@@ -466,6 +466,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTopicWithOptions(instanceId, topicName, headers, runtime);
     }
 
+    public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptionsWithOptions(String instanceId, String consumerGroupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumerGroupSubscriptions"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/consumerGroups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + "/subscriptions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConsumerGroupSubscriptionsResponse());
+    }
+
+    public ListConsumerGroupSubscriptionsResponse listConsumerGroupSubscriptions(String instanceId, String consumerGroupId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumerGroupSubscriptionsWithOptions(instanceId, consumerGroupId, headers, runtime);
+    }
+
     /**
       * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
       *
@@ -627,6 +651,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTopicsWithOptions(instanceId, request, headers, runtime);
+    }
+
+    public ResetConsumeOffsetResponse resetConsumeOffsetWithOptions(String instanceId, String consumerGroupId, String topicName, ResetConsumeOffsetRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resetTime)) {
+            body.put("resetTime", request.resetTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resetType)) {
+            body.put("resetType", request.resetType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetConsumeOffset"),
+            new TeaPair("version", "2022-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/consumerGroups/" + com.aliyun.openapiutil.Client.getEncodeParam(consumerGroupId) + "/consumeOffsets/" + com.aliyun.openapiutil.Client.getEncodeParam(topicName) + ""),
+            new TeaPair("method", "PATCH"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetConsumeOffsetResponse());
+    }
+
+    public ResetConsumeOffsetResponse resetConsumeOffset(String instanceId, String consumerGroupId, String topicName, ResetConsumeOffsetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resetConsumeOffsetWithOptions(instanceId, consumerGroupId, topicName, request, headers, runtime);
     }
 
     /**
