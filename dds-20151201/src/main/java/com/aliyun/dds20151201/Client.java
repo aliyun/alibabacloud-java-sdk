@@ -6858,6 +6858,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Period", request.period);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pricingCycle)) {
+            query.put("PricingCycle", request.pricingCycle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
