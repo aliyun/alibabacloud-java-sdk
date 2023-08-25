@@ -94,6 +94,11 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHop")
         public String nextHop;
 
+        /**
+         * <p>The ID of the tunnel associated with the next hop of the policy-based route.</p>
+         * <br>
+         * <p>This parameter is returned only if the VPN gateway supports the dual-tunnel mode.</p>
+         */
         @NameInMap("NextHopTunnelId")
         public String nextHopTunnelId;
 
@@ -135,8 +140,10 @@ public class DescribeVpnPbrRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The weight of the policy-based route. Valid values:</p>
          * <br>
-         * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
-         * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>
+         * <p>- For a VPN gateway that supports the dual-tunnel mode, the default weight is **100**.</p>
+         * <p>- For a VPN gateway that supports the single-tunnel mode, the weight specifies the priority of the policy-based route.</p>
+         * <p>   - **100**: a high priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the active connection.</p>
+         * <p>   - **0**: a low priority. If multiple policy-based routes with the same source CIDR block and destination CIDR block exist, the IPsec-VPN connection associated with the policy-based route is the standby connection.</p>
          */
         @NameInMap("Weight")
         public Integer weight;

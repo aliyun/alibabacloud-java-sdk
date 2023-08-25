@@ -31,6 +31,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     @NameInMap("Services")
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> services;
 
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     public static ListVpcEndpointServicesByEndUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListVpcEndpointServicesByEndUserResponseBody self = new ListVpcEndpointServicesByEndUserResponseBody();
         return TeaModel.build(map, self);
@@ -66,6 +69,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     }
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> getServices() {
         return this.services;
+    }
+
+    public ListVpcEndpointServicesByEndUserResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListVpcEndpointServicesByEndUserResponseBodyServices extends TeaModel {
