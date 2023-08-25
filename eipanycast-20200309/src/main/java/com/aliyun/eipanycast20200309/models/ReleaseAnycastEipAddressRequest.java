@@ -4,9 +4,17 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class ReleaseAnycastEipAddressRequest extends TeaModel {
+    /**
+     * <p>The ID of the Anycast EIP to be released.</p>
+     */
     @NameInMap("AnycastId")
     public String anycastId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 

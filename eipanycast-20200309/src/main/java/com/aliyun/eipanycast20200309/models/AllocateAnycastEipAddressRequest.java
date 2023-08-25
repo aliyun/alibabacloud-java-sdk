@@ -4,24 +4,68 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class AllocateAnycastEipAddressRequest extends TeaModel {
+    /**
+     * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
+     * <br>
+     * <p>Valid values: **200** to **1000**.</p>
+     * <br>
+     * <p>Default value: **1000**.</p>
+     * <br>
+     * <p>>  The maximum bandwidth value is not a guaranteed value. It indicates the upper limit of bandwidth and is for reference only.</p>
+     */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the Anycast EIP.</p>
+     * <br>
+     * <p>The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The billing method of the Anycast EIP.</p>
+     * <br>
+     * <p>Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The metering method of the Anycast EIP.</p>
+     * <br>
+     * <p>Set the value to **PayByTraffic**, which specifies the pay-by-data-transfer metering method.</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The name of the Anycast EIP.</p>
+     * <br>
+     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The access area of the Anycast EIP.</p>
+     * <br>
+     * <p>Set the value to **international**, which specifies the regions outside the Chinese mainland.</p>
+     */
     @NameInMap("ServiceLocation")
     public String serviceLocation;
 
@@ -76,6 +120,14 @@ public class AllocateAnycastEipAddressRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public AllocateAnycastEipAddressRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public AllocateAnycastEipAddressRequest setServiceLocation(String serviceLocation) {

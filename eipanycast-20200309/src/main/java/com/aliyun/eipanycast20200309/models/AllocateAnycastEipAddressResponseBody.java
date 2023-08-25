@@ -4,12 +4,21 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class AllocateAnycastEipAddressResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the Anycast EIP.</p>
+     */
     @NameInMap("AnycastId")
     public String anycastId;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

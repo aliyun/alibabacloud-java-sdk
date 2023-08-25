@@ -4,9 +4,17 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class ModifyAnycastEipAddressSpecRequest extends TeaModel {
+    /**
+     * <p>The ID of the Anycast EIP.</p>
+     */
     @NameInMap("AnycastId")
     public String anycastId;
 
+    /**
+     * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
+     * <br>
+     * <p>Valid values: **200** to **1000**.</p>
+     */
     @NameInMap("Bandwidth")
     public String bandwidth;
 

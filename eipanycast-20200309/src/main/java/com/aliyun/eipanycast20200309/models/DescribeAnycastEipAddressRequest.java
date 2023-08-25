@@ -4,12 +4,25 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnycastEipAddressRequest extends TeaModel {
+    /**
+     * <p>The ID of the Anycast EIP.</p>
+     * <br>
+     * <p>>  You must specify at least one of **Ip** and **AnycastId**.</p>
+     */
     @NameInMap("AnycastId")
     public String anycastId;
 
+    /**
+     * <p>The ID of the cloud resource with which the Anycast EIP is associated.</p>
+     */
     @NameInMap("BindInstanceId")
     public String bindInstanceId;
 
+    /**
+     * <p>The IP address of the Anycast EIP.</p>
+     * <br>
+     * <p>>  You must specify at least one of **Ip** and **AnycastId**.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 

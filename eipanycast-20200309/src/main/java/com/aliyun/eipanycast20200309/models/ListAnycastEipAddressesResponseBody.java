@@ -4,15 +4,30 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class ListAnycastEipAddressesResponseBody extends TeaModel {
+    /**
+     * <p>The list of Anycast EIPs.</p>
+     */
     @NameInMap("AnycastList")
     public java.util.List<ListAnycastEipAddressesResponseBodyAnycastList> anycastList;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,15 +69,30 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
     }
 
     public static class ListAnycastEipAddressesResponseBodyAnycastListAnycastEipBindInfoList extends TeaModel {
+        /**
+         * <p>The ID of the cloud resource with which the Anycast EIP is associated.</p>
+         */
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
 
+        /**
+         * <p>The ID of the region where the cloud resource is deployed.</p>
+         */
         @NameInMap("BindInstanceRegionId")
         public String bindInstanceRegionId;
 
+        /**
+         * <p>The type of cloud resource with which the Anycast EIP is associated.</p>
+         * <br>
+         * <p>*   **SlbInstance**: an internal-facing Classic Load Balancer (CLB) instance deployed in a virtual private cloud (VPC). CLB is formerly known as Server Load Balancer (SLB).</p>
+         * <p>*   **NetworkInterface**: an elastic network interface (ENI).</p>
+         */
         @NameInMap("BindInstanceType")
         public String bindInstanceType;
 
+        /**
+         * <p>The time when the Anycast EIP was associated.</p>
+         */
         @NameInMap("BindTime")
         public String bindTime;
 
@@ -106,9 +136,15 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
     }
 
     public static class ListAnycastEipAddressesResponseBodyAnycastListTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,48 +172,116 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
     }
 
     public static class ListAnycastEipAddressesResponseBodyAnycastList extends TeaModel {
+        /**
+         * <p>The ID of the account to which the Anycast EIP belongs.</p>
+         */
         @NameInMap("AliUid")
         public Long aliUid;
 
+        /**
+         * <p>The list of cloud resources with which the Anycast EIPs are associated.</p>
+         */
         @NameInMap("AnycastEipBindInfoList")
         public java.util.List<ListAnycastEipAddressesResponseBodyAnycastListAnycastEipBindInfoList> anycastEipBindInfoList;
 
+        /**
+         * <p>The ID of the Anycast EIP.</p>
+         */
         @NameInMap("AnycastId")
         public String anycastId;
 
+        /**
+         * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The service status of the Anycast EIP. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
+         */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <p>The time when the Anycast EIP was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the Anycast EIP.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The billing method of the Anycast EIP.</p>
+         * <br>
+         * <p>**PostPaid**: pay-as-you-go</p>
+         */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
+        /**
+         * <p>The metering method of the Anycast EIP.</p>
+         * <br>
+         * <p>**PayByTraffic**: pay-by-data-transfer</p>
+         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
+        /**
+         * <p>The IP address of the Anycast EIP.</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
+        /**
+         * <p>The name of the Anycast EIP.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The access area of the Anycast EIP.</p>
+         * <br>
+         * <p>**international**: regions outside the Chinese mainland</p>
+         */
         @NameInMap("ServiceLocation")
         public String serviceLocation;
 
+        /**
+         * <p>Indicates whether the resource is created by the service account.</p>
+         * <br>
+         * <p>*   **0**: no</p>
+         * <p>*   **1**: yes</p>
+         */
         @NameInMap("ServiceManaged")
         public Integer serviceManaged;
 
+        /**
+         * <p>The status of the Anycast EIP.</p>
+         * <br>
+         * <p>*   **Associating**</p>
+         * <p>*   **Unassociating**</p>
+         * <p>*   **Allocated**</p>
+         * <p>*   **Associated**</p>
+         * <p>*   **Modifying**</p>
+         * <p>*   **Releasing**</p>
+         * <p>*   **Released**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The information about the tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListAnycastEipAddressesResponseBodyAnycastListTags> tags;
 
@@ -272,6 +376,14 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListAnycastEipAddressesResponseBodyAnycastList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListAnycastEipAddressesResponseBodyAnycastList setServiceLocation(String serviceLocation) {
