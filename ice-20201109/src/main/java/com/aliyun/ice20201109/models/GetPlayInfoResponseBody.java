@@ -43,14 +43,23 @@ public class GetPlayInfoResponseBody extends TeaModel {
     }
 
     public static class GetPlayInfoResponseBodyMediaBase extends TeaModel {
+        @NameInMap("CateId")
+        public Long cateId;
+
         @NameInMap("CoverURL")
         public String coverURL;
 
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("MediaId")
         public String mediaId;
+
+        @NameInMap("MediaTags")
+        public String mediaTags;
 
         @NameInMap("MediaType")
         public String mediaType;
@@ -64,6 +73,14 @@ public class GetPlayInfoResponseBody extends TeaModel {
         public static GetPlayInfoResponseBodyMediaBase build(java.util.Map<String, ?> map) throws Exception {
             GetPlayInfoResponseBodyMediaBase self = new GetPlayInfoResponseBodyMediaBase();
             return TeaModel.build(map, self);
+        }
+
+        public GetPlayInfoResponseBodyMediaBase setCateId(Long cateId) {
+            this.cateId = cateId;
+            return this;
+        }
+        public Long getCateId() {
+            return this.cateId;
         }
 
         public GetPlayInfoResponseBodyMediaBase setCoverURL(String coverURL) {
@@ -82,12 +99,28 @@ public class GetPlayInfoResponseBody extends TeaModel {
             return this.creationTime;
         }
 
+        public GetPlayInfoResponseBodyMediaBase setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public GetPlayInfoResponseBodyMediaBase setMediaId(String mediaId) {
             this.mediaId = mediaId;
             return this;
         }
         public String getMediaId() {
             return this.mediaId;
+        }
+
+        public GetPlayInfoResponseBodyMediaBase setMediaTags(String mediaTags) {
+            this.mediaTags = mediaTags;
+            return this;
+        }
+        public String getMediaTags() {
+            return this.mediaTags;
         }
 
         public GetPlayInfoResponseBodyMediaBase setMediaType(String mediaType) {
