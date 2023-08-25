@@ -4,6 +4,11 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnycastServerRegionsRequest extends TeaModel {
+    /**
+     * <p>The access area from which you use the Anycast EIP to communicate with the Internet.</p>
+     * <br>
+     * <p>Set the value to **international**, which specifies the regions outside the Chinese mainland.</p>
+     */
     @NameInMap("ServiceLocation")
     public String serviceLocation;
 

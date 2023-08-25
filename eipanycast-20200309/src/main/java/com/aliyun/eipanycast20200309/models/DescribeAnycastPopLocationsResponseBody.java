@@ -4,12 +4,21 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
+    /**
+     * <p>The list of access points in the specified access area.</p>
+     */
     @NameInMap("AnycastPopLocationList")
     public java.util.List<DescribeAnycastPopLocationsResponseBodyAnycastPopLocationList> anycastPopLocationList;
 
+    /**
+     * <p>The number of access points.</p>
+     */
     @NameInMap("Count")
     public String count;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
     }
 
     public static class DescribeAnycastPopLocationsResponseBodyAnycastPopLocationList extends TeaModel {
+        /**
+         * <p>The ID of the region where the access point is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the region where the access point is deployed.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 

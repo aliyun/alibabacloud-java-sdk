@@ -4,51 +4,121 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnycastEipAddressResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the account to which the Anycast EIP belongs.</p>
+     */
     @NameInMap("AliUid")
     public Long aliUid;
 
+    /**
+     * <p>The information about the cloud resource with which the Anycast EIP is associated.</p>
+     */
     @NameInMap("AnycastEipBindInfoList")
     public java.util.List<DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoList> anycastEipBindInfoList;
 
+    /**
+     * <p>The ID of the Anycast EIP.</p>
+     */
     @NameInMap("AnycastId")
     public String anycastId;
 
+    /**
+     * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
+     */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
+    /**
+     * <p>The BID of the account to which the Anycast EIP belongs.</p>
+     */
     @NameInMap("Bid")
     public String bid;
 
+    /**
+     * <p>The service status of the Anycast EIP. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
+     */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
+    /**
+     * <p>The time when the Anycast EIP was created.</p>
+     * <br>
+     * <p>The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the Anycast EIP.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The billing method of the Anycast EIP.</p>
+     * <br>
+     * <p>Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.</p>
+     */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
+    /**
+     * <p>The metering method of the Anycast EIP.</p>
+     * <br>
+     * <p>Only **PayByTraffic** may be returned, which indicates the pay-by-data-transfer metering method.</p>
+     */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    /**
+     * <p>The IP address of the Anycast EIP.</p>
+     */
     @NameInMap("IpAddress")
     public String ipAddress;
 
+    /**
+     * <p>The name of the Anycast EIP.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>The area from which you can use the Anycast EIP to access the backend server over the Internet.</p>
+     * <br>
+     * <p>Only **international** may be returned, which indicates the areas outside the Chinese mainland.</p>
+     */
     @NameInMap("ServiceLocation")
     public String serviceLocation;
 
+    /**
+     * <p>The status of the Anycast EIP. Valid values:</p>
+     * <br>
+     * <p>*   **Associating**</p>
+     * <p>*   **Unassociating**</p>
+     * <p>*   **Allocated**</p>
+     * <p>*   **Associated**</p>
+     * <p>*   **Modifying**</p>
+     * <p>*   **Releasing**</p>
+     * <p>*   **Released**</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tag information.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeAnycastEipAddressResponseBodyTags> tags;
 
@@ -161,6 +231,14 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeAnycastEipAddressResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeAnycastEipAddressResponseBody setServiceLocation(String serviceLocation) {
         this.serviceLocation = serviceLocation;
         return this;
@@ -186,6 +264,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoListPopLocations extends TeaModel {
+        /**
+         * <p>The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.</p>
+         * <br>
+         * <p>If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.</p>
+         */
         @NameInMap("PopLocation")
         public String popLocation;
 
@@ -205,27 +288,69 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoList extends TeaModel {
+        /**
+         * <p>The association mode. Valid values:</p>
+         * <br>
+         * <p>*   **Default**: the default mode. In this mode, associated cloud resources are set as default origin servers.</p>
+         * <p>*   **Normal**: the standard mode. In this mode, associated cloud resources are set as standard origin servers.</p>
+         */
         @NameInMap("AssociationMode")
         public String associationMode;
 
+        /**
+         * <p>The ID of the cloud resource with which the Anycast EIP is associated.</p>
+         */
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
 
+        /**
+         * <p>The ID of the region in which the cloud resource is deployed.</p>
+         */
         @NameInMap("BindInstanceRegionId")
         public String bindInstanceRegionId;
 
+        /**
+         * <p>The type of cloud resource with which the Anycast EIP is associated. Valid values:</p>
+         * <br>
+         * <p>*   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)</p>
+         * <p>*   **NetworkInterface**: an elastic network interface (ENI)</p>
+         */
         @NameInMap("BindInstanceType")
         public String bindInstanceType;
 
+        /**
+         * <p>The time when the Anycast EIP was associated.</p>
+         * <br>
+         * <p>The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BindTime")
         public String bindTime;
 
+        /**
+         * <p>The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.</p>
+         * <br>
+         * <p>If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.</p>
+         */
         @NameInMap("PopLocations")
         public java.util.List<DescribeAnycastEipAddressResponseBodyAnycastEipBindInfoListPopLocations> popLocations;
 
+        /**
+         * <p>The secondary private IP address of the associated ENI.</p>
+         * <br>
+         * <p>This parameter is valid only when **BindInstanceType** is set to **NetworkInterface**.</p>
+         */
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
+        /**
+         * <p>The status of the cloud resource. Valid values:</p>
+         * <br>
+         * <p>*   **BINDING**</p>
+         * <p>*   **BINDED**</p>
+         * <p>*   **UNBINDING**</p>
+         * <p>*   **DELETED**</p>
+         * <p>*   **MODIFYING**</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -301,9 +426,15 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     }
 
     public static class DescribeAnycastEipAddressResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

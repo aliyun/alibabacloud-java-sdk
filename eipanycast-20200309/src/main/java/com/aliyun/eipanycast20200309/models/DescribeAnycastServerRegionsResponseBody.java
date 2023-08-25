@@ -4,12 +4,21 @@ package com.aliyun.eipanycast20200309.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of regions where you can associate Anycast EIPs with backend servers.</p>
+     */
     @NameInMap("AnycastServerRegionList")
     public java.util.List<DescribeAnycastServerRegionsResponseBodyAnycastServerRegionList> anycastServerRegionList;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Count")
     public String count;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeAnycastServerRegionsResponseBodyAnycastServerRegionList extends TeaModel {
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("RegionName")
         public String regionName;
 
