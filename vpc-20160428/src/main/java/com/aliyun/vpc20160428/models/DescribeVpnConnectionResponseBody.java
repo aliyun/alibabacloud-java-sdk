@@ -1076,8 +1076,8 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         /**
          * <p>The tunnel role. Valid values:</p>
          * <br>
-         * <p>- **false** </p>
-         * <p>- **true**</p>
+         * <p>- **master** </p>
+         * <p>- **slave**</p>
          */
         @NameInMap("Role")
         public String role;
