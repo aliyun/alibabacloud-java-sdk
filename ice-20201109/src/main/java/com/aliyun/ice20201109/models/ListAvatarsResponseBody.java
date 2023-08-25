@@ -61,6 +61,9 @@ public class ListAvatarsResponseBody extends TeaModel {
         @NameInMap("Thumbnail")
         public String thumbnail;
 
+        @NameInMap("Transparent")
+        public Boolean transparent;
+
         public static ListAvatarsResponseBodyDataAvatarList build(java.util.Map<String, ?> map) throws Exception {
             ListAvatarsResponseBodyDataAvatarList self = new ListAvatarsResponseBodyDataAvatarList();
             return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class ListAvatarsResponseBody extends TeaModel {
         }
         public String getThumbnail() {
             return this.thumbnail;
+        }
+
+        public ListAvatarsResponseBodyDataAvatarList setTransparent(Boolean transparent) {
+            this.transparent = transparent;
+            return this;
+        }
+        public Boolean getTransparent() {
+            return this.transparent;
         }
 
     }
