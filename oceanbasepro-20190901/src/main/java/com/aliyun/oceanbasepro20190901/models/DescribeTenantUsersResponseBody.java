@@ -67,6 +67,9 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         @NameInMap("Database")
         public String database;
 
+        @NameInMap("Privileges")
+        public String privileges;
+
         @NameInMap("Role")
         public String role;
 
@@ -84,6 +87,14 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
         public String getDatabase() {
             return this.database;
+        }
+
+        public DescribeTenantUsersResponseBodyTenantUsersDatabases setPrivileges(String privileges) {
+            this.privileges = privileges;
+            return this;
+        }
+        public String getPrivileges() {
+            return this.privileges;
         }
 
         public DescribeTenantUsersResponseBodyTenantUsersDatabases setRole(String role) {

@@ -5,14 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     /**
-     * <p>The end time of the time range for querying the execution history of the slow SQL statement.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Hard parsing time。</p>
+     * <p>The execution history of the slow SQL statement.</p>
      */
     @NameInMap("SlowSQLHistoryList")
     public DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryList slowSQLHistoryList;
@@ -40,248 +39,241 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
 
     public static class DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList extends TeaModel {
         /**
-         * <p>The wait event.</p>
+         * <p>The number of rows affected.</p>
          */
         @NameInMap("AffectedRows")
         public Double affectedRows;
 
         /**
-         * <p>The number of row cache hits.</p>
+         * <p>The wait time of the client.</p>
          */
         @NameInMap("AppWaitTime")
         public Double appWaitTime;
 
         /**
-         * <p>The average CPU time.</p>
+         * <p>The number of block cache hits.</p>
          */
         @NameInMap("BlockCacheHit")
         public Double blockCacheHit;
 
         /**
-         * <p>The number of rows to return on each page.  </p>
-         * <p>- Maximum value: 100   </p>
-         * <p>- Default value: 10</p>
+         * <p>The number of block index cache hits.</p>
          */
         @NameInMap("BlockIndexCacheHit")
         public Double blockIndexCacheHit;
 
         /**
-         * <p>The number of executions.</p>
+         * <p>The number of Bloom filter cache hits.</p>
          */
         @NameInMap("BloomFilterCacheHit")
         public Double bloomFilterCacheHit;
 
         /**
-         * <p>The number of retries.</p>
+         * <p>The IP address of the client.</p>
          */
         @NameInMap("ClientIp")
         public String clientIp;
 
         /**
-         * <p>$.parameters[6].schema.example</p>
+         * <p>The wait time in concurrent execution.</p>
          */
         @NameInMap("ConcurrencyWaitTime")
         public Double concurrencyWaitTime;
 
         /**
-         * <p>$.parameters[6].schema.enumValueTitles</p>
+         * <p>The average CPU time.</p>
          */
         @NameInMap("CpuTime")
         public Double cpuTime;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("DbName")
         public String dbName;
 
         /**
-         * <p>$.parameters[7].schema.description</p>
+         * <p>The time to wait for decoding.</p>
          */
         @NameInMap("DecodeTime")
         public Double decodeTime;
 
         /**
-         * <p>SQLID.</p>
+         * <p>The number of physical reads.</p>
          */
         @NameInMap("DiskRead")
         public Double diskRead;
 
         /**
-         * <p>The queuing time.</p>
+         * <p>The average response time.</p>
          */
         @NameInMap("ElapsedTime")
         public Double elapsedTime;
 
+        /**
+         * <p>The end time.</p>
+         */
         @NameInMap("EndTimeUTCString")
         public String endTimeUTCString;
 
         /**
-         * <p>The internal wait time.</p>
+         * <p>The wait event.</p>
          */
         @NameInMap("Event")
         public String event;
 
         /**
-         * <p>The number of failures.</p>
+         * <p>The number of executions per second.</p>
          */
         @NameInMap("ExecPerSecond")
         public Double execPerSecond;
 
         /**
-         * <p>The request ID.</p>
+         * <p>The internal execution time.</p>
          */
         @NameInMap("ExecuteTime")
         public Double executeTime;
 
         /**
-         * <p>The maximum CPU time.</p>
+         * <p>The number of executions.</p>
          */
         @NameInMap("Executions")
         public Double executions;
 
         /**
-         * <p>The number of rows returned.</p>
+         * <p>The number of failures.</p>
          */
         @NameInMap("FailTimes")
         public Double failTimes;
 
         /**
-         * <p>Example 1</p>
+         * <p>Hard parsing time.</p>
          */
         @NameInMap("GetPlanTime")
         public Double getPlanTime;
 
         /**
-         * <p>$.parameters[7].schema.enumValueTitles</p>
+         * <p>The I/O wait time.</p>
          */
         @NameInMap("IOWaitTime")
         public Double IOWaitTime;
 
         /**
-         * <p>The quantity.</p>
+         * <p>The number of logical reads.</p>
          */
         @NameInMap("LogicalRead")
         public Double logicalRead;
 
         /**
-         * <p>DescribeSlowSQLHistoryList</p>
+         * <p>The maximum CPU time.</p>
          */
         @NameInMap("MaxCpuTime")
         public Double maxCpuTime;
 
         /**
-         * <p>```</p>
-         * <p>http(s)://[Endpoint]/?Action=DescribeSlowSQLHistoryList</p>
-         * <p>&TenantId=t384tolsj****</p>
-         * <p>&StartTime=2021-12-14T02:34:49Z</p>
-         * <p>&EndTime=2021-12-14T08:34:49Z</p>
-         * <p>&SQLId=8D6E84735C0****1823D199E2CA1****</p>
-         * <p>&PageNumber=1</p>
-         * <p>&PageSize=10</p>
-         * <p>&Common request parameters</p>
-         * <p>```</p>
+         * <p>The maximum response time.</p>
          */
         @NameInMap("MaxElapsedTime")
         public Double maxElapsedTime;
 
         /**
-         * <p>The wait time of the client.</p>
+         * <p>The number of rows read from the memory.</p>
          */
         @NameInMap("MemstoreReadRowCount")
         public Double memstoreReadRowCount;
 
         /**
-         * <p>The number of rows read from the disk.</p>
+         * <p>The number of plan misses.</p>
          */
         @NameInMap("MissPlans")
         public Double missPlans;
 
         /**
-         * <p>$.parameters[7].schema.example</p>
+         * <p>The wait time for network.</p>
          */
         @NameInMap("NetWaitTime")
         public Double netWaitTime;
 
         /**
-         * <p>The number of the page to return.    </p>
-         * <p>- Start value: 1   </p>
-         * <p>- Default value: 1</p>
+         * <p>The IP address of the node.</p>
          */
         @NameInMap("NodeIp")
         public String nodeIp;
 
         /**
-         * <p>$.parameters[6].schema.description</p>
+         * <p>The queuing time.</p>
          */
         @NameInMap("QueueTime")
         public Double queueTime;
 
         /**
-         * <p>The end time.</p>
+         * <p>The number of RPCs.</p>
          */
         @NameInMap("RPCCount")
         public Double RPCCount;
 
         /**
-         * <p>The time to wait for decoding.</p>
+         * <p>The number of remote plans.</p>
          */
         @NameInMap("RemotePlans")
         public Double remotePlans;
 
         /**
-         * <p>The number of block index cache hits.</p>
+         * <p>The number of retries.</p>
          */
         @NameInMap("RetryCount")
         public Double retryCount;
 
         /**
-         * <p>The number of executions per second.</p>
+         * <p>The number of rows returned.</p>
          */
         @NameInMap("ReturnRows")
         public Double returnRows;
 
         /**
-         * <p>The execution history of the slow SQL statement.</p>
+         * <p>The number of row cache hits.</p>
          */
         @NameInMap("RowCacheHit")
         public Double rowCacheHit;
 
         /**
-         * <p>You can call this operation to query the execution history of an SQL statement by SQL ID that is determined as a slow SQL statement during a specified period of time.</p>
+         * <p>The scheduling duration.</p>
          */
         @NameInMap("ScheduleTime")
         public Double scheduleTime;
 
         /**
-         * <p>The return result of the request.</p>
+         * <p>SQLID.</p>
          */
         @NameInMap("SqlId")
         public String sqlId;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The SQL type.</p>
          */
         @NameInMap("SqlType")
         public String sqlType;
 
         /**
-         * <p>The scheduling duration.</p>
+         * <p>The number of rows read from the disk.</p>
          */
         @NameInMap("SsstoreReadRowCount")
         public Double ssstoreReadRowCount;
 
         /**
-         * <p>The return result of the request.</p>
+         * <p>The name of the tenant.</p>
          */
         @NameInMap("TenantName")
         public String tenantName;
 
+        /**
+         * <p>The internal wait time.</p>
+         */
         @NameInMap("TotalWaitTime")
         public Double totalWaitTime;
 
         /**
-         * <p>The number of physical reads.</p>
+         * <p>The username.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -614,11 +606,14 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     }
 
     public static class DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryList extends TeaModel {
+        /**
+         * <p>The quantity.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
         /**
-         * <p>The SQL ID, which uniquely identifies an SQL statement.</p>
+         * <p>The return result of the request.</p>
          */
         @NameInMap("List")
         public java.util.List<DescribeSlowSQLHistoryListResponseBodySlowSQLHistoryListList> list;

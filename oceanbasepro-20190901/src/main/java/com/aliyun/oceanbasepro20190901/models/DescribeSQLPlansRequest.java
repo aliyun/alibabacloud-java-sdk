@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPlansRequest extends TeaModel {
     /**
-     * <p>The time when the plan was loaded for the first time, .</p>
+     * <p>SQLID.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The time when the plan was loaded for the first time, .</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

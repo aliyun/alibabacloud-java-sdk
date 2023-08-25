@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class SwitchoverInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The list of data for the switchover.</p>
+     */
     @NameInMap("Data")
     public SwitchoverInstanceResponseBodyData data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,17 @@ public class SwitchoverInstanceResponseBody extends TeaModel {
     }
 
     public static class SwitchoverInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The message of the switchover.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>Whether the switchover is successful.</p>
+         * <p>- true: the switchover succeeded.</p>
+         * <p>- false: the switchover failed.</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

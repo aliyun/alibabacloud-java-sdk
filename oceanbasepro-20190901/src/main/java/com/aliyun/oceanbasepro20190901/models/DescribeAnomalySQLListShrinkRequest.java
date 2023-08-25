@@ -5,56 +5,59 @@ import com.aliyun.tea.*;
 
 public class DescribeAnomalySQLListShrinkRequest extends TeaModel {
     /**
-     * <p>The search value.</p>
+     * <p>The language of the returned data.   </p>
+     * <p>Default value: CN for a China site and EN for an International site.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>{</p>
-     * <p>  "UserName":testUser</p>
-     * <p>}</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("DbName")
     public String dbName;
 
     /**
-     * <p>zh-CN</p>
+     * <p>The end time of the time range for querying suspicious SQL statements.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
+
+    /**
+     * <p>The filter condition.   </p>
+     * <p>> <br> - All fields in OceanBase Database support filtering. <br> - You can write the key-value pair of a parameter in a JSON string in the JSON format to filter the parameter.</p>
+     */
+    @NameInMap("FilterCondition")
+    public String filterConditionShrink;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    /**
+     * <p>The IP address of the node.</p>
+     */
+    @NameInMap("NodeIp")
+    public String nodeIp;
 
     /**
      * <p>The number of the page to return.    </p>
      * <p>- Start value: 1   </p>
      * <p>- Default value: 1</p>
      */
-    @NameInMap("FilterCondition")
-    public String filterConditionShrink;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     /**
      * <p>The number of rows to return on each page.    </p>
      * <p>- Maximum value: 100   </p>
      * <p>- Default value: 10</p>
      */
-    @NameInMap("NodeIp")
-    public String nodeIp;
-
-    /**
-     * <p>desc</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The start time of the time range for querying suspicious SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>1</p>
+     * <p>SQLID.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
@@ -66,44 +69,45 @@ public class DescribeAnomalySQLListShrinkRequest extends TeaModel {
     public String searchKeyWord;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The search parameter.</p>
      */
     @NameInMap("SearchParameter")
     public String searchParameter;
 
     /**
-     * <p>Utilization above threshold</p>
+     * <p>The search rule.   </p>
+     * <p>Valid values: "=", ">", ">=", "<", and "<="</p>
      */
     @NameInMap("SearchRule")
     public String searchRule;
 
     /**
-     * <p>10</p>
+     * <p>The search value.</p>
      */
     @NameInMap("SearchValue")
     public String searchValue;
 
     /**
-     * <p>The end time of the time range for querying suspicious SQL statements.   </p>
-     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The sorted column.</p>
      */
     @NameInMap("SortColumn")
     public String sortColumn;
 
     /**
-     * <p>The request time, in ms.</p>
+     * <p>The sorting rule.</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
 
     /**
-     * <p>The total count.</p>
+     * <p>The start time of the time range for querying suspicious SQL statements.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>Alibaba Cloud CLI</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
@@ -143,6 +147,14 @@ public class DescribeAnomalySQLListShrinkRequest extends TeaModel {
     }
     public String getFilterConditionShrink() {
         return this.filterConditionShrink;
+    }
+
+    public DescribeAnomalySQLListShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeAnomalySQLListShrinkRequest setNodeIp(String nodeIp) {

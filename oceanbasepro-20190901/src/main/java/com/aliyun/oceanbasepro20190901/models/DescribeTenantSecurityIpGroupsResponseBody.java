@@ -4,12 +4,21 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of the whitelist groups.</p>
+     */
     @NameInMap("SecurityIpGroups")
     public java.util.List<DescribeTenantSecurityIpGroupsResponseBodySecurityIpGroups> securityIpGroups;
 
+    /**
+     * <p>The total number of the whitelist groups.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,15 +52,29 @@ public class DescribeTenantSecurityIpGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantSecurityIpGroupsResponseBodySecurityIpGroups extends TeaModel {
+        /**
+         * <p>The group name.</p>
+         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
+        /**
+         * <p>The whitelist group type.</p>
+         * <p>- instance: the whitelist group from the cluster.</p>
+         * <p>- tenant: the whitelist group of the current tenant.</p>
+         */
         @NameInMap("SecurityIpGroupType")
         public String securityIpGroupType;
 
+        /**
+         * <p>The whitelist of IP addresses. It is a string separated by commas, and each object is an IP string or a CIDR block.</p>
+         */
         @NameInMap("SecurityIps")
         public String securityIps;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 

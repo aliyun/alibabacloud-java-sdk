@@ -5,12 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNameResponseBody extends TeaModel {
     /**
-     * <p>The name of the OceanBase cluster.</p>
-     */
-    @NameInMap("InstanceName")
-    public String instanceName;
-
-    /**
      * <p>The operation that you want to perform.   </p>
      * <p>Set the value to **ModifyInstanceName**.</p>
      */
@@ -20,14 +14,6 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
     public static ModifyInstanceNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceNameResponseBody self = new ModifyInstanceNameResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceNameResponseBody setInstanceName(String instanceName) {
-        this.instanceName = instanceName;
-        return this;
-    }
-    public String getInstanceName() {
-        return this.instanceName;
     }
 
     public ModifyInstanceNameResponseBody setRequestId(String requestId) {
