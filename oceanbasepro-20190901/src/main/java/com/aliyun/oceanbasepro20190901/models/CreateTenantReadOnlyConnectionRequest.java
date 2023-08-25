@@ -10,6 +10,12 @@ public class CreateTenantReadOnlyConnectionRequest extends TeaModel {
     @NameInMap("TenantId")
     public String tenantId;
 
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
+    @NameInMap("VpcId")
+    public String vpcId;
+
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -32,6 +38,22 @@ public class CreateTenantReadOnlyConnectionRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public CreateTenantReadOnlyConnectionRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public CreateTenantReadOnlyConnectionRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public CreateTenantReadOnlyConnectionRequest setZoneId(String zoneId) {

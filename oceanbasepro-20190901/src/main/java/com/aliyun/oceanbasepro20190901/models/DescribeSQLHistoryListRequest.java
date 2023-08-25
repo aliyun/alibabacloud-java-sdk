@@ -5,37 +5,40 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLHistoryListRequest extends TeaModel {
     /**
-     * <p>The number of block index cache hits.</p>
+     * <p>The end time of the time range for querying the SQL execution history.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The end time in UTC +0.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The end time.</p>
+     * <p>The number of entries returned on each page.   </p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of block index cache hits.</p>
+     * <p>SQLID.</p>
      */
     @NameInMap("SQLId")
     public String SQLId;
 
     /**
-     * <p>The maximum response time.</p>
+     * <p>The start time of the time range for querying the SQL execution history.   </p>
+     * <p>The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The average CPU time.</p>
+     * <p>The ID of the tenant.</p>
      */
     @NameInMap("TenantId")
     public String tenantId;

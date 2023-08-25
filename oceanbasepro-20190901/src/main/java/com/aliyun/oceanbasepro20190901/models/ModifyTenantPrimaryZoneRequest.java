@@ -24,22 +24,13 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
     public String masterIntranetAddressZone;
 
     /**
-     * <p>The switching mode.</p>
-     */
-    @NameInMap("ModifyType")
-    public String modifyType;
-
-    /**
      * <p>The ID of the vSwitch.</p>
      */
     @NameInMap("PrimaryZone")
     public String primaryZone;
 
-    /**
-     * <p>Example 1</p>
-     */
-    @NameInMap("PrimaryZoneDeployType")
-    public String primaryZoneDeployType;
+    @NameInMap("TenantEndpointId")
+    public String tenantEndpointId;
 
     /**
      * <p>The return result of the request.</p>
@@ -74,14 +65,6 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
         return this.masterIntranetAddressZone;
     }
 
-    public ModifyTenantPrimaryZoneRequest setModifyType(String modifyType) {
-        this.modifyType = modifyType;
-        return this;
-    }
-    public String getModifyType() {
-        return this.modifyType;
-    }
-
     public ModifyTenantPrimaryZoneRequest setPrimaryZone(String primaryZone) {
         this.primaryZone = primaryZone;
         return this;
@@ -90,12 +73,12 @@ public class ModifyTenantPrimaryZoneRequest extends TeaModel {
         return this.primaryZone;
     }
 
-    public ModifyTenantPrimaryZoneRequest setPrimaryZoneDeployType(String primaryZoneDeployType) {
-        this.primaryZoneDeployType = primaryZoneDeployType;
+    public ModifyTenantPrimaryZoneRequest setTenantEndpointId(String tenantEndpointId) {
+        this.tenantEndpointId = tenantEndpointId;
         return this;
     }
-    public String getPrimaryZoneDeployType() {
-        return this.primaryZoneDeployType;
+    public String getTenantEndpointId() {
+        return this.tenantEndpointId;
     }
 
     public ModifyTenantPrimaryZoneRequest setTenantId(String tenantId) {

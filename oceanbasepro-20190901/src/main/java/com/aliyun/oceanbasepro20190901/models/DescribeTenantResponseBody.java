@@ -45,16 +45,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String addressType;
 
         /**
-         * <p>是否开启事务拆分</p>
-         */
-        @NameInMap("ConnectionRole")
-        public String connectionRole;
-
-        /**
          * <p>The Internet address for accessing the tenant.</p>
          */
         @NameInMap("ConnectionZones")
         public java.util.List<String> connectionZones;
+
+        @NameInMap("EnableTransactionSplit")
+        public Boolean enableTransactionSplit;
 
         /**
          * <p>The ID of the VPC.</p>
@@ -107,6 +104,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         public Integer intranetPort;
 
+        @NameInMap("ParallelQueryDegree")
+        public Long parallelQueryDegree;
+
+        @NameInMap("TenantEndpointId")
+        public String tenantEndpointId;
+
         /**
          * <p>The primary zone corresponding to the address for accessing the tenant.</p>
          */
@@ -141,20 +144,20 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.addressType;
         }
 
-        public DescribeTenantResponseBodyTenantTenantConnections setConnectionRole(String connectionRole) {
-            this.connectionRole = connectionRole;
-            return this;
-        }
-        public String getConnectionRole() {
-            return this.connectionRole;
-        }
-
         public DescribeTenantResponseBodyTenantTenantConnections setConnectionZones(java.util.List<String> connectionZones) {
             this.connectionZones = connectionZones;
             return this;
         }
         public java.util.List<String> getConnectionZones() {
             return this.connectionZones;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setEnableTransactionSplit(Boolean enableTransactionSplit) {
+            this.enableTransactionSplit = enableTransactionSplit;
+            return this;
+        }
+        public Boolean getEnableTransactionSplit() {
+            return this.enableTransactionSplit;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setInternetAddress(String internetAddress) {
@@ -221,6 +224,22 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.intranetPort;
         }
 
+        public DescribeTenantResponseBodyTenantTenantConnections setParallelQueryDegree(Long parallelQueryDegree) {
+            this.parallelQueryDegree = parallelQueryDegree;
+            return this;
+        }
+        public Long getParallelQueryDegree() {
+            return this.parallelQueryDegree;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setTenantEndpointId(String tenantEndpointId) {
+            this.tenantEndpointId = tenantEndpointId;
+            return this;
+        }
+        public String getTenantEndpointId() {
+            return this.tenantEndpointId;
+        }
+
         public DescribeTenantResponseBodyTenantTenantConnections setTransactionSplit(Boolean transactionSplit) {
             this.transactionSplit = transactionSplit;
             return this;
@@ -243,6 +262,47 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+    }
+
+    public static class DescribeTenantResponseBodyTenantTenantResourceCapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        public Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        public Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacit")
+        public Integer usedCapacit;
+
+        public static DescribeTenantResponseBodyTenantTenantResourceCapacityUnit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTenantResponseBodyTenantTenantResourceCapacityUnit self = new DescribeTenantResponseBodyTenantTenantResourceCapacityUnit();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantTenantResourceCapacityUnit setMaxCapacityUnit(Integer maxCapacityUnit) {
+            this.maxCapacityUnit = maxCapacityUnit;
+            return this;
+        }
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantResourceCapacityUnit setMinCapacityUnit(Integer minCapacityUnit) {
+            this.minCapacityUnit = minCapacityUnit;
+            return this;
+        }
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantResourceCapacityUnit setUsedCapacit(Integer usedCapacit) {
+            this.usedCapacit = usedCapacit;
+            return this;
+        }
+        public Integer getUsedCapacit() {
+            return this.usedCapacit;
         }
 
     }
@@ -382,6 +442,9 @@ public class DescribeTenantResponseBody extends TeaModel {
     }
 
     public static class DescribeTenantResponseBodyTenantTenantResource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        public DescribeTenantResponseBodyTenantTenantResourceCapacityUnit capacityUnit;
+
         /**
          * <p>The enabling status of the Clog service.  </p>
          * <p>CLOSED: The Clog service is disabled.  </p>
@@ -412,6 +475,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         public static DescribeTenantResponseBodyTenantTenantResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeTenantResponseBodyTenantTenantResource self = new DescribeTenantResponseBodyTenantTenantResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTenantResponseBodyTenantTenantResource setCapacityUnit(DescribeTenantResponseBodyTenantTenantResourceCapacityUnit capacityUnit) {
+            this.capacityUnit = capacityUnit;
+            return this;
+        }
+        public DescribeTenantResponseBodyTenantTenantResourceCapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
         }
 
         public DescribeTenantResponseBodyTenantTenantResource setCpu(DescribeTenantResponseBodyTenantTenantResourceCpu cpu) {
@@ -571,6 +642,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("EnableInternetAddressService")
         public Boolean enableInternetAddressService;
 
+        @NameInMap("EnableParallelQuery")
+        public Boolean enableParallelQuery;
+
         @NameInMap("EnableReadWriteSplit")
         public Boolean enableReadWriteSplit;
 
@@ -646,6 +720,9 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         @NameInMap("MasterIntranetAddressZone")
         public String masterIntranetAddressZone;
+
+        @NameInMap("MaxParallelQueryDegree")
+        public Long maxParallelQueryDegree;
 
         @NameInMap("PayType")
         public String payType;
@@ -771,6 +848,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("TenantZones")
         public java.util.List<DescribeTenantResponseBodyTenantTenantZones> tenantZones;
 
+        @NameInMap("TimeZone")
+        public String timeZone;
+
         /**
          * <p>Indicates whether the clog service is available. To enable the clog service, submit a ticket.</p>
          */
@@ -878,6 +958,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             return this.enableInternetAddressService;
         }
 
+        public DescribeTenantResponseBodyTenant setEnableParallelQuery(Boolean enableParallelQuery) {
+            this.enableParallelQuery = enableParallelQuery;
+            return this;
+        }
+        public Boolean getEnableParallelQuery() {
+            return this.enableParallelQuery;
+        }
+
         public DescribeTenantResponseBodyTenant setEnableReadWriteSplit(Boolean enableReadWriteSplit) {
             this.enableReadWriteSplit = enableReadWriteSplit;
             return this;
@@ -900,6 +988,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getMasterIntranetAddressZone() {
             return this.masterIntranetAddressZone;
+        }
+
+        public DescribeTenantResponseBodyTenant setMaxParallelQueryDegree(Long maxParallelQueryDegree) {
+            this.maxParallelQueryDegree = maxParallelQueryDegree;
+            return this;
+        }
+        public Long getMaxParallelQueryDegree() {
+            return this.maxParallelQueryDegree;
         }
 
         public DescribeTenantResponseBodyTenant setPayType(String payType) {
@@ -988,6 +1084,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public java.util.List<DescribeTenantResponseBodyTenantTenantZones> getTenantZones() {
             return this.tenantZones;
+        }
+
+        public DescribeTenantResponseBodyTenant setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
         public DescribeTenantResponseBodyTenant setVpcId(String vpcId) {

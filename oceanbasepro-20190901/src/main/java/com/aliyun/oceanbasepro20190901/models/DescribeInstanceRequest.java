@@ -16,12 +16,6 @@ public class DescribeInstanceRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The server with the highest disk usage.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     public static DescribeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceRequest self = new DescribeInstanceRequest();
         return TeaModel.build(map, self);
@@ -41,14 +35,6 @@ public class DescribeInstanceRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
-    }
-
-    public DescribeInstanceRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

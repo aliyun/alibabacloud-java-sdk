@@ -68,6 +68,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesUsers extends TeaModel {
+        @NameInMap("Privileges")
+        public String privileges;
+
         /**
          * <p>The request ID.</p>
          */
@@ -89,6 +92,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         public static DescribeDatabasesResponseBodyDatabasesUsers build(java.util.Map<String, ?> map) throws Exception {
             DescribeDatabasesResponseBodyDatabasesUsers self = new DescribeDatabasesResponseBodyDatabasesUsers();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesUsers setPrivileges(String privileges) {
+            this.privileges = privileges;
+            return this;
+        }
+        public String getPrivileges() {
+            return this.privileges;
         }
 
         public DescribeDatabasesResponseBodyDatabasesUsers setRole(String role) {

@@ -112,6 +112,9 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("RejectedValue")
         public java.util.List<String> rejectedValue;
 
+        @NameInMap("Unit")
+        public String unit;
+
         /**
          * <p>The invalid value range of the parameter.    </p>
          * <p>It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.</p>
@@ -186,6 +189,14 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
         public java.util.List<String> getRejectedValue() {
             return this.rejectedValue;
+        }
+
+        public DescribeParametersResponseBodyParameters setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
         }
 
         public DescribeParametersResponseBodyParameters setValueType(String valueType) {

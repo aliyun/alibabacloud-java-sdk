@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeTenantSecurityIpGroupsRequest extends TeaModel {
+    /**
+     * <p>The ID of the OceanBase cluster.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 

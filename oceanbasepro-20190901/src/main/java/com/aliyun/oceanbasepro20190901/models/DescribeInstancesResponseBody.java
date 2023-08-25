@@ -45,7 +45,136 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig extends TeaModel {
+        @NameInMap("AutoScale")
+        public Boolean autoScale;
+
+        @NameInMap("MaxDiskSize")
+        public Long maxDiskSize;
+
+        @NameInMap("ScaleStepInMerge")
+        public Long scaleStepInMerge;
+
+        @NameInMap("ScaleStepInNormal")
+        public Long scaleStepInNormal;
+
+        @NameInMap("UpperMergeThreshold")
+        public Long upperMergeThreshold;
+
+        @NameInMap("UpperThreshold")
+        public Long upperThreshold;
+
+        @NameInMap("Upperbound")
+        public Long upperbound;
+
+        public static DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig self = new DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setAutoScale(Boolean autoScale) {
+            this.autoScale = autoScale;
+            return this;
+        }
+        public Boolean getAutoScale() {
+            return this.autoScale;
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setMaxDiskSize(Long maxDiskSize) {
+            this.maxDiskSize = maxDiskSize;
+            return this;
+        }
+        public Long getMaxDiskSize() {
+            return this.maxDiskSize;
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setScaleStepInMerge(Long scaleStepInMerge) {
+            this.scaleStepInMerge = scaleStepInMerge;
+            return this;
+        }
+        public Long getScaleStepInMerge() {
+            return this.scaleStepInMerge;
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setScaleStepInNormal(Long scaleStepInNormal) {
+            this.scaleStepInNormal = scaleStepInNormal;
+            return this;
+        }
+        public Long getScaleStepInNormal() {
+            return this.scaleStepInNormal;
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperMergeThreshold(Long upperMergeThreshold) {
+            this.upperMergeThreshold = upperMergeThreshold;
+            return this;
+        }
+        public Long getUpperMergeThreshold() {
+            return this.upperMergeThreshold;
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperThreshold(Long upperThreshold) {
+            this.upperThreshold = upperThreshold;
+            return this;
+        }
+        public Long getUpperThreshold() {
+            return this.upperThreshold;
+        }
+
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig setUpperbound(Long upperbound) {
+            this.upperbound = upperbound;
+            return this;
+        }
+        public Long getUpperbound() {
+            return this.upperbound;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesResourceCapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        public Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        public Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacityUnit")
+        public Integer usedCapacityUnit;
+
+        public static DescribeInstancesResponseBodyInstancesResourceCapacityUnit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesResourceCapacityUnit self = new DescribeInstancesResponseBodyInstancesResourceCapacityUnit();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesResourceCapacityUnit setMaxCapacityUnit(Integer maxCapacityUnit) {
+            this.maxCapacityUnit = maxCapacityUnit;
+            return this;
+        }
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        public DescribeInstancesResponseBodyInstancesResourceCapacityUnit setMinCapacityUnit(Integer minCapacityUnit) {
+            this.minCapacityUnit = minCapacityUnit;
+            return this;
+        }
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        public DescribeInstancesResponseBodyInstancesResourceCapacityUnit setUsedCapacityUnit(Integer usedCapacityUnit) {
+            this.usedCapacityUnit = usedCapacityUnit;
+            return this;
+        }
+        public Integer getUsedCapacityUnit() {
+            return this.usedCapacityUnit;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesResourceCpu extends TeaModel {
+        @NameInMap("OriginalTotalCpu")
+        public Long originalTotalCpu;
+
         /**
          * <p>The name of the OceanBase cluster.    </p>
          * <p>It must be 1 to 20 characters in length.   </p>
@@ -75,6 +204,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstancesResponseBodyInstancesResourceCpu setOriginalTotalCpu(Long originalTotalCpu) {
+            this.originalTotalCpu = originalTotalCpu;
+            return this;
+        }
+        public Long getOriginalTotalCpu() {
+            return this.originalTotalCpu;
+        }
+
         public DescribeInstancesResponseBodyInstancesResourceCpu setTotalCpu(Long totalCpu) {
             this.totalCpu = totalCpu;
             return this;
@@ -102,6 +239,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResourceDiskSize extends TeaModel {
+        @NameInMap("OriginalTotalDiskSize")
+        public Long originalTotalDiskSize;
+
         /**
          * <p>The request ID.</p>
          */
@@ -123,6 +263,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstancesResourceDiskSize build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesResourceDiskSize self = new DescribeInstancesResponseBodyInstancesResourceDiskSize();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesResourceDiskSize setOriginalTotalDiskSize(Long originalTotalDiskSize) {
+            this.originalTotalDiskSize = originalTotalDiskSize;
+            return this;
+        }
+        public Long getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
         }
 
         public DescribeInstancesResponseBodyInstancesResourceDiskSize setTotalDiskSize(Long totalDiskSize) {
@@ -152,6 +300,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResourceMemory extends TeaModel {
+        @NameInMap("OriginalTotalMemory")
+        public Long originalTotalMemory;
+
         /**
          * <p>The number of CPU cores of the cluster.</p>
          */
@@ -173,6 +324,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstancesResourceMemory build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesResourceMemory self = new DescribeInstancesResponseBodyInstancesResourceMemory();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesResourceMemory setOriginalTotalMemory(Long originalTotalMemory) {
+            this.originalTotalMemory = originalTotalMemory;
+            return this;
+        }
+        public Long getOriginalTotalMemory() {
+            return this.originalTotalMemory;
         }
 
         public DescribeInstancesResponseBodyInstancesResourceMemory setTotalMemory(Long totalMemory) {
@@ -202,6 +361,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstancesResponseBodyInstancesResource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        public DescribeInstancesResponseBodyInstancesResourceCapacityUnit capacityUnit;
+
         /**
          * <p>Indicates whether new nodes can be added.</p>
          */
@@ -241,6 +403,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static DescribeInstancesResponseBodyInstancesResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseBodyInstancesResource self = new DescribeInstancesResponseBodyInstancesResource();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesResource setCapacityUnit(DescribeInstancesResponseBodyInstancesResourceCapacityUnit capacityUnit) {
+            this.capacityUnit = capacityUnit;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesResourceCapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
         }
 
         public DescribeInstancesResponseBodyInstancesResource setCpu(DescribeInstancesResponseBodyInstancesResourceCpu cpu) {
@@ -305,6 +475,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DataDiskAutoScaleConfig")
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig dataDiskAutoScaleConfig;
+
         /**
          * <p>The request ID.</p>
          */
@@ -346,6 +519,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("ExpireTime")
         public String expireTime;
+
+        @NameInMap("InTempCapacityStatus")
+        public Boolean inTempCapacityStatus;
 
         /**
          * <p>The instance type.</p>
@@ -404,15 +580,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
-
-        /**
-         * <p>The number of the page to return.    </p>
-         * <br>
-         * <p>- Start value: 1 </p>
-         * <p>- Default value: 1</p>
-         */
-        @NameInMap("SecurityIps")
-        public java.util.List<String> securityIps;
 
         /**
          * <p>The billing method for the OceanBase cluster. Valid values:  </p>
@@ -483,6 +650,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public DescribeInstancesResponseBodyInstances setDataDiskAutoScaleConfig(DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig dataDiskAutoScaleConfig) {
+            this.dataDiskAutoScaleConfig = dataDiskAutoScaleConfig;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesDataDiskAutoScaleConfig getDataDiskAutoScaleConfig() {
+            return this.dataDiskAutoScaleConfig;
+        }
+
         public DescribeInstancesResponseBodyInstances setDeployMode(String deployMode) {
             this.deployMode = deployMode;
             return this;
@@ -537,6 +712,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeInstancesResponseBodyInstances setInTempCapacityStatus(Boolean inTempCapacityStatus) {
+            this.inTempCapacityStatus = inTempCapacityStatus;
+            return this;
+        }
+        public Boolean getInTempCapacityStatus() {
+            return this.inTempCapacityStatus;
         }
 
         public DescribeInstancesResponseBodyInstances setInstanceClass(String instanceClass) {
@@ -617,14 +800,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
-        }
-
-        public DescribeInstancesResponseBodyInstances setSecurityIps(java.util.List<String> securityIps) {
-            this.securityIps = securityIps;
-            return this;
-        }
-        public java.util.List<String> getSecurityIps() {
-            return this.securityIps;
         }
 
         public DescribeInstancesResponseBodyInstances setSeries(String series) {

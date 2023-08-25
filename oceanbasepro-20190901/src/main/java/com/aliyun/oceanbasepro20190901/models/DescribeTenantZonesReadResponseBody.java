@@ -47,9 +47,6 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         @NameInMap("IsPrimary")
         public Boolean isPrimary;
 
-        @NameInMap("IsReadOnlyAddressMaster")
-        public Boolean isReadOnlyAddressMaster;
-
         @NameInMap("IsReadable")
         public String isReadable;
 
@@ -75,14 +72,6 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         }
         public Boolean getIsPrimary() {
             return this.isPrimary;
-        }
-
-        public DescribeTenantZonesReadResponseBodyTenantZones setIsReadOnlyAddressMaster(Boolean isReadOnlyAddressMaster) {
-            this.isReadOnlyAddressMaster = isReadOnlyAddressMaster;
-            return this;
-        }
-        public Boolean getIsReadOnlyAddressMaster() {
-            return this.isReadOnlyAddressMaster;
         }
 
         public DescribeTenantZonesReadResponseBodyTenantZones setIsReadable(String isReadable) {

@@ -4,6 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharsetRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     /**
      * <p>实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。</p>
      */
@@ -19,6 +22,14 @@ public class DescribeCharsetRequest extends TeaModel {
     public static DescribeCharsetRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCharsetRequest self = new DescribeCharsetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCharsetRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeCharsetRequest setSeries(String series) {

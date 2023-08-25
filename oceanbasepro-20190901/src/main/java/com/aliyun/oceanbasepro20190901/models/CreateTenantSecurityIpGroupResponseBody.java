@@ -4,9 +4,15 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class CreateTenantSecurityIpGroupResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the whitelist group.</p>
+     */
     @NameInMap("SecurityIpGroup")
     public CreateTenantSecurityIpGroupResponseBodySecurityIpGroup securityIpGroup;
 
@@ -32,15 +38,29 @@ public class CreateTenantSecurityIpGroupResponseBody extends TeaModel {
     }
 
     public static class CreateTenantSecurityIpGroupResponseBodySecurityIpGroup extends TeaModel {
+        /**
+         * <p>The ID of the OceanBase cluster.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the whitelist group.</p>
+         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
+        /**
+         * <p>The list of IP addresses in the IP address whitelist group.   </p>
+         * <br>
+         * <p>It is a string separated by commas, and each object is an IP address or CIDR block.</p>
+         */
         @NameInMap("SecurityIps")
         public String securityIps;
 
+        /**
+         * <p>The ID of the tenant.</p>
+         */
         @NameInMap("TenantId")
         public String tenantId;
 
