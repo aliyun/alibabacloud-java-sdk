@@ -269,6 +269,9 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         @NameInMap("SessionId")
         public Long sessionId;
 
+        @NameInMap("SqlTemplateId")
+        public String sqlTemplateId;
+
         /**
          * <p>The SQL statement executed in the session.</p>
          */
@@ -346,6 +349,14 @@ public class GetMySQLAllSessionAsyncResponseBody extends TeaModel {
         }
         public Long getSessionId() {
             return this.sessionId;
+        }
+
+        public GetMySQLAllSessionAsyncResponseBodyDataSessionDataSessionList setSqlTemplateId(String sqlTemplateId) {
+            this.sqlTemplateId = sqlTemplateId;
+            return this;
+        }
+        public String getSqlTemplateId() {
+            return this.sqlTemplateId;
         }
 
         public GetMySQLAllSessionAsyncResponseBodyDataSessionDataSessionList setSqlText(String sqlText) {
