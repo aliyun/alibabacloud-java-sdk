@@ -65,6 +65,9 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("Period")
     public Long period;
 
+    @NameInMap("PricingCycle")
+    public String pricingCycle;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -149,6 +152,14 @@ public class TransformInstanceChargeTypeRequest extends TeaModel {
     }
     public Long getPeriod() {
         return this.period;
+    }
+
+    public TransformInstanceChargeTypeRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
     }
 
     public TransformInstanceChargeTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
