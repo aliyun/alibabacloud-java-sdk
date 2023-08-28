@@ -177,6 +177,9 @@ public class QueryAvatarResponseBody extends TeaModel {
     }
 
     public static class QueryAvatarResponseBodyData extends TeaModel {
+        @NameInMap("AllLocateImages")
+        public java.util.Map<String, ?> allLocateImages;
+
         @NameInMap("AvatarType")
         public String avatarType;
 
@@ -188,6 +191,9 @@ public class QueryAvatarResponseBody extends TeaModel {
 
         @NameInMap("MakeFailReason")
         public String makeFailReason;
+
+        @NameInMap("MakeStage")
+        public String makeStage;
 
         @NameInMap("MakeStatus")
         public String makeStatus;
@@ -207,6 +213,14 @@ public class QueryAvatarResponseBody extends TeaModel {
         public static QueryAvatarResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAvatarResponseBodyData self = new QueryAvatarResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAvatarResponseBodyData setAllLocateImages(java.util.Map<String, ?> allLocateImages) {
+            this.allLocateImages = allLocateImages;
+            return this;
+        }
+        public java.util.Map<String, ?> getAllLocateImages() {
+            return this.allLocateImages;
         }
 
         public QueryAvatarResponseBodyData setAvatarType(String avatarType) {
@@ -239,6 +253,14 @@ public class QueryAvatarResponseBody extends TeaModel {
         }
         public String getMakeFailReason() {
             return this.makeFailReason;
+        }
+
+        public QueryAvatarResponseBodyData setMakeStage(String makeStage) {
+            this.makeStage = makeStage;
+            return this;
+        }
+        public String getMakeStage() {
+            return this.makeStage;
         }
 
         public QueryAvatarResponseBodyData setMakeStatus(String makeStatus) {

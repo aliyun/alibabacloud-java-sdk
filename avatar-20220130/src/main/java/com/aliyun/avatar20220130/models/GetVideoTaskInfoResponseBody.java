@@ -74,6 +74,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("FailReason")
         public String failReason;
 
+        @NameInMap("PreviewPic")
+        public String previewPic;
+
         @NameInMap("SubtitlesUrl")
         public String subtitlesUrl;
 
@@ -116,6 +119,14 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         }
         public String getFailReason() {
             return this.failReason;
+        }
+
+        public GetVideoTaskInfoResponseBodyDataTaskResult setPreviewPic(String previewPic) {
+            this.previewPic = previewPic;
+            return this;
+        }
+        public String getPreviewPic() {
+            return this.previewPic;
         }
 
         public GetVideoTaskInfoResponseBodyDataTaskResult setSubtitlesUrl(String subtitlesUrl) {

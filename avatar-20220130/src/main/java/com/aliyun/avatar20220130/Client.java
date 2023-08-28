@@ -489,6 +489,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryTimedResetOperateStatusWithOptions(request, runtime);
     }
 
+    public QueryVideoTaskInfoResponse queryVideoTaskInfoWithOptions(QueryVideoTaskInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryVideoTaskInfoShrinkRequest request = new QueryVideoTaskInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.app)) {
+            request.appShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.app, "App", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appShrink)) {
+            query.put("App", request.appShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderById)) {
+            query.put("OrderById", request.orderById);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskUuid)) {
+            query.put("TaskUuid", request.taskUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryVideoTaskInfo"),
+            new TeaPair("version", "2022-01-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryVideoTaskInfoResponse());
+    }
+
+    public QueryVideoTaskInfoResponse queryVideoTaskInfo(QueryVideoTaskInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryVideoTaskInfoWithOptions(request, runtime);
+    }
+
     public SendCommandResponse sendCommandWithOptions(SendCommandRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SendCommandShrinkRequest request = new SendCommandShrinkRequest();

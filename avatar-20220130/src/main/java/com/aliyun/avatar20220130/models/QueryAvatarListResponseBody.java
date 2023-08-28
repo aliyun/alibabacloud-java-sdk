@@ -192,6 +192,9 @@ public class QueryAvatarListResponseBody extends TeaModel {
         @NameInMap("MakeFailReason")
         public String makeFailReason;
 
+        @NameInMap("MakeStage")
+        public String makeStage;
+
         @NameInMap("MakeStatus")
         public String makeStatus;
 
@@ -250,6 +253,14 @@ public class QueryAvatarListResponseBody extends TeaModel {
         }
         public String getMakeFailReason() {
             return this.makeFailReason;
+        }
+
+        public QueryAvatarListResponseBodyDataList setMakeStage(String makeStage) {
+            this.makeStage = makeStage;
+            return this;
+        }
+        public String getMakeStage() {
+            return this.makeStage;
         }
 
         public QueryAvatarListResponseBodyDataList setMakeStatus(String makeStatus) {
