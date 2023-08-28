@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
+    @NameInMap("code")
+    public String code;
+
     @NameInMap("domain_id")
     public String domainId;
 
@@ -12,6 +15,9 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
 
     @NameInMap("file_id")
     public String fileId;
+
+    @NameInMap("message")
+    public String message;
 
     @NameInMap("share_id")
     public String shareId;
@@ -22,6 +28,14 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     public static GetVideoPreviewPlayInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVideoPreviewPlayInfoResponseBody self = new GetVideoPreviewPlayInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetVideoPreviewPlayInfoResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public GetVideoPreviewPlayInfoResponseBody setDomainId(String domainId) {
@@ -46,6 +60,14 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     }
     public String getFileId() {
         return this.fileId;
+    }
+
+    public GetVideoPreviewPlayInfoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetVideoPreviewPlayInfoResponseBody setShareId(String shareId) {

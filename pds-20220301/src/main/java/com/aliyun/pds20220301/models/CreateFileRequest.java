@@ -241,12 +241,23 @@ public class CreateFileRequest extends TeaModel {
     }
 
     public static class CreateFileRequestPartInfoList extends TeaModel {
+        @NameInMap("content_md5")
+        public String contentMd5;
+
         @NameInMap("part_number")
         public Integer partNumber;
 
         public static CreateFileRequestPartInfoList build(java.util.Map<String, ?> map) throws Exception {
             CreateFileRequestPartInfoList self = new CreateFileRequestPartInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateFileRequestPartInfoList setContentMd5(String contentMd5) {
+            this.contentMd5 = contentMd5;
+            return this;
+        }
+        public String getContentMd5() {
+            return this.contentMd5;
         }
 
         public CreateFileRequestPartInfoList setPartNumber(Integer partNumber) {

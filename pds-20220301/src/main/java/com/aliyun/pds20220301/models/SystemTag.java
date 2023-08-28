@@ -16,9 +16,6 @@ public class SystemTag extends TeaModel {
     @NameInMap("parent_name")
     public String parentName;
 
-    @NameInMap("source")
-    public String source;
-
     @NameInMap("tag_level")
     public Integer tagLevel;
 
@@ -57,14 +54,6 @@ public class SystemTag extends TeaModel {
     }
     public String getParentName() {
         return this.parentName;
-    }
-
-    public SystemTag setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
     }
 
     public SystemTag setTagLevel(Integer tagLevel) {

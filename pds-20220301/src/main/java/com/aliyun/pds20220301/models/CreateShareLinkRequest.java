@@ -28,6 +28,9 @@ public class CreateShareLinkRequest extends TeaModel {
     @NameInMap("file_id_list")
     public java.util.List<String> fileIdList;
 
+    @NameInMap("office_editable")
+    public Boolean officeEditable;
+
     @NameInMap("preview_limit")
     public Long previewLimit;
 
@@ -113,6 +116,14 @@ public class CreateShareLinkRequest extends TeaModel {
     }
     public java.util.List<String> getFileIdList() {
         return this.fileIdList;
+    }
+
+    public CreateShareLinkRequest setOfficeEditable(Boolean officeEditable) {
+        this.officeEditable = officeEditable;
+        return this;
+    }
+    public Boolean getOfficeEditable() {
+        return this.officeEditable;
     }
 
     public CreateShareLinkRequest setPreviewLimit(Long previewLimit) {

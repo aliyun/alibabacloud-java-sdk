@@ -16,6 +16,9 @@ public class ListFacegroupsRequest extends TeaModel {
     @NameInMap("remarks")
     public String remarks;
 
+    @NameInMap("return_total_count")
+    public Boolean returnTotalCount;
+
     public static ListFacegroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFacegroupsRequest self = new ListFacegroupsRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListFacegroupsRequest extends TeaModel {
     }
     public String getRemarks() {
         return this.remarks;
+    }
+
+    public ListFacegroupsRequest setReturnTotalCount(Boolean returnTotalCount) {
+        this.returnTotalCount = returnTotalCount;
+        return this;
+    }
+    public Boolean getReturnTotalCount() {
+        return this.returnTotalCount;
     }
 
 }
