@@ -23,13 +23,13 @@ public class DescribeTasksRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeTasks**.</p>
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

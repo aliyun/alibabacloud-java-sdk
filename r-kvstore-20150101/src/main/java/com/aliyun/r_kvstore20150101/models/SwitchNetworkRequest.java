@@ -38,11 +38,12 @@ public class SwitchNetworkRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query VPC IDs.</p>
+     * <p>The network type to which you want to switch. Set the value to **VPC**.</p>
      * <br>
-     * <p>> </p>
-     * <p>*   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.</p>
-     * <p>*   After you set this parameter, you must also set the **VSwitchId** parameter.</p>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   CLASSIC</p>
+     * <p>*   VPC</p>
      */
     @NameInMap("TargetNetworkType")
     public String targetNetworkType;

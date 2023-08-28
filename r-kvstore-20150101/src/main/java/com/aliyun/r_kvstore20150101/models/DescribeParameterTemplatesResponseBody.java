@@ -26,7 +26,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     public String parameterCount;
 
     /**
-     * <p>Redis</p>
+     * <p>Details of the returned parameters.</p>
      */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
@@ -84,36 +84,43 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
         /**
-         * <p>The number of parameters that are supported by the instance.</p>
+         * <p>The check code that indicates the valid values of the parameter.</p>
          */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
         /**
-         * <p>DescribeParameterTemplates</p>
+         * <p>Indicates whether the parameter can be reset. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The parameter can be reset.</p>
+         * <p>*   **false**: The parameter cannot be reset.</p>
          */
         @NameInMap("ForceModify")
         public Boolean forceModify;
 
         /**
-         * <p>Queries the parameters and default values of an ApsaraDB for Redis instance that runs a specific major version in a specific architecture.</p>
+         * <p>Indicates whether a restart of the instance is required after the parameter is reset. Valid values:</p>
+         * <br>
+         * <p>*   **true**: After the parameter is reset, you must restart the instance to make the new value of the parameter take effect.</p>
+         * <p>*   **false**: After the parameter is reset, the new value of the parameter immediately takes effect. You do not need to restart the instance.</p>
          */
         @NameInMap("ForceRestart")
         public Boolean forceRestart;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
-         * <p>5.0</p>
+         * <p>The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](~~259681~~).</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
-         * <p>The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
-         * <br>
-         * <p>>  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).</p>
+         * <p>The default value of the parameter.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

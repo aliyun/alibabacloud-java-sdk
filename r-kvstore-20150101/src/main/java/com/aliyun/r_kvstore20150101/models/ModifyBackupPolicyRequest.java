@@ -4,9 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>Enables or disables the data flashback feature for the instance. Valid values:</p>
+     * <br>
+     * <p>*   **1**: enables the data flashback feature. Before you can use data flashback, you must make sure that AOF persistence is enabled for the instance (`appendonly` set to `yes`).</p>
+     * <p>*   **0** (default): disables the data flashback feature.</p>
+     * <br>
+     * <p>> This parameter is available only for Tair DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).</p>
+     */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,9 +27,27 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The days of the week to back up data. Valid values:</p>
+     * <br>
+     * <p>*   **Monday**: every Monday</p>
+     * <p>*   **Tuesday**: every Tuesday</p>
+     * <p>*   **Wednesday**: every Wednesday</p>
+     * <p>*   **Thursday**: every Thursday</p>
+     * <p>*   **Friday**: every Friday</p>
+     * <p>*   **Saturday**: every Saturday</p>
+     * <p>*   **Sunday**: every Sunday</p>
+     * <br>
+     * <p>>  Separate multiple options with commas (,).</p>
+     */
     @NameInMap("PreferredBackupPeriod")
     public String preferredBackupPeriod;
 
+    /**
+     * <p>The time range to back up data. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>>  The beginning and end of the time range must be on the hour. The duration must be an hour.</p>
+     */
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 

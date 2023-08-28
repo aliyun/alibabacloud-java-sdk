@@ -5,32 +5,32 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The new password for the default account. The default account is named after the instance ID. Default account example: r-bp10noxlhcoim2****.</p>
-     * <br>
-     * <p>>  The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The release protection state of the instance. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The release protection is enabled.</p>
-     * <p>*   **false**: The release protection is disabled.</p>
-     * <br>
-     * <p>>  This parameter is available only for pay-as-you-go instances.</p>
+     * <p>The new name of the instance. The name must be 2 to 80 characters in length. The name must start with a letter and cannot contain spaces and the following special characters: `@ / : = " < > { [ ] }`</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ModifyInstanceAttribute**.</p>
+     * <p>[The release protection state of the instance.](~~165005~~) Valid values:</p>
+     * <br>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false**: disabled</p>
+     * <br>
+     * <p>> This parameter is available only for pay-as-you-go instances.</p>
      */
     @NameInMap("InstanceReleaseProtection")
     public Boolean instanceReleaseProtection;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The new password for the default account. The default account is named after the instance ID. Example: r-bp10noxlhcoim2\*\*\*\*.</p>
+     * <br>
+     * <p>> The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
      */
     @NameInMap("NewPassword")
     public String newPassword;

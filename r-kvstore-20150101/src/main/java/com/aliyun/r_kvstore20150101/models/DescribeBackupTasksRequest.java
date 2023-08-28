@@ -17,7 +17,12 @@ public class DescribeBackupTasksRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform. The operation that you want to perform. Set the value to **DescribeBackupTasks**.</p>
+     * <p>The backup mode. Valid values:</p>
+     * <br>
+     * <p>*   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](~~61078~~) operation to query the automatic backup policy.</p>
+     * <p>*   **Manual**: manual backup.</p>
+     * <br>
+     * <p>> By default, the information about backup tasks in both modes is returned.</p>
      */
     @NameInMap("JobMode")
     public String jobMode;

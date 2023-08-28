@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionKeyListRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeEncryptionKeyList**.</p>
+     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

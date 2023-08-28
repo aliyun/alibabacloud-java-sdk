@@ -5,19 +5,24 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMajorVersionRequest extends TeaModel {
     /**
-     * <p>The major version to which you want to upgrade the instance. Valid values: **4.0** and **5.0**.</p>
+     * <p>The time when the major version is upgraded. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: immediately upgrades the major version. This is the default value.</p>
+     * <p>*   **MaintainTime**: upgrades the major version in the maintenance window.</p>
+     * <br>
+     * <p>>  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ModifyInstanceMajorVersion**.</p>
+     * <p>The major version to which you want to upgrade the instance. Valid values: **4.0** and **5.0**.</p>
      */
     @NameInMap("MajorVersion")
     public String majorVersion;

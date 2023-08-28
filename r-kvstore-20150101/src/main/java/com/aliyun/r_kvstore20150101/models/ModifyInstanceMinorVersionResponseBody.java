@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceMinorVersionResponseBody extends TeaModel {
     /**
-     * <p>Upgrades the minor version of an ApsaraDB for Redis instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

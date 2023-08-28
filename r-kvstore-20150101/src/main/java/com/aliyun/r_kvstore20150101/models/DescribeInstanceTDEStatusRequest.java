@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceTDEStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

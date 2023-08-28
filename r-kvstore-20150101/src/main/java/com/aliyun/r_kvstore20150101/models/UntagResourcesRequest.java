@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the instance. Default value: false. Valid values:</p>
+     * <p>Specifies whether to remove all tags from the instance. Valid values:</p>
      * <br>
      * <p>*   **true**: removes all tags from the instance.</p>
-     * <p>*   **false**: does not remove all tags from the instance.</p>
+     * <p>*   **false** (default): does not remove all tags from the instance.</p>
      * <br>
      * <p>> If you specify both this parameter and the **TagKey.N** parameter, this parameter does not take effect.</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **ModifyInstanceVpcAuthMode**.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -26,12 +26,12 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>Specifies whether to enable password authentication for access in the VPC. Valid values:</p>
+     * <p>Specifies whether to disable password-free access. Valid values:</p>
      * <br>
-     * <p>*   **Open**: enables password authentication.</p>
-     * <p>*   **Close**: disables password authentication.</p>
+     * <p>*   **Open**: disables password-free access.</p>
+     * <p>*   **Close**: enables password-free access.</p>
      * <br>
-     * <p>>  Default value: **Open**.</p>
+     * <p>> The default value is **Open**.</p>
      */
     @NameInMap("VpcAuthMode")
     public String vpcAuthMode;

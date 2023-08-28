@@ -4,18 +4,33 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHistoryTasksResponseBody extends TeaModel {
+    /**
+     * <p>The request source. Valid values: System and User.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeHistoryTasksResponseBodyItems> items;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of tasks that meet these constraints without taking pagination into account.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

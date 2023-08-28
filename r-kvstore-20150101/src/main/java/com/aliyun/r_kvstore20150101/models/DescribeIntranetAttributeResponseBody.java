@@ -16,7 +16,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public Boolean autoRenewal;
 
     /**
-     * <p>The time when the extra internal bandwidth that you purchased expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The expiration time of the purchased bandwidth. The time follows the ISO 8601 standard in the *yyyy-MM-dd* T *HH:mm:ss* Z format.</p>
      * <br>
      * <p>> If no extra internal bandwidth is purchased, this parameter is not returned.</p>
      */
@@ -35,9 +35,12 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Does the instance have unexpired prepaid bandwidth package, value:</p>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>Specifies whether the instance has unexpired bandwidth plans. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The instance has unexpired bandwidth plans.</p>
+     * <p>*   **false**: The instance does not have unexpired bandwidth plans.</p>
+     * <br>
+     * <p>> If no extra internal bandwidth is purchased, this parameter is not returned.</p>
      */
     @NameInMap("HasPrePaidBandWidthOrderRunning")
     public Boolean hasPrePaidBandWidthOrderRunning;
