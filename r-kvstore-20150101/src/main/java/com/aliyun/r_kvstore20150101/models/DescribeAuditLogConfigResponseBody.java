@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAuditLogConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false**: disabled</p>
+     * <br>
+     * <p>> You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</p>
      */
     @NameInMap("DbAudit")
     public String dbAudit;
@@ -17,12 +22,7 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: The audit log feature is enabled.</p>
-     * <p>*   **false**: The audit log feature is disabled.</p>
-     * <br>
-     * <p>>  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.</p>
+     * <p>The retention period of audit logs. Unit: days.</p>
      */
     @NameInMap("Retention")
     public String retention;

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
     /**
-     * <p>Indicates whether the parameter can be reconfigured. Valid values:</p>
+     * <p>The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:</p>
      * <br>
-     * <p>*   **true**: The parameter can be reconfigured.</p>
-     * <p>*   **false**: The parameter cannot be reconfigured.</p>
+     * <p>*   **logic**: The instance is a cluster or read/write splitting instance.</p>
+     * <p>*   **normal**: The instance is a standard master-replica instance.</p>
      */
     @NameInMap("CharacterType")
     public String characterType;

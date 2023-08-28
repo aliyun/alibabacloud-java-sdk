@@ -56,7 +56,7 @@ public class RestoreInstanceRequest extends TeaModel {
      * <p>The restoration mode. Default value: 0. Valid values:</p>
      * <br>
      * <p>*   **0**: restores data from the specified backup set.</p>
-     * <p>*   **1**: restores data to a specified point in time. This parameter is available only if the [data flashback](~~148479~~) feature is enabled for the instance. If you specify this value, you must also specify the **RestoreTime** parameter.</p>
+     * <p>*   **1**: restores data to a specified point in time. You can specify this value only if the [data flashback](~~148479~~) feature is enabled for the instance. If you specify this value, you must also specify the **RestoreTime** parameter.</p>
      */
     @NameInMap("RestoreType")
     public String restoreType;

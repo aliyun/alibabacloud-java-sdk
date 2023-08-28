@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     /**
-     * <p>The time when the system performs the switchover operation. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.</p>
+     * <p>The O\&M tasks of the instance.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeActiveOperationTaskResponseBodyItems> items;
@@ -82,67 +82,86 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeActiveOperationTaskResponseBodyItems extends TeaModel {
+        /**
+         * <p>The time when the O\&M task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>Queries the information about operations and maintenance (O&M) tasks for an ApsaraDB for Redis instance.</p>
+         * <p>The engine type of the instance. The return value is **Redis**.</p>
          */
         @NameInMap("DbType")
         public String dbType;
 
         /**
-         * <p>The time when the O\&M task was modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.</p>
+         * <p>The deadline before which the time to perform the O\&M task can be modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("Deadline")
         public String deadline;
 
+        /**
+         * <p>The ID of the O\&M task.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the ApsaraDB for Redis instance.</p>
          */
         @NameInMap("InsName")
         public String insName;
 
         /**
-         * <p>The maximum number of entries that were returned per page.</p>
+         * <p>The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   **rds_apsaradb_ha**: switchover between a master node and a replica node.</p>
-         * <p>*   **rds_apsaradb_transfer**: instance migration task.</p>
-         * <p>*   **rds_apsaradb_upgrade**: minor version upgrade.</p>
-         * <p>*   **all**: all task types.</p>
+         * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the *HH:mm:ss* format.</p>
          */
         @NameInMap("PrepareInterval")
         public String prepareInterval;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The time when the O\&M task was performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The required preparation period between the task start time and the switchover time. The time is displayed in the *HH:mm:ss* format.</p>
+         * <p>The state of the O\&M task. Valid values:</p>
+         * <br>
+         * <p>*   **2**: The task is waiting for users to specify a switchover time.</p>
+         * <p>*   **3**: The task is waiting to be performed.</p>
+         * <p>*   **4**: The task is being performed. If the task is in this state, the [ModifyActiveOperationTask](~~197384~~) operation cannot be called to modify the scheduled switchover time.</p>
+         * <p>*   **5**: The task is performed.</p>
+         * <p>*   **6**: The task fails.</p>
+         * <p>*   **7**: The task is canceled.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The time when the switchover operation was performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("SwitchTime")
         public String switchTime;
 
         /**
-         * <p>The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.</p>
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   **rds_apsaradb_ha**: primary/secondary switchover</p>
+         * <p>*   **rds_apsaradb_transfer**: instance migration</p>
+         * <p>*   **rds_apsaradb_upgrade**: minor version update</p>
+         * <p>*   **all**: all types</p>
          */
         @NameInMap("TaskType")
         public String taskType;

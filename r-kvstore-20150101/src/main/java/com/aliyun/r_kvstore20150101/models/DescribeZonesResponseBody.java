@@ -7,6 +7,9 @@ public class DescribeZonesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried zones.</p>
+     */
     @NameInMap("Zones")
     public DescribeZonesResponseBodyZones zones;
 
@@ -32,21 +35,45 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesKVStoreZone extends TeaModel {
+        /**
+         * <p>Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:</p>
+         * <br>
+         * <p>*   **true**: ApsaraDB for Redis instances cannot be created in the current zone.</p>
+         * <p>*   **false**: ApsaraDB for Redis instances can be created in the current zone.</p>
+         */
         @NameInMap("Disabled")
         public Boolean disabled;
 
+        /**
+         * <p>Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is **true** in ApsaraDB for Redis.</p>
+         */
         @NameInMap("IsRds")
         public Boolean isRds;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether the network type of the instance can be changed from the classic network to Virtual Private Cloud (VPC). Valid values:</p>
+         * <br>
+         * <p>*   **true**: The network type of the instance can be changed from the classic network to VPC.</p>
+         * <p>*   **false**: The network type of the instance cannot be changed from the classic network to VPC.</p>
+         */
         @NameInMap("SwitchNetwork")
         public Boolean switchNetwork;
 
+        /**
+         * <p>The ID of the zone within the specified region.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
+        /**
+         * <p>The name of the zone within the specified region.</p>
+         */
         @NameInMap("ZoneName")
         public String zoneName;
 

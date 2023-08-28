@@ -17,13 +17,13 @@ public class DescribeGlobalDistributeCacheRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

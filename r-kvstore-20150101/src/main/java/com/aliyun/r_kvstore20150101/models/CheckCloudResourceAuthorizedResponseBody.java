@@ -5,11 +5,18 @@ import com.aliyun.tea.*;
 
 public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
     /**
-     * <p>CheckCloudResourceAuthorized</p>
+     * <p>Indicates whether the instance is authorized to use KMS. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The instance is authorized to use KMS.</p>
+     * <p>*   **1**: The instance is not authorized to use KMS.</p>
+     * <p>*   **2**: KMS is not activated. For more information, see [Activate KMS](~~153781~~).</p>
      */
     @NameInMap("AuthorizationState")
     public Integer authorizationState;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

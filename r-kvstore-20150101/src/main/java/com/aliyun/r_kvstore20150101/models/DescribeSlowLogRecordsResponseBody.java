@@ -17,7 +17,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Details of slow log entries.</p>
+     * <p>The slow log entries.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogRecordsResponseBodyItems items;
@@ -173,7 +173,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public Long elapsedTime;
 
         /**
-         * <p>The start time when the slow query statement was executed. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The start time when the slow query statement was executed. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          */
         @NameInMap("ExecuteTime")
         public String executeTime;
@@ -185,7 +185,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public String IPAddress;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;

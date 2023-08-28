@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class FlushExpireKeysRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The time when to delete the expired keys. Default value: Immediately. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: deletes the keys immediately.</p>
+     * <p>*   **MaintainTime**: deletes the keys during the maintenance window.</p>
+     * <br>
+     * <p>> You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;

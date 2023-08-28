@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEncryptionKeyListResponseBody extends TeaModel {
     /**
-     * <p>DescribeEncryptionKeyList</p>
+     * <p>The custom keys that are available in the region.</p>
      */
     @NameInMap("KeyIds")
     public DescribeEncryptionKeyListResponseBodyKeyIds keyIds;
 
     /**
-     * <p>Queries the custom keys that are available for an ApsaraDB for Redis instance to use transparent data encryption (TDE).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

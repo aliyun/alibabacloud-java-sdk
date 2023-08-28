@@ -8,7 +8,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     public DescribeBackupTasksResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.</p>
+     * <p>The details of the backup tasks.</p>
      */
     @NameInMap("BackupJobs")
     public java.util.List<DescribeBackupTasksResponseBodyBackupJobs> backupJobs;
@@ -162,22 +162,17 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public Integer backupJobID;
 
         /**
-         * <p>The beginning time when the backup task started. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.</p>
+         * <p>The state of the backup task. Valid values:</p>
+         * <br>
+         * <p>*   **NoStart**: The backup task is not started.</p>
+         * <p>*   **Preparing**: The backup task is being prepared.</p>
+         * <p>*   **Waiting**: The backup task is pending.</p>
+         * <p>*   **Uploading**: The system is uploading the backup file.</p>
+         * <p>*   **Checking**: The system is checking the uploaded backup file.</p>
+         * <p>*   **Finished**: The backup task is completed.</p>
          */
         @NameInMap("BackupProgressStatus")
         public String backupProgressStatus;
-
-        /**
-         * <p>Manual</p>
-         */
-        @NameInMap("JobMode")
-        public String jobMode;
-
-        /**
-         * <p>The ID of the request.</p>
-         */
-        @NameInMap("NodeId")
-        public String nodeId;
 
         /**
          * <p>The backup mode. Valid values:</p>
@@ -185,15 +180,33 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
          * <p>*   **Automated**: automatic backup</p>
          * <p>*   **Manual**: manual backup</p>
          */
+        @NameInMap("JobMode")
+        public String jobMode;
+
+        /**
+         * <p>The ID of the data node.</p>
+         */
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        /**
+         * <p>The progress of the backup task in percentage.</p>
+         */
         @NameInMap("Process")
         public String process;
 
         /**
-         * <p>1162****</p>
+         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The type of the backup task. Valid values:</p>
+         * <br>
+         * <p>*   **TempBackupTask**: The backup task was manually performed.</p>
+         * <p>*   **NormalBackupTask**: The backup task was automatically performed.</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 

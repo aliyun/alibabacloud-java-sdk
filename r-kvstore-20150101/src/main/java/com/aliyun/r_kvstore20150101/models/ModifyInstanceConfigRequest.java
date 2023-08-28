@@ -4,9 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
+    /**
+     * <p>The configuration parameters of the instance in the JSON format.</p>
+     * <br>
+     * <p>> For more information, see [Supported parameters](~~259681~~).</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

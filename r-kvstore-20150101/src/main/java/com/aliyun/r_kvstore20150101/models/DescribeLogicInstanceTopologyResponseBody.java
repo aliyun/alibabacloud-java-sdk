@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeLogicInstanceTopology**.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
+     * <p>The detailed proxy information, including information about proxy nodes.</p>
      */
     @NameInMap("RedisProxyList")
     public DescribeLogicInstanceTopologyResponseBodyRedisProxyList redisProxyList;
@@ -20,7 +20,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     public DescribeLogicInstanceTopologyResponseBodyRedisShardList redisShardList;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -64,31 +64,34 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         /**
-         * <p>The detailed proxy information, including information about proxy nodes.</p>
+         * <p>The storage capacity of the node. Unit: MB.</p>
          */
         @NameInMap("Capacity")
         public String capacity;
 
         /**
-         * <p>The ID of the instance whose topology information you want to query.</p>
+         * <p>The maximum number of connections.</p>
          */
         @NameInMap("Connection")
         public String connection;
 
         /**
-         * <p>Queries the logical topology of an ApsaraDB for Redis instance.</p>
+         * <p>The ID of the node.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>*   **proxy**: proxy node</p>
+         * <p>*   **db**: data node</p>
          */
         @NameInMap("NodeType")
         public String nodeType;

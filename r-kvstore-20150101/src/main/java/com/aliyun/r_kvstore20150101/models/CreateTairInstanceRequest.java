@@ -93,7 +93,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String globalInstanceId;
 
     /**
-     * <p>实例的全局IP白名单模板，多个IP白名单模板请用英文逗号（,）分隔，不可重复。</p>
+     * <p>The global IP whitelist template of the instance. Separate multiple IP whitelist templates with commas (,) and make sure that each IP whitelist template is unique.</p>
      */
     @NameInMap("GlobalSecurityGroupIds")
     public String globalSecurityGroupIds;
@@ -133,6 +133,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>参数模板ID，根据新创建的参数模板参数创建实例，不可重复。</p>
+     */
     @NameInMap("ParamGroupId")
     public String paramGroupId;
 
@@ -197,11 +200,7 @@ public class CreateTairInstanceRequest extends TeaModel {
     /**
      * <p>The ID of the secondary zone. You can call the [DescribeRegions](~~61012~~) operation to query the ID of the secondary zone.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You cannot specify multiple zone IDs or set this parameter to a value that is the same as that of the **ZoneId** parameter.</p>
-     * <br>
-     * <p>*   If you set both the SecondaryZoneId and **ZoneId** parameters, the master node is deployed in the primary zone and the replica node is deployed in the secondary zone within the same region. In this case, the instance adopts the zone-disaster recovery architecture.</p>
+     * <p>> You cannot specify multiple zone IDs or set this parameter to a value that is the same as that of the ZoneId parameter.</p>
      */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
@@ -210,12 +209,12 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of data shards in the instance. Default value: 1. Valid values:</p>
+     * <p>The number of data nodes in the instance. Valid values:</p>
      * <br>
-     * <p>*   **1**: You can create an instance in the [standard architecture](~~52228~~) that contains only a single data shard.</p>
-     * <p>*   **2** to **32**: You can create an instance in the [cluster architecture](~~52228~~) that contains the specified number of data shards.</p>
+     * <p>*   **1**: You can create an instance in the standard architecture that contains only one data node. For more information about the standard architecture, see [Cluster master-replica instances](~~52228~~). This is the default value.</p>
+     * <p>*   **2** to **32**: You can create an instance in the cluster architecture that contains the specified number of data nodes. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).</p>
      * <br>
-     * <p>> Only persistent memory-optimized instances can use the cluster architecture. You can set this parameter to an integer from **2** to **32** only if you set the **InstanceType** parameter to **tair_scm**.</p>
+     * <p>> Only persistent memory-optimized instances can use the cluster architecture. Therefore, you can set this parameter to an integer from **2** to **32** only if you set the **InstanceType** parameter to **tair_scm**.</p>
      */
     @NameInMap("ShardCount")
     public Integer shardCount;
@@ -272,9 +271,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent zone list.</p>
+     * <p>The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the IDs of available zones.</p>
      * <br>
-     * <p>> If you want to create an instance that adopts the zone-disaster recovery architecture, you can deploy the master node and replica node of the instance in different zones within the same region. You can set the **SecondaryZoneId** parameter to specify the secondary zone. In this case, do not set the ZoneId parameter to multiple zone IDs.</p>
+     * <p>>  You can also set the SecondaryZoneId parameter to specify the secondary zone. The primary and secondary nodes will then be deployed in the specified primary and secondary zones to implement the master-replica zone-disaster recovery architecture. For example, you can set the ZoneId parameter to cn-hangzhou-h and the SecondaryZoneId parameter to cn-hangzhou-g.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AllocateDirectConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.</p>
+     * <p>The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -22,6 +22,9 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.</p>
+     */
     @NameInMap("Port")
     public String port;
 

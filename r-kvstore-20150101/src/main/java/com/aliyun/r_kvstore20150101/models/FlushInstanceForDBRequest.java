@@ -4,9 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class FlushInstanceForDBRequest extends TeaModel {
+    /**
+     * <p>The index number of the database. Valid values: 0 to 255.</p>
+     */
     @NameInMap("DbIndex")
     public Integer dbIndex;
 
+    /**
+     * <p>The instance ID. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

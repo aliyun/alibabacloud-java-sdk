@@ -17,13 +17,13 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The deadline before which the time to execute the O\&M task can be modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeActiveOperationTask**.</p>
+     * <p>The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

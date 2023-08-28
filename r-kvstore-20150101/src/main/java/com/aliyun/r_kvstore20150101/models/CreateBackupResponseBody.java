@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateBackup**.</p>
+     * <p>The ID of the backup task.</p>
      */
     @NameInMap("BackupJobID")
     public String backupJobID;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

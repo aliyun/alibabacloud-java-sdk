@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogicInstanceTopologyRequest extends TeaModel {
     /**
-     * <p>The storage capacity of the node. Unit: MB.</p>
+     * <p>The ID of the instance whose topology information you want to query.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

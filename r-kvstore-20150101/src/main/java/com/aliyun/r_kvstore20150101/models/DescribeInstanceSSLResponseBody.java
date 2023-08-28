@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
     /**
-     * <p>The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.</p>
+     * <p>The common name of the CA certificate. The default value is the internal endpoint of the instance.</p>
      */
     @NameInMap("CertCommonName")
     public String certCommonName;
 
     /**
-     * <p>Download URL for CA certificate.</p>
+     * <p>The download URL of the CA certificate.</p>
      */
     @NameInMap("CertDownloadURL")
     public String certDownloadURL;
@@ -29,7 +29,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+     * <p>The status of the TLS (SSL) encryption feature. Valid values:</p>
      * <br>
      * <p>*   **Enable**: SSL encryption is enabled.</p>
      * <p>*   **Disable**: SSL encryption is disabled.</p>
@@ -38,7 +38,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String SSLEnabled;
 
     /**
-     * <p>The expiration time of the SSL certificate.</p>
+     * <p>The time when the CA certificate expires.</p>
      */
     @NameInMap("SSLExpiredTime")
     public String SSLExpiredTime;

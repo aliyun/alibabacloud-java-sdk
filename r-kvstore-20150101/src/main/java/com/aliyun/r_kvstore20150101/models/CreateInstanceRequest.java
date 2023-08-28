@@ -169,6 +169,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("ParamGroupId")
+    public String paramGroupId;
+
     /**
      * <p>The password that is used to connect to the instance. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`</p>
      */
@@ -469,6 +472,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public CreateInstanceRequest setParamGroupId(String paramGroupId) {
+        this.paramGroupId = paramGroupId;
+        return this;
+    }
+    public String getParamGroupId() {
+        return this.paramGroupId;
     }
 
     public CreateInstanceRequest setPassword(String password) {

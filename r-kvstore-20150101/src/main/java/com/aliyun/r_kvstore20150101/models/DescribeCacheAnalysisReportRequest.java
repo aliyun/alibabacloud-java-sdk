@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The type of analytics. Set the value to **BigKey**.</p>
      */
     @NameInMap("AnalysisType")
     public String analysisType;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The date to query. You can query the report for one day each time. Specify the date in the *yyyy-MM-dd*Z format. The time must be in UTC.</p>
      */
     @NameInMap("Date")
     public String date;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
-     * <br>
-     * <p>>  Default value: **30**.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the child node in the cluster instance.</p>
+     * <br>
+     * <p>> If this parameter is not specified, the analytics results of all child nodes in the instance are returned.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -33,11 +36,18 @@ public class DescribeCacheAnalysisReportRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     * <br>
+     * <p>> If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.</p>
+     */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**.</p>
+     * <br>
+     * <p>> The default value is **30**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
