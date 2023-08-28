@@ -22,6 +22,9 @@ public class UpdateDomainRequest extends TeaModel {
     @NameInMap("init_drive_size")
     public Long initDriveSize;
 
+    @NameInMap("published_app_access_strategy")
+    public AppAccessStrategy publishedAppAccessStrategy;
+
     @NameInMap("size_quota")
     public Long sizeQuota;
 
@@ -71,6 +74,14 @@ public class UpdateDomainRequest extends TeaModel {
     }
     public Long getInitDriveSize() {
         return this.initDriveSize;
+    }
+
+    public UpdateDomainRequest setPublishedAppAccessStrategy(AppAccessStrategy publishedAppAccessStrategy) {
+        this.publishedAppAccessStrategy = publishedAppAccessStrategy;
+        return this;
+    }
+    public AppAccessStrategy getPublishedAppAccessStrategy() {
+        return this.publishedAppAccessStrategy;
     }
 
     public UpdateDomainRequest setSizeQuota(Long sizeQuota) {

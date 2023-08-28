@@ -3,7 +3,7 @@ package com.aliyun.pds20220301.models;
 
 import com.aliyun.tea.*;
 
-public class File extends TeaModel {
+public class ViewFile extends TeaModel {
     @NameInMap("category")
     public String category;
 
@@ -34,17 +34,26 @@ public class File extends TeaModel {
     @NameInMap("drive_id")
     public String driveId;
 
+    @NameInMap("fields")
+    public java.util.Map<String, ?> fields;
+
     @NameInMap("file_extension")
     public String fileExtension;
 
     @NameInMap("file_id")
     public String fileId;
 
+    @NameInMap("file_revision_id")
+    public String fileRevisionId;
+
     @NameInMap("hidden")
     public Boolean hidden;
 
     @NameInMap("investigation_info")
-    public FileInvestigationInfo investigationInfo;
+    public ViewFileInvestigationInfo investigationInfo;
+
+    @NameInMap("joined_at")
+    public Long joinedAt;
 
     @NameInMap("labels")
     public java.util.List<String> labels;
@@ -91,15 +100,15 @@ public class File extends TeaModel {
     @NameInMap("upload_id")
     public String uploadId;
 
-    @NameInMap("user_tags")
-    public java.util.Map<String, String> userTags;
+    @NameInMap("view_id")
+    public String viewId;
 
-    public static File build(java.util.Map<String, ?> map) throws Exception {
-        File self = new File();
+    public static ViewFile build(java.util.Map<String, ?> map) throws Exception {
+        ViewFile self = new ViewFile();
         return TeaModel.build(map, self);
     }
 
-    public File setCategory(String category) {
+    public ViewFile setCategory(String category) {
         this.category = category;
         return this;
     }
@@ -107,7 +116,7 @@ public class File extends TeaModel {
         return this.category;
     }
 
-    public File setContentHash(String contentHash) {
+    public ViewFile setContentHash(String contentHash) {
         this.contentHash = contentHash;
         return this;
     }
@@ -115,7 +124,7 @@ public class File extends TeaModel {
         return this.contentHash;
     }
 
-    public File setContentHashName(String contentHashName) {
+    public ViewFile setContentHashName(String contentHashName) {
         this.contentHashName = contentHashName;
         return this;
     }
@@ -123,7 +132,7 @@ public class File extends TeaModel {
         return this.contentHashName;
     }
 
-    public File setContentType(String contentType) {
+    public ViewFile setContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -131,7 +140,7 @@ public class File extends TeaModel {
         return this.contentType;
     }
 
-    public File setCrc64Hash(String crc64Hash) {
+    public ViewFile setCrc64Hash(String crc64Hash) {
         this.crc64Hash = crc64Hash;
         return this;
     }
@@ -139,7 +148,7 @@ public class File extends TeaModel {
         return this.crc64Hash;
     }
 
-    public File setCreatedAt(String createdAt) {
+    public ViewFile setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -147,7 +156,7 @@ public class File extends TeaModel {
         return this.createdAt;
     }
 
-    public File setDescription(String description) {
+    public ViewFile setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -155,7 +164,7 @@ public class File extends TeaModel {
         return this.description;
     }
 
-    public File setDomainId(String domainId) {
+    public ViewFile setDomainId(String domainId) {
         this.domainId = domainId;
         return this;
     }
@@ -163,7 +172,7 @@ public class File extends TeaModel {
         return this.domainId;
     }
 
-    public File setDownloadUrl(String downloadUrl) {
+    public ViewFile setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
@@ -171,7 +180,7 @@ public class File extends TeaModel {
         return this.downloadUrl;
     }
 
-    public File setDriveId(String driveId) {
+    public ViewFile setDriveId(String driveId) {
         this.driveId = driveId;
         return this;
     }
@@ -179,7 +188,15 @@ public class File extends TeaModel {
         return this.driveId;
     }
 
-    public File setFileExtension(String fileExtension) {
+    public ViewFile setFields(java.util.Map<String, ?> fields) {
+        this.fields = fields;
+        return this;
+    }
+    public java.util.Map<String, ?> getFields() {
+        return this.fields;
+    }
+
+    public ViewFile setFileExtension(String fileExtension) {
         this.fileExtension = fileExtension;
         return this;
     }
@@ -187,7 +204,7 @@ public class File extends TeaModel {
         return this.fileExtension;
     }
 
-    public File setFileId(String fileId) {
+    public ViewFile setFileId(String fileId) {
         this.fileId = fileId;
         return this;
     }
@@ -195,7 +212,15 @@ public class File extends TeaModel {
         return this.fileId;
     }
 
-    public File setHidden(Boolean hidden) {
+    public ViewFile setFileRevisionId(String fileRevisionId) {
+        this.fileRevisionId = fileRevisionId;
+        return this;
+    }
+    public String getFileRevisionId() {
+        return this.fileRevisionId;
+    }
+
+    public ViewFile setHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
     }
@@ -203,15 +228,23 @@ public class File extends TeaModel {
         return this.hidden;
     }
 
-    public File setInvestigationInfo(FileInvestigationInfo investigationInfo) {
+    public ViewFile setInvestigationInfo(ViewFileInvestigationInfo investigationInfo) {
         this.investigationInfo = investigationInfo;
         return this;
     }
-    public FileInvestigationInfo getInvestigationInfo() {
+    public ViewFileInvestigationInfo getInvestigationInfo() {
         return this.investigationInfo;
     }
 
-    public File setLabels(java.util.List<String> labels) {
+    public ViewFile setJoinedAt(Long joinedAt) {
+        this.joinedAt = joinedAt;
+        return this;
+    }
+    public Long getJoinedAt() {
+        return this.joinedAt;
+    }
+
+    public ViewFile setLabels(java.util.List<String> labels) {
         this.labels = labels;
         return this;
     }
@@ -219,7 +252,7 @@ public class File extends TeaModel {
         return this.labels;
     }
 
-    public File setLocalCreatedAt(String localCreatedAt) {
+    public ViewFile setLocalCreatedAt(String localCreatedAt) {
         this.localCreatedAt = localCreatedAt;
         return this;
     }
@@ -227,7 +260,7 @@ public class File extends TeaModel {
         return this.localCreatedAt;
     }
 
-    public File setLocalModifiedAt(String localModifiedAt) {
+    public ViewFile setLocalModifiedAt(String localModifiedAt) {
         this.localModifiedAt = localModifiedAt;
         return this;
     }
@@ -235,7 +268,7 @@ public class File extends TeaModel {
         return this.localModifiedAt;
     }
 
-    public File setName(String name) {
+    public ViewFile setName(String name) {
         this.name = name;
         return this;
     }
@@ -243,7 +276,7 @@ public class File extends TeaModel {
         return this.name;
     }
 
-    public File setParentFileId(String parentFileId) {
+    public ViewFile setParentFileId(String parentFileId) {
         this.parentFileId = parentFileId;
         return this;
     }
@@ -251,7 +284,7 @@ public class File extends TeaModel {
         return this.parentFileId;
     }
 
-    public File setRevisionId(String revisionId) {
+    public ViewFile setRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
@@ -259,7 +292,7 @@ public class File extends TeaModel {
         return this.revisionId;
     }
 
-    public File setSize(Long size) {
+    public ViewFile setSize(Long size) {
         this.size = size;
         return this;
     }
@@ -267,7 +300,7 @@ public class File extends TeaModel {
         return this.size;
     }
 
-    public File setStarred(Boolean starred) {
+    public ViewFile setStarred(Boolean starred) {
         this.starred = starred;
         return this;
     }
@@ -275,7 +308,7 @@ public class File extends TeaModel {
         return this.starred;
     }
 
-    public File setStatus(String status) {
+    public ViewFile setStatus(String status) {
         this.status = status;
         return this;
     }
@@ -283,7 +316,7 @@ public class File extends TeaModel {
         return this.status;
     }
 
-    public File setThumbnail(String thumbnail) {
+    public ViewFile setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
     }
@@ -291,7 +324,7 @@ public class File extends TeaModel {
         return this.thumbnail;
     }
 
-    public File setThumbnailUrls(java.util.Map<String, String> thumbnailUrls) {
+    public ViewFile setThumbnailUrls(java.util.Map<String, String> thumbnailUrls) {
         this.thumbnailUrls = thumbnailUrls;
         return this;
     }
@@ -299,7 +332,7 @@ public class File extends TeaModel {
         return this.thumbnailUrls;
     }
 
-    public File setTrashedAt(String trashedAt) {
+    public ViewFile setTrashedAt(String trashedAt) {
         this.trashedAt = trashedAt;
         return this;
     }
@@ -307,7 +340,7 @@ public class File extends TeaModel {
         return this.trashedAt;
     }
 
-    public File setType(String type) {
+    public ViewFile setType(String type) {
         this.type = type;
         return this;
     }
@@ -315,7 +348,7 @@ public class File extends TeaModel {
         return this.type;
     }
 
-    public File setUpdatedAt(String updatedAt) {
+    public ViewFile setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
@@ -323,7 +356,7 @@ public class File extends TeaModel {
         return this.updatedAt;
     }
 
-    public File setUploadId(String uploadId) {
+    public ViewFile setUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
@@ -331,27 +364,27 @@ public class File extends TeaModel {
         return this.uploadId;
     }
 
-    public File setUserTags(java.util.Map<String, String> userTags) {
-        this.userTags = userTags;
+    public ViewFile setViewId(String viewId) {
+        this.viewId = viewId;
         return this;
     }
-    public java.util.Map<String, String> getUserTags() {
-        return this.userTags;
+    public String getViewId() {
+        return this.viewId;
     }
 
-    public static class FileInvestigationInfo extends TeaModel {
+    public static class ViewFileInvestigationInfo extends TeaModel {
         @NameInMap("status")
         public Long status;
 
         @NameInMap("suggestion")
         public String suggestion;
 
-        public static FileInvestigationInfo build(java.util.Map<String, ?> map) throws Exception {
-            FileInvestigationInfo self = new FileInvestigationInfo();
+        public static ViewFileInvestigationInfo build(java.util.Map<String, ?> map) throws Exception {
+            ViewFileInvestigationInfo self = new ViewFileInvestigationInfo();
             return TeaModel.build(map, self);
         }
 
-        public FileInvestigationInfo setStatus(Long status) {
+        public ViewFileInvestigationInfo setStatus(Long status) {
             this.status = status;
             return this;
         }
@@ -359,7 +392,7 @@ public class File extends TeaModel {
             return this.status;
         }
 
-        public FileInvestigationInfo setSuggestion(String suggestion) {
+        public ViewFileInvestigationInfo setSuggestion(String suggestion) {
             this.suggestion = suggestion;
             return this;
         }

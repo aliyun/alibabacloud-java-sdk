@@ -95,6 +95,12 @@ public class GetUploadUrlRequest extends TeaModel {
     }
 
     public static class GetUploadUrlRequestPartInfoList extends TeaModel {
+        @NameInMap("content_md5")
+        public String contentMd5;
+
+        @NameInMap("content_type")
+        public String contentType;
+
         @NameInMap("parallel_sha1_ctx")
         public GetUploadUrlRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
 
@@ -104,6 +110,22 @@ public class GetUploadUrlRequest extends TeaModel {
         public static GetUploadUrlRequestPartInfoList build(java.util.Map<String, ?> map) throws Exception {
             GetUploadUrlRequestPartInfoList self = new GetUploadUrlRequestPartInfoList();
             return TeaModel.build(map, self);
+        }
+
+        public GetUploadUrlRequestPartInfoList setContentMd5(String contentMd5) {
+            this.contentMd5 = contentMd5;
+            return this;
+        }
+        public String getContentMd5() {
+            return this.contentMd5;
+        }
+
+        public GetUploadUrlRequestPartInfoList setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
         }
 
         public GetUploadUrlRequestPartInfoList setParallelSha1Ctx(GetUploadUrlRequestPartInfoListParallelSha1Ctx parallelSha1Ctx) {

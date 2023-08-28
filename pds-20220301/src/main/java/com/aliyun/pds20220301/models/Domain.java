@@ -25,6 +25,9 @@ public class Domain extends TeaModel {
     @NameInMap("parent_domain_id")
     public String parentDomainId;
 
+    @NameInMap("published_app_access_strategy")
+    public AppAccessStrategy publishedAppAccessStrategy;
+
     @NameInMap("size_quota")
     public Long sizeQuota;
 
@@ -102,6 +105,14 @@ public class Domain extends TeaModel {
     }
     public String getParentDomainId() {
         return this.parentDomainId;
+    }
+
+    public Domain setPublishedAppAccessStrategy(AppAccessStrategy publishedAppAccessStrategy) {
+        this.publishedAppAccessStrategy = publishedAppAccessStrategy;
+        return this;
+    }
+    public AppAccessStrategy getPublishedAppAccessStrategy() {
+        return this.publishedAppAccessStrategy;
     }
 
     public Domain setSizeQuota(Long sizeQuota) {
