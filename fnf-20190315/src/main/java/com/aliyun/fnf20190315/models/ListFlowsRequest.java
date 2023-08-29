@@ -4,26 +4,26 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class ListFlowsRequest extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Limit")
+    public Integer limit;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Limit")
-    public Integer limit;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListFlowsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFlowsRequest self = new ListFlowsRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListFlowsRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListFlowsRequest setLimit(Integer limit) {
+        this.limit = limit;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getLimit() {
+        return this.limit;
     }
 
     public ListFlowsRequest setNextToken(String nextToken) {
@@ -34,12 +34,12 @@ public class ListFlowsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListFlowsRequest setLimit(Integer limit) {
-        this.limit = limit;
+    public ListFlowsRequest setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getLimit() {
-        return this.limit;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

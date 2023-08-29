@@ -4,23 +4,15 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class ReportTaskSucceededResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("EventId")
     public Long eventId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ReportTaskSucceededResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ReportTaskSucceededResponseBody self = new ReportTaskSucceededResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ReportTaskSucceededResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ReportTaskSucceededResponseBody setEventId(Long eventId) {
@@ -29,6 +21,14 @@ public class ReportTaskSucceededResponseBody extends TeaModel {
     }
     public Long getEventId() {
         return this.eventId;
+    }
+
+    public ReportTaskSucceededResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

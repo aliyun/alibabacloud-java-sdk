@@ -4,14 +4,14 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeExecutionRequest extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ExecutionName")
+    public String executionName;
 
     @NameInMap("FlowName")
     public String flowName;
 
-    @NameInMap("ExecutionName")
-    public String executionName;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("WaitTimeSeconds")
     public Integer waitTimeSeconds;
@@ -21,12 +21,12 @@ public class DescribeExecutionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeExecutionRequest setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeExecutionRequest setExecutionName(String executionName) {
+        this.executionName = executionName;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getExecutionName() {
+        return this.executionName;
     }
 
     public DescribeExecutionRequest setFlowName(String flowName) {
@@ -37,12 +37,12 @@ public class DescribeExecutionRequest extends TeaModel {
         return this.flowName;
     }
 
-    public DescribeExecutionRequest setExecutionName(String executionName) {
-        this.executionName = executionName;
+    public DescribeExecutionRequest setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getExecutionName() {
-        return this.executionName;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeExecutionRequest setWaitTimeSeconds(Integer waitTimeSeconds) {

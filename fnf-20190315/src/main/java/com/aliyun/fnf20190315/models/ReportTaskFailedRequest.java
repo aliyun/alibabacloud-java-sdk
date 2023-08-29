@@ -4,21 +4,37 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class ReportTaskFailedRequest extends TeaModel {
+    @NameInMap("Cause")
+    public String cause;
+
+    @NameInMap("Error")
+    public String error;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("TaskToken")
     public String taskToken;
 
-    @NameInMap("Error")
-    public String error;
-
-    @NameInMap("Cause")
-    public String cause;
-
     public static ReportTaskFailedRequest build(java.util.Map<String, ?> map) throws Exception {
         ReportTaskFailedRequest self = new ReportTaskFailedRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReportTaskFailedRequest setCause(String cause) {
+        this.cause = cause;
+        return this;
+    }
+    public String getCause() {
+        return this.cause;
+    }
+
+    public ReportTaskFailedRequest setError(String error) {
+        this.error = error;
+        return this;
+    }
+    public String getError() {
+        return this.error;
     }
 
     public ReportTaskFailedRequest setRequestId(String requestId) {
@@ -35,22 +51,6 @@ public class ReportTaskFailedRequest extends TeaModel {
     }
     public String getTaskToken() {
         return this.taskToken;
-    }
-
-    public ReportTaskFailedRequest setError(String error) {
-        this.error = error;
-        return this;
-    }
-    public String getError() {
-        return this.error;
-    }
-
-    public ReportTaskFailedRequest setCause(String cause) {
-        this.cause = cause;
-        return this;
-    }
-    public String getCause() {
-        return this.cause;
     }
 
 }

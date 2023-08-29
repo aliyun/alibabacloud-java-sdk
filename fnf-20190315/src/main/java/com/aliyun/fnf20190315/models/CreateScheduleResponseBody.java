@@ -4,26 +4,26 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateScheduleResponseBody extends TeaModel {
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("CreatedTime")
     public String createdTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("CronExpression")
+    public String cronExpression;
 
-    @NameInMap("LastModifiedTime")
-    public String lastModifiedTime;
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("Enable")
     public Boolean enable;
 
+    @NameInMap("LastModifiedTime")
+    public String lastModifiedTime;
+
     @NameInMap("Payload")
     public String payload;
 
-    @NameInMap("CronExpression")
-    public String cronExpression;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ScheduleId")
     public String scheduleId;
@@ -36,14 +36,6 @@ public class CreateScheduleResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateScheduleResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
     public CreateScheduleResponseBody setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -52,20 +44,20 @@ public class CreateScheduleResponseBody extends TeaModel {
         return this.createdTime;
     }
 
-    public CreateScheduleResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateScheduleResponseBody setCronExpression(String cronExpression) {
+        this.cronExpression = cronExpression;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getCronExpression() {
+        return this.cronExpression;
     }
 
-    public CreateScheduleResponseBody setLastModifiedTime(String lastModifiedTime) {
-        this.lastModifiedTime = lastModifiedTime;
+    public CreateScheduleResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getLastModifiedTime() {
-        return this.lastModifiedTime;
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateScheduleResponseBody setEnable(Boolean enable) {
@@ -76,6 +68,14 @@ public class CreateScheduleResponseBody extends TeaModel {
         return this.enable;
     }
 
+    public CreateScheduleResponseBody setLastModifiedTime(String lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+        return this;
+    }
+    public String getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
     public CreateScheduleResponseBody setPayload(String payload) {
         this.payload = payload;
         return this;
@@ -84,12 +84,12 @@ public class CreateScheduleResponseBody extends TeaModel {
         return this.payload;
     }
 
-    public CreateScheduleResponseBody setCronExpression(String cronExpression) {
-        this.cronExpression = cronExpression;
+    public CreateScheduleResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getCronExpression() {
-        return this.cronExpression;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateScheduleResponseBody setScheduleId(String scheduleId) {

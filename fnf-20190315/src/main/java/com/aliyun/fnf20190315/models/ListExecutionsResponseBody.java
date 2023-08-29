@@ -43,39 +43,81 @@ public class ListExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListExecutionsResponseBodyExecutions extends TeaModel {
+        @NameInMap("FlowDefinition")
+        public String flowDefinition;
+
+        @NameInMap("FlowName")
+        public String flowName;
+
+        @NameInMap("Input")
+        public String input;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Output")
+        public String output;
+
+        @NameInMap("StartedTime")
+        public String startedTime;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("StoppedTime")
         public String stoppedTime;
 
-        @NameInMap("StartedTime")
-        public String startedTime;
-
-        @NameInMap("FlowDefinition")
-        public String flowDefinition;
-
-        @NameInMap("ExternalInputUri")
-        public String externalInputUri;
-
-        @NameInMap("Output")
-        public String output;
-
-        @NameInMap("FlowName")
-        public String flowName;
-
-        @NameInMap("ExternalOutputUri")
-        public String externalOutputUri;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Input")
-        public String input;
-
         public static ListExecutionsResponseBodyExecutions build(java.util.Map<String, ?> map) throws Exception {
             ListExecutionsResponseBodyExecutions self = new ListExecutionsResponseBodyExecutions();
             return TeaModel.build(map, self);
+        }
+
+        public ListExecutionsResponseBodyExecutions setFlowDefinition(String flowDefinition) {
+            this.flowDefinition = flowDefinition;
+            return this;
+        }
+        public String getFlowDefinition() {
+            return this.flowDefinition;
+        }
+
+        public ListExecutionsResponseBodyExecutions setFlowName(String flowName) {
+            this.flowName = flowName;
+            return this;
+        }
+        public String getFlowName() {
+            return this.flowName;
+        }
+
+        public ListExecutionsResponseBodyExecutions setInput(String input) {
+            this.input = input;
+            return this;
+        }
+        public String getInput() {
+            return this.input;
+        }
+
+        public ListExecutionsResponseBodyExecutions setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListExecutionsResponseBodyExecutions setOutput(String output) {
+            this.output = output;
+            return this;
+        }
+        public String getOutput() {
+            return this.output;
+        }
+
+        public ListExecutionsResponseBodyExecutions setStartedTime(String startedTime) {
+            this.startedTime = startedTime;
+            return this;
+        }
+        public String getStartedTime() {
+            return this.startedTime;
         }
 
         public ListExecutionsResponseBodyExecutions setStatus(String status) {
@@ -92,70 +134,6 @@ public class ListExecutionsResponseBody extends TeaModel {
         }
         public String getStoppedTime() {
             return this.stoppedTime;
-        }
-
-        public ListExecutionsResponseBodyExecutions setStartedTime(String startedTime) {
-            this.startedTime = startedTime;
-            return this;
-        }
-        public String getStartedTime() {
-            return this.startedTime;
-        }
-
-        public ListExecutionsResponseBodyExecutions setFlowDefinition(String flowDefinition) {
-            this.flowDefinition = flowDefinition;
-            return this;
-        }
-        public String getFlowDefinition() {
-            return this.flowDefinition;
-        }
-
-        public ListExecutionsResponseBodyExecutions setExternalInputUri(String externalInputUri) {
-            this.externalInputUri = externalInputUri;
-            return this;
-        }
-        public String getExternalInputUri() {
-            return this.externalInputUri;
-        }
-
-        public ListExecutionsResponseBodyExecutions setOutput(String output) {
-            this.output = output;
-            return this;
-        }
-        public String getOutput() {
-            return this.output;
-        }
-
-        public ListExecutionsResponseBodyExecutions setFlowName(String flowName) {
-            this.flowName = flowName;
-            return this;
-        }
-        public String getFlowName() {
-            return this.flowName;
-        }
-
-        public ListExecutionsResponseBodyExecutions setExternalOutputUri(String externalOutputUri) {
-            this.externalOutputUri = externalOutputUri;
-            return this;
-        }
-        public String getExternalOutputUri() {
-            return this.externalOutputUri;
-        }
-
-        public ListExecutionsResponseBodyExecutions setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListExecutionsResponseBodyExecutions setInput(String input) {
-            this.input = input;
-            return this;
-        }
-        public String getInput() {
-            return this.input;
         }
 
     }
