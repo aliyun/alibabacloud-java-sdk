@@ -4,55 +4,39 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowResponseBody extends TeaModel {
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("CreatedTime")
     public String createdTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Definition")
     public String definition;
 
-    @NameInMap("LastModifiedTime")
-    public String lastModifiedTime;
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ExecutionMode")
+    public String executionMode;
 
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("ExternalStorageLocation")
-    public String externalStorageLocation;
-
-    @NameInMap("RoleArn")
-    public String roleArn;
+    @NameInMap("LastModifiedTime")
+    public String lastModifiedTime;
 
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("RoleArn")
+    public String roleArn;
+
+    @NameInMap("Type")
+    public String type;
+
     public static DescribeFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowResponseBody self = new DescribeFlowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFlowResponseBody setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public DescribeFlowResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public DescribeFlowResponseBody setCreatedTime(String createdTime) {
@@ -63,14 +47,6 @@ public class DescribeFlowResponseBody extends TeaModel {
         return this.createdTime;
     }
 
-    public DescribeFlowResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeFlowResponseBody setDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -79,12 +55,20 @@ public class DescribeFlowResponseBody extends TeaModel {
         return this.definition;
     }
 
-    public DescribeFlowResponseBody setLastModifiedTime(String lastModifiedTime) {
-        this.lastModifiedTime = lastModifiedTime;
+    public DescribeFlowResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getLastModifiedTime() {
-        return this.lastModifiedTime;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeFlowResponseBody setExecutionMode(String executionMode) {
+        this.executionMode = executionMode;
+        return this;
+    }
+    public String getExecutionMode() {
+        return this.executionMode;
     }
 
     public DescribeFlowResponseBody setId(String id) {
@@ -95,12 +79,28 @@ public class DescribeFlowResponseBody extends TeaModel {
         return this.id;
     }
 
-    public DescribeFlowResponseBody setExternalStorageLocation(String externalStorageLocation) {
-        this.externalStorageLocation = externalStorageLocation;
+    public DescribeFlowResponseBody setLastModifiedTime(String lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
         return this;
     }
-    public String getExternalStorageLocation() {
-        return this.externalStorageLocation;
+    public String getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    public DescribeFlowResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeFlowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeFlowResponseBody setRoleArn(String roleArn) {
@@ -111,12 +111,12 @@ public class DescribeFlowResponseBody extends TeaModel {
         return this.roleArn;
     }
 
-    public DescribeFlowResponseBody setName(String name) {
-        this.name = name;
+    public DescribeFlowResponseBody setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getType() {
+        return this.type;
     }
 
 }

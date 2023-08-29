@@ -4,11 +4,11 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class DeleteScheduleRequest extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("FlowName")
     public String flowName;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("ScheduleName")
     public String scheduleName;
@@ -18,20 +18,20 @@ public class DeleteScheduleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DeleteScheduleRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DeleteScheduleRequest setFlowName(String flowName) {
         this.flowName = flowName;
         return this;
     }
     public String getFlowName() {
         return this.flowName;
+    }
+
+    public DeleteScheduleRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DeleteScheduleRequest setScheduleName(String scheduleName) {

@@ -4,40 +4,24 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class GetExecutionHistoryRequest extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("ExecutionName")
+    public String executionName;
 
     @NameInMap("FlowName")
     public String flowName;
 
-    @NameInMap("ExecutionName")
-    public String executionName;
+    @NameInMap("Limit")
+    public Integer limit;
 
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("Limit")
-    public Integer limit;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static GetExecutionHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         GetExecutionHistoryRequest self = new GetExecutionHistoryRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetExecutionHistoryRequest setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetExecutionHistoryRequest setFlowName(String flowName) {
-        this.flowName = flowName;
-        return this;
-    }
-    public String getFlowName() {
-        return this.flowName;
     }
 
     public GetExecutionHistoryRequest setExecutionName(String executionName) {
@@ -48,12 +32,12 @@ public class GetExecutionHistoryRequest extends TeaModel {
         return this.executionName;
     }
 
-    public GetExecutionHistoryRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public GetExecutionHistoryRequest setFlowName(String flowName) {
+        this.flowName = flowName;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public String getFlowName() {
+        return this.flowName;
     }
 
     public GetExecutionHistoryRequest setLimit(Integer limit) {
@@ -62,6 +46,22 @@ public class GetExecutionHistoryRequest extends TeaModel {
     }
     public Integer getLimit() {
         return this.limit;
+    }
+
+    public GetExecutionHistoryRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public GetExecutionHistoryRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

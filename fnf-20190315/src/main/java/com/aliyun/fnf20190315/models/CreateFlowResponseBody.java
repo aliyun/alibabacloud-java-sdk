@@ -4,55 +4,39 @@ package com.aliyun.fnf20190315.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowResponseBody extends TeaModel {
-    @NameInMap("Type")
-    public String type;
-
-    @NameInMap("Description")
-    public String description;
-
     @NameInMap("CreatedTime")
     public String createdTime;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("Definition")
     public String definition;
 
-    @NameInMap("LastModifiedTime")
-    public String lastModifiedTime;
+    @NameInMap("Description")
+    public String description;
+
+    @NameInMap("ExecutionMode")
+    public String executionMode;
 
     @NameInMap("Id")
     public String id;
 
-    @NameInMap("ExternalStorageLocation")
-    public String externalStorageLocation;
-
-    @NameInMap("RoleArn")
-    public String roleArn;
+    @NameInMap("LastModifiedTime")
+    public String lastModifiedTime;
 
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("RoleArn")
+    public String roleArn;
+
+    @NameInMap("Type")
+    public String type;
+
     public static CreateFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowResponseBody self = new CreateFlowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateFlowResponseBody setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public CreateFlowResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
     }
 
     public CreateFlowResponseBody setCreatedTime(String createdTime) {
@@ -63,14 +47,6 @@ public class CreateFlowResponseBody extends TeaModel {
         return this.createdTime;
     }
 
-    public CreateFlowResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateFlowResponseBody setDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -79,12 +55,20 @@ public class CreateFlowResponseBody extends TeaModel {
         return this.definition;
     }
 
-    public CreateFlowResponseBody setLastModifiedTime(String lastModifiedTime) {
-        this.lastModifiedTime = lastModifiedTime;
+    public CreateFlowResponseBody setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public String getLastModifiedTime() {
-        return this.lastModifiedTime;
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateFlowResponseBody setExecutionMode(String executionMode) {
+        this.executionMode = executionMode;
+        return this;
+    }
+    public String getExecutionMode() {
+        return this.executionMode;
     }
 
     public CreateFlowResponseBody setId(String id) {
@@ -95,12 +79,28 @@ public class CreateFlowResponseBody extends TeaModel {
         return this.id;
     }
 
-    public CreateFlowResponseBody setExternalStorageLocation(String externalStorageLocation) {
-        this.externalStorageLocation = externalStorageLocation;
+    public CreateFlowResponseBody setLastModifiedTime(String lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
         return this;
     }
-    public String getExternalStorageLocation() {
-        return this.externalStorageLocation;
+    public String getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    public CreateFlowResponseBody setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateFlowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateFlowResponseBody setRoleArn(String roleArn) {
@@ -111,12 +111,12 @@ public class CreateFlowResponseBody extends TeaModel {
         return this.roleArn;
     }
 
-    public CreateFlowResponseBody setName(String name) {
-        this.name = name;
+    public CreateFlowResponseBody setType(String type) {
+        this.type = type;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public String getType() {
+        return this.type;
     }
 
 }
