@@ -16,6 +16,9 @@ public class DeleteDatabaseResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static DeleteDatabaseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteDatabaseResponseBody self = new DeleteDatabaseResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DeleteDatabaseResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DeleteDatabaseResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

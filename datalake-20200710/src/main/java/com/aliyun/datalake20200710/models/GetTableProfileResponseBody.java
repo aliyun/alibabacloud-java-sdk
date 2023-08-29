@@ -4,9 +4,15 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTableProfileResponseBody extends TeaModel {
+    /**
+     * <p>Code</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Message</p>
+     */
     @NameInMap("Message")
     public String message;
 
