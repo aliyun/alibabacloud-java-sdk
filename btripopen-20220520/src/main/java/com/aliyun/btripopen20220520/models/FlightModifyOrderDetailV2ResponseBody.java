@@ -515,6 +515,47 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
 
     }
 
+    public static class FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee extends TeaModel {
+        @NameInMap("change_fee")
+        public Long changeFee;
+
+        @NameInMap("service_fee")
+        public Long serviceFee;
+
+        @NameInMap("upgrade_price")
+        public Long upgradePrice;
+
+        public static FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee build(java.util.Map<String, ?> map) throws Exception {
+            FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee self = new FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee setChangeFee(Long changeFee) {
+            this.changeFee = changeFee;
+            return this;
+        }
+        public Long getChangeFee() {
+            return this.changeFee;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee setServiceFee(Long serviceFee) {
+            this.serviceFee = serviceFee;
+            return this;
+        }
+        public Long getServiceFee() {
+            return this.serviceFee;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee setUpgradePrice(Long upgradePrice) {
+            this.upgradePrice = upgradePrice;
+            return this;
+        }
+        public Long getUpgradePrice() {
+            return this.upgradePrice;
+        }
+
+    }
+
     public static class FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOS extends TeaModel {
         @NameInMap("birth_date")
         public String birthDate;
@@ -524,6 +565,9 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
 
         @NameInMap("cert_type")
         public Integer certType;
+
+        @NameInMap("change_fee")
+        public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee changeFee;
 
         @NameInMap("gender")
         public Integer gender;
@@ -576,6 +620,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         }
         public Integer getCertType() {
             return this.certType;
+        }
+
+        public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOS setChangeFee(FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee changeFee) {
+            this.changeFee = changeFee;
+            return this;
+        }
+        public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOSChangeFee getChangeFee() {
+            return this.changeFee;
         }
 
         public FlightModifyOrderDetailV2ResponseBodyModuleTravelerInfoDTOS setGender(Integer gender) {
