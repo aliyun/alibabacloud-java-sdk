@@ -284,11 +284,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.travelerStandardShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.travelerStandard, "traveler_standard", "json");
         }
 
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.internationalFlightCabins)) {
-            query.put("international_flight_cabins", request.internationalFlightCabins);
-        }
-
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.budget)) {
             body.put("budget", request.budget);
@@ -332,6 +327,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hotelShareShrink)) {
             body.put("hotel_share", request.hotelShareShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internationalFlightCabins)) {
+            body.put("international_flight_cabins", request.internationalFlightCabins);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.itineraryListShrink)) {
@@ -429,7 +428,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", realHeaders),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
