@@ -12,6 +12,7 @@ public class DescribeInstanceBillRequest extends TeaModel {
 
     /**
      * <p>The billing cycle. Specify the parameter in the YYYY-MM format.</p>
+     * <p>Only the latest 18 month billing cycle is supported.</p>
      */
     @NameInMap("BillingCycle")
     public String billingCycle;

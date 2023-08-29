@@ -17,7 +17,7 @@ public class QueryCostUnitRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page. A maximum of 300 entries can be returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

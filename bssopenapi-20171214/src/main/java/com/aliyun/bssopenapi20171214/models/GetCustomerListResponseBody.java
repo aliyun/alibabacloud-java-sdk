@@ -4,18 +4,36 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetCustomerListResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public GetCustomerListResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The call is successful.</p>
+     * <p>*   **false**: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +83,9 @@ public class GetCustomerListResponseBody extends TeaModel {
     }
 
     public static class GetCustomerListResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of customer IDs.</p>
+         */
         @NameInMap("UidList")
         public java.util.List<String> uidList;
 

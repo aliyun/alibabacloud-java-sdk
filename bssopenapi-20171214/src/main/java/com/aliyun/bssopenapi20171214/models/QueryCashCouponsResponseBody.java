@@ -110,6 +110,9 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         @NameInMap("CashCouponNo")
         public String cashCouponNo;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The time when the voucher took effect.</p>
          */
@@ -187,6 +190,14 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
         public String getCashCouponNo() {
             return this.cashCouponNo;
+        }
+
+        public QueryCashCouponsResponseBodyDataCashCoupon setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public QueryCashCouponsResponseBodyDataCashCoupon setEffectiveTime(String effectiveTime) {
