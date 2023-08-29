@@ -1,0 +1,108 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.paifeaturestore20230621.models;
+
+import com.aliyun.tea.*;
+
+public class CreateModelFeatureRequest extends TeaModel {
+    @NameInMap("Features")
+    public java.util.List<CreateModelFeatureRequestFeatures> features;
+
+    @NameInMap("LabelTableId")
+    public String labelTableId;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("ProjectId")
+    public String projectId;
+
+    public static CreateModelFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateModelFeatureRequest self = new CreateModelFeatureRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateModelFeatureRequest setFeatures(java.util.List<CreateModelFeatureRequestFeatures> features) {
+        this.features = features;
+        return this;
+    }
+    public java.util.List<CreateModelFeatureRequestFeatures> getFeatures() {
+        return this.features;
+    }
+
+    public CreateModelFeatureRequest setLabelTableId(String labelTableId) {
+        this.labelTableId = labelTableId;
+        return this;
+    }
+    public String getLabelTableId() {
+        return this.labelTableId;
+    }
+
+    public CreateModelFeatureRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateModelFeatureRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public static class CreateModelFeatureRequestFeatures extends TeaModel {
+        @NameInMap("AliasName")
+        public String aliasName;
+
+        @NameInMap("FeatureViewId")
+        public String featureViewId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateModelFeatureRequestFeatures build(java.util.Map<String, ?> map) throws Exception {
+            CreateModelFeatureRequestFeatures self = new CreateModelFeatureRequestFeatures();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateModelFeatureRequestFeatures setAliasName(String aliasName) {
+            this.aliasName = aliasName;
+            return this;
+        }
+        public String getAliasName() {
+            return this.aliasName;
+        }
+
+        public CreateModelFeatureRequestFeatures setFeatureViewId(String featureViewId) {
+            this.featureViewId = featureViewId;
+            return this;
+        }
+        public String getFeatureViewId() {
+            return this.featureViewId;
+        }
+
+        public CreateModelFeatureRequestFeatures setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateModelFeatureRequestFeatures setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+}
