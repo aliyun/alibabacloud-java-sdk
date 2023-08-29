@@ -451,6 +451,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyAddRequestExternalTravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("international_flight_cabins")
+        public String internationalFlightCabins;
+
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
@@ -503,6 +506,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public java.util.List<ApplyAddRequestExternalTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyAddRequestExternalTravelerStandard setInternationalFlightCabins(String internationalFlightCabins) {
+            this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
         }
 
         public ApplyAddRequestExternalTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
@@ -983,6 +994,9 @@ public class ApplyAddRequest extends TeaModel {
         @NameInMap("hotel_citys")
         public java.util.List<ApplyAddRequestTravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("international_flight_cabins")
+        public String internationalFlightCabins;
+
         @NameInMap("premium_economy_discount")
         public Integer premiumEconomyDiscount;
 
@@ -1038,6 +1052,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public java.util.List<ApplyAddRequestTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
+        }
+
+        public ApplyAddRequestTravelerStandard setInternationalFlightCabins(String internationalFlightCabins) {
+            this.internationalFlightCabins = internationalFlightCabins;
+            return this;
+        }
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
         }
 
         public ApplyAddRequestTravelerStandard setPremiumEconomyDiscount(Integer premiumEconomyDiscount) {
