@@ -126,6 +126,9 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("RegionCode")
+        public String regionCode;
+
         /**
          * <p>The type of the resource.</p>
          */
@@ -197,6 +200,14 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public QuerySavingsPlansDiscountResponseBodyDataItems setRegionCode(String regionCode) {
+            this.regionCode = regionCode;
+            return this;
+        }
+        public String getRegionCode() {
+            return this.regionCode;
         }
 
         public QuerySavingsPlansDiscountResponseBodyDataItems setSpec(String spec) {

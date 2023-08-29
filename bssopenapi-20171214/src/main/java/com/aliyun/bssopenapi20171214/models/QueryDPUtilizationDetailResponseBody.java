@@ -4,18 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryDPUtilizationDetailResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public QueryDPUtilizationDetailResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,45 +80,90 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryDPUtilizationDetailResponseBodyDataDetailListDetailList extends TeaModel {
+        /**
+         * <p>The deduction date.</p>
+         */
         @NameInMap("DeductDate")
         public String deductDate;
 
+        /**
+         * <p>The total computing capacity or storage capacity of the RI or SCU during the deduction.</p>
+         */
         @NameInMap("DeductFactorTotal")
         public Float deductFactorTotal;
 
+        /**
+         * <p>The deduct factor. This parameter is returned only if the CommodityCode parameter is set to ecsRi.</p>
+         */
         @NameInMap("DeductHours")
         public Float deductHours;
 
+        /**
+         * <p>The original measured amount.</p>
+         */
         @NameInMap("DeductMeasure")
         public Float deductMeasure;
 
+        /**
+         * <p>The computing capacity or storage capacity that is deducted in a pay-as-you-go instance.</p>
+         */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
+        /**
+         * <p>The code of the deducted service.</p>
+         */
         @NameInMap("DeductedCommodityCode")
         public String deductedCommodityCode;
 
+        /**
+         * <p>The ID of the deducted instance.</p>
+         */
         @NameInMap("DeductedInstanceId")
         public String deductedInstanceId;
 
+        /**
+         * <p>The name of the deducted service.</p>
+         */
         @NameInMap("DeductedProductDetail")
         public String deductedProductDetail;
 
+        /**
+         * <p>The ID of the RI.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance type of the deducted instance.</p>
+         */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        /**
+         * <p>The region in which the instance resides. This parameter can be left empty.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The billable item.</p>
+         */
         @NameInMap("ResCode")
         public String resCode;
 
+        /**
+         * <p>The UID of the deducted instance.</p>
+         * <br>
+         * <p>*   If the deduction is shared, the value of this parameter indicates the UID of the deducted instance.</p>
+         * <p>*   If the deduction is not shared, the value of this parameter is the same as that of the uid parameter.</p>
+         */
         @NameInMap("ShareUid")
         public Long shareUid;
 
+        /**
+         * <p>The UID of the deducted instance.</p>
+         */
         @NameInMap("Uid")
         public Long uid;
 
@@ -246,9 +306,15 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     }
 
     public static class QueryDPUtilizationDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The detailed resource plan usage.</p>
+         */
         @NameInMap("DetailList")
         public QueryDPUtilizationDetailResponseBodyDataDetailList detailList;
 
+        /**
+         * <p>The token that is used to retrieve the next page of results. You can set the LastToken parameter to this value in the next request. If null is returned, all results are queried.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

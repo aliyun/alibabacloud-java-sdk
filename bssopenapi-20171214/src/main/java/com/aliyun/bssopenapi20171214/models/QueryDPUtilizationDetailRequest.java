@@ -4,33 +4,66 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryDPUtilizationDetailRequest extends TeaModel {
+    /**
+     * <p>The code of the resource, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect for the request.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The ID of the deducted instance. If this parameter is not specified, the details of all instances are returned.</p>
+     */
     @NameInMap("DeductedInstanceId")
     public String deductedInstanceId;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Specifies whether to query the resource plan usage of linked accounts. Valid values:</p>
+     * <br>
+     * <p>*   true: queries the resource plan usage of linked accounts.</p>
+     * <p>*   false: does not query the resource plan usage of linked accounts.</p>
+     */
     @NameInMap("IncludeShare")
     public Boolean includeShare;
 
+    /**
+     * <p>The ID of the instance to query. If this parameter is not specified, the details of all used instances are returned.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance type of the instance.</p>
+     */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results. For the first query, set the value to null. For subsequent queries, set the value to the token that is obtained from the NextToken parameter.</p>
+     */
     @NameInMap("LastToken")
     public String lastToken;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>The code of the service. Example: ecs.</p>
+     */
     @NameInMap("ProdCode")
     public String prodCode;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

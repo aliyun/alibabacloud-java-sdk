@@ -120,6 +120,9 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         @NameInMap("AllocationStatus")
         public String allocationStatus;
 
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
         /**
          * <p>The status of the instance. Valid values:</p>
          * <br>
@@ -129,6 +132,9 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
          */
         @NameInMap("Currency")
         public String currency;
+
+        @NameInMap("CurrentPoolValue")
+        public String currentPoolValue;
 
         @NameInMap("Cycle")
         public String cycle;
@@ -240,12 +246,28 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             return this.allocationStatus;
         }
 
+        public QuerySavingsPlansInstanceResponseBodyDataItems setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
         public QuerySavingsPlansInstanceResponseBodyDataItems setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setCurrentPoolValue(String currentPoolValue) {
+            this.currentPoolValue = currentPoolValue;
+            return this;
+        }
+        public String getCurrentPoolValue() {
+            return this.currentPoolValue;
         }
 
         public QuerySavingsPlansInstanceResponseBodyDataItems setCycle(String cycle) {

@@ -32,7 +32,7 @@ public class QueryResourcePackageInstancesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

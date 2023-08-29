@@ -2006,7 +2006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the customer.
+      * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
       *
       * @param request GetCustomerListRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2029,7 +2029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the customer.
+      * The system queries the IDs of customers of a VNO based on the AccessKey pair used in the request.
       *
       * @return GetCustomerListResponse
      */
@@ -3117,7 +3117,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The UID of the deducted instance.
+      * Limits:
+      * *   Only the usage records within the past year can be queried.
       *
       * @param request QueryDPUtilizationDetailRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3184,7 +3185,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The UID of the deducted instance.
+      * Limits:
+      * *   Only the usage records within the past year can be queried.
       *
       * @param request QueryDPUtilizationDetailRequest
       * @return QueryDPUtilizationDetailResponse
@@ -4523,6 +4525,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RelieveAccountRelationResponse relieveAccountRelation(RelieveAccountRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.relieveAccountRelationWithOptions(request, runtime);
+    }
+
+    public RenewChangeInstanceResponse renewChangeInstanceWithOptions(RenewChangeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameter)) {
+            query.put("Parameter", request.parameter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renewPeriod)) {
+            query.put("RenewPeriod", request.renewPeriod);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RenewChangeInstance"),
+            new TeaPair("version", "2017-12-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RenewChangeInstanceResponse());
+    }
+
+    public RenewChangeInstanceResponse renewChangeInstance(RenewChangeInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.renewChangeInstanceWithOptions(request, runtime);
     }
 
     public RenewInstanceResponse renewInstanceWithOptions(RenewInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
