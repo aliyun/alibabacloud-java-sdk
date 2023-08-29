@@ -13,11 +13,20 @@ public class DatabaseProfile extends TeaModel {
     @NameInMap("FileSize")
     public Long fileSize;
 
+    @NameInMap("LatestDate")
+    public String latestDate;
+
     @NameInMap("Location")
     public String location;
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("ObjectCnt")
+    public Long objectCnt;
+
+    @NameInMap("ObjectSize")
+    public Long objectSize;
 
     public static DatabaseProfile build(java.util.Map<String, ?> map) throws Exception {
         DatabaseProfile self = new DatabaseProfile();
@@ -48,6 +57,14 @@ public class DatabaseProfile extends TeaModel {
         return this.fileSize;
     }
 
+    public DatabaseProfile setLatestDate(String latestDate) {
+        this.latestDate = latestDate;
+        return this;
+    }
+    public String getLatestDate() {
+        return this.latestDate;
+    }
+
     public DatabaseProfile setLocation(String location) {
         this.location = location;
         return this;
@@ -62,6 +79,22 @@ public class DatabaseProfile extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public DatabaseProfile setObjectCnt(Long objectCnt) {
+        this.objectCnt = objectCnt;
+        return this;
+    }
+    public Long getObjectCnt() {
+        return this.objectCnt;
+    }
+
+    public DatabaseProfile setObjectSize(Long objectSize) {
+        this.objectSize = objectSize;
+        return this;
+    }
+    public Long getObjectSize() {
+        return this.objectSize;
     }
 
 }

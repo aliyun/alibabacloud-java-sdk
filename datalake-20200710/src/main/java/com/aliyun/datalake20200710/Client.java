@@ -987,6 +987,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDatabaseResponse deleteDatabaseWithOptions(DeleteDatabaseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.async)) {
+            query.put("Async", request.async);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cascade)) {
             query.put("Cascade", request.cascade);
         }
@@ -1552,6 +1556,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getFunctionWithOptions(request, headers, runtime);
+    }
+
+    public GetLifecycleRuleResponse getLifecycleRuleWithOptions(GetLifecycleRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
+            query.put("ResourceName", request.resourceName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLifecycleRule"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/metastorehouse/lifecycle/rule/getLifecycleRule"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLifecycleRuleResponse());
+    }
+
+    public GetLifecycleRuleResponse getLifecycleRule(GetLifecycleRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLifecycleRuleWithOptions(request, headers, runtime);
     }
 
     public GetLockResponse getLockWithOptions(GetLockRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

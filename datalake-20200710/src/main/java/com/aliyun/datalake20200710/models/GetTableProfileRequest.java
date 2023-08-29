@@ -4,12 +4,21 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class GetTableProfileRequest extends TeaModel {
+    /**
+     * <p>CatalogId</p>
+     */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>DatabaseName</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>TableName</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

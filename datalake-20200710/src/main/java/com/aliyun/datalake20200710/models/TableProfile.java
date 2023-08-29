@@ -16,6 +16,9 @@ public class TableProfile extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
+
     @NameInMap("DatabaseName")
     public String databaseName;
 
@@ -28,17 +31,41 @@ public class TableProfile extends TeaModel {
     @NameInMap("IsPartitioned")
     public Boolean isPartitioned;
 
+    @NameInMap("LastAccessNumTime")
+    public String lastAccessNumTime;
+
     @NameInMap("LastAccessTime")
     public String lastAccessTime;
 
+    @NameInMap("LastDdlTime")
+    public String lastDdlTime;
+
     @NameInMap("LastModifyTime")
     public String lastModifyTime;
+
+    @NameInMap("LatestAccessNumDate")
+    public String latestAccessNumDate;
 
     @NameInMap("LatestDate")
     public String latestDate;
 
     @NameInMap("Location")
     public String location;
+
+    @NameInMap("ObjectAccessNum")
+    public Long objectAccessNum;
+
+    @NameInMap("ObjectAccessNumMonthly")
+    public Long objectAccessNumMonthly;
+
+    @NameInMap("ObjectAccessNumWeekly")
+    public Long objectAccessNumWeekly;
+
+    @NameInMap("ObjectCnt")
+    public Long objectCnt;
+
+    @NameInMap("ObjectSize")
+    public Long objectSize;
 
     @NameInMap("PartitionCnt")
     public Long partitionCnt;
@@ -86,6 +113,14 @@ public class TableProfile extends TeaModel {
         return this.createTime;
     }
 
+    public TableProfile setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
+    }
+
     public TableProfile setDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -118,6 +153,14 @@ public class TableProfile extends TeaModel {
         return this.isPartitioned;
     }
 
+    public TableProfile setLastAccessNumTime(String lastAccessNumTime) {
+        this.lastAccessNumTime = lastAccessNumTime;
+        return this;
+    }
+    public String getLastAccessNumTime() {
+        return this.lastAccessNumTime;
+    }
+
     public TableProfile setLastAccessTime(String lastAccessTime) {
         this.lastAccessTime = lastAccessTime;
         return this;
@@ -126,12 +169,28 @@ public class TableProfile extends TeaModel {
         return this.lastAccessTime;
     }
 
+    public TableProfile setLastDdlTime(String lastDdlTime) {
+        this.lastDdlTime = lastDdlTime;
+        return this;
+    }
+    public String getLastDdlTime() {
+        return this.lastDdlTime;
+    }
+
     public TableProfile setLastModifyTime(String lastModifyTime) {
         this.lastModifyTime = lastModifyTime;
         return this;
     }
     public String getLastModifyTime() {
         return this.lastModifyTime;
+    }
+
+    public TableProfile setLatestAccessNumDate(String latestAccessNumDate) {
+        this.latestAccessNumDate = latestAccessNumDate;
+        return this;
+    }
+    public String getLatestAccessNumDate() {
+        return this.latestAccessNumDate;
     }
 
     public TableProfile setLatestDate(String latestDate) {
@@ -148,6 +207,46 @@ public class TableProfile extends TeaModel {
     }
     public String getLocation() {
         return this.location;
+    }
+
+    public TableProfile setObjectAccessNum(Long objectAccessNum) {
+        this.objectAccessNum = objectAccessNum;
+        return this;
+    }
+    public Long getObjectAccessNum() {
+        return this.objectAccessNum;
+    }
+
+    public TableProfile setObjectAccessNumMonthly(Long objectAccessNumMonthly) {
+        this.objectAccessNumMonthly = objectAccessNumMonthly;
+        return this;
+    }
+    public Long getObjectAccessNumMonthly() {
+        return this.objectAccessNumMonthly;
+    }
+
+    public TableProfile setObjectAccessNumWeekly(Long objectAccessNumWeekly) {
+        this.objectAccessNumWeekly = objectAccessNumWeekly;
+        return this;
+    }
+    public Long getObjectAccessNumWeekly() {
+        return this.objectAccessNumWeekly;
+    }
+
+    public TableProfile setObjectCnt(Long objectCnt) {
+        this.objectCnt = objectCnt;
+        return this;
+    }
+    public Long getObjectCnt() {
+        return this.objectCnt;
+    }
+
+    public TableProfile setObjectSize(Long objectSize) {
+        this.objectSize = objectSize;
+        return this;
+    }
+    public Long getObjectSize() {
+        return this.objectSize;
     }
 
     public TableProfile setPartitionCnt(Long partitionCnt) {

@@ -4,6 +4,9 @@ package com.aliyun.datalake20200710.models;
 import com.aliyun.tea.*;
 
 public class DeleteDatabaseRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("Cascade")
     public Boolean cascade;
 
@@ -16,6 +19,14 @@ public class DeleteDatabaseRequest extends TeaModel {
     public static DeleteDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDatabaseRequest self = new DeleteDatabaseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDatabaseRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public DeleteDatabaseRequest setCascade(Boolean cascade) {
