@@ -67,6 +67,9 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("SourceBiz")
     public String sourceBiz;
 
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     public static AddShardingNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddShardingNodeRequest self = new AddShardingNodeRequest();
         return TeaModel.build(map, self);
@@ -166,6 +169,14 @@ public class AddShardingNodeRequest extends TeaModel {
     }
     public String getSourceBiz() {
         return this.sourceBiz;
+    }
+
+    public AddShardingNodeRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }
