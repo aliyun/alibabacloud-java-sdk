@@ -126,6 +126,18 @@ public class DescribeRulesRequest extends TeaModel {
     public Integer status;
 
     /**
+     * <p>The type of the data asset. Valid values:</p>
+     * <br>
+     * <p>*   **0**: all data assets</p>
+     * <p>*   **1**: structured data asset</p>
+     * <p>*   **2**: unstructured data asset</p>
+     * <br>
+     * <p>> If you set the parameter to 1 or 2, rules that support all data assets and rules that support the queried data asset type are returned.</p>
+     */
+    @NameInMap("SupportForm")
+    public Integer supportForm;
+
+    /**
      * <p>The severity level of the alert. Valid values:</p>
      * <br>
      * <p>*   **1**: low</p>
@@ -258,6 +270,14 @@ public class DescribeRulesRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public DescribeRulesRequest setSupportForm(Integer supportForm) {
+        this.supportForm = supportForm;
+        return this;
+    }
+    public Integer getSupportForm() {
+        return this.supportForm;
     }
 
     public DescribeRulesRequest setWarnLevel(Integer warnLevel) {

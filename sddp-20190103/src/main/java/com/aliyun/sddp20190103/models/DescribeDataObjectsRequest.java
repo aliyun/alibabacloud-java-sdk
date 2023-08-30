@@ -10,8 +10,17 @@ public class DescribeDataObjectsRequest extends TeaModel {
     @NameInMap("DomainId")
     public Long domainId;
 
+    @NameInMap("FileType")
+    public Long fileType;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     @NameInMap("Lang")
     public String lang;
+
+    @NameInMap("ModelIds")
+    public String modelIds;
 
     @NameInMap("ModelTagIds")
     public String modelTagIds;
@@ -58,12 +67,36 @@ public class DescribeDataObjectsRequest extends TeaModel {
         return this.domainId;
     }
 
+    public DescribeDataObjectsRequest setFileType(Long fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public Long getFileType() {
+        return this.fileType;
+    }
+
+    public DescribeDataObjectsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribeDataObjectsRequest setLang(String lang) {
         this.lang = lang;
         return this;
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDataObjectsRequest setModelIds(String modelIds) {
+        this.modelIds = modelIds;
+        return this;
+    }
+    public String getModelIds() {
+        return this.modelIds;
     }
 
     public DescribeDataObjectsRequest setModelTagIds(String modelTagIds) {
