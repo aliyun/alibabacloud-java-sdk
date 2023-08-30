@@ -4,24 +4,51 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The database engine that the instance runs.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The page number.</p>
+     * <br>
+     * <p>Pages start from page 1.</p>
+     * <br>
+     * <p>Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 30 to 100.</p>
+     * <br>
+     * <p>Default value: 30.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The number of logical reads.</p>
+     */
     @NameInMap("PhysicalIORead")
     public Long physicalIORead;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The database name.</p>
+     */
     @NameInMap("SlowLogs")
     public java.util.List<DescribeDatabaseSlowLogRecordsResponseBodySlowLogs> slowLogs;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

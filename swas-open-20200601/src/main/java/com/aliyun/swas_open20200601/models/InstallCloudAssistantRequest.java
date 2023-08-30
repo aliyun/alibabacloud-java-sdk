@@ -11,7 +11,7 @@ public class InstallCloudAssistantRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -10,12 +10,21 @@ public class StartTerminalSessionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The session ID.</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
+    /**
+     * <p>The URL of the WebSocket session that is used to connect to the server. The URL contains the session ID (`SessionId`) and the authentication token (`SecurityToken`).</p>
+     */
     @NameInMap("WebSocketUrl")
     public String webSocketUrl;
 

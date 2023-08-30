@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     /**
-     * <p>The details of the data transfer plans of the simple application servers.</p>
+     * <p>The data transfers that exceed the quota of the data transfer plan in the current month. Unit: bytes.</p>
      */
     @NameInMap("InstanceTrafficPackageUsages")
     public java.util.List<ListInstancesTrafficPackagesResponseBodyInstanceTrafficPackageUsages> instanceTrafficPackageUsages;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

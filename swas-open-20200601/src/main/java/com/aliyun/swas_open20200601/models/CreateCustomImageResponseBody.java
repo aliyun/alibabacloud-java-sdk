@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCustomImageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the custom image.</p>
+     * <p>The custom image ID.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

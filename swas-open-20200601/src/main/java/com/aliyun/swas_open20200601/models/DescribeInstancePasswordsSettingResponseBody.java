@@ -4,12 +4,21 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether a logon password is set for the simple application server.</p>
+     */
     @NameInMap("InstancePasswordSetting")
     public Boolean instancePasswordSetting;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether a VNC connection password is set.</p>
+     */
     @NameInMap("VncPasswordSetting")
     public Boolean vncPasswordSetting;
 

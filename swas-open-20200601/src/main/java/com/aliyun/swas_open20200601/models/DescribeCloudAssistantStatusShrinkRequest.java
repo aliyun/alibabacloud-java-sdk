@@ -11,7 +11,7 @@ public class DescribeCloudAssistantStatusShrinkRequest extends TeaModel {
     public String instanceIdsShrink;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -21,7 +21,7 @@ public class DescribeCloudAssistantStatusShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Maximum value: 50.</p>
      * <br>
@@ -31,7 +31,7 @@ public class DescribeCloudAssistantStatusShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the simple application server.</p>
+     * <p>The region ID of the simple application servers.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

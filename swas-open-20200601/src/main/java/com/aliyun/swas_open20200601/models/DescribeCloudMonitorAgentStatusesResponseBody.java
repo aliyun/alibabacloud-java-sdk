@@ -4,9 +4,18 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("InstanceStatusList")
     public java.util.List<DescribeCloudMonitorAgentStatusesResponseBodyInstanceStatusList> instanceStatusList;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -23,7 +23,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The region ID of the simple application server.</p>
+     * <p>Details about the snapshots.</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<ListSnapshotsResponseBodySnapshots> snapshots;
@@ -86,6 +86,11 @@ public class ListSnapshotsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the simple application server.</p>
+         * <br>
+         * <p>Note: This parameter has a value for system disk snapshots. This parameter is left empty for data disk snapshots.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -96,7 +101,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID of the snapshots.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -107,11 +112,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The time when the last disk rollback was performed.</p>
+         */
         @NameInMap("RollbackTime")
         public String rollbackTime;
 
         /**
-         * <p>The ID of the snapshot.</p>
+         * <p>The snapshot ID.</p>
          */
         @NameInMap("SnapshotId")
         public String snapshotId;
@@ -123,7 +131,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         public String snapshotName;
 
         /**
-         * <p>The ID of the source disk. This parameter has a value even after the source disk is released.</p>
+         * <p>The ID of the source disk based on which the snapshot is created. This parameter has a value even if the source disk is released.</p>
          */
         @NameInMap("SourceDiskId")
         public String sourceDiskId;
@@ -131,8 +139,8 @@ public class ListSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The type of the source disk. Valid values:</p>
          * <br>
-         * <p>*   System: system disk</p>
-         * <p>*   data: data disk</p>
+         * <p>*   system: system disk.</p>
+         * <p>*   data: data disk.</p>
          */
         @NameInMap("SourceDiskType")
         public String sourceDiskType;

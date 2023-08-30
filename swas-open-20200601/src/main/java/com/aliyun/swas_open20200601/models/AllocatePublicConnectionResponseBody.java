@@ -4,9 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class AllocatePublicConnectionResponseBody extends TeaModel {
+    /**
+     * <p>The public endpoint that is assigned to the Simple Database Service instance.</p>
+     */
     @NameInMap("PublicConnection")
     public String publicConnection;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

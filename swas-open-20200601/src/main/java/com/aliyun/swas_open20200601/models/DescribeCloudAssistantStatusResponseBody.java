@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     /**
-     * <p>The status of the Cloud Assistant client.</p>
+     * <p>Indicates whether the Cloud Assistant client is installed on the server.</p>
      */
     @NameInMap("CloudAssistantStatus")
     public java.util.List<DescribeCloudAssistantStatusResponseBodyCloudAssistantStatus> cloudAssistantStatus;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -21,7 +21,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Maximum value: 50.</p>
      * <br>
@@ -31,13 +31,13 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of commands.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

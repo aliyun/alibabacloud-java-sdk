@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesRequest extends TeaModel {
     /**
-     * <p>The billing method of the simple application server. Set the value to PrePaid, which indicates the subscription billing method. Only the subscription billing method is supported.</p>
+     * <p>The billing method of the simple application servers. Set the value to PrePaid, which indicates the subscription billing method.</p>
      * <br>
      * <p>Default value: PrePaid.</p>
      */
@@ -13,15 +13,15 @@ public class ListInstancesRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate the server IDs with commas (,).</p>
+     * <p>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).</p>
      * <br>
-     * <p>>  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.</p>
+     * <p>> If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Default value: 1.</p>
      */
@@ -29,7 +29,7 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -37,9 +37,9 @@ public class ListInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).</p>
+     * <p>The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).</p>
      * <br>
-     * <p>>  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.</p>
+     * <p>> If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.</p>
      */
     @NameInMap("PublicIpAddresses")
     public String publicIpAddresses;
@@ -50,6 +50,18 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>实例状态，可能值：</p>
+     * <br>
+     * <p>- Pending：准备中</p>
+     * <p>- Starting：启动中</p>
+     * <p>- Running：运行中</p>
+     * <p>- Stopping：停止中</p>
+     * <p>- Stopped：停止</p>
+     * <p>- Resetting：重置中</p>
+     * <p>- Upgrading：升级中</p>
+     * <p>- Disabled：不可用</p>
+     */
     @NameInMap("Status")
     public String status;
 

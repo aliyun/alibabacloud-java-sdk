@@ -11,17 +11,17 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The status of the command. Valid values:</p>
+     * <p>The status of the command execution. Valid values:</p>
      * <br>
-     * <p>*   Running: The command is running.</p>
-     * <p>*   Finished: The command finishes running.</p>
-     * <p>*   Failed: The command failed to be run.</p>
+     * <p>*   Running: The command is being executed.</p>
+     * <p>*   Finished: The execution is complete.</p>
+     * <p>*   Failed: The execution fails.</p>
      */
     @NameInMap("InvokeStatus")
     public String invokeStatus;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
@@ -31,11 +31,11 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Maximum value: 50.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

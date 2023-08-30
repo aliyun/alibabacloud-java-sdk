@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationResultResponseBody extends TeaModel {
     /**
-     * <p>The information about the command running result.</p>
+     * <p>The execution results.</p>
      */
     @NameInMap("InvocationResult")
     public DescribeInvocationResultResponseBodyInvocationResult invocationResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,64 +39,64 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
 
     public static class DescribeInvocationResultResponseBodyInvocationResult extends TeaModel {
         /**
-         * <p>The error code returned when the command cannot be sent or run. Valid values:</p>
+         * <p>The error code that is returned if the command failed to be sent or executed.</p>
          * <br>
-         * <p>*   If this parameter is empty, the command is run normally.</p>
-         * <p>*   InstanceNotExists: The instance does not exist or is released.</p>
-         * <p>*   InstanceReleased: The instance was released while the command was being run on the instance.</p>
-         * <p>*   InstanceNotRunning: The instance is not in the Running state while the command is being run.</p>
-         * <p>*   CommandNotApplicable: The command is not applicable to the specified instance.</p>
+         * <p>*   If this parameter is empty, the command is executed normally.</p>
+         * <p>*   InstanceNotExists: The specified server does not exist or is released.</p>
+         * <p>*   InstanceReleased: The server was released while the command was being executed on the server.</p>
+         * <p>*   InstanceNotRunning: The server is not in the Running state while the command is being executed.</p>
+         * <p>*   CommandNotApplicable: The command is not applicable to the specified server.</p>
          * <p>*   AccountNotExists: The specified account does not exist.</p>
          * <p>*   DirectoryNotExists: The specified directory does not exist.</p>
-         * <p>*   BadCronExpression: The specified cron expression for the running schedule is invalid.</p>
+         * <p>*   BadCronExpression: The specified cron expression for the execution schedule is invalid.</p>
          * <p>*   ClientNotRunning: The Cloud Assistant client is not running.</p>
          * <p>*   ClientNotResponse: The Cloud Assistant client does not respond.</p>
          * <p>*   ClientIsUpgrading: The Cloud Assistant client is being upgraded.</p>
          * <p>*   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.</p>
-         * <p>*   DeliveryTimeout: The request for sending the command times out.</p>
-         * <p>*   ExecutionTimeout: The running of the command times out.</p>
-         * <p>*   ExecutionException: An exception has occurred while the command is being run.</p>
-         * <p>*   ExecutionInterrupted: The running of the command is interrupted.</p>
-         * <p>*   ExitCodeNonzero: The command finishes running, but the exit code is not 0.</p>
+         * <p>*   DeliveryTimeout: Command sending times out.</p>
+         * <p>*   ExecutionTimeout: The execution times out.</p>
+         * <p>*   ExecutionException: An exception occurs while the command is being executed.</p>
+         * <p>*   ExecutionInterrupted: The execution is interrupted.</p>
+         * <p>*   ExitCodeNonzero: The execution is complete, but the exit code is not 0.</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>The error message returned when the command cannot be sent or run. Valid values:</p>
+         * <p>The error message returned when the command is not successfully sent or executed. Valid values:</p>
          * <br>
-         * <p>*   If this parameter is empty, the command is run normally.</p>
-         * <p>*   the specified instance does not exists: The specified instance does not exist or is released.</p>
-         * <p>*   the instance has released when create task: The instance was released while the command was being run on the instance.</p>
-         * <p>*   the instance is not running when create task: The instance is not in the Running state while the command is being run.</p>
-         * <p>*   the command is not applicable: The command is not applicable to the specified instance.</p>
+         * <p>*   If this parameter is empty, the command is executed normally.</p>
+         * <p>*   the specified instance does not exists: The specified server does not exist or is released.</p>
+         * <p>*   the instance has released when create task: The server was released while the command was being executed on the server.</p>
+         * <p>*   the instance is not running when create task: The server is not in the Running state while the command is being executed.</p>
+         * <p>*   the command is not applicable: The command is not applicable to the specified server.</p>
          * <p>*   the specified account does not exists: The specified account does not exist.</p>
          * <p>*   the specified directory does not exists: The specified directory does not exist.</p>
-         * <p>*   the cron job expression is invalid: The specified cron expression for the runing schedule is invalid.</p>
+         * <p>*   the cron job expression is invalid: The specified cron expression is invalid.</p>
          * <p>*   the aliyun service is not running on the instance: The Cloud Assistance client is not running.</p>
-         * <p>*   the aliyun service in the instance does not response: The Cloud Assistant client does not respond.</p>
+         * <p>*   the aliyun service in the instance does not response: The Cloud Assistant client does not respond to your request.</p>
          * <p>*   the aliyun service in the instance is upgrading now: The Cloud Assistant client is being upgraded.</p>
          * <p>*   the aliyun service in the instance need upgrade: The Cloud Assistant client needs to be upgraded.</p>
-         * <p>*   the command delivery has been timeout: The request for sending the command times out.</p>
-         * <p>*   the command execution has been timeout: The running of the command times out.</p>
-         * <p>*   the command execution got an exception: An exception has occurred while the command is being run.</p>
-         * <p>*   the command execution has been interrupted: The running of the command is interrupted.</p>
-         * <p>*   the command execution exit code is not zero: The command finishes running, but the exit code is not 0.</p>
+         * <p>*   the command delivery has been timeout: Command sending times out.</p>
+         * <p>*   the command execution has been timeout: The execution times out.</p>
+         * <p>*   the command execution got an exception: An exception occurs while the command is being executed.</p>
+         * <p>*   the command execution has been interrupted: The execution is interrupted.</p>
+         * <p>*   the command execution exit code is not zero: The execution is complete, and the exit code is not 0.</p>
          */
         @NameInMap("ErrorInfo")
         public String errorInfo;
 
         /**
-         * <p>The exit code of the command task.</p>
+         * <p>The exit code of the command.</p>
          * <br>
-         * <p>*   For Linux instances, the value is the exit code of the shell command.</p>
-         * <p>*   For Windows instances, the value is the exit code of the batch or PowerShell command.</p>
+         * <p>*   For Linux instances, the exit code is the exit code of the shell command.</p>
+         * <p>*   For Windows instances, the exit code is the exit code of the batch or PowerShell command.</p>
          */
         @NameInMap("ExitCode")
         public Long exitCode;
 
         /**
-         * <p>The time when the command finished running on the instance.</p>
+         * <p>The time when the execution ended.</p>
          */
         @NameInMap("FinishedTime")
         public String finishedTime;
@@ -108,31 +108,31 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The status of the command. Valid values:</p>
+         * <p>The status of the execution progress. Valid values:</p>
          * <br>
          * <p>*   Pending: The command is being verified or sent.</p>
          * <p>*   Invalid: The specified command type or parameter is invalid.</p>
-         * <p>*   Aborted: The command failed to be sent. To send a command to an instance, make sure that the instance is in the Running state and the command is sent to the instance within 1 minute.</p>
-         * <p>*   Running: The command is being run on the instance.</p>
-         * <p>*   Success: The command finishes running, and the exit code is 0.</p>
-         * <p>*   Failed: The command finishes running, but the exit code is not 0.</p>
-         * <p>*   Error: The running of the command cannot proceed due to an exception.</p>
-         * <p>*   Timeout: The running of the command times out.</p>
-         * <p>*   Cancelled: The running is canceled, and the command is not run.</p>
-         * <p>*   Stopping: The command that is running is being stopped.</p>
-         * <p>*   Terminated: The command is terminated while it is being run.</p>
+         * <p>*   Aborted: The command fails to be sent to the server. To send a command to a server, make sure that the server is in the Running state and the command can be sent within 1 minute.</p>
+         * <p>*   Running: The command is being executed on the server.</p>
+         * <p>*   Success: The execution is completed, and the exit code is 0.</p>
+         * <p>*   Failed: The execution is completed, and the exit code is not 0.</p>
+         * <p>*   Error: The execution cannot proceed due to an exception.</p>
+         * <p>*   Timeout: The execution times out.</p>
+         * <p>*   Cancelled: The execution is canceled, and the command is not executed.</p>
+         * <p>*   Stopping: The command in the Running state is being stopped.</p>
+         * <p>*   Terminated: The command is terminated while it is being executed.</p>
          */
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
         /**
-         * <p>The ID of the command task.</p>
+         * <p>The execution ID.</p>
          */
         @NameInMap("InvokeId")
         public String invokeId;
 
         /**
-         * <p>The status of the command task. Valid values:</p>
+         * <p>The status of the execution. Valid values:</p>
          * <br>
          * <p>*   Running</p>
          * <p>*   Finished</p>
@@ -143,7 +143,7 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
         public String invokeRecordStatus;
 
         /**
-         * <p>The username who runs the command on the simple application server.</p>
+         * <p>The username who executes the command on the simple application server.</p>
          */
         @NameInMap("InvokeUser")
         public String invokeUser;
@@ -155,7 +155,7 @@ public class DescribeInvocationResultResponseBody extends TeaModel {
         public String output;
 
         /**
-         * <p>The time when the command started to be run on the instance.</p>
+         * <p>The time when the execution started.</p>
          */
         @NameInMap("StartTime")
         public String startTime;

@@ -25,7 +25,7 @@ public class ListSnapshotsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -44,6 +44,12 @@ public class ListSnapshotsRequest extends TeaModel {
     @NameInMap("SnapshotIds")
     public String snapshotIds;
 
+    /**
+     * <p>The type of the source disk. Valid values:</p>
+     * <br>
+     * <p>*   system: system disk.</p>
+     * <p>*   data: data disk.</p>
+     */
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
 

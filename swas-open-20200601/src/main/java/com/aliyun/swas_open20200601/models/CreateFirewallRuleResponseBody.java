@@ -11,7 +11,7 @@ public class CreateFirewallRuleResponseBody extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

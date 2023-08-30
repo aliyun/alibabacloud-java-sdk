@@ -4,15 +4,27 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceKeyPairResponseBody extends TeaModel {
+    /**
+     * <p>The fingerprint of the key pair.</p>
+     */
     @NameInMap("Fingerprint")
     public String fingerprint;
 
+    /**
+     * <p>The name of the key pair.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The private key.</p>
+     */
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

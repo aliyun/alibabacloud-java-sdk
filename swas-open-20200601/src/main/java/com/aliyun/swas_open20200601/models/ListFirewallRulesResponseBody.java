@@ -11,25 +11,25 @@ public class ListFirewallRulesResponseBody extends TeaModel {
     public java.util.List<ListFirewallRulesResponseBodyFirewallRules> firewallRules;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of firewall rules.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,6 +80,12 @@ public class ListFirewallRulesResponseBody extends TeaModel {
     }
 
     public static class ListFirewallRulesResponseBodyFirewallRules extends TeaModel {
+        /**
+         * <p>The firewall policy.</p>
+         * <br>
+         * <p>*   accept: Access is allowed.</p>
+         * <p>*   drop: Access is refused.</p>
+         */
         @NameInMap("Policy")
         public String policy;
 
@@ -105,12 +111,15 @@ public class ListFirewallRulesResponseBody extends TeaModel {
          * <p>The transport layer protocol. Valid values:</p>
          * <br>
          * <p>*   TCP: the TCP protocol.</p>
-         * <p>*   UDP: the UDP protocol.</p>
-         * <p>*   TCP+UDP: the TCP and UDP protocols.</p>
+         * <p>*   UDP: the UDP protocol</p>
+         * <p>*   TCP+UDP: the TCP and UDP protocols</p>
          */
         @NameInMap("RuleProtocol")
         public String ruleProtocol;
 
+        /**
+         * <p>The IP address or CIDR block that is allowed by the firewall rule.</p>
+         */
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
 

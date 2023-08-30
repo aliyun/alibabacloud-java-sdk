@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListInstancePlansModificationResponseBody extends TeaModel {
     /**
-     * <p>Details about the plans.</p>
+     * <p>The operating system types supported by the plan.</p>
      */
     @NameInMap("Plans")
     public java.util.List<ListInstancePlansModificationResponseBodyPlans> plans;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
