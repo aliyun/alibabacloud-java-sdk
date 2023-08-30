@@ -11,7 +11,7 @@ public class PublishRoutineCodeRevisionShrinkRequest extends TeaModel {
      * <br>
      * <p>*   production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).</p>
      * <br>
-     * <p>*   Preset_Canary_xx: You can add canary release environments based on your business requirements. This parameter is optional.</p>
+     * <p>*   presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.</p>
      */
     @NameInMap("Envs")
     public String envsShrink;

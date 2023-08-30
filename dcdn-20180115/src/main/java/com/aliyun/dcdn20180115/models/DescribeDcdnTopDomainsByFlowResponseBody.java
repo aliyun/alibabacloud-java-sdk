@@ -17,19 +17,19 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     public Long domainOnlineCount;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end of the reporting period.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range during which data was queried.</p>
+     * <p>The beginning of the reporting period.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -119,13 +119,13 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         public Long rank;
 
         /**
-         * <p>The number of visits to the URL.</p>
+         * <p>The number of visits.</p>
          */
         @NameInMap("TotalAccess")
         public Long totalAccess;
 
         /**
-         * <p>The total volume of traffic.</p>
+         * <p>The total amount of network traffic.</p>
          */
         @NameInMap("TotalTraffic")
         public String totalTraffic;

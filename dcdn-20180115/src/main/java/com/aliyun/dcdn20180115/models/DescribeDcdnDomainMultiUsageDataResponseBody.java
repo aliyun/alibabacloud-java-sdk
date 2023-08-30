@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end of the time range that was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,7 +23,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
 
     /**
-     * <p>The start of the time range during which data was queried.</p>
+     * <p>The beginning of the time range that was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -93,7 +93,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         public Long request;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
@@ -182,7 +182,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

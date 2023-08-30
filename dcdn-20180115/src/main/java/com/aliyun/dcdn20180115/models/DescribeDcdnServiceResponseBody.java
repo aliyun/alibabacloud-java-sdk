@@ -11,15 +11,15 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
     public String changingAffectTime;
 
     /**
-     * <p>The new metering method for DCDN. Valid values:</p>
+     * <p>The new metering method for the renewed secure DCDN. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay-by-95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)</p>
+     * <p>*   **PayByTraffic**: pay by data transfer</p>
+     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
+     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
      */
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
@@ -33,13 +33,13 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
     /**
      * <p>The current metering method. Valid values:</p>
      * <br>
-     * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
-     * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
-     * <p>*   **PayByBandwidth95**: pay-by-95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth</p>
-     * <p>*   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month</p>
-     * <p>*   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth</p>
-     * <p>*   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)</p>
+     * <p>*   **PayByTraffic**: pay by data transfer</p>
+     * <p>*   **PayByBandwidth**: pay by bandwidth</p>
+     * <p>*   **PayByBandwidth95**: pay by 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_monthavg**: pay by monthly average bandwidth</p>
+     * <p>*   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month</p>
+     * <p>*   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth</p>
+     * <p>*   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -51,13 +51,13 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
     public String openingTime;
 
     /**
-     * <p>The lock status of secure DCDN.</p>
+     * <p>The lock status of DCDN.</p>
      */
     @NameInMap("OperationLocks")
     public DescribeDcdnServiceResponseBodyOperationLocks operationLocks;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -167,7 +167,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
 
     public static class DescribeDcdnServiceResponseBodyOperationLocksLockReason extends TeaModel {
         /**
-         * <p>The reason why the instance is locked. For example, a value of financial indicates that an overdue payment exists.</p>
+         * <p>The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.</p>
          */
         @NameInMap("LockReason")
         public String lockReason;

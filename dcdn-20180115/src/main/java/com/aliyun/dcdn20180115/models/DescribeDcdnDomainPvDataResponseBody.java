@@ -17,7 +17,7 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range during which data was queried.</p>
+     * <p>The end of the time range that was queried.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,13 +29,13 @@ public class DescribeDcdnDomainPvDataResponseBody extends TeaModel {
     public DescribeDcdnDomainPvDataResponseBodyPvDataInterval pvDataInterval;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The start of the time range during which data was queried.</p>
+     * <p>The beginning of the time range that was queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

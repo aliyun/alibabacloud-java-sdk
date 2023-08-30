@@ -22,9 +22,15 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
     @NameInMap("DomainQuota")
     public Integer domainQuota;
 
+    /**
+     * <p>The maximum number of URLs or directories with parameters ignored that can be refreshed.</p>
+     */
     @NameInMap("IgnoreParamsQuota")
     public Integer ignoreParamsQuota;
 
+    /**
+     * <p>The number of remaining URLs or directories with parameters ignored that can be refreshed.</p>
+     */
     @NameInMap("IgnoreParamsRemain")
     public Integer ignoreParamsRemain;
 

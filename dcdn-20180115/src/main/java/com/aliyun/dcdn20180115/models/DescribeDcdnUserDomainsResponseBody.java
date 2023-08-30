@@ -214,6 +214,9 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        @NameInMap("FunctionType")
+        public String functionType;
+
         /**
          * <p>The time when the accelerated domain name was added to Dynamic Content Delivery Network (DCDN).</p>
          */
@@ -247,6 +250,13 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("Sandbox")
         public String sandbox;
 
+        /**
+         * <p>场景。支持：</p>
+         * <p>- **apiscene**：API加速。</p>
+         * <p>- **webservicescene**：网站业务加速。</p>
+         * <p>- **staticscene**：视频、图文类加速。</p>
+         * <p>- **（空）**：没有场景。</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
@@ -299,6 +309,14 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
         public String getDomainStatus() {
             return this.domainStatus;
+        }
+
+        public DescribeDcdnUserDomainsResponseBodyDomainsPageData setFunctionType(String functionType) {
+            this.functionType = functionType;
+            return this;
+        }
+        public String getFunctionType() {
+            return this.functionType;
         }
 
         public DescribeDcdnUserDomainsResponseBodyDomainsPageData setGmtCreated(String gmtCreated) {

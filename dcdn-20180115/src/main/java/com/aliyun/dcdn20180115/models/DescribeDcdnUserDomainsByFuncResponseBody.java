@@ -11,7 +11,7 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
     public DescribeDcdnUserDomainsByFuncResponseBodyDomains domains;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the page returned.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -81,7 +81,7 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
 
     public static class DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSourcesSource extends TeaModel {
         /**
-         * <p>The address of the origin server.</p>
+         * <p>The origin server address.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -233,7 +233,7 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
         public String sandbox;
 
         /**
-         * <p>The information about the origin server.</p>
+         * <p>The information about the origin servers.</p>
          */
         @NameInMap("Sources")
         public DescribeDcdnUserDomainsByFuncResponseBodyDomainsPageDataSources sources;
@@ -241,8 +241,8 @@ public class DescribeDcdnUserDomainsByFuncResponseBody extends TeaModel {
         /**
          * <p>Indicates whether HTTPS is enabled. Valid values:</p>
          * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <p>*   **on**: HTTPS is enabled.</p>
+         * <p>*   **off**: HTTPS is disabled.</p>
          */
         @NameInMap("SslProtocol")
         public String sslProtocol;

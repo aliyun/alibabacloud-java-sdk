@@ -54,6 +54,9 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
         @NameInMap("PolicyId")
         public Long policyId;
 
+        /**
+         * <p>The IDs of the protection policy.</p>
+         */
         @NameInMap("PolicyIds")
         public String policyIds;
 

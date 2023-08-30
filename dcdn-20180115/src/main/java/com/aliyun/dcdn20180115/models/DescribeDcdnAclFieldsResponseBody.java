@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
     /**
-     * <p>Details about the rules.</p>
+     * <p>The details about the rules.</p>
      */
     @NameInMap("Content")
     public java.util.List<DescribeDcdnAclFieldsResponseBodyContent> content;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

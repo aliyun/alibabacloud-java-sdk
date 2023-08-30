@@ -29,6 +29,7 @@ public class DescribeDcdnRefreshTasksRequest extends TeaModel {
      * <br>
      * <p>*   **file**: URL-based refresh</p>
      * <p>*   **directory**: directory-based refresh</p>
+     * <p>*   **regex**: regular expression-based refresh</p>
      * <p>*   **preload**: URL-based prefetch</p>
      * <br>
      * <p>If you set **DomainName** or **Status**, you must also set this parameter.</p>

@@ -13,15 +13,15 @@ public class ModifyDcdnWafPolicyDomainsRequest extends TeaModel {
     public String bindDomains;
 
     /**
-     * <p>The change method. Valid values:</p>
+     * <p>The association method. Valid values:</p>
      * <br>
-     * <p>*   0: replace</p>
-     * <p>*   1: add</p>
+     * <p>*   0: replace.</p>
+     * <p>*   1: add.</p>
      * <p>*   Default value: 0.</p>
      * <br>
      * <p>> </p>
      * <br>
-     * <p>*   This parameter takes effect only when you specify **BindDomains**. If you have bound a domain name indicated by **BindDomains** to the default protection policy, the `Policy.DefaultAndCustom.BindToSameDomain` error is returned.</p>
+     * <p>*   This parameter takes effect only when you specify **BindDomains**. If you have associated a domain name indicated by **BindDomains** with the default protection policy, the `Policy.DefaultAndCustom.BindToSameDomain` error is returned.</p>
      * <br>
      * <p>*   You can only replace accelerated domain names that are bound to the default protection policy.</p>
      */

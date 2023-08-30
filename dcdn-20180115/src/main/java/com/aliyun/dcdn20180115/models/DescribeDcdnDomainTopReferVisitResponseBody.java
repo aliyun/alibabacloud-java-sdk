@@ -11,7 +11,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,7 +67,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainTopReferVisitResponseBodyTopReferListReferList extends TeaModel {
         /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
+         * <p>The amount of network traffic. (Unit: bytes)</p>
          */
         @NameInMap("Flow")
         public String flow;
@@ -85,7 +85,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         public String referDetail;
 
         /**
-         * <p>The number of visits to the URL.</p>
+         * <p>The number of visits.</p>
          */
         @NameInMap("VisitData")
         public String visitData;

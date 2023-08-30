@@ -11,7 +11,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
     public DescribeDcdnDomainCnameResponseBodyCnameDatas cnameDatas;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
