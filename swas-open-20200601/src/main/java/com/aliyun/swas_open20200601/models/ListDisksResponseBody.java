@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisksResponseBody extends TeaModel {
     /**
-     * <p>The region ID of the disks.</p>
+     * <p>Details about the disks.</p>
      */
     @NameInMap("Disks")
     public java.util.List<ListDisksResponseBodyDisks> disks;
@@ -81,10 +81,10 @@ public class ListDisksResponseBody extends TeaModel {
 
     public static class ListDisksResponseBodyDisks extends TeaModel {
         /**
-         * <p>The category of the disk. Valid values: Valid values:</p>
+         * <p>The category of the disk. Valid values:</p>
          * <br>
-         * <p>*   ESSD: enhanced SSD (ESSD) at performance level 0 (PL0)</p>
-         * <p>*   SSD: standard SSD</p>
+         * <p>*   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).</p>
+         * <p>*   SSD: a standard SSD.</p>
          */
         @NameInMap("Category")
         public String category;
@@ -122,8 +122,8 @@ public class ListDisksResponseBody extends TeaModel {
         /**
          * <p>The type of the disk. Valid values:</p>
          * <br>
-         * <p>*   System: system disk</p>
-         * <p>*   Data: data disk</p>
+         * <p>*   System: system disk.</p>
+         * <p>*   Data: data disk.</p>
          */
         @NameInMap("DiskType")
         public String diskType;
@@ -135,19 +135,19 @@ public class ListDisksResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>轻量应用服务器名称。</p>
+         * <p>Name of the simple application server.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The region ID of the server.</p>
+         * <p>The region ID of the disks.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>磁盘备注。</p>
+         * <p>Description about the disk.</p>
          */
         @NameInMap("Remark")
         public String remark;

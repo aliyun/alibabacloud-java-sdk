@@ -4,9 +4,15 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabaseInstanceParametersRequest extends TeaModel {
+    /**
+     * <p>The ID of the Simple Database Service instance.</p>
+     */
     @NameInMap("DatabaseInstanceId")
     public String databaseInstanceId;
 
+    /**
+     * <p>The region ID of the Simple Database Service instance. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

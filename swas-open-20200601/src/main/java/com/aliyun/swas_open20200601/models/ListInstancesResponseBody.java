@@ -11,25 +11,25 @@ public class ListInstancesResponseBody extends TeaModel {
     public java.util.List<ListInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of simple application servers returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,21 +80,43 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesImage extends TeaModel {
+        /**
+         * <p>The image provider.</p>
+         */
         @NameInMap("ImageContact")
         public String imageContact;
 
+        /**
+         * <p>The URL of the image icon.</p>
+         */
         @NameInMap("ImageIconUrl")
         public String imageIconUrl;
 
+        /**
+         * <p>The image name.</p>
+         */
         @NameInMap("ImageName")
         public String imageName;
 
+        /**
+         * <p>The image type. Valid values:</p>
+         * <br>
+         * <p>*   system</p>
+         * <p>*   app</p>
+         * <p>*   custom</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
+        /**
+         * <p>The image tag.</p>
+         */
         @NameInMap("ImageVersion")
         public String imageVersion;
 
+        /**
+         * <p>The OS.</p>
+         */
         @NameInMap("OsType")
         public String osType;
 
@@ -154,21 +176,46 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstancesResourceSpec extends TeaModel {
+        /**
+         * <p>The bandwidth of the server.</p>
+         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public Integer cpu;
 
+        /**
+         * <p>The category of the disk. Valid values:</p>
+         * <br>
+         * <p>*   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).</p>
+         * <p>*   SSD: a standard SSD.</p>
+         * <p>*   CLOUD_EFFICIENCY: an ultra disk.</p>
+         */
         @NameInMap("DiskCategory")
         public String diskCategory;
 
+        /**
+         * <p>The disk size.</p>
+         */
         @NameInMap("DiskSize")
         public Integer diskSize;
 
+        /**
+         * <p>The amount of the traffic.</p>
+         * <br>
+         * <p>*   A value of 0 indicates that the server is a bandwidth-based server.</p>
+         * <p>*   A value of none-zero indicates that the server is a data transfer plan-based server.</p>
+         */
         @NameInMap("Flow")
         public Double flow;
 
+        /**
+         * <p>The memory size.</p>
+         */
         @NameInMap("Memory")
         public Double memory;
 
@@ -229,11 +276,11 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The status of the simple application server. Valid values:</p>
+         * <p>The status of the server. Valid values:</p>
          * <br>
-         * <p>*   Normal</p>
-         * <p>*   Expired</p>
-         * <p>*   Overdue</p>
+         * <p>*   Normal: The server is normal.</p>
+         * <p>*   Expired: The server expires.</p>
+         * <p>*   Overdue: The payment of the server is overdue.</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
@@ -244,9 +291,15 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>Indicates whether the plan is a bundle plan.</p>
+         */
         @NameInMap("Combination")
         public Boolean combination;
 
+        /**
+         * <p>The ID of the bundle plan.</p>
+         */
         @NameInMap("CombinationInstanceId")
         public String combinationInstanceId;
 
@@ -257,29 +310,39 @@ public class ListInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The DDoS protection status. Valid values:</p>
+         * <p>The DDoS protection status of the server. Valid values:</p>
          * <br>
-         * <p>*   Normal: Normal</p>
-         * <p>*   BlackHole: Blackholing</p>
-         * <p>*   Defense: Cleaning</p>
+         * <p>*   Normal: The DDoS protection status of the server is normal.</p>
+         * <p>*   BlackHole: The server is in blackhole filtering.</p>
+         * <p>*   Defense: The server is being scrubbed.</p>
          */
         @NameInMap("DdosStatus")
         public String ddosStatus;
 
+        /**
+         * <p>The reason why the server is disabled. Valid values:</p>
+         * <br>
+         * <p>*   FINANCIAL: The server is locked due to overdue payments.</p>
+         * <p>*   SECURITY: The server is locked due to security reasons.</p>
+         * <p>*   EXPIRED: The server has expired.</p>
+         */
         @NameInMap("DisableReason")
         public String disableReason;
 
         /**
-         * <p>The time when the simple application server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The description of the image.</p>
+         */
         @NameInMap("Image")
         public ListInstancesResponseBodyInstancesImage image;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The ID of an image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -297,29 +360,32 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the simple application server.</p>
+         * <p>The name of the server.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The ID of the plan.</p>
+         * <p>The plan ID.</p>
          */
         @NameInMap("PlanId")
         public String planId;
 
         /**
-         * <p>The public IP address.</p>
+         * <p>The public IP address of the server.</p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
         /**
-         * <p>The region ID of the simple application servers.</p>
+         * <p>The region ID of the servers.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The specifications of the resource.</p>
+         */
         @NameInMap("ResourceSpec")
         public ListInstancesResponseBodyInstancesResourceSpec resourceSpec;
 
@@ -338,6 +404,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The universally unique identifier (UUID) of the server.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

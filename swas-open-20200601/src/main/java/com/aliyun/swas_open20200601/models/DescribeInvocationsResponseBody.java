@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationsResponseBody extends TeaModel {
     /**
-     * <p>Running records of commands.</p>
+     * <p>The command name.</p>
      */
     @NameInMap("Invocations")
     public java.util.List<DescribeInvocationsResponseBodyInvocations> invocations;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of commands.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

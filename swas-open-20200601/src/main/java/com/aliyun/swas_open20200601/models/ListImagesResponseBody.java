@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
     /**
-     * <p>Details of the images.</p>
+     * <p>The OS type of the image. Valid values:</p>
+     * <br>
+     * <p>*   Linux</p>
+     * <p>*   Windows</p>
      */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

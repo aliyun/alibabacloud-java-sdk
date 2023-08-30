@@ -4,18 +4,33 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListCustomImagesResponseBody extends TeaModel {
+    /**
+     * <p>The queried custom images.</p>
+     */
     @NameInMap("CustomImages")
     public java.util.List<ListCustomImagesResponseBodyCustomImages> customImages;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -65,42 +80,81 @@ public class ListCustomImagesResponseBody extends TeaModel {
     }
 
     public static class ListCustomImagesResponseBodyCustomImages extends TeaModel {
+        /**
+         * <p>The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The ID of the data disk snapshot.</p>
+         */
         @NameInMap("DataSnapshotId")
         public String dataSnapshotId;
 
+        /**
+         * <p>The name of the data disk snapshot.</p>
+         */
         @NameInMap("DataSnapshotName")
         public String dataSnapshotName;
 
+        /**
+         * <p>The description of the custom image.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the custom image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>Indicates whether the custom image is shared with Elastic Compute Service (ECS).</p>
+         */
         @NameInMap("InShare")
         public Boolean inShare;
 
+        /**
+         * <p>The ID of the simple application server.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the simple application server.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The name of the custom image.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The region ID of the custom images.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The status of the custom image.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the system disk snapshot.</p>
+         */
         @NameInMap("SystemSnapshotId")
         public String systemSnapshotId;
 
+        /**
+         * <p>The name of the system disk snapshot.</p>
+         */
         @NameInMap("SystemSnapshotName")
         public String systemSnapshotName;
 

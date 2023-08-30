@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
     /**
-     * <p>The IDs of the images. The value can be a JSON array that consists of up to 50 image IDs, in the format of `["xxx", "yyy", … "zzz"]`. Separate the image IDs with commas (,).</p>
+     * <p>The image IDs. The value can be a JSON array that consists of up to 50 image IDs. Format: `["xxx", "yyy", … "zzz"]`. Separate multiple image IDs with commas (,).</p>
      */
     @NameInMap("ImageIds")
     public String imageIds;
 
     /**
-     * <p>The type of the image. Valid values:</p>
+     * <p>The type of the images. Valid values:</p>
      * <br>
-     * <p>*   system</p>
-     * <p>*   app</p>
-     * <p>*   custom</p>
+     * <p>*   system: OS images</p>
+     * <p>*   app: application images</p>
+     * <p>*   custom: custom images</p>
      */
     @NameInMap("ImageType")
     public String imageType;

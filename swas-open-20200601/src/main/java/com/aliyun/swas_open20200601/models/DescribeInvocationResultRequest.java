@@ -11,7 +11,7 @@ public class DescribeInvocationResultRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the command task. You can call the [DescribeInvocations](~~439368~~) operation to query the task IDs.</p>
+     * <p>The execution ID. You can call the [DescribeInvocations](~~439368~~) operation to query execution IDs.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;

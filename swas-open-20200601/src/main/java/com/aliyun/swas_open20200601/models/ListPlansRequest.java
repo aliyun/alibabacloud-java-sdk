@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPlansRequest extends TeaModel {
     /**
-     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the plans. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

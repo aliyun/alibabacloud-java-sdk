@@ -4,18 +4,40 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
+    /**
+     * <p>The range of ParameterValue.</p>
+     * <br>
+     * <p>> The value of CheckingCode varies based on the value of ParameterName.</p>
+     */
     @NameInMap("ConfigParameters")
     public java.util.List<DescribeDatabaseInstanceParametersResponseBodyConfigParameters> configParameters;
 
+    /**
+     * <p>The database engine that the instance runs. The value must be MySQL.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The version of the database engine. Valid values:</p>
+     * <br>
+     * <p>*   5.7: MySQL 5.7.</p>
+     * <p>*   8.0: MySQL 8.0.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The range of ParameterValue.</p>
+     * <br>
+     * <p>> The value of CheckingCode varies based on the value of ParameterName.</p>
+     */
     @NameInMap("RunningParameters")
     public java.util.List<DescribeDatabaseInstanceParametersResponseBodyRunningParameters> runningParameters;
 

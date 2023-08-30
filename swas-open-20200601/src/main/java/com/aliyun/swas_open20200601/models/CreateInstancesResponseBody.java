@@ -11,7 +11,7 @@ public class CreateInstancesResponseBody extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -11,13 +11,12 @@ public class ListDisksRequest extends TeaModel {
     public String diskIds;
 
     /**
-     * <p>磁盘类型。可能值：</p>
+     * <p>The type of the disk. Valid values:</p>
      * <br>
-     * <p>- System：系统盘</p>
+     * <p>*   System: system disk.</p>
+     * <p>*   Data: data disk.</p>
      * <br>
-     * <p>- Data：数据盘</p>
-     * <br>
-     * <p>默认全量查询</p>
+     * <p>By default, system disks and data disks are both queried.</p>
      */
     @NameInMap("DiskType")
     public String diskType;
@@ -39,7 +38,7 @@ public class ListDisksRequest extends TeaModel {
     /**
      * <p>The number of entries per page.</p>
      * <br>
-     * <p>Valid values: 1 to 100.</p>
+     * <p>Maximum value: 100.</p>
      * <br>
      * <p>Default value: 10.</p>
      */
@@ -47,7 +46,7 @@ public class ListDisksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the simple application server.</p>
+     * <p>The region ID of the disks.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

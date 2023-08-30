@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RunCommandResponseBody extends TeaModel {
     /**
-     * <p>The ID of the command task.</p>
+     * <p>The execution ID.</p>
      */
     @NameInMap("InvokeId")
     public String invokeId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

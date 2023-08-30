@@ -4,18 +4,33 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabaseInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The name of the super administrator account of the Simple Database Service instance.</p>
+     */
     @NameInMap("DatabaseInstances")
     public java.util.List<DescribeDatabaseInstancesResponseBodyDatabaseInstances> databaseInstances;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

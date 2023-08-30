@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ResetSystemRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. ****For more information, see [How to ensure idempotence](~~25693~~).</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the image that is used to replace the image on the simple application server. If you do not specify this parameter, the operating system of the simple application server is reset by default.</p>
+     * <p>The ID of the image that is used to replace the image of the simple application server. If you do not specify this parameter, the current image of the simple application server is replaced by default.</p>
      */
     @NameInMap("ImageId")
     public String imageId;

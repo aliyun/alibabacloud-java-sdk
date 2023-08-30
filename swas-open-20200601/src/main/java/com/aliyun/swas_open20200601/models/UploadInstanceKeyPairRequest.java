@@ -4,18 +4,33 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class UploadInstanceKeyPairRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the simple application server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the key pair.</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>The public key.</p>
+     */
     @NameInMap("PublicKey")
     public String publicKey;
 
+    /**
+     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

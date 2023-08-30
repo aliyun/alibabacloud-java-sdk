@@ -4,15 +4,27 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class CreateFirewallRulesShrinkRequest extends TeaModel {
+    /**
+     * <p>The client token.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The remarks of the firewall rule.</p>
+     */
     @NameInMap("FirewallRules")
     public String firewallRulesShrink;
 
+    /**
+     * <p>The ID of the simple application server.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
