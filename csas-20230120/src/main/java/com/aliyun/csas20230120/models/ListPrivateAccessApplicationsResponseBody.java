@@ -79,6 +79,9 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        @NameInMap("ConnectorIds")
+        public java.util.List<String> connectorIds;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -122,6 +125,14 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         }
         public String getApplicationId() {
             return this.applicationId;
+        }
+
+        public ListPrivateAccessApplicationsResponseBodyApplications setConnectorIds(java.util.List<String> connectorIds) {
+            this.connectorIds = connectorIds;
+            return this;
+        }
+        public java.util.List<String> getConnectorIds() {
+            return this.connectorIds;
         }
 
         public ListPrivateAccessApplicationsResponseBodyApplications setCreateTime(String createTime) {

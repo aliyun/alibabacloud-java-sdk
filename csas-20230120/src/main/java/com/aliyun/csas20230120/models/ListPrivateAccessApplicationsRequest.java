@@ -10,6 +10,9 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
+    @NameInMap("ConnectorId")
+    public String connectorId;
+
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
@@ -47,6 +50,14 @@ public class ListPrivateAccessApplicationsRequest extends TeaModel {
     }
     public java.util.List<String> getApplicationIds() {
         return this.applicationIds;
+    }
+
+    public ListPrivateAccessApplicationsRequest setConnectorId(String connectorId) {
+        this.connectorId = connectorId;
+        return this;
+    }
+    public String getConnectorId() {
+        return this.connectorId;
     }
 
     public ListPrivateAccessApplicationsRequest setCurrentPage(Integer currentPage) {
