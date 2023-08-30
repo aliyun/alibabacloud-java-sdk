@@ -10,17 +10,20 @@ public class DeleteTraceAppShrinkRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The reason(s) to delete application.</p>
+     */
     @NameInMap("DeleteReason")
     public String deleteReasonShrink;
 
     /**
-     * <p>The PID of the application that you want to delete. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
+     * <p>The PID of the application. For more information about how to query the PID, see [QueryMetricByPage](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).</p>
      */
     @NameInMap("Pid")
     public String pid;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the region in which the application is located.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -28,7 +31,7 @@ public class DeleteTraceAppShrinkRequest extends TeaModel {
     /**
      * <p>The type of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application type. For more information, see [SearchTraceAppByName](~~130676~~). Valid values:</p>
      * <br>
-     * <p>*   `TRACE`: application monitoring</p>
+     * <p>*   `TRACE`: Application Monitoring</p>
      * <p>*   `RETCODE`: frontend monitoring</p>
      */
     @NameInMap("Type")

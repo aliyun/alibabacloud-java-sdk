@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DeleteTraceAppResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Long code;
 
@@ -13,6 +16,9 @@ public class DeleteTraceAppResponseBody extends TeaModel {
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -22,6 +28,13 @@ public class DeleteTraceAppResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>true: The request was successful.</p>
+     * <br>
+     * <p>false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
