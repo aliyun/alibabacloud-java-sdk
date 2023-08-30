@@ -17,7 +17,7 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -79,7 +79,7 @@ public class DescribeDcdnDomainIpaConnDataResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;

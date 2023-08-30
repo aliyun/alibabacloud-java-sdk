@@ -17,7 +17,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -123,7 +123,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList extends TeaModel {
         /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
+         * <p>The amount of network traffic. (Unit: bytes)</p>
          */
         @NameInMap("Flow")
         public String flow;
@@ -141,13 +141,13 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         public String urlDetail;
 
         /**
-         * <p>The number of visits to the URL.</p>
+         * <p>The number of visits.</p>
          */
         @NameInMap("VisitData")
         public String visitData;
 
         /**
-         * <p>The proportion of visits to the URL.</p>
+         * <p>The proportion of visits.</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;
@@ -220,7 +220,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList extends TeaModel {
         /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
+         * <p>The amount of network traffic. (Unit: bytes)</p>
          */
         @NameInMap("Flow")
         public String flow;
@@ -238,13 +238,13 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         public String urlDetail;
 
         /**
-         * <p>The number of visits to the URL.</p>
+         * <p>The number of visits.</p>
          */
         @NameInMap("VisitData")
         public String visitData;
 
         /**
-         * <p>The proportion of visits to the URL.</p>
+         * <p>The proportion of visits.</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;
@@ -317,7 +317,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList extends TeaModel {
         /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
+         * <p>The amount of network traffic. (Unit: bytes)</p>
          */
         @NameInMap("Flow")
         public String flow;
@@ -335,13 +335,13 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         public String urlDetail;
 
         /**
-         * <p>The number of visits to the URL.</p>
+         * <p>The number of visits.</p>
          */
         @NameInMap("VisitData")
         public String visitData;
 
         /**
-         * <p>The proportion of visits to the URL.</p>
+         * <p>The proportion of visits.</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;
@@ -414,7 +414,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList extends TeaModel {
         /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
+         * <p>The amount of network traffic. (Unit: bytes)</p>
          */
         @NameInMap("Flow")
         public String flow;
@@ -432,13 +432,13 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         public String urlDetail;
 
         /**
-         * <p>The number of visits to the URL.</p>
+         * <p>The number of visits.</p>
          */
         @NameInMap("VisitData")
         public String visitData;
 
         /**
-         * <p>The proportion of visits to the URL.</p>
+         * <p>The proportion of visits.</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;
@@ -511,7 +511,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList extends TeaModel {
         /**
-         * <p>The amount of network traffic. Unit: bytes.</p>
+         * <p>The amount of network traffic. (Unit: bytes)</p>
          */
         @NameInMap("Flow")
         public String flow;
@@ -529,13 +529,13 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         public String urlDetail;
 
         /**
-         * <p>The number of visits to the URL.</p>
+         * <p>The number of visits.</p>
          */
         @NameInMap("VisitData")
         public String visitData;
 
         /**
-         * <p>The proportion of visits to the URL.</p>
+         * <p>The proportion of visits.</p>
          */
         @NameInMap("VisitProportion")
         public Float visitProportion;

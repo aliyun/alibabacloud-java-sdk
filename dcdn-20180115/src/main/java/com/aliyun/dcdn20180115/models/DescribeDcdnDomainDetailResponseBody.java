@@ -184,6 +184,9 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        @NameInMap("FunctionType")
+        public String functionType;
+
         /**
          * <p>The time when the domain name was added.</p>
          */
@@ -271,6 +274,14 @@ public class DescribeDcdnDomainDetailResponseBody extends TeaModel {
         }
         public String getDomainStatus() {
             return this.domainStatus;
+        }
+
+        public DescribeDcdnDomainDetailResponseBodyDomainDetail setFunctionType(String functionType) {
+            this.functionType = functionType;
+            return this;
+        }
+        public String getFunctionType() {
+            return this.functionType;
         }
 
         public DescribeDcdnDomainDetailResponseBodyDomainDetail setGmtCreated(String gmtCreated) {

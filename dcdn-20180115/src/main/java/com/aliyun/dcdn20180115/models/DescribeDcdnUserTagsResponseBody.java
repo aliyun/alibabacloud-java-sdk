@@ -44,6 +44,9 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag that you want to query.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

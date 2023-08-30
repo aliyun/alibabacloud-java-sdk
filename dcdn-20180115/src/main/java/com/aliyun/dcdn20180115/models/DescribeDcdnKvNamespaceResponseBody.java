@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The available capacity of all namespaces in your account.</p>
+     */
     @NameInMap("CapacityString")
     public String capacityString;
 
+    /**
+     * <p>The used capacity of all namespaces in your account.</p>
+     */
     @NameInMap("CapacityUsedString")
     public String capacityUsedString;
 

@@ -23,7 +23,7 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,7 +87,7 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The accelerated domain name.</p>
+         * <p>The accelerated domain name whose ICP filing status you want to update.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
@@ -99,13 +99,13 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The timestamp of the returned data.</p>
+         * <p>The timestamp of the data returned.</p>
          */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         /**
-         * <p>The object that triggered rate limiting.</p>
+         * <p>The object that triggered the blocking event.</p>
          */
         @NameInMap("TriggerObject")
         public String triggerObject;
@@ -117,7 +117,7 @@ public class DescribeDcdnDomainCcActivityLogResponseBody extends TeaModel {
         public Long ttl;
 
         /**
-         * <p>The value of the object that triggered rate limiting.</p>
+         * <p>The value of the trigger for rate limiting.</p>
          */
         @NameInMap("Value")
         public String value;

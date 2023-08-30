@@ -18,6 +18,9 @@ public class AddDcdnDomainRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("FunctionType")
+    public String functionType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -85,6 +88,14 @@ public class AddDcdnDomainRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public AddDcdnDomainRequest setFunctionType(String functionType) {
+        this.functionType = functionType;
+        return this;
+    }
+    public String getFunctionType() {
+        return this.functionType;
     }
 
     public AddDcdnDomainRequest setOwnerAccount(String ownerAccount) {

@@ -32,7 +32,7 @@ public class DescribeDcdnDomainIpaConnDataRequest extends TeaModel {
     public String splitBy;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start of the time range to query.</p>
      * <br>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      */

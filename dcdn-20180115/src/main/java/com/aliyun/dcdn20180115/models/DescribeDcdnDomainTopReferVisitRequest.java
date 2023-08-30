@@ -11,7 +11,7 @@ public class DescribeDcdnDomainTopReferVisitRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The method that is used to arrange the returned application information. Valid values:</p>
+     * <p>The sorting order. Valid values:</p>
      * <br>
      * <p>*   **traf**: by network traffic</p>
      * <p>*   **pv**: by the number of visits</p>
@@ -22,11 +22,11 @@ public class DescribeDcdnDomainTopReferVisitRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
      * <p>To query the data on a specified day, use the yyyy-MM-ddT16:00:00Z format.</p>
      * <br>
-     * <p>If you leave this parameter empty, data collected in the last 24 hours is queried.</p>
+     * <p>If you do not set this parameter, data collected within the last 24 hours is queried.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -99,6 +99,9 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<DescribeDcdnUserDomainsRequestTag> tag;
 
+    @NameInMap("WebSiteType")
+    public String webSiteType;
+
     public static DescribeDcdnUserDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnUserDomainsRequest self = new DescribeDcdnUserDomainsRequest();
         return TeaModel.build(map, self);
@@ -206,6 +209,14 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     }
     public java.util.List<DescribeDcdnUserDomainsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeDcdnUserDomainsRequest setWebSiteType(String webSiteType) {
+        this.webSiteType = webSiteType;
+        return this;
+    }
+    public String getWebSiteType() {
+        return this.webSiteType;
     }
 
     public static class DescribeDcdnUserDomainsRequestTag extends TeaModel {

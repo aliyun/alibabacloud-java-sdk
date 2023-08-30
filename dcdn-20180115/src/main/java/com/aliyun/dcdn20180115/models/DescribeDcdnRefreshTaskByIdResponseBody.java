@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -91,7 +91,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         public String process;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The task status. Valid values:</p>
          * <br>
          * <p>*   **Complete**: The task is complete.</p>
          * <p>*   **Pending**: The task is pending.</p>

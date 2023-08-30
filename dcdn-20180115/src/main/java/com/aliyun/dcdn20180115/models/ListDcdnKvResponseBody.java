@@ -81,7 +81,7 @@ public class ListDcdnKvResponseBody extends TeaModel {
 
     public static class ListDcdnKvResponseBodyKeys extends TeaModel {
         /**
-         * <p>The name of the key.</p>
+         * <p>The value of the key obtained in this traversal.</p>
          */
         @NameInMap("Name")
         public String name;

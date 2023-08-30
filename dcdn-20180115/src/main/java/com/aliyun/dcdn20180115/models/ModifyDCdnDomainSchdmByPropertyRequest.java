@@ -14,7 +14,7 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends TeaModel {
      * <p>The region where the acceleration service is deployed. Valid values:</p>
      * <br>
      * <p>*   **domestic**: Chinese mainland</p>
-     * <p>*   **overseas**: outside the Chinese mainland</p>
+     * <p>*   **overseas**: global (excluding mainland China)</p>
      * <p>*   **global**: global</p>
      */
     @NameInMap("Property")

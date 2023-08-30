@@ -11,7 +11,7 @@ public class DescribeDcdnDomainTopUrlVisitRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The sorting method. Valid values:</p>
+     * <p>The sorting order. Valid values:</p>
      * <br>
      * <p>*   **traf**: by network traffic</p>
      * <p>*   **pv**: by the number of visits</p>

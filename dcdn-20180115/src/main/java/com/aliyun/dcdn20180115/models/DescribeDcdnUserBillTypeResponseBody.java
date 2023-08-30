@@ -11,7 +11,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
     public DescribeDcdnUserBillTypeResponseBodyBillTypeData billTypeData;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,7 +57,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
         public String billType;
 
         /**
-         * <p>The billing cycle.</p>
+         * <p>The metering cycle.</p>
          */
         @NameInMap("BillingCycle")
         public String billingCycle;

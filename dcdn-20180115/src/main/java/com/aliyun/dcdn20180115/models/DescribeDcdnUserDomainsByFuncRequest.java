@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name.</p>
+     * <p>The accelerated domain name whose ICP filing status you want to update.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
 
     /**
-     * <p>Specifies whether the feature that is specified by the FuncId parameter is enabled. Valid values:</p>
+     * <p>Specifies whether the feature that is specified by the FuncId parameter is enabled.</p>
      * <br>
      * <p>*   **config**: enabled</p>
      * <p>*   **unconfig**: not enabled</p>

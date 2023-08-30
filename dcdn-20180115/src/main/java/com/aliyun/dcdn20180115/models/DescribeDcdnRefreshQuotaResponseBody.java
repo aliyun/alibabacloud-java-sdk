@@ -28,9 +28,15 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     @NameInMap("DirRemain")
     public String dirRemain;
 
+    /**
+     * <p>The maximum number of URLs or directories with parameters ignored that can be refreshed on the current day.</p>
+     */
     @NameInMap("IgnoreParamsQuota")
     public String ignoreParamsQuota;
 
+    /**
+     * <p>The number of remaining URLs or directories that can be refreshed with parameters ignored on the current day.</p>
+     */
     @NameInMap("IgnoreParamsRemain")
     public String ignoreParamsRemain;
 

@@ -4,9 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class PutDcdnKvRequest extends TeaModel {
+    /**
+     * <p>The time when the key expires.Example: "1690081381".</p>
+     */
     @NameInMap("Expiration")
     public Long expiration;
 
+    /**
+     * <p>The time when the key expires.Example: "3600".</p>
+     */
     @NameInMap("ExpirationTtl")
     public Long expirationTtl;
 
