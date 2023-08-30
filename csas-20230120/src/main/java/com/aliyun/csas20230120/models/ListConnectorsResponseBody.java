@@ -72,6 +72,58 @@ public class ListConnectorsResponseBody extends TeaModel {
 
     }
 
+    public static class ListConnectorsResponseBodyConnectorsConnectorClients extends TeaModel {
+        @NameInMap("ConnectionStatus")
+        public String connectionStatus;
+
+        @NameInMap("DevTag")
+        public String devTag;
+
+        @NameInMap("Hostname")
+        public String hostname;
+
+        @NameInMap("PublicIp")
+        public String publicIp;
+
+        public static ListConnectorsResponseBodyConnectorsConnectorClients build(java.util.Map<String, ?> map) throws Exception {
+            ListConnectorsResponseBodyConnectorsConnectorClients self = new ListConnectorsResponseBodyConnectorsConnectorClients();
+            return TeaModel.build(map, self);
+        }
+
+        public ListConnectorsResponseBodyConnectorsConnectorClients setConnectionStatus(String connectionStatus) {
+            this.connectionStatus = connectionStatus;
+            return this;
+        }
+        public String getConnectionStatus() {
+            return this.connectionStatus;
+        }
+
+        public ListConnectorsResponseBodyConnectorsConnectorClients setDevTag(String devTag) {
+            this.devTag = devTag;
+            return this;
+        }
+        public String getDevTag() {
+            return this.devTag;
+        }
+
+        public ListConnectorsResponseBodyConnectorsConnectorClients setHostname(String hostname) {
+            this.hostname = hostname;
+            return this;
+        }
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        public ListConnectorsResponseBodyConnectorsConnectorClients setPublicIp(String publicIp) {
+            this.publicIp = publicIp;
+            return this;
+        }
+        public String getPublicIp() {
+            return this.publicIp;
+        }
+
+    }
+
     public static class ListConnectorsResponseBodyConnectorsUpgradeTime extends TeaModel {
         @NameInMap("End")
         public String end;
@@ -105,6 +157,9 @@ public class ListConnectorsResponseBody extends TeaModel {
     public static class ListConnectorsResponseBodyConnectors extends TeaModel {
         @NameInMap("Applications")
         public java.util.List<ListConnectorsResponseBodyConnectorsApplications> applications;
+
+        @NameInMap("ConnectorClients")
+        public java.util.List<ListConnectorsResponseBodyConnectorsConnectorClients> connectorClients;
 
         /**
          * <p>ConnectorID。</p>
@@ -141,6 +196,14 @@ public class ListConnectorsResponseBody extends TeaModel {
         }
         public java.util.List<ListConnectorsResponseBodyConnectorsApplications> getApplications() {
             return this.applications;
+        }
+
+        public ListConnectorsResponseBodyConnectors setConnectorClients(java.util.List<ListConnectorsResponseBodyConnectorsConnectorClients> connectorClients) {
+            this.connectorClients = connectorClients;
+            return this;
+        }
+        public java.util.List<ListConnectorsResponseBodyConnectorsConnectorClients> getConnectorClients() {
+            return this.connectorClients;
         }
 
         public ListConnectorsResponseBodyConnectors setConnectorId(String connectorId) {
