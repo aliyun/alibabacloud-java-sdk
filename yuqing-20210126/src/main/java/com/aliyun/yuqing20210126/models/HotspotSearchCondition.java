@@ -7,6 +7,9 @@ public class HotspotSearchCondition extends TeaModel {
     @NameInMap("active")
     public Boolean active;
 
+    @NameInMap("cities")
+    public String cities;
+
     @NameInMap("crawlerTimeEndFilter")
     public Long crawlerTimeEndFilter;
 
@@ -15,6 +18,9 @@ public class HotspotSearchCondition extends TeaModel {
 
     @NameInMap("enableKeywordHighlight")
     public Boolean enableKeywordHighlight;
+
+    @NameInMap("hotspotCategory")
+    public String hotspotCategory;
 
     @NameInMap("mediaSubType")
     public String mediaSubType;
@@ -56,6 +62,14 @@ public class HotspotSearchCondition extends TeaModel {
         return this.active;
     }
 
+    public HotspotSearchCondition setCities(String cities) {
+        this.cities = cities;
+        return this;
+    }
+    public String getCities() {
+        return this.cities;
+    }
+
     public HotspotSearchCondition setCrawlerTimeEndFilter(Long crawlerTimeEndFilter) {
         this.crawlerTimeEndFilter = crawlerTimeEndFilter;
         return this;
@@ -78,6 +92,14 @@ public class HotspotSearchCondition extends TeaModel {
     }
     public Boolean getEnableKeywordHighlight() {
         return this.enableKeywordHighlight;
+    }
+
+    public HotspotSearchCondition setHotspotCategory(String hotspotCategory) {
+        this.hotspotCategory = hotspotCategory;
+        return this;
+    }
+    public String getHotspotCategory() {
+        return this.hotspotCategory;
     }
 
     public HotspotSearchCondition setMediaSubType(String mediaSubType) {
