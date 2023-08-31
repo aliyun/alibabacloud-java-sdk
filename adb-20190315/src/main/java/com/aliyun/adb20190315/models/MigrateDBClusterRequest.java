@@ -3,10 +3,7 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeTablesRequest extends TeaModel {
-    /**
-     * <p>The ID of the cluster.</p>
-     */
+public class MigrateDBClusterRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -16,27 +13,18 @@ public class DescribeTablesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The name of the database.</p>
-     */
-    @NameInMap("SchemaName")
-    public String schemaName;
-
-    public static DescribeTablesRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeTablesRequest self = new DescribeTablesRequest();
+    public static MigrateDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
+        MigrateDBClusterRequest self = new MigrateDBClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTablesRequest setDBClusterId(String DBClusterId) {
+    public MigrateDBClusterRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -44,7 +32,7 @@ public class DescribeTablesRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public DescribeTablesRequest setOwnerAccount(String ownerAccount) {
+    public MigrateDBClusterRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -52,7 +40,7 @@ public class DescribeTablesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeTablesRequest setOwnerId(Long ownerId) {
+    public MigrateDBClusterRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -60,15 +48,7 @@ public class DescribeTablesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeTablesRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeTablesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public MigrateDBClusterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -76,20 +56,12 @@ public class DescribeTablesRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeTablesRequest setResourceOwnerId(Long resourceOwnerId) {
+    public MigrateDBClusterRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public DescribeTablesRequest setSchemaName(String schemaName) {
-        this.schemaName = schemaName;
-        return this;
-    }
-    public String getSchemaName() {
-        return this.schemaName;
     }
 
 }
