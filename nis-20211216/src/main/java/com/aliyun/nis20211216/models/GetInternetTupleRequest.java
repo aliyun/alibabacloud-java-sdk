@@ -4,66 +4,157 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class GetInternetTupleRequest extends TeaModel {
+    /**
+     * <p>The IDs of member accounts.</p>
+     */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
 
+    /**
+     * <p>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    /**
+     * <p>The local IP address.</p>
+     */
     @NameInMap("CloudIp")
     public String cloudIp;
 
+    /**
+     * <p>The local Internet service provider (ISP).</p>
+     * <br>
+     * <p>> In most cases, the value is Alibaba or Alibaba Cloud.</p>
+     */
     @NameInMap("CloudIsp")
     public String cloudIsp;
 
+    /**
+     * <p>The local port.</p>
+     * <br>
+     * <p>> This parameter is required only when you set **TupleType** to **5**.</p>
+     */
     @NameInMap("CloudPort")
     public String cloudPort;
 
+    /**
+     * <p>The direction of the Internet traffic that you want to query. Valid values:</p>
+     * <br>
+     * <p>- **in**: inbound</p>
+     * <p>- **out**: outbound</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The ID of the Alibaba Cloud instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance IDs for filtering.</p>
+     */
     @NameInMap("InstanceList")
     public java.util.List<String> instanceList;
 
+    /**
+     * <p>The metric for instance ranking. Default value: **ByteCount**. This value specifies that instances are ranked by traffic volume.</p>
+     */
     @NameInMap("OrderBy")
     public String orderBy;
 
+    /**
+     * <p>The remote city.</p>
+     * <br>
+     * <p>> This parameter is required only if you set **TupleType** to **5**.</p>
+     */
     @NameInMap("OtherCity")
     public String otherCity;
 
+    /**
+     * <p>The remote country.</p>
+     * <br>
+     * <p>> This parameter is required only if you set **TupleType** to **5**.</p>
+     */
     @NameInMap("OtherCountry")
     public String otherCountry;
 
+    /**
+     * <p>The remote IP address.</p>
+     * <br>
+     * <p>> This parameter is required only when you set **TupleType** to **2** or **5**.</p>
+     */
     @NameInMap("OtherIp")
     public String otherIp;
 
+    /**
+     * <p>The remote ISP.</p>
+     * <br>
+     * <p>> This parameter is required if you want to view the information about the remote ISP.</p>
+     */
     @NameInMap("OtherIsp")
     public String otherIsp;
 
+    /**
+     * <p>The remote port.</p>
+     * <br>
+     * <p>> This parameter is required only when you set **TupleType** to **5**.</p>
+     */
     @NameInMap("OtherPort")
     public String otherPort;
 
+    /**
+     * <p>The protocol number.</p>
+     * <br>
+     * <p>> All protocols are supported. This parameter is required only when you set **TupleType** to **5**.</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The ID of the region for which you want to query the Internet traffic.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The order in which instances are ranked by Internet traffic. Valid values:</p>
+     * <br>
+     * <p>- **desc**: the descending order</p>
+     * <p>- **asc**: the ascending order</p>
+     */
     @NameInMap("Sort")
     public String sort;
 
+    /**
+     * <p>Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.</p>
+     */
     @NameInMap("TopN")
     public Integer topN;
 
+    /**
+     * <p>The type of the tuple. Valid values:</p>
+     * <br>
+     * <p>- **1**: 1-tuple</p>
+     * <p>- **2**: 2-tuples</p>
+     * <p>- **5**: 5-tuples</p>
+     */
     @NameInMap("TupleType")
     public Integer tupleType;
 
+    /**
+     * <p>Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.</p>
+     * <br>
+     * <p>> By default, the multi-account management feature is disabled. If you want to enable this feature, contact your customer business manager.</p>
+     */
     @NameInMap("UseMultiAccount")
     public Boolean useMultiAccount;
 

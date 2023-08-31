@@ -4,6 +4,9 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class CreateAndAnalyzeNetworkPathRequest extends TeaModel {
+    @NameInMap("AuditParam")
+    public String auditParam;
+
     /**
      * <p>The protocol type. Valid values:</p>
      * <br>
@@ -84,6 +87,14 @@ public class CreateAndAnalyzeNetworkPathRequest extends TeaModel {
     public static CreateAndAnalyzeNetworkPathRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAndAnalyzeNetworkPathRequest self = new CreateAndAnalyzeNetworkPathRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAndAnalyzeNetworkPathRequest setAuditParam(String auditParam) {
+        this.auditParam = auditParam;
+        return this;
+    }
+    public String getAuditParam() {
+        return this.auditParam;
     }
 
     public CreateAndAnalyzeNetworkPathRequest setProtocol(String protocol) {

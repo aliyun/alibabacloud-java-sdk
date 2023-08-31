@@ -4,6 +4,9 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class CreateNetworkReachableAnalysisRequest extends TeaModel {
+    @NameInMap("AuditParam")
+    public String auditParam;
+
     /**
      * <p>The ID of the network path. You can call the **CreateNetworkPath** operation to obtain the ID of the network path.</p>
      */
@@ -22,6 +25,14 @@ public class CreateNetworkReachableAnalysisRequest extends TeaModel {
     public static CreateNetworkReachableAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkReachableAnalysisRequest self = new CreateNetworkReachableAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNetworkReachableAnalysisRequest setAuditParam(String auditParam) {
+        this.auditParam = auditParam;
+        return this;
+    }
+    public String getAuditParam() {
+        return this.auditParam;
     }
 
     public CreateNetworkReachableAnalysisRequest setNetworkPathId(String networkPathId) {
