@@ -22,6 +22,9 @@ public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    @NameInMap("SpecificationName")
+    public String specificationName;
+
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -76,6 +79,14 @@ public class GetServiceEstimateCostShrinkRequest extends TeaModel {
     }
     public String getServiceVersion() {
         return this.serviceVersion;
+    }
+
+    public GetServiceEstimateCostShrinkRequest setSpecificationName(String specificationName) {
+        this.specificationName = specificationName;
+        return this;
+    }
+    public String getSpecificationName() {
+        return this.specificationName;
     }
 
     public GetServiceEstimateCostShrinkRequest setTemplateName(String templateName) {

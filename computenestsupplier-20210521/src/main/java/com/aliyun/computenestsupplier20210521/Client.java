@@ -630,6 +630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceVersion", request.serviceVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.specificationName)) {
+            query.put("SpecificationName", request.specificationName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
             query.put("TemplateName", request.templateName);
         }
