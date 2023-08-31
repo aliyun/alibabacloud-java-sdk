@@ -152,6 +152,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addCustomQAWithOptions(request, headers, runtime);
     }
 
+    public AddCustomQAV2Response addCustomQAV2WithOptions(AddCustomQAV2Request tmpReq, AddCustomQAV2Headers headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddCustomQAV2ShrinkRequest request = new AddCustomQAV2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.answers)) {
+            request.answersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.answers, "Answers", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.keyWords)) {
+            request.keyWordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.keyWords, "KeyWords", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.supplementaryQuestions)) {
+            request.supplementaryQuestionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.supplementaryQuestions, "SupplementaryQuestions", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.answersShrink)) {
+            body.put("Answers", request.answersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelId)) {
+            body.put("HotelId", request.hotelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyWordsShrink)) {
+            body.put("KeyWords", request.keyWordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.majorQuestion)) {
+            body.put("MajorQuestion", request.majorQuestion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.supplementaryQuestionsShrink)) {
+            body.put("SupplementaryQuestions", request.supplementaryQuestionsShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddCustomQAV2"),
+            new TeaPair("version", "ip_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ip/addQAV2"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddCustomQAV2Response());
+    }
+
+    public AddCustomQAV2Response addCustomQAV2(AddCustomQAV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        AddCustomQAV2Headers headers = new AddCustomQAV2Headers();
+        return this.addCustomQAV2WithOptions(request, headers, runtime);
+    }
+
     public AddMessageTemplateResponse addMessageTemplateWithOptions(AddMessageTemplateRequest request, AddMessageTemplateHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3028,9 +3102,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listHotelOrderWithOptions(request, headers, runtime);
     }
 
-    public ListHotelRoomsResponse listHotelRoomsWithOptions(ListHotelRoomsRequest request, ListHotelRoomsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListHotelRoomsResponse listHotelRoomsWithOptions(ListHotelRoomsRequest tmpReq, ListHotelRoomsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListHotelRoomsShrinkRequest request = new ListHotelRoomsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotelAdminRoom)) {
+            request.hotelAdminRoomShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotelAdminRoom, "HotelAdminRoom", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelAdminRoomShrink)) {
+            body.put("HotelAdminRoom", request.hotelAdminRoomShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hotelId)) {
             body.put("HotelId", request.hotelId);
         }
@@ -3300,11 +3384,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListHotelsShrinkRequest request = new ListHotelsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotelRequest)) {
+            request.hotelRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotelRequest, "HotelRequest", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.page)) {
             request.pageShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.page, "Page", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelRequestShrink)) {
+            query.put("HotelRequest", request.hotelRequestShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageShrink)) {
             query.put("Page", request.pageShrink);
         }

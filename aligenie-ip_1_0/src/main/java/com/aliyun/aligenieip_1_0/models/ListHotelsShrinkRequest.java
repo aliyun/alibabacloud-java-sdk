@@ -4,6 +4,9 @@ package com.aliyun.aligenieip_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListHotelsShrinkRequest extends TeaModel {
+    @NameInMap("HotelRequest")
+    public String hotelRequestShrink;
+
     @NameInMap("Page")
     public String pageShrink;
 
@@ -13,6 +16,14 @@ public class ListHotelsShrinkRequest extends TeaModel {
     public static ListHotelsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListHotelsShrinkRequest self = new ListHotelsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListHotelsShrinkRequest setHotelRequestShrink(String hotelRequestShrink) {
+        this.hotelRequestShrink = hotelRequestShrink;
+        return this;
+    }
+    public String getHotelRequestShrink() {
+        return this.hotelRequestShrink;
     }
 
     public ListHotelsShrinkRequest setPageShrink(String pageShrink) {
