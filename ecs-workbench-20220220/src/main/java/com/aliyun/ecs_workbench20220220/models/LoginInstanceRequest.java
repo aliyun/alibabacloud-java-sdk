@@ -274,6 +274,12 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("Certificate")
         public String certificate;
 
+        @NameInMap("DockerContainerName")
+        public String dockerContainerName;
+
+        @NameInMap("DockerExec")
+        public String dockerExec;
+
         @NameInMap("DurationSeconds")
         public Long durationSeconds;
 
@@ -335,6 +341,22 @@ public class LoginInstanceRequest extends TeaModel {
         }
         public String getCertificate() {
             return this.certificate;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfo setDockerContainerName(String dockerContainerName) {
+            this.dockerContainerName = dockerContainerName;
+            return this;
+        }
+        public String getDockerContainerName() {
+            return this.dockerContainerName;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfo setDockerExec(String dockerExec) {
+            this.dockerExec = dockerExec;
+            return this;
+        }
+        public String getDockerExec() {
+            return this.dockerExec;
         }
 
         public LoginInstanceRequestInstanceLoginInfo setDurationSeconds(Long durationSeconds) {
