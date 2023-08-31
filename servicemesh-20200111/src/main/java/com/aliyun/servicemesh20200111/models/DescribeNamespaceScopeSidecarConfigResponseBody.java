@@ -352,6 +352,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         @NameInMap("Concurrency")
         public Integer concurrency;
 
+        @NameInMap("EnableCoreDump")
+        public Boolean enableCoreDump;
+
         /**
          * <p>The inbound ports to be excluded from redirection to the sidecar proxy in the ASM instance.</p>
          */
@@ -427,6 +430,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         @NameInMap("LogLevel")
         public String logLevel;
 
+        @NameInMap("Privileged")
+        public Boolean privileged;
+
         @NameInMap("ProxyMetadata")
         public java.util.Map<String, String> proxyMetadata;
 
@@ -435,6 +441,15 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
          */
         @NameInMap("ProxyStatsMatcher")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher proxyStatsMatcher;
+
+        @NameInMap("ReadinessFailureThreshold")
+        public Integer readinessFailureThreshold;
+
+        @NameInMap("ReadinessInitialDelaySeconds")
+        public Integer readinessInitialDelaySeconds;
+
+        @NameInMap("ReadinessPeriodSeconds")
+        public Integer readinessPeriodSeconds;
 
         @NameInMap("SidecarProxyAckSloResource")
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource sidecarProxyAckSloResource;
@@ -489,6 +504,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
         public Integer getConcurrency() {
             return this.concurrency;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setEnableCoreDump(Boolean enableCoreDump) {
+            this.enableCoreDump = enableCoreDump;
+            return this;
+        }
+        public Boolean getEnableCoreDump() {
+            return this.enableCoreDump;
         }
 
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setExcludeInboundPorts(String excludeInboundPorts) {
@@ -579,6 +602,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             return this.logLevel;
         }
 
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setPrivileged(Boolean privileged) {
+            this.privileged = privileged;
+            return this;
+        }
+        public Boolean getPrivileged() {
+            return this.privileged;
+        }
+
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setProxyMetadata(java.util.Map<String, String> proxyMetadata) {
             this.proxyMetadata = proxyMetadata;
             return this;
@@ -593,6 +624,30 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesProxyStatsMatcher getProxyStatsMatcher() {
             return this.proxyStatsMatcher;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setReadinessFailureThreshold(Integer readinessFailureThreshold) {
+            this.readinessFailureThreshold = readinessFailureThreshold;
+            return this;
+        }
+        public Integer getReadinessFailureThreshold() {
+            return this.readinessFailureThreshold;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setReadinessInitialDelaySeconds(Integer readinessInitialDelaySeconds) {
+            this.readinessInitialDelaySeconds = readinessInitialDelaySeconds;
+            return this;
+        }
+        public Integer getReadinessInitialDelaySeconds() {
+            return this.readinessInitialDelaySeconds;
+        }
+
+        public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setReadinessPeriodSeconds(Integer readinessPeriodSeconds) {
+            this.readinessPeriodSeconds = readinessPeriodSeconds;
+            return this;
+        }
+        public Integer getReadinessPeriodSeconds() {
+            return this.readinessPeriodSeconds;
         }
 
         public DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatches setSidecarProxyAckSloResource(DescribeNamespaceScopeSidecarConfigResponseBodyConfigPatchesSidecarProxyAckSloResource sidecarProxyAckSloResource) {

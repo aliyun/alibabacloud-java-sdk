@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshVMsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
         public Boolean hasTag;
 
         /**
-         * <p>The hostname of the ECS instance.</p>
+         * <p>The host name.</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -63,7 +63,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("Region")
         public String region;
@@ -75,7 +75,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
         public String securityGroupIds;
 
         /**
-         * <p>The ID of the ASM instance.</p>
+         * <p>The ASM instance ID.</p>
          */
         @NameInMap("ServiceMeshId")
         public String serviceMeshId;

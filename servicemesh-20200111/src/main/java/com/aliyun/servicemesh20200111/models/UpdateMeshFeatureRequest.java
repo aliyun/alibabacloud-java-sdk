@@ -30,6 +30,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("AccessLogFormat")
     public String accessLogFormat;
 
+    @NameInMap("AccessLogGatewayEnabled")
+    public Boolean accessLogGatewayEnabled;
+
     /**
      * <p>The retention period for the access logs of the sidecar proxy. Unit: day. The logs are collected by using Log Service. For example, `30` indicates 30 days.</p>
      */
@@ -64,6 +67,9 @@ public class UpdateMeshFeatureRequest extends TeaModel {
      */
     @NameInMap("AccessLogServicePort")
     public Integer accessLogServicePort;
+
+    @NameInMap("AccessLogSidecarEnabled")
+    public Boolean accessLogSidecarEnabled;
 
     /**
      * <p>Specifies whether to enable automatic diagnostics for the ASM instance. If you enable this feature, the ASM instance is automatically diagnosed when you modify Istio resources in the ASM instance.</p>
@@ -179,11 +185,13 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     public Boolean DNSProxyingEnabled;
 
     /**
-     * <p>Specifies the default scheduling configurations that ASM delivers to components on the data plane. You can configure nodeSelector and tolerations in the JSON format. </p>
+     * <p>Specifies the default scheduling configurations that ASM delivers to components on the data plane. You can configure `nodeSelector` and `tolerations` in the JSON format.</p>
      * <br>
+     * <p>> </p>
      * <br>
-     * <p>>* Modifying the value of this parameter is a high-risk operation. The modification will cause all components on the data plane of ASM to restart. Exercise caution before modifying the value of this parameter. </p>
-     * <p>>* The configurations specified by this parameter do not apply to the ASM gateway. You can configure scheduling on the ASM gateway.</p>
+     * <p>*   Modifying the value of this parameter is a high-risk operation. The modification will cause all components on the data plane of ASM to restart. Exercise caution before modifying the value of this parameter.</p>
+     * <br>
+     * <p>*   The configurations specified by this parameter do not apply to the ASM gateway. You can configure gateway-specific scheduling on the ASM gateway.</p>
      */
     @NameInMap("DefaultComponentsScheduleConfig")
     public String defaultComponentsScheduleConfig;
@@ -364,11 +372,11 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     public Boolean kialiEnabled;
 
     /**
-     * <p>当开启网格拓扑且为访问网格拓扑创建CLB时，通过此参数使用Annotation配置不同集群中网格拓扑服务的CLB。</p>
+     * <p>Specifies Classic Load Balancer (CLB) instances by using annotations when the Mesh Topology feature is enabled. These CLB instances are used to access the Mesh Topology feature in different clusters.</p>
      * <br>
-     * <p>参数格式为JSON编码的字符串，JSON对象中的键为数据面集群的集群ID，值为数据面集群中网格拓扑服务的Annotation内容。</p>
+     * <p>This parameter is a JSON-encoded string. The key in the JSON object is the ID of a cluster on the data plane, and the value is the annotation content of the Mesh Topology service in the cluster.</p>
      * <br>
-     * <p>有关如何通过注解配置CLB，参考 [通过Annotation配置传统型负载均衡CLB](https://help.aliyun.com/document_detail/86531.html)。</p>
+     * <p>For more information about how to configure CLB instances by using annotations, see [Add annotations to the YAML file of a Service to configure CLB instances](https://www.alibabacloud.com/help/container-service-for-kubernetes/latest/use-annotations-to-configure-load-balancing-1).</p>
      */
     @NameInMap("KialiServiceAnnotations")
     public String kialiServiceAnnotations;
@@ -824,6 +832,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.accessLogFormat;
     }
 
+    public UpdateMeshFeatureRequest setAccessLogGatewayEnabled(Boolean accessLogGatewayEnabled) {
+        this.accessLogGatewayEnabled = accessLogGatewayEnabled;
+        return this;
+    }
+    public Boolean getAccessLogGatewayEnabled() {
+        return this.accessLogGatewayEnabled;
+    }
+
     public UpdateMeshFeatureRequest setAccessLogGatewayLifecycle(Integer accessLogGatewayLifecycle) {
         this.accessLogGatewayLifecycle = accessLogGatewayLifecycle;
         return this;
@@ -862,6 +878,14 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Integer getAccessLogServicePort() {
         return this.accessLogServicePort;
+    }
+
+    public UpdateMeshFeatureRequest setAccessLogSidecarEnabled(Boolean accessLogSidecarEnabled) {
+        this.accessLogSidecarEnabled = accessLogSidecarEnabled;
+        return this;
+    }
+    public Boolean getAccessLogSidecarEnabled() {
+        return this.accessLogSidecarEnabled;
     }
 
     public UpdateMeshFeatureRequest setAccessLogSidecarLifecycle(Integer accessLogSidecarLifecycle) {

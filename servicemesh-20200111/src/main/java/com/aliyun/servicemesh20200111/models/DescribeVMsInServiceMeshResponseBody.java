@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +39,25 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
 
     public static class DescribeVMsInServiceMeshResponseBodyVMs extends TeaModel {
         /**
-         * <p>Indicates whether the VM has labels.</p>
+         * <p>Indicates whether the ECS instance has labels.</p>
          */
         @NameInMap("HasTag")
         public Boolean hasTag;
 
         /**
-         * <p>The host name of the VM.</p>
+         * <p>The host name.</p>
          */
         @NameInMap("HostName")
         public String hostName;
 
         /**
-         * <p>The ID of the VM.</p>
+         * <p>The ID of the ECS instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The IP address of the VM.</p>
+         * <p>The IP address of the ECS instance.</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
@@ -69,13 +69,13 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The security group to which the VM belongs.</p>
+         * <p>The security group to which the ECS instance belongs.</p>
          */
         @NameInMap("SecurityGroupIds")
         public String securityGroupIds;
 
         /**
-         * <p>The status of the VM.</p>
+         * <p>The state of the ECS instance.</p>
          */
         @NameInMap("Status")
         public String status;

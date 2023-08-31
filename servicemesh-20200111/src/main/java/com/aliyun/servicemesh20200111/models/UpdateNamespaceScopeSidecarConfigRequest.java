@@ -10,6 +10,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     @NameInMap("Concurrency")
     public Integer concurrency;
 
+    @NameInMap("EnableCoreDump")
+    public Boolean enableCoreDump;
+
     /**
      * <p>The range of IP addresses that are allowed to access external services. (`global.proxy.excludelPRanges`)</p>
      */
@@ -103,6 +106,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     @NameInMap("PreStop")
     public String preStop;
 
+    @NameInMap("Privileged")
+    public Boolean privileged;
+
     @NameInMap("ProxyInitAckSloCPUResourceLimit")
     public String proxyInitAckSloCPUResourceLimit;
 
@@ -139,6 +145,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     @NameInMap("ProxyInitMemoryResourceRequest")
     public String proxyInitMemoryResourceRequest;
 
+    /**
+     * <p>The environment variables that are added to a sidecar proxy. The environment variables are represented as JSON objects. The keys and values in the JSON objects represent the keys and values added to the environment variables of the sidecar proxy.</p>
+     */
     @NameInMap("ProxyMetadata")
     public String proxyMetadata;
 
@@ -147,6 +156,15 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
      */
     @NameInMap("ProxyStatsMatcher")
     public String proxyStatsMatcher;
+
+    @NameInMap("ReadinessFailureThreshold")
+    public Integer readinessFailureThreshold;
+
+    @NameInMap("ReadinessInitialDelaySeconds")
+    public Integer readinessInitialDelaySeconds;
+
+    @NameInMap("ReadinessPeriodSeconds")
+    public Integer readinessPeriodSeconds;
 
     /**
      * <p>The ID of the ASM instance.</p>
@@ -221,6 +239,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     }
     public Integer getConcurrency() {
         return this.concurrency;
+    }
+
+    public UpdateNamespaceScopeSidecarConfigRequest setEnableCoreDump(Boolean enableCoreDump) {
+        this.enableCoreDump = enableCoreDump;
+        return this;
+    }
+    public Boolean getEnableCoreDump() {
+        return this.enableCoreDump;
     }
 
     public UpdateNamespaceScopeSidecarConfigRequest setExcludeIPRanges(String excludeIPRanges) {
@@ -335,6 +361,14 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
         return this.preStop;
     }
 
+    public UpdateNamespaceScopeSidecarConfigRequest setPrivileged(Boolean privileged) {
+        this.privileged = privileged;
+        return this;
+    }
+    public Boolean getPrivileged() {
+        return this.privileged;
+    }
+
     public UpdateNamespaceScopeSidecarConfigRequest setProxyInitAckSloCPUResourceLimit(String proxyInitAckSloCPUResourceLimit) {
         this.proxyInitAckSloCPUResourceLimit = proxyInitAckSloCPUResourceLimit;
         return this;
@@ -413,6 +447,30 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends TeaModel {
     }
     public String getProxyStatsMatcher() {
         return this.proxyStatsMatcher;
+    }
+
+    public UpdateNamespaceScopeSidecarConfigRequest setReadinessFailureThreshold(Integer readinessFailureThreshold) {
+        this.readinessFailureThreshold = readinessFailureThreshold;
+        return this;
+    }
+    public Integer getReadinessFailureThreshold() {
+        return this.readinessFailureThreshold;
+    }
+
+    public UpdateNamespaceScopeSidecarConfigRequest setReadinessInitialDelaySeconds(Integer readinessInitialDelaySeconds) {
+        this.readinessInitialDelaySeconds = readinessInitialDelaySeconds;
+        return this;
+    }
+    public Integer getReadinessInitialDelaySeconds() {
+        return this.readinessInitialDelaySeconds;
+    }
+
+    public UpdateNamespaceScopeSidecarConfigRequest setReadinessPeriodSeconds(Integer readinessPeriodSeconds) {
+        this.readinessPeriodSeconds = readinessPeriodSeconds;
+        return this;
+    }
+    public Integer getReadinessPeriodSeconds() {
+        return this.readinessPeriodSeconds;
     }
 
     public UpdateNamespaceScopeSidecarConfigRequest setServiceMeshId(String serviceMeshId) {

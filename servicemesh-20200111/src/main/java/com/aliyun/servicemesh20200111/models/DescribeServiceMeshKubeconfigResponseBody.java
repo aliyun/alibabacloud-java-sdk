@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
+    @NameInMap("ExpireTime")
+    public String expireTime;
+
     /**
      * <p>The content of the kubeconfig file of the cluster.</p>
      */
@@ -19,6 +22,14 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
     public static DescribeServiceMeshKubeconfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeServiceMeshKubeconfigResponseBody self = new DescribeServiceMeshKubeconfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeServiceMeshKubeconfigResponseBody setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     public DescribeServiceMeshKubeconfigResponseBody setKubeconfig(String kubeconfig) {
