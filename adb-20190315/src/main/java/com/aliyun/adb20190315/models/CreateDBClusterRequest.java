@@ -189,6 +189,9 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("StorageType")
     public String storageType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateDBClusterRequestTag> tag;
+
     /**
      * <p>The subscription period of the subscription cluster.</p>
      * <br>
@@ -434,6 +437,14 @@ public class CreateDBClusterRequest extends TeaModel {
         return this.storageType;
     }
 
+    public CreateDBClusterRequest setTag(java.util.List<CreateDBClusterRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDBClusterRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateDBClusterRequest setUsedTime(String usedTime) {
         this.usedTime = usedTime;
         return this;
@@ -464,6 +475,36 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateDBClusterRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDBClusterRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDBClusterRequestTag self = new CreateDBClusterRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDBClusterRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDBClusterRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

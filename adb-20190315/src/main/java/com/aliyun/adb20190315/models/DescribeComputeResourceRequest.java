@@ -4,8 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeComputeResourceRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    public String DBClusterId;
+
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
+
+    @NameInMap("Migrate")
+    public Boolean migrate;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -35,12 +41,28 @@ public class DescribeComputeResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeComputeResourceRequest setDBClusterId(String DBClusterId) {
+        this.DBClusterId = DBClusterId;
+        return this;
+    }
+    public String getDBClusterId() {
+        return this.DBClusterId;
+    }
+
     public DescribeComputeResourceRequest setDBClusterVersion(String DBClusterVersion) {
         this.DBClusterVersion = DBClusterVersion;
         return this;
     }
     public String getDBClusterVersion() {
         return this.DBClusterVersion;
+    }
+
+    public DescribeComputeResourceRequest setMigrate(Boolean migrate) {
+        this.migrate = migrate;
+        return this;
+    }
+    public Boolean getMigrate() {
+        return this.migrate;
     }
 
     public DescribeComputeResourceRequest setOwnerAccount(String ownerAccount) {
