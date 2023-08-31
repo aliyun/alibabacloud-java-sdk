@@ -4,6 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesRequest extends TeaModel {
+    @NameInMap("AdDomain")
+    public String adDomain;
+
     /**
      * <p>The list of username of convenience users.</p>
      */
@@ -33,6 +36,14 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public static DescribeMfaDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMfaDevicesRequest self = new DescribeMfaDevicesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMfaDevicesRequest setAdDomain(String adDomain) {
+        this.adDomain = adDomain;
+        return this;
+    }
+    public String getAdDomain() {
+        return this.adDomain;
     }
 
     public DescribeMfaDevicesRequest setEndUserIds(java.util.List<String> endUserIds) {

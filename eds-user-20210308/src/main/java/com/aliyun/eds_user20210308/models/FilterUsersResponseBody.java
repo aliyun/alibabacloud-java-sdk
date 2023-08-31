@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class FilterUsersResponseBody extends TeaModel {
     /**
-     * <p>The token that is used to query the next page. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,13 +53,13 @@ public class FilterUsersResponseBody extends TeaModel {
 
     public static class FilterUsersResponseBodyUsersExternalInfo extends TeaModel {
         /**
-         * <p>The name of the external system account to which the user is connected.</p>
+         * <p>The account that is connected to the user.</p>
          */
         @NameInMap("ExternalName")
         public String externalName;
 
         /**
-         * <p>The student ID or employee ID of the external system account that is connected to the user.</p>
+         * <p>The account, student ID, or employee ID that is connected to the user.</p>
          */
         @NameInMap("JobNumber")
         public String jobNumber;
@@ -95,7 +95,7 @@ public class FilterUsersResponseBody extends TeaModel {
         public String propertyValue;
 
         /**
-         * <p>The ID of the property value.</p>
+         * <p>The property value ID.</p>
          */
         @NameInMap("PropertyValueId")
         public Long propertyValueId;
@@ -125,25 +125,25 @@ public class FilterUsersResponseBody extends TeaModel {
 
     public static class FilterUsersResponseBodyUsersUserSetPropertiesModels extends TeaModel {
         /**
-         * <p>The ID of the property.</p>
+         * <p>The property ID.</p>
          */
         @NameInMap("PropertyId")
         public Long propertyId;
 
         /**
-         * <p>The name of the property.</p>
+         * <p>The property name.</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
-         * <p>The ID of property.</p>
+         * <p>The property ID.</p>
          */
         @NameInMap("PropertyType")
         public Integer propertyType;
 
         /**
-         * <p>Details of the property value.</p>
+         * <p>The property value.</p>
          */
         @NameInMap("PropertyValues")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModelsPropertyValues> propertyValues;
@@ -229,16 +229,37 @@ public class FilterUsersResponseBody extends TeaModel {
         public Long desktopGroupCount;
 
         /**
-         * <p>The email address of the user.</p>
+         * <p>The email address.</p>
          */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>Indicates whether the user is a local administrator.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("EnableAdminAccess")
         public Boolean enableAdminAccess;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username.</p>
          */
         @NameInMap("EndUserId")
         public String endUserId;
@@ -250,43 +271,105 @@ public class FilterUsersResponseBody extends TeaModel {
         public FilterUsersResponseBodyUsersExternalInfo externalInfo;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>Specifies whether the user is a tenant administrator.</p>
+         * <p>Indicates whether the user is a tenant administrator.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
         /**
          * <p>The type of the account ownership.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   CreateFromManager</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    administrator-activated</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Normal</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    user-activated</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("OwnerType")
         public String ownerType;
 
         /**
-         * <p>The mobile number of the user.</p>
+         * <p>The mobile number.</p>
          */
         @NameInMap("Phone")
         public String phone;
 
         /**
-         * <p>The remarks of the user.</p>
+         * <p>The remarks.</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The status of the user.</p>
+         * <p>The user status.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0: The user status is normal.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   9: The user is locked.</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("Status")
         public Long status;
 
         /**
-         * <p>Details of the user properties.</p>
+         * <p>Details of the properties.</p>
          */
         @NameInMap("UserSetPropertiesModels")
         public java.util.List<FilterUsersResponseBodyUsersUserSetPropertiesModels> userSetPropertiesModels;

@@ -4,6 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateUsersRequest extends TeaModel {
+    @NameInMap("AutoLockTime")
+    public String autoLockTime;
+
     /**
      * <p>The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.</p>
      */
@@ -19,6 +22,14 @@ public class CreateUsersRequest extends TeaModel {
     public static CreateUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUsersRequest self = new CreateUsersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUsersRequest setAutoLockTime(String autoLockTime) {
+        this.autoLockTime = autoLockTime;
+        return this;
+    }
+    public String getAutoLockTime() {
+        return this.autoLockTime;
     }
 
     public CreateUsersRequest setPassword(String password) {
