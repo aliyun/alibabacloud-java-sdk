@@ -413,6 +413,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        @NameInMap("LogTTL")
+        public Integer logTTL;
+
         /**
          * <p>The name of the Log Service project that stores control-plane logs.</p>
          */
@@ -430,6 +433,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo setLogTTL(Integer logTTL) {
+            this.logTTL = logTTL;
+            return this;
+        }
+        public Integer getLogTTL() {
+            return this.logTTL;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigControlPlaneLogInfo setProject(String project) {
@@ -493,11 +504,17 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf extends TeaModel {
+        @NameInMap("GatewayEnabled")
+        public Boolean gatewayEnabled;
+
         /**
          * <p>The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.</p>
          */
         @NameInMap("GatewayLifecycle")
         public Integer gatewayLifecycle;
+
+        @NameInMap("SidecarEnabled")
+        public Boolean sidecarEnabled;
 
         /**
          * <p>The retention period for the access logs of sidecar proxies. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.</p>
@@ -510,12 +527,28 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf setGatewayEnabled(Boolean gatewayEnabled) {
+            this.gatewayEnabled = gatewayEnabled;
+            return this;
+        }
+        public Boolean getGatewayEnabled() {
+            return this.gatewayEnabled;
+        }
+
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf setGatewayLifecycle(Integer gatewayLifecycle) {
             this.gatewayLifecycle = gatewayLifecycle;
             return this;
         }
         public Integer getGatewayLifecycle() {
             return this.gatewayLifecycle;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf setSidecarEnabled(Boolean sidecarEnabled) {
+            this.sidecarEnabled = sidecarEnabled;
+            return this;
+        }
+        public Boolean getSidecarEnabled() {
+            return this.sidecarEnabled;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigExtraConfigurationAccessLogExtraConf setSidecarLifecycle(Integer sidecarLifecycle) {

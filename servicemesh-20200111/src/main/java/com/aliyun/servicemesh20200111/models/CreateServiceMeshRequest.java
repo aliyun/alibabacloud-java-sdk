@@ -115,6 +115,7 @@ public class CreateServiceMeshRequest extends TeaModel {
 
     /**
      * <p>The billing method of the SLB instance. Valid values:</p>
+     * <br>
      * <p>*   `PayOnDemand`: pay-as-you-go.</p>
      * <p>*   `PrePay`: subscription.</p>
      */
@@ -473,7 +474,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public Boolean openAgentPolicy;
 
     /**
-     * <p>The subscription period of the SLB instance. Unit: month. This parameter is valid only if the ChargeType parameter is set to PrePay. For example, if the subscription period is one year, set this parameter to 12.</p>
+     * <p>The auto-renewal period of the SLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the SLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -530,6 +531,9 @@ public class CreateServiceMeshRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateServiceMeshRequestTag> tag;
 
     /**
      * <p>Specifies whether to enable Prometheus monitoring. We recommend that you use Prometheus Service of [Application Real-Time Monitoring Service (ARMS)](https://arms.console.aliyun.com/). Valid values:</p>
@@ -1124,6 +1128,14 @@ public class CreateServiceMeshRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateServiceMeshRequest setTag(java.util.List<CreateServiceMeshRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateServiceMeshRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateServiceMeshRequest setTelemetry(Boolean telemetry) {
         this.telemetry = telemetry;
         return this;
@@ -1186,6 +1198,36 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getWebAssemblyFilterEnabled() {
         return this.webAssemblyFilterEnabled;
+    }
+
+    public static class CreateServiceMeshRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateServiceMeshRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateServiceMeshRequestTag self = new CreateServiceMeshRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateServiceMeshRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateServiceMeshRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddVMIntoServiceMeshRequest extends TeaModel {
     /**
-     * <p>The ID of the VM.</p>
+     * <p>The ID of the ECS instance.</p>
      */
     @NameInMap("EcsId")
     public String ecsId;
 
     /**
-     * <p>The ID of the ASM instance.</p>
+     * <p>The ASM instance ID.</p>
      */
     @NameInMap("ServiceMeshId")
     public String serviceMeshId;

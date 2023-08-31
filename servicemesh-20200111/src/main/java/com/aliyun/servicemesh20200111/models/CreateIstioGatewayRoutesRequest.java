@@ -422,7 +422,7 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
 
     public static class CreateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsRetries extends TeaModel {
         /**
-         * <p>The number of retries allowed for a request.</p>
+         * <p>The number of retries that are allowed for a request.</p>
          */
         @NameInMap("Attempts")
         public Integer attempts;
@@ -534,7 +534,7 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
         public CreateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsFault fault;
 
         /**
-         * <p>The HTTP redirect rule.</p>
+         * <p>The HTTP redirection rule.</p>
          */
         @NameInMap("HTTPRedirect")
         public CreateIstioGatewayRoutesRequestGatewayRouteHTTPAdvancedOptionsHTTPRedirect HTTPRedirect;
@@ -835,6 +835,9 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort extends TeaModel {
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Number")
         public Integer number;
 
@@ -860,6 +863,9 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The port.</p>
+         */
         @NameInMap("Port")
         public CreateIstioGatewayRoutesRequestGatewayRouteRouteDestinationsDestinationPort port;
 
@@ -937,6 +943,9 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
     }
 
     public static class CreateIstioGatewayRoutesRequestGatewayRoute extends TeaModel {
+        /**
+         * <p>The requested domain names.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<String> domains;
 
@@ -953,11 +962,14 @@ public class CreateIstioGatewayRoutesRequest extends TeaModel {
         public CreateIstioGatewayRoutesRequestGatewayRouteMatchRequest matchRequest;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The namespace.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>A JSON string. This parameter corresponds to the three routing types in virtual services and provides configuration entries for advanced features. The value of this parameter overwrites the configurations in RouteName, RouteType, MatchRequest, and HTTPAdvancedOptions.</p>
+         */
         @NameInMap("RawVSRoute")
         public Object rawVSRoute;
 

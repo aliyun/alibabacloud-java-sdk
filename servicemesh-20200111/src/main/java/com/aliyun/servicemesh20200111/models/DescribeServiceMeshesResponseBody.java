@@ -671,6 +671,36 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshesResponseBodyServiceMeshesTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeServiceMeshesResponseBodyServiceMeshesTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshesResponseBodyServiceMeshesTag self = new DescribeServiceMeshesResponseBodyServiceMeshesTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshesTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeServiceMeshesResponseBodyServiceMeshes extends TeaModel {
         /**
          * <p>The edition of the ASM instance. Valid values:</p>
@@ -720,6 +750,9 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
          */
         @NameInMap("Spec")
         public DescribeServiceMeshesResponseBodyServiceMeshesSpec spec;
+
+        @NameInMap("Tag")
+        public java.util.List<DescribeServiceMeshesResponseBodyServiceMeshesTag> tag;
 
         public static DescribeServiceMeshesResponseBodyServiceMeshes build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseBodyServiceMeshes self = new DescribeServiceMeshesResponseBodyServiceMeshes();
@@ -780,6 +813,14 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
         public DescribeServiceMeshesResponseBodyServiceMeshesSpec getSpec() {
             return this.spec;
+        }
+
+        public DescribeServiceMeshesResponseBodyServiceMeshes setTag(java.util.List<DescribeServiceMeshesResponseBodyServiceMeshesTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeServiceMeshesResponseBodyServiceMeshesTag> getTag() {
+            return this.tag;
         }
 
     }

@@ -19,6 +19,9 @@ public class UpdateIstioInjectionConfigRequest extends TeaModel {
     @NameInMap("EnableSidecarSetInjection")
     public Boolean enableSidecarSetInjection;
 
+    /**
+     * <p>Specifies the version to be injected into the namespace. This parameter is valid only when the ASM instance performs a canary release. When IstioRev is not empty, you must not specify EnableIstioInjection and EnableSidecarSetInjection.</p>
+     */
     @NameInMap("IstioRev")
     public String istioRev;
 

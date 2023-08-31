@@ -17,7 +17,7 @@ public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
     public String expectedVersion;
 
     /**
-     * <p>执行升级检查。如果该值设置为true，则只会执行升级检查，并不会实际升级。</p>
+     * <p>Specifies whether to perform an upgrade check. If the value of this parameter is set to true, only the upgrade check is performed and the ASM instance is not upgraded.</p>
      */
     @NameInMap("PreCheck")
     public Boolean preCheck;
@@ -29,8 +29,10 @@ public class UpgradeMeshEditionPartiallyRequest extends TeaModel {
     public String serviceMeshId;
 
     /**
-     * <p>*   ``</p>
-     * <p>*   ``</p>
+     * <p>Specifies whether to upgrade the ASM instance to Professional Edition. Valid values:</p>
+     * <br>
+     * <p>*   `true`</p>
+     * <p>*   `false`</p>
      */
     @NameInMap("SwitchToPro")
     @Deprecated

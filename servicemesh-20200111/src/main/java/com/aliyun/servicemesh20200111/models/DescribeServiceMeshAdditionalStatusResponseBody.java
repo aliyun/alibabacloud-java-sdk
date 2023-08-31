@@ -66,7 +66,7 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         public Boolean reused;
 
         /**
-         * <p>The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:</p>
+         * <p>The check result of the number of backend servers of the SLB instance created for exposing the API server. Valid values:</p>
          * <br>
          * <p>*   `too_much`: An excessive number of backend servers are created.</p>
          * <p>*   `num_exact`: A proper number of backend servers are created.</p>
@@ -135,18 +135,42 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus extends TeaModel {
+        /**
+         * <p>Indicates whether the SLB instance is locked due to overdue payments. Valid values: `true` `false`</p>
+         */
         @NameInMap("Locked")
         public Boolean locked;
 
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>Indicates whether the SLB instance is reused. Valid values:</p>
+         * <br>
+         * <p>*   `true`: The SLB instance is reused. Non-ASM listener configuration is detected in the listener configurations of the SLB instance.</p>
+         * <p>*   `false`: The SLB instance is not reused.</p>
+         */
         @NameInMap("Reused")
         public Boolean reused;
 
+        /**
+         * <p>The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:</p>
+         * <br>
+         * <p>*   `num_exact`: A proper number of backend servers are created.</p>
+         * <p>*   `too_much`: An excessive number of backend servers are created.</p>
+         * <p>*   `too_little`: The number of backend servers falls short.</p>
+         */
         @NameInMap("SLBBackEndServerNumStatus")
         public String SLBBackEndServerNumStatus;
 
+        /**
+         * <p>The check result of the SLB instance. Valid values:</p>
+         * <br>
+         * <p>*   `exist`: The SLB instance exists.</p>
+         * <p>*   `not_exist`: The SLB instance does not exist.</p>
+         * <p>*   `time_out`: The check times out.</p>
+         * <p>*   `failed`: The SLB instance has expired.</p>
+         */
         @NameInMap("SLBExistStatus")
         public String SLBExistStatus;
 
@@ -226,7 +250,7 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         public Boolean reused;
 
         /**
-         * <p>The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:</p>
+         * <p>The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:</p>
          * <br>
          * <p>*   `too_much`: An excessive number of backend servers are created.</p>
          * <p>*   `num_exact`: A proper number of backend servers are created.</p>
@@ -334,6 +358,9 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         @NameInMap("AuditProjectStatus")
         public String auditProjectStatus;
 
+        /**
+         * <p>The check results of the SLB instance that is created for exposing Istio Pilot and used during canary release.</p>
+         */
         @NameInMap("CanaryPilotLoadBalancerStatus")
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusCanaryPilotLoadBalancerStatus canaryPilotLoadBalancerStatus;
 
@@ -360,6 +387,15 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
         @NameInMap("PilotLoadBalancerStatus")
         public DescribeServiceMeshAdditionalStatusResponseBodyClusterStatusPilotLoadBalancerStatus pilotLoadBalancerStatus;
 
+        /**
+         * <p>The status of the RAM OAuth application that is integrated with Mesh Topology. Valid values:</p>
+         * <br>
+         * <p>*   `exist`: The RAM OAuth application exists.</p>
+         * <p>*   `reused`: The RAM OAuth application is reused.</p>
+         * <p>*   `not_exist`: The RAM OAuth application does not exist.</p>
+         * <p>*   `failed`: The check fails.</p>
+         * <p>*   `time_out`: The check times out.</p>
+         */
         @NameInMap("RAMApplicationStatus")
         public String RAMApplicationStatus;
 
