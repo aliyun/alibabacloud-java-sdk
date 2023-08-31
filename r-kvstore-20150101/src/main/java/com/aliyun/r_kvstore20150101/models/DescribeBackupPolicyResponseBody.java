@@ -13,6 +13,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     public String backupRetentionPeriod;
 
+    @NameInMap("DbsInstance")
+    public String dbsInstance;
+
     /**
      * <p>Indicates whether incremental data backup is enabled. Valid values:</p>
      * <br>
@@ -73,6 +76,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getBackupRetentionPeriod() {
         return this.backupRetentionPeriod;
+    }
+
+    public DescribeBackupPolicyResponseBody setDbsInstance(String dbsInstance) {
+        this.dbsInstance = dbsInstance;
+        return this;
+    }
+    public String getDbsInstance() {
+        return this.dbsInstance;
     }
 
     public DescribeBackupPolicyResponseBody setEnableBackupLog(Integer enableBackupLog) {
