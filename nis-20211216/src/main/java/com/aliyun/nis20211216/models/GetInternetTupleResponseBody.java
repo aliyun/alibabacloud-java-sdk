@@ -4,9 +4,15 @@ package com.aliyun.nis20211216.models;
 import com.aliyun.tea.*;
 
 public class GetInternetTupleResponseBody extends TeaModel {
+    /**
+     * <p>The ranking result of instances by Internet traffic.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetInternetTupleResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,99 +38,200 @@ public class GetInternetTupleResponseBody extends TeaModel {
     }
 
     public static class GetInternetTupleResponseBodyData extends TeaModel {
+        /**
+         * <p>The access point of Alibaba Cloud.</p>
+         * <br>
+         * <p>> This parameter is valid only when the value of **InstanceId** is the instance ID of an Anycast elastic IP address (EIP).</p>
+         */
         @NameInMap("AccessRegion")
         public String accessRegion;
 
+        /**
+         * <p>The beginning of the time range that you queried. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <p>The traffic volume. Unit: bytes.</p>
+         */
         @NameInMap("ByteCount")
         public Double byteCount;
 
+        /**
+         * <p>The local city.</p>
+         */
         @NameInMap("CloudCity")
         public String cloudCity;
 
+        /**
+         * <p>The local country or region.</p>
+         */
         @NameInMap("CloudCountry")
         public String cloudCountry;
 
+        /**
+         * <p>The local IP address.</p>
+         */
         @NameInMap("CloudIp")
         public String cloudIp;
 
+        /**
+         * <p>The local ISP.</p>
+         */
         @NameInMap("CloudIsp")
         public String cloudIsp;
 
+        /**
+         * <p>The local port.</p>
+         */
         @NameInMap("CloudPort")
         public String cloudPort;
 
+        /**
+         * <p>The product code of the instance to which the local IP address belongs.</p>
+         */
         @NameInMap("CloudProduct")
         public String cloudProduct;
 
+        /**
+         * <p>The local province.</p>
+         */
         @NameInMap("CloudProvince")
         public String cloudProvince;
 
+        /**
+         * <p>The direction of the Internet traffic. Valid values:</p>
+         * <br>
+         * <p>- **in**: inbound</p>
+         * <p>- **out**: outbound</p>
+         */
         @NameInMap("Direction")
         public String direction;
 
+        /**
+         * <p>The inbound traffic volume. Unit: bytes.</p>
+         */
         @NameInMap("InByteCount")
         public Double inByteCount;
 
+        /**
+         * <p>The number of inbound disordered packets.</p>
+         */
         @NameInMap("InOutOrderCount")
         public Double inOutOrderCount;
 
+        /**
+         * <p>The number of inbound packets.</p>
+         */
         @NameInMap("InPacketCount")
         public Double inPacketCount;
 
+        /**
+         * <p>The number of inbound repeated packets.</p>
+         */
         @NameInMap("InRetranCount")
         public Double inRetranCount;
 
+        /**
+         * <p>The instance ID to which the local IP address belongs.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The remote city. In most cases, this parameter is empty if the value of **OtherCountry** is not China.</p>
+         */
         @NameInMap("OtherCity")
         public String otherCity;
 
+        /**
+         * <p>The remote country or region.</p>
+         */
         @NameInMap("OtherCountry")
         public String otherCountry;
 
+        /**
+         * <p>The remote IP address.</p>
+         */
         @NameInMap("OtherIp")
         public String otherIp;
 
+        /**
+         * <p>The remote ISP.</p>
+         */
         @NameInMap("OtherIsp")
         public String otherIsp;
 
+        /**
+         * <p>The remote port.</p>
+         */
         @NameInMap("OtherPort")
         public String otherPort;
 
+        /**
+         * <p>The product code of the instance to which the remote IP address belongs. If the IP address is not in the cloud, this parameter is empty.</p>
+         */
         @NameInMap("OtherProduct")
         public String otherProduct;
 
+        /**
+         * <p>The remote province. In most cases, this parameter is empty if the value of **OtherCountry** is not China.</p>
+         */
         @NameInMap("OtherProvince")
         public String otherProvince;
 
+        /**
+         * <p>The outbound traffic volume. Unit: bytes.</p>
+         */
         @NameInMap("OutByteCount")
         public Double outByteCount;
 
+        /**
+         * <p>The number of disordered packets.</p>
+         */
         @NameInMap("OutOrderCount")
         public Double outOrderCount;
 
+        /**
+         * <p>The number of outbound disordered packets.</p>
+         */
         @NameInMap("OutOutOrderCount")
         public Double outOutOrderCount;
 
+        /**
+         * <p>The number of outbound packets.</p>
+         */
         @NameInMap("OutPacketCount")
         public Double outPacketCount;
 
+        /**
+         * <p>The number of outbound repeated packets.</p>
+         */
         @NameInMap("OutRetranCount")
         public Double outRetranCount;
 
+        /**
+         * <p>The number of packets.</p>
+         */
         @NameInMap("PacketCount")
         public Double packetCount;
 
+        /**
+         * <p>The protocol number.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The number of repeated packets.</p>
+         */
         @NameInMap("RetranCount")
         public Double retranCount;
 
+        /**
+         * <p>The round-trip time (RTT). Unit: milliseconds.</p>
+         */
         @NameInMap("Rtt")
         public Double rtt;
 

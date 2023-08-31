@@ -168,6 +168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateNetworkReachableAnalysisResponse createNetworkReachableAnalysisWithOptions(CreateNetworkReachableAnalysisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auditParam)) {
+            query.put("AuditParam", request.auditParam);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.networkPathId)) {
             query.put("NetworkPathId", request.networkPathId);
         }
@@ -504,5 +508,211 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNetworkReachableAnalysisResponse getNetworkReachableAnalysis(GetNetworkReachableAnalysisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNetworkReachableAnalysisWithOptions(request, runtime);
+    }
+
+    public GetTransitRouterFlowTopNResponse getTransitRouterFlowTopNWithOptions(GetTransitRouterFlowTopNRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetTransitRouterFlowTopNShrinkRequest request = new GetTransitRouterFlowTopNShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.accountIds)) {
+            request.accountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accountIds, "AccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountIdsShrink)) {
+            query.put("AccountIds", request.accountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwithPackageId)) {
+            query.put("BandwithPackageId", request.bandwithPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cenId)) {
+            query.put("CenId", request.cenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            query.put("GroupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otherIp)) {
+            query.put("OtherIp", request.otherIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otherPort)) {
+            query.put("OtherPort", request.otherPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otherRegion)) {
+            query.put("OtherRegion", request.otherRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
+            query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thisIp)) {
+            query.put("ThisIp", request.thisIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thisPort)) {
+            query.put("ThisPort", request.thisPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.thisRegion)) {
+            query.put("ThisRegion", request.thisRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topN)) {
+            query.put("TopN", request.topN);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useMultiAccount)) {
+            query.put("UseMultiAccount", request.useMultiAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTransitRouterFlowTopN"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTransitRouterFlowTopNResponse());
+    }
+
+    public GetTransitRouterFlowTopNResponse getTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTransitRouterFlowTopNWithOptions(request, runtime);
+    }
+
+    public GetVbrFlowTopNResponse getVbrFlowTopNWithOptions(GetVbrFlowTopNRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetVbrFlowTopNShrinkRequest request = new GetVbrFlowTopNShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.accountIds)) {
+            request.accountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.accountIds, "AccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountIdsShrink)) {
+            query.put("AccountIds", request.accountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachmentId)) {
+            query.put("AttachmentId", request.attachmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
+            query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cenId)) {
+            query.put("CenId", request.cenId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudIp)) {
+            query.put("CloudIp", request.cloudIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudPort)) {
+            query.put("CloudPort", request.cloudPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("Direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupBy)) {
+            query.put("GroupBy", request.groupBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otherIp)) {
+            query.put("OtherIp", request.otherIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otherPort)) {
+            query.put("OtherPort", request.otherPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
+            query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topN)) {
+            query.put("TopN", request.topN);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useMultiAccount)) {
+            query.put("UseMultiAccount", request.useMultiAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualBorderRouterId)) {
+            query.put("VirtualBorderRouterId", request.virtualBorderRouterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVbrFlowTopN"),
+            new TeaPair("version", "2021-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVbrFlowTopNResponse());
+    }
+
+    public GetVbrFlowTopNResponse getVbrFlowTopN(GetVbrFlowTopNRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVbrFlowTopNWithOptions(request, runtime);
     }
 }
