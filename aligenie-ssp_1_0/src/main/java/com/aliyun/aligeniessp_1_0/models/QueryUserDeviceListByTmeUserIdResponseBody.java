@@ -74,6 +74,12 @@ public class QueryUserDeviceListByTmeUserIdResponseBody extends TeaModel {
         @NameInMap("OpenDeviceId")
         public String openDeviceId;
 
+        @NameInMap("TmeDeviceId")
+        public String tmeDeviceId;
+
+        @NameInMap("TmeProductId")
+        public String tmeProductId;
+
         public static QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoListAuthorizedDeviceList build(java.util.Map<String, ?> map) throws Exception {
             QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoListAuthorizedDeviceList self = new QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoListAuthorizedDeviceList();
             return TeaModel.build(map, self);
@@ -101,6 +107,22 @@ public class QueryUserDeviceListByTmeUserIdResponseBody extends TeaModel {
         }
         public String getOpenDeviceId() {
             return this.openDeviceId;
+        }
+
+        public QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoListAuthorizedDeviceList setTmeDeviceId(String tmeDeviceId) {
+            this.tmeDeviceId = tmeDeviceId;
+            return this;
+        }
+        public String getTmeDeviceId() {
+            return this.tmeDeviceId;
+        }
+
+        public QueryUserDeviceListByTmeUserIdResponseBodyResultAligenieUserInfoListAuthorizedDeviceList setTmeProductId(String tmeProductId) {
+            this.tmeProductId = tmeProductId;
+            return this;
+        }
+        public String getTmeProductId() {
+            return this.tmeProductId;
         }
 
     }
