@@ -56,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **CheckUsedPropertyValue**.
+      * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
       *
       * @param request CheckUsedPropertyValueRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -91,7 +91,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **CheckUsedPropertyValue**.
+      * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
       *
       * @param request CheckUsedPropertyValueRequest
       * @return CheckUsedPropertyValueResponse
@@ -143,6 +143,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public CreateUsersResponse createUsersWithOptions(CreateUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoLockTime)) {
+            query.put("AutoLockTime", request.autoLockTime);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             body.put("Password", request.password);
@@ -153,6 +158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -233,6 +239,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeMfaDevicesResponse describeMfaDevicesWithOptions(DescribeMfaDevicesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adDomain)) {
+            query.put("AdDomain", request.adDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             query.put("EndUserIds", request.endUserIds);
         }
@@ -448,7 +458,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Locks a virtual MFA device that is bound to a convenience user.
+      * ## Description
+      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
       *
       * @param request LockMfaDeviceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -457,6 +468,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LockMfaDeviceResponse lockMfaDeviceWithOptions(LockMfaDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adDomain)) {
+            query.put("AdDomain", request.adDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
             query.put("SerialNumber", request.serialNumber);
         }
@@ -479,7 +494,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Locks a virtual MFA device that is bound to a convenience user.
+      * ## Description
+      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
       *
       * @param request LockMfaDeviceRequest
       * @return LockMfaDeviceResponse
@@ -579,6 +595,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveMfaDeviceResponse removeMfaDeviceWithOptions(RemoveMfaDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adDomain)) {
+            query.put("AdDomain", request.adDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
             query.put("SerialNumber", request.serialNumber);
         }
@@ -774,6 +794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnlockMfaDeviceResponse unlockMfaDeviceWithOptions(UnlockMfaDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adDomain)) {
+            query.put("AdDomain", request.adDomain);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
             query.put("SerialNumber", request.serialNumber);
         }
@@ -802,12 +826,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public UnlockUsersResponse unlockUsersWithOptions(UnlockUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoLockTime)) {
+            query.put("AutoLockTime", request.autoLockTime);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.users)) {
             body.put("Users", request.users);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(

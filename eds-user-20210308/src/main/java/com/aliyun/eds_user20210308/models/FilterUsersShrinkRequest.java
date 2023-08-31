@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class FilterUsersShrinkRequest extends TeaModel {
     /**
-     * <p>The IDs of excluded users.</p>
+     * <p>The list of usernames to be precisely excluded.</p>
      */
     @NameInMap("ExcludeEndUserIds")
     public java.util.List<String> excludeEndUserIds;
 
     /**
-     * <p>The string that you enter for a fuzzy search. You can enter a string to match the username or email address.</p>
+     * <p>The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (\*) are supported for this parameter. For example, if you set this parameter to a\*m, the usernames or an email addresses that start with a or end with m are returned.</p>
      */
     @NameInMap("Filter")
     public String filter;
@@ -29,19 +29,19 @@ public class FilterUsersShrinkRequest extends TeaModel {
     public Boolean includeDesktopGroupCount;
 
     /**
-     * <p>The number of entries to return on each page. If you set this parameter to a value greater than 100, the system resets the value to 100.</p>
+     * <p>The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. You do not need to configure this parameter if you call this operation for the first time. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The parameter that is supported to sort query results.</p>
+     * <p>The parameter that supports to sort query results.</p>
      */
     @NameInMap("OrderParam")
     public String orderParamShrink;
@@ -59,13 +59,13 @@ public class FilterUsersShrinkRequest extends TeaModel {
     public String ownerType;
 
     /**
-     * <p>Details of the user property that you want to perform fuzzy search.</p>
+     * <p>The list of properties for fuzzy search.</p>
      */
     @NameInMap("PropertyFilterParam")
     public java.util.List<FilterUsersShrinkRequestPropertyFilterParam> propertyFilterParam;
 
     /**
-     * <p>Details of the properties and property values.</p>
+     * <p>The list of property names and property values.</p>
      */
     @NameInMap("PropertyKeyValueFilterParam")
     public java.util.List<FilterUsersShrinkRequestPropertyKeyValueFilterParam> propertyKeyValueFilterParam;
@@ -201,13 +201,13 @@ public class FilterUsersShrinkRequest extends TeaModel {
 
     public static class FilterUsersShrinkRequestPropertyKeyValueFilterParam extends TeaModel {
         /**
-         * <p>The name of the property.</p>
+         * <p>The property name.</p>
          */
         @NameInMap("PropertyKey")
         public String propertyKey;
 
         /**
-         * <p>The values of the property.</p>
+         * <p>The property values.</p>
          */
         @NameInMap("PropertyValues")
         public String propertyValues;

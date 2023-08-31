@@ -10,6 +10,9 @@ public class DescribeUsersResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details of the convenience users.</p>
+     */
     @NameInMap("Users")
     public java.util.List<DescribeUsersResponseBodyUsers> users;
 
@@ -43,36 +46,94 @@ public class DescribeUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeUsersResponseBodyUsers extends TeaModel {
+        /**
+         * <p>The email address.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The name of the user.</p>
+         */
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Indicates whether the user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile phone of the user administrator. For more information, see [Create a convenience user](~~214472~~).</p>
+         */
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        /**
+         * <p>The nickname of the user.</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <p>The ID of the organization to which the user belongs.</p>
+         */
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The type of the convenience account.</p>
+         * <br>
+         * <p>*   The administrator-activated type. The administrator specifies the username and the password of the convenience account. User notifications such as password reset are sent to the email address or mobile number of the administrator.</p>
+         * <p>*   The user-activated type. The administrator specifies the username and the email address or mobile number of a user. Activation notifications are sent to the email address or mobile number of the user.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   CreateFromManager</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    administrator-activated</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   Normal: user-activated</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("OwnerType")
         public String ownerType;
 
+        /**
+         * <p>The mobile number of the user. If you leave this parameter empty, the value of this parameter is not returned.</p>
+         */
         @NameInMap("Phone")
         public String phone;
 
+        /**
+         * <p>The remarks on the user.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 
+        /**
+         * <p>The status of the user.</p>
+         */
         @NameInMap("Status")
         public Long status;
 
+        /**
+         * <p>The user ID that is globally unique.</p>
+         */
         @NameInMap("WyId")
         public String wyId;
 
