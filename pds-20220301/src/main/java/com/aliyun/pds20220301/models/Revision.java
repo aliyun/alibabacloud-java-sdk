@@ -16,6 +16,12 @@ public class Revision extends TeaModel {
     @NameInMap("created_at")
     public String createdAt;
 
+    @NameInMap("creator_id")
+    public String creatorId;
+
+    @NameInMap("creator_name")
+    public String creatorName;
+
     @NameInMap("domain_id")
     public String domainId;
 
@@ -96,6 +102,22 @@ public class Revision extends TeaModel {
     }
     public String getCreatedAt() {
         return this.createdAt;
+    }
+
+    public Revision setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
+        return this;
+    }
+    public String getCreatorId() {
+        return this.creatorId;
+    }
+
+    public Revision setCreatorName(String creatorName) {
+        this.creatorName = creatorName;
+        return this;
+    }
+    public String getCreatorName() {
+        return this.creatorName;
     }
 
     public Revision setDomainId(String domainId) {
