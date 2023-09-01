@@ -49,6 +49,9 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("StorageType")
+    public String storageType;
+
     /**
      * <p>The ID of the zone. You can call the [DescribeRegions](~~61933~~) operation to query the available zones.</p>
      */
@@ -130,6 +133,14 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeAvailableResourceRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public DescribeAvailableResourceRequest setZoneId(String zoneId) {

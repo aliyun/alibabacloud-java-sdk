@@ -112,6 +112,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsDdsRegion extends TeaModel {
+        @NameInMap("EndPoint")
+        public String endPoint;
+
         /**
          * <p>The ID of the region.</p>
          */
@@ -135,6 +138,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public static DescribeRegionsResponseBodyRegionsDdsRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionsDdsRegion self = new DescribeRegionsResponseBodyRegionsDdsRegion();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyRegionsDdsRegion setEndPoint(String endPoint) {
+            this.endPoint = endPoint;
+            return this;
+        }
+        public String getEndPoint() {
+            return this.endPoint;
         }
 
         public DescribeRegionsResponseBodyRegionsDdsRegion setRegionId(String regionId) {
