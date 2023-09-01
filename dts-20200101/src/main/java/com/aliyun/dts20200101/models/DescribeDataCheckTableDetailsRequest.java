@@ -20,25 +20,28 @@ public class DescribeDataCheckTableDetailsRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
+     * <p>The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the schema whose data is verified in the source database.</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
     /**
-     * <p>The status of data verification results. Valid values:</p>
+     * <p>The status of the data verification result. Valid values:</p>
      * <br>
-     * <p>*   **-1** (default): all states.</p>
-     * <p>*   **6**: inconsistent data detected in tables.</p>
+     * <p>*   **-1** (default): All status.</p>
+     * <p>*   **6**: Inconsistent data detected in the table.</p>
      */
     @NameInMap("Status")
     public String status;

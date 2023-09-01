@@ -11,15 +11,15 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Long diffTableCount;
 
     /**
-     * <p>The dynamic error code. This parameter will be removed in the future.</p>
+     * <p>The dynamic error code. This parameter will be discontinued in the future.</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the value of **ErrMessage**.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
      * <br>
-     * <p>>  For example, if the return value of **ErrMessage** is **The Value of Input Parameter %s is not valid** and the return value of **DynamicMessage** is **Type**, the specified value of **Type** is invalid.</p>
+     * <p>> For example, if the returned value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **Type**, the specified **Type** parameter is invalid.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
@@ -43,13 +43,13 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Long finishedCount;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -67,7 +67,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The details of data verification results.</p>
+     * <p>The details of the data verification result.</p>
      */
     @NameInMap("TableDetails")
     public java.util.List<DescribeDataCheckTableDetailsResponseBodyTableDetails> tableDetails;
@@ -193,7 +193,12 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long diffCount;
 
         /**
-         * <p>The error code returned if the request failed.</p>
+         * <p>任务运行出错时，返回报错信息的错误编码。</p>
+         * <br>
+         * <p>- **1**：无主键表数量超过限制。</p>
+         * <p>- **2**：差异数据超过300行。</p>
+         * <p>- **3**：待查询的表不存在。</p>
+         * <p>- **4**：查询数据的SQL语法错误。</p>
          */
         @NameInMap("ErrorCode")
         public Integer errorCode;
@@ -205,7 +210,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long finishCount;
 
         /**
-         * <p>The auto-increment primary key that is used to identify the data in a verification result.</p>
+         * <p>The auto-increment primary key that is used to identify a data record in a verification result.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -223,11 +228,11 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public String sourceTbName;
 
         /**
-         * <p>The state of the data verification task. Valid values:</p>
+         * <p>The status of the data verification result. Valid values:</p>
          * <br>
          * <p>*   **0**: The data verification task was complete.</p>
-         * <p>*   **2**: The data verification task was being initialized.</p>
-         * <p>*   **3**: The data verification task was in progress.</p>
+         * <p>*   **2**: The data verification task was initialized.</p>
+         * <p>*   **3**: The data verification task was running.</p>
          * <p>*   **5**: The data verification task failed.</p>
          */
         @NameInMap("Status")
