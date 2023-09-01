@@ -4,6 +4,9 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class UpdateConfigurationRecorderRequest extends TeaModel {
+    /**
+     * <p>The resource types. Separate multiple resource types with commas (,).</p>
+     */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 

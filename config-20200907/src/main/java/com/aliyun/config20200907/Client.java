@@ -1781,9 +1781,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### Prerequisites
+      * One or more rules are added to a compliance package.
+      * ### Usage notes
       * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-      * ## Prerequisites
-      * One or more rules in an account group are added to a compliance package.
       *
       * @param request DetachAggregateConfigRuleToCompliancePackRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1822,9 +1823,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ### Prerequisites
+      * One or more rules are added to a compliance package.
+      * ### Usage notes
       * The sample request in this topic shows you how to remove the `cr-6cc4626622af00e7****` rule in the `ca-75b4626622af00c3****` account group from the `cp-5bb1626622af00bd****` compliance package.
-      * ## Prerequisites
-      * One or more rules in an account group are added to a compliance package.
       *
       * @param request DetachAggregateConfigRuleToCompliancePackRequest
       * @return DetachAggregateConfigRuleToCompliancePackResponse
@@ -2029,6 +2031,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.generateAggregateConfigRulesReportWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+      *
+      * @param request GenerateAggregateResourceInventoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateAggregateResourceInventoryResponse
+     */
     public GenerateAggregateResourceInventoryResponse generateAggregateResourceInventoryWithOptions(GenerateAggregateResourceInventoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2065,6 +2074,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateAggregateResourceInventoryResponse());
     }
 
+    /**
+      * This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+      *
+      * @param request GenerateAggregateResourceInventoryRequest
+      * @return GenerateAggregateResourceInventoryResponse
+     */
     public GenerateAggregateResourceInventoryResponse generateAggregateResourceInventory(GenerateAggregateResourceInventoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateAggregateResourceInventoryWithOptions(request, runtime);
@@ -2166,6 +2181,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.generateConfigRulesReportWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to generate a resource inventory for global resources of the current account.
+      *
+      * @param request GenerateResourceInventoryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GenerateResourceInventoryResponse
+     */
     public GenerateResourceInventoryResponse generateResourceInventoryWithOptions(GenerateResourceInventoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2194,6 +2216,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateResourceInventoryResponse());
     }
 
+    /**
+      * This topic provides an example on how to generate a resource inventory for global resources of the current account.
+      *
+      * @param request GenerateResourceInventoryRequest
+      * @return GenerateResourceInventoryResponse
+     */
     public GenerateResourceInventoryResponse generateResourceInventory(GenerateResourceInventoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateResourceInventoryWithOptions(request, runtime);
@@ -2365,6 +2393,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAggregateCompliancePackReportWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+      *
+      * @param request GetAggregateComplianceSummaryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAggregateComplianceSummaryResponse
+     */
     public GetAggregateComplianceSummaryResponse getAggregateComplianceSummaryWithOptions(GetAggregateComplianceSummaryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2389,6 +2424,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateComplianceSummaryResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\\*\\*\\*\\*.
+      *
+      * @param request GetAggregateComplianceSummaryRequest
+      * @return GetAggregateComplianceSummaryResponse
+     */
     public GetAggregateComplianceSummaryResponse getAggregateComplianceSummary(GetAggregateComplianceSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAggregateComplianceSummaryWithOptions(request, runtime);
@@ -2636,7 +2677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+      * This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
       *
       * @param request GetAggregateResourceComplianceByConfigRuleRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2683,7 +2724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The sample request in this topic shows you how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The return result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
+      * This topic provides an example on how to query the compliance evaluation results based on the `cr-d369626622af008e****` rule in the `ca-a4e5626622af0079****` account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.
       *
       * @param request GetAggregateResourceComplianceByConfigRuleRequest
       * @return GetAggregateResourceComplianceByConfigRuleResponse
@@ -3134,6 +3175,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getCompliancePackReportWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
+      *
+      * @param request GetComplianceSummaryRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetComplianceSummaryResponse
+     */
     public GetComplianceSummaryResponse getComplianceSummaryWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3150,6 +3198,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetComplianceSummaryResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.
+      *
+      * @return GetComplianceSummaryResponse
+     */
     public GetComplianceSummaryResponse getComplianceSummary() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getComplianceSummaryWithOptions(runtime);
@@ -3341,6 +3394,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getConfigRulesReportWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
+      *
+      * @param request GetConfigurationRecorderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetConfigurationRecorderResponse
+     */
     public GetConfigurationRecorderResponse getConfigurationRecorderWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -3357,6 +3417,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigurationRecorderResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.
+      *
+      * @return GetConfigurationRecorderResponse
+     */
     public GetConfigurationRecorderResponse getConfigurationRecorder() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getConfigurationRecorderWithOptions(runtime);
@@ -3555,6 +3620,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getManagedRuleWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
+      *
+      * @param request GetRemediationTemplateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetRemediationTemplateResponse
+     */
     public GetRemediationTemplateResponse getRemediationTemplateWithOptions(GetRemediationTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3579,6 +3651,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetRemediationTemplateResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.
+      *
+      * @param request GetRemediationTemplateRequest
+      * @return GetRemediationTemplateResponse
+     */
     public GetRemediationTemplateResponse getRemediationTemplate(GetRemediationTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getRemediationTemplateWithOptions(request, runtime);
@@ -5095,6 +5173,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPreManagedRulesWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
+      *
+      * @param request ListRemediationExecutionsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListRemediationExecutionsResponse
+     */
     public ListRemediationExecutionsResponse listRemediationExecutionsWithOptions(ListRemediationExecutionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5131,6 +5216,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRemediationExecutionsResponse());
     }
 
+    /**
+      * This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\\*\\*\\*\\*.
+      *
+      * @param request ListRemediationExecutionsRequest
+      * @return ListRemediationExecutionsResponse
+     */
     public ListRemediationExecutionsResponse listRemediationExecutions(ListRemediationExecutionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRemediationExecutionsWithOptions(request, runtime);
@@ -5748,6 +5839,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.startAggregateRemediationWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
+      *
+      * @param request StartConfigRuleEvaluationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartConfigRuleEvaluationResponse
+     */
     public StartConfigRuleEvaluationResponse startConfigRuleEvaluationWithOptions(StartConfigRuleEvaluationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5780,11 +5878,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartConfigRuleEvaluationResponse());
     }
 
+    /**
+      * In this example, the cr-9920626622af0035\\*\\*\\*\\* rule is used to re-evaluate the compliance of resources.
+      *
+      * @param request StartConfigRuleEvaluationRequest
+      * @return StartConfigRuleEvaluationResponse
+     */
     public StartConfigRuleEvaluationResponse startConfigRuleEvaluation(StartConfigRuleEvaluationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startConfigRuleEvaluationWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
+      *
+      * @param request StartConfigurationRecorderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartConfigurationRecorderResponse
+     */
     public StartConfigurationRecorderResponse startConfigurationRecorderWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -5801,6 +5912,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartConfigurationRecorderResponse());
     }
 
+    /**
+      * This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.
+      *
+      * @return StartConfigurationRecorderResponse
+     */
     public StartConfigurationRecorderResponse startConfigurationRecorder() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startConfigurationRecorderWithOptions(runtime);
@@ -6679,6 +6795,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateConfigRuleWithOptions(request, runtime);
     }
 
+    /**
+      * This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
+      *
+      * @param request UpdateConfigurationRecorderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateConfigurationRecorderResponse
+     */
     public UpdateConfigurationRecorderResponse updateConfigurationRecorderWithOptions(UpdateConfigurationRecorderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -6703,6 +6826,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConfigurationRecorderResponse());
     }
 
+    /**
+      * This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.
+      *
+      * @param request UpdateConfigurationRecorderRequest
+      * @return UpdateConfigurationRecorderResponse
+     */
     public UpdateConfigurationRecorderResponse updateConfigurationRecorder(UpdateConfigurationRecorderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateConfigurationRecorderWithOptions(request, runtime);

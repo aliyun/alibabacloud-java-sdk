@@ -38,6 +38,9 @@ public class ListManagedRulesResponseBody extends TeaModel {
     }
 
     public static class ListManagedRulesResponseBodyManagedRulesManagedRuleListScope extends TeaModel {
+        /**
+         * <p>The type of resource to which the managed rule applies.</p>
+         */
         @NameInMap("ComplianceResourceTypes")
         public java.util.List<String> complianceResourceTypes;
 
@@ -82,14 +85,20 @@ public class ListManagedRulesResponseBody extends TeaModel {
         public String identifier;
 
         /**
-         * <p>The tags of the managed rule.</p>
+         * <p>Classification description of the managed rule.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
+        /**
+         * <p>Supported remediation template id.</p>
+         */
         @NameInMap("RemediationTemplateIdentifier")
         public String remediationTemplateIdentifier;
 
+        /**
+         * <p>Supported remediation template name.</p>
+         */
         @NameInMap("RemediationTemplateName")
         public String remediationTemplateName;
 
@@ -103,9 +112,19 @@ public class ListManagedRulesResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The effective scope of the managed rule.</p>
+         */
         @NameInMap("Scope")
         public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope scope;
 
+        /**
+         * <p>Whether pre-check is supported. Value:</p>
+         * <br>
+         * <p>- true: Supported</p>
+         * <br>
+         * <p>- false: not supported</p>
+         */
         @NameInMap("SupportPreviewManagedRule")
         public Boolean supportPreviewManagedRule;
 

@@ -42,7 +42,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          */
         @NameInMap("AccountId")
-        public Integer accountId;
+        public Long accountId;
 
         /**
          * <p>The type of the relationship between the resource and the object.</p>
@@ -119,11 +119,11 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList setAccountId(Integer accountId) {
+        public ListAggregateResourceRelationsResponseBodyResourceRelationsResourceRelationList setAccountId(Long accountId) {
             this.accountId = accountId;
             return this;
         }
-        public Integer getAccountId() {
+        public Long getAccountId() {
             return this.accountId;
         }
 

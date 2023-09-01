@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDiscoveredResourceCountsGroupByResourceTypeRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the resource resides.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("Region")
     public String region;

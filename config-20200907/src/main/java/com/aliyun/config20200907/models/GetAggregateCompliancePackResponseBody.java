@@ -51,10 +51,10 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the input parameter was required. Valid values:</p>
+         * <p>Indicates whether the input parameter is required. Valid values:</p>
          * <br>
-         * <p>*   true: required</p>
-         * <p>*   false: optional</p>
+         * <p>*   true: The input parameter is required.</p>
+         * <p>*   false: The input parameter is optional.</p>
          */
         @NameInMap("Required")
         public Boolean required;
@@ -92,13 +92,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     public static class GetAggregateCompliancePackResponseBodyCompliancePackConfigRules extends TeaModel {
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
@@ -116,16 +116,19 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the managed rule.</p>
+         * <p>The identifier of the managed rule.</p>
          */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
+        /**
+         * <p>The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).</p>
+         */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
         /**
-         * <p>The risk level of the resources that were not compliant with the rule. Valid values:</p>
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
          * <br>
          * <p>*   1: high</p>
          * <p>*   2: medium</p>
@@ -307,11 +310,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
         public String compliancePackTemplateId;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high</p>
-         * <p>*   2: medium</p>
-         * <p>*   3: low</p>
+         * <p>The rules in the compliance package.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<GetAggregateCompliancePackResponseBodyCompliancePackConfigRules> configRules;

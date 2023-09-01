@@ -11,7 +11,7 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
     public java.util.List<GetDiscoveredResourceCountsGroupByResourceTypeResponseBodyDiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,7 +41,7 @@ public class GetDiscoveredResourceCountsGroupByResourceTypeResponseBody extends 
         /**
          * <p>The resource type by which the statistics are collected.</p>
          * <br>
-         * <p>>  We recommend that you use the `ResourceType` parameter.</p>
+         * <p>> We recommend that you use the `ResourceType` parameter.</p>
          */
         @NameInMap("GroupName")
         public String groupName;

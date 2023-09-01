@@ -7,7 +7,7 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
     /**
      * <p>The ID of the account group.</p>
      * <br>
-     * <p>For more information about how to query the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     * <p>For more information about how to obtain the ID of the account group, see [ListAggregators](~~255797~~).</p>
      */
     @NameInMap("AggregatorId")
     public String aggregatorId;
@@ -15,8 +15,8 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
     /**
      * <p>The compliance evaluation result of the resources. Valid values:</p>
      * <br>
-     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+     * <p>*   COMPLIANT: The resource is evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resource is evaluated as incompliant.</p>
      * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
      * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
      */
@@ -26,11 +26,16 @@ public class GetAggregateResourceComplianceByConfigRuleRequest extends TeaModel 
     /**
      * <p>The ID of the rule.</p>
      * <br>
-     * <p>For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
+     * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
      */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the resources in the account group belong.</p>
+     * <br>
+     * <p>> You can use either the ResourceAccountId or ResourceOwnerId parameter. We recommend that you use the ResourceAccountId parameter.</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 

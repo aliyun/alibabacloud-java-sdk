@@ -64,6 +64,9 @@ public class ListAggregateConfigRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Resource type for the rule to evaluate.</p>
+     */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 

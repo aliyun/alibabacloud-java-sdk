@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GenerateResourceInventoryRequest extends TeaModel {
+    /**
+     * <p>The region IDs of the resources. Separate multiple region IDs with commas (,).</p>
+     */
     @NameInMap("Regions")
     public String regions;
 
+    /**
+     * <p>The resource types. Separate multiple resource types with commas (,).</p>
+     */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 

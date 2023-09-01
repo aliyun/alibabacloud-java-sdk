@@ -13,7 +13,7 @@ public class AttachAggregateConfigRuleToCompliancePackRequest extends TeaModel {
     public String aggregatorId;
 
     /**
-     * <p>The ID of the compliance package to which you want to add the rule.</p>
+     * <p>The ID of the compliance package.</p>
      * <br>
      * <p>For more information about how to obtain the ID of a compliance package, see [ListAggregateCompliancePacks](~~262059~~).</p>
      */
@@ -21,7 +21,7 @@ public class AttachAggregateConfigRuleToCompliancePackRequest extends TeaModel {
     public String compliancePackId;
 
     /**
-     * <p>The ID of the rule to be added to the compliance package. Separate multiple rule IDs with commas (,).</p>
+     * <p>The rule IDs. Separate multiple rule IDs with commas (,).</p>
      * <br>
      * <p>For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).</p>
      */

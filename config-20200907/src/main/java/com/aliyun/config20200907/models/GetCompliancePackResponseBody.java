@@ -98,13 +98,13 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String configRuleId;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
         /**
-         * <p>The details of the input parameter of the rule.</p>
+         * <p>The input parameters of the rule.</p>
          */
         @NameInMap("ConfigRuleParameters")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRulesConfigRuleParameters> configRuleParameters;
@@ -121,6 +121,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
+        /**
+         * <p>The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).</p>
+         */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
@@ -301,11 +304,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
         public String compliancePackTemplateId;
 
         /**
-         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
-         * <br>
-         * <p>*   1: high</p>
-         * <p>*   2: medium</p>
-         * <p>*   3: low</p>
+         * <p>The rules in the compliance package.</p>
          */
         @NameInMap("ConfigRules")
         public java.util.List<GetCompliancePackResponseBodyCompliancePackConfigRules> configRules;

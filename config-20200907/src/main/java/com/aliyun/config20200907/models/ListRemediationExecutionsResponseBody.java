@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationExecutionsResponseBody extends TeaModel {
+    /**
+     * <p>The queried remediation records.</p>
+     */
     @NameInMap("RemediationExecutionData")
     public ListRemediationExecutionsResponseBodyRemediationExecutionData remediationExecutionData;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,42 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListRemediationExecutionsResponseBodyRemediationExecutionDataRemediationExecutions extends TeaModel {
+        /**
+         * <p>The time when the remediation record was created.</p>
+         */
         @NameInMap("ExecutionCreateDate")
         public String executionCreateDate;
 
+        /**
+         * <p>The invocation ID of the remediation record.</p>
+         */
         @NameInMap("ExecutionInvocationId")
         public String executionInvocationId;
 
+        /**
+         * <p>The IDs of the remediated resources. Multiple resource IDs are separated with commas (,).</p>
+         */
         @NameInMap("ExecutionResourceIds")
         public String executionResourceIds;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ExecutionResourceType")
         public String executionResourceType;
 
+        /**
+         * <p>The status of the remediation. Valid values:</p>
+         * <br>
+         * <p>*   Success</p>
+         * <p>*   Failed</p>
+         */
         @NameInMap("ExecutionStatus")
         public String executionStatus;
 
+        /**
+         * <p>The error message returned when the remediation fails.</p>
+         */
         @NameInMap("ExecutionStatusMessage")
         public String executionStatusMessage;
 
@@ -106,12 +133,21 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
     }
 
     public static class ListRemediationExecutionsResponseBodyRemediationExecutionData extends TeaModel {
+        /**
+         * <p>The maximum number of entries returned for a single request.</p>
+         */
         @NameInMap("MaxResults")
         public Long maxResults;
 
+        /**
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The queried remediation records.</p>
+         */
         @NameInMap("RemediationExecutions")
         public java.util.List<ListRemediationExecutionsResponseBodyRemediationExecutionDataRemediationExecutions> remediationExecutions;
 
