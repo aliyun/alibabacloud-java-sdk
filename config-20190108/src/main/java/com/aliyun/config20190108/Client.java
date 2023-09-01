@@ -30,6 +30,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * @deprecated : ActiveConfigRules is deprecated, please use Config::2020-09-07::ActiveConfigRules instead.
+      *
+      * @param request ActiveConfigRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ActiveConfigRulesResponse
+     */
+    // Deprecated
     public ActiveConfigRulesResponse activeConfigRulesWithOptions(ActiveConfigRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -54,6 +62,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ActiveConfigRulesResponse());
     }
 
+    /**
+      * @deprecated : ActiveConfigRules is deprecated, please use Config::2020-09-07::ActiveConfigRules instead.
+      *
+      * @param request ActiveConfigRulesRequest
+      * @return ActiveConfigRulesResponse
+     */
+    // Deprecated
     public ActiveConfigRulesResponse activeConfigRules(ActiveConfigRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.activeConfigRulesWithOptions(request, runtime);
@@ -207,6 +222,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeConfigRuleWithOptions(request, runtime);
     }
 
+    /**
+      * In this example, the Alibaba Cloud account `100931896542****` is used. The return result shows that two types of resources are monitored: `ACS::ECS::Instance` and `ACS::ECS::NetworkInterface`. The status of the configuration recorder is `REGISTERED`.
+      *
+      * @param request DescribeConfigurationRecorderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeConfigurationRecorderResponse
+     */
     public DescribeConfigurationRecorderResponse describeConfigurationRecorderWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -223,11 +245,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeConfigurationRecorderResponse());
     }
 
+    /**
+      * In this example, the Alibaba Cloud account `100931896542****` is used. The return result shows that two types of resources are monitored: `ACS::ECS::Instance` and `ACS::ECS::NetworkInterface`. The status of the configuration recorder is `REGISTERED`.
+      *
+      * @return DescribeConfigurationRecorderResponse
+     */
     public DescribeConfigurationRecorderResponse describeConfigurationRecorder() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeConfigurationRecorderWithOptions(runtime);
     }
 
+    /**
+      * @deprecated : DescribeDeliveryChannels is deprecated, please use Config::2020-09-07::ListConfigDeliveryChannels,Config::2020-09-07::ListAggregateConfigDeliveryChannels instead.
+      *
+      * @param request DescribeDeliveryChannelsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDeliveryChannelsResponse
+     */
+    // Deprecated
     public DescribeDeliveryChannelsResponse describeDeliveryChannelsWithOptions(DescribeDeliveryChannelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -252,6 +287,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDeliveryChannelsResponse());
     }
 
+    /**
+      * @deprecated : DescribeDeliveryChannels is deprecated, please use Config::2020-09-07::ListConfigDeliveryChannels,Config::2020-09-07::ListAggregateConfigDeliveryChannels instead.
+      *
+      * @param request DescribeDeliveryChannelsRequest
+      * @return DescribeDeliveryChannelsResponse
+     */
+    // Deprecated
     public DescribeDeliveryChannelsResponse describeDeliveryChannels(DescribeDeliveryChannelsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDeliveryChannelsWithOptions(request, runtime);
@@ -327,6 +369,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEvaluationResultsWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : GetAggregateDiscoveredResource is deprecated, please use Config::2020-09-07::GetAggregateDiscoveredResource instead.
+      * In this topic, the `new-bucket` resource in the `ca-5885626622af0008****` account group is used as an example.
+      *
+      * @param request GetAggregateDiscoveredResourceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAggregateDiscoveredResourceResponse
+     */
+    // Deprecated
     public GetAggregateDiscoveredResourceResponse getAggregateDiscoveredResourceWithOptions(GetAggregateDiscoveredResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -347,6 +398,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggregateDiscoveredResourceResponse());
     }
 
+    /**
+      * @deprecated : GetAggregateDiscoveredResource is deprecated, please use Config::2020-09-07::GetAggregateDiscoveredResource instead.
+      * In this topic, the `new-bucket` resource in the `ca-5885626622af0008****` account group is used as an example.
+      *
+      * @param request GetAggregateDiscoveredResourceRequest
+      * @return GetAggregateDiscoveredResourceResponse
+     */
+    // Deprecated
     public GetAggregateDiscoveredResourceResponse getAggregateDiscoveredResource(GetAggregateDiscoveredResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAggregateDiscoveredResourceWithOptions(request, runtime);
@@ -565,6 +624,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getSupportedResourceTypesWithOptions(runtime);
     }
 
+    /**
+      * @deprecated : ListAggregateDiscoveredResources is deprecated, please use Config::2020-09-07::ListAggregateDiscoveredResources instead.
+      * In this example, the `ca-c560626622af0005****` account group is used. The return result shows a total of eight resources in this sample account group.
+      *
+      * @param request ListAggregateDiscoveredResourcesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListAggregateDiscoveredResourcesResponse
+     */
+    // Deprecated
     public ListAggregateDiscoveredResourcesResponse listAggregateDiscoveredResourcesWithOptions(ListAggregateDiscoveredResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -617,6 +685,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggregateDiscoveredResourcesResponse());
     }
 
+    /**
+      * @deprecated : ListAggregateDiscoveredResources is deprecated, please use Config::2020-09-07::ListAggregateDiscoveredResources instead.
+      * In this example, the `ca-c560626622af0005****` account group is used. The return result shows a total of eight resources in this sample account group.
+      *
+      * @param request ListAggregateDiscoveredResourcesRequest
+      * @return ListAggregateDiscoveredResourcesResponse
+     */
+    // Deprecated
     public ListAggregateDiscoveredResourcesResponse listAggregateDiscoveredResources(ListAggregateDiscoveredResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAggregateDiscoveredResourcesWithOptions(request, runtime);
@@ -740,6 +816,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listDiscoveredResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ListRemediationTemplates is deprecated, please use Config::2020-09-07::ListRemediationTemplates instead.
+      * In this topic, the `oss-bucket-public-write-prohibited` managed rule is used as an example. The return result shows the detailed information about the remediation template of the `OOS` type for the managed rule. OOS represents Operation Orchestration Service.
+      *
+      * @param request ListRemediationTemplatesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListRemediationTemplatesResponse
+     */
+    // Deprecated
     public ListRemediationTemplatesResponse listRemediationTemplatesWithOptions(ListRemediationTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -768,11 +853,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListRemediationTemplatesResponse());
     }
 
+    /**
+      * @deprecated : ListRemediationTemplates is deprecated, please use Config::2020-09-07::ListRemediationTemplates instead.
+      * In this topic, the `oss-bucket-public-write-prohibited` managed rule is used as an example. The return result shows the detailed information about the remediation template of the `OOS` type for the managed rule. OOS represents Operation Orchestration Service.
+      *
+      * @param request ListRemediationTemplatesRequest
+      * @return ListRemediationTemplatesResponse
+     */
+    // Deprecated
     public ListRemediationTemplatesResponse listRemediationTemplates(ListRemediationTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listRemediationTemplatesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : PutConfigRule is deprecated, please use Config::2020-09-07::CreateConfigRule,Config::2020-09-07::CreateAggregateConfigRule instead.
+      *
+      * @param request PutConfigRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PutConfigRuleResponse
+     */
+    // Deprecated
     public PutConfigRuleResponse putConfigRuleWithOptions(PutConfigRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -851,11 +952,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutConfigRuleResponse());
     }
 
+    /**
+      * @deprecated : PutConfigRule is deprecated, please use Config::2020-09-07::CreateConfigRule,Config::2020-09-07::CreateAggregateConfigRule instead.
+      *
+      * @param request PutConfigRuleRequest
+      * @return PutConfigRuleResponse
+     */
+    // Deprecated
     public PutConfigRuleResponse putConfigRule(PutConfigRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putConfigRuleWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : PutConfigurationRecorder is deprecated, please use Config::2020-09-07::UpdateConfigurationRecorder instead.
+      * This operation is valid only for the current Alibaba Cloud account. For more information, see [Alibaba Cloud services that support Cloud Config](~~127411~~).
+      *
+      * @param request PutConfigurationRecorderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return PutConfigurationRecorderResponse
+     */
+    // Deprecated
     public PutConfigurationRecorderResponse putConfigurationRecorderWithOptions(PutConfigurationRecorderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -880,18 +997,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutConfigurationRecorderResponse());
     }
 
+    /**
+      * @deprecated : PutConfigurationRecorder is deprecated, please use Config::2020-09-07::UpdateConfigurationRecorder instead.
+      * This operation is valid only for the current Alibaba Cloud account. For more information, see [Alibaba Cloud services that support Cloud Config](~~127411~~).
+      *
+      * @param request PutConfigurationRecorderRequest
+      * @return PutConfigurationRecorderResponse
+     */
+    // Deprecated
     public PutConfigurationRecorderResponse putConfigurationRecorder(PutConfigurationRecorderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putConfigurationRecorderWithOptions(request, runtime);
     }
 
     /**
+      * @deprecated : PutDeliveryChannel is deprecated, please use Config::2020-09-07::CreateConfigDeliveryChannel,Config::2020-09-07::CreateAggregateConfigDeliveryChannel instead.
       * ****
       *
       * @param request PutDeliveryChannelRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return PutDeliveryChannelResponse
      */
+    // Deprecated
     public PutDeliveryChannelResponse putDeliveryChannelWithOptions(PutDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -949,23 +1076,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated : PutDeliveryChannel is deprecated, please use Config::2020-09-07::CreateConfigDeliveryChannel,Config::2020-09-07::CreateAggregateConfigDeliveryChannel instead.
       * ****
       *
       * @param request PutDeliveryChannelRequest
       * @return PutDeliveryChannelResponse
      */
+    // Deprecated
     public PutDeliveryChannelResponse putDeliveryChannel(PutDeliveryChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putDeliveryChannelWithOptions(request, runtime);
     }
 
     /**
+      * @deprecated : PutEvaluations is deprecated, please use Config::2020-09-07::PutEvaluations instead.
       * ****
       *
       * @param request PutEvaluationsRequest
       * @param runtime runtime options for this request RuntimeOptions
       * @return PutEvaluationsResponse
      */
+    // Deprecated
     public PutEvaluationsResponse putEvaluationsWithOptions(PutEvaluationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -995,16 +1126,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * @deprecated : PutEvaluations is deprecated, please use Config::2020-09-07::PutEvaluations instead.
       * ****
       *
       * @param request PutEvaluationsRequest
       * @return PutEvaluationsResponse
      */
+    // Deprecated
     public PutEvaluationsResponse putEvaluations(PutEvaluationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putEvaluationsWithOptions(request, runtime);
     }
 
+    /**
+      * >  After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the specified rule or compliance package, call the ListConfigRuleEvaluationResults operation. For more information, see [ListConfigRuleEvaluationResults](~~267503~~).
+      * In this example, the `cr-bdb6626622af0012****` rule is used.
+      *
+      * @param request StartConfigRuleEvaluationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartConfigRuleEvaluationResponse
+     */
     public StartConfigRuleEvaluationResponse startConfigRuleEvaluationWithOptions(StartConfigRuleEvaluationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1037,11 +1178,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartConfigRuleEvaluationResponse());
     }
 
+    /**
+      * >  After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the specified rule or compliance package, call the ListConfigRuleEvaluationResults operation. For more information, see [ListConfigRuleEvaluationResults](~~267503~~).
+      * In this example, the `cr-bdb6626622af0012****` rule is used.
+      *
+      * @param request StartConfigRuleEvaluationRequest
+      * @return StartConfigRuleEvaluationResponse
+     */
     public StartConfigRuleEvaluationResponse startConfigRuleEvaluation(StartConfigRuleEvaluationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startConfigRuleEvaluationWithOptions(request, runtime);
     }
 
+    /**
+      * Ordinary accounts and management accounts have the following differences when you use them to call the StartConfigurationRecorder operation:
+      * *   If you are using an ordinary account, you can call the StartConfigurationRecorder operation to activate Cloud Config for the current account. You can also view the resources of the current account and manage the compliance rules of the current account.
+      * *   If you are using the management account of a resource directory and set the `EnterpriseEdition` parameter to `true`, you can activate Cloud Config for all member accounts. In addition, a global account group that includes all member accounts is created by default. You can view the resources of all member accounts in the account group and manage the compliance rules of all member accounts.
+      * In this topic, an ordinary account is used as an example to show how to activate Cloud Config and monitor the resources of the current account.
+      *
+      * @param request StartConfigurationRecorderRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartConfigurationRecorderResponse
+     */
     public StartConfigurationRecorderResponse startConfigurationRecorderWithOptions(StartConfigurationRecorderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1066,6 +1224,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartConfigurationRecorderResponse());
     }
 
+    /**
+      * Ordinary accounts and management accounts have the following differences when you use them to call the StartConfigurationRecorder operation:
+      * *   If you are using an ordinary account, you can call the StartConfigurationRecorder operation to activate Cloud Config for the current account. You can also view the resources of the current account and manage the compliance rules of the current account.
+      * *   If you are using the management account of a resource directory and set the `EnterpriseEdition` parameter to `true`, you can activate Cloud Config for all member accounts. In addition, a global account group that includes all member accounts is created by default. You can view the resources of all member accounts in the account group and manage the compliance rules of all member accounts.
+      * In this topic, an ordinary account is used as an example to show how to activate Cloud Config and monitor the resources of the current account.
+      *
+      * @param request StartConfigurationRecorderRequest
+      * @return StartConfigurationRecorderResponse
+     */
     public StartConfigurationRecorderResponse startConfigurationRecorder(StartConfigurationRecorderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startConfigurationRecorderWithOptions(request, runtime);

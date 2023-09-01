@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRulesResponseBody extends TeaModel {
+    /**
+     * <p>The rules.</p>
+     */
     @NameInMap("ConfigRules")
     public ListConfigRulesResponseBodyConfigRules configRules;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,20 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance extends TeaModel {
+        /**
+         * <p>The compliance evaluation result of the resources. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
+         * <p>*   INSUFFICIENT_DATA: The resource data is insufficient.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The number of resources with the specified compliance evaluation result.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
@@ -62,9 +79,15 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy extends TeaModel {
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The name of the compliance package.</p>
+         */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
@@ -92,9 +115,15 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -122,45 +151,103 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account that owns the rule.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The type of the remediation template. The value is fixed to LC.</p>
+         * <br>
+         * <p>>  LC stands for Logic Composer.</p>
+         */
         @NameInMap("AutomationType")
         public String automationType;
 
+        /**
+         * <p>The statistics about the compliance evaluation results based on the rule.</p>
+         */
         @NameInMap("Compliance")
         public ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance;
 
+        /**
+         * <p>The ID of the compliance package to which the rule belongs.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The ARN of the rule.</p>
+         */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>*   ACTIVE: The rule is enabled.</p>
+         * <p>*   EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
+         * <p>*   INACTIVE: The rule is disabled.</p>
+         */
         @NameInMap("ConfigRuleState")
         public String configRuleState;
 
+        /**
+         * <p>The information about how the rule is created.</p>
+         */
         @NameInMap("CreateBy")
         public ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk level</p>
+         * <p>*   2: medium risk level</p>
+         * <p>*   3: low risk level</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The identifier of the rule.</p>
+         * <br>
+         * <p>*   If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.</p>
+         * <p>*   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</p>
+         */
         @NameInMap("SourceIdentifier")
         public String sourceIdentifier;
 
+        /**
+         * <p>The method that is used to create the rule. Valid values:</p>
+         * <br>
+         * <p>*   CUSTOM_FC: The rule is a custom rule.</p>
+         * <p>*   ALIYUN: The rule is created based on a managed rule of Alibaba Cloud.</p>
+         */
         @NameInMap("SourceOwner")
         public String sourceOwner;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleListTags> tags;
 
@@ -284,15 +371,27 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRules extends TeaModel {
+        /**
+         * <p>The tag key of the ENI.</p>
+         */
         @NameInMap("ConfigRuleList")
         public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleList> configRuleList;
 
+        /**
+         * <p>The page number of the returned page. A minimum of one entry can be returned on each page.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page. Valid values: 1 to 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of cluster defense rules.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

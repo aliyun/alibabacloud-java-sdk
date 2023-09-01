@@ -4,12 +4,30 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class StartConfigRuleEvaluationRequest extends TeaModel {
+    /**
+     * <p>The ID of the compliance package.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~263332~~).</p>
+     * <br>
+     * <p>>  You must set one of the `CompliancePackId` and `ConfigRuleId` parameters.</p>
+     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>Specifies whether to reevaluate a non-compliant resource that is ignored. Valid values:</p>
+     * <br>
+     * <p>*   true: reevaluates a non-compliant resource that is ignored.</p>
+     * <p>*   false: continues to ignore a non-compliant resource.</p>
+     */
     @NameInMap("RevertEvaluation")
     public Boolean revertEvaluation;
 

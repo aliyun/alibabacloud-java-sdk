@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DescribeComplianceResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of compliance evaluations.</p>
+     */
     @NameInMap("ComplianceResult")
     public DescribeComplianceResponseBodyComplianceResult complianceResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,23 @@ public class DescribeComplianceResponseBody extends TeaModel {
     }
 
     public static class DescribeComplianceResponseBodyComplianceResultCompliances extends TeaModel {
+        /**
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resource is evaluated to be compliant.</p>
+         * <p>*   NON_COMPLIANT: The resource is evaluated to be non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+         * <p>*   INSUFFICIENT_DATA: The resource data is insufficient.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The number of compliance evaluations with the corresponding result.</p>
+         * <br>
+         * <p>*   This parameter returns the total number of evaluated resources if you set the ResourceId parameter in the request.</p>
+         * <p>*   This parameter returns the total number of triggered rules if you set the ConfigRuleId parameter in the request.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
@@ -62,9 +82,18 @@ public class DescribeComplianceResponseBody extends TeaModel {
     }
 
     public static class DescribeComplianceResponseBodyComplianceResult extends TeaModel {
+        /**
+         * <p>The compliance evaluation results based on compliance types.</p>
+         */
         @NameInMap("Compliances")
         public java.util.List<DescribeComplianceResponseBodyComplianceResultCompliances> compliances;
 
+        /**
+         * <p>The total number of compliance evaluations.</p>
+         * <br>
+         * <p>*   This parameter returns the total number of evaluated resources if you set the ResourceId parameter in the request.</p>
+         * <p>*   This parameter returns the total number of triggered rules if you set the ConfigRuleId parameter in the request.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

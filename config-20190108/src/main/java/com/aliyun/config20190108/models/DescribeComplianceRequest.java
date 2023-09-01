@@ -4,21 +4,50 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DescribeComplianceRequest extends TeaModel {
+    /**
+     * <p>The compliance evaluation result of the resource. Valid values:</p>
+     * <br>
+     * <p>*   COMPLIANT: The resource is evaluated to be compliant.</p>
+     * <p>*   NON_COMPLIANT: The resource is evaluated to be non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+     * <p>*   INSUFFICIENT_DATA: The resource data is insufficient.</p>
+     */
     @NameInMap("ComplianceType")
     public String complianceType;
 
+    /**
+     * <p>The ID of the rule.</p>
+     * <br>
+     * <p>If you query compliance evaluation results by resource, you must specify the ConfigRuleId, ResourceType, and ResourceId parameters. Otherwise, the ConfigRuleId parameter becomes invalid.</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>This parameter is scheduled to be removed before 00:00:00, June 30, 2021. Account group-related APIs will be provided as an alternative before 00:00:00, May 30, 2021. If you are using this parameter, we recommend that you switch to account group-related APIs after 00:00:00, May 30, 2021. For more information, see [Account groups](~~211534~~).</p>
+     */
     @NameInMap("MemberId")
     public Long memberId;
 
+    /**
+     * <p>This parameter is scheduled to be removed before 00:00:00, June 30, 2021. Account group-related APIs will be provided as an alternative before 00:00:00, May 30, 2021. If you are using this parameter, we recommend that you switch to account group-related APIs after 00:00:00, May 30, 2021. For more information, see [Account groups](~~211534~~).</p>
+     */
     @NameInMap("MultiAccount")
     public Boolean multiAccount;
 
+    /**
+     * <p>The ID of the resource.</p>
+     * <br>
+     * <p>If you query compliance evaluation results by resource, you must specify the ResourceType and ResourceId parameters.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>If you query compliance evaluation results by resource, you must specify the ResourceType and ResourceId parameters.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

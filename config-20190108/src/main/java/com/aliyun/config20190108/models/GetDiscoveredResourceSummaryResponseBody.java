@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class GetDiscoveredResourceSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of the resources monitored by Cloud Config.</p>
+     */
     @NameInMap("DiscoveredResourceSummary")
     public GetDiscoveredResourceSummaryResponseBodyDiscoveredResourceSummary discoveredResourceSummary;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,21 @@ public class GetDiscoveredResourceSummaryResponseBody extends TeaModel {
     }
 
     public static class GetDiscoveredResourceSummaryResponseBodyDiscoveredResourceSummary extends TeaModel {
+        /**
+         * <p>The number of the regions involved in the monitoring.</p>
+         */
         @NameInMap("RegionCount")
         public Integer regionCount;
 
+        /**
+         * <p>The number of the resources monitored by Cloud Config.</p>
+         */
         @NameInMap("ResourceCount")
         public Integer resourceCount;
 
+        /**
+         * <p>The number of the resource types monitored by Cloud Config.</p>
+         */
         @NameInMap("ResourceTypeCount")
         public Integer resourceTypeCount;
 

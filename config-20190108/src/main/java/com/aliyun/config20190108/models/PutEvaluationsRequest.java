@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class PutEvaluationsRequest extends TeaModel {
+    /**
+     * <p>The compliance evaluation results.</p>
+     */
     @NameInMap("Evaluations")
     public String evaluations;
 
+    /**
+     * <p>The token used to return the response.</p>
+     */
     @NameInMap("ResultToken")
     public String resultToken;
 
