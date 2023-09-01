@@ -46,6 +46,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("LatestMetrics")
     public java.util.List<GetTrainingJobResponseBodyLatestMetrics> latestMetrics;
 
+    @NameInMap("LatestProgress")
+    public GetTrainingJobResponseBodyLatestProgress latestProgress;
+
     @NameInMap("OutputChannels")
     public java.util.List<GetTrainingJobResponseBodyOutputChannels> outputChannels;
 
@@ -84,6 +87,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     @NameInMap("UserId")
     public String userId;
+
+    @NameInMap("UserVpc")
+    public GetTrainingJobResponseBodyUserVpc userVpc;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -205,6 +211,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         return this.latestMetrics;
     }
 
+    public GetTrainingJobResponseBody setLatestProgress(GetTrainingJobResponseBodyLatestProgress latestProgress) {
+        this.latestProgress = latestProgress;
+        return this;
+    }
+    public GetTrainingJobResponseBodyLatestProgress getLatestProgress() {
+        return this.latestProgress;
+    }
+
     public GetTrainingJobResponseBody setOutputChannels(java.util.List<GetTrainingJobResponseBodyOutputChannels> outputChannels) {
         this.outputChannels = outputChannels;
         return this;
@@ -307,6 +321,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public GetTrainingJobResponseBody setUserVpc(GetTrainingJobResponseBodyUserVpc userVpc) {
+        this.userVpc = userVpc;
+        return this;
+    }
+    public GetTrainingJobResponseBodyUserVpc getUserVpc() {
+        return this.userVpc;
     }
 
     public GetTrainingJobResponseBody setWorkspaceId(String workspaceId) {
@@ -530,6 +552,96 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetTrainingJobResponseBodyLatestProgressOverallProgress extends TeaModel {
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Value")
+        public Float value;
+
+        public static GetTrainingJobResponseBodyLatestProgressOverallProgress build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyLatestProgressOverallProgress self = new GetTrainingJobResponseBodyLatestProgressOverallProgress();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyLatestProgressOverallProgress setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetTrainingJobResponseBodyLatestProgressOverallProgress setValue(Float value) {
+            this.value = value;
+            return this;
+        }
+        public Float getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetTrainingJobResponseBodyLatestProgressRemainingTime extends TeaModel {
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Value")
+        public Long value;
+
+        public static GetTrainingJobResponseBodyLatestProgressRemainingTime build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyLatestProgressRemainingTime self = new GetTrainingJobResponseBodyLatestProgressRemainingTime();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyLatestProgressRemainingTime setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetTrainingJobResponseBodyLatestProgressRemainingTime setValue(Long value) {
+            this.value = value;
+            return this;
+        }
+        public Long getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetTrainingJobResponseBodyLatestProgress extends TeaModel {
+        @NameInMap("OverallProgress")
+        public GetTrainingJobResponseBodyLatestProgressOverallProgress overallProgress;
+
+        @NameInMap("RemainingTime")
+        public GetTrainingJobResponseBodyLatestProgressRemainingTime remainingTime;
+
+        public static GetTrainingJobResponseBodyLatestProgress build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyLatestProgress self = new GetTrainingJobResponseBodyLatestProgress();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyLatestProgress setOverallProgress(GetTrainingJobResponseBodyLatestProgressOverallProgress overallProgress) {
+            this.overallProgress = overallProgress;
+            return this;
+        }
+        public GetTrainingJobResponseBodyLatestProgressOverallProgress getOverallProgress() {
+            return this.overallProgress;
+        }
+
+        public GetTrainingJobResponseBodyLatestProgress setRemainingTime(GetTrainingJobResponseBodyLatestProgressRemainingTime remainingTime) {
+            this.remainingTime = remainingTime;
+            return this;
+        }
+        public GetTrainingJobResponseBodyLatestProgressRemainingTime getRemainingTime() {
+            return this.remainingTime;
+        }
+
+    }
+
     public static class GetTrainingJobResponseBodyOutputChannels extends TeaModel {
         @NameInMap("DatasetId")
         public String datasetId;
@@ -649,6 +761,58 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+    }
+
+    public static class GetTrainingJobResponseBodyUserVpc extends TeaModel {
+        @NameInMap("ExtendedCIDRs")
+        public java.util.List<String> extendedCIDRs;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SwitchId")
+        public String switchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static GetTrainingJobResponseBodyUserVpc build(java.util.Map<String, ?> map) throws Exception {
+            GetTrainingJobResponseBodyUserVpc self = new GetTrainingJobResponseBodyUserVpc();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTrainingJobResponseBodyUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
+            this.extendedCIDRs = extendedCIDRs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCIDRs() {
+            return this.extendedCIDRs;
+        }
+
+        public GetTrainingJobResponseBodyUserVpc setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GetTrainingJobResponseBodyUserVpc setSwitchId(String switchId) {
+            this.switchId = switchId;
+            return this;
+        }
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        public GetTrainingJobResponseBodyUserVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

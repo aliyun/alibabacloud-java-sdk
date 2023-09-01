@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UserVpc extends TeaModel {
+    @NameInMap("DefaultRoute")
+    public String defaultRoute;
+
     @NameInMap("ExtendedCIDRs")
     public java.util.List<String> extendedCIDRs;
 
@@ -22,6 +25,14 @@ public class UserVpc extends TeaModel {
     public static UserVpc build(java.util.Map<String, ?> map) throws Exception {
         UserVpc self = new UserVpc();
         return TeaModel.build(map, self);
+    }
+
+    public UserVpc setDefaultRoute(String defaultRoute) {
+        this.defaultRoute = defaultRoute;
+        return this;
+    }
+    public String getDefaultRoute() {
+        return this.defaultRoute;
     }
 
     public UserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {

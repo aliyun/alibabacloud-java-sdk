@@ -7,6 +7,9 @@ public class MachineGroup extends TeaModel {
     @NameInMap("CreatorID")
     public String creatorID;
 
+    @NameInMap("DefaultDriver")
+    public String defaultDriver;
+
     @NameInMap("EcsCount")
     public Long ecsCount;
 
@@ -49,6 +52,9 @@ public class MachineGroup extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("SupportedDrivers")
+    public java.util.List<String> supportedDrivers;
+
     public static MachineGroup build(java.util.Map<String, ?> map) throws Exception {
         MachineGroup self = new MachineGroup();
         return TeaModel.build(map, self);
@@ -60,6 +66,14 @@ public class MachineGroup extends TeaModel {
     }
     public String getCreatorID() {
         return this.creatorID;
+    }
+
+    public MachineGroup setDefaultDriver(String defaultDriver) {
+        this.defaultDriver = defaultDriver;
+        return this;
+    }
+    public String getDefaultDriver() {
+        return this.defaultDriver;
     }
 
     public MachineGroup setEcsCount(Long ecsCount) {
@@ -172,6 +186,14 @@ public class MachineGroup extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public MachineGroup setSupportedDrivers(java.util.List<String> supportedDrivers) {
+        this.supportedDrivers = supportedDrivers;
+        return this;
+    }
+    public java.util.List<String> getSupportedDrivers() {
+        return this.supportedDrivers;
     }
 
 }

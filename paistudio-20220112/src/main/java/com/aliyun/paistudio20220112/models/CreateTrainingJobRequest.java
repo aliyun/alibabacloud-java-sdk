@@ -46,6 +46,9 @@ public class CreateTrainingJobRequest extends TeaModel {
     @NameInMap("TrainingJobName")
     public String trainingJobName;
 
+    @NameInMap("UserVpc")
+    public CreateTrainingJobRequestUserVpc userVpc;
+
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -166,6 +169,14 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.trainingJobName;
     }
 
+    public CreateTrainingJobRequest setUserVpc(CreateTrainingJobRequestUserVpc userVpc) {
+        this.userVpc = userVpc;
+        return this;
+    }
+    public CreateTrainingJobRequestUserVpc getUserVpc() {
+        return this.userVpc;
+    }
+
     public CreateTrainingJobRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -174,12 +185,81 @@ public class CreateTrainingJobRequest extends TeaModel {
         return this.workspaceId;
     }
 
+    public static class CreateTrainingJobRequestComputeResourceInstanceSpec extends TeaModel {
+        @NameInMap("CPU")
+        public String CPU;
+
+        @NameInMap("GPU")
+        public String GPU;
+
+        @NameInMap("GPUType")
+        public String GPUType;
+
+        @NameInMap("Memory")
+        public String memory;
+
+        @NameInMap("SharedMemory")
+        public String sharedMemory;
+
+        public static CreateTrainingJobRequestComputeResourceInstanceSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateTrainingJobRequestComputeResourceInstanceSpec self = new CreateTrainingJobRequestComputeResourceInstanceSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTrainingJobRequestComputeResourceInstanceSpec setCPU(String CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public String getCPU() {
+            return this.CPU;
+        }
+
+        public CreateTrainingJobRequestComputeResourceInstanceSpec setGPU(String GPU) {
+            this.GPU = GPU;
+            return this;
+        }
+        public String getGPU() {
+            return this.GPU;
+        }
+
+        public CreateTrainingJobRequestComputeResourceInstanceSpec setGPUType(String GPUType) {
+            this.GPUType = GPUType;
+            return this;
+        }
+        public String getGPUType() {
+            return this.GPUType;
+        }
+
+        public CreateTrainingJobRequestComputeResourceInstanceSpec setMemory(String memory) {
+            this.memory = memory;
+            return this;
+        }
+        public String getMemory() {
+            return this.memory;
+        }
+
+        public CreateTrainingJobRequestComputeResourceInstanceSpec setSharedMemory(String sharedMemory) {
+            this.sharedMemory = sharedMemory;
+            return this;
+        }
+        public String getSharedMemory() {
+            return this.sharedMemory;
+        }
+
+    }
+
     public static class CreateTrainingJobRequestComputeResource extends TeaModel {
         @NameInMap("EcsCount")
         public Long ecsCount;
 
         @NameInMap("EcsSpec")
         public String ecsSpec;
+
+        @NameInMap("InstanceCount")
+        public Long instanceCount;
+
+        @NameInMap("InstanceSpec")
+        public CreateTrainingJobRequestComputeResourceInstanceSpec instanceSpec;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -203,6 +283,22 @@ public class CreateTrainingJobRequest extends TeaModel {
         }
         public String getEcsSpec() {
             return this.ecsSpec;
+        }
+
+        public CreateTrainingJobRequestComputeResource setInstanceCount(Long instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Long getInstanceCount() {
+            return this.instanceCount;
+        }
+
+        public CreateTrainingJobRequestComputeResource setInstanceSpec(CreateTrainingJobRequestComputeResourceInstanceSpec instanceSpec) {
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+        public CreateTrainingJobRequestComputeResourceInstanceSpec getInstanceSpec() {
+            return this.instanceSpec;
         }
 
         public CreateTrainingJobRequestComputeResource setResourceGroupId(String resourceGroupId) {
@@ -372,6 +468,58 @@ public class CreateTrainingJobRequest extends TeaModel {
         }
         public Long getMaxRunningTimeInSeconds() {
             return this.maxRunningTimeInSeconds;
+        }
+
+    }
+
+    public static class CreateTrainingJobRequestUserVpc extends TeaModel {
+        @NameInMap("ExtendedCIDRs")
+        public java.util.List<String> extendedCIDRs;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SwitchId")
+        public String switchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static CreateTrainingJobRequestUserVpc build(java.util.Map<String, ?> map) throws Exception {
+            CreateTrainingJobRequestUserVpc self = new CreateTrainingJobRequestUserVpc();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTrainingJobRequestUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
+            this.extendedCIDRs = extendedCIDRs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCIDRs() {
+            return this.extendedCIDRs;
+        }
+
+        public CreateTrainingJobRequestUserVpc setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public CreateTrainingJobRequestUserVpc setSwitchId(String switchId) {
+            this.switchId = switchId;
+            return this;
+        }
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        public CreateTrainingJobRequestUserVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

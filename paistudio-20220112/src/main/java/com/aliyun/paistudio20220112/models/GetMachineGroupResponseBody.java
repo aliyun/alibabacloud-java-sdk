@@ -7,6 +7,9 @@ public class GetMachineGroupResponseBody extends TeaModel {
     @NameInMap("Count")
     public Long count;
 
+    @NameInMap("DefaultDriver")
+    public String defaultDriver;
+
     @NameInMap("Duration")
     public String duration;
 
@@ -49,6 +52,9 @@ public class GetMachineGroupResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("SupportedDrivers")
+    public java.util.List<String> supportedDrivers;
+
     public static GetMachineGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMachineGroupResponseBody self = new GetMachineGroupResponseBody();
         return TeaModel.build(map, self);
@@ -60,6 +66,14 @@ public class GetMachineGroupResponseBody extends TeaModel {
     }
     public Long getCount() {
         return this.count;
+    }
+
+    public GetMachineGroupResponseBody setDefaultDriver(String defaultDriver) {
+        this.defaultDriver = defaultDriver;
+        return this;
+    }
+    public String getDefaultDriver() {
+        return this.defaultDriver;
     }
 
     public GetMachineGroupResponseBody setDuration(String duration) {
@@ -172,6 +186,14 @@ public class GetMachineGroupResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetMachineGroupResponseBody setSupportedDrivers(java.util.List<String> supportedDrivers) {
+        this.supportedDrivers = supportedDrivers;
+        return this;
+    }
+    public java.util.List<String> getSupportedDrivers() {
+        return this.supportedDrivers;
     }
 
 }
