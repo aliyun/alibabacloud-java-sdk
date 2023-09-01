@@ -3,16 +3,16 @@ package com.aliyun.fc20230330.models;
 
 import com.aliyun.tea.*;
 
-public class VPCBinding extends TeaModel {
+public class ListVpcBindingsOutput extends TeaModel {
     @NameInMap("vpcIds")
     public java.util.List<String> vpcIds;
 
-    public static VPCBinding build(java.util.Map<String, ?> map) throws Exception {
-        VPCBinding self = new VPCBinding();
+    public static ListVpcBindingsOutput build(java.util.Map<String, ?> map) throws Exception {
+        ListVpcBindingsOutput self = new ListVpcBindingsOutput();
         return TeaModel.build(map, self);
     }
 
-    public VPCBinding setVpcIds(java.util.List<String> vpcIds) {
+    public ListVpcBindingsOutput setVpcIds(java.util.List<String> vpcIds) {
         this.vpcIds = vpcIds;
         return this;
     }

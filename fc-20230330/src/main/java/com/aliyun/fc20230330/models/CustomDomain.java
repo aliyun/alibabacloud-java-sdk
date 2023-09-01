@@ -10,6 +10,9 @@ public class CustomDomain extends TeaModel {
     @NameInMap("apiVersion")
     public String apiVersion;
 
+    @NameInMap("authConfig")
+    public AuthConfig authConfig;
+
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
@@ -56,6 +59,14 @@ public class CustomDomain extends TeaModel {
     }
     public String getApiVersion() {
         return this.apiVersion;
+    }
+
+    public CustomDomain setAuthConfig(AuthConfig authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
     }
 
     public CustomDomain setCertConfig(CertConfig certConfig) {

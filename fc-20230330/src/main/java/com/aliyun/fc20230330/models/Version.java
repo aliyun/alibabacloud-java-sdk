@@ -10,9 +10,6 @@ public class Version extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    @NameInMap("functionVersionArn")
-    public String functionVersionArn;
-
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
 
@@ -38,14 +35,6 @@ public class Version extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public Version setFunctionVersionArn(String functionVersionArn) {
-        this.functionVersionArn = functionVersionArn;
-        return this;
-    }
-    public String getFunctionVersionArn() {
-        return this.functionVersionArn;
     }
 
     public Version setLastModifiedTime(String lastModifiedTime) {
