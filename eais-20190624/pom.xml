@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>eais20190624</artifactId>
-  <version>2.1.2</version>
+  <version>2.1.3</version>
   <packaging>jar</packaging>
   <name>eais20190624</name>
   <description>Alibaba Cloud eais (20190624) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.18</version>
+      <version>0.2.20</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

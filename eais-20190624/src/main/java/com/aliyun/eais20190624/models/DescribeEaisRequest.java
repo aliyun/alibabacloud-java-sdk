@@ -28,6 +28,9 @@ public class DescribeEaisRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeEaisRequestTag> tag;
+
     public static DescribeEaisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEaisRequest self = new DescribeEaisRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,44 @@ public class DescribeEaisRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeEaisRequest setTag(java.util.List<DescribeEaisRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeEaisRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeEaisRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeEaisRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEaisRequestTag self = new DescribeEaisRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEaisRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeEaisRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
