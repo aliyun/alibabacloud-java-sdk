@@ -7,14 +7,26 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("CNNodeCount")
+    public String CNNodeCount;
+
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("CnClass")
+    public String cnClass;
 
     @NameInMap("DBNodeClass")
     public String DBNodeClass;
 
     @NameInMap("DBNodeCount")
     public Integer DBNodeCount;
+
+    @NameInMap("DNNodeCount")
+    public String DNNodeCount;
+
+    @NameInMap("DnClass")
+    public String dnClass;
 
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -80,12 +92,28 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.autoRenew;
     }
 
+    public CreateDBInstanceRequest setCNNodeCount(String CNNodeCount) {
+        this.CNNodeCount = CNNodeCount;
+        return this;
+    }
+    public String getCNNodeCount() {
+        return this.CNNodeCount;
+    }
+
     public CreateDBInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDBInstanceRequest setCnClass(String cnClass) {
+        this.cnClass = cnClass;
+        return this;
+    }
+    public String getCnClass() {
+        return this.cnClass;
     }
 
     public CreateDBInstanceRequest setDBNodeClass(String DBNodeClass) {
@@ -102,6 +130,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public Integer getDBNodeCount() {
         return this.DBNodeCount;
+    }
+
+    public CreateDBInstanceRequest setDNNodeCount(String DNNodeCount) {
+        this.DNNodeCount = DNNodeCount;
+        return this;
+    }
+    public String getDNNodeCount() {
+        return this.DNNodeCount;
+    }
+
+    public CreateDBInstanceRequest setDnClass(String dnClass) {
+        this.dnClass = dnClass;
+        return this;
+    }
+    public String getDnClass() {
+        return this.dnClass;
     }
 
     public CreateDBInstanceRequest setEngineVersion(String engineVersion) {

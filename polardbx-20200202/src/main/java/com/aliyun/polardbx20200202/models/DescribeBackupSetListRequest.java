@@ -7,6 +7,9 @@ public class DescribeBackupSetListRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("DestCrossRegion")
+    public String destCrossRegion;
+
     @NameInMap("EndTime")
     public Long endTime;
 
@@ -33,6 +36,14 @@ public class DescribeBackupSetListRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public DescribeBackupSetListRequest setDestCrossRegion(String destCrossRegion) {
+        this.destCrossRegion = destCrossRegion;
+        return this;
+    }
+    public String getDestCrossRegion() {
+        return this.destCrossRegion;
     }
 
     public DescribeBackupSetListRequest setEndTime(Long endTime) {

@@ -75,11 +75,26 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         @NameInMap("ColdDataBackupRetention")
         public Integer coldDataBackupRetention;
 
+        @NameInMap("CrossRegionDataBackupRetention")
+        public Integer crossRegionDataBackupRetention;
+
+        @NameInMap("CrossRegionLogBackupRetention")
+        public Integer crossRegionLogBackupRetention;
+
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        @NameInMap("DestCrossRegion")
+        public String destCrossRegion;
+
         @NameInMap("ForceCleanOnHighSpaceUsage")
         public Integer forceCleanOnHighSpaceUsage;
+
+        @NameInMap("IsCrossRegionDataBackupEnabled")
+        public Boolean isCrossRegionDataBackupEnabled;
+
+        @NameInMap("IsCrossRegionLogBackupEnabled")
+        public Boolean isCrossRegionLogBackupEnabled;
 
         @NameInMap("IsEnabled")
         public Integer isEnabled;
@@ -157,6 +172,22 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             return this.coldDataBackupRetention;
         }
 
+        public UpdateBackupPolicyResponseBodyData setCrossRegionDataBackupRetention(Integer crossRegionDataBackupRetention) {
+            this.crossRegionDataBackupRetention = crossRegionDataBackupRetention;
+            return this;
+        }
+        public Integer getCrossRegionDataBackupRetention() {
+            return this.crossRegionDataBackupRetention;
+        }
+
+        public UpdateBackupPolicyResponseBodyData setCrossRegionLogBackupRetention(Integer crossRegionLogBackupRetention) {
+            this.crossRegionLogBackupRetention = crossRegionLogBackupRetention;
+            return this;
+        }
+        public Integer getCrossRegionLogBackupRetention() {
+            return this.crossRegionLogBackupRetention;
+        }
+
         public UpdateBackupPolicyResponseBodyData setDBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
             return this;
@@ -165,12 +196,36 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             return this.DBInstanceName;
         }
 
+        public UpdateBackupPolicyResponseBodyData setDestCrossRegion(String destCrossRegion) {
+            this.destCrossRegion = destCrossRegion;
+            return this;
+        }
+        public String getDestCrossRegion() {
+            return this.destCrossRegion;
+        }
+
         public UpdateBackupPolicyResponseBodyData setForceCleanOnHighSpaceUsage(Integer forceCleanOnHighSpaceUsage) {
             this.forceCleanOnHighSpaceUsage = forceCleanOnHighSpaceUsage;
             return this;
         }
         public Integer getForceCleanOnHighSpaceUsage() {
             return this.forceCleanOnHighSpaceUsage;
+        }
+
+        public UpdateBackupPolicyResponseBodyData setIsCrossRegionDataBackupEnabled(Boolean isCrossRegionDataBackupEnabled) {
+            this.isCrossRegionDataBackupEnabled = isCrossRegionDataBackupEnabled;
+            return this;
+        }
+        public Boolean getIsCrossRegionDataBackupEnabled() {
+            return this.isCrossRegionDataBackupEnabled;
+        }
+
+        public UpdateBackupPolicyResponseBodyData setIsCrossRegionLogBackupEnabled(Boolean isCrossRegionLogBackupEnabled) {
+            this.isCrossRegionLogBackupEnabled = isCrossRegionLogBackupEnabled;
+            return this;
+        }
+        public Boolean getIsCrossRegionLogBackupEnabled() {
+            return this.isCrossRegionLogBackupEnabled;
         }
 
         public UpdateBackupPolicyResponseBodyData setIsEnabled(Integer isEnabled) {
