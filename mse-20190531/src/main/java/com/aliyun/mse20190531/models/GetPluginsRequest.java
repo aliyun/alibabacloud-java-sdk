@@ -5,12 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetPluginsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>zh: Chinese en: English</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
+
+    /**
+     * <p>Specifies whether to enable the plug-in.</p>
+     */
+    @NameInMap("Category")
+    public Integer category;
+
+    /**
+     * <p>The name of the plug-in.</p>
+     */
+    @NameInMap("EnableOnly")
+    public Boolean enableOnly;
 
     /**
      * <p>The type of the plug-in. Valid values:</p>
@@ -22,23 +32,13 @@ public class GetPluginsRequest extends TeaModel {
      * <p>*   4: traffic control</p>
      * <p>*   5: traffic observation</p>
      */
-    @NameInMap("Category")
-    public Integer category;
-
-    /**
-     * <p>Specifies whether to enable the plug-in.</p>
-     */
-    @NameInMap("EnableOnly")
-    public Boolean enableOnly;
-
-    /**
-     * <p>The ID of the gateway.</p>
-     */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>The name of the plug-in.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>zh: Chinese en: English</p>
      */
     @NameInMap("Name")
     public String name;

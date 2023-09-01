@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     /**
-     * <p>The name of the MSE namespace.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public CreateOrUpdateSwimmingLaneGroupResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -88,9 +88,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("DbGrayEnable")
         public String dbGrayEnable;
 
-        @NameInMap("Enable")
-        public String enable;
-
         @NameInMap("EntryApp")
         public String entryApp;
 
@@ -115,12 +112,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
-        @NameInMap("Source")
-        public String source;
-
-        @NameInMap("Status")
-        public Integer status;
-
         @NameInMap("UserId")
         public String userId;
 
@@ -143,14 +134,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getDbGrayEnable() {
             return this.dbGrayEnable;
-        }
-
-        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setEnable(String enable) {
-            this.enable = enable;
-            return this;
-        }
-        public String getEnable() {
-            return this.enable;
         }
 
         public CreateOrUpdateSwimmingLaneGroupResponseBodyData setEntryApp(String entryApp) {
@@ -215,22 +198,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
-        }
-
-        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setSource(String source) {
-            this.source = source;
-            return this;
-        }
-        public String getSource() {
-            return this.source;
-        }
-
-        public CreateOrUpdateSwimmingLaneGroupResponseBodyData setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
         }
 
         public CreateOrUpdateSwimmingLaneGroupResponseBodyData setUserId(String userId) {

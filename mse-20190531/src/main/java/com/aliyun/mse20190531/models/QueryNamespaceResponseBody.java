@@ -7,6 +7,9 @@ public class QueryNamespaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<QueryNamespaceResponseBodyData> data;
 
+    /**
+     * <p>错误码。</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 

@@ -5,60 +5,60 @@ import com.aliyun.tea.*;
 
 public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 is returned if the request was successful.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The URL that is used to upload the configuration file.</p>
      */
     @NameInMap("Data")
     public GetZookeeperDataImportUrlResponseBodyData data;
-
-    /**
-     * <p>The dynamic part in the error message.</p>
-     */
-    @NameInMap("DynamicCode")
-    public String dynamicCode;
 
     /**
      * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
      * <br>
      * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
      */
+    @NameInMap("DynamicCode")
+    public String dynamicCode;
+
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The request was successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The status code. A value of 200 is returned if the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -142,13 +142,13 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
 
     public static class GetZookeeperDataImportUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The maximum size of a file that can be uploaded each time. Unit: MB.</p>
+         * <p>code</p>
          */
         @NameInMap("MaxSize")
         public String maxSize;
 
         /**
-         * <p>The URL that is used to upload the configuration file.</p>
+         * <p>The maximum size of a file that can be uploaded each time. Unit: MB.</p>
          */
         @NameInMap("Url")
         public String url;

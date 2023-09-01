@@ -290,6 +290,15 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("DiskType")
         public String diskType;
 
+        @NameInMap("EipInstanceId")
+        public String eipInstanceId;
+
+        @NameInMap("EndDate")
+        public String endDate;
+
+        @NameInMap("ExpectZones")
+        public java.util.List<String> expectZones;
+
         /**
          * <p>The status of the instance.</p>
          */
@@ -398,6 +407,12 @@ public class QueryClusterInfoResponseBody extends TeaModel {
          */
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SecurityGroupType")
+        public String securityGroupType;
 
         /**
          * <p>The tag.</p>
@@ -532,6 +547,30 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
         public String getDiskType() {
             return this.diskType;
+        }
+
+        public QueryClusterInfoResponseBodyData setEipInstanceId(String eipInstanceId) {
+            this.eipInstanceId = eipInstanceId;
+            return this;
+        }
+        public String getEipInstanceId() {
+            return this.eipInstanceId;
+        }
+
+        public QueryClusterInfoResponseBodyData setEndDate(String endDate) {
+            this.endDate = endDate;
+            return this;
+        }
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        public QueryClusterInfoResponseBodyData setExpectZones(java.util.List<String> expectZones) {
+            this.expectZones = expectZones;
+            return this;
+        }
+        public java.util.List<String> getExpectZones() {
+            return this.expectZones;
         }
 
         public QueryClusterInfoResponseBodyData setHealthStatus(String healthStatus) {
@@ -676,6 +715,22 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public QueryClusterInfoResponseBodyData setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public QueryClusterInfoResponseBodyData setSecurityGroupType(String securityGroupType) {
+            this.securityGroupType = securityGroupType;
+            return this;
+        }
+        public String getSecurityGroupType() {
+            return this.securityGroupType;
         }
 
         public QueryClusterInfoResponseBodyData setTags(java.util.Map<String, ?> tags) {

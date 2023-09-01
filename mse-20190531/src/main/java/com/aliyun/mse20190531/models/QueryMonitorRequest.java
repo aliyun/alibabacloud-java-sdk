@@ -5,46 +5,46 @@ import com.aliyun.tea.*;
 
 public class QueryMonitorRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The timestamp when the monitoring starts.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>systemError</p>
+     * <p>system error</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
 
     /**
-     * <p>The extended request parameters in the JSON format.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>cluster not found</p>
+     * <p>mse-100-001</p>
      */
     @NameInMap("MonitorType")
     public String monitorType;
 
     /**
-     * <p>clusterNotFound</p>
+     * <p>cluster not found</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
 
     /**
-     * <p>mse-100-001</p>
+     * <p>systemError</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
 
     /**
-     * <p>system error</p>
+     * <p>The extended request parameters in the JSON format.</p>
      */
     @NameInMap("Step")
     public Long step;

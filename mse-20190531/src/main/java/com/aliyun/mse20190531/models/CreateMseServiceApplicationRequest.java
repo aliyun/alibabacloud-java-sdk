@@ -7,8 +7,8 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>*   zh: Chinese.</p>
+     * <p>*   en: English.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -34,8 +34,8 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     /**
      * <p>The edition of the MSE instance that you want to purchase.</p>
      * <br>
-     * <p>*   mse_pro: Professional Edition</p>
-     * <p>*   mse_dev: Developer Edition</p>
+     * <p>*   mse_pro: Professional Edition.</p>
+     * <p>*   mse_dev: Developer Edition.</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;

@@ -5,54 +5,54 @@ import com.aliyun.tea.*;
 
 public class CloneNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
+     * <br>
+     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The number of skipped operations.</p>
      */
     @NameInMap("Data")
     public CloneNacosConfigResponseBodyData data;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The number of successful operations.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    /**
-     * <p>The message returned.</p>
-     */
-    @NameInMap("Message")
-    public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
+     */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    /**
+     * <p>The details of the data.</p>
+     */
+    @NameInMap("Message")
+    public String message;
+
+    /**
+     * <p>The error code returned if the request failed.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The response code returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -128,13 +128,13 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
     public static class CloneNacosConfigResponseBodyDataFailData extends TeaModel {
         /**
-         * <p>The ID of the data.</p>
+         * <p>mse-200-105</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>duplicatedClusterAliasName</p>
          */
         @NameInMap("Group")
         public String group;
@@ -164,13 +164,13 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
     public static class CloneNacosConfigResponseBodyDataSkipData extends TeaModel {
         /**
-         * <p>The ID of the data.</p>
+         * <p>The details of the failed configurations.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("Group")
         public String group;
@@ -200,25 +200,25 @@ public class CloneNacosConfigResponseBody extends TeaModel {
 
     public static class CloneNacosConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the failed configurations.</p>
+         * <p>The ID of the data.</p>
          */
         @NameInMap("FailData")
         public java.util.List<CloneNacosConfigResponseBodyDataFailData> failData;
 
         /**
-         * <p>The number of skipped operations.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("SkipCount")
         public Integer skipCount;
 
         /**
-         * <p>The details of the skipped configurations.</p>
+         * <p>The ID of the data.</p>
          */
         @NameInMap("SkipData")
         public java.util.List<CloneNacosConfigResponseBodyDataSkipData> skipData;
 
         /**
-         * <p>The number of successful operations.</p>
+         * <p>The details of the skipped configurations.</p>
          */
         @NameInMap("SuccCount")
         public Integer succCount;

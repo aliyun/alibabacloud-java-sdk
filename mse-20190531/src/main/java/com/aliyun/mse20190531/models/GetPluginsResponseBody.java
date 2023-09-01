@@ -5,55 +5,55 @@ import com.aliyun.tea.*;
 
 public class GetPluginsResponseBody extends TeaModel {
     /**
-     * <p>The returned code.</p>
+     * <p>The error code returned if the request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The data entries returned.</p>
+     * <p>The information about the plug-in.</p>
      */
     @NameInMap("Data")
     public java.util.List<GetPluginsResponseBodyData> data;
 
     /**
-     * <p>The dynamic part in the error message.</p>
+     * <p>The dynamic error message.</p>
      */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>The data entries returned.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The dynamic part in the error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>The returned code.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -137,6 +137,45 @@ public class GetPluginsResponseBody extends TeaModel {
 
     public static class GetPluginsResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the plug-in.</p>
+         */
+        @NameInMap("Category")
+        public Integer category;
+
+        /**
+         * <p>\# The configuration includes the fields required for checking, such as name, age, and friends. Sample configuration: name: John age: 18 friends: - David - Anne</p>
+         */
+        @NameInMap("ConfigCheck")
+        public String configCheck;
+
+        /**
+         * <p>The ID of the creator.</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("MaxVersion")
+        public String maxVersion;
+
+        @NameInMap("Mode")
+        public Integer mode;
+
+        /**
+         * <p>The version of the plug-in.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("NewVersionPublishingFlag")
+        public Boolean newVersionPublishingFlag;
+
+        /**
+         * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         */
+        @NameInMap("Phase")
+        public Integer phase;
+
+        /**
          * <p>The type of the plug-in. Valid values:</p>
          * <br>
          * <p>0: custom</p>
@@ -151,64 +190,35 @@ public class GetPluginsResponseBody extends TeaModel {
          * <br>
          * <p>5: traffic observation</p>
          */
-        @NameInMap("Category")
-        public Integer category;
-
-        /**
-         * <p>The information about the plug-in configuration used for checking.</p>
-         */
-        @NameInMap("ConfigCheck")
-        public String configCheck;
-
-        /**
-         * <p>The ID of the plug-in.</p>
-         */
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("MaxVersion")
-        public String maxVersion;
-
-        @NameInMap("Mode")
-        public Integer mode;
-
-        /**
-         * <p>The name of the plug-in.</p>
-         */
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("NewVersionPublishingFlag")
-        public Boolean newVersionPublishingFlag;
-
-        /**
-         * <p>The execution stage of the plug-in.</p>
-         * <br>
-         * <p>*   0: default stage</p>
-         * <p>*   1: authorization stage</p>
-         * <p>*   2: authentication stage</p>
-         * <p>*   3: statistics stage</p>
-         */
-        @NameInMap("Phase")
-        public Integer phase;
-
-        /**
-         * <p>The ID of the creator.</p>
-         */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
         /**
-         * <p>The execution priority of the plug-in. A larger value indicates a higher priority.</p>
+         * <p>The information about the plug-in configuration used for checking.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The publish status.</p>
+         * <p>The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.</p>
          */
         @NameInMap("PublishState")
         public Integer publishState;
+
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>This is a plug-in.</p>
+         */
+        @NameInMap("Summary")
+        public String summary;
+
+        /**
+         * <p>The summary of the plug-in.</p>
+         */
+        @NameInMap("Version")
+        public String version;
 
         /**
          * <p>Indicates whether the plug-in is enabled.</p>
@@ -216,35 +226,11 @@ public class GetPluginsResponseBody extends TeaModel {
          * <p>*   0: disabled</p>
          * <p>*   1: enabled</p>
          */
-        @NameInMap("Status")
-        public String status;
-
-        /**
-         * <p>The summary of the plug-in.</p>
-         */
-        @NameInMap("Summary")
-        public String summary;
-
-        /**
-         * <p>The version of the plug-in.</p>
-         */
-        @NameInMap("Version")
-        public String version;
-
-        /**
-         * <p>The URL of the Object Storage Service (OSS) bucket that stores the WebAssembly plug-in.</p>
-         */
         @NameInMap("WasmFile")
         public String wasmFile;
 
         /**
-         * <p>The WebAssembly language. Valid values:</p>
-         * <br>
-         * <p>*   0: C++</p>
-         * <p>*   1: TinyGo</p>
-         * <p>*   2: Rust</p>
-         * <p>*   3: AssemblyScript</p>
-         * <p>*   4: Zig</p>
+         * <p>The publish status.</p>
          */
         @NameInMap("WasmLang")
         public Integer wasmLang;

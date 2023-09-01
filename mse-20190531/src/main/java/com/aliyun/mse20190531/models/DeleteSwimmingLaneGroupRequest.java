@@ -19,14 +19,11 @@ public class DeleteSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("Namespace")
     public String namespace;
-
-    @NameInMap("Region")
-    public String region;
-
-    @NameInMap("name")
-    public String name;
 
     public static DeleteSwimmingLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSwimmingLaneGroupRequest self = new DeleteSwimmingLaneGroupRequest();
@@ -49,28 +46,20 @@ public class DeleteSwimmingLaneGroupRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DeleteSwimmingLaneGroupRequest setNamespace(String namespace) {
-        this.namespace = namespace;
-        return this;
-    }
-    public String getNamespace() {
-        return this.namespace;
-    }
-
-    public DeleteSwimmingLaneGroupRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
     public DeleteSwimmingLaneGroupRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public DeleteSwimmingLaneGroupRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

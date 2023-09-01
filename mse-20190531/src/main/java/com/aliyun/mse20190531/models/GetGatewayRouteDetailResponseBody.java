@@ -400,6 +400,69 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetGatewayRouteDetailResponseBodyDataFlowMirror extends TeaModel {
+        @NameInMap("Percentage")
+        public Integer percentage;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TargetServiceId")
+        public Long targetServiceId;
+
+        @NameInMap("TargetServiceName")
+        public String targetServiceName;
+
+        public static GetGatewayRouteDetailResponseBodyDataFlowMirror build(java.util.Map<String, ?> map) throws Exception {
+            GetGatewayRouteDetailResponseBodyDataFlowMirror self = new GetGatewayRouteDetailResponseBodyDataFlowMirror();
+            return TeaModel.build(map, self);
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFlowMirror setPercentage(Integer percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFlowMirror setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFlowMirror setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFlowMirror setTargetServiceId(Long targetServiceId) {
+            this.targetServiceId = targetServiceId;
+            return this;
+        }
+        public Long getTargetServiceId() {
+            return this.targetServiceId;
+        }
+
+        public GetGatewayRouteDetailResponseBodyDataFlowMirror setTargetServiceName(String targetServiceName) {
+            this.targetServiceName = targetServiceName;
+            return this;
+        }
+        public String getTargetServiceName() {
+            return this.targetServiceName;
+        }
+
+    }
+
     public static class GetGatewayRouteDetailResponseBodyDataHTTPRewrite extends TeaModel {
         /**
          * <p>The hostname of the gateway.</p>
@@ -1197,6 +1260,9 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         @NameInMap("FallbackServices")
         public java.util.List<GetGatewayRouteDetailResponseBodyDataFallbackServices> fallbackServices;
 
+        @NameInMap("FlowMirror")
+        public GetGatewayRouteDetailResponseBodyDataFlowMirror flowMirror;
+
         /**
          * <p>The ID of the gateway.</p>
          */
@@ -1416,6 +1482,14 @@ public class GetGatewayRouteDetailResponseBody extends TeaModel {
         }
         public java.util.List<GetGatewayRouteDetailResponseBodyDataFallbackServices> getFallbackServices() {
             return this.fallbackServices;
+        }
+
+        public GetGatewayRouteDetailResponseBodyData setFlowMirror(GetGatewayRouteDetailResponseBodyDataFlowMirror flowMirror) {
+            this.flowMirror = flowMirror;
+            return this;
+        }
+        public GetGatewayRouteDetailResponseBodyDataFlowMirror getFlowMirror() {
+            return this.flowMirror;
         }
 
         public GetGatewayRouteDetailResponseBodyData setGatewayId(Long gatewayId) {

@@ -5,22 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateMseServiceApplicationResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
-     */
-    @NameInMap("Code")
-    public Integer code;
-
-    /**
      * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public CreateMseServiceApplicationResponseBodyData data;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
@@ -48,28 +36,12 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMseServiceApplicationResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public CreateMseServiceApplicationResponseBody setData(CreateMseServiceApplicationResponseBodyData data) {
         this.data = data;
         return this;
     }
     public CreateMseServiceApplicationResponseBodyData getData() {
         return this.data;
-    }
-
-    public CreateMseServiceApplicationResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public CreateMseServiceApplicationResponseBody setMessage(String message) {
@@ -146,7 +118,7 @@ public class CreateMseServiceApplicationResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The status. Valid values: 1: available; 2: deleted</p>
+         * <p>The status. Valid values: 1: available; 2: deleted.</p>
          */
         @NameInMap("Status")
         public Integer status;

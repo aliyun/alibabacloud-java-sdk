@@ -5,22 +5,10 @@ import com.aliyun.tea.*;
 
 public class ApplyTagPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
-     */
-    @NameInMap("Code")
-    public Integer code;
-
-    /**
      * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ApplyTagPoliciesResponseBodyData> data;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
@@ -45,28 +33,12 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ApplyTagPoliciesResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public ApplyTagPoliciesResponseBody setData(java.util.List<ApplyTagPoliciesResponseBodyData> data) {
         this.data = data;
         return this;
     }
     public java.util.List<ApplyTagPoliciesResponseBodyData> getData() {
         return this.data;
-    }
-
-    public ApplyTagPoliciesResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public ApplyTagPoliciesResponseBody setMessage(String message) {

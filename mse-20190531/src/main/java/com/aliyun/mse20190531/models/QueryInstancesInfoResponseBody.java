@@ -154,6 +154,9 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         @NameInMap("Zone")
         public String zone;
 
+        @NameInMap("ZoneDistributed")
+        public Boolean zoneDistributed;
+
         public static QueryInstancesInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryInstancesInfoResponseBodyData self = new QueryInstancesInfoResponseBodyData();
             return TeaModel.build(map, self);
@@ -229,6 +232,14 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
         public String getZone() {
             return this.zone;
+        }
+
+        public QueryInstancesInfoResponseBodyData setZoneDistributed(Boolean zoneDistributed) {
+            this.zoneDistributed = zoneDistributed;
+            return this;
+        }
+        public Boolean getZoneDistributed() {
+            return this.zoneDistributed;
         }
 
     }

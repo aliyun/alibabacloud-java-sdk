@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class PullServicesRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>The namespace.</p>
      */
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
     /**
-     * <p>The namespace.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The type of the service source.</p>
+     * <p>The unique ID of the gateway.</p>
      */
     @NameInMap("SourceType")
     public String sourceType;

@@ -5,22 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
-     */
-    @NameInMap("Code")
-    public Integer code;
-
-    /**
      * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public GetGovernanceKubernetesClusterResponseBodyData data;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
@@ -48,28 +36,12 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetGovernanceKubernetesClusterResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetGovernanceKubernetesClusterResponseBody setData(GetGovernanceKubernetesClusterResponseBodyData data) {
         this.data = data;
         return this;
     }
     public GetGovernanceKubernetesClusterResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetGovernanceKubernetesClusterResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public GetGovernanceKubernetesClusterResponseBody setMessage(String message) {
@@ -97,21 +69,37 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyDataNamespaces extends TeaModel {
+        @NameInMap("Labels")
+        public java.util.Map<String, String> labels;
+
+        @NameInMap("MseNamespace")
+        public String mseNamespace;
+
         /**
          * <p>The name.</p>
          */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>The tags.</p>
-         */
-        @NameInMap("Tags")
-        public String tags;
-
         public static GetGovernanceKubernetesClusterResponseBodyDataNamespaces build(java.util.Map<String, ?> map) throws Exception {
             GetGovernanceKubernetesClusterResponseBodyDataNamespaces self = new GetGovernanceKubernetesClusterResponseBodyDataNamespaces();
             return TeaModel.build(map, self);
+        }
+
+        public GetGovernanceKubernetesClusterResponseBodyDataNamespaces setLabels(java.util.Map<String, String> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
+        }
+
+        public GetGovernanceKubernetesClusterResponseBodyDataNamespaces setMseNamespace(String mseNamespace) {
+            this.mseNamespace = mseNamespace;
+            return this;
+        }
+        public String getMseNamespace() {
+            return this.mseNamespace;
         }
 
         public GetGovernanceKubernetesClusterResponseBodyDataNamespaces setName(String name) {
@@ -120,14 +108,6 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public GetGovernanceKubernetesClusterResponseBodyDataNamespaces setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
         }
 
     }

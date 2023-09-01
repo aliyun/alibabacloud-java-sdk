@@ -30,6 +30,9 @@ public class ExportNacosConfigRequest extends TeaModel {
     @NameInMap("DataId")
     public String dataId;
 
+    @NameInMap("DataIds")
+    public String dataIds;
+
     /**
      * <p>The name of the configuration group.</p>
      */
@@ -83,6 +86,14 @@ public class ExportNacosConfigRequest extends TeaModel {
     }
     public String getDataId() {
         return this.dataId;
+    }
+
+    public ExportNacosConfigRequest setDataIds(String dataIds) {
+        this.dataIds = dataIds;
+        return this;
+    }
+    public String getDataIds() {
+        return this.dataIds;
     }
 
     public ExportNacosConfigRequest setGroup(String group) {

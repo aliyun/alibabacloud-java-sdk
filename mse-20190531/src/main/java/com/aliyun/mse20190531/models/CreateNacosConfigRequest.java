@@ -68,7 +68,7 @@ public class CreateNacosConfigRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The format of the configuration. Supported formats include TEXT, JSON, and XML.</p>
+     * <p>The configuration format such as text, JSON, or XML.</p>
      */
     @NameInMap("Type")
     public String type;

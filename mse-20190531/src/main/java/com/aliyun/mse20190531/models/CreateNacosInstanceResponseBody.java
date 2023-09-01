@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateNacosInstanceResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
+     * <p>The result returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The result returned.</p>
+     * <p>duplicatedClusterAliasName</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>mse-200-105</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -5,22 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetApplicationListResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
-     */
-    @NameInMap("Code")
-    public Integer code;
-
-    /**
      * <p>The data structure.</p>
      */
     @NameInMap("Data")
     public GetApplicationListResponseBodyData data;
 
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    @NameInMap("ErrorCode")
+    public String errorCode;
 
     /**
      * <p>The message returned.</p>
@@ -48,14 +39,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetApplicationListResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetApplicationListResponseBody setData(GetApplicationListResponseBodyData data) {
         this.data = data;
         return this;
@@ -64,12 +47,12 @@ public class GetApplicationListResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GetApplicationListResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public GetApplicationListResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     public GetApplicationListResponseBody setMessage(String message) {
@@ -127,12 +110,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
-        /**
-         * <p>The license key in use.</p>
-         */
-        @NameInMap("LicenseKey")
-        public String licenseKey;
-
         @NameInMap("Namespace")
         public String namespace;
 
@@ -153,6 +130,9 @@ public class GetApplicationListResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public Long status;
+
+        @NameInMap("TagCount")
+        public Long tagCount;
 
         /**
          * <p>The ID of the user.</p>
@@ -205,14 +185,6 @@ public class GetApplicationListResponseBody extends TeaModel {
             return this.language;
         }
 
-        public GetApplicationListResponseBodyDataResult setLicenseKey(String licenseKey) {
-            this.licenseKey = licenseKey;
-            return this;
-        }
-        public String getLicenseKey() {
-            return this.licenseKey;
-        }
-
         public GetApplicationListResponseBodyDataResult setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
@@ -243,6 +215,14 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
         public Long getStatus() {
             return this.status;
+        }
+
+        public GetApplicationListResponseBodyDataResult setTagCount(Long tagCount) {
+            this.tagCount = tagCount;
+            return this;
+        }
+        public Long getTagCount() {
+            return this.tagCount;
         }
 
         public GetApplicationListResponseBodyDataResult setUserId(String userId) {

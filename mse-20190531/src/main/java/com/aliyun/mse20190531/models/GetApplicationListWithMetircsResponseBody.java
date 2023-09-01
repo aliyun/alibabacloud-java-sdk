@@ -5,22 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     /**
-     * <p>The response code returned.</p>
-     */
-    @NameInMap("Code")
-    public Integer code;
-
-    /**
      * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public GetApplicationListWithMetircsResponseBodyData data;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
@@ -48,28 +36,12 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetApplicationListWithMetircsResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
     public GetApplicationListWithMetircsResponseBody setData(GetApplicationListWithMetircsResponseBodyData data) {
         this.data = data;
         return this;
     }
     public GetApplicationListWithMetircsResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetApplicationListWithMetircsResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     public GetApplicationListWithMetircsResponseBody setMessage(String message) {
@@ -354,12 +326,6 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
-        /**
-         * <p>The license key in use.</p>
-         */
-        @NameInMap("LicenseKey")
-        public String licenseKey;
-
         @NameInMap("Namespace")
         public String namespace;
 
@@ -381,17 +347,14 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         @NameInMap("Status")
         public Long status;
 
+        @NameInMap("TagCount")
+        public Long tagCount;
+
         /**
          * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<String> tags;
-
-        /**
-         * <p>The ID of the user.</p>
-         */
-        @NameInMap("UserId")
-        public String userId;
 
         public static GetApplicationListWithMetircsResponseBodyDataResult build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationListWithMetircsResponseBodyDataResult self = new GetApplicationListWithMetircsResponseBodyDataResult();
@@ -462,14 +425,6 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             return this.language;
         }
 
-        public GetApplicationListWithMetircsResponseBodyDataResult setLicenseKey(String licenseKey) {
-            this.licenseKey = licenseKey;
-            return this;
-        }
-        public String getLicenseKey() {
-            return this.licenseKey;
-        }
-
         public GetApplicationListWithMetircsResponseBodyDataResult setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
@@ -502,20 +457,20 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetApplicationListWithMetircsResponseBodyDataResult setTagCount(Long tagCount) {
+            this.tagCount = tagCount;
+            return this;
+        }
+        public Long getTagCount() {
+            return this.tagCount;
+        }
+
         public GetApplicationListWithMetircsResponseBodyDataResult setTags(java.util.List<String> tags) {
             this.tags = tags;
             return this;
         }
         public java.util.List<String> getTags() {
             return this.tags;
-        }
-
-        public GetApplicationListWithMetircsResponseBodyDataResult setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
         }
 
     }

@@ -1071,10 +1071,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Rules", request.rules);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
-            query.put("Source", request.source);
-        }
-
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1098,7 +1094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
       * @param request CloneNacosConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1149,7 +1145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
       * @param request CloneNacosConfigRequest
       * @return CloneNacosConfigResponse
@@ -1339,6 +1335,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DiskType", request.diskType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.eipEnabled)) {
+            query.put("EipEnabled", request.eipEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceCount)) {
             query.put("InstanceCount", request.instanceCount);
         }
@@ -1377,6 +1377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupType)) {
+            query.put("SecurityGroupType", request.securityGroupType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -1696,7 +1700,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
       * @param request CreateNacosInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1773,7 +1777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * mse-200-105
       *
       * @param request CreateNacosInstanceRequest
       * @return CreateNacosInstanceResponse
@@ -1947,10 +1951,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dbGrayEnable)) {
             query.put("DbGrayEnable", request.dbGrayEnable);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
-            query.put("Enable", request.enable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.entryApp)) {
@@ -3004,16 +3004,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupId", request.groupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("Namespace", request.namespace);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
-            query.put("Region", request.region);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
-            query.put("name", request.name);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3099,6 +3095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
             query.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataIds)) {
+            query.put("DataIds", request.dataIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.group)) {
@@ -3383,6 +3383,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getApplicationListWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : GetApplicationListWithMetircs is deprecated, please use mse::2019-05-31::GetApplicationList instead.
+      *
+      * @param request GetApplicationListWithMetircsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetApplicationListWithMetircsResponse
+     */
+    // Deprecated
     public GetApplicationListWithMetircsResponse getApplicationListWithMetircsWithOptions(GetApplicationListWithMetircsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3435,6 +3443,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetApplicationListWithMetircsResponse());
     }
 
+    /**
+      * @deprecated : GetApplicationListWithMetircs is deprecated, please use mse::2019-05-31::GetApplicationList instead.
+      *
+      * @param request GetApplicationListWithMetircsRequest
+      * @return GetApplicationListWithMetircsResponse
+     */
+    // Deprecated
     public GetApplicationListWithMetircsResponse getApplicationListWithMetircs(GetApplicationListWithMetircsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getApplicationListWithMetircsWithOptions(request, runtime);
@@ -3815,7 +3830,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The details of the data.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).\\n
       *
       * @param request GetImportFileUrlRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3858,7 +3873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The details of the data.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).\\n
       *
       * @param request GetImportFileUrlRequest
       * @return GetImportFileUrlResponse
@@ -5008,6 +5023,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listAnsServicesWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated : ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.
+      *
+      * @param request ListAppBySwimmingLaneGroupTagRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListAppBySwimmingLaneGroupTagResponse
+     */
+    // Deprecated
     public ListAppBySwimmingLaneGroupTagResponse listAppBySwimmingLaneGroupTagWithOptions(ListAppBySwimmingLaneGroupTagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5044,9 +5067,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppBySwimmingLaneGroupTagResponse());
     }
 
+    /**
+      * @deprecated : ListAppBySwimmingLaneGroupTag is deprecated, please use mse::2019-05-31::ListAppBySwimmingLaneGroupTags instead.
+      *
+      * @param request ListAppBySwimmingLaneGroupTagRequest
+      * @return ListAppBySwimmingLaneGroupTagResponse
+     */
+    // Deprecated
     public ListAppBySwimmingLaneGroupTagResponse listAppBySwimmingLaneGroupTag(ListAppBySwimmingLaneGroupTagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAppBySwimmingLaneGroupTagWithOptions(request, runtime);
+    }
+
+    public ListAppBySwimmingLaneGroupTagsResponse listAppBySwimmingLaneGroupTagsWithOptions(ListAppBySwimmingLaneGroupTagsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAppBySwimmingLaneGroupTagsShrinkRequest request = new ListAppBySwimmingLaneGroupTagsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAppBySwimmingLaneGroupTags"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAppBySwimmingLaneGroupTagsResponse());
+    }
+
+    public ListAppBySwimmingLaneGroupTagsResponse listAppBySwimmingLaneGroupTags(ListAppBySwimmingLaneGroupTagsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAppBySwimmingLaneGroupTagsWithOptions(request, runtime);
     }
 
     public ListApplicationsWithTagRulesResponse listApplicationsWithTagRulesWithOptions(ListApplicationsWithTagRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6691,8 +6768,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listZnodeChildrenWithOptions(request, runtime);
     }
 
-    public ModifyGovernanceKubernetesClusterResponse modifyGovernanceKubernetesClusterWithOptions(ModifyGovernanceKubernetesClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyGovernanceKubernetesClusterResponse modifyGovernanceKubernetesClusterWithOptions(ModifyGovernanceKubernetesClusterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyGovernanceKubernetesClusterShrinkRequest request = new ModifyGovernanceKubernetesClusterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.namespaceInfos)) {
+            request.namespaceInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.namespaceInfos, "NamespaceInfos", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -6702,16 +6785,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClusterId", request.clusterId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.namespaceInfos)) {
-            query.put("NamespaceInfos", request.namespaceInfos);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceInfosShrink)) {
+            body.put("NamespaceInfos", request.namespaceInfosShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ModifyGovernanceKubernetesCluster"),
