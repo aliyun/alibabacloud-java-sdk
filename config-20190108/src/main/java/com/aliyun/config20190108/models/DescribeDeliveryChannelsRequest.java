@@ -4,6 +4,11 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeliveryChannelsRequest extends TeaModel {
+    /**
+     * <p>The ID of the delivery channel. Separate multiple IDs with commas (,).</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a delivery channel, see [PutDeliveryChannel](~~174253~~).</p>
+     */
     @NameInMap("DeliveryChannelIds")
     public String deliveryChannelIds;
 

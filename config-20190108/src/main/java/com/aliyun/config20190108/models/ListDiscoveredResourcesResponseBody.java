@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class ListDiscoveredResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The information about the returned resources.</p>
+     */
     @NameInMap("DiscoveredResourceProfiles")
     public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles discoveredResourceProfiles;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,65 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     }
 
     public static class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The timestamp when the resource was created.</p>
+         */
         @NameInMap("ResourceCreationTime")
         public Long resourceCreationTime;
 
+        /**
+         * <p>Indicates whether the resource is deleted. Valid values:</p>
+         * <br>
+         * <p>*   1: The resource is retained.</p>
+         * <p>*   0: The resource is deleted.</p>
+         */
         @NameInMap("ResourceDeleted")
         public Integer resourceDeleted;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The status of the resource. The parameter value varies based on the resource type and may be left empty.</p>
+         * <br>
+         * <p>Examples:</p>
+         * <br>
+         * <p>*   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</p>
+         * <p>*   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that does not have a specific state. In this case, this parameter is left empty.</p>
+         */
         @NameInMap("ResourceStatus")
         public String resourceStatus;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -139,15 +180,27 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     }
 
     public static class ListDiscoveredResourcesResponseBodyDiscoveredResourceProfiles extends TeaModel {
+        /**
+         * <p>The information about the resource.</p>
+         */
         @NameInMap("DiscoveredResourceProfileList")
         public java.util.List<ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> discoveredResourceProfileList;
 
+        /**
+         * <p>The page number of the returned page. Pages start from page 1.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Valid values: 1 to 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of resources.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

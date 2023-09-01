@@ -4,12 +4,21 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the rule. You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>This parameter is unavailable since 00:00:00 on June 30, 2021. Account group-related operations are provided as an alternative after 00:00:00 on May 30, 2021. If you are using this parameter, we recommend that you switch to account group-related operations after 00:00:00 on May 30, 2021. For information about account groups, see [Overview](~~211534~~).</p>
+     */
     @NameInMap("MemberId")
     public Long memberId;
 
+    /**
+     * <p>This parameter is unavailable since 00:00:00 on June 30, 2021. Account group-related operations are provided as an alternative after 00:00:00 on May 30, 2021. If you are using this parameter, we recommend that you switch to account group-related operations after 00:00:00 on May 30, 2021. For information about account groups, see [Overview](~~211534~~).</p>
+     */
     @NameInMap("MultiAccount")
     public Boolean multiAccount;
 

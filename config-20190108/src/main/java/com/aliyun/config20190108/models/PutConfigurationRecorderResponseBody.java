@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class PutConfigurationRecorderResponseBody extends TeaModel {
+    /**
+     * <p>The details of the configuration recorder that monitors resources.</p>
+     */
     @NameInMap("ConfigurationRecorder")
     public PutConfigurationRecorderResponseBodyConfigurationRecorder configurationRecorder;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,26 @@ public class PutConfigurationRecorderResponseBody extends TeaModel {
     }
 
     public static class PutConfigurationRecorderResponseBodyConfigurationRecorder extends TeaModel {
+        /**
+         * <p>The ID of your Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The status of the configuration recorder. Valid values:</p>
+         * <br>
+         * <p>*   REGISTRABLE: The configuration recorder has not been registered.</p>
+         * <p>*   BUILDING: The configuration recorder is being deployed.</p>
+         * <p>*   REGISTERED: The configuration recorder has been registered.</p>
+         * <p>*   REBUILDING: The configuration recorder is being redeployed.</p>
+         */
         @NameInMap("ConfigurationRecorderStatus")
         public String configurationRecorderStatus;
 
+        /**
+         * <p>The types of resources that are monitored by Cloud Config.</p>
+         */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
 

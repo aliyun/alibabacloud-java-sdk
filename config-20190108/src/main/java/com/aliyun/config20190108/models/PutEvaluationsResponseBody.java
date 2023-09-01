@@ -4,9 +4,18 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class PutEvaluationsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The operation was successful.</p>
+     * <p>*   false: The operation failed.</p>
+     */
     @NameInMap("Result")
     public Boolean result;
 

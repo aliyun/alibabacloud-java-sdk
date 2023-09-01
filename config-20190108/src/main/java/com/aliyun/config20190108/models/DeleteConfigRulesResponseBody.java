@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DeleteConfigRulesResponseBody extends TeaModel {
+    /**
+     * <p>The result information about the operation.</p>
+     */
     @NameInMap("OperateRuleResult")
     public DeleteConfigRulesResponseBodyOperateRuleResult operateRuleResult;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,27 @@ public class DeleteConfigRulesResponseBody extends TeaModel {
     }
 
     public static class DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The error code.</p>
+         * <br>
+         * <p>*   If the rule is deleted, no error code is returned.</p>
+         * <p>*   If you fail to delete the rule, an error code is returned. For more information, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Indicates whether the rule is deleted. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 
@@ -73,6 +94,9 @@ public class DeleteConfigRulesResponseBody extends TeaModel {
     }
 
     public static class DeleteConfigRulesResponseBodyOperateRuleResult extends TeaModel {
+        /**
+         * <p>The result information about each rule.</p>
+         */
         @NameInMap("OperateRuleItemList")
         public java.util.List<DeleteConfigRulesResponseBodyOperateRuleResultOperateRuleItemList> operateRuleItemList;
 

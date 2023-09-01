@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DescribeComplianceSummaryResponseBody extends TeaModel {
+    /**
+     * <p>The summary of compliance evaluations.</p>
+     */
     @NameInMap("ComplianceSummary")
     public DescribeComplianceSummaryResponseBodyComplianceSummary complianceSummary;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +38,27 @@ public class DescribeComplianceSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule extends TeaModel {
+        /**
+         * <p>The timestamp when the summary was recorded.</p>
+         */
         @NameInMap("ComplianceSummaryTimestamp")
         public Long complianceSummaryTimestamp;
 
+        /**
+         * <p>The number of rules whose evaluation results are compliant.</p>
+         */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
+        /**
+         * <p>The number of rules whose evaluation results are non-compliant.</p>
+         */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
+        /**
+         * <p>The total number of rules.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -84,15 +102,27 @@ public class DescribeComplianceSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource extends TeaModel {
+        /**
+         * <p>The timestamp when the summary was recorded.</p>
+         */
         @NameInMap("ComplianceSummaryTimestamp")
         public Long complianceSummaryTimestamp;
 
+        /**
+         * <p>The number of resources evaluated as compliant.</p>
+         */
         @NameInMap("CompliantCount")
         public Integer compliantCount;
 
+        /**
+         * <p>The number of resources evaluated as non-compliant.</p>
+         */
         @NameInMap("NonCompliantCount")
         public Integer nonCompliantCount;
 
+        /**
+         * <p>The total number of resources.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
@@ -136,9 +166,15 @@ public class DescribeComplianceSummaryResponseBody extends TeaModel {
     }
 
     public static class DescribeComplianceSummaryResponseBodyComplianceSummary extends TeaModel {
+        /**
+         * <p>The summary of compliance evaluations from the rule dimension.</p>
+         */
         @NameInMap("ComplianceSummaryByConfigRule")
         public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule complianceSummaryByConfigRule;
 
+        /**
+         * <p>The summary of compliance evaluations from the resource dimension.</p>
+         */
         @NameInMap("ComplianceSummaryByResource")
         public DescribeComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource complianceSummaryByResource;
 

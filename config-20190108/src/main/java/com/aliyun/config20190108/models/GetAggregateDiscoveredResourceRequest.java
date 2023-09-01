@@ -4,18 +4,38 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class GetAggregateDiscoveredResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the account group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an account group, see [ListAggregators](~~255797~~).</p>
+     */
     @NameInMap("AggregatorId")
     public String aggregatorId;
 
+    /**
+     * <p>The ID of the region where the resource resides.</p>
+     * <br>
+     * <p>For more information about how to obtain the region ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the resource.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource.</p>
+     * <br>
+     * <p>For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

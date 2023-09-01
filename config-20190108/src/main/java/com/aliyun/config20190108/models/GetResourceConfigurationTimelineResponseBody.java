@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information of the configuration timeline.</p>
+     */
     @NameInMap("ResourceConfigurationTimeline")
     public GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline resourceConfigurationTimeline;
 
@@ -32,36 +38,73 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList extends TeaModel {
+        /**
+         * <p>The ID of your Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("AvailabilityZone")
         public String availabilityZone;
 
+        /**
+         * <p>The timestamp when the configuration change occurred.</p>
+         */
         @NameInMap("CaptureTime")
         public String captureTime;
 
+        /**
+         * <p>The information of the changes to the configuration of the resource.</p>
+         */
         @NameInMap("ConfigurationDiff")
         public String configurationDiff;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The time when the resource was created.</p>
+         */
         @NameInMap("ResourceCreateTime")
         public String resourceCreateTime;
 
+        /**
+         * <p>The type of the resource change event. Valid values:</p>
+         * <br>
+         * <p>*   DISCOVERED: A resource was created.</p>
+         * <p>*   MODIFY: A resource was modified.</p>
+         * <p>*   REMOVE: A resource is deleted.</p>
+         */
         @NameInMap("ResourceEventType")
         public String resourceEventType;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The name of the resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tags of the resource.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
@@ -161,15 +204,27 @@ public class GetResourceConfigurationTimelineResponseBody extends TeaModel {
     }
 
     public static class GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimeline extends TeaModel {
+        /**
+         * <p>The configuration changes of the configuration timeline.</p>
+         */
         @NameInMap("ConfigurationList")
         public java.util.List<GetResourceConfigurationTimelineResponseBodyResourceConfigurationTimelineConfigurationList> configurationList;
 
+        /**
+         * <p>The number of entries returned on each page. Valid values: 1 to 100.</p>
+         */
         @NameInMap("Limit")
         public Integer limit;
 
+        /**
+         * <p>The token that was returned for the next query.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of configuration changes for the specified resource.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

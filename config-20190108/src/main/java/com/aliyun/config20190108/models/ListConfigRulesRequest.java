@@ -4,30 +4,70 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class ListConfigRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the compliance package to which the rule belongs.</p>
+     */
     @NameInMap("CompliancePackId")
     public String compliancePackId;
 
+    /**
+     * <p>The compliance evaluation result of the resources. Valid values:</p>
+     * <br>
+     * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
+     * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
+     * <p>*   NOT_APPLICABLE: The rule does not apply to the resources.</p>
+     * <p>*   INSUFFICIENT_DATA: The resource data is insufficient.</p>
+     */
     @NameInMap("ComplianceType")
     public String complianceType;
 
+    /**
+     * <p>The name of the monitoring rule.</p>
+     */
     @NameInMap("ConfigRuleName")
     public String configRuleName;
 
+    /**
+     * <p>The status of the rule. Valid values:</p>
+     * <br>
+     * <p>*   ACTIVE: The rule is enabled.</p>
+     * <p>*   EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
+     * <p>*   INACTIVE: The rule is disabled.</p>
+     */
     @NameInMap("ConfigRuleState")
     public String configRuleState;
 
+    /**
+     * <p>This parameter is unavailable since 00:00:00 on June 30, 2021. Account group-related operations are provided as an alternative after 00:00:00 on May 30, 2021. If you are using this parameter, we recommend that you switch to account group-related operations after 00:00:00 on May 30, 2021. For information about account groups, see [Overview](~~211534~~).</p>
+     */
     @NameInMap("MemberId")
     public Long memberId;
 
+    /**
+     * <p>This parameter is unavailable since 00:00:00 on June 30, 2021. Account group-related operations are provided as an alternative after 00:00:00 on May 30, 2021. If you are using this parameter, we recommend that you switch to account group-related operations after 00:00:00 on May 30, 2021. For information about account groups, see [Overview](~~211534~~).</p>
+     */
     @NameInMap("MultiAccount")
     public Boolean multiAccount;
 
+    /**
+     * <p>The page number of the returned page. A minimum of one entry can be returned on each page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+     * <br>
+     * <p>*   1: high</p>
+     * <p>*   2: medium</p>
+     * <p>*   3: low</p>
+     */
     @NameInMap("RiskLevel")
     public Integer riskLevel;
 

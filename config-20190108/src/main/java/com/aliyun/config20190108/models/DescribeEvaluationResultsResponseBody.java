@@ -4,9 +4,15 @@ package com.aliyun.config20190108.models;
 import com.aliyun.tea.*;
 
 public class DescribeEvaluationResultsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the compliance evaluation results returned.</p>
+     */
     @NameInMap("EvaluationResults")
     public DescribeEvaluationResultsResponseBodyEvaluationResults evaluationResults;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,45 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the rule.</p>
+         */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the evaluated resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the evaluated resource.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The type of the evaluated resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -117,9 +144,15 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier extends TeaModel {
+        /**
+         * <p>The information of the rule and the evaluated resource.</p>
+         */
         @NameInMap("EvaluationResultQualifier")
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier evaluationResultQualifier;
 
+        /**
+         * <p>The timestamp that was generated when the compliance evaluation was performed.</p>
+         */
         @NameInMap("OrderingTimestamp")
         public Long orderingTimestamp;
 
@@ -147,27 +180,66 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList extends TeaModel {
+        /**
+         * <p>The annotation to the resource that is evaluated to be non-compliant.</p>
+         */
         @NameInMap("Annotation")
         public String annotation;
 
+        /**
+         * <p>The compliance evaluation result of the resource. Valid values:</p>
+         * <br>
+         * <p>*   COMPLIANT: The resource is evaluated to be compliant.</p>
+         * <p>*   NON_COMPLIANT: The resource is evaluated to be non-compliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule does not apply to the resource.</p>
+         * <p>*   INSUFFICIENT_DATA: The resource data is insufficient.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The timestamp that was generated when the rule was triggered.</p>
+         */
         @NameInMap("ConfigRuleInvokedTimestamp")
         public Long configRuleInvokedTimestamp;
 
+        /**
+         * <p>The identifier of the compliance evaluation result.</p>
+         */
         @NameInMap("EvaluationResultIdentifier")
         public DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifier evaluationResultIdentifier;
 
+        /**
+         * <p>The trigger type of the rule. Valid values:</p>
+         * <br>
+         * <p>*   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</p>
+         * <p>*   ScheduledNotification: The rule is triggered as scheduled.</p>
+         */
         @NameInMap("InvokingEventMessageType")
         public String invokingEventMessageType;
 
+        /**
+         * <p>Specifies whether to enable the remediation template. Valid values:</p>
+         * <br>
+         * <p>* **true**</p>
+         * <p>* **false**</p>
+         */
         @NameInMap("RemediationEnabled")
         public Boolean remediationEnabled;
 
+        /**
+         * <p>The timestamp that was generated when the compliance evaluation result was recorded.</p>
+         */
         @NameInMap("ResultRecordedTimestamp")
         public Long resultRecordedTimestamp;
 
+        /**
+         * <p>The risk level of the non-compliant resource. Valid values:</p>
+         * <br>
+         * <p>*   1: high risk</p>
+         * <p>*   2: medium risk</p>
+         * <p>*   3: low risk</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
@@ -243,15 +315,30 @@ public class DescribeEvaluationResultsResponseBody extends TeaModel {
     }
 
     public static class DescribeEvaluationResultsResponseBodyEvaluationResults extends TeaModel {
+        /**
+         * <p>Indicates whether remediation is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("EvaluationResultList")
         public java.util.List<DescribeEvaluationResultsResponseBodyEvaluationResultsEvaluationResultList> evaluationResultList;
 
+        /**
+         * <p>The page number of the returned page. Pages start from page 1.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page. Valid values: 1 to 100.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of compliance evaluation results.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 
