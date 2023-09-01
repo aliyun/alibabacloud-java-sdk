@@ -4,13 +4,13 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class Error extends TeaModel {
-    @NameInMap("code")
+    @NameInMap("Code")
     public String code;
 
-    @NameInMap("message")
+    @NameInMap("Message")
     public String message;
 
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     public String requestId;
 
     public static Error build(java.util.Map<String, ?> map) throws Exception {

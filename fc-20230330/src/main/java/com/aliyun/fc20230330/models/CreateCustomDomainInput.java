@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomDomainInput extends TeaModel {
+    @NameInMap("authConfig")
+    public AuthConfig authConfig;
+
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
@@ -25,6 +28,14 @@ public class CreateCustomDomainInput extends TeaModel {
     public static CreateCustomDomainInput build(java.util.Map<String, ?> map) throws Exception {
         CreateCustomDomainInput self = new CreateCustomDomainInput();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCustomDomainInput setAuthConfig(AuthConfig authConfig) {
+        this.authConfig = authConfig;
+        return this;
+    }
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
     }
 
     public CreateCustomDomainInput setCertConfig(CertConfig certConfig) {

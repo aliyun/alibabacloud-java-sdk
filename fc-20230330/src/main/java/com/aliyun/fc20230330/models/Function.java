@@ -88,9 +88,6 @@ public class Function extends TeaModel {
     @NameInMap("tracingConfig")
     public TracingConfig tracingConfig;
 
-    @NameInMap("vpcBinding")
-    public VPCBinding vpcBinding;
-
     @NameInMap("vpcConfig")
     public VPCConfig vpcConfig;
 
@@ -321,14 +318,6 @@ public class Function extends TeaModel {
     }
     public TracingConfig getTracingConfig() {
         return this.tracingConfig;
-    }
-
-    public Function setVpcBinding(VPCBinding vpcBinding) {
-        this.vpcBinding = vpcBinding;
-        return this;
-    }
-    public VPCBinding getVpcBinding() {
-        return this.vpcBinding;
     }
 
     public Function setVpcConfig(VPCConfig vpcConfig) {

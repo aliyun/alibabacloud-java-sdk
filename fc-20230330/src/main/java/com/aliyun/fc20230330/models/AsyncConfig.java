@@ -10,8 +10,8 @@ public class AsyncConfig extends TeaModel {
     @NameInMap("destinationConfig")
     public DestinationConfig destinationConfig;
 
-    @NameInMap("functionName")
-    public String functionName;
+    @NameInMap("functionArn")
+    public String functionArn;
 
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
@@ -21,9 +21,6 @@ public class AsyncConfig extends TeaModel {
 
     @NameInMap("maxAsyncRetryAttempts")
     public Long maxAsyncRetryAttempts;
-
-    @NameInMap("qualifier")
-    public String qualifier;
 
     public static AsyncConfig build(java.util.Map<String, ?> map) throws Exception {
         AsyncConfig self = new AsyncConfig();
@@ -46,12 +43,12 @@ public class AsyncConfig extends TeaModel {
         return this.destinationConfig;
     }
 
-    public AsyncConfig setFunctionName(String functionName) {
-        this.functionName = functionName;
+    public AsyncConfig setFunctionArn(String functionArn) {
+        this.functionArn = functionArn;
         return this;
     }
-    public String getFunctionName() {
-        return this.functionName;
+    public String getFunctionArn() {
+        return this.functionArn;
     }
 
     public AsyncConfig setLastModifiedTime(String lastModifiedTime) {
@@ -76,14 +73,6 @@ public class AsyncConfig extends TeaModel {
     }
     public Long getMaxAsyncRetryAttempts() {
         return this.maxAsyncRetryAttempts;
-    }
-
-    public AsyncConfig setQualifier(String qualifier) {
-        this.qualifier = qualifier;
-        return this;
-    }
-    public String getQualifier() {
-        return this.qualifier;
     }
 
 }

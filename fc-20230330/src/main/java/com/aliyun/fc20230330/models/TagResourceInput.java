@@ -7,9 +7,6 @@ public class TagResourceInput extends TeaModel {
     @NameInMap("resourceArn")
     public String resourceArn;
 
-    @NameInMap("resourceType")
-    public String resourceType;
-
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
@@ -24,14 +21,6 @@ public class TagResourceInput extends TeaModel {
     }
     public String getResourceArn() {
         return this.resourceArn;
-    }
-
-    public TagResourceInput setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public TagResourceInput setTags(java.util.Map<String, String> tags) {

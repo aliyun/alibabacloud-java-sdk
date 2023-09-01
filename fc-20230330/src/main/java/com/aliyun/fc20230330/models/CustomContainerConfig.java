@@ -10,8 +10,8 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("accelerationType")
     public String accelerationType;
 
-    @NameInMap("acrInstanceID")
-    public String acrInstanceID;
+    @NameInMap("acrInstanceId")
+    public String acrInstanceId;
 
     @NameInMap("command")
     public java.util.List<String> command;
@@ -49,12 +49,12 @@ public class CustomContainerConfig extends TeaModel {
         return this.accelerationType;
     }
 
-    public CustomContainerConfig setAcrInstanceID(String acrInstanceID) {
-        this.acrInstanceID = acrInstanceID;
+    public CustomContainerConfig setAcrInstanceId(String acrInstanceId) {
+        this.acrInstanceId = acrInstanceId;
         return this;
     }
-    public String getAcrInstanceID() {
-        return this.acrInstanceID;
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
     }
 
     public CustomContainerConfig setCommand(java.util.List<String> command) {

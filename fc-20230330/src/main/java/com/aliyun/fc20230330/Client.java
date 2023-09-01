@@ -27,7 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * create function version
+      * 创建函数别名。
       *
       * @param request CreateAliasRequest
       * @param headers map
@@ -55,7 +55,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * create function version
+      * 创建函数别名。
       *
       * @param request CreateAliasRequest
       * @return CreateAliasResponse
@@ -67,7 +67,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create custom domain.
+      * 创建自定义域名。
       *
       * @param request CreateCustomDomainRequest
       * @param headers map
@@ -95,7 +95,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create custom domain.
+      * 创建自定义域名。
       *
       * @param request CreateCustomDomainRequest
       * @return CreateCustomDomainResponse
@@ -107,7 +107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create function
+      * 创建函数。
       *
       * @param request CreateFunctionRequest
       * @param headers map
@@ -135,7 +135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create function
+      * 创建函数。
       *
       * @param request CreateFunctionRequest
       * @return CreateFunctionResponse
@@ -147,7 +147,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create layer version
+      * 创建层版本。
       *
       * @param request CreateLayerVersionRequest
       * @param headers map
@@ -175,7 +175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create layer version
+      * 创建层版本。
       *
       * @param request CreateLayerVersionRequest
       * @return CreateLayerVersionResponse
@@ -187,7 +187,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create trigger.
+      * 创建函数触发器。
       *
       * @param request CreateTriggerRequest
       * @param headers map
@@ -215,7 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Create trigger.
+      * 创建函数触发器。
       *
       * @param request CreateTriggerRequest
       * @return CreateTriggerResponse
@@ -227,7 +227,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function alias
+      * 创建VPC绑定。
+      *
+      * @param request CreateVpcBindingRequest
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateVpcBindingResponse
+     */
+    public CreateVpcBindingResponse createVpcBindingWithOptions(String functionName, CreateVpcBindingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVpcBinding"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/vpc-bindings"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVpcBindingResponse());
+    }
+
+    /**
+      * 创建VPC绑定。
+      *
+      * @param request CreateVpcBindingRequest
+      * @return CreateVpcBindingResponse
+     */
+    public CreateVpcBindingResponse createVpcBinding(String functionName, CreateVpcBindingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createVpcBindingWithOptions(functionName, request, headers, runtime);
+    }
+
+    /**
+      * 删除函数别名。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -252,7 +292,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function alias
+      * 删除函数别名。
       *
       * @return DeleteAliasResponse
      */
@@ -263,7 +303,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function async invoke config
+      * 删除函数异步调用配置。
       *
       * @param request DeleteAsyncInvokeConfigRequest
       * @param headers map
@@ -296,7 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function async invoke config
+      * 删除函数异步调用配置。
       *
       * @param request DeleteAsyncInvokeConfigRequest
       * @return DeleteAsyncInvokeConfigResponse
@@ -308,7 +348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * deletes the concurrency config for a function
+      * 删除函数并发度配置。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -333,7 +373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * deletes the concurrency config for a function
+      * 删除函数并发度配置。
       *
       * @return DeleteConcurrencyConfigResponse
      */
@@ -344,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete custom domain.
+      * 删除自定义域名。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -369,7 +409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete custom domain.
+      * 删除自定义域名。
       *
       * @return DeleteCustomDomainResponse
      */
@@ -380,7 +420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function
+      * 删除函数。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -405,7 +445,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function
+      * 删除函数。
       *
       * @return DeleteFunctionResponse
      */
@@ -416,13 +456,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function version
+      * 删除函数版本。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
       * @return DeleteFunctionVersionResponse
      */
-    public DeleteFunctionVersionResponse deleteFunctionVersionWithOptions(String functionName, String versionID, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteFunctionVersionResponse deleteFunctionVersionWithOptions(String functionName, String versionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
@@ -430,7 +470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteFunctionVersion"),
             new TeaPair("version", "2023-03-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(versionID) + ""),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/versions/" + com.aliyun.openapiutil.Client.getEncodeParam(versionId) + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -441,18 +481,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete function version
+      * 删除函数版本。
       *
       * @return DeleteFunctionVersionResponse
      */
-    public DeleteFunctionVersionResponse deleteFunctionVersion(String functionName, String versionID) throws Exception {
+    public DeleteFunctionVersionResponse deleteFunctionVersion(String functionName, String versionId) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteFunctionVersionWithOptions(functionName, versionID, headers, runtime);
+        return this.deleteFunctionVersionWithOptions(functionName, versionId, headers, runtime);
     }
 
     /**
-      * Delete layer version
+      * 删除层版本。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -477,7 +517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete layer version
+      * 删除层版本。
       *
       * @return DeleteLayerVersionResponse
      */
@@ -488,7 +528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete provision config.
+      * 删除函数预留配置。
       *
       * @param request DeleteProvisionConfigRequest
       * @param headers map
@@ -521,7 +561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete provision config.
+      * 删除函数预留配置。
       *
       * @param request DeleteProvisionConfigRequest
       * @return DeleteProvisionConfigResponse
@@ -533,7 +573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete trigger.
+      * 删除函数触发器。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -558,7 +598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Delete trigger.
+      * 删除函数触发器。
       *
       * @return DeleteTriggerResponse
      */
@@ -569,7 +609,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function alias
+      * 删除VPC绑定。
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteVpcBindingResponse
+     */
+    public DeleteVpcBindingResponse deleteVpcBindingWithOptions(String functionName, String vpcId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVpcBinding"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/vpc-bindings/" + com.aliyun.openapiutil.Client.getEncodeParam(vpcId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVpcBindingResponse());
+    }
+
+    /**
+      * 删除VPC绑定。
+      *
+      * @return DeleteVpcBindingResponse
+     */
+    public DeleteVpcBindingResponse deleteVpcBinding(String functionName, String vpcId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteVpcBindingWithOptions(functionName, vpcId, headers, runtime);
+    }
+
+    /**
+      * 获取函数别名信息。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -594,7 +670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function alias
+      * 获取函数别名信息。
       *
       * @return GetAliasResponse
      */
@@ -605,7 +681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function async invoke config
+      * 获取函数异步调用配置。
       *
       * @param request GetAsyncInvokeConfigRequest
       * @param headers map
@@ -638,7 +714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function async invoke config
+      * 获取函数异步调用配置。
       *
       * @param request GetAsyncInvokeConfigRequest
       * @return GetAsyncInvokeConfigResponse
@@ -650,7 +726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * gets the concurrency config for a function
+      * 获取函数并发度配置。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -675,7 +751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * gets the concurrency config for a function
+      * 获取函数并发度配置。
       *
       * @return GetConcurrencyConfigResponse
      */
@@ -686,7 +762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get custom domain.
+      * 获取自定义域名。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -711,7 +787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get custom domain.
+      * 获取自定义域名。
       *
       * @return GetCustomDomainResponse
      */
@@ -722,7 +798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function info by function name
+      * 获取函数信息。
       *
       * @param request GetFunctionRequest
       * @param headers map
@@ -755,7 +831,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function info by function name
+      * 获取函数信息。
       *
       * @param request GetFunctionRequest
       * @return GetFunctionResponse
@@ -767,7 +843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function code by function name
+      * 获取函数代码。
       *
       * @param request GetFunctionCodeRequest
       * @param headers map
@@ -800,7 +876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get function code by function name
+      * 获取函数代码。
       *
       * @param request GetFunctionCodeRequest
       * @return GetFunctionCodeResponse
@@ -812,7 +888,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get layer version.
+      * 获取层版本。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -837,7 +913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get layer version.
+      * 获取层版本。
       *
       * @return GetLayerVersionResponse
      */
@@ -848,7 +924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get layer version by arn.
+      * 根据资源标识获取层版本。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -873,7 +949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get layer version by arn.
+      * 根据资源标识获取层版本。
       *
       * @return GetLayerVersionByArnResponse
      */
@@ -884,7 +960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get provision config.
+      * 获取函数预留配置。
       *
       * @param request GetProvisionConfigRequest
       * @param headers map
@@ -917,7 +993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get provision config.
+      * 获取函数预留配置。
       *
       * @param request GetProvisionConfigRequest
       * @return GetProvisionConfigResponse
@@ -929,7 +1005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get resource tag
+      * 获取资源标签。
       *
       * @param request GetResourceTagsRequest
       * @param headers map
@@ -962,7 +1038,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get resource tag
+      * 获取资源标签。
       *
       * @param request GetResourceTagsRequest
       * @return GetResourceTagsResponse
@@ -974,7 +1050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get trigger.
+      * 获取函数触发器。
       *
       * @param headers map
       * @param runtime runtime options for this request RuntimeOptions
@@ -999,7 +1075,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Get trigger.
+      * 获取函数触发器。
       *
       * @return GetTriggerResponse
      */
@@ -1010,7 +1086,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Invoke function
+      * 调用函数。
       *
       * @param request InvokeFunctionRequest
       * @param headers InvokeFunctionHeaders
@@ -1075,7 +1151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Invoke function
+      * 调用函数。
       *
       * @param request InvokeFunctionRequest
       * @return InvokeFunctionResponse
@@ -1087,7 +1163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List function aliases
+      * 列出函数别名。
       *
       * @param request ListAliasesRequest
       * @param headers map
@@ -1128,7 +1204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List function aliases
+      * 列出函数别名。
       *
       * @param request ListAliasesRequest
       * @return ListAliasesResponse
@@ -1140,7 +1216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List all functions async invoke config
+      * 列出函数异步调用配置。
       *
       * @param request ListAsyncInvokeConfigsRequest
       * @param headers map
@@ -1181,7 +1257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List all functions async invoke config
+      * 列出函数异步调用配置。
       *
       * @param request ListAsyncInvokeConfigsRequest
       * @return ListAsyncInvokeConfigsResponse
@@ -1193,7 +1269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List all functions concurrency configs
+      * 列出函数并发度配置。
       *
       * @param request ListConcurrencyConfigsRequest
       * @param headers map
@@ -1234,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List all functions concurrency configs
+      * 列出函数并发度配置。
       *
       * @param request ListConcurrencyConfigsRequest
       * @return ListConcurrencyConfigsResponse
@@ -1246,7 +1322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List custom domains.
+      * 列出自定义域名。
       *
       * @param request ListCustomDomainsRequest
       * @param headers map
@@ -1287,7 +1363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List custom domains.
+      * 列出自定义域名。
       *
       * @param request ListCustomDomainsRequest
       * @return ListCustomDomainsResponse
@@ -1299,7 +1375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List function versions
+      * 列出函数版本。
       *
       * @param request ListFunctionVersionsRequest
       * @param headers map
@@ -1340,7 +1416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List function versions
+      * 列出函数版本。
       *
       * @param request ListFunctionVersionsRequest
       * @return ListFunctionVersionsResponse
@@ -1352,7 +1428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Lists existing functions.
+      * 列出函数。
       *
       * @param request ListFunctionsRequest
       * @param headers map
@@ -1393,7 +1469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Lists existing functions.
+      * 列出函数。
       *
       * @param request ListFunctionsRequest
       * @return ListFunctionsResponse
@@ -1405,7 +1481,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List instances for function.
+      * 列出函数实例。
       *
       * @param request ListInstancesRequest
       * @param headers map
@@ -1442,7 +1518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List instances for function.
+      * 列出函数实例。
       *
       * @param request ListInstancesRequest
       * @return ListInstancesResponse
@@ -1454,7 +1530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List layer versions.
+      * 列出层版本。
       *
       * @param request ListLayerVersionsRequest
       * @param headers map
@@ -1491,7 +1567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List layer versions.
+      * 列出层版本。
       *
       * @param request ListLayerVersionsRequest
       * @return ListLayerVersionsResponse
@@ -1503,7 +1579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List layers .
+      * 列出层。
       *
       * @param request ListLayersRequest
       * @param headers map
@@ -1552,7 +1628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List layers .
+      * 列出层。
       *
       * @param request ListLayersRequest
       * @return ListLayersResponse
@@ -1564,7 +1640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List provision configs.
+      * 列出函数预留配置。
       *
       * @param request ListProvisionConfigsRequest
       * @param headers map
@@ -1605,7 +1681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List provision configs.
+      * 列出函数预留配置。
       *
       * @param request ListProvisionConfigsRequest
       * @return ListProvisionConfigsResponse
@@ -1617,7 +1693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List tagged resources
+      * 列出具有标签的资源。
       *
       * @param request ListTaggedResourcesRequest
       * @param headers map
@@ -1654,7 +1730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List tagged resources
+      * 列出具有标签的资源。
       *
       * @param request ListTaggedResourcesRequest
       * @return ListTaggedResourcesResponse
@@ -1666,7 +1742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List triggers.
+      * 列出函数触发器。
       *
       * @param request ListTriggersRequest
       * @param headers map
@@ -1707,7 +1783,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * List triggers.
+      * 列出函数触发器。
       *
       * @param request ListTriggersRequest
       * @return ListTriggersResponse
@@ -1719,7 +1795,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * publish new function version
+      * 列出VPC绑定配置。
+      *
+      * @param headers map
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListVpcBindingsResponse
+     */
+    public ListVpcBindingsResponse listVpcBindingsWithOptions(String functionName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVpcBindings"),
+            new TeaPair("version", "2023-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/2023-03-30/functions/" + com.aliyun.openapiutil.Client.getEncodeParam(functionName) + "/vpc-bindings"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVpcBindingsResponse());
+    }
+
+    /**
+      * 列出VPC绑定配置。
+      *
+      * @return ListVpcBindingsResponse
+     */
+    public ListVpcBindingsResponse listVpcBindings(String functionName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listVpcBindingsWithOptions(functionName, headers, runtime);
+    }
+
+    /**
+      * 发布函数版本。
       *
       * @param request PublishFunctionVersionRequest
       * @param headers map
@@ -1747,7 +1859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * publish new function version
+      * 发布函数版本。
       *
       * @param request PublishFunctionVersionRequest
       * @return PublishFunctionVersionResponse
@@ -1759,7 +1871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Put function async invoke config.
+      * 设置函数异步调用配置。
       *
       * @param request PutAsyncInvokeConfigRequest
       * @param headers map
@@ -1793,7 +1905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Put function async invoke config.
+      * 设置函数异步调用配置。
       *
       * @param request PutAsyncInvokeConfigRequest
       * @return PutAsyncInvokeConfigResponse
@@ -1805,7 +1917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * sets the concurrency config for a function
+      * 设置函数并发度配置。
       *
       * @param request PutConcurrencyConfigRequest
       * @param headers map
@@ -1833,7 +1945,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * sets the concurrency config for a function
+      * 设置函数并发度配置。
       *
       * @param request PutConcurrencyConfigRequest
       * @return PutConcurrencyConfigResponse
@@ -1845,7 +1957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update layer ACL.
+      * 设置层的访问权限。
       *
       * @param request PutLayerACLRequest
       * @param headers map
@@ -1878,7 +1990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update layer ACL.
+      * 设置层的访问权限。
       *
       * @param request PutLayerACLRequest
       * @return PutLayerACLResponse
@@ -1890,7 +2002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Put provision config.
+      * 设置函数预留配置。
       *
       * @param request PutProvisionConfigRequest
       * @param headers map
@@ -1924,7 +2036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Put provision config.
+      * 设置函数预留配置。
       *
       * @param request PutProvisionConfigRequest
       * @return PutProvisionConfigResponse
@@ -1936,7 +2048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Tag resource
+      * 设置资源标签。
       *
       * @param request TagResourceRequest
       * @param headers map
@@ -1958,13 +2070,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
+            new TeaPair("bodyType", "none")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourceResponse());
     }
 
     /**
-      * Tag resource
+      * 设置资源标签。
       *
       * @param request TagResourceRequest
       * @return TagResourceResponse
@@ -1976,7 +2088,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Untag resource tag, support resource type: function, service
+      * 删除资源标签。
       *
       * @param request UntagResourceRequest
       * @param headers map
@@ -2017,7 +2129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Untag resource tag, support resource type: function, service
+      * 删除资源标签。
       *
       * @param request UntagResourceRequest
       * @return UntagResourceResponse
@@ -2029,7 +2141,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update function alias
+      * 更新函数别名。
       *
       * @param request UpdateAliasRequest
       * @param headers map
@@ -2057,7 +2169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update function alias
+      * 更新函数别名。
       *
       * @param request UpdateAliasRequest
       * @return UpdateAliasResponse
@@ -2069,7 +2181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update custom domain.
+      * 更新自定义域名。
       *
       * @param request UpdateCustomDomainRequest
       * @param headers map
@@ -2097,7 +2209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update custom domain.
+      * 更新自定义域名。
       *
       * @param request UpdateCustomDomainRequest
       * @return UpdateCustomDomainResponse
@@ -2109,7 +2221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update function
+      * 更新函数。
       *
       * @param request UpdateFunctionRequest
       * @param headers map
@@ -2137,7 +2249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update function
+      * 更新函数。
       *
       * @param request UpdateFunctionRequest
       * @return UpdateFunctionResponse
@@ -2149,7 +2261,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update trigger.
+      * 更新函数触发器。
       *
       * @param request UpdateTriggerRequest
       * @param headers map
@@ -2177,7 +2289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Update trigger.
+      * 更新函数触发器。
       *
       * @param request UpdateTriggerRequest
       * @return UpdateTriggerResponse
