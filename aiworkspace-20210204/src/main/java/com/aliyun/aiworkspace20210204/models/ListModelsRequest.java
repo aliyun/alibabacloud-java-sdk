@@ -34,6 +34,12 @@ public class ListModelsRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("SouceType")
+    public String souceType;
+
+    @NameInMap("SourceId")
+    public String sourceId;
+
     @NameInMap("Task")
     public String task;
 
@@ -123,6 +129,22 @@ public class ListModelsRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public ListModelsRequest setSouceType(String souceType) {
+        this.souceType = souceType;
+        return this;
+    }
+    public String getSouceType() {
+        return this.souceType;
+    }
+
+    public ListModelsRequest setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
     }
 
     public ListModelsRequest setTask(String task) {

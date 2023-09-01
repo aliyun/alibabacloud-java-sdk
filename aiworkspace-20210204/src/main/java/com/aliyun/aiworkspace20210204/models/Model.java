@@ -46,6 +46,12 @@ public class Model extends TeaModel {
     @NameInMap("Provider")
     public String provider;
 
+    @NameInMap("SourceId")
+    public String sourceId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
     @NameInMap("Task")
     public String task;
 
@@ -170,6 +176,22 @@ public class Model extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public Model setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    public Model setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public Model setTask(String task) {

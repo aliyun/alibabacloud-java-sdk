@@ -83,6 +83,25 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
 
+    public static class ListResourcesResponseBodyResourcesExecutor extends TeaModel {
+        @NameInMap("OwnerId")
+        public String ownerId;
+
+        public static ListResourcesResponseBodyResourcesExecutor build(java.util.Map<String, ?> map) throws Exception {
+            ListResourcesResponseBodyResourcesExecutor self = new ListResourcesResponseBodyResourcesExecutor();
+            return TeaModel.build(map, self);
+        }
+
+        public ListResourcesResponseBodyResourcesExecutor setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+    }
+
     public static class ListResourcesResponseBodyResourcesQuotasSpecs extends TeaModel {
         @NameInMap("Name")
         public String name;
@@ -217,7 +236,7 @@ public class ListResourcesResponseBody extends TeaModel {
         public String envType;
 
         @NameInMap("Executor")
-        public java.util.Map<String, ResourcesExecutorValue> executor;
+        public ListResourcesResponseBodyResourcesExecutor executor;
 
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
@@ -270,11 +289,11 @@ public class ListResourcesResponseBody extends TeaModel {
             return this.envType;
         }
 
-        public ListResourcesResponseBodyResources setExecutor(java.util.Map<String, ResourcesExecutorValue> executor) {
+        public ListResourcesResponseBodyResources setExecutor(ListResourcesResponseBodyResourcesExecutor executor) {
             this.executor = executor;
             return this;
         }
-        public java.util.Map<String, ResourcesExecutorValue> getExecutor() {
+        public ListResourcesResponseBodyResourcesExecutor getExecutor() {
             return this.executor;
         }
 
