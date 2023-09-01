@@ -5,31 +5,22 @@ import com.aliyun.tea.*;
 
 public class CloneNacosConfigRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The IDs of configurations.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Ids")
     public String ids;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the destination namespace.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
-
-    /**
-     * <p>The ID of the source namespace.</p>
-     */
-    @NameInMap("OriginNamespaceId")
-    public String originNamespaceId;
 
     /**
      * <p>The policy used when a write conflict occurs.</p>
@@ -38,11 +29,20 @@ public class CloneNacosConfigRequest extends TeaModel {
      * <p>*   SKIP</p>
      * <p>*   OVERWRITE</p>
      */
+    @NameInMap("OriginNamespaceId")
+    public String originNamespaceId;
+
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
     /**
-     * <p>The ID of the destination namespace.</p>
+     * <p>The IDs of configurations.</p>
      */
     @NameInMap("TargetNamespaceId")
     public String targetNamespaceId;

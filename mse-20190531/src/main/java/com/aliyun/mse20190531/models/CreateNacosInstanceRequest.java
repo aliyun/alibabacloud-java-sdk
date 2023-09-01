@@ -5,76 +5,76 @@ import com.aliyun.tea.*;
 
 public class CreateNacosInstanceRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The name of the Nacos instance.</p>
+     * <p>The port number of the Nacos instance.</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>Specifies whether to enable the service for the instance.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("Enabled")
     public Boolean enabled;
 
     /**
-     * <p>Specifies whether to mark the instance as a temporary node.</p>
+     * <p>Specifies whether to enable the service for the instance.</p>
      */
     @NameInMap("Ephemeral")
     public Boolean ephemeral;
 
     /**
-     * <p>The name of the group.</p>
+     * <p>The name of the Nacos instance.</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The name of the group.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The IP address of the Nacos instance.</p>
+     * <p>Specifies whether to mark the instance as a temporary node.</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>The node metadata of the instance.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Metadata")
     public String metadata;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The IP address of the Nacos instance.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
     /**
-     * <p>The port number of the Nacos instance.</p>
+     * <p>The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
-     * <p>The name of the service.</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
-     * <p>The weight. Valid values: 0 to 10000. The value must be an integer. A larger value indicates a higher frequency at which the instance is accessed.</p>
+     * <p>The node metadata of the instance.</p>
      */
     @NameInMap("Weight")
     public String weight;

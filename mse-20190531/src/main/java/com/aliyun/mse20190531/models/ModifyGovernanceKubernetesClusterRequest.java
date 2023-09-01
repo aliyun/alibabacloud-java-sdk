@@ -19,11 +19,8 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
-    /**
-     * <p>The information about the namespaces of the cluster.</p>
-     */
     @NameInMap("NamespaceInfos")
-    public String namespaceInfos;
+    public java.util.List<ModifyGovernanceKubernetesClusterRequestNamespaceInfos> namespaceInfos;
 
     /**
      * <p>The region in which the cluster resides.</p>
@@ -52,11 +49,11 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ModifyGovernanceKubernetesClusterRequest setNamespaceInfos(String namespaceInfos) {
+    public ModifyGovernanceKubernetesClusterRequest setNamespaceInfos(java.util.List<ModifyGovernanceKubernetesClusterRequestNamespaceInfos> namespaceInfos) {
         this.namespaceInfos = namespaceInfos;
         return this;
     }
-    public String getNamespaceInfos() {
+    public java.util.List<ModifyGovernanceKubernetesClusterRequestNamespaceInfos> getNamespaceInfos() {
         return this.namespaceInfos;
     }
 
@@ -66,6 +63,47 @@ public class ModifyGovernanceKubernetesClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public static class ModifyGovernanceKubernetesClusterRequestNamespaceInfos extends TeaModel {
+        @NameInMap("labels")
+        public java.util.Map<String, String> labels;
+
+        @NameInMap("mseNamespace")
+        public String mseNamespace;
+
+        @NameInMap("name")
+        public String name;
+
+        public static ModifyGovernanceKubernetesClusterRequestNamespaceInfos build(java.util.Map<String, ?> map) throws Exception {
+            ModifyGovernanceKubernetesClusterRequestNamespaceInfos self = new ModifyGovernanceKubernetesClusterRequestNamespaceInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyGovernanceKubernetesClusterRequestNamespaceInfos setLabels(java.util.Map<String, String> labels) {
+            this.labels = labels;
+            return this;
+        }
+        public java.util.Map<String, String> getLabels() {
+            return this.labels;
+        }
+
+        public ModifyGovernanceKubernetesClusterRequestNamespaceInfos setMseNamespace(String mseNamespace) {
+            this.mseNamespace = mseNamespace;
+            return this;
+        }
+        public String getMseNamespace() {
+            return this.mseNamespace;
+        }
+
+        public ModifyGovernanceKubernetesClusterRequestNamespaceInfos setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
     }
 
 }

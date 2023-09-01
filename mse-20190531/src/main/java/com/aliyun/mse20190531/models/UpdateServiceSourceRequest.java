@@ -7,8 +7,8 @@ public class UpdateServiceSourceRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>*   zh: Chinese.</p>
+     * <p>*   en: English.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -58,8 +58,8 @@ public class UpdateServiceSourceRequest extends TeaModel {
     /**
      * <p>The service source. Valid values:</p>
      * <br>
-     * <p>*   K8S: ACK cluster</p>
-     * <p>*   MSE: Nacos instance</p>
+     * <p>*   K8s: ACK cluster.</p>
+     * <p>*   MSE: Nacos instance.</p>
      */
     @NameInMap("Source")
     public String source;
@@ -67,8 +67,8 @@ public class UpdateServiceSourceRequest extends TeaModel {
     /**
      * <p>The type of the service source. Valid values:</p>
      * <br>
-     * <p>*   K8S: ACK cluster</p>
-     * <p>*   NACOS: Nacos instance</p>
+     * <p>*   K8s: ACK cluster.</p>
+     * <p>*   NACOS: Nacos instance.</p>
      */
     @NameInMap("Type")
     public String type;

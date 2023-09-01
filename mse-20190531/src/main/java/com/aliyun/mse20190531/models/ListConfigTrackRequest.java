@@ -5,67 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListConfigTrackRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
-     * <br>
-     * <p>*   zh: Chinese</p>
-     * <p>*   en: English</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The ID of the configuration.</p>
+     * <p>The name of the configuration group.</p>
      */
     @NameInMap("DataId")
     public String dataId;
 
     /**
-     * <p>The end timestamp. Unit: seconds.</p>
+     * <p>The number of entries to return on each page.</p>
      */
     @NameInMap("EndTs")
     public Long endTs;
 
     /**
-     * <p>The name of the configuration group.</p>
+     * <p>The ID of the namespace.</p>
      */
     @NameInMap("Group")
     public String group;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the configuration.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The IP address of the listener.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("Ip")
     public String ip;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The start timestamp. Unit: seconds.</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
-
-    /**
-     * <p>The number of the page to return.</p>
-     */
-    @NameInMap("PageNum")
-    public Long pageNum;
-
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    /**
-     * <p>The extended request parameters in the JSON format.</p>
-     */
-    @NameInMap("RequestPars")
-    public String requestPars;
 
     /**
      * <p>Specifies whether to enable reverse ordering. Valid values:</p>
@@ -73,11 +55,29 @@ public class ListConfigTrackRequest extends TeaModel {
      * <p>*   true</p>
      * <p>*   false</p>
      */
+    @NameInMap("PageNum")
+    public Long pageNum;
+
+    /**
+     * <p>The number of the page to return.</p>
+     */
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    /**
+     * <p>The ID of the instance.</p>
+     */
+    @NameInMap("RequestPars")
+    public String requestPars;
+
+    /**
+     * <p>The IP address of the listener.</p>
+     */
     @NameInMap("Reverse")
     public Boolean reverse;
 
     /**
-     * <p>The start timestamp. Unit: seconds.</p>
+     * <p>The end timestamp. Unit: seconds.</p>
      */
     @NameInMap("StartTs")
     public Long startTs;

@@ -697,6 +697,9 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
         /**
          * <p>The ID of the secondary vSwitch.</p>
          */
@@ -1002,6 +1005,14 @@ public class ListGatewayResponseBody extends TeaModel {
         }
         public Boolean getUpgrade() {
             return this.upgrade;
+        }
+
+        public ListGatewayResponseBodyDataResult setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public ListGatewayResponseBodyDataResult setVswitch2(String vswitch2) {

@@ -73,7 +73,11 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   alicloud-disk-essd-pl1</p>
      */
     @NameInMap("DiskType")
+    @Deprecated
     public String diskType;
+
+    @NameInMap("EipEnabled")
+    public Boolean eipEnabled;
 
     /**
      * <p>The number of nodes in the instance. Valid values: 1 to 9.</p>
@@ -120,6 +124,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   `slb.s3.medium`</p>
      */
     @NameInMap("PrivateSlbSpecification")
+    @Deprecated
     public String privateSlbSpecification;
 
     /**
@@ -136,6 +141,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>*   `slb.s3.medium`</p>
      */
     @NameInMap("PubSlbSpecification")
+    @Deprecated
     public String pubSlbSpecification;
 
     /**
@@ -161,6 +167,9 @@ public class CreateClusterRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("SecurityGroupType")
+    public String securityGroupType;
 
     /**
      * <p>The list of the tags that you want to add.</p>
@@ -241,6 +250,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.diskType;
     }
 
+    public CreateClusterRequest setEipEnabled(Boolean eipEnabled) {
+        this.eipEnabled = eipEnabled;
+        return this;
+    }
+    public Boolean getEipEnabled() {
+        return this.eipEnabled;
+    }
+
     public CreateClusterRequest setInstanceCount(Integer instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -319,6 +336,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateClusterRequest setSecurityGroupType(String securityGroupType) {
+        this.securityGroupType = securityGroupType;
+        return this;
+    }
+    public String getSecurityGroupType() {
+        return this.securityGroupType;
     }
 
     public CreateClusterRequest setTag(java.util.List<CreateClusterRequestTag> tag) {

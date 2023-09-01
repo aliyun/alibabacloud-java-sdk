@@ -50,12 +50,6 @@ public class ApplyTagPoliciesRequest extends TeaModel {
     @NameInMap("Rules")
     public String rules;
 
-    /**
-     * <p>The service source.</p>
-     */
-    @NameInMap("Source")
-    public String source;
-
     public static ApplyTagPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyTagPoliciesRequest self = new ApplyTagPoliciesRequest();
         return TeaModel.build(map, self);
@@ -123,14 +117,6 @@ public class ApplyTagPoliciesRequest extends TeaModel {
     }
     public String getRules() {
         return this.rules;
-    }
-
-    public ApplyTagPoliciesRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
     }
 
 }

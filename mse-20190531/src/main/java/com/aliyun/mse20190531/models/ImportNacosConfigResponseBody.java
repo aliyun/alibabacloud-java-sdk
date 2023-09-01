@@ -5,54 +5,52 @@ import com.aliyun.tea.*;
 
 public class ImportNacosConfigResponseBody extends TeaModel {
     /**
-     * <p>The code returned.</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The details of the data.</p>
+     * <p>The number of configurations that are imported.</p>
      */
     @NameInMap("Data")
     public ImportNacosConfigResponseBodyData data;
 
     /**
-     * <p>The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.</p>
-     * <br>
-     * <p>>  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
     /**
-     * <p>The error code that is returned.</p>
+     * <p>The code returned.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The request is successfully processed.</p>
      */
     @NameInMap("Message")
     public String message;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("RequestId")
-    public String requestId;
 
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
      * <p>*   `true`: The request was successful.</p>
      * <p>*   `false`: The request failed.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The error code that is returned.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -128,14 +126,11 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     public static class ImportNacosConfigResponseBodyDataFailData extends TeaModel {
         /**
-         * <p>The ID of the data.</p>
+         * <p>The ID of the group.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
-        /**
-         * <p>The ID of the group.</p>
-         */
         @NameInMap("Group")
         public String group;
 
@@ -164,13 +159,13 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     public static class ImportNacosConfigResponseBodyDataSkipData extends TeaModel {
         /**
-         * <p>The ID of the data.</p>
+         * <p>The ID of the group.</p>
          */
         @NameInMap("DataId")
         public String dataId;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>The information about configurations that are failed to be imported.</p>
          */
         @NameInMap("Group")
         public String group;
@@ -200,25 +195,25 @@ public class ImportNacosConfigResponseBody extends TeaModel {
 
     public static class ImportNacosConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The information about configurations that are failed to be imported.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("FailData")
         public java.util.List<ImportNacosConfigResponseBodyDataFailData> failData;
 
         /**
-         * <p>The number of configurations that are skipped.</p>
+         * <p>The information about skipped configurations.</p>
          */
         @NameInMap("SkipCount")
         public Integer skipCount;
 
         /**
-         * <p>The information about skipped configurations.</p>
+         * <p>The data structure.</p>
          */
         @NameInMap("SkipData")
         public java.util.List<ImportNacosConfigResponseBodyDataSkipData> skipData;
 
         /**
-         * <p>The number of configurations that are imported.</p>
+         * <p>The number of configurations that are skipped.</p>
          */
         @NameInMap("SuccCount")
         public Integer succCount;

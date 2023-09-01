@@ -26,11 +26,14 @@ public class DeleteGatewaySlbRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The ID of the associated record.</p>
+     * <p>The ID of the association record.</p>
      */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The ID of the SLB instance that needs to be deleted.</p>
+     */
     @NameInMap("SlbId")
     public String slbId;
 

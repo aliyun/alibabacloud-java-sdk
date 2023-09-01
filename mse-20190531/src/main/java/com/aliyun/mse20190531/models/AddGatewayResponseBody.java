@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddGatewayResponseBody extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The unique ID of the gateway.</p>
      */
     @NameInMap("Data")
     public AddGatewayResponseBodyData data;
-
-    /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
 
     /**
      * <p>The message returned.</p>
@@ -28,20 +25,23 @@ public class AddGatewayResponseBody extends TeaModel {
      * <p>*   If the request is successful, a success message is returned.</p>
      * <p>*   If the request fails, an error message is returned.</p>
      */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    /**
+     * <p>The request is successfully processed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -101,7 +101,7 @@ public class AddGatewayResponseBody extends TeaModel {
 
     public static class AddGatewayResponseBodyData extends TeaModel {
         /**
-         * <p>The unique ID of the gateway.</p>
+         * <p>code</p>
          */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;

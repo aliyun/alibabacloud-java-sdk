@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     /**
-     * <p>Specifies whether to record the request details.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -23,19 +26,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public Boolean dbGrayEnable;
 
     /**
-     * <p>Specifies whether to enable a lane group.</p>
-     */
-    @NameInMap("Enable")
-    public Boolean enable;
-
-    /**
      * <p>The ingress application.</p>
      */
     @NameInMap("EntryApp")
     public String entryApp;
 
     /**
-     * <p>The ID of the primary key. The primary key is auto-increment.</p>
+     * <p>The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.</p>
      */
     @NameInMap("Id")
     public Long id;
@@ -58,11 +55,14 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>是否开启记录请求详情。</p>
+     * <p>Specifies whether to record request details.</p>
      */
     @NameInMap("RecordCanaryDetail")
     public Boolean recordCanaryDetail;
@@ -106,14 +106,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     }
     public Boolean getDbGrayEnable() {
         return this.dbGrayEnable;
-    }
-
-    public CreateOrUpdateSwimmingLaneGroupRequest setEnable(Boolean enable) {
-        this.enable = enable;
-        return this;
-    }
-    public Boolean getEnable() {
-        return this.enable;
     }
 
     public CreateOrUpdateSwimmingLaneGroupRequest setEntryApp(String entryApp) {

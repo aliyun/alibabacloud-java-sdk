@@ -253,6 +253,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("VersionCode")
         public String versionCode;
 
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static ListClustersResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListClustersResponseBodyData self = new ListClustersResponseBodyData();
             return TeaModel.build(map, self);
@@ -408,6 +411,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getVersionCode() {
             return this.versionCode;
+        }
+
+        public ListClustersResponseBodyData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetMseSourceResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
      */
     @NameInMap("Code")
     public Integer code;
@@ -17,31 +20,28 @@ public class GetMseSourceResponseBody extends TeaModel {
     public java.util.List<GetMseSourceResponseBodyData> data;
 
     /**
-     * <p>The HTTP status code returned.</p>
-     */
-    @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
-
-    /**
      * <p>The message returned.</p>
      * <br>
      * <p>*   If the request is successful, a success message is returned.</p>
      * <p>*   If the request fails, an error message is returned, such as the "TaskId not found" message.</p>
      */
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    /**
+     * <p>The request is successfully processed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code returned.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <br>
-     * <p>*   `true`: The request was successful.</p>
-     * <p>*   `false`: The request failed.</p>
+     * <p>The data structure.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -101,31 +101,31 @@ public class GetMseSourceResponseBody extends TeaModel {
 
     public static class GetMseSourceResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The type.</p>
          */
         @NameInMap("Address")
         public String address;
 
         /**
-         * <p>The ID of cluster.</p>
+         * <p>code</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The endpoint of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name.</p>
+         * <p>The ID of cluster.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type.</p>
+         * <p>The name.</p>
          */
         @NameInMap("Type")
         public String type;

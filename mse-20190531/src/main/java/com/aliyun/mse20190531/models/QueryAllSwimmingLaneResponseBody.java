@@ -82,7 +82,183 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems extends TeaModel {
+        @NameInMap("cond")
+        public String cond;
+
+        @NameInMap("datum")
+        public String datum;
+
+        @NameInMap("divisor")
+        public Integer divisor;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("nameList")
+        public java.util.List<String> nameList;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("rate")
+        public Integer rate;
+
+        @NameInMap("remainder")
+        public Integer remainder;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("value")
+        public String value;
+
+        public static QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems build(java.util.Map<String, ?> map) throws Exception {
+            QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems self = new QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setCond(String cond) {
+            this.cond = cond;
+            return this;
+        }
+        public String getCond() {
+            return this.cond;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setDatum(String datum) {
+            this.datum = datum;
+            return this;
+        }
+        public String getDatum() {
+            return this.datum;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setDivisor(Integer divisor) {
+            this.divisor = divisor;
+            return this;
+        }
+        public Integer getDivisor() {
+            return this.divisor;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setNameList(java.util.List<String> nameList) {
+            this.nameList = nameList;
+            return this;
+        }
+        public java.util.List<String> getNameList() {
+            return this.nameList;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setRate(Integer rate) {
+            this.rate = rate;
+            return this;
+        }
+        public Integer getRate() {
+            return this.rate;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setRemainder(Integer remainder) {
+            this.remainder = remainder;
+            return this;
+        }
+        public Integer getRemainder() {
+            return this.remainder;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class QueryAllSwimmingLaneResponseBodyDataEntryRules extends TeaModel {
+        @NameInMap("condition")
+        public String condition;
+
+        @NameInMap("path")
+        public String path;
+
+        @NameInMap("paths")
+        public java.util.List<String> paths;
+
+        @NameInMap("restItems")
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems> restItems;
+
+        public static QueryAllSwimmingLaneResponseBodyDataEntryRules build(java.util.Map<String, ?> map) throws Exception {
+            QueryAllSwimmingLaneResponseBodyDataEntryRules self = new QueryAllSwimmingLaneResponseBodyDataEntryRules();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRules setCondition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+        public String getCondition() {
+            return this.condition;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRules setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRules setPaths(java.util.List<String> paths) {
+            this.paths = paths;
+            return this;
+        }
+        public java.util.List<String> getPaths() {
+            return this.paths;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyDataEntryRules setRestItems(java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems> restItems) {
+            this.restItems = restItems;
+            return this;
+        }
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRulesRestItems> getRestItems() {
+            return this.restItems;
+        }
+
+    }
+
     public static class QueryAllSwimmingLaneResponseBodyData extends TeaModel {
+        @NameInMap("EntryRules")
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRules> entryRules;
+
+        @NameInMap("GroupId")
+        public String groupId;
+
         @NameInMap("Id")
         public Long id;
 
@@ -119,12 +295,25 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("gmtModified")
         public String gmtModified;
 
-        @NameInMap("groupId")
-        public String groupId;
-
         public static QueryAllSwimmingLaneResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAllSwimmingLaneResponseBodyData self = new QueryAllSwimmingLaneResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryAllSwimmingLaneResponseBodyData setEntryRules(java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRules> entryRules) {
+            this.entryRules = entryRules;
+            return this;
+        }
+        public java.util.List<QueryAllSwimmingLaneResponseBodyDataEntryRules> getEntryRules() {
+            return this.entryRules;
+        }
+
+        public QueryAllSwimmingLaneResponseBodyData setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
         public QueryAllSwimmingLaneResponseBodyData setId(Long id) {
@@ -221,14 +410,6 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
-        }
-
-        public QueryAllSwimmingLaneResponseBodyData setGroupId(String groupId) {
-            this.groupId = groupId;
-            return this;
-        }
-        public String getGroupId() {
-            return this.groupId;
         }
 
     }
