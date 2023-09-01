@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgentInstallStatusResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the installation results for the servers.</p>
+     * <p>The status of servers.</p>
      */
     @NameInMap("AegisClientInvokeStatusResponseList")
     public java.util.List<DescribeAgentInstallStatusResponseBodyAegisClientInvokeStatusResponseList> aegisClientInvokeStatusResponseList;
@@ -39,35 +39,35 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
 
     public static class DescribeAgentInstallStatusResponseBodyAegisClientInvokeStatusResponseList extends TeaModel {
         /**
-         * <p>The message returned.</p>
+         * <p>The returned message.</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The result code returned. Valid values:</p>
+         * <p>The installation status. Valid value:</p>
          * <br>
          * <p>*   **-1**: The agent is not installed.</p>
          * <p>*   **0**: The agent is installed.</p>
-         * <p>*   **1**: The directory of the agent failed to be created.</p>
-         * <p>*   **2**: The installation package failed to be downloaded.</p>
+         * <p>*   **1**: Failed to create a directory in the client.</p>
+         * <p>*   **2**: Failed to download the installation package.</p>
          * <p>*   **3**: The installation file does not exist.</p>
-         * <p>*   **4**: The verification information about the installation file does not exist.</p>
-         * <p>*   **5**: The installation file failed to pass the verification.</p>
-         * <p>*   **6**: The installation file failed to be executed.</p>
-         * <p>*   **7**: The agent failed to be installed because the required permissions are not granted.</p>
-         * <p>*   **8**: No process of the agent was detected.</p>
-         * <p>*   **100**: The agent failed to be installed because an unknown error occurred.</p>
-         * <p>*   **1001**: The agent failed to be installed because the automatic installation of the agent is not supported in the region.</p>
-         * <p>*   **1002**: The agent failed to be installed because the agent cannot be installed on servers outside the cloud. You can install the agent only on supported servers.</p>
-         * <p>*   **1003**: The agent failed to be installed because the operating system type of the server is not supported.</p>
+         * <p>*   **4**: The verification information of the installation file does not exist.</p>
+         * <p>*   **5**: Failed to verify the installation file.</p>
+         * <p>*   **6**: Failed to execute the installation file.</p>
+         * <p>*   **7**: You do not have the required permissions. The installation failed.</p>
+         * <p>*   **8**: No client process is detected.</p>
+         * <p>*   **100**: The installation failed due to an unknown error.</p>
+         * <p>*   **1001**: The installation failed. One-click installation is not supported in this region.</p>
+         * <p>*   **1002**: The installation failed. Servers that are not provided by Alibaba Cloud are not supported. Install the agent by executing a script on the server.</p>
+         * <p>*   **1003**: The installation failed. The operating system is not supported.</p>
          * <p>*   **1004**: An internal error occurred. Try again later.</p>
-         * <p>*   **1005**: The Elastic Compute Service (ECS) instance is not running. Start the ECS instance and try again.</p>
-         * <p>*   **1006**: The automatic installation of the agent is not supported on an ECS instance that resides in the classic network.</p>
-         * <p>*   **1007**: The process of the installation command is manually stopped.</p>
-         * <p>*   **1008**: The agent failed to be installed because Cloud Assistant is not installed.</p>
-         * <p>*   **1009**: The execution of the installation command timed out. Try again later.</p>
-         * <p>*   **1010**: The agent on the server is already online. You do not need to install the agent.</p>
+         * <p>*   **1005**: The Elastic Compute Service (ECS) instance is not started. Start the ECS instance and try again.</p>
+         * <p>*   **1006**: One-click installation is not supported for ECS instances of the classic network type.</p>
+         * <p>*   **1007**: The running command is manually stopped.</p>
+         * <p>*   **1008**: Cloud Assistant is not installed. You cannot install the client.</p>
+         * <p>*   **1009**: The command execution timed out. Try again later.</p>
+         * <p>*   **1010**: The machine is already online. You do not need to install a client.</p>
          */
         @NameInMap("ResuleCode")
         public String resuleCode;
@@ -75,10 +75,10 @@ public class DescribeAgentInstallStatusResponseBody extends TeaModel {
         /**
          * <p>The installation result. Valid value:</p>
          * <br>
-         * <p>*   **-1**: not installed</p>
-         * <p>*   **0**: being installed</p>
-         * <p>*   **1**: installed</p>
-         * <p>*   **2**: installation failed</p>
+         * <p>*   **-1**: The agent is not installed.</p>
+         * <p>*   **0**: The agent is being installed.</p>
+         * <p>*   **1**: The agent is installed.</p>
+         * <p>*   **2**: The installation failed.</p>
          */
         @NameInMap("Result")
         public Integer result;

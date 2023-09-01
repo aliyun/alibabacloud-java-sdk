@@ -53,13 +53,13 @@ public class DescribeVpcListResponseBody extends TeaModel {
 
     public static class DescribeVpcListResponseBodyVpcList extends TeaModel {
         /**
-         * <p>The number of ECS instances.</p>
+         * <p>The number of Elastic Compute Service (ECS) instances.</p>
          */
         @NameInMap("EcsCount")
         public Integer ecsCount;
 
         /**
-         * <p>The information about the VPC.</p>
+         * <p>The information about the virtual private cloud (VPC).</p>
          */
         @NameInMap("InstanceDesc")
         public String instanceDesc;
@@ -77,7 +77,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The region in which the ECS instance resides.</p>
+         * <p>The region in which the server resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

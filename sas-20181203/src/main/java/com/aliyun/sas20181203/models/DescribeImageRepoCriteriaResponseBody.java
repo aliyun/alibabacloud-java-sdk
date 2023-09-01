@@ -39,37 +39,37 @@ public class DescribeImageRepoCriteriaResponseBody extends TeaModel {
 
     public static class DescribeImageRepoCriteriaResponseBodyCriteriaList extends TeaModel {
         /**
-         * <p>The name of the filter condition. Valid values:</p>
+         * <p>The name of the search condition. Valid values:</p>
          * <br>
          * <p>*   **instanceId**: the ID of the image instance.</p>
          * <p>*   **repoName**: the name of the image repository.</p>
          * <p>*   **repoId**: the ID of the image repository.</p>
          * <p>*   **repoNamespace**: the namespace of the image repository.</p>
-         * <p>*   **regionId**: the region of the image.</p>
+         * <p>*   **regionId**: the region in which the image resides.</p>
          * <p>*   **vulStatus**: indicates whether vulnerabilities exist.</p>
          * <p>*   **alarmStatus**: indicates whether security alerts exist.</p>
          * <p>*   **hcStatus**: indicates whether baseline risks exist.</p>
          * <p>*   **riskStatus**: indicates whether risks exist.</p>
          * <p>*   **registryType**: the type of the image repository.</p>
-         * <p>*   **ImageId**: the ID of the image.</p>
-         * <p>*   **tag**: the tag of the image</p>
+         * <p>*   **ImageId**: the image ID.</p>
+         * <p>*   **tag**: the image tag.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type of the filter condition. Valid values:</p>
+         * <p>The type of the search condition. Valid values:</p>
          * <br>
-         * <p>*   **input**: The filter condition needs to be specified.</p>
-         * <p>*   **select**: The filter condition is an option that can be selected from the drop-down list.</p>
+         * <p>*   **input**: The search condition needs to be specified.</p>
+         * <p>*   **select**: The search condition is an option that can be selected from the drop-down list.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The value of the filter condition. This parameter is returned only if the value of **Type** is **select**.</p>
+         * <p>The values of the search condition. This parameter is returned only if the value of **Type** is set to **select**.</p>
          * <br>
-         * <p>> If the value of **Type** is **input**, the value of this parameter is an empty string.</p>
+         * <p>> If the value of **Type** is set to **input**, the return value of this parameter is empty.</p>
          */
         @NameInMap("Values")
         public String values;

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class InstallRaspAttachRequest extends TeaModel {
+    /**
+     * <p>The application group ID.</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The UUIDs of ECS instances on which the RASP agent is to be installed.</p>
+     */
     @NameInMap("EcsUUIDList")
     public java.util.List<String> ecsUUIDList;
 

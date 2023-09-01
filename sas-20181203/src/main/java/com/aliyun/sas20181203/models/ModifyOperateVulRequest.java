@@ -4,6 +4,9 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ModifyOperateVulRequest extends TeaModel {
+    @NameInMap("From")
+    public String from;
+
     /**
      * <p>The details of the vulnerability. The value of this parameter is in the JSON format and contains the following fields:</p>
      * <br>
@@ -67,6 +70,14 @@ public class ModifyOperateVulRequest extends TeaModel {
     public static ModifyOperateVulRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyOperateVulRequest self = new ModifyOperateVulRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyOperateVulRequest setFrom(String from) {
+        this.from = from;
+        return this;
+    }
+    public String getFrom() {
+        return this.from;
     }
 
     public ModifyOperateVulRequest setInfo(String info) {

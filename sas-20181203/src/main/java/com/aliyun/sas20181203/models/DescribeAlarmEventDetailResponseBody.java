@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlarmEventDetailResponseBody extends TeaModel {
     /**
-     * <p>The details about the alert event.</p>
+     * <p>The details of the alert event.</p>
      */
     @NameInMap("Data")
     public DescribeAlarmEventDetailResponseBodyData data;
@@ -39,13 +39,13 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
 
     public static class DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue extends TeaModel {
         /**
-         * <p>The name of the field that displays tracing information.</p>
+         * <p>The name of the field that displays the tracing information.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The type of the field that displays tracing information. Valid values:</p>
+         * <p>The type of the field that displays the tracing information. Valid values:</p>
          * <br>
          * <p>*   **text**</p>
          * <p>*   **html**</p>
@@ -54,7 +54,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the field that displays tracing information.</p>
+         * <p>The value of the field that displays the tracing information.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -98,7 +98,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>An array consisting of the value that is used to trace the alert event.</p>
+         * <p>The value that is used to trace the alert event.</p>
          */
         @NameInMap("Value")
         public java.util.List<DescribeAlarmEventDetailResponseBodyDataCauseDetailsValue> value;
@@ -140,9 +140,9 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         public String alarmEventDesc;
 
         /**
-         * <p>The unique ID of the alert event.</p>
+         * <p>The unique identifier of the alert event.</p>
          * <br>
-         * <p>>  To query the details about an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.</p>
+         * <p>> To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.</p>
          */
         @NameInMap("AlarmUniqueInfo")
         public String alarmUniqueInfo;

@@ -41,19 +41,19 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
         /**
          * <p>The type of the asset. Valid values:</p>
          * <br>
-         * <p>*   **namespace**: namespace</p>
-         * <p>*   **clusters**: cluster</p>
-         * <p>*   **applications**: application</p>
-         * <p>*   **pods**: container group</p>
-         * <p>*   **containers**: container</p>
-         * <p>*   **images**: image</p>
-         * <p>*   **hosts**: node</p>
+         * <p>*   **namespace**</p>
+         * <p>*   **clusters**</p>
+         * <p>*   **applications**</p>
+         * <p>*   **pods**</p>
+         * <p>*   **containers**</p>
+         * <p>*   **images**</p>
+         * <p>*   **hosts**</p>
          */
         @NameInMap("AssetType")
         public String assetType;
 
         /**
-         * <p>The number of assets that are at risk.</p>
+         * <p>The number of potential risky assets.</p>
          */
         @NameInMap("RiskCount")
         public Long riskCount;

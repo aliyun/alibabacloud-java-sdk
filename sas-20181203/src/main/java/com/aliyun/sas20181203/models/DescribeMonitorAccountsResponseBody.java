@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the members.</p>
+     */
     @NameInMap("AccountIds")
     public java.util.List<String> accountIds;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

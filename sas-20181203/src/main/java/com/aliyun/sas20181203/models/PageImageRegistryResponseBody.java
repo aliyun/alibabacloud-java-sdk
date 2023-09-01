@@ -53,7 +53,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
 
     public static class PageImageRegistryResponseBodyList extends TeaModel {
         /**
-         * <p>The blacklist.</p>
+         * <p>The IP address blacklist.</p>
          */
         @NameInMap("BlackList")
         public String blackList;
@@ -65,13 +65,13 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The update time. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -97,8 +97,8 @@ public class PageImageRegistryResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <br>
-         * <p>*   **1**: Internet</p>
-         * <p>*   **2**: Virtual Private Cloud (VPC)</p>
+         * <p>*   **1**: Internet.</p>
+         * <p>*   **2**: virtual private cloud (VPC).</p>
          */
         @NameInMap("NetType")
         public Integer netType;
@@ -110,7 +110,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The number of days during which assets can be retained.</p>
+         * <p>The number of days for which assets are retained.</p>
          */
         @NameInMap("PersistenceDay")
         public Integer persistenceDay;
@@ -118,8 +118,8 @@ public class PageImageRegistryResponseBody extends TeaModel {
         /**
          * <p>The type of the protocol. Valid values:</p>
          * <br>
-         * <p>*   **1**: HTTP</p>
-         * <p>*   **2**: HTTPS</p>
+         * <p>*   **1**: HTTP.</p>
+         * <p>*   **2**: HTTPS.</p>
          */
         @NameInMap("ProtocolType")
         public Integer protocolType;
@@ -145,10 +145,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
         /**
          * <p>The type of the image repository. Valid values:</p>
          * <br>
-         * <p>*   **acr**: Container Registry</p>
-         * <p>*   **harbor**: Harbor</p>
-         * <p>*   **quay**: Quay</p>
-         * <p>*   **CI/CD**: Jenkins</p>
+         * <p>*   **acr**: Container Registry.</p>
+         * <p>*   **harbor**: Harbor.</p>
+         * <p>*   **quay**: Quay.</p>
+         * <p>*   **CI/CD**: Jenkins.</p>
          */
         @NameInMap("RegistryType")
         public String registryType;
@@ -172,13 +172,13 @@ public class PageImageRegistryResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The whitelist.</p>
+         * <p>The IP address whitelist.</p>
          */
         @NameInMap("WhiteList")
         public String whiteList;

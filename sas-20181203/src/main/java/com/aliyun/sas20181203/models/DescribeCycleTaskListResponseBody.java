@@ -53,46 +53,46 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
 
     public static class DescribeCycleTaskListResponseBodyCycleScheduleResponseList extends TeaModel {
         /**
-         * <p>The ID of the task configuration.</p>
+         * <p>The configuration ID.</p>
          */
         @NameInMap("ConfigId")
         public String configId;
 
         /**
-         * <p>Indicates whether the task is enabled. Valid values:</p>
+         * <p>Indicates whether the configuration for the task interval was enabled. Valid values:</p>
          * <br>
-         * <p>*   **1**: yes</p>
-         * <p>*   **0**: no</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **0**: disabled.</p>
          */
         @NameInMap("Enable")
         public Integer enable;
 
         /**
-         * <p>The first time when the task starts.</p>
+         * <p>The time when the task first started.</p>
          */
         @NameInMap("FirstDateStr")
         public Long firstDateStr;
 
         /**
-         * <p>The interval of the task.</p>
+         * <p>The interval between which two consecutive tasks are run.</p>
          */
         @NameInMap("IntervalPeriod")
         public Integer intervalPeriod;
 
         /**
-         * <p>The ID of the task when the task last runs.</p>
+         * <p>The ID of the last task.</p>
          */
         @NameInMap("LastTaskId")
         public String lastTaskId;
 
         /**
-         * <p>The next time when the task starts. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the next task starts. The value is a UNIX timestamp. Unit: milliseconds.</p>
          */
         @NameInMap("NextStartTimeStr")
         public Long nextStartTimeStr;
 
         /**
-         * <p>The additional information.</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("Param")
         public String param;
@@ -100,20 +100,20 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
         /**
          * <p>The unit of the scan interval. Valid values:</p>
          * <br>
-         * <p>*   **day**: days</p>
-         * <p>*   **hour**: hours</p>
+         * <p>*   **day**</p>
+         * <p>*   **hour**</p>
          */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
         /**
-         * <p>The period of time before the task ends. Unit: hours.</p>
+         * <p>The end time of the task. The time must be a time frame.</p>
          */
         @NameInMap("TargetEndTime")
         public Integer targetEndTime;
 
         /**
-         * <p>The period of time before the task starts for the next time. Unit: hours.</p>
+         * <p>The start time of the task. The start time must be a time frame.</p>
          */
         @NameInMap("TargetStartTime")
         public Integer targetStartTime;

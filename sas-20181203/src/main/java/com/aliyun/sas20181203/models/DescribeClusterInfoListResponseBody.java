@@ -53,17 +53,17 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
         /**
          * <p>The type of the cluster. Valid values:</p>
          * <br>
-         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster</p>
-         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster</p>
-         * <p>*   **PrivateKubernetes**: private cluster</p>
-         * <p>*   **kubernetes**: dedicated Kubernetes cluster</p>
-         * <p>*   **ask**: dedicated ASK cluster</p>
+         * <p>*   **ManagedKubernetes**: managed Kubernetes cluster.</p>
+         * <p>*   **NotManagedKubernetes**: non-managed Kubernetes cluster.</p>
+         * <p>*   **PrivateKubernetes**: private cluster.</p>
+         * <p>*   **kubernetes**: dedicated Kubernetes cluster.</p>
+         * <p>*   **ask**: dedicated serverless Kubernetes (ASK) cluster.</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
-         * <p>The region of the container cluster.</p>
+         * <p>The region in which the cluster resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -71,19 +71,19 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
         /**
          * <p>The status of the cluster. Valid values:</p>
          * <br>
-         * <p>*   **unavailable**</p>
-         * <p>*   **Available**</p>
-         * <p>*   **Creating**</p>
-         * <p>*   **CreateFailed**</p>
+         * <p>*   **unavailable**: The cluster is unavailable.</p>
+         * <p>*   **Available**: The cluster is available.</p>
+         * <p>*   **Creating**: The cluster is being created.</p>
+         * <p>*   **CreateFailed**: The cluster failed to be created.</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>Indicates whether the cluster is enabled. Valid values:</p>
+         * <p>Indicates whether container network topology was enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("TargetResult")
         public Boolean targetResult;

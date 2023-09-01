@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerStatisticsRequest extends TeaModel {
     /**
-     * <p>The ID of the container cluster.</p>
+     * <p>The ID of the specified container cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to obtain the cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
