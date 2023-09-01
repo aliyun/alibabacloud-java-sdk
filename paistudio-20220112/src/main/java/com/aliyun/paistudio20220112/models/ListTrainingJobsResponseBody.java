@@ -296,6 +296,58 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
     }
 
+    public static class ListTrainingJobsResponseBodyTrainingJobsUserVpc extends TeaModel {
+        @NameInMap("ExtendedCIDRs")
+        public java.util.List<String> extendedCIDRs;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SwitchId")
+        public String switchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static ListTrainingJobsResponseBodyTrainingJobsUserVpc build(java.util.Map<String, ?> map) throws Exception {
+            ListTrainingJobsResponseBodyTrainingJobsUserVpc self = new ListTrainingJobsResponseBodyTrainingJobsUserVpc();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
+            this.extendedCIDRs = extendedCIDRs;
+            return this;
+        }
+        public java.util.List<String> getExtendedCIDRs() {
+            return this.extendedCIDRs;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsUserVpc setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsUserVpc setSwitchId(String switchId) {
+            this.switchId = switchId;
+            return this;
+        }
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobsUserVpc setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class ListTrainingJobsResponseBodyTrainingJobs extends TeaModel {
         @NameInMap("AlgorithmName")
         public String algorithmName;
@@ -359,6 +411,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
         @NameInMap("UserId")
         public String userId;
+
+        @NameInMap("UserVpc")
+        public ListTrainingJobsResponseBodyTrainingJobsUserVpc userVpc;
 
         @NameInMap("WorkspaceId")
         public String workspaceId;
@@ -534,6 +589,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public ListTrainingJobsResponseBodyTrainingJobs setUserVpc(ListTrainingJobsResponseBodyTrainingJobsUserVpc userVpc) {
+            this.userVpc = userVpc;
+            return this;
+        }
+        public ListTrainingJobsResponseBodyTrainingJobsUserVpc getUserVpc() {
+            return this.userVpc;
         }
 
         public ListTrainingJobsResponseBodyTrainingJobs setWorkspaceId(String workspaceId) {

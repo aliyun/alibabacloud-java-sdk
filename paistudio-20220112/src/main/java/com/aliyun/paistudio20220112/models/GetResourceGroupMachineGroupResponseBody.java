@@ -7,6 +7,9 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("Cpu")
     public String cpu;
 
+    @NameInMap("DefaultDriver")
+    public String defaultDriver;
+
     @NameInMap("EcsCount")
     public Long ecsCount;
 
@@ -55,6 +58,9 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("SupportedDrivers")
+    public java.util.List<String> supportedDrivers;
+
     public static GetResourceGroupMachineGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourceGroupMachineGroupResponseBody self = new GetResourceGroupMachineGroupResponseBody();
         return TeaModel.build(map, self);
@@ -66,6 +72,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
     public String getCpu() {
         return this.cpu;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setDefaultDriver(String defaultDriver) {
+        this.defaultDriver = defaultDriver;
+        return this;
+    }
+    public String getDefaultDriver() {
+        return this.defaultDriver;
     }
 
     public GetResourceGroupMachineGroupResponseBody setEcsCount(Long ecsCount) {
@@ -194,6 +208,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setSupportedDrivers(java.util.List<String> supportedDrivers) {
+        this.supportedDrivers = supportedDrivers;
+        return this;
+    }
+    public java.util.List<String> getSupportedDrivers() {
+        return this.supportedDrivers;
     }
 
 }
