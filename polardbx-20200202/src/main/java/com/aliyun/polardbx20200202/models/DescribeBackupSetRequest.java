@@ -10,6 +10,9 @@ public class DescribeBackupSetRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    @NameInMap("DestCrossRegion")
+    public String destCrossRegion;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,6 +35,14 @@ public class DescribeBackupSetRequest extends TeaModel {
     }
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    public DescribeBackupSetRequest setDestCrossRegion(String destCrossRegion) {
+        this.destCrossRegion = destCrossRegion;
+        return this;
+    }
+    public String getDestCrossRegion() {
+        return this.destCrossRegion;
     }
 
     public DescribeBackupSetRequest setRegionId(String regionId) {

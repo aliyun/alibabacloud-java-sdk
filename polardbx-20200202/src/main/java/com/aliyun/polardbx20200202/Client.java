@@ -481,8 +481,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoRenew", request.autoRenew);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.CNNodeCount)) {
+            query.put("CNNodeCount", request.CNNodeCount);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cnClass)) {
+            query.put("CnClass", request.cnClass);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBNodeClass)) {
@@ -491,6 +499,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBNodeCount)) {
             query.put("DBNodeCount", request.DBNodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DNNodeCount)) {
+            query.put("DNNodeCount", request.DNNodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dnClass)) {
+            query.put("DnClass", request.dnClass);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.engineVersion)) {
@@ -954,6 +970,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
             query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destCrossRegion)) {
+            query.put("DestCrossRegion", request.destCrossRegion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -2826,12 +2846,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ColdDataBackupRetention", request.coldDataBackupRetention);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.crossRegionDataBackupRetention)) {
+            query.put("CrossRegionDataBackupRetention", request.crossRegionDataBackupRetention);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossRegionLogBackupRetention)) {
+            query.put("CrossRegionLogBackupRetention", request.crossRegionLogBackupRetention);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
             query.put("DBInstanceName", request.DBInstanceName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destCrossRegion)) {
+            query.put("DestCrossRegion", request.destCrossRegion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.forceCleanOnHighSpaceUsage)) {
             query.put("ForceCleanOnHighSpaceUsage", request.forceCleanOnHighSpaceUsage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isCrossRegionDataBackupEnabled)) {
+            query.put("IsCrossRegionDataBackupEnabled", request.isCrossRegionDataBackupEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isCrossRegionLogBackupEnabled)) {
+            query.put("IsCrossRegionLogBackupEnabled", request.isCrossRegionLogBackupEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isEnabled)) {
