@@ -4,15 +4,30 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class ListRemediationExecutionsRequest extends TeaModel {
+    /**
+     * <p>The rule ID.</p>
+     */
     @NameInMap("ConfigRuleId")
     public String configRuleId;
 
+    /**
+     * <p>The status of the remediation. Valid values:</p>
+     * <br>
+     * <p>*   Success</p>
+     * <p>*   Failed</p>
+     */
     @NameInMap("ExecutionStatus")
     public String executionStatus;
 
+    /**
+     * <p>The maximum number of entries to return for a single request. Valid values: 10 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

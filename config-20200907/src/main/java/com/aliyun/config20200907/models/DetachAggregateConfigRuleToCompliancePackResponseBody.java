@@ -11,7 +11,7 @@ public class DetachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
     public DetachAggregateConfigRuleToCompliancePackResponseBodyOperateRuleResult operateRuleResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DetachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
 
     public static class DetachAggregateConfigRuleToCompliancePackResponseBodyOperateRuleResultOperateRuleItemList extends TeaModel {
         /**
-         * <p>The ID of the rule that is removed from the compliance package.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
@@ -48,19 +48,16 @@ public class DetachAggregateConfigRuleToCompliancePackResponseBody extends TeaMo
          * <p>The error code.</p>
          * <br>
          * <p>*   This parameter is empty if the rule is removed from the compliance package.</p>
-         * <br>
-         * <p><!----></p>
-         * <br>
-         * <p>*   An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).</p>
+         * <p>*   An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;
 
         /**
-         * <p>Indicates whether the operation is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
          * <br>
-         * <p>*   true: The operation is successful.</p>
-         * <p>*   false: The operation fails.</p>
+         * <p>*   true</p>
+         * <p>*   false</p>
          */
         @NameInMap("Success")
         public Boolean success;

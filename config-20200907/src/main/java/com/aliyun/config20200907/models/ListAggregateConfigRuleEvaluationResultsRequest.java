@@ -58,6 +58,9 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends TeaModel {
     @NameInMap("Regions")
     public String regions;
 
+    /**
+     * <p>Member accountId to which the resource to be queried belongs.</p>
+     */
     @NameInMap("ResourceAccountId")
     public Long resourceAccountId;
 

@@ -4,9 +4,15 @@ package com.aliyun.config20200907.models;
 import com.aliyun.tea.*;
 
 public class GetRemediationTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The information about the automatic remediation template.</p>
+     */
     @NameInMap("RemediationTemplates")
     public java.util.List<GetRemediationTemplateResponseBodyRemediationTemplates> remediationTemplates;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
     }
 
     public static class GetRemediationTemplateResponseBodyRemediationTemplates extends TeaModel {
+        /**
+         * <p>The ID of the supported rule template.</p>
+         */
         @NameInMap("ManagedRuleIdentifier")
         public String managedRuleIdentifier;
 
+        /**
+         * <p>The type of the automatic remediation template. Valid value: OOS.</p>
+         */
         @NameInMap("RemediationType")
         public String remediationType;
 
+        /**
+         * <p>The parameters of the automatic remediation template.</p>
+         */
         @NameInMap("TemplateDefinition")
         public String templateDefinition;
 
+        /**
+         * <p>The description of the automatic remediation template.</p>
+         */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
+        /**
+         * <p>The identifier of the automatic remediation template.</p>
+         */
         @NameInMap("TemplateIdentifier")
         public String templateIdentifier;
 
+        /**
+         * <p>The name of the automatic remediation template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 

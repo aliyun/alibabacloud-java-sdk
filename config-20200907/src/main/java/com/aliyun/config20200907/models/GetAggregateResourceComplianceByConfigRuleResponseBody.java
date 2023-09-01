@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaModel {
     /**
-     * <p>The return result of the request.</p>
+     * <p>The compliance result.</p>
      */
     @NameInMap("ComplianceResult")
     public GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult complianceResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,18 +39,18 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
 
     public static class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances extends TeaModel {
         /**
-         * <p>The compliance evaluation result of the resources. Valid values:</p>
+         * <p>The compliance evaluation results of the resources. Valid values:</p>
          * <br>
-         * <p>*   COMPLIANT: The resources are evaluated as compliant.</p>
-         * <p>*   NON_COMPLIANT: The resources are evaluated as non-compliant.</p>
-         * <p>*   NOT_APPLICABLE: The rule does not apply to your resources.</p>
-         * <p>*   INSUFFICIENT_DATA: No resource data is available.</p>
+         * <p>*   COMPLIANT: The resource was evaluated as compliant.</p>
+         * <p>*   NON_COMPLIANT: The resource was evaluated as incompliant.</p>
+         * <p>*   NOT_APPLICABLE: The rule did not apply to your resources.</p>
+         * <p>*   INSUFFICIENT_DATA: No resource data was available.</p>
          */
         @NameInMap("ComplianceType")
         public String complianceType;
 
         /**
-         * <p>The number of resources that have the compliance evaluation result. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.</p>
+         * <p>The number of resources that have compliance evaluation results. For example, if the value of the `ComplianceType` parameter is `COMPLIANT`, this parameter value indicates the number of compliant resources.</p>
          */
         @NameInMap("Count")
         public Integer count;
@@ -80,7 +80,7 @@ public class GetAggregateResourceComplianceByConfigRuleResponseBody extends TeaM
 
     public static class GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResult extends TeaModel {
         /**
-         * <p>The compliance evaluation results returned.</p>
+         * <p>The compliance list result.</p>
          */
         @NameInMap("Compliances")
         public java.util.List<GetAggregateResourceComplianceByConfigRuleResponseBodyComplianceResultCompliances> compliances;

@@ -13,7 +13,7 @@ public class GetDiscoveredResourceRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The ID of the resource.</p>
+     * <p>The resource IDs.</p>
      * <br>
      * <p>For more information about how to query the ID of a resource, see [ListDiscoveredResources](~~411702~~).</p>
      */
@@ -21,9 +21,9 @@ public class GetDiscoveredResourceRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource.</p>
+     * <p>The resource type.</p>
      * <br>
-     * <p>For more information about how to query the type of a resource, see [ListDiscoveredResources](~~411702~~).</p>
+     * <p>For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~411702~~).</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

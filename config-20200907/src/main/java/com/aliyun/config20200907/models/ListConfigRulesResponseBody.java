@@ -38,9 +38,23 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance extends TeaModel {
+        /**
+         * <p>The compliance evaluation result. Valid values:</p>
+         * <br>
+         * <p>- COMPLIANT: The resource is evaluated as compliant.</p>
+         * <br>
+         * <p>- NON_COMPLIANT: The resource is evaluated as non-compliant.</p>
+         * <br>
+         * <p>- NOT_APPLICABLE: The rule does not apply to the resource.</p>
+         * <br>
+         * <p>- INSUFFICIENT_DATA: No resource data is available.</p>
+         */
         @NameInMap("ComplianceType")
         public String complianceType;
 
+        /**
+         * <p>The number of evaluated resources.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
@@ -68,9 +82,15 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy extends TeaModel {
+        /**
+         * <p>The ID of the compliance package.</p>
+         */
         @NameInMap("CompliancePackId")
         public String compliancePackId;
 
+        /**
+         * <p>The name of the compliance package.</p>
+         */
         @NameInMap("CompliancePackName")
         public String compliancePackName;
 
@@ -98,9 +118,15 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleListTags extends TeaModel {
+        /**
+         * <p>The tag key of the rule.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the rule.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -128,45 +154,109 @@ public class ListConfigRulesResponseBody extends TeaModel {
     }
 
     public static class ListConfigRulesResponseBodyConfigRulesConfigRuleList extends TeaModel {
+        /**
+         * <p>The ID of the management account to which the rule belongs.</p>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <p>The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.</p>
+         */
         @NameInMap("AutomationType")
         public String automationType;
 
+        /**
+         * <p>The compliance evaluation result.</p>
+         */
         @NameInMap("Compliance")
         public ListConfigRulesResponseBodyConfigRulesConfigRuleListCompliance compliance;
 
+        /**
+         * <p>The ARN of the rule.</p>
+         */
         @NameInMap("ConfigRuleArn")
         public String configRuleArn;
 
+        /**
+         * <p>The rule ID.</p>
+         */
         @NameInMap("ConfigRuleId")
         public String configRuleId;
 
+        /**
+         * <p>The rule name.</p>
+         */
         @NameInMap("ConfigRuleName")
         public String configRuleName;
 
+        /**
+         * <p>The status of the rule. Valid values:</p>
+         * <br>
+         * <p>- ACTIVE: The rule is enabled.</p>
+         * <br>
+         * <p>- DELETING: The rule is being deleted.</p>
+         * <br>
+         * <p>- EVALUATING: The rule is triggered and is being used to monitor resource configurations.</p>
+         * <br>
+         * <p>- INACTIVE: The rule is disabled.</p>
+         */
         @NameInMap("ConfigRuleState")
         public String configRuleState;
 
+        /**
+         * <p>The information about the creation of the rule.</p>
+         */
         @NameInMap("CreateBy")
         public ListConfigRulesResponseBodyConfigRulesConfigRuleListCreateBy createBy;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The types of resources evaluated by the rule. Multiple resource types are separated with commas (,).</p>
+         */
         @NameInMap("ResourceTypesScope")
         public String resourceTypesScope;
 
+        /**
+         * <p>The risk level of the resources that are not compliant with the rule. Valid values:</p>
+         * <br>
+         * <p>- 1: high</p>
+         * <br>
+         * <p>- 2: medium</p>
+         * <br>
+         * <p>- 3: low</p>
+         */
         @NameInMap("RiskLevel")
         public Integer riskLevel;
 
+        /**
+         * <p>The ID of the rule.</p>
+         * <br>
+         * <p>- If the rule is a managed rule, the value of this parameter is the name of the managed rule.</p>
+         * <br>
+         * <p>- If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</p>
+         */
         @NameInMap("SourceIdentifier")
         public String sourceIdentifier;
 
+        /**
+         * <p>The type of the rule. Valid values:</p>
+         * <br>
+         * <p>- CUSTOM_FC: custom rule</p>
+         * <br>
+         * <p>- ALIYUN: managed rule</p>
+         */
         @NameInMap("SourceOwner")
         public String sourceOwner;
 
+        /**
+         * <p>The tags of the rule.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListConfigRulesResponseBodyConfigRulesConfigRuleListTags> tags;
 

@@ -26,6 +26,9 @@ public class ListManagedRulesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The type of the resources to be evaluated based on the rule.</p>
+     */
     @NameInMap("ResourceTypes")
     public String resourceTypes;
 
