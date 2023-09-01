@@ -10,6 +10,9 @@ public class AddImageRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("ImageId")
+    public String imageId;
+
     @NameInMap("ImageUri")
     public String imageUri;
 
@@ -18,6 +21,9 @@ public class AddImageRequest extends TeaModel {
 
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("Size")
+    public Integer size;
 
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -43,6 +49,14 @@ public class AddImageRequest extends TeaModel {
         return this.description;
     }
 
+    public AddImageRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
     public AddImageRequest setImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -65,6 +79,14 @@ public class AddImageRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public AddImageRequest setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
     public AddImageRequest setWorkspaceId(String workspaceId) {

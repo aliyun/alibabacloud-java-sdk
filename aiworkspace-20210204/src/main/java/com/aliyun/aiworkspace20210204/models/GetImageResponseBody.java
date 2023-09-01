@@ -31,6 +31,9 @@ public class GetImageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Size")
+    public Integer size;
+
     @NameInMap("UserId")
     public String userId;
 
@@ -112,6 +115,14 @@ public class GetImageResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetImageResponseBody setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
     public GetImageResponseBody setUserId(String userId) {

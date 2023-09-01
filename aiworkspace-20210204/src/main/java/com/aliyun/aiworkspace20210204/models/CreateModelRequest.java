@@ -28,6 +28,12 @@ public class CreateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    @NameInMap("SourceId")
+    public String sourceId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
     @NameInMap("Task")
     public String task;
 
@@ -101,6 +107,22 @@ public class CreateModelRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
+    }
+
+    public CreateModelRequest setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    public CreateModelRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public CreateModelRequest setTask(String task) {

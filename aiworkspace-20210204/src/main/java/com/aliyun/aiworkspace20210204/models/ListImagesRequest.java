@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
+    @NameInMap("Accessibility")
+    public String accessibility;
+
     @NameInMap("Labels")
     public String labels;
 
@@ -40,6 +43,14 @@ public class ListImagesRequest extends TeaModel {
     public static ListImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListImagesRequest self = new ListImagesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListImagesRequest setAccessibility(String accessibility) {
+        this.accessibility = accessibility;
+        return this;
+    }
+    public String getAccessibility() {
+        return this.accessibility;
     }
 
     public ListImagesRequest setLabels(String labels) {

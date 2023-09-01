@@ -25,6 +25,12 @@ public class UpdateModelRequest extends TeaModel {
     @NameInMap("Origin")
     public String origin;
 
+    @NameInMap("SourceId")
+    public String sourceId;
+
+    @NameInMap("SourceType")
+    public String sourceType;
+
     @NameInMap("Task")
     public String task;
 
@@ -87,6 +93,22 @@ public class UpdateModelRequest extends TeaModel {
     }
     public String getOrigin() {
         return this.origin;
+    }
+
+    public UpdateModelRequest setSourceId(String sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
+    public String getSourceId() {
+        return this.sourceId;
+    }
+
+    public UpdateModelRequest setSourceType(String sourceType) {
+        this.sourceType = sourceType;
+        return this;
+    }
+    public String getSourceType() {
+        return this.sourceType;
     }
 
     public UpdateModelRequest setTask(String task) {

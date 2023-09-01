@@ -100,6 +100,9 @@ public class ListImagesResponseBody extends TeaModel {
         @NameInMap("ParentUserId")
         public String parentUserId;
 
+        @NameInMap("Size")
+        public Integer size;
+
         @NameInMap("UserId")
         public String userId;
 
@@ -181,6 +184,14 @@ public class ListImagesResponseBody extends TeaModel {
         }
         public String getParentUserId() {
             return this.parentUserId;
+        }
+
+        public ListImagesResponseBodyImages setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
         }
 
         public ListImagesResponseBodyImages setUserId(String userId) {
