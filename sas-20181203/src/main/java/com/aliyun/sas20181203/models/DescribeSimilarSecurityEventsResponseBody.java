@@ -17,7 +17,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array consisting of the alert events that are triggered by the same rule or of the same alert type.</p>
+     * <p>The information about the alert events that are triggered by the same rule or of the same alert type.</p>
      */
     @NameInMap("SecurityEventsResponse")
     public java.util.List<DescribeSimilarSecurityEventsResponseBodySecurityEventsResponse> securityEventsResponse;
@@ -123,45 +123,42 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The alert type of the alert event. Valid values:</p>
+         * <p>The type of the alert event. Valid values:</p>
          * <br>
-         * <p>*   Suspicious process</p>
+         * <p>*   Suspicious Process</p>
          * <p>*   Webshell</p>
-         * <p>*   Unusual logon</p>
-         * <p>*   Exception</p>
-         * <p>*   Sensitive file tampering</p>
-         * <p>*   Malicious process (cloud threat detection)</p>
-         * <p>*   Suspicious network connection</p>
+         * <p>*   Unusual Logon</p>
+         * <p>*   Malicious Software</p>
+         * <p>*   Sensitive File Tampering</p>
+         * <p>*   Unusual Network Connection</p>
          * <p>*   Other</p>
-         * <p>*   Abnormal account</p>
-         * <p>*   Application intrusion event</p>
+         * <p>*   Suspicious Account</p>
          * <p>*   Cloud threat detection</p>
-         * <p>*   Precise defense</p>
-         * <p>*   Application whitelist</p>
-         * <p>*   Persistent webshell</p>
-         * <p>*   Web application threat detection</p>
-         * <p>*   Malicious script</p>
-         * <p>*   Threat intelligence</p>
-         * <p>*   Malicious network activity</p>
-         * <p>*   Cluster exception</p>
-         * <p>*   Webshell (on-premises threat detection)</p>
-         * <p>*   Vulnerability exploitation</p>
-         * <p>*   Malicious process (on-premises threat detection)</p>
+         * <p>*   Precision defense</p>
+         * <p>*   Application Whitelist</p>
+         * <p>*   Persistence</p>
+         * <p>*   Web Application Threat Detection</p>
+         * <p>*   Malicious scripts</p>
+         * <p>*   Malicious Network Activity</p>
+         * <p>*   K8s Abnormal Behavior</p>
+         * <p>*   Website backdoor (local engine)</p>
+         * <p>*   Exploit</p>
+         * <p>*   Image Scan</p>
          * <p>*   Trusted exception</p>
          * <br>
-         * <p>For more information about alert types, see [Alerts](https://www.alibabacloud.com/help/en/security-center/latest/events-overview).</p>
+         * <p>For more information about alert types, see [Overview](~~68388~~).</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The timestamp when the alert event was last detected. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the alert event was last detected. Unit: milliseconds.</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
 
         /**
-         * <p>The timestamp when the alert event was first detected. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the alert event was first detected. Unit: milliseconds.</p>
          */
         @NameInMap("OccurrenceTime")
         public Long occurrenceTime;
@@ -173,7 +170,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         public Long securityEventId;
 
         /**
-         * <p>The UUID of the server that is affected by the alert event.</p>
+         * <p>The UUID of the server that was affected by the alert event.</p>
          */
         @NameInMap("Uuid")
         public String uuid;

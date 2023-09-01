@@ -4,24 +4,48 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCloudVendorRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The return code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The regions that the service provider supports.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListCloudVendorRegionsResponseBodyData> data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -87,15 +111,67 @@ public class ListCloudVendorRegionsResponseBody extends TeaModel {
     }
 
     public static class ListCloudVendorRegionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The area to which the region belongs. The valid values vary based on the value of the Vendor parameter.</p>
+         * <br>
+         * <p>*   Valid values if **Vendor** is set to Tencent:</p>
+         * <p>*   **cn**: China</p>
+         * <p>*   **southeast_asia**: Southeast Asia Pacific</p>
+         * <p>*   **northeast_asia**: Northeast Asia Pacific</p>
+         * <p>*   **southern_asia**: South Asia Pacific</p>
+         * <p>*   **north_America**: North America</p>
+         * <p>*   **south_America**: South America</p>
+         * <p>*   **western_America**: Western United States</p>
+         * <p>*   **eastern_America**: Eastern United States</p>
+         * <p>*   **european**: Europe</p>
+         * <p>*   Valid values if **Vendor** is set to HUAWEICLOUD:</p>
+         * <p>*   **cn**: China</p>
+         * <p>*   **africa**: Africa</p>
+         * <p>*   **latin_america**: Latin America</p>
+         * <p>*   **asia**: Asia Pacific</p>
+         * <p>*   Valid values if **Vendor** is set to Azure:</p>
+         * <p>*   **middle_east**: Middle East</p>
+         * <p>*   **south_america**: South America</p>
+         * <p>*   **canada**: Canada</p>
+         * <p>*   **asia-pacific**: Asia Pacific</p>
+         * <p>*   **europe**: Europe</p>
+         * <p>*   **africa**: Africa</p>
+         * <p>*   **us**: United States</p>
+         * <p>*   **other**: other regions</p>
+         * <p>*   Valid values if **Vendor** is set to AWS:</p>
+         * <p>*   **cn**: China</p>
+         * <p>*   **us**: United States</p>
+         * <p>*   **eu**: Europe</p>
+         * <p>*   **asia**: Asia Pacific</p>
+         * <p>*   **south_america**: South America</p>
+         * <p>*   **me**: Middle East</p>
+         * <p>*   **ca**: Canada</p>
+         * <p>*   **af**: Africa</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>Indicates whether the region is configured as a synchronization region on another site. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The region is not configured as a synchronization region on another site.</p>
+         * <p>*   **1**: The region is configured as a synchronization region on another site.</p>
+         */
         @NameInMap("Disable")
         public Integer disable;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Indicates whether the region is configured as a synchronization region on this site. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The region is configured as a synchronization region on this site.</p>
+         * <p>*   **1**: The region is configured as a synchronization region on this site.</p>
+         */
         @NameInMap("Selected")
         public Integer selected;
 

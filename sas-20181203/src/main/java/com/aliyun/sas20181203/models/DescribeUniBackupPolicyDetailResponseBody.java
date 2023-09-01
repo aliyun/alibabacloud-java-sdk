@@ -129,7 +129,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         public String planType;
 
         /**
-         * <p>The time when the incremental backup started. The time is in the HH:mm:ss format.</p>
+         * <p>The time when the incremental data backup starts. The time is in the hh:mm:ss format.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
@@ -208,7 +208,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOFullPlan fullPlan;
 
         /**
-         * <p>The details of the policy for incremental backup.</p>
+         * <p>The policy for incremental data backup.</p>
          */
         @NameInMap("IncPlan")
         public DescribeUniBackupPolicyDetailResponseBodyUniBackupPolicyDTOIncPlan incPlan;

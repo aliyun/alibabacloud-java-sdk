@@ -7,16 +7,16 @@ public class DescribeCriteriaRequest extends TeaModel {
     /**
      * <p>The type of the asset. Valid values:</p>
      * <br>
-     * <p>*   **ecs**: Elastic Compute Service (ECS) instance</p>
+     * <p>*   Set the value to **ecs**, which specifies to query all Elastic Compute Service (ECS) instances.</p>
      */
     @NameInMap("MachineTypes")
     public String machineTypes;
 
     /**
-     * <p>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. default **false**, Valid values:</p>
+     * <p>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: **false**. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("SupportAutoTag")
     public Boolean supportAutoTag;

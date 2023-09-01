@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
     /**
-     * <p>The details of the server.</p>
+     * <p>The asset details.</p>
      */
     @NameInMap("AssetDetail")
     public DescribeAssetDetailByUuidResponseBodyAssetDetail assetDetail;
@@ -185,7 +185,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         public String kernel;
 
         /**
-         * <p>The media access control (MAC) addresses of the server.</p>
+         * <p>The Media Access Control (MAC) addresses.</p>
          */
         @NameInMap("MacList")
         public java.util.List<String> macList;

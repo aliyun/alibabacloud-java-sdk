@@ -47,7 +47,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The type of the destination node. Valid values:</p>
          * <br>
-         * <p>*   **cluster**: a cluster</p>
+         * <p>*   Set the value to **cluster**.</p>
          */
         @NameInMap("DstNodeType")
         public String dstNodeType;
@@ -73,8 +73,8 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The type of the source node. Valid values:</p>
          * <br>
-         * <p>*   **cluster**: a cluster</p>
-         * <p>*   **internet**: a network node in another cluster</p>
+         * <p>*   **cluster**: a cluster.</p>
+         * <p>*   **internet**: a network node outside the cluster</p>
          */
         @NameInMap("SrcNodeType")
         public String srcNodeType;
@@ -136,10 +136,10 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
 
     public static class DescribeClusterNetworkResponseBodyClusterNetworkNode extends TeaModel {
         /**
-         * <p>The micro-segmentation switch. Valid values:</p>
+         * <p>The status of the microsegmentation switch. Valid values:</p>
          * <br>
-         * <p>*   **0**: The switch is turned off.</p>
-         * <p>*   **1**: The switch is turned on.</p>
+         * <p>*   **0**: off.</p>
+         * <p>*   **1**: on.</p>
          */
         @NameInMap("CnnfSwitch")
         public Integer cnnfSwitch;
@@ -153,8 +153,8 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The network type. Valid values:</p>
          * <br>
-         * <p>*   **0**: classic network</p>
-         * <p>*   **1**: virtual private cloud (VPC)</p>
+         * <p>*   **0**: classic network.</p>
+         * <p>*   **1**: virtual private cloud (VPC).</p>
          */
         @NameInMap("InterceptionType")
         public Integer interceptionType;
@@ -166,7 +166,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The network topology switch. Valid values:</p>
+         * <p>The status of the network topology switch. Valid values:</p>
          * <br>
          * <p>*   **ON**</p>
          * <p>*   **OFF**</p>
@@ -177,11 +177,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <br>
-         * <p>*   **3**: high</p>
-         * <p>*   **2**: medium</p>
-         * <p>*   **1**: low</p>
-         * <p>*   **0**: warning</p>
-         * <p>*   **-1**: unknown</p>
+         * <p>*   **3**: high.</p>
+         * <p>*   **2**: medium.</p>
+         * <p>*   **1**: low.</p>
+         * <p>*   **0**: secure.</p>
+         * <p>*   **-1**: unknown.</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -189,8 +189,8 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
         /**
          * <p>The type of the node. Valid values:</p>
          * <br>
-         * <p>*   **cluster**: a cluster</p>
-         * <p>*   **internet**: a node in another cluster</p>
+         * <p>*   **cluster**: a cluster.</p>
+         * <p>*   **internet**: a network node outside the cluster.</p>
          */
         @NameInMap("Type")
         public String type;

@@ -53,25 +53,25 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
 
     public static class DescribeGroupedContainerInstancesResponseBodyGroupedContainerInstanceList extends TeaModel {
         /**
-         * <p>The number of alerts that are generated on the current pod, application, namespace, or cluster.</p>
+         * <p>The number of alerts that are detected from the current pod, application, namespace, or cluster.</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the cluster.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
@@ -79,15 +79,15 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         /**
          * <p>The type of the cluster. Valid values:</p>
          * <br>
-         * <p>*   **Kubernetes**: dedicated Kubernetes cluster</p>
-         * <p>*   **ManagedKubernetes**: standard managed cluster (edge cluster)</p>
-         * <p>*   **Ask**: standard serverless cluster</p>
+         * <p>*   **Kubernetes**: dedicated Kubernetes cluster.</p>
+         * <p>*   **ManagedKubernetes**: standard managed cluster (edge cluster).</p>
+         * <p>*   **Ask**: standard serverless cluster.</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
-         * <p>The timestamp when the cluster was created. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the cluster was created. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -135,7 +135,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String imageRepoName;
 
         /**
-         * <p>The namespace to which the image repository belongs.</p>
+         * <p>The namespace of the image repository.</p>
          */
         @NameInMap("ImageRepoNamespace")
         public String imageRepoNamespace;
@@ -153,13 +153,13 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String imageUuid;
 
         /**
-         * <p>The number of queried pods, applications, clusters, or namespaces.</p>
+         * <p>The number of pods, applications, clusters, or namespaces that is returned.</p>
          */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The ID of the server instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -183,13 +183,13 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String podIp;
 
         /**
-         * <p>The ID of the region in which the server resides.</p>
+         * <p>The ID of the region in which the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The number of at-risk instances.</p>
+         * <p>The number of potential risky instances.</p>
          */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
@@ -214,7 +214,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
         public String riskStatus;
 
         /**
-         * <p>The number of vulnerabilities that are detected on the current pod, application, namespace, or cluster.</p>
+         * <p>The number of vulnerabilities that are detected from the current pod, application, namespace, or cluster.</p>
          */
         @NameInMap("VulCount")
         public Integer vulCount;

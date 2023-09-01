@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class UninstallRaspAttachRequest extends TeaModel {
+    /**
+     * <p>The application group ID.</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The UUIDs of ECS instances from which the RASP agent is to be uninstalled.</p>
+     */
     @NameInMap("EcsUUIDList")
     public java.util.List<String> ecsUUIDList;
 

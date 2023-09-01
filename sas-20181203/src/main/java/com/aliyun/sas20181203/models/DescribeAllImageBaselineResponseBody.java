@@ -109,7 +109,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>An array that consists of baseline check items.</p>
+         * <p>The information about the baseline check item.</p>
          */
         @NameInMap("BaselineItemList")
         public java.util.List<DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameListBaselineItemList> baselineItemList;
@@ -173,7 +173,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>An array that consists of baselines.</p>
+         * <p>The information about the baseline.</p>
          */
         @NameInMap("BaselineNameList")
         public java.util.List<DescribeAllImageBaselineResponseBodyImageBaselinesBaselineClassListBaselineNameList> baselineNameList;

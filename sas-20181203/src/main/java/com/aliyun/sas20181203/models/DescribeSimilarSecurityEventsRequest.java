@@ -35,7 +35,7 @@ public class DescribeSimilarSecurityEventsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The ID of the task. You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to query the IDs of tasks.</p>
+     * <p>The task ID. You can call the [CreateSimilarSecurityEventsQueryTask](~~CreateSimilarSecurityEventsQueryTask~~) operation to obtain the task ID.</p>
      */
     @NameInMap("TaskId")
     public Long taskId;

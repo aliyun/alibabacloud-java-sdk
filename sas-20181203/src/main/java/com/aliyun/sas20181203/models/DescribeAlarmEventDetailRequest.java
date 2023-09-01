@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAlarmEventDetailRequest extends TeaModel {
     /**
-     * <p>The unique ID of the alert event.</p>
+     * <p>The unique identifier of the alert event.</p>
      * <br>
-     * <p>>  To query the details of an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.</p>
+     * <p>> To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.</p>
      */
     @NameInMap("AlarmUniqueInfo")
     public String alarmUniqueInfo;

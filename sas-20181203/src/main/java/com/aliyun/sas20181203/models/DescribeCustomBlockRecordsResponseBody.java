@@ -117,15 +117,15 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
 
     public static class DescribeCustomBlockRecordsResponseBodyRecordListTargetList extends TeaModel {
         /**
-         * <p>The ID of the server.</p>
+         * <p>The ID of the destination asset.</p>
          */
         @NameInMap("Target")
         public String target;
 
         /**
-         * <p>The type of the query condition. Valid values:</p>
+         * <p>The type of the query. Valid values:</p>
          * <br>
-         * <p>*   **uuid**: the ID of an asset</p>
+         * <p>*   Set the value to **uuid**.</p>
          */
         @NameInMap("TargetType")
         public String targetType;
@@ -155,7 +155,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
 
     public static class DescribeCustomBlockRecordsResponseBodyRecordList extends TeaModel {
         /**
-         * <p>The timestamp when the defense rule expires.</p>
+         * <p>The timestamp generated when the block action on the IP address becomes invalid.</p>
          */
         @NameInMap("BlockExpireDate")
         public Long blockExpireDate;
@@ -169,20 +169,20 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         /**
          * <p>The direction of the traffic that is sent by the blocked IP address. Valid values:</p>
          * <br>
-         * <p>*   **in**: inbound</p>
-         * <p>*   **out**: outbound</p>
+         * <p>*   **in**</p>
+         * <p>*   **out**</p>
          */
         @NameInMap("Bound")
         public String bound;
 
         /**
-         * <p>The number of servers to which the defense rule is applied.</p>
+         * <p>The number of servers for which the defense rule is enabled.</p>
          */
         @NameInMap("EnableCount")
         public Integer enableCount;
 
         /**
-         * <p>The ID of the defense rule.</p>
+         * <p>The record ID.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -194,23 +194,23 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
         public Integer serverCount;
 
         /**
-         * <p>The source of the defense rule. Valid values:</p>
+         * <p>The source of the defense rule.</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>The status of the defense rule. Valid values:</p>
+         * <p>The status of the defense rule against brute-force attacks. Valid values:</p>
          * <br>
-         * <p>*   **0**: invalid</p>
-         * <p>*   **1**: enabled</p>
-         * <p>*   **2**: failed</p>
+         * <p>*   **0**: invalid.</p>
+         * <p>*   **1**: enabled.</p>
+         * <p>*   **2**: failed.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>An array consisting of the servers to which the defense rule is applied.</p>
+         * <p>The servers for which the defense rule is enabled.</p>
          */
         @NameInMap("TargetList")
         public java.util.List<DescribeCustomBlockRecordsResponseBodyRecordListTargetList> targetList;

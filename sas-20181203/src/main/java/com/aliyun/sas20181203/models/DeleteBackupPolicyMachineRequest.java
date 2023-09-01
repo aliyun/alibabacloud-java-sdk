@@ -6,7 +6,8 @@ import com.aliyun.tea.*;
 public class DeleteBackupPolicyMachineRequest extends TeaModel {
     /**
      * <p>The ID of the anti-ransomware policy.</p>
-     * <p>>  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the **Id** of anti-ransomware policies.</p>
+     * <br>
+     * <p>> You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.</p>
      */
     @NameInMap("PolicyId")
     public Long policyId;
@@ -25,7 +26,7 @@ public class DeleteBackupPolicyMachineRequest extends TeaModel {
     /**
      * <p>The UUID of the server to which the anti-ransomware policy is applied.</p>
      * <br>
-     * <p>>  You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
+     * <p>> You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
      */
     @NameInMap("Uuid")
     public String uuid;
@@ -33,7 +34,7 @@ public class DeleteBackupPolicyMachineRequest extends TeaModel {
     /**
      * <p>The UUIDs of the servers to which the anti-ransomware policy is applied.</p>
      * <br>
-     * <p>>  You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
+     * <p>> You must specify at least one of the `UuidList` and `Uuid` parameters.</p>
      */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;

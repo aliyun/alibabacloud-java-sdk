@@ -7,8 +7,8 @@ public class DescribeVpcHoneyPotCriteriaRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English.</p>
      */
     @NameInMap("Lang")
     public String lang;
