@@ -4,21 +4,39 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Set the value to **DOMAIN**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The key-value pair of a tag.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
+    /**
+     * <p>The business ID of the tag owner.</p>
+     */
     @NameInMap("TagOwnerBid")
     public String tagOwnerBid;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the tag belongs.</p>
+     */
     @NameInMap("TagOwnerUid")
     public String tagOwnerUid;
 
@@ -76,9 +94,15 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

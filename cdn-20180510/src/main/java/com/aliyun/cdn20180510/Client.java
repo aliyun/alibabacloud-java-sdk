@@ -393,8 +393,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call this operation up to 10 times per second per account.
-      * *   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+      * > *   You can call this operation up to 10 times per second per account.
+      * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+      * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
       *
       * @param request BatchSetCdnDomainServerCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -461,8 +462,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can call this operation up to 10 times per second per account.
-      * *   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+      * > *   You can call this operation up to 10 times per second per account.
+      * >*   You can specify up to 10 domain names in each request. Separate multiple domain names with commas (,)
+      * >*   If the service type of a domain name is live streaming, the service may be unavailable after you configure the certificate for the domain name. Therefore, you cannot use this operation to configure the certificate for a domain name that is used for live streaming.
       *
       * @param request BatchSetCdnDomainServerCertificateRequest
       * @return BatchSetCdnDomainServerCertificateResponse
@@ -1752,7 +1754,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can call this operation up to 100 times per second per account.
+      * >  You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnDomainByCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1791,7 +1793,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > You can call this operation up to 100 times per second per account.
+      * >  You can call this operation up to 100 times per second per account.
       *
       * @param request DescribeCdnDomainByCertificateRequest
       * @return DescribeCdnDomainByCertificateResponse
@@ -3780,11 +3782,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The unit of the bandwidth is bit/s.
-      * *   The time granularity of the queried data is 5 minutes.
-      * *   You can query data in the last 90 days.
-      * *   You can specify the StartTime and EndTime parameters, or the TimePoint and Cycle parameters to query the 95th percentile bandwidth data. If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned. If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned. If you do not specify parameters as previously mentioned, the 95th percentile bandwidth data in the last 24 hours is returned.
-      * *   You can call this operation up to 100 times per second per account.
+      * **You can use one of the following methods to query data:**
+      * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
+      * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+      * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+      * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
+      * * Maximum time range to query: 90 days 
+      * * Minimum data granularity to query: 1 day 
+      * * Historical data available: 90 days
+      * - You can call this operation up to 100 times per second per account.
+      * - The unit of the bandwidth data returned is bit/s.
       *
       * @param request DescribeDomainMax95BpsDataRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3831,11 +3838,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The unit of the bandwidth is bit/s.
-      * *   The time granularity of the queried data is 5 minutes.
-      * *   You can query data in the last 90 days.
-      * *   You can specify the StartTime and EndTime parameters, or the TimePoint and Cycle parameters to query the 95th percentile bandwidth data. If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned. If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned. If you do not specify parameters as previously mentioned, the 95th percentile bandwidth data in the last 24 hours is returned.
-      * *   You can call this operation up to 100 times per second per account.
+      * **You can use one of the following methods to query data:**
+      * *   If you specify the StartTime and EndTime parameters and the time range that is specified by these parameters is less than or equal to 24 hours, the 95th percentile bandwidth data on the day of the start time is returned. If the time range that is specified by these parameters is more than 24 hours, the 95th percentile bandwidth data in the month of the start time is returned.
+      * *   If you specify the TimePoint and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+      * *   If you specify the StartTime, EndTime, and Cycle parameters, the 95th percentile bandwidth data of the cycle is returned.
+      * If you do not use one of the methods, the 95th percentile bandwidth data of the previous 24 hours is returned by default.
+      * * Maximum time range to query: 90 days 
+      * * Minimum data granularity to query: 1 day 
+      * * Historical data available: 90 days
+      * - You can call this operation up to 100 times per second per account.
+      * - The unit of the bandwidth data returned is bit/s.
       *
       * @param request DescribeDomainMax95BpsDataRequest
       * @return DescribeDomainMax95BpsDataResponse
@@ -7270,6 +7282,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyCdnDomainWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is used in the following scenario:
+      * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
+      * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
+      *
+      * @param request ModifyCdnDomainOwnerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyCdnDomainOwnerResponse
+     */
     public ModifyCdnDomainOwnerResponse modifyCdnDomainOwnerWithOptions(ModifyCdnDomainOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7306,6 +7327,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCdnDomainOwnerResponse());
     }
 
+    /**
+      * This operation is used in the following scenario:
+      * *   You have multiple Alibaba Cloud accounts and want to transfer domain names from Account A to Account B.
+      * *   You are prompted that a domain name has been added when you add the domain name to Alibaba Cloud CDN. You do not know which account does the domain name belong to, and you want to transfer the domain name to your current account.
+      *
+      * @param request ModifyCdnDomainOwnerRequest
+      * @return ModifyCdnDomainOwnerResponse
+     */
     public ModifyCdnDomainOwnerResponse modifyCdnDomainOwner(ModifyCdnDomainOwnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCdnDomainOwnerWithOptions(request, runtime);
@@ -7824,6 +7853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            query.put("Env", request.env);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {

@@ -4,6 +4,16 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnConditionIPBInfoRequest extends TeaModel {
+    /**
+     * <p>The configuration ID. Valid values:</p>
+     * <br>
+     * <p>*   condition_region_config_cn</p>
+     * <p>*   condition_region_config_en</p>
+     * <p>*   condition_isp_config_cn</p>
+     * <p>*   condition_isp_config_en</p>
+     * <p>*   condition_country_config_cn</p>
+     * <p>*   condition_country_config_en</p>
+     */
     @NameInMap("DataId")
     public String dataId;
 

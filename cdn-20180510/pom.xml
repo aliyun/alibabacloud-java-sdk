@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cdn20180510</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <packaging>jar</packaging>
   <name>cdn20180510</name>
   <description>Alibaba Cloud Alibaba Cloud CDN (20180510) SDK for Java

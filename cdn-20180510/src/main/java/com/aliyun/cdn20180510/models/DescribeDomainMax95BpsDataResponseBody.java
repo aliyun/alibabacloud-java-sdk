@@ -4,6 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
+    /**
+     * <p>Details of the 95th percentile bandwidth.</p>
+     */
     @NameInMap("DetailData")
     public DescribeDomainMax95BpsDataResponseBodyDetailData detailData;
 
@@ -119,15 +122,27 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainMax95BpsDataResponseBodyDetailDataMax95Detail extends TeaModel {
+        /**
+         * <p>Region of the 95th percentile bandwidth.</p>
+         */
         @NameInMap("Area")
         public String area;
 
+        /**
+         * <p>The 95th percentile bandwidth.</p>
+         */
         @NameInMap("Max95Bps")
         public Float max95Bps;
 
+        /**
+         * <p>Time of the 95th percentile bandwidth.</p>
+         */
         @NameInMap("Max95BpsPeakTime")
         public String max95BpsPeakTime;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

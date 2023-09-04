@@ -11,10 +11,10 @@ public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
     public String certName;
 
     /**
-     * <p>The type of the certificate. Valid values:</p>
+     * <p>The type of the SSL certificate. Valid values:</p>
      * <br>
      * <p>*   **upload**: a user-uploaded SSL certificate.</p>
-     * <p>*   **cas**: a certificate that is acquired through Certificate Management Service.</p>
+     * <p>*   **cas**: a certificate that is issued by SSL Certificates Service.</p>
      */
     @NameInMap("CertType")
     public String certType;
@@ -22,7 +22,7 @@ public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
     /**
      * <p>The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).</p>
      * <br>
-     * <p>>You can configure up to 10 domain names at a time.</p>
+     * <p>>  You can manage the SSL certificates of up to 50 accelerated domain names in each call.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
@@ -37,28 +37,28 @@ public class BatchSetCdnDomainServerCertificateRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The private key. Specify the private key only if you want to enable the SSL certificate.</p>
+     * <p>The private key. Specify the private key only if you enable the SSL certificate.</p>
      */
     @NameInMap("SSLPri")
     public String SSLPri;
 
     /**
-     * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
+     * <p>Specifies whether to enable the SSL certificate. Valid values:</p>
      * <br>
-     * <p>*   **on** ：enables the SSL certificate.</p>
-     * <p>*   **off**：disables the SSL certificate</p>
+     * <p>*   **on**: enables the SSL certificate.</p>
+     * <p>*   **off**: disables the SSL certificate. This is the default value.</p>
      */
     @NameInMap("SSLProtocol")
     public String SSLProtocol;
 
     /**
-     * <p>The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.</p>
+     * <p>The content of the SSL certificate. Specify the content of the certificate only if you want to enable the SSL certificate.</p>
      */
     @NameInMap("SSLPub")
     public String SSLPub;
