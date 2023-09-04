@@ -483,6 +483,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.docOcrWithOptions(request, runtime);
     }
 
+    public EkycVerifyResponse ekycVerifyWithOptions(EkycVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authorize)) {
+            query.put("Authorize", request.authorize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crop)) {
+            query.put("Crop", request.crop);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docName)) {
+            query.put("DocName", request.docName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docNo)) {
+            query.put("DocNo", request.docNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
+            query.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.facePictureBase64)) {
+            query.put("FacePictureBase64", request.facePictureBase64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.facePictureUrl)) {
+            query.put("FacePictureUrl", request.facePictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureBase64)) {
+            query.put("IdOcrPictureBase64", request.idOcrPictureBase64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idOcrPictureUrl)) {
+            query.put("IdOcrPictureUrl", request.idOcrPictureUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantUserId)) {
+            query.put("MerchantUserId", request.merchantUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EkycVerify"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EkycVerifyResponse());
+    }
+
+    public EkycVerifyResponse ekycVerify(EkycVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.ekycVerifyWithOptions(request, runtime);
+    }
+
     public FaceCompareResponse faceCompareWithOptions(FaceCompareRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -695,6 +768,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.productConfig)) {
             query.put("ProductConfig", request.productConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productFlow)) {
+            query.put("ProductFlow", request.productFlow);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.returnUrl)) {
