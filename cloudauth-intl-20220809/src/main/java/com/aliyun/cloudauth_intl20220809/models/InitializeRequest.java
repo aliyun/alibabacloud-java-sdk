@@ -58,6 +58,9 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("ProductConfig")
     public String productConfig;
 
+    @NameInMap("ProductFlow")
+    public String productFlow;
+
     @NameInMap("ReturnUrl")
     public String returnUrl;
 
@@ -206,6 +209,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getProductConfig() {
         return this.productConfig;
+    }
+
+    public InitializeRequest setProductFlow(String productFlow) {
+        this.productFlow = productFlow;
+        return this;
+    }
+    public String getProductFlow() {
+        return this.productFlow;
     }
 
     public InitializeRequest setReturnUrl(String returnUrl) {
