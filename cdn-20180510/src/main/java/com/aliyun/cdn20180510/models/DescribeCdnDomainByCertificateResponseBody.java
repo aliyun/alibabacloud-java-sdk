@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
     /**
-     * <p>The certificate information.</p>
+     * <p>The information about the certificate.</p>
      */
     @NameInMap("CertInfos")
     public DescribeCdnDomainByCertificateResponseBodyCertInfos certInfos;
@@ -41,8 +41,8 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
          * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
+         * <p>*   **yes**: The SSL certificate is obsolete.</p>
+         * <p>*   **no**: The SSL certificate is working as expected.</p>
          */
         @NameInMap("CertCaIsLegacy")
         public String certCaIsLegacy;
@@ -56,14 +56,14 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the SSL certificate is expired. Valid values:</p>
          * <br>
-         * <p>*   **yes**</p>
-         * <p>*   **no**</p>
+         * <p>*   **yes**: The SSL certificate is expired.</p>
+         * <p>*   **no**: The SSL certificate is not expired.</p>
          */
         @NameInMap("CertExpired")
         public String certExpired;
 
         /**
-         * <p>The effective time of the certificate.</p>
+         * <p>The time when the certificate became effective.</p>
          */
         @NameInMap("CertStartTime")
         public String certStartTime;
@@ -81,7 +81,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         public String certType;
 
         /**
-         * <p>The list of domain names. If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).</p>
+         * <p>If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).</p>
          */
         @NameInMap("DomainList")
         public String domainList;

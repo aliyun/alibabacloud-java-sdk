@@ -59,8 +59,8 @@ public class SetDomainServerCertificateRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the SSL certificate. Default value: off. Valid values:</p>
      * <br>
-     * <p>*   **on** ：enables the SSL certificate.</p>
-     * <p>*   **off**：disables the SSL certificate.</p>
+     * <p>*   **on** : enables the SSL certificate.</p>
+     * <p>*   **off**: disables the SSL certificate.</p>
      */
     @NameInMap("ServerCertificateStatus")
     public String serverCertificateStatus;

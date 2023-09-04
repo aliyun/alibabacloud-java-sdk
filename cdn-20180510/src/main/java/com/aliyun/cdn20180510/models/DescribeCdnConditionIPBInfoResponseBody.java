@@ -4,9 +4,15 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
+    /**
+     * <p>The data that is returned.</p>
+     */
     @NameInMap("Datas")
     public java.util.List<DescribeCdnConditionIPBInfoResponseBodyDatas> datas;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +38,9 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeCdnConditionIPBInfoResponseBodyDatas extends TeaModel {
+        /**
+         * <p>The configuration value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -7,8 +7,8 @@ public class DescribeUserVipsByDomainRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:</p>
      * <br>
-     * <p>*   **on**：healthy CDN edge nodes.</p>
-     * <p>*   **off**：all CDN edge nodes.</p>
+     * <p>*   **on**: healthy CDN edge nodes.</p>
+     * <p>*   **off**: all CDN edge nodes.</p>
      */
     @NameInMap("Available")
     public String available;

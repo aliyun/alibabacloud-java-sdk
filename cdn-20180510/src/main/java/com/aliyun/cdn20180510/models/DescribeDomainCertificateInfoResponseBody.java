@@ -106,7 +106,7 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
         public String certUpdateTime;
 
         /**
-         * <p>The CANME status of the domain name.</p>
+         * <p>The CNAME status of the domain name.</p>
          * <br>
          * <p>*   **ok**: The domain name points to the CNAME assigned by Alibaba Cloud CDN.</p>
          * <p>*   **cname_error**: An error occurred and the domain name cannot point to the CNAME.</p>
