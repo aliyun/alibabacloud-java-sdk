@@ -10,6 +10,9 @@ public class ListFeatureViewsRequest extends TeaModel {
     @NameInMap("FeatureViewIds")
     public java.util.List<String> featureViewIds;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("Order")
     public String order;
 
@@ -53,6 +56,14 @@ public class ListFeatureViewsRequest extends TeaModel {
     }
     public java.util.List<String> getFeatureViewIds() {
         return this.featureViewIds;
+    }
+
+    public ListFeatureViewsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListFeatureViewsRequest setOrder(String order) {
