@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetAccessConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the access configuration.</p>
+     */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 

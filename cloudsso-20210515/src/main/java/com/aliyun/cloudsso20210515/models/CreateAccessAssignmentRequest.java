@@ -4,21 +4,45 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessAssignmentRequest extends TeaModel {
+    /**
+     * <p>The ID of the access configuration.</p>
+     */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the CloudSSO identity.</p>
+     * <br>
+     * <p>*   If you set `PrincipalType` to `User`, set `PrincipalId` to the ID of the CloudSSO user.</p>
+     * <p>*   If you set `PrincipalType` to `Group`, set `PrincipalId` to the ID of the CloudSSO group.</p>
+     */
     @NameInMap("PrincipalId")
     public String principalId;
 
+    /**
+     * <p>The type of the CloudSSO identity. Valid values:</p>
+     * <br>
+     * <p>*   User</p>
+     * <p>*   Group</p>
+     */
     @NameInMap("PrincipalType")
     public String principalType;
 
+    /**
+     * <p>The ID of the task object.</p>
+     */
     @NameInMap("TargetId")
     public String targetId;
 
+    /**
+     * <p>The type of the task object. Set the value to RD-Account, which indicates an account in your resource directory.</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

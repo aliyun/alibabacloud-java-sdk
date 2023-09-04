@@ -4,21 +4,44 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The groups.</p>
+     */
     @NameInMap("Groups")
     public java.util.List<ListGroupsResponseBodyGroups> groups;
 
+    /**
+     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <br>
+     * <p>*   true: The queried entries are truncated.</p>
+     * <p>*   false: The queried entries are not truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is returned for the next page.</p>
+     * <br>
+     * <p>>  This parameter is returned only when the `IsTruncated` parameter is set to `true`.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
 
@@ -76,21 +99,42 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static class ListGroupsResponseBodyGroups extends TeaModel {
+        /**
+         * <p>The time when the group was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group. Valid values:</p>
+         * <br>
+         * <p>*   Manual: The group is manually created.</p>
+         * <p>*   Synchronized: The group is synchronized from an external IdP.</p>
+         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>The time when the information about the group was modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

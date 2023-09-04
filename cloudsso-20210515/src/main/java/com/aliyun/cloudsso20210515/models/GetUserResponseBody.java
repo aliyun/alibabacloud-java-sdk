@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the user.</p>
+     */
     @NameInMap("User")
     public GetUserResponseBodyUser user;
 
@@ -32,36 +38,75 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyUser extends TeaModel {
+        /**
+         * <p>The time when the user was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the user.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The display name of the user.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The email address of the user.</p>
+         */
         @NameInMap("Email")
         public String email;
 
+        /**
+         * <p>The first name of the user.</p>
+         */
         @NameInMap("FirstName")
         public String firstName;
 
+        /**
+         * <p>The last name of the user.</p>
+         */
         @NameInMap("LastName")
         public String lastName;
 
+        /**
+         * <p>The type of the user. Valid values:</p>
+         * <br>
+         * <p>*   Manual: The user is manually created.</p>
+         * <p>*   Synchronized: The user is synchronized from an external identity provider (IdP).</p>
+         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>The status of the user. Valid values:</p>
+         * <br>
+         * <p>*   Enabled: The logon of the user is enabled.</p>
+         * <p>*   Disabled: The logon of the user is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when the information about the user was modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The name of the user.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 

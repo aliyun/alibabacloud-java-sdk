@@ -4,21 +4,44 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ListJoinedGroupsForUserResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <br>
+     * <p>*   true: The queried entries are truncated.</p>
+     * <p>*   false: The queried entries are not truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The groups to which the user is added.</p>
+     */
     @NameInMap("JoinedGroups")
     public java.util.List<ListJoinedGroupsForUserResponseBodyJoinedGroups> joinedGroups;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is returned for the next page.</p>
+     * <br>
+     * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
 
@@ -76,21 +99,42 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
     }
 
     public static class ListJoinedGroupsForUserResponseBodyJoinedGroups extends TeaModel {
+        /**
+         * <p>The description of the group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The time when the user was added to the user group.</p>
+         */
         @NameInMap("JoinTime")
         public String joinTime;
 
+        /**
+         * <p>The type of the group. Valid values:</p>
+         * <br>
+         * <p>*   Manual: The group is manually created.</p>
+         * <p>*   Synchronized: The user is synchronized from an external identity provider (IdP).</p>
+         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>The ID of the user.</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

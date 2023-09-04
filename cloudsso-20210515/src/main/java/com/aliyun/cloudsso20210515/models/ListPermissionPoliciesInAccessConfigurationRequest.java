@@ -4,12 +4,26 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionPoliciesInAccessConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the access configuration.</p>
+     */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The type of the policy. The type can be used to filter policies. Valid values:</p>
+     * <br>
+     * <p>*   System: system policy</p>
+     * <p>*   Inline: inline policy</p>
+     * <br>
+     * <p>If you do not specify this parameter, all types of policies are queried.</p>
+     */
     @NameInMap("PermissionPolicyType")
     public String permissionPolicyType;
 

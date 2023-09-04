@@ -4,9 +4,18 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class SetMFAAuthenticationStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The status of MFA. Valid values:</p>
+     * <br>
+     * <p>*   Enabled</p>
+     * <p>*   Disabled</p>
+     */
     @NameInMap("MFAAuthenticationStatus")
     public String MFAAuthenticationStatus;
 

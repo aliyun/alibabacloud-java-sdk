@@ -4,15 +4,30 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class RemovePermissionPolicyFromAccessConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the access configuration.</p>
+     */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The name of the policy.</p>
+     */
     @NameInMap("PermissionPolicyName")
     public String permissionPolicyName;
 
+    /**
+     * <p>The type of the policy. Valid values:</p>
+     * <br>
+     * <p>*   System: system policy</p>
+     * <p>*   Inline: inline policy</p>
+     */
     @NameInMap("PermissionPolicyType")
     public String permissionPolicyType;
 

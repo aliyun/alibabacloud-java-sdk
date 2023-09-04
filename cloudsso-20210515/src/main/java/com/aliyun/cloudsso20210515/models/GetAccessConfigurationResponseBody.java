@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetAccessConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The information about the access configuration.</p>
+     */
     @NameInMap("AccessConfiguration")
     public GetAccessConfigurationResponseBodyAccessConfiguration accessConfiguration;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,53 @@ public class GetAccessConfigurationResponseBody extends TeaModel {
     }
 
     public static class GetAccessConfigurationResponseBodyAccessConfiguration extends TeaModel {
+        /**
+         * <p>The ID of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
+        /**
+         * <p>The name of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
+        /**
+         * <p>The time when the access configuration was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the access configuration.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         */
         @NameInMap("RelayState")
         public String relayState;
 
+        /**
+         * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         */
         @NameInMap("SessionDuration")
         public Integer sessionDuration;
 
+        /**
+         * <p>The status notification.</p>
+         */
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
+        /**
+         * <p>The time when the information about the access configuration was modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

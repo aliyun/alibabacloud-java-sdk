@@ -4,12 +4,21 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionPoliciesInAccessConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The policies.</p>
+     */
     @NameInMap("PermissionPolicies")
     public java.util.List<ListPermissionPoliciesInAccessConfigurationResponseBodyPermissionPolicies> permissionPolicies;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of policies.</p>
+     */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
 
@@ -43,15 +52,29 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
     }
 
     public static class ListPermissionPoliciesInAccessConfigurationResponseBodyPermissionPolicies extends TeaModel {
+        /**
+         * <p>The time when the policy was created for the access configuration.</p>
+         */
         @NameInMap("AddTime")
         public String addTime;
 
+        /**
+         * <p>The configurations of the inline policy.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the value of the PermissionPolicyType parameter is Inline.</p>
+         */
         @NameInMap("PermissionPolicyDocument")
         public String permissionPolicyDocument;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("PermissionPolicyName")
         public String permissionPolicyName;
 
+        /**
+         * <p>The type of the policy.</p>
+         */
         @NameInMap("PermissionPolicyType")
         public String permissionPolicyType;
 

@@ -4,12 +4,24 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class UpdateSCIMServerCredentialStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the SCIM credential.</p>
+     */
     @NameInMap("CredentialId")
     public String credentialId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The new status of the SCIM credential. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: The SCIM credential is enabled.</p>
+     * <p>*   Disabled: The SCIM credential is disabled.</p>
+     */
     @NameInMap("NewStatus")
     public String newStatus;
 

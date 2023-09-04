@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class CreateSCIMServerCredentialResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the SCIM credential.</p>
+     */
     @NameInMap("SCIMServerCredential")
     public CreateSCIMServerCredentialResponseBodySCIMServerCredential SCIMServerCredential;
 
@@ -32,24 +38,47 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
     }
 
     public static class CreateSCIMServerCredentialResponseBodySCIMServerCredential extends TeaModel {
+        /**
+         * <p>The time when the SCIM credential was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the SCIM credential.</p>
+         */
         @NameInMap("CredentialId")
         public String credentialId;
 
+        /**
+         * <p>The SCIM credential.</p>
+         * <br>
+         * <p>>  The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</p>
+         */
         @NameInMap("CredentialSecret")
         public String credentialSecret;
 
+        /**
+         * <p>The type of the SCIM credential.</p>
+         */
         @NameInMap("CredentialType")
         public String credentialType;
 
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The time when the SCIM credential expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 

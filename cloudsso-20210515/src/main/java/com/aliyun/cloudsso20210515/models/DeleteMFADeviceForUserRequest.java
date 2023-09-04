@@ -4,12 +4,23 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class DeleteMFADeviceForUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the MFA device.</p>
+     * <br>
+     * <p>You can call the [ListMFADevicesForUser](~~333531~~) operation to query the IDs of MFA devices.</p>
+     */
     @NameInMap("MFADeviceId")
     public String MFADeviceId;
 
+    /**
+     * <p>The ID of the user.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,15 +4,27 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the group.</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The new description of the group.</p>
+     */
     @NameInMap("NewDescription")
     public String newDescription;
 
+    /**
+     * <p>The new name of the group.</p>
+     */
     @NameInMap("NewGroupName")
     public String newGroupName;
 
