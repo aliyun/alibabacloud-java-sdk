@@ -4,12 +4,21 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ListDirectoriesResponseBody extends TeaModel {
+    /**
+     * <p>The directories.</p>
+     */
     @NameInMap("Directories")
     public java.util.List<ListDirectoriesResponseBodyDirectories> directories;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of directories.</p>
+     */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
 
@@ -43,18 +52,33 @@ public class ListDirectoriesResponseBody extends TeaModel {
     }
 
     public static class ListDirectoriesResponseBodyDirectories extends TeaModel {
+        /**
+         * <p>The time when the directory was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The name of the directory.</p>
+         */
         @NameInMap("DirectoryName")
         public String directoryName;
 
+        /**
+         * <p>The region ID of the directory.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The time when the directory was modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

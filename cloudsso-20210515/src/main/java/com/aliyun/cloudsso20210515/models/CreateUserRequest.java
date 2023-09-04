@@ -4,27 +4,68 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
+    /**
+     * <p>The description of the user.</p>
+     * <br>
+     * <p>The description can be up to 1,024 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The display name of the user.</p>
+     * <br>
+     * <p>The name can be up to 256 characters in length.</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
+    /**
+     * <p>The email address of the user. The email address must be unique within the directory.</p>
+     * <br>
+     * <p>The email address can be up to 128 characters in length.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The first name of the user.</p>
+     * <br>
+     * <p>The name can be up to 64 characters in length.</p>
+     */
     @NameInMap("FirstName")
     public String firstName;
 
+    /**
+     * <p>The last name of the user.</p>
+     * <br>
+     * <p>The name can be up to 64 characters in length.</p>
+     */
     @NameInMap("LastName")
     public String lastName;
 
+    /**
+     * <p>The status of the user. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: The logon of the user is enabled. This is the default value.</p>
+     * <p>*   Disabled: The logon of the user is disabled.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The name of the user. The name must be unique within the directory. The name cannot be changed.</p>
+     * <br>
+     * <p>The name can contain numbers, letters, and the following special characters: `@_-.`</p>
+     * <br>
+     * <p>The name can be up to 64 characters in length.</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

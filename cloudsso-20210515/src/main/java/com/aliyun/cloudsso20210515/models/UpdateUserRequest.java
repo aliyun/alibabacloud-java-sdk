@@ -4,24 +4,45 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The new description of the user.</p>
+     */
     @NameInMap("NewDescription")
     public String newDescription;
 
+    /**
+     * <p>The new display name of the user.</p>
+     */
     @NameInMap("NewDisplayName")
     public String newDisplayName;
 
+    /**
+     * <p>The new email address of the user.</p>
+     */
     @NameInMap("NewEmail")
     public String newEmail;
 
+    /**
+     * <p>The new first name of the user.</p>
+     */
     @NameInMap("NewFirstName")
     public String newFirstName;
 
+    /**
+     * <p>The new last name of the user.</p>
+     */
     @NameInMap("NewLastName")
     public String newLastName;
 
+    /**
+     * <p>The ID of the user.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

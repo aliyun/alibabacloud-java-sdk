@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class DeleteSCIMServerCredentialRequest extends TeaModel {
+    /**
+     * <p>The ID of the SCIM credential.</p>
+     */
     @NameInMap("CredentialId")
     public String credentialId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 

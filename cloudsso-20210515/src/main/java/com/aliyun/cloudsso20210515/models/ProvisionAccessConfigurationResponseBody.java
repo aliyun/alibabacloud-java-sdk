@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ProvisionAccessConfigurationResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the task.</p>
+     */
     @NameInMap("Tasks")
     public java.util.List<ProvisionAccessConfigurationResponseBodyTasks> tasks;
 
@@ -32,33 +38,67 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
     }
 
     public static class ProvisionAccessConfigurationResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The ID of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
+        /**
+         * <p>The name of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   InProgress: The task is running.</p>
+         * <p>*   Success: The task is successful.</p>
+         * <p>*   Failed: The task failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task object.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the task object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The path ID of the task object in your resource directory.</p>
+         */
         @NameInMap("TargetPath")
         public String targetPath;
 
+        /**
+         * <p>The path name of the task object in your resource directory.</p>
+         */
         @NameInMap("TargetPathName")
         public String targetPathName;
 
+        /**
+         * <p>The type of the task object. The value is fixed as RD-Account, which indicates an account your resource directory.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The type of the task. The value is fixed as ProvisionAccessConfiguration, which indicates that an access configuration is provisioned.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

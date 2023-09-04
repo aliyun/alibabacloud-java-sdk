@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class CreateDirectoryResponseBody extends TeaModel {
+    /**
+     * <p>The information about the directory.</p>
+     */
     @NameInMap("Directory")
     public CreateDirectoryResponseBodyDirectory directory;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,33 @@ public class CreateDirectoryResponseBody extends TeaModel {
     }
 
     public static class CreateDirectoryResponseBodyDirectory extends TeaModel {
+        /**
+         * <p>The time when the directory was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The name of the directory.</p>
+         */
         @NameInMap("DirectoryName")
         public String directoryName;
 
+        /**
+         * <p>The region ID of the directory.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The time when the directory was modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

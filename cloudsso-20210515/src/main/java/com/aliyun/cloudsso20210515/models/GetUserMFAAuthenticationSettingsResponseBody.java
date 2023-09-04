@@ -4,9 +4,18 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetUserMFAAuthenticationSettingsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether MFA is enabled for the user. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: MFA is enabled for the user.</p>
+     * <p>*   Disabled: MFA is disabled for the user.</p>
+     */
     @NameInMap("UserMFAAuthenticationSettings")
     public String userMFAAuthenticationSettings;
 

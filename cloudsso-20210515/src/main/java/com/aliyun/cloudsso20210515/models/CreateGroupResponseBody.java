@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
+    /**
+     * <p>The information about the group.</p>
+     */
     @NameInMap("Group")
     public CreateGroupResponseBodyGroup group;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class CreateGroupResponseBody extends TeaModel {
     }
 
     public static class CreateGroupResponseBodyGroup extends TeaModel {
+        /**
+         * <p>The time when the group was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the group.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the group. The value is fixed as Manual, which indicates that the group is manually created.</p>
+         */
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>The time when the information about the group was modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

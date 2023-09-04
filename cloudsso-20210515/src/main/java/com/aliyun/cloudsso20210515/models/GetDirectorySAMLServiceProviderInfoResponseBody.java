@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the SP.</p>
+     */
     @NameInMap("SAMLServiceProvider")
     public GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider SAMLServiceProvider;
 
@@ -32,15 +38,27 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
     }
 
     public static class GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider extends TeaModel {
+        /**
+         * <p>The Assertion Consumer Service (ACS) URL of the SP.</p>
+         */
         @NameInMap("AcsUrl")
         public String acsUrl;
 
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The metadata file of the SP. The value of this parameter is Base64-encoded.</p>
+         */
         @NameInMap("EncodedMetadataDocument")
         public String encodedMetadataDocument;
 
+        /**
+         * <p>The entity ID of the SP.</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 

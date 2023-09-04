@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

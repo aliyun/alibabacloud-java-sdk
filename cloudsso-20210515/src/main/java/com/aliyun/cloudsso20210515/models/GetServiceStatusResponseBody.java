@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetServiceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status information of CloudSSO.</p>
+     */
     @NameInMap("ServiceStatus")
     public GetServiceStatusResponseBodyServiceStatus serviceStatus;
 
@@ -32,15 +38,35 @@ public class GetServiceStatusResponseBody extends TeaModel {
     }
 
     public static class GetServiceStatusResponseBodyServiceStatus extends TeaModel {
+        /**
+         * <p>The ID of your Alibaba Cloud account.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>Indicates whether you have permissions to enable CloudSSO. Valid values:</p>
+         * <br>
+         * <p>*   Success: You have permissions to enable CloudSSO.</p>
+         * <p>*   Failed: You do not have permissions to enable CloudSSO.</p>
+         * <br>
+         * <p>>  The value of this parameter is returned only if the value of `Status` is `Disabled`.</p>
+         */
         @NameInMap("PrerequisiteCheckResult")
         public String prerequisiteCheckResult;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionsInUse")
         public java.util.List<String> regionsInUse;
 
+        /**
+         * <p>Indicates whether CloudSSO is enabled. Valid values:</p>
+         * <br>
+         * <p>*   Enabled</p>
+         * <p>*   Disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 

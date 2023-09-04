@@ -4,12 +4,21 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The SAML signing certificates.</p>
+     */
     @NameInMap("SAMLIdPCertificates")
     public java.util.List<ListExternalSAMLIdPCertificatesResponseBodySAMLIdPCertificates> SAMLIdPCertificates;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
 
@@ -43,33 +52,63 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
     }
 
     public static class ListExternalSAMLIdPCertificatesResponseBodySAMLIdPCertificates extends TeaModel {
+        /**
+         * <p>The ID of the certificate.</p>
+         */
         @NameInMap("CertificateId")
         public String certificateId;
 
+        /**
+         * <p>The issuer of the certificate.</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The time when the certificate expires.</p>
+         */
         @NameInMap("NotAfter")
         public String notAfter;
 
+        /**
+         * <p>The time when the certificate was created.</p>
+         */
         @NameInMap("NotBefore")
         public String notBefore;
 
+        /**
+         * <p>The public key of the certificate. The value of this paremeter is in the PEM format and is Base64-encoded.</p>
+         */
         @NameInMap("PublicKey")
         public String publicKey;
 
+        /**
+         * <p>The serial number of the certificate.</p>
+         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
+        /**
+         * <p>The signature algorithm of the certificate.</p>
+         */
         @NameInMap("SignatureAlgorithm")
         public String signatureAlgorithm;
 
+        /**
+         * <p>The subject of the certificate.</p>
+         */
         @NameInMap("Subject")
         public String subject;
 
+        /**
+         * <p>The version of the certificate.</p>
+         */
         @NameInMap("Version")
         public Integer version;
 
+        /**
+         * <p>The X.509 certificate in the PEM format.</p>
+         */
         @NameInMap("X509Certificate")
         public String x509Certificate;
 

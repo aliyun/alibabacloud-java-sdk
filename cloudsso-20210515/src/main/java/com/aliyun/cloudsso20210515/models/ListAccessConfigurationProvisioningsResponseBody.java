@@ -4,21 +4,44 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
+    /**
+     * <p>The accounts for which the access configuration is provisioned.</p>
+     */
     @NameInMap("AccessConfigurationProvisionings")
     public java.util.List<ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings> accessConfigurationProvisionings;
 
+    /**
+     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <br>
+     * <p>*   true: The queried entries are truncated.</p>
+     * <p>*   false: The queried entries are not truncated.</p>
+     */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is returned for the next page.</p>
+     * <br>
+     * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
 
@@ -76,42 +99,89 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     }
 
     public static class ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings extends TeaModel {
+        /**
+         * <p>The ID of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
+        /**
+         * <p>The name of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
+        /**
+         * <p>The first time when the access configuration was provisioned.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The name of the custom policy that is created for an account in your resource directory.</p>
+         */
         @NameInMap("RAMPolicyNames")
         public java.util.List<String> RAMPolicyNames;
 
+        /**
+         * <p>The name of the RAM role that is created for an account in your resource directory.</p>
+         */
         @NameInMap("RAMRoleName")
         public String RAMRoleName;
 
+        /**
+         * <p>The name of the Security Assertion Markup Language (SAML) identity provider (IdP) that is created within an account in your resource directory.</p>
+         */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
+        /**
+         * <p>The status of the access configuration. Valid values:</p>
+         * <br>
+         * <p>*   Provisioned: The access configuration is provisioned.</p>
+         * <p>*   ReprovisionRequired: The access configuration needs to be re-provisioned.</p>
+         * <p>*   DeprovisionFailed: The access configuration failed to be provisioned.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task object.</p>
+         * <br>
+         * <p>If the value of TargetType is `RD-Account`, the value of this parameter is the UID of an account in your resource directory.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the task object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The path ID of the task object in your resource directory.</p>
+         */
         @NameInMap("TargetPath")
         public String targetPath;
 
+        /**
+         * <p>The path name of the task object in your resource directory.</p>
+         */
         @NameInMap("TargetPathName")
         public String targetPathName;
 
+        /**
+         * <p>The type of the task object.</p>
+         * <br>
+         * <p>The value is fixed as RD-Account, which indicates an account in your resource directory.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The last time when the access configuration was provisioned.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

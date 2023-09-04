@@ -4,18 +4,43 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class AddPermissionPolicyToAccessConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the access configuration.</p>
+     */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The configurations of the inline policy.</p>
+     * <br>
+     * <p>The value can be up to 4,096 characters in length.</p>
+     * <br>
+     * <p>If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).</p>
+     */
     @NameInMap("InlinePolicyDocument")
     public String inlinePolicyDocument;
 
+    /**
+     * <p>The name of the policy.</p>
+     * <br>
+     * <p>*   If you set `PermissionPolicyType` to `System`, you must set this parameter to the name of the system policy. You can obtain the name of the system policy from RAM.</p>
+     * <p>*   If you set `PermissionPolicyType` to `Inline`, you must set this parameter to the name of the inline policy. A custom value is supported.</p>
+     */
     @NameInMap("PermissionPolicyName")
     public String permissionPolicyName;
 
+    /**
+     * <p>The type of the policy. Valid values:</p>
+     * <br>
+     * <p>*   System: system policy. Resource Access Management (RAM) system policies are reused.</p>
+     * <p>*   Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</p>
+     */
     @NameInMap("PermissionPolicyType")
     public String permissionPolicyType;
 

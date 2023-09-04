@@ -4,15 +4,27 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class DeprovisionAccessConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the access configuration.</p>
+     */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the task object.</p>
+     */
     @NameInMap("TargetId")
     public String targetId;
 
+    /**
+     * <p>The type of the task object. Set the value to RD-Account, which indicates an account in your resource directory.</p>
+     */
     @NameInMap("TargetType")
     public String targetType;
 

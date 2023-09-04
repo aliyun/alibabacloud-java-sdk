@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The configurations of the IdP.</p>
+     */
     @NameInMap("SAMLIdentityProviderConfiguration")
     public SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration;
 
@@ -32,30 +38,63 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
     }
 
     public static class SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration extends TeaModel {
+        /**
+         * <p>The ID of the SAML signing certificate.</p>
+         */
         @NameInMap("CertificateIds")
         public java.util.List<String> certificateIds;
 
+        /**
+         * <p>The time when the IdP was configured for the first time.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The metadata file of the IdP. The value of this parameter is Base64-encoded.</p>
+         */
         @NameInMap("EncodedMetadataDocument")
         public String encodedMetadataDocument;
 
+        /**
+         * <p>The entity ID of the IdP.</p>
+         */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>The logon URL of the IdP.</p>
+         */
         @NameInMap("LoginUrl")
         public String loginUrl;
 
+        /**
+         * <p>The status of SSO logon. Valid values:</p>
+         * <br>
+         * <p>*   Enabled</p>
+         * <p>*   Disabled</p>
+         */
         @NameInMap("SSOStatus")
         public String SSOStatus;
 
+        /**
+         * <p>The time when the IdP configurations were last modified.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <p>Indicates whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</p>
+         * <br>
+         * <p>*   true: yes</p>
+         * <p>*   false: no (default)</p>
+         */
         @NameInMap("WantRequestSigned")
         public Boolean wantRequestSigned;
 

@@ -4,15 +4,31 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class UpdateInlinePolicyForAccessConfigurationRequest extends TeaModel {
+    /**
+     * <p>The ID of the access configuration.</p>
+     */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The name of the inline policy.</p>
+     */
     @NameInMap("InlinePolicyName")
     public String inlinePolicyName;
 
+    /**
+     * <p>The new configurations of the inline policy.</p>
+     * <br>
+     * <p>The value can be up to 4,096 characters in length.</p>
+     * <br>
+     * <p>For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).</p>
+     */
     @NameInMap("NewInlinePolicyDocument")
     public String newInlinePolicyDocument;
 

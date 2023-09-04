@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the SCIM credential.</p>
+     */
     @NameInMap("SCIMServerCredential")
     public UpdateSCIMServerCredentialStatusResponseBodySCIMServerCredential SCIMServerCredential;
 
@@ -32,21 +38,42 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
     }
 
     public static class UpdateSCIMServerCredentialStatusResponseBodySCIMServerCredential extends TeaModel {
+        /**
+         * <p>The time when the SCIM credential was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the SCIM credential.</p>
+         */
         @NameInMap("CredentialId")
         public String credentialId;
 
+        /**
+         * <p>The type of the SCIM credential.</p>
+         */
         @NameInMap("CredentialType")
         public String credentialType;
 
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The time when the SCIM credential expires.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>The status of the SCIM credential. Valid values:</p>
+         * <br>
+         * <p>*   Enabled: The SCIM credential is enabled.</p>
+         * <p>*   Disabled: The SCIM credential is disabled.</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetDirectoryStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of the directory.</p>
+     */
     @NameInMap("DirectoryStatistics")
     public GetDirectoryStatisticsResponseBodyDirectoryStatistics directoryStatistics;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,45 +38,96 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
     }
 
     public static class GetDirectoryStatisticsResponseBodyDirectoryStatistics extends TeaModel {
+        /**
+         * <p>The number of access permissions that are assigned.</p>
+         */
         @NameInMap("AccessAssignmentCount")
         public Integer accessAssignmentCount;
 
+        /**
+         * <p>The number of access configurations.</p>
+         */
         @NameInMap("AccessConfigurationCount")
         public Integer accessConfigurationCount;
 
+        /**
+         * <p>The quota for access configurations.</p>
+         */
         @NameInMap("AccessConfigurationQuota")
         public Integer accessConfigurationQuota;
 
+        /**
+         * <p>The ID of the directory.</p>
+         */
         @NameInMap("DirectoryId")
         public String directoryId;
 
+        /**
+         * <p>The name of the directory.</p>
+         */
         @NameInMap("DirectoryName")
         public String directoryName;
 
+        /**
+         * <p>The number of groups.</p>
+         */
         @NameInMap("GroupCount")
         public Integer groupCount;
 
+        /**
+         * <p>The quota for groups.</p>
+         */
         @NameInMap("GroupQuota")
         public Integer groupQuota;
 
+        /**
+         * <p>The number of tasks that are being performed.</p>
+         */
         @NameInMap("InProgressTaskCount")
         public Integer inProgressTaskCount;
 
+        /**
+         * <p>The region ID of the directory.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The number of SCIM credentials.</p>
+         */
         @NameInMap("SCIMServerCredentialCount")
         public Integer SCIMServerCredentialCount;
 
+        /**
+         * <p>Indicates whether SCIM synchronization is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: SCIM synchronization is enabled.</p>
+         * <p>*   false: SCIM synchronization is disabled.</p>
+         */
         @NameInMap("SCIMSyncEnabled")
         public Boolean SCIMSyncEnabled;
 
+        /**
+         * <p>Indicates whether SSO logon is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: SSO logon is enabled.</p>
+         * <p>*   false: SSO logon is disabled.</p>
+         */
         @NameInMap("SSOEnabled")
         public Boolean SSOEnabled;
 
+        @NameInMap("SystemPolicyPerAccessConfigurationQuota")
+        public Integer systemPolicyPerAccessConfigurationQuota;
+
+        /**
+         * <p>The number of users.</p>
+         */
         @NameInMap("UserCount")
         public Integer userCount;
 
+        /**
+         * <p>The quota for users.</p>
+         */
         @NameInMap("UserQuota")
         public Integer userQuota;
 
@@ -173,6 +230,14 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
         public Boolean getSSOEnabled() {
             return this.SSOEnabled;
+        }
+
+        public GetDirectoryStatisticsResponseBodyDirectoryStatistics setSystemPolicyPerAccessConfigurationQuota(Integer systemPolicyPerAccessConfigurationQuota) {
+            this.systemPolicyPerAccessConfigurationQuota = systemPolicyPerAccessConfigurationQuota;
+            return this;
+        }
+        public Integer getSystemPolicyPerAccessConfigurationQuota() {
+            return this.systemPolicyPerAccessConfigurationQuota;
         }
 
         public GetDirectoryStatisticsResponseBodyDirectoryStatistics setUserCount(Integer userCount) {

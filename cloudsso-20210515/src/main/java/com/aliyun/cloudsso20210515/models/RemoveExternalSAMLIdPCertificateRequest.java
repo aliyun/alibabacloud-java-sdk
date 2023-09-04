@@ -4,9 +4,17 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class RemoveExternalSAMLIdPCertificateRequest extends TeaModel {
+    /**
+     * <p>The ID of the certificate.</p>
+     * <br>
+     * <p>You can call the [ListExternalSAMLIdPCertificates](~~341629~~) operation to query the IDs of certificates.</p>
+     */
     @NameInMap("CertificateId")
     public String certificateId;
 
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 

@@ -4,9 +4,18 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class SetSCIMSynchronizationStatusRequest extends TeaModel {
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The status of SCIM synchronization. Valid values:</p>
+     * <br>
+     * <p>*   Enabled</p>
+     * <p>*   Disabled</p>
+     */
     @NameInMap("SCIMSynchronizationStatus")
     public String SCIMSynchronizationStatus;
 

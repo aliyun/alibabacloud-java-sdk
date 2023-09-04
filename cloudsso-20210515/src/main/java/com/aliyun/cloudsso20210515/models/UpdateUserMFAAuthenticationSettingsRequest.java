@@ -4,12 +4,24 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserMFAAuthenticationSettingsRequest extends TeaModel {
+    /**
+     * <p>The ID of the directory.</p>
+     */
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    /**
+     * <p>The ID of the user.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>Specifies whether to enable MFA for the user. Valid values:</p>
+     * <br>
+     * <p>*   Enabled: enables MFA for the user.</p>
+     * <p>*   Disabled: disables MFA for the user.</p>
+     */
     @NameInMap("UserMFAAuthenticationSettings")
     public String userMFAAuthenticationSettings;
 

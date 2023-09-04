@@ -4,9 +4,15 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class GetTaskResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the task.</p>
+     */
     @NameInMap("Task")
     public GetTaskResponseBodyTask task;
 
@@ -32,51 +38,113 @@ public class GetTaskResponseBody extends TeaModel {
     }
 
     public static class GetTaskResponseBodyTask extends TeaModel {
+        /**
+         * <p>The ID of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
+        /**
+         * <p>The name of the access configuration.</p>
+         */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
+        /**
+         * <p>The time when the task ended.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The cause of the task failure.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the value of `Status` is `Failed`.</p>
+         */
         @NameInMap("FailureReason")
         public String failureReason;
 
+        /**
+         * <p>The ID of the CloudSSO identity.</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
+        /**
+         * <p>The name of the CloudSSO identity.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The type of the CloudSSO identity. Valid values:</p>
+         * <br>
+         * <p>*   User</p>
+         * <p>*   Group</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
+        /**
+         * <p>The time when the task started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   InProgress: The task is running.</p>
+         * <p>*   Success: The task is successful.</p>
+         * <p>*   Failed: The task failed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the task object.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the task object.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The path ID of the task object in the resource directory.</p>
+         */
         @NameInMap("TargetPath")
         public String targetPath;
 
+        /**
+         * <p>The path name of the task object in the resource directory.</p>
+         */
         @NameInMap("TargetPathName")
         public String targetPathName;
 
+        /**
+         * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
+        /**
+         * <p>The type of the task. Valid values:</p>
+         * <br>
+         * <p>*   ProvisionAccessConfiguration: An access configuration is provisioned.</p>
+         * <p>*   DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>
+         * <p>*   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</p>
+         * <p>*   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 
