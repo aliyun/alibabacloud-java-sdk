@@ -1191,6 +1191,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FeatureViewIds", request.featureViewIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
         }

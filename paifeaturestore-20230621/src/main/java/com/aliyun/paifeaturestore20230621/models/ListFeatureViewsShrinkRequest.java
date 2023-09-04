@@ -10,6 +10,9 @@ public class ListFeatureViewsShrinkRequest extends TeaModel {
     @NameInMap("FeatureViewIds")
     public String featureViewIdsShrink;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("Order")
     public String order;
 
@@ -53,6 +56,14 @@ public class ListFeatureViewsShrinkRequest extends TeaModel {
     }
     public String getFeatureViewIdsShrink() {
         return this.featureViewIdsShrink;
+    }
+
+    public ListFeatureViewsShrinkRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListFeatureViewsShrinkRequest setOrder(String order) {
