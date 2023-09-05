@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ebs20210730</artifactId>
-  <version>1.3.16</version>
+  <version>1.3.17</version>
   <packaging>jar</packaging>
   <name>ebs20210730</name>
   <description>Alibaba Cloud ebs (20210730) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.16</version>
+      <version>0.2.20</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

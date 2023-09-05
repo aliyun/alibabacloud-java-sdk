@@ -4,15 +4,27 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
+    /**
+     * <p>The near real-time monitoring data of the disks.</p>
+     */
     @NameInMap("MonitorData")
     public java.util.List<DescribeDiskMonitorDataListResponseBodyMonitorData> monitorData;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -54,12 +66,21 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskMonitorDataListResponseBodyMonitorData extends TeaModel {
+        /**
+         * <p>The number of burst I/O operations.</p>
+         */
         @NameInMap("BurstIOCount")
         public Long burstIOCount;
 
+        /**
+         * <p>The ID of the disk.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The beginning of the time range during which the performance of the disk bursts. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 

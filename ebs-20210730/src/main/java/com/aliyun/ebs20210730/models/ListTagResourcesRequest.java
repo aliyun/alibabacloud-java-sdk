@@ -22,19 +22,27 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID list of the resource. You can specify up to 50 resource IDs in each call.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
      * <p>The type of the resource. Valid values:</p>
      * <br>
-     * <p>*   dbsc: dedicated block storage cluster</p>
-     * <p>*   pair: replication pair</p>
-     * <p>*   group: replication pair-consistent group</p>
+     * <p>*   dedicatedblockstoragecluster: dedicated block storage cluster</p>
+     * <p>*   diskreplicapair: replication pair</p>
+     * <p>*   diskreplicagroup: replication pair-consistent group</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 

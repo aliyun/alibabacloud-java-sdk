@@ -61,9 +61,9 @@ public class ListTagResourcesResponseBody extends TeaModel {
         /**
          * <p>The type of the resource. Valid values:</p>
          * <br>
-         * <p>*   dbsc: dedicated block storage cluster</p>
-         * <p>*   pair: replication pair</p>
-         * <p>*   group: replication pair-consistent group</p>
+         * <p>*   dedicatedblockstoragecluster: dedicated block storage cluster</p>
+         * <p>*   diskreplicapair: replication pair</p>
+         * <p>*   diskreplicagroup: replication pair-consistent group</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

@@ -4,9 +4,15 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaPairProgressRequest extends TeaModel {
+    /**
+     * <p>The region ID of the replication pair.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the replication pair. You can call the [DescribeDiskReplicaPairs](~~354206~~)operation to query the IDs of existing replication pairs.</p>
+     */
     @NameInMap("ReplicaPairId")
     public String replicaPairId;
 

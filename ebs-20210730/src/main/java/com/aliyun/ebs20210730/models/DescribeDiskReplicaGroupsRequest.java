@@ -5,18 +5,52 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaGroupsRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The IDs of replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).</p>
+     * <br>
+     * <p>This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried.</p>
      */
     @NameInMap("GroupIds")
     public String groupIds;
 
     /**
-     * <p>The IDs of replication pair-consistent groups. You can specify the IDs of one or more replication pair-consistent groups. Separate the IDs with commas (,).</p>
+     * <p>The maximum number of entries to return on each page. Valid values: 1 to 500.</p>
      * <br>
-     * <p>This parameter is empty by default, which indicates that all replication pair-consistent groups in the specified region are queried.</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
+
+    /**
+     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaGroups operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</p>
+     */
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    /**
+     * <p>The number of the page to return.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of entries to return on each page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The region ID of the replication pair-consistent group.</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The ID of the resource group to which the replication group belongs.</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The type of the site from which the information of replication pair-consistent groups is retrieved. This parameter is used for scenarios where data is replicated across zones in replication pairs.</p>
@@ -28,38 +62,12 @@ public class DescribeDiskReplicaGroupsRequest extends TeaModel {
      * <p>    *   production: primary site</p>
      * <p>    *   backup: secondary site</p>
      */
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The query token returned in this call.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    /**
-     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeDiskReplicaGroups operation. Leave this parameter empty the first time you call this operation. When NextToken is specified, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.</p>
-     */
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Valid values: 1 to 100.</p>
-     */
     @NameInMap("Site")
     public String site;
 
+    /**
+     * <p>The resource tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDiskReplicaGroupsRequestTag> tag;
 
@@ -141,9 +149,15 @@ public class DescribeDiskReplicaGroupsRequest extends TeaModel {
     }
 
     public static class DescribeDiskReplicaGroupsRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N of the replication group.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the replication group.</p>
+         */
         @NameInMap("Value")
         public String value;
 

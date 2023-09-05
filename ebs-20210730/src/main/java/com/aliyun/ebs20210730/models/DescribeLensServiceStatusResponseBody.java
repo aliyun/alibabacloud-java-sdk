@@ -4,9 +4,19 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeLensServiceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of CloudLens for EBS. Valid values:</p>
+     * <br>
+     * <p>*   Applying</p>
+     * <p>*   UnAvailable</p>
+     * <p>*   Available</p>
+     */
     @NameInMap("Status")
     public String status;
 

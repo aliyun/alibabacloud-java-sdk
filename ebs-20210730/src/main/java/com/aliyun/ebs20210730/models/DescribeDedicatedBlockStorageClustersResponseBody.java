@@ -91,6 +91,18 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("AvailableCapacity")
         public Long availableCapacity;
 
+        @NameInMap("AvailableDeviceCapacity")
+        public Long availableDeviceCapacity;
+
+        @NameInMap("AvailableSpaceCapacity")
+        public Double availableSpaceCapacity;
+
+        @NameInMap("ClusterAvailableCapacity")
+        public Long clusterAvailableCapacity;
+
+        @NameInMap("ClusterDeliveryCapacity")
+        public Long clusterDeliveryCapacity;
+
         @NameInMap("DeliveryCapacity")
         public Long deliveryCapacity;
 
@@ -100,8 +112,20 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("TotalCapacity")
         public Long totalCapacity;
 
+        @NameInMap("TotalDeviceCapacity")
+        public Long totalDeviceCapacity;
+
+        @NameInMap("TotalSpaceCapacity")
+        public Long totalSpaceCapacity;
+
         @NameInMap("UsedCapacity")
         public Long usedCapacity;
+
+        @NameInMap("UsedDeviceCapacity")
+        public Long usedDeviceCapacity;
+
+        @NameInMap("UsedSpaceCapacity")
+        public Double usedSpaceCapacity;
 
         public static DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity self = new DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity();
@@ -114,6 +138,38 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         }
         public Long getAvailableCapacity() {
             return this.availableCapacity;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setAvailableDeviceCapacity(Long availableDeviceCapacity) {
+            this.availableDeviceCapacity = availableDeviceCapacity;
+            return this;
+        }
+        public Long getAvailableDeviceCapacity() {
+            return this.availableDeviceCapacity;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setAvailableSpaceCapacity(Double availableSpaceCapacity) {
+            this.availableSpaceCapacity = availableSpaceCapacity;
+            return this;
+        }
+        public Double getAvailableSpaceCapacity() {
+            return this.availableSpaceCapacity;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setClusterAvailableCapacity(Long clusterAvailableCapacity) {
+            this.clusterAvailableCapacity = clusterAvailableCapacity;
+            return this;
+        }
+        public Long getClusterAvailableCapacity() {
+            return this.clusterAvailableCapacity;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setClusterDeliveryCapacity(Long clusterDeliveryCapacity) {
+            this.clusterDeliveryCapacity = clusterDeliveryCapacity;
+            return this;
+        }
+        public Long getClusterDeliveryCapacity() {
+            return this.clusterDeliveryCapacity;
         }
 
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setDeliveryCapacity(Long deliveryCapacity) {
@@ -132,12 +188,44 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             return this.totalCapacity;
         }
 
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setTotalDeviceCapacity(Long totalDeviceCapacity) {
+            this.totalDeviceCapacity = totalDeviceCapacity;
+            return this;
+        }
+        public Long getTotalDeviceCapacity() {
+            return this.totalDeviceCapacity;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setTotalSpaceCapacity(Long totalSpaceCapacity) {
+            this.totalSpaceCapacity = totalSpaceCapacity;
+            return this;
+        }
+        public Long getTotalSpaceCapacity() {
+            return this.totalSpaceCapacity;
+        }
+
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setUsedCapacity(Long usedCapacity) {
             this.usedCapacity = usedCapacity;
             return this;
         }
         public Long getUsedCapacity() {
             return this.usedCapacity;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setUsedDeviceCapacity(Long usedDeviceCapacity) {
+            this.usedDeviceCapacity = usedDeviceCapacity;
+            return this;
+        }
+        public Long getUsedDeviceCapacity() {
+            return this.usedDeviceCapacity;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClustersDedicatedBlockStorageClusterCapacity setUsedSpaceCapacity(Double usedSpaceCapacity) {
+            this.usedSpaceCapacity = usedSpaceCapacity;
+            return this;
+        }
+        public Double getUsedSpaceCapacity() {
+            return this.usedSpaceCapacity;
         }
 
     }
@@ -173,6 +261,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     }
 
     public static class DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters extends TeaModel {
+        @NameInMap("AliUid")
+        public String aliUid;
+
         /**
          * <p>The category of disks that can be created in the dedicated block storage cluster.</p>
          */
@@ -209,6 +300,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EnableThinProvision")
+        public Boolean enableThinProvision;
+
         /**
          * <p>The time when the dedicated block storage cluster expires. The value is a UNIX timestamp. Unit: seconds.</p>
          */
@@ -237,6 +331,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("SizeOverSoldRatio")
+        public Double sizeOverSoldRatio;
+
         /**
          * <p>The state of the dedicated block storage cluster. Valid values:</p>
          * <br>
@@ -247,6 +344,9 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
          */
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("StorageDomain")
+        public String storageDomain;
 
         /**
          * <p>This parameter is not supported.</p>
@@ -275,6 +375,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
         public static DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters self = new DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setAliUid(String aliUid) {
+            this.aliUid = aliUid;
+            return this;
+        }
+        public String getAliUid() {
+            return this.aliUid;
         }
 
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setCategory(String category) {
@@ -325,6 +433,14 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             return this.description;
         }
 
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setEnableThinProvision(Boolean enableThinProvision) {
+            this.enableThinProvision = enableThinProvision;
+            return this;
+        }
+        public Boolean getEnableThinProvision() {
+            return this.enableThinProvision;
+        }
+
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
@@ -357,12 +473,28 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
             return this.resourceGroupId;
         }
 
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setSizeOverSoldRatio(Double sizeOverSoldRatio) {
+            this.sizeOverSoldRatio = sizeOverSoldRatio;
+            return this;
+        }
+        public Double getSizeOverSoldRatio() {
+            return this.sizeOverSoldRatio;
+        }
+
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setStorageDomain(String storageDomain) {
+            this.storageDomain = storageDomain;
+            return this;
+        }
+        public String getStorageDomain() {
+            return this.storageDomain;
         }
 
         public DescribeDedicatedBlockStorageClustersResponseBodyDedicatedBlockStorageClusters setSupportedCategory(String supportedCategory) {
