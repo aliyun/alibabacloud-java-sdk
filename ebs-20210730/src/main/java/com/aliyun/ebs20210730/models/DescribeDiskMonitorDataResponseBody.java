@@ -4,12 +4,21 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
+    /**
+     * <p>The near real-time monitoring data of the disk.</p>
+     */
     @NameInMap("MonitorData")
     public java.util.List<DescribeDiskMonitorDataResponseBodyMonitorData> monitorData;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -43,30 +52,57 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskMonitorDataResponseBodyMonitorData extends TeaModel {
+        /**
+         * <p>The percentage of BPS.</p>
+         */
         @NameInMap("BPSPercent")
         public Long BPSPercent;
 
+        /**
+         * <p>The number of burst I/O operations.</p>
+         */
         @NameInMap("BurstIOCount")
         public Long burstIOCount;
 
+        /**
+         * <p>The ID of the disk.</p>
+         */
         @NameInMap("DiskId")
         public String diskId;
 
+        /**
+         * <p>The percentage of IOPS.</p>
+         */
         @NameInMap("IOPSPercent")
         public Long IOPSPercent;
 
+        /**
+         * <p>The read bandwidth of the disk. Unit: Mbit/s.</p>
+         */
         @NameInMap("ReadBPS")
         public Long readBPS;
 
+        /**
+         * <p>The maximum number of read IOPS.</p>
+         */
         @NameInMap("ReadIOPS")
         public Long readIOPS;
 
+        /**
+         * <p>The timestamp that is used to query the near real-time monitoring data of the disk. The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("Timestamp")
         public String timestamp;
 
+        /**
+         * <p>The write bandwidth of the disk. Unit: Mbit/s.</p>
+         */
         @NameInMap("WriteBPS")
         public Long writeBPS;
 
+        /**
+         * <p>The maximum number of write IOPS.</p>
+         */
         @NameInMap("WriteIOPS")
         public Long writeIOPS;
 

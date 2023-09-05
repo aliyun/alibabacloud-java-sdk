@@ -5,19 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The name of the region.</p>
+     * <p>The language in which the regions and zones are named. This parameter corresponds to the `LocalName` response parameter. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN: Chinese</p>
+     * <p>*   en-US: English</p>
+     * <p>*   ja: Japanese</p>
+     * <br>
+     * <p>Default value: zh-CN.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>The endpoint of the region.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Details about the regions.</p>
+     * <p>The type of resource. Valid values:</p>
+     * <br>
+     * <p>*   ear: async replication</p>
+     * <p>*   lens: CloudLens for EBS</p>
+     * <p>*   dbsc: Dedicated Block Storage Cluster</p>
+     * <br>
+     * <p>Default value: ear.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

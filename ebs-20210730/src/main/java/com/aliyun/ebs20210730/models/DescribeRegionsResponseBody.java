@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>Details about the zones.</p>
+     * <p>Details about the regions.</p>
      */
     @NameInMap("Regions")
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,12 +38,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsZones extends TeaModel {
+        /**
+         * <p>The name of the zone.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The type of resource list.</p>
+         */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -80,27 +89,26 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>The name of the zone.</p>
+         * <p>The name of the region.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The endpoint of the region.</p>
          */
         @NameInMap("RegionEndpoint")
         public String regionEndpoint;
 
         /**
-         * <p>The type of resource. Valid values:</p>
-         * <br>
-         * <p>*   ear: async replication</p>
-         * <p>*   lend: CloudLens for EBS</p>
-         * <p>*   dbsc: Dedicated Block Storage Cluster</p>
+         * <p>The ID of the region.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Details about the zones.</p>
+         */
         @NameInMap("Zones")
         public java.util.List<DescribeRegionsResponseBodyRegionsZones> zones;
 

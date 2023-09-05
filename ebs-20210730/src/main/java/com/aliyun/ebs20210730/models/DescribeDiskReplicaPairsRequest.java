@@ -75,6 +75,9 @@ public class DescribeDiskReplicaPairsRequest extends TeaModel {
     @NameInMap("Site")
     public String site;
 
+    /**
+     * <p>The resource tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDiskReplicaPairsRequestTag> tag;
 

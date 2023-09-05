@@ -18,26 +18,15 @@ public class DescribeDedicatedBlockStorageClustersRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).</p>
-     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("DedicatedBlockStorageClusterId")
     public java.util.List<String> dedicatedBlockStorageClusterId;
 
-    /**
-     * <p>The maximum number of entries to return on each page. Maximum value: 500.</p>
-     * <br>
-     * <p>Default value: 10.</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The query token. Set the value to the NextToken value returned in the previous call to the DescribeDedicatedBlockStorageClusters operation. Leave this parameter empty the first time you call this operation.</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 

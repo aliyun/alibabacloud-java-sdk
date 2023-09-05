@@ -4,6 +4,11 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskReplicaGroupRequest extends TeaModel {
+    /**
+     * <p>The bandwidth value. Unit: Kbit/s.</p>
+     * <br>
+     * <p>>  This parameter is unavailable.</p>
+     */
     @NameInMap("Bandwidth")
     public Long bandwidth;
 

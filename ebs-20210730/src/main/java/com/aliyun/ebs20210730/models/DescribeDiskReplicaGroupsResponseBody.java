@@ -5,32 +5,38 @@ import com.aliyun.tea.*;
 
 public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the replication pair-consistent group.</p>
+     * <p>The query token returned in this call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region in which the primary site is deployed.</p>
+     * <p>Details about the replication pair-consistent groups.</p>
      */
     @NameInMap("ReplicaGroups")
     public java.util.List<DescribeDiskReplicaGroupsResponseBodyReplicaGroups> replicaGroups;
 
     /**
-     * <p>Details about the replication pair-consistent groups.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -88,9 +94,15 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiskReplicaGroupsResponseBodyReplicaGroupsTags extends TeaModel {
+        /**
+         * <p>The tag key of the replication group.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the replication group.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -119,28 +131,115 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
 
     public static class DescribeDiskReplicaGroupsResponseBodyReplicaGroups extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The bandwidth value. Unit: Mbit/s. This parameter is unavailable and has a system-preset value.</p>
          */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
-         * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds.</p>
+         * <p>The description of the replication pair-consistent group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the replication pair-consistent group.</p>
+         * <p>The ID of the region in which the secondary site is deployed.</p>
          */
         @NameInMap("DestinationRegionId")
         public String destinationRegionId;
 
         /**
-         * <p>The description of the replication pair-consistent group.</p>
+         * <p>The ID of the zone in which the secondary site is deployed.</p>
          */
         @NameInMap("DestinationZoneId")
         public String destinationZoneId;
+
+        /**
+         * <p>The name of the replication pair-consistent group.</p>
+         */
+        @NameInMap("GroupName")
+        public String groupName;
+
+        /**
+         * <p>The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.</p>
+         */
+        @NameInMap("LastRecoverPoint")
+        public Long lastRecoverPoint;
+
+        /**
+         * <p>The IDs of the replications pairs that belong to the replication pair-consistent group.</p>
+         */
+        @NameInMap("PairIds")
+        public java.util.List<byte[]> pairIds;
+
+        /**
+         * <p>The number of replications pairs that belong to the replication pair-consistent group.</p>
+         */
+        @NameInMap("PairNumber")
+        public Long pairNumber;
+
+        /**
+         * <p>The initial source region (primary region) of the replication pair-consistent group.</p>
+         */
+        @NameInMap("PrimaryRegion")
+        public String primaryRegion;
+
+        /**
+         * <p>The initial source zone (primary zone) of the replication pair-consistent group.</p>
+         */
+        @NameInMap("PrimaryZone")
+        public String primaryZone;
+
+        /**
+         * <p>The recovery point objective (RPO) of the replication pair-consistent group. Unit: seconds.</p>
+         */
+        @NameInMap("RPO")
+        public Long RPO;
+
+        /**
+         * <p>The ID of the replication pair-consistent group.</p>
+         */
+        @NameInMap("ReplicaGroupId")
+        public String replicaGroupId;
+
+        /**
+         * <p>The ID of the resource group to which the replication group belongs.</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:</p>
+         * <br>
+         * <p>*   production: primary site</p>
+         * <p>*   backup: secondary site</p>
+         */
+        @NameInMap("Site")
+        public String site;
+
+        /**
+         * <p>The ID of the region in which the primary site is deployed.</p>
+         */
+        @NameInMap("SourceRegionId")
+        public String sourceRegionId;
+
+        /**
+         * <p>The ID of the zone in which the primary site is deployed.</p>
+         */
+        @NameInMap("SourceZoneId")
+        public String sourceZoneId;
+
+        /**
+         * <p>The initial destination region (secondary region) of the replication pair-consistent group.</p>
+         */
+        @NameInMap("StandbyRegion")
+        public String standbyRegion;
+
+        /**
+         * <p>The initial destination zone (secondary zone) of the replication pair-consistent group.</p>
+         */
+        @NameInMap("StandbyZone")
+        public String standbyZone;
 
         /**
          * <p>The state of the replication pair-consistent group. Valid values:</p>
@@ -164,93 +263,12 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
          * <p>*   delete_failed: The replication pair-consistent group cannot be deleted.</p>
          * <p>*   deleted: The replication pair-consistent group is deleted.</p>
          */
-        @NameInMap("GroupName")
-        public String groupName;
-
-        /**
-         * <p>The IDs of the replications pairs that belong to the replication pair-consistent group.</p>
-         */
-        @NameInMap("LastRecoverPoint")
-        public Long lastRecoverPoint;
-
-        /**
-         * <p>The initial source region (primary region) of the replication pair-consistent group.</p>
-         */
-        @NameInMap("PairIds")
-        public java.util.List<byte[]> pairIds;
-
-        /**
-         * <p>The initial destination region (secondary region) of the replication pair-consistent group.</p>
-         */
-        @NameInMap("PairNumber")
-        public Long pairNumber;
-
-        /**
-         * <p>The initial source zone (primary zone) of the replication pair-consistent group.</p>
-         */
-        @NameInMap("PrimaryRegion")
-        public String primaryRegion;
-
-        /**
-         * <p>The bandwidth value. Unit: Mbit/s. This parameter is unavailable and has a system-preset value.</p>
-         */
-        @NameInMap("PrimaryZone")
-        public String primaryZone;
-
-        /**
-         * <p>The type of the site from which the information of the replication pair and replication pair-consistent group is obtained. Valid values:</p>
-         * <br>
-         * <p>*   production: primary site</p>
-         * <p>*   backup: secondary site</p>
-         */
-        @NameInMap("RPO")
-        public Long RPO;
-
-        /**
-         * <p>The ID of the zone in which the primary site is deployed.</p>
-         */
-        @NameInMap("ReplicaGroupId")
-        public String replicaGroupId;
-
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
-        /**
-         * <p>The number of replications pairs that belong to the replication pair-consistent group.</p>
-         */
-        @NameInMap("Site")
-        public String site;
-
-        /**
-         * <p>The ID of the region in which the secondary site is deployed.</p>
-         */
-        @NameInMap("SourceRegionId")
-        public String sourceRegionId;
-
-        /**
-         * <p>The ID of the zone in which the secondary site is deployed.</p>
-         */
-        @NameInMap("SourceZoneId")
-        public String sourceZoneId;
-
-        /**
-         * <p>The initial destination zone (secondary zone) of the replication pair-consistent group.</p>
-         */
-        @NameInMap("StandbyRegion")
-        public String standbyRegion;
-
-        /**
-         * <p>The page number of the returned page.</p>
-         */
-        @NameInMap("StandbyZone")
-        public String standbyZone;
-
-        /**
-         * <p>The time when data was last replicated from the primary disks to the secondary disks in the replication pair-consistent group. The value of this parameter is a timestamp. Unit: seconds.</p>
-         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the replication pair.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeDiskReplicaGroupsResponseBodyReplicaGroupsTags> tags;
 

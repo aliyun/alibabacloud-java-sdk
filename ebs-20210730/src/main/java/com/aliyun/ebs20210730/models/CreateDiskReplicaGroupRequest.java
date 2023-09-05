@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDiskReplicaGroupRequest extends TeaModel {
     /**
-     * <p>The bandwidth value. Unit: Mbit/s.</p>
+     * <p>The bandwidth value. Unit: Kbit/s.</p>
      * <br>
      * <p>>  This parameter is unavailable.</p>
      */
@@ -54,6 +54,9 @@ public class CreateDiskReplicaGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which to assign the replication group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -63,6 +66,9 @@ public class CreateDiskReplicaGroupRequest extends TeaModel {
     @NameInMap("SourceZoneId")
     public String sourceZoneId;
 
+    /**
+     * <p>The resource tags. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateDiskReplicaGroupRequestTag> tag;
 
@@ -160,9 +166,15 @@ public class CreateDiskReplicaGroupRequest extends TeaModel {
     }
 
     public static class CreateDiskReplicaGroupRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:` or contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

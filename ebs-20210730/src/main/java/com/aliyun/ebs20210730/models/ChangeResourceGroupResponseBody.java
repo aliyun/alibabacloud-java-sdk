@@ -4,6 +4,9 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
