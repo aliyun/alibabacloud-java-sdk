@@ -18,7 +18,7 @@ public class ListNodesRequest extends TeaModel {
      * <p>Format: {"status":"node_status"}. Replace node_status with the node status. Valid values of node_status:</p>
      * <br>
      * <p>*   uninit: The node is being installed.</p>
-     * <p>*   exception: An exception has occurred on the node.</p>
+     * <p>*   exception: An exception occurred on the node.</p>
      * <p>*   running: The node is running.</p>
      * <p>*   initing: The node is being initialized.</p>
      * <p>*   releasing: The node is being released.</p>
@@ -55,7 +55,7 @@ public class ListNodesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -82,9 +82,9 @@ public class ListNodesRequest extends TeaModel {
      * <p>*   Forward: sorts the nodes in chronological order.</p>
      * <p>*   Backward: sorts the nodes in reverse chronological order.</p>
      * <br>
-     * <p>Default value: Forward</p>
+     * <p>Default value: Forward.</p>
      * <br>
-     * <p>>  Sequence is used in combination with SortBy. If SortBy is set to AddedTime and Sequence is set to Forward, nodes are sorted by the time that they were added in chronological order.</p>
+     * <p>>  This parameter is used together with the SortBy parameter. If you set SortBy to AddedTime and set Sequence to Forward, nodes are queried in ascending order of time that they are added.</p>
      */
     @NameInMap("Sequence")
     public String sequence;
@@ -92,7 +92,7 @@ public class ListNodesRequest extends TeaModel {
     /**
      * <p>The sorting method of the node list. Valid values:</p>
      * <br>
-     * <p>*   AddedTime: sorts the nodes by the time that they were added.</p>
+     * <p>*   AddedTime: sorts the nodes by the time that they are added.</p>
      * <p>*   HostName: sorts the nodes by their host names.</p>
      */
     @NameInMap("SortBy")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
 
     public static class ListJobTemplatesResponseBodyTemplatesJobTemplates extends TeaModel {
         /**
-         * <p>The job array.</p>
+         * <p>The queue of the job.</p>
          * <br>
          * <p>Format: X-Y:Z. X is the minimum index value. Y is the maximum index value. Z is the step size. For example, 2-7:2 indicates that three jobs need to be run and their index values are 2, 4, and 6.</p>
          */
@@ -99,13 +99,13 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String clockTime;
 
         /**
-         * <p>The command that was used to run the job.</p>
+         * <p>The command that is used to run the job.</p>
          */
         @NameInMap("CommandLine")
         public String commandLine;
 
         /**
-         * <p>The maximum GPU usage required by a single compute node. Valid values: 1 to 8.</p>
+         * <p>The maximum GPU usage for individual compute nodes. Valid values: 1 to 8.</p>
          * <br>
          * <p>The parameter takes effect only when the cluster uses PBS and a compute node is a GPU-accelerated instance.</p>
          */
@@ -119,7 +119,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The URL of the job files that were uploaded to an Object Storage Service (OSS) bucket.</p>
+         * <p>The URL of the job files that are uploaded to an Object Storage Service (OSS) bucket.</p>
          */
         @NameInMap("InputFileUrl")
         public String inputFileUrl;
@@ -137,19 +137,19 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of the compute nodes. Valid values: 1 to 500.</p>
+         * <p>The number of compute nodes. Valid values: 1 to 500.</p>
          */
         @NameInMap("Node")
         public Integer node;
 
         /**
-         * <p>The path that was used to run the job.</p>
+         * <p>The path that is used to run the job.</p>
          */
         @NameInMap("PackagePath")
         public String packagePath;
 
         /**
-         * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
+         * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
@@ -161,7 +161,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String queue;
 
         /**
-         * <p>Indicates whether the job can be rerun. Valid values:</p>
+         * <p>Specifies whether the job can be rerun. Valid values:</p>
          * <br>
          * <p>*   true: The job can be rerun.</p>
          * <p>*   false: The job cannot be rerun.</p>
@@ -170,7 +170,7 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public Boolean reRunable;
 
         /**
-         * <p>The name of the user that ran the job.</p>
+         * <p>The name of the user that runs the job.</p>
          */
         @NameInMap("RunasUser")
         public String runasUser;
@@ -194,13 +194,13 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public Integer task;
 
         /**
-         * <p>The number of threads required by a single compute node. Valid values: 1 to 1000.</p>
+         * <p>The number of threads required by a single task. Valid values: 1 to 1000.</p>
          */
         @NameInMap("Thread")
         public Integer thread;
 
         /**
-         * <p>The command that was used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:</p>
+         * <p>The command that is used to decompress the job files downloaded from an OSS bucket. The parameter takes effect only when WithUnzipCmd is set to true. Valid values:</p>
          * <br>
          * <p>*   tar xzf: decompresses GZIP files.</p>
          * <p>*   tar xf: decompresses TAR files.</p>
@@ -216,10 +216,10 @@ public class ListJobTemplatesResponseBody extends TeaModel {
         public String variables;
 
         /**
-         * <p>Indicates whether to decompress the job files downloaded from an OSS bucket. Valid values:</p>
+         * <p>Specifies whether to decompress the job files downloaded from an OSS bucket. Valid value:</p>
          * <br>
-         * <p>*   true: The job files are decompressed.</p>
-         * <p>*   false: The job files are not decompressed.</p>
+         * <p>*   true: decompresses the job file.</p>
+         * <p>*   false: does not decompress the job file.</p>
          */
         @NameInMap("WithUnzipCmd")
         public Boolean withUnzipCmd;

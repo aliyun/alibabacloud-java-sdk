@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListVolumesRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class ListVolumesRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page. Valid values: 1 to 50.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

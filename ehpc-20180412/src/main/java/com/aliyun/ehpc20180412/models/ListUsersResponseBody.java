@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -96,7 +96,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String group;
 
         /**
-         * <p>The username.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("Name")
         public String name;

@@ -11,7 +11,7 @@ public class DescribeImageResponseBody extends TeaModel {
     public DescribeImageResponseBodyImageInfo imageInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DescribeImageResponseBody extends TeaModel {
 
     public static class DescribeImageResponseBodyImageInfo extends TeaModel {
         /**
-         * <p>The ID of the image.</p>
+         * <p>The ID of the custom image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -51,7 +51,7 @@ public class DescribeImageResponseBody extends TeaModel {
         public String repository;
 
         /**
-         * <p>The status of the image.</p>
+         * <p>The state of the image.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -63,7 +63,7 @@ public class DescribeImageResponseBody extends TeaModel {
         public String system;
 
         /**
-         * <p>The tag of the image.</p>
+         * <p>The tags of the image.</p>
          */
         @NameInMap("Tag")
         public String tag;

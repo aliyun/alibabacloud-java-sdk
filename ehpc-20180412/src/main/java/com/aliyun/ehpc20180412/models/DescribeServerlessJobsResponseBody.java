@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerlessJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of detailed information about the serverless job.</p>
+     */
     @NameInMap("JobInfos")
     public java.util.List<DescribeServerlessJobsResponseBodyJobInfos> jobInfos;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -43,12 +52,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosArrayProperties extends TeaModel {
+        /**
+         * <p>The end value of the array job index.</p>
+         */
         @NameInMap("IndexEnd")
         public Long indexEnd;
 
+        /**
+         * <p>The starting value of the array job index.</p>
+         */
         @NameInMap("IndexStart")
         public Long indexStart;
 
+        /**
+         * <p>The interval of the array job index.</p>
+         */
         @NameInMap("IndexStep")
         public Long indexStep;
 
@@ -84,27 +102,55 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersCurrentState extends TeaModel {
+        /**
+         * <p>The details of the container status.</p>
+         */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
+        /**
+         * <p>The exit code of the container.</p>
+         */
         @NameInMap("ExitCode")
         public Long exitCode;
 
+        /**
+         * <p>The time when the container stopped running.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The information about the container status.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The reason why the container is in this state.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The code of the container status.</p>
+         */
         @NameInMap("Signal")
         public Long signal;
 
+        /**
+         * <p>The time when the container started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the job. Valid values:</p>
+         * <br>
+         * <p>*   Waiting</p>
+         * <p>*   Running</p>
+         * <p>*   Terminated</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -180,6 +226,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVarsValueFromFieldRef extends TeaModel {
+        /**
+         * <p>The path of the field.</p>
+         */
         @NameInMap("FieldPath")
         public String fieldPath;
 
@@ -199,6 +248,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVarsValueFrom extends TeaModel {
+        /**
+         * <p>The specified field.</p>
+         */
         @NameInMap("FieldRef")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVarsValueFromFieldRef fieldRef;
 
@@ -218,12 +270,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVars extends TeaModel {
+        /**
+         * <p>The key of the environment variable.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the environment variable.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The source of the environment variable value. This parameter can be used only when the variable value is not specified.</p>
+         */
         @NameInMap("ValueFrom")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVarsValueFrom valueFrom;
 
@@ -259,12 +320,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeHttpGet extends TeaModel {
+        /**
+         * <p>The path to which HTTP GET requests are sent.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The port to which HTTP GET requests are sent.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <p>The protocol type of the HTTP GET requests.</p>
+         */
         @NameInMap("Scheme")
         public String scheme;
 
@@ -300,9 +370,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeTcpSocket extends TeaModel {
+        /**
+         * <p>The name of the host.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
@@ -330,33 +406,51 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbe extends TeaModel {
+        /**
+         * <p>The commands that are run.</p>
+         */
         @NameInMap("Execs")
         public java.util.List<String> execs;
 
+        /**
+         * <p>The minimum number of consecutive failures that must occur for the probe to be considered failed. Default value: 3.</p>
+         */
         @NameInMap("FailureThreshold")
         public Long failureThreshold;
 
         /**
-         * <p>HttpGet。</p>
+         * <p>The HTTP GET method that is used to check the container.</p>
          */
         @NameInMap("HttpGet")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeHttpGet httpGet;
 
+        /**
+         * <p>The number of seconds between the time when the startup of the container ends and the time when the check starts.</p>
+         */
         @NameInMap("InitialDelaySeconds")
         public Long initialDelaySeconds;
 
+        /**
+         * <p>The interval at which the probe is run. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+         */
         @NameInMap("PeriodSeconds")
         public Long periodSeconds;
 
+        /**
+         * <p>The minimum number of consecutive successes for the probe to be considered successful after having failed. Default value: 1. Set the value to 1.</p>
+         */
         @NameInMap("SuccessThreshold")
         public Long successThreshold;
 
         /**
-         * <p>TcpSocket。</p>
+         * <p>The TCP socket method that is used to check the container.</p>
          */
         @NameInMap("TcpSocket")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbeTcpSocket tcpSocket;
 
+        /**
+         * <p>The timeout period of a readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.</p>
+         */
         @NameInMap("TimeoutSeconds")
         public Long timeoutSeconds;
 
@@ -432,9 +526,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersPorts extends TeaModel {
+        /**
+         * <p>The port number. Valid values: 1 to 65535.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <p>The protocol.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -462,27 +562,55 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersPreviousState extends TeaModel {
+        /**
+         * <p>The details of the container status.</p>
+         */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
+        /**
+         * <p>The exit code of the container.</p>
+         */
         @NameInMap("ExitCode")
         public Long exitCode;
 
+        /**
+         * <p>The time when the container stopped running.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The message about the container status.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The reason why the container is in this state.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The code of the container status.</p>
+         */
         @NameInMap("Signal")
         public Long signal;
 
+        /**
+         * <p>The time when the container started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the container. Valid values:</p>
+         * <br>
+         * <p>*   Waiting: The container is being started.</p>
+         * <p>*   Running: The container is running.</p>
+         * <p>*   Terminated: The container terminates running.</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -558,14 +686,20 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbeHttpGet extends TeaModel {
+        /**
+         * <p>The path to which HTTP GET requests are sent.</p>
+         */
         @NameInMap("Path")
         public String path;
 
+        /**
+         * <p>The port to which the system sends an HTTP GET request for a health check.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
         /**
-         * <p>HTTP／HTTPS。</p>
+         * <p>The protocol type of the HTTP GET requests.</p>
          */
         @NameInMap("Scheme")
         public String scheme;
@@ -603,11 +737,14 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbeTcpSocket extends TeaModel {
         /**
-         * <p>Host。</p>
+         * <p>The IP address of the host.</p>
          */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
@@ -635,27 +772,51 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbe extends TeaModel {
+        /**
+         * <p>The commands that are run in the container when you use the command line interface (CLI) to perform health checks.</p>
+         */
         @NameInMap("Execs")
         public java.util.List<String> execs;
 
+        /**
+         * <p>The minimum number of consecutive failures that must occur for the check to be considered failure. Default value: 3.</p>
+         */
         @NameInMap("FailureThreshold")
         public Long failureThreshold;
 
+        /**
+         * <p>The HTTP GET method that is used to check the container.</p>
+         */
         @NameInMap("HttpGet")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbeHttpGet httpGet;
 
+        /**
+         * <p>The number of seconds between the time when the startup of the container ends and the time when the check starts.</p>
+         */
         @NameInMap("InitialDelaySeconds")
         public Long initialDelaySeconds;
 
+        /**
+         * <p>The interval at which the check is performed. Unit: seconds. Default value: 10. Minimum value: 1.</p>
+         */
         @NameInMap("PeriodSeconds")
         public Long periodSeconds;
 
+        /**
+         * <p>The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.</p>
+         */
         @NameInMap("SuccessThreshold")
         public Long successThreshold;
 
+        /**
+         * <p>The TCP socket method that is used to check the container.</p>
+         */
         @NameInMap("TcpSocket")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbeTcpSocket tcpSocket;
 
+        /**
+         * <p>The timeout period of the check. Default value: 1. Minimum value: 1.</p>
+         */
         @NameInMap("TimeoutSeconds")
         public Long timeoutSeconds;
 
@@ -731,6 +892,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersSecurityContextCapability extends TeaModel {
+        /**
+         * <p>The permissions specific to the processes in the container.</p>
+         */
         @NameInMap("Adds")
         public java.util.List<String> adds;
 
@@ -750,12 +914,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersSecurityContext extends TeaModel {
+        /**
+         * <p>The permissions specific to the processes in the container.</p>
+         */
         @NameInMap("Capability")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersSecurityContextCapability capability;
 
+        /**
+         * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
+         */
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
 
+        /**
+         * <p>The UID that is used to run the entry point of the container process.</p>
+         */
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
@@ -791,18 +964,37 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersVolumeMounts extends TeaModel {
+        /**
+         * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <p>The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:</p>
+         * <br>
+         * <p>*   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
+         * <p>*   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
+         * <p>*   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</p>
+         */
         @NameInMap("MountPropagation")
         public String mountPropagation;
 
+        /**
+         * <p>The name of the volume.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Indicates whether the volumes are read-only.</p>
+         */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
+        /**
+         * <p>The subdirectory of the volume. This parameter specifies different subdirectories of the same volume that the instance can mount to different subdirectories of containers.</p>
+         */
         @NameInMap("SubPath")
         public String subPath;
 
@@ -854,69 +1046,139 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainers extends TeaModel {
+        /**
+         * <p>The startup parameter of the container.</p>
+         */
         @NameInMap("Args")
         public java.util.List<String> args;
 
+        /**
+         * <p>The startup command of the container.</p>
+         */
         @NameInMap("Commands")
         public java.util.List<String> commands;
 
+        /**
+         * <p>The number of vCPUs of the container.</p>
+         */
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The current status of the container.</p>
+         */
         @NameInMap("CurrentState")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersCurrentState currentState;
 
+        /**
+         * <p>The environment variables.</p>
+         */
         @NameInMap("EnvironmentVars")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersEnvironmentVars> environmentVars;
 
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("Gpu")
         public Integer gpu;
 
+        /**
+         * <p>The image of the container.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The policy for image pulling. Valid values:</p>
+         * <br>
+         * <p>*   Always: Each time instances are created, image pulling is performed.</p>
+         * <p>*   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</p>
+         * <p>*   Never: On-premises images are always used. Image pulling is not performed.</p>
+         */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
+        /**
+         * <p>The liveness probe of the container.</p>
+         */
         @NameInMap("LivenessProbe")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersLivenessProbe livenessProbe;
 
+        /**
+         * <p>The memory size of the instance. Unit: GiB.</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 
+        /**
+         * <p>The container name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The exposed ports and protocols of the container.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersPorts> ports;
 
+        /**
+         * <p>The previous status of the container.</p>
+         */
         @NameInMap("PreviousState")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersPreviousState previousState;
 
+        /**
+         * <p>The readiness probe that is used to check whether the container is ready to serve a request.</p>
+         */
         @NameInMap("ReadinessProbe")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersReadinessProbe readinessProbe;
 
+        /**
+         * <p>Indicates whether the container passed the readiness probe.</p>
+         */
         @NameInMap("Ready")
         public Boolean ready;
 
+        /**
+         * <p>The number of times that the instance worker restarted.</p>
+         */
         @NameInMap("RestartCount")
         public Integer restartCount;
 
+        /**
+         * <p>The security context of the container.</p>
+         */
         @NameInMap("SecurityContext")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersSecurityContext securityContext;
 
+        /**
+         * <p>Indicates whether the container allocates buffer resources to standard input streams when the container runs. If you do not specify this parameter, an EOF error may occur when standard input streams in the init container are read. Default value: false.</p>
+         */
         @NameInMap("Stdin")
         public Boolean stdin;
 
+        /**
+         * <p>Indicates whether the container runtime closes the stdin channel after the stdin channel has been opened by a single attach session. If stdin is true, the stdin stream remains open across multiple attach sessions. If StdinOnce is set to true, stdin is opened on container start, remains empty until the first client attaches to stdin, and then is open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.</p>
+         */
         @NameInMap("StdinOnce")
         public Boolean stdinOnce;
 
+        /**
+         * <p>Indicates whether interaction is enabled. Default value: false. If the value of the Command parameter is /bin/bash, the value of this parameter must be set to true.</p>
+         */
         @NameInMap("Tty")
         public Boolean tty;
 
+        /**
+         * <p>Information about the mounted volumes.</p>
+         */
         @NameInMap("VolumeMounts")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainersVolumeMounts> volumeMounts;
 
+        /**
+         * <p>The working directory.</p>
+         */
         @NameInMap("WorkingDir")
         public String workingDir;
 
@@ -1104,9 +1366,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsDnsConfigOptions extends TeaModel {
+        /**
+         * <p>The variable name of the option.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The variable value of the option.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1134,12 +1402,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsDnsConfig extends TeaModel {
+        /**
+         * <p>The IP addresses of DNS servers.</p>
+         */
         @NameInMap("NameServers")
         public java.util.List<String> nameServers;
 
+        /**
+         * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
+         */
         @NameInMap("Options")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsDnsConfigOptions> options;
 
+        /**
+         * <p>The search domains of the DNS server.</p>
+         */
         @NameInMap("Searches")
         public java.util.List<String> searches;
 
@@ -1175,9 +1452,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEciSecurityContextSysctls extends TeaModel {
+        /**
+         * <p>The name of the Sysctl parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The value of the Sysctl parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1205,6 +1488,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEciSecurityContext extends TeaModel {
+        /**
+         * <p>The Sysctl parameters.</p>
+         */
         @NameInMap("Sysctls")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEciSecurityContextSysctls> sysctls;
 
@@ -1224,24 +1510,48 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEvents extends TeaModel {
+        /**
+         * <p>The number of the events.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The time when the event started.</p>
+         */
         @NameInMap("FirstTimestamp")
         public String firstTimestamp;
 
+        /**
+         * <p>The time when the event ended.</p>
+         */
         @NameInMap("LastTimestamp")
         public String lastTimestamp;
 
+        /**
+         * <p>The message about the event.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the object to which the event belongs.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name of the event.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The type of the event. Valid values:</p>
+         * <br>
+         * <p>*   Normal</p>
+         * <p>*   Warning</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -1309,9 +1619,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsHostAliases extends TeaModel {
+        /**
+         * <p>The information about the host.</p>
+         */
         @NameInMap("Hostnames")
         public java.util.List<String> hostnames;
 
+        /**
+         * <p>The IP address of the host.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
@@ -1339,27 +1655,55 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersCurrentState extends TeaModel {
+        /**
+         * <p>The details of the container status.</p>
+         */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
+        /**
+         * <p>The exit code of the container.</p>
+         */
         @NameInMap("ExitCode")
         public Long exitCode;
 
+        /**
+         * <p>The time when the container stopped running.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The message of the event.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The reason why the container is in this state.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The code of the container status.</p>
+         */
         @NameInMap("Signal")
         public Long signal;
 
+        /**
+         * <p>The time when the container started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the container. Valid values:</p>
+         * <br>
+         * <p>*   Waiting</p>
+         * <p>*   Running</p>
+         * <p>*   Terminated</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -1435,6 +1779,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef extends TeaModel {
+        /**
+         * <p>The path of the field in the specified version. Set the value to `status.podIP`.</p>
+         */
         @NameInMap("FieldPath")
         public String fieldPath;
 
@@ -1454,6 +1801,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVarsValueFrom extends TeaModel {
+        /**
+         * <p>The specified field.</p>
+         */
         @NameInMap("FieldRef")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef fieldRef;
 
@@ -1473,12 +1823,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVars extends TeaModel {
+        /**
+         * <p>The key of the environment variable.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the environment variable.</p>
+         */
         @NameInMap("Value")
         public String value;
 
+        /**
+         * <p>The source of the environment variable value. This parameter can be used only when the variable value is not specified.</p>
+         */
         @NameInMap("ValueFrom")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVarsValueFrom valueFrom;
 
@@ -1514,9 +1873,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersPorts extends TeaModel {
+        /**
+         * <p>The port number. Valid values: 1 to 65535.</p>
+         */
         @NameInMap("Port")
         public Long port;
 
+        /**
+         * <p>The protocol.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
@@ -1544,27 +1909,51 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersPreviousState extends TeaModel {
+        /**
+         * <p>The details of the container status.</p>
+         */
         @NameInMap("DetailStatus")
         public String detailStatus;
 
+        /**
+         * <p>The exit code of the container.</p>
+         */
         @NameInMap("ExitCode")
         public Long exitCode;
 
+        /**
+         * <p>The time when the container stopped running.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The message about the container status.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The reason why the container is in this state.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The code of the container status.</p>
+         */
         @NameInMap("Signal")
         public Long signal;
 
+        /**
+         * <p>The time when the container started to run.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the container. Valid values: Waiting, Running, and Terminated.</p>
+         */
         @NameInMap("State")
         public String state;
 
@@ -1640,6 +2029,9 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersSecurityContextCapability extends TeaModel {
+        /**
+         * <p>The permissions specific to the processes in the container.</p>
+         */
         @NameInMap("Adds")
         public java.util.List<String> adds;
 
@@ -1659,12 +2051,21 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersSecurityContext extends TeaModel {
+        /**
+         * <p>The permissions specific to the processes in the container.</p>
+         */
         @NameInMap("Capability")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersSecurityContextCapability capability;
 
+        /**
+         * <p>Indicates whether the root file system is set to the read-only mode. The only valid value is true.</p>
+         */
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
 
+        /**
+         * <p>The UID that is used to run the entry point of the container process.</p>
+         */
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
@@ -1700,15 +2101,33 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersVolumeMounts extends TeaModel {
+        /**
+         * <p>The directory to which the volume is mounted. Data under this directory is overwritten by the data on the volume.</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <p>The mount propagation settings of the volume. Mount propagation allows you to share volumes that are mounted on a container with other containers in the same pod or other pods on the same node. Valid values:</p>
+         * <br>
+         * <p>*   None: The volume mount does not receive subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
+         * <p>*   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume.</p>
+         * <p>*   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to the volume or the subdirectories of the volume. All volume mounts that are mounted by the container are propagated back to the instance and all containers of all pods that use the same volume.</p>
+         * <br>
+         * <p>Default value: None.</p>
+         */
         @NameInMap("MountPropagation")
         public String mountPropagation;
 
+        /**
+         * <p>The name of the volume. The name is the same as the volume you selected when you purchased the container.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Default value: False.</p>
+         */
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
@@ -1752,54 +2171,105 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainers extends TeaModel {
+        /**
+         * <p>The startup parameters.</p>
+         */
         @NameInMap("Args")
         public java.util.List<String> args;
 
+        /**
+         * <p>The startup command.</p>
+         */
         @NameInMap("Command")
         public java.util.List<String> command;
 
+        /**
+         * <p>The number of vCPUs.</p>
+         */
         @NameInMap("Cpu")
         public Long cpu;
 
+        /**
+         * <p>The current status of the container.</p>
+         */
         @NameInMap("CurrentState")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersCurrentState currentState;
 
+        /**
+         * <p>The environment variables.</p>
+         */
         @NameInMap("EnvironmentVars")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersEnvironmentVars> environmentVars;
 
+        /**
+         * <p>The number of GPUs.</p>
+         */
         @NameInMap("Gpu")
         public Long gpu;
 
+        /**
+         * <p>The image of the container.</p>
+         */
         @NameInMap("Image")
         public String image;
 
+        /**
+         * <p>The policy for image pulling.</p>
+         */
         @NameInMap("ImagePullPolicy")
         public String imagePullPolicy;
 
+        /**
+         * <p>The size of memory that is allocated to the init container. Unit: GiB.</p>
+         */
         @NameInMap("Memory")
         public Long memory;
 
+        /**
+         * <p>The container name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The exposed ports and protocols of the container.</p>
+         */
         @NameInMap("Ports")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersPorts> ports;
 
+        /**
+         * <p>The previous status of the container.</p>
+         */
         @NameInMap("PreviousState")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersPreviousState previousState;
 
+        /**
+         * <p>Indicates whether the container passed the readiness probe.</p>
+         */
         @NameInMap("Ready")
         public Boolean ready;
 
+        /**
+         * <p>The number of times that the instance worker restarted.</p>
+         */
         @NameInMap("RestartCount")
         public Long restartCount;
 
+        /**
+         * <p>The security context of the container.</p>
+         */
         @NameInMap("SecurityContext")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersSecurityContext securityContext;
 
+        /**
+         * <p>The information about the volumes that are mounted to the init container.</p>
+         */
         @NameInMap("VolumeMounts")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainersVolumeMounts> volumeMounts;
 
+        /**
+         * <p>The working directory.</p>
+         */
         @NameInMap("WorkingDir")
         public String workingDir;
 
@@ -1947,9 +2417,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1977,9 +2453,15 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsVolumesConfigFileVolumeConfigFileToPaths extends TeaModel {
+        /**
+         * <p>The content of the configuration file. Maximum size: 32 KB.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The relative path to the configuration file.</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -2007,42 +2489,89 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroupsVolumes extends TeaModel {
+        /**
+         * <p>The paths to configuration files.</p>
+         */
         @NameInMap("ConfigFileVolumeConfigFileToPaths")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsVolumesConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
 
+        /**
+         * <p>The ID of the disk volume if you set Type to DiskVolume.</p>
+         */
         @NameInMap("DiskVolumeDiskId")
         public String diskVolumeDiskId;
 
+        /**
+         * <p>The file system type of the disk volume.</p>
+         */
         @NameInMap("DiskVolumeFsType")
         public String diskVolumeFsType;
 
+        /**
+         * <p>The storage media of emptyDir volume N. This parameter is empty by default, which indicates that the node file system is used as the storage media. Valid values:</p>
+         * <br>
+         * <p>*   Memory: uses memory as the storage media.</p>
+         * <p>*   LocalRaid0: forms local disks into RAID 0. This value is applicable only to scenarios in which an elastic container instance that has local disks mounted is created. For more information, see [Create an elastic container instance that has local disks mounted](~~114664~~).</p>
+         */
         @NameInMap("EmptyDirVolumeMedium")
         public String emptyDirVolumeMedium;
 
+        /**
+         * <p>The storage size of the emptyDir volume. If you specify this parameter, include the unit in the value. We recommend that you use Gi or Mi.</p>
+         */
         @NameInMap("EmptyDirVolumeSizeLimit")
         public String emptyDirVolumeSizeLimit;
 
+        /**
+         * <p>The name of the driver when you set the Type parameter to FlexVolume.</p>
+         */
         @NameInMap("FlexVolumeDriver")
         public String flexVolumeDriver;
 
+        /**
+         * <p>The file system type when you set the Type parameter to FlexVolume. The default value is determined by the script of the FlexVolume plug-in.</p>
+         */
         @NameInMap("FlexVolumeFsType")
         public String flexVolumeFsType;
 
+        /**
+         * <p>The FlexVolume options.</p>
+         */
         @NameInMap("FlexVolumeOptions")
         public String flexVolumeOptions;
 
+        /**
+         * <p>The path to the NFS volume.</p>
+         */
         @NameInMap("NFSVolumePath")
         public String NFSVolumePath;
 
+        /**
+         * <p>Indicates whether the NFS volume is read-only.</p>
+         */
         @NameInMap("NFSVolumeReadOnly")
         public Boolean NFSVolumeReadOnly;
 
+        /**
+         * <p>The endpoint of the server when you set the Type parameter to NFSVolume.</p>
+         */
         @NameInMap("NFSVolumeServer")
         public String NFSVolumeServer;
 
+        /**
+         * <p>The name of the volume.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the volume. Valid values:</p>
+         * <br>
+         * <p>*   EmptyDirVolume</p>
+         * <p>*   NFSVolume</p>
+         * <p>*   ConfigFileVolume</p>
+         * <p>*   FlexVolume</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -2158,117 +2687,252 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfosContainerGroups extends TeaModel {
+        /**
+         * <p>The ID of the container group.</p>
+         */
         @NameInMap("ContainerGroupId")
         public String containerGroupId;
 
+        /**
+         * <p>The name of the container group.</p>
+         */
         @NameInMap("ContainerGroupName")
         public String containerGroupName;
 
+        /**
+         * <p>The list of containers in the container group.</p>
+         */
         @NameInMap("Containers")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsContainers> containers;
 
+        /**
+         * <p>The number of vCPUs that are allocated to the container.</p>
+         */
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The time when the instance is created. The time follows the RFC 3339 standard and must be in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The discount.</p>
+         */
         @NameInMap("Discount")
         public Long discount;
 
+        /**
+         * <p>The Domain Name System (DNS) settings.</p>
+         */
         @NameInMap("DnsConfig")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsDnsConfig dnsConfig;
 
+        /**
+         * <p>The security context of the container group.</p>
+         */
         @NameInMap("EciSecurityContext")
         public DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEciSecurityContext eciSecurityContext;
 
+        /**
+         * <p>The ID of the elastic network interface (ENI).</p>
+         */
         @NameInMap("EniInstanceId")
         public String eniInstanceId;
 
+        /**
+         * <p>The size of the temporary storage space. Unit: GiB.</p>
+         */
         @NameInMap("EphemeralStorage")
         public Long ephemeralStorage;
 
+        /**
+         * <p>The event information. Up to 50 events can be returned.</p>
+         */
         @NameInMap("Events")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsEvents> events;
 
+        /**
+         * <p>The time when the instance failed to run due to overdue payments. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The time when the instance failed to run. The time follows the RFC 3339 standard and must be in UTC.</p>
+         */
         @NameInMap("FailedTime")
         public String failedTime;
 
+        /**
+         * <p>The hostname mapping of a container in the elastic container instance.</p>
+         */
         @NameInMap("HostAliases")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsHostAliases> hostAliases;
 
+        /**
+         * <p>The init containers.</p>
+         */
         @NameInMap("InitContainers")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsInitContainers> initContainers;
 
+        /**
+         * <p>The instance type of the Elastic Compute Service (ECS) instance.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The public IP address.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The IPv6 address.</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The memory size of the instance. Unit: GiB.</p>
+         */
         @NameInMap("Memory")
         public Float memory;
 
+        /**
+         * <p>The name of the instance RAM role. You can use an instance RAM role to access both elastic container instances and ECS instances. For more information, see [Use the instance RAM role by calling APIs](~~61178~~).</p>
+         */
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
+        /**
+         * <p>The ID of the region in which the instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs. If you do not specify a resource group when you create an elastic container instance, the system automatically adds the instance to the default resource group in your account.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The instance restart policy. Valid values:</p>
+         * <br>
+         * <p>*   Always: Always restarts the instance if a container in the instance exits upon termination.</p>
+         * <p>*   Never: Never restarts the instance if a container in the instance exits upon termination.</p>
+         * <p>*   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.</p>
+         */
         @NameInMap("RestartPolicy")
         public String restartPolicy;
 
+        /**
+         * <p>The ID of the security group to which the instances belong.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The maximum hourly price for the preemptible instance.</p>
+         * <br>
+         * <p>This parameter is returned only if you set SpotStrategy to SpotWithPriceLimit.</p>
+         */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
+        /**
+         * <p>The bidding policy for the instance. Valid values:</p>
+         * <br>
+         * <p>*   NoSpot: The node is a regular pay-as-you-go instance.</p>
+         * <p>*   SpotWithPriceLimit: The node is a preemptible instance that has a user-defined maximum hourly price.</p>
+         * <p>*   SpotAsPriceGo: The node is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
+         */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
+        /**
+         * <p>The status of the instance. Valid value:</p>
+         * <br>
+         * <p>*   Pending: The instance is being started.</p>
+         * <p>*   Running: The instance is running.</p>
+         * <p>*   Succeeded: The instance runs successfully.</p>
+         * <p>*   Failed: The instance fails to run.</p>
+         * <p>*   Scheduling: The instance is being created.</p>
+         * <p>*   ScheduleFailed: The instance fails to be created.</p>
+         * <p>*   Restarting: The instance is being restarted.</p>
+         * <p>*   Updating: The instance is being updated.</p>
+         * <p>*   Terminating: The instance is being terminated.</p>
+         * <p>*   Expired: The instance expires.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The time when all containers exited on success. The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.</p>
+         */
         @NameInMap("SucceededTime")
         public String succeededTime;
 
+        /**
+         * <p>The tags of the instances.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsTags> tags;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("TenantEniInstanceId")
         public String tenantEniInstanceId;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("TenantEniIp")
         public String tenantEniIp;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("TenantSecurityGroupId")
         public String tenantSecurityGroupId;
 
+        /**
+         * <p>This parameter is unavailable.</p>
+         */
         @NameInMap("TenantVSwitchId")
         public String tenantVSwitchId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The information about volumes.</p>
+         */
         @NameInMap("Volumes")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroupsVolumes> volumes;
 
+        /**
+         * <p>The ID of the VPC to which the elastic container instances belong.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone in which the elastic container instance is deployed.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -2584,42 +3248,88 @@ public class DescribeServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeServerlessJobsResponseBodyJobInfos extends TeaModel {
+        /**
+         * <p>The properties of the array job.</p>
+         */
         @NameInMap("ArrayProperties")
         public DescribeServerlessJobsResponseBodyJobInfosArrayProperties arrayProperties;
 
+        /**
+         * <p>The information of the container groups that are used to run the serverless job.</p>
+         */
         @NameInMap("ContainerGroups")
         public java.util.List<DescribeServerlessJobsResponseBodyJobInfosContainerGroups> containerGroups;
 
+        /**
+         * <p>The time when the serverless job ended.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Indicates whether the job is an array job.</p>
+         */
         @NameInMap("IsArrayJob")
         public Boolean isArrayJob;
 
+        /**
+         * <p>The ID of the serverless job or the subtask (array job).</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The name of the serverless job.</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>The time when the serverless job is last modified.</p>
+         */
         @NameInMap("LastModifyTime")
         public Long lastModifyTime;
 
+        /**
+         * <p>The scheduling priority of the serverless job.</p>
+         */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <p>The name of the queue in which the serverless job is run.</p>
+         */
         @NameInMap("Queue")
         public String queue;
 
+        /**
+         * <p>The time when the serverless job started.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the serverless job. Valid values:</p>
+         * <br>
+         * <p>*   Pending</p>
+         * <p>*   Initing</p>
+         * <p>*   Running</p>
+         * <p>*   Succeeded</p>
+         * <p>*   Canceled</p>
+         * <p>*   Failed</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The time when the serverless job is submitted.</p>
+         */
         @NameInMap("SubmitTime")
         public Long submitTime;
 
+        /**
+         * <p>The username that is used to run the serverless job.</p>
+         */
         @NameInMap("User")
         public String user;
 

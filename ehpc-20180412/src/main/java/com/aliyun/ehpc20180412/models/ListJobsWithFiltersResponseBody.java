@@ -11,7 +11,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
     public java.util.List<ListJobsWithFiltersResponseBodyJobs> jobs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -23,7 +23,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -31,7 +31,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
+     * <p>*   true: The request was successful.</p>
      * <p>*   false: The request failed.</p>
      */
     @NameInMap("Success")
@@ -148,7 +148,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -178,7 +178,7 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
+         * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
          */
         @NameInMap("Priority")
         public String priority;
@@ -192,8 +192,8 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the job can be run again. Valid values:</p>
          * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>*   true: yes</p>
+         * <p>*   false: no</p>
          */
         @NameInMap("Rerunable")
         public Boolean rerunable;
@@ -211,16 +211,16 @@ public class ListJobsWithFiltersResponseBody extends TeaModel {
         public String shellPath;
 
         /**
-         * <p>The time when the job started to run.</p>
+         * <p>The time when the job was created.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The status of the job. Valid value:</p>
          * <br>
          * <p>*   FINISHED: The job is completed.</p>
-         * <p>*   RUNNING: The job connector is running.</p>
+         * <p>*   RUNNING: The job is running.</p>
          * <p>*   QUEUED: The job is pending in a queue.</p>
          */
         @NameInMap("State")

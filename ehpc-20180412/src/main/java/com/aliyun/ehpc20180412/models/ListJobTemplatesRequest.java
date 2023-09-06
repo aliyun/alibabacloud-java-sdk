@@ -13,17 +13,17 @@ public class ListJobTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of the page to return. Page numbers start from 1.</p>
+     * <p>The page number to return. Pages start from page 1.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The number of entries to return per page. Maximum value: 50.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -11,7 +11,7 @@ public class DescribePriceResponseBody extends TeaModel {
     public DescribePriceResponseBodyPrices prices;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -19,7 +19,7 @@ public class DescribePriceResponseBody extends TeaModel {
     /**
      * <p>The total price.</p>
      * <br>
-     * <p>Unit: USD</p>
+     * <p>Unit: USD.</p>
      */
     @NameInMap("TotalTradePrice")
     public Float totalTradePrice;
@@ -75,7 +75,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * <p>The original price of the image.</p>
          * <br>
-         * <p>Unit: USD</p>
+         * <p>Unit: USD.</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
@@ -83,7 +83,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * <p>The final price.</p>
          * <br>
-         * <p>Unit: USD</p>
+         * <p>Unit: USD.</p>
          */
         @NameInMap("TradePrice")
         public Float tradePrice;

@@ -270,8 +270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the zone.
-      * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
+      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
       *
       * @param request CreateClusterRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -298,8 +297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the zone.
-      * You can call the [ListRegions](~~188593~~) and [DescribeZones](~~25610~~) operations to query IDs of the zones where E-HPC is supported.
+      * After you create an Elastic High Performance Computing (E-HPC) cluster, you are charged for the cluster resources that you use. We recommend that you learn about the billing methods of E-HPC in advance. For more information, see [Billing overview](~~57844~~).
       *
       * @param request CreateClusterRequest
       * @return CreateClusterResponse
@@ -497,6 +495,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteClusterWithOptions(request, runtime);
     }
 
+    /**
+      * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+      *
+      * @param request DeleteContainerAppsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteContainerAppsResponse
+     */
     public DeleteContainerAppsResponse deleteContainerAppsWithOptions(DeleteContainerAppsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -517,6 +522,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteContainerAppsResponse());
     }
 
+    /**
+      * Before you delete container applications, you can call the [ListContainerApps](~~87333~~) operation to query the container applications.
+      *
+      * @param request DeleteContainerAppsRequest
+      * @return DeleteContainerAppsResponse
+     */
     public DeleteContainerAppsResponse deleteContainerApps(DeleteContainerAppsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteContainerAppsWithOptions(request, runtime);
@@ -761,7 +772,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
       *
       * @param request DeleteUsersRequest
@@ -789,7 +799,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * If you delete a user, only its information is deleted. The files stored in the /home directory for the user are retained. For example, if you delete a user named user1, the files in the `/home/user1/` directory of the cluster are not deleted. However, a deleted user cannot be recovered. Even if you create another user that has the same name, the data retained for the deleted user is not reused.
       *
       * @param request DeleteUsersRequest
@@ -1245,6 +1254,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAccountingReportWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+      *
+      * @param request GetAutoScaleConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetAutoScaleConfigResponse
+     */
     public GetAutoScaleConfigResponse getAutoScaleConfigWithOptions(GetAutoScaleConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1265,6 +1282,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoScaleConfigResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=EHPC\\&api=GetAutoScaleConfig\\&type=RPC\\&version=2018-04-12)
+      *
+      * @param request GetAutoScaleConfigRequest
+      * @return GetAutoScaleConfigResponse
+     */
     public GetAutoScaleConfigResponse getAutoScaleConfig(GetAutoScaleConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAutoScaleConfigWithOptions(request, runtime);
@@ -2615,7 +2639,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The new cluster name.
+      * ## Usage notes
+      * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
       *
       * @param request ModifyClusterAttributesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2642,7 +2667,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The new cluster name.
+      * ## Usage notes
+      * Before you call this operation, you can call the [DescribeCluster](~~87126~~) operation to query details of the selected cluster.
       *
       * @param request ModifyClusterAttributesRequest
       * @return ModifyClusterAttributesResponse
@@ -2983,7 +3009,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Configures the auto scaling settings of a cluster.
+      * ## Usage notes
+      * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
       *
       * @param request SetAutoScaleConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3010,7 +3037,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Configures the auto scaling settings of a cluster.
+      * ## Usage notes
+      * If the settings in the Queue Configuration section are different from the settings in the Global Configurations section, the former prevails.
       *
       * @param request SetAutoScaleConfigRequest
       * @return SetAutoScaleConfigResponse
@@ -3526,11 +3554,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceType)) {
-            request.instanceTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceType, "InstanceType", "simple");
+            request.instanceTypeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceType, "InstanceType", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.retryStrategy)) {
+            request.retryStrategyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.retryStrategy, "RetryStrategy", "json");
         }
 
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.vSwitchId)) {
-            request.vSwitchIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitchId, "VSwitchId", "simple");
+            request.vSwitchIdShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitchId, "VSwitchId", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3576,6 +3608,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ramRoleName)) {
             query.put("RamRoleName", request.ramRoleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retryStrategyShrink)) {
+            query.put("RetryStrategy", request.retryStrategyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.spotPriceLimit)) {
@@ -3828,7 +3864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+      * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
       *
       * @param request UpdateQueueConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3855,7 +3891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * After you update the instance types of a resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
+      * After you update the resource group, the nodes that you add by scaling out the cluster are automatically included in the resource group.
       *
       * @param request UpdateQueueConfigRequest
       * @return UpdateQueueConfigResponse

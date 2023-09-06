@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */
@@ -21,19 +21,19 @@ public class ListJobsRequest extends TeaModel {
     public String owner;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      * <br>
-     * <p>Pages start from page 1.</p>
+     * <p>Pages start from 1.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The number of entries to return per page. Maximum value: 50.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -44,7 +44,7 @@ public class ListJobsRequest extends TeaModel {
      * <p>*   true</p>
      * <p>*   false</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("Rerunable")
     public String rerunable;

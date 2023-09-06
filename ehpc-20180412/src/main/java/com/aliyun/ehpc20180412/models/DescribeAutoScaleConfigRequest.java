@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoScaleConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

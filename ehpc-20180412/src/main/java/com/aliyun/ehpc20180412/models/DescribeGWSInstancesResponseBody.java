@@ -11,7 +11,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
     public DescribeGWSInstancesResponseBodyInstances instances;
 
     /**
-     * <p>The page number of the current page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,13 +23,13 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of the information.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -80,6 +80,9 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppListAppInfo extends TeaModel {
+        /**
+         * <p>The runtime parameters of the application.</p>
+         */
         @NameInMap("AppArgs")
         public String appArgs;
 
@@ -90,7 +93,7 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The execution directory of the application.</p>
+         * <p>The running path of the application.</p>
          */
         @NameInMap("AppPath")
         public String appPath;
@@ -147,27 +150,27 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
 
     public static class DescribeGWSInstancesResponseBodyInstancesInstanceInfo extends TeaModel {
         /**
-         * <p>The list of application information.</p>
+         * <p>The application information.</p>
          * <br>
-         * <p>>  If the WorkMode parameter is set to Desktop, an empty value is returned in this parameter.</p>
+         * <p>>  This parameter is emtryp if the working mode is Desktop.</p>
          */
         @NameInMap("AppList")
         public DescribeGWSInstancesResponseBodyInstancesInstanceInfoAppList appList;
 
         /**
-         * <p>The ID of the visualizatio service.</p>
+         * <p>The ID of the visualization cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The time when the visualization instance was created.</p>
+         * <p>The time at which the visualization instance was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The time when the visualization instance expires.</p>
+         * <p>The time at which the visualization instance expires.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -193,24 +196,24 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         /**
          * <p>The status of the visualization instance. Valid values:</p>
          * <br>
-         * <p>*   Creating: The instance is being created.</p>
-         * <p>*   Starting: The instance is being started.</p>
-         * <p>*   Stopping: The instance is being stopped.</p>
-         * <p>*   Stopped: The instance is stopped.</p>
-         * <p>*   Initializing: The instance is being initialized.</p>
-         * <p>*   Unregistered: The instance is not registered.</p>
-         * <p>*   Registered: The instance is registered.</p>
-         * <p>*   InUse: The instance is in use.</p>
-         * <p>*   Missing: The instance cannot be found.</p>
-         * <p>*   Cloning: An image is being generated based on the instance.</p>
+         * <p>*   Creating</p>
+         * <p>*   Starting</p>
+         * <p>*   Stopping</p>
+         * <p>*   Stopped</p>
+         * <p>*   Initializing</p>
+         * <p>*   Unregistered</p>
+         * <p>*   Registered</p>
+         * <p>*   InUse</p>
+         * <p>*   Missing</p>
+         * <p>*   Cloning: The image is being created.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The username of the entity to which the visualization instance is assigned.</p>
+         * <p>The username assigned to the visualization instance.</p>
          * <br>
-         * <p>>  If the instance is not assigned to a specified user, this parameter is empty.</p>
+         * <p>>  This parameter is empty if the instance is not assigned to specified users.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -218,8 +221,8 @@ public class DescribeGWSInstancesResponseBody extends TeaModel {
         /**
          * <p>The working mode of the visualization instance. Valid values:</p>
          * <br>
-         * <p>*   Desktop</p>
-         * <p>*   Application</p>
+         * <p>*   Desktop: the desktop mode</p>
+         * <p>*   Application: the application mode</p>
          */
         @NameInMap("WorkMode")
         public String workMode;

@@ -11,7 +11,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
     public ListContainerAppsResponseBodyContainerApps containerApps;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,7 +23,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
 
     public static class ListContainerAppsResponseBodyContainerAppsContainerApps extends TeaModel {
         /**
-         * <p>The time when the containerized application was created.</p>
+         * <p>The time at which the containerized application was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -93,7 +93,7 @@ public class ListContainerAppsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the containerized application.</p>
+         * <p>The ID of the container application.</p>
          */
         @NameInMap("Id")
         public String id;

@@ -11,7 +11,7 @@ public class ListJobsWithFiltersRequest extends TeaModel {
     public Boolean async;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */
@@ -40,7 +40,7 @@ public class ListJobsWithFiltersRequest extends TeaModel {
     public String executeOrder;
 
     /**
-     * <p>The name of the job. Fuzzy match is supported.</p>
+     * <p>The name of the job. Fuzzy search is supported.</p>
      */
     @NameInMap("JobName")
     public String jobName;
@@ -52,28 +52,31 @@ public class ListJobsWithFiltersRequest extends TeaModel {
      * <p>*   finished</p>
      * <p>*   notfinish</p>
      * <br>
-     * <p>Default value: all</p>
+     * <p>Default value: all.</p>
      */
     @NameInMap("JobStatus")
     public String jobStatus;
 
+    /**
+     * <p>The information about the computing nodes that are used to run the job.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<String> nodes;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number to return.</p>
      * <br>
-     * <p>Pages start from page 1.</p>
+     * <p>Pages start from 1.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 50.</p>
+     * <p>The number of entries per page. Maximum value: 50.</p>
      * <br>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -87,13 +90,14 @@ public class ListJobsWithFiltersRequest extends TeaModel {
     @NameInMap("PendOrder")
     public String pendOrder;
 
+    /**
+     * <p>The information about the queues in which the job is run.</p>
+     */
     @NameInMap("Queues")
     public java.util.List<String> queues;
 
     /**
-     * <p>The ID of the region.</p>
-     * <br>
-     * <p>You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.</p>
+     * <p>The ID of the region. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -107,6 +111,9 @@ public class ListJobsWithFiltersRequest extends TeaModel {
     @NameInMap("SubmitOrder")
     public String submitOrder;
 
+    /**
+     * <p>The users that run the job.</p>
+     */
     @NameInMap("Users")
     public java.util.List<String> users;
 

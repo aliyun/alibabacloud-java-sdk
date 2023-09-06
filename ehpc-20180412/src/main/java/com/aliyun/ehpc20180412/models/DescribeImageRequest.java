@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster that you want to manage.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -17,7 +17,7 @@ public class DescribeImageRequest extends TeaModel {
     public String containerType;
 
     /**
-     * <p>The tag of the image. Default value: latest.</p>
+     * <p>The tags of the image. Default value: latest.</p>
      */
     @NameInMap("ImageTag")
     public String imageTag;

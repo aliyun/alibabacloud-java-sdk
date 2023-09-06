@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListContainerAppsRequest extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number to return.</p>
      * <br>
      * <p>Pages start from page 1.</p>
      * <br>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSecurityGroupsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      */
     @NameInMap("SecurityGroups")
     public ListSecurityGroupsResponseBodySecurityGroups securityGroups;

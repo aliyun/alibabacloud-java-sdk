@@ -44,7 +44,7 @@ public class CreateHybridClusterRequest extends TeaModel {
     public String computeSpotStrategy;
 
     /**
-     * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with [http:// or https://](http://https://。).</p>
+     * <p>The description of the E-HPC cluster. The description must be 2 to 256 characters in length and cannot start with `http://` or` https://`.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -228,9 +228,7 @@ public class CreateHybridClusterRequest extends TeaModel {
     /**
      * <p>You can select an existing security group by its ID.</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>**If you specify this parameter, you cannot specify the **SecurityGroupName`  parameter. `</p>
+     * <p>> If you specify this parameter, you cannot specify the `SecurityGroupName`  parameter.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

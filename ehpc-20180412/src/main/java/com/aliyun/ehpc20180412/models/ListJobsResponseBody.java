@@ -11,7 +11,7 @@ public class ListJobsResponseBody extends TeaModel {
     public ListJobsResponseBodyJobs jobs;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,7 +23,7 @@ public class ListJobsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -131,7 +131,7 @@ public class ListJobsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The job ID.</p>
          */
         @NameInMap("Id")
         public String id;
@@ -155,13 +155,13 @@ public class ListJobsResponseBody extends TeaModel {
         public String nodeList;
 
         /**
-         * <p>The name of the user that runs the job.</p>
+         * <p>The name of the user that ran the job.</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
+         * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a higher priority.</p>
          */
         @NameInMap("Priority")
         public String priority;
@@ -179,16 +179,16 @@ public class ListJobsResponseBody extends TeaModel {
         public String shellPath;
 
         /**
-         * <p>The time when the job started to run.</p>
+         * <p>The time when the job was created.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The status of the job. Valid values: Valid values:</p>
+         * <p>The status of the job. Valid values:</p>
          * <br>
          * <p>*   FINISHED: The job is completed</p>
-         * <p>*   RUNNING: The job is running.</p>
+         * <p>*   RUNNING: The job connector is running.</p>
          * <p>*   QUEUED: The job is pending in a queue.</p>
          */
         @NameInMap("State")

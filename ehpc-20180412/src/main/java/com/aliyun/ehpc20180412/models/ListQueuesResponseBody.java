@@ -64,7 +64,7 @@ public class ListQueuesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+         * <p>The maximum hourly price of the preemptible instance. The value can be accurate to three decimal places. The parameter only takes effect when SpotStrategy is set to SpotWithPriceLimit.</p>
          */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
@@ -113,7 +113,7 @@ public class ListQueuesResponseBody extends TeaModel {
 
     public static class ListQueuesResponseBodyQueuesQueueInfo extends TeaModel {
         /**
-         * <p>The instance type of the compute nodes.</p>
+         * <p>The instance type of compute node.</p>
          */
         @NameInMap("ComputeInstanceType")
         public ListQueuesResponseBodyQueuesQueueInfoComputeInstanceType computeInstanceType;
@@ -122,16 +122,16 @@ public class ListQueuesResponseBody extends TeaModel {
         public String deploymentSetId;
 
         /**
-         * <p>Indicates whether the queue enabled auto scale-out. Valid values:</p>
+         * <p>Indicates whether the queue enabled the auto scale-out. Valid values:</p>
          * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>*   true: The queue enabled auto scale-out.</p>
+         * <p>*   false: The queue disabled auto scale-out.</p>
          */
         @NameInMap("EnableAutoGrow")
         public Boolean enableAutoGrow;
 
         /**
-         * <p>The orefix of the host name.</p>
+         * <p>The prefix of the hostname.</p>
          */
         @NameInMap("HostNamePrefix")
         public String hostNamePrefix;
@@ -147,6 +147,9 @@ public class ListQueuesResponseBody extends TeaModel {
          */
         @NameInMap("ImageId")
         public String imageId;
+
+        @NameInMap("NetworkInterfaceTrafficMode")
+        public String networkInterfaceTrafficMode;
 
         /**
          * <p>The name of the queue.</p>
@@ -169,21 +172,24 @@ public class ListQueuesResponseBody extends TeaModel {
         /**
          * <p>The preemption policy of the compute nodes. Valid values:</p>
          * <br>
-         * <p>*   NoSpot: The instance is a regular pay-as-you-go instance.</p>
-         * <p>*   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</p>
+         * <p>*   NoSpot: The instances of the compute node are pay-as-you-go instances.</p>
+         * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
          * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
          */
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
         /**
-         * <p>The type of the queue. Valid values:</p>
+         * <p>The type of queue. Valid values:</p>
          * <br>
          * <p>*   Execution: Queues in which jobs can be executed.</p>
          * <p>*   Router: Queues in which jobs cannot be executed but are forwarded to the bounded Execution queue for processing.</p>
          */
         @NameInMap("Type")
         public String type;
+
+        @NameInMap("UseESS")
+        public Boolean useESS;
 
         public static ListQueuesResponseBodyQueuesQueueInfo build(java.util.Map<String, ?> map) throws Exception {
             ListQueuesResponseBodyQueuesQueueInfo self = new ListQueuesResponseBodyQueuesQueueInfo();
@@ -238,6 +244,14 @@ public class ListQueuesResponseBody extends TeaModel {
             return this.imageId;
         }
 
+        public ListQueuesResponseBodyQueuesQueueInfo setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+            this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+            return this;
+        }
+        public String getNetworkInterfaceTrafficMode() {
+            return this.networkInterfaceTrafficMode;
+        }
+
         public ListQueuesResponseBodyQueuesQueueInfo setQueueName(String queueName) {
             this.queueName = queueName;
             return this;
@@ -276,6 +290,14 @@ public class ListQueuesResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListQueuesResponseBodyQueuesQueueInfo setUseESS(Boolean useESS) {
+            this.useESS = useESS;
+            return this;
+        }
+        public Boolean getUseESS() {
+            return this.useESS;
         }
 
     }

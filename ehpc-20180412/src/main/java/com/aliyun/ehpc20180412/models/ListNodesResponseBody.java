@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
     /**
-     * <p>The information about nodes.</p>
+     * <p>The list of nodes.</p>
      */
     @NameInMap("Nodes")
     public ListNodesResponseBodyNodes nodes;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,7 +23,7 @@ public class ListNodesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -112,7 +112,7 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer gpu;
 
         /**
-         * <p>The memory capacity. Unit: GB</p>
+         * <p>The memory capacity. Unit: GB.</p>
          */
         @NameInMap("Memory")
         public Integer memory;
@@ -162,7 +162,7 @@ public class ListNodesResponseBody extends TeaModel {
         public Integer gpu;
 
         /**
-         * <p>The memory capacity. Unit: GB</p>
+         * <p>The memory capacity. Unit: GB.</p>
          */
         @NameInMap("Memory")
         public Integer memory;
@@ -200,7 +200,7 @@ public class ListNodesResponseBody extends TeaModel {
 
     public static class ListNodesResponseBodyNodesNodeInfo extends TeaModel {
         /**
-         * <p>The time when the node was added to the cluster.</p>
+         * <p>The time when the node is added to the cluster.</p>
          */
         @NameInMap("AddTime")
         public String addTime;
@@ -208,14 +208,14 @@ public class ListNodesResponseBody extends TeaModel {
         /**
          * <p>The mode in which the compute nodes are added. Valid values:</p>
          * <br>
-         * <p>*   manual: The compute nodes are manually added.</p>
-         * <p>*   autoscale: The compute nodes are automatically added.</p>
+         * <p>*   manual: The node is manually added.</p>
+         * <p>*   autoscale: The node is automatically added.</p>
          */
         @NameInMap("CreateMode")
         public String createMode;
 
         /**
-         * <p>Indicates whether the node was created by using E-HPC.</p>
+         * <p>Indicates whether the node is created by using E-HPC.</p>
          * <br>
          * <p>*   true: The node is created by using E-HPC.</p>
          * <p>*   false: The node is not created by using E-HPC.</p>
@@ -236,7 +236,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The name of the task node.</p>
          */
         @NameInMap("HostName")
         public String hostName;
@@ -248,13 +248,13 @@ public class ListNodesResponseBody extends TeaModel {
         public Boolean htEnabled;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The ID of the custom image.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -283,7 +283,7 @@ public class ListNodesResponseBody extends TeaModel {
         public String ipAddress;
 
         /**
-         * <p>The location where the node was deployed. Valid values:</p>
+         * <p>The location where the node is deployed. Valid values:</p>
          * <br>
          * <p>*   OnPremise: The node is deployed on your data center.</p>
          * <p>*   PublicCloud: The node is deployed on the public cloud.</p>
@@ -292,12 +292,12 @@ public class ListNodesResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The reason why the node was locked. Valid values:</p>
+         * <p>The reason why the node is locked. Valid values:</p>
          * <br>
-         * <p>*   financial: The node is locked due to overdue payments.</p>
+         * <p>*   financial: The instance is locked due to overdue payments.</p>
          * <p>*   security: The node is locked for security reasons.</p>
-         * <p>*   recycling: The preemptible node is locked and pending release.</p>
-         * <p>*   dedicatedhostfinancial: The node is locked due to the overdue payments of the dedicated host.</p>
+         * <p>*   recycling: The preemptible instance is locked and pending release.</p>
+         * <p>*   dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.</p>
          * <br>
          * <p>By default, an empty string is returned.</p>
          */
@@ -305,13 +305,13 @@ public class ListNodesResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The public IP address of the node.</p>
+         * <p>The public IP address of the server.</p>
          */
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -347,7 +347,7 @@ public class ListNodesResponseBody extends TeaModel {
          * <p>The status of the node. Valid values:</p>
          * <br>
          * <p>*   uninit: The node is being installed.</p>
-         * <p>*   exception: An exception has occurred on the node.</p>
+         * <p>*   exception: An exception occurred on the node.</p>
          * <p>*   running: The node is running.</p>
          * <p>*   initing: The node is being initialized.</p>
          * <p>*   releasing: The node is being released.</p>
@@ -370,25 +370,25 @@ public class ListNodesResponseBody extends TeaModel {
         public ListNodesResponseBodyNodesNodeInfoUsedResources usedResources;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The version of the client.</p>
+         * <p>The version of the client that is used for the cluster.</p>
          */
         @NameInMap("Version")
         public String version;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>The VPC ID of the node.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
