@@ -10,6 +10,9 @@ public class QueryPriceEntityListRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("Lang")
+    public String lang;
+
     public static QueryPriceEntityListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPriceEntityListRequest self = new QueryPriceEntityListRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class QueryPriceEntityListRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public QueryPriceEntityListRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
 }
