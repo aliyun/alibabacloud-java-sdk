@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCommodityListRequest extends TeaModel {
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The code of the service.</p>
      */
@@ -13,6 +16,14 @@ public class QueryCommodityListRequest extends TeaModel {
     public static QueryCommodityListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryCommodityListRequest self = new QueryCommodityListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCommodityListRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public QueryCommodityListRequest setProductCode(String productCode) {

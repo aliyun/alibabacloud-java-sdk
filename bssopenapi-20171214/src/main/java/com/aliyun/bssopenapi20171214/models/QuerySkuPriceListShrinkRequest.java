@@ -10,6 +10,9 @@ public class QuerySkuPriceListShrinkRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The token that is used to retrieve the next page. You do not need to set this parameter if you query coverage details for the first time. The response returns a token that you can use to query coverage details of the next page. If a null value is returned for the NextPageToken parameter, no more coverage details can be queried.</p>
      */
@@ -45,6 +48,14 @@ public class QuerySkuPriceListShrinkRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public QuerySkuPriceListShrinkRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public QuerySkuPriceListShrinkRequest setNextPageToken(String nextPageToken) {
