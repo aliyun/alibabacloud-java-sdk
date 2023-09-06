@@ -1519,6 +1519,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDatabaseWithOptions(request, headers, runtime);
     }
 
+    public GetDatabaseProfileResponse getDatabaseProfileWithOptions(GetDatabaseProfileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            query.put("DatabaseName", request.databaseName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDatabaseProfile"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/metastorehouse/catalog/database/databaseprofile"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDatabaseProfileResponse());
+    }
+
+    public GetDatabaseProfileResponse getDatabaseProfile(GetDatabaseProfileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDatabaseProfileWithOptions(request, headers, runtime);
+    }
+
     public GetFunctionResponse getFunctionWithOptions(GetFunctionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2506,6 +2541,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listPartitionsByFilterWithOptions(request, headers, runtime);
+    }
+
+    public ListPartitionsProfileResponse listPartitionsProfileWithOptions(ListPartitionsProfileRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListPartitionsProfileShrinkRequest request = new ListPartitionsProfileShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.partitionNames)) {
+            request.partitionNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.partitionNames, "PartitionNames", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            query.put("CatalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.databaseName)) {
+            query.put("DatabaseName", request.databaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionNamesShrink)) {
+            query.put("PartitionNames", request.partitionNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPartitionsProfile"),
+            new TeaPair("version", "2020-07-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/webapi/metastorehouse/catalog/database/tableprofile/partitionprofile/listPartitionsProfile"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPartitionsProfileResponse());
+    }
+
+    public ListPartitionsProfileResponse listPartitionsProfile(ListPartitionsProfileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPartitionsProfileWithOptions(request, headers, runtime);
     }
 
     public ListPermissionsResponse listPermissionsWithOptions(ListPermissionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
