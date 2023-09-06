@@ -223,6 +223,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.editZeroCreditShutdownWithOptions(request, runtime);
     }
 
+    public InviteSubAccountResponse inviteSubAccountWithOptions(InviteSubAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accountInfoList)) {
+            query.put("AccountInfoList", request.accountInfoList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InviteSubAccount"),
+            new TeaPair("version", "2022-12-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InviteSubAccountResponse());
+    }
+
+    public InviteSubAccountResponse inviteSubAccount(InviteSubAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.inviteSubAccountWithOptions(request, runtime);
+    }
+
     /**
       * *   Make sure that you are a distributor of the Alibaba Cloud international ecosystem.
       * *   You can call this operation to subscribe to only one type of bill at a time.
