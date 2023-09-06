@@ -4,11 +4,16 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class CreateJobFileRequest extends TeaModel {
+    /**
+     * <p>Indicates whether to use an asynchronous link to submit job files.</p>
+     * <br>
+     * <p>Default value: false.</p>
+     */
     @NameInMap("Async")
     public Boolean async;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */
@@ -22,7 +27,7 @@ public class CreateJobFileRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The user to which the job belongs.</p>
+     * <p>The user to which the job file belongs.</p>
      * <br>
      * <p>You can call the [ListUsers](~~188572~~) operation to query the users of the cluster.</p>
      */
@@ -30,7 +35,7 @@ public class CreateJobFileRequest extends TeaModel {
     public String runasUser;
 
     /**
-     * <p>The password of the user.</p>
+     * <p>The user password.</p>
      */
     @NameInMap("RunasUserPassword")
     public String runasUserPassword;

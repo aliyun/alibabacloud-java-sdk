@@ -59,7 +59,7 @@ public class CreateJobTemplateRequest extends TeaModel {
     /**
      * <p>The number of compute nodes. Valid values: 1 to 500.</p>
      * <br>
-     * <p>>  If the parameter is not specified, the Task, Thread, Mem, and Gpu parameters become invalid.</p>
+     * <p>>  If you do not specify this parameter, the Task, Thread, Mem, or GPU parameters do not take effect.</p>
      */
     @NameInMap("Node")
     public Integer node;
@@ -71,9 +71,9 @@ public class CreateJobTemplateRequest extends TeaModel {
     public String packagePath;
 
     /**
-     * <p>The priority of the job. Valid values: 0 to 9. A large value indicates a high priority.</p>
+     * <p>The priority of the job. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
      * <br>
-     * <p>Default value: 0</p>
+     * <p>Default value: 0.</p>
      */
     @NameInMap("Priority")
     public Integer priority;
@@ -81,16 +81,16 @@ public class CreateJobTemplateRequest extends TeaModel {
     /**
      * <p>The name of the queue in which the job is run.</p>
      * <br>
-     * <p>You can call the [ListQueues](~~92176~~) operation to query the queue name.</p>
+     * <p>You can call the [ListQueues](~~92176~~) operation to query the name of the queue.</p>
      */
     @NameInMap("Queue")
     public String queue;
 
     /**
-     * <p>Specifies whether the job can be rerun. Valid values:</p>
+     * <p>Specifies whether to automatically rerun the job after the job fails. Valid value:</p>
      * <br>
-     * <p>*   true: The job can be rerun.</p>
-     * <p>*   false: The job cannot be rerun.</p>
+     * <p>*   true: reruns the job.</p>
+     * <p>*   false: does not rerun the job.</p>
      */
     @NameInMap("ReRunable")
     public Boolean reRunable;
@@ -146,8 +146,8 @@ public class CreateJobTemplateRequest extends TeaModel {
     /**
      * <p>Specifies whether to decompress the job files downloaded from an OSS bucket. Valid values:</p>
      * <br>
-     * <p>*   true: The job files are decompressed.</p>
-     * <p>*   false: The job files are not decompressed.</p>
+     * <p>*   true: decompresses the job file.</p>
+     * <p>*   false: does not decompress the job file.</p>
      */
     @NameInMap("WithUnzipCmd")
     public Boolean withUnzipCmd;

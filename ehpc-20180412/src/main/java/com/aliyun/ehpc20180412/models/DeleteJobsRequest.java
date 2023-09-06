@@ -7,13 +7,13 @@ public class DeleteJobsRequest extends TeaModel {
     /**
      * <p>Specifies whether to use an asynchronous link to delete the jobs.</p>
      * <br>
-     * <p>Default value: false</p>
+     * <p>Default value: false.</p>
      */
     @NameInMap("Async")
     public Boolean async;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */

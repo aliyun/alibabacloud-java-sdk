@@ -406,12 +406,27 @@ public class SubmitJobRequest extends TeaModel {
     }
 
     public static class SubmitJobRequestJobRetry extends TeaModel {
+        /**
+         * <p>The number of retries for the job. Valid values: 1 to 10. You can only retry jobs that are run on the PBS clusters.</p>
+         * <br>
+         * <p>>  If this parameter is left empty, the JobRetry.Priority and JobRetry.OnExitCode parameters do not take effect.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The retry condition of the job. If the exit code is the value of the parameter, the job retry is triggered.</p>
+         * <br>
+         * <p>>  If this parameter is left empty, the job retry is triggered when the exit code is not 0.</p>
+         */
         @NameInMap("OnExitCode")
         public Integer onExitCode;
 
+        /**
+         * <p>The priority of the job retry. Valid values: 0 to 9. A larger value indicates a higher priority.</p>
+         * <br>
+         * <p>>  If this parameter is left empty, the priority of the job retry is min {Priority of the original job +1, 9}.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 

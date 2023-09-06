@@ -4,18 +4,33 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListServerlessJobsResponseBody extends TeaModel {
+    /**
+     * <p>The list of serverless jobs.</p>
+     */
     @NameInMap("Jobs")
     public java.util.List<ListServerlessJobsResponseBodyJobs> jobs;
 
+    /**
+     * <p>The page number returned.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,33 +80,73 @@ public class ListServerlessJobsResponseBody extends TeaModel {
     }
 
     public static class ListServerlessJobsResponseBodyJobs extends TeaModel {
+        /**
+         * <p>The time at which the serverless job ended.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>Indicates whether the job is an array job. Valid values:</p>
+         * <br>
+         * <p>*   True: yes</p>
+         * <p>*   False: no</p>
+         */
         @NameInMap("IsArrayJob")
         public Boolean isArrayJob;
 
+        /**
+         * <p>The ID of the serverless job or subtask (array job).</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The name of the serverless job.</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
+        /**
+         * <p>The scheduling priority of the serverless job. Valid values are 0 to 999. A greater value indicates a higher priority.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The name of the queue in which the serverless job is run.</p>
+         */
         @NameInMap("Queue")
         public String queue;
 
+        /**
+         * <p>The time at which the serverless job started.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the serverless job. Valid values:</p>
+         * <br>
+         * <p>*   Pending</p>
+         * <p>*   Initing</p>
+         * <p>*   Running</p>
+         * <p>*   Succeeded</p>
+         * <p>*   Canceled</p>
+         * <p>*   Failed</p>
+         */
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The time at which the serverless job is submitted.</p>
+         */
         @NameInMap("SubmitTime")
         public String submitTime;
 
+        /**
+         * <p>The username that is used to run the serverless job.</p>
+         */
         @NameInMap("User")
         public String user;
 

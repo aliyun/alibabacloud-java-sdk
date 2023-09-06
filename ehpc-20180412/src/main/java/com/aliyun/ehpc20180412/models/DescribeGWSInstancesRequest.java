@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGWSInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the visualization service.</p>
+     * <p>The ID of the visualization cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

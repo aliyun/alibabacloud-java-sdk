@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the associated cluster.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -22,13 +22,13 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Indicates whether auto scale-out is enabled.</p>
+     * <p>Specifies whether to enable auto scale-out.</p>
      */
     @NameInMap("EnableAutoGrow")
     public Boolean enableAutoGrow;
 
     /**
-     * <p>Indicates whether auto scale-in is enabled.</p>
+     * <p>Specifies whether to enable auto scale-in.</p>
      */
     @NameInMap("EnableAutoShrink")
     public Boolean enableAutoShrink;
@@ -40,25 +40,25 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     public String excludeNodes;
 
     /**
-     * <p>The ratio of added nodes to the original ones. Valid values: 0 to 100.</p>
+     * <p>The percentage of extra compute nodes. Valid values: 0 to 100.</p>
      */
     @NameInMap("ExtraNodesGrowRatio")
     public Integer extraNodesGrowRatio;
 
     /**
-     * <p>The scale-out interval. The interval at which the compute nodes were scaled out. Valid values: 2 to 10.</p>
+     * <p>The interval between two consecutive rounds of scale-in. Valid values: 2 to 10.</p>
      */
     @NameInMap("GrowIntervalInMinutes")
     public Integer growIntervalInMinutes;
 
     /**
-     * <p>The percentage of the added nodes. Valid values: 1 to 100.</p>
+     * <p>The percentage of each round of scale-out. Valid values: 1 to 100.</p>
      */
     @NameInMap("GrowRatio")
     public Integer growRatio;
 
     /**
-     * <p>The timeout period before the node was started. Valid values: 10 to 60.</p>
+     * <p>The timeout period before the scale-out nodes were started. Valid values: 10 to 60.</p>
      */
     @NameInMap("GrowTimeoutInMinutes")
     public Integer growTimeoutInMinutes;
@@ -70,41 +70,41 @@ public class DescribeAutoScaleConfigResponseBody extends TeaModel {
     public Integer maxNodesInCluster;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of consecutive idle times of a node during a scale-in check. Valid values: 2 to 5.</p>
+     * <p>The number of consecutive idle times of a node during the resource shrink check. Valid values: 2 to 5.</p>
      */
     @NameInMap("ShrinkIdleTimes")
     public Integer shrinkIdleTimes;
 
     /**
-     * <p>The scale-in interval. The interval at which the compute nodes were scaled in. Valid values: 2 to 10.</p>
+     * <p>The interval between two consecutive rounds of scale-out. Valid values: 2 to 10.</p>
      */
     @NameInMap("ShrinkIntervalInMinutes")
     public Integer shrinkIntervalInMinutes;
 
     /**
-     * <p>The maximum hourly rate of the instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
+     * <p>The maximum hourly price of the new ECS instance. The value is accurate to three decimal places. It takes effect only when SpotStrategy is set to SpotWithPriceLimit.</p>
      */
     @NameInMap("SpotPriceLimit")
     public String spotPriceLimit;
 
     /**
-     * <p>The bidding policy for the compute nodes. Valid values:</p>
+     * <p>The bidding method of the compute nodes. Valid values:</p>
      * <br>
-     * <p>*   NoSpot: The instance is created as a regular pay-as-you-go instance.</p>
-     * <p>*   SpotWithPriceLimit: The instance is a preemptible one with a user-defined maximum hourly rate.</p>
-     * <p>*   SpotAsPriceGo: The instance is created as a pay-as-you-go instance that is automatically priced based on the Alibaba Cloud Marketplace.</p>
+     * <p>*   NoSpot: The instances of the compute node are pay-as-you-go instances.</p>
+     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.</p>
      */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
     /**
-     * <p>The ID of the user.</p>
+     * <p>The user ID.</p>
      */
     @NameInMap("Uid")
     public String uid;

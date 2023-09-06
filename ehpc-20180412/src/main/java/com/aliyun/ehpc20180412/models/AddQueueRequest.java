@@ -24,6 +24,9 @@ public class AddQueueRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    @NameInMap("UseESS")
+    public Boolean useESS;
+
     public static AddQueueRequest build(java.util.Map<String, ?> map) throws Exception {
         AddQueueRequest self = new AddQueueRequest();
         return TeaModel.build(map, self);
@@ -59,6 +62,14 @@ public class AddQueueRequest extends TeaModel {
     }
     public String getQueueName() {
         return this.queueName;
+    }
+
+    public AddQueueRequest setUseESS(Boolean useESS) {
+        this.useESS = useESS;
+        return this;
+    }
+    public Boolean getUseESS() {
+        return this.useESS;
     }
 
 }

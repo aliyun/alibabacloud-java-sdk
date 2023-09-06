@@ -4,12 +4,21 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteLocalImageRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster from which you want to delete the image.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The image type. Set the value to singularity.</p>
+     */
     @NameInMap("ContainerType")
     public String containerType;
 
+    /**
+     * <p>The name of the image that you want to delete.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 

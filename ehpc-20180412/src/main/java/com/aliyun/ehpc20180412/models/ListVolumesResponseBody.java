@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVolumesResponseBody extends TeaModel {
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -17,7 +17,7 @@ public class ListVolumesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,9 +93,9 @@ public class ListVolumesResponseBody extends TeaModel {
         public String localDirectory;
 
         /**
-         * <p>The location where the cluster was deployed. Valid values:</p>
+         * <p>The location where the cluster is deployed. Valid values:</p>
          * <br>
-         * <p>*   OnPremise: The cluster is deployed on a hybrid cloud.</p>
+         * <p>*   OnPremise: The node is deployed on a hybrid cloud.</p>
          * <p>*   PublicCloud: The cluster is deployed on a public cloud.</p>
          */
         @NameInMap("Location")
@@ -250,19 +250,19 @@ public class ListVolumesResponseBody extends TeaModel {
         public ListVolumesResponseBodyVolumesVolumeInfoAdditionalVolumes additionalVolumes;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

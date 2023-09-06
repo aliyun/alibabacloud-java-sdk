@@ -11,7 +11,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
     public String DBInfo;
 
     /**
-     * <p>The array of local images.</p>
+     * <p>The array of images.</p>
      */
     @NameInMap("Images")
     public ListContainerImagesResponseBodyImages images;
@@ -29,7 +29,7 @@ public class ListContainerImagesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -95,19 +95,19 @@ public class ListContainerImagesResponseBody extends TeaModel {
 
     public static class ListContainerImagesResponseBodyImagesImages extends TeaModel {
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The name of the repository.</p>
+         * <p>The name of the certificate application repository.</p>
          */
         @NameInMap("Repository")
         public String repository;
 
         /**
-         * <p>The status of the image.</p>
+         * <p>The state of the image.</p>
          */
         @NameInMap("Status")
         public String status;

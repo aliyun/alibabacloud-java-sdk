@@ -4,6 +4,9 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class DeleteContainerAppsRequest extends TeaModel {
+    /**
+     * <p>The information about containers.</p>
+     */
     @NameInMap("ContainerApp")
     public java.util.List<DeleteContainerAppsRequestContainerApp> containerApp;
 
@@ -23,8 +26,6 @@ public class DeleteContainerAppsRequest extends TeaModel {
     public static class DeleteContainerAppsRequestContainerApp extends TeaModel {
         /**
          * <p>The ID of the containerized application that you want to delete. Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>You can call the [ListContainerApps](~~87333~~) operation to query the ID of the containerized application.</p>
          */
         @NameInMap("Id")
         public String id;

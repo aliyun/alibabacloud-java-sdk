@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeImagePriceResponseBody extends TeaModel {
     /**
-     * <p>The number of images that you want to purchase.</p>
+     * <p>The number of instances that are purchased.</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
-     * <p>The discount that is applied.</p>
+     * <p>The discount.</p>
      */
     @NameInMap("DiscountPrice")
     public Float discountPrice;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The ID of the custom image.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -29,7 +29,7 @@ public class DescribeImagePriceResponseBody extends TeaModel {
     public Float originalPrice;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

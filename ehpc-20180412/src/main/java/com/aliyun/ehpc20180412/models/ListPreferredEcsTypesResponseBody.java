@@ -11,7 +11,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of recommended ECS instances. Each series contains the recommended ECS instance types for various nodes of the E-HPC cluster.</p>
+     * <p>The list of recommended ECS instances. Each SeriesInfo element contains the recommended ECS instance types for various nodes in the E-HPC cluster.</p>
      */
     @NameInMap("Series")
     public ListPreferredEcsTypesResponseBodySeries series;
@@ -166,7 +166,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         public ListPreferredEcsTypesResponseBodySeriesSeriesInfoRoles roles;
 
         /**
-         * <p>The ECS instance series ID. Valid values:</p>
+         * <p>The ID of the ECS instance series. Valid values:</p>
          * <br>
          * <p>*   HighCompute: compute-optimized instance families</p>
          * <p>*   HighMem: memory-optimized instance families</p>
@@ -177,7 +177,7 @@ public class ListPreferredEcsTypesResponseBody extends TeaModel {
         public String seriesId;
 
         /**
-         * <p>The instance series name. Valid values:</p>
+         * <p>The name of the instance series. Valid values:</p>
          * <br>
          * <p>*   SeriesHighCompute</p>
          * <p>*   SeriesHighMem</p>

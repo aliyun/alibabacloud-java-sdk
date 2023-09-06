@@ -4,48 +4,112 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class SubmitServerlessJobShrinkRequest extends TeaModel {
+    /**
+     * <p>The configuration of the array job.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   The index value of an array job is passed to the serverless job container by using the environment variable **EHPC_JOB_ARRAY_INDEX** to allow access to the array job from business programs.</p>
+     */
     @NameInMap("ArrayProperties")
     public String arrayPropertiesShrink;
 
+    /**
+     * <p>The ID of the E-HPC cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The properties of the serverless job container.</p>
+     */
     @NameInMap("Container")
     public String containerShrink;
 
+    /**
+     * <p>The vCPU size of the serverless job container. Unit: cores.</p>
+     */
     @NameInMap("Cpu")
     public Float cpu;
 
+    /**
+     * <p>The serverless job dependencies.</p>
+     */
     @NameInMap("DependsOn")
     public String dependsOnShrink;
 
+    /**
+     * <p>The size of the temporary storage that is added to the serverless job container. Unit: GiB.</p>
+     * <br>
+     * <p>>  By default, the serverless job container provides 30 GiB of free storage quota. If you require storage of more than 30 GiB, you can use this parameter to specify the temporary storage to add to the job container.</p>
+     */
     @NameInMap("EphemeralStorage")
     public Integer ephemeralStorage;
 
+    /**
+     * <p>The ECS instance types used by the serverless job container.</p>
+     */
     @NameInMap("InstanceType")
     public String instanceTypeShrink;
 
+    /**
+     * <p>The name of the serverless job.</p>
+     */
     @NameInMap("JobName")
     public String jobName;
 
+    /**
+     * <p>The scheduling priority of the serverless job. Valid values: 0 to 999. A greater value indicates a higher priority.</p>
+     */
     @NameInMap("JobPriority")
     public Long jobPriority;
 
+    /**
+     * <p>The memory size of the serverless job container. Unit: GiB.</p>
+     */
     @NameInMap("Memory")
     public Float memory;
 
+    /**
+     * <p>The name of the RAM role that is associated with the serverless job container.</p>
+     */
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
+    @NameInMap("RetryStrategy")
+    public String retryStrategyShrink;
+
+    /**
+     * <p>The maximum hourly price of the preemptible instance. The value can contain up to three decimal places.</p>
+     * <br>
+     * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.</p>
+     */
     @NameInMap("SpotPriceLimit")
     public Float spotPriceLimit;
 
+    /**
+     * <p>The bidding policy for the instance. Valid values:</p>
+     * <br>
+     * <p>*   NoSpot: The instance is created as a pay-as-you-go instance.</p>
+     * <p>*   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</p>
+     * <p>*   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is used as the bid price.</p>
+     * <br>
+     * <p>Default value: NoSpot.</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    /**
+     * <p>The validity period of the serverless job. After the validity period expires, the job is forcibly terminated. Unit: seconds.</p>
+     */
     @NameInMap("Timeout")
     public Long timeout;
 
+    /**
+     * <p>The IDs of the vSwitches to which the serverless job container belongs.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchIdShrink;
 
@@ -140,6 +204,14 @@ public class SubmitServerlessJobShrinkRequest extends TeaModel {
     }
     public String getRamRoleName() {
         return this.ramRoleName;
+    }
+
+    public SubmitServerlessJobShrinkRequest setRetryStrategyShrink(String retryStrategyShrink) {
+        this.retryStrategyShrink = retryStrategyShrink;
+        return this;
+    }
+    public String getRetryStrategyShrink() {
+        return this.retryStrategyShrink;
     }
 
     public SubmitServerlessJobShrinkRequest setSpotPriceLimit(Float spotPriceLimit) {

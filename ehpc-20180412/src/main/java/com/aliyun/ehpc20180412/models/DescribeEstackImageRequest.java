@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEstackImageRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number of the page to return.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

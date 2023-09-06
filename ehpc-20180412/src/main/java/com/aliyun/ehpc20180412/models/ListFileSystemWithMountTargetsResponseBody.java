@@ -11,19 +11,19 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
     public ListFileSystemWithMountTargetsResponseBodyFileSystemList fileSystemList;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned per page. Valid values: 1 to 50. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,22 +81,27 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
 
     public static class ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetListMountTargets extends TeaModel {
         /**
-         * <p>The name of the permission group that applied to the mount target.</p>
+         * <p>Specifies whether to use the user default permission group.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true: ueses the default permission group. If you use the default permission group, access from all IP addresses are allowed. The default permission group and the permission rules in the default permission group cannot be deleted.</p>
+         * <p>*   false: does not use the default permission group.</p>
          */
         @NameInMap("AccessGroup")
         public String accessGroup;
 
         /**
-         * <p>The domain name of the mount target.</p>
+         * <p>The domain where the mount target resides.</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
 
         /**
-         * <p>The network type of the mount target. Valid values:</p>
+         * <p>The network type of the cluster. Valid values:</p>
          * <br>
-         * <p>*   Vpc: virtual private cloud (VPC)</p>
-         * <p>*   Classic: the classic network</p>
+         * <p>*   vpc: Virtual Private Cloud (VPC)</p>
+         * <p>*   classic: the classic network</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -105,7 +110,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
          * <p>The status of the mount target. Valid values:</p>
          * <br>
          * <p>*   Active: The mount target is available.</p>
-         * <p>*   Inactive: The mount target is inactive.</p>
+         * <p>*   Inactive: The mount target is unavailable.</p>
          * <p>*   Pending: The mount target is being created or modified.</p>
          * <p>*   Deleting: The mount target is being deleted.</p>
          */
@@ -253,7 +258,7 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         public Integer capacity;
 
         /**
-         * <p>The time when the file system was created.</p>
+         * <p>The time at which the file system is created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -265,10 +270,15 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         public String destription;
 
         /**
-         * <p>Indicates whether the file system is encrypted. Valid values:</p>
+         * <p>Specifies whether to encrypt the data in the file system.</p>
          * <br>
-         * <p>*   0: The file system is not encrypted.</p>
-         * <p>*   1: The file system is encrypted.</p>
+         * <p>You can use keys that are managed by Key Management Service (KMS) to encrypt the data that is stored in a file system. When you read and write the encrypted data, the data is automatically decrypted.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0 (default): The data in the file system is not encrypted.</p>
+         * <p>*   1: NAS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to standard or extreme.</p>
+         * <p>*   2: KMS-managed keys are used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to extreme.</p>
          */
         @NameInMap("EncryptType")
         public Integer encryptType;
@@ -282,20 +292,19 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         /**
          * <p>The type of the file system. Valid values:</p>
          * <br>
-         * <p>*   standard: General-purpose NAS file system</p>
-         * <p>*   extreme: Extreme NAS file system</p>
+         * <p>*   standard: general-purpose NAS. extreme: Extreme NAS.</p>
          */
         @NameInMap("FileSystemType")
         public String fileSystemType;
 
         /**
-         * <p>The used capacity of the file system. Unit: bytes.</p>
+         * <p>The used storage of the NAS file system. Unit: byte.</p>
          */
         @NameInMap("MeteredSize")
         public Integer meteredSize;
 
         /**
-         * <p>The list of mount targets.</p>
+         * <p>The mount targets.</p>
          */
         @NameInMap("MountTargetList")
         public ListFileSystemWithMountTargetsResponseBodyFileSystemListFileSystemsMountTargetList mountTargetList;
@@ -309,14 +318,13 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         /**
          * <p>The protocol type of the file system. Valid values:</p>
          * <br>
-         * <p>- NFS</p>
-         * <p>- SMB</p>
+         * <p>*   NFS- SMB</p>
          */
         @NameInMap("ProtocolType")
         public String protocolType;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -324,25 +332,27 @@ public class ListFileSystemWithMountTargetsResponseBody extends TeaModel {
         /**
          * <p>The status of the file system. Valid values:</p>
          * <br>
-         * <p>- Pending: The file system is being created or modified.</p>
-         * <p>- Running: The file system is available.</p>
-         * <p>- Stopped: The file system is stopped.</p>
-         * <p>- Extending: The file system is being scaled out.</p>
-         * <p>- Stopping: The file system is being stopped.</p>
-         * <p>- Deleting: The file system is being deleted.</p>
+         * <p>*   Pending: The file system is processing a task.</p>
+         * <p>*   Running: The file system is available.</p>
+         * <p>*   Stopped: The file system is unavailable.</p>
+         * <p>*   Extending: The file system is being scaled out.</p>
+         * <p>*   Stopping: The file system is being disabled.</p>
+         * <p>*   Deleting: The file system is being deleted.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The storage type of the file system. </p>
+         * <p>The storage type of the file system.</p>
          * <br>
-         * <p>- If FileSystemType is set to standard, the StorageType parameter has the following valid values: Capacity and Performance.</p>
-         * <p>- If FileSystemType is set to extreme, the StorageType parameter has the following valid values: standard and advance.</p>
+         * <p>*   Valid values when FileSystemType is set to standard: Capacity and Performance. Valid values when FileSystemType is set to extreme: standard and advance.</p>
          */
         @NameInMap("StorageType")
         public String storageType;
 
+        /**
+         * <p>The VPC ID of the node.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 

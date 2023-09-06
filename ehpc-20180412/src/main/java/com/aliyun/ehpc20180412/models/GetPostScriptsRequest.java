@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetPostScriptsRequest extends TeaModel {
     /**
-     * <p>The URL that is used to download the Nth post-installation script. Valid values of N: 1 to 16.</p>
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to obtain the cluster ID.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
 
     /**
-     * <p>The parameter that is used to run the Nth post-installation script. Valid values of N: 1 to 16.</p>
+     * <p>The ID of the region where the cluster resides.</p>
+     * <br>
+     * <p>You can call the [ListRegions](~~188593~~) operation to query the latest region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

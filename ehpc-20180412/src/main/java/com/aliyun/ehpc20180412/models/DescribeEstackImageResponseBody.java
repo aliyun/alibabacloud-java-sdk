@@ -11,7 +11,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
     public DescribeEstackImageResponseBodyImageList imageList;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -23,7 +23,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,7 +81,7 @@ public class DescribeEstackImageResponseBody extends TeaModel {
 
     public static class DescribeEstackImageResponseBodyImageListImageListInfo extends TeaModel {
         /**
-         * <p>The name of the image.</p>
+         * <p>The image name.</p>
          */
         @NameInMap("ImageName")
         public String imageName;

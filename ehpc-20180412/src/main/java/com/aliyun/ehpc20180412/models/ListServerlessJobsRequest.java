@@ -4,36 +4,90 @@ package com.aliyun.ehpc20180412.models;
 import com.aliyun.tea.*;
 
 public class ListServerlessJobsRequest extends TeaModel {
+    /**
+     * <p>The ID of the E-HPC cluster.</p>
+     * <br>
+     * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The list of serverless job IDs or subtask IDs (array jobs).</p>
+     */
     @NameInMap("JobIds")
     public java.util.List<String> jobIds;
 
+    /**
+     * <p>The names of the serverless jobs.</p>
+     */
     @NameInMap("JobNames")
     public java.util.List<String> jobNames;
 
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Maximum value: 100. Default value: 20.</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region ID. You can call the [ListRegions](~~188593~~) operation to query the list of regions where E-HPC is supported.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to sort the serverless jobs by the job start time. Valid value:</p>
+     * <br>
+     * <p>*   Asc: ascending order</p>
+     * <p>*   Desc: descending order</p>
+     */
     @NameInMap("StartOrder")
     public String startOrder;
 
+    /**
+     * <p>The status of the serverless job. Valid value:</p>
+     * <br>
+     * <p>*   All</p>
+     * <p>*   Pending</p>
+     * <p>*   Running</p>
+     * <p>*   Succeeded</p>
+     * <p>*   Canceled</p>
+     * <p>*   Failed</p>
+     * <br>
+     * <p>Default value: All.</p>
+     */
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>Specifies whether to sort the serverless jobs by the job submission time. Valid value:</p>
+     * <br>
+     * <p>*   Asc: ascending order</p>
+     * <p>*   Desc: descending order</p>
+     */
     @NameInMap("SubmitOrder")
     public String submitOrder;
 
+    /**
+     * <p>The latest time at which the job is submitted.</p>
+     * <br>
+     * <p>>  You can use this parameter to query the job list based on the job submission time.</p>
+     */
     @NameInMap("SubmitTimeEnd")
     public String submitTimeEnd;
 
+    /**
+     * <p>The earliest time at which the job is submitted.</p>
+     * <br>
+     * <p>>  You can use this parameter to query the job list based on the job submission time.</p>
+     */
     @NameInMap("SubmitTimeStart")
     public String submitTimeStart;
 

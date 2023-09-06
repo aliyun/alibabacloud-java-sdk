@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateQueueConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the E-HPC cluster.</p>
      * <br>
      * <p>You can call the [ListClusters](~~87116~~) operation to query the cluster ID.</p>
      */
@@ -20,8 +20,14 @@ public class UpdateQueueConfigRequest extends TeaModel {
     @NameInMap("ComputeInstanceType")
     public String computeInstanceType;
 
+    /**
+     * <p>The ID of the deployment set. You can obtain the deployment set ID by calling the [DescribeDeploymentSets](~~91313~~) operation. Only the deployment sets that use low latency policy are supported.</p>
+     */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
+
+    @NameInMap("NetworkInterfaceTrafficMode")
+    public String networkInterfaceTrafficMode;
 
     /**
      * <p>The name of the queue.</p>
@@ -30,7 +36,7 @@ public class UpdateQueueConfigRequest extends TeaModel {
     public String queueName;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * <br>
      * <p>You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.</p>
      */
@@ -64,6 +70,14 @@ public class UpdateQueueConfigRequest extends TeaModel {
     }
     public String getDeploymentSetId() {
         return this.deploymentSetId;
+    }
+
+    public UpdateQueueConfigRequest setNetworkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
+        this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
+        return this;
+    }
+    public String getNetworkInterfaceTrafficMode() {
+        return this.networkInterfaceTrafficMode;
     }
 
     public UpdateQueueConfigRequest setQueueName(String queueName) {

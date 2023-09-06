@@ -7,13 +7,13 @@ public class DescribeImagePriceRequest extends TeaModel {
     /**
      * <p>The number of images that you want to purchase. Valid values: 1 to 1000.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Amount")
     public Integer amount;
 
     /**
-     * <p>The ID of the image.</p>
+     * <p>The ID of an image.</p>
      */
     @NameInMap("ImageId")
     public String imageId;
@@ -25,13 +25,13 @@ public class DescribeImagePriceRequest extends TeaModel {
     public String orderType;
 
     /**
-     * <p>The subscription duration. Valid values:</p>
+     * <p>The subscription duration of the read-only instance. Valid values:</p>
      * <br>
      * <p>*   If PriceUnit is set to Day, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, and 30.</p>
      * <p>*   If PriceUnit is set to Month, the valid values of the Period parameter are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</p>
      * <p>*   If PriceUnit is set to Year, the valid values of the Period parameter are 1, 2, and 3.</p>
      * <br>
-     * <p>Default value: 1</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Period")
     public Integer period;
@@ -43,7 +43,7 @@ public class DescribeImagePriceRequest extends TeaModel {
      * <p>*   Month</p>
      * <p>*   Year</p>
      * <br>
-     * <p>Default value: Day</p>
+     * <p>Default value: Day.</p>
      */
     @NameInMap("PriceUnit")
     public String priceUnit;
