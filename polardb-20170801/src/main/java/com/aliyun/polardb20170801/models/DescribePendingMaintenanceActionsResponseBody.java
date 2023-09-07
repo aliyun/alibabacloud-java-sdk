@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of pending events.</p>
+     */
     @NameInMap("TypeList")
     public java.util.List<DescribePendingMaintenanceActionsResponseBodyTypeList> typeList;
 
@@ -32,9 +38,20 @@ public class DescribePendingMaintenanceActionsResponseBody extends TeaModel {
     }
 
     public static class DescribePendingMaintenanceActionsResponseBodyTypeList extends TeaModel {
+        /**
+         * <p>The number of pending events.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The task type of pending events. Valid values:</p>
+         * <br>
+         * <p>*   **DatabaseSoftwareUpgrading**: database software upgrades</p>
+         * <p>*   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades</p>
+         * <p>*   **DatabaseStorageUpgrading**: database storage upgrades</p>
+         * <p>*   **DatabaseProxyUpgrading**: minor version upgrades of the proxy</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

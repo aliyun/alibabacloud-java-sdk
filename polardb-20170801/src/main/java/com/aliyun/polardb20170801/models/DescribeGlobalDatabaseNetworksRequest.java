@@ -4,12 +4,34 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specify the region in which you want to query GDNs. You can create secondary clusters for the GDNs.</p>
+     */
+    @NameInMap("FilterRegion")
+    public String filterRegion;
+
+    /**
+     * <p>The description of the GDN. The description must meet the following requirements:</p>
+     * <br>
+     * <p>*   It cannot start with [http:// or https://.](http://https://。)</p>
+     * <p>*   It must start with a letter.</p>
+     * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>*   It must be 2 to 126 characters in length.</p>
+     */
     @NameInMap("GDNDescription")
     public String GDNDescription;
 
+    /**
+     * <p>The ID of the GDN.</p>
+     */
     @NameInMap("GDNId")
     public String GDNId;
 
@@ -19,12 +41,25 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: 1. The value must be an integer that is greater than 0.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: 30. Valid values:</p>
+     * <br>
+     * <p>*   30</p>
+     * <p>*   50</p>
+     * <p>*   100</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -48,6 +83,14 @@ public class DescribeGlobalDatabaseNetworksRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeGlobalDatabaseNetworksRequest setFilterRegion(String filterRegion) {
+        this.filterRegion = filterRegion;
+        return this;
+    }
+    public String getFilterRegion() {
+        return this.filterRegion;
     }
 
     public DescribeGlobalDatabaseNetworksRequest setGDNDescription(String GDNDescription) {

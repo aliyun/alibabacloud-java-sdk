@@ -4,45 +4,107 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterMigrationResponseBody extends TeaModel {
+    /**
+     * <p>The description of a migration exception. If no exception occurs during the migration, an empty string is returned.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The endpoints of the PolarDB cluster.</p>
+     */
     @NameInMap("DBClusterEndpointList")
     public java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointList> DBClusterEndpointList;
 
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The mode of the PolarDB cluster. Valid values:</p>
+     * <br>
+     * <p>*   **rw**: read and write mode</p>
+     * <p>*   **ro**: read-only mode</p>
+     */
     @NameInMap("DBClusterReadWriteMode")
     public String DBClusterReadWriteMode;
 
+    /**
+     * <p>The replication latency between the ApsaraDB RDS instance and the PolarDB cluster. Unit: seconds.</p>
+     */
     @NameInMap("DelayedSeconds")
     public Integer delayedSeconds;
 
+    /**
+     * <p>The ID of the synchronous task.</p>
+     */
     @NameInMap("DtsInstanceId")
     public String dtsInstanceId;
 
+    /**
+     * <p>The expiration time of the replication between ApsaraDB RDS and PolarDB. The time is in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The migration state of the PolarDB cluster. Valid values:</p>
+     * <br>
+     * <p>*   **NO_MIGRATION**: No migration task is running.</p>
+     * <p>*   **RDS2POLARDB_CLONING**: Data is being replicated.</p>
+     * <p>*   **RDS2POLARDB_SYNCING**: Data is being replicated. During the replication, the PolarDB cluster is running in read-only mode and the source ApsaraDB RDS instance is running in read and write mode.</p>
+     * <p>*   **SWITCHING**: Databases are being switched.</p>
+     * <p>*   **POLARDB2RDS_SYNCING**: Databases are switched. The PolarDB cluster is running in read and write mode and the source ApsaraDB RDS instance is running in read-only mode. In this state, you can modify the endpoints for your applications.</p>
+     * <p>*   **ROLLBACK**: The migration is being rolled back. After the rollback is complete, the value **RDS2POLARDB_SYNCING** is returned.</p>
+     * <p>*   **CLOSING_MIGRATION**: The migration task is being terminated.</p>
+     */
     @NameInMap("MigrationStatus")
     public String migrationStatus;
 
+    /**
+     * <p>The endpoints of the ApsaraDB RDS instance.</p>
+     */
     @NameInMap("RdsEndpointList")
     public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointList> rdsEndpointList;
 
+    /**
+     * <p>The mode of the source ApsaraDB RDS instance. Valid values:</p>
+     * <br>
+     * <p>*   **rw**: read and write mode</p>
+     * <p>*   **ro**: read-only mode</p>
+     */
     @NameInMap("RdsReadWriteMode")
     public String rdsReadWriteMode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the source ApsaraDB RDS instance.</p>
+     */
     @NameInMap("SourceRDSDBInstanceId")
     public String sourceRDSDBInstanceId;
 
+    /**
+     * <p>The type of the source database. Valid values:</p>
+     * <br>
+     * <p>*   **PolarDBMySQL**: The source database is a PolarDB for MySQL database when the major version of your PolarDB cluster is upgraded.</p>
+     * <p>*   **RDS**: The source database is an ApsaraDB RDS database when data is migrated from ApsaraDB RDS to PolarDB for MySQL.</p>
+     */
     @NameInMap("SrcDbType")
     public String srcDbType;
 
+    /**
+     * <p>The synchronization direction. Valid values:</p>
+     * <br>
+     * <p>*   **RDS2POLARDB**: Data is replicated from an ApsaraDB RDS instance to a PolarDB cluster.</p>
+     * <p>*   **POLARDB2RDS**: Data is replicated from a PolarDB cluster to an ApsaraDB RDS instance.</p>
+     */
     @NameInMap("Topologies")
     public String topologies;
 
@@ -164,24 +226,52 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems extends TeaModel {
+        /**
+         * <p>The connection string.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The IP address of the endpoint.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: the public endpoint</p>
+         * <p>*   **Private**: the internal endpoint (VPC)</p>
+         * <p>*   **Inner**: the internal endpoint (classic network)</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **Enabled**</p>
+         * <p>*   **Disabled**</p>
+         */
         @NameInMap("SSLEnabled")
         public String SSLEnabled;
 
+        /**
+         * <p>The VPC ID.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -249,12 +339,25 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterMigrationResponseBodyDBClusterEndpointList extends TeaModel {
+        /**
+         * <p>Details about the endpoints.</p>
+         */
         @NameInMap("AddressItems")
         public java.util.List<DescribeDBClusterMigrationResponseBodyDBClusterEndpointListAddressItems> addressItems;
 
+        /**
+         * <p>The ID of the endpoint.</p>
+         */
         @NameInMap("DBEndpointId")
         public String DBEndpointId;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Cluster**: the default cluster endpoint</p>
+         * <p>*   **Primary**: the primary endpoint</p>
+         * <p>*   **Custom**: the custom cluster endpoint</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
@@ -290,24 +393,52 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems extends TeaModel {
+        /**
+         * <p>The connection string.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The IP address of the endpoint.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Public**: the public endpoint</p>
+         * <p>*   **Private**: the internal endpoint (VPC)</p>
+         * <p>*   **Inner**: the internal endpoint (classic network)</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **Enabled**</p>
+         * <p>*   **Disabled**</p>
+         */
         @NameInMap("SSLEnabled")
         public String SSLEnabled;
 
+        /**
+         * <p>The VPC ID.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -375,12 +506,24 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterMigrationResponseBodyRdsEndpointList extends TeaModel {
+        /**
+         * <p>Details about the endpoints.</p>
+         */
         @NameInMap("AddressItems")
         public java.util.List<DescribeDBClusterMigrationResponseBodyRdsEndpointListAddressItems> addressItems;
 
+        /**
+         * <p>The ID of the endpoint.</p>
+         */
         @NameInMap("DBEndpointId")
         public String DBEndpointId;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: the standard endpoint</p>
+         * <p>*   **ReadWriteSplitting**: the read/write splitting endpoint</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 

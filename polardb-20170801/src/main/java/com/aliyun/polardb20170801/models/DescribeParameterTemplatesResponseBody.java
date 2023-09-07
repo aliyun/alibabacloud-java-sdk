@@ -4,21 +4,39 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
+    /**
+     * <p>The type of the database engine.</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The version of the database engine.</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    /**
+     * <p>The database engine of the cluster.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The number of parameters.</p>
+     */
     @NameInMap("ParameterCount")
     public String parameterCount;
 
+    /**
+     * <p>The details of the parameters.</p>
+     */
     @NameInMap("Parameters")
     public DescribeParameterTemplatesResponseBodyParameters parameters;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,27 +94,60 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterTemplatesResponseBodyParametersTemplateRecord extends TeaModel {
+        /**
+         * <p>The valid values of the parameter.</p>
+         */
         @NameInMap("CheckingCode")
         public String checkingCode;
 
+        /**
+         * <p>Indicates whether the parameter setting can be modified. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("ForceModify")
         public String forceModify;
 
+        /**
+         * <p>Indicates whether a cluster restart is required to make the parameter modification take effect. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        /**
+         * <p>Indicates whether the parameter is a global parameter. Valid values:</p>
+         * <br>
+         * <p>*   **0**: yes. The modified parameter value is synchronized to other nodes by default.</p>
+         * <p>*   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized.</p>
+         */
         @NameInMap("IsNodeAvailable")
         public String isNodeAvailable;
 
+        /**
+         * <p>The parameter dependencies.</p>
+         */
         @NameInMap("ParamRelyRule")
         public String paramRelyRule;
 
+        /**
+         * <p>The description of the parameter.</p>
+         */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("ParameterName")
         public String parameterName;
 
+        /**
+         * <p>The default value of the parameter.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 

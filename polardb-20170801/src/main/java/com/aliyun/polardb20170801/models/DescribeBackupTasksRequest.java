@@ -4,12 +4,24 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTasksRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup task.</p>
+     */
     @NameInMap("BackupJobId")
     public String backupJobId;
 
+    /**
+     * <p>The backup mode. Valid values:</p>
+     * <br>
+     * <p>*   **Automated**</p>
+     * <p>*   **Manual**</p>
+     */
     @NameInMap("BackupMode")
     public String backupMode;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

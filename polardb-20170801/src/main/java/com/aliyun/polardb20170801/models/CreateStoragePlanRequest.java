@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateStoragePlanRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -13,6 +16,12 @@ public class CreateStoragePlanRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The unit of the subscription duration for the storage plan. Valid values:</p>
+     * <br>
+     * <p>*   **Month**</p>
+     * <p>*   **Year**</p>
+     */
     @NameInMap("Period")
     public String period;
 
@@ -22,12 +31,27 @@ public class CreateStoragePlanRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000</p>
+     */
     @NameInMap("StorageClass")
     public String storageClass;
 
+    /**
+     * <p>The type of the storage plan. Valid values:</p>
+     * <br>
+     * <p>*   **Mainland**: The storage plan is used inside the Chinese mainland.</p>
+     * <p>*   **Overseas**: The storage plan is used outside the Chinese mainland.</p>
+     */
     @NameInMap("StorageType")
     public String storageType;
 
+    /**
+     * <p>The subscription duration of the storage plan.</p>
+     * <br>
+     * <p>*   If **Period** is set to **Month**, the value ranges from 1 to 9.</p>
+     * <p>*   If **Period** is set to **Year**, the value can be 1, 2, 3, or 5.</p>
+     */
     @NameInMap("UsedTime")
     public String usedTime;
 

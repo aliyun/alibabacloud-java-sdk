@@ -4,9 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class RemoveDBClusterFromGDNRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster in the GDN.</p>
+     * <br>
+     * <p>>  You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to view the ID of the cluster in the GDN.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the GDN.</p>
+     */
     @NameInMap("GDNId")
     public String GDNId;
 

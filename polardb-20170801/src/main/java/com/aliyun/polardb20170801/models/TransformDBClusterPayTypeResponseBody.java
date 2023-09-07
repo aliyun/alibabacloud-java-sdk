@@ -4,18 +4,38 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class TransformDBClusterPayTypeResponseBody extends TeaModel {
+    /**
+     * <p>The billing method of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go.</p>
+     * <p>*   **Prepaid**: subscription.</p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The time when the cluster expires.</p>
+     * <br>
+     * <p>>  This parameter is returned if you set the **PayType** parameter to **Prepaid**.</p>
+     */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

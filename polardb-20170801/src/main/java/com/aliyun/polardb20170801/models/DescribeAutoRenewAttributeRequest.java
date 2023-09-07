@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</p>
+     */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
 
@@ -13,15 +16,29 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. The value must be an integer that is larger than 0 and does not exceed the maximum value of the INTEGER data type. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 30, 50, and 100. Default value: 30.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query the region ID details.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

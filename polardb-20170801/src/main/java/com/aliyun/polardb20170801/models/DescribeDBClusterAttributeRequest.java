@@ -4,8 +4,19 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAttributeRequest extends TeaModel {
+    /**
+     * <p>The ID of cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    /**
+     * <p>Specifies whether to query information about AI-related nodes.</p>
+     */
+    @NameInMap("DescribeType")
+    public String describeType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -30,6 +41,14 @@ public class DescribeDBClusterAttributeRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeDBClusterAttributeRequest setDescribeType(String describeType) {
+        this.describeType = describeType;
+        return this;
+    }
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     public DescribeDBClusterAttributeRequest setOwnerAccount(String ownerAccount) {

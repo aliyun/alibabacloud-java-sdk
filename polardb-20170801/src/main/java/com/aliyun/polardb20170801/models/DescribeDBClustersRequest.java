@@ -4,27 +4,58 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersRequest extends TeaModel {
+    /**
+     * <p>The endpoint of the cluster.</p>
+     */
     @NameInMap("ConnectionString")
     public String connectionString;
 
+    /**
+     * <p>The description of the cluster. Fuzzy match is supported.</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
+    /**
+     * <p>The ID of the cluster. Separate multiple cluster IDs with commas (,).</p>
+     */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
 
+    /**
+     * <p>The state of the cluster that you want to query. For information about valid values, see [Cluster states](~~99286~~).</p>
+     */
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
+    /**
+     * <p>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+     */
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
 
+    /**
+     * <p>The database engine that the cluster runs. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**</p>
+     * <p>*   **PostgreSQL**</p>
+     * <p>*   **Oracle**</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The database engine version of the cluster.</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    /**
+     * <p>Specifies whether the cluster has expired. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Expired")
     public Boolean expired;
 
@@ -34,24 +65,52 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return per page. Valid values: **30**, **50**, or **100**.</p>
+     * <br>
+     * <p>Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go</p>
+     * <p>*   **Prepaid**: subscription</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>Filters clusters created in the last N days. Valid values: 0 to 15.</p>
+     */
     @NameInMap("RecentCreationInterval")
     public Integer recentCreationInterval;
 
+    /**
+     * <p>Filters clusters that expire after N days. Valid values: 0 to 15.</p>
+     */
     @NameInMap("RecentExpirationInterval")
     public Integer recentExpirationInterval;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query the available regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -61,6 +120,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags of the cluster.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDBClustersRequestTag> tag;
 
@@ -230,9 +292,19 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
 
     public static class DescribeDBClustersRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can use tags to filter clusters. You can specify up to 20 tags. N specifies the serial number of each tag. The values that you specify for N must be unique and consecutive integers that start from 1. The value of Tag.N.Key is Tag.N.Value.</p>
+         * <br>
+         * <p>> The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * <br>
+         * <p>> The tag value can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -4,9 +4,18 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterDescriptionRequest extends TeaModel {
+    /**
+     * <p>The name of the cluster. The name must meet the following requirements:</p>
+     * <br>
+     * <p>*   The name cannot start with `http://` or `https://`.</p>
+     * <p>*   The name must be 2 to 256 characters in length.</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
+    /**
+     * <p>The ID of the PolarDB cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

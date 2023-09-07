@@ -4,9 +4,18 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAuditLogCollectorResponseBody extends TeaModel {
+    /**
+     * <p>The status of SQL data collector. Valid values:</p>
+     * <br>
+     * <p>*   Enable: SQL data collector is enabled.</p>
+     * <p>*   Disabled: SQL data collector is disabled.</p>
+     */
     @NameInMap("CollectorStatus")
     public String collectorStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

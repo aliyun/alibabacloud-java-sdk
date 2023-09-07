@@ -4,9 +4,25 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeClassListRequest extends TeaModel {
+    /**
+     * <p>The maximum number of IOPS.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The number of nodes. Valid values:</p>
+     * <br>
+     * <p>*   single</p>
+     * <p>*   cluster</p>
+     * <p>*   all</p>
+     */
+    @NameInMap("MasterHa")
+    public String masterHa;
+
+    /**
+     * <p>The specification type of the cluster.</p>
+     */
     @NameInMap("OrderType")
     public String orderType;
 
@@ -16,9 +32,15 @@ public class DescribeClassListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The number of CPU cores.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -39,6 +61,14 @@ public class DescribeClassListRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public DescribeClassListRequest setMasterHa(String masterHa) {
+        this.masterHa = masterHa;
+        return this;
+    }
+    public String getMasterHa() {
+        return this.masterHa;
     }
 
     public DescribeClassListRequest setOrderType(String orderType) {

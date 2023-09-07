@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterServerlessConfRequest extends TeaModel {
+    /**
+     * <p>The ID of the serverless cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBNodesParametersRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</p>
+     */
     @NameInMap("DBNodeIds")
     public String DBNodeIds;
 

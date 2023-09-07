@@ -4,24 +4,45 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The type of the database engine.</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The version of the database engine.</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    /**
+     * <p>The end time of the query. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Details about the performance metrics.</p>
+     */
     @NameInMap("PerformanceKeys")
     public DescribeDBProxyPerformanceResponseBodyPerformanceKeys performanceKeys;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start time of the query. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -87,9 +108,15 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
+        /**
+         * <p>The time when the metric value was collected. This value is a timestamp in milliseconds.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,15 +163,27 @@ public class DescribeDBProxyPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
+        /**
+         * <p>The ID of the node.</p>
+         */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
+        /**
+         * <p>The performance metric.</p>
+         */
         @NameInMap("Measurement")
         public String measurement;
 
+        /**
+         * <p>The name of the performance metric.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The list of the performance metrics.</p>
+         */
         @NameInMap("Points")
         public DescribeDBProxyPerformanceResponseBodyPerformanceKeysPerformanceItemPoints points;
 

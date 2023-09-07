@@ -4,12 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterMigrationRequest extends TeaModel {
+    /**
+     * <p>The endpoints to be switched. The endpoints are in the JSON format.</p>
+     * <br>
+     * <p>> This parameter is valid when the SwapConnectionString parameter is set to true.</p>
+     */
     @NameInMap("ConnectionStrings")
     public String connectionStrings;
 
+    /**
+     * <p>The ID of cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the new instance or new cluster. Valid values:</p>
+     * <br>
+     * <p>*   To perform a data migration, enter the ID of the PolarDB cluster.</p>
+     * <p>*   To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.</p>
+     */
     @NameInMap("NewMasterInstanceId")
     public String newMasterInstanceId;
 
@@ -28,9 +42,20 @@ public class ModifyDBClusterMigrationRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the source ApsaraDB RDS instance.</p>
+     */
     @NameInMap("SourceRDSDBInstanceId")
     public String sourceRDSDBInstanceId;
 
+    /**
+     * <p>Specifies whether to switch the endpoints. Valid values:</p>
+     * <br>
+     * <p>*   **true**: switches the endpoints. If you select this option, you do not need the change the endpoint in your applications.</p>
+     * <p>*   **false**: does not switch the endpoints. If you select this option, you must specify the endpoint of the PolarDB cluster in your applications.</p>
+     * <br>
+     * <p>Default value: **false**.</p>
+     */
     @NameInMap("SwapConnectionString")
     public String swapConnectionString;
 

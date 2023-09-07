@@ -4,9 +4,19 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateParameterGroupRequest extends TeaModel {
+    /**
+     * <p>The type of the database engine. Only **MySQL** is supported.</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The version of the database engine. Valid values:</p>
+     * <br>
+     * <p>*   **5.6**</p>
+     * <p>*   **5.7**</p>
+     * <p>*   **8.0**</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
@@ -16,18 +26,40 @@ public class CreateParameterGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The description of the parameter template. It must be 0 to 199 characters in length.</p>
+     */
     @NameInMap("ParameterGroupDesc")
     public String parameterGroupDesc;
 
+    /**
+     * <p>The name of the parameter template. The name must meet the following requirements:</p>
+     * <br>
+     * <p>*   It can contain letters, digits, and underscores (\_). It must start with a letter and cannot end with an underscore.**</p>
+     * <p>*   It must be 8 to 64 characters in length.</p>
+     */
     @NameInMap("ParameterGroupName")
     public String parameterGroupName;
 
+    /**
+     * <p>The JSON string that consists of parameters and values. The parameter values are strings. Example: `{"wait_timeout":"86400","innodb_old_blocks_time":"1000"}`.</p>
+     * <br>
+     * <p>> You can call the [DescribeParameterTemplates](~~207428~~) operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.</p>
+     */
     @NameInMap("Parameters")
     public String parameters;
 
+    /**
+     * <p>The region ID.</p>
+     * <br>
+     * <p>> You can call the [DescribeRegions](~~98041~~) operation to query available regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

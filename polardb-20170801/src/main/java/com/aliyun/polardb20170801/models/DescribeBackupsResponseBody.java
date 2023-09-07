@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The details of backup sets.</p>
+     */
     @NameInMap("Items")
     public DescribeBackupsResponseBodyItems items;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
 
@@ -65,39 +80,127 @@ public class DescribeBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupsResponseBodyItemsBackup extends TeaModel {
+        /**
+         * <p>The end time of the backup task. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <p>The ID of the backup set.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The backup method. Only **Snapshot** may be returned.</p>
+         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        /**
+         * <p>The backup mode. Valid values:</p>
+         * <br>
+         * <p>*   **Automated**</p>
+         * <p>*   **Manual**</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The size of the backup set. Unit: bytes.</p>
+         * <br>
+         * <p>> After you delete the target snapshot backups, the storage space that is consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share specific data blocks. For more information, see [FAQ about backup](~~164881~~).</p>
+         */
         @NameInMap("BackupSetSize")
         public String backupSetSize;
 
+        /**
+         * <p>The start time of the backup task. The time is displayed in UTC. Unit: seconds.</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>The status of the backup set. Valid values:</p>
+         * <br>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        /**
+         * <p>The type of the backup. Only **FullBackup** may be returned.</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>The level of the backup set. Valid values:</p>
+         * <br>
+         * <p>*   **Level-1**</p>
+         * <p>*   **Level-2**</p>
+         */
         @NameInMap("BackupsLevel")
         public String backupsLevel;
 
+        /**
+         * <p>The snapshot checkpoint time. The value follows the Unix time format. Unit: seconds.</p>
+         */
         @NameInMap("ConsistentTime")
         public String consistentTime;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>�The expected expiration time of the backup set (This parameter is supported only for instances that are enabled with sparse backup).</p>
+         */
+        @NameInMap("ExpectExpireTime")
+        public String expectExpireTime;
+
+        /**
+         * <p>The expected expiration type of the backup set (This parameter is supported only for instances that are enabled with sparse backup).</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   NEVER</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   EXPIRED</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   DELAY</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
+        @NameInMap("ExpectExpireType")
+        public String expectExpireType;
+
+        /**
+         * <p>Indicates whether the backup set is available. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The backup set is unavailable.</p>
+         * <p>*   **1**: The backup set is available.</p>
+         */
         @NameInMap("IsAvail")
         public String isAvail;
 
@@ -192,6 +295,22 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getDBClusterId() {
             return this.DBClusterId;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setExpectExpireTime(String expectExpireTime) {
+            this.expectExpireTime = expectExpireTime;
+            return this;
+        }
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setExpectExpireType(String expectExpireType) {
+            this.expectExpireType = expectExpireType;
+            return this;
+        }
+        public String getExpectExpireType() {
+            return this.expectExpireType;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setIsAvail(String isAvail) {

@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupPolicyResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the log backup feature was enabled. Valid values:</p>
+     * <br>
+     * <p>*   0: disabled.</p>
+     * <p>*   1: enabled. By default, the log backup feature is enabled and cannot be disabled.</p>
+     */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
@@ -13,9 +19,18 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     @NameInMap("LogBackupAnotherRegionRetentionPeriod")
     public String logBackupAnotherRegionRetentionPeriod;
 
+    /**
+     * <p>The retention period of the logs. Valid values:</p>
+     * <br>
+     * <p>*   7 to 7300: The logs are retained for 7 to 7,300 days.</p>
+     * <p>*   \-1: The logs are permanently retained.</p>
+     */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,27 +4,51 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster for which the task was created.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end time of the query.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The page number of the page returned.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start time of the query.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The details of the task.</p>
+     */
     @NameInMap("Tasks")
     public DescribeTasksResponseBodyTasks tasks;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -98,45 +122,93 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyTasksTask extends TeaModel {
+        /**
+         * <p>The time when the task was started. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BeginTime")
         public String beginTime;
 
+        /**
+         * <p>The name of the current step.</p>
+         */
         @NameInMap("CurrentStepName")
         public String currentStepName;
 
+        /**
+         * <p>The database name.</p>
+         * <br>
+         * <p>>  This parameter is returned for only the tasks that involve database operations.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The estimated end time of the task. In most cases, this parameter is empty.</p>
+         */
         @NameInMap("ExpectedFinishTime")
         public String expectedFinishTime;
 
+        /**
+         * <p>The time when the task was completed. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("FinishTime")
         public String finishTime;
 
+        /**
+         * <p>The progress of the task in percentage.</p>
+         */
         @NameInMap("Progress")
         public Integer progress;
 
+        /**
+         * <p>The description of the task progress. If no progress description is provided for the task, this parameter is empty.</p>
+         */
         @NameInMap("ProgressInfo")
         public String progressInfo;
 
+        /**
+         * <p>The estimated remaining duration of the task. Unit: seconds.</p>
+         */
         @NameInMap("Remain")
         public Integer remain;
 
+        /**
+         * <p>The progress of the subtasks. For example, the value `1/4` indicates that the task consists of four subtasks and the first subtask is in progress.</p>
+         */
         @NameInMap("StepProgressInfo")
         public String stepProgressInfo;
 
+        /**
+         * <p>The details of the subtasks.</p>
+         */
         @NameInMap("StepsInfo")
         public String stepsInfo;
 
+        /**
+         * <p>The API operation that is used by the task. Example: `CreateDBInstance`.</p>
+         */
         @NameInMap("TaskAction")
         public String taskAction;
 
+        /**
+         * <p>The error code that is returned when an error occurs.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the task is in the **Stop** state.</p>
+         */
         @NameInMap("TaskErrorCode")
         public String taskErrorCode;
 
+        /**
+         * <p>The error message that is returned when an error occurs.</p>
+         * <br>
+         * <p>>  This parameter is returned only when the task is in the **Stop** state.</p>
+         */
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

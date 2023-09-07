@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyPendingMaintenanceActionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the task.</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

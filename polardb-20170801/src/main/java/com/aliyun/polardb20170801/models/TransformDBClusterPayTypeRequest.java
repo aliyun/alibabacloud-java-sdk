@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class TransformDBClusterPayTypeRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -16,15 +22,35 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The billing method of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Postpaid**: pay-as-you-go.</p>
+     * <p>*   **Prepaid**: subscription.</p>
+     */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <p>The renewal cycle of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   **Year**</p>
+     * <p>*   **Month**</p>
+     * <br>
+     * <p>>  This parameter is required if you set the **PayType** parameter to **Prepaid**.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,6 +60,14 @@ public class TransformDBClusterPayTypeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The subscription duration of the cluster. Valid values:</p>
+     * <br>
+     * <p>*   If the **Period** parameter is set to **Year**, the **UsedTime** parameter can be set to 1, 2, or 3.</p>
+     * <p>*   If the **Period** parameter is set to **Month**, the **UsedTime** parameter can be set to 1, 2, 3, 4, 5, 6, 7, 8, or 9.</p>
+     * <br>
+     * <p>>  This parameter is required if you set the **PayType** parameter to **Prepaid**.</p>
+     */
     @NameInMap("UsedTime")
     public String usedTime;
 

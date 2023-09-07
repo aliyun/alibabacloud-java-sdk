@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
+    /**
+     * <p>Details about tasks.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribePendingMaintenanceActionResponseBodyItems> items;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,45 +80,121 @@ public class DescribePendingMaintenanceActionResponseBody extends TeaModel {
     }
 
     public static class DescribePendingMaintenanceActionResponseBodyItems extends TeaModel {
+        /**
+         * <p>The time when the task was created. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The type of the database engine. Valid values:</p>
+         * <br>
+         * <p>*   **MySQL**</p>
+         * <p>*   **PostgreSQL**</p>
+         * <p>*   **Oracle**</p>
+         */
         @NameInMap("DBType")
         public String DBType;
 
+        /**
+         * <p>The version of the database engine.</p>
+         * <br>
+         * <p>*   Valid values for the MySQL database engine:</p>
+         * <br>
+         * <p>    *   **5.6**</p>
+         * <p>    *   **5.7**</p>
+         * <p>    *   **8.0**</p>
+         * <br>
+         * <p>*   Valid values for the PostgreSQL database engine:</p>
+         * <br>
+         * <p>    *   **11**</p>
+         * <p>    *   **14**</p>
+         * <br>
+         * <p>*   Valid value for the Oracle database engine: **11**</p>
+         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <p>The deadline before which the task can be executed. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("Deadline")
         public String deadline;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The time when the parameter was modified. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The preparation time that is required before the pending event is switched. The time follows the `HH:mm:ss` format.</p>
+         */
         @NameInMap("PrepareInterval")
         public String prepareInterval;
 
+        /**
+         * <p>The region ID of the pending event.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The execution result of the task. Valid values:</p>
+         * <br>
+         * <p>*   **manualCancel**: The task is manually canceled.</p>
+         * <p>*   **paramCheckNotPass**: The task fails to pass the parameter check.</p>
+         * <br>
+         * <p>> This parameter is returned only when the value of the `Status` parameter is **6** or **7**. The value 6 indicates that the task is completed but fails to be executed. The value 7 indicates that the task is canceled.</p>
+         */
         @NameInMap("ResultInfo")
         public String resultInfo;
 
+        /**
+         * <p>The time when the task was executed in the background. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the pending task.</p>
+         * <br>
+         * <p>*   If you set the `IsHistory` parameter to **0**, the status of the pending task is returned. Valid values:</p>
+         * <br>
+         * <p>    *   **2**: The start time of the task is to be specified.</p>
+         * <p>    *   **3**: The task is pending.</p>
+         * <p>    *   **4**: The task is running. In this case, you cannot modify the execution time.</p>
+         * <br>
+         * <p>*   If you set the `IsHistory` parameter to **1**, the details of the historical tasks are returned. Valid values:</p>
+         * <br>
+         * <p>    *   **5**: The task is completed and executed.</p>
+         * <p>    *   **6**: The task is completed but fails to be executed.</p>
+         * <p>    *   **7**: The task is canceled.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The time when the pending event was switched. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        /**
+         * <p>The type of the pending event.</p>
+         */
         @NameInMap("TaskType")
         public String taskType;
 

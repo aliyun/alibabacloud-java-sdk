@@ -4,9 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBLinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the source cluster where a database link is to be deleted.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the database link to be deleted.</p>
+     */
     @NameInMap("DBLinkName")
     public String DBLinkName;
 

@@ -4,12 +4,24 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePolarSQLCollectorPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the clusters.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the SQL Explorer feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **Enable**</p>
+     * <p>*   **Disabled**</p>
+     */
     @NameInMap("SQLCollectorStatus")
     public String SQLCollectorStatus;
 

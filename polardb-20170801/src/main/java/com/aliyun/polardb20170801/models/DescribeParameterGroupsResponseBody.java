@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The details of parameter templates.</p>
+     */
     @NameInMap("ParameterGroups")
     public java.util.List<DescribeParameterGroupsResponseBodyParameterGroups> parameterGroups;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,64 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeParameterGroupsResponseBodyParameterGroups extends TeaModel {
+        /**
+         * <p>The time when the parameter template was created. The time is in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The type of the engine.</p>
+         */
         @NameInMap("DBType")
         public String DBType;
 
+        /**
+         * <p>The version of the database engine</p>
+         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <p>Indicates whether to restart the cluster when this parameter template is applied. Valid values:</p>
+         * <br>
+         * <p>*   **0**: A restart is not required.</p>
+         * <p>*   **1**: A restart is required.</p>
+         */
         @NameInMap("ForceRestart")
         public String forceRestart;
 
+        /**
+         * <p>The number of parameters in the parameter template.</p>
+         */
         @NameInMap("ParameterCounts")
         public Long parameterCounts;
 
+        /**
+         * <p>The description of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
+        /**
+         * <p>The ID of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupId")
         public String parameterGroupId;
 
+        /**
+         * <p>The name of the parameter template.</p>
+         */
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
+        /**
+         * <p>The type of the parameter template. Valid values:</p>
+         * <br>
+         * <p>*   **0**: the default parameter template.</p>
+         * <p>*   **1**: a custom parameter template.</p>
+         * <p>*   **2**: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</p>
+         */
         @NameInMap("ParameterGroupType")
         public String parameterGroupType;
 

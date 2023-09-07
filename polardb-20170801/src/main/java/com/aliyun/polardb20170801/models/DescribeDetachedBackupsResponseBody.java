@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDetachedBackupsResponseBody extends TeaModel {
+    /**
+     * <p>Details about the backup sets.</p>
+     */
     @NameInMap("Items")
     public DescribeDetachedBackupsResponseBodyItems items;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
 
@@ -65,42 +80,98 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDetachedBackupsResponseBodyItemsBackup extends TeaModel {
+        /**
+         * <p>The end time of the backup task. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        /**
+         * <p>The ID of the backup set.</p>
+         */
         @NameInMap("BackupId")
         public String backupId;
 
+        /**
+         * <p>The backup method. Only snapshot backups are supported. The value is set to **Snapshot**.</p>
+         */
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        /**
+         * <p>The backup mode. Valid values:</p>
+         * <br>
+         * <p>*   **Automated**</p>
+         * <p>*   **Manual**</p>
+         */
         @NameInMap("BackupMode")
         public String backupMode;
 
+        /**
+         * <p>The size of the backup set. Unit: bytes.</p>
+         * <br>
+         * <p>> After you delete the target snapshot backups, the storage space consumed by the backups is released. The released storage space is smaller than the size of the backup file, because the snapshots share certain data blocks.</p>
+         */
         @NameInMap("BackupSetSize")
         public String backupSetSize;
 
+        /**
+         * <p>The start time of the backup task. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        /**
+         * <p>The status of the backup set. Valid values:</p>
+         * <br>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
+         */
         @NameInMap("BackupStatus")
         public String backupStatus;
 
+        /**
+         * <p>The type of the backup. Only full backups are supported. The value is set to **FullBackup**.</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <p>The level of the backup set. Valid values:</p>
+         * <br>
+         * <p>*   **Level-1**: level-1 backup set</p>
+         * <p>*   **Level-2**: level-2 backup set</p>
+         */
         @NameInMap("BackupsLevel")
         public String backupsLevel;
 
+        /**
+         * <p>The snapshot checkpoint time. The value is a Unix timestamp.</p>
+         */
         @NameInMap("ConsistentTime")
         public String consistentTime;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>Indicates whether the backup set is available. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The data backup set is unavailable.</p>
+         * <p>*   **1**: The data backup set is available.</p>
+         */
         @NameInMap("IsAvail")
         public String isAvail;
 
+        /**
+         * <p>Indicates whether the backup set can be deleted. Valid values:</p>
+         * <br>
+         * <p>*   **Enabled**: The backup set can be deleted.</p>
+         * <p>*   **Disabled**: The backup set cannot be deleted.</p>
+         */
         @NameInMap("StoreStatus")
         public String storeStatus;
 

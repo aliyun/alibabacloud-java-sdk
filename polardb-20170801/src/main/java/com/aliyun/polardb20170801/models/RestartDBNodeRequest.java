@@ -4,6 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class RestartDBNodeRequest extends TeaModel {
+    /**
+     * <p>The ID of the node.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~185342~~) operation to query the details of all clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     */
     @NameInMap("DBNodeId")
     public String DBNodeId;
 

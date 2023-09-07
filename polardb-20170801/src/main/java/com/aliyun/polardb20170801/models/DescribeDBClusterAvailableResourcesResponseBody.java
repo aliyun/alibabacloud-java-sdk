@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The available zones of the cluster.</p>
+     */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZones> availableZones;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,24 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEnginesAvailableResources extends TeaModel {
+        /**
+         * <p>The edition of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: Cluster Edition.</p>
+         * <p>*   **Basic**: Single Node Edition.</p>
+         * <p>*   **ArchiveNormal**: X-Engine.</p>
+         * <p>*   **NormalMultimaster**: Multi-master Cluster (Database/Table) Edition.</p>
+         * <p>*   **SENormal**: Standard Edition.</p>
+         * <br>
+         * <p>>- Only PolarDB for MySQL supports Single Node Edition.</p>
+         * <p>>- Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The specifications of the node.</p>
+         */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
@@ -62,9 +83,15 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEngines extends TeaModel {
+        /**
+         * <p>The available resources.</p>
+         */
         @NameInMap("AvailableResources")
         public java.util.List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEnginesAvailableResources> availableResources;
 
+        /**
+         * <p>The version of the database engine.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
@@ -92,12 +119,21 @@ public class DescribeDBClusterAvailableResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAvailableResourcesResponseBodyAvailableZones extends TeaModel {
+        /**
+         * <p>The region ID of the cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The database engines that the available resources support.</p>
+         */
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZonesSupportedEngines> supportedEngines;
 
+        /**
+         * <p>The zone ID of the cluster.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

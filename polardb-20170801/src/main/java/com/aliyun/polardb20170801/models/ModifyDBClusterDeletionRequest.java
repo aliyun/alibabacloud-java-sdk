@@ -4,6 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterDeletionRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to.obtain the cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,6 +18,12 @@ public class ModifyDBClusterDeletionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>Specifies whether to enable the cluster lock feature. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.</p>
+     * <p>*   **false**: disables the cluster lock feature.</p>
+     */
     @NameInMap("Protection")
     public Boolean protection;
 

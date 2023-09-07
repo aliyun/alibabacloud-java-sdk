@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The renewal information about the clusters.</p>
+     */
     @NameInMap("Items")
     public DescribeAutoRenewAttributeResponseBodyItems items;
 
+    /**
+     * <p>The page number of the page returned.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The total number of pages returned.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,21 +80,49 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAutoRenewAttributeResponseBodyItemsAutoRenewAttribute extends TeaModel {
+        /**
+         * <p>Indicates whether the auto-renewal feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true: enabled</p>
+         * <p>*   false: disabled</p>
+         */
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The renewal duration.</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The unit of the duration. Valid values:</p>
+         * <br>
+         * <p>*   Year</p>
+         * <p>*   Month</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The renewal status. Valid values:</p>
+         * <br>
+         * <p>*   AutoRenewal: The cluster is automatically renewed.</p>
+         * <p>*   Normal: The cluster is manually renewed. The system sends a text message to remind you before the cluster expires.</p>
+         * <p>*   NotRenewal: The cluster is not renewed. The system does not send a reminder for expiration but only sends a text message three days before the cluster expires to remind you that the cluster is not renewed.</p>
+         */
         @NameInMap("RenewalStatus")
         public String renewalStatus;
 

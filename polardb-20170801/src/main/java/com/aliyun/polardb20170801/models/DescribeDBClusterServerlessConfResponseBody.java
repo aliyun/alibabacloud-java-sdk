@@ -4,27 +4,54 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("AllowShutDown")
     public String allowShutDown;
 
+    /**
+     * <p>The ID of the serverless cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
+     */
     @NameInMap("ScaleMax")
     public String scaleMax;
 
+    /**
+     * <p>The minimum number of PCUs per node for scaling. Valid values: 1 PCU to 31 PCUs.</p>
+     */
     @NameInMap("ScaleMin")
     public String scaleMin;
 
+    /**
+     * <p>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     */
     @NameInMap("ScaleRoNumMax")
     public String scaleRoNumMax;
 
+    /**
+     * <p>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</p>
+     */
     @NameInMap("ScaleRoNumMin")
     public String scaleRoNumMin;
 
+    /**
+     * <p>The detection period for no-activity suspension. Valid values: 300 to 86400. Unit: seconds. The value must be a multiple of 300.</p>
+     */
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;
 

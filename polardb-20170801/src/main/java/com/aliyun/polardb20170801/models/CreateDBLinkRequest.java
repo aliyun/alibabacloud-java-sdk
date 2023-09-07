@@ -4,12 +4,27 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBLinkRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the source cluster that the database link connects.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the database link.</p>
+     * <br>
+     * <p>*   The name must contain lowercase letters and can also contain digits and underscores (\_).</p>
+     * <p>*   The name must start with a letter and end with a letter or digit.</p>
+     * <p>*   The name must be 1 to 64 characters in length.</p>
+     */
     @NameInMap("DBLinkName")
     public String DBLinkName;
 
@@ -19,9 +34,17 @@ public class CreateDBLinkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query information about regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -31,27 +54,62 @@ public class CreateDBLinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the source database.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.</p>
+     */
     @NameInMap("SourceDBName")
     public String sourceDBName;
 
+    /**
+     * <p>The account of the destination database.</p>
+     * <br>
+     * <p>>  You can call the [DescribeAccounts](~~173549~~) operation to query the account of a PolarDB cluster.</p>
+     */
     @NameInMap("TargetDBAccount")
     public String targetDBAccount;
 
+    /**
+     * <p>The ID of the destination cluster that the database link connects.</p>
+     * <br>
+     * <p>> *   If the destination cluster is a user-created Oracle database on an ECS instance, set the value to `null`.</p>
+     * <p>> *   You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.</p>
+     */
     @NameInMap("TargetDBInstanceName")
     public String targetDBInstanceName;
 
+    /**
+     * <p>The name of the destination database.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDatabases](~~173558~~) operation to query information about databases in a PolarDB cluster.</p>
+     */
     @NameInMap("TargetDBName")
     public String targetDBName;
 
+    /**
+     * <p>The account password of the destination database.</p>
+     */
     @NameInMap("TargetDBPasswd")
     public String targetDBPasswd;
 
+    /**
+     * <p>The IP address of the user-created Oracle database on an ECS instance.</p>
+     */
     @NameInMap("TargetIp")
     public String targetIp;
 
+    /**
+     * <p>The port number of the user-created Oracle database on an ECS instance.</p>
+     */
     @NameInMap("TargetPort")
     public String targetPort;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <br>
+     * <p>>  You can call the [DescribeVpcs](~~35739~~) operation to query information about VPCs.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
