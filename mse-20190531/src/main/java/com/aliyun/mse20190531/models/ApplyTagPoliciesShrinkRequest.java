@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class ApplyTagPoliciesRequest extends TeaModel {
+public class ApplyTagPoliciesShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
@@ -48,14 +48,14 @@ public class ApplyTagPoliciesRequest extends TeaModel {
      * <p>The details of the routing rule.</p>
      */
     @NameInMap("Rules")
-    public java.util.Map<String, RulesValue> rules;
+    public String rulesShrink;
 
-    public static ApplyTagPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ApplyTagPoliciesRequest self = new ApplyTagPoliciesRequest();
+    public static ApplyTagPoliciesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ApplyTagPoliciesShrinkRequest self = new ApplyTagPoliciesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ApplyTagPoliciesRequest setAcceptLanguage(String acceptLanguage) {
+    public ApplyTagPoliciesShrinkRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -63,7 +63,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public ApplyTagPoliciesRequest setAppId(String appId) {
+    public ApplyTagPoliciesShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -71,7 +71,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.appId;
     }
 
-    public ApplyTagPoliciesRequest setAppName(String appName) {
+    public ApplyTagPoliciesShrinkRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -79,7 +79,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.appName;
     }
 
-    public ApplyTagPoliciesRequest setEnable(Boolean enable) {
+    public ApplyTagPoliciesShrinkRequest setEnable(Boolean enable) {
         this.enable = enable;
         return this;
     }
@@ -87,7 +87,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.enable;
     }
 
-    public ApplyTagPoliciesRequest setNamespace(String namespace) {
+    public ApplyTagPoliciesShrinkRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -95,7 +95,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.namespace;
     }
 
-    public ApplyTagPoliciesRequest setNamespaceId(String namespaceId) {
+    public ApplyTagPoliciesShrinkRequest setNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
     }
@@ -103,7 +103,7 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.namespaceId;
     }
 
-    public ApplyTagPoliciesRequest setRegion(String region) {
+    public ApplyTagPoliciesShrinkRequest setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -111,12 +111,12 @@ public class ApplyTagPoliciesRequest extends TeaModel {
         return this.region;
     }
 
-    public ApplyTagPoliciesRequest setRules(java.util.Map<String, RulesValue> rules) {
-        this.rules = rules;
+    public ApplyTagPoliciesShrinkRequest setRulesShrink(String rulesShrink) {
+        this.rulesShrink = rulesShrink;
         return this;
     }
-    public java.util.Map<String, RulesValue> getRules() {
-        return this.rules;
+    public String getRulesShrink() {
+        return this.rulesShrink;
     }
 
 }

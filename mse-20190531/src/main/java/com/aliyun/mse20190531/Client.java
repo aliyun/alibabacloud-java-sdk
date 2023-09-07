@@ -1036,8 +1036,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyGatewayRouteWithOptions(request, runtime);
     }
 
-    public ApplyTagPoliciesResponse applyTagPoliciesWithOptions(ApplyTagPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ApplyTagPoliciesResponse applyTagPoliciesWithOptions(ApplyTagPoliciesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ApplyTagPoliciesShrinkRequest request = new ApplyTagPoliciesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rules)) {
+            request.rulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rules, "Rules", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -1067,8 +1073,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Region", request.region);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.rules)) {
-            query.put("Rules", request.rules);
+        if (!com.aliyun.teautil.Common.isUnset(request.rulesShrink)) {
+            query.put("Rules", request.rulesShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

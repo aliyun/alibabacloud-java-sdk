@@ -85,13 +85,498 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
-        /**
-         * <p>Indicates whether the field is a primary key.</p>
-         */
-        @NameInMap("CarryData")
-        public Boolean carryData;
+    public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems extends TeaModel {
+        @NameInMap("cond")
+        public String cond;
 
+        @NameInMap("datum")
+        public String datum;
+
+        @NameInMap("divisor")
+        public Integer divisor;
+
+        @NameInMap("expr")
+        public String expr;
+
+        @NameInMap("index")
+        public Integer index;
+
+        @NameInMap("nameList")
+        public java.util.List<String> nameList;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("rate")
+        public Integer rate;
+
+        @NameInMap("remainder")
+        public Integer remainder;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems self = new ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setCond(String cond) {
+            this.cond = cond;
+            return this;
+        }
+        public String getCond() {
+            return this.cond;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setDatum(String datum) {
+            this.datum = datum;
+            return this;
+        }
+        public String getDatum() {
+            return this.datum;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setDivisor(Integer divisor) {
+            this.divisor = divisor;
+            return this;
+        }
+        public Integer getDivisor() {
+            return this.divisor;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setExpr(String expr) {
+            this.expr = expr;
+            return this;
+        }
+        public String getExpr() {
+            return this.expr;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setIndex(Integer index) {
+            this.index = index;
+            return this;
+        }
+        public Integer getIndex() {
+            return this.index;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setNameList(java.util.List<String> nameList) {
+            this.nameList = nameList;
+            return this;
+        }
+        public java.util.List<String> getNameList() {
+            return this.nameList;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setRate(Integer rate) {
+            this.rate = rate;
+            return this;
+        }
+        public Integer getRate() {
+            return this.rate;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setRemainder(Integer remainder) {
+            this.remainder = remainder;
+            return this;
+        }
+        public Integer getRemainder() {
+            return this.remainder;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo extends TeaModel {
+        @NameInMap("appId")
+        public String appId;
+
+        @NameInMap("argumentItems")
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems> argumentItems;
+
+        @NameInMap("condition")
+        public String condition;
+
+        @NameInMap("group")
+        public String group;
+
+        @NameInMap("methodName")
+        public String methodName;
+
+        @NameInMap("paramTypes")
+        public java.util.List<String> paramTypes;
+
+        @NameInMap("serviceName")
+        public String serviceName;
+
+        @NameInMap("tags")
+        public java.util.List<String> tags;
+
+        @NameInMap("triggerPolicy")
+        public String triggerPolicy;
+
+        @NameInMap("version")
+        public String version;
+
+        public static ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo self = new ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setArgumentItems(java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems> argumentItems) {
+            this.argumentItems = argumentItems;
+            return this;
+        }
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubboArgumentItems> getArgumentItems() {
+            return this.argumentItems;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setCondition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+        public String getCondition() {
+            return this.condition;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setGroup(String group) {
+            this.group = group;
+            return this;
+        }
+        public String getGroup() {
+            return this.group;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setMethodName(String methodName) {
+            this.methodName = methodName;
+            return this;
+        }
+        public String getMethodName() {
+            return this.methodName;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setParamTypes(java.util.List<String> paramTypes) {
+            this.paramTypes = paramTypes;
+            return this;
+        }
+        public java.util.List<String> getParamTypes() {
+            return this.paramTypes;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setServiceName(String serviceName) {
+            this.serviceName = serviceName;
+            return this;
+        }
+        public String getServiceName() {
+            return this.serviceName;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setTriggerPolicy(String triggerPolicy) {
+            this.triggerPolicy = triggerPolicy;
+            return this;
+        }
+        public String getTriggerPolicy() {
+            return this.triggerPolicy;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems extends TeaModel {
+        @NameInMap("cond")
+        public String cond;
+
+        @NameInMap("datum")
+        public String datum;
+
+        @NameInMap("divisor")
+        public Integer divisor;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("nameList")
+        public java.util.List<String> nameList;
+
+        @NameInMap("operator")
+        public String operator;
+
+        @NameInMap("rate")
+        public Integer rate;
+
+        @NameInMap("remainder")
+        public Integer remainder;
+
+        @NameInMap("type")
+        public String type;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems self = new ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setCond(String cond) {
+            this.cond = cond;
+            return this;
+        }
+        public String getCond() {
+            return this.cond;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setDatum(String datum) {
+            this.datum = datum;
+            return this;
+        }
+        public String getDatum() {
+            return this.datum;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setDivisor(Integer divisor) {
+            this.divisor = divisor;
+            return this;
+        }
+        public Integer getDivisor() {
+            return this.divisor;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setNameList(java.util.List<String> nameList) {
+            this.nameList = nameList;
+            return this;
+        }
+        public java.util.List<String> getNameList() {
+            return this.nameList;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setRate(Integer rate) {
+            this.rate = rate;
+            return this;
+        }
+        public Integer getRate() {
+            return this.rate;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setRemainder(Integer remainder) {
+            this.remainder = remainder;
+            return this;
+        }
+        public Integer getRemainder() {
+            return this.remainder;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud extends TeaModel {
+        @NameInMap("appId")
+        public String appId;
+
+        @NameInMap("condition")
+        public String condition;
+
+        @NameInMap("enable")
+        public Boolean enable;
+
+        @NameInMap("path")
+        public String path;
+
+        @NameInMap("paths")
+        public java.util.List<String> paths;
+
+        @NameInMap("priority")
+        public Integer priority;
+
+        @NameInMap("restItems")
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems> restItems;
+
+        @NameInMap("tags")
+        public java.util.List<String> tags;
+
+        @NameInMap("triggerPolicy")
+        public String triggerPolicy;
+
+        public static ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud self = new ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setCondition(String condition) {
+            this.condition = condition;
+            return this;
+        }
+        public String getCondition() {
+            return this.condition;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setPaths(java.util.List<String> paths) {
+            this.paths = paths;
+            return this;
+        }
+        public java.util.List<String> getPaths() {
+            return this.paths;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setRestItems(java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems> restItems) {
+            this.restItems = restItems;
+            return this;
+        }
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloudRestItems> getRestItems() {
+            return this.restItems;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setTags(java.util.List<String> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<String> getTags() {
+            return this.tags;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud setTriggerPolicy(String triggerPolicy) {
+            this.triggerPolicy = triggerPolicy;
+            return this;
+        }
+        public String getTriggerPolicy() {
+            return this.triggerPolicy;
+        }
+
+    }
+
+    public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules extends TeaModel {
+        @NameInMap("dubbo")
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo> dubbo;
+
+        @NameInMap("springcloud")
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud> springcloud;
+
+        public static ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules build(java.util.Map<String, ?> map) throws Exception {
+            ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules self = new ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules();
+            return TeaModel.build(map, self);
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules setDubbo(java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo> dubbo) {
+            this.dubbo = dubbo;
+            return this;
+        }
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesDubbo> getDubbo() {
+            return this.dubbo;
+        }
+
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules setSpringcloud(java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud> springcloud) {
+            this.springcloud = springcloud;
+            return this;
+        }
+        public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRulesSpringcloud> getSpringcloud() {
+            return this.springcloud;
+        }
+
+    }
+
+    public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
         /**
          * <p>Indicates whether the alert rule is enabled. Valid value:</p>
          * <br>
@@ -100,12 +585,6 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
          */
         @NameInMap("Enable")
         public Boolean enable;
-
-        /**
-         * <p>The modification time.</p>
-         */
-        @NameInMap("GmtModified")
-        public String gmtModified;
 
         /**
          * <p>The ID of the rule.</p>
@@ -132,16 +611,10 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Integer rate;
 
         /**
-         * <p>Indicates whether the routing rule is deleted.</p>
-         */
-        @NameInMap("Remove")
-        public Boolean remove;
-
-        /**
          * <p>The details of the routing rule.</p>
          */
         @NameInMap("Rules")
-        public String rules;
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules rules;
 
         /**
          * <p>The status.</p>
@@ -160,28 +633,12 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setCarryData(Boolean carryData) {
-            this.carryData = carryData;
-            return this;
-        }
-        public Boolean getCarryData() {
-            return this.carryData;
-        }
-
         public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setEnable(Boolean enable) {
             this.enable = enable;
             return this;
         }
         public Boolean getEnable() {
             return this.enable;
-        }
-
-        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
         }
 
         public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setId(Long id) {
@@ -216,19 +673,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             return this.rate;
         }
 
-        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setRemove(Boolean remove) {
-            this.remove = remove;
-            return this;
-        }
-        public Boolean getRemove() {
-            return this.remove;
-        }
-
-        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setRules(String rules) {
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRules setRules(ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules rules) {
             this.rules = rules;
             return this;
         }
-        public String getRules() {
+        public ListApplicationsWithTagRulesResponseBodyDataResultRouteRulesRules getRules() {
             return this.rules;
         }
 
