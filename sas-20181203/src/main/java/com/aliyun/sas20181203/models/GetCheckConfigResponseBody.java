@@ -5,24 +5,36 @@ import com.aliyun.tea.*;
 
 public class GetCheckConfigResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of days in a week on which an automatic check is performed.</p>
+     * <p>The days in a week on which an automatic check is performed.</p>
      */
     @NameInMap("CycleDays")
     public java.util.List<Integer> cycleDays;
 
+    /**
+     * <p>Indicates whether the check for new check items in the selected requirement item is enabled by default. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("EnableAddCheck")
     public Boolean enableAddCheck;
 
+    /**
+     * <p>Indicates whether the automatic check is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("EnableAutoCheck")
     public Boolean enableAutoCheck;
 
     /**
      * <p>The end time of the check. The value indicates a point in time. The time period that is specified by the start time and end time must be one of the following time periods:</p>
      * <br>
-     * <p>*   **00:00 to 06:00:** The StartTime parameter is set to 0 and the EndTime parameter is set to 6.</p>
-     * <p>*   **06:00 to 12:00**: The StartTime parameter is set to 6 and the EndTime parameter is set to 12.</p>
-     * <p>*   **12:00 to 18:00**: The StartTime parameter is set to 12 and the EndTime parameter is set to 18.</p>
-     * <p>*   **18:00 to 24:00:** The StartTime parameter is set to 18 and the EndTime parameter is set to 24.</p>
+     * <p>*   **00:00 to 06:00**: If StartTime is set to 00:00, EndTime must be set to 06:00.</p>
+     * <p>*   **06:00 to 12:00**: If StartTime is set to 06:00, EndTime must be set to 12:00.</p>
+     * <p>*   **12:00 to 18:00**: If StartTime is set to 12:00, EndTime must be set to 18:00.</p>
+     * <p>*   **18:00 to 24:00**: If StartTime is set to 18:00, EndTime must be set to 24:00.</p>
      */
     @NameInMap("EndTime")
     public Integer endTime;
@@ -33,11 +45,14 @@ public class GetCheckConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The check items selected in the policy.</p>
+     */
     @NameInMap("SelectedChecks")
     public java.util.List<GetCheckConfigResponseBodySelectedChecks> selectedChecks;
 
     /**
-     * <p>An array that consists of the information about the check items.</p>
+     * <p>The information about the check items.</p>
      */
     @NameInMap("Standards")
     public java.util.List<GetCheckConfigResponseBodyStandards> standards;
@@ -118,9 +133,15 @@ public class GetCheckConfigResponseBody extends TeaModel {
     }
 
     public static class GetCheckConfigResponseBodySelectedChecks extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The section ID of the check item.</p>
+         */
         @NameInMap("SectionId")
         public Long sectionId;
 
@@ -163,8 +184,8 @@ public class GetCheckConfigResponseBody extends TeaModel {
         /**
          * <p>The status of the check item. Valid values:</p>
          * <br>
-         * <p>*   **ON**: enabled</p>
-         * <p>*   **OFF**: disabled</p>
+         * <p>*   **ON**: The check item is enabled.</p>
+         * <p>*   **OFF**: The check item is disabled.</p>
          */
         @NameInMap("Status")
         public String status;

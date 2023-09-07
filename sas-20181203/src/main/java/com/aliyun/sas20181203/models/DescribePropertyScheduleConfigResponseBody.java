@@ -7,7 +7,7 @@ public class DescribePropertyScheduleConfigResponseBody extends TeaModel {
     /**
      * <p>The configuration time. Unit: hours.</p>
      * <br>
-     * <p>>  The value **0** indicates that asset fingerprint collection is disabled for this type of asset.</p>
+     * <p>>  A value **0** indicates that asset fingerprint collection is disabled for this type of asset.</p>
      */
     @NameInMap("Config")
     public String config;

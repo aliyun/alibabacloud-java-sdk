@@ -87,7 +87,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public String baselineNameLevel;
 
         /**
-         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
@@ -99,7 +99,7 @@ public class DescribeImageBaselineCheckSummaryResponseBody extends TeaModel {
         public Integer highRiskImage;
 
         /**
-         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;

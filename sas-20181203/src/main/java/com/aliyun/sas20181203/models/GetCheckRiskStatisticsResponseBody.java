@@ -189,7 +189,7 @@ public class GetCheckRiskStatisticsResponseBody extends TeaModel {
         public String sceneName;
 
         /**
-         * <p>An array consisting of the statistics on check items that are used in the risk scenario by baseline type.</p>
+         * <p>The statistics on check items that are used in the risk scenario by baseline type.</p>
          */
         @NameInMap("SubStatistics")
         public java.util.List<GetCheckRiskStatisticsResponseBodyDataSubStatistics> subStatistics;

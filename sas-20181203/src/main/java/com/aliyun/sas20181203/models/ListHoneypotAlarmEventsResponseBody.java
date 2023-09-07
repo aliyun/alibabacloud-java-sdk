@@ -117,7 +117,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
 
     public static class ListHoneypotAlarmEventsResponseBodyHoneypotAlarmEvents extends TeaModel {
         /**
-         * <p>The ID of the alert event.</p>
+         * <p>The event ID.</p>
          */
         @NameInMap("AlarmEventId")
         public Long alarmEventId;
@@ -147,13 +147,13 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         public Integer eventCount;
 
         /**
-         * <p>The timestamp when the alert event was first generated. Unit: milliseconds.</p>
+         * <p>The timestamp that indicates the time when the alert event was first detected. Unit: milliseconds.</p>
          */
         @NameInMap("FirstTime")
         public Long firstTime;
 
         /**
-         * <p>The timestamp when the alert event was last generated. Unit: milliseconds.</p>
+         * <p>The timestamp that indicates the time when the alert event was last detected. Unit: milliseconds.</p>
          */
         @NameInMap("LastTime")
         public Long lastTime;
@@ -175,7 +175,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         public Integer operateStatus;
 
         /**
-         * <p>The risk level of the alert event. Valid values:</p>
+         * <p>The risk level. Valid values:</p>
          * <br>
          * <p>*   **2**: low</p>
          * <p>*   **3**: medium</p>
@@ -285,7 +285,7 @@ public class ListHoneypotAlarmEventsResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **100**</p>
+         * <p>The number of entries returned per page. Default value: 100.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;

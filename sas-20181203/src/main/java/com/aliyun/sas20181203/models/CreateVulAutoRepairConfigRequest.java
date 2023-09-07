@@ -11,9 +11,7 @@ public class CreateVulAutoRepairConfigRequest extends TeaModel {
     public String reason;
 
     /**
-     * <p>The type of the vulnerability. Valid values: </p>
-     * <p>- **cve**: Linux software vulnerability </p>
-     * <p>- **sys**: Windows system vulnerability</p>
+     * <p>The type of the vulnerability. Valid values: -**cve**: Linux software vulnerability -**sys**: Windows system vulnerability</p>
      */
     @NameInMap("Type")
     public String type;

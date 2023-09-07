@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckInstanceResultResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the basic information about the instances.</p>
+     * <p>The basic information about the affected instances.</p>
      */
     @NameInMap("BasicData")
     public java.util.List<ListCheckInstanceResultResponseBodyBasicData> basicData;
@@ -87,31 +87,31 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The instance ID of the server.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the server.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The ID of the region in which the instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The statuses of check items. Multiple statuses are separated by commas (,). Valid values:</p>
+         * <p>The states of check items. Multiple states are separated with commas (,). Valid values:</p>
          * <br>
-         * <p>*   **PASS**</p>
-         * <p>*   **NOT_PASS**</p>
-         * <p>*   **CHECKING**</p>
-         * <p>*   **NOT_CHECK**</p>
-         * <p>*   **WHITELIST**</p>
+         * <p>*   **PASS**: The instance passed the check.</p>
+         * <p>*   **NOT_PASS**: The instance failed to pass the check.</p>
+         * <p>*   **CHECKING**: The instance is being checked.</p>
+         * <p>*   **NOT_CHECK**: The instance is not checked.</p>
+         * <p>*   **WHITELIST**: The instance is in the whitelist.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -243,8 +243,8 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the search condition is used. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Search")
         public Boolean search;
@@ -262,7 +262,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
         public String showName;
 
         /**
-         * <p>The format of the check results for the instances. Valid values:</p>
+         * <p>The type of the check result for the instance. Valid values:</p>
          * <br>
          * <p>*   **text**</p>
          * <p>*   **link**</p>

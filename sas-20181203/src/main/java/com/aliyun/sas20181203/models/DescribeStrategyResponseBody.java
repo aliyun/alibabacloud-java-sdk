@@ -11,7 +11,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the baseline check policies.</p>
+     * <p>The details of the baseline check policies.</p>
      */
     @NameInMap("Strategies")
     public java.util.List<DescribeStrategyResponseBodyStrategies> strategies;
@@ -41,8 +41,8 @@ public class DescribeStrategyResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the baseline check policy is applied to the asset group. Valid values:</p>
          * <br>
-         * <p>*   **add**: yes</p>
-         * <p>*   **del**: no</p>
+         * <p>*   **add**: The baseline check policy is applied to the asset group.</p>
+         * <p>*   **del**: the baseline check policy is not applied to the asset group.</p>
          */
         @NameInMap("Flag")
         public String flag;
@@ -95,7 +95,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
 
     public static class DescribeStrategyResponseBodyStrategies extends TeaModel {
         /**
-         * <p>An array consisting of the assets to which the baseline check policy is applied.</p>
+         * <p>The details of the assets to which the baseline check policy is applied.</p>
          */
         @NameInMap("ConfigTargets")
         public java.util.List<DescribeStrategyResponseBodyStrategiesConfigTargets> configTargets;
@@ -103,8 +103,8 @@ public class DescribeStrategyResponseBody extends TeaModel {
         /**
          * <p>The type of the baseline check policy. Valid values:</p>
          * <br>
-         * <p>*   **common**: standard baseline check policy</p>
-         * <p>*   **custom**: custom baseline check policy</p>
+         * <p>*   **common**</p>
+         * <p>*   **custom**</p>
          */
         @NameInMap("CustomType")
         public String customType;
@@ -138,7 +138,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
         public Integer ecsCount;
 
         /**
-         * <p>The time when the baseline check based on the baseline check policy ends.</p>
+         * <p>The end time of the baseline check policy.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
@@ -146,8 +146,8 @@ public class DescribeStrategyResponseBody extends TeaModel {
         /**
          * <p>The status of the baseline check policy. Valid values:</p>
          * <br>
-         * <p>*   **1**: disabled</p>
-         * <p>*   **2**: enabled</p>
+         * <p>*   **1**: not executed</p>
+         * <p>*   **2**: executing</p>
          */
         @NameInMap("ExecStatus")
         public Integer execStatus;
@@ -165,7 +165,7 @@ public class DescribeStrategyResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The proportion of risk items to all baseline check items in the baseline check result.</p>
+         * <p>The proportion of risky baselines in the baseline check result.</p>
          */
         @NameInMap("PassRate")
         public Integer passRate;
@@ -183,16 +183,16 @@ public class DescribeStrategyResponseBody extends TeaModel {
         public Integer riskCount;
 
         /**
-         * <p>The time when the baseline check based on the baseline check policy starts.</p>
+         * <p>The start time of the baseline check policy.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The source of the baseline check policy. Valid values:</p>
+         * <p>The source type of the baseline check policy. Valid values:</p>
          * <br>
-         * <p>*   **1**: built-in policy, which indicates that the baseline check policy is provided and performed by Security Center by default.</p>
-         * <p>*   **2**: user-defined policy, which can be a standard or custom baseline check policy.</p>
+         * <p>*   **1**: indicates a built-in policy provided and performed by Security Center by default.</p>
+         * <p>*   **2**: indicates a user-defined policy. It can be a standard or custom baseline check policy.</p>
          */
         @NameInMap("Type")
         public Integer type;

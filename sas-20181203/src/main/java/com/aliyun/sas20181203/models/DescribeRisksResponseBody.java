@@ -11,7 +11,7 @@ public class DescribeRisksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of baselines.</p>
+     * <p>The baselines.</p>
      */
     @NameInMap("Risks")
     public java.util.List<DescribeRisksResponseBodyRisks> risks;
@@ -59,7 +59,7 @@ public class DescribeRisksResponseBody extends TeaModel {
         public String riskDetail;
 
         /**
-         * <p>The ID of the baseline.</p>
+         * <p>The baseline ID.</p>
          */
         @NameInMap("RiskId")
         public Long riskId;

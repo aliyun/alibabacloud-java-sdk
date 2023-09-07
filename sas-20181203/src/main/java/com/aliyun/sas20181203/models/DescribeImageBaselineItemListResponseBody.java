@@ -89,7 +89,7 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         public String baselineNameKey;
 
         /**
-         * <p>The status of the baseline risk item. Valid values:</p>
+         * <p>The status of the baseline risks. Valid values:</p>
          * <br>
          * <p>*   **0**: unfixed</p>
          * <p>*   **1**: fixed</p>
@@ -102,8 +102,8 @@ public class DescribeImageBaselineItemListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the baseline check item is added to the whitelist. Valid values:</p>
          * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>*   **0**: The baseline check item is not added to the whitelist.</p>
+         * <p>*   **1**: The baseline check item is added to the whitelist.</p>
          */
         @NameInMap("WhiteList")
         public Integer whiteList;

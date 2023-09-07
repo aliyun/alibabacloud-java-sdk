@@ -34,6 +34,9 @@ public class AddPrivateRegistryRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("Port")
+    public Integer port;
+
     /**
      * <p>The type of the protocol. Valid values:</p>
      * <br>
@@ -128,6 +131,14 @@ public class AddPrivateRegistryRequest extends TeaModel {
     }
     public String getPassword() {
         return this.password;
+    }
+
+    public AddPrivateRegistryRequest setPort(Integer port) {
+        this.port = port;
+        return this;
+    }
+    public Integer getPort() {
+        return this.port;
     }
 
     public AddPrivateRegistryRequest setProtocolType(Long protocolType) {

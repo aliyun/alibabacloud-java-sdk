@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertySoftwareDetailRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -17,13 +17,13 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public String extend;
 
     /**
-     * <p>The timestamp at which the software update ends. Unit: milliseconds.</p>
+     * <p>The timestamp generated when the software update ends. Unit: milliseconds.</p>
      */
     @NameInMap("InstallTimeEnd")
     public Long installTimeEnd;
 
     /**
-     * <p>The timestamp at which the software update starts. Unit: milliseconds.</p>
+     * <p>The timestamp generated when the software update starts. Unit: milliseconds.</p>
      */
     @NameInMap("InstallTimeStart")
     public Long installTimeStart;
@@ -35,7 +35,7 @@ public class DescribePropertySoftwareDetailRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

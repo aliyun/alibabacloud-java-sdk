@@ -140,13 +140,9 @@ public class GetAssetsPropertyDetailRequest extends TeaModel {
          * <br>
          * <p>*   **remarkItemName**: the aggregation item of the asset fingerprints. Fuzzy match is supported.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If **Biz** is set to **web_server**, **remarkItemName** specifies a domain name.</p>
-         * <br>
-         * <p>*   If **Biz** is set to **lkm**, **remarkItemName** specifies a module name.</p>
-         * <br>
-         * <p>*   If **Biz** is set to **autorun**, **remarkItemName** specifies the path to a startup item.</p>
+         * <p>> *   If **Biz** is set to **web_server**, **remarkItemName** specifies a domain name. </p>
+         * <p>> *   If **Biz** is set to **lkm**, **remarkItemName** specifies a module name.</p>
+         * <p>> *   If **Biz** is set to **autorun**, **remarkItemName** specifies the path to a startup item.</p>
          */
         @NameInMap("Name")
         public String name;

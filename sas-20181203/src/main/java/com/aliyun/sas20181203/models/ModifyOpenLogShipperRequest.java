@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyOpenLogShipperRequest extends TeaModel {
     /**
-     * <p>The ID of the request source. The default value is **aegis**. Valid values:</p>
-     * <p>- **aegis**: Server Guard</p>
-     * <p>- **sas**: Security Center</p>
+     * <p>The ID of the request source. Default value: **aegis**. Valid values:</p>
      * <br>
-     * <p>> If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.</p>
+     * <p>*   **aegis**: Server Guard</p>
+     * <p>*   **sas**: Security Center</p>
+     * <br>
+     * <p>>  If you use Server Guard, set the value to **aegis**. If you use Security Center, set the value to **sas**.</p>
      */
     @NameInMap("From")
     public String from;

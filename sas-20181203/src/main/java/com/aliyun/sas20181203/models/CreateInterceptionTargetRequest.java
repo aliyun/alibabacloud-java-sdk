@@ -41,14 +41,15 @@ public class CreateInterceptionTargetRequest extends TeaModel {
     public java.util.List<String> tagList;
 
     /**
-     * <p>The object name.</p>
+     * <p>The name of the object to be blocked.</p>
      */
     @NameInMap("TargetName")
     public String targetName;
 
     /**
-     * <p>The object type. Valid value: </p>
-     * <p>- **IMAGE**: specifies an image</p>
+     * <p>The object type. Valid value:</p>
+     * <br>
+     * <p>*   **IMAGE**</p>
      */
     @NameInMap("TargetType")
     public String targetType;

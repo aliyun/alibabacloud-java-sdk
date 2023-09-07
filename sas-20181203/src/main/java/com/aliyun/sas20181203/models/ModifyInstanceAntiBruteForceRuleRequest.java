@@ -13,6 +13,9 @@ public class ModifyInstanceAntiBruteForceRuleRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The UUID of the server for which you want to modify the defense rule. You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

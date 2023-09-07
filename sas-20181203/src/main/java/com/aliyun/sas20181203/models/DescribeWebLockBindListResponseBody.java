@@ -123,7 +123,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         public String os;
 
         /**
-         * <p>The starting progress percentage of web tamper proofing. Valid values: 0 to 100.</p>
+         * <p>The percentage of the starting progress of web tamper proofing. Valid values: 0 to 100.</p>
          */
         @NameInMap("Percent")
         public Integer percent;
@@ -138,7 +138,7 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         public String serviceCode;
 
         /**
-         * <p>The error message for web tamper proofing. Valid values:</p>
+         * <p>The exception details of web tamper proofing. Valid values:</p>
          * <br>
          * <p>*   **client offline**: The Security Center agent is offline.</p>
          * <p>*   **timeout**: The connection timed out.</p>
@@ -161,8 +161,8 @@ public class DescribeWebLockBindListResponseBody extends TeaModel {
         /**
          * <p>The protection status of the server. Valid values:</p>
          * <br>
-         * <p>*   **on**: protected</p>
-         * <p>*   **off**: unprotected</p>
+         * <p>*   **on**: The server is protected.</p>
+         * <p>*   **off**: The server is not protected.</p>
          */
         @NameInMap("Status")
         public String status;

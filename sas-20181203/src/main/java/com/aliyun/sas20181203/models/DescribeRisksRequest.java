@@ -20,9 +20,9 @@ public class DescribeRisksRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The ID of the baseline.</p>
+     * <p>The baseline ID.</p>
      * <br>
-     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of baselines.</p>
+     * <p>>  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the baseline IDs.</p>
      */
     @NameInMap("RiskId")
     public Long riskId;

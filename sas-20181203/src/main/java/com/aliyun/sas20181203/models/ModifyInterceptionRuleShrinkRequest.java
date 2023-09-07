@@ -13,7 +13,10 @@ public class ModifyInterceptionRuleShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The list of destination network objects.</p>
+     * <p>The destination objects of the rule. The following parameters are included:</p>
+     * <br>
+     * <p>*   targetId: the ID of the destination object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.</p>
+     * <p>*   ports: the destination port ranges.</p>
      */
     @NameInMap("DstTarget")
     public String dstTargetShrink;
@@ -56,7 +59,9 @@ public class ModifyInterceptionRuleShrinkRequest extends TeaModel {
     public Integer ruleSwitch;
 
     /**
-     * <p>The list of source network objects.</p>
+     * <p>The source object of the rule. The following parameters are included:</p>
+     * <br>
+     * <p>*   targetId: the ID of the source object. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the ID.</p>
      */
     @NameInMap("SrcTarget")
     public String srcTargetShrink;

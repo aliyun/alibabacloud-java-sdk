@@ -51,13 +51,13 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public Integer finish;
 
         /**
-         * <p>The end time of the task. The value of this parameter is returned only if Status is SUCCESS. Otherwise, this parameter is returned empty.</p>
+         * <p>The end time of the task. A value is returned only when the task is in the Finished state. Otherwise, the returned value is empty.</p>
          */
         @NameInMap("FinishTime")
         public Long finishTime;
 
         /**
-         * <p>The primary key ID of the database.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -75,10 +75,10 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The creation method. A task can be created in the Security Center console or by calling an operation. Valid values:</p>
+         * <p>The method in which the task was created. A task can be created in the Security Center console or by calling an API operation. Valid values:</p>
          * <br>
          * <p>*   **console_batch**: The task was created in the Security Center console.</p>
-         * <p>*   **openapi**: The task was created by calling an operation.</p>
+         * <p>*   **openapi**: The task was created by calling an API operation.</p>
          */
         @NameInMap("Source")
         public String source;
@@ -90,15 +90,15 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the task. Valid values:</p>
+         * <p>The status of the task. Valid value:</p>
          * <br>
-         * <p>*   **PROCESSING**: running</p>
-         * <p>*   **START**: starting</p>
-         * <p>*   **MESSAGE_SEND**: delivering</p>
-         * <p>*   **PRE_ANALYZER**: image prechecking</p>
-         * <p>*   **SUCCESS**: successful</p>
-         * <p>*   **FAIL**: failed</p>
-         * <p>*   **TIMOUT**: timed out</p>
+         * <p>*   **PROCESSING**: The task is running.</p>
+         * <p>*   **START**: The task is being started.</p>
+         * <p>*   **MESSAGE_SEND**: The scan task is sent.</p>
+         * <p>*   **PRE_ANALYZER**: The image is in precheck.</p>
+         * <p>*   **SUCCESS**: The task was successful.</p>
+         * <p>*   **FAIL**: The task failed.</p>
+         * <p>*   **TIMOUT**: The task timed out.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -110,23 +110,23 @@ public class DescribeImageLatestScanTaskResponseBody extends TeaModel {
         public String target;
 
         /**
-         * <p>The type of the scanned asset. Valid values:</p>
+         * <p>The type of the scanned asset. Valid value:</p>
          * <br>
-         * <p>*   **IMAGE**: image</p>
+         * <p>*   **IMAGE**</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The ID of the scan task.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The type of the task. Valid values:</p>
+         * <p>The type of the task. Valid value:</p>
          * <br>
-         * <p>*   **IMAGE_SCAN**: image scan task</p>
+         * <p>*   **IMAGE_SCAN**</p>
          */
         @NameInMap("TaskType")
         public String taskType;

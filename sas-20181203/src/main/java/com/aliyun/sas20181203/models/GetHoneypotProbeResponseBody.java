@@ -11,7 +11,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details about the probe.</p>
+     * <p>The information about the probe.</p>
      */
     @NameInMap("Data")
     public GetHoneypotProbeResponseBodyData data;
@@ -148,7 +148,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
     public static class GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort extends TeaModel {
         /**
-         * <p>The ID of the monitoring record.</p>
+         * <p>The unique ID of the service that is monitored.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -166,7 +166,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         public String probeId;
 
         /**
-         * <p>An array consisting of the IP addresses of the sever on which the probe is deployed.</p>
+         * <p>The IP addresses that are monitored.</p>
          */
         @NameInMap("ServiceIpList")
         public java.util.List<String> serviceIpList;
@@ -241,7 +241,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         public Integer endPort;
 
         /**
-         * <p>The error that indicates a binding failure.</p>
+         * <p>The error that is returned if an error occurred in the port of the honeypot that is bound to the probe.</p>
          */
         @NameInMap("Err")
         public String err;
@@ -253,19 +253,19 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         public Boolean fixed;
 
         /**
-         * <p>The ID of the port binding record.</p>
+         * <p>The unique ID of the port binding record.</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The details about the error.</p>
+         * <p>The error message that is returned if an error occurred in the port of the honeypot that is bound to the probe.</p>
          */
         @NameInMap("Msg")
         public String msg;
 
         /**
-         * <p>The protocol type.</p>
+         * <p>The type of the protocol.</p>
          */
         @NameInMap("Proto")
         public String proto;
@@ -277,7 +277,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         public Integer startPort;
 
         /**
-         * <p>The binding status. Valid values:</p>
+         * <p>The status of the port of the honeypot that is bound to the probe. Valid values:</p>
          * <br>
          * <p>*   **1**: abnormal</p>
          * <p>*   **3**: normal</p>
@@ -380,31 +380,31 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
 
     public static class GetHoneypotProbeResponseBodyDataHoneypotProbeBindList extends TeaModel {
         /**
-         * <p>The ID of the binding record.</p>
+         * <p>The unique ID of the honeypot that is bound to the probe.</p>
          */
         @NameInMap("BindId")
         public String bindId;
 
         /**
-         * <p>An array consisting of the ports that are bound to the probe.</p>
+         * <p>The ports that are bound to the probe.</p>
          */
         @NameInMap("BindPortList")
         public java.util.List<GetHoneypotProbeResponseBodyDataHoneypotProbeBindListBindPortList> bindPortList;
 
         /**
-         * <p>The ID of the honeypot.</p>
+         * <p>The honeypot ID.</p>
          */
         @NameInMap("HoneypotId")
         public String honeypotId;
 
         /**
-         * <p>An array consisting of the IP addresses that are monitored.</p>
+         * <p>The IP addresses that are monitored.</p>
          */
         @NameInMap("ServiceIpList")
         public java.util.List<String> serviceIpList;
 
         /**
-         * <p>The status of the service. Valid values:</p>
+         * <p>The status of the honeypot that is bound to the probe. Valid values:</p>
          * <br>
          * <p>*   **1**: abnormal</p>
          * <p>*   **3**: normal</p>
@@ -473,7 +473,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         public java.util.List<String> canListenIpList;
 
         /**
-         * <p>An array consisting of the CIDR blocks that are allowed to access the VPC probe.</p>
+         * <p>The CIDR blocks of the probe deployed in a virtual private cloud (VPC).</p>
          */
         @NameInMap("CidrList")
         public java.util.List<String> cidrList;
@@ -509,7 +509,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         public GetHoneypotProbeResponseBodyDataHoneyPotProbeScanPort honeyPotProbeScanPort;
 
         /**
-         * <p>An array consisting of the honeypots to which the probe forwards traffic.</p>
+         * <p>The honeypots that are bound to the probe.</p>
          */
         @NameInMap("HoneypotProbeBindList")
         public java.util.List<GetHoneypotProbeResponseBodyDataHoneypotProbeBindList> honeypotProbeBindList;
@@ -598,7 +598,7 @@ public class GetHoneypotProbeResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>The ID of the VPC in which the VPC probe is deployed.</p>
+         * <p>The ID of the VPC in which the probe is deployed.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

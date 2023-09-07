@@ -35,7 +35,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>An array that consists of the servers.</p>
+     * <p>The information about the servers.</p>
      */
     @NameInMap("WarningMachines")
     public java.util.List<DescribeWarningMachinesResponseBodyWarningMachines> warningMachines;
@@ -110,20 +110,20 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Bind")
         public Boolean bind;
 
         /**
-         * <p>The ID of the container.</p>
+         * <p>The container ID.</p>
          */
         @NameInMap("ContainerId")
         public String containerId;
 
         /**
-         * <p>The name of container.</p>
+         * <p>The name of the container.</p>
          */
         @NameInMap("ContainerName")
         public String containerName;
@@ -135,7 +135,7 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         public Integer highWarningCount;
 
         /**
-         * <p>The ID of the server.</p>
+         * <p>The server ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -179,8 +179,8 @@ public class DescribeWarningMachinesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a port on the server is accessible over the Internet. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("PortOpen")
         public Boolean portOpen;

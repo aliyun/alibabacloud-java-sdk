@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
+    /**
+     * <p>The malicious files.</p>
+     */
     @NameInMap("List")
     public java.util.List<ListAgentlessMaliciousFilesResponseBodyList> list;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListAgentlessMaliciousFilesResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +52,27 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessMaliciousFilesResponseBodyListDetails extends TeaModel {
+        /**
+         * <p>The name of the exception.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The name key of the exception.</p>
+         */
         @NameInMap("NameKey")
         public String nameKey;
 
+        /**
+         * <p>The type of the exception.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the exception.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -95,12 +116,21 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessMaliciousFilesResponseBodyListNotes extends TeaModel {
+        /**
+         * <p>The remark.</p>
+         */
         @NameInMap("Note")
         public String note;
 
+        /**
+         * <p>The ID of the remark.</p>
+         */
         @NameInMap("NoteId")
         public String noteId;
 
+        /**
+         * <p>The time when the remark was created.</p>
+         */
         @NameInMap("NoteTime")
         public String noteTime;
 
@@ -136,66 +166,135 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessMaliciousFilesResponseBodyList extends TeaModel {
+        /**
+         * <p>The details of the exception.</p>
+         */
         @NameInMap("Details")
         public java.util.List<ListAgentlessMaliciousFilesResponseBodyListDetails> details;
 
+        /**
+         * <p>The URL to download the malicious image sample.</p>
+         */
         @NameInMap("DownloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>The file path.</p>
+         */
         @NameInMap("FilePath")
         public Long filePath;
 
+        /**
+         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("FirstScanTimestamp")
         public Long firstScanTimestamp;
 
+        /**
+         * <p>The highlighted JSON string.</p>
+         */
         @NameInMap("HighLight")
         public String highLight;
 
+        /**
+         * <p>The event ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The name of the asset.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The public IP address of the server.</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>The private IP address of the server.</p>
+         */
         @NameInMap("IntranetIp")
         public String intranetIp;
 
+        /**
+         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
+         */
         @NameInMap("LatestScanTimestamp")
         public Long latestScanTimestamp;
 
+        /**
+         * <p>The severity of the malicious file. Valid values:</p>
+         * <br>
+         * <p>*   serious</p>
+         * <p>*   suspicious</p>
+         * <p>*   remind</p>
+         */
         @NameInMap("Level")
         public String level;
 
+        /**
+         * <p>The MD5 hash value of the malicious file.</p>
+         */
         @NameInMap("MaliciousMd5")
         public String maliciousMd5;
 
+        /**
+         * <p>The name of the malicious file.</p>
+         */
         @NameInMap("MaliciousName")
         public String maliciousName;
 
+        /**
+         * <p>The remarks.</p>
+         */
         @NameInMap("Notes")
         public java.util.List<ListAgentlessMaliciousFilesResponseBodyListNotes> notes;
 
+        /**
+         * <p>The handling result of the exception.</p>
+         */
         @NameInMap("OperateResult")
         public String operateResult;
 
+        /**
+         * <p>The timestamp generated when the exception is handled. Unit: milliseconds.</p>
+         */
         @NameInMap("OperateTimestamp")
         public String operateTimestamp;
 
+        /**
+         * <p>The partition of the disk.</p>
+         */
         @NameInMap("Partition")
         public String partition;
 
+        /**
+         * <p>The ID of the asset that is scanned.</p>
+         */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>The name of the asset that is scanned.</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
+        /**
+         * <p>The type of the asset that is scanned. Valid values:</p>
+         * <br>
+         * <p>*   2: The scanned asset is an image.</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 
@@ -375,15 +474,27 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
     }
 
     public static class ListAgentlessMaliciousFilesResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

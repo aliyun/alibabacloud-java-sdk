@@ -7,7 +7,7 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
+     * <p>> You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -39,9 +39,9 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The ID of the new server group to which the servers belong.</p>
+     * <p>The ID of the asset group.</p>
      * <br>
-     * <p>>  You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.</p>
+     * <p>> You can call the [DescribeAllGroups](~~130972~~) operation to query the IDs of asset groups.</p>
      */
     @NameInMap("GroupId")
     public Long groupId;
@@ -71,7 +71,7 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     public String machineName;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: **10**, which indicates that 10 entries of server information are displayed on each page. A maximum of 100 entries can be returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -79,7 +79,7 @@ public class DescribeWarningMachinesRequest extends TeaModel {
     /**
      * <p>The ID of the risk item.</p>
      * <br>
-     * <p>>  You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.</p>
+     * <p>> You can call the [DescribeCheckWarningSummary](~~DescribeCheckWarningSummary~~) operation to query the IDs of risk items.</p>
      */
     @NameInMap("RiskId")
     public Long riskId;

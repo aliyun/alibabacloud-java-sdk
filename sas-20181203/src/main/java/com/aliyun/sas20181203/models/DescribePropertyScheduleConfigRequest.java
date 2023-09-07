@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyScheduleConfigRequest extends TeaModel {
     /**
-     * <p>The type of the asset fingerprints to query. Valid values:</p>
+     * <p>The type of the asset fingerprints. Valid values:</p>
      * <br>
      * <p>*   **scheduler_port_period**: listening port</p>
      * <p>*   **scheduler_process_period**: running process</p>

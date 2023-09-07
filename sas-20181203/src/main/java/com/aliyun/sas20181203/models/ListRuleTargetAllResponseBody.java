@@ -51,7 +51,7 @@ public class ListRuleTargetAllResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The type of the network object. Valid values:</p>
+         * <p>The type of the object. Valid values:</p>
          * <br>
          * <p>*   IMAGE</p>
          */

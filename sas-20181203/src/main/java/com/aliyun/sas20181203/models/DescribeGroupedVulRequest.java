@@ -20,7 +20,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String assetType;
 
     /**
-     * <p>The type of the vulnerability. This parameter is valid only for application vulnerabilities. Valid values:</p>
+     * <p>The type of the vulnerability. This parameter is valid only for application vulnerabilities. Separate multiple values with commas (,). Valid values:</p>
      * <br>
      * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
      * <p>*   **app**: application vulnerability</p>
@@ -92,6 +92,11 @@ public class DescribeGroupedVulRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
@@ -118,14 +123,13 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The type of the vulnerabilities. Valid values:</p>
+     * <p>The type of the vulnerability that you want to query. Default value: cve. Valid values:</p>
      * <br>
      * <p>*   **cve**: Linux software vulnerability</p>
      * <p>*   **sys**: Windows system vulnerability</p>
      * <p>*   **cms**: Web-CMS vulnerability</p>
      * <p>*   **app**: application vulnerability</p>
-     * <p>*   **emg**: urgent vulnerabilities</p>
-     * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
+     * <p>*   **emg**: urgent vulnerability</p>
      */
     @NameInMap("Type")
     public String type;
