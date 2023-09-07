@@ -53,7 +53,7 @@ public class DescribeVulListPageResponseBody extends TeaModel {
 
     public static class DescribeVulListPageResponseBodyData extends TeaModel {
         /**
-         * <p>The CVE ID of the vulnerability.</p>
+         * <p>The common vulnerabilities and exposures (CVE) ID of the vulnerability.</p>
          */
         @NameInMap("CveId")
         public String cveId;

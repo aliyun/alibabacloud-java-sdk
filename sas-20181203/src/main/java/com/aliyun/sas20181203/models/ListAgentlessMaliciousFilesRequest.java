@@ -4,33 +4,75 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAgentlessMaliciousFilesRequest extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Specifies whether the vulnerability is handled. Valid values:</p>
+     * <br>
+     * <p>*   Y: The vulnerability is handled.</p>
+     * <p>*   N: The vulnerability is not handled.</p>
+     */
     @NameInMap("Dealed")
     public String dealed;
 
+    /**
+     * <p>The event ID.</p>
+     */
     @NameInMap("EventId")
     public Long eventId;
 
+    /**
+     * <p>The name of the malicious file that you want to query.</p>
+     * <br>
+     * <p>> Fuzzy match is supported.</p>
+     */
     @NameInMap("FuzzyMaliciousName")
     public String fuzzyMaliciousName;
 
+    /**
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The severities of the malicious files. Separate multiple values with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   serious</p>
+     * <p>*   suspicious</p>
+     * <p>*   remind</p>
+     */
     @NameInMap("Levels")
     public String levels;
 
+    /**
+     * <p>The MD5 hash value of the malicious file.</p>
+     */
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The remarks for the asset affected by the vulnerability. The value can be the private IP address, public IP address, or name of the asset. Fuzzy match is supported.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <p>The UUID of the asset.</p>
+     */
     @NameInMap("Uuid")
     public String uuid;
 

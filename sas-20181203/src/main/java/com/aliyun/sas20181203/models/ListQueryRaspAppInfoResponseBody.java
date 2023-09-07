@@ -4,21 +4,42 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListQueryRaspAppInfoResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The installation information of the RASP-enabled application.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListQueryRaspAppInfoResponseBodyData> data;
 
+    /**
+     * <p>The HTTP status code that is returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The additional information that is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The unique ID of the request, which is used to locate and troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request was successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +97,41 @@ public class ListQueryRaspAppInfoResponseBody extends TeaModel {
     }
 
     public static class ListQueryRaspAppInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the RASP-enabled application.</p>
+         */
         @NameInMap("RaspAppName")
         public String raspAppName;
 
+        /**
+         * <p>The online status of the RASP-enabled applications. Valid values:</p>
+         * <br>
+         * <p>*   **0**: All RASP-enabled applications are online.</p>
+         * <p>*   **1**: Part of the RASP-enabled applications are online.</p>
+         * <p>*   **2**: All RASP-enabled applications are offline.</p>
+         */
         @NameInMap("RaspOnlineStatus")
         public Integer raspOnlineStatus;
 
+        /**
+         * <p>The installation status of the RASP-enabled application. Valid values:</p>
+         * <br>
+         * <p>*   **SUCCESS**: The RASP-enabled application is installed.</p>
+         * <p>*   **FAIL**: The RASP-enabled application fails to be installed.</p>
+         * <p>*   **INSTALL**: The RASP-enabled application is being installed.</p>
+         */
         @NameInMap("RaspStatus")
         public String raspStatus;
 
         /**
-         * <p>推送失败结果</p>
+         * <p>The result returned if the push fails.</p>
          */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>The UUID of the asset.</p>
+         */
         @NameInMap("Uuid")
         public String uuid;
 

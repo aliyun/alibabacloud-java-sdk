@@ -104,13 +104,13 @@ public class QueryAttackCountResponseBody extends TeaModel {
         public Integer eventCount;
 
         /**
-         * <p>The ID of the ATT\&CK phase.</p>
+         * <p>The stage ID of the ATT\&CK attack.</p>
          */
         @NameInMap("TacticId")
         public String tacticId;
 
         /**
-         * <p>The type of the ATT\&CK phase.</p>
+         * <p>The type of stage of the ATT\&CK attack.</p>
          */
         @NameInMap("TacticType")
         public String tacticType;

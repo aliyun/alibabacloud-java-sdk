@@ -53,13 +53,13 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineCheckResultResponseBodyBaselineResult extends TeaModel {
         /**
-         * <p>The key of the type for the image baseline.</p>
+         * <p>The key of the image baseline type.</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
-         * <p>The number of check items.</p>
+         * <p>The number of baseline check items.</p>
          */
         @NameInMap("BaselineItemCount")
         public Integer baselineItemCount;
@@ -87,7 +87,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         public String baselineNameLevel;
 
         /**
-         * <p>The timestamp when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
@@ -99,7 +99,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         public Integer highRiskItemCount;
 
         /**
-         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the last scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;

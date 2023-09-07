@@ -135,7 +135,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
          * <br>
          * <p>*   System service</p>
          * <p>*   Software library</p>
-         * <p>*   Container component</p>
+         * <p>*   Docker component</p>
          * <p>*   Database</p>
          * <p>*   Web container</p>
          * <p>*   JAR package</p>
@@ -163,7 +163,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         public String containerName;
 
         /**
-         * <p>The latest collection timestamp, which indicates the last timestamp when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.</p>
+         * <p>The timestamp of the latest collection , which indicates the last timestamp generated when Security Center collected the information about the middleware, database, or web service. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -211,7 +211,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         public String listenIp;
 
         /**
-         * <p>The protocol of the traffic on which the process listens. Valid values:</p>
+         * <p>The listener protocol. Valid values:</p>
          * <br>
          * <p>*   **UDP**</p>
          * <p>*   **TCP**</p>
@@ -222,8 +222,8 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         /**
          * <p>The listening status of the process. Valid values:</p>
          * <br>
-         * <p>*   **NONE**: not listening</p>
-         * <p>*   **LISTEN**: listening</p>
+         * <p>*   **NONE**: The process is not listened.</p>
+         * <p>*   **LISTEN**: The process is listened.</p>
          */
         @NameInMap("ListenStatus")
         public String listenStatus;
@@ -241,7 +241,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The PID.</p>
+         * <p>The process ID.</p>
          */
         @NameInMap("Pid")
         public String pid;
@@ -259,7 +259,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         public String ppid;
 
         /**
-         * <p>The timestamp when the process starts. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the process starts. Unit: milliseconds.</p>
          */
         @NameInMap("ProcessStarted")
         public Long processStarted;
@@ -279,7 +279,7 @@ public class DescribePropertyScaDetailResponseBody extends TeaModel {
         /**
          * <p>The version of the runtime environment.</p>
          * <br>
-         * <p>>  The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</p>
+         * <p>> The value of this parameter can be the Java Development Kit (JDK) version of the runtime environment for a Java process.</p>
          */
         @NameInMap("RuntimeEnvVersion")
         public String runtimeEnvVersion;

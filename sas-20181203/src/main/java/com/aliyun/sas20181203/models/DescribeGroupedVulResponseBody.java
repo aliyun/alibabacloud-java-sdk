@@ -11,7 +11,7 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>An array that consists of the details of the vulnerability.</p>
+     * <p>The information about the vulnerability.</p>
      */
     @NameInMap("GroupedVulItems")
     public java.util.List<DescribeGroupedVulResponseBodyGroupedVulItems> groupedVulItems;
@@ -133,6 +133,9 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
         @NameInMap("RaspDefend")
         public Integer raspDefend;
 
+        /**
+         * <p>The IDs of the common vulnerabilities and exposures (CVEs) that are related to the vulnerability.</p>
+         */
         @NameInMap("Related")
         public String related;
 
@@ -161,8 +164,8 @@ public class DescribeGroupedVulResponseBody extends TeaModel {
          * <p>*   **cve**: Linux software vulnerability</p>
          * <p>*   **sys**: Windows system vulnerability</p>
          * <p>*   **cms**: Web-CMS vulnerability</p>
-         * <p>*   **app**: application vulnerabilitiy</p>
-         * <p>*   **emg**: urgent vulnerabilities</p>
+         * <p>*   **app**: application vulnerability</p>
+         * <p>*   **emg**: urgent vulnerability</p>
          * <p>*   **sca**: vulnerability that is detected based on software component analysis</p>
          */
         @NameInMap("Type")

@@ -53,7 +53,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
 
     public static class DescribeImageInstancesResponseBodyImageInstanceList extends TeaModel {
         /**
-         * <p>The number of alerts that are generated on the image.</p>
+         * <p>The number of alerts that are generated for the image.</p>
          */
         @NameInMap("AlarmCount")
         public Integer alarmCount;
@@ -95,7 +95,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         public Integer hcCount;
 
         /**
-         * <p>Indicates whether the image baseline risks exist. Valid values:</p>
+         * <p>Indicates whether the baseline risks exist. Valid values:</p>
          * <br>
          * <p>*   **NO**</p>
          * <p>*   **YES**</p>
@@ -104,13 +104,13 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         public String hcStatus;
 
         /**
-         * <p>The timestamp when the image was created. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the image was created. Unit: milliseconds.</p>
          */
         @NameInMap("ImageCreate")
         public String imageCreate;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
@@ -122,19 +122,19 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         public String imageSize;
 
         /**
-         * <p>The timestamp when the image was updated. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the image was updated. Unit: milliseconds.</p>
          */
         @NameInMap("ImageUpdate")
         public String imageUpdate;
 
         /**
-         * <p>The ID of the image instance.</p>
+         * <p>The ID of the image.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The region ID of the image.</p>
+         * <p>The ID of the region in which the image resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -180,8 +180,8 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether risks exist. Valid values:</p>
          * <br>
-         * <p>*   **NO**: No risks exist.</p>
-         * <p>*   **YES**: Risks exist.</p>
+         * <p>*   **NO**</p>
+         * <p>*   **YES**</p>
          */
         @NameInMap("RiskStatus")
         public String riskStatus;
@@ -205,28 +205,28 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         /**
          * <p>The scan status of the image. Valid values:</p>
          * <br>
-         * <p>*   **INIT**: The image scan task is to be started.</p>
+         * <p>*   **INIT**: The image scan task is pending startup.</p>
          * <p>*   **START**: The image scan task is started.</p>
          * <p>*   **MESSAGE_SEND**: The message about the image scan task is sent.</p>
-         * <p>*   **START_RUN**: The image scan task is started.</p>
+         * <p>*   **START_RUN**: The image analysis task is started.</p>
          * <p>*   **DOWNLOAD**: The image scan result is downloaded.</p>
-         * <p>*   **PRE_ANALYZER**: The image scan task is being processed.</p>
+         * <p>*   **PRE_ANALYZER**: The image pre-analysis is started.</p>
          * <p>*   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.</p>
-         * <p>*   **CVE_ANALYZER**: The CVE analysis is complete.</p>
+         * <p>*   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis is complete.</p>
          * <p>*   **BIN_ANALYZER**: The binary analysis of the image is complete.</p>
          * <p>*   **OTHER_ANALYZER**: The extended analysis of the image is complete.</p>
          * <p>*   **SUCCESS**: The image scan task is complete.</p>
-         * <p>*   **PRE_ANALYZER_SUCCESS**: The image scan task is processed.</p>
-         * <p>*   **FAIL**: The image scan task fails.</p>
-         * <p>*   **TIMEOUT**: The image scan task times out.</p>
+         * <p>*   **PRE_ANALYZER_SUCCESS**: The image pre-analysis is complete.</p>
+         * <p>*   **FAIL**: The image scan task failed.</p>
+         * <p>*   **TIMEOUT**: The image scan task timed out.</p>
          */
         @NameInMap("ScaStatus")
         public String scaStatus;
 
         /**
-         * <p>The status of the image. Valid values:</p>
+         * <p>The status of the image. Valid value:</p>
          * <br>
-         * <p>*   **NORMAL**: The image is normal.</p>
+         * <p>*   **NORMAL**</p>
          */
         @NameInMap("Status")
         public String status;

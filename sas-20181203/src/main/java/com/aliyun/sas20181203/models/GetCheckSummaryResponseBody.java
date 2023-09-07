@@ -51,7 +51,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The number of passed check items.</p>
+         * <p>The number of check items that passed the check.</p>
          */
         @NameInMap("PassCount")
         public Integer passCount;
@@ -157,7 +157,7 @@ public class GetCheckSummaryResponseBody extends TeaModel {
         public Long passCount;
 
         /**
-         * <p>An array that consist of the standard IDs of check items.</p>
+         * <p>The information about the check items.</p>
          */
         @NameInMap("Standards")
         public java.util.List<GetCheckSummaryResponseBodySummarysStandards> standards;

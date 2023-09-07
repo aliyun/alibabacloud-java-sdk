@@ -11,7 +11,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
     public Integer authCount;
 
     /**
-     * <p>The used quota for web tamper proofing.</p>
+     * <p>The associated tamper proofing quota.</p>
      */
     @NameInMap("BindCount")
     public Integer bindCount;
@@ -29,7 +29,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
     public Integer dirCount;
 
     /**
-     * <p>The timestamp when the quota for web tamper proofing expires.</p>
+     * <p>The timestamp generated when the quota for tamper proofing expires. Unit: millisecond.</p>
      */
     @NameInMap("ExpireTime")
     public Long expireTime;
@@ -41,7 +41,7 @@ public class DescribeWebLockStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of processes that are added to the process whitelist.</p>
+     * <p>The number of processes in the whitelist.</p>
      */
     @NameInMap("WhiteCount")
     public Integer whiteCount;

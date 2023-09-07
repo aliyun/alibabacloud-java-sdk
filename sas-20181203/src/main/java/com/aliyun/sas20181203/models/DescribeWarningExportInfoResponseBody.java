@@ -41,7 +41,7 @@ public class DescribeWarningExportInfoResponseBody extends TeaModel {
     public String link;
 
     /**
-     * <p>The message that shows the export task result. The value is fixed as **successful**, which indicates that the export task is successful.</p>
+     * <p>The message that shows the task result. The value is fixed as **successful**, which indicates that the export task is complete.</p>
      */
     @NameInMap("Message")
     public String message;

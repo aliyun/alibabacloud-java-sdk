@@ -56,7 +56,7 @@ public class ListCheckInstanceResultRequest extends TeaModel {
     public String regionIdKey;
 
     /**
-     * <p>The sort type of the instances.</p>
+     * <p>The types of the conditions based on which the check items are sorted.</p>
      */
     @NameInMap("SortTypes")
     public java.util.List<String> sortTypes;

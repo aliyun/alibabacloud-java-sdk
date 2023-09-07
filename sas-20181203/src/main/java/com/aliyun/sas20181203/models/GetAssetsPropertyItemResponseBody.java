@@ -123,9 +123,9 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The domain name.</p>
+         * <p>The endpoint.</p>
          * <br>
-         * <p>>  This parameter is returned only when **Biz** is set to **web_server**.</p>
+         * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
          */
         @NameInMap("Domain")
         public String domain;
@@ -133,7 +133,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         /**
          * <p>The name of the module.</p>
          * <br>
-         * <p>>  This parameter is returned only when **Biz** is set to **lkm**.</p>
+         * <p>> This parameter is returned only when **Biz** is set to **lkm**.</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
@@ -141,7 +141,7 @@ public class GetAssetsPropertyItemResponseBody extends TeaModel {
         /**
          * <p>The path to the startup item.</p>
          * <br>
-         * <p>>  This parameter is returned only when **Biz** is set to **autorun**.</p>
+         * <p>> This parameter is returned only when **Biz** is set to **autorun**.</p>
          */
         @NameInMap("Path")
         public String path;

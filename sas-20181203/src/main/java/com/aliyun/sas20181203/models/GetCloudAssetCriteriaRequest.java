@@ -39,69 +39,116 @@ public class GetCloudAssetCriteriaRequest extends TeaModel {
 
     public static class GetCloudAssetCriteriaRequestCloudAssetTypes extends TeaModel {
         /**
-         * <p>The subtype of the cloud service. Valid values:</p>
+         * <p>The subtype of the cloud service or asset. Valid values:</p>
          * <br>
          * <p>*   **0**: ECS</p>
+         * <br>
          * <p>    *   **0**: instance</p>
-         * <p>    *  **1**: disk (storage)</p>
-         * <p>    *  **2**: security group</p>
+         * <p>    *   **1**: disk (storage)</p>
+         * <p>    *   **2**: security group</p>
+         * <br>
          * <p>*   **1**: SLB</p>
-         * <p>    *  **0**: SLB</p>
-         * <p>    *  **1**: Application Load Balancer (ALB)</p>
+         * <br>
+         * <p>    *   **0**: SLB</p>
+         * <p>    *   **1**: Application Load Balancer (ALB)</p>
+         * <br>
          * <p>*   **3**: ApsaraDB RDS</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **4**: MongoDB</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **5**: Redis</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **6**: Container Registry</p>
-         * <p>    *  **1**: Container Registry Enterprise Edition</p>
-         * <p>    *  **2**: Container Registry Personal Edition</p>
+         * <br>
+         * <p>    *   **1**: Enterprise Edition</p>
+         * <p>    *   **2**: Personal Edition</p>
+         * <br>
          * <p>*   **8**: ACK</p>
-         * <p>    *  **0**: cluster</p>
+         * <br>
+         * <p>    *   **0**: cluster</p>
+         * <br>
          * <p>*   **9**: VPC</p>
-         * <p>    *  **0**: NAT gateway</p>
-         * <p>    *  **1**: EIP</p>
-         * <p>    *  **2**: Virtual Private Network (VPN)</p>
-         * <p>    *  **3**: flow log</p>
+         * <br>
+         * <p>    *   **0**: NAT gateway</p>
+         * <p>    *   **1**: Elastic IP address (EIP)</p>
+         * <p>    *   **2**: VPN</p>
+         * <p>    *   **3**: VPC Flow Logs</p>
+         * <br>
          * <p>*   **11**: ActionTrail</p>
-         * <p>    *  **0**: trail</p>
+         * <br>
+         * <p>    *   **0**: trail</p>
+         * <br>
          * <p>*   **12**: CDN</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
-         * <p>    *  **0**: certificate</p>
+         * <br>
+         * <p>    *   **0**: certificate</p>
+         * <br>
          * <p>*   **14**: Apsara Devops</p>
-         * <p>    *  **0**: organization</p>
+         * <br>
+         * <p>    *   **0**: organization</p>
+         * <br>
          * <p>*   **16**: Anti-DDoS</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **17**: WAF</p>
-         * <p>    *  **0**: domain name</p>
+         * <br>
+         * <p>    *   **0**: domain name</p>
+         * <br>
          * <p>*   **18**: OSS</p>
-         * <p>    *  **0**: bucket</p>
+         * <br>
+         * <p>    *   **0**: bucket</p>
+         * <br>
          * <p>*   **19**: PolarDB</p>
-         * <p>    *  **0**: cluster</p>
+         * <br>
+         * <p>    *   **0**: cluster</p>
+         * <br>
          * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **21**: MSE</p>
-         * <p>    *  **0**: cluster</p>
+         * <br>
+         * <p>    *   **0**: cluster</p>
+         * <br>
          * <p>*   **22**: NAS</p>
-         * <p>    *  **0**: file system</p>
+         * <br>
+         * <p>    *   **0**: file system</p>
+         * <br>
          * <p>*   **23**: DSC</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **24**: EIP</p>
-         * <p>    *  **0**: Anycast EIP</p>
+         * <br>
+         * <p>    *   **0**: Anycast EIP</p>
+         * <br>
          * <p>*   **25**: IDaaS EIAM</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **26**: PolarDB-X</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
+         * <br>
          * <p>*   **27**: Elasticsearch</p>
-         * <p>    *  **0**: instance</p>
+         * <br>
+         * <p>    *   **0**: instance</p>
          */
         @NameInMap("AssetSubType")
         public Integer assetSubType;
 
         /**
-         * <p>The type of the asset by source. Valid values:</p>
+         * <p>The type of the asset. Valid values:</p>
          * <br>
          * <p>*   **0**: Elastic Compute Service (ECS)</p>
          * <p>*   **1**: Server Load Balancer (SLB)</p>

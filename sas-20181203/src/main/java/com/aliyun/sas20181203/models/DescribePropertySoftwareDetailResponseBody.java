@@ -17,7 +17,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
     public java.util.List<DescribePropertySoftwareDetailResponseBodyPropertys> propertys;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,13 +59,13 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page. Default value: **10**.</p>
+         * <p>The number of entries per page. Default value: **10**.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -117,7 +117,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
 
     public static class DescribePropertySoftwareDetailResponseBodyPropertys extends TeaModel {
         /**
-         * <p>The timestamp at which the last asset fingerprint collection is performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the last asset fingerprint collection is performed. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
@@ -129,7 +129,7 @@ public class DescribePropertySoftwareDetailResponseBody extends TeaModel {
         public String installTime;
 
         /**
-         * <p>The timestamp at which the software is installed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the software is installed. Unit: milliseconds.</p>
          */
         @NameInMap("InstallTimeDt")
         public Long installTimeDt;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCheckResultResponseBody extends TeaModel {
     /**
-     * <p>The check items.</p>
+     * <p>The information about the check items.</p>
      */
     @NameInMap("Checks")
     public java.util.List<ListCheckResultResponseBodyChecks> checks;
@@ -59,7 +59,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Long requirementId;
 
         /**
-         * <p>The display name of the requirement item for the check item.</p>
+         * <p>The display name of the requirement item of the check item.</p>
          */
         @NameInMap("RequirementShowName")
         public String requirementShowName;
@@ -71,7 +71,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Long sectionId;
 
         /**
-         * <p>The section display name of the check item.</p>
+         * <p>The section display name of section of the check item.</p>
          */
         @NameInMap("SectionShowName")
         public String sectionShowName;
@@ -151,7 +151,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Long checkId;
 
         /**
-         * <p>The check policies.</p>
+         * <p>The information about the check policies.</p>
          */
         @NameInMap("CheckPolicies")
         public java.util.List<ListCheckResultResponseBodyChecksCheckPolicies> checkPolicies;
@@ -183,11 +183,11 @@ public class ListCheckResultResponseBody extends TeaModel {
          * <p>    *   **POLICY**</p>
          * <p>    *   **GROUP**</p>
          * <br>
-         * <p>*   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:</p>
+         * <p>*   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:</p>
          * <br>
          * <p>    *   **DOMAIN**</p>
          * <br>
-         * <p>*   If **InstanceType** is set to other values, this parameter supports the following valid values:</p>
+         * <p>*   If **InstanceType** is set to other values, this parameter supports the following valid value:</p>
          * <br>
          * <p>    *   **INSTANCE**</p>
          */
@@ -197,34 +197,34 @@ public class ListCheckResultResponseBody extends TeaModel {
         /**
          * <p>The asset type of the cloud service. Valid values:</p>
          * <br>
-         * <p>*   **ECS**: ECS</p>
-         * <p>*   **SLB**: SLB</p>
+         * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
+         * <p>*   **SLB**: Server Load Balancer (SLB)</p>
          * <p>*   **RDS**: ApsaraDB RDS</p>
-         * <p>*   **MONGODB**: MongoDB</p>
-         * <p>*   **KVSTORE**: Redis</p>
+         * <p>*   **MONGODB**: ApsaraDB for MongoDB (MongoDB)</p>
+         * <p>*   **KVSTORE**: ApsaraDB for Redis</p>
          * <p>*   **ACR**: Container Registry</p>
-         * <p>*   **CSK**: ACK</p>
-         * <p>*   **VPC**: VPC</p>
+         * <p>*   **CSK**: Container Service for Kubernetes (ACK)</p>
+         * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
          * <p>*   **ACTIONTRAIL**: ActionTrail</p>
-         * <p>*   **CDN**: CDN</p>
-         * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * <p>*   **CDN**: Alibaba Cloud CDN (CDN)</p>
+         * <p>*   **CAS**: Certificate Management Service</p>
          * <p>*   **RDC**: Apsara Devops</p>
-         * <p>*   **RAM**: RAM</p>
+         * <p>*   **RAM**: Resource Access Management (RAM)</p>
          * <p>*   **DDOS**: Anti-DDoS</p>
-         * <p>*   **WAF**: WAF</p>
-         * <p>*   **OSS**: OSS</p>
+         * <p>*   **WAF**: Web Application Firewall (WAF)</p>
+         * <p>*   **OSS**: Object Storage Service (OSS)</p>
          * <p>*   **POLARDB**: PolarDB</p>
          * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL</p>
-         * <p>*   **MSE**: MSE</p>
-         * <p>*   **NAS**: NAS</p>
-         * <p>*   **SDDP**: SDDP</p>
-         * <p>*   **EIP**: EIP</p>
+         * <p>*   **MSE**: Microservices Engine (MSE)</p>
+         * <p>*   **NAS**: Apsara File Storage NAS (NAS)</p>
+         * <p>*   **SDDP**: Sensitive Data Discovery and Protection (SDDP)</p>
+         * <p>*   **EIP**: Elastic IP Address (EIP)</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The timestamp when the last check was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the last check was performed. Unit: milliseconds.</p>
          */
         @NameInMap("LastCheckTime")
         public Long lastCheckTime;
@@ -267,7 +267,7 @@ public class ListCheckResultResponseBody extends TeaModel {
         public Boolean trialPermission;
 
         /**
-         * <p>The value of the cloud service provider.</p>
+         * <p>The cloud service provider.</p>
          */
         @NameInMap("Vendor")
         public String vendor;

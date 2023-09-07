@@ -36,7 +36,7 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
     public String targetOperations;
 
     /**
-     * <p>The dimension based on which you want to configure the feature. Valid values:</p>
+     * <p>The dimension based on which the asset is selected. Valid values:</p>
      * <br>
      * <p>*   **uuid**: the UUID of the server</p>
      * <p>*   **Cluster**: the ID of the cluster</p>
@@ -49,11 +49,11 @@ public class OperateCommonTargetConfigRequest extends TeaModel {
      * <p>The type of the feature. Valid values:</p>
      * <br>
      * <p>*   **alidetect-scan-enable**: local file detection</p>
-     * <p>*   **ACTION-TRIAL-PERMISSION**: data delivery of ActionTrail</p>
+     * <p>*   **ACTION-TRIAL-PERMISSION**: data delivery to ActionTrail</p>
      * <p>*   **alidetect**: local file detection engine</p>
-     * <p>*   **container\_prevent\_escape**: container escape prevention</p>
-     * <p>*   **image\_repo**: repository image scan</p>
-     * <p>*   **proc\_filter\_switch**: log filtering</p>
+     * <p>*   **container_prevent_escape**: container escape prevention</p>
+     * <p>*   **image_repo**: repository image scan</p>
+     * <p>*   **proc_filter_switch**: log filtering</p>
      * <p>*   **agentless**: agentless detection</p>
      * <p>*   **rasp**: application protection</p>
      * <p>*   **sensitiveFile**: sensitive file detection</p>

@@ -66,6 +66,9 @@ public class DescribeVulListRequest extends TeaModel {
     @NameInMap("Necessity")
     public String necessity;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries per page. Default value: **10**.</p>
      */
@@ -96,6 +99,9 @@ public class DescribeVulListRequest extends TeaModel {
      */
     @NameInMap("Type")
     public String type;
+
+    @NameInMap("UseNextToken")
+    public Boolean useNextToken;
 
     /**
      * <p>The UUIDs of the servers on which you want to query the vulnerabilities. Separate multiple UUIDs with commas (,).</p>
@@ -178,6 +184,14 @@ public class DescribeVulListRequest extends TeaModel {
         return this.necessity;
     }
 
+    public DescribeVulListRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribeVulListRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -216,6 +230,14 @@ public class DescribeVulListRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public DescribeVulListRequest setUseNextToken(Boolean useNextToken) {
+        this.useNextToken = useNextToken;
+        return this;
+    }
+    public Boolean getUseNextToken() {
+        return this.useNextToken;
     }
 
     public DescribeVulListRequest setUuids(String uuids) {

@@ -17,7 +17,7 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>An array that consists of the information about the images.</p>
+     * <p>The information about the images.</p>
      */
     @NameInMap("ImageInfos")
     public java.util.List<DescribeImageListBySensitiveFileResponseBodyImageInfos> imageInfos;
@@ -111,13 +111,13 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
 
     public static class DescribeImageListBySensitiveFileResponseBodyImageInfos extends TeaModel {
         /**
-         * <p>The image digest.</p>
+         * <p>The digest of the image.</p>
          */
         @NameInMap("Digest")
         public String digest;
 
         /**
-         * <p>The UNIX timestamp of when the first scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the first scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("FirstScanTime")
         public Long firstScanTime;
@@ -129,13 +129,13 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The UNIX timestamp of when the last scan was performed. Unit: milliseconds.</p>
+         * <p>The timestamp when the last scan was performed. Unit: milliseconds.</p>
          */
         @NameInMap("LastScanTime")
         public Long lastScanTime;
 
         /**
-         * <p>The region ID of the image instance.</p>
+         * <p>The ID of the region in which the image instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -154,15 +154,16 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
 
         /**
          * <p>The risk level. Valid values:</p>
-         * <p>- **high**</p>
-         * <p>- **medium**</p>
-         * <p>- **low**</p>
+         * <br>
+         * <p>*   **high**</p>
+         * <p>*   **medium**</p>
+         * <p>*   **low**</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
         /**
-         * <p>The tag that is added to the image.</p>
+         * <p>The tag of the image.</p>
          */
         @NameInMap("Tag")
         public String tag;

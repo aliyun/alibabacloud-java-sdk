@@ -230,7 +230,7 @@ public class GetAssetsPropertyDetailResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>The timestamp when the process was started. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the process was started. Unit: milliseconds.</p>
          * <br>
          * <p>> This parameter is returned only when **Biz** is set to **web_server**.</p>
          */

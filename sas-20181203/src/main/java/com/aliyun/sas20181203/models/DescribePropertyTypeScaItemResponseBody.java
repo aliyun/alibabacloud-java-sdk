@@ -123,7 +123,7 @@ public class DescribePropertyTypeScaItemResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The middleware type. Valid values:</p>
+         * <p>The type of the middleware. Valid values:</p>
          * <br>
          * <p>*   **system_service**: system service</p>
          * <p>*   **software_library**: software library</p>

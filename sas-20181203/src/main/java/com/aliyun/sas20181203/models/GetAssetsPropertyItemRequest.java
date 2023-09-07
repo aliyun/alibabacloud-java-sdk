@@ -39,9 +39,9 @@ public class GetAssetsPropertyItemRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The number of entries per page. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
      * <br>
-     * <p>>  We recommend that you do not leave this parameter empty.</p>
+     * <p>> We recommend that you do not leave this parameter empty.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

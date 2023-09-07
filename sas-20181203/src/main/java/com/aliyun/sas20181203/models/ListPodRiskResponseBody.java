@@ -135,7 +135,7 @@ public class ListPodRiskResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The timestamp when the pod was created. Unit: milliseconds.</p>
+         * <p>The timestamp that indicates the time when the pod was created. Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -147,7 +147,7 @@ public class ListPodRiskResponseBody extends TeaModel {
         public Integer hcCount;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The instance ID of the node.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;

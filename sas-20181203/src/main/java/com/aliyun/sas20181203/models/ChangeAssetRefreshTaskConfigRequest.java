@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
+    /**
+     * <p>The asset synchronization configurations.</p>
+     */
     @NameInMap("AssetRefreshConfigs")
     public java.util.List<ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs> assetRefreshConfigs;
 
+    /**
+     * <p>The region in which your Security Center service resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -32,12 +38,35 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
     }
 
     public static class ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs extends TeaModel {
+        /**
+         * <p>The interval at which assets are synchronized. Unit: minutes. Valid values:</p>
+         * <br>
+         * <p>*   **60**</p>
+         * <p>*   **180**</p>
+         * <p>*   **360**</p>
+         * <p>*   **720**</p>
+         * <p>*   **1440**</p>
+         * <p>*   **10080**</p>
+         */
         @NameInMap("SchedulePeriod")
         public Integer schedulePeriod;
 
+        /**
+         * <p>The status of the asset synchronization feature. Valid values:</p>
+         * <br>
+         * <p>*   **1**: Asset synchronization is enabled.</p>
+         * <p>*   **0**: Asset synchronization is disabled.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <br>
+         * <p>*   **3**: Tencent Cloud</p>
+         * <p>*   **4**: HUAWEI CLOUD</p>
+         * <p>*   **7**: Amazon Web Services (AWS)</p>
+         */
         @NameInMap("Vendor")
         public Integer vendor;
 

@@ -103,7 +103,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
 
     public static class ListInterceptionTargetPageResponseBodyRuleTargetList extends TeaModel {
         /**
-         * <p>The name of the application to which the network object belongs.</p>
+         * <p>The name of the application of the network object.</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -121,7 +121,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>An array that consists of the images of the network object.</p>
+         * <p>The images of the network object.</p>
          */
         @NameInMap("ImageList")
         public java.util.List<String> imageList;
@@ -133,7 +133,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The rule type. Valid values:</p>
+         * <p>The type of the rule. Valid value:</p>
          * <br>
          * <p>*   customize: custom rule</p>
          */
@@ -141,7 +141,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         public String ruleType;
 
         /**
-         * <p>An array that consists of the labels specified for the network object.</p>
+         * <p>The tags specified for the network object.</p>
          */
         @NameInMap("TagList")
         public java.util.List<String> tagList;
@@ -161,7 +161,7 @@ public class ListInterceptionTargetPageResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The type of the network object. Valid values:</p>
+         * <p>The type of the network object. Valid value:</p>
          * <br>
          * <p>*   IMAGE</p>
          */

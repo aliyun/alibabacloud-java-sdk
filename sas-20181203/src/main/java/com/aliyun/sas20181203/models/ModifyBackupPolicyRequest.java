@@ -17,20 +17,20 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The new configurations of the anti-ransomware policy that you want to modify. The value is a JSON string that contains the following fields:</p>
+     * <p>The configurations of the anti-ransomware policy that you want to modify. The value is a JSON string that contains the following fields:</p>
      * <br>
      * <p>*   **Source**: the directory that you want to protect. If you want to protect all directories, set this field to brackets \[].</p>
      * <br>
-     * <p>*   **Include**: the format of the file that you want to protect. Examples: "\*.jpg" and "\*.doc".</p>
+     * <p>*   **Include**: the format of the file that you want to protect. Examples: \*.jpg and \*.doc.</p>
      * <br>
-     * <p>*   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. You can call the DescribeExcludeSystemPath operation to query all directories before you specify the directory that you want to exclude. Example: "/home/user".</p>
+     * <p>*   **Exclude**: the directory that you want to exclude from the anti-ransomware policy. You can call the DescribeExcludeSystemPath operation to query all directories and then specify the directory that you want to exclude. Example: /home/user.</p>
      * <br>
      * <p>*   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour.</p>
      * <br>
-     * <p>    *   If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.</p>
-     * <p>    *   If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.</p>
+     * <p>    *   If you set this field to I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of three weeks.</p>
+     * <p>    *   If you set this field to I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is executed at an interval of 24 hours.</p>
      * <br>
-     * <p>*   **Retention**: the period during which backup data is retained. Unit: days. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
+     * <p>*   **Retention**: the period during which backup data is retained. Unit: day. If you set this field to 7, backup data is retained for a week. If you set this field to 365, backup data is retained for a year. If you set this field to -1, backup data is permanently retained.</p>
      * <br>
      * <p>*   **SpeedLimiter**: the limit on the network bandwidth for data backup tasks. If you set this field to 12:15:15360|6:12:5120, the maximum bandwidth for a data backup task is 15 Mbit/s from 12:00 to 15:00 and 5 Mbit/s from 06:00 to 12:00.</p>
      * <br>

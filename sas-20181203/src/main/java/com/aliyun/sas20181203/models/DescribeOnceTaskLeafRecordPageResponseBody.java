@@ -70,6 +70,9 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         @NameInMap("ClusterName")
         public String clusterName;
 
+        @NameInMap("CostTimeInfo")
+        public String costTimeInfo;
+
         /**
          * <p>The digest of the image.</p>
          */
@@ -169,6 +172,14 @@ public class DescribeOnceTaskLeafRecordPageResponseBody extends TeaModel {
         }
         public String getClusterName() {
             return this.clusterName;
+        }
+
+        public DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo setCostTimeInfo(String costTimeInfo) {
+            this.costTimeInfo = costTimeInfo;
+            return this;
+        }
+        public String getCostTimeInfo() {
+            return this.costTimeInfo;
         }
 
         public DescribeOnceTaskLeafRecordPageResponseBodyOnceTasksTaskImageInfo setDigest(String digest) {

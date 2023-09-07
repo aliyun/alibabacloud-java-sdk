@@ -11,7 +11,7 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array consisting of the assets to which the baseline check policy is applied.</p>
+     * <p>The information about the assets to which the baseline check policy is applied.</p>
      */
     @NameInMap("StrategyTargets")
     public java.util.List<DescribeStrategyTargetResponseBodyStrategyTargets> strategyTargets;
@@ -47,8 +47,8 @@ public class DescribeStrategyTargetResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the baseline check policy is applied to the asset group. Valid values:</p>
          * <br>
-         * <p>*   **add**: yes</p>
-         * <p>*   **del**: no</p>
+         * <p>*   **add**: The baseline check policy is applied to the asset group.</p>
+         * <p>*   **del**: the baseline check policy is not applied to the asset group.</p>
          */
         @NameInMap("Flag")
         public String flag;

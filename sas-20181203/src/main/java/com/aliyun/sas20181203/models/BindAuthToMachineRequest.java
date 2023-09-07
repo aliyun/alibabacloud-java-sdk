@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAuthToMachineRequest extends TeaModel {
     /**
-     * <p>The edition of Security Center. Valid values:</p>
+     * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
      * <br>
      * <p>*   **6**: Anti-virus edition</p>
      * <p>*   **5**: Advanced edition</p>
@@ -51,10 +51,10 @@ public class BindAuthToMachineRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The logical relationship among multiple search conditions. Valid values:</p>
+     * <p>The logical relationship that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:</p>
      * <br>
-     * <p>*   **OR**: Search conditions are evaluated by using a logical **OR**.</p>
-     * <p>*   **AND**: Search conditions are evaluated by using a logical **AND**.</p>
+     * <p>*   **OR******</p>
+     * <p>*   **AND******</p>
      */
     @NameInMap("LogicalExp")
     public String logicalExp;

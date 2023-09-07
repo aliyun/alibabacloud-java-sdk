@@ -81,7 +81,7 @@ public class DescribeWebLockProcessBlockStatisticsResponseBody extends TeaModel 
 
     public static class DescribeWebLockProcessBlockStatisticsResponseBodyList extends TeaModel {
         /**
-         * <p>The number of processes on the current page.</p>
+         * <p>The number of processes that are returned on the current page.</p>
          */
         @NameInMap("Count")
         public Integer count;
