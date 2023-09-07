@@ -58,6 +58,9 @@ public class SetDevicePropertyRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("Qos")
+    public Integer qos;
+
     public static SetDevicePropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDevicePropertyRequest self = new SetDevicePropertyRequest();
         return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class SetDevicePropertyRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
+    }
+
+    public SetDevicePropertyRequest setQos(Integer qos) {
+        this.qos = qos;
+        return this;
+    }
+    public Integer getQos() {
+        return this.qos;
     }
 
 }

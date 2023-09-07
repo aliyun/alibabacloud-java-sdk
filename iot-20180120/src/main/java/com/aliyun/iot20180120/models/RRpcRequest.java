@@ -30,9 +30,6 @@ public class RRpcRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    /**
-     * <p>The string that is obtained by performing Base64 encoding on the message. Example: `dGhpcyBpcyBhbiBleGFtcGxl`.</p>
-     */
     @NameInMap("RequestBase64Byte")
     public String requestBase64Byte;
 
