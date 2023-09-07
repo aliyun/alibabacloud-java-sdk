@@ -120,6 +120,107 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.recognizeAirItineraryWithOptions(request, runtime);
     }
 
+    public RecognizeAllTextResponse recognizeAllTextWithOptions(RecognizeAllTextRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RecognizeAllTextShrinkRequest request = new RecognizeAllTextShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.advancedConfig)) {
+            request.advancedConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.advancedConfig, "AdvancedConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.idCardConfig)) {
+            request.idCardConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.idCardConfig, "IdCardConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.internationalIdCardConfig)) {
+            request.internationalIdCardConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.internationalIdCardConfig, "InternationalIdCardConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.multiLanConfig)) {
+            request.multiLanConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multiLanConfig, "MultiLanConfig", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedConfigShrink)) {
+            query.put("AdvancedConfig", request.advancedConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idCardConfigShrink)) {
+            query.put("IdCardConfig", request.idCardConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.internationalIdCardConfigShrink)) {
+            query.put("InternationalIdCardConfig", request.internationalIdCardConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multiLanConfigShrink)) {
+            query.put("MultiLanConfig", request.multiLanConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputBarCode)) {
+            query.put("OutputBarCode", request.outputBarCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputCoordinate)) {
+            query.put("OutputCoordinate", request.outputCoordinate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputFigure)) {
+            query.put("OutputFigure", request.outputFigure);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputKVExcel)) {
+            query.put("OutputKVExcel", request.outputKVExcel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputOricoord)) {
+            query.put("OutputOricoord", request.outputOricoord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputQrcode)) {
+            query.put("OutputQrcode", request.outputQrcode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outputStamp)) {
+            query.put("OutputStamp", request.outputStamp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            query.put("Url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", request.body),
+            new TeaPair("stream", tmpReq.body)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RecognizeAllText"),
+            new TeaPair("version", "2021-07-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RecognizeAllTextResponse());
+    }
+
+    public RecognizeAllTextResponse recognizeAllText(RecognizeAllTextRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.recognizeAllTextWithOptions(request, runtime);
+    }
+
     public RecognizeBankAcceptanceResponse recognizeBankAcceptanceWithOptions(RecognizeBankAcceptanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
