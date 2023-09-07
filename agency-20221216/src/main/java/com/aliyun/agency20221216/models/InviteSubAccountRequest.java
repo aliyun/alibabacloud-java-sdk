@@ -27,6 +27,9 @@ public class InviteSubAccountRequest extends TeaModel {
         @NameInMap("CreditLine")
         public String creditLine;
 
+        @NameInMap("CustomerId")
+        public String customerId;
+
         @NameInMap("EmailAddress")
         public String emailAddress;
 
@@ -61,6 +64,14 @@ public class InviteSubAccountRequest extends TeaModel {
         }
         public String getCreditLine() {
             return this.creditLine;
+        }
+
+        public InviteSubAccountRequestAccountInfoList setCustomerId(String customerId) {
+            this.customerId = customerId;
+            return this;
+        }
+        public String getCustomerId() {
+            return this.customerId;
         }
 
         public InviteSubAccountRequestAccountInfoList setEmailAddress(String emailAddress) {

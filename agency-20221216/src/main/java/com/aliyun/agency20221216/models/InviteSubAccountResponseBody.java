@@ -14,7 +14,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Results")
-    public java.util.List<InviteSubAccountResponseBodyResults> results;
+    public InviteSubAccountResponseBodyResults results;
 
     @NameInMap("Success")
     public Boolean success;
@@ -48,11 +48,11 @@ public class InviteSubAccountResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InviteSubAccountResponseBody setResults(java.util.List<InviteSubAccountResponseBodyResults> results) {
+    public InviteSubAccountResponseBody setResults(InviteSubAccountResponseBodyResults results) {
         this.results = results;
         return this;
     }
-    public java.util.List<InviteSubAccountResponseBodyResults> getResults() {
+    public InviteSubAccountResponseBodyResults getResults() {
         return this.results;
     }
 
@@ -64,7 +64,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class InviteSubAccountResponseBodyResultsResult extends TeaModel {
+    public static class InviteSubAccountResponseBodyResultsResultResult extends TeaModel {
         @NameInMap("Days")
         public Integer days;
 
@@ -74,12 +74,12 @@ public class InviteSubAccountResponseBody extends TeaModel {
         @NameInMap("RegUrl")
         public String regUrl;
 
-        public static InviteSubAccountResponseBodyResultsResult build(java.util.Map<String, ?> map) throws Exception {
-            InviteSubAccountResponseBodyResultsResult self = new InviteSubAccountResponseBodyResultsResult();
+        public static InviteSubAccountResponseBodyResultsResultResult build(java.util.Map<String, ?> map) throws Exception {
+            InviteSubAccountResponseBodyResultsResultResult self = new InviteSubAccountResponseBodyResultsResultResult();
             return TeaModel.build(map, self);
         }
 
-        public InviteSubAccountResponseBodyResultsResult setDays(Integer days) {
+        public InviteSubAccountResponseBodyResultsResultResult setDays(Integer days) {
             this.days = days;
             return this;
         }
@@ -87,7 +87,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             return this.days;
         }
 
-        public InviteSubAccountResponseBodyResultsResult setInviteId(Long inviteId) {
+        public InviteSubAccountResponseBodyResultsResultResult setInviteId(Long inviteId) {
             this.inviteId = inviteId;
             return this;
         }
@@ -95,7 +95,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             return this.inviteId;
         }
 
-        public InviteSubAccountResponseBodyResultsResult setRegUrl(String regUrl) {
+        public InviteSubAccountResponseBodyResultsResultResult setRegUrl(String regUrl) {
             this.regUrl = regUrl;
             return this;
         }
@@ -105,7 +105,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
 
     }
 
-    public static class InviteSubAccountResponseBodyResults extends TeaModel {
+    public static class InviteSubAccountResponseBodyResultsResult extends TeaModel {
         @NameInMap("Code")
         public String code;
 
@@ -113,17 +113,17 @@ public class InviteSubAccountResponseBody extends TeaModel {
         public String message;
 
         @NameInMap("Result")
-        public InviteSubAccountResponseBodyResultsResult result;
+        public InviteSubAccountResponseBodyResultsResultResult result;
 
         @NameInMap("Success")
         public Boolean success;
 
-        public static InviteSubAccountResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
-            InviteSubAccountResponseBodyResults self = new InviteSubAccountResponseBodyResults();
+        public static InviteSubAccountResponseBodyResultsResult build(java.util.Map<String, ?> map) throws Exception {
+            InviteSubAccountResponseBodyResultsResult self = new InviteSubAccountResponseBodyResultsResult();
             return TeaModel.build(map, self);
         }
 
-        public InviteSubAccountResponseBodyResults setCode(String code) {
+        public InviteSubAccountResponseBodyResultsResult setCode(String code) {
             this.code = code;
             return this;
         }
@@ -131,7 +131,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
             return this.code;
         }
 
-        public InviteSubAccountResponseBodyResults setMessage(String message) {
+        public InviteSubAccountResponseBodyResultsResult setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -139,20 +139,39 @@ public class InviteSubAccountResponseBody extends TeaModel {
             return this.message;
         }
 
-        public InviteSubAccountResponseBodyResults setResult(InviteSubAccountResponseBodyResultsResult result) {
+        public InviteSubAccountResponseBodyResultsResult setResult(InviteSubAccountResponseBodyResultsResultResult result) {
             this.result = result;
             return this;
         }
-        public InviteSubAccountResponseBodyResultsResult getResult() {
+        public InviteSubAccountResponseBodyResultsResultResult getResult() {
             return this.result;
         }
 
-        public InviteSubAccountResponseBodyResults setSuccess(Boolean success) {
+        public InviteSubAccountResponseBodyResultsResult setSuccess(Boolean success) {
             this.success = success;
             return this;
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+    }
+
+    public static class InviteSubAccountResponseBodyResults extends TeaModel {
+        @NameInMap("Result")
+        public java.util.List<InviteSubAccountResponseBodyResultsResult> result;
+
+        public static InviteSubAccountResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
+            InviteSubAccountResponseBodyResults self = new InviteSubAccountResponseBodyResults();
+            return TeaModel.build(map, self);
+        }
+
+        public InviteSubAccountResponseBodyResults setResult(java.util.List<InviteSubAccountResponseBodyResultsResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<InviteSubAccountResponseBodyResultsResult> getResult() {
+            return this.result;
         }
 
     }
