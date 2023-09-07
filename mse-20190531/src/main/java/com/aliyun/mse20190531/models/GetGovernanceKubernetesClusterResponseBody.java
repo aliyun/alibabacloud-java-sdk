@@ -69,9 +69,6 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyDataNamespaces extends TeaModel {
-        @NameInMap("Labels")
-        public java.util.Map<String, String> labels;
-
         @NameInMap("MseNamespace")
         public String mseNamespace;
 
@@ -84,14 +81,6 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         public static GetGovernanceKubernetesClusterResponseBodyDataNamespaces build(java.util.Map<String, ?> map) throws Exception {
             GetGovernanceKubernetesClusterResponseBodyDataNamespaces self = new GetGovernanceKubernetesClusterResponseBodyDataNamespaces();
             return TeaModel.build(map, self);
-        }
-
-        public GetGovernanceKubernetesClusterResponseBodyDataNamespaces setLabels(java.util.Map<String, String> labels) {
-            this.labels = labels;
-            return this;
-        }
-        public java.util.Map<String, String> getLabels() {
-            return this.labels;
         }
 
         public GetGovernanceKubernetesClusterResponseBodyDataNamespaces setMseNamespace(String mseNamespace) {

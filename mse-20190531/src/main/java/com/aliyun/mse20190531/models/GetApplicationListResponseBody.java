@@ -10,9 +10,6 @@ public class GetApplicationListResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetApplicationListResponseBodyData data;
 
-    @NameInMap("ErrorCode")
-    public String errorCode;
-
     /**
      * <p>The message returned.</p>
      */
@@ -45,14 +42,6 @@ public class GetApplicationListResponseBody extends TeaModel {
     }
     public GetApplicationListResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetApplicationListResponseBody setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-        return this;
-    }
-    public String getErrorCode() {
-        return this.errorCode;
     }
 
     public GetApplicationListResponseBody setMessage(String message) {
@@ -130,9 +119,6 @@ public class GetApplicationListResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public Long status;
-
-        @NameInMap("TagCount")
-        public Long tagCount;
 
         /**
          * <p>The ID of the user.</p>
@@ -215,14 +201,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
         public Long getStatus() {
             return this.status;
-        }
-
-        public GetApplicationListResponseBodyDataResult setTagCount(Long tagCount) {
-            this.tagCount = tagCount;
-            return this;
-        }
-        public Long getTagCount() {
-            return this.tagCount;
         }
 
         public GetApplicationListResponseBodyDataResult setUserId(String userId) {
