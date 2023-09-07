@@ -4,6 +4,14 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePendingMaintenanceActionRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the historical tasks. Valid values:</p>
+     * <br>
+     * <p>*   **0**: returns the current task.</p>
+     * <p>*   **1**: returns the historical tasks.</p>
+     * <br>
+     * <p>Default value: **0**.</p>
+     */
     @NameInMap("IsHistory")
     public Integer isHistory;
 
@@ -13,15 +21,31 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. The value of this parameter must be an integer that is greater than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: **30**, **50**, or **100**.</p>
+     * <br>
+     * <p>Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID of the pending event. You can call the [DescribeRegions](~~98041~~) operation to query the regions and zones that are supported by PolarDB.</p>
+     * <p>>- You can set this parameter to **all** to view all pending events within your account.</p>
+     * <p>>- If you set `Region` to **all**, you must set `TaskType` to **all**.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -34,6 +58,17 @@ public class DescribePendingMaintenanceActionRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The task type of pending events. Valid values:</p>
+     * <br>
+     * <p>*   **DatabaseSoftwareUpgrading**: database software upgrades</p>
+     * <p>*   **DatabaseHardwareMaintenance**: hardware maintenance and upgrades</p>
+     * <p>*   **DatabaseStorageUpgrading**: database storage upgrades</p>
+     * <p>*   **DatabaseProxyUpgrading**: minor version upgrades of the proxy</p>
+     * <p>*   **all**: queries the details of the pending events of all preceding types.</p>
+     * <br>
+     * <p>> If the `Region` parameter is set to **all**, the `TaskType` parameter must be set to **all**.</p>
+     */
     @NameInMap("TaskType")
     public String taskType;
 

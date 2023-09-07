@@ -4,9 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeMaskingRulesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the masking rule.</p>
+     */
     @NameInMap("RuleNameList")
     public String ruleNameList;
 

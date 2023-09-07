@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
+        /**
+         * <p>Indicates whether virtual private clouds (VPCs) are supported.</p>
+         */
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
+        /**
+         * <p>The ID of the zone.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -81,9 +93,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The list of zones.</p>
+         */
         @NameInMap("Zones")
         public DescribeRegionsResponseBodyRegionsRegionZones zones;
 

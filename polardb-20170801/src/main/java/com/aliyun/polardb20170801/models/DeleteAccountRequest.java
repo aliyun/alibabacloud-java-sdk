@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountRequest extends TeaModel {
+    /**
+     * <p>The username of the account.</p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

@@ -4,12 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBLinksResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>Details about the database links.</p>
+     */
     @NameInMap("DBLinkInfos")
     public java.util.List<DescribeDBLinksResponseBodyDBLinkInfos> DBLinkInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,21 +52,41 @@ public class DescribeDBLinksResponseBody extends TeaModel {
     }
 
     public static class DescribeDBLinksResponseBodyDBLinkInfos extends TeaModel {
+        /**
+         * <p>The ID of the source cluster that the database link connects.</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <p>The name of the database link.</p>
+         */
         @NameInMap("DBLinkName")
         public String DBLinkName;
 
+        /**
+         * <p>The name of the source database of the database link.</p>
+         */
         @NameInMap("SourceDBName")
         public String sourceDBName;
 
+        /**
+         * <p>The account of the destination database of the database link.</p>
+         */
         @NameInMap("TargetAccount")
         public String targetAccount;
 
+        /**
+         * <p>The ID of the destination cluster that the database link connects.</p>
+         * <br>
+         * <p>> If the destination cluster is not a PolarDB for Oracle cluster, the returned value is empty.</p>
+         */
         @NameInMap("TargetDBInstanceName")
         public String targetDBInstanceName;
 
+        /**
+         * <p>The name of the destination database of the database link.</p>
+         */
         @NameInMap("TargetDBName")
         public String targetDBName;
 

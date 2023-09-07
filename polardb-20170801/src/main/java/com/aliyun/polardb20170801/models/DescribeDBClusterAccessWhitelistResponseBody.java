@@ -4,12 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
+    /**
+     * <p>The Elastic Compute Service (ECS) security groups that are associated with the cluster.</p>
+     */
     @NameInMap("DBClusterSecurityGroups")
     public DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroups DBClusterSecurityGroups;
 
+    /**
+     * <p>The details about the cluster.</p>
+     */
     @NameInMap("Items")
     public DescribeDBClusterAccessWhitelistResponseBodyItems items;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAccessWhitelistResponseBodyDBClusterSecurityGroupsDBClusterSecurityGroup extends TeaModel {
+        /**
+         * <p>The ID of the ECS security group.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The name of the ECS security group.</p>
+         */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 
@@ -92,12 +107,36 @@ public class DescribeDBClusterAccessWhitelistResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAccessWhitelistResponseBodyItemsDBClusterIPArray extends TeaModel {
+        /**
+         * <p>The attributes of the IP whitelist group. Set this parameter to **hidden** to hide the IP whitelist group in the console.</p>
+         * <br>
+         * <p>> *   The IP whitelist group that has appeared in the console cannot be hidden.</p>
+         * <p>> *   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.</p>
+         */
         @NameInMap("DBClusterIPArrayAttribute")
         public String DBClusterIPArrayAttribute;
 
+        /**
+         * <p>The name of the IP whitelist group. The group name must be 2 to 120 characters in length and consists of lowercase letters and digits. It must start with a letter, and end with a letter or a digit.</p>
+         * <br>
+         * <p>*   If the specified whitelist group name does not exist, the whitelist group is created.</p>
+         * <p>*   If the specified whitelist group name exists, the whitelist group is modified.</p>
+         * <p>*   If you do not specify this parameter, the default group is modified.</p>
+         * <br>
+         * <p>> *   You can create a maximum of 50 IP whitelist groups for a cluster.</p>
+         * <p>>*   This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.</p>
+         */
         @NameInMap("DBClusterIPArrayName")
         public String DBClusterIPArrayName;
 
+        /**
+         * <p>The IP addresses or Classless Inter-Domain Routing (CIDR) blocks in the IP whitelist group. You can add 1,000 IP addresses or CIDR blocks to all the IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported:</p>
+         * <br>
+         * <p>*   IP addresses. Example: 10.23.12.24.</p>
+         * <p>*   CIDR blocks. Example: 10.23.12.24/24. 24 indicates the length of the prefix of the CIDR block. The length is the range of 1 to 32.</p>
+         * <br>
+         * <p>>  This parameter can be specified only when the **WhiteListType** parameter is set to **IP**.</p>
+         */
         @NameInMap("SecurityIps")
         public String securityIps;
 

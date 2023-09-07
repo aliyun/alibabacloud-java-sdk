@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhitelistRequest extends TeaModel {
+    /**
+     * <p>The ID of the PolarDB cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

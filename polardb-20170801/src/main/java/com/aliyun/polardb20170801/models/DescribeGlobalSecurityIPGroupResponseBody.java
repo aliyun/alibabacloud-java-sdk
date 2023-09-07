@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
+    /**
+     * <p>The details of the global IP whitelist template.</p>
+     */
     @NameInMap("GlobalSecurityIPGroup")
     public java.util.List<DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup> globalSecurityIPGroup;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,39 @@ public class DescribeGlobalSecurityIPGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalSecurityIPGroupResponseBodyGlobalSecurityIPGroup extends TeaModel {
+        /**
+         * <p>The details of the clusters that are associated with the global IP address whitelist template.</p>
+         */
         @NameInMap("DBInstances")
         public java.util.List<String> DBInstances;
 
+        /**
+         * <p>The IP address in the global IP whitelist template.</p>
+         * <br>
+         * <p>>  Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.</p>
+         */
         @NameInMap("GIpList")
         public String GIpList;
 
+        /**
+         * <p>The name of the global IP whitelist template. The name must meet the following requirements:</p>
+         * <br>
+         * <p>*   The name can contain lowercase letters, digits, and underscores (\_).</p>
+         * <p>*   The name must start with a letter and end with a letter or a digit.</p>
+         * <p>*   The name must be 2 to 120 characters in length.</p>
+         */
         @NameInMap("GlobalIgName")
         public String globalIgName;
 
+        /**
+         * <p>The ID of the global IP whitelist template.</p>
+         */
         @NameInMap("GlobalSecurityGroupId")
         public String globalSecurityGroupId;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

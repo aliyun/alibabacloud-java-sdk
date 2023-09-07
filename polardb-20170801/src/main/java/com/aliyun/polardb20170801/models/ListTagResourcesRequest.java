@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    /**
+     * <p>The token required to obtain more results. This parameter is not required in the first query. If the first query does not return all results, you can use the token that is returned from the first query in the next query to obtain more results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -13,9 +16,21 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~98041~~) operation to query available region IDs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The cluster ID. To query the tags of multiple clusters, click **Add** to add cluster IDs.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   You must specify at least one of the `ResourceId.N` and `Tag.N.Key` parameters.</p>
+     * <br>
+     * <p>*   If you specify the `ResourceId.N` parameter, you can add a maximum of 50 cluster IDs at a time.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +40,15 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **cluster**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
@@ -109,9 +130,21 @@ public class ListTagResourcesRequest extends TeaModel {
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. To query the details of clusters to which multiple tags are bound, click **Add** to add tags.</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   You must specify at least one of the `ResourceId.N` and `Tag.N.Key` parameters.</p>
+         * <br>
+         * <p>*   If you specify the `Tag.N.Key` parameter, you can create up to 20 tags at a time.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value that is paired with the tag key. This parameter can be set to an empty string.</p>
+         */
         @NameInMap("Value")
         public String value;
 

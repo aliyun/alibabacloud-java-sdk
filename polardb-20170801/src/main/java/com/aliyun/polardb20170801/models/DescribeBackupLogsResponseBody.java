@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupLogsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the backup logs.</p>
+     */
     @NameInMap("Items")
     public DescribeBackupLogsResponseBodyItems items;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
 
@@ -65,27 +80,51 @@ public class DescribeBackupLogsResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupLogsResponseBodyItemsBackupLog extends TeaModel {
+        /**
+         * <p>The time when the backup task ended. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupLogEndTime")
         public String backupLogEndTime;
 
+        /**
+         * <p>The ID of the backup log.</p>
+         */
         @NameInMap("BackupLogId")
         public String backupLogId;
 
+        /**
+         * <p>The name of the backup log.</p>
+         */
         @NameInMap("BackupLogName")
         public String backupLogName;
 
+        /**
+         * <p>The size of the backup log. Unit: bytes.</p>
+         */
         @NameInMap("BackupLogSize")
         public String backupLogSize;
 
+        /**
+         * <p>The time when the backup task started. The time follows the ISO 8601 standard in the `YYYY-MM-DD\"T\"HH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("BackupLogStartTime")
         public String backupLogStartTime;
 
+        /**
+         * <p>The public URL used to download the backup log.</p>
+         */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
+        /**
+         * <p>The internal URL used to download the backup log.</p>
+         */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
+        /**
+         * <p>The time when the download URL expires.</p>
+         */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 

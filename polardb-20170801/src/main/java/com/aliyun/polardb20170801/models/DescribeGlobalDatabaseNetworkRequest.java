@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworkRequest extends TeaModel {
+    /**
+     * <p>The ID of the GDN.</p>
+     */
     @NameInMap("GDNId")
     public String GDNId;
 
@@ -13,6 +16,9 @@ public class DescribeGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

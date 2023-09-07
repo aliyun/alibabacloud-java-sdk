@@ -16,6 +16,12 @@ public class RefreshDBClusterStorageUsageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Specifies whether to enable real-time synchronization. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**: T + 1</p>
+     */
     @NameInMap("SyncRealTime")
     public Boolean syncRealTime;
 

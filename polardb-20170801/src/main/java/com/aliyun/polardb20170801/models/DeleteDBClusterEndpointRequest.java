@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBClusterEndpointRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the custom cluster endpoint.</p>
+     */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 

@@ -4,12 +4,26 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster that will become the primary cluster in the GDN.</p>
+     * <br>
+     * <p>You can call the [DescribeGlobalDatabaseNetwork](~~264580~~) operation to query the ID of the cluster in the GDN.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>Specifies whether to forcibly switch over the primary and secondary clusters in the GDN. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Forced")
     public Boolean forced;
 
+    /**
+     * <p>The ID of the GDN.</p>
+     */
     @NameInMap("GDNId")
     public String GDNId;
 
@@ -19,9 +33,15 @@ public class SwitchOverGlobalDatabaseNetworkRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

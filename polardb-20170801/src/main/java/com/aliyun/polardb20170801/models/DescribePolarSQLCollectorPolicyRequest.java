@@ -4,6 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribePolarSQLCollectorPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all the clusters for your account, such as the cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

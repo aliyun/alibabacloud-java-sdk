@@ -4,12 +4,25 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DeleteDBEndpointAddressRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to query the details of all clusters that belong to your account, such as the cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the endpoint.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusterEndpoints](~~98205~~) operation to query the endpoints of a specified PolarDB cluster.</p>
+     */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
 
+    /**
+     * <p>The network type of the endpoint. Set the value to **Public** (public network).</p>
+     */
     @NameInMap("NetType")
     public String netType;
 

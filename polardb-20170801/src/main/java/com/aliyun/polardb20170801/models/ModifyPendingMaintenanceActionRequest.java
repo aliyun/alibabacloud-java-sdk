@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyPendingMaintenanceActionRequest extends TeaModel {
+    /**
+     * <p>The ID of the task. You can specify multiple task IDs at a time to modify the switching time of the tasks in a unified manner. The task IDs must be separated with commas (,).</p>
+     */
     @NameInMap("Ids")
     public String ids;
 
@@ -13,9 +16,17 @@ public class ModifyPendingMaintenanceActionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query the region ID details.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -28,6 +39,9 @@ public class ModifyPendingMaintenanceActionRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The time that you specify for the background to perform the action that corresponds to the pending event. Specify the time in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 

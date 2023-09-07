@@ -4,15 +4,29 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeScheduleTasksResponseBody extends TeaModel {
+    /**
+     * <p>The result data that is returned.</p>
+     */
     @NameInMap("Data")
     public DescribeScheduleTasksResponseBodyData data;
 
+    /**
+     * <p>The message that is returned for the request.</p>
+     * <br>
+     * <p>>  If the request is successful, **Successful** is returned. If the request fails, an error message such as an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,39 +68,80 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeScheduleTasksResponseBodyDataTimerInfos extends TeaModel {
+        /**
+         * <p>The type of the scheduled tasks.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("DbClusterDescription")
         public String dbClusterDescription;
 
+        /**
+         * <p>The state of the cluster.</p>
+         */
         @NameInMap("DbClusterStatus")
         public String dbClusterStatus;
 
+        /**
+         * <p>The ID of the order.</p>
+         * <br>
+         * <p>>  This parameter is returned only when you set the `Action` parameter to **CreateDBNodes** or **ModifyDBNodeClass**.</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+         */
         @NameInMap("PlannedEndTime")
         public String plannedEndTime;
 
+        /**
+         * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+         */
         @NameInMap("PlannedStartTime")
         public String plannedStartTime;
 
+        /**
+         * <p>The expected start time of the task. The time is displayed in UTC.</p>
+         */
         @NameInMap("PlannedTime")
         public String plannedTime;
 
+        /**
+         * <p>The ID of the region in which the scheduled task runs.</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The state of the scheduled task.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Indicates whether the scheduled task can be canceled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("TaskCancel")
         public Boolean taskCancel;
 
+        /**
+         * <p>The ID of the task.</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
@@ -194,15 +249,27 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeScheduleTasksResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number of the page returned.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The details of the scheduled task.</p>
+         */
         @NameInMap("TimerInfos")
         public java.util.List<DescribeScheduleTasksResponseBodyDataTimerInfos> timerInfos;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalRecordCount")
         public Integer totalRecordCount;
 

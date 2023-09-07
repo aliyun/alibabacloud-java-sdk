@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterMonitorResponseBody extends TeaModel {
+    /**
+     * <p>The interval at which monitoring data is collected. Unit: seconds.</p>
+     */
     @NameInMap("Period")
     public String period;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

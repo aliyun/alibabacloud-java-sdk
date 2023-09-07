@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The details about the cluster.</p>
+     */
     @NameInMap("Items")
     public DescribeDBClustersWithBackupsResponseBodyItems items;
 
+    /**
+     * <p>The total number of returned pages.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of clusters returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,60 +80,146 @@ public class DescribeDBClustersWithBackupsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClustersWithBackupsResponseBodyItemsDBCluster extends TeaModel {
+        /**
+         * <p>The time when the cluster was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("DBClusterDescription")
         public String DBClusterDescription;
 
+        /**
+         * <p>The ID of cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The network type of the cluster.</p>
+         */
         @NameInMap("DBClusterNetworkType")
         public String DBClusterNetworkType;
 
+        /**
+         * <p>The status of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   Creating: The cluster is being created.</p>
+         * <p>*   Running: The cluster is running.</p>
+         * <p>*   Deleting: The cluster is being released.</p>
+         * <p>*   Rebooting: The cluster is restarting.</p>
+         * <p>*   DBNodeCreating: The node is being added.</p>
+         * <p>*   DBNodeDeleting: The node is being deleted.</p>
+         * <p>*   ClassChanging: The specifications of the node are being changed.</p>
+         * <p>*   NetAddressCreating: The network connection is being created.</p>
+         * <p>*   NetAddressDeleting: The network connection is being deleted.</p>
+         * <p>*   NetAddressModifying: The network connection is being modified.</p>
+         * <p>*   Deleted: The cluster has been released.</p>
+         */
         @NameInMap("DBClusterStatus")
         public String DBClusterStatus;
 
+        /**
+         * <p>The specifications of the node.</p>
+         */
         @NameInMap("DBNodeClass")
         public String DBNodeClass;
 
+        /**
+         * <p>The type of the database engine.</p>
+         */
         @NameInMap("DBType")
         public String DBType;
 
+        /**
+         * <p>The version of the database engine.</p>
+         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <p>The time when the cluster was deleted.</p>
+         */
         @NameInMap("DeletedTime")
         public String deletedTime;
 
+        /**
+         * <p>Indicates whether the cluster is locked and can be deleted. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The cluster is not locked and can be deleted.</p>
+         * <p>*   **1**: The cluster is locked and cannot be deleted.</p>
+         */
         @NameInMap("DeletionLock")
         public Integer deletionLock;
 
+        /**
+         * <p>The type of the database engine.</p>
+         */
         @NameInMap("Engine")
         public String engine;
 
+        /**
+         * <p>The time when the cluster expires.</p>
+         * <br>
+         * <p>> A specific value will be returned only for subscription clusters. For pay-as-you-go clusters, an empty string will be returned.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>Indicates whether the cluster has expired.</p>
+         * <br>
+         * <p>> A specific value will be returned only for subscription clusters.</p>
+         */
         @NameInMap("Expired")
         public String expired;
 
+        /**
+         * <p>Indicates whether the cluster was released. Valid values:</p>
+         * <br>
+         * <p>*   1: released</p>
+         * <p>*   0: not released</p>
+         */
         @NameInMap("IsDeleted")
         public Integer isDeleted;
 
+        /**
+         * <p>The state of the cluster lock. Valid values:</p>
+         * <br>
+         * <p>*   **Unlock**: The cluster is not locked.</p>
+         * <p>*   **ManualLock**: The cluster is manually locked.</p>
+         * <p>*   **LockByExpiration**: The cluster is automatically locked after the cluster expires.</p>
+         */
         @NameInMap("LockMode")
         public String lockMode;
 
+        /**
+         * <p>The billing method. Valid values:</p>
+         * <br>
+         * <p>*   **Postpaid**: pay-as-you-go.</p>
+         * <p>*   **Prepaid**: subscription</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
+        /**
+         * <p>The region ID of the cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The VPC ID of the cluster.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the zone in which the instance is located.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 

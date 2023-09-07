@@ -4,9 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CheckDBNameRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query information about all clusters that are deployed in a region, such as the cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 

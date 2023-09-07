@@ -4,8 +4,20 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterParametersRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    /**
+     * <p>The kernel parameter. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: the kernel parameters.</p>
+     * <p>*   **MigrationFromRDS**: compares the current parameters with the parameters of the source RDS instance.</p>
+     */
+    @NameInMap("DescribeType")
+    public String describeType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -30,6 +42,14 @@ public class DescribeDBClusterParametersRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeDBClusterParametersRequest setDescribeType(String describeType) {
+        this.describeType = describeType;
+        return this;
+    }
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     public DescribeDBClusterParametersRequest setOwnerAccount(String ownerAccount) {

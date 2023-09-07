@@ -4,9 +4,19 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterTemplatesRequest extends TeaModel {
+    /**
+     * <p>The type of the database engine. Only **MySQL** is supported.</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The version of the database. Valid values:</p>
+     * <br>
+     * <p>*   **5.6**</p>
+     * <p>*   **5.7**</p>
+     * <p>*   **8.0**</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
@@ -16,9 +26,17 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query all regions that are available within your account, such as the region IDs.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

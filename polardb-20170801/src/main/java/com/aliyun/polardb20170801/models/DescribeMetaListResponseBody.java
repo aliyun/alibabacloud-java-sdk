@@ -7,21 +7,39 @@ public class DescribeMetaListResponseBody extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The details of databases and tables that can be restored.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeMetaListResponseBodyItems> items;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned pages.</p>
+     */
     @NameInMap("TotalPageCount")
     public String totalPageCount;
 
+    /**
+     * <p>The total number of entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public String totalRecordCount;
 
@@ -87,9 +105,15 @@ public class DescribeMetaListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetaListResponseBodyItems extends TeaModel {
+        /**
+         * <p>The name of the database that can be restored.</p>
+         */
         @NameInMap("Database")
         public String database;
 
+        /**
+         * <p>The name of the table that can be restored.</p>
+         */
         @NameInMap("Tables")
         public java.util.List<String> tables;
 

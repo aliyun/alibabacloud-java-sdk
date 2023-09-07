@@ -4,6 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CancelScheduleTasksRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,6 +18,9 @@ public class CancelScheduleTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -22,6 +30,12 @@ public class CancelScheduleTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the scheduled task that you want to cancel.</p>
+     * <br>
+     * <p>> *   You can call the [DescribeScheduleTasks](~~199648~~) operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.</p>
+     * <p>>*   You can cancel only the tasks whose status is `pending`.``</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 

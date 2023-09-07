@@ -4,15 +4,27 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabasesResponseBody extends TeaModel {
+    /**
+     * <p>Details about databases.</p>
+     */
     @NameInMap("Databases")
     public DescribeDatabasesResponseBodyDatabases databases;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,43 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesDatabaseAccountsAccount extends TeaModel {
+        /**
+         * <p>The username of the account.</p>
+         * <br>
+         * <p>> A PolarDB for MySQL cluster does not support privileged accounts.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The permissions that are granted to the account. Valid values:</p>
+         * <br>
+         * <p>*   **ReadWrite**: read and write permissions</p>
+         * <p>*   **ReadOnly**: read-only permissions</p>
+         * <p>*   **DMLOnly**: The account is granted the permissions to execute only DML statements on the database.</p>
+         * <p>*   **DDLOnly**: The account is granted the permissions to execute only DDL statements on the database.</p>
+         * <p>*   **ReadIndex**: The account has the read and index permissions on the database.</p>
+         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
+        /**
+         * <p>The state of the account. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>The authorization state of the account. Valid values:</p>
+         * <br>
+         * <p>*   **Empowering**: The system is granting permissions to the account.</p>
+         * <p>*   **Empowered**: Permissions are granted to the account.</p>
+         * <p>*   **Removing**: The system is revoking permissions from the account.</p>
+         */
         @NameInMap("PrivilegeStatus")
         public String privilegeStatus;
 
@@ -125,23 +165,57 @@ public class DescribeDatabasesResponseBody extends TeaModel {
     }
 
     public static class DescribeDatabasesResponseBodyDatabasesDatabase extends TeaModel {
+        /**
+         * <p>Details about the accounts.</p>
+         * <br>
+         * <p>> A PolarDB for MySQL cluster does not support privileged accounts.</p>
+         */
         @NameInMap("Accounts")
         public DescribeDatabasesResponseBodyDatabasesDatabaseAccounts accounts;
 
+        /**
+         * <p>The character set that the database uses. For more information, see [Character set tables](~~99716~~).</p>
+         */
         @NameInMap("CharacterSetName")
         public String characterSetName;
 
+        /**
+         * <p>The description of the database.</p>
+         */
         @NameInMap("DBDescription")
         public String DBDescription;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
+        /**
+         * <p>The state of the database. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Running**</p>
+         * <p>*   **Deleting**</p>
+         */
         @NameInMap("DBStatus")
         public String DBStatus;
 
+        /**
+         * <p>The type of the database engine. Valid values:</p>
+         * <br>
+         * <p>*   **MySQL**</p>
+         * <p>*   **Oracle**</p>
+         * <p>*   **PostgreSQL**</p>
+         */
         @NameInMap("Engine")
         public String engine;
+
+        /**
+         * <p>The ID of the primary node in the cluster of Multi-master Cluster (Database/Table) Edition.</p>
+         */
+        @NameInMap("MasterID")
+        public String masterID;
 
         public static DescribeDatabasesResponseBodyDatabasesDatabase build(java.util.Map<String, ?> map) throws Exception {
             DescribeDatabasesResponseBodyDatabasesDatabase self = new DescribeDatabasesResponseBodyDatabasesDatabase();
@@ -194,6 +268,14 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeDatabasesResponseBodyDatabasesDatabase setMasterID(String masterID) {
+            this.masterID = masterID;
+            return this;
+        }
+        public String getMasterID() {
+            return this.masterID;
         }
 
     }

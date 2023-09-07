@@ -4,12 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupLogsRequest extends TeaModel {
+    /**
+     * <p>The region for the backup data.</p>
+     */
     @NameInMap("BackupRegion")
     public String backupRegion;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
@@ -19,9 +28,21 @@ public class DescribeBackupLogsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number of the page to return. The value must be an integer that is larger than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values:</p>
+     * <br>
+     * <p>*   **30**</p>
+     * <p>*   **50**</p>
+     * <p>*   **100**</p>
+     * <br>
+     * <p>Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -31,6 +52,9 @@ public class DescribeBackupLogsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

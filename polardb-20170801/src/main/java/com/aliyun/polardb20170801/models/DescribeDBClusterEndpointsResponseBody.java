@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the endpoints.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeDBClusterEndpointsResponseBodyItems> items;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,56 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterEndpointsResponseBodyItemsAddressItems extends TeaModel {
+        /**
+         * <p>The endpoint.</p>
+         */
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        /**
+         * <p>The IP address.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
+        /**
+         * <p>The network type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Public**</p>
+         * <p>*   **Private**</p>
+         */
         @NameInMap("NetType")
         public String netType;
 
+        /**
+         * <p>The port.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The private domain name that is bound to the endpoint.</p>
+         */
         @NameInMap("PrivateZoneConnectionString")
         public String privateZoneConnectionString;
 
+        /**
+         * <p>The ID of the VPC.</p>
+         */
         @NameInMap("VPCId")
         public String VPCId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) instance.</p>
+         * <br>
+         * <p>> This parameter is returned for only PolarDB for MySQL clusters.</p>
+         */
         @NameInMap("VpcInstanceId")
         public String vpcInstanceId;
 
@@ -128,33 +163,93 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterEndpointsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The details of the endpoint.</p>
+         */
         @NameInMap("AddressItems")
         public java.util.List<DescribeDBClusterEndpointsResponseBodyItemsAddressItems> addressItems;
 
+        /**
+         * <p>Indicates whether new nodes are automatically associated with the default cluster endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Enable**</p>
+         * <p>*   **Disable**</p>
+         */
         @NameInMap("AutoAddNewNodes")
         public String autoAddNewNodes;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The name of the endpoint.</p>
+         */
         @NameInMap("DBEndpointDescription")
         public String DBEndpointDescription;
 
+        /**
+         * <p>The ID of the endpoint.</p>
+         */
         @NameInMap("DBEndpointId")
         public String DBEndpointId;
 
+        /**
+         * <p>The advanced configurations of the endpoint.</p>
+         * <br>
+         * <p>*   **DistributedTransaction**: indicates whether transaction splitting is enabled. Valid values:</p>
+         * <br>
+         * <p>    *   **on**</p>
+         * <p>    *   **off**</p>
+         * <br>
+         * <p>*   **ConsistLevel**: the consistency level of sessions. Valid values:</p>
+         * <br>
+         * <p>    *   **0**: eventual consistency.</p>
+         * <p>    *   **1**: session consistency.</p>
+         * <p>    *   **2**: global consistency.</p>
+         * <br>
+         * <p>*   **LoadBalanceStrategy**: the load balancing policy that automatically schedules loads. Only **load** may be returned.</p>
+         * <br>
+         * <p>*   **MasterAcceptReads**: indicates whether the primary node processes read requests. Valid values:</p>
+         * <br>
+         * <p>    *   **on**</p>
+         * <p>    *   **off**</p>
+         */
         @NameInMap("EndpointConfig")
         public String endpointConfig;
 
+        /**
+         * <p>The type of the endpoint. Valid values:</p>
+         * <br>
+         * <p>*   **Cluster**: the default endpoint.</p>
+         * <p>*   **Primary**: the primary endpoint.</p>
+         * <p>*   **Custom**: a custom cluster endpoint.</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The role name of each node in the endpoint. The role name of the primary node is **Writer**. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number, such as **Reader1** and **Reader2**.</p>
+         * <br>
+         * <p>> This parameter is valid only for PolarDB for PostgreSQL clusters and PolarDB for PostgreSQL (Compatible with Oracle)) clusters.</p>
+         */
         @NameInMap("NodeWithRoles")
         public String nodeWithRoles;
 
+        /**
+         * <p>The nodes in the endpoint.</p>
+         */
         @NameInMap("Nodes")
         public String nodes;
 
+        /**
+         * <p>The read/write mode. Valid values:</p>
+         * <br>
+         * <p>*   **ReadWrite**: handles read and write requests. Automatic read/write splitting is enabled.</p>
+         * <p>*   **ReadOnly**: handles read-only requests.</p>
+         */
         @NameInMap("ReadWriteMode")
         public String readWriteMode;
 

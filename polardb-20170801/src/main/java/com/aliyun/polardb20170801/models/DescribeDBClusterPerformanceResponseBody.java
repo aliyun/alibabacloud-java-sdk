@@ -4,24 +4,45 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The type of the database engine.</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The version of the database engine.</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    /**
+     * <p>The end time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The cluster performance metrics.</p>
+     */
     @NameInMap("PerformanceKeys")
     public DescribeDBClusterPerformanceResponseBodyPerformanceKeys performanceKeys;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The start time of the query. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -87,9 +108,15 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPointsPerformanceItemValue extends TeaModel {
+        /**
+         * <p>The timestamp of the metric. This value is a UNIX timestamp. Unit: millisecond.</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>The value of the metric.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,15 +163,29 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItem extends TeaModel {
+        /**
+         * <p>The ID of the cluster node.</p>
+         * <br>
+         * <p>>  The value of this parameter is not returned if the `Key` parameter is set to `PolarDBDiskUsage`.</p>
+         */
         @NameInMap("DBNodeId")
         public String DBNodeId;
 
+        /**
+         * <p>The performance metrics that are returned.</p>
+         */
         @NameInMap("Measurement")
         public String measurement;
 
+        /**
+         * <p>The name of the performance metric.</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The performance metrics.</p>
+         */
         @NameInMap("Points")
         public DescribeDBClusterPerformanceResponseBodyPerformanceKeysPerformanceItemPoints points;
 

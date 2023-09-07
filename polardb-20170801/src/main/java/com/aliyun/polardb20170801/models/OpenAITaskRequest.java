@@ -4,8 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class OpenAITaskRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("DescribeType")
+    public String describeType;
+
+    @NameInMap("NodeType")
+    public String nodeType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -13,12 +22,21 @@ public class OpenAITaskRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The password used to access the database for which you want to enable the PolarDB for AI feature.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -28,6 +46,9 @@ public class OpenAITaskRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The username used to access the database for which you want to enable the PolarDB for AI feature.</p>
+     */
     @NameInMap("Username")
     public String username;
 
@@ -42,6 +63,22 @@ public class OpenAITaskRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public OpenAITaskRequest setDescribeType(String describeType) {
+        this.describeType = describeType;
+        return this;
+    }
+    public String getDescribeType() {
+        return this.describeType;
+    }
+
+    public OpenAITaskRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public OpenAITaskRequest setOwnerAccount(String ownerAccount) {

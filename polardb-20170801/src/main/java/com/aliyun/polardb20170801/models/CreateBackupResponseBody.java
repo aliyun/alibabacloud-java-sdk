@@ -4,9 +4,15 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the backup set.</p>
+     */
     @NameInMap("BackupJobId")
     public String backupJobId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

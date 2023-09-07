@@ -3,7 +3,7 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeStoragePlanResponse extends TeaModel {
+public class ModifyDBNodeHotReplicaModeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DescribeStoragePlanResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeStoragePlanResponseBody body;
+    public ModifyDBNodeHotReplicaModeResponseBody body;
 
-    public static DescribeStoragePlanResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeStoragePlanResponse self = new DescribeStoragePlanResponse();
+    public static ModifyDBNodeHotReplicaModeResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyDBNodeHotReplicaModeResponse self = new ModifyDBNodeHotReplicaModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeStoragePlanResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyDBNodeHotReplicaModeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DescribeStoragePlanResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeStoragePlanResponse setStatusCode(Integer statusCode) {
+    public ModifyDBNodeHotReplicaModeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DescribeStoragePlanResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeStoragePlanResponse setBody(DescribeStoragePlanResponseBody body) {
+    public ModifyDBNodeHotReplicaModeResponse setBody(ModifyDBNodeHotReplicaModeResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeStoragePlanResponseBody getBody() {
+    public ModifyDBNodeHotReplicaModeResponseBody getBody() {
         return this.body;
     }
 

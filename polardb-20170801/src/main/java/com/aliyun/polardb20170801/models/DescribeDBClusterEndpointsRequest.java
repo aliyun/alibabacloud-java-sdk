@@ -4,11 +4,22 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterEndpointsRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~98094~~) operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the endpoint.</p>
+     */
     @NameInMap("DBEndpointId")
     public String DBEndpointId;
+
+    @NameInMap("DescribeType")
+    public String describeType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -41,6 +52,14 @@ public class DescribeDBClusterEndpointsRequest extends TeaModel {
     }
     public String getDBEndpointId() {
         return this.DBEndpointId;
+    }
+
+    public DescribeDBClusterEndpointsRequest setDescribeType(String describeType) {
+        this.describeType = describeType;
+        return this;
+    }
+    public String getDescribeType() {
+        return this.describeType;
     }
 
     public DescribeDBClusterEndpointsRequest setOwnerAccount(String ownerAccount) {

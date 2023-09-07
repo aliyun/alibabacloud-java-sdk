@@ -4,18 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
+    /**
+     * <p>Details about the GDNs.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItems> items;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of records on the current page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
 
@@ -65,12 +80,26 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        /**
+         * <p>The region ID of the cluster.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The role of the cluster. Valid values:</p>
+         * <br>
+         * <p>*   **Primary**: the primary cluster</p>
+         * <p>*   **standby**: the secondary cluster</p>
+         * <br>
+         * <p>> A GDN consists of one primary cluster and up to four secondary clusters. For more information, see [GDN](~~160381~~).</p>
+         */
         @NameInMap("Role")
         public String role;
 
@@ -106,24 +135,56 @@ public class DescribeGlobalDatabaseNetworksResponseBody extends TeaModel {
     }
 
     public static class DescribeGlobalDatabaseNetworksResponseBodyItems extends TeaModel {
+        /**
+         * <p>The time when the GDN was created. The time is in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Details about clusters in the GDN.</p>
+         */
         @NameInMap("DBClusters")
         public java.util.List<DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters> DBClusters;
 
+        /**
+         * <p>The type of the database engine. Only **MySQL** is supported.</p>
+         */
         @NameInMap("DBType")
         public String DBType;
 
+        /**
+         * <p>The version of the database engine. Only the **8.0** version is supported.</p>
+         */
         @NameInMap("DBVersion")
         public String DBVersion;
 
+        /**
+         * <p>The description of the GDN. The description must meet the following requirements:</p>
+         * <br>
+         * <p>*   It cannot start with [http:// or https://.](http://https://。)</p>
+         * <p>*   It must start with a letter.</p>
+         * <p>*   It can contain letters, digits, underscores (\_), and hyphens (-).</p>
+         * <p>*   It must be 2 to 126 characters in length.</p>
+         */
         @NameInMap("GDNDescription")
         public String GDNDescription;
 
+        /**
+         * <p>The ID of the GDN.</p>
+         */
         @NameInMap("GDNId")
         public String GDNId;
 
+        /**
+         * <p>The status of the GDN. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**: The GDN is being created.</p>
+         * <p>*   **active**: The GDN is running.</p>
+         * <p>*   **deleting**: The GDN is being deleted.</p>
+         * <p>*   **locked**: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.</p>
+         * <p>*   **removing_member**: The secondary cluster is being removed from the GDN.</p>
+         */
         @NameInMap("GDNStatus")
         public String GDNStatus;
 

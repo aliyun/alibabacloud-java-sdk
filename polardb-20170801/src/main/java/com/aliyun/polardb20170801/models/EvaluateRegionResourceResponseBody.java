@@ -4,15 +4,47 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class EvaluateRegionResourceResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether sufficient resources are available. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("DBInstanceAvailable")
     public String DBInstanceAvailable;
 
+    /**
+     * <p>The type of the database engine. Valid values:</p>
+     * <br>
+     * <p>*   **MySQL**</p>
+     * <p>*   **PostgreSQL**</p>
+     * <p>*   **Oracle**</p>
+     */
     @NameInMap("DBType")
     public String DBType;
 
+    /**
+     * <p>The version of the database engine</p>
+     * <br>
+     * <p>*   Valid values for the MySQL database engine:</p>
+     * <br>
+     * <p>    *   **5.6**</p>
+     * <p>    *   **5.7**</p>
+     * <p>    *   **8.0**</p>
+     * <br>
+     * <p>*   Valid values for the PostgreSQL database engine:</p>
+     * <br>
+     * <p>    *   **11**</p>
+     * <p>    *   **14**</p>
+     * <br>
+     * <p>*   Valid value for the Oracle database engine: **11**</p>
+     */
     @NameInMap("DBVersion")
     public String DBVersion;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupPolicyRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBClusters](~~98094~~) operation to query all the information about the available clusters in the target region, including the cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterMonitorRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
@@ -13,6 +16,9 @@ public class ModifyDBClusterMonitorRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The interval at which monitoring data is collected. Valid values: **5** and **60**. Unit: seconds.</p>
+     */
     @NameInMap("Period")
     public String period;
 

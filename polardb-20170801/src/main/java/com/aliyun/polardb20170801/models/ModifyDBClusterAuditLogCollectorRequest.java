@@ -4,9 +4,18 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterAuditLogCollectorRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable or disable SQL collector. Valid values:</p>
+     * <br>
+     * <p>*   Enable</p>
+     * <p>*   Disable</p>
+     */
     @NameInMap("CollectorStatus")
     public String collectorStatus;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 

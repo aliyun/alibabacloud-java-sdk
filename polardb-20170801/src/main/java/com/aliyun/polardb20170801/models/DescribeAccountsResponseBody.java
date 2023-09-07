@@ -4,15 +4,27 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccountsResponseBody extends TeaModel {
+    /**
+     * <p>The details of the account.</p>
+     */
     @NameInMap("Accounts")
     public java.util.List<DescribeAccountsResponseBodyAccounts> accounts;
 
+    /**
+     * <p>The page number of the page returned.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsDatabasePrivileges extends TeaModel {
+        /**
+         * <p>The permissions that the account is granted on the database. Valid values:</p>
+         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 
+        /**
+         * <p>The name of the database.</p>
+         */
         @NameInMap("DBName")
         public String DBName;
 
@@ -84,27 +102,61 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccounts extends TeaModel {
+        /**
+         * <p>The description of the account.</p>
+         */
         @NameInMap("AccountDescription")
         public String accountDescription;
 
+        /**
+         * <p>The locking state of the account. Valid values:</p>
+         * <br>
+         * <p>*   **UnLock**</p>
+         * <p>*   **Lock**</p>
+         */
         @NameInMap("AccountLockState")
         public String accountLockState;
 
+        /**
+         * <p>The name of the account.</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>The password of the account that is used to log on to the database.</p>
+         */
         @NameInMap("AccountPassword")
         public String accountPassword;
 
+        /**
+         * <p>The validity period of the password.</p>
+         */
         @NameInMap("AccountPasswordValidTime")
         public String accountPasswordValidTime;
 
+        /**
+         * <p>The state of the account. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**: The account is being created.</p>
+         * <p>*   **Available**: The account is available.</p>
+         * <p>*   **Deleting**: The account is being deleted</p>
+         */
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        /**
+         * <p>The type of the account. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: a standard account</p>
+         * <p>*   **Super**: a privileged account</p>
+         */
         @NameInMap("AccountType")
         public String accountType;
 
+        /**
+         * <p>The list of database permissions that are granted to the account.</p>
+         */
         @NameInMap("DatabasePrivileges")
         public java.util.List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> databasePrivileges;
 

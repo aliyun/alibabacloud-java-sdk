@@ -4,12 +4,21 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeCharacterSetNameResponseBody extends TeaModel {
+    /**
+     * <p>The character sets that are supported.</p>
+     */
     @NameInMap("CharacterSetNameItems")
     public DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems;
 
+    /**
+     * <p>The type of the database engine.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

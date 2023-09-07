@@ -4,6 +4,11 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to unbinds all tags from the cluster. Valid values: **true** and **false**. Default value: **false**.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when the value of the `TagKey.n` parameter is empty.</p>
+     */
     @NameInMap("All")
     public Boolean all;
 
@@ -13,9 +18,17 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>>  You can call the [DescribeRegions](~~98041~~) operation to query the available regions.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the clusters.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -25,9 +38,15 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The type of the resource. Set the value to **cluster**.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The keys of the tags.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

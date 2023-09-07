@@ -4,9 +4,17 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBLinksRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster for which you want to query the database links.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBClusters](~~173433~~) operation to query PolarDB clusters.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The name of the database link. If you leave this parameter empty, the system returns all the database links.</p>
+     */
     @NameInMap("DBLinkName")
     public String DBLinkName;
 

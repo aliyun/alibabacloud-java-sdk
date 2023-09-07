@@ -4,12 +4,29 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeScheduleTasksRequest extends TeaModel {
+    /**
+     * <p>The description of the cluster.</p>
+     */
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   You can call the [DescribeDBClusters](~~98094~~) operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, all scheduled tasks on your clusters are queried.</p>
+     */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the order.</p>
+     * <br>
+     * <p>>  The order ID can contain only digits.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
@@ -19,21 +36,45 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number of the page to return. Set this parameter to an integer that is greater than 0. Default value: **1**.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+     */
     @NameInMap("PlannedEndTime")
     public String plannedEndTime;
 
+    /**
+     * <p>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</p>
+     */
     @NameInMap("PlannedStartTime")
     public String plannedStartTime;
 
+    /**
+     * <p>The ID of the region.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   You can call the [DescribeRegions](~~98041~~) operation to query the region information of all clusters in a specific account.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -43,9 +84,36 @@ public class DescribeScheduleTasksRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The state of the tasks that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **pending**: The tasks are pending execution.</p>
+     * <p>*   **executing**: The tasks are being executed.</p>
+     * <p>*   **failure**: The tasks failed and need to be run again.</p>
+     * <p>*   **finish**: The tasks are complete.</p>
+     * <p>*   **cancel**: The tasks are canceled.</p>
+     * <p>*   **expired**: The tasks are expired. The tasks are not started within the time periods that are specified to start the tasks.</p>
+     * <p>*   **rollback**: The tasks are being rolled back.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, all scheduled tasks in all states are queried.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The type of scheduled tasks that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   **CreateDBNodes**</p>
+     * <p>*   **ModifyDBNodeClass**</p>
+     * <p>*   **UpgradeDBClusterVersion**</p>
+     * <p>*   **ModifyDBClusterPrimaryZone**</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you specify the `PlannedStartTime` parameter when you call the four preceding operations, the details of each task are returned. Otherwise, an empty string is returned for the `TimerInfos` parameter.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, all types of scheduled tasks on you clusters are queried.</p>
+     */
     @NameInMap("TaskAction")
     public String taskAction;
 

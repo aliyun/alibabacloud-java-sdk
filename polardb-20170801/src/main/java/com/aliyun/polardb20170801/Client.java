@@ -225,6 +225,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkDBNameWithOptions(request, runtime);
     }
 
+    public CheckKMSAuthorizedResponse checkKMSAuthorizedWithOptions(CheckKMSAuthorizedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TDERegion)) {
+            query.put("TDERegion", request.TDERegion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckKMSAuthorized"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckKMSAuthorizedResponse());
+    }
+
+    public CheckKMSAuthorizedResponse checkKMSAuthorized(CheckKMSAuthorizedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkKMSAuthorizedWithOptions(request, runtime);
+    }
+
+    public CheckServiceLinkedRoleResponse checkServiceLinkedRoleWithOptions(CheckServiceLinkedRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckServiceLinkedRole"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckServiceLinkedRoleResponse());
+    }
+
+    public CheckServiceLinkedRoleResponse checkServiceLinkedRole(CheckServiceLinkedRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkServiceLinkedRoleWithOptions(request, runtime);
+    }
+
     public CloseAITaskResponse closeAITaskWithOptions(CloseAITaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -274,6 +368,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.closeAITaskWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call this operation to cancel the migration task before data migration.
+      * *   You can call this operation to perform the migration task after data migration.
+      * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+      *
+      * @param request CloseDBClusterMigrationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CloseDBClusterMigrationResponse
+     */
     public CloseDBClusterMigrationResponse closeDBClusterMigrationWithOptions(CloseDBClusterMigrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -318,6 +421,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CloseDBClusterMigrationResponse());
     }
 
+    /**
+      * *   You can call this operation to cancel the migration task before data migration.
+      * *   You can call this operation to perform the migration task after data migration.
+      * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+      *
+      * @param request CloseDBClusterMigrationRequest
+      * @return CloseDBClusterMigrationResponse
+     */
     public CloseDBClusterMigrationResponse closeDBClusterMigration(CloseDBClusterMigrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeDBClusterMigrationWithOptions(request, runtime);
@@ -366,6 +477,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OwnerId", request.ownerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.privForAllDB)) {
+            query.put("PrivForAllDB", request.privForAllDB);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -396,6 +511,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAccountWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can manually create up to three backups for each cluster.
+      * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](~~98101~~).
+      * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
+      *
+      * @param request CreateBackupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateBackupResponse
+     */
     public CreateBackupResponse createBackupWithOptions(CreateBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -440,6 +565,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackupResponse());
     }
 
+    /**
+      * > 
+      * *   You can manually create up to three backups for each cluster.
+      * *   The `Exceeding the daily backup times of this DB cluster` error message indicates that three manual backups already exist in your cluster. You must delete existing backups before you call this operation to manually create backups. For more information about how to delete backups, see [Delete backups](~~98101~~).
+      * *   After you call this operation, a backup task is created in the backend. The task may be time-consuming if you want to back up large amounts of data.
+      *
+      * @param request CreateBackupRequest
+      * @return CreateBackupResponse
+     */
     public CreateBackupResponse createBackup(CreateBackupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBackupWithOptions(request, runtime);
@@ -450,6 +584,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.allowShutDown)) {
             query.put("AllowShutDown", request.allowShutDown);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.architecture)) {
+            query.put("Architecture", request.architecture);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
@@ -492,6 +630,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBNodeClass", request.DBNodeClass);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeNum)) {
+            query.put("DBNodeNum", request.DBNodeNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBType)) {
             query.put("DBType", request.DBType);
         }
@@ -506,6 +648,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.GDNId)) {
             query.put("GDNId", request.GDNId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotStandbyCluster)) {
+            query.put("HotStandbyCluster", request.hotStandbyCluster);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loosePolarLogBin)) {
+            query.put("LoosePolarLogBin", request.loosePolarLogBin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.looseXEngine)) {
+            query.put("LooseXEngine", request.looseXEngine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.looseXEngineUseMemoryPct)) {
+            query.put("LooseXEngineUseMemoryPct", request.looseXEngineUseMemoryPct);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.lowerCaseTableNames)) {
@@ -530,6 +688,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.period)) {
             query.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyClass)) {
+            query.put("ProxyClass", request.proxyClass);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyType)) {
+            query.put("ProxyType", request.proxyType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -576,8 +742,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SourceResourceId", request.sourceResourceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyAZ)) {
+            query.put("StandbyAZ", request.standbyAZ);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageAutoScale)) {
+            query.put("StorageAutoScale", request.storageAutoScale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storagePayType)) {
+            query.put("StoragePayType", request.storagePayType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSpace)) {
+            query.put("StorageSpace", request.storageSpace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
             query.put("StorageType", request.storageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageUpperBound)) {
+            query.put("StorageUpperBound", request.storageUpperBound);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strictConsistency)) {
+            query.put("StrictConsistency", request.strictConsistency);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.TDEStatus)) {
@@ -699,6 +889,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDBClusterEndpointWithOptions(request, runtime);
     }
 
+    /**
+      * > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+      *
+      * @param request CreateDBEndpointAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDBEndpointAddressResponse
+     */
     public CreateDBEndpointAddressResponse createDBEndpointAddressWithOptions(CreateDBEndpointAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -734,6 +931,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.securityGroupId)) {
+            query.put("SecurityGroupId", request.securityGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneInfo)) {
+            query.put("ZoneInfo", request.zoneInfo);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -751,11 +960,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBEndpointAddressResponse());
     }
 
+    /**
+      * > You can create a public endpoint for the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+      *
+      * @param request CreateDBEndpointAddressRequest
+      * @return CreateDBEndpointAddressResponse
+     */
     public CreateDBEndpointAddressResponse createDBEndpointAddress(CreateDBEndpointAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBEndpointAddressWithOptions(request, runtime);
     }
 
+    /**
+      * A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
+      * > *   You can create up to 10 database links for a cluster.
+      * > *   Each database link connects a source cluster and a destination cluster.
+      * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
+      *
+      * @param request CreateDBLinkRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDBLinkResponse
+     */
     public CreateDBLinkResponse createDBLinkWithOptions(CreateDBLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -844,6 +1069,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDBLinkResponse());
     }
 
+    /**
+      * A database link can be used to connect two PolarDB for PostgreSQL(Compatible with Oracle) clusters, or connect a PolarDB for PostgreSQL(Compatible with Oracle) cluster to a user-created PostgreSQL database that is hosted on an Elastic Compute Service (ECS) instance. You can use database links to query data across clusters.
+      * > *   You can create up to 10 database links for a cluster.
+      * > *   Each database link connects a source cluster and a destination cluster.
+      * > *   The source cluster and the destination cluster or the destination ECS instance must be located in the same region.
+      *
+      * @param request CreateDBLinkRequest
+      * @return CreateDBLinkResponse
+     */
     public CreateDBLinkResponse createDBLink(CreateDBLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDBLinkWithOptions(request, runtime);
@@ -862,6 +1096,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBNode)) {
             query.put("DBNode", request.DBNode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeType)) {
+            query.put("DBNodeType", request.DBNodeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointBindList)) {
@@ -922,6 +1160,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createDBNodesWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   The cluster is in the Running state.
+      * *   The cluster is unlocked.
+      *
+      * @param request CreateDatabaseRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateDatabaseResponse
+     */
     public CreateDatabaseResponse createDatabaseWithOptions(CreateDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -990,11 +1237,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDatabaseResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   The cluster is in the Running state.
+      * *   The cluster is unlocked.
+      *
+      * @param request CreateDatabaseRequest
+      * @return CreateDatabaseResponse
+     */
     public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDatabaseWithOptions(request, runtime);
     }
 
+    /**
+      * >  A cluster belongs to only one GDN.
+      *
+      * @param request CreateGlobalDatabaseNetworkRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateGlobalDatabaseNetworkResponse
+     */
     public CreateGlobalDatabaseNetworkResponse createGlobalDatabaseNetworkWithOptions(CreateGlobalDatabaseNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1047,6 +1309,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGlobalDatabaseNetworkResponse());
     }
 
+    /**
+      * >  A cluster belongs to only one GDN.
+      *
+      * @param request CreateGlobalDatabaseNetworkRequest
+      * @return CreateGlobalDatabaseNetworkResponse
+     */
     public CreateGlobalDatabaseNetworkResponse createGlobalDatabaseNetwork(CreateGlobalDatabaseNetworkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createGlobalDatabaseNetworkWithOptions(request, runtime);
@@ -1113,6 +1381,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createGlobalSecurityIPGroupWithOptions(request, runtime);
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * > You can call this operation only on a PolarDB for MySQL cluster.
+      *
+      * @param request CreateParameterGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateParameterGroupResponse
+     */
     public CreateParameterGroupResponse createParameterGroupWithOptions(CreateParameterGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1177,9 +1453,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateParameterGroupResponse());
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * > You can call this operation only on a PolarDB for MySQL cluster.
+      *
+      * @param request CreateParameterGroupRequest
+      * @return CreateParameterGroupResponse
+     */
     public CreateParameterGroupResponse createParameterGroup(CreateParameterGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createParameterGroupWithOptions(request, runtime);
+    }
+
+    public CreateServiceLinkedRoleResponse createServiceLinkedRoleWithOptions(CreateServiceLinkedRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateServiceLinkedRole"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServiceLinkedRoleResponse());
+    }
+
+    public CreateServiceLinkedRoleResponse createServiceLinkedRole(CreateServiceLinkedRoleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createServiceLinkedRoleWithOptions(request, runtime);
     }
 
     public CreateStoragePlanResponse createStoragePlanWithOptions(CreateStoragePlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1243,6 +1567,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createStoragePlanWithOptions(request, runtime);
     }
 
+    /**
+      * > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+      *
+      * @param request DeleteAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteAccountResponse
+     */
     public DeleteAccountResponse deleteAccountWithOptions(DeleteAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1287,11 +1618,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAccountResponse());
     }
 
+    /**
+      * > Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+      *
+      * @param request DeleteAccountRequest
+      * @return DeleteAccountResponse
+     */
     public DeleteAccountResponse deleteAccount(DeleteAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAccountWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that the cluster meets the following requirements:
+      * *   The cluster is in the Running state.
+      * *   The backup sets are in the Success state.
+      * > *   You can call the [DescribeBackups](~~98102~~) operation to query the status of backup sets.
+      * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
+      *
+      * @param request DeleteBackupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteBackupResponse
+     */
     public DeleteBackupResponse deleteBackupWithOptions(DeleteBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1336,6 +1684,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBackupResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that the cluster meets the following requirements:
+      * *   The cluster is in the Running state.
+      * *   The backup sets are in the Success state.
+      * > *   You can call the [DescribeBackups](~~98102~~) operation to query the status of backup sets.
+      * >*   After you delete the backup set file, the storage space that is occupied by the file is released. The released storage space is smaller than the size of the file because your snapshots share some data blocks
+      *
+      * @param request DeleteBackupRequest
+      * @return DeleteBackupResponse
+     */
     public DeleteBackupResponse deleteBackup(DeleteBackupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteBackupWithOptions(request, runtime);
@@ -1439,6 +1797,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDBClusterEndpointWithOptions(request, runtime);
     }
 
+    /**
+      * > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+      * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
+      *
+      * @param request DeleteDBEndpointAddressRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDBEndpointAddressResponse
+     */
     public DeleteDBEndpointAddressResponse deleteDBEndpointAddressWithOptions(DeleteDBEndpointAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1487,6 +1853,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDBEndpointAddressResponse());
     }
 
+    /**
+      * > *   You can delete a public-facing or classic network endpoint of the primary endpoint, the default cluster endpoint, or a custom cluster endpoint.
+      * > *   Classic network endpoints are supported only on the China site (aliyun.com). Therefore, you do not need to delete classic network endpoints on the International site (alibabacloud.com).
+      *
+      * @param request DeleteDBEndpointAddressRequest
+      * @return DeleteDBEndpointAddressResponse
+     */
     public DeleteDBEndpointAddressResponse deleteDBEndpointAddress(DeleteDBEndpointAddressRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDBEndpointAddressWithOptions(request, runtime);
@@ -1556,6 +1929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBNodeId", request.DBNodeId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeType)) {
+            query.put("DBNodeType", request.DBNodeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -1594,6 +1971,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDBNodesWithOptions(request, runtime);
     }
 
+    /**
+      * >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
+      * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
+      *
+      * @param request DeleteDatabaseRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteDatabaseResponse
+     */
     public DeleteDatabaseResponse deleteDatabaseWithOptions(DeleteDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1638,11 +2023,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDatabaseResponse());
     }
 
+    /**
+      * >- The cluster must be in the Running state and unlocked. Otherwise, the specified database cannot be deleted.
+      * >- The delete operation is performed in an asynchronous manner. A long period of time may be required to delete a large database. A success response for this operation only indicates that the request to delete the database is sent. You must query the database to check whether the database is deleted.
+      *
+      * @param request DeleteDatabaseRequest
+      * @return DeleteDatabaseResponse
+     */
     public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDatabaseWithOptions(request, runtime);
     }
 
+    /**
+      * >  You can delete a GDN only when the GDN includes only a primary cluster.
+      *
+      * @param request DeleteGlobalDatabaseNetworkRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteGlobalDatabaseNetworkResponse
+     */
     public DeleteGlobalDatabaseNetworkResponse deleteGlobalDatabaseNetworkWithOptions(DeleteGlobalDatabaseNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1691,6 +2090,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGlobalDatabaseNetworkResponse());
     }
 
+    /**
+      * >  You can delete a GDN only when the GDN includes only a primary cluster.
+      *
+      * @param request DeleteGlobalDatabaseNetworkRequest
+      * @return DeleteGlobalDatabaseNetworkResponse
+     */
     public DeleteGlobalDatabaseNetworkResponse deleteGlobalDatabaseNetwork(DeleteGlobalDatabaseNetworkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteGlobalDatabaseNetworkWithOptions(request, runtime);
@@ -1790,6 +2195,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteMaskingRulesWithOptions(request, runtime);
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
+      *
+      * @param request DeleteParameterGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteParameterGroupResponse
+     */
     public DeleteParameterGroupResponse deleteParameterGroupWithOptions(DeleteParameterGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1838,6 +2251,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteParameterGroupResponse());
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and quickly apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * >  When you delete a parameter template, the parameter settings that are applied to PolarDB clusters are not affected.
+      *
+      * @param request DeleteParameterGroupRequest
+      * @return DeleteParameterGroupResponse
+     */
     public DeleteParameterGroupResponse deleteParameterGroup(DeleteParameterGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteParameterGroupWithOptions(request, runtime);
@@ -2282,6 +2702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CommodityCode", request.commodityCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.masterHa)) {
+            query.put("MasterHa", request.masterHa);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orderType)) {
             query.put("OrderType", request.orderType);
         }
@@ -2382,6 +2806,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -2532,6 +2960,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClusterAvailableResourcesWithOptions(request, runtime);
     }
 
+    public DescribeDBClusterConnectivityResponse describeDBClusterConnectivityWithOptions(DescribeDBClusterConnectivityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceIpAddress)) {
+            query.put("SourceIpAddress", request.sourceIpAddress);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDBClusterConnectivity"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterConnectivityResponse());
+    }
+
+    public DescribeDBClusterConnectivityResponse describeDBClusterConnectivity(DescribeDBClusterConnectivityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBClusterConnectivityWithOptions(request, runtime);
+    }
+
     public DescribeDBClusterEndpointsResponse describeDBClusterEndpointsWithOptions(DescribeDBClusterEndpointsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2541,6 +3026,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBEndpointId)) {
             query.put("DBEndpointId", request.DBEndpointId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -2581,6 +3070,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClusterEndpointsWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](~~121582~~).
+      * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
+      *
+      * @param request DescribeDBClusterMigrationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBClusterMigrationResponse
+     */
     public DescribeDBClusterMigrationResponse describeDBClusterMigrationWithOptions(DescribeDBClusterMigrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2621,6 +3118,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterMigrationResponse());
     }
 
+    /**
+      * *   You can call this operation to query the status of data migration from an ApsaraDB RDS instance to a PolarDB cluster. For more information, see [Upgrade ApsaraDB RDS for MySQL to PolarDB for MySQL with one click](~~121582~~).
+      * *   Before you call this operation, make sure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**.
+      *
+      * @param request DescribeDBClusterMigrationRequest
+      * @return DescribeDBClusterMigrationResponse
+     */
     public DescribeDBClusterMigrationResponse describeDBClusterMigration(DescribeDBClusterMigrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterMigrationWithOptions(request, runtime);
@@ -2678,6 +3182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -2716,6 +3224,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClusterParametersWithOptions(request, runtime);
     }
 
+    /**
+      * *   When the monitoring data is collected every 5 seconds:
+      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * *   When the monitoring data is collected every 60 seconds:
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+      *
+      * @param request DescribeDBClusterPerformanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBClusterPerformanceResponse
+     */
     public DescribeDBClusterPerformanceResponse describeDBClusterPerformanceWithOptions(DescribeDBClusterPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2752,6 +3278,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterPerformanceResponse());
     }
 
+    /**
+      * *   When the monitoring data is collected every 5 seconds:
+      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * *   When the monitoring data is collected every 60 seconds:
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+      *
+      * @param request DescribeDBClusterPerformanceRequest
+      * @return DescribeDBClusterPerformanceResponse
+     */
     public DescribeDBClusterPerformanceResponse describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterPerformanceWithOptions(request, runtime);
@@ -2892,6 +3435,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBClusterTDEWithOptions(request, runtime);
     }
 
+    /**
+      * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+      *
+      * @param request DescribeDBClusterVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBClusterVersionResponse
+     */
     public DescribeDBClusterVersionResponse describeDBClusterVersionWithOptions(DescribeDBClusterVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2932,6 +3482,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBClusterVersionResponse());
     }
 
+    /**
+      * > For more information, see [Engine versions](~~471239~~) and [PolarDB for MySQL](~~172561~~).
+      *
+      * @param request DescribeDBClusterVersionRequest
+      * @return DescribeDBClusterVersionResponse
+     */
     public DescribeDBClusterVersionResponse describeDBClusterVersion(DescribeDBClusterVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBClusterVersionWithOptions(request, runtime);
@@ -3164,6 +3720,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBInitializeVariableWithOptions(request, runtime);
     }
 
+    /**
+      * > You can query only the database links that use a PolarDB for Oracle cluster as the source.
+      *
+      * @param request DescribeDBLinksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBLinksResponse
+     */
     public DescribeDBLinksResponse describeDBLinksWithOptions(DescribeDBLinksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3208,11 +3771,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBLinksResponse());
     }
 
+    /**
+      * > You can query only the database links that use a PolarDB for Oracle cluster as the source.
+      *
+      * @param request DescribeDBLinksRequest
+      * @return DescribeDBLinksResponse
+     */
     public DescribeDBLinksResponse describeDBLinks(DescribeDBLinksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBLinksWithOptions(request, runtime);
     }
 
+    /**
+      * *   When the monitoring data is collected every 5 seconds:
+      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * *   When the monitoring data is collected every 60 seconds:
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+      *
+      * @param request DescribeDBNodePerformanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBNodePerformanceResponse
+     */
     public DescribeDBNodePerformanceResponse describeDBNodePerformanceWithOptions(DescribeDBNodePerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3253,6 +3840,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBNodePerformanceResponse());
     }
 
+    /**
+      * *   When the monitoring data is collected every 5 seconds:
+      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * *   When the monitoring data is collected every 60 seconds:
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * >  By default, the monitoring data is collected once every 60 seconds. You can call the [ModifyDBClusterMonitor](~~159557~~) operation to set the data collection interval to every 5 seconds.
+      *
+      * @param request DescribeDBNodePerformanceRequest
+      * @return DescribeDBNodePerformanceResponse
+     */
     public DescribeDBNodePerformanceResponse describeDBNodePerformance(DescribeDBNodePerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBNodePerformanceWithOptions(request, runtime);
@@ -3307,6 +3911,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBNodesParametersWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeDBProxyPerformanceRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDBProxyPerformanceResponse
+     */
     public DescribeDBProxyPerformanceResponse describeDBProxyPerformanceWithOptions(DescribeDBProxyPerformanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3343,6 +3954,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDBProxyPerformanceResponse());
     }
 
+    /**
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeDBProxyPerformanceRequest
+      * @return DescribeDBProxyPerformanceResponse
+     */
     public DescribeDBProxyPerformanceResponse describeDBProxyPerformance(DescribeDBProxyPerformanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDBProxyPerformanceWithOptions(request, runtime);
@@ -3405,6 +4022,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDatabasesWithOptions(request, runtime);
     }
 
+    /**
+      * Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
+      * > You can call the [DescribeDBClusterAttribute](~~98181~~) operation to query the cluster status.
+      *
+      * @param request DescribeDetachedBackupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDetachedBackupsResponse
+     */
     public DescribeDetachedBackupsResponse describeDetachedBackupsWithOptions(DescribeDetachedBackupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3477,6 +4102,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDetachedBackupsResponse());
     }
 
+    /**
+      * Before you call this operation, make sure that the PolarDB cluster is in the **Released** state. You must also confirm that the **Retain All Backups Permanently** or **Retain Last Automatic Backup Permanently** backup retention policy takes effect after you release the cluster. If you delete all backup sets after the cluster is released, you cannot use this API operation to query the cluster.
+      * > You can call the [DescribeDBClusterAttribute](~~98181~~) operation to query the cluster status.
+      *
+      * @param request DescribeDetachedBackupsRequest
+      * @return DescribeDetachedBackupsResponse
+     */
     public DescribeDetachedBackupsResponse describeDetachedBackups(DescribeDetachedBackupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDetachedBackupsWithOptions(request, runtime);
@@ -3540,6 +4172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterRegion)) {
+            query.put("FilterRegion", request.filterRegion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.GDNDescription)) {
@@ -3865,6 +4501,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeMetaListWithOptions(request, runtime);
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * > This parameter is valid only for a PolarDB for MySQL cluster.
+      *
+      * @param request DescribeParameterGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeParameterGroupResponse
+     */
     public DescribeParameterGroupResponse describeParameterGroupWithOptions(DescribeParameterGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3913,11 +4557,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeParameterGroupResponse());
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * > This parameter is valid only for a PolarDB for MySQL cluster.
+      *
+      * @param request DescribeParameterGroupRequest
+      * @return DescribeParameterGroupResponse
+     */
     public DescribeParameterGroupResponse describeParameterGroup(DescribeParameterGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeParameterGroupWithOptions(request, runtime);
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeParameterGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeParameterGroupsResponse
+     */
     public DescribeParameterGroupsResponse describeParameterGroupsWithOptions(DescribeParameterGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3970,6 +4629,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeParameterGroupsResponse());
     }
 
+    /**
+      * You can use parameter templates to manage multiple parameters at a time and apply existing parameters to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeParameterGroupsRequest
+      * @return DescribeParameterGroupsResponse
+     */
     public DescribeParameterGroupsResponse describeParameterGroups(DescribeParameterGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeParameterGroupsWithOptions(request, runtime);
@@ -4309,6 +4975,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeScheduleTasksWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeSlowLogRecordsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSlowLogRecordsResponse
+     */
     public DescribeSlowLogRecordsResponse describeSlowLogRecordsWithOptions(DescribeSlowLogRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4377,11 +5050,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSlowLogRecordsResponse());
     }
 
+    /**
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeSlowLogRecordsRequest
+      * @return DescribeSlowLogRecordsResponse
+     */
     public DescribeSlowLogRecordsResponse describeSlowLogRecords(DescribeSlowLogRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSlowLogRecordsWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeSlowLogsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSlowLogsResponse
+     */
     public DescribeSlowLogsResponse describeSlowLogsWithOptions(DescribeSlowLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4446,64 +5132,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSlowLogsResponse());
     }
 
+    /**
+      * > This operation is applicable only to PolarDB for MySQL clusters.
+      *
+      * @param request DescribeSlowLogsRequest
+      * @return DescribeSlowLogsResponse
+     */
     public DescribeSlowLogsResponse describeSlowLogs(DescribeSlowLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSlowLogsWithOptions(request, runtime);
     }
 
-    public DescribeStoragePlanResponse describeStoragePlanWithOptions(DescribeStoragePlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
-            query.put("OwnerAccount", request.ownerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
-            query.put("OwnerId", request.ownerId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
-            query.put("ResourceGroupId", request.resourceGroupId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
-            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
-            query.put("ResourceOwnerId", request.resourceOwnerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeStoragePlan"),
-            new TeaPair("version", "2017-08-01"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeStoragePlanResponse());
-    }
-
-    public DescribeStoragePlanResponse describeStoragePlan(DescribeStoragePlanRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeStoragePlanWithOptions(request, runtime);
-    }
-
+    /**
+      * *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](~~98169~~) operation or [create a cluster](~~58769~~) in the console.
+      * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](~~98169~~) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
+      *
+      * @param request DescribeTasksRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeTasksResponse
+     */
     public DescribeTasksResponse describeTasksWithOptions(DescribeTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4568,9 +5215,142 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTasksResponse());
     }
 
+    /**
+      * *   You can call this operation to view the details of a task that is generated by a specific API operation or in the console. The system calls the specific API operation when you perform an operation in the console. For example, you can view the details of the task when you call the [CreateDBCluster](~~98169~~) operation or [create a cluster](~~58769~~) in the console.
+      * *   You can view the details of tasks that are generated only when you call the [CreateDBCluster](~~98169~~) operation to create a cluster and `CreationOption` is not set to `CreateGdnStandby`.
+      *
+      * @param request DescribeTasksRequest
+      * @return DescribeTasksResponse
+     */
     public DescribeTasksResponse describeTasks(DescribeTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeTasksWithOptions(request, runtime);
+    }
+
+    public DescribeUserEncryptionKeyListResponse describeUserEncryptionKeyListWithOptions(DescribeUserEncryptionKeyListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.TDERegion)) {
+            query.put("TDERegion", request.TDERegion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserEncryptionKeyList"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserEncryptionKeyListResponse());
+    }
+
+    public DescribeUserEncryptionKeyListResponse describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserEncryptionKeyListWithOptions(request, runtime);
+    }
+
+    public DescribeVSwitchesResponse describeVSwitchesWithOptions(DescribeVSwitchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedHostGroupId)) {
+            query.put("DedicatedHostGroupId", request.dedicatedHostGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVSwitches"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVSwitchesResponse());
+    }
+
+    public DescribeVSwitchesResponse describeVSwitches(DescribeVSwitchesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVSwitchesWithOptions(request, runtime);
     }
 
     public EnableFirewallRulesResponse enableFirewallRulesWithOptions(EnableFirewallRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4760,6 +5540,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.failoverDBClusterWithOptions(request, runtime);
     }
 
+    /**
+      * > *   An account can be authorized to access one or more databases.
+      * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
+      * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+      * > *   You can call this operation only on a PolarDB for MySQL cluster.
+      * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
+      *
+      * @param request GrantAccountPrivilegeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GrantAccountPrivilegeResponse
+     */
     public GrantAccountPrivilegeResponse grantAccountPrivilegeWithOptions(GrantAccountPrivilegeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4812,6 +5603,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GrantAccountPrivilegeResponse());
     }
 
+    /**
+      * > *   An account can be authorized to access one or more databases.
+      * > *   If the specified account already has the access permissions on the specified databases, the operation returns a successful response.
+      * > *   Before you call this operation, make sure that the cluster is in the Running state. Otherwise, the operation fails.
+      * > *   You can call this operation only on a PolarDB for MySQL cluster.
+      * > *   By default, a privileged account for a cluster has all the permissions on the databases in the cluster.
+      *
+      * @param request GrantAccountPrivilegeRequest
+      * @return GrantAccountPrivilegeResponse
+     */
     public GrantAccountPrivilegeResponse grantAccountPrivilege(GrantAccountPrivilegeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.grantAccountPrivilegeWithOptions(request, runtime);
@@ -4876,6 +5677,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    public ManuallyStartDBClusterResponse manuallyStartDBClusterWithOptions(ManuallyStartDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ManuallyStartDBCluster"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ManuallyStartDBClusterResponse());
+    }
+
+    public ManuallyStartDBClusterResponse manuallyStartDBCluster(ManuallyStartDBClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.manuallyStartDBClusterWithOptions(request, runtime);
     }
 
     public ModifyAccountDescriptionResponse modifyAccountDescriptionWithOptions(ModifyAccountDescriptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5049,6 +5899,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyAutoRenewAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](~~280422~~).
+      *
+      * @param request ModifyBackupPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyBackupPolicyResponse
+     */
     public ModifyBackupPolicyResponse modifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5137,9 +5994,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyBackupPolicyResponse());
     }
 
+    /**
+      * > You can also modify the automatic backup policy of a PolarDB cluster in the console. For more information, see [Backup settings](~~280422~~).
+      *
+      * @param request ModifyBackupPolicyRequest
+      * @return ModifyBackupPolicyResponse
+     */
     public ModifyBackupPolicyResponse modifyBackupPolicy(ModifyBackupPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyBackupPolicyWithOptions(request, runtime);
+    }
+
+    public ModifyDBClusterResponse modifyDBClusterWithOptions(ModifyDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataSyncMode)) {
+            query.put("DataSyncMode", request.dataSyncMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.faultSimulateMode)) {
+            query.put("FaultSimulateMode", request.faultSimulateMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.standbyHAMode)) {
+            query.put("StandbyHAMode", request.standbyHAMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageAutoScale)) {
+            query.put("StorageAutoScale", request.storageAutoScale);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageUpperBound)) {
+            query.put("StorageUpperBound", request.storageUpperBound);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBCluster"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterResponse());
+    }
+
+    public ModifyDBClusterResponse modifyDBCluster(ModifyDBClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBClusterWithOptions(request, runtime);
     }
 
     public ModifyDBClusterAccessWhitelistResponse modifyDBClusterAccessWhitelistWithOptions(ModifyDBClusterAccessWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -5496,6 +6424,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBClusterEndpointWithOptions(request, runtime);
     }
 
+    /**
+      * >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
+      *
+      * @param request ModifyDBClusterMaintainTimeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBClusterMaintainTimeResponse
+     */
     public ModifyDBClusterMaintainTimeResponse modifyDBClusterMaintainTimeWithOptions(ModifyDBClusterMaintainTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5540,11 +6475,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterMaintainTimeResponse());
     }
 
+    /**
+      * >  We recommend that you set the routine maintenance window to off-peak hours. Alibaba Cloud maintains your cluster within the specified maintenance window to minimize the negative impacts on your business.
+      *
+      * @param request ModifyDBClusterMaintainTimeRequest
+      * @return ModifyDBClusterMaintainTimeResponse
+     */
     public ModifyDBClusterMaintainTimeResponse modifyDBClusterMaintainTime(ModifyDBClusterMaintainTimeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterMaintainTimeWithOptions(request, runtime);
     }
 
+    /**
+      * *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
+      * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
+      * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+      *
+      * @param request ModifyDBClusterMigrationRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBClusterMigrationResponse
+     */
     public ModifyDBClusterMigrationResponse modifyDBClusterMigrationWithOptions(ModifyDBClusterMigrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5605,11 +6555,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterMigrationResponse());
     }
 
+    /**
+      * *   You can call this operation to switch the task that migrates data from ApsaraDB for RDS to PolarDB.
+      * *   You can call this operation to roll back the task that migrates data from ApsaraDB for RDS to PolarDB.
+      * > Before you call this operation, ensure that a one-click upgrade task has been created for the cluster. You can call the [CreateDBCluster](~~98169~~) operation to create an upgrade task. Set the **CreationOption** parameter to **MigrationFromRDS**. For more information, see [Create a PolarDB for MySQL cluster by using the Migration from RDS method](~~121582~~).
+      *
+      * @param request ModifyDBClusterMigrationRequest
+      * @return ModifyDBClusterMigrationResponse
+     */
     public ModifyDBClusterMigrationResponse modifyDBClusterMigration(ModifyDBClusterMigrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterMigrationWithOptions(request, runtime);
     }
 
+    /**
+      * *   When the monitoring data is collected every 5 seconds:
+      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * *   When the monitoring data is collected every 60 seconds:
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      *
+      * @param request ModifyDBClusterMonitorRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBClusterMonitorResponse
+     */
     public ModifyDBClusterMonitorResponse modifyDBClusterMonitorWithOptions(ModifyDBClusterMonitorRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5654,11 +6629,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterMonitorResponse());
     }
 
+    /**
+      * *   When the monitoring data is collected every 5 seconds:
+      *     *   If the query time range is less than or equal to 1 hour, the data is displayed at intervals of 5 seconds.
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      * *   When the monitoring data is collected every 60 seconds:
+      *     *   If the query time range is less than or equal to one day, the data is displayed at intervals of 1 minute.
+      *     *   If the query time range is less than or equal to seven days, the data is displayed at intervals of 10 minutes.
+      *     *   If the query time range is less than or equal to 30 days, the data is displayed at intervals of 1 hour.
+      *     *   When the query time range is greater than 30 days, the data is displayed at intervals of 1 day.
+      *
+      * @param request ModifyDBClusterMonitorRequest
+      * @return ModifyDBClusterMonitorResponse
+     */
     public ModifyDBClusterMonitorResponse modifyDBClusterMonitor(ModifyDBClusterMonitorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterMonitorWithOptions(request, runtime);
     }
 
+    /**
+      * PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * **
+      * **Only PolarDB for MySQL clusters support parameter templates.
+      *
+      * @param request ModifyDBClusterParametersRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBClusterParametersResponse
+     */
     public ModifyDBClusterParametersResponse modifyDBClusterParametersWithOptions(ModifyDBClusterParametersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5719,6 +6719,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterParametersResponse());
     }
 
+    /**
+      * PolarDB supports the parameter template feature to centrally manage clusters. You can configure a number of parameters at a time by using a parameter template and apply the template to a PolarDB cluster. For more information, see [Use a parameter template](~~207009~~).
+      * **
+      * **Only PolarDB for MySQL clusters support parameter templates.
+      *
+      * @param request ModifyDBClusterParametersRequest
+      * @return ModifyDBClusterParametersResponse
+     */
     public ModifyDBClusterParametersResponse modifyDBClusterParameters(ModifyDBClusterParametersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterParametersWithOptions(request, runtime);
@@ -5733,6 +6741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fromTimeService)) {
             query.put("FromTimeService", request.fromTimeService);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isSwitchOverForDisaster)) {
+            query.put("IsSwitchOverForDisaster", request.isSwitchOverForDisaster);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -5757,6 +6769,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
+            query.put("VPCId", request.VPCId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
@@ -5972,6 +6988,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBClusterServerlessConfWithOptions(request, runtime);
     }
 
+    public ModifyDBClusterStorageSpaceResponse modifyDBClusterStorageSpaceWithOptions(ModifyDBClusterStorageSpaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedEndTime)) {
+            query.put("PlannedEndTime", request.plannedEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.plannedStartTime)) {
+            query.put("PlannedStartTime", request.plannedStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSpace)) {
+            query.put("StorageSpace", request.storageSpace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subCategory)) {
+            query.put("SubCategory", request.subCategory);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBClusterStorageSpace"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterStorageSpaceResponse());
+    }
+
+    public ModifyDBClusterStorageSpaceResponse modifyDBClusterStorageSpace(ModifyDBClusterStorageSpaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBClusterStorageSpaceWithOptions(request, runtime);
+    }
+
+    /**
+      * > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](~~153781~~).
+      * > *   After TDE is enabled, you cannot disable TDE.
+      *
+      * @param request ModifyDBClusterTDERequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyDBClusterTDEResponse
+     */
     public ModifyDBClusterTDEResponse modifyDBClusterTDEWithOptions(ModifyDBClusterTDERequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6028,6 +7117,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBClusterTDEResponse());
     }
 
+    /**
+      * > *   To perform this operation, you must activate KMS first. For more information, see [Purchase a dedicated KMS instance](~~153781~~).
+      * > *   After TDE is enabled, you cannot disable TDE.
+      *
+      * @param request ModifyDBClusterTDERequest
+      * @return ModifyDBClusterTDEResponse
+     */
     public ModifyDBClusterTDEResponse modifyDBClusterTDE(ModifyDBClusterTDERequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBClusterTDEWithOptions(request, runtime);
@@ -6222,6 +7318,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDBNodeClassResponse modifyDBNodeClass(ModifyDBNodeClassRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDBNodeClassWithOptions(request, runtime);
+    }
+
+    public ModifyDBNodeHotReplicaModeResponse modifyDBNodeHotReplicaModeWithOptions(ModifyDBNodeHotReplicaModeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeId)) {
+            query.put("DBNodeId", request.DBNodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotReplicaMode)) {
+            query.put("HotReplicaMode", request.hotReplicaMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDBNodeHotReplicaMode"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDBNodeHotReplicaModeResponse());
+    }
+
+    public ModifyDBNodeHotReplicaModeResponse modifyDBNodeHotReplicaMode(ModifyDBNodeHotReplicaModeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBNodeHotReplicaModeWithOptions(request, runtime);
     }
 
     public ModifyDBNodesClassResponse modifyDBNodesClassWithOptions(ModifyDBNodesClassRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6776,6 +7925,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.describeType)) {
+            query.put("DescribeType", request.describeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeType)) {
+            query.put("NodeType", request.nodeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -6875,6 +8032,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.refreshDBClusterStorageUsageWithOptions(request, runtime);
     }
 
+    /**
+      * >  You cannot remove the primary cluster from a GDN.
+      *
+      * @param request RemoveDBClusterFromGDNRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveDBClusterFromGDNResponse
+     */
     public RemoveDBClusterFromGDNResponse removeDBClusterFromGDNWithOptions(RemoveDBClusterFromGDNRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6923,11 +8087,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveDBClusterFromGDNResponse());
     }
 
+    /**
+      * >  You cannot remove the primary cluster from a GDN.
+      *
+      * @param request RemoveDBClusterFromGDNRequest
+      * @return RemoveDBClusterFromGDNResponse
+     */
     public RemoveDBClusterFromGDNResponse removeDBClusterFromGDN(RemoveDBClusterFromGDNRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeDBClusterFromGDNWithOptions(request, runtime);
     }
 
+    /**
+      * >- Only PolarDB for MySQL clusters support this operation.
+      * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
+      *
+      * @param request ResetAccountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ResetAccountResponse
+     */
     public ResetAccountResponse resetAccountWithOptions(ResetAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6976,9 +8154,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ResetAccountResponse());
     }
 
+    /**
+      * >- Only PolarDB for MySQL clusters support this operation.
+      * >- If the privileged account of your cluster encounters exceptions, you can call this operation to reset the permissions. For example, the permissions are accidentally revoked.
+      *
+      * @param request ResetAccountRequest
+      * @return ResetAccountResponse
+     */
     public ResetAccountResponse resetAccount(ResetAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resetAccountWithOptions(request, runtime);
+    }
+
+    public ResetGlobalDatabaseNetworkResponse resetGlobalDatabaseNetworkWithOptions(ResetGlobalDatabaseNetworkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.GDNId)) {
+            query.put("GDNId", request.GDNId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ResetGlobalDatabaseNetwork"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ResetGlobalDatabaseNetworkResponse());
+    }
+
+    public ResetGlobalDatabaseNetworkResponse resetGlobalDatabaseNetwork(ResetGlobalDatabaseNetworkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetGlobalDatabaseNetworkWithOptions(request, runtime);
     }
 
     public RestartDBNodeResponse restartDBNodeWithOptions(RestartDBNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -7327,6 +8569,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.tempModifyDBNodeWithOptions(request, runtime);
     }
 
+    /**
+      * > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](~~172886~~) and [Change the billing method from pay-as-you-go to subscription](~~84076~~).
+      * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
+      * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
+      *
+      * @param request TransformDBClusterPayTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return TransformDBClusterPayTypeResponse
+     */
     public TransformDBClusterPayTypeResponse transformDBClusterPayTypeWithOptions(TransformDBClusterPayTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7391,6 +8642,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TransformDBClusterPayTypeResponse());
     }
 
+    /**
+      * > *   PolarDB clusters support the subscription and pay-as-you-go billing methods. You can change the billing method from subscription to pay-as-you-go or from pay-as-you-go to subscription based on your business requirements. For more information, see [Change the billing method from subscription to pay-as-you-go](~~172886~~) and [Change the billing method from pay-as-you-go to subscription](~~84076~~).
+      * >*   You cannot change the billing method from pay-as-you-go to subscription if your account balance is insufficient.
+      * >*   If you change the billing method from subscription to pay-as-you-go, the system automatically refunds the balance of the prepaid subscription fees.
+      *
+      * @param request TransformDBClusterPayTypeRequest
+      * @return TransformDBClusterPayTypeResponse
+     */
     public TransformDBClusterPayTypeResponse transformDBClusterPayType(TransformDBClusterPayTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.transformDBClusterPayTypeWithOptions(request, runtime);
@@ -7457,6 +8716,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    /**
+      * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
+      *
+      * @param request UpgradeDBClusterMinorVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradeDBClusterMinorVersionResponse
+     */
     public UpgradeDBClusterMinorVersionResponse upgradeDBClusterMinorVersionWithOptions(UpgradeDBClusterMinorVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7509,11 +8775,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeDBClusterMinorVersionResponse());
     }
 
+    /**
+      * > You can upgrade only the revision version of a PolarDB for MySQL cluster. For example, you can upgrade the version 8.0.1.1.3 of a PolarDB for MySQL cluster to the version 8.0.1.1.4.
+      *
+      * @param request UpgradeDBClusterMinorVersionRequest
+      * @return UpgradeDBClusterMinorVersionResponse
+     */
     public UpgradeDBClusterMinorVersionResponse upgradeDBClusterMinorVersion(UpgradeDBClusterMinorVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeDBClusterMinorVersionWithOptions(request, runtime);
     }
 
+    /**
+      * > 
+      * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+      * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+      *
+      * @param request UpgradeDBClusterVersionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpgradeDBClusterVersionResponse
+     */
     public UpgradeDBClusterVersionResponse upgradeDBClusterVersionWithOptions(UpgradeDBClusterVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -7549,6 +8830,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.targetDBRevisionVersionCode)) {
+            query.put("TargetDBRevisionVersionCode", request.targetDBRevisionVersionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.upgradeLabel)) {
             query.put("UpgradeLabel", request.upgradeLabel);
         }
@@ -7578,6 +8863,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradeDBClusterVersionResponse());
     }
 
+    /**
+      * > 
+      * *   You can update only the revision version of a PolarDB for MySQL cluster, for example, from 8.0.1.1.3 to 8.0.1.1.4.
+      * *   You can use only your Alibaba Cloud account to create scheduled tasks that update the kernel version of a PolarDB for MySQL cluster. RAM users are not authorized to update the kernel version of a PolarDB for MySQL cluster.
+      *
+      * @param request UpgradeDBClusterVersionRequest
+      * @return UpgradeDBClusterVersionResponse
+     */
     public UpgradeDBClusterVersionResponse upgradeDBClusterVersion(UpgradeDBClusterVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeDBClusterVersionWithOptions(request, runtime);
