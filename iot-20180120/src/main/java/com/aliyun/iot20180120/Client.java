@@ -10270,6 +10270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductKey", request.productKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.qos)) {
+            query.put("Qos", request.qos);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -12190,6 +12194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.retained)) {
             query.put("Retained", request.retained);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.topicAlias)) {
+            query.put("TopicAlias", request.topicAlias);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topicFullName)) {
@@ -18043,10 +18051,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProductKey", request.productKey);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.requestBase64Byte)) {
-            query.put("RequestBase64Byte", request.requestBase64Byte);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
             query.put("Timeout", request.timeout);
         }
@@ -18055,8 +18059,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Topic", request.topic);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.requestBase64Byte)) {
+            body.put("RequestBase64Byte", request.requestBase64Byte);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RRpc"),
@@ -19057,6 +19067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.productKey)) {
             query.put("ProductKey", request.productKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.qos)) {
+            query.put("Qos", request.qos);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -62,6 +62,9 @@ public class InvokeThingServiceRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("Qos")
+    public Integer qos;
+
     public static InvokeThingServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeThingServiceRequest self = new InvokeThingServiceRequest();
         return TeaModel.build(map, self);
@@ -113,6 +116,14 @@ public class InvokeThingServiceRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
+    }
+
+    public InvokeThingServiceRequest setQos(Integer qos) {
+        this.qos = qos;
+        return this;
+    }
+    public Integer getQos() {
+        return this.qos;
     }
 
 }

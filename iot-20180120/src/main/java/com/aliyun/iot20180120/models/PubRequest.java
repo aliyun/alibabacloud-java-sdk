@@ -89,6 +89,9 @@ public class PubRequest extends TeaModel {
     @NameInMap("Retained")
     public Boolean retained;
 
+    @NameInMap("TopicAlias")
+    public Integer topicAlias;
+
     /**
      * <p>The custom topic for the device that receives the message.</p>
      * <br>
@@ -196,6 +199,14 @@ public class PubRequest extends TeaModel {
     }
     public Boolean getRetained() {
         return this.retained;
+    }
+
+    public PubRequest setTopicAlias(Integer topicAlias) {
+        this.topicAlias = topicAlias;
+        return this;
+    }
+    public Integer getTopicAlias() {
+        return this.topicAlias;
     }
 
     public PubRequest setTopicFullName(String topicFullName) {
