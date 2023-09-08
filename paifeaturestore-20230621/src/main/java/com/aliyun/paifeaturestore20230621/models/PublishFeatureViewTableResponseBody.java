@@ -7,6 +7,9 @@ public class PublishFeatureViewTableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static PublishFeatureViewTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PublishFeatureViewTableResponseBody self = new PublishFeatureViewTableResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class PublishFeatureViewTableResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public PublishFeatureViewTableResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }
