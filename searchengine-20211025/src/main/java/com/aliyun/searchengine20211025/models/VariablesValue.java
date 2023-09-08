@@ -4,24 +4,48 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class VariablesValue extends TeaModel {
+    /**
+     * <p>Specifies whether the variable cannot be modified.</p>
+     */
     @NameInMap("disableModify")
     public Boolean disableModify;
 
+    /**
+     * <p>Specifies whether the variable is modified.</p>
+     */
     @NameInMap("isModify")
     public Boolean isModify;
 
+    /**
+     * <p>The value of the variable.</p>
+     */
     @NameInMap("value")
     public String value;
 
+    /**
+     * <p>The description about the variable.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The value of the template.</p>
+     */
     @NameInMap("templateValue")
     public String templateValue;
 
+    /**
+     * <p>The type of the variable. Valid values:</p>
+     * <br>
+     * <p>*   NORMAL: a normal variable</p>
+     * <p>*   FUNCTION: a function variable</p>
+     */
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The function variable.</p>
+     */
     @NameInMap("funcValue")
     public VariablesValueFuncValue funcValue;
 
@@ -87,9 +111,15 @@ public class VariablesValue extends TeaModel {
     }
 
     public static class VariablesValueFuncValue extends TeaModel {
+        /**
+         * <p>The class name.</p>
+         */
         @NameInMap("funcClassName")
         public String funcClassName;
 
+        /**
+         * <p>The template of the variable.</p>
+         */
         @NameInMap("template")
         public String template;
 

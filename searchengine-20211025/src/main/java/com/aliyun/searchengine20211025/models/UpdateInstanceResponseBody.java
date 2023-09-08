@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class UpdateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("result")
     public UpdateInstanceResponseBodyResult result;
 
@@ -32,36 +38,69 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
 
     public static class UpdateInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The billing method of the instance.</p>
+         */
         @NameInMap("chargeType")
         public String chargeType;
 
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("commodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The time when the instance was created.</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <p>The description of the instance.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The time when the instance expires.</p>
+         */
         @NameInMap("expiredTime")
         public String expiredTime;
 
+        /**
+         * <p>Indicates whether an overdue payment is involved.</p>
+         */
         @NameInMap("inDebt")
         public Boolean inDebt;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 
+        /**
+         * <p>The lock mode of the instance.</p>
+         */
         @NameInMap("lockMode")
         public String lockMode;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("resourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The state of the instance.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The time when the instance was last updated.</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 

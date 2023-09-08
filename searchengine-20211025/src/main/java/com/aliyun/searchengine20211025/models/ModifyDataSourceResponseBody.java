@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyDataSourceResponseBody extends TeaModel {
+    /**
+     * <p>id of request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The schema information.</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

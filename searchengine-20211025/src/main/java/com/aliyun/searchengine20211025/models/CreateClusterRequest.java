@@ -4,18 +4,33 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically balance the load between QRS workers.</p>
+     */
     @NameInMap("autoLoad")
     public Boolean autoLoad;
 
+    /**
+     * <p>The information about Searcher workers.</p>
+     */
     @NameInMap("dataNode")
     public CreateClusterRequestDataNode dataNode;
 
+    /**
+     * <p>The description of the cluster.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The information about Query Result Searcher (QRS) workers.</p>
+     */
     @NameInMap("queryNode")
     public CreateClusterRequestQueryNode queryNode;
 
@@ -65,6 +80,9 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestDataNode extends TeaModel {
+        /**
+         * <p>The number of Searcher workers.</p>
+         */
         @NameInMap("number")
         public Integer number;
 
@@ -84,6 +102,9 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestQueryNode extends TeaModel {
+        /**
+         * <p>The number of QRS workers.</p>
+         */
         @NameInMap("number")
         public Integer number;
 

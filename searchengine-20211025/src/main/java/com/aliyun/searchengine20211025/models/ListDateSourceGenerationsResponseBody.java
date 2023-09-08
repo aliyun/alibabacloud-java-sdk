@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListDateSourceGenerationsResponseBody extends TeaModel {
+    /**
+     * <p>id of request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>List</p>
+     */
     @NameInMap("result")
     public java.util.List<ListDateSourceGenerationsResponseBodyResult> result;
 
@@ -32,6 +38,9 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
     }
 
     public static class ListDateSourceGenerationsResponseBodyResult extends TeaModel {
+        /**
+         * <p>buildDeployId</p>
+         */
         @NameInMap("buildDeployId")
         public Integer buildDeployId;
 

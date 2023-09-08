@@ -7,6 +7,9 @@ public class ModifyClusterDescResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Map</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

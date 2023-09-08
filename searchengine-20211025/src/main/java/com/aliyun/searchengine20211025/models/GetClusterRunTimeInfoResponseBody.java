@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetClusterRunTimeInfoResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The configuration progress. Unit: percentage.</p>
+     */
     @NameInMap("result")
     public java.util.List<GetClusterRunTimeInfoResponseBodyResult> result;
 
@@ -31,28 +37,28 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus extends TeaModel {
+    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList extends TeaModel {
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
         @NameInMap("donePercent")
-        public Long donePercent;
+        public Integer donePercent;
 
         @NameInMap("doneSize")
-        public Long doneSize;
+        public Integer doneSize;
 
         @NameInMap("name")
         public String name;
 
         @NameInMap("totalSize")
-        public Long totalSize;
+        public Integer totalSize;
 
-        public static GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus build(java.util.Map<String, ?> map) throws Exception {
-            GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus self = new GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus();
+        public static GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList self = new GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList();
             return TeaModel.build(map, self);
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus setConfigUpdateTime(String configUpdateTime) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList setConfigUpdateTime(String configUpdateTime) {
             this.configUpdateTime = configUpdateTime;
             return this;
         }
@@ -60,23 +66,23 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             return this.configUpdateTime;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus setDonePercent(Long donePercent) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList setDonePercent(Integer donePercent) {
             this.donePercent = donePercent;
             return this;
         }
-        public Long getDonePercent() {
+        public Integer getDonePercent() {
             return this.donePercent;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus setDoneSize(Long doneSize) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList setDoneSize(Integer doneSize) {
             this.doneSize = doneSize;
             return this;
         }
-        public Long getDoneSize() {
+        public Integer getDoneSize() {
             return this.doneSize;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus setName(String name) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList setName(String name) {
             this.name = name;
             return this;
         }
@@ -84,114 +90,37 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus setTotalSize(Long totalSize) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList setTotalSize(Integer totalSize) {
             this.totalSize = totalSize;
             return this;
         }
-        public Long getTotalSize() {
+        public Integer getTotalSize() {
             return this.totalSize;
         }
 
     }
 
-    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus extends TeaModel {
-        @NameInMap("donePercent")
-        public Long donePercent;
-
-        @NameInMap("doneSize")
-        public Long doneSize;
-
-        @NameInMap("errorMsg")
-        public String errorMsg;
-
-        @NameInMap("fullSwitchTime")
-        public String fullSwitchTime;
-
-        @NameInMap("incSwitchTime")
-        public String incSwitchTime;
-
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("partition")
-        public Long partition;
-
-        @NameInMap("totalSize")
-        public Long totalSize;
+    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo extends TeaModel {
+        @NameInMap("configMetaName")
+        public String configMetaName;
 
         @NameInMap("version")
         public Long version;
 
-        public static GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus build(java.util.Map<String, ?> map) throws Exception {
-            GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus self = new GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus();
+        public static GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo self = new GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setDonePercent(Long donePercent) {
-            this.donePercent = donePercent;
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo setConfigMetaName(String configMetaName) {
+            this.configMetaName = configMetaName;
             return this;
         }
-        public Long getDonePercent() {
-            return this.donePercent;
+        public String getConfigMetaName() {
+            return this.configMetaName;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setDoneSize(Long doneSize) {
-            this.doneSize = doneSize;
-            return this;
-        }
-        public Long getDoneSize() {
-            return this.doneSize;
-        }
-
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setErrorMsg(String errorMsg) {
-            this.errorMsg = errorMsg;
-            return this;
-        }
-        public String getErrorMsg() {
-            return this.errorMsg;
-        }
-
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setFullSwitchTime(String fullSwitchTime) {
-            this.fullSwitchTime = fullSwitchTime;
-            return this;
-        }
-        public String getFullSwitchTime() {
-            return this.fullSwitchTime;
-        }
-
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setIncSwitchTime(String incSwitchTime) {
-            this.incSwitchTime = incSwitchTime;
-            return this;
-        }
-        public String getIncSwitchTime() {
-            return this.incSwitchTime;
-        }
-
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setPartition(Long partition) {
-            this.partition = partition;
-            return this;
-        }
-        public Long getPartition() {
-            return this.partition;
-        }
-
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setTotalSize(Long totalSize) {
-            this.totalSize = totalSize;
-            return this;
-        }
-        public Long getTotalSize() {
-            return this.totalSize;
-        }
-
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus setVersion(Long version) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo setVersion(Long version) {
             this.version = version;
             return this;
         }
@@ -201,53 +130,278 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus extends TeaModel {
+    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo extends TeaModel {
+        @NameInMap("configMetaName")
+        public String configMetaName;
+
+        @NameInMap("version")
+        public Long version;
+
+        public static GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo self = new GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo setConfigMetaName(String configMetaName) {
+            this.configMetaName = configMetaName;
+            return this;
+        }
+        public String getConfigMetaName() {
+            return this.configMetaName;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo setVersion(Long version) {
+            this.version = version;
+            return this;
+        }
+        public Long getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList extends TeaModel {
+        @NameInMap("advanceConfigInfo")
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo advanceConfigInfo;
+
+        @NameInMap("deployFailedWorker")
+        public java.util.List<String> deployFailedWorker;
+
+        @NameInMap("docSize")
+        public Integer docSize;
+
         @NameInMap("donePercent")
-        public Long donePercent;
+        public Integer donePercent;
 
         @NameInMap("doneSize")
-        public Long doneSize;
+        public Integer doneSize;
+
+        @NameInMap("errorMsg")
+        public String errorMsg;
+
+        @NameInMap("fullUpdateTime")
+        public String fullUpdateTime;
+
+        @NameInMap("fullVersion")
+        public Long fullVersion;
+
+        @NameInMap("incUpdateTime")
+        public String incUpdateTime;
+
+        @NameInMap("incVersion")
+        public Long incVersion;
+
+        @NameInMap("indexConfigInfo")
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo indexConfigInfo;
+
+        @NameInMap("indexSize")
+        public Long indexSize;
+
+        @NameInMap("lackDiskWorker")
+        public java.util.List<String> lackDiskWorker;
+
+        @NameInMap("lackMemWorker")
+        public java.util.List<String> lackMemWorker;
+
+        @NameInMap("name")
+        public String name;
 
         @NameInMap("totalSize")
-        public Long totalSize;
+        public Integer totalSize;
+
+        public static GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList self = new GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setAdvanceConfigInfo(GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo advanceConfigInfo) {
+            this.advanceConfigInfo = advanceConfigInfo;
+            return this;
+        }
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListAdvanceConfigInfo getAdvanceConfigInfo() {
+            return this.advanceConfigInfo;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setDeployFailedWorker(java.util.List<String> deployFailedWorker) {
+            this.deployFailedWorker = deployFailedWorker;
+            return this;
+        }
+        public java.util.List<String> getDeployFailedWorker() {
+            return this.deployFailedWorker;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setDocSize(Integer docSize) {
+            this.docSize = docSize;
+            return this;
+        }
+        public Integer getDocSize() {
+            return this.docSize;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setDonePercent(Integer donePercent) {
+            this.donePercent = donePercent;
+            return this;
+        }
+        public Integer getDonePercent() {
+            return this.donePercent;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setDoneSize(Integer doneSize) {
+            this.doneSize = doneSize;
+            return this;
+        }
+        public Integer getDoneSize() {
+            return this.doneSize;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setFullUpdateTime(String fullUpdateTime) {
+            this.fullUpdateTime = fullUpdateTime;
+            return this;
+        }
+        public String getFullUpdateTime() {
+            return this.fullUpdateTime;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setFullVersion(Long fullVersion) {
+            this.fullVersion = fullVersion;
+            return this;
+        }
+        public Long getFullVersion() {
+            return this.fullVersion;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setIncUpdateTime(String incUpdateTime) {
+            this.incUpdateTime = incUpdateTime;
+            return this;
+        }
+        public String getIncUpdateTime() {
+            return this.incUpdateTime;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setIncVersion(Long incVersion) {
+            this.incVersion = incVersion;
+            return this;
+        }
+        public Long getIncVersion() {
+            return this.incVersion;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setIndexConfigInfo(GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo indexConfigInfo) {
+            this.indexConfigInfo = indexConfigInfo;
+            return this;
+        }
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusListIndexConfigInfo getIndexConfigInfo() {
+            return this.indexConfigInfo;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setIndexSize(Long indexSize) {
+            this.indexSize = indexSize;
+            return this;
+        }
+        public Long getIndexSize() {
+            return this.indexSize;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setLackDiskWorker(java.util.List<String> lackDiskWorker) {
+            this.lackDiskWorker = lackDiskWorker;
+            return this;
+        }
+        public java.util.List<String> getLackDiskWorker() {
+            return this.lackDiskWorker;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setLackMemWorker(java.util.List<String> lackMemWorker) {
+            this.lackMemWorker = lackMemWorker;
+            return this;
+        }
+        public java.util.List<String> getLackMemWorker() {
+            return this.lackMemWorker;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList setTotalSize(Integer totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Integer getTotalSize() {
+            return this.totalSize;
+        }
+
+    }
+
+    public static class GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus extends TeaModel {
+        @NameInMap("donePercent")
+        public Integer donePercent;
+
+        @NameInMap("doneSize")
+        public Integer doneSize;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("totalSize")
+        public Integer totalSize;
 
         public static GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus build(java.util.Map<String, ?> map) throws Exception {
             GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus self = new GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus();
             return TeaModel.build(map, self);
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus setDonePercent(Long donePercent) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus setDonePercent(Integer donePercent) {
             this.donePercent = donePercent;
             return this;
         }
-        public Long getDonePercent() {
+        public Integer getDonePercent() {
             return this.donePercent;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus setDoneSize(Long doneSize) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus setDoneSize(Integer doneSize) {
             this.doneSize = doneSize;
             return this;
         }
-        public Long getDoneSize() {
+        public Integer getDoneSize() {
             return this.doneSize;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus setTotalSize(Long totalSize) {
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus setTotalSize(Integer totalSize) {
             this.totalSize = totalSize;
             return this;
         }
-        public Long getTotalSize() {
+        public Integer getTotalSize() {
             return this.totalSize;
         }
 
     }
 
     public static class GetClusterRunTimeInfoResponseBodyResultDataNodes extends TeaModel {
-        @NameInMap("configStatus")
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus configStatus;
+        @NameInMap("configStatusList")
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList> configStatusList;
 
-        @NameInMap("dataStatus")
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus dataStatus;
+        @NameInMap("dataStatusList")
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList> dataStatusList;
 
         @NameInMap("serviceStatus")
         public GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus serviceStatus;
@@ -257,20 +411,20 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodes setConfigStatus(GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus configStatus) {
-            this.configStatus = configStatus;
+        public GetClusterRunTimeInfoResponseBodyResultDataNodes setConfigStatusList(java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList> configStatusList) {
+            this.configStatusList = configStatusList;
             return this;
         }
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatus getConfigStatus() {
-            return this.configStatus;
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesConfigStatusList> getConfigStatusList() {
+            return this.configStatusList;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultDataNodes setDataStatus(GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus dataStatus) {
-            this.dataStatus = dataStatus;
+        public GetClusterRunTimeInfoResponseBodyResultDataNodes setDataStatusList(java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList> dataStatusList) {
+            this.dataStatusList = dataStatusList;
             return this;
         }
-        public GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatus getDataStatus() {
-            return this.dataStatus;
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodesDataStatusList> getDataStatusList() {
+            return this.dataStatusList;
         }
 
         public GetClusterRunTimeInfoResponseBodyResultDataNodes setServiceStatus(GetClusterRunTimeInfoResponseBodyResultDataNodesServiceStatus serviceStatus) {
@@ -283,28 +437,43 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
 
     }
 
-    public static class GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus extends TeaModel {
+    public static class GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList extends TeaModel {
+        /**
+         * <p>configUpdateTime</p>
+         */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
+        /**
+         * <p>donePercent</p>
+         */
         @NameInMap("donePercent")
-        public Long donePercent;
+        public Integer donePercent;
 
+        /**
+         * <p>doneSize</p>
+         */
         @NameInMap("doneSize")
-        public Long doneSize;
+        public Integer doneSize;
 
+        /**
+         * <p>name</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>totalSize</p>
+         */
         @NameInMap("totalSize")
-        public Long totalSize;
+        public Integer totalSize;
 
-        public static GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus build(java.util.Map<String, ?> map) throws Exception {
-            GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus self = new GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus();
+        public static GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList build(java.util.Map<String, ?> map) throws Exception {
+            GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList self = new GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList();
             return TeaModel.build(map, self);
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus setConfigUpdateTime(String configUpdateTime) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList setConfigUpdateTime(String configUpdateTime) {
             this.configUpdateTime = configUpdateTime;
             return this;
         }
@@ -312,23 +481,23 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             return this.configUpdateTime;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus setDonePercent(Long donePercent) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList setDonePercent(Integer donePercent) {
             this.donePercent = donePercent;
             return this;
         }
-        public Long getDonePercent() {
+        public Integer getDonePercent() {
             return this.donePercent;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus setDoneSize(Long doneSize) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList setDoneSize(Integer doneSize) {
             this.doneSize = doneSize;
             return this;
         }
-        public Long getDoneSize() {
+        public Integer getDoneSize() {
             return this.doneSize;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus setName(String name) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList setName(String name) {
             this.name = name;
             return this;
         }
@@ -336,61 +505,90 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus setTotalSize(Long totalSize) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList setTotalSize(Integer totalSize) {
             this.totalSize = totalSize;
             return this;
         }
-        public Long getTotalSize() {
+        public Integer getTotalSize() {
             return this.totalSize;
         }
 
     }
 
     public static class GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus extends TeaModel {
+        /**
+         * <p>donePercent</p>
+         */
         @NameInMap("donePercent")
-        public Long donePercent;
+        public Integer donePercent;
 
+        /**
+         * <p>doneSize</p>
+         */
         @NameInMap("doneSize")
-        public Long doneSize;
+        public Integer doneSize;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>totalSize</p>
+         */
         @NameInMap("totalSize")
-        public Long totalSize;
+        public Integer totalSize;
 
         public static GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus build(java.util.Map<String, ?> map) throws Exception {
             GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus self = new GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus();
             return TeaModel.build(map, self);
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus setDonePercent(Long donePercent) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus setDonePercent(Integer donePercent) {
             this.donePercent = donePercent;
             return this;
         }
-        public Long getDonePercent() {
+        public Integer getDonePercent() {
             return this.donePercent;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus setDoneSize(Long doneSize) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus setDoneSize(Integer doneSize) {
             this.doneSize = doneSize;
             return this;
         }
-        public Long getDoneSize() {
+        public Integer getDoneSize() {
             return this.doneSize;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus setTotalSize(Long totalSize) {
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus setTotalSize(Integer totalSize) {
             this.totalSize = totalSize;
             return this;
         }
-        public Long getTotalSize() {
+        public Integer getTotalSize() {
             return this.totalSize;
         }
 
     }
 
     public static class GetClusterRunTimeInfoResponseBodyResultQueryNode extends TeaModel {
-        @NameInMap("configStatus")
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus configStatus;
+        /**
+         * <p>configStatusList</p>
+         */
+        @NameInMap("configStatusList")
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList> configStatusList;
 
+        /**
+         * <p>serviceStatus</p>
+         */
         @NameInMap("serviceStatus")
         public GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus serviceStatus;
 
@@ -399,12 +597,12 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetClusterRunTimeInfoResponseBodyResultQueryNode setConfigStatus(GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus configStatus) {
-            this.configStatus = configStatus;
+        public GetClusterRunTimeInfoResponseBodyResultQueryNode setConfigStatusList(java.util.List<GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList> configStatusList) {
+            this.configStatusList = configStatusList;
             return this;
         }
-        public GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatus getConfigStatus() {
-            return this.configStatus;
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultQueryNodeConfigStatusList> getConfigStatusList() {
+            return this.configStatusList;
         }
 
         public GetClusterRunTimeInfoResponseBodyResultQueryNode setServiceStatus(GetClusterRunTimeInfoResponseBodyResultQueryNodeServiceStatus serviceStatus) {
@@ -418,12 +616,21 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
     }
 
     public static class GetClusterRunTimeInfoResponseBodyResult extends TeaModel {
+        /**
+         * <p>The name of the cluster</p>
+         */
         @NameInMap("clusterName")
         public String clusterName;
 
+        /**
+         * <p>dataNodes</p>
+         */
         @NameInMap("dataNodes")
-        public GetClusterRunTimeInfoResponseBodyResultDataNodes dataNodes;
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodes> dataNodes;
 
+        /**
+         * <p>The specifications of the query node.</p>
+         */
         @NameInMap("queryNode")
         public GetClusterRunTimeInfoResponseBodyResultQueryNode queryNode;
 
@@ -440,11 +647,11 @@ public class GetClusterRunTimeInfoResponseBody extends TeaModel {
             return this.clusterName;
         }
 
-        public GetClusterRunTimeInfoResponseBodyResult setDataNodes(GetClusterRunTimeInfoResponseBodyResultDataNodes dataNodes) {
+        public GetClusterRunTimeInfoResponseBodyResult setDataNodes(java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodes> dataNodes) {
             this.dataNodes = dataNodes;
             return this;
         }
-        public GetClusterRunTimeInfoResponseBodyResultDataNodes getDataNodes() {
+        public java.util.List<GetClusterRunTimeInfoResponseBodyResultDataNodes> getDataNodes() {
             return this.dataNodes;
         }
 

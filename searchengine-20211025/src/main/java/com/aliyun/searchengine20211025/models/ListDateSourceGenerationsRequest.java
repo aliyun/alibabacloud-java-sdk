@@ -7,6 +7,9 @@ public class ListDateSourceGenerationsRequest extends TeaModel {
     @NameInMap("domainName")
     public String domainName;
 
+    /**
+     * <p>Obtains the data restoration version of a data source.</p>
+     */
     @NameInMap("validStatus")
     public Boolean validStatus;
 

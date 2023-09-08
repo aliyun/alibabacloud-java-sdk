@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceSpecsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The specifications of the instances.</p>
+     */
     @NameInMap("result")
     public java.util.List<ListInstanceSpecsResponseBodyResult> result;
 
@@ -32,14 +38,29 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
     }
 
     public static class ListInstanceSpecsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The number of CPU cores.</p>
+         */
         @NameInMap("cpu")
         public Integer cpu;
 
-        @NameInMap("disk")
-        public Integer disk;
+        /**
+         * <p>The maximum storage space of a searcher worker.</p>
+         */
+        @NameInMap("maxDisk")
+        public Integer maxDisk;
 
+        /**
+         * <p>The memory size. Unit: GB.</p>
+         */
         @NameInMap("mem")
         public Integer mem;
+
+        /**
+         * <p>The minimum storage space of a searcher worker.</p>
+         */
+        @NameInMap("minDisk")
+        public Integer minDisk;
 
         public static ListInstanceSpecsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListInstanceSpecsResponseBodyResult self = new ListInstanceSpecsResponseBodyResult();
@@ -54,12 +75,12 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             return this.cpu;
         }
 
-        public ListInstanceSpecsResponseBodyResult setDisk(Integer disk) {
-            this.disk = disk;
+        public ListInstanceSpecsResponseBodyResult setMaxDisk(Integer maxDisk) {
+            this.maxDisk = maxDisk;
             return this;
         }
-        public Integer getDisk() {
-            return this.disk;
+        public Integer getMaxDisk() {
+            return this.maxDisk;
         }
 
         public ListInstanceSpecsResponseBodyResult setMem(Integer mem) {
@@ -68,6 +89,14 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         }
         public Integer getMem() {
             return this.mem;
+        }
+
+        public ListInstanceSpecsResponseBodyResult setMinDisk(Integer minDisk) {
+            this.minDisk = minDisk;
+            return this;
+        }
+        public Integer getMinDisk() {
+            return this.minDisk;
         }
 
     }

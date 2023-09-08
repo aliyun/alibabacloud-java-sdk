@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceSpecsRequest extends TeaModel {
+    /**
+     * <p>The node type. Valid values: qrs, search, index, and cluster. qrs specifies an Query Result Searcher (QRS) worker, search specifies a searcher worker, index specifies an index node, and cluster specifies a cluster.</p>
+     */
     @NameInMap("type")
     public String type;
 

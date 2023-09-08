@@ -4,12 +4,18 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class RecoverIndexRequest extends TeaModel {
+    /**
+     * <p>buildDeployId</p>
+     */
     @NameInMap("buildDeployId")
     public Integer buildDeployId;
 
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
+    /**
+     * <p>generation</p>
+     */
     @NameInMap("generation")
     public String generation;
 

@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("result")
     public CreateInstanceResponseBodyResult result;
 
@@ -32,6 +38,9 @@ public class CreateInstanceResponseBody extends TeaModel {
     }
 
     public static class CreateInstanceResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("instanceId")
         public String instanceId;
 

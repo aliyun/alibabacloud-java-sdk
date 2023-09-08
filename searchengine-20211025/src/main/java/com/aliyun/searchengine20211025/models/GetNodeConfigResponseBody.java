@@ -4,11 +4,14 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetNodeConfigResponseBody extends TeaModel {
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("result")
-    public java.util.List<GetNodeConfigResponseBodyResult> result;
+    public GetNodeConfigResponseBodyResult result;
 
     public static GetNodeConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetNodeConfigResponseBody self = new GetNodeConfigResponseBody();
@@ -23,23 +26,26 @@ public class GetNodeConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetNodeConfigResponseBody setResult(java.util.List<GetNodeConfigResponseBodyResult> result) {
+    public GetNodeConfigResponseBody setResult(GetNodeConfigResponseBodyResult result) {
         this.result = result;
         return this;
     }
-    public java.util.List<GetNodeConfigResponseBodyResult> getResult() {
+    public GetNodeConfigResponseBodyResult getResult() {
         return this.result;
     }
 
     public static class GetNodeConfigResponseBodyResult extends TeaModel {
+        @NameInMap("active")
+        public Boolean active;
+
         @NameInMap("dataDuplicateNumber")
-        public Long dataDuplicateNumber;
+        public Integer dataDuplicateNumber;
 
         @NameInMap("dataFragmentNumber")
-        public Long dataFragmentNumber;
+        public Integer dataFragmentNumber;
 
         @NameInMap("minServicePercent")
-        public Long minServicePercent;
+        public Integer minServicePercent;
 
         @NameInMap("published")
         public Boolean published;
@@ -49,27 +55,35 @@ public class GetNodeConfigResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetNodeConfigResponseBodyResult setDataDuplicateNumber(Long dataDuplicateNumber) {
+        public GetNodeConfigResponseBodyResult setActive(Boolean active) {
+            this.active = active;
+            return this;
+        }
+        public Boolean getActive() {
+            return this.active;
+        }
+
+        public GetNodeConfigResponseBodyResult setDataDuplicateNumber(Integer dataDuplicateNumber) {
             this.dataDuplicateNumber = dataDuplicateNumber;
             return this;
         }
-        public Long getDataDuplicateNumber() {
+        public Integer getDataDuplicateNumber() {
             return this.dataDuplicateNumber;
         }
 
-        public GetNodeConfigResponseBodyResult setDataFragmentNumber(Long dataFragmentNumber) {
+        public GetNodeConfigResponseBodyResult setDataFragmentNumber(Integer dataFragmentNumber) {
             this.dataFragmentNumber = dataFragmentNumber;
             return this;
         }
-        public Long getDataFragmentNumber() {
+        public Integer getDataFragmentNumber() {
             return this.dataFragmentNumber;
         }
 
-        public GetNodeConfigResponseBodyResult setMinServicePercent(Long minServicePercent) {
+        public GetNodeConfigResponseBodyResult setMinServicePercent(Integer minServicePercent) {
             this.minServicePercent = minServicePercent;
             return this;
         }
-        public Long getMinServicePercent() {
+        public Integer getMinServicePercent() {
             return this.minServicePercent;
         }
 

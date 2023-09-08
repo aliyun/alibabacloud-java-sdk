@@ -7,6 +7,9 @@ public class CreateDataSourceResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

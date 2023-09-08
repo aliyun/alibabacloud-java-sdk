@@ -4,12 +4,21 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyAdvanceConfigFileRequest extends TeaModel {
+    /**
+     * <p>The content of the file.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>The variable.</p>
+     */
     @NameInMap("variables")
     public java.util.Map<String, VariablesValue> variables;
 
+    /**
+     * <p>The name of the file.</p>
+     */
     @NameInMap("fileName")
     public String fileName;
 
