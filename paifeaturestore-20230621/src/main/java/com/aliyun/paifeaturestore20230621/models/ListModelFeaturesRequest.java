@@ -17,10 +17,10 @@ public class ListModelFeaturesRequest extends TeaModel {
     public String owner;
 
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     @NameInMap("ProjectId")
     public String projectId;
@@ -65,19 +65,19 @@ public class ListModelFeaturesRequest extends TeaModel {
         return this.owner;
     }
 
-    public ListModelFeaturesRequest setPageNumber(String pageNumber) {
+    public ListModelFeaturesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListModelFeaturesRequest setPageSize(String pageSize) {
+    public ListModelFeaturesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
