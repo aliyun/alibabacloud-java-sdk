@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterVpcAttachmentRequest extends TeaModel {
     /**
-     * <p>是否使企业版转发路由器自动发布路由到VPC实例。</p>
+     * <p>Specifies whether to enable the Enterprise Edition transit router to automatically advertise routes to VPCs. Valid values:</p>
      * <br>
-     * <p>- **false**（默认值）：否。</p>
-     * <p>- **true**：是。</p>
+     * <p>*   **false:** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
