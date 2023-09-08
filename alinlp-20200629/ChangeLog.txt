@@ -1,3 +1,6 @@
+2023-09-08 Version: 2.1.0
+- Generated java 2020-06-29 for alinlp.
+
 2023-02-27 Version: 2.0.3
 - Supported SDK for AliNLP version-2.
 
