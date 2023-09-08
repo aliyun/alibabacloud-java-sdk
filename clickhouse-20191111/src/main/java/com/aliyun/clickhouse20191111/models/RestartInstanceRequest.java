@@ -28,6 +28,9 @@ public class RestartInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RestartTime")
+    public String restartTime;
+
     public static RestartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartInstanceRequest self = new RestartInstanceRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class RestartInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public RestartInstanceRequest setRestartTime(String restartTime) {
+        this.restartTime = restartTime;
+        return this;
+    }
+    public String getRestartTime() {
+        return this.restartTime;
     }
 
 }

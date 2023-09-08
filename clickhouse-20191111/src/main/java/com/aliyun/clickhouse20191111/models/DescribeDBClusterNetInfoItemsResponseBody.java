@@ -7,6 +7,9 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     @NameInMap("ClusterNetworkType")
     public String clusterNetworkType;
 
+    @NameInMap("EnableSLB")
+    public Boolean enableSLB;
+
     @NameInMap("NetInfoItems")
     public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems netInfoItems;
 
@@ -24,6 +27,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
     }
     public String getClusterNetworkType() {
         return this.clusterNetworkType;
+    }
+
+    public DescribeDBClusterNetInfoItemsResponseBody setEnableSLB(Boolean enableSLB) {
+        this.enableSLB = enableSLB;
+        return this;
+    }
+    public Boolean getEnableSLB() {
+        return this.enableSLB;
     }
 
     public DescribeDBClusterNetInfoItemsResponseBody setNetInfoItems(DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems netInfoItems) {
@@ -49,11 +60,17 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         @NameInMap("HttpPort")
         public String httpPort;
 
+        @NameInMap("HttpsPort")
+        public String httpsPort;
+
         @NameInMap("IPAddress")
         public String IPAddress;
 
         @NameInMap("JdbcPort")
         public String jdbcPort;
+
+        @NameInMap("MySQLPort")
+        public String mySQLPort;
 
         @NameInMap("NetType")
         public String netType;
@@ -85,6 +102,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             return this.httpPort;
         }
 
+        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setHttpsPort(String httpsPort) {
+            this.httpsPort = httpsPort;
+            return this;
+        }
+        public String getHttpsPort() {
+            return this.httpsPort;
+        }
+
         public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setIPAddress(String IPAddress) {
             this.IPAddress = IPAddress;
             return this;
@@ -99,6 +124,14 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         }
         public String getJdbcPort() {
             return this.jdbcPort;
+        }
+
+        public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setMySQLPort(String mySQLPort) {
+            this.mySQLPort = mySQLPort;
+            return this;
+        }
+        public String getMySQLPort() {
+            return this.mySQLPort;
         }
 
         public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem setNetType(String netType) {
