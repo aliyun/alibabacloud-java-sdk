@@ -10,6 +10,9 @@ public class DescribeVulListResponseBody extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The number of entries per page.</p>
      */
@@ -45,6 +48,14 @@ public class DescribeVulListResponseBody extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeVulListResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeVulListResponseBody setPageSize(Integer pageSize) {
