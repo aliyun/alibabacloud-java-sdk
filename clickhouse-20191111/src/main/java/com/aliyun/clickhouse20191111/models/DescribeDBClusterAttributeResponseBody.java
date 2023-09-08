@@ -114,6 +114,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public String aliUid;
 
+        @NameInMap("AppointmentRestartTime")
+        public String appointmentRestartTime;
+
         @NameInMap("Bid")
         public String bid;
 
@@ -177,6 +180,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("ExtStorageSize")
+        public Integer extStorageSize;
+
+        @NameInMap("ExtStorageType")
+        public String extStorageType;
+
         @NameInMap("IsExpired")
         public String isExpired;
 
@@ -210,6 +219,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ScaleOutStatus")
         public DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus scaleOutStatus;
 
@@ -237,6 +249,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -245,6 +260,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("ZookeeperClass")
+        public String zookeeperClass;
 
         public static DescribeDBClusterAttributeResponseBodyDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAttributeResponseBodyDBCluster self = new DescribeDBClusterAttributeResponseBodyDBCluster();
@@ -257,6 +275,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getAliUid() {
             return this.aliUid;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setAppointmentRestartTime(String appointmentRestartTime) {
+            this.appointmentRestartTime = appointmentRestartTime;
+            return this;
+        }
+        public String getAppointmentRestartTime() {
+            return this.appointmentRestartTime;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setBid(String bid) {
@@ -427,6 +453,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public DescribeDBClusterAttributeResponseBodyDBCluster setExtStorageSize(Integer extStorageSize) {
+            this.extStorageSize = extStorageSize;
+            return this;
+        }
+        public Integer getExtStorageSize() {
+            return this.extStorageSize;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setExtStorageType(String extStorageType) {
+            this.extStorageType = extStorageType;
+            return this;
+        }
+        public String getExtStorageType() {
+            return this.extStorageType;
+        }
+
         public DescribeDBClusterAttributeResponseBodyDBCluster setIsExpired(String isExpired) {
             this.isExpired = isExpired;
             return this;
@@ -513,6 +555,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setScaleOutStatus(DescribeDBClusterAttributeResponseBodyDBClusterScaleOutStatus scaleOutStatus) {
@@ -609,6 +659,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setZookeeperClass(String zookeeperClass) {
+            this.zookeeperClass = zookeeperClass;
+            return this;
+        }
+        public String getZookeeperClass() {
+            return this.zookeeperClass;
         }
 
     }

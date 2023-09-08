@@ -189,6 +189,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("ExtStorageSize")
+        public Integer extStorageSize;
+
+        @NameInMap("ExtStorageType")
+        public String extStorageType;
+
         @NameInMap("IsExpired")
         public String isExpired;
 
@@ -207,6 +213,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("ScaleOutStatus")
         public DescribeDBClustersResponseBodyDBClustersDBClusterScaleOutStatus scaleOutStatus;
 
@@ -222,6 +231,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
+        /**
+         * <p>VPC ID。</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -353,6 +365,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public DescribeDBClustersResponseBodyDBClustersDBCluster setExtStorageSize(Integer extStorageSize) {
+            this.extStorageSize = extStorageSize;
+            return this;
+        }
+        public Integer getExtStorageSize() {
+            return this.extStorageSize;
+        }
+
+        public DescribeDBClustersResponseBodyDBClustersDBCluster setExtStorageType(String extStorageType) {
+            this.extStorageType = extStorageType;
+            return this;
+        }
+        public String getExtStorageType() {
+            return this.extStorageType;
+        }
+
         public DescribeDBClustersResponseBodyDBClustersDBCluster setIsExpired(String isExpired) {
             this.isExpired = isExpired;
             return this;
@@ -399,6 +427,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeDBClustersResponseBodyDBClustersDBCluster setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeDBClustersResponseBodyDBClustersDBCluster setScaleOutStatus(DescribeDBClustersResponseBodyDBClustersDBClusterScaleOutStatus scaleOutStatus) {

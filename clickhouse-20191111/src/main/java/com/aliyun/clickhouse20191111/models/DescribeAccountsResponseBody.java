@@ -77,6 +77,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @NameInMap("AccountType")
         public String accountType;
 
+        @NameInMap("ConfigType")
+        public String configType;
+
         public static DescribeAccountsResponseBodyAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsAccount self = new DescribeAccountsResponseBodyAccountsAccount();
             return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
         public String getAccountType() {
             return this.accountType;
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccount setConfigType(String configType) {
+            this.configType = configType;
+            return this;
+        }
+        public String getConfigType() {
+            return this.configType;
         }
 
     }
