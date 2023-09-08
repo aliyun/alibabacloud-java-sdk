@@ -4,47 +4,57 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterOfflineConfigRequest extends TeaModel {
-    @NameInMap("advancedConfigVersionId")
-    public Integer advancedConfigVersionId;
-
+    /**
+     * <p>The reindexing method. Valid values: api: API data source. indexRecover: data recovery through indexing.</p>
+     */
     @NameInMap("buildMode")
     public String buildMode;
 
-    @NameInMap("dataSource")
-    public String dataSource;
+    /**
+     * <p>The configuration name, which is stored as a key.</p>
+     */
+    @NameInMap("config")
+    public java.util.Map<String, Integer> config;
 
+    @NameInMap("dataSourceName")
+    public String dataSourceName;
+
+    /**
+     * <p>The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.</p>
+     */
     @NameInMap("dataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>This parameter is required if the API data source experiences full indexing.</p>
+     */
     @NameInMap("dataTimeSec")
     public Integer dataTimeSec;
 
+    /**
+     * <p>The domain in which the data source is deployed.</p>
+     */
     @NameInMap("domain")
     public String domain;
 
+    /**
+     * <p>The ID of the backward data delivery.</p>
+     */
     @NameInMap("generation")
     public Long generation;
 
-    @NameInMap("indexes")
-    public java.util.List<ModifyClusterOfflineConfigRequestIndexes> indexes;
-
+    /**
+     * <p>This parameter is required if the MaxCompute data source experiences full indexing.</p>
+     */
     @NameInMap("partition")
     public String partition;
 
-    @NameInMap("triggerBuild")
-    public Boolean triggerBuild;
+    @NameInMap("pushMode")
+    public String pushMode;
 
     public static ModifyClusterOfflineConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterOfflineConfigRequest self = new ModifyClusterOfflineConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyClusterOfflineConfigRequest setAdvancedConfigVersionId(Integer advancedConfigVersionId) {
-        this.advancedConfigVersionId = advancedConfigVersionId;
-        return this;
-    }
-    public Integer getAdvancedConfigVersionId() {
-        return this.advancedConfigVersionId;
     }
 
     public ModifyClusterOfflineConfigRequest setBuildMode(String buildMode) {
@@ -55,12 +65,20 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
         return this.buildMode;
     }
 
-    public ModifyClusterOfflineConfigRequest setDataSource(String dataSource) {
-        this.dataSource = dataSource;
+    public ModifyClusterOfflineConfigRequest setConfig(java.util.Map<String, Integer> config) {
+        this.config = config;
         return this;
     }
-    public String getDataSource() {
-        return this.dataSource;
+    public java.util.Map<String, Integer> getConfig() {
+        return this.config;
+    }
+
+    public ModifyClusterOfflineConfigRequest setDataSourceName(String dataSourceName) {
+        this.dataSourceName = dataSourceName;
+        return this;
+    }
+    public String getDataSourceName() {
+        return this.dataSourceName;
     }
 
     public ModifyClusterOfflineConfigRequest setDataSourceType(String dataSourceType) {
@@ -95,14 +113,6 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
         return this.generation;
     }
 
-    public ModifyClusterOfflineConfigRequest setIndexes(java.util.List<ModifyClusterOfflineConfigRequestIndexes> indexes) {
-        this.indexes = indexes;
-        return this;
-    }
-    public java.util.List<ModifyClusterOfflineConfigRequestIndexes> getIndexes() {
-        return this.indexes;
-    }
-
     public ModifyClusterOfflineConfigRequest setPartition(String partition) {
         this.partition = partition;
         return this;
@@ -111,42 +121,12 @@ public class ModifyClusterOfflineConfigRequest extends TeaModel {
         return this.partition;
     }
 
-    public ModifyClusterOfflineConfigRequest setTriggerBuild(Boolean triggerBuild) {
-        this.triggerBuild = triggerBuild;
+    public ModifyClusterOfflineConfigRequest setPushMode(String pushMode) {
+        this.pushMode = pushMode;
         return this;
     }
-    public Boolean getTriggerBuild() {
-        return this.triggerBuild;
-    }
-
-    public static class ModifyClusterOfflineConfigRequestIndexes extends TeaModel {
-        @NameInMap("name")
-        public String name;
-
-        @NameInMap("versionId")
-        public Integer versionId;
-
-        public static ModifyClusterOfflineConfigRequestIndexes build(java.util.Map<String, ?> map) throws Exception {
-            ModifyClusterOfflineConfigRequestIndexes self = new ModifyClusterOfflineConfigRequestIndexes();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyClusterOfflineConfigRequestIndexes setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ModifyClusterOfflineConfigRequestIndexes setVersionId(Integer versionId) {
-            this.versionId = versionId;
-            return this;
-        }
-        public Integer getVersionId() {
-            return this.versionId;
-        }
-
+    public String getPushMode() {
+        return this.pushMode;
     }
 
 }

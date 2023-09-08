@@ -4,6 +4,39 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyIndexVersionRequest extends TeaModel {
+    /**
+     * <p>## Sample requests</p>
+     * <br>
+     * <p>﻿</p>
+     * <br>
+     * <p>    PUT /openapi/ha3/instances/ha3_instance_nameclusters/test_cluster/index-version</p>
+     * <br>
+     * <p>﻿</p>
+     * <br>
+     * <p>    [</p>
+     * <p>    ﻿</p>
+     * <p>      {</p>
+     * <p>    ﻿</p>
+     * <p>        "indexName": "index1",</p>
+     * <p>    ﻿</p>
+     * <p>        "version": "123456",</p>
+     * <p>    ﻿</p>
+     * <p>        "buildDeployId": "20201010"</p>
+     * <p>    ﻿</p>
+     * <p>      },</p>
+     * <p>    ﻿</p>
+     * <p>      {</p>
+     * <p>    ﻿</p>
+     * <p>        "indexName": "index1",</p>
+     * <p>    ﻿</p>
+     * <p>        "version": "123456",</p>
+     * <p>    ﻿</p>
+     * <p>        "buildDeployId": "20201010"</p>
+     * <p>    ﻿</p>
+     * <p>      }</p>
+     * <p>    ﻿</p>
+     * <p>    ]</p>
+     */
     @NameInMap("body")
     public java.util.List<ModifyIndexVersionRequestBody> body;
 
@@ -24,6 +57,9 @@ public class ModifyIndexVersionRequest extends TeaModel {
         @NameInMap("buildDeployId")
         public String buildDeployId;
 
+        /**
+         * <p>WB01240825</p>
+         */
         @NameInMap("indexName")
         public String indexName;
 

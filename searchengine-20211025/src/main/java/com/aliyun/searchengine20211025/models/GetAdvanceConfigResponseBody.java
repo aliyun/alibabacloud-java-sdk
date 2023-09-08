@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetAdvanceConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("result")
     public GetAdvanceConfigResponseBodyResult result;
 
@@ -32,15 +38,27 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
     }
 
     public static class GetAdvanceConfigResponseBodyResultFiles extends TeaModel {
+        /**
+         * <p>The name of the file path.</p>
+         */
         @NameInMap("fullPathName")
         public String fullPathName;
 
+        /**
+         * <p>Indicates whether it is a directory.</p>
+         */
         @NameInMap("isDir")
         public Boolean isDir;
 
+        /**
+         * <p>Indicates whether it is a template.</p>
+         */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -84,24 +102,67 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
     }
 
     public static class GetAdvanceConfigResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content of the configuration that is returned.</p>
+         */
+        @NameInMap("content")
+        public String content;
+
+        /**
+         * <p>The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.</p>
+         */
+        @NameInMap("contentType")
+        public String contentType;
+
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <p>The information about files.</p>
+         */
         @NameInMap("files")
         public java.util.List<GetAdvanceConfigResponseBodyResultFiles> files;
 
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The update time.</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 
         public static GetAdvanceConfigResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetAdvanceConfigResponseBodyResult self = new GetAdvanceConfigResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetAdvanceConfigResponseBodyResult setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetAdvanceConfigResponseBodyResult setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
         }
 
         public GetAdvanceConfigResponseBodyResult setDesc(String desc) {

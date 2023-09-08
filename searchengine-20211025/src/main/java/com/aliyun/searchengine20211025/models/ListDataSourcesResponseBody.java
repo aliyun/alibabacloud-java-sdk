@@ -4,9 +4,21 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListDataSourcesResponseBody extends TeaModel {
+    /**
+     * <p>## Method</p>
+     * <br>
+     * <p>`GET`</p>
+     * <br>
+     * <p>## URI</p>
+     * <br>
+     * <p>`/openapi/ha3/instances/{instanceId}/data-sources`</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("result")
     public java.util.List<ListDataSourcesResponseBodyResult> result;
 
@@ -31,116 +43,46 @@ public class ListDataSourcesResponseBody extends TeaModel {
         return this.result;
     }
 
-    public static class ListDataSourcesResponseBodyResultConfig extends TeaModel {
-        @NameInMap("accessKey")
-        public String accessKey;
-
-        @NameInMap("accessSecret")
-        public String accessSecret;
-
-        @NameInMap("partition")
-        public String partition;
-
-        @NameInMap("project")
-        public String project;
-
-        @NameInMap("table")
-        public String table;
-
-        public static ListDataSourcesResponseBodyResultConfig build(java.util.Map<String, ?> map) throws Exception {
-            ListDataSourcesResponseBodyResultConfig self = new ListDataSourcesResponseBodyResultConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public ListDataSourcesResponseBodyResultConfig setAccessKey(String accessKey) {
-            this.accessKey = accessKey;
-            return this;
-        }
-        public String getAccessKey() {
-            return this.accessKey;
-        }
-
-        public ListDataSourcesResponseBodyResultConfig setAccessSecret(String accessSecret) {
-            this.accessSecret = accessSecret;
-            return this;
-        }
-        public String getAccessSecret() {
-            return this.accessSecret;
-        }
-
-        public ListDataSourcesResponseBodyResultConfig setPartition(String partition) {
-            this.partition = partition;
-            return this;
-        }
-        public String getPartition() {
-            return this.partition;
-        }
-
-        public ListDataSourcesResponseBodyResultConfig setProject(String project) {
-            this.project = project;
-            return this;
-        }
-        public String getProject() {
-            return this.project;
-        }
-
-        public ListDataSourcesResponseBodyResultConfig setTable(String table) {
-            this.table = table;
-            return this;
-        }
-        public String getTable() {
-            return this.table;
-        }
-
-    }
-
     public static class ListDataSourcesResponseBodyResult extends TeaModel {
-        @NameInMap("autoBuildIndex")
-        public Boolean autoBuildIndex;
-
-        @NameInMap("config")
-        public ListDataSourcesResponseBodyResultConfig config;
-
+        /**
+         * <p>The data sources deployed in offline mode.</p>
+         */
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The indexes.</p>
+         */
         @NameInMap("indexes")
         public java.util.List<String> indexes;
 
+        /**
+         * <p>The time when the full data of the data source was last queried.</p>
+         */
         @NameInMap("lastFulTime")
         public Long lastFulTime;
 
+        /**
+         * <p>The name of the data source.</p>
+         */
         @NameInMap("name")
         public String name;
 
-        @NameInMap("partitions")
-        public java.util.List<String> partitions;
-
+        /**
+         * <p>The status of the data source.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The type of the data source.</p>
+         */
         @NameInMap("type")
         public String type;
 
         public static ListDataSourcesResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListDataSourcesResponseBodyResult self = new ListDataSourcesResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public ListDataSourcesResponseBodyResult setAutoBuildIndex(Boolean autoBuildIndex) {
-            this.autoBuildIndex = autoBuildIndex;
-            return this;
-        }
-        public Boolean getAutoBuildIndex() {
-            return this.autoBuildIndex;
-        }
-
-        public ListDataSourcesResponseBodyResult setConfig(ListDataSourcesResponseBodyResultConfig config) {
-            this.config = config;
-            return this;
-        }
-        public ListDataSourcesResponseBodyResultConfig getConfig() {
-            return this.config;
         }
 
         public ListDataSourcesResponseBodyResult setDomain(String domain) {
@@ -173,14 +115,6 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public ListDataSourcesResponseBodyResult setPartitions(java.util.List<String> partitions) {
-            this.partitions = partitions;
-            return this;
-        }
-        public java.util.List<String> getPartitions() {
-            return this.partitions;
         }
 
         public ListDataSourcesResponseBodyResult setStatus(String status) {

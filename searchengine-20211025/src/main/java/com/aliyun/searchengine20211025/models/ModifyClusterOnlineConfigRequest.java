@@ -4,23 +4,21 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterOnlineConfigRequest extends TeaModel {
-    @NameInMap("advancedConfigVersionId")
-    public Integer advancedConfigVersionId;
-
+    /**
+     * <p>The information about the cluster</p>
+     */
     @NameInMap("clusters")
     public java.util.List<String> clusters;
+
+    /**
+     * <p>配置信息</p>
+     */
+    @NameInMap("config")
+    public java.util.Map<String, Integer> config;
 
     public static ModifyClusterOnlineConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterOnlineConfigRequest self = new ModifyClusterOnlineConfigRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyClusterOnlineConfigRequest setAdvancedConfigVersionId(Integer advancedConfigVersionId) {
-        this.advancedConfigVersionId = advancedConfigVersionId;
-        return this;
-    }
-    public Integer getAdvancedConfigVersionId() {
-        return this.advancedConfigVersionId;
     }
 
     public ModifyClusterOnlineConfigRequest setClusters(java.util.List<String> clusters) {
@@ -29,6 +27,14 @@ public class ModifyClusterOnlineConfigRequest extends TeaModel {
     }
     public java.util.List<String> getClusters() {
         return this.clusters;
+    }
+
+    public ModifyClusterOnlineConfigRequest setConfig(java.util.Map<String, Integer> config) {
+        this.config = config;
+        return this;
+    }
+    public java.util.Map<String, Integer> getConfig() {
+        return this.config;
     }
 
 }

@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyDataSourceRequest extends TeaModel {
+    /**
+     * <p>The information about the index</p>
+     */
     @NameInMap("body")
     public java.util.Map<String, ?> body;
 
+    /**
+     * <p>The ID of the request</p>
+     */
     @NameInMap("dryRun")
     public Boolean dryRun;
 

@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyOnlineConfigRequest extends TeaModel {
+    /**
+     * <p>ashortdescriptionofstruct</p>
+     */
     @NameInMap("body")
     public java.util.Map<String, String> body;
 

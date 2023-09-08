@@ -4,15 +4,27 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyIndexPartitionRequest extends TeaModel {
+    /**
+     * <p>The name of the data source.</p>
+     */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
+    /**
+     * <p>The information about each index.</p>
+     */
     @NameInMap("domainName")
     public String domainName;
 
+    /**
+     * <p>The name of the data center.</p>
+     */
     @NameInMap("generation")
     public Long generation;
 
+    /**
+     * <p>The number of shards of the index.</p>
+     */
     @NameInMap("indexInfos")
     public java.util.List<ModifyIndexPartitionRequestIndexInfos> indexInfos;
 
@@ -54,12 +66,21 @@ public class ModifyIndexPartitionRequest extends TeaModel {
     }
 
     public static class ModifyIndexPartitionRequestIndexInfos extends TeaModel {
+        /**
+         * <p>auditing</p>
+         */
         @NameInMap("indexName")
         public String indexName;
 
+        /**
+         * <p>The parameters in the request body.</p>
+         */
         @NameInMap("parallelNum")
         public Integer parallelNum;
 
+        /**
+         * <p>The number of shards of the index.</p>
+         */
         @NameInMap("partitionCount")
         public Integer partitionCount;
 

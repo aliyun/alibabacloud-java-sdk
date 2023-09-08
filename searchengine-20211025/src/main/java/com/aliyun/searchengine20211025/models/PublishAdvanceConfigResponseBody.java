@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class PublishAdvanceConfigResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The result returned</p>
+     */
     @NameInMap("result")
     public java.util.Map<String, ?> result;
 

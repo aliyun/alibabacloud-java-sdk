@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListClusterTasksResponseBody extends TeaModel {
+    /**
+     * <p>id of request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The date when the task was completed.</p>
+     */
     @NameInMap("result")
     public java.util.List<ListClusterTasksResponseBodyResult> result;
 
@@ -120,12 +126,31 @@ public class ListClusterTasksResponseBody extends TeaModel {
         @NameInMap("field3")
         public String field3;
 
+        /**
+         * <p>fsmId</p>
+         */
         @NameInMap("fsmId")
         public String fsmId;
 
+        /**
+         * <p>### Method</p>
+         * <br>
+         * <p>```java</p>
+         * <p>GET</p>
+         * <p>```</p>
+         * <br>
+         * <p>### URI</p>
+         * <br>
+         * <p>```java</p>
+         * <p>/openapi/ha3/instances/{instanceId}/cluster-tasks</p>
+         * <p>```</p>
+         */
         @NameInMap("groupType")
         public String groupType;
 
+        /**
+         * <p>Displays cluster tasks .</p>
+         */
         @NameInMap("name")
         public String name;
 

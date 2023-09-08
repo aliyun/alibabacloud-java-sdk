@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
+    /**
+     * <p>id of request</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -120,8 +123,20 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("currentAdvanceConfigVersion")
         public String currentAdvanceConfigVersion;
 
+        /**
+         * <p>词典配置生效版本</p>
+         */
+        @NameInMap("currentOfflineDictConfigVersion")
+        public String currentOfflineDictConfigVersion;
+
         @NameInMap("currentOnlineConfigVersion")
         public String currentOnlineConfigVersion;
+
+        /**
+         * <p>查询配置生效版本</p>
+         */
+        @NameInMap("currentOnlineQueryConfigVersion")
+        public String currentOnlineQueryConfigVersion;
 
         @NameInMap("dataNode")
         public ListClustersResponseBodyResultDataNode dataNode;
@@ -132,8 +147,20 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("latestAdvanceConfigVersion")
         public String latestAdvanceConfigVersion;
 
+        /**
+         * <p>词典配置最新版本</p>
+         */
+        @NameInMap("latestOfflineDictConfigVersion")
+        public String latestOfflineDictConfigVersion;
+
         @NameInMap("latestOnlineConfigVersion")
         public String latestOnlineConfigVersion;
+
+        /**
+         * <p>查询配置最新版本</p>
+         */
+        @NameInMap("latestOnlineQueryConfigVersion")
+        public String latestOnlineQueryConfigVersion;
 
         @NameInMap("name")
         public String name;
@@ -165,12 +192,28 @@ public class ListClustersResponseBody extends TeaModel {
             return this.currentAdvanceConfigVersion;
         }
 
+        public ListClustersResponseBodyResult setCurrentOfflineDictConfigVersion(String currentOfflineDictConfigVersion) {
+            this.currentOfflineDictConfigVersion = currentOfflineDictConfigVersion;
+            return this;
+        }
+        public String getCurrentOfflineDictConfigVersion() {
+            return this.currentOfflineDictConfigVersion;
+        }
+
         public ListClustersResponseBodyResult setCurrentOnlineConfigVersion(String currentOnlineConfigVersion) {
             this.currentOnlineConfigVersion = currentOnlineConfigVersion;
             return this;
         }
         public String getCurrentOnlineConfigVersion() {
             return this.currentOnlineConfigVersion;
+        }
+
+        public ListClustersResponseBodyResult setCurrentOnlineQueryConfigVersion(String currentOnlineQueryConfigVersion) {
+            this.currentOnlineQueryConfigVersion = currentOnlineQueryConfigVersion;
+            return this;
+        }
+        public String getCurrentOnlineQueryConfigVersion() {
+            return this.currentOnlineQueryConfigVersion;
         }
 
         public ListClustersResponseBodyResult setDataNode(ListClustersResponseBodyResultDataNode dataNode) {
@@ -197,12 +240,28 @@ public class ListClustersResponseBody extends TeaModel {
             return this.latestAdvanceConfigVersion;
         }
 
+        public ListClustersResponseBodyResult setLatestOfflineDictConfigVersion(String latestOfflineDictConfigVersion) {
+            this.latestOfflineDictConfigVersion = latestOfflineDictConfigVersion;
+            return this;
+        }
+        public String getLatestOfflineDictConfigVersion() {
+            return this.latestOfflineDictConfigVersion;
+        }
+
         public ListClustersResponseBodyResult setLatestOnlineConfigVersion(String latestOnlineConfigVersion) {
             this.latestOnlineConfigVersion = latestOnlineConfigVersion;
             return this;
         }
         public String getLatestOnlineConfigVersion() {
             return this.latestOnlineConfigVersion;
+        }
+
+        public ListClustersResponseBodyResult setLatestOnlineQueryConfigVersion(String latestOnlineQueryConfigVersion) {
+            this.latestOnlineQueryConfigVersion = latestOnlineQueryConfigVersion;
+            return this;
+        }
+        public String getLatestOnlineQueryConfigVersion() {
+            return this.latestOnlineQueryConfigVersion;
         }
 
         public ListClustersResponseBodyResult setName(String name) {

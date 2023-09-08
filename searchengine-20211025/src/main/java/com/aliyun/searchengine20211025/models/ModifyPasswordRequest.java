@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyPasswordRequest extends TeaModel {
+    /**
+     * <p>The password</p>
+     */
     @NameInMap("password")
     public String password;
 
+    /**
+     * <p>The username</p>
+     */
     @NameInMap("username")
     public String username;
 

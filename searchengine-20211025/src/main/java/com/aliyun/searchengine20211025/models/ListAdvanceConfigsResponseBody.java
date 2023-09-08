@@ -84,6 +84,18 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
     }
 
     public static class ListAdvanceConfigsResponseBodyResult extends TeaModel {
+        /**
+         * <p>配置内容 http，git 请求时不为空</p>
+         */
+        @NameInMap("content")
+        public String content;
+
+        /**
+         * <p>配置内容的类型 (FILE, GIT, HTTP, ODPS)</p>
+         */
+        @NameInMap("contentType")
+        public String contentType;
+
         @NameInMap("desc")
         public String desc;
 
@@ -102,6 +114,22 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         public static ListAdvanceConfigsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListAdvanceConfigsResponseBodyResult self = new ListAdvanceConfigsResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListAdvanceConfigsResponseBodyResult setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public ListAdvanceConfigsResponseBodyResult setContentType(String contentType) {
+            this.contentType = contentType;
+            return this;
+        }
+        public String getContentType() {
+            return this.contentType;
         }
 
         public ListAdvanceConfigsResponseBodyResult setDesc(String desc) {

@@ -3,7 +3,7 @@ package com.aliyun.searchengine20211025.models;
 
 import com.aliyun.tea.*;
 
-public class ListInstancesRequest extends TeaModel {
+public class ListInstancesShrinkRequest extends TeaModel {
     /**
      * <p>The description of the instance</p>
      */
@@ -41,14 +41,14 @@ public class ListInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("tags")
-    public java.util.List<ListInstancesRequestTags> tags;
+    public String tagsShrink;
 
-    public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListInstancesRequest self = new ListInstancesRequest();
+    public static ListInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListInstancesShrinkRequest self = new ListInstancesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListInstancesRequest setDescription(String description) {
+    public ListInstancesShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -56,7 +56,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.description;
     }
 
-    public ListInstancesRequest setEdition(String edition) {
+    public ListInstancesShrinkRequest setEdition(String edition) {
         this.edition = edition;
         return this;
     }
@@ -64,7 +64,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.edition;
     }
 
-    public ListInstancesRequest setInstanceId(String instanceId) {
+    public ListInstancesShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -72,7 +72,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListInstancesRequest setPageNumber(Integer pageNumber) {
+    public ListInstancesShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -80,7 +80,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListInstancesRequest setPageSize(Integer pageSize) {
+    public ListInstancesShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -88,7 +88,7 @@ public class ListInstancesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListInstancesRequest setResourceGroupId(String resourceGroupId) {
+    public ListInstancesShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -96,42 +96,12 @@ public class ListInstancesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListInstancesRequest setTags(java.util.List<ListInstancesRequestTags> tags) {
-        this.tags = tags;
+    public ListInstancesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<ListInstancesRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public static class ListInstancesRequestTags extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("value")
-        public String value;
-
-        public static ListInstancesRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListInstancesRequestTags self = new ListInstancesRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListInstancesRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListInstancesRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }

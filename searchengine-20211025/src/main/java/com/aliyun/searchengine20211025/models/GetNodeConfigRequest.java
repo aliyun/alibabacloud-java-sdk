@@ -7,14 +7,8 @@ public class GetNodeConfigRequest extends TeaModel {
     @NameInMap("clusterName")
     public String clusterName;
 
-    @NameInMap("dataSourceName")
-    public String dataSourceName;
-
     @NameInMap("name")
     public String name;
-
-    @NameInMap("tableDeployId")
-    public String tableDeployId;
 
     @NameInMap("type")
     public String type;
@@ -32,28 +26,12 @@ public class GetNodeConfigRequest extends TeaModel {
         return this.clusterName;
     }
 
-    public GetNodeConfigRequest setDataSourceName(String dataSourceName) {
-        this.dataSourceName = dataSourceName;
-        return this;
-    }
-    public String getDataSourceName() {
-        return this.dataSourceName;
-    }
-
     public GetNodeConfigRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
-    }
-
-    public GetNodeConfigRequest setTableDeployId(String tableDeployId) {
-        this.tableDeployId = tableDeployId;
-        return this;
-    }
-    public String getTableDeployId() {
-        return this.tableDeployId;
     }
 
     public GetNodeConfigRequest setType(String type) {

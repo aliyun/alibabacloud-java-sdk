@@ -4,6 +4,9 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ListQueryResultRequest extends TeaModel {
+    /**
+     * <p>353490</p>
+     */
     @NameInMap("query")
     public String query;
 

@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetIndexResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the index.</p>
+     */
     @NameInMap("result")
     public GetIndexResponseBodyResult result;
 
@@ -31,13 +37,291 @@ public class GetIndexResponseBody extends TeaModel {
         return this.result;
     }
 
+    public static class GetIndexResponseBodyResultDataSourceInfoConfig extends TeaModel {
+        @NameInMap("accessKey")
+        public String accessKey;
+
+        @NameInMap("accessSecret")
+        public String accessSecret;
+
+        @NameInMap("bucket")
+        public String bucket;
+
+        /**
+         * <p>A parameter related to MaxCompute.</p>
+         */
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        /**
+         * <p>A parameter related to SARO.</p>
+         */
+        @NameInMap("namespace")
+        public String namespace;
+
+        /**
+         * <p>A parameter related to OSS.</p>
+         */
+        @NameInMap("ossPath")
+        public String ossPath;
+
+        @NameInMap("partition")
+        public String partition;
+
+        /**
+         * <p>A parameter related to Apsara File Storage for HDFS.</p>
+         */
+        @NameInMap("path")
+        public String path;
+
+        @NameInMap("project")
+        public String project;
+
+        /**
+         * <p>A parameter related to SARO and MaxCompute.</p>
+         */
+        @NameInMap("table")
+        public String table;
+
+        public static GetIndexResponseBodyResultDataSourceInfoConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetIndexResponseBodyResultDataSourceInfoConfig self = new GetIndexResponseBodyResultDataSourceInfoConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setAccessKey(String accessKey) {
+            this.accessKey = accessKey;
+            return this;
+        }
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setAccessSecret(String accessSecret) {
+            this.accessSecret = accessSecret;
+            return this;
+        }
+        public String getAccessSecret() {
+            return this.accessSecret;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setOssPath(String ossPath) {
+            this.ossPath = ossPath;
+            return this;
+        }
+        public String getOssPath() {
+            return this.ossPath;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setPartition(String partition) {
+            this.partition = partition;
+            return this;
+        }
+        public String getPartition() {
+            return this.partition;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoConfig setTable(String table) {
+            this.table = table;
+            return this;
+        }
+        public String getTable() {
+            return this.table;
+        }
+
+    }
+
+    public static class GetIndexResponseBodyResultDataSourceInfoSaroConfig extends TeaModel {
+        @NameInMap("namespace")
+        public String namespace;
+
+        @NameInMap("tableName")
+        public String tableName;
+
+        public static GetIndexResponseBodyResultDataSourceInfoSaroConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetIndexResponseBodyResultDataSourceInfoSaroConfig self = new GetIndexResponseBodyResultDataSourceInfoSaroConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoSaroConfig setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfoSaroConfig setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+    }
+
+    public static class GetIndexResponseBodyResultDataSourceInfo extends TeaModel {
+        /**
+         * <p>Indicates whether the automatic full indexing feature is enabled.</p>
+         */
+        @NameInMap("autoBuildIndex")
+        public Boolean autoBuildIndex;
+
+        /**
+         * <p>The configuration of MaxCompute data sources.</p>
+         */
+        @NameInMap("config")
+        public GetIndexResponseBodyResultDataSourceInfoConfig config;
+
+        /**
+         * <p>The offline deployment name of the data source.</p>
+         */
+        @NameInMap("domain")
+        public String domain;
+
+        /**
+         * <p>The name of the data source.</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The number of resources used for data update.</p>
+         */
+        @NameInMap("processPartitionCount")
+        public Integer processPartitionCount;
+
+        /**
+         * <p>The configuration of SARO data sources.</p>
+         */
+        @NameInMap("saroConfig")
+        public GetIndexResponseBodyResultDataSourceInfoSaroConfig saroConfig;
+
+        /**
+         * <p>The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static GetIndexResponseBodyResultDataSourceInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetIndexResponseBodyResultDataSourceInfo self = new GetIndexResponseBodyResultDataSourceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setAutoBuildIndex(Boolean autoBuildIndex) {
+            this.autoBuildIndex = autoBuildIndex;
+            return this;
+        }
+        public Boolean getAutoBuildIndex() {
+            return this.autoBuildIndex;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setConfig(GetIndexResponseBodyResultDataSourceInfoConfig config) {
+            this.config = config;
+            return this;
+        }
+        public GetIndexResponseBodyResultDataSourceInfoConfig getConfig() {
+            return this.config;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setProcessPartitionCount(Integer processPartitionCount) {
+            this.processPartitionCount = processPartitionCount;
+            return this;
+        }
+        public Integer getProcessPartitionCount() {
+            return this.processPartitionCount;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setSaroConfig(GetIndexResponseBodyResultDataSourceInfoSaroConfig saroConfig) {
+            this.saroConfig = saroConfig;
+            return this;
+        }
+        public GetIndexResponseBodyResultDataSourceInfoSaroConfig getSaroConfig() {
+            return this.saroConfig;
+        }
+
+        public GetIndexResponseBodyResultDataSourceInfo setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class GetIndexResponseBodyResultVersionsFiles extends TeaModel {
+        /**
+         * <p>The full path of the file.</p>
+         */
         @NameInMap("fullPathName")
         public String fullPathName;
 
+        /**
+         * <p>Indicates whether the file is a directory.</p>
+         */
         @NameInMap("isDir")
         public Boolean isDir;
 
+        /**
+         * <p>Indicates whether the file is a template.</p>
+         */
         @NameInMap("isTemplate")
         public Boolean isTemplate;
 
@@ -84,21 +368,39 @@ public class GetIndexResponseBody extends TeaModel {
     }
 
     public static class GetIndexResponseBodyResultVersions extends TeaModel {
+        /**
+         * <p>The description of the version.</p>
+         */
         @NameInMap("desc")
         public String desc;
 
+        /**
+         * <p>The information about the files.</p>
+         */
         @NameInMap("files")
         public java.util.List<GetIndexResponseBodyResultVersionsFiles> files;
 
+        /**
+         * <p>The name of the version.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The status of the version.</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The last time when the version was updated.</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 
+        /**
+         * <p>The ID of the version.</p>
+         */
         @NameInMap("versionId")
         public Integer versionId;
 
@@ -158,24 +460,86 @@ public class GetIndexResponseBody extends TeaModel {
     }
 
     public static class GetIndexResponseBodyResult extends TeaModel {
+        /**
+         * <p>The content of the index.</p>
+         */
+        @NameInMap("content")
+        public String content;
+
         @NameInMap("dataSource")
         public String dataSource;
+
+        /**
+         * <p>The information about the data source.</p>
+         */
+        @NameInMap("dataSourceInfo")
+        public GetIndexResponseBodyResultDataSourceInfo dataSourceInfo;
+
+        /**
+         * <p>The remarks.</p>
+         */
+        @NameInMap("description")
+        public String description;
 
         @NameInMap("domain")
         public String domain;
 
+        /**
+         * <p>The last time when full data in the index was updated.</p>
+         */
+        @NameInMap("fullUpdateTime")
+        public String fullUpdateTime;
+
+        /**
+         * <p>The version of the data.</p>
+         */
+        @NameInMap("fullVersion")
+        public Long fullVersion;
+
+        /**
+         * <p>The last time when incremental data in the index was updated.</p>
+         */
+        @NameInMap("incUpdateTime")
+        public String incUpdateTime;
+
+        /**
+         * <p>The index size.</p>
+         */
+        @NameInMap("indexSize")
+        public Long indexSize;
+
+        /**
+         * <p>The status of the index. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, and RESTORE_USE. After a Retrieval Engine Edition instance is created, it enters the IN_USE state.</p>
+         */
         @NameInMap("indexStatus")
         public String indexStatus;
 
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The number of shards.</p>
+         */
+        @NameInMap("partition")
+        public Integer partition;
+
+        /**
+         * <p>The information about the versions.</p>
+         */
         @NameInMap("versions")
         public java.util.List<GetIndexResponseBodyResultVersions> versions;
 
         public static GetIndexResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             GetIndexResponseBodyResult self = new GetIndexResponseBodyResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetIndexResponseBodyResult setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
         public GetIndexResponseBodyResult setDataSource(String dataSource) {
@@ -186,12 +550,60 @@ public class GetIndexResponseBody extends TeaModel {
             return this.dataSource;
         }
 
+        public GetIndexResponseBodyResult setDataSourceInfo(GetIndexResponseBodyResultDataSourceInfo dataSourceInfo) {
+            this.dataSourceInfo = dataSourceInfo;
+            return this;
+        }
+        public GetIndexResponseBodyResultDataSourceInfo getDataSourceInfo() {
+            return this.dataSourceInfo;
+        }
+
+        public GetIndexResponseBodyResult setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public GetIndexResponseBodyResult setDomain(String domain) {
             this.domain = domain;
             return this;
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public GetIndexResponseBodyResult setFullUpdateTime(String fullUpdateTime) {
+            this.fullUpdateTime = fullUpdateTime;
+            return this;
+        }
+        public String getFullUpdateTime() {
+            return this.fullUpdateTime;
+        }
+
+        public GetIndexResponseBodyResult setFullVersion(Long fullVersion) {
+            this.fullVersion = fullVersion;
+            return this;
+        }
+        public Long getFullVersion() {
+            return this.fullVersion;
+        }
+
+        public GetIndexResponseBodyResult setIncUpdateTime(String incUpdateTime) {
+            this.incUpdateTime = incUpdateTime;
+            return this;
+        }
+        public String getIncUpdateTime() {
+            return this.incUpdateTime;
+        }
+
+        public GetIndexResponseBodyResult setIndexSize(Long indexSize) {
+            this.indexSize = indexSize;
+            return this;
+        }
+        public Long getIndexSize() {
+            return this.indexSize;
         }
 
         public GetIndexResponseBodyResult setIndexStatus(String indexStatus) {
@@ -208,6 +620,14 @@ public class GetIndexResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetIndexResponseBodyResult setPartition(Integer partition) {
+            this.partition = partition;
+            return this;
+        }
+        public Integer getPartition() {
+            return this.partition;
         }
 
         public GetIndexResponseBodyResult setVersions(java.util.List<GetIndexResponseBodyResultVersions> versions) {

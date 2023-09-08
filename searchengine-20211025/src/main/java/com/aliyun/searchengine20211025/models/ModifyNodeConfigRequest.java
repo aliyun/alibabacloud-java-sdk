@@ -4,21 +4,42 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodeConfigRequest extends TeaModel {
-    @NameInMap("body")
-    public java.util.Map<String, ?> body;
+    @NameInMap("active")
+    public Boolean active;
 
+    @NameInMap("dataDuplicateNumber")
+    public Integer dataDuplicateNumber;
+
+    @NameInMap("dataFragmentNumber")
+    public Integer dataFragmentNumber;
+
+    @NameInMap("minServicePercent")
+    public Integer minServicePercent;
+
+    @NameInMap("published")
+    public Boolean published;
+
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("clusterName")
     public String clusterName;
 
+    /**
+     * <p>The parameters in the request body.</p>
+     */
     @NameInMap("dataSourceName")
     public String dataSourceName;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("name")
     public String name;
 
-    @NameInMap("tableDeployId")
-    public String tableDeployId;
-
+    /**
+     * <p>The original name of the node.</p>
+     */
     @NameInMap("type")
     public String type;
 
@@ -27,12 +48,44 @@ public class ModifyNodeConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyNodeConfigRequest setBody(java.util.Map<String, ?> body) {
-        this.body = body;
+    public ModifyNodeConfigRequest setActive(Boolean active) {
+        this.active = active;
         return this;
     }
-    public java.util.Map<String, ?> getBody() {
-        return this.body;
+    public Boolean getActive() {
+        return this.active;
+    }
+
+    public ModifyNodeConfigRequest setDataDuplicateNumber(Integer dataDuplicateNumber) {
+        this.dataDuplicateNumber = dataDuplicateNumber;
+        return this;
+    }
+    public Integer getDataDuplicateNumber() {
+        return this.dataDuplicateNumber;
+    }
+
+    public ModifyNodeConfigRequest setDataFragmentNumber(Integer dataFragmentNumber) {
+        this.dataFragmentNumber = dataFragmentNumber;
+        return this;
+    }
+    public Integer getDataFragmentNumber() {
+        return this.dataFragmentNumber;
+    }
+
+    public ModifyNodeConfigRequest setMinServicePercent(Integer minServicePercent) {
+        this.minServicePercent = minServicePercent;
+        return this;
+    }
+    public Integer getMinServicePercent() {
+        return this.minServicePercent;
+    }
+
+    public ModifyNodeConfigRequest setPublished(Boolean published) {
+        this.published = published;
+        return this;
+    }
+    public Boolean getPublished() {
+        return this.published;
     }
 
     public ModifyNodeConfigRequest setClusterName(String clusterName) {
@@ -57,14 +110,6 @@ public class ModifyNodeConfigRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public ModifyNodeConfigRequest setTableDeployId(String tableDeployId) {
-        this.tableDeployId = tableDeployId;
-        return this;
-    }
-    public String getTableDeployId() {
-        return this.tableDeployId;
     }
 
     public ModifyNodeConfigRequest setType(String type) {

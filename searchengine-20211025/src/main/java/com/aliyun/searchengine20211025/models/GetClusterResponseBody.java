@@ -4,9 +4,15 @@ package com.aliyun.searchengine20211025.models;
 import com.aliyun.tea.*;
 
 public class GetClusterResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of the cluster details.</p>
+     */
     @NameInMap("result")
     public GetClusterResponseBodyResult result;
 
@@ -32,12 +38,21 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodyResultDataNode extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The number of replicas.</p>
+         */
         @NameInMap("number")
         public Integer number;
 
+        /**
+         * <p>The number of partitions.</p>
+         */
         @NameInMap("partition")
         public Integer partition;
 
@@ -73,12 +88,21 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodyResultQueryNode extends TeaModel {
+        /**
+         * <p>The name of the node.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The number of nodes.</p>
+         */
         @NameInMap("number")
         public Integer number;
 
+        /**
+         * <p>The number of replicas.</p>
+         */
         @NameInMap("partition")
         public Integer partition;
 
@@ -114,33 +138,63 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodyResult extends TeaModel {
+        /**
+         * <p>The time when the cluster was updated.</p>
+         */
         @NameInMap("configUpdateTime")
         public String configUpdateTime;
 
+        /**
+         * <p>The effective advanced configuration version.</p>
+         */
         @NameInMap("currentAdvanceConfigVersion")
         public String currentAdvanceConfigVersion;
 
+        /**
+         * <p>The effective online configuration version.</p>
+         */
         @NameInMap("currentOnlineConfigVersion")
         public String currentOnlineConfigVersion;
 
+        /**
+         * <p>The specifications of the data node.</p>
+         */
         @NameInMap("dataNode")
         public GetClusterResponseBodyResultDataNode dataNode;
 
+        /**
+         * <p>The description of the cluster.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The latest advanced configuration version.</p>
+         */
         @NameInMap("latestAdvanceConfigVersion")
         public String latestAdvanceConfigVersion;
 
+        /**
+         * <p>The latest online configuration version.</p>
+         */
         @NameInMap("latestOnlineConfigVersion")
         public String latestOnlineConfigVersion;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The specifications of the query node.</p>
+         */
         @NameInMap("queryNode")
         public GetClusterResponseBodyResultQueryNode queryNode;
 
+        /**
+         * <p>The creation status of the cluster. Valid values: NEW and PUBLISH. NEW indicates that the cluster is being created. PUBLISH indicates that the cluster is created.</p>
+         */
         @NameInMap("status")
         public String status;
 
