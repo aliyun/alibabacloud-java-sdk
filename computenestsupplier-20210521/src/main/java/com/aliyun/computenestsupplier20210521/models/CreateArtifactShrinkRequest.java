@@ -19,8 +19,14 @@ public class CreateArtifactShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SupportRegionIds")
     public java.util.List<String> supportRegionIds;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateArtifactShrinkRequestTag> tag;
 
     @NameInMap("VersionName")
     public String versionName;
@@ -70,6 +76,14 @@ public class CreateArtifactShrinkRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateArtifactShrinkRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateArtifactShrinkRequest setSupportRegionIds(java.util.List<String> supportRegionIds) {
         this.supportRegionIds = supportRegionIds;
         return this;
@@ -78,12 +92,50 @@ public class CreateArtifactShrinkRequest extends TeaModel {
         return this.supportRegionIds;
     }
 
+    public CreateArtifactShrinkRequest setTag(java.util.List<CreateArtifactShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateArtifactShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateArtifactShrinkRequest setVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     public String getVersionName() {
         return this.versionName;
+    }
+
+    public static class CreateArtifactShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateArtifactShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateArtifactShrinkRequestTag self = new CreateArtifactShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateArtifactShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateArtifactShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

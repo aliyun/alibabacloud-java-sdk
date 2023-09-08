@@ -34,11 +34,17 @@ public class GetArtifactResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("Status")
     public String status;
 
     @NameInMap("SupportRegionIds")
     public String supportRegionIds;
+
+    @NameInMap("Tags")
+    public java.util.List<GetArtifactResponseBodyTags> tags;
 
     @NameInMap("VersionName")
     public String versionName;
@@ -128,6 +134,14 @@ public class GetArtifactResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public GetArtifactResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public GetArtifactResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -144,12 +158,50 @@ public class GetArtifactResponseBody extends TeaModel {
         return this.supportRegionIds;
     }
 
+    public GetArtifactResponseBody setTags(java.util.List<GetArtifactResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetArtifactResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetArtifactResponseBody setVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     public String getVersionName() {
         return this.versionName;
+    }
+
+    public static class GetArtifactResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetArtifactResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetArtifactResponseBodyTags self = new GetArtifactResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetArtifactResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetArtifactResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

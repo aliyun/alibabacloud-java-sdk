@@ -13,6 +13,12 @@ public class ListArtifactsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<ListArtifactsRequestTag> tag;
+
     public static ListArtifactsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListArtifactsRequest self = new ListArtifactsRequest();
         return TeaModel.build(map, self);
@@ -42,6 +48,22 @@ public class ListArtifactsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListArtifactsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public ListArtifactsRequest setTag(java.util.List<ListArtifactsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListArtifactsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class ListArtifactsRequestFilter extends TeaModel {
         @NameInMap("Name")
         public String name;
@@ -68,6 +90,36 @@ public class ListArtifactsRequest extends TeaModel {
         }
         public java.util.List<String> getValues() {
             return this.values;
+        }
+
+    }
+
+    public static class ListArtifactsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListArtifactsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListArtifactsRequestTag self = new ListArtifactsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListArtifactsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListArtifactsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

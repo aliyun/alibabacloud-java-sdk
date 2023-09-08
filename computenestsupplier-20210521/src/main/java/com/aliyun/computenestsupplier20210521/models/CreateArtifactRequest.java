@@ -19,8 +19,14 @@ public class CreateArtifactRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SupportRegionIds")
     public java.util.List<String> supportRegionIds;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateArtifactRequestTag> tag;
 
     @NameInMap("VersionName")
     public String versionName;
@@ -70,12 +76,28 @@ public class CreateArtifactRequest extends TeaModel {
         return this.name;
     }
 
+    public CreateArtifactRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateArtifactRequest setSupportRegionIds(java.util.List<String> supportRegionIds) {
         this.supportRegionIds = supportRegionIds;
         return this;
     }
     public java.util.List<String> getSupportRegionIds() {
         return this.supportRegionIds;
+    }
+
+    public CreateArtifactRequest setTag(java.util.List<CreateArtifactRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateArtifactRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateArtifactRequest setVersionName(String versionName) {
@@ -200,6 +222,36 @@ public class CreateArtifactRequest extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+    }
+
+    public static class CreateArtifactRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateArtifactRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateArtifactRequestTag self = new CreateArtifactRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateArtifactRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateArtifactRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

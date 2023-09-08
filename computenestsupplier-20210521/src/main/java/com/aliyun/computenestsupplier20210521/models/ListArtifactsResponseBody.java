@@ -64,6 +64,36 @@ public class ListArtifactsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListArtifactsResponseBodyArtifactsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListArtifactsResponseBodyArtifactsTags build(java.util.Map<String, ?> map) throws Exception {
+            ListArtifactsResponseBodyArtifactsTags self = new ListArtifactsResponseBodyArtifactsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListArtifactsResponseBodyArtifactsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListArtifactsResponseBodyArtifactsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListArtifactsResponseBodyArtifacts extends TeaModel {
         @NameInMap("ArtifactId")
         public String artifactId;
@@ -83,8 +113,14 @@ public class ListArtifactsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("Tags")
+        public java.util.List<ListArtifactsResponseBodyArtifactsTags> tags;
 
         public static ListArtifactsResponseBodyArtifacts build(java.util.Map<String, ?> map) throws Exception {
             ListArtifactsResponseBodyArtifacts self = new ListArtifactsResponseBodyArtifacts();
@@ -139,12 +175,28 @@ public class ListArtifactsResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListArtifactsResponseBodyArtifacts setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListArtifactsResponseBodyArtifacts setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListArtifactsResponseBodyArtifacts setTags(java.util.List<ListArtifactsResponseBodyArtifactsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListArtifactsResponseBodyArtifactsTags> getTags() {
+            return this.tags;
         }
 
     }
