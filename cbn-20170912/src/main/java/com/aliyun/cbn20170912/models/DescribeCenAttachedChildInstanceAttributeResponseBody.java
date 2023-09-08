@@ -4,33 +4,73 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the CEN instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The time when the network instance was attached to the CEN instance.</p>
+     * <br>
+     * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.</p>
+     */
     @NameInMap("ChildInstanceAttachTime")
     public String childInstanceAttachTime;
 
+    /**
+     * <p>The details about the network instance.</p>
+     */
     @NameInMap("ChildInstanceAttributes")
     public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributes childInstanceAttributes;
 
+    /**
+     * <p>The ID of the network instance.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The name of the network instance.</p>
+     */
     @NameInMap("ChildInstanceName")
     public String childInstanceName;
 
+    /**
+     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
+     */
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
+    /**
+     * <p>The region ID of the network instance.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: VPC</p>
+     * <p>*   **VBR**: VBR</p>
+     * <p>*   **CCN**: CCN instance</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the network instance is attached to the CEN instance.</p>
+     * <br>
+     * <p>*   **Attaching**: The network instance is being attached to the CEN instance.</p>
+     * <p>*   **Attached**: The network instance is attached to the CEN instance.</p>
+     * <p>*   **Detaching**: The network instance is being detached from the CEN instance.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -120,9 +160,22 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     }
 
     public static class DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocksIpv6CidrBlock extends TeaModel {
+        /**
+         * <p>The IPv6 CIDR block of the VPC.</p>
+         */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
+        /**
+         * <p>The type of the IPv6 CIDR block. Valid values:</p>
+         * <br>
+         * <p>* **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</p>
+         * <p>* **ChinaMobile:** China Mobile (single line)</p>
+         * <p>* **ChinaUnicom:** China Unicom (single line)</p>
+         * <p>* **ChinaTelecom:** China Telecom (single line)</p>
+         * <br>
+         * <p>> If your Alibaba Cloud account has the required permissions to activate single-ISP bandwidth, you can set Ipv6Isp to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
+         */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
 
@@ -188,15 +241,27 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     }
 
     public static class DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributes extends TeaModel {
+        /**
+         * <p>The IPv4 CIDR block of the VPC.</p>
+         */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
+        /**
+         * <p>The IPv6 CIDR block of the VPC.</p>
+         */
         @NameInMap("Ipv6CidrBlock")
         public String ipv6CidrBlock;
 
+        /**
+         * <p>The information about the IPv6 CIDR blocks of the VPC.</p>
+         */
         @NameInMap("Ipv6CidrBlocks")
         public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocks ipv6CidrBlocks;
 
+        /**
+         * <p>The secondary IPv4 CIDR block of the VPC.</p>
+         */
         @NameInMap("SecondaryCidrBlocks")
         public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesSecondaryCidrBlocks secondaryCidrBlocks;
 

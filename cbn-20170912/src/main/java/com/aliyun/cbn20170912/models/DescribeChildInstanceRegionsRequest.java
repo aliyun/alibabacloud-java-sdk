@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeChildInstanceRegionsRequest extends TeaModel {
+    @NameInMap("AcceptLanguage")
+    public String acceptLanguage;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -29,6 +32,14 @@ public class DescribeChildInstanceRegionsRequest extends TeaModel {
     public static DescribeChildInstanceRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeChildInstanceRegionsRequest self = new DescribeChildInstanceRegionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeChildInstanceRegionsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     public DescribeChildInstanceRegionsRequest setOwnerAccount(String ownerAccount) {
