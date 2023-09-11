@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the alert contact group.</p>
+     */
     @NameInMap("ContactGroupId")
     public Long contactGroupId;
 
+    /**
+     * <p>The name of the alert contact group.</p>
+     */
     @NameInMap("ContactGroupName")
     public String contactGroupName;
 
+    /**
+     * <p>The ID of the alert contact.</p>
+     */
     @NameInMap("ContactIds")
     public String contactIds;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

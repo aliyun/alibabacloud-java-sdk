@@ -136,6 +136,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("ClusterId")
+        public String clusterId;
+
         /**
          * <p>The time when the monitoring task was created. The value is a timestamp. Unit: milliseconds.</p>
          */
@@ -147,6 +150,9 @@ public class ListTraceAppsResponseBody extends TeaModel {
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
+
+        @NameInMap("Namespace")
+        public String namespace;
 
         /**
          * <p>The process identifier (PID) of the application.</p>
@@ -208,6 +214,12 @@ public class ListTraceAppsResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
+        @NameInMap("WorkloadKind")
+        public String workloadKind;
+
+        @NameInMap("WorkloadName")
+        public String workloadName;
+
         public static ListTraceAppsResponseBodyTraceApps build(java.util.Map<String, ?> map) throws Exception {
             ListTraceAppsResponseBodyTraceApps self = new ListTraceAppsResponseBodyTraceApps();
             return TeaModel.build(map, self);
@@ -229,6 +241,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public ListTraceAppsResponseBodyTraceApps setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
         public ListTraceAppsResponseBodyTraceApps setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -243,6 +263,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
         public java.util.List<String> getLabels() {
             return this.labels;
+        }
+
+        public ListTraceAppsResponseBodyTraceApps setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public ListTraceAppsResponseBodyTraceApps setPid(String pid) {
@@ -315,6 +343,22 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public ListTraceAppsResponseBodyTraceApps setWorkloadKind(String workloadKind) {
+            this.workloadKind = workloadKind;
+            return this;
+        }
+        public String getWorkloadKind() {
+            return this.workloadKind;
+        }
+
+        public ListTraceAppsResponseBodyTraceApps setWorkloadName(String workloadName) {
+            this.workloadName = workloadName;
+            return this;
+        }
+        public String getWorkloadName() {
+            return this.workloadName;
         }
 
     }

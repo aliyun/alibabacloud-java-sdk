@@ -4,33 +4,51 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContactsRequest extends TeaModel {
+    /**
+     * <p>The ID of the alert contact that you want to query. Separate multiple contact IDs with spaces.</p>
+     */
     @NameInMap("ContactIds")
     public String contactIds;
 
     /**
-     * <p>Indicates whether the email address was verified.</p>
+     * <p>The name of the alert contact.</p>
      */
     @NameInMap("ContactName")
     public String contactName;
 
+    /**
+     * <p>The email address of the alert contact.</p>
+     */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Long page;
 
     /**
-     * <p>The ID of the alert contact.</p>
+     * <p>The mobile number of the alert contact.</p>
      */
     @NameInMap("Phone")
     public String phone;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The number of alert contacts to return on each page.</p>
+     */
     @NameInMap("Size")
     public Long size;
 
+    /**
+     * <p>Specifies whether to return redundant information.</p>
+     */
     @NameInMap("Verbose")
     public String verbose;
 

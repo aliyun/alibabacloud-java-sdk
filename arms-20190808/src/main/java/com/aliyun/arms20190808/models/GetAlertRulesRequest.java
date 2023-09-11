@@ -76,6 +76,9 @@ public class GetAlertRulesRequest extends TeaModel {
     @NameInMap("Size")
     public Long size;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetAlertRulesRequestTags> tags;
 
@@ -165,9 +168,15 @@ public class GetAlertRulesRequest extends TeaModel {
     }
 
     public static class GetAlertRulesRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

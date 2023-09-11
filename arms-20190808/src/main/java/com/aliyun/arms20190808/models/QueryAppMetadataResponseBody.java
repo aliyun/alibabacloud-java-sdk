@@ -4,18 +4,41 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class QueryAppMetadataResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <br>
+     * <p>*   2XX: The request is successful.</p>
+     * <p>*   3XX: A redirection message is returned.</p>
+     * <p>*   4XX: The request is invalid.</p>
+     * <p>*   5XX: A server error occurs.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned struct.</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The call was successful.</p>
+     * <p>*   `false`: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

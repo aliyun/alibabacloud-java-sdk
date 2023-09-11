@@ -16,6 +16,9 @@ public class GetTraceAppRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetTraceAppRequestTags> tags;
 
@@ -49,9 +52,15 @@ public class GetTraceAppRequest extends TeaModel {
     }
 
     public static class GetTraceAppRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

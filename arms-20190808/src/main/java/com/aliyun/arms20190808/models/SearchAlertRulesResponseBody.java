@@ -497,6 +497,9 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("AlertVersion")
         public Integer alertVersion;
 
+        /**
+         * <p>Sending method of alarm notification.</p>
+         */
         @NameInMap("AlertWays")
         public java.util.List<String> alertWays;
 
@@ -568,6 +571,9 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

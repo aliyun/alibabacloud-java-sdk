@@ -4,12 +4,21 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the alert rule.</p>
+     */
     @NameInMap("AlertId")
     public Long alertId;
 
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

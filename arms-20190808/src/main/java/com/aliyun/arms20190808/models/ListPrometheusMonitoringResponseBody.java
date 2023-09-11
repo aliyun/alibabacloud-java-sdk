@@ -67,7 +67,7 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
 
     public static class ListPrometheusMonitoringResponseBodyData extends TeaModel {
         /**
-         * <p>Prometheus实例ID。</p>
+         * <p>Prometheus Instance ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;

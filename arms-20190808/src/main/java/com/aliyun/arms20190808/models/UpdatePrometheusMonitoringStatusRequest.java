@@ -29,7 +29,10 @@ public class UpdatePrometheusMonitoringStatusRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the monitoring configuration. Valid values for a Prometheus instance for Container Service: ServiceMonitor, PodMonitor, and CustomJob. Valid value for a Prometheus instance for ECS: CustomJob. The status of Probe cannot be modified.</p>
+     * <p>The type of the monitoring configuration. </p>
+     * <p>Valid values for a Prometheus instance for Container Service: serviceMonitor, podMonitor, and customJob. </p>
+     * <p>Valid value for a Prometheus instance for ECS: customJob. </p>
+     * <p>The status of probe cannot be modified.</p>
      */
     @NameInMap("Type")
     public String type;
