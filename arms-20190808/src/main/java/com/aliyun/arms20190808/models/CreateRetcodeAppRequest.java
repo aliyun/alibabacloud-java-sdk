@@ -4,18 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateRetcodeAppRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The name of the application that is monitored by Browser Monitoring.</p>
+     */
     @NameInMap("RetcodeAppName")
     public String retcodeAppName;
 
+    /**
+     * <p>The site type.</p>
+     */
     @NameInMap("RetcodeAppType")
     public String retcodeAppType;
 
+    /**
+     * <p>The list of tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateRetcodeAppRequestTags> tags;
 
@@ -65,9 +80,15 @@ public class CreateRetcodeAppRequest extends TeaModel {
     }
 
     public static class CreateRetcodeAppRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

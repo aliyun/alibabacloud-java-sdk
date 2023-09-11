@@ -436,9 +436,15 @@ public class GetAlertRulesResponseBody extends TeaModel {
     }
 
     public static class GetAlertRulesResponseBodyPageBeanAlertRulesTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -626,6 +632,9 @@ public class GetAlertRulesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetAlertRulesResponseBodyPageBeanAlertRulesTags> tags;
 

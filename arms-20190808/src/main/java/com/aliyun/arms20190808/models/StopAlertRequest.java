@@ -4,9 +4,15 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class StopAlertRequest extends TeaModel {
+    /**
+     * <p>The ID of the alert rule.</p>
+     */
     @NameInMap("AlertId")
     public String alertId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

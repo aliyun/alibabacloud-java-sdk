@@ -4,15 +4,27 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListActivatedAlertsRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return. Default value: `1`.</p>
+     */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The filter condition in the `{"key":"value"}`format. You must specify the `key` and `value` of the filter condition.</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: `10`.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class SearchEventsResponseBody extends TeaModel {
     /**
-     * <p>The process identifier (PID) of the application that is associated with the alert rule.</p>
+     * <p>Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:</p>
+     * <br>
+     * <p>*   `1`: The event is triggered.</p>
+     * <p>*   `0`: The event is not triggered.</p>
      */
     @NameInMap("IsTrigger")
     public Integer isTrigger;
 
     /**
-     * <p>The event content. The parameter value is a JSON string. Each key indicates a dimension and each value indicates the alert content in the dimension.</p>
+     * <p>The struct returned.</p>
      */
     @NameInMap("PageBean")
     public SearchEventsResponseBodyPageBean pageBean;
 
     /**
-     * <p>The severity of the event.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -52,44 +55,65 @@ public class SearchEventsResponseBody extends TeaModel {
     }
 
     public static class SearchEventsResponseBodyPageBeanEvent extends TeaModel {
+        /**
+         * <p>The ID of the alert rule that is associated with the event.</p>
+         */
         @NameInMap("AlertId")
         public Long alertId;
 
+        /**
+         * <p>The name of the alert rule that is associated with the event.</p>
+         */
         @NameInMap("AlertName")
         public String alertName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The condition of the alert rule.</p>
          */
         @NameInMap("AlertRule")
         public String alertRule;
 
         /**
-         * <p>The name of the alert rule that is associated with the event.</p>
+         * <p>The type of the alert rule. This parameter is not returned. Valid values:</p>
+         * <br>
+         * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
+         * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
+         * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
+         * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
+         * <p>*   `6`: the default frontend alert rules</p>
+         * <p>*   `7`: the default application alert rules</p>
+         * <p>*   `8`: Tracing Analysis alert rules</p>
+         * <p>*   `101`: Prometheus alert rules</p>
          */
         @NameInMap("AlertType")
         public Integer alertType;
 
         /**
-         * <p>The number of entries to return on each page. Default value: `10`.</p>
+         * <p>The severity of the event.</p>
          */
         @NameInMap("EventLevel")
         public String eventLevel;
 
         /**
-         * <p>The struct returned.</p>
+         * <p>The timestamp when the event occurred.</p>
          */
         @NameInMap("EventTime")
         public Long eventTime;
 
+        /**
+         * <p>The ID of the event record.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The list of event URLs.</p>
+         */
         @NameInMap("Links")
         public java.util.List<String> links;
 
         /**
-         * <p>The condition of the alert rule.</p>
+         * <p>The event content. The parameter value is a JSON string. Each key indicates a dimension and each value indicates the alert content in the dimension.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -175,34 +199,25 @@ public class SearchEventsResponseBody extends TeaModel {
 
     public static class SearchEventsResponseBodyPageBean extends TeaModel {
         /**
-         * <p>The ID of the event record.</p>
+         * <p>The information about the alert events.</p>
          */
         @NameInMap("Event")
         public java.util.List<SearchEventsResponseBodyPageBeanEvent> event;
 
         /**
-         * <p>The number of the page to return. Default value: `1`.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The type of the alert rule. Valid values:</p>
-         * <br>
-         * <p>*   `1`: custom alert rules to monitor drill-down data sets</p>
-         * <p>*   `3`: custom alert rules to monitor tiled data sets</p>
-         * <p>*   `4`: alert rules to monitor the frontend, including the default frontend alert rules</p>
-         * <p>*   `5`: alert rules to monitor applications, including the default application alert rules</p>
-         * <p>*   `6`: the default frontend alert rules</p>
-         * <p>*   `7`: the default application alert rules</p>
-         * <p>*   `8`: Tracing Analysis alert rules</p>
-         * <p>*   `101`: Prometheus alert rules</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The beginning of the time range to query. Specify a UNIX timestamp of the LONG data type, in milliseconds. The default value is 10 minutes before the current time.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

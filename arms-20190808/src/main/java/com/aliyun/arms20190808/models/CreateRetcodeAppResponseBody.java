@@ -4,21 +4,42 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateRetcodeAppResponseBody extends TeaModel {
+    /**
+     * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The return detail.</p>
+     */
     @NameInMap("RetcodeAppDataBean")
     public CreateRetcodeAppResponseBodyRetcodeAppDataBean retcodeAppDataBean;
 
+    /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   true: The call was successful.</p>
+     * <p>*   false: The call failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +97,15 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     }
 
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBeanTagsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -125,6 +152,9 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
     }
 
     public static class CreateRetcodeAppResponseBodyRetcodeAppDataBean extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
@@ -134,9 +164,17 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         @NameInMap("Pid")
         public String pid;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         * <br>
+         * <p>If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public CreateRetcodeAppResponseBodyRetcodeAppDataBeanTags tags;
 

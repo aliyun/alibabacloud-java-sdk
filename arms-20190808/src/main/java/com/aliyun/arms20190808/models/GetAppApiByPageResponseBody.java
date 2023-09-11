@@ -5,28 +5,39 @@ import com.aliyun.tea.*;
 
 public class GetAppApiByPageResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The HTTP status code returned for the request. Valid values:</p>
+     * <br>
+     * <p>*   2XX: The request was successful.</p>
+     * <p>*   3XX: A redirection message was returned.</p>
+     * <p>*   4XX: The request was invalid.</p>
+     * <p>*   5XX: A server error occurred.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The struct returned.</p>
+     */
     @NameInMap("Data")
     public GetAppApiByPageResponseBodyData data;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The struct returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The call was successful.</p>
+     * <p>*   `false`: The call failed.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -77,18 +88,33 @@ public class GetAppApiByPageResponseBody extends TeaModel {
     }
 
     public static class GetAppApiByPageResponseBodyData extends TeaModel {
+        /**
+         * <p>Is completed.</p>
+         */
         @NameInMap("Completed")
         public Boolean completed;
 
+        /**
+         * <p>The data entries.</p>
+         */
         @NameInMap("Items")
         public java.util.List<java.util.Map<String, ?>> items;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("Page")
         public Integer page;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of returned entries.</p>
+         */
         @NameInMap("Total")
         public String total;
 

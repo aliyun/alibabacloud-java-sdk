@@ -1,3 +1,6 @@
+2023-09-11 Version: 5.2.0
+- Generated java 2019-08-08 for ARMS.
+
 2023-08-30 Version: 5.1.0
 - Generated java 2019-08-08 for ARMS.
 

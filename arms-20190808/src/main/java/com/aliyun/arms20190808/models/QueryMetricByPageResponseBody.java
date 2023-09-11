@@ -88,6 +88,12 @@ public class QueryMetricByPageResponseBody extends TeaModel {
     }
 
     public static class QueryMetricByPageResponseBodyData extends TeaModel {
+        /**
+         * <p>Whether the paging query ends.</p>
+         * <br>
+         * <p>true: end.</p>
+         * <p>false: Need to continue pagination (continue to query after CurrentPage+1).</p>
+         */
         @NameInMap("Completed")
         public Boolean completed;
 

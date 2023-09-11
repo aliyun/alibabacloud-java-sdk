@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTraceAppsRequest extends TeaModel {
+    @NameInMap("AppType")
+    public String appType;
+
     /**
      * <p>The region ID.</p>
      */
@@ -31,6 +34,14 @@ public class ListTraceAppsRequest extends TeaModel {
     public static ListTraceAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTraceAppsRequest self = new ListTraceAppsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTraceAppsRequest setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
     }
 
     public ListTraceAppsRequest setRegion(String region) {

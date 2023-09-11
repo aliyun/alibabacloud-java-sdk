@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchAlertRulesRequest extends TeaModel {
+    /**
+     * <p>The id of AlertRule.</p>
+     */
     @NameInMap("AlertRuleId")
     public String alertRuleId;
 
@@ -40,6 +43,9 @@ public class SearchAlertRulesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group. You can obtain the resource group ID in the **Resource Management** console.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

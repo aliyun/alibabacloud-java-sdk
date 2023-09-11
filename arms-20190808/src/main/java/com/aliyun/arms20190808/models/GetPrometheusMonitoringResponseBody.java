@@ -67,7 +67,7 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
 
     public static class GetPrometheusMonitoringResponseBodyData extends TeaModel {
         /**
-         * <p>Prometheus实例ID。</p>
+         * <p>Prometheus Instance ID.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -91,7 +91,7 @@ public class GetPrometheusMonitoringResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the monitoring configuration. Valid values: ServiceMonitor, PodMonitor, CustomJob, and Probe.</p>
+         * <p>The type of the monitoring configuration. Valid values: serviceMonitor, podMonitor, customJob, and probe.</p>
          */
         @NameInMap("Type")
         public String type;
