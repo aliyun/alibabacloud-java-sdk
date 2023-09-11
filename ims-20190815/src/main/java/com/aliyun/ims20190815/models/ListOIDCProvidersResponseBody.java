@@ -20,7 +20,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
     public String marker;
 
     /**
-     * <p>The timestamp when the OIDC IdP was modified.</p>
+     * <p>The information about the OIDC IdP.</p>
      */
     @NameInMap("OIDCProviders")
     public ListOIDCProvidersResponseBodyOIDCProviders OIDCProviders;
@@ -76,7 +76,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         public String arn;
 
         /**
-         * <p>The ID of the client. If multiple client IDs are returned, the client IDs are separated by commas (,).</p>
+         * <p>The ID of the client, If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
          */
         @NameInMap("ClientIds")
         public String clientIds;
@@ -111,6 +111,9 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</p>
+         */
         @NameInMap("IssuanceLimitTime")
         public Long issuanceLimitTime;
 

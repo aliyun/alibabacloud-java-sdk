@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -114,7 +114,7 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The email address of the RAM user.</p>
          * <br>
-         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("Email")
         public String email;
@@ -128,13 +128,13 @@ public class GetUserResponseBody extends TeaModel {
         /**
          * <p>The mobile phone number of the RAM user.</p>
          * <br>
-         * <p>>  This parameter is valid only on the China site (aliyun.com).</p>
+         * <p>> This parameter is valid only on the China site (aliyun.com).</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
         /**
-         * <p>The source of the RAM user. Valid values:</p>
+         * <p>The source of the RAM user. Valid value:</p>
          * <br>
          * <p>*   Manual: The RAM user is manually created in the RAM console.</p>
          * <p>*   SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).</p>
@@ -144,7 +144,7 @@ public class GetUserResponseBody extends TeaModel {
         public String provisionType;
 
         /**
-         * <p>An array that consists of tags.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public GetUserResponseBodyUserTags tags;

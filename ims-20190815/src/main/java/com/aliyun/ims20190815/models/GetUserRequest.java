@@ -7,7 +7,7 @@ public class GetUserRequest extends TeaModel {
     /**
      * <p>The AccessKey ID of the RAM user.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
+     * <p>> You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
@@ -15,7 +15,7 @@ public class GetUserRequest extends TeaModel {
     /**
      * <p>The ID of the RAM user.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
+     * <p>> You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
      */
     @NameInMap("UserId")
     public String userId;
@@ -25,9 +25,9 @@ public class GetUserRequest extends TeaModel {
      * <br>
      * <p>The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name.</p>
      * <br>
-     * <p>The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<AccountAlias>.onaliyun.com` must be 1 to 64 characters in length.</p>
+     * <p>The value of `UserPrincipalName` must be `1 to 128` characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be `1 to 64` characters in length.</p>
      * <br>
-     * <p>>  You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
+     * <p>> You must specify only one of the following parameters: `UserPrincipalName`, `UserId`, and `UserAccessKeyId`.</p>
      */
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;

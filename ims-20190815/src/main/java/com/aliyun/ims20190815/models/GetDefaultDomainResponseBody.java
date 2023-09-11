@@ -11,7 +11,7 @@ public class GetDefaultDomainResponseBody extends TeaModel {
     public String defaultDomainName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

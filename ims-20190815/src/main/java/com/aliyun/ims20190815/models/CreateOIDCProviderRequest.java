@@ -32,11 +32,14 @@ public class CreateOIDCProviderRequest extends TeaModel {
     @NameInMap("Fingerprints")
     public String fingerprints;
 
+    /**
+     * <p>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</p>
+     */
     @NameInMap("IssuanceLimitTime")
     public Long issuanceLimitTime;
 
     /**
-     * <p>The URL of the issuer, which is provided by the external IdP Okta. The URL of the issuer must be unique within an Alibaba Cloud account.</p>
+     * <p>The URL of the issuer, which is provided by the external IdP. The URL of the issuer must be unique within an Alibaba Cloud account.</p>
      * <br>
      * <p>The URL of the issuer must start with `https` and be in the valid URL format. The URL cannot contain query parameters that follow a question mark (`?`) or logon information that is identified by at signs (`@`). The URL cannot be a fragment URL that contains number signs (`#`).</p>
      * <br>

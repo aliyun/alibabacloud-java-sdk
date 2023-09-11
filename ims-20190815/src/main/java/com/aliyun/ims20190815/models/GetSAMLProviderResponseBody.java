@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetSAMLProviderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of the IdP.</p>
+     * <p>The information about the IdP.</p>
      */
     @NameInMap("SAMLProvider")
     public GetSAMLProviderResponseBodySAMLProvider SAMLProvider;

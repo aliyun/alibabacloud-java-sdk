@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationResponseBody extends TeaModel {
     /**
-     * <p>The information about the application.</p>
+     * <p>The configuration information about the application.</p>
      */
     @NameInMap("Application")
     public GetApplicationResponseBodyApplication application;
@@ -94,7 +94,7 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static class GetApplicationResponseBodyApplicationDelegatedScope extends TeaModel {
         /**
-         * <p>An array consisting of the information about the permissions that are granted on the application.</p>
+         * <p>The information about the permissions that are granted on the application.</p>
          */
         @NameInMap("PredefinedScopes")
         public GetApplicationResponseBodyApplicationDelegatedScopePredefinedScopes predefinedScopes;
