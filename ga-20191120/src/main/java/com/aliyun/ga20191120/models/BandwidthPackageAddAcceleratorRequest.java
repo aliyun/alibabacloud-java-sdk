@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class BandwidthPackageAddAcceleratorRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The GA instance ID.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The ID of the bandwidth plan.</p>
+     * <p>The bandwidth plan ID.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateAclsFromListenerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The IDs of the ACL.</p>
      */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;

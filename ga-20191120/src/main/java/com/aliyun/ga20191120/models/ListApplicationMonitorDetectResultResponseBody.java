@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
     /**
-     * <p>The diagnostic results of the origin probing tasks.</p>
+     * <p>Details about the diagnostic result of the origin probing task.</p>
      */
     @NameInMap("ApplicationMonitorDetectResultList")
     public java.util.List<ListApplicationMonitorDetectResultResponseBodyApplicationMonitorDetectResultList> applicationMonitorDetectResultList;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,15 +93,15 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The description of the diagnostic result of the origin probing task. Valid values:</p>
+         * <p>The description of the diagnostic result. Valid values:</p>
          * <br>
-         * <p>*   **All forward nodes work well**: The origin is normal.</p>
-         * <p>*   **Endpoint network error.**: The origin is abnormal. You must check whether the origin is running as expected.</p>
+         * <p>*   **All forward nodes work well.**: The origin server is normal.</p>
+         * <p>*   **Endpoint network error.**: The origin server is abnormal. You must check whether the origin server is running as expected.</p>
          * <p>*   **Public network error.**: An Internet error occurred. This refers to a network error that occurred when the client connects to the acceleration region.</p>
          * <p>*   **Ga internal error.**: An internal error occurred. For example, an exception occurred when a request is processed by GA.</p>
          * <p>*   **Ga has been deleted.**: The current GA instance is deleted.</p>
          * <p>*   **Ga state is not stable**: The current GA instance is in an unstable state, such as the Configuring state.</p>
-         * <p>*   **Ga has no listener configuration.**: The current GA instance does not have a listener.</p>
+         * <p>*   **Ga has no listener configuration.**: No listener is configured for the current GA instance.</p>
          * <p>*   **Missing endpoint configuration.**: No endpoint is configured.</p>
          * <p>*   **Missing acceleration region configuration.**: No acceleration region is configured.</p>
          * <p>*   **Missing endpointgroup configuration.**: No endpoint group is configured.</p>
@@ -110,16 +110,16 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The time when the diagnosis of the origin detection task ends.</p>
+         * <p>The time when the diagnosis of the origin probing task ends.</p>
          */
         @NameInMap("DetectTime")
         public String detectTime;
 
         /**
-         * <p>The diagnostic result of the origin probing task.</p>
+         * <p>The diagnostic result of the origin probing task. Valid values:</p>
          * <br>
-         * <p>*   **success**: The origin probing task succeeded.</p>
-         * <p>*   **failed**: The origin probing task failed.</p>
+         * <p>*   **success:** The origin probing task succeeded.</p>
+         * <p>*   **failed:** The origin probing task failed.</p>
          */
         @NameInMap("DiagStatus")
         public String diagStatus;
@@ -139,10 +139,10 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         /**
          * <p>The network transmission protocol that is used by the listener. Valid values:</p>
          * <br>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **udp**: UDP</p>
-         * <p>*   **http**: HTTP</p>
-         * <p>*   **https**: HTTPS</p>
+         * <p>*   **tcp:** TCP.</p>
+         * <p>*   **udp:** UDP.</p>
+         * <p>*   **http:** HTTP.</p>
+         * <p>*   **https:** HTTPS.</p>
          * <br>
          * <p>>  UDP listeners do not support probing.</p>
          */
@@ -156,7 +156,7 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
         public String statusCode;
 
         /**
-         * <p>The ID of the origin probing task.</p>
+         * <p>The origin probing task ID.</p>
          */
         @NameInMap("TaskId")
         public String taskId;

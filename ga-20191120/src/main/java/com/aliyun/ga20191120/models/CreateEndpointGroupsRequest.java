@@ -29,6 +29,9 @@ public class CreateEndpointGroupsRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Terminal node group configuration information.</p>
+     */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
@@ -101,7 +104,7 @@ public class CreateEndpointGroupsRequest extends TeaModel {
 
     public static class CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
         /**
-         * <p>The IP address or domain name of the endpoint.</p>
+         * <p>The IP address, domain name or instance id according to the type of the endpoint.</p>
          * <br>
          * <p>You can specify up to 100 endpoint IP addresses or domain names in an endpoint group.</p>
          * <br>
@@ -247,6 +250,9 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         @NameInMap("EnableClientIPPreservationToa")
         public Boolean enableClientIPPreservationToa;
 
+        /**
+         * <p>Terminal node configuration information.</p>
+         */
         @NameInMap("EndpointConfigurations")
         public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
 
@@ -353,6 +359,9 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
+        /**
+         * <p>The mappings between ports.</p>
+         */
         @NameInMap("PortOverrides")
         public java.util.List<CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> portOverrides;
 

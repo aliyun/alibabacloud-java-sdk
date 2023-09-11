@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListBasicAcceleratorsResponseBody extends TeaModel {
     /**
-     * <p>The basic GA instances.</p>
+     * <p>The information about basic GA instances.</p>
      */
     @NameInMap("Accelerators")
     public java.util.List<ListBasicAcceleratorsResponseBodyAccelerators> accelerators;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -223,19 +223,19 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         public String bandwidthBillingType;
 
         /**
-         * <p>The details about the basic bandwidth plan that is associated with the basic GA instance.</p>
+         * <p>Details about the basic bandwidth plan that is associated with the basic GA instance.</p>
          */
         @NameInMap("BasicBandwidthPackage")
         public ListBasicAcceleratorsResponseBodyAcceleratorsBasicBandwidthPackage basicBandwidthPackage;
 
         /**
-         * <p>The ID of the endpoint group.</p>
+         * <p>The ID of the endpoint group that is associated with the basic GA instance.</p>
          */
         @NameInMap("BasicEndpointGroupId")
         public String basicEndpointGroupId;
 
         /**
-         * <p>The ID of the acceleration region.</p>
+         * <p>The ID of the acceleration region where the basic GA instance is deployed.</p>
          */
         @NameInMap("BasicIpSetId")
         public String basicIpSetId;
@@ -249,19 +249,18 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>基础全球加速实例是否开启跨境线路功能。取值：</p>
+         * <p>Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:</p>
          * <br>
-         * <p>- **true**：开启跨境线路功能，可以加速跨境线路。</p>
-         * <br>
-         * <p>- **false**：关闭跨境线路功能，不可以加速跨境线路。</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("CrossBorderStatus")
         public Boolean crossBorderStatus;
 
         /**
-         * <p>The details about the cross-region acceleration bandwidth plan that is associated with the GA instance.</p>
+         * <p>Details about the cross-region acceleration bandwidth plan that is associated with the GA instance.</p>
          * <br>
-         * <p>This array is returned only for GA instances that are created on the international site (alibabacloud.com).</p>
+         * <p>This parameter is returned only when you call this operation on the International site (alibabacloud.com).</p>
          */
         @NameInMap("CrossDomainBandwidthPackage")
         public ListBasicAcceleratorsResponseBodyAcceleratorsCrossDomainBandwidthPackage crossDomainBandwidthPackage;
@@ -305,15 +304,15 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The status of the basic GA instance.</p>
+         * <p>The state of the basic GA instance.</p>
          * <br>
-         * <p>*   **init**: The GA instance is being initialized.</p>
-         * <p>*   **active**: The GA instance is available.</p>
-         * <p>*   **configuring**: The GA instance is being configured.</p>
-         * <p>*   **binding**: The GA instance is being associated.</p>
+         * <p>*   **init**: The basic GA instance is being initialized.</p>
+         * <p>*   **active**: The basic GA instance is available.</p>
+         * <p>*   **configuring**: The basic GA instance is being configured.</p>
+         * <p>*   **binding**: The basic GA instance is being associated.</p>
          * <p>*   **unbinding**: The GA instance is being disassociated.</p>
-         * <p>*   **deleting**: The GA instance is being deleted.</p>
-         * <p>*   **finacialLocked**: The GA instance is locked due to overdue payments.</p>
+         * <p>*   **deleting**: The basic GA instance is being deleted.</p>
+         * <p>*   **finacialLocked**: The basic GA instance is locked due to overdue payments.</p>
          */
         @NameInMap("State")
         public String state;
@@ -325,7 +324,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         public java.util.List<ListBasicAcceleratorsResponseBodyAcceleratorsTags> tags;
 
         /**
-         * <p>An invalid parameter.</p>
+         * <p>This parameter is invalid.</p>
          */
         @NameInMap("Type")
         public String type;

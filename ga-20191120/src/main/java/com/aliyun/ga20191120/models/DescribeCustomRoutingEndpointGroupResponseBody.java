@@ -79,6 +79,29 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The service ID to which the managed instance belongs.</p>
+     * <br>
+     * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+     */
+    @NameInMap("ServiceId")
+    public String serviceId;
+
+    /**
+     * <p>Is it a managed instance. Value:</p>
+     * <br>
+     * <p>- true</p>
+     * <p>- false</p>
+     */
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
+    /**
+     * <p>A list of action policies that users can execute on this managed instance.</p>
+     */
+    @NameInMap("ServiceManagedInfos")
+    public java.util.List<DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos;
+
+    /**
      * <p>The name of the Logstore.</p>
      */
     @NameInMap("SlsLogStoreName")
@@ -200,6 +223,30 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeCustomRoutingEndpointGroupResponseBody setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    public DescribeCustomRoutingEndpointGroupResponseBody setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    public DescribeCustomRoutingEndpointGroupResponseBody setServiceManagedInfos(java.util.List<DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos) {
+        this.serviceManagedInfos = serviceManagedInfos;
+        return this;
+    }
+    public java.util.List<DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos> getServiceManagedInfos() {
+        return this.serviceManagedInfos;
+    }
+
     public DescribeCustomRoutingEndpointGroupResponseBody setSlsLogStoreName(String slsLogStoreName) {
         this.slsLogStoreName = slsLogStoreName;
         return this;
@@ -230,6 +277,77 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
     }
     public String getState() {
         return this.state;
+    }
+
+    public static class DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos extends TeaModel {
+        /**
+         * <p>Managed policy action name, Valid values:</p>
+         * <br>
+         * <p>- Create</p>
+         * <p>- Update</p>
+         * <p>- Delete</p>
+         * <p>- Associate</p>
+         * <p>- UserUnmanaged</p>
+         * <p>- CreateChild</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>Sub resource type, Valid values:</p>
+         * <br>
+         * <p>- Listener</p>
+         * <p>- IpSet</p>
+         * <p>- EndpointGroup</p>
+         * <p>- ForwardingRule</p>
+         * <p>- Endpoint</p>
+         * <p>- EndpointGroupDestination</p>
+         * <p>- EndpointPolicy</p>
+         * <br>
+         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         */
+        @NameInMap("ChildType")
+        public String childType;
+
+        /**
+         * <p>Is the managed policy action managed, Valid values:</p>
+         * <br>
+         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <br>
+         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         */
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
+        public static DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos self = new DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos setChildType(String childType) {
+            this.childType = childType;
+            return this;
+        }
+        public String getChildType() {
+            return this.childType;
+        }
+
+        public DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
     }
 
 }

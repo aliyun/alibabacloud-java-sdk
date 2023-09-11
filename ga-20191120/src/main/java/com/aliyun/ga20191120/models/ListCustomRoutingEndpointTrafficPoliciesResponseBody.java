@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -23,13 +23,13 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
     public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies> policies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,13 +81,13 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges extends TeaModel {
         /**
-         * <p>The first port of the port range.</p>
+         * <p>The first port of the port range used by the traffic destination to process requests.</p>
          */
         @NameInMap("FromPort")
         public Integer fromPort;
 
         /**
-         * <p>The last port of the port range.</p>
+         * <p>The last port of the port range used by the traffic destination to process requests.</p>
          */
         @NameInMap("ToPort")
         public Integer toPort;
@@ -115,15 +115,91 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
 
     }
 
+    public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos extends TeaModel {
+        /**
+         * <p>托管策略动作名称，取值：</p>
+         * <p>- **Create**：创建实例。</p>
+         * <p>- **Update**：更新当前实例。</p>
+         * <p>- **Delete**：删除当前实例。</p>
+         * <p>- **Associate**：引用/被引用当前实例。</p>
+         * <p>- **UserUnmanaged**：用户解托管实例。</p>
+         * <p>- **CreateChild**：在当前实例下创建子资源。</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>子资源类型，取值：</p>
+         * <br>
+         * <p>- **Listener**：监听资源。</p>
+         * <br>
+         * <p>- **IpSet**：加速地域资源。</p>
+         * <br>
+         * <p>- **EndpointGroup**：终端节点组资源。</p>
+         * <br>
+         * <p>- **ForwardingRule**：转发策略资源。</p>
+         * <br>
+         * <p>- **Endpoint**：终端节点资源。</p>
+         * <br>
+         * <p>- **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。</p>
+         * <br>
+         * <p>- **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。</p>
+         * <br>
+         * <p>> 仅在**Action**参数为**CreateChild**时有效。</p>
+         */
+        @NameInMap("ChildType")
+        public String childType;
+
+        /**
+         * <p>托管策略动作是否被托管，取值：</p>
+         * <br>
+         * <p>- **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。</p>
+         * <br>
+         * <p>- **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。</p>
+         */
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
+        public static ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos self = new ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos setChildType(String childType) {
+            this.childType = childType;
+            return this;
+        }
+        public String getChildType() {
+            return this.childType;
+        }
+
+        public ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+    }
+
     public static class ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The ID of the GA instance to which the endpoint belongs.</p>
+         * <p>The ID of the GA instance with which the endpoint is associated.</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
 
         /**
-         * <p>The IP address of the traffic policy.</p>
+         * <p>The IP address of the traffic destination.</p>
          */
         @NameInMap("Address")
         public String address;
@@ -135,19 +211,19 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         public String endpointGroupId;
 
         /**
-         * <p>The ID of the endpoint to which the traffic policy belongs.</p>
+         * <p>The ID of the endpoint to which the traffic destination belongs.</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
 
         /**
-         * <p>The ID of the custom routing listener to which the endpoint belongs.</p>
+         * <p>The ID of the custom routing listener with which the endpoint is associated.</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
-         * <p>The ID of the traffic policy.</p>
+         * <p>The traffic policy ID.</p>
          */
         @NameInMap("PolicyId")
         public String policyId;
@@ -157,6 +233,32 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
          */
         @NameInMap("PortRanges")
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges> portRanges;
+
+        /**
+         * <p>托管实例所属的服务方ID。</p>
+         * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+         */
+        @NameInMap("ServiceId")
+        public String serviceId;
+
+        /**
+         * <p>是否为托管实例。取值：  </p>
+         * <br>
+         * <p>- true：是托管资实例。  </p>
+         * <br>
+         * <p>- false：不是托管实例。</p>
+         */
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
+        /**
+         * <p>用户在此托管实例下可执行的动作策略列表。</p>
+         * <br>
+         * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+         * <p>> - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。</p>
+         */
+        @NameInMap("ServiceManagedInfos")
+        public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos> serviceManagedInfos;
 
         public static ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
             ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies self = new ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies();
@@ -217,6 +319,30 @@ public class ListCustomRoutingEndpointTrafficPoliciesResponseBody extends TeaMod
         }
         public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesPortRanges> getPortRanges() {
             return this.portRanges;
+        }
+
+        public ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        public ListCustomRoutingEndpointTrafficPoliciesResponseBodyPolicies setServiceManagedInfos(java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos> serviceManagedInfos) {
+            this.serviceManagedInfos = serviceManagedInfos;
+            return this;
+        }
+        public java.util.List<ListCustomRoutingEndpointTrafficPoliciesResponseBodyPoliciesServiceManagedInfos> getServiceManagedInfos() {
+            return this.serviceManagedInfos;
         }
 
     }

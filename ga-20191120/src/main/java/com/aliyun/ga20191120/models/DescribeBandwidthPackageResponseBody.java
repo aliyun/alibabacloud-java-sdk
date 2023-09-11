@@ -105,6 +105,9 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -123,6 +126,9 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     @NameInMap("State")
     public String state;
 
+    /**
+     * <p>Tag objects.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeBandwidthPackageResponseBodyTags> tags;
 
@@ -295,9 +301,15 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     }
 
     public static class DescribeBandwidthPackageResponseBodyTags extends TeaModel {
+        /**
+         * <p>The tag key</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

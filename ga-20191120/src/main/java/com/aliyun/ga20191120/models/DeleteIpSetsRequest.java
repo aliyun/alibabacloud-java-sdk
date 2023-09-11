@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpSetsRequest extends TeaModel {
+    /**
+     * <p>The ID of the acceleration region that you want to delete.</p>
+     */
     @NameInMap("IpSetIds")
     public java.util.List<String> ipSetIds;
 

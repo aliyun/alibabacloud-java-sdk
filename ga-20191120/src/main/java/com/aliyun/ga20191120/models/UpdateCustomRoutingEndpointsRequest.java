@@ -14,6 +14,9 @@ public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The configurations of the endpoint.</p>
+     */
     @NameInMap("EndpointConfigurations")
     public java.util.List<UpdateCustomRoutingEndpointsRequestEndpointConfigurations> endpointConfigurations;
 
@@ -121,6 +124,15 @@ public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <p>The port range of the destination to which traffic is forwarded. The value of this parameter must fall within the port range of the endpoint group.</p>
+         * <br>
+         * <p>If you leave this parameter empty, traffic is forwarded to all destination ports.</p>
+         * <br>
+         * <p>This parameter takes effect only when **TrafficToEndpointPolicy** is set to **AllowCustom**.</p>
+         * <br>
+         * <p>You can specify port ranges for up to 20 destinations for each endpoint and specify up to 20 port ranges for each destination.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<UpdateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurationsPortRanges> portRanges;
 
@@ -156,6 +168,9 @@ public class UpdateCustomRoutingEndpointsRequest extends TeaModel {
         @NameInMap("EndpointId")
         public String endpointId;
 
+        /**
+         * <p>The configurations of the policy.</p>
+         */
         @NameInMap("PolicyConfigurations")
         public java.util.List<UpdateCustomRoutingEndpointsRequestEndpointConfigurationsPolicyConfigurations> policyConfigurations;
 

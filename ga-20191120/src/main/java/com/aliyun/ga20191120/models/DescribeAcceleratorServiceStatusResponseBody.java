@@ -4,9 +4,15 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DescribeAcceleratorServiceStatusResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -16,9 +22,73 @@ public class DescribeAcceleratorServiceStatusResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the GA instance.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Released</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The instance was released due to overdue payments</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   Expired</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The instance expired due to overdue payments</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   NotOpened</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The instance is not activated</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     * <br>
+     * <p>*   Normal</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The instance is activated</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    .</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values: true false</p>
+     */
     @NameInMap("Success")
     public String success;
 

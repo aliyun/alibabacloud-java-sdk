@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddEntriesToAclRequest extends TeaModel {
     /**
-     * <p>The ACL entries.</p>
+     * <p>The IP addresses or CIDR blocks that you want to add to the ACL. You can add at most 20 entries in each request.</p>
      */
     @NameInMap("AclEntries")
     public java.util.List<AddEntriesToAclRequestAclEntries> aclEntries;
 
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The ACL ID.</p>
      */
     @NameInMap("AclId")
     public String aclId;
@@ -19,24 +19,24 @@ public class AddEntriesToAclRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -88,11 +88,9 @@ public class AddEntriesToAclRequest extends TeaModel {
 
     public static class AddEntriesToAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The IP address(192.168.XX.XX) or CIDR(10.0.XX.XX/24) block that you want to add to the network ACL.</p>
+         * <p>The IP address (192.168.XX.XX) or CIDR block (10.0.XX.XX/24) that you want to add to the ACL. You can add at most 20 entries in each request.</p>
          * <br>
-         * <p>You can add at most 20 entries in each request.</p>
-         * <br>
-         * <p>>  This parameter is required.</p>
+         * <p>> This parameter is required.</p>
          */
         @NameInMap("Entry")
         public String entry;
@@ -100,7 +98,7 @@ public class AddEntriesToAclRequest extends TeaModel {
         /**
          * <p>The description of the entry.</p>
          * <br>
-         * <p>You can add at most 20 entry descriptions in each request.</p>
+         * <p>You can add the descriptions of up to 20 entries in each request.</p>
          * <br>
          * <p>The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
          */

@@ -325,7 +325,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
         public Boolean enableProxyProtocol;
 
         /**
-         * <p>The IP address or domain name of the endpoint.</p>
+         * <p>The IP address, domain name or instance id according to the type of the endpoint.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;

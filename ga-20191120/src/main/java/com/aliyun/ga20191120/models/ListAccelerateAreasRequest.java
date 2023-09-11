@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccelerateAreasRequest extends TeaModel {
     /**
-     * <p>The region ID of the Global Accelerator instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

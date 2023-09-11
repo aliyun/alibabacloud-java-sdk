@@ -20,6 +20,9 @@ public class DetachLogStoreFromEndpointGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The IDs of endpoint groups.</p>
+     */
     @NameInMap("EndpointGroupIds")
     public java.util.List<String> endpointGroupIds;
 

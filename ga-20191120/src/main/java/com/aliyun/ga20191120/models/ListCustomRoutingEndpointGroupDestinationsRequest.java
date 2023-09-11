@@ -34,14 +34,25 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
      * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
+    /**
+     * <p>The backend service protocols of the endpoint group. Valid values:</p>
+     * <br>
+     * <p>- **TCP**: TCP.</p>
+     * <p>- **UDP**: UDP.</p>
+     * <p>- **TCP,UDP**: TCP and UDP.</p>
+     * <br>
+     * <p>If this parameter is empty, all types of protocols are queried.</p>
+     * <br>
+     * <p>You can specify up to 10 protocols.</p>
+     */
     @NameInMap("Protocols")
     public java.util.List<String> protocols;
 
@@ -96,19 +107,19 @@ public class ListCustomRoutingEndpointGroupDestinationsRequest extends TeaModel 
         return this.listenerId;
     }
 
-    public ListCustomRoutingEndpointGroupDestinationsRequest setPageNumber(String pageNumber) {
+    public ListCustomRoutingEndpointGroupDestinationsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListCustomRoutingEndpointGroupDestinationsRequest setPageSize(String pageSize) {
+    public ListCustomRoutingEndpointGroupDestinationsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

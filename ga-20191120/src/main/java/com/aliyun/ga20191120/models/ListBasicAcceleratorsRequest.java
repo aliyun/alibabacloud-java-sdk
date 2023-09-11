@@ -35,23 +35,22 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the basic GA instance. Valid values:</p>
+     * <p>The state of the basic GA instance. Valid values:</p>
      * <br>
-     * <p>*   **init**: The GA instance is being initialized.</p>
-     * <p>*   **active**: The GA instance is available.</p>
-     * <p>*   **configuring**: The GA instance is being configured.</p>
-     * <p>*   **binding**: The GA instance is being associated.</p>
-     * <p>*   **unbinding**: The GA instance is being disassociated.</p>
-     * <p>*   **deleting**: The GA instance is being deleted.</p>
-     * <p>*   **finacialLocked**: The GA instance is locked due to overdue payments.</p>
+     * <p>*   **init**: The basic GA instance is being initialized.</p>
+     * <p>*   **active**: The basic GA instance is available.</p>
+     * <p>*   **configuring**: The basic GA instance is being configured.</p>
+     * <p>*   **binding**: The basic GA instance is being associated.</p>
+     * <p>*   **unbinding**: The basic GA instance is being disassociated.</p>
+     * <p>*   **deleting**: The basic GA instance is being deleted.</p>
+     * <p>*   **finacialLocked**: The basic GA instance is locked due to overdue payments.</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
      * <p>The tags of the basic GA instance.</p>
-     * <br>
-     * <p>You can specify up to 20 tags.</p>
+     * <p>You can specify at most 20 tags in each call.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListBasicAcceleratorsRequestTag> tag;
@@ -119,7 +118,7 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
 
     public static class ListBasicAcceleratorsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the basic GA instance. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the basic GA resource. The tag key cannot be an empty string.</p>
          * <br>
          * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>

@@ -79,6 +79,80 @@ public class ListDomainsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos extends TeaModel {
+        /**
+         * <p>托管策略动作名称，取值：</p>
+         * <p>- **Create**：创建实例。</p>
+         * <p>- **Update**：更新当前实例。</p>
+         * <p>- **Delete**：删除当前实例。</p>
+         * <p>- **Associate**：引用/被引用当前实例。</p>
+         * <p>- **UserUnmanaged**：用户解托管实例。</p>
+         * <p>- **CreateChild**：在当前实例下创建子资源。</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>子资源类型，取值：</p>
+         * <br>
+         * <p>- **Listener**：监听资源。</p>
+         * <br>
+         * <p>- **IpSet**：加速地域资源。</p>
+         * <br>
+         * <p>- **EndpointGroup**：终端节点组资源。</p>
+         * <br>
+         * <p>- **ForwardingRule**：转发策略资源。</p>
+         * <br>
+         * <p>- **Endpoint**：终端节点资源。</p>
+         * <br>
+         * <p>- **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。</p>
+         * <br>
+         * <p>- **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。</p>
+         * <br>
+         * <p>> 仅在**Action**参数为**CreateChild**时有效。</p>
+         */
+        @NameInMap("ChildType")
+        public String childType;
+
+        /**
+         * <p>托管策略动作是否被托管，取值：</p>
+         * <p>- **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。</p>
+         * <p>- **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。</p>
+         */
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
+        public static ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos self = new ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos setChildType(String childType) {
+            this.childType = childType;
+            return this;
+        }
+        public String getChildType() {
+            return this.childType;
+        }
+
+        public ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+    }
+
     public static class ListDomainsResponseBodyDomainsAccelerators extends TeaModel {
         /**
          * <p>The ID of the GA instance.</p>
@@ -91,6 +165,32 @@ public class ListDomainsResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>托管实例所属的服务方ID。</p>
+         * <br>
+         * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+         */
+        @NameInMap("ServiceId")
+        public String serviceId;
+
+        /**
+         * <p>是否为托管实例。取值：</p>
+         * <br>
+         * <p>- **true**：是托管资实例。</p>
+         * <br>
+         * <p>- **false**：不是托管实例。</p>
+         */
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
+        /**
+         * <p>用户在此托管实例下可执行的动作策略列表。</p>
+         * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+         * <p>> - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。</p>
+         */
+        @NameInMap("ServiceManagedInfos")
+        public java.util.List<ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos> serviceManagedInfos;
 
         public static ListDomainsResponseBodyDomainsAccelerators build(java.util.Map<String, ?> map) throws Exception {
             ListDomainsResponseBodyDomainsAccelerators self = new ListDomainsResponseBodyDomainsAccelerators();
@@ -111,6 +211,30 @@ public class ListDomainsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListDomainsResponseBodyDomainsAccelerators setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public ListDomainsResponseBodyDomainsAccelerators setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        public ListDomainsResponseBodyDomainsAccelerators setServiceManagedInfos(java.util.List<ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos> serviceManagedInfos) {
+            this.serviceManagedInfos = serviceManagedInfos;
+            return this;
+        }
+        public java.util.List<ListDomainsResponseBodyDomainsAcceleratorsServiceManagedInfos> getServiceManagedInfos() {
+            return this.serviceManagedInfos;
         }
 
     }

@@ -40,6 +40,23 @@ public class GetBasicIpSetResponseBody extends TeaModel {
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>The line type of the elastic IP address (EIP) in the acceleration region. Valid values:</p>
+     * <br>
+     * <p>*   **BGP** (default)</p>
+     * <p>*   **BGP_PRO** If the acceleration region is China (Hong Kong) and a basic bandwidth plan whose bandwidth type is Premium is associated with the GA instance, the default value of IspType is BGP_PRO.</p>
+     * <br>
+     * <p>If you are allowed to use single-ISP bandwidth, you can also specify one of the following values:</p>
+     * <br>
+     * <p>*   **ChinaTelecom**: China Telecom (single ISP)</p>
+     * <p>*   **ChinaUnicom**: China Unicom (single ISP)</p>
+     * <p>*   **ChinaMobile**: China Mobile (single ISP)</p>
+     * <p>*   **ChinaTelecom_L2**: China Telecom \_L2 (single ISP)</p>
+     * <p>*   **ChinaUnicom_L2**: China Unicom \_L2 (single ISP)</p>
+     * <p>*   **ChinaMobile_L2**: China Mobile \_L2 (single ISP)</p>
+     * <br>
+     * <p>> Different acceleration regions support different single-ISP BGP lines.</p>
+     */
     @NameInMap("IspType")
     public String ispType;
 

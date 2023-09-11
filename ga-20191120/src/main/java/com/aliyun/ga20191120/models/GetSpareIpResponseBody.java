@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetSpareIpResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The state of the secondary IP address. Valid values:</p>
+     * <p>The status of the secondary IP address. Valid values:</p>
      * <br>
-     * <p>*   **active**: The secondary IP address is available.</p>
-     * <p>*   **inuse**: The secondary IP address is in use.</p>
+     * <p>*   **active:** The secondary IP address is available.</p>
+     * <p>*   **inuse:** The secondary IP address is in use.</p>
      */
     @NameInMap("State")
     public String state;

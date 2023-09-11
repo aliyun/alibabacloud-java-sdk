@@ -17,7 +17,7 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -29,7 +29,7 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -79,6 +79,76 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos extends TeaModel {
+        /**
+         * <p>Managed policy action name, Valid values:</p>
+         * <p>- Create</p>
+         * <p>- Update</p>
+         * <p>- Delete</p>
+         * <p>- Associate</p>
+         * <p>- UserUnmanaged</p>
+         * <p>- CreateChild</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>Sub resource type, Valid values:</p>
+         * <br>
+         * <p>- Listener</p>
+         * <p>- IpSet</p>
+         * <p>- EndpointGroup</p>
+         * <p>- ForwardingRule</p>
+         * <p>- Endpoint</p>
+         * <p>- EndpointGroupDestination</p>
+         * <p>- EndpointPolicy</p>
+         * <br>
+         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         */
+        @NameInMap("ChildType")
+        public String childType;
+
+        /**
+         * <p>Is the managed policy action managed, Valid values:</p>
+         * <br>
+         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <br>
+         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         */
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
+        public static ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos self = new ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos setChildType(String childType) {
+            this.childType = childType;
+            return this;
+        }
+        public String getChildType() {
+            return this.childType;
+        }
+
+        public ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+    }
+
     public static class ListCustomRoutingEndpointGroupsResponseBodyEndpointGroups extends TeaModel {
         /**
          * <p>The ID of the GA instance.</p>
@@ -99,13 +169,13 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
         public String endpointGroupId;
 
         /**
-         * <p>A list of endpoint group IP addresses.</p>
+         * <p>The list of endpoint group IP addresses.</p>
          */
         @NameInMap("EndpointGroupIpList")
         public java.util.List<String> endpointGroupIpList;
 
         /**
-         * <p>The ID of the region where the endpoint group is deployed.</p>
+         * <p>The ID of the region where the endpoint group is created.</p>
          */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
@@ -129,12 +199,35 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the endpoint group. Valid values:</p>
+         * <p>The service ID to which the managed instance belongs.</p>
          * <br>
-         * <p>*   **init**: The endpoint group is being initialized.</p>
-         * <p>*   **active**: The endpoint group is running as expected.</p>
-         * <p>*   **updating**: The endpoint group is being updated.</p>
-         * <p>*   **deleting**: The endpoint group is being deleted.</p>
+         * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+         */
+        @NameInMap("ServiceId")
+        public String serviceId;
+
+        /**
+         * <p>Is it a managed instance. Valid values:</p>
+         * <br>
+         * <p>- true</p>
+         * <p>- false</p>
+         */
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
+        /**
+         * <p>A list of action policies that users can execute on this managed instance.</p>
+         */
+        @NameInMap("ServiceManagedInfos")
+        public java.util.List<ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> serviceManagedInfos;
+
+        /**
+         * <p>The status of the endpoint group.</p>
+         * <br>
+         * <p>*   **init**: being initialized</p>
+         * <p>*   **active**: running as expected</p>
+         * <p>*   **updating**: being updated</p>
+         * <p>*   **deleting**: being deleted</p>
          */
         @NameInMap("State")
         public String state;
@@ -206,6 +299,30 @@ public class ListCustomRoutingEndpointGroupsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListCustomRoutingEndpointGroupsResponseBodyEndpointGroups setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public ListCustomRoutingEndpointGroupsResponseBodyEndpointGroups setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        public ListCustomRoutingEndpointGroupsResponseBodyEndpointGroups setServiceManagedInfos(java.util.List<ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> serviceManagedInfos) {
+            this.serviceManagedInfos = serviceManagedInfos;
+            return this;
+        }
+        public java.util.List<ListCustomRoutingEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> getServiceManagedInfos() {
+            return this.serviceManagedInfos;
         }
 
         public ListCustomRoutingEndpointGroupsResponseBodyEndpointGroups setState(String state) {

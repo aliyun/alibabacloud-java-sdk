@@ -11,16 +11,16 @@ public class ListEndpointGroupsRequest extends TeaModel {
     public String acceleratorId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>Specifies whether the access logging feature is enabled. Default value: off. Valid values:</p>
+     * <br>
+     * <p>*   **on**: The access logging feature is enabled.</p>
+     * <p>*   **off**: The access logging feature is disabled.</p>
      */
     @NameInMap("AccessLogSwitch")
     public String accessLogSwitch;
 
     /**
-     * <p>The protocol that is used to monitor latency. Valid values:</p>
-     * <br>
-     * <p>*   **icmp**: ICMP</p>
-     * <p>*   **tcp**: TCP</p>
+     * <p>The ID of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
@@ -28,36 +28,33 @@ public class ListEndpointGroupsRequest extends TeaModel {
     /**
      * <p>The type of the endpoint group. Valid values:</p>
      * <br>
-     * <p>*   **default**</p>
-     * <p>*   **virtual**</p>
+     * <p>*   **default**: a default endpoint group</p>
+     * <p>*   **virtual**: a virtual endpoint group</p>
      * <p>*   If you leave this parameter empty, all default and virtual endpoint groups are queried.</p>
      */
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The ID of the listener.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The protocol that is used by the backend service. Valid values:</p>
-     * <br>
-     * <p>*   **HTTP**: HTTP</p>
-     * <p>*   **HTTPS**: HTTPS</p>
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The endpoint port.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -147,17 +144,21 @@ public class ListEndpointGroupsRequest extends TeaModel {
 
     public static class ListEndpointGroupsRequestTag extends TeaModel {
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The tag key of the Endpoint Group. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag keys.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The type of the endpoint group. Valid values:</p>
+         * <p>The tag value of the Endpoint Group. The tag value can be an empty string.</p>
          * <br>
-         * <p>*   **default**: a default endpoint group</p>
-         * <p>*   **virtual**: a virtual endpoint group</p>
-         * <p>*   If you leave this parameter empty, all default and virtual endpoint groups are queried.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag values.</p>
          */
         @NameInMap("Value")
         public String value;

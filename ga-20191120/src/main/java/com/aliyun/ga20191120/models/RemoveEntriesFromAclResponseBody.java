@@ -4,11 +4,14 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class RemoveEntriesFromAclResponseBody extends TeaModel {
+    /**
+     * <p>The ACL ID.</p>
+     */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ID of the ACL.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

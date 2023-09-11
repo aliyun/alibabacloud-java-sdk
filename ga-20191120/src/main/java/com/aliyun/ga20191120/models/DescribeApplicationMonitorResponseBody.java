@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationMonitorResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance on which the origin probing task runs.</p>
+     * <p>The ID of the GA instance on which the origin probing task ran.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The URL or IP address that is probed.</p>
+     * <p>The URL or IP address that was probed.</p>
      */
     @NameInMap("Address")
     public String address;
@@ -19,34 +19,34 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the automatic diagnostics feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes.</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("DetectEnable")
     public Boolean detectEnable;
 
     /**
-     * <p>The threshold that is used to trigger the automatic diagnostics feature.</p>
+     * <p>The threshold that is used to trigger automatic diagnostics.</p>
      * <br>
-     * <p>If the liveness of the origin in percentile drops below the specified threshold, the automatic diagnostics feature is triggered.</p>
+     * <p>If the availability of the origin server drops below the specified threshold, the automatic diagnostics feature is triggered.</p>
      */
     @NameInMap("DetectThreshold")
     public Integer detectThreshold;
 
     /**
-     * <p>The number of times that is required to reach the threshold before the automatic diagnostics feature can be triggered.</p>
+     * <p>The number of times that are required to reach the threshold before the automatic diagnostics feature is triggered.</p>
      */
     @NameInMap("DetectTimes")
     public Integer detectTimes;
 
     /**
-     * <p>The list of probe points provided by the service provider.</p>
+     * <p>The probe points of the Internet service provider (ISP).</p>
      */
     @NameInMap("IspCityList")
     public java.util.List<DescribeApplicationMonitorResponseBodyIspCityList> ispCityList;
 
     /**
-     * <p>The ID of the listener on which the origin probing task runs.</p>
+     * <p>The ID of the listener on which the origin probing task ran.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -58,21 +58,21 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     public String optionsJson;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. The value is set to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The silence period of the automatic diagnostics feature. This parameter specifies the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.</p>
+     * <p>The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers automatic diagnostics, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.</p>
      * <br>
-     * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of the **DetectTimes** parameter, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
+     * <p>If the number of consecutive times that the availability rate drops below the automatic diagnostics threshold reaches the value of **DetectTimes**, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period regardless of whether the availability rate remains below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
      * <br>
      * <p>Unit: seconds.</p>
      */
@@ -202,25 +202,25 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
 
     public static class DescribeApplicationMonitorResponseBodyIspCityList extends TeaModel {
         /**
-         * <p>The ID of the city where the probe point provided by the service provider is deployed.</p>
+         * <p>The ID of the city where the probe point of the ISP is deployed.</p>
          */
         @NameInMap("City")
         public String city;
 
         /**
-         * <p>The name of the city where the probe point provided by the service provider is deployed.</p>
+         * <p>The name of the city where the probe point of the ISP is deployed.</p>
          */
         @NameInMap("CityName")
         public String cityName;
 
         /**
-         * <p>The ID of the probe point provided by the service provider.</p>
+         * <p>The probe point ID of the ISP.</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
-         * <p>The name of the probe point provided by the service provider.</p>
+         * <p>The probe point name of the ISP.</p>
          */
         @NameInMap("IspName")
         public String ispName;

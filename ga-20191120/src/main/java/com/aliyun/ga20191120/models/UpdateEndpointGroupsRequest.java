@@ -7,30 +7,30 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to only precheck the request. Default value: false. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true:** performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>Terminal node group configuration information.</p>
+     * <p>The configurations of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupConfigurations")
     public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurations> endpointGroupConfigurations;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The listener ID.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -94,22 +94,24 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The type of the endpoint. Valid values:</p>
+         * <p>The type of the endpoint.</p>
          * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <p>*   **Domain:** a custom domain name.</p>
+         * <p>*   **Ip:** a custom IP address.</p>
+         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
+         * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
+         * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
+         * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
          * <br>
          * <p>> </p>
-         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system creates the service-linked role.</p>
+         * <br>
+         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
+         * <br>
          * <p>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system creates the service-linked role.</p>
          * <p>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system creates the service-linked role.</p>
          * <br>
-         * <p>    For more information, see [Service-linked roles](~~178360~~).</p>
+         * <p>For more information, see [Service-linked roles](~~178360~~).</p>
          */
         @NameInMap("Type")
         public String type;
@@ -119,7 +121,7 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
          * <br>
          * <p>Valid values: **0** to **255**.</p>
          * <br>
-         * <p>>  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.</p>
+         * <p>> If you set the weight of an endpoint to 0, GA does not route network traffic to the endpoint. Make sure that you are aware of the impact on your business before you set the endpoint weight to 0.</p>
          */
         @NameInMap("Weight")
         public Long weight;
@@ -165,12 +167,14 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public Long endpointPort;
 
         /**
-         * <p>The listening port.</p>
+         * <p>The listener port of the instance.</p>
          * <br>
          * <p>Valid values: **1** to **65499**.</p>
          * <br>
          * <p>> </p>
-         * <p>*   Only HTTP and HTTPS listeners support port mapping.</p>
+         * <br>
+         * <p>*   Only HTTP and HTTPS listeners support port mappings.</p>
+         * <br>
          * <p>*   The listener port in a port mapping must be the one used by the current listener.</p>
          */
         @NameInMap("ListenerPort")
@@ -203,8 +207,8 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
          * <br>
-         * <p>*   **true**: uses the proxy protocol to preserve client IP addresses.</p>
-         * <p>*   **false**: does not use the proxy protocol to preserve client IP addresses.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableClientIPPreservationProxyProtocol")
         public Boolean enableClientIPPreservationProxyProtocol;
@@ -212,14 +216,14 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Valid values:</p>
          * <br>
-         * <p>*   **true**: preserves client IP addresses by using the TOA module.</p>
-         * <p>*   **false**: does not preserve client IP addresses by using the TOA module.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableClientIPPreservationToa")
         public Boolean enableClientIPPreservationToa;
 
         /**
-         * <p>Terminal node configuration information.</p>
+         * <p>The configurations of endpoints in the endpoint group.</p>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
@@ -227,13 +231,13 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>The description of the endpoint group.</p>
          * <br>
-         * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+         * <p>The description can be up to 256 characters in length and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("EndpointGroupDescription")
         public String endpointGroupDescription;
 
         /**
-         * <p>The ID of the endpoint.</p>
+         * <p>The endpoint ID.</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
@@ -249,21 +253,23 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         /**
          * <p>The protocol that is used by the backend service. Valid values:</p>
          * <br>
-         * <p>*   **HTTP**: HTTP</p>
-         * <p>*   **HTTPS**: HTTPS</p>
+         * <p>*   **HTTP**</p>
+         * <p>*   **HTTPS**</p>
          * <br>
          * <p>> </p>
-         * <p>*   You can set this property only if the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</p>
+         * <br>
+         * <p>*   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</p>
+         * <br>
          * <p>*   For an HTTP listener, the backend service protocol must be HTTP.</p>
          */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
 
         /**
-         * <p>Specifies whether to enable the health check feature. Default value: false. Valid values:</p>
+         * <p>Specifies whether to enable the health check feature. Valid values:</p>
          * <br>
-         * <p>*   **true**: enables the health check feature.</p>
-         * <p>*   **false**: disables the health check feature.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
@@ -289,17 +295,17 @@ public class UpdateEndpointGroupsRequest extends TeaModel {
         public Long healthCheckPort;
 
         /**
-         * <p>The protocol over which health check requests are sent.</p>
+         * <p>The protocol over which health check requests are sent. Valid values:</p>
          * <br>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **http**: HTTP</p>
-         * <p>*   **https**: HTTPS</p>
+         * <p>*   **tcp:** TCP</p>
+         * <p>*   **http:** HTTP</p>
+         * <p>*   **https:** HTTPS</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
         /**
-         * <p>The mappings between ports.</p>
+         * <p>The port mapping.</p>
          */
         @NameInMap("PortOverrides")
         public java.util.List<UpdateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> portOverrides;

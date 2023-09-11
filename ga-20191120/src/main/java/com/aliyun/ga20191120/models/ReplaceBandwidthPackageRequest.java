@@ -4,11 +4,14 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class ReplaceBandwidthPackageRequest extends TeaModel {
+    /**
+     * <p>The GA instance ID.</p>
+     */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The ID of the replacement bandwidth plan. When you specify a replacement bandwidth plan, take note of the following items:</p>
+     * <p>The ID of the required bandwidth plan. When you specify a replacement bandwidth plan, take note of the following items:</p>
      * <br>
      * <p>*   Only a bandwidth plan that is not associated with a GA instance can be specified.</p>
      * <p>*   If you want to replace a basic bandwidth plan, make sure that the bandwidth provided by the replacement bandwidth plan is not less than the total bandwidth allocated to the acceleration area.</p>
@@ -17,7 +20,7 @@ public class ReplaceBandwidthPackageRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

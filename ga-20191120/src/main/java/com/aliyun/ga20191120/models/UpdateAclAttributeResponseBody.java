@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateAclAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the network ACL.</p>
+     * <p>The ACL ID.</p>
      */
     @NameInMap("AclId")
     public String aclId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

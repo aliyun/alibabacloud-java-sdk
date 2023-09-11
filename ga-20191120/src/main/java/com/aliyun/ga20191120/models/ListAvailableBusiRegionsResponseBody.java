@@ -38,6 +38,9 @@ public class ListAvailableBusiRegionsResponseBody extends TeaModel {
     }
 
     public static class ListAvailableBusiRegionsResponseBodyRegions extends TeaModel {
+        /**
+         * <p>Whether China Mainland.</p>
+         */
         @NameInMap("ChinaMainland")
         public Boolean chinaMainland;
 
