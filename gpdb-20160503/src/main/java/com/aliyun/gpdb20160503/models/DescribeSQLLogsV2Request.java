@@ -96,7 +96,7 @@ public class DescribeSQLLogsV2Request extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

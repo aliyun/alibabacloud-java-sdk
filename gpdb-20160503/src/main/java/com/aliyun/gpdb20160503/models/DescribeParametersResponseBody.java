@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
     /**
-     * <p>Details of the parameters.</p>
+     * <p>The queried configuration parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<DescribeParametersResponseBodyParameters> parameters;
@@ -39,7 +39,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     public static class DescribeParametersResponseBodyParameters extends TeaModel {
         /**
-         * <p>The current value of the parameter.</p>
+         * <p>The current value of the configuration parameter.</p>
          */
         @NameInMap("CurrentValue")
         public String currentValue;
@@ -54,7 +54,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String forceRestartInstance;
 
         /**
-         * <p>Indicates whether the parameter can be modified. Valid values:</p>
+         * <p>Indicates whether the configuration parameter can be modified. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -63,25 +63,25 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String isChangeableConfig;
 
         /**
-         * <p>The valid values of the parameter.</p>
+         * <p>The valid values of the configuration parameter.</p>
          */
         @NameInMap("OptionalRange")
         public String optionalRange;
 
         /**
-         * <p>The description of the parameter.</p>
+         * <p>The description of the configuration parameter.</p>
          */
         @NameInMap("ParameterDescription")
         public String parameterDescription;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The name of the configuration parameter.</p>
          */
         @NameInMap("ParameterName")
         public String parameterName;
 
         /**
-         * <p>The default value of the parameter.</p>
+         * <p>The default value of the configuration parameter.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;

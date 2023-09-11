@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDownloadSQLLogsResponseBody extends TeaModel {
+    /**
+     * <p>The URL that is used to download the file.</p>
+     */
     @NameInMap("Records")
     public java.util.List<DescribeDownloadSQLLogsResponseBodyRecords> records;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

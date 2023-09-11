@@ -5,31 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeDataBackupsResponseBody extends TeaModel {
     /**
-     * <p>Details about the backup sets.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDataBackupsResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of backup sets on the page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total backup set size. Unit: Byte.</p>
+     */
+    @NameInMap("TotalBackupSize")
+    public Long totalBackupSize;
+
+    /**
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -71,6 +77,14 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDataBackupsResponseBody setTotalBackupSize(Long totalBackupSize) {
+        this.totalBackupSize = totalBackupSize;
+        return this;
+    }
+    public Long getTotalBackupSize() {
+        return this.totalBackupSize;
+    }
+
     public DescribeDataBackupsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -91,6 +105,16 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
          */
         @NameInMap("BackupEndTimeLocal")
         public String backupEndTimeLocal;
+
+        /**
+         * <p>The method that is used to generate the backup set. Valid values:</p>
+         * <br>
+         * <p>*   **Logical**: logical backup</p>
+         * <p>*   **Physical**: physical backup</p>
+         * <p>*   **Snapshot**: snapshot backup</p>
+         */
+        @NameInMap("BackupMethod")
+        public String backupMethod;
 
         /**
          * <p>The backup mode.</p>
@@ -189,6 +213,14 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
         public String getBackupEndTimeLocal() {
             return this.backupEndTimeLocal;
+        }
+
+        public DescribeDataBackupsResponseBodyItems setBackupMethod(String backupMethod) {
+            this.backupMethod = backupMethod;
+            return this;
+        }
+        public String getBackupMethod() {
+            return this.backupMethod;
         }
 
         public DescribeDataBackupsResponseBodyItems setBackupMode(String backupMode) {

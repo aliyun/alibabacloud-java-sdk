@@ -23,19 +23,19 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     public String maxOutputRows;
 
     /**
-     * <p>The ID of the query.</p>
+     * <p>The query ID.</p>
      */
     @NameInMap("QueryID")
     public String queryID;
 
     /**
-     * <p>The information of the operator.</p>
+     * <p>The information about the operator.</p>
      */
     @NameInMap("QueryPlan")
     public String queryPlan;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,7 +59,7 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     public String sortedMetrics;
 
     /**
-     * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time of the query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -67,20 +67,20 @@ public class DescribeDiagnosisSQLInfoResponseBody extends TeaModel {
     /**
      * <p>The execution state of the query. Valid values:</p>
      * <br>
-     * <p>*   **running**: The query is being executed.</p>
-     * <p>*   **finished**: The query execution is complete.</p>
+     * <p>*   **running**</p>
+     * <p>*   **finished**</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The information of the execution plan.</p>
+     * <p>The information about the execution plan.</p>
      */
     @NameInMap("TextPlan")
     public String textPlan;
 
     /**
-     * <p>The name of the database account.</p>
+     * <p>The username.</p>
      */
     @NameInMap("User")
     public String user;

@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDiagnosisSummaryResponseBody extends TeaModel {
     /**
-     * <p>Details of instance nodes.</p>
+     * <p>The group ID.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceDiagnosisSummaryResponseBodyItems> items;
 
     /**
-     * <p>State statistics of the coordinator node.</p>
+     * <p>The state information about the coordinator node.</p>
      */
     @NameInMap("MasterStatusInfo")
     public DescribeDBInstanceDiagnosisSummaryResponseBodyMasterStatusInfo masterStatusInfo;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>State statistics of compute nodes.</p>
+     * <p>The state information about compute nodes.</p>
      */
     @NameInMap("SegmentStatusInfo")
     public DescribeDBInstanceDiagnosisSummaryResponseBodySegmentStatusInfo segmentStatusInfo;

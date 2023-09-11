@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     /**
-     * <p>Details of SQL queries.</p>
+     * <p>The threshold that determines whether the SQL statement must be truncated. The value is the number of characters.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDiagnosisRecordsResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

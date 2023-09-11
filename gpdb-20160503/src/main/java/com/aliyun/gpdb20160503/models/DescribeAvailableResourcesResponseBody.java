@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourcesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the available resources.</p>
+     * <p>The zone ID.</p>
      */
     @NameInMap("Resources")
     public java.util.List<DescribeAvailableResourcesResponseBodyResources> resources;

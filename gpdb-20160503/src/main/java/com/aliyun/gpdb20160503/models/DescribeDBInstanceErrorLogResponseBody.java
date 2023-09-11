@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceErrorLogResponseBody extends TeaModel {
     /**
-     * <p>Details of the error logs.</p>
+     * <p>The content of the error log.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceErrorLogResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

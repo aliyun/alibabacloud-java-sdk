@@ -4,24 +4,48 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListNamespacesResponseBody extends TeaModel {
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The queried namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public ListNamespacesResponseBodyNamespaces namespaces;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **success**</p>
+     * <p>*   **fail**</p>
+     */
     @NameInMap("Status")
     public String status;
 

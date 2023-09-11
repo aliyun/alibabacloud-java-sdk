@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceDiagnosisSummaryRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query details about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   **20**</p>
      * <p>*   **50**</p>
@@ -31,7 +31,7 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The role state of the node. It indicates whether a primary/secondary switchover occurs. Valid values:</p>
+     * <p>The role state of the node. It specifies whether a primary/secondary switchover occurs. Valid values:</p>
      * <br>
      * <p>*   **normal**: The node role is normal. No primary/secondary switchover occurs.</p>
      * <p>*   **reverse**: The node role is reversed. A primary/secondary switchover occurs.</p>
@@ -45,7 +45,7 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends TeaModel {
      * <p>*   **UP**: The node is running.</p>
      * <p>*   **DOWN**: The node is faulty.</p>
      * <br>
-     * <p>If this parameter is not specified, information of nodes in all running states is returned.</p>
+     * <p>If you do not specify this parameter, the information about nodes in all running states is returned.</p>
      */
     @NameInMap("StartStatus")
     public String startStatus;
@@ -56,7 +56,7 @@ public class DescribeDBInstanceDiagnosisSummaryRequest extends TeaModel {
      * <p>*   **synced**: The node data is synchronized.</p>
      * <p>*   **notSyncing**: The node data is not synchronized.</p>
      * <br>
-     * <p>If this parameter is not specified, information of nodes in all synchronization states is returned.</p>
+     * <p>If you do not specify this parameter, the information about nodes in all synchronization states is returned.</p>
      */
     @NameInMap("SyncMode")
     public String syncMode;

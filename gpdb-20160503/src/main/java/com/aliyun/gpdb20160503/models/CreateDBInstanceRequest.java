@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    @NameInMap("BackupId")
+    public String backupId;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. For more information, see [Ensure idempotence](~~327176~~).</p>
      */
@@ -144,6 +147,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    @NameInMap("MasterCU")
+    public Integer masterCU;
+
     /**
      * <p>The number of coordinator nodes. Valid values: 1 and 2.</p>
      * <br>
@@ -158,11 +164,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>- **Postpaid**: pay-as-you-go.</p>
-     * <p>- **Prepaid**: subscription.</p>
+     * <p>*   **Postpaid**: pay-as-you-go.</p>
+     * <p>*   **Prepaid**: subscription.</p>
+     * <br>
      * <p>> </p>
-     * <p>- If you do not specify this parameter, Postpaid is used.</p>
-     * <p>- You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, Postpaid is used.</p>
+     * <br>
+     * <p>*   You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</p>
      */
     @NameInMap("PayType")
     public String payType;
@@ -206,12 +215,15 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The performance level of ESSDs. Valid values:</p>
      * <br>
-     * <p>- **pl0**</p>
-     * <p>- **pl1**</p>
-     * <p>- **pl2**</p>
+     * <p>*   **pl0**</p>
+     * <p>*   **pl1**</p>
+     * <p>*   **pl2**</p>
+     * <br>
      * <p>> </p>
-     * <p>- This parameter takes effect only when SegStorageType is set to cloud_essd.</p>
-     * <p>- If you do not specify this parameter, pl1 is used.</p>
+     * <br>
+     * <p>*   This parameter takes effect only when SegStorageType is set to cloud_essd.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, pl1 is used.</p>
      */
     @NameInMap("SegDiskPerformanceLevel")
     public String segDiskPerformanceLevel;
@@ -254,6 +266,9 @@ public class CreateDBInstanceRequest extends TeaModel {
      */
     @NameInMap("ServerlessResource")
     public Integer serverlessResource;
+
+    @NameInMap("SrcDbInstanceName")
+    public String srcDbInstanceName;
 
     /**
      * <p>The storage capacity of the instance. Unit: GB. Valid values: 50 to 4000.</p>
@@ -327,6 +342,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceRequest self = new CreateDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBInstanceRequest setBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public String getBackupId() {
+        return this.backupId;
     }
 
     public CreateDBInstanceRequest setClientToken(String clientToken) {
@@ -441,6 +464,14 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.instanceSpec;
     }
 
+    public CreateDBInstanceRequest setMasterCU(Integer masterCU) {
+        this.masterCU = masterCU;
+        return this;
+    }
+    public Integer getMasterCU() {
+        return this.masterCU;
+    }
+
     public CreateDBInstanceRequest setMasterNodeNum(String masterNodeNum) {
         this.masterNodeNum = masterNodeNum;
         return this;
@@ -543,6 +574,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public Integer getServerlessResource() {
         return this.serverlessResource;
+    }
+
+    public CreateDBInstanceRequest setSrcDbInstanceName(String srcDbInstanceName) {
+        this.srcDbInstanceName = srcDbInstanceName;
+        return this;
+    }
+    public String getSrcDbInstanceName() {
+        return this.srcDbInstanceName;
     }
 
     public CreateDBInstanceRequest setStorageSize(Long storageSize) {

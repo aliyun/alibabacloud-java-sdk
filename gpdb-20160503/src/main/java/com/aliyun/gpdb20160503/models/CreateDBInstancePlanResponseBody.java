@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstancePlanResponseBody extends TeaModel {
     /**
-     * <p>The ID of instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -13,27 +13,27 @@ public class CreateDBInstancePlanResponseBody extends TeaModel {
     /**
      * <p>The error message.</p>
      * <br>
-     * <p>This parameter is returned only if the operation fails.</p>
+     * <p>This parameter is returned only if the request fails.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>The ID of the plan.</p>
+     * <p>The plan ID.</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The state of the operation.</p>
+     * <p>Indicates whether the request was successful.</p>
      * <br>
-     * <p>If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.</p>
+     * <p>If the request was successful, **success** is returned. If the request failed, this parameter is not returned.</p>
      */
     @NameInMap("Status")
     public String status;

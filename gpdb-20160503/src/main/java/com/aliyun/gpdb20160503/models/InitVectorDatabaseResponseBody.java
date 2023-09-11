@@ -4,12 +4,24 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class InitVectorDatabaseResponseBody extends TeaModel {
+    /**
+     * <p>The error message returned if the request fails.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **Success**</p>
+     * <p>*   **fail**</p>
+     */
     @NameInMap("Status")
     public String status;
 

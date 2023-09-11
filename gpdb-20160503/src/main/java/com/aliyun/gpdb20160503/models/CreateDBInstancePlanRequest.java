@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstancePlanRequest extends TeaModel {
     /**
-     * <p>The ID of instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -16,7 +16,7 @@ public class CreateDBInstancePlanRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of the **PlanType** and **PlanScheduleType** parameters. The following section describes the PlanConfig parameter.</p>
+     * <p>The execution information of the plan. Specify the parameter in the JSON format. The parameter value varies based on the values of **PlanType** and **PlanScheduleType**. The following section describes the PlanConfig parameter.</p>
      */
     @NameInMap("PlanConfig")
     public String planConfig;
@@ -30,8 +30,11 @@ public class CreateDBInstancePlanRequest extends TeaModel {
     /**
      * <p>The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.</p>
      * <br>
-     * <p>> *   This parameter is required only if the **PlanScheduleType** parameter is set to **Regular**.</p>
-     * <p>> *   If you do not specify this parameter, the plan does not end.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, the plan does not end.</p>
      */
     @NameInMap("PlanEndDate")
     public String planEndDate;
@@ -54,8 +57,11 @@ public class CreateDBInstancePlanRequest extends TeaModel {
     /**
      * <p>The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  *   This parameter is required only if the **PlanScheduleType** parameter is set to **Regular**.</p>
-     * <p>>  *   If you do not specify this parameter, the plan is executed immediately.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, the plan is executed immediately.</p>
      */
     @NameInMap("PlanStartDate")
     public String planStartDate;
@@ -67,8 +73,11 @@ public class CreateDBInstancePlanRequest extends TeaModel {
      * <p>*   **Resize**: changes the number of compute nodes.</p>
      * <p>*   **ModifySpec**: changes compute node specifications.</p>
      * <br>
-     * <p>> *   You can specify the value to Resize only for instances in Serverless mode.</p>
-     * <p>> *   You can specify the value to ModifySpec only for instances in elastic storage mode.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   You can specify the value to Resize only for instances in Serverless mode.</p>
+     * <br>
+     * <p>*   You can specify the value to ModifySpec only for instances in elastic storage mode.</p>
      */
     @NameInMap("PlanType")
     public String planType;

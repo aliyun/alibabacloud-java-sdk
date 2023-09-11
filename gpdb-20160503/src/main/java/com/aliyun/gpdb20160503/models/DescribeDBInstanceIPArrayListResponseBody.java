@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     /**
-     * <p>Details of the IP address whitelists.</p>
+     * <p>The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

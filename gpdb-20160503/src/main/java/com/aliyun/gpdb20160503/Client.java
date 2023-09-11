@@ -306,6 +306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDBInstanceResponse createDBInstanceWithOptions(CreateDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupId)) {
+            query.put("BackupId", request.backupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -362,6 +366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceSpec", request.instanceSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.masterCU)) {
+            query.put("MasterCU", request.masterCU);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.masterNodeNum)) {
             query.put("MasterNodeNum", request.masterNodeNum);
         }
@@ -412,6 +420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serverlessResource)) {
             query.put("ServerlessResource", request.serverlessResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcDbInstanceName)) {
+            query.put("SrcDbInstanceName", request.srcDbInstanceName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
@@ -478,10 +490,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to create a plan for an AnalyticDB for PostgreSQL instance. For example, you can create a plan to pause and resume an instance, change the number of compute nodes, or change compute node specifications.
-      * >  This operation is applicable only to pay-as-you-go instances.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * *   The plan management feature is supported only for pay-as-you-go instances.
+      * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+      * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
       *
       * @param request CreateDBInstancePlanRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -544,10 +555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to create a plan for an AnalyticDB for PostgreSQL instance. For example, you can create a plan to pause and resume an instance, change the number of compute nodes, or change compute node specifications.
-      * >  This operation is applicable only to pay-as-you-go instances.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * *   The plan management feature is supported only for pay-as-you-go instances.
+      * *   When you change the compute node specifications or change the number of compute nodes, transient connections may occur. We recommend that you perform these operations during off-peak hours.
+      * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
       *
       * @param request CreateDBInstancePlanRequest
       * @return CreateDBInstancePlanResponse
@@ -1145,9 +1155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a specific zone.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
       *
       * @param request DescribeAvailableResourcesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1186,9 +1194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a specific zone.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.
       *
       * @param request DescribeAvailableResourcesRequest
       * @return DescribeAvailableResourcesResponse
@@ -1294,9 +1300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is called to query the information of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+      * ##
+      * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
       * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDBClusterNodeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1331,9 +1338,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is called to query the information of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
+      * ##
+      * You can call this operation to query the information about coordinator and compute nodes in an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
       * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDBClusterNodeRequest
       * @return DescribeDBClusterNodeResponse
@@ -1344,10 +1352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is called to query the performance metrics of an AnalyticDB for PostgreSQL instance, such as the number of connections, memory usage, CPU utilization, I/O throughput, read IOPS, write IOPS, and disk space usage.
       * You can query monitoring information only within the last 30 days.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDBClusterPerformanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1398,10 +1403,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is called to query the performance metrics of an AnalyticDB for PostgreSQL instance, such as the number of connections, memory usage, CPU utilization, I/O throughput, read IOPS, write IOPS, and disk space usage.
       * You can query monitoring information only within the last 30 days.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDBClusterPerformanceRequest
       * @return DescribeDBClusterPerformanceResponse
@@ -1412,9 +1414,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ##
       * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
       * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDBInstanceAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1453,9 +1456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ##
       * You can call this operation to query the information about an AnalyticDB for PostgreSQL instance, such as the instance type, network type, and instance state.
       * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request DescribeDBInstanceAttributeRequest
       * @return DescribeDBInstanceAttributeResponse
@@ -1574,9 +1578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the distribution and states of coordinator and compute nodes on an AnalyticDB for PostgreSQL instance.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
       *
       * @param request DescribeDBInstanceDiagnosisSummaryRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1627,9 +1629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the distribution and states of coordinator and compute nodes on an AnalyticDB for PostgreSQL instance.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query the distribution and states of coordinator and compute nodes in an AnalyticDB for PostgreSQL instance.
       *
       * @param request DescribeDBInstanceDiagnosisSummaryRequest
       * @return DescribeDBInstanceDiagnosisSummaryResponse
@@ -1772,10 +1772,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Appropriate indexes can improve the database query speed. You can call this operation to query the details of index usage on an AnalyticDB for PostgreSQL instance.
-      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
       *
       * @param request DescribeDBInstanceIndexUsageRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1814,10 +1812,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Appropriate indexes can improve the database query speed. You can call this operation to query the details of index usage on an AnalyticDB for PostgreSQL instance.
-      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * Appropriate indexes can accelerate database queries. You can call this operation to query the index usage of an AnalyticDB for PostgreSQL instance.
+      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
       *
       * @param request DescribeDBInstanceIndexUsageRequest
       * @return DescribeDBInstanceIndexUsageResponse
@@ -2005,7 +2001,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a specific region.
+      * ##
+      * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
       * ## Limits
       * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -2104,7 +2101,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a specific region.
+      * ##
+      * You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.
       * ## Limits
       * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -2116,6 +2114,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDBInstancesWithOptions(request, runtime);
     }
 
+    /**
+      * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+      *
+      * @param request DescribeDataBackupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDataBackupsResponse
+     */
     public DescribeDataBackupsResponse describeDataBackupsWithOptions(DescribeDataBackupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2172,6 +2177,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDataBackupsResponse());
     }
 
+    /**
+      * You can call this operation to query a list of backup sets and backup details only for instances in elastic storage mode.
+      *
+      * @param request DescribeDataBackupsRequest
+      * @return DescribeDataBackupsResponse
+     */
     public DescribeDataBackupsResponse describeDataBackups(DescribeDataBackupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDataBackupsWithOptions(request, runtime);
@@ -2211,9 +2222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the state of data sharing for AnalyticDB for PostgreSQL instances in Serverless mode.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * Data sharing is supported only for instances in Serverless mode.
       *
       * @param request DescribeDataShareInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2264,9 +2273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the state of data sharing for AnalyticDB for PostgreSQL instances in Serverless mode.
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * Data sharing is supported only for instances in Serverless mode.
       *
       * @param request DescribeDataShareInstancesRequest
       * @return DescribeDataShareInstancesResponse
@@ -2533,10 +2540,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the details of a specified query on an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
       *
       * @param request DescribeDiagnosisSQLInfoRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2575,10 +2580,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to query the details of a specified query on an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
-      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query the information about a query for an AnalyticDB for PostgreSQL instance, including the SQL statement, execution plan text, and execution plan tree.
+      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
       *
       * @param request DescribeDiagnosisSQLInfoRequest
       * @return DescribeDiagnosisSQLInfoResponse
@@ -2589,10 +2592,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to obtain a download record before you can call this operation to query and download the query diagnostic information.
-      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
       *
       * @param request DescribeDownloadRecordsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2623,10 +2624,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to obtain a download record before you can call this operation to query and download the query diagnostic information.
-      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For more information about how to view and update the minor engine version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You must call the [DownloadDiagnosisRecords](~~447700~~) operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
+      * This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see [View the minor engine version](~~277424~~) and [Update the minor engine version](~~139271~~).
       *
       * @param request DescribeDownloadRecordsRequest
       * @return DescribeDownloadRecordsResponse
@@ -3090,6 +3089,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRegionsWithOptions(request, runtime);
     }
 
+    /**
+      * This operation is not available for instances in reserved storage mode.
+      *
+      * @param request DescribeSQLLogCountRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeSQLLogCountResponse
+     */
     public DescribeSQLLogCountResponse describeSQLLogCountWithOptions(DescribeSQLLogCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3162,6 +3168,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSQLLogCountResponse());
     }
 
+    /**
+      * This operation is not available for instances in reserved storage mode.
+      *
+      * @param request DescribeSQLLogCountRequest
+      * @return DescribeSQLLogCountResponse
+     */
     public DescribeSQLLogCountResponse describeSQLLogCount(DescribeSQLLogCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSQLLogCountWithOptions(request, runtime);
@@ -4391,6 +4403,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBInstanceSSLWithOptions(request, runtime);
     }
 
+    public ModifyMasterSpecResponse modifyMasterSpecWithOptions(ModifyMasterSpecRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceDescription)) {
+            query.put("DBInstanceDescription", request.DBInstanceDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.masterCU)) {
+            query.put("MasterCU", request.masterCU);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyMasterSpec"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyMasterSpecResponse());
+    }
+
+    public ModifyMasterSpecResponse modifyMasterSpec(ModifyMasterSpecRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyMasterSpecWithOptions(request, runtime);
+    }
+
     /**
       * This operation can be called to modify parameters of an AnalyticDB for PostgreSQL instance in elastic storage mode or Serverless mode.
       * ## Limits
@@ -4658,6 +4711,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeValues)) {
+            query.put("IncludeValues", request.includeValues);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metrics)) {
+            query.put("Metrics", request.metrics);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
@@ -5244,6 +5305,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.untagResourcesWithOptions(request, runtime);
     }
 
+    public UpdateCollectionDataMetadataResponse updateCollectionDataMetadataWithOptions(UpdateCollectionDataMetadataRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCollectionDataMetadataShrinkRequest request = new UpdateCollectionDataMetadataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.metadata)) {
+            request.metadataShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metadata, "Metadata", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            query.put("Ids", request.idsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metadataShrink)) {
+            query.put("Metadata", request.metadataShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateCollectionDataMetadata"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCollectionDataMetadataResponse());
+    }
+
+    public UpdateCollectionDataMetadataResponse updateCollectionDataMetadata(UpdateCollectionDataMetadataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateCollectionDataMetadataWithOptions(request, runtime);
+    }
+
     /**
       * You can call this operation to modify a plan for an AnalyticDB for PostgreSQL instance in Serverless mode. For example, you can modify a plan for periodically pausing and resuming an instance or scaling an instance.
       * ## Limits
@@ -5319,11 +5451,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to change the configurations of an AnalyticDB for PostgreSQL instance.
-      * >  This operation is not supported for instances in reserved storage mode.
+      * This operation is not available for instances in reserved storage mode.
       * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request UpgradeDBInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -5406,11 +5535,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to change the configurations of an AnalyticDB for PostgreSQL instance.
-      * >  This operation is not supported for instances in reserved storage mode.
+      * This operation is not available for instances in reserved storage mode.
       * Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see [Billing methods](~~35406~~) and [AnalyticDB for PostgreSQL pricing](https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing).
-      * ## Limits
-      * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
       * @param request UpgradeDBInstanceRequest
       * @return UpgradeDBInstanceResponse

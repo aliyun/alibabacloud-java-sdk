@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeModifyParameterLogResponseBody extends TeaModel {
     /**
-     * <p>Details about the parameter reconfiguration logs.</p>
+     * <p>Indicates whether the modification takes effect.</p>
      */
     @NameInMap("Changelogs")
     public java.util.List<DescribeModifyParameterLogResponseBodyChangelogs> changelogs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

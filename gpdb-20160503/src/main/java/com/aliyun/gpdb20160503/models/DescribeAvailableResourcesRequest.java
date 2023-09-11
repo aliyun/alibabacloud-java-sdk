@@ -7,24 +7,24 @@ public class DescribeAvailableResourcesRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <br>
-     * <p>*   **Postpaid**: pay-as-you-go</p>
-     * <p>*   **Prepaid**: subscription</p>
+     * <p>*   **Postpaid**: pay-as-you-go.</p>
+     * <p>*   **Prepaid**: subscription.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
      */
     @NameInMap("Region")
     public String region;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The zone ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.</p>
+     * <p>> You can call the [DescribeRegions](~~86912~~)operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

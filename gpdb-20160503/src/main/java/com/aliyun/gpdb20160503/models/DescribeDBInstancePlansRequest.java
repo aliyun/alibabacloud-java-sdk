@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePlansRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -28,9 +28,9 @@ public class DescribeDBInstancePlansRequest extends TeaModel {
     public String planDesc;
 
     /**
-     * <p>The ID of the plan.</p>
+     * <p>The plan ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the details of plans, including plan IDs.</p>
+     * <p>> You can call the [DescribeDBInstancePlans](~~449398~~) operation to query the information about plans, including plan IDs.</p>
      */
     @NameInMap("PlanId")
     public String planId;

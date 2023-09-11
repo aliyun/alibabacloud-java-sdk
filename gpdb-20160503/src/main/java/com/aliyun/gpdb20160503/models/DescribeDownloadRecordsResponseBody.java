@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
     /**
-     * <p>Details of the download records.</p>
+     * <p>The URL that is used to download the file.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeDownloadRecordsResponseBodyRecords> records;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

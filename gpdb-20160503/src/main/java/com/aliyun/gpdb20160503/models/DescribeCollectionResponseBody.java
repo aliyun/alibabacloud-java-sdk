@@ -4,39 +4,76 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeCollectionResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The number of vector dimensions.</p>
+     */
     @NameInMap("Dimension")
     public Integer dimension;
 
+    /**
+     * <p>The fields that are used for full-text search. Multiple fields are separated by commas (,).</p>
+     */
     @NameInMap("FullTextRetrievalFields")
     public String fullTextRetrievalFields;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The metadata of vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Warning** Reserved fields such as id, vector, and to_tsvector cannot be used.</p>
+     */
     @NameInMap("Metadata")
     public java.util.Map<String, String> metadata;
 
     /**
-     * <p>Distance Metrics。</p>
+     * <p>The distance metrics.</p>
      */
     @NameInMap("Metrics")
     public String metrics;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The analyzer that is used for full-text search.</p>
+     */
     @NameInMap("Parser")
     public String parser;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **success**</p>
+     * <p>*   **fail**</p>
+     */
     @NameInMap("Status")
     public String status;
 

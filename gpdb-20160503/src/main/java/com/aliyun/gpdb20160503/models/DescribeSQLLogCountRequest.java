@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLLogCountRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -19,21 +19,21 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     public String database;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time. Their interval cannot be more than seven days.</p>
+     * <p>> The end time must be later than the start time. The maximum time range that can be specified is seven days.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The execution duration of the query. Unit: seconds.</p>
+     * <p>The execution duration of the SQL statement. Unit: seconds.</p>
      */
     @NameInMap("ExecuteCost")
     public String executeCost;
 
     /**
-     * <p>The execution state of the query. Valid values:</p>
+     * <p>The execution state of the SQL statement. Valid values:</p>
      * <br>
      * <p>*   **success**</p>
      * <p>*   **fail**</p>
@@ -42,13 +42,13 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     public String executeState;
 
     /**
-     * <p>The maximum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.</p>
+     * <p>The maximum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
      */
     @NameInMap("MaxExecuteCost")
     public String maxExecuteCost;
 
     /**
-     * <p>The minimum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.</p>
+     * <p>The minimum amount of time consumed by a slow query. Unit: seconds. Minimum value: 0.</p>
      */
     @NameInMap("MinExecuteCost")
     public String minExecuteCost;
@@ -68,15 +68,18 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     /**
      * <p>The type of the SQL statement.</p>
      * <br>
-     * <p>> *   If the **OperationClass** parameter is specified, the **OperationType** value must belong to the corresponding query language. For example, if the **OperationClass** value is **DQL**, the **OperationType** value must be a **DQL** SQL statement such as **SELECT**.</p>
-     * <p>>*   If the **OperationClass** parameter is not specified, the **OperationType** value can be an SQL statement of all query languages.</p>
-     * <p>>*   If neither of the **OperationClass** and **OperationType** parameters is specified, all types of SQL statements are returned.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If **OperationClass** is specified, the value of **OperationType** must belong to the corresponding query language. For example, if **OperationClass** is set to **DQL**, the value of **OperationType** must be a **DQL** statement such as **SELECT**.</p>
+     * <br>
+     * <p>*   If **OperationClass** is not specified, the value of **OperationType** can be an SQL statement of any query language.</p>
+     * <p>*   If **OperationClass** and **OperationType** are not specified, all types of SQL statements are returned.</p>
      */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
-     * <p>The keywords used to query.</p>
+     * <p>The keywords that are used to query audit logs.</p>
      */
     @NameInMap("QueryKeywords")
     public String queryKeywords;
@@ -88,13 +91,13 @@ public class DescribeSQLLogCountRequest extends TeaModel {
     public String sourceIP;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The username that is used to log on to the database.</p>
+     * <p>The name of the database account that is used to connect to the database.</p>
      */
     @NameInMap("User")
     public String user;

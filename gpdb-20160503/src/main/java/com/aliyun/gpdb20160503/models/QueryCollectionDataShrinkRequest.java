@@ -16,6 +16,12 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("IncludeValues")
+    public Boolean includeValues;
+
+    @NameInMap("Metrics")
+    public String metrics;
+
     @NameInMap("Namespace")
     public String namespace;
 
@@ -69,6 +75,22 @@ public class QueryCollectionDataShrinkRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public QueryCollectionDataShrinkRequest setIncludeValues(Boolean includeValues) {
+        this.includeValues = includeValues;
+        return this;
+    }
+    public Boolean getIncludeValues() {
+        return this.includeValues;
+    }
+
+    public QueryCollectionDataShrinkRequest setMetrics(String metrics) {
+        this.metrics = metrics;
+        return this;
+    }
+    public String getMetrics() {
+        return this.metrics;
     }
 
     public QueryCollectionDataShrinkRequest setNamespace(String namespace) {

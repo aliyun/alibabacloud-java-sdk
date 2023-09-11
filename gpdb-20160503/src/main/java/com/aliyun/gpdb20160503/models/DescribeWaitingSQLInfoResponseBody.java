@@ -11,7 +11,7 @@ public class DescribeWaitingSQLInfoResponseBody extends TeaModel {
     public String database;
 
     /**
-     * <p>Details of the lock-waiting query.</p>
+     * <p>The queried lock-waiting query.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeWaitingSQLInfoResponseBodyItems> items;

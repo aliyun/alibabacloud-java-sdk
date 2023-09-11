@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterNodeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The information of nodes.</p>
+     * <p>The name of the node.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<DescribeDBClusterNodeResponseBodyNodes> nodes;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

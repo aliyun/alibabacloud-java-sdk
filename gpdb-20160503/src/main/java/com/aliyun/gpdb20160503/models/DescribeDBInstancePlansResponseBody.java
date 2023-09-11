@@ -5,47 +5,47 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePlansResponseBody extends TeaModel {
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * <br>
-     * <p>This parameter is returned only when the operation fails.</p>
+     * <p>This parameter is returned only if the request fails.</p>
      */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     /**
-     * <p>Details of the plans.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancePlansResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The state of the operation.</p>
+     * <p>Indicates whether the request was successful.</p>
      * <br>
-     * <p>If the operation is successful, **success** is returned. If the operation fails, this parameter is not returned.</p>
+     * <p>If the request was successful, **success** is returned. If the request failed, this parameter is not returned.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;

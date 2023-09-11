@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosisRecordsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</p>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -37,13 +37,13 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   **30**</p>
      * <p>*   **50**</p>
@@ -63,17 +63,17 @@ public class DescribeDiagnosisRecordsRequest extends TeaModel {
      * <br>
      * <p>*   `{"Type":"status","Value":"running"}`: filters running queries.</p>
      * <br>
-     * <p>*   `{"Type":"cost","Min":"30","Max":"50"}`: filters the queries that consume 30 milliseconds or more and less than 50 milliseconds. You can customize a filter condition by setting **Min** and **Max**.</p>
+     * <p>*   `{"Type":"cost","Min":"30","Max":"50"}`: filters the queries that consume a period of 30 milliseconds to less than 50 milliseconds. You can customize a filter condition by setting **Min** and **Max**.</p>
      * <br>
-     * <p>    *   If only **Min** is specified, the queries that consume a period of time that is greater than or equal to the Min value are filtered.</p>
+     * <p>    *   If only **Min** is specified, the queries that consume a period of time that is greater than the Min value are filtered.</p>
      * <p>    *   If only **Max** is specified, the queries that consume a period of time that is less than the Max value are filtered.</p>
-     * <p>    *   If both **Min** and **Max** are specified, the queries that consume a period of time that is greater than or equal to the **Min** value and less than the **Max** value are filtered.</p>
+     * <p>    *   If both **Min** and **Max** are specified, the queries that consume a period of time that is greater than or equal to the **Min** value and less than or equal to the **Max** value are filtered.</p>
      */
     @NameInMap("QueryCondition")
     public String queryCondition;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

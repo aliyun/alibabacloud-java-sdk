@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -23,13 +23,13 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>Details of the performance metrics. Format: {perf1, perf2, perf3, …}.</p>
+     * <p>The queried performance metrics.</p>
      */
     @NameInMap("PerformanceKeys")
     public java.util.List<String> performanceKeys;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

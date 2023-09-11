@@ -1,3 +1,6 @@
+2023-09-11 Version: 1.1.0
+- Generated java 2016-05-03 for gpdb.
+
 2023-08-09 Version: 1.0.39
 - Generated java 2016-05-03 for gpdb.
 

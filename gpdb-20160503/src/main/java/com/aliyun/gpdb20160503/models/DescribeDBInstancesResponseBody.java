@@ -5,25 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details of the instance.</p>
+     * <p>The type of the Serverless mode. Valid values:</p>
+     * <br>
+     * <p>*   **Manual**: manual scheduling.</p>
+     * <p>*   **Auto**: automatic scheduling.</p>
+     * <br>
+     * <p>> This parameter is returned only for instances in Serverless mode.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
