@@ -301,6 +301,9 @@ public class CreateJobRequest extends TeaModel {
     }
 
     public static class CreateJobRequestUserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        public String defaultRoute;
+
         @NameInMap("ExtendedCIDRs")
         public java.util.List<String> extendedCIDRs;
 
@@ -316,6 +319,14 @@ public class CreateJobRequest extends TeaModel {
         public static CreateJobRequestUserVpc build(java.util.Map<String, ?> map) throws Exception {
             CreateJobRequestUserVpc self = new CreateJobRequestUserVpc();
             return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestUserVpc setDefaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
+        public String getDefaultRoute() {
+            return this.defaultRoute;
         }
 
         public CreateJobRequestUserVpc setExtendedCIDRs(java.util.List<String> extendedCIDRs) {
