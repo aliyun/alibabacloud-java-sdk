@@ -27,10 +27,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **AddEntriesToAcl** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of an ACL:
-      *     *   If an ACL is in the **configuring** state, the IP entries are being added. In this case, you can perform only query operations.
-      *     *   If an ACL is in the **active** state, the IP entries are added.
-      * *   You cannot repeatedly call the **AddEntriesToAcl** operation for the same Global Accelerator (GA) instance within the specified period of time.
+      * *   **AddEntriesToAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of the ACL to which you want to add IP entries.
+      *     *   If the ACL is in the **configuring** state, it indicates that IP entries are added to the ACL. In this case, you can perform only query operations.
+      *     *   If the ACL is in the **active** state, it indicates that IP entries are added to the ACL.
+      * *   The **AddEntriesToAcl** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request AddEntriesToAclRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -77,10 +77,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **AddEntriesToAcl** operation is asynchronous. After you send a request, the system returns a request ID, but the operation is still being performed in the background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of an ACL:
-      *     *   If an ACL is in the **configuring** state, the IP entries are being added. In this case, you can perform only query operations.
-      *     *   If an ACL is in the **active** state, the IP entries are added.
-      * *   You cannot repeatedly call the **AddEntriesToAcl** operation for the same Global Accelerator (GA) instance within the specified period of time.
+      * *   **AddEntriesToAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of the ACL to which you want to add IP entries.
+      *     *   If the ACL is in the **configuring** state, it indicates that IP entries are added to the ACL. In this case, you can perform only query operations.
+      *     *   If the ACL is in the **active** state, it indicates that IP entries are added to the ACL.
+      * *   The **AddEntriesToAcl** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request AddEntriesToAclRequest
       * @return AddEntriesToAclResponse
@@ -91,6 +91,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **AssociateAclsWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener with which you attempt to associate an ACL.
       *     *   If the listener is in the **updating** state, it indicates that the ACL is being associated. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, it indicates that the ACL is associated.
@@ -145,6 +146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **AssociateAclsWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener with which you attempt to associate an ACL.
       *     *   If the listener is in the **updating** state, it indicates that the ACL is being associated. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, it indicates that the ACL is associated.
@@ -159,11 +161,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can associate additional certificates with only HTTPS listeners.
-      * *   **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener with which you attempt to associate an additional certificate.
+      * *   Only HTTPS listeners can be associated with additional certificates.
+      * *   **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of the listener with which you want to associate an additional certificate.
       *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being associated. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, it indicates that the additional certificate is associated.
-      * *   The **AssociateAdditionalCertificatesWithListener** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   The **AssociateAdditionalCertificatesWithListener** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request AssociateAdditionalCertificatesWithListenerRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -210,11 +212,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   You can associate additional certificates with only HTTPS listeners.
-      * *   **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of the listener with which you attempt to associate an additional certificate.
+      * *   Only HTTPS listeners can be associated with additional certificates.
+      * *   **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeListener](~~153254~~) operation to query the status of the listener with which you want to associate an additional certificate.
       *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being associated. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, it indicates that the additional certificate is associated.
-      * *   The **AssociateAdditionalCertificatesWithListener** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   The **AssociateAdditionalCertificatesWithListener** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request AssociateAdditionalCertificatesWithListenerRequest
       * @return AssociateAdditionalCertificatesWithListenerResponse
@@ -363,10 +365,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **BandwidthPackageAddAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the state of the bandwidth plan that you attempt to associate.
+      * *   **BandwidthPackageAddAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you want to associate.
       *     *   If the bandwidth plan is in the **binding** state, it indicates that the bandwidth plan is being associated. In this case, you can perform only query operations.
       *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is associated.
-      * *   The **BandwidthPackageAddAccelerator** operation cannot be called repeatedly for the same GA instance.
+      * *   The **BandwidthPackageAddAccelerator** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request BandwidthPackageAddAcceleratorRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -405,10 +407,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **BandwidthPackageAddAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the state of the bandwidth plan that you attempt to associate.
+      * *   **BandwidthPackageAddAccelerator** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeBandwidthPackage](~~153241~~) operation to query the status of the bandwidth plan that you want to associate.
       *     *   If the bandwidth plan is in the **binding** state, it indicates that the bandwidth plan is being associated. In this case, you can perform only query operations.
       *     *   If the bandwidth plan is in the **active** state, it indicates that the bandwidth plan is associated.
-      * *   The **BandwidthPackageAddAccelerator** operation cannot be called repeatedly for the same GA instance.
+      * *   The **BandwidthPackageAddAccelerator** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request BandwidthPackageAddAcceleratorRequest
       * @return BandwidthPackageAddAcceleratorResponse
@@ -533,10 +535,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **ConfigEndpointProbe** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of the endpoint group to which an endpoint belongs and determine whether latency monitoring is configured for the endpoint.
+      * *   **ConfigEndpointProbe** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the endpoint group to which an endpoint belongs and determine whether latency monitoring is configured for the endpoint.
       *     *   If the endpoint group is in the **updating** state, it indicates that latency monitoring is being configured for the endpoint. In this case, you can perform only query operations.
       *     *   If the endpoint group is in the **active** state, it indicates that latency monitoring is configured for the endpoint.
-      * *   The **ConfigEndpointProbe** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   The **ConfigEndpointProbe** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request ConfigEndpointProbeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -595,10 +597,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **ConfigEndpointProbe** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of the endpoint group to which an endpoint belongs and determine whether latency monitoring is configured for the endpoint.
+      * *   **ConfigEndpointProbe** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the endpoint group to which an endpoint belongs and determine whether latency monitoring is configured for the endpoint.
       *     *   If the endpoint group is in the **updating** state, it indicates that latency monitoring is being configured for the endpoint. In this case, you can perform only query operations.
       *     *   If the endpoint group is in the **active** state, it indicates that latency monitoring is configured for the endpoint.
-      * *   The **ConfigEndpointProbe** operation cannot be called repeatedly for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   The **ConfigEndpointProbe** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request ConfigEndpointProbeRequest
       * @return ConfigEndpointProbeResponse
@@ -609,8 +611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
-      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
+      * ## Description
+      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns the ID of a GA instance, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can perform only query operations.
       * *   If the GA instance is in the **active** state, it indicates that the GA instance is created.
       *
       * @param request CreateAcceleratorRequest
@@ -706,8 +709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
-      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can continue to perform query operations on the GA instance.
+      * ## Description
+      * **CreateAccelerator** is an asynchronous operation. After you send a request, the system returns the ID of a GA instance, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+      * *   If the GA instance is in the **init** state, it indicates that the GA instance is being created. In this case, you can perform only query operations.
       * *   If the GA instance is in the **active** state, it indicates that the GA instance is created.
       *
       * @param request CreateAcceleratorRequest
@@ -2359,10 +2363,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **CreateSpareIps** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
-      *     *   If the GA instance is in the **configuring** state, it indicates that spare IP addresses are being created for the CNAME that is assigned to the GA instance. In this case, you can only perform query operations.
-      *     *   If the GA instance is in the **active** state, it indicates that spare IP addresses are created for the CNAME that is assigned to the GA instance.
-      * *   The **CreateSpareIps** operation cannot be called repeatedly for the same GA instance within a specific period of time.
+      * *   **CreateSpareIps** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
+      *     *   If the GA instance is in the **configuring** state, it indicates that secondary IP addresses are being created for the CNAME that is assigned to the GA instance. In this case, you can only perform query operations.
+      *     *   If the GA instance is in the **active** state, it indicates that secondary IP addresses are created for the CNAME that is assigned to the GA instance.
+      * *   The **CreateSpareIps** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request CreateSpareIpsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2409,10 +2413,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **CreateSpareIps** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
-      *     *   If the GA instance is in the **configuring** state, it indicates that spare IP addresses are being created for the CNAME that is assigned to the GA instance. In this case, you can only perform query operations.
-      *     *   If the GA instance is in the **active** state, it indicates that spare IP addresses are created for the CNAME that is assigned to the GA instance.
-      * *   The **CreateSpareIps** operation cannot be called repeatedly for the same GA instance within a specific period of time.
+      * *   **CreateSpareIps** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
+      *     *   If the GA instance is in the **configuring** state, it indicates that secondary IP addresses are being created for the CNAME that is assigned to the GA instance. In this case, you can only perform query operations.
+      *     *   If the GA instance is in the **active** state, it indicates that secondary IP addresses are created for the CNAME that is assigned to the GA instance.
+      * *   The **CreateSpareIps** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request CreateSpareIpsRequest
       * @return CreateSpareIpsResponse
@@ -3289,10 +3293,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
+      * *   **DeleteEndpointGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the endpoint group.
       *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
       *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
-      * *   The **DeleteEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   The **DeleteEndpointGroup** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request DeleteEndpointGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3331,10 +3335,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
+      * *   **DeleteEndpointGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the status of the endpoint group.
       *     *   If the endpoint group is in the **deleting** state, it indicates that the endpoint group is being deleted. In this case, you can perform only query operations.
       *     *   If the endpoint group cannot be queried, it indicates that the endpoint group is deleted.
-      * *   The **DeleteEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   The **DeleteEndpointGroup** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request DeleteEndpointGroupRequest
       * @return DeleteEndpointGroupResponse
@@ -3469,10 +3473,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
-      *     *   If the acceleration region is in the **deleting** state, the acceleration region is being deleted. In this case, you can perform only query operations.
-      *     *   If the acceleration region cannot be queried, the acceleration region is deleted.
-      * *   The **DeleteIpSet** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   **DeleteIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of an acceleration region.
+      *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
+      *     *   If the acceleration region cannot be queried, it indicates that the acceleration region is deleted.
+      * *   The **DeleteIpSet** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request DeleteIpSetRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3515,10 +3519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteIpSet** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeIpSet](~~153246~~) operation to query the state of an acceleration region.
-      *     *   If the acceleration region is in the **deleting** state, the acceleration region is being deleted. In this case, you can perform only query operations.
-      *     *   If the acceleration region cannot be queried, the acceleration region is deleted.
-      * *   The **DeleteIpSet** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      * *   **DeleteIpSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeIpSet](~~153246~~) operation to query the status of an acceleration region.
+      *     *   If the acceleration region is in the **deleting** state, it indicates that the acceleration region is being deleted. In this case, you can perform only query operations.
+      *     *   If the acceleration region cannot be queried, it indicates that the acceleration region is deleted.
+      * *   The **DeleteIpSet** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request DeleteIpSetRequest
       * @return DeleteIpSetResponse
@@ -3637,10 +3641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteSpareIps** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+      * *   **DeleteSpareIps** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
       *     *   If the GA instance is in the **configuring** state, it indicates that the secondary IP addresses for the CNAME are being deleted. In this case, you can perform only query operations.
       *     *   If the GA instance is in the **active** state and the secondary IP addresses for the CNAME cannot be queried by calling the [ListSpareIps](~~262121~~) operation, it indicates that the IP addresses are deleted.
-      * *   The **DeleteSpareIps** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      * *   The **DeleteSpareIps** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request DeleteSpareIpsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3687,10 +3691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **DeleteSpareIps** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) operation to query the state of a GA instance.
+      * *   **DeleteSpareIps** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) operation to query the status of a GA instance.
       *     *   If the GA instance is in the **configuring** state, it indicates that the secondary IP addresses for the CNAME are being deleted. In this case, you can perform only query operations.
       *     *   If the GA instance is in the **active** state and the secondary IP addresses for the CNAME cannot be queried by calling the [ListSpareIps](~~262121~~) operation, it indicates that the IP addresses are deleted.
-      * *   The **DeleteSpareIps** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      * *   The **DeleteSpareIps** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request DeleteSpareIpsRequest
       * @return DeleteSpareIpsResponse
@@ -4149,6 +4153,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeEndpointGroupWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
+      *
+      * @param request DescribeIpSetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeIpSetResponse
+     */
     public DescribeIpSetResponse describeIpSetWithOptions(DescribeIpSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4177,6 +4189,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeIpSetResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=DescribeIpSet\\&type=RPC\\&version=2019-11-20)
+      *
+      * @param request DescribeIpSetRequest
+      * @return DescribeIpSetResponse
+     */
     public DescribeIpSetResponse describeIpSet(DescribeIpSetRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeIpSetWithOptions(request, runtime);
@@ -4226,6 +4245,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeListenerResponse describeListener(DescribeListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeListenerWithOptions(request, runtime);
+    }
+
+    public DescribeLogStoreOfEndpointGroupResponse describeLogStoreOfEndpointGroupWithOptions(DescribeLogStoreOfEndpointGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
+            query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointGroupId)) {
+            query.put("EndpointGroupId", request.endpointGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenerId)) {
+            query.put("ListenerId", request.listenerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLogStoreOfEndpointGroup"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLogStoreOfEndpointGroupResponse());
+    }
+
+    public DescribeLogStoreOfEndpointGroupResponse describeLogStoreOfEndpointGroup(DescribeLogStoreOfEndpointGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLogStoreOfEndpointGroupWithOptions(request, runtime);
     }
 
     public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -4310,6 +4370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **DetachLogStoreFromEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
       *     *   If the endpoint group is in the **updating** state, the Log Service Logstore is being disassociated from the endpoint group. In this case, you can perform only query operations.
       *     <!---->
@@ -4361,6 +4422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **DetachLogStoreFromEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
       *     *   If the endpoint group is in the **updating** state, the Log Service Logstore is being disassociated from the endpoint group. In this case, you can perform only query operations.
       *     <!---->
@@ -4450,6 +4512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **DissociateAclsFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener:
       *     *   If the listener is in the **updating** state, ACLs are being disassociated from the listener. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, ACLs are disassociated from the listener.
@@ -4500,6 +4563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **DissociateAclsFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of a listener:
       *     *   If the listener is in the **updating** state, ACLs are being disassociated from the listener. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, ACLs are disassociated from the listener.
@@ -4514,6 +4578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of an HTTPS listener.
       *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being dissociated from the listener. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, it indicates that the additional certificate is dissociated from the listener.
@@ -4564,6 +4629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After you send a request, the system returns a request ID, but this operation is still being performed in the system background. You can call the [DescribeListener](~~153254~~) operation to query the state of an HTTPS listener.
       *     *   If the listener is in the **updating** state, it indicates that the additional certificate is being dissociated from the listener. In this case, you can perform only query operations.
       *     *   If the listener is in the **active** state, it indicates that the additional certificate is dissociated from the listener.
@@ -5807,6 +5873,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listCustomRoutingEndpointGroupDestinationsWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListCustomRoutingEndpointGroups\\&type=RPC\\&version=2019-11-20)
+      *
+      * @param request ListCustomRoutingEndpointGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListCustomRoutingEndpointGroupsResponse
+     */
     public ListCustomRoutingEndpointGroupsResponse listCustomRoutingEndpointGroupsWithOptions(ListCustomRoutingEndpointGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -5851,6 +5925,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListCustomRoutingEndpointGroupsResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListCustomRoutingEndpointGroups\\&type=RPC\\&version=2019-11-20)
+      *
+      * @param request ListCustomRoutingEndpointGroupsRequest
+      * @return ListCustomRoutingEndpointGroupsResponse
+     */
     public ListCustomRoutingEndpointGroupsResponse listCustomRoutingEndpointGroups(ListCustomRoutingEndpointGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCustomRoutingEndpointGroupsWithOptions(request, runtime);
@@ -6151,6 +6232,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listEndpointGroupIpAddressCidrBlocksWithOptions(request, runtime);
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
+      *
+      * @param request ListEndpointGroupsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ListEndpointGroupsResponse
+     */
     public ListEndpointGroupsResponse listEndpointGroupsWithOptions(ListEndpointGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -6207,13 +6296,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListEndpointGroupsResponse());
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=Ga\\&api=ListEndpointGroups\\&type=RPC\\&version=2019-11-20)
+      *
+      * @param request ListEndpointGroupsRequest
+      * @return ListEndpointGroupsResponse
+     */
     public ListEndpointGroupsResponse listEndpointGroups(ListEndpointGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEndpointGroupsWithOptions(request, runtime);
     }
 
     /**
-      * >  You can call this operation to query only custom forwarding rules. You cannot call this operation to query the default forwarding rule.
+      * >  This operation is used to query only custom forwarding rules, not the default forwarding rule.
       *
       * @param request ListForwardingRulesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6268,7 +6364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * >  You can call this operation to query only custom forwarding rules. You cannot call this operation to query the default forwarding rule.
+      * >  This operation is used to query only custom forwarding rules, not the default forwarding rule.
       *
       * @param request ListForwardingRulesRequest
       * @return ListForwardingRulesResponse
@@ -6501,7 +6597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can select a TLS security policy when you create and modify an HTTPS listener. This API operation is used to query the TLS security policies that are supported by HTTPS listeners.
+      * You can select a TLS security policy when you create an HTTPS listener. This API operation is used to query the TLS security policies that are supported by HTTPS listeners.
       *
       * @param request ListSystemSecurityPoliciesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6540,7 +6636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can select a TLS security policy when you create and modify an HTTPS listener. This API operation is used to query the TLS security policies that are supported by HTTPS listeners.
+      * You can select a TLS security policy when you create an HTTPS listener. This API operation is used to query the TLS security policies that are supported by HTTPS listeners.
       *
       * @param request ListSystemSecurityPoliciesRequest
       * @return ListSystemSecurityPoliciesResponse
@@ -6681,7 +6777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **RemoveEntriesFromAcl**.
+      * *   **RemoveEntriesFromAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of the ACL from which you want to delete IP entries.
+      *     *   If the ACL is in the **configuring** state, it indicates that the IP entries are being deleted. In this case, you can perform only query operations.
+      *     *   If the ACL is in the **active** state, it indicates that the IP entries are deleted.
+      * *   The **RemoveEntriesFromAcl** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request RemoveEntriesFromAclRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6728,7 +6827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **RemoveEntriesFromAcl**.
+      * *   **RemoveEntriesFromAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetAcl](~~258292~~) or [ListAcls](~~258291~~) operation to query the status of the ACL from which you want to delete IP entries.
+      *     *   If the ACL is in the **configuring** state, it indicates that the IP entries are being deleted. In this case, you can perform only query operations.
+      *     *   If the ACL is in the **active** state, it indicates that the IP entries are deleted.
+      * *   The **RemoveEntriesFromAcl** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request RemoveEntriesFromAclRequest
       * @return RemoveEntriesFromAclResponse
@@ -6739,12 +6841,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation to replace the bandwidth plan that is associated with a GA instance, take note of the following items:
+      * When you call this operation, take note of the following items:
       * *   The GA instance continues to forward network traffic.
-      * *   **ReplaceBandwidthPackage** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the state of the GA instance.
+      * *   **ReplaceBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
       *     *   If the GA instance is in the **configuring** state, it indicates that the associated bandwidth plan is being replaced. In this case, you can perform only query operations.
       *     *   If the GA instance is in the **active** state, it indicates that the associated bandwidth plan is replaced.
-      * *   The **ReplaceBandwidthPackage** operation cannot be called repeatedly for the same GA instance within a specific period of time.
+      * *   The **ReplaceBandwidthPackage** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request ReplaceBandwidthPackageRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6787,12 +6889,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * When you call this operation to replace the bandwidth plan that is associated with a GA instance, take note of the following items:
+      * When you call this operation, take note of the following items:
       * *   The GA instance continues to forward network traffic.
-      * *   **ReplaceBandwidthPackage** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the state of the GA instance.
+      * *   **ReplaceBandwidthPackage** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeAccelerator](~~153235~~) or [ListAccelerators](~~153236~~) operation to query the status of the GA instance.
       *     *   If the GA instance is in the **configuring** state, it indicates that the associated bandwidth plan is being replaced. In this case, you can perform only query operations.
       *     *   If the GA instance is in the **active** state, it indicates that the associated bandwidth plan is replaced.
-      * *   The **ReplaceBandwidthPackage** operation cannot be called repeatedly for the same GA instance within a specific period of time.
+      * *   The **ReplaceBandwidthPackage** operation holds an exclusive lock on the GA instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request ReplaceBandwidthPackageRequest
       * @return ReplaceBandwidthPackageResponse
@@ -7165,6 +7267,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAcceleratorCrossBorderModeResponse updateAcceleratorCrossBorderMode(UpdateAcceleratorCrossBorderModeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateAcceleratorCrossBorderModeWithOptions(request, runtime);
+    }
+
+    /**
+      * You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:
+      * - **Basic GA instances**:
+      * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+      * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.
+      * - **Standard GA instances**:
+      * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+      *
+      * @param request UpdateAcceleratorCrossBorderStatusRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateAcceleratorCrossBorderStatusResponse
+     */
+    public UpdateAcceleratorCrossBorderStatusResponse updateAcceleratorCrossBorderStatusWithOptions(UpdateAcceleratorCrossBorderStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceleratorId)) {
+            query.put("AcceleratorId", request.acceleratorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crossBorderStatus)) {
+            query.put("CrossBorderStatus", request.crossBorderStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAcceleratorCrossBorderStatus"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAcceleratorCrossBorderStatusResponse());
+    }
+
+    /**
+      * You can use this operation to enable or disable the cross-border data transmission feature for a GA instance. Before you enable the cross-border data transmission feature, make sure that the following requirements are met:
+      * - **Basic GA instances**:
+      * Cloud Data Transfer (CDT) is activated. When you call the CreateBasicAccelerator operation to create a basic GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+      * If you want to enable the cross-border data transmission feature, make sure that the current account has completed enterprise real-name registration. For more information, see Real-name registration FAQs.
+      * - **Standard GA instances**:
+      * CDT is activated. When you call the CreateAccelerator operation to create a standard GA instance, set BandwidthBillingType to CDT. Then, the system automatically activates CDT. The data transfer fees are managed by CDT.
+      *
+      * @param request UpdateAcceleratorCrossBorderStatusRequest
+      * @return UpdateAcceleratorCrossBorderStatusResponse
+     */
+    public UpdateAcceleratorCrossBorderStatusResponse updateAcceleratorCrossBorderStatus(UpdateAcceleratorCrossBorderStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAcceleratorCrossBorderStatusWithOptions(request, runtime);
     }
 
     public UpdateAclAttributeResponse updateAclAttributeWithOptions(UpdateAclAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -7924,6 +8090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **UpdateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of the endpoint groups associated with a custom routing listener to check whether the endpoints in the endpoint groups are modified.
       *     *   If an endpoint group is in the **updating** state, the endpoints in the endpoint group are being modified. In this case, you can perform only query operations.
       *     *   If an endpoint group is in the **active** state, the endpoints in the endpoint group are modified.
@@ -7970,6 +8137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **UpdateCustomRoutingEndpoints** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeCustomRoutingEndpointGroup](~~449373~~) operation to query the state of the endpoint groups associated with a custom routing listener to check whether the endpoints in the endpoint groups are modified.
       *     *   If an endpoint group is in the **updating** state, the endpoints in the endpoint group are being modified. In this case, you can perform only query operations.
       *     *   If an endpoint group is in the **active** state, the endpoints in the endpoint group are modified.
@@ -8084,10 +8252,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **updating** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-      *     *   If the endpoint group is in the **active** state, the configurations of the endpoint group are modified.
-      * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
+      * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
       *
       * @param request UpdateEndpointGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8178,10 +8347,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+      * ## Description
       * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **updating** state, the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
-      *     *   If the endpoint group is in the **active** state, the configurations of the endpoint group are modified.
-      * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same GA instance within a specific period of time.
+      *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
+      * *   The **UpdateEndpointGroup** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
       *
       * @param request UpdateEndpointGroupRequest
       * @return UpdateEndpointGroupResponse
@@ -8237,10 +8407,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UpdateEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **updating** state, the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
-      *     *   If the endpoint group is in the **active**, the configuration of the endpoint group is modified.
-      * *   The **UpdateEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      * ### Description
+      * *   **UpdateEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the status of an endpoint group.
+      *     *   If the endpoint group is in the **updating** state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that the configuration of the endpoint group is modified.
+      * *   The **UpdateEndpointGroups** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request UpdateEndpointGroupsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8287,10 +8458,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UpdateEndpointGroups** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the state of an endpoint group.
-      *     *   If the endpoint group is in the **updating** state, the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
-      *     *   If the endpoint group is in the **active**, the configuration of the endpoint group is modified.
-      * *   The **UpdateEndpointGroups** operation cannot be repeatedly called for the same Global Accelerator (GA) instance within a specific period of time.
+      * ### Description
+      * *   **UpdateEndpointGroups** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEndpointGroup](~~153260~~) or [ListEndpointGroups](~~153261~~) operation to query the status of an endpoint group.
+      *     *   If the endpoint group is in the **updating** state, it indicates that the configuration of the endpoint group is being modified. In this case, you can perform only query operations.
+      *     *   If the endpoint group is in the **active** state, it indicates that the configuration of the endpoint group is modified.
+      * *   The **UpdateEndpointGroups** operation holds an exclusive lock on the Global Accelerator (GA) instance. While the operation is in progress, you cannot call the same operation in the same Alibaba Cloud account.
       *
       * @param request UpdateEndpointGroupsRequest
       * @return UpdateEndpointGroupsResponse
@@ -8574,5 +8746,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateListenerResponse updateListener(UpdateListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateListenerWithOptions(request, runtime);
+    }
+
+    public UpdateServiceManagedControlResponse updateServiceManagedControlWithOptions(UpdateServiceManagedControlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceManaged)) {
+            query.put("ServiceManaged", request.serviceManaged);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateServiceManagedControl"),
+            new TeaPair("version", "2019-11-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceManagedControlResponse());
+    }
+
+    public UpdateServiceManagedControlResponse updateServiceManagedControl(UpdateServiceManagedControlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateServiceManagedControlWithOptions(request, runtime);
     }
 }

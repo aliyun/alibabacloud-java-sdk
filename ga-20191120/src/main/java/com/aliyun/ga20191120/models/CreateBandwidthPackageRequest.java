@@ -89,10 +89,10 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     public String cbnGeographicRegionIdB;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method of the bandwidth plan. Valid values:</p>
      * <br>
-     * <p>*   **PREPAY** (default): subscription</p>
-     * <p>*   **POSTPAY**: pay-as-you-go By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.</p>
+     * <p>*   **PREPAY** (default): subscription.</p>
+     * <p>*   **POSTPAY**: pay-as-you-go. By default, the pay-as-you-go billing method is unavailable. If you want to use the billing method, contact your account manager.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -157,6 +157,9 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags to add to the bandwidth plan.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateBandwidthPackageRequestTag> tag;
 
@@ -329,9 +332,23 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     }
 
     public static class CreateBandwidthPackageRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * <br>
+         * <p>Each tag key corresponds to a tag value. Valid values of **N**: **1** to **20**.</p>
+         * <br>
+         * <p>The value cannot exceed 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

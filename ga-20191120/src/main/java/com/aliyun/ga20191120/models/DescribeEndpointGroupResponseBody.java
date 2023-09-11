@@ -30,14 +30,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the access log feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **on**: enabled</p>
-     * <p>*   **off**: disabled</p>
+     * <p>*   **true**: enabled</p>
+     * <p>*   **false**: disabled</p>
      */
     @NameInMap("EnableAccessLog")
     public Boolean enableAccessLog;
 
     /**
-     * <p>The configurations of the endpoint.</p>
+     * <p>The configurations of endpoints in the endpoint group.</p>
      */
     @NameInMap("EndpointConfigurations")
     public java.util.List<DescribeEndpointGroupResponseBodyEndpointConfigurations> endpointConfigurations;
@@ -49,7 +49,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String endpointGroupId;
 
     /**
-     * <p>The IP addresses in the endpoint group.</p>
+     * <p>The active endpoint IP addresses of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupIpList")
     public java.util.List<String> endpointGroupIpList;
@@ -70,7 +70,7 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String endpointGroupType;
 
     /**
-     * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
+     * <p>The endpoint group IP addresses to be confirmed. After the GA instance is upgraded, the IP addresses that are added to the endpoint group need to be confirmed.</p>
      */
     @NameInMap("EndpointGroupUnconfirmedIpList")
     public java.util.List<String> endpointGroupUnconfirmedIpList;
@@ -150,6 +150,32 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <p>托管实例所属的服务方ID。</p>
+     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+     */
+    @NameInMap("ServiceId")
+    public String serviceId;
+
+    /**
+     * <p>是否为托管实例。取值：</p>
+     * <br>
+     * <p>- **true**：是托管实例。</p>
+     * <br>
+     * <p>- **false**：不是托管实例。</p>
+     */
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
+    /**
+     * <p>用户在此托管实例下可执行的动作策略列表。</p>
+     * <br>
+     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+     * <p>> - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。</p>
+     */
+    @NameInMap("ServiceManagedInfos")
+    public java.util.List<DescribeEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos;
 
     /**
      * <p>The name of the Logstore.</p>
@@ -371,6 +397,30 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeEndpointGroupResponseBody setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    public DescribeEndpointGroupResponseBody setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    public DescribeEndpointGroupResponseBody setServiceManagedInfos(java.util.List<DescribeEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos) {
+        this.serviceManagedInfos = serviceManagedInfos;
+        return this;
+    }
+    public java.util.List<DescribeEndpointGroupResponseBodyServiceManagedInfos> getServiceManagedInfos() {
+        return this.serviceManagedInfos;
+    }
+
     public DescribeEndpointGroupResponseBody setSlsLogStoreName(String slsLogStoreName) {
         this.slsLogStoreName = slsLogStoreName;
         return this;
@@ -431,14 +481,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true:** The client IP address preservation feature is enabled.</p>
+         * <p>*   **false:** The client IP address preservation feature is disabled.</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
 
         /**
-         * <p>是否使用ProxyProtocol方式保留客户端源IP。</p>
+         * <p>Indicates whether the proxy protocol is used to preserve client IP addresses.</p>
          */
         @NameInMap("EnableProxyProtocol")
         public Boolean enableProxyProtocol;
@@ -450,30 +500,30 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The port that is used to monitor the latency.</p>
+         * <p>The port that is used to monitor latency.</p>
          */
         @NameInMap("ProbePort")
         public Integer probePort;
 
         /**
-         * <p>The protocol that is used to monitor the network latency. Valid values:</p>
+         * <p>The protocol that is used to monitor latency. Valid values:</p>
          * <br>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **icmp**: ICMP</p>
+         * <p>*   **tcp:** TCP.</p>
+         * <p>*   **icmp:** ICMP.</p>
          */
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
 
         /**
-         * <p>The type of endpoint. Valid values:</p>
+         * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS:** Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: Object Storage Service (OSS) bucket</p>
+         * <p>*   **Domain:** a custom domain name.</p>
+         * <p>*   **Ip:** a custom IP address.</p>
+         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
+         * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
+         * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
+         * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -583,15 +633,89 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeEndpointGroupResponseBodyServiceManagedInfos extends TeaModel {
+        /**
+         * <p>托管策略动作名称，取值：</p>
+         * <p>- **Create**：创建实例。</p>
+         * <p>- **Update**：更新当前实例。</p>
+         * <p>- **Delete**：删除当前实例。</p>
+         * <p>- **Associate**：引用/被引用当前实例。</p>
+         * <p>- **UserUnmanaged**：用户解托管实例。</p>
+         * <p>- **CreateChild**：在当前实例下创建子资源。</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>子资源类型，取值：</p>
+         * <br>
+         * <p>- **Listener**：监听资源。</p>
+         * <br>
+         * <p>- **IpSet**：加速地域资源。</p>
+         * <br>
+         * <p>- **EndpointGroup**：终端节点组资源。</p>
+         * <br>
+         * <p>- **ForwardingRule**：转发策略资源。</p>
+         * <br>
+         * <p>- **Endpoint**：终端节点资源。</p>
+         * <br>
+         * <p>- **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。</p>
+         * <br>
+         * <p>- **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。</p>
+         * <br>
+         * <p>> 仅在**Action**参数为**CreateChild**时有效。</p>
+         */
+        @NameInMap("ChildType")
+        public String childType;
+
+        /**
+         * <p>托管策略动作是否被托管，取值：</p>
+         * <p>- **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。</p>
+         * <p>- **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。</p>
+         */
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
+        public static DescribeEndpointGroupResponseBodyServiceManagedInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEndpointGroupResponseBodyServiceManagedInfos self = new DescribeEndpointGroupResponseBodyServiceManagedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEndpointGroupResponseBodyServiceManagedInfos setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public DescribeEndpointGroupResponseBodyServiceManagedInfos setChildType(String childType) {
+            this.childType = childType;
+            return this;
+        }
+        public String getChildType() {
+            return this.childType;
+        }
+
+        public DescribeEndpointGroupResponseBodyServiceManagedInfos setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+    }
+
     public static class DescribeEndpointGroupResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N that is added to the endpoint group.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N that is added to the endpoint group.</p>
          */
         @NameInMap("Value")
         public String value;

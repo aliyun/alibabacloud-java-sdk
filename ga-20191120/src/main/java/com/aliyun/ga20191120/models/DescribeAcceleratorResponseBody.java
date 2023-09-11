@@ -95,7 +95,7 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public Long expiredTime;
 
     /**
-     * <p>The billing method of the GA instance. Only **PREPAY** is returned. This value indicates the subscription billing method.</p>
+     * <p>The billing method of the GA instance.</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -135,6 +135,31 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
      */
     @NameInMap("SecondDnsName")
     public String secondDnsName;
+
+    /**
+     * <p>托管实例所属的服务方ID。</p>
+     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+     */
+    @NameInMap("ServiceId")
+    public String serviceId;
+
+    /**
+     * <p>是否为托管实例。取值：</p>
+     * <br>
+     * <p>- **true**：是托管实例。</p>
+     * <br>
+     * <p>- **false**：不是托管实例。</p>
+     */
+    @NameInMap("ServiceManaged")
+    public Boolean serviceManaged;
+
+    /**
+     * <p>用户在此托管实例下可执行的动作策略列表。</p>
+     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+     * <p>> - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。</p>
+     */
+    @NameInMap("ServiceManagedInfos")
+    public java.util.List<DescribeAcceleratorResponseBodyServiceManagedInfos> serviceManagedInfos;
 
     /**
      * <p>The specification of the GA instance. Valid values:</p>
@@ -184,10 +209,11 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
     public java.util.List<DescribeAcceleratorResponseBodyTags> tags;
 
     /**
-     * <p>Indicates the upgradable state of the GA instance.</p>
-     * <p>- **notUpgradable**: The GA instance can not be upgraded</p>
-     * <p>- **upgradable**: The GA instance can be upgraded</p>
-     * <p>- **upgradeFailed**: The GA instance has been upgraded and failed</p>
+     * <p>Indicates whether the GA instance can be upgraded. Valid values:</p>
+     * <br>
+     * <p>*   **notUpgradable:** The GA instance does not need to be upgraded.</p>
+     * <p>*   **upgradable:** The GA instance can be upgraded to the latest version.</p>
+     * <p>*   **upgradeFailed:** The GA instance failed to be upgraded.</p>
      */
     @NameInMap("UpgradableStatus")
     public String upgradableStatus;
@@ -357,6 +383,30 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
         return this.secondDnsName;
     }
 
+    public DescribeAcceleratorResponseBody setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
+    public DescribeAcceleratorResponseBody setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    public DescribeAcceleratorResponseBody setServiceManagedInfos(java.util.List<DescribeAcceleratorResponseBodyServiceManagedInfos> serviceManagedInfos) {
+        this.serviceManagedInfos = serviceManagedInfos;
+        return this;
+    }
+    public java.util.List<DescribeAcceleratorResponseBodyServiceManagedInfos> getServiceManagedInfos() {
+        return this.serviceManagedInfos;
+    }
+
     public DescribeAcceleratorResponseBody setSpec(String spec) {
         this.spec = spec;
         return this;
@@ -504,15 +554,91 @@ public class DescribeAcceleratorResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAcceleratorResponseBodyServiceManagedInfos extends TeaModel {
+        /**
+         * <p>托管策略动作名称，取值：</p>
+         * <p>- **Create**：创建实例。</p>
+         * <p>- **Update**：更新当前实例。</p>
+         * <p>- **Delete**：删除当前实例。</p>
+         * <p>- **Associate**：引用/被引用当前实例。</p>
+         * <p>- **UserUnmanaged**：用户解托管实例。</p>
+         * <p>- **CreateChild**：在当前实例下创建子资源。</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>子资源类型，取值：</p>
+         * <br>
+         * <p>- **Listener**：监听资源。</p>
+         * <br>
+         * <p>- **IpSet**：加速地域资源。</p>
+         * <br>
+         * <p>- **EndpointGroup**：终端节点组资源。</p>
+         * <br>
+         * <p>- **ForwardingRule**：转发策略资源。</p>
+         * <br>
+         * <p>- **Endpoint**：终端节点资源。</p>
+         * <br>
+         * <p>- **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。</p>
+         * <br>
+         * <p>- **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。</p>
+         * <br>
+         * <p>> 仅在**Action**参数为**CreateChild**时有效。</p>
+         */
+        @NameInMap("ChildType")
+        public String childType;
+
+        /**
+         * <p>托管策略动作是否被托管，取值：</p>
+         * <br>
+         * <p>- **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。</p>
+         * <br>
+         * <p>- **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。</p>
+         */
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
+        public static DescribeAcceleratorResponseBodyServiceManagedInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAcceleratorResponseBodyServiceManagedInfos self = new DescribeAcceleratorResponseBodyServiceManagedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAcceleratorResponseBodyServiceManagedInfos setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public DescribeAcceleratorResponseBodyServiceManagedInfos setChildType(String childType) {
+            this.childType = childType;
+            return this;
+        }
+        public String getChildType() {
+            return this.childType;
+        }
+
+        public DescribeAcceleratorResponseBodyServiceManagedInfos setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+    }
+
     public static class DescribeAcceleratorResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N that is added to the GA instance.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N that is added to the GA instance.</p>
          */
         @NameInMap("Value")
         public String value;

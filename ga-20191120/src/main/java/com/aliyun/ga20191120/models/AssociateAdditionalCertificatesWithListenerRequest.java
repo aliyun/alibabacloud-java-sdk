@@ -5,32 +5,37 @@ import com.aliyun.tea.*;
 
 public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The GA instance ID.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
+    /**
+     * <p>The additional certificates.</p>
+     * <br>
+     * <p>You can specify up to 10 certificate IDs in each request.</p>
+     */
     @NameInMap("Certificates")
     public java.util.List<AssociateAdditionalCertificatesWithListenerRequestCertificates> certificates;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the listener. Only HTTPS listeners are supported.</p>
+     * <p>The listener ID. Only HTTPS listeners are supported.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -82,9 +87,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
 
     public static class AssociateAdditionalCertificatesWithListenerRequestCertificates extends TeaModel {
         /**
-         * <p>The domain name specified by the certificate.</p>
-         * <br>
-         * <p>You can associate each domain name with only a single additional certificate.</p>
+         * <p>The domain name specified by the certificate. You can associate each domain name with only one additional certificate.</p>
          * <br>
          * <p>You can specify up to 10 domain names in each request.</p>
          */
@@ -92,7 +95,7 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends TeaModel
         public String domain;
 
         /**
-         * <p>The ID of the certificate. Only server certificates are supported.</p>
+         * <p>The certificate ID. Only server certificates are supported.</p>
          * <br>
          * <p>You can specify up to 10 certificate IDs in each request.</p>
          */

@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class QueryCrossBorderApprovalStatusRequest extends TeaModel {
+    /**
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

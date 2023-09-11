@@ -7,18 +7,18 @@ public class ConfigEndpointProbeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable latency monitoring. Default value: false. Valid values:</p>
+     * <p>Specifies whether to enable latency monitoring. Valid values:</p>
      * <br>
-     * <p>*   **true**: enables latency monitoring.</p>
-     * <p>*   **false**: disables latency monitoring.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("Enable")
     public String enable;
@@ -30,18 +30,18 @@ public class ConfigEndpointProbeRequest extends TeaModel {
     public String endpoint;
 
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The endpoint group ID.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The type of endpoint. Valid values:</p>
+     * <p>The type of the endpoint. Valid values:</p>
      * <br>
-     * <p>*   **Ip**: a custom IP address</p>
-     * <p>*   **Domain**: a custom domain name</p>
-     * <p>*   **EIP**: an Alibaba Cloud elastic IP address (EIP)</p>
-     * <p>*   **PublicIp**: an Alibaba Cloud public IP address</p>
+     * <p>*   **Ip:** a custom IP address.</p>
+     * <p>*   **Domain:** a custom domain name.</p>
+     * <p>*   **EIP:** an Alibaba Cloud elastic IP address (EIP).</p>
+     * <p>*   **PublicIp:** an Alibaba Cloud public IP address.</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
@@ -55,14 +55,14 @@ public class ConfigEndpointProbeRequest extends TeaModel {
     /**
      * <p>The protocol that is used to monitor latency. Valid values:</p>
      * <br>
-     * <p>*   **tcp**</p>
-     * <p>*   **icmp**</p>
+     * <p>*   **tcp:** TCP.</p>
+     * <p>*   **icmp:** ICMP.</p>
      */
     @NameInMap("ProbeProtocol")
     public String probeProtocol;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

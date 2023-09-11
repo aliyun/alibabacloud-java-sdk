@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndPointTrafficPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the endpoint to which the traffic destination belongs.</p>
+     * <p>The ID of the traffic policy to be queried.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The ID of the traffic destination to be queried.</p>
+     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("PolicyId")
     public String policyId;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The operation that you want to perform. Set the value to **DescribeCustomRoutingEndPointTrafficPolicy**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

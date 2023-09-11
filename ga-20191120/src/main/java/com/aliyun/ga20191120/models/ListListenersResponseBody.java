@@ -189,6 +189,76 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
 
+    public static class ListListenersResponseBodyListenersServiceManagedInfos extends TeaModel {
+        /**
+         * <p>Managed policy action name, Valid values:</p>
+         * <p>- Create</p>
+         * <p>- Update</p>
+         * <p>- Delete</p>
+         * <p>- Associate</p>
+         * <p>- UserUnmanaged</p>
+         * <p>- CreateChild</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>Sub resource type, Valid values:</p>
+         * <br>
+         * <p>- Listener</p>
+         * <p>- IpSet</p>
+         * <p>- EndpointGroup</p>
+         * <p>- ForwardingRule</p>
+         * <p>- Endpoint</p>
+         * <p>- EndpointGroupDestination</p>
+         * <p>- EndpointPolicy</p>
+         * <br>
+         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         */
+        @NameInMap("ChildType")
+        public String childType;
+
+        /**
+         * <p>Is the managed policy action managed, Valid values:</p>
+         * <br>
+         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <br>
+         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         */
+        @NameInMap("IsManaged")
+        public Boolean isManaged;
+
+        public static ListListenersResponseBodyListenersServiceManagedInfos build(java.util.Map<String, ?> map) throws Exception {
+            ListListenersResponseBodyListenersServiceManagedInfos self = new ListListenersResponseBodyListenersServiceManagedInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenersResponseBodyListenersServiceManagedInfos setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListListenersResponseBodyListenersServiceManagedInfos setChildType(String childType) {
+            this.childType = childType;
+            return this;
+        }
+        public String getChildType() {
+            return this.childType;
+        }
+
+        public ListListenersResponseBodyListenersServiceManagedInfos setIsManaged(Boolean isManaged) {
+            this.isManaged = isManaged;
+            return this;
+        }
+        public Boolean getIsManaged() {
+            return this.isManaged;
+        }
+
+    }
+
     public static class ListListenersResponseBodyListenersXForwardedForConfig extends TeaModel {
         /**
          * <p>Indicates whether the `GA-AP` header is used to retrieve the information about acceleration regions. Valid values:</p>
@@ -404,6 +474,29 @@ public class ListListenersResponseBody extends TeaModel {
         public String securityPolicyId;
 
         /**
+         * <p>The service ID to which the managed instance belongs.</p>
+         * <br>
+         * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+         */
+        @NameInMap("ServiceId")
+        public String serviceId;
+
+        /**
+         * <p>Is it a managed instance. Valid values:</p>
+         * <br>
+         * <p>- true</p>
+         * <p>- false</p>
+         */
+        @NameInMap("ServiceManaged")
+        public Boolean serviceManaged;
+
+        /**
+         * <p>A list of action policies that users can execute on this managed instance.</p>
+         */
+        @NameInMap("ServiceManagedInfos")
+        public java.util.List<ListListenersResponseBodyListenersServiceManagedInfos> serviceManagedInfos;
+
+        /**
          * <p>The state of the listener. Valid values:</p>
          * <br>
          * <p>*   **active**: The listener is normal.</p>
@@ -528,6 +621,30 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public String getSecurityPolicyId() {
             return this.securityPolicyId;
+        }
+
+        public ListListenersResponseBodyListeners setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
+        }
+
+        public ListListenersResponseBodyListeners setServiceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        public ListListenersResponseBodyListeners setServiceManagedInfos(java.util.List<ListListenersResponseBodyListenersServiceManagedInfos> serviceManagedInfos) {
+            this.serviceManagedInfos = serviceManagedInfos;
+            return this;
+        }
+        public java.util.List<ListListenersResponseBodyListenersServiceManagedInfos> getServiceManagedInfos() {
+            return this.serviceManagedInfos;
         }
 
         public ListListenersResponseBodyListeners setState(String state) {

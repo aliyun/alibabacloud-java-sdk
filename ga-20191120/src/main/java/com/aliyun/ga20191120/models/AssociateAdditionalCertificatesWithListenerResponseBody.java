@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AssociateAdditionalCertificatesWithListenerResponseBody extends TeaModel {
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The listener ID.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

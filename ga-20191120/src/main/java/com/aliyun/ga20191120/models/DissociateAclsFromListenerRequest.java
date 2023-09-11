@@ -4,6 +4,9 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DissociateAclsFromListenerRequest extends TeaModel {
+    /**
+     * <p>The ID of the ACL. You can disassociate up to two ACLs from a listener.</p>
+     */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 

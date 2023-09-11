@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListCustomRoutingEndpointsRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The GA instance ID.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The endpoint group ID.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The ID of the listener.</p>
+     * <p>The listener ID.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -69,19 +69,19 @@ public class ListCustomRoutingEndpointsRequest extends TeaModel {
         return this.listenerId;
     }
 
-    public ListCustomRoutingEndpointsRequest setPageNumber(String pageNumber) {
+    public ListCustomRoutingEndpointsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListCustomRoutingEndpointsRequest setPageSize(String pageSize) {
+    public ListCustomRoutingEndpointsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

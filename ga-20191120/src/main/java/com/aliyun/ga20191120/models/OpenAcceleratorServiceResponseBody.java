@@ -4,18 +4,36 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class OpenAcceleratorServiceResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true:** The call was successful.</p>
+     * <p>*   **false:** The call failed.</p>
+     */
     @NameInMap("Success")
     public String success;
 

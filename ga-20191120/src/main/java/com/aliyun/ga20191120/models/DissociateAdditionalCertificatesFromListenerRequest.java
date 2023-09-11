@@ -20,6 +20,11 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends TeaMode
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The domain name associated with the additional certificate.</p>
+     * <br>
+     * <p>You can specify up to 10 domain names in each request.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<String> domains;
 

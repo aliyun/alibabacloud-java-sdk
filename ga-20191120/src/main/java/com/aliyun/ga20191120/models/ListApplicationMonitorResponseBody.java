@@ -11,19 +11,19 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
     public java.util.List<ListApplicationMonitorResponseBodyApplicationMonitors> applicationMonitors;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,7 +87,7 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         public String acceleratorId;
 
         /**
-         * <p>The URL or IP address that is probed.</p>
+         * <p>The URL or IP address that was probed.</p>
          */
         @NameInMap("Address")
         public String address;
@@ -95,8 +95,8 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the automatic diagnostics feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("DetectEnable")
         public Boolean detectEnable;
@@ -126,9 +126,9 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         public String optionsJson;
 
         /**
-         * <p>The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic, GA must wait until the silence period ends before GA can trigger another automatic diagnostic.</p>
+         * <p>The silence period of the automatic diagnostics feature. This parameter indicates the interval at which the automatic diagnostics feature is triggered. If the availability rate does not return to normal after GA triggers an automatic diagnostic task, GA must wait until the silence period ends before GA can trigger another automatic diagnostic task.</p>
          * <br>
-         * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of the **DetectTimes** parameter, the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
+         * <p>If the number of consecutive times that the availability rate drops below the threshold of automatic diagnostics reaches the value of **DetectTimes** , the automatic diagnostics feature is triggered. The automatic diagnostics feature is not triggered again within the silence period even if the availability rate stays below the threshold. If the availability rate does not return to normal after the silence period ends, the automatic diagnostics feature is triggered again.</p>
          * <br>
          * <p>Unit: seconds.</p>
          */
@@ -136,24 +136,24 @@ public class ListApplicationMonitorResponseBody extends TeaModel {
         public Integer silenceTime;
 
         /**
-         * <p>The state of the origin probing task. Valid values:</p>
+         * <p>The status of the origin probing task. Valid values:</p>
          * <br>
-         * <p>*   **active**: The origin probing task is running.</p>
-         * <p>*   **inactive**: The origin probing task is stopped.</p>
-         * <p>*   **init**: The origin probing task is being initialized.</p>
-         * <p>*   **deleting**: The origin probing task is being deleted.</p>
+         * <p>*   **active:** The origin probing task is running.</p>
+         * <p>*   **inactive:** The origin probing task is stopped.</p>
+         * <p>*   **init:** The origin probing task is being initialized.</p>
+         * <p>*   **deleting:** The origin probing task is being deleted.</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The ID of the origin probing task.</p>
+         * <p>The origin probing task ID.</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
-         * <p>The name of the origin probing task.</p>
+         * <p>The origin probing task name.</p>
          */
         @NameInMap("TaskName")
         public String taskName;

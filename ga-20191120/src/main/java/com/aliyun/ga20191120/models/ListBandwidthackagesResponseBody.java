@@ -80,9 +80,15 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
     }
 
     public static class ListBandwidthackagesResponseBodyBandwidthPackagesTags extends TeaModel {
+        /**
+         * <p>The tag key of the bandwidth plan.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the bandwidth plan.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -164,6 +170,9 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -182,6 +191,9 @@ public class ListBandwidthackagesResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The tags of the bandwidth plans.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListBandwidthackagesResponseBodyBandwidthPackagesTags> tags;
 

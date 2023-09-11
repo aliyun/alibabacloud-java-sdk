@@ -3,9 +3,9 @@ package com.aliyun.ga20191120.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteIpSetRequest extends TeaModel {
+public class UpdateAcceleratorCrossBorderStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the GA instance for which you want to delete an acceleration region.</p>
+     * <p>The ID of the GA instance.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
@@ -21,23 +21,26 @@ public class DeleteIpSetRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the acceleration region that you want to delete.</p>
+     * <p>Specifies whether to enable the cross-border acceleration feature for the GA instance. Valid values:</p>
+     * <br>
+     * <p>- **true**</p>
+     * <p>- **false**</p>
      */
-    @NameInMap("IpSetId")
-    public String ipSetId;
+    @NameInMap("CrossBorderStatus")
+    public Boolean crossBorderStatus;
 
     /**
-     * <p>The region ID of the GA instance. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the GA instance. Set the value to cn-hangzhou.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    public static DeleteIpSetRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteIpSetRequest self = new DeleteIpSetRequest();
+    public static UpdateAcceleratorCrossBorderStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAcceleratorCrossBorderStatusRequest self = new UpdateAcceleratorCrossBorderStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteIpSetRequest setAcceleratorId(String acceleratorId) {
+    public UpdateAcceleratorCrossBorderStatusRequest setAcceleratorId(String acceleratorId) {
         this.acceleratorId = acceleratorId;
         return this;
     }
@@ -45,7 +48,7 @@ public class DeleteIpSetRequest extends TeaModel {
         return this.acceleratorId;
     }
 
-    public DeleteIpSetRequest setClientToken(String clientToken) {
+    public UpdateAcceleratorCrossBorderStatusRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -53,15 +56,15 @@ public class DeleteIpSetRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public DeleteIpSetRequest setIpSetId(String ipSetId) {
-        this.ipSetId = ipSetId;
+    public UpdateAcceleratorCrossBorderStatusRequest setCrossBorderStatus(Boolean crossBorderStatus) {
+        this.crossBorderStatus = crossBorderStatus;
         return this;
     }
-    public String getIpSetId() {
-        return this.ipSetId;
+    public Boolean getCrossBorderStatus() {
+        return this.crossBorderStatus;
     }
 
-    public DeleteIpSetRequest setRegionId(String regionId) {
+    public UpdateAcceleratorCrossBorderStatusRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

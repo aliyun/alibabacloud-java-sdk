@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAccelerateAreasResponseBody extends TeaModel {
     /**
-     * <p>The acceleration areas.</p>
+     * <p>The information about the areas.</p>
      */
     @NameInMap("Areas")
     public java.util.List<ListAccelerateAreasResponseBodyAreas> areas;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,13 +39,13 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
 
     public static class ListAccelerateAreasResponseBodyAreasRegionList extends TeaModel {
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -75,19 +75,19 @@ public class ListAccelerateAreasResponseBody extends TeaModel {
 
     public static class ListAccelerateAreasResponseBodyAreas extends TeaModel {
         /**
-         * <p>The ID of the acceleration area.</p>
+         * <p>The area ID.</p>
          */
         @NameInMap("AreaId")
         public String areaId;
 
         /**
-         * <p>The name of the acceleration area.</p>
+         * <p>The area name.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>The list of regions.</p>
+         * <p>The regions in the acceleration area.</p>
          */
         @NameInMap("RegionList")
         public java.util.List<ListAccelerateAreasResponseBodyAreasRegionList> regionList;

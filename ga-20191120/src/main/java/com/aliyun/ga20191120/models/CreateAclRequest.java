@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateAclRequest extends TeaModel {
     /**
-     * <p>The ACL entries.</p>
+     * <p>The entries of IP addresses or CIDR blocks to add to the ACL.</p>
+     * <br>
+     * <p>You can add up to 20 entries in each request.</p>
      */
     @NameInMap("AclEntries")
     public java.util.List<CreateAclRequestAclEntries> aclEntries;
@@ -56,6 +58,9 @@ public class CreateAclRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags of the ACL.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateAclRequestTag> tag;
 
@@ -130,7 +135,7 @@ public class CreateAclRequest extends TeaModel {
 
     public static class CreateAclRequestAclEntries extends TeaModel {
         /**
-         * <p>The IP address(192.168.XX.XX) or CIDR(10.0.XX.XX/24) block that you want to add to the ACL.</p>
+         * <p>The IP addresses (192.168.XX.XX) or CIDR blocks (10.0.XX.XX/24) that you want to add to the ACL.</p>
          * <br>
          * <p>You can add up to 20 entries in each request.</p>
          */
@@ -171,9 +176,23 @@ public class CreateAclRequest extends TeaModel {
     }
 
     public static class CreateAclRequestTag extends TeaModel {
+        /**
+         * <p>The tag key of the ACL. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the ACL. The tag value cannot be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <br>
+         * <p>You can specify up to 20 tag values.</p>
+         */
         @NameInMap("Value")
         public String value;
 

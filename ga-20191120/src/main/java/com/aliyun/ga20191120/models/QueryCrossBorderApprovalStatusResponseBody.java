@@ -4,9 +4,20 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class QueryCrossBorderApprovalStatusResponseBody extends TeaModel {
+    /**
+     * <p>Cross border permissions of Alibaba Cloud account (main account).</p>
+     * <br>
+     * <p>-  UNAPPLIED : No cross-border permission application has been submitted or application records cannot be found.</p>
+     * <p>-  APPLIED : Cross-border permission review in progress.</p>
+     * <p>-  REJECTED : Cross-border permission review failed.</p>
+     * <p>-  PASSED : Cross-border permission review passed.</p>
+     */
     @NameInMap("ApprovalStatus")
     public String approvalStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -26,13 +26,13 @@ public class ListCustomRoutingPortMappingsRequest extends TeaModel {
      * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
      * <p>The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.</p>
@@ -69,19 +69,19 @@ public class ListCustomRoutingPortMappingsRequest extends TeaModel {
         return this.listenerId;
     }
 
-    public ListCustomRoutingPortMappingsRequest setPageNumber(String pageNumber) {
+    public ListCustomRoutingPortMappingsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListCustomRoutingPortMappingsRequest setPageSize(String pageSize) {
+    public ListCustomRoutingPortMappingsRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

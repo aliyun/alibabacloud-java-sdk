@@ -20,6 +20,9 @@ public class AttachLogStoreToEndpointGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The IDs of the endpoint groups.</p>
+     */
     @NameInMap("EndpointGroupIds")
     public java.util.List<String> endpointGroupIds;
 

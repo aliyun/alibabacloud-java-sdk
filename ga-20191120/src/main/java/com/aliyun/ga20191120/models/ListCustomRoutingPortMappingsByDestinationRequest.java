@@ -20,13 +20,13 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends TeaModel 
      * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     /**
      * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
      * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
@@ -55,19 +55,19 @@ public class ListCustomRoutingPortMappingsByDestinationRequest extends TeaModel 
         return this.endpointId;
     }
 
-    public ListCustomRoutingPortMappingsByDestinationRequest setPageNumber(String pageNumber) {
+    public ListCustomRoutingPortMappingsByDestinationRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public ListCustomRoutingPortMappingsByDestinationRequest setPageSize(String pageSize) {
+    public ListCustomRoutingPortMappingsByDestinationRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
