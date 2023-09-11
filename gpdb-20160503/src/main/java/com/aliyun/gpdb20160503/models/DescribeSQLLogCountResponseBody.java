@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLLogCountResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -17,13 +17,13 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Details of the audit logs of the instance.</p>
+     * <p>The name of the instance.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeSQLLogCountResponseBodyItems> items;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

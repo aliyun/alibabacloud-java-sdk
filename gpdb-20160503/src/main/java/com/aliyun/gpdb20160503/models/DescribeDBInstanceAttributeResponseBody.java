@@ -96,7 +96,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The service availability of the instance. Unit: %.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("AvailabilityValue")
         public String availabilityValue;
@@ -132,7 +132,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The number of CPU cores per node.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("CpuCoresPerNode")
         public Integer cpuCoresPerNode;
@@ -155,7 +155,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The instance type of the instance.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("DBInstanceClass")
         public String DBInstanceClass;
@@ -186,7 +186,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The maximum disk throughput of the compute group. Unit: Mbit/s.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("DBInstanceDiskMBPS")
         public Long DBInstanceDiskMBPS;
@@ -194,7 +194,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The number of compute groups.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("DBInstanceGroupCount")
         public String DBInstanceGroupCount;
@@ -208,7 +208,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The memory capacity per compute node.</p>
          * <br>
-         * <p>>  For instances in reserved storage mode, the unit of this parameter is MB. For instances in elastic storage mode and Serverless mode, the unit of this parameter is GB.</p>
+         * <p>> The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless or elastic storage mode.</p>
          */
         @NameInMap("DBInstanceMemory")
         public Long DBInstanceMemory;
@@ -234,7 +234,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceNetType;
 
         /**
-         * <p>The state of the instance. For more information, see [Instance statuses](~~86944~~).</p>
+         * <p>The state of the instance. For more information, see the "Additional description of DBInstanceStatus" section of this topic.</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
@@ -248,7 +248,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The encryption key.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances for which disk encryption is enabled.</p>
+         * <p>> This parameter is returned only for instances that have disk encryption enabled.</p>
          */
         @NameInMap("EncryptionKey")
         public String encryptionKey;
@@ -258,7 +258,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **CloudDisk**: disk encryption.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances for which disk encryption is enabled.</p>
+         * <p>> This parameter is returned only for instances that have disk encryption enabled.</p>
          */
         @NameInMap("EncryptionType")
         public String encryptionType;
@@ -278,7 +278,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The expiration time of the instance. The time is displayed in UTC.</p>
          * <br>
-         * <p>>  For pay-as-you-go instances, `2999-09-08T16:00:00Z` is returned.</p>
+         * <p>> The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -289,7 +289,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **0**: SSD.</p>
          * <p>*   **1**: HDD.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("HostType")
         public String hostType;
@@ -297,7 +297,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The wait period for the instance that has no traffic to become idle. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances in automatic Serverless mode.</p>
+         * <p>> This parameter is returned only for instances in Serverless automatic scheduling mode.</p>
          */
         @NameInMap("IdleTime")
         public Integer idleTime;
@@ -315,7 +315,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>The lock mode of the instance. Valid values:</p>
          * <br>
          * <p>*   **Unlock**: The instance is not locked.</p>
-         * <p>*   **ManualLock**: The cluster is manually locked.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
          * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
          * <p>*   **LockByRestoration**: The instance is automatically locked due to instance restoration.</p>
          * <p>*   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage.</p>
@@ -330,16 +330,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String lockReason;
 
         /**
-         * <p>The end time of the maintenance window.</p>
+         * <p>The end time of the maintenance window of the instance.</p>
          */
         @NameInMap("MaintainEndTime")
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the maintenance window.</p>
+         * <p>The start time of the maintenance window of the instance.</p>
          */
         @NameInMap("MaintainStartTime")
         public String maintainStartTime;
+
+        @NameInMap("MasterCU")
+        public Integer masterCU;
 
         /**
          * <p>The number of coordinator nodes.</p>
@@ -350,15 +353,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The maximum number of concurrent connections to the instance.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
-         * <p>The memory capacity per node. The unit can be one of the valid values of the **MemoryUnit** parameter.</p>
+         * <p>The memory capacity per node. The unit of this parameter can be one of the valid values of **MemoryUnit**.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("MemoryPerNode")
         public Integer memoryPerNode;
@@ -366,7 +369,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The memory capacity per compute node.</p>
          * <br>
-         * <p>>  For instances in reserved storage mode, the unit of this parameter is MB. For instances in elastic storage mode and Serverless mode, the unit of this parameter is GB.</p>
+         * <p>> The unit of this parameter is MB for instances in reserved storage mode and GB for instances in Serverless or elastic storage mode.</p>
          */
         @NameInMap("MemorySize")
         public Long memorySize;
@@ -374,7 +377,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The unit of the memory capacity.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("MemoryUnit")
         public String memoryUnit;
@@ -439,7 +442,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The number of compute nodes.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in elastic storage mode or manual Serverless mode.</p>
+         * <p>> This parameter is returned only for instances in Serverless or elastic storage mode.</p>
          */
         @NameInMap("SegNodeNum")
         public Integer segNodeNum;
@@ -447,7 +450,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The number of compute groups.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("SegmentCounts")
         public Integer segmentCounts;
@@ -458,15 +461,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **Manual**: manual scheduling.</p>
          * <p>*   **Auto**: automatic scheduling.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances in Serverless mode.</p>
+         * <p>> This parameter is returned only for instances in Serverless mode.</p>
          */
         @NameInMap("ServerlessMode")
         public String serverlessMode;
 
         /**
-         * <p>The threshold of computing resources. Unit: AnalyticDB compute unit (ACU).</p>
+         * <p>The threshold of computing resources. Unit: AnalyticDB compute units (ACUs).</p>
          * <br>
-         * <p>>  This parameter is returned only for instances in automatic Serverless mode.</p>
+         * <p>> This parameter is returned only for instances in Serverless automatic scheduling mode.</p>
          */
         @NameInMap("ServerlessResource")
         public Integer serverlessResource;
@@ -478,15 +481,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The storage capacity per node. The unit can be one of the valid values of the **StorageUnit** parameter.</p>
+         * <p>The storage capacity per node. The unit of this parameter can be one of the valid values of **StorageUnit**.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode.</p>
+         * <p>> This parameter is returned only for instances in reserved storage mode.</p>
          */
         @NameInMap("StoragePerNode")
         public Integer storagePerNode;
 
         /**
-         * <p>The storage capacity. Unit: GB.</p>
+         * <p>The storage capacity of the instance. Unit: GB.</p>
          */
         @NameInMap("StorageSize")
         public Long storageSize;
@@ -494,10 +497,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The storage type of the instance. Valid values:</p>
          * <br>
-         * <p>- **cloud_essd**: enhanced SSD (ESSD).</p>
-         * <p>- **cloud_efficiency**: ultra disk.</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD).</p>
+         * <p>*   **cloud_efficiency**: ultra disk.</p>
          * <br>
-         * <p>>  This parameter is available only for instances in elastic storage mode.</p>
+         * <p>> This parameter is returned only for instances in elastic storage mode.</p>
          */
         @NameInMap("StorageType")
         public String storageType;
@@ -509,13 +512,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **TB SSD**</p>
          * <p>*   **GB HDD**</p>
          * <br>
-         * <p>>  This parameter is available only for instances in reserved storage mode or Serverless mode.</p>
+         * <p>> This parameter is returned only for instances in Serverless or reserved storage mode.</p>
          */
         @NameInMap("StorageUnit")
         public String storageUnit;
 
         /**
-         * <p>Indicates whether the instance supports backup and restoration.</p>
+         * <p>Indicates whether the instance supports backup and restoration. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -815,6 +818,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getMaintainStartTime() {
             return this.maintainStartTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMasterCU(Integer masterCU) {
+            this.masterCU = masterCU;
+            return this;
+        }
+        public Integer getMasterCU() {
+            return this.masterCU;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setMasterNodeNum(Integer masterNodeNum) {

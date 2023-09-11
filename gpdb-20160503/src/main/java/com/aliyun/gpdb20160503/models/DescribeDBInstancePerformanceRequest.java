@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.</p>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +25,7 @@ public class DescribeDBInstancePerformanceRequest extends TeaModel {
     public String key;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

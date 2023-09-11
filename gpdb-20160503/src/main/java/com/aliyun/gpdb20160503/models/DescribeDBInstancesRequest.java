@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
     /**
-     * <p>The edition of the instance. Separate multiple values with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **basic**: Basic Edition</p>
-     * <p>*   **highavailability**: High-availability Edition</p>
-     * <p>*   **finance**: Enterprise Edition</p>
+     * <p>The edition of the instance. Separate multiple values with commas (,).</p>
      */
     @NameInMap("DBInstanceCategories")
     public java.util.List<String> DBInstanceCategories;
@@ -21,25 +17,19 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the instance. Separate multiple IDs with commas (,).</p>
+     * <p>The instance ID. Separate multiple values with commas (,).</p>
      */
     @NameInMap("DBInstanceIds")
     public String DBInstanceIds;
 
     /**
-     * <p>The resource type of the instance. Separate multiple values with commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **serverless**: Serverless mode</p>
-     * <p>*   **storageelastic**: elastic storage mode</p>
-     * <p>*   **classic**: reserved storage mode</p>
+     * <p>The resource type of the instance. Separate multiple values with commas (,).</p>
      */
     @NameInMap("DBInstanceModes")
     public java.util.List<String> DBInstanceModes;
 
     /**
-     * <p>The state of the instance. Separate multiple values with commas (,). For more information, see [Instance statuses](~~86944~~).</p>
-     * <br>
-     * <p>>  The value of this parameter must be in lowercase.</p>
+     * <p>The state of the instance.</p>
      */
     @NameInMap("DBInstanceStatuses")
     public java.util.List<String> DBInstanceStatuses;
@@ -53,10 +43,10 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **VPC**</p>
-     * <p>*   **Classic**</p>
+     * <p>*   **VPC**: virtual private cloud (VPC).</p>
+     * <p>*   **Classic**: classic network.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, instances of both network types are returned.</p>
+     * <p>> If you do not specify this parameter, instances of all network types are returned.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -65,13 +55,13 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   **30**</p>
      * <p>*   **50**</p>
@@ -83,9 +73,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -97,7 +87,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tag value.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesRequestTag> tag;

@@ -4,27 +4,54 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class ListCollectionsResponseBody extends TeaModel {
+    /**
+     * <p>The queried vector collections.</p>
+     */
     @NameInMap("Collections")
     public ListCollectionsResponseBodyCollections collections;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **success**</p>
+     * <p>*   **fail**</p>
+     */
     @NameInMap("Status")
     public String status;
 

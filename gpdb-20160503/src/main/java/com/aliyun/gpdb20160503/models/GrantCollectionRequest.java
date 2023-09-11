@@ -4,30 +4,62 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class GrantCollectionRequest extends TeaModel {
+    /**
+     * <p>The name of the collection.</p>
+     */
     @NameInMap("Collection")
     public String collection;
 
+    /**
+     * <p>The ID of the instance in reserved storage mode.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the namespace to which you want to grant the vector collection permissions.</p>
+     */
     @NameInMap("GrantToNamespace")
     public String grantToNamespace;
 
+    /**
+     * <p>The type of the permissions that you want to grant. Valid values:</p>
+     * <br>
+     * <p>*   rw: the read and write permissions.</p>
+     * <p>*   ro: the read-only permission.</p>
+     * <p>*   none: the delete permission.</p>
+     */
     @NameInMap("GrantType")
     public String grantType;
 
+    /**
+     * <p>The name of the manager account that has the rds_superuser permission.</p>
+     */
     @NameInMap("ManagerAccount")
     public String managerAccount;
 
+    /**
+     * <p>The password of the manager account.</p>
+     */
     @NameInMap("ManagerAccountPassword")
     public String managerAccountPassword;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

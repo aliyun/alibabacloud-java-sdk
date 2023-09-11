@@ -5,22 +5,24 @@ import com.aliyun.tea.*;
 
 public class SwitchDBInstanceNetTypeRequest extends TeaModel {
     /**
-     * <p>The prefix of the custom endpoint. The prefix must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter. A valid endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.</p>
+     * <p>The prefix of the custom endpoint.</p>
+     * <br>
+     * <p>*   The prefix can contain lowercase letters, digits, and hyphens (-) and must start with a lowercase letter.</p>
+     * <p>*   The prefix can be up to 30 characters in length.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The port number. Valid values: 3000 to 5999.</p>
-     * <br>
-     * <p>> </p>
-     * <p>*   Only ApsaraDB PolarDB MySQL-compatible edition clusters support this parameter. If you leave this parameter empty, the default port 3306 is used.</p>
+     * <p>The port number.</p>
      */
     @NameInMap("Port")
     public String port;

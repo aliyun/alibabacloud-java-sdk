@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DownloadSQLLogsRecordsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the download task.</p>
+     */
     @NameInMap("DownloadId")
     public Long downloadId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

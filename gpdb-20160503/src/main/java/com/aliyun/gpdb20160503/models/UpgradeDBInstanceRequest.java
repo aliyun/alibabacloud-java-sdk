@@ -19,7 +19,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The instance ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.</p>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -27,7 +27,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The specifications of each compute node. For information about the supported specifications, see [Instance specifications](~~35406~~).</p>
      * <br>
-     * <p>>  This parameter is available only for instances in elastic storage mode.</p>
+     * <p>> This parameter is available only for instances in elastic storage mode.</p>
      */
     @NameInMap("InstanceSpec")
     public String instanceSpec;
@@ -35,7 +35,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The number of coordinator nodes. Valid values: 1 and 2.</p>
      * <br>
-     * <p>>  This parameter is available only on the China site (aliyun.com).</p>
+     * <p>> This parameter is available only for China site (aliyun.com).</p>
      */
     @NameInMap("MasterNodeNum")
     public String masterNodeNum;
@@ -52,13 +52,13 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The region ID of the instance.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).</p>
+     * <p>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -76,9 +76,9 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The number of compute nodes. The number of compute nodes varies based on the instance resource type and edition.</p>
      * <br>
-     * <p>*   Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments</p>
-     * <p>*   Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments</p>
-     * <p>*   Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments</p>
+     * <p>*   Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments.</p>
+     * <p>*   Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments.</p>
+     * <p>*   Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments.</p>
      */
     @NameInMap("SegNodeNum")
     public String segNodeNum;
@@ -92,7 +92,7 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.</p>
      * <br>
-     * <p>>  This parameter is available only for instances in elastic storage mode.</p>
+     * <p>> This parameter is available only for instances in elastic storage mode.</p>
      */
     @NameInMap("StorageSize")
     public String storageSize;
@@ -105,10 +105,13 @@ public class UpgradeDBInstanceRequest extends TeaModel {
      * <p>*   **2**: changes the number of coordinator nodes.</p>
      * <p>*   **3**: changes the disk storage type and ESSD performance level of the instance.</p>
      * <br>
-     * <p>> *   The supported changes to compute node configurations vary based on the instance resource type. For more information, see the "[Precautions](~~50956~~)" section of the Change compute node configurations topic.</p>
-     * <p>> *   After you specify a change type, only the corresponding parameters take effect. For example, if you set **UpgradeType** to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.</p>
-     * <p>> *   The number of coordinator nodes can be changed only on the China site (aliyun.com).</p>
-     * <p>> *   The disk storage type can be changed only from ultra disks to ESSDs.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   The supported changes to compute node configurations vary based on the instance resource type. For more information, see the "[Usage notes](~~50956~~)" section of the Change compute node configurations topic.</p>
+     * <br>
+     * <p>*   After you specify a change type, only the corresponding parameters take effect. For example, if you set **UpgradeType** to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.</p>
+     * <p>*   The number of coordinator nodes can be changed only on the China site (aliyun.com).</p>
+     * <p>*   The disk storage type can be changed only from ultra disks to ESSDs.</p>
      */
     @NameInMap("UpgradeType")
     public Long upgradeType;

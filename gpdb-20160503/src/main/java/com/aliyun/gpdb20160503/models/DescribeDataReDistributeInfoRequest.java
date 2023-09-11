@@ -4,6 +4,11 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataReDistributeInfoRequest extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     * <br>
+     * <p>> You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

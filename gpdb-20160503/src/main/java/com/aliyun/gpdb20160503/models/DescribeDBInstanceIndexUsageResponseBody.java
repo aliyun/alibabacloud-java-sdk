@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
     /**
-     * <p>Details of index usage.</p>
+     * <p>The time when the table was last deleted, inserted, or updated.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceIndexUsageResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

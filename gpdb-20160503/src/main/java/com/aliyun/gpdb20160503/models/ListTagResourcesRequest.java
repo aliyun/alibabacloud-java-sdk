@@ -44,7 +44,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The queried tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -128,19 +128,23 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. The key must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
+         * <p>The key of tag N. The key must be 1 to 128 characters in length.</p>
          * <br>
-         * <p>You can use `Tag.N.Key and Tag.N.Value` to query AnalyticDB for PostgreSQL instances to which specific tags are bound.</p>
+         * <p>You can use `Tag.N` to query instances that have specific tags added. Tag.N consists of Tag.N.Key and Tag.N.Value.</p>
          * <br>
-         * <p>*   If you specify only `Tag.N.Key`, the instances whose tags contain the specified tag keys are returned.</p>
-         * <p>*   If you specify only `Tag.N.Value`, `InvalidParameter.TagValue` is returned.</p>
-         * <p>*   If you specify multiple tag key-value pairs at a time, the instances to which all the specified tags are bound are returned.</p>
+         * <p>Valid values of N: 1 to 20.</p>
+         * <br>
+         * <p>*   If you specify only `Tag.N.Key`, all instances that have the tag key added are returned.</p>
+         * <p>*   If you specify only `Tag.N.Value`, the `InvalidParameter.TagValue` error is returned.</p>
+         * <p>*   If you specify multiple tag key-value pairs at a time, the instances that match all the specified tag key-value pairs are returned.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N. The value must be 1 to 128 characters in length. Valid values of N: 1 to 20.</p>
+         * <p>The value of tag N. The value must be 1 to 128 characters in length.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 20.</p>
          */
         @NameInMap("Value")
         public String value;

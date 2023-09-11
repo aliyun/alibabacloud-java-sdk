@@ -5,25 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeDataShareInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details of the instances.</p>
+     * <p>The state of data sharing. Valid values:</p>
+     * <br>
+     * <p>*   **opening**</p>
+     * <p>*   **opened**</p>
+     * <p>*   **closing**</p>
+     * <p>*   **closed**</p>
      */
     @NameInMap("Items")
     public DescribeDataShareInstancesResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

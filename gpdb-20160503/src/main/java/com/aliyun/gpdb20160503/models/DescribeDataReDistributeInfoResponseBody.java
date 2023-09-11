@@ -4,9 +4,15 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
+    /**
+     * <p>The data redistribution information.</p>
+     */
     @NameInMap("DataReDistributeInfo")
     public DescribeDataReDistributeInfoResponseBodyDataReDistributeInfo dataReDistributeInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +38,39 @@ public class DescribeDataReDistributeInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDataReDistributeInfoResponseBodyDataReDistributeInfo extends TeaModel {
+        /**
+         * <p>The execution information. If an error occurs, the error message is returned.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The progress of data redistribution. Unit: %.</p>
+         */
         @NameInMap("Progress")
         public Long progress;
 
+        /**
+         * <p>The estimated remaining time for data redistribution.</p>
+         */
         @NameInMap("RemainTime")
         public String remainTime;
 
+        /**
+         * <p>This parameter is not supported.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of data redistribution.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The execution type. The value **immediate** is returned, indicating immediate execution.</p>
+         */
         @NameInMap("Type")
         public String type;
 

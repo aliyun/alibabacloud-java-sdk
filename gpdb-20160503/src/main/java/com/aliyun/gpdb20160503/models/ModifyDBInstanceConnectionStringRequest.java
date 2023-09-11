@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     /**
-     * <p>The new endpoint of the instance.</p>
+     * <p>The endpoint prefix of the instance.</p>
      */
     @NameInMap("ConnectionStringPrefix")
     public String connectionStringPrefix;
 
     /**
-     * <p>The original endpoint of the instance.</p>
+     * <p>The current endpoint of the instance.</p>
      */
     @NameInMap("CurrentConnectionString")
     public String currentConnectionString;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The new port number of the instance.</p>
+     * <p>The port number. Example: 5432.</p>
      */
     @NameInMap("Port")
     public String port;
