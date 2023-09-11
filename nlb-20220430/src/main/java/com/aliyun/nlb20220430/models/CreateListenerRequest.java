@@ -7,39 +7,56 @@ public class CreateListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Application-Layer Protocol Negotiation (ALPN). Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("AlpnEnabled")
     public Boolean alpnEnabled;
 
     /**
      * <p>The ALPN policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   HTTP1Only</p>
+     * <p>*   HTTP2Only</p>
+     * <p>*   HTTP2Preferred</p>
+     * <p>*   HTTP2Optional</p>
      */
     @NameInMap("AlpnPolicy")
     public String alpnPolicy;
 
+    /**
+     * <p>The certificate authority (CA) certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <br>
+     * <p>> You can specify only one CA certificate.</p>
+     */
     @NameInMap("CaCertificateIds")
     public java.util.List<String> caCertificateIds;
 
     /**
      * <p>Specifies whether to enable mutual authentication. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("CaEnabled")
     public Boolean caEnabled;
 
+    /**
+     * <p>The server certificates. This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <br>
+     * <p>> You can specify only one server certificate.</p>
+     */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -51,26 +68,24 @@ public class CreateListenerRequest extends TeaModel {
     public Integer cps;
 
     /**
-     * <p>Specifies whether to only precheck this request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request without creating the resource. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The last port in the listening port range. Valid values: **0** to **65535**.</p>
+     * <p>The last port in the listener port range. Valid values: **0** to **65535**. The number of the last port must be greater than the number of the first port.</p>
      * <br>
-     * <p>The number of the last port must be larger than that of the first port.</p>
+     * <p>> This parameter is required when **ListenerPort** is set to **0**.</p>
      */
     @NameInMap("EndPort")
     public Integer endPort;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds.</p>
-     * <br>
-     * <p>Valid values: **1** to **900**. Default value: **900**.</p>
+     * <p>The timeout period of idle connections. Unit: seconds. Valid values: **1** to **900**. Default value: **900**.</p>
      */
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
@@ -84,31 +99,29 @@ public class CreateListenerRequest extends TeaModel {
     public String listenerDescription;
 
     /**
-     * <p>The listening port. Valid values: **0** to **65535**.</p>
+     * <p>The listener port. Valid values: **0** to **65535**.</p>
      * <br>
-     * <p>If you set the value to **0**, the listener listens by port range. If you set the value to **0**, you must also set the **StartPort** and **EndPort** parameters.</p>
+     * <p>If you set the value to **0**, the listener listens by port range. If you set the value to **0**, you must specify **StartPort** and **EndPort**.</p>
      */
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
     /**
-     * <p>The listening protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
+     * <p>The listener protocol. Valid values: **TCP**, **UDP**, and **TCPSSL**.</p>
      */
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
     /**
-     * <p>The ID of the NLB instance.</p>
+     * <p>The ID of the Network Load Balancer (NLB) instance.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The maximum size of a TCP segment. Unit: bytes. Valid values: **0** to **1500**.</p>
+     * <p>The maximum size of a TCP segment. Unit: bytes. Valid values: **0** to **1500**. **0** specifies that the maximum segment size remains unchanged.</p>
      * <br>
-     * <p>**0** specifies that the maximum segment size remains unchanged.</p>
-     * <br>
-     * <p>>  This parameter is supported only by listeners that use SSL over TCP.</p>
+     * <p>> This parameter is supported only by TCP listeners and listeners that use SSL over TCP.</p>
      */
     @NameInMap("Mss")
     public Integer mss;
@@ -116,14 +129,14 @@ public class CreateListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to use the Proxy protocol to pass client IP addresses to backend servers. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("ProxyProtocolEnabled")
     public Boolean proxyProtocolEnabled;
 
     /**
-     * <p>The ID of the region where the NLB instance is deployed.</p>
+     * <p>The region ID of the NLB instance.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
      */
@@ -133,30 +146,32 @@ public class CreateListenerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable fine-grained monitoring. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("SecSensorEnabled")
     public Boolean secSensorEnabled;
 
     /**
-     * <p>The ID of the security policy. System security policies and custom security policies are supported.</p>
+     * <p>The security policy ID. System security policies and custom security policies are supported.</p>
      * <br>
      * <p>Valid values: **tls_cipher_policy\_1\_0** (default), **tls_cipher_policy\_1\_1**, **tls_cipher_policy\_1\_2**, **tls_cipher_policy\_1\_2\_strict**, and **tls_cipher_policy\_1\_2\_strict_with\_1\_3**.</p>
      * <br>
-     * <p>>  This parameter takes effect only for listeners that use SSL over TCP.</p>
+     * <p>> This parameter takes effect only for listeners that use SSL over TCP.</p>
      */
     @NameInMap("SecurityPolicyId")
     public String securityPolicyId;
 
     /**
-     * <p>The ID of the server group.</p>
+     * <p>The server group ID.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
     /**
-     * <p>The first port in the listening port range. Valid values: **0** to **65535**.</p>
+     * <p>The first port in the listener port range. Valid values: **0** to **65535**.</p>
+     * <br>
+     * <p>> This parameter is required when **ListenerPort** is set to **0**.</p>
      */
     @NameInMap("StartPort")
     public Integer startPort;

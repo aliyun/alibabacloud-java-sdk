@@ -4,6 +4,11 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListSystemSecurityPolicyRequest extends TeaModel {
+    /**
+     * <p>The region ID of the NLB instance.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

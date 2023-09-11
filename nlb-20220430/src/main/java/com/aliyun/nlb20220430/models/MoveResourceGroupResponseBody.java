@@ -4,15 +4,30 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public MoveResourceGroupResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,6 +69,9 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     }
 
     public static class MoveResourceGroupResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the resource. You can specify up to 50 resource IDs in each call.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 

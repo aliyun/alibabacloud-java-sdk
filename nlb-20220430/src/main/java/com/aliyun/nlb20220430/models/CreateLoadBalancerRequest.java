@@ -95,6 +95,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateLoadBalancerRequestTag> tag;
 
@@ -342,9 +345,19 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
 
     public static class CreateLoadBalancerRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -19,15 +19,24 @@ public class ListServerGroupServersRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <p>The ID of the server group.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
+    /**
+     * <p>The IDs of the servers.</p>
+     */
     @NameInMap("ServerIds")
     public java.util.List<String> serverIds;
 
+    /**
+     * <p>The IP addresses of the servers.</p>
+     */
     @NameInMap("ServerIps")
     public java.util.List<String> serverIps;
 
@@ -50,6 +59,14 @@ public class ListServerGroupServersRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListServerGroupServersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ListServerGroupServersRequest setServerGroupId(String serverGroupId) {

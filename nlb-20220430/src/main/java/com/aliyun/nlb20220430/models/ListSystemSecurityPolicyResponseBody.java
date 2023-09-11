@@ -4,9 +4,15 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListSystemSecurityPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of TLS security policies.</p>
+     */
     @NameInMap("SecurityPolicies")
     public java.util.List<ListSystemSecurityPolicyResponseBodySecurityPolicies> securityPolicies;
 
@@ -32,15 +38,27 @@ public class ListSystemSecurityPolicyResponseBody extends TeaModel {
     }
 
     public static class ListSystemSecurityPolicyResponseBodySecurityPolicies extends TeaModel {
+        /**
+         * <p>The cipher suites.</p>
+         */
         @NameInMap("Ciphers")
         public String ciphers;
 
+        /**
+         * <p>The TLS policy ID.</p>
+         */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
+        /**
+         * <p>The TLS policy name.</p>
+         */
         @NameInMap("SecurityPolicyName")
         public String securityPolicyName;
 
+        /**
+         * <p>The version of the TLS protocol.</p>
+         */
         @NameInMap("TlsVersion")
         public String tlsVersion;
 

@@ -37,6 +37,9 @@ public class AddServersToServerGroupRequest extends TeaModel {
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
+    /**
+     * <p>A list of backend servers.</p>
+     */
     @NameInMap("Servers")
     public java.util.List<AddServersToServerGroupRequestServers> servers;
 

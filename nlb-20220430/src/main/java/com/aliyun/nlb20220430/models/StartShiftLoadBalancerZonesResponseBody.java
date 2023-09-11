@@ -3,19 +3,19 @@ package com.aliyun.nlb20220430.models;
 
 import com.aliyun.tea.*;
 
-public class DisableLoadBalancerIpv6InternetResponseBody extends TeaModel {
+public class StartShiftLoadBalancerZonesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DisableLoadBalancerIpv6InternetResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DisableLoadBalancerIpv6InternetResponseBody self = new DisableLoadBalancerIpv6InternetResponseBody();
+    public static StartShiftLoadBalancerZonesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StartShiftLoadBalancerZonesResponseBody self = new StartShiftLoadBalancerZonesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DisableLoadBalancerIpv6InternetResponseBody setRequestId(String requestId) {
+    public StartShiftLoadBalancerZonesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -4,6 +4,12 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
+    /**
+     * <p>The type of the certificate. Valid values:</p>
+     * <br>
+     * <p>*   **Server**: a server certificate.</p>
+     * <p>*   **Ca**: Certificate Authority Certificate</p>
+     */
     @NameInMap("CertType")
     public String certType;
 

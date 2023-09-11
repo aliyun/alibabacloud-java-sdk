@@ -83,9 +83,17 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag option.</p>
+         * <br>
+         * <p>The value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -275,6 +283,9 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("StartPort")
         public String startPort;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListListenersResponseBodyListenersTags> tags;
 

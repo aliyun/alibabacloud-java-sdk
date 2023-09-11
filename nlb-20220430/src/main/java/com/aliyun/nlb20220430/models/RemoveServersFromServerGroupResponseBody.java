@@ -11,13 +11,13 @@ public class RemoveServersFromServerGroupResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the server group.</p>
+     * <p>The server group ID.</p>
      */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
