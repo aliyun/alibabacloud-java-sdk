@@ -18,8 +18,14 @@ public class GetCredentialReportResponseBody extends TeaModel {
     @NameInMap("GeneratedTime")
     public String generatedTime;
 
+    @NameInMap("IsTruncated")
+    public String isTruncated;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -43,6 +49,22 @@ public class GetCredentialReportResponseBody extends TeaModel {
     }
     public String getGeneratedTime() {
         return this.generatedTime;
+    }
+
+    public GetCredentialReportResponseBody setIsTruncated(String isTruncated) {
+        this.isTruncated = isTruncated;
+        return this;
+    }
+    public String getIsTruncated() {
+        return this.isTruncated;
+    }
+
+    public GetCredentialReportResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public GetCredentialReportResponseBody setRequestId(String requestId) {

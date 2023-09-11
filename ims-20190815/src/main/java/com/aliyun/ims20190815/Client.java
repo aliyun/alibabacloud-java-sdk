@@ -444,14 +444,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Prerequisites
+      * ### [](#)Prerequisite
       * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-      * ### Limits
+      * ### [](#)Limits
       * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
       * *   You can add a maximum of 20 client IDs to an OIDC IdP.
       * *   You can add a maximum of five fingerprints to an OIDC IdP.
-      * ###
-      * ``
+      * ### [](#)
+      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
       *
       * @param request CreateOIDCProviderRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -502,14 +502,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ### Prerequisites
+      * ### [](#)Prerequisite
       * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-      * ### Limits
+      * ### [](#)Limits
       * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
       * *   You can add a maximum of 20 client IDs to an OIDC IdP.
       * *   You can add a maximum of five fingerprints to an OIDC IdP.
-      * ###
-      * ``
+      * ### [](#)
+      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP and Alibaba Cloud.
       *
       * @param request CreateOIDCProviderRequest
       * @return CreateOIDCProviderResponse
@@ -1169,8 +1169,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getApplicationWithOptions(request, runtime);
     }
 
-    public GetCredentialReportResponse getCredentialReportWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public GetCredentialReportResponse getCredentialReportWithOptions(GetCredentialReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxItems)) {
+            query.put("MaxItems", request.maxItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetCredentialReport"),
             new TeaPair("version", "2019-08-15"),
@@ -1185,9 +1197,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetCredentialReportResponse());
     }
 
-    public GetCredentialReportResponse getCredentialReport() throws Exception {
+    public GetCredentialReportResponse getCredentialReport(GetCredentialReportRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getCredentialReportWithOptions(runtime);
+        return this.getCredentialReportWithOptions(request, runtime);
     }
 
     public GetDefaultDomainResponse getDefaultDomainWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

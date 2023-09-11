@@ -16,6 +16,9 @@ public class UpdateOIDCProviderRequest extends TeaModel {
     @NameInMap("ClientIds")
     public String clientIds;
 
+    /**
+     * <p>The earliest time when an external IdP can issue an ID token. If the value of the iat field in the ID token is later than the current time, the request is rejected. Unit: hours. Valid values: 1 to 168.</p>
+     */
     @NameInMap("IssuanceLimitTime")
     public Long issuanceLimitTime;
 

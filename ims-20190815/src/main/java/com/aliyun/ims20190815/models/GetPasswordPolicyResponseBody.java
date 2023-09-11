@@ -11,7 +11,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
     public GetPasswordPolicyResponseBodyPasswordPolicy passwordPolicy;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -63,7 +63,7 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         public Integer minimumPasswordDifferentCharacter;
 
         /**
-         * <p>The minimum number of characters in the password.</p>
+         * <p>The minimum required number of characters in a password.</p>
          */
         @NameInMap("MinimumPasswordLength")
         public Integer minimumPasswordLength;

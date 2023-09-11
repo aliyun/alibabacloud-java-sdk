@@ -45,7 +45,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         public String lastUsedDate;
 
         /**
-         * <p>The Alibaba Cloud service that was last accessed.</p>
+         * <p>The Alibaba Cloud service that was last accessed by using the AccessKey pair.</p>
          */
         @NameInMap("ServiceName")
         public String serviceName;
