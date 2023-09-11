@@ -5,34 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListServerGroupsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page. Valid values: **1** to **100**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If **NextToken** is empty, it indicates that no subsequent query is to be sent.</p>
-     * <p>*   If a value of **NextToken** is returned, the value is the token used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The server groups.</p>
+     * <p>A list of server groups.</p>
      */
     @NameInMap("ServerGroups")
     public java.util.List<ListServerGroupsResponseBodyServerGroups> serverGroups;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -94,20 +94,18 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>The maximum timeout period of a health check. Unit: seconds.</p>
-         * <br>
-         * <p>Valid values: **1** to **300**.</p>
+         * <p>The maximum timeout period of a health check. Unit: seconds. Valid values: **1** to **300**.</p>
          */
         @NameInMap("HealthCheckConnectTimeout")
         public Integer healthCheckConnectTimeout;
 
         /**
-         * <p>The domain name that is used for health checks. Valid values:</p>
+         * <p>The domain name that you want to use for health checks. Valid values:</p>
          * <br>
          * <p>*   **$SERVER_IP**: the private IP address of a backend server.</p>
          * <p>*   **domain**: a specified domain name. The domain name must be 1 to 80 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.).</p>
          * <br>
-         * <p>>  This parameter takes effect only if **HealthCheckType** is set to **HTTP**.</p>
+         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
          */
         @NameInMap("HealthCheckDomain")
         public String healthCheckDomain;
@@ -115,24 +113,22 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the health check feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
         /**
-         * <p>The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,).</p>
+         * <p>The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
          * <br>
-         * <p>Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.</p>
-         * <br>
-         * <p>>  This parameter takes effect only if **HealthCheckType** is set to **HTTP**.</p>
+         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
          */
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
         /**
-         * <p>The interval between two consecutive health checks. Unit: seconds.</p>
+         * <p>The interval at which health checks are performed. Unit: seconds.</p>
          * <br>
          * <p>Valid values: **5** to **50**.</p>
          */
@@ -146,15 +142,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String healthCheckType;
 
         /**
-         * <p>The path to which health check requests are sent.</p>
+         * <p>The path to which health check probes are sent.</p>
          * <br>
-         * <p>>  This parameter takes effect only if **HealthCheckType** is set to **HTTP**.</p>
+         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
          */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from **fail** to **success**.</p>
          * <br>
          * <p>Valid values: **2** to **10**.</p>
          */
@@ -164,13 +160,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The HTTP method that is used for health checks. Valid values: **GET** and **HEAD**.</p>
          * <br>
-         * <p>>  This parameter takes effect only if **HealthCheckType** is set to **HTTP**.</p>
+         * <p>> This parameter takes effect only when **HealthCheckType** is set to **HTTP**.</p>
          */
         @NameInMap("HttpCheckMethod")
         public String httpCheckMethod;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from **success** to **fail**.</p>
          * <br>
          * <p>Valid values: **2** to **10**.</p>
          */
@@ -314,16 +310,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
         /**
-         * <p>The protocol version. Valid values:</p>
+         * <p>The IP version. Valid values:</p>
          * <br>
-         * <p>*   **ipv4**: IPv4</p>
-         * <p>*   **DualStack**: dual stack</p>
+         * <p>*   **ipv4**</p>
+         * <p>*   **DualStack**</p>
          */
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
         /**
-         * <p>The UID of the Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account.</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
@@ -331,8 +327,8 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the feature of forwarding requests to all ports is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("AnyPortEnabled")
         public Boolean anyPortEnabled;
@@ -340,16 +336,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether connection draining is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ConnectionDrainEnabled")
         public Boolean connectionDrainEnabled;
 
         /**
-         * <p>The timeout period of connection draining. Unit: seconds.</p>
-         * <br>
-         * <p>Valid values: **10** to **900**.</p>
+         * <p>The timeout period of connection draining. Unit: seconds. Valid values: **10** to **900**.</p>
          */
         @NameInMap("ConnectionDrainTimeout")
         public Integer connectionDrainTimeout;
@@ -363,10 +357,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether client IP preservation is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: enabled</p>
-         * <p>*   **false**: disabled</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          * <br>
-         * <p>>  Note: If **AddressIPVersion** is set to **ipv4**, the default value is **true**. If **AddressIPVersion** is set to **ipv6**, the only valid value is **false**. **true** will be supported in later version.</p>
+         * <p>> This parameter is set to **true** by default when **AddressIPVersion** is set to **ipv4**. This parameter is set to **false** when **AddressIPVersion** is set to **ipv6**. **true** will be supported by later versions.</p>
          */
         @NameInMap("PreserveClientIpEnabled")
         public Boolean preserveClientIpEnabled;
@@ -378,7 +372,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>The region ID of the NLB instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -396,7 +390,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The scheduling algorithm. Valid values:</p>
+         * <p>The routing algorithm. Valid values:</p>
          * <br>
          * <p>*   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
          * <p>*   **rr**: Requests are forwarded to the backend servers in sequence. sch: Requests are forwarded to the backend servers based on source IP address hashing.</p>
@@ -414,13 +408,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public Integer serverCount;
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The server group ID.</p>
          */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
         /**
-         * <p>The name of the server group.</p>
+         * <p>The server group name.</p>
          */
         @NameInMap("ServerGroupName")
         public String serverGroupName;
@@ -428,9 +422,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The status of the server group. Valid values:</p>
          * <br>
-         * <p>*   **Creating**: The server group is being created.</p>
-         * <p>*   **Available**: The server group is available.</p>
-         * <p>*   **Configuring**: The server group is being configured.</p>
+         * <p>*   **Creating**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Configuring**</p>
          */
         @NameInMap("ServerGroupStatus")
         public String serverGroupStatus;
@@ -438,14 +432,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of server group. Valid values:</p>
          * <br>
-         * <p>*   **Instance** : allows you to add servers of the **Ecs**, **Ens**, and **Eci** types.</p>
-         * <p>*   **Ip**: allows you to add servers by specifying IP addresses.</p>
+         * <p>*   **Instance** : contains servers of the **Ecs**, **Ens**, and **Eci** types.</p>
+         * <p>*   **Ip**: contains servers specified by IP addresses.</p>
          */
         @NameInMap("ServerGroupType")
         public String serverGroupType;
 
         /**
-         * <p>The tags that are added to the NLB instance.</p>
+         * <p>The tag.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;

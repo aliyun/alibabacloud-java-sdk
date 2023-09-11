@@ -7,9 +7,9 @@ public class UpdateLoadBalancerProtectionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -24,32 +24,32 @@ public class UpdateLoadBalancerProtectionRequest extends TeaModel {
     public Boolean deletionProtectionEnabled;
 
     /**
-     * <p>The reason for enabling deletion protection. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+     * <p>The reason why deletion protection is enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
      * <br>
-     * <p>>  This parameter is valid only if you set **DeletionProtectionEnabled** to **true**.</p>
+     * <p>> This parameter takes effect only when **DeletionProtectionEnabled** is set to **true**.</p>
      */
     @NameInMap("DeletionProtectionReason")
     public String deletionProtectionReason;
 
     /**
-     * <p>Specifies whether to perform only a dry run without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
      * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the NLB instance.</p>
+     * <p>The NLB instance ID.</p>
      */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     /**
-     * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+     * <p>The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
      * <br>
-     * <p>>  This parameter takes effect only if you set **Status** to **ConsoleProtection**.</p>
+     * <p>> This parameter takes effect only if **Status** is set to **ConsoleProtection**.</p>
      */
     @NameInMap("ModificationProtectionReason")
     public String modificationProtectionReason;
@@ -57,10 +57,10 @@ public class UpdateLoadBalancerProtectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
      * <br>
-     * <p>*   **NonProtection**: disables the configuration read-only mode. In this case, you cannot specify **ModificationProtectionReason**. If you specify **ModificationProtectionReason**, the value is cleared.</p>
+     * <p>*   **NonProtection**: disables the configuration read-only mode. In this case, you cannot set the **ModificationProtectionReason** parameter. If you specify **ModificationProtectionReason**, the value is cleared.</p>
      * <p>*   **ConsoleProtection**: enables the configuration read-only mode. In this case, you can specify **ModificationProtectionReason**.</p>
      * <br>
-     * <p>>  If you set this parameter to **ConsoleProtection**, you cannot modify instance configurations in the NLB console. However, you can modify instance configurations by calling API operations.</p>
+     * <p>> If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
      */
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;

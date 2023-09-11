@@ -4,18 +4,36 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListLoadBalancersResponseBody extends TeaModel {
+    /**
+     * <p>The NLB instances.</p>
+     */
     @NameInMap("LoadBalancers")
     public java.util.List<ListLoadBalancersResponseBodyLoadBalancers> loadBalancers;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +83,24 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig extends TeaModel {
+        /**
+         * <p>Indicates whether deletion protection is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The time when deletion protection was enabled. The time is displayed in UTC in `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         */
         @NameInMap("EnabledTime")
         public String enabledTime;
 
+        /**
+         * <p>The reason why the deletion protection feature is enabled or disabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
@@ -106,6 +136,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig extends TeaModel {
+        /**
+         * <p>The billing method of the NLB instance. Only **PostPay** is supported, which indicates the pay-as-you-go billing method.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
@@ -125,12 +158,28 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig extends TeaModel {
+        /**
+         * <p>The time when the configuration read-only mode was enabled. The time is displayed in UTC in `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         */
         @NameInMap("EnabledTime")
         public String enabledTime;
 
+        /**
+         * <p>The reason why the configuration read-only mode is enabled. The reason must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         * <br>
+         * <p>This parameter takes effect only if **Status** is set to **ConsoleProtection**.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>Indicates whether the configuration read-only mode is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **NonProtection**: disabled. In this case, **Reason** is not returned. If **Reason** is set, the value is cleared.</p>
+         * <p>*   **ConsoleProtection**: enabled. In this case, **Reason** is returned.</p>
+         * <br>
+         * <p>>  If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -166,9 +215,20 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersOperationLocks extends TeaModel {
+        /**
+         * <p>The reason why the NLB instance is locked.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The type of lock. Valid values:</p>
+         * <br>
+         * <p>*   **SecurityLocked**: The NLB instance is locked due to security reasons.</p>
+         * <p>*   **RelatedResourceLocked**: The NLB instance is locked due to association issues.</p>
+         * <p>*   **FinancialLocked**: The NLB instance is locked due to overdue payments.</p>
+         * <p>*   **ResidualLocked**: The NLB instance is locked because the payments of the associated resources are overdue and the resources are released.</p>
+         */
         @NameInMap("LockType")
         public String lockType;
 
@@ -196,9 +256,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -226,15 +292,27 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersZoneMappingsLoadBalancerAddresses extends TeaModel {
+        /**
+         * <p>The ID of the elastic IP address (EIP).</p>
+         */
         @NameInMap("AllocationId")
         public String allocationId;
 
+        /**
+         * <p>The ID of the elastic network interface (ENI) attached to the NLB instance.</p>
+         */
         @NameInMap("EniId")
         public String eniId;
 
+        /**
+         * <p>The IPv6 address used by the NLB instance.</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
+        /**
+         * <p>The private IPv4 address of the NLB instance.</p>
+         */
         @NameInMap("PrivateIPv4Address")
         public String privateIPv4Address;
 
@@ -244,6 +322,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("PrivateIPv6HcStatus")
         public String privateIPv6HcStatus;
 
+        /**
+         * <p>The public IPv4 address of the NLB instance.</p>
+         */
         @NameInMap("PublicIPv4Address")
         public String publicIPv4Address;
 
@@ -311,15 +392,24 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancersZoneMappings extends TeaModel {
+        /**
+         * <p>The IP addresses that are used by the NLB instance.</p>
+         */
         @NameInMap("LoadBalancerAddresses")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>The name of the zone. You can call the [DescribeZones](~~443890~~) operation to query the zones.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -363,69 +453,157 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     }
 
     public static class ListLoadBalancersResponseBodyLoadBalancers extends TeaModel {
+        /**
+         * <p>The IP version. Valid values:</p>
+         * <br>
+         * <p>*   **ipv4**: IPv4</p>
+         * <p>*   **DualStack**: dual stack</p>
+         */
         @NameInMap("AddressIpVersion")
         public String addressIpVersion;
 
+        /**
+         * <p>The type of IPv4 address used by the NLB instance. Valid values:</p>
+         * <br>
+         * <p>*   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</p>
+         * <p>*   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 
+        /**
+         * <p>The ID of the EIP bandwidth plan that is associated with the NLB instance if the NLB instance uses a public IP address.</p>
+         */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        /**
+         * <p>The time when the resource was created. The time is displayed in UTC in the `yyyy-MM-ddTHH:mm:ssZ` format.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Indicates whether cross-zone load balancing is enabled for the NLB instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**: enabled</p>
+         * <p>*   **false**: disabled</p>
+         */
         @NameInMap("CrossZoneEnabled")
         public Boolean crossZoneEnabled;
 
+        /**
+         * <p>The domain name of the NLB instance.</p>
+         */
         @NameInMap("DNSName")
         public String DNSName;
 
+        /**
+         * <p>The configuration of the deletion protection feature.</p>
+         */
         @NameInMap("DeletionProtectionConfig")
         public ListLoadBalancersResponseBodyLoadBalancersDeletionProtectionConfig deletionProtectionConfig;
 
+        /**
+         * <p>The type of IPv6 address used by the NLB instance. Valid values:</p>
+         * <br>
+         * <p>*   **Internet**: The NLB instance uses a public IP address. The domain name of the NLB instance is resolved to the public IP address. Therefore, the NLB instance can be accessed over the Internet.</p>
+         * <p>*   **Intranet**: The NLB instance uses a private IP address. The domain name of the NLB instance is resolved to the private IP address. Therefore, the NLB instance can be accessed over the VPC where the NLB instance is deployed.</p>
+         */
         @NameInMap("Ipv6AddressType")
         public String ipv6AddressType;
 
+        /**
+         * <p>The billing settings of the NLB instance.</p>
+         */
         @NameInMap("LoadBalancerBillingConfig")
         public ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig loadBalancerBillingConfig;
 
+        /**
+         * <p>The business status of the NLB instance. Valid values:</p>
+         * <br>
+         * <p>*   **Abnormal**: The NLB instance is not working as expected.</p>
+         * <p>*   **Normal**: The NLB instance is working as expected.</p>
+         */
         @NameInMap("LoadBalancerBusinessStatus")
         public String loadBalancerBusinessStatus;
 
+        /**
+         * <p>The ID of the NLB instance.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The name of the NLB instance.</p>
+         */
         @NameInMap("LoadBalancerName")
         public String loadBalancerName;
 
+        /**
+         * <p>The status of the NLB instance. Valid values:</p>
+         * <br>
+         * <p>*   **Inactive**: The NLB instance is disabled. Listeners of NLB instances in the Inactive state do not forward traffic.</p>
+         * <p>*   **Active**: The NLB instance is running.</p>
+         * <p>*   **Provisioning**: The NLB instance is being created.</p>
+         * <p>*   **Configuring**: The NLB instance is being modified.</p>
+         * <p>*   **Deleting**: The NLB instance is being deleted.</p>
+         * <p>*   **Deleted**: The NLB instance is deleted.</p>
+         */
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
 
+        /**
+         * <p>The type of the SLB instance. Only **Network** is returned, which indicates NLB.</p>
+         */
         @NameInMap("LoadBalancerType")
         public String loadBalancerType;
 
+        /**
+         * <p>The configuration of the configuration read-only mode.</p>
+         */
         @NameInMap("ModificationProtectionConfig")
         public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig modificationProtectionConfig;
 
+        /**
+         * <p>The configuration of the operation lock. This parameter takes effect if the value of `LoadBalancerBussinessStatus` is **Abnormal**.</p>
+         */
         @NameInMap("OperationLocks")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersOperationLocks> operationLocks;
 
+        /**
+         * <p>The ID of the region where the NLB instance is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The security group to which the NLB instance is added.</p>
+         */
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
 
+        /**
+         * <p>A list of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersTags> tags;
 
+        /**
+         * <p>The ID of the VPC where the NLB instance is deployed.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The mappings between zones and vSwitches.</p>
+         */
         @NameInMap("ZoneMappings")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersZoneMappings> zoneMappings;
 

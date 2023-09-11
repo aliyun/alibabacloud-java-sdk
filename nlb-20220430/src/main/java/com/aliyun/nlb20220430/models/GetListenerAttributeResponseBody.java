@@ -174,6 +174,9 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("StartPort")
     public String startPort;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetListenerAttributeResponseBodyTags> tags;
 
@@ -367,9 +370,15 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetListenerAttributeResponseBodyTags extends TeaModel {
+        /**
+         * <p>The key of the tag that you want to remove. You can remove up to 20 tags in each call.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

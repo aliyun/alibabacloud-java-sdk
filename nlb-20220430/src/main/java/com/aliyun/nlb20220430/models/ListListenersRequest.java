@@ -4,6 +4,9 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class ListListenersRequest extends TeaModel {
+    /**
+     * <p>The listener IDs.</p>
+     */
     @NameInMap("ListenerIds")
     public java.util.List<String> listenerIds;
 
@@ -13,6 +16,9 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
 
+    /**
+     * <p>The ID of the NLB instance. You can query up to 20 NLB instances at a time.</p>
+     */
     @NameInMap("LoadBalancerIds")
     public java.util.List<String> loadBalancerIds;
 
@@ -39,6 +45,9 @@ public class ListListenersRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListListenersRequestTag> tag;
 
@@ -104,9 +113,19 @@ public class ListListenersRequest extends TeaModel {
     }
 
     public static class ListListenersRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify up to 10 tag values.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

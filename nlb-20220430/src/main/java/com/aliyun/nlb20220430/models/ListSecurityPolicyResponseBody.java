@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class ListSecurityPolicyResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query or no next query is to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   If NextToken is empty, no next page exists.</p>
+     * <p>*   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -32,7 +32,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     public java.util.List<ListSecurityPolicyResponseBodySecurityPolicies> securityPolicies;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -84,25 +84,25 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
 
     public static class ListSecurityPolicyResponseBodySecurityPoliciesRelatedListeners extends TeaModel {
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The listener ID.</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
 
         /**
-         * <p>The listening port.</p>
+         * <p>The listener port.</p>
          */
         @NameInMap("ListenerPort")
         public Long listenerPort;
 
         /**
-         * <p>The listening protocol. Valid value: **TCPSSL**.</p>
+         * <p>The listener protocol. Valid value: **TCPSSL**.</p>
          */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
         /**
-         * <p>The ID of the NLB instance.</p>
+         * <p>The NLB instance ID.</p>
          */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
@@ -148,17 +148,17 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
 
     public static class ListSecurityPolicyResponseBodySecurityPoliciesTags extends TeaModel {
         /**
-         * <p>The tag keys. You can specify up to 10 tag keys.</p>
+         * <p>The tag key. You can specify up to 10 tag keys.</p>
          * <br>
-         * <p>The tag key can be at most 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag values. You can specify up to 10 tag values.</p>
+         * <p>The tag value. You can specify up to 10 tag values.</p>
          * <br>
-         * <p>It can be at most 128 characters in length, and cannot contain `http://` or `https://`. It must not start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -234,7 +234,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         public String ciphers;
 
         /**
-         * <p>The ID of the region where the NLB instance is deployed.</p>
+         * <p>The region ID of the NLB instance.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -246,7 +246,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         public java.util.List<ListSecurityPolicyResponseBodySecurityPoliciesRelatedListeners> relatedListeners;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -266,14 +266,14 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
         /**
          * <p>The status of the TLS security policy. Valid values:</p>
          * <br>
-         * <p>*   **Configuring**: The security policy is being configured.</p>
-         * <p>*   **Available**: The security policy is available.</p>
+         * <p>*   **Configuring**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("SecurityPolicyStatus")
         public String securityPolicyStatus;
 
         /**
-         * <p>The tags that are added to the NLB instance.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListSecurityPolicyResponseBodySecurityPoliciesTags> tags;
