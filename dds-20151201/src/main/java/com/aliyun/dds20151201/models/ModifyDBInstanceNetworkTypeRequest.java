@@ -70,6 +70,9 @@ public class ModifyDBInstanceNetworkTypeRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The zone ID of the instance. You can call the [DescribeRegions](~~468365~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
