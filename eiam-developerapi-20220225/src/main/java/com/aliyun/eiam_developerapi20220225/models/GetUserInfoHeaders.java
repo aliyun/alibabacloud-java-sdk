@@ -7,6 +7,9 @@ public class GetUserInfoHeaders extends TeaModel {
     @NameInMap("commonHeaders")
     public java.util.Map<String, String> commonHeaders;
 
+    /**
+     * <p>The authentication information. Format: Bearer ${access_token}. Example: Bearer ATxxxx.</p>
+     */
     @NameInMap("Authorization")
     public String authorization;
 
