@@ -25,6 +25,9 @@ public class GetUserResponseBody extends TeaModel {
     @NameInMap("emailVerified")
     public Boolean emailVerified;
 
+    /**
+     * <p>账户所属组列表。</p>
+     */
     @NameInMap("groups")
     public java.util.List<GetUserResponseBodyGroups> groups;
 
@@ -304,12 +307,21 @@ public class GetUserResponseBody extends TeaModel {
     }
 
     public static class GetUserResponseBodyGroups extends TeaModel {
+        /**
+         * <p>组描述。</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>组ID。</p>
+         */
         @NameInMap("groupId")
         public String groupId;
 
+        /**
+         * <p>组名称。</p>
+         */
         @NameInMap("groupName")
         public String groupName;
 
