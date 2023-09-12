@@ -13,6 +13,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("AiType")
     public String aiType;
 
+    @NameInMap("Architecture")
+    public String architecture;
+
     /**
      * <p>Maximum blktags in file system.</p>
      */
@@ -158,6 +161,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     @NameInMap("HasCompleteStandbyRes")
     public Boolean hasCompleteStandbyRes;
+
+    @NameInMap("HotStandbyCluster")
+    public String hotStandbyCluster;
 
     /**
      * <p>Maximum inodes in file system.</p>
@@ -385,6 +391,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return this.aiType;
     }
 
+    public DescribeDBClusterAttributeResponseBody setArchitecture(String architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    public String getArchitecture() {
+        return this.architecture;
+    }
+
     public DescribeDBClusterAttributeResponseBody setBlktagTotal(Long blktagTotal) {
         this.blktagTotal = blktagTotal;
         return this;
@@ -551,6 +565,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public Boolean getHasCompleteStandbyRes() {
         return this.hasCompleteStandbyRes;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setHotStandbyCluster(String hotStandbyCluster) {
+        this.hotStandbyCluster = hotStandbyCluster;
+        return this;
+    }
+    public String getHotStandbyCluster() {
+        return this.hotStandbyCluster;
     }
 
     public DescribeDBClusterAttributeResponseBody setInodeTotal(Long inodeTotal) {
