@@ -7266,6 +7266,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBNodeTargetClass", request.DBNodeTargetClass);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeType)) {
+            query.put("DBNodeType", request.DBNodeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
             query.put("ModifyType", request.modifyType);
         }

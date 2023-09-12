@@ -22,6 +22,9 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     @NameInMap("DBNodeTargetClass")
     public String DBNodeTargetClass;
 
+    @NameInMap("DBNodeType")
+    public String DBNodeType;
+
     /**
      * <p>The type of the configuration change. Valid values:</p>
      * <br>
@@ -98,6 +101,14 @@ public class ModifyDBNodeClassRequest extends TeaModel {
     }
     public String getDBNodeTargetClass() {
         return this.DBNodeTargetClass;
+    }
+
+    public ModifyDBNodeClassRequest setDBNodeType(String DBNodeType) {
+        this.DBNodeType = DBNodeType;
+        return this;
+    }
+    public String getDBNodeType() {
+        return this.DBNodeType;
     }
 
     public ModifyDBNodeClassRequest setModifyType(String modifyType) {
