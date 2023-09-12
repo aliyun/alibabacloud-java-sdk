@@ -8,7 +8,7 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("MaxResult")
-    public String maxResult;
+    public Long maxResult;
 
     @NameInMap("Notification")
     public Notification notification;
@@ -18,9 +18,6 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
 
     @NameInMap("Sources")
     public java.util.List<CreateFacesSearchingTaskRequestSources> sources;
-
-    @NameInMap("TopK")
-    public Long topK;
 
     @NameInMap("UserData")
     public String userData;
@@ -38,11 +35,11 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public CreateFacesSearchingTaskRequest setMaxResult(String maxResult) {
+    public CreateFacesSearchingTaskRequest setMaxResult(Long maxResult) {
         this.maxResult = maxResult;
         return this;
     }
-    public String getMaxResult() {
+    public Long getMaxResult() {
         return this.maxResult;
     }
 
@@ -68,14 +65,6 @@ public class CreateFacesSearchingTaskRequest extends TeaModel {
     }
     public java.util.List<CreateFacesSearchingTaskRequestSources> getSources() {
         return this.sources;
-    }
-
-    public CreateFacesSearchingTaskRequest setTopK(Long topK) {
-        this.topK = topK;
-        return this;
-    }
-    public Long getTopK() {
-        return this.topK;
     }
 
     public CreateFacesSearchingTaskRequest setUserData(String userData) {

@@ -22,8 +22,8 @@ public class CreateFileUncompressionTaskShrinkRequest extends TeaModel {
     @NameInMap("SourceURI")
     public String sourceURI;
 
-    @NameInMap("Target")
-    public String targetShrink;
+    @NameInMap("TargetURI")
+    public String targetURI;
 
     @NameInMap("UserData")
     public String userData;
@@ -81,12 +81,12 @@ public class CreateFileUncompressionTaskShrinkRequest extends TeaModel {
         return this.sourceURI;
     }
 
-    public CreateFileUncompressionTaskShrinkRequest setTargetShrink(String targetShrink) {
-        this.targetShrink = targetShrink;
+    public CreateFileUncompressionTaskShrinkRequest setTargetURI(String targetURI) {
+        this.targetURI = targetURI;
         return this;
     }
-    public String getTargetShrink() {
-        return this.targetShrink;
+    public String getTargetURI() {
+        return this.targetURI;
     }
 
     public CreateFileUncompressionTaskShrinkRequest setUserData(String userData) {

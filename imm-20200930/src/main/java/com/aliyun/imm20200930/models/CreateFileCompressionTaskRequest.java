@@ -13,9 +13,6 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     @NameInMap("Notification")
     public Notification notification;
 
-    @NameInMap("Password")
-    public String password;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -58,14 +55,6 @@ public class CreateFileCompressionTaskRequest extends TeaModel {
     }
     public Notification getNotification() {
         return this.notification;
-    }
-
-    public CreateFileCompressionTaskRequest setPassword(String password) {
-        this.password = password;
-        return this;
-    }
-    public String getPassword() {
-        return this.password;
     }
 
     public CreateFileCompressionTaskRequest setProjectName(String projectName) {

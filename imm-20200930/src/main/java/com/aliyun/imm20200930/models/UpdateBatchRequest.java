@@ -13,9 +13,6 @@ public class UpdateBatchRequest extends TeaModel {
     @NameInMap("Input")
     public Input input;
 
-    @NameInMap("Notification")
-    public UpdateBatchRequestNotification notification;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -49,14 +46,6 @@ public class UpdateBatchRequest extends TeaModel {
     }
     public Input getInput() {
         return this.input;
-    }
-
-    public UpdateBatchRequest setNotification(UpdateBatchRequestNotification notification) {
-        this.notification = notification;
-        return this;
-    }
-    public UpdateBatchRequestNotification getNotification() {
-        return this.notification;
     }
 
     public UpdateBatchRequest setProjectName(String projectName) {
@@ -101,36 +90,6 @@ public class UpdateBatchRequest extends TeaModel {
         }
         public java.util.List<String> getParameters() {
             return this.parameters;
-        }
-
-    }
-
-    public static class UpdateBatchRequestNotification extends TeaModel {
-        @NameInMap("Endpoint")
-        public String endpoint;
-
-        @NameInMap("Topic")
-        public String topic;
-
-        public static UpdateBatchRequestNotification build(java.util.Map<String, ?> map) throws Exception {
-            UpdateBatchRequestNotification self = new UpdateBatchRequestNotification();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateBatchRequestNotification setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        public UpdateBatchRequestNotification setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
     }

@@ -4,6 +4,9 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class Notification extends TeaModel {
+    @NameInMap("ExtendedMessageURI")
+    public String extendedMessageURI;
+
     @NameInMap("MNS")
     public MNS MNS;
 
@@ -13,6 +16,14 @@ public class Notification extends TeaModel {
     public static Notification build(java.util.Map<String, ?> map) throws Exception {
         Notification self = new Notification();
         return TeaModel.build(map, self);
+    }
+
+    public Notification setExtendedMessageURI(String extendedMessageURI) {
+        this.extendedMessageURI = extendedMessageURI;
+        return this;
+    }
+    public String getExtendedMessageURI() {
+        return this.extendedMessageURI;
     }
 
     public Notification setMNS(MNS MNS) {

@@ -67,12 +67,6 @@ public class File extends TeaModel {
     @NameInMap("DatasetName")
     public String datasetName;
 
-    @NameInMap("DocumentContent")
-    public String documentContent;
-
-    @NameInMap("DocumentLanguage")
-    public String documentLanguage;
-
     @NameInMap("Duration")
     public Double duration;
 
@@ -412,22 +406,6 @@ public class File extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
-    }
-
-    public File setDocumentContent(String documentContent) {
-        this.documentContent = documentContent;
-        return this;
-    }
-    public String getDocumentContent() {
-        return this.documentContent;
-    }
-
-    public File setDocumentLanguage(String documentLanguage) {
-        this.documentLanguage = documentLanguage;
-        return this;
-    }
-    public String getDocumentLanguage() {
-        return this.documentLanguage;
     }
 
     public File setDuration(Double duration) {

@@ -22,9 +22,6 @@ public class CreateImageModerationTaskRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
-    @NameInMap("Reviewer")
-    public String reviewer;
-
     @NameInMap("Scenes")
     public java.util.List<String> scenes;
 
@@ -80,14 +77,6 @@ public class CreateImageModerationTaskRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
-    }
-
-    public CreateImageModerationTaskRequest setReviewer(String reviewer) {
-        this.reviewer = reviewer;
-        return this;
-    }
-    public String getReviewer() {
-        return this.reviewer;
     }
 
     public CreateImageModerationTaskRequest setScenes(java.util.List<String> scenes) {
