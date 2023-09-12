@@ -1194,4 +1194,48 @@ public class Client extends com.aliyun.teaopenapi.Client {
         TicketingHeaders headers = new TicketingHeaders();
         return this.ticketingWithOptions(request, headers, runtime);
     }
+
+    public TicketingCheckResponse ticketingCheckWithOptions(TicketingCheckRequest request, TicketingCheckHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.orderNum)) {
+            body.put("order_num", request.orderNum);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketAccessToken)) {
+            realHeaders.put("x-acs-airticket-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAirticketLanguage)) {
+            realHeaders.put("x-acs-airticket-language", com.aliyun.teautil.Common.toJSONString(headers.xAcsAirticketLanguage));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TicketingCheck"),
+            new TeaPair("version", "2023-01-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/airticket/v1/trade/action-ticketing-check"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TicketingCheckResponse());
+    }
+
+    public TicketingCheckResponse ticketingCheck(TicketingCheckRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        TicketingCheckHeaders headers = new TicketingCheckHeaders();
+        return this.ticketingCheckWithOptions(request, headers, runtime);
+    }
 }
