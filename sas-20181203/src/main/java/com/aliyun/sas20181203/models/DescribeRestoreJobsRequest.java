@@ -31,7 +31,7 @@ public class DescribeRestoreJobsRequest extends TeaModel {
      * <p>*   **CANCELING**: The task is being canceled.</p>
      * <p>*   **CANCELED**: The task is canceled.</p>
      * <p>*   **PARTIAL_COMPLETE**: The task is partially successful.</p>
-     * <p>*   **CREATED**: The task is created but is not run.</p>
+     * <p>*   **CREATED**: The task was created but is not run.</p>
      * <p>*   **EXPIRED**: The task is not updated.</p>
      * <p>*   **QUEUED**: The task is waiting to be run.</p>
      * <p>*   **CLIENT_DELETED**: The task fails because the anti-ransomware agent is uninstalled.</p>

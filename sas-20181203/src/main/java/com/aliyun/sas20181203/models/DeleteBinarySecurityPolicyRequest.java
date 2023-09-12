@@ -4,12 +4,18 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteBinarySecurityPolicyRequest extends TeaModel {
+    /**
+     * <p>The name of the binary security policy.</p>
+     */
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The source IP address of the request.</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 

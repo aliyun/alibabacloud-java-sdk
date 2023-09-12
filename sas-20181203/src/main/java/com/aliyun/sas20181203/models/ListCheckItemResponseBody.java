@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCheckItemResponseBody extends TeaModel {
+    /**
+     * <p>The check items.</p>
+     */
     @NameInMap("CheckItems")
     public java.util.List<ListCheckItemResponseBodyCheckItems> checkItems;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PageInfo")
     public ListCheckItemResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +52,33 @@ public class ListCheckItemResponseBody extends TeaModel {
     }
 
     public static class ListCheckItemResponseBodyCheckItemsCustomConfigs extends TeaModel {
+        /**
+         * <p>The default value of the check item. The value is a string.</p>
+         */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>The name of the check item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The display name of the check item.</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
+        /**
+         * <p>The type of the check item. The value is a JSON string.</p>
+         */
         @NameInMap("TypeDefine")
         public String typeDefine;
 
+        /**
+         * <p>The specified value of the check item. The value is a string.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -106,9 +130,17 @@ public class ListCheckItemResponseBody extends TeaModel {
     }
 
     public static class ListCheckItemResponseBodyCheckItemsDescription extends TeaModel {
+        /**
+         * <p>The type of the description of the check item. Valid value:</p>
+         * <br>
+         * <p>*   **text**</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The content of the description for the check item when the Type parameter is text.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -136,30 +168,116 @@ public class ListCheckItemResponseBody extends TeaModel {
     }
 
     public static class ListCheckItemResponseBodyCheckItems extends TeaModel {
+        /**
+         * <p>The ID of the check item.</p>
+         */
         @NameInMap("CheckId")
         public Long checkId;
 
+        /**
+         * <p>The name of the check item.</p>
+         */
         @NameInMap("CheckShowName")
         public String checkShowName;
 
+        /**
+         * <p>The check items.</p>
+         */
         @NameInMap("CustomConfigs")
         public java.util.List<ListCheckItemResponseBodyCheckItemsCustomConfigs> customConfigs;
 
+        /**
+         * <p>The description of the check item.</p>
+         */
         @NameInMap("Description")
         public ListCheckItemResponseBodyCheckItemsDescription description;
 
+        /**
+         * <p>The asset subtype of the cloud service. Valid value:</p>
+         * <br>
+         * <p>*   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **INSTANCE**</p>
+         * <p>    *   **DISK**</p>
+         * <p>    *   **SECURITY_GROUP**</p>
+         * <br>
+         * <p>*   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **REPOSITORY_ENTERPRISE**</p>
+         * <p>    *   **REPOSITORY_PERSON**</p>
+         * <br>
+         * <p>*   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **ALIAS**</p>
+         * <p>    *   **USER**</p>
+         * <p>    *   **POLICY**</p>
+         * <p>    *   **GROUP**</p>
+         * <br>
+         * <p>*   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **DOMAIN**</p>
+         * <br>
+         * <p>*   If **InstanceType** is set to other values, this parameter supports the following valid values:</p>
+         * <br>
+         * <p>    *   **INSTANCE**</p>
+         */
         @NameInMap("InstanceSubType")
         public String instanceSubType;
 
+        /**
+         * <p>The asset type of the cloud service. Valid value:</p>
+         * <br>
+         * <p>*   **ECS**: Elastic Compute Service (ECS)</p>
+         * <p>*   **SLB**: Server Load Balancer (SLB)</p>
+         * <p>*   **RDS**: ApsaraDB RDS</p>
+         * <p>*   **MONGODB**: ApsaraDB for MongoDB (MongoDB)</p>
+         * <p>*   **KVSTORE**: ApsaraDB for Redis (Redis)</p>
+         * <p>*   **ACR**: Container Registry</p>
+         * <p>*   **CSK**: Container Service for Kubernetes (ACK)</p>
+         * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+         * <p>*   **ACTIONTRAIL**: ActionTrail</p>
+         * <p>*   **CDN**: Alibaba Cloud CDN (CDN)</p>
+         * <p>*   **CAS**: Certificate Management Service (formerly SSL Certificates Service)</p>
+         * <p>*   **RDC**: Apsara Devops</p>
+         * <p>*   **RAM**: Resource Access Management (RAM)</p>
+         * <p>*   **DDOS**: Anti-DDoS</p>
+         * <p>*   **WAF**: Web Application Firewall (WAF)</p>
+         * <p>*   **OSS**: Object Storage Service (OSS)</p>
+         * <p>*   **POLARDB**: PolarDB</p>
+         * <p>*   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL</p>
+         * <p>*   **MSE**: Microservices Engine (MSE)</p>
+         * <p>*   **NAS**: Apsara File Storage NAS (NAS)</p>
+         * <p>*   **SDDP**: Sensitive Data Discovery and Protection (SDDP)</p>
+         * <p>*   **EIP**: Elastic IP Address (EIP)</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>The risk level of the check item. Valid value:</p>
+         * <br>
+         * <p>*   **HIGH**</p>
+         * <p>*   **MEDIUM**</p>
+         * <p>*   **LOW**</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        /**
+         * <p>The IDs of the sections associated with the check items.</p>
+         */
         @NameInMap("SectionIds")
         public java.util.List<Long> sectionIds;
 
+        /**
+         * <p>The type of the cloud asset. Valid value:</p>
+         * <br>
+         * <p>*   **0**: an asset provided by Alibaba Cloud</p>
+         * <p>*   **1**: a third-party cloud asset</p>
+         * <p>*   **2**: an asset in a data center</p>
+         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset</p>
+         * <p>*   **8**: a simple application server</p>
+         */
         @NameInMap("Vendor")
         public String vendor;
 
@@ -243,15 +361,27 @@ public class ListCheckItemResponseBody extends TeaModel {
     }
 
     public static class ListCheckItemResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of entries returned on the current page.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The page number of the returned page.</p>
+         */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalCount")
         public Integer totalCount;
 

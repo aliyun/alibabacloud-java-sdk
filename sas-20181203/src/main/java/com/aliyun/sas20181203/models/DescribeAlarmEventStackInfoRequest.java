@@ -15,12 +15,17 @@ public class DescribeAlarmEventStackInfoRequest extends TeaModel {
     /**
      * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Chinese</p>
-     * <p>*   **en**: English</p>
+     * <p>*   **zh**: Chinese.</p>
+     * <p>*   **en**: English.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

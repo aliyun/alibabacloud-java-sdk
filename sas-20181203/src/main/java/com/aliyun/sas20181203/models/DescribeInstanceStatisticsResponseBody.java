@@ -74,6 +74,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @NameInMap("AgentlessVulSca")
         public Integer agentlessVulSca;
 
+        @NameInMap("AgentlessVulSys")
+        public Integer agentlessVulSys;
+
         /**
          * <p>The number of application vulnerabilities detected on the asset.</p>
          */
@@ -203,6 +206,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         }
         public Integer getAgentlessVulSca() {
             return this.agentlessVulSca;
+        }
+
+        public DescribeInstanceStatisticsResponseBodyData setAgentlessVulSys(Integer agentlessVulSys) {
+            this.agentlessVulSys = agentlessVulSys;
+            return this;
+        }
+        public Integer getAgentlessVulSys() {
+            return this.agentlessVulSys;
         }
 
         public DescribeInstanceStatisticsResponseBodyData setAppNum(Integer appNum) {

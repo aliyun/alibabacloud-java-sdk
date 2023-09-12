@@ -7,12 +7,13 @@ public class ModifyStartVulScanRequest extends TeaModel {
     /**
      * <p>The types of vulnerabilities that can be detected. Valid values:</p>
      * <br>
-     * <p>*   **cve**: Linux software vulnerability</p>
-     * <p>*   **sys**: Windows system vulnerability</p>
+     * <p>*   **cve**: Linux software vulnerabilities</p>
+     * <p>*   **sys**: Windows system vulnerabilities</p>
      * <p>*   **cms**: Web-CMS vulnerabilities</p>
      * <p>*   **app**: application vulnerabilities</p>
      * <p>*   **emg**: urgent vulnerabilities</p>
      * <p>*   **image**: container image vulnerabilities</p>
+     * <p>*   **sca**: vulnerabilities that are detected based on software component analysis</p>
      * <br>
      * <p>> If you leave this parameter empty, all types of vulnerabilities can be detected.</p>
      */

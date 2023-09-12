@@ -112,13 +112,13 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
 
     public static class ListAvailableHoneypotResponseBodyData extends TeaModel {
         /**
-         * <p>The display name of the image that is used for the honeypot.</p>
+         * <p>The display name of the image.</p>
          */
         @NameInMap("HoneypotImageDisplayName")
         public String honeypotImageDisplayName;
 
         /**
-         * <p>The ID of the image that is used for the honeypot.</p>
+         * <p>The ID of the image.</p>
          */
         @NameInMap("HoneypotImageId")
         public String honeypotImageId;
@@ -130,19 +130,19 @@ public class ListAvailableHoneypotResponseBody extends TeaModel {
         public String honeypotImageName;
 
         /**
-         * <p>The type of the image that is used for the honeypot.</p>
+         * <p>The type of the image.</p>
          */
         @NameInMap("HoneypotImageType")
         public String honeypotImageType;
 
         /**
-         * <p>The version of the image that is used for the honeypot.</p>
+         * <p>The version of the image.</p>
          */
         @NameInMap("HoneypotImageVersion")
         public String honeypotImageVersion;
 
         /**
-         * <p>The port that is supported by the honeypot. The value is in the JSON format. The value contains the following fields:</p>
+         * <p>The port that is supported by the honeypot. The value is in the JSON format. Valid values:</p>
          * <br>
          * <p>*   **log_type**: the log type</p>
          * <p>*   **proto**: the supported protocol</p>

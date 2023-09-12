@@ -23,31 +23,31 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
     public Integer healthTotal;
 
     /**
-     * <p>The total number of fixed baseline risks.</p>
+     * <p>The total number of fixed baseline risk items. This parameter is deprecated.</p>
      */
     @NameInMap("HealthdealedTotal")
     public Integer healthdealedTotal;
 
     /**
-     * <p>The number of baselines whose risk level is high.</p>
+     * <p>The number of baseline risk items whose severity is high.</p>
      */
     @NameInMap("HealthhighTotal")
     public Integer healthhighTotal;
 
     /**
-     * <p>The number of baseline risks whose risk level is low.</p>
+     * <p>The number of baseline risk items whose severity is low.</p>
      */
     @NameInMap("HealthlowTotal")
     public Integer healthlowTotal;
 
     /**
-     * <p>The number of baseline risks whose risk level is medium.</p>
+     * <p>The number of baseline risk items whose severity is medium.</p>
      */
     @NameInMap("HealthmediumTotal")
     public Integer healthmediumTotal;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>The number of baseline risk items whose severity is urgent. This parameter is deprecated.</p>
      */
     @NameInMap("HealthseriousTotal")
     public Integer healthseriousTotal;
@@ -65,10 +65,10 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
     public Integer newsuspicious;
 
     /**
-     * <p>Indicates whether the Security Center agent is online. Valid values:</p>
+     * <p>Indicates whether the agent is online. Valid values:</p>
      * <br>
-     * <p>*   **true**: The service is online.</p>
-     * <p>*   **false**: The service is offline.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Online")
     public Boolean online;
@@ -104,7 +104,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
     public Integer suspiciousdealedTotal;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is deprecated. This parameter is deprecated.</p>
      */
     @NameInMap("SuspicioushighTotal")
     public Integer suspicioushighTotal;
@@ -158,7 +158,7 @@ public class DescribeTotalStatisticsResponseBody extends TeaModel {
     public Integer vulLaterSum;
 
     /**
-     * <p>The number of unfixed vulnerabilities whose severity level is medium.</p>
+     * <p>The number of unfixed vulnerabilities whose severity level is low.</p>
      */
     @NameInMap("VulNntfSum")
     public Integer vulNntfSum;
