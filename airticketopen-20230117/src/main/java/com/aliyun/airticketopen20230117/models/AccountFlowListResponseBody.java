@@ -117,6 +117,9 @@ public class AccountFlowListResponseBody extends TeaModel {
         @NameInMap("order_type")
         public Integer orderType;
 
+        @NameInMap("out_order_num")
+        public String outOrderNum;
+
         @NameInMap("refund_order_num")
         public Long refundOrderNum;
 
@@ -203,6 +206,14 @@ public class AccountFlowListResponseBody extends TeaModel {
         }
         public Integer getOrderType() {
             return this.orderType;
+        }
+
+        public AccountFlowListResponseBodyDataList setOutOrderNum(String outOrderNum) {
+            this.outOrderNum = outOrderNum;
+            return this;
+        }
+        public String getOutOrderNum() {
+            return this.outOrderNum;
         }
 
         public AccountFlowListResponseBodyDataList setRefundOrderNum(Long refundOrderNum) {
