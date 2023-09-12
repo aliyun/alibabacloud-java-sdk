@@ -22,6 +22,12 @@ public class CreateSwimLaneGroupRequest extends TeaModel {
     @NameInMap("IngressType")
     public String ingressType;
 
+    @NameInMap("IsPermissive")
+    public Boolean isPermissive;
+
+    @NameInMap("RouteHeader")
+    public String routeHeader;
+
     /**
      * <p>The ID of the Alibaba Cloud Service Mesh (ASM) instance.</p>
      */
@@ -33,6 +39,9 @@ public class CreateSwimLaneGroupRequest extends TeaModel {
      */
     @NameInMap("ServicesList")
     public String servicesList;
+
+    @NameInMap("TraceHeader")
+    public String traceHeader;
 
     public static CreateSwimLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSwimLaneGroupRequest self = new CreateSwimLaneGroupRequest();
@@ -63,6 +72,22 @@ public class CreateSwimLaneGroupRequest extends TeaModel {
         return this.ingressType;
     }
 
+    public CreateSwimLaneGroupRequest setIsPermissive(Boolean isPermissive) {
+        this.isPermissive = isPermissive;
+        return this;
+    }
+    public Boolean getIsPermissive() {
+        return this.isPermissive;
+    }
+
+    public CreateSwimLaneGroupRequest setRouteHeader(String routeHeader) {
+        this.routeHeader = routeHeader;
+        return this;
+    }
+    public String getRouteHeader() {
+        return this.routeHeader;
+    }
+
     public CreateSwimLaneGroupRequest setServiceMeshId(String serviceMeshId) {
         this.serviceMeshId = serviceMeshId;
         return this;
@@ -77,6 +102,14 @@ public class CreateSwimLaneGroupRequest extends TeaModel {
     }
     public String getServicesList() {
         return this.servicesList;
+    }
+
+    public CreateSwimLaneGroupRequest setTraceHeader(String traceHeader) {
+        this.traceHeader = traceHeader;
+        return this;
+    }
+    public String getTraceHeader() {
+        return this.traceHeader;
     }
 
 }

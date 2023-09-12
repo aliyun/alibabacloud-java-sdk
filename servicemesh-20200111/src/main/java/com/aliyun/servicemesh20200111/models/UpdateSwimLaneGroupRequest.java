@@ -4,6 +4,9 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateSwimLaneGroupRequest extends TeaModel {
+    @NameInMap("FallbackTarget")
+    public String fallbackTarget;
+
     /**
      * <p>The name of the lane group.</p>
      */
@@ -25,6 +28,14 @@ public class UpdateSwimLaneGroupRequest extends TeaModel {
     public static UpdateSwimLaneGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSwimLaneGroupRequest self = new UpdateSwimLaneGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateSwimLaneGroupRequest setFallbackTarget(String fallbackTarget) {
+        this.fallbackTarget = fallbackTarget;
+        return this;
+    }
+    public String getFallbackTarget() {
+        return this.fallbackTarget;
     }
 
     public UpdateSwimLaneGroupRequest setGroupName(String groupName) {

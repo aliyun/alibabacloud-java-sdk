@@ -38,6 +38,9 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
     }
 
     public static class GetSwimLaneGroupListResponseBodySwimLaneGroupList extends TeaModel {
+        @NameInMap("FallbackTarget")
+        public String fallbackTarget;
+
         /**
          * <p>The name of the lane group.</p>
          */
@@ -56,15 +59,35 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
         @NameInMap("IngressType")
         public String ingressType;
 
+        @NameInMap("IsPermissive")
+        public Boolean isPermissive;
+
+        @NameInMap("RouteHeader")
+        public String routeHeader;
+
         /**
          * <p>A list of services associated with the lane group.</p>
          */
         @NameInMap("ServiceList")
         public String serviceList;
 
+        @NameInMap("SwimLaneLabels")
+        public String swimLaneLabels;
+
+        @NameInMap("TraceHeader")
+        public String traceHeader;
+
         public static GetSwimLaneGroupListResponseBodySwimLaneGroupList build(java.util.Map<String, ?> map) throws Exception {
             GetSwimLaneGroupListResponseBodySwimLaneGroupList self = new GetSwimLaneGroupListResponseBodySwimLaneGroupList();
             return TeaModel.build(map, self);
+        }
+
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setFallbackTarget(String fallbackTarget) {
+            this.fallbackTarget = fallbackTarget;
+            return this;
+        }
+        public String getFallbackTarget() {
+            return this.fallbackTarget;
         }
 
         public GetSwimLaneGroupListResponseBodySwimLaneGroupList setGroupName(String groupName) {
@@ -91,12 +114,44 @@ public class GetSwimLaneGroupListResponseBody extends TeaModel {
             return this.ingressType;
         }
 
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setIsPermissive(Boolean isPermissive) {
+            this.isPermissive = isPermissive;
+            return this;
+        }
+        public Boolean getIsPermissive() {
+            return this.isPermissive;
+        }
+
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setRouteHeader(String routeHeader) {
+            this.routeHeader = routeHeader;
+            return this;
+        }
+        public String getRouteHeader() {
+            return this.routeHeader;
+        }
+
         public GetSwimLaneGroupListResponseBodySwimLaneGroupList setServiceList(String serviceList) {
             this.serviceList = serviceList;
             return this;
         }
         public String getServiceList() {
             return this.serviceList;
+        }
+
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setSwimLaneLabels(String swimLaneLabels) {
+            this.swimLaneLabels = swimLaneLabels;
+            return this;
+        }
+        public String getSwimLaneLabels() {
+            return this.swimLaneLabels;
+        }
+
+        public GetSwimLaneGroupListResponseBodySwimLaneGroupList setTraceHeader(String traceHeader) {
+            this.traceHeader = traceHeader;
+            return this;
+        }
+        public String getTraceHeader() {
+            return this.traceHeader;
         }
 
     }
