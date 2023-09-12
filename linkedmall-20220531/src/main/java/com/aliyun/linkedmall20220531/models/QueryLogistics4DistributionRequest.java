@@ -10,6 +10,9 @@ public class QueryLogistics4DistributionRequest extends TeaModel {
     @NameInMap("MainDistributionOrderId")
     public String mainDistributionOrderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("TenantId")
     public String tenantId;
 
@@ -32,6 +35,14 @@ public class QueryLogistics4DistributionRequest extends TeaModel {
     }
     public String getMainDistributionOrderId() {
         return this.mainDistributionOrderId;
+    }
+
+    public QueryLogistics4DistributionRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public QueryLogistics4DistributionRequest setTenantId(String tenantId) {
