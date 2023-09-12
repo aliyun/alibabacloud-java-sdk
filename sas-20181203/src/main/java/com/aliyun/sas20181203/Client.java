@@ -15776,6 +15776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MaliciousMd5", request.maliciousMd5);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maliciousType)) {
+            query.put("MaliciousType", request.maliciousType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
         }

@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics of cloud services that are protected by Security Center.</p>
+     */
     @NameInMap("GroupedFields")
     public DescribeCloudProductFieldStatisticsResponseBodyGroupedFields groupedFields;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,28 @@ public class DescribeCloudProductFieldStatisticsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudProductFieldStatisticsResponseBodyGroupedFields extends TeaModel {
+        /**
+         * <p>The statistics of different types of assets. **MachineType** indicates the type of the asset. **Count** indicates the number of assets of a specific type.</p>
+         * <br>
+         * <p>Valid values of **MachineType**:</p>
+         * <br>
+         * <p>*   **1**: Server Load Balancer (SLB) instance</p>
+         * <p>*   **2**: NAT gateway instance</p>
+         * <p>*   **3**: ApsaraDB RDS instance</p>
+         * <p>*   **4**: ApsaraDB for MongoDB instance</p>
+         */
         @NameInMap("CategoryCount")
         public String categoryCount;
 
+        /**
+         * <p>The total number of cloud services that are protected by Security Center.</p>
+         */
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
+        /**
+         * <p>The number of cloud services that are at risk.</p>
+         */
         @NameInMap("RiskInstanceCount")
         public Integer riskInstanceCount;
 

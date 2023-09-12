@@ -17,7 +17,7 @@ public class ListVulAutoRepairConfigRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Default value: **10**.</p>
+     * <p>The number of entries per page. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

@@ -17,8 +17,8 @@ public class OperationSuspEventsRequest extends TeaModel {
      * <br>
      * <p>*   **deal**: quarantines the source file of the malicious process.</p>
      * <p>*   **ignore**: ignores the alerts.</p>
-     * <p>*   **mark\_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.</p>
-     * <p>*   **rm\_mark\_mis_info**: cancels marking the alerts as false positives by removing the alerts from the whitelist.</p>
+     * <p>*   **mark_mis_info**: marks the alerts as false positives by adding the alerts to the whitelist.</p>
+     * <p>*   **rm_mark_mis_info**: cancels false positives by removing the alerts from the whitelist.</p>
      * <p>*   **offline_handled**: marks the alerts as handled.</p>
      */
     @NameInMap("Operation")
@@ -43,7 +43,7 @@ public class OperationSuspEventsRequest extends TeaModel {
     /**
      * <p>The IDs of alert events.</p>
      * <br>
-     * <p>>  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.</p>
+     * <p>> You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.</p>
      */
     @NameInMap("SuspiciousEventIds")
     public String suspiciousEventIds;

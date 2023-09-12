@@ -58,6 +58,9 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     @NameInMap("MaliciousMd5")
     public String maliciousMd5;
 
+    @NameInMap("MaliciousType")
+    public String maliciousType;
+
     /**
      * <p>The number of entries per page.</p>
      */
@@ -135,6 +138,14 @@ public class ListAgentlessMaliciousFilesRequest extends TeaModel {
     }
     public String getMaliciousMd5() {
         return this.maliciousMd5;
+    }
+
+    public ListAgentlessMaliciousFilesRequest setMaliciousType(String maliciousType) {
+        this.maliciousType = maliciousType;
+        return this;
+    }
+    public String getMaliciousType() {
+        return this.maliciousType;
     }
 
     public ListAgentlessMaliciousFilesRequest setPageSize(String pageSize) {

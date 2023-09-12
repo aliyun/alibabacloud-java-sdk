@@ -248,6 +248,9 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         @NameInMap("MaliciousName")
         public String maliciousName;
 
+        @NameInMap("MaliciousType")
+        public String maliciousType;
+
         /**
          * <p>The remarks.</p>
          */
@@ -405,6 +408,14 @@ public class ListAgentlessMaliciousFilesResponseBody extends TeaModel {
         }
         public String getMaliciousName() {
             return this.maliciousName;
+        }
+
+        public ListAgentlessMaliciousFilesResponseBodyList setMaliciousType(String maliciousType) {
+            this.maliciousType = maliciousType;
+            return this;
+        }
+        public String getMaliciousType() {
+            return this.maliciousType;
         }
 
         public ListAgentlessMaliciousFilesResponseBodyList setNotes(java.util.List<ListAgentlessMaliciousFilesResponseBodyListNotes> notes) {
