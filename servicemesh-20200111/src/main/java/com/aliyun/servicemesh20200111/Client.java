@@ -701,12 +701,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IngressType", request.ingressType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isPermissive)) {
+            body.put("IsPermissive", request.isPermissive);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.routeHeader)) {
+            body.put("RouteHeader", request.routeHeader);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.serviceMeshId)) {
             body.put("ServiceMeshId", request.serviceMeshId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.servicesList)) {
             body.put("ServicesList", request.servicesList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.traceHeader)) {
+            body.put("TraceHeader", request.traceHeader);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3945,6 +3957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateSwimLaneGroupResponse updateSwimLaneGroupWithOptions(UpdateSwimLaneGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackTarget)) {
+            body.put("FallbackTarget", request.fallbackTarget);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
             body.put("GroupName", request.groupName);
         }
