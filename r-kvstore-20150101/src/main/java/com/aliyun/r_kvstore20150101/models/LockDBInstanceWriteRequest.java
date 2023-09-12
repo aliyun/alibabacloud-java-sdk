@@ -3,12 +3,12 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class RemoveSubInstanceRequest extends TeaModel {
-    /**
-     * <p>分布式实例中的子实例ID，可调用[DescribeGlobalDistributeCache](~~188699~~)接口获取。</p>
-     */
-    @NameInMap("InstanceId")
-    public String instanceId;
+public class LockDBInstanceWriteRequest extends TeaModel {
+    @NameInMap("DBInstanceId")
+    public String DBInstanceId;
+
+    @NameInMap("LockReason")
+    public String lockReason;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -25,20 +25,28 @@ public class RemoveSubInstanceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static RemoveSubInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        RemoveSubInstanceRequest self = new RemoveSubInstanceRequest();
+    public static LockDBInstanceWriteRequest build(java.util.Map<String, ?> map) throws Exception {
+        LockDBInstanceWriteRequest self = new LockDBInstanceWriteRequest();
         return TeaModel.build(map, self);
     }
 
-    public RemoveSubInstanceRequest setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public LockDBInstanceWriteRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
-    public RemoveSubInstanceRequest setOwnerAccount(String ownerAccount) {
+    public LockDBInstanceWriteRequest setLockReason(String lockReason) {
+        this.lockReason = lockReason;
+        return this;
+    }
+    public String getLockReason() {
+        return this.lockReason;
+    }
+
+    public LockDBInstanceWriteRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -46,7 +54,7 @@ public class RemoveSubInstanceRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public RemoveSubInstanceRequest setOwnerId(Long ownerId) {
+    public LockDBInstanceWriteRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -54,7 +62,7 @@ public class RemoveSubInstanceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public RemoveSubInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public LockDBInstanceWriteRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -62,7 +70,7 @@ public class RemoveSubInstanceRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public RemoveSubInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public LockDBInstanceWriteRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -70,7 +78,7 @@ public class RemoveSubInstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public RemoveSubInstanceRequest setSecurityToken(String securityToken) {
+    public LockDBInstanceWriteRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

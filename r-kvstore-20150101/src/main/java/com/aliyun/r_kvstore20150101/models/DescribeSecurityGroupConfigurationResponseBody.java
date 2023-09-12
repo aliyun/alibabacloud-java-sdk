@@ -41,6 +41,12 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
+        /**
+         * <p>The network type of the ECS security group. Valid values:</p>
+         * <br>
+         * <p>*   **vpc**</p>
+         * <p>*   **classic**</p>
+         */
         @NameInMap("NetType")
         public String netType;
 

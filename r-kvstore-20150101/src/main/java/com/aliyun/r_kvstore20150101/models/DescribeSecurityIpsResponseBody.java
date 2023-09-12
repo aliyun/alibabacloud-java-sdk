@@ -44,9 +44,15 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         @NameInMap("SecurityIpGroupAttribute")
         public String securityIpGroupAttribute;
 
+        /**
+         * <p>The name of the security group.</p>
+         */
         @NameInMap("SecurityIpGroupName")
         public String securityIpGroupName;
 
+        /**
+         * <p>The IP addresses in the whitelist.</p>
+         */
         @NameInMap("SecurityIpList")
         public String securityIpList;
 

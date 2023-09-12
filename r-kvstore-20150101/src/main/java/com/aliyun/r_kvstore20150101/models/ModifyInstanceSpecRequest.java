@@ -40,6 +40,11 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    /**
+     * <p>是否开启强制传输，取值：</p>
+     * <p>- **false**（默认）：在变配前，系统会检查实例当前的内核小版本，若内核版本过低则会报错，您需要升级内核小版本后重试。</p>
+     * <p>- **true**：跳过检查项，直接执行变配操作。</p>
+     */
     @NameInMap("ForceTrans")
     public Boolean forceTrans;
 
