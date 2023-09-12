@@ -156,6 +156,9 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("Period")
     public Integer period;
 
+    /**
+     * <p>The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.</p>
+     */
     @NameInMap("Port")
     public Integer port;
 

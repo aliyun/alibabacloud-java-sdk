@@ -38,6 +38,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccountDatabasePrivilegesDatabasePrivilege extends TeaModel {
+        /**
+         * <p>The permissions of the account. Valid values:</p>
+         * <br>
+         * <p>*   **RoleReadOnly**: The account has read-only permissions.</p>
+         * <p>*   **RoleReadWrite**: The account has read and write permissions.</p>
+         */
         @NameInMap("AccountPrivilege")
         public String accountPrivilege;
 

@@ -82,6 +82,9 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The IP address of the instance in the classic network.</p>
+         */
         @NameInMap("IPAddress")
         public String IPAddress;
 
