@@ -983,6 +983,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MainDistributionOrderId", request.mainDistributionOrderId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.requestId)) {
+            body.put("RequestId", request.requestId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
             body.put("TenantId", request.tenantId);
         }

@@ -143,6 +143,9 @@ public class QueryLogistics4DistributionResponseBody extends TeaModel {
         @NameInMap("Quantity")
         public Integer quantity;
 
+        @NameInMap("SkuId")
+        public String skuId;
+
         public static QueryLogistics4DistributionResponseBodyModelGoods build(java.util.Map<String, ?> map) throws Exception {
             QueryLogistics4DistributionResponseBodyModelGoods self = new QueryLogistics4DistributionResponseBodyModelGoods();
             return TeaModel.build(map, self);
@@ -170,6 +173,14 @@ public class QueryLogistics4DistributionResponseBody extends TeaModel {
         }
         public Integer getQuantity() {
             return this.quantity;
+        }
+
+        public QueryLogistics4DistributionResponseBodyModelGoods setSkuId(String skuId) {
+            this.skuId = skuId;
+            return this;
+        }
+        public String getSkuId() {
+            return this.skuId;
         }
 
     }
