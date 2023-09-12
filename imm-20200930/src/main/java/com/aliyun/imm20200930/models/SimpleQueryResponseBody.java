@@ -16,6 +16,9 @@ public class SimpleQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalHits")
+    public Long totalHits;
+
     public static SimpleQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SimpleQueryResponseBody self = new SimpleQueryResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class SimpleQueryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SimpleQueryResponseBody setTotalHits(Long totalHits) {
+        this.totalHits = totalHits;
+        return this;
+    }
+    public Long getTotalHits() {
+        return this.totalHits;
     }
 
     public static class SimpleQueryResponseBodyAggregationsGroups extends TeaModel {

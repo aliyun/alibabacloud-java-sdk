@@ -106,31 +106,20 @@ public class CreateTriggerRequest extends TeaModel {
     }
 
     public static class CreateTriggerRequestNotification extends TeaModel {
-        @NameInMap("Endpoint")
-        public String endpoint;
-
-        @NameInMap("Topic")
-        public String topic;
+        @NameInMap("MNS")
+        public MNS MNS;
 
         public static CreateTriggerRequestNotification build(java.util.Map<String, ?> map) throws Exception {
             CreateTriggerRequestNotification self = new CreateTriggerRequestNotification();
             return TeaModel.build(map, self);
         }
 
-        public CreateTriggerRequestNotification setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
+        public CreateTriggerRequestNotification setMNS(MNS MNS) {
+            this.MNS = MNS;
             return this;
         }
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        public CreateTriggerRequestNotification setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
+        public MNS getMNS() {
+            return this.MNS;
         }
 
     }

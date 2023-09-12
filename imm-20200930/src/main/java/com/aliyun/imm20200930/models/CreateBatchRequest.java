@@ -106,31 +106,20 @@ public class CreateBatchRequest extends TeaModel {
     }
 
     public static class CreateBatchRequestNotification extends TeaModel {
-        @NameInMap("Endpoint")
-        public String endpoint;
-
-        @NameInMap("Topic")
-        public String topic;
+        @NameInMap("MNS")
+        public MNS MNS;
 
         public static CreateBatchRequestNotification build(java.util.Map<String, ?> map) throws Exception {
             CreateBatchRequestNotification self = new CreateBatchRequestNotification();
             return TeaModel.build(map, self);
         }
 
-        public CreateBatchRequestNotification setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
+        public CreateBatchRequestNotification setMNS(MNS MNS) {
+            this.MNS = MNS;
             return this;
         }
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        public CreateBatchRequestNotification setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
+        public MNS getMNS() {
+            return this.MNS;
         }
 
     }

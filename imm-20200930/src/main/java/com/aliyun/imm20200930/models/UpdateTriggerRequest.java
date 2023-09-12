@@ -13,9 +13,6 @@ public class UpdateTriggerRequest extends TeaModel {
     @NameInMap("Input")
     public Input input;
 
-    @NameInMap("Notification")
-    public UpdateTriggerRequestNotification notification;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -49,14 +46,6 @@ public class UpdateTriggerRequest extends TeaModel {
     }
     public Input getInput() {
         return this.input;
-    }
-
-    public UpdateTriggerRequest setNotification(UpdateTriggerRequestNotification notification) {
-        this.notification = notification;
-        return this;
-    }
-    public UpdateTriggerRequestNotification getNotification() {
-        return this.notification;
     }
 
     public UpdateTriggerRequest setProjectName(String projectName) {
@@ -101,36 +90,6 @@ public class UpdateTriggerRequest extends TeaModel {
         }
         public java.util.List<String> getParameters() {
             return this.parameters;
-        }
-
-    }
-
-    public static class UpdateTriggerRequestNotification extends TeaModel {
-        @NameInMap("Endpoint")
-        public String endpoint;
-
-        @NameInMap("Topic")
-        public String topic;
-
-        public static UpdateTriggerRequestNotification build(java.util.Map<String, ?> map) throws Exception {
-            UpdateTriggerRequestNotification self = new UpdateTriggerRequestNotification();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateTriggerRequestNotification setEndpoint(String endpoint) {
-            this.endpoint = endpoint;
-            return this;
-        }
-        public String getEndpoint() {
-            return this.endpoint;
-        }
-
-        public UpdateTriggerRequestNotification setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
     }

@@ -19,9 +19,6 @@ public class CreateArchiveFileInspectionTaskShrinkRequest extends TeaModel {
     @NameInMap("SourceURI")
     public String sourceURI;
 
-    @NameInMap("TargetURI")
-    public String targetURI;
-
     @NameInMap("UserData")
     public String userData;
 
@@ -68,14 +65,6 @@ public class CreateArchiveFileInspectionTaskShrinkRequest extends TeaModel {
     }
     public String getSourceURI() {
         return this.sourceURI;
-    }
-
-    public CreateArchiveFileInspectionTaskShrinkRequest setTargetURI(String targetURI) {
-        this.targetURI = targetURI;
-        return this;
-    }
-    public String getTargetURI() {
-        return this.targetURI;
     }
 
     public CreateArchiveFileInspectionTaskShrinkRequest setUserData(String userData) {

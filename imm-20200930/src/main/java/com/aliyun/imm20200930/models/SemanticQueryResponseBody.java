@@ -13,6 +13,9 @@ public class SemanticQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalHits")
+    public Long totalHits;
+
     public static SemanticQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SemanticQueryResponseBody self = new SemanticQueryResponseBody();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SemanticQueryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SemanticQueryResponseBody setTotalHits(Long totalHits) {
+        this.totalHits = totalHits;
+        return this;
+    }
+    public Long getTotalHits() {
+        return this.totalHits;
     }
 
 }

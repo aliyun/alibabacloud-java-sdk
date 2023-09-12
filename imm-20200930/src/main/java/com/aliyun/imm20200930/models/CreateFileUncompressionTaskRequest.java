@@ -22,8 +22,8 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
     @NameInMap("SourceURI")
     public String sourceURI;
 
-    @NameInMap("Target")
-    public CreateFileUncompressionTaskRequestTarget target;
+    @NameInMap("TargetURI")
+    public String targetURI;
 
     @NameInMap("UserData")
     public String userData;
@@ -81,12 +81,12 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
         return this.sourceURI;
     }
 
-    public CreateFileUncompressionTaskRequest setTarget(CreateFileUncompressionTaskRequestTarget target) {
-        this.target = target;
+    public CreateFileUncompressionTaskRequest setTargetURI(String targetURI) {
+        this.targetURI = targetURI;
         return this;
     }
-    public CreateFileUncompressionTaskRequestTarget getTarget() {
-        return this.target;
+    public String getTargetURI() {
+        return this.targetURI;
     }
 
     public CreateFileUncompressionTaskRequest setUserData(String userData) {
@@ -95,36 +95,6 @@ public class CreateFileUncompressionTaskRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
-    }
-
-    public static class CreateFileUncompressionTaskRequestTarget extends TeaModel {
-        @NameInMap("ManifestURI")
-        public String manifestURI;
-
-        @NameInMap("URI")
-        public String URI;
-
-        public static CreateFileUncompressionTaskRequestTarget build(java.util.Map<String, ?> map) throws Exception {
-            CreateFileUncompressionTaskRequestTarget self = new CreateFileUncompressionTaskRequestTarget();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateFileUncompressionTaskRequestTarget setManifestURI(String manifestURI) {
-            this.manifestURI = manifestURI;
-            return this;
-        }
-        public String getManifestURI() {
-            return this.manifestURI;
-        }
-
-        public CreateFileUncompressionTaskRequestTarget setURI(String URI) {
-            this.URI = URI;
-            return this;
-        }
-        public String getURI() {
-            return this.URI;
-        }
-
     }
 
 }

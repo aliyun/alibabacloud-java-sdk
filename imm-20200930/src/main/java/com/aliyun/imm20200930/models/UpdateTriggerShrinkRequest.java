@@ -13,9 +13,6 @@ public class UpdateTriggerShrinkRequest extends TeaModel {
     @NameInMap("Input")
     public String inputShrink;
 
-    @NameInMap("Notification")
-    public String notificationShrink;
-
     @NameInMap("ProjectName")
     public String projectName;
 
@@ -49,14 +46,6 @@ public class UpdateTriggerShrinkRequest extends TeaModel {
     }
     public String getInputShrink() {
         return this.inputShrink;
-    }
-
-    public UpdateTriggerShrinkRequest setNotificationShrink(String notificationShrink) {
-        this.notificationShrink = notificationShrink;
-        return this;
-    }
-    public String getNotificationShrink() {
-        return this.notificationShrink;
     }
 
     public UpdateTriggerShrinkRequest setProjectName(String projectName) {

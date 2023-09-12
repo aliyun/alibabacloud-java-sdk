@@ -4,9 +4,6 @@ package com.aliyun.imm20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteBindingRequest extends TeaModel {
-    @NameInMap("Cleanup")
-    public Boolean cleanup;
-
     @NameInMap("DatasetName")
     public String datasetName;
 
@@ -19,14 +16,6 @@ public class DeleteBindingRequest extends TeaModel {
     public static DeleteBindingRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBindingRequest self = new DeleteBindingRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteBindingRequest setCleanup(Boolean cleanup) {
-        this.cleanup = cleanup;
-        return this;
-    }
-    public Boolean getCleanup() {
-        return this.cleanup;
     }
 
     public DeleteBindingRequest setDatasetName(String datasetName) {

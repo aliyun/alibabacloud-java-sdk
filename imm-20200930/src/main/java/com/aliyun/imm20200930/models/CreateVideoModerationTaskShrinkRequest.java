@@ -22,9 +22,6 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
-    @NameInMap("Reviewer")
-    public String reviewer;
-
     @NameInMap("Scenes")
     public String scenesShrink;
 
@@ -80,14 +77,6 @@ public class CreateVideoModerationTaskShrinkRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
-    }
-
-    public CreateVideoModerationTaskShrinkRequest setReviewer(String reviewer) {
-        this.reviewer = reviewer;
-        return this;
-    }
-    public String getReviewer() {
-        return this.reviewer;
     }
 
     public CreateVideoModerationTaskShrinkRequest setScenesShrink(String scenesShrink) {

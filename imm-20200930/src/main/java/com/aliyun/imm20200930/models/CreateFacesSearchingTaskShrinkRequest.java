@@ -8,7 +8,7 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     public String datasetName;
 
     @NameInMap("MaxResult")
-    public String maxResult;
+    public Long maxResult;
 
     @NameInMap("Notification")
     public String notificationShrink;
@@ -18,9 +18,6 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
 
     @NameInMap("Sources")
     public String sourcesShrink;
-
-    @NameInMap("TopK")
-    public Long topK;
 
     @NameInMap("UserData")
     public String userData;
@@ -38,11 +35,11 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public CreateFacesSearchingTaskShrinkRequest setMaxResult(String maxResult) {
+    public CreateFacesSearchingTaskShrinkRequest setMaxResult(Long maxResult) {
         this.maxResult = maxResult;
         return this;
     }
-    public String getMaxResult() {
+    public Long getMaxResult() {
         return this.maxResult;
     }
 
@@ -68,14 +65,6 @@ public class CreateFacesSearchingTaskShrinkRequest extends TeaModel {
     }
     public String getSourcesShrink() {
         return this.sourcesShrink;
-    }
-
-    public CreateFacesSearchingTaskShrinkRequest setTopK(Long topK) {
-        this.topK = topK;
-        return this;
-    }
-    public Long getTopK() {
-        return this.topK;
     }
 
     public CreateFacesSearchingTaskShrinkRequest setUserData(String userData) {

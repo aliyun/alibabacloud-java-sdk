@@ -13,6 +13,9 @@ public class FuzzyQueryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalHits")
+    public Long totalHits;
+
     public static FuzzyQueryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         FuzzyQueryResponseBody self = new FuzzyQueryResponseBody();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class FuzzyQueryResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public FuzzyQueryResponseBody setTotalHits(Long totalHits) {
+        this.totalHits = totalHits;
+        return this;
+    }
+    public Long getTotalHits() {
+        return this.totalHits;
     }
 
 }
