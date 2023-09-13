@@ -30,6 +30,9 @@ public class ExportNacosConfigRequest extends TeaModel {
     @NameInMap("DataId")
     public String dataId;
 
+    /**
+     * <p>The configuration group name and the ID of the data that you want to export. Separate multiple configurations with comma (,).</p>
+     */
     @NameInMap("DataIds")
     public String dataIds;
 

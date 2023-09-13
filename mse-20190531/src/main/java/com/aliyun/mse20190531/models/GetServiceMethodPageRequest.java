@@ -22,6 +22,9 @@ public class GetServiceMethodPageRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -97,6 +100,14 @@ public class GetServiceMethodPageRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public GetServiceMethodPageRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public GetServiceMethodPageRequest setPageNumber(Integer pageNumber) {
