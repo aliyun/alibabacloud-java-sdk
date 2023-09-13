@@ -31,6 +31,9 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     @NameInMap("Receivers")
     public Integer receivers;
 
+    @NameInMap("RemainFreeQuota")
+    public Integer remainFreeQuota;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -127,6 +130,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     }
     public Integer getReceivers() {
         return this.receivers;
+    }
+
+    public DescAccountSummaryResponseBody setRemainFreeQuota(Integer remainFreeQuota) {
+        this.remainFreeQuota = remainFreeQuota;
+        return this;
+    }
+    public Integer getRemainFreeQuota() {
+        return this.remainFreeQuota;
     }
 
     public DescAccountSummaryResponseBody setRequestId(String requestId) {

@@ -7,11 +7,17 @@ public class ModifyPWByDomainRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Password")
     public String password;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
     @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
+    public Long resourceOwnerId;
 
     public static ModifyPWByDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPWByDomainRequest self = new ModifyPWByDomainRequest();
@@ -26,6 +32,14 @@ public class ModifyPWByDomainRequest extends TeaModel {
         return this.domainName;
     }
 
+    public ModifyPWByDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ModifyPWByDomainRequest setPassword(String password) {
         this.password = password;
         return this;
@@ -34,11 +48,19 @@ public class ModifyPWByDomainRequest extends TeaModel {
         return this.password;
     }
 
-    public ModifyPWByDomainRequest setResourceOwnerId(String resourceOwnerId) {
+    public ModifyPWByDomainRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyPWByDomainRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
