@@ -3,19 +3,16 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteReceiverResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
+public class DeleteInvalidAddressResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeleteReceiverResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteReceiverResponseBody self = new DeleteReceiverResponseBody();
+    public static DeleteInvalidAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteInvalidAddressResponseBody self = new DeleteInvalidAddressResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteReceiverResponseBody setRequestId(String requestId) {
+    public DeleteInvalidAddressResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

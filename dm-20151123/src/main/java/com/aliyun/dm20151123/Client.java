@@ -488,6 +488,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteDomainWithOptions(request, runtime);
     }
 
+    public DeleteInvalidAddressResponse deleteInvalidAddressWithOptions(DeleteInvalidAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toAddress)) {
+            query.put("ToAddress", request.toAddress);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInvalidAddress"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInvalidAddressResponse());
+    }
+
+    public DeleteInvalidAddressResponse deleteInvalidAddress(DeleteInvalidAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteInvalidAddressWithOptions(request, runtime);
+    }
+
     public DeleteIpfilterByEdmIdResponse deleteIpfilterByEdmIdWithOptions(DeleteIpfilterByEdmIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1055,8 +1096,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DomainName", request.domainName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.password)) {
             query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {

@@ -3,7 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateMailAddressMsgCallBackUrlResponse extends TeaModel {
+public class DeleteInvalidAddressResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class UpdateMailAddressMsgCallBackUrlResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateMailAddressMsgCallBackUrlResponseBody body;
+    public DeleteInvalidAddressResponseBody body;
 
-    public static UpdateMailAddressMsgCallBackUrlResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateMailAddressMsgCallBackUrlResponse self = new UpdateMailAddressMsgCallBackUrlResponse();
+    public static DeleteInvalidAddressResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteInvalidAddressResponse self = new DeleteInvalidAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMailAddressMsgCallBackUrlResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteInvalidAddressResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class UpdateMailAddressMsgCallBackUrlResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateMailAddressMsgCallBackUrlResponse setStatusCode(Integer statusCode) {
+    public DeleteInvalidAddressResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class UpdateMailAddressMsgCallBackUrlResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public UpdateMailAddressMsgCallBackUrlResponse setBody(UpdateMailAddressMsgCallBackUrlResponseBody body) {
+    public DeleteInvalidAddressResponse setBody(DeleteInvalidAddressResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateMailAddressMsgCallBackUrlResponseBody getBody() {
+    public DeleteInvalidAddressResponseBody getBody() {
         return this.body;
     }
 

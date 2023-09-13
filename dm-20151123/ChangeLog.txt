@@ -1,3 +1,6 @@
+2023-09-13 Version: 1.0.5
+- Generated java 2015-11-23 for Dm.
+
 2022-09-29 Version: 1.0.4
 - Automatically generate sdk tasks.
 

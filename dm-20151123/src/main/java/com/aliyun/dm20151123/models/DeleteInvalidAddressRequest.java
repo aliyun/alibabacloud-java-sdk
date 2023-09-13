@@ -3,7 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteTagRequest extends TeaModel {
+public class DeleteInvalidAddressRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -13,18 +13,15 @@ public class DeleteTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The ID of the tag.</p>
-     */
-    @NameInMap("TagId")
-    public Integer tagId;
+    @NameInMap("ToAddress")
+    public String toAddress;
 
-    public static DeleteTagRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteTagRequest self = new DeleteTagRequest();
+    public static DeleteInvalidAddressRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteInvalidAddressRequest self = new DeleteInvalidAddressRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTagRequest setOwnerId(Long ownerId) {
+    public DeleteInvalidAddressRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -32,7 +29,7 @@ public class DeleteTagRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DeleteTagRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public DeleteInvalidAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -40,7 +37,7 @@ public class DeleteTagRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DeleteTagRequest setResourceOwnerId(Long resourceOwnerId) {
+    public DeleteInvalidAddressRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -48,12 +45,12 @@ public class DeleteTagRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DeleteTagRequest setTagId(Integer tagId) {
-        this.tagId = tagId;
+    public DeleteInvalidAddressRequest setToAddress(String toAddress) {
+        this.toAddress = toAddress;
         return this;
     }
-    public Integer getTagId() {
-        return this.tagId;
+    public String getToAddress() {
+        return this.toAddress;
     }
 
 }
