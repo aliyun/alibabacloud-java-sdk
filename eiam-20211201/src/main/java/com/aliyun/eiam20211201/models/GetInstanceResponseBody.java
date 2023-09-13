@@ -76,6 +76,59 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceResponseBodyInstanceDomainConfig extends TeaModel {
+        /**
+         * <p>The default domain of the instance.</p>
+         */
+        @NameInMap("DefaultDomain")
+        public String defaultDomain;
+
+        /**
+         * <p>The init domain of the instance.</p>
+         */
+        @NameInMap("InitDomain")
+        public String initDomain;
+
+        /**
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
+        @NameInMap("InitDomainAutoRedirectStatus")
+        public String initDomainAutoRedirectStatus;
+
+        public static GetInstanceResponseBodyInstanceDomainConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyInstanceDomainConfig self = new GetInstanceResponseBodyInstanceDomainConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyInstanceDomainConfig setDefaultDomain(String defaultDomain) {
+            this.defaultDomain = defaultDomain;
+            return this;
+        }
+        public String getDefaultDomain() {
+            return this.defaultDomain;
+        }
+
+        public GetInstanceResponseBodyInstanceDomainConfig setInitDomain(String initDomain) {
+            this.initDomain = initDomain;
+            return this;
+        }
+        public String getInitDomain() {
+            return this.initDomain;
+        }
+
+        public GetInstanceResponseBodyInstanceDomainConfig setInitDomainAutoRedirectStatus(String initDomainAutoRedirectStatus) {
+            this.initDomainAutoRedirectStatus = initDomainAutoRedirectStatus;
+            return this;
+        }
+        public String getInitDomainAutoRedirectStatus() {
+            return this.initDomainAutoRedirectStatus;
+        }
+
+    }
+
     public static class GetInstanceResponseBodyInstance extends TeaModel {
         /**
          * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -94,6 +147,12 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         @NameInMap("Description")
         public String description;
+
+        /**
+         * <p>The default domain of the instance.</p>
+         */
+        @NameInMap("DomainConfig")
+        public GetInstanceResponseBodyInstanceDomainConfig domainConfig;
 
         /**
          * <p>The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.</p>
@@ -143,6 +202,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetInstanceResponseBodyInstance setDomainConfig(GetInstanceResponseBodyInstanceDomainConfig domainConfig) {
+            this.domainConfig = domainConfig;
+            return this;
+        }
+        public GetInstanceResponseBodyInstanceDomainConfig getDomainConfig() {
+            return this.domainConfig;
         }
 
         public GetInstanceResponseBodyInstance setEgressAddresses(java.util.List<String> egressAddresses) {
