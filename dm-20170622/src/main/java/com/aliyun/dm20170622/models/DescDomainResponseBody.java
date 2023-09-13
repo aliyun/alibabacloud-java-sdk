@@ -19,6 +19,15 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DefaultDomain")
     public String defaultDomain;
 
+    @NameInMap("DkimAuthStatus")
+    public String dkimAuthStatus;
+
+    @NameInMap("DkimPublicKey")
+    public String dkimPublicKey;
+
+    @NameInMap("DkimRR")
+    public String dkimRR;
+
     @NameInMap("DnsMx")
     public String dnsMx;
 
@@ -40,6 +49,9 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DomainType")
     public String domainType;
 
+    @NameInMap("HostRecord")
+    public String hostRecord;
+
     @NameInMap("IcpStatus")
     public String icpStatus;
 
@@ -57,6 +69,9 @@ public class DescDomainResponseBody extends TeaModel {
 
     @NameInMap("SpfRecord")
     public String spfRecord;
+
+    @NameInMap("SpfRecordV2")
+    public String spfRecordV2;
 
     @NameInMap("TlDomainName")
     public String tlDomainName;
@@ -107,6 +122,30 @@ public class DescDomainResponseBody extends TeaModel {
     }
     public String getDefaultDomain() {
         return this.defaultDomain;
+    }
+
+    public DescDomainResponseBody setDkimAuthStatus(String dkimAuthStatus) {
+        this.dkimAuthStatus = dkimAuthStatus;
+        return this;
+    }
+    public String getDkimAuthStatus() {
+        return this.dkimAuthStatus;
+    }
+
+    public DescDomainResponseBody setDkimPublicKey(String dkimPublicKey) {
+        this.dkimPublicKey = dkimPublicKey;
+        return this;
+    }
+    public String getDkimPublicKey() {
+        return this.dkimPublicKey;
+    }
+
+    public DescDomainResponseBody setDkimRR(String dkimRR) {
+        this.dkimRR = dkimRR;
+        return this;
+    }
+    public String getDkimRR() {
+        return this.dkimRR;
     }
 
     public DescDomainResponseBody setDnsMx(String dnsMx) {
@@ -165,6 +204,14 @@ public class DescDomainResponseBody extends TeaModel {
         return this.domainType;
     }
 
+    public DescDomainResponseBody setHostRecord(String hostRecord) {
+        this.hostRecord = hostRecord;
+        return this;
+    }
+    public String getHostRecord() {
+        return this.hostRecord;
+    }
+
     public DescDomainResponseBody setIcpStatus(String icpStatus) {
         this.icpStatus = icpStatus;
         return this;
@@ -211,6 +258,14 @@ public class DescDomainResponseBody extends TeaModel {
     }
     public String getSpfRecord() {
         return this.spfRecord;
+    }
+
+    public DescDomainResponseBody setSpfRecordV2(String spfRecordV2) {
+        this.spfRecordV2 = spfRecordV2;
+        return this;
+    }
+    public String getSpfRecordV2() {
+        return this.spfRecordV2;
     }
 
     public DescDomainResponseBody setTlDomainName(String tlDomainName) {
