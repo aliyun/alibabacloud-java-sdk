@@ -10,6 +10,9 @@ public class GetServiceListPageRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("AppName")
+    public String appName;
+
     @NameInMap("Ip")
     public String ip;
 
@@ -50,6 +53,14 @@ public class GetServiceListPageRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetServiceListPageRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public GetServiceListPageRequest setIp(String ip) {

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mse20190531</artifactId>
-  <version>6.1.0</version>
+  <version>6.1.1</version>
   <packaging>jar</packaging>
   <name>mse20190531</name>
   <description>Alibaba Cloud Microservice Engine (20190531) SDK for Java

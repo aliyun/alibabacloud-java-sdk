@@ -21,9 +21,20 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetApplicationInstanceListResponseBodyDataResultTags extends TeaModel {
+        @NameInMap("Tag")
+        public String tag;
+
         public static GetApplicationInstanceListResponseBodyDataResultTags build(java.util.Map<String, ?> map) throws Exception {
             GetApplicationInstanceListResponseBodyDataResultTags self = new GetApplicationInstanceListResponseBodyDataResultTags();
             return TeaModel.build(map, self);
+        }
+
+        public GetApplicationInstanceListResponseBodyDataResultTags setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
         }
 
     }
