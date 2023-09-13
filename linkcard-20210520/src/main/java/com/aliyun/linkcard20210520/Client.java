@@ -800,6 +800,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Msisdn", request.msisdn);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.notifyId)) {
             query.put("NotifyId", request.notifyId);
         }
@@ -1124,6 +1128,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeSingleCardResponse resumeSingleCard(ResumeSingleCardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeSingleCardWithOptions(request, runtime);
+    }
+
+    public SendMessageResponse sendMessageWithOptions(SendMessageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SendMessageShrinkRequest request = new SendMessageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.msisdns)) {
+            request.msisdnsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.msisdns, "Msisdns", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiProduct)) {
+            body.put("ApiProduct", request.apiProduct);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageSendTime)) {
+            body.put("MessageSendTime", request.messageSendTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageTemplateId)) {
+            body.put("MessageTemplateId", request.messageTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageVariableParam)) {
+            body.put("MessageVariableParam", request.messageVariableParam);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.msisdnsShrink)) {
+            body.put("Msisdns", request.msisdnsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            body.put("TaskName", request.taskName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendMessage"),
+            new TeaPair("version", "2021-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendMessageResponse());
+    }
+
+    public SendMessageResponse sendMessage(SendMessageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendMessageWithOptions(request, runtime);
     }
 
     public SetCardStopRuleResponse setCardStopRuleWithOptions(SetCardStopRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
