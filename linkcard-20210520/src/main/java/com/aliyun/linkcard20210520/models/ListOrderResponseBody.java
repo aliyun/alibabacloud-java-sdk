@@ -178,6 +178,9 @@ public class ListOrderResponseBody extends TeaModel {
         @NameInMap("FunctionFee")
         public Integer functionFee;
 
+        @NameInMap("NetworkType")
+        public String networkType;
+
         @NameInMap("OrderDetailUrl")
         public String orderDetailUrl;
 
@@ -321,6 +324,14 @@ public class ListOrderResponseBody extends TeaModel {
         }
         public Integer getFunctionFee() {
             return this.functionFee;
+        }
+
+        public ListOrderResponseBodyDataList setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public ListOrderResponseBodyDataList setOrderDetailUrl(String orderDetailUrl) {

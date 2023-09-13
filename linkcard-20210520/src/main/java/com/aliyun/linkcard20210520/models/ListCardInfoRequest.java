@@ -61,6 +61,9 @@ public class ListCardInfoRequest extends TeaModel {
     @NameInMap("Msisdn")
     public String msisdn;
 
+    @NameInMap("NetworkType")
+    public String networkType;
+
     @NameInMap("NotifyId")
     public String notifyId;
 
@@ -246,6 +249,14 @@ public class ListCardInfoRequest extends TeaModel {
     }
     public String getMsisdn() {
         return this.msisdn;
+    }
+
+    public ListCardInfoRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public ListCardInfoRequest setNotifyId(String notifyId) {

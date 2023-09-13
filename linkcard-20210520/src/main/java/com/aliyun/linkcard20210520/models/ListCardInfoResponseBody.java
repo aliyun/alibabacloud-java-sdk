@@ -148,6 +148,9 @@ public class ListCardInfoResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("FlowLatestModifiedTime")
+        public String flowLatestModifiedTime;
+
         @NameInMap("Iccid")
         public String iccid;
 
@@ -159,6 +162,9 @@ public class ListCardInfoResponseBody extends TeaModel {
 
         @NameInMap("Msisdn")
         public java.util.List<String> msisdn;
+
+        @NameInMap("NetworkType")
+        public String networkType;
 
         @NameInMap("NotifyId")
         public String notifyId;
@@ -319,6 +325,14 @@ public class ListCardInfoResponseBody extends TeaModel {
             return this.expireTime;
         }
 
+        public ListCardInfoResponseBodyDataList setFlowLatestModifiedTime(String flowLatestModifiedTime) {
+            this.flowLatestModifiedTime = flowLatestModifiedTime;
+            return this;
+        }
+        public String getFlowLatestModifiedTime() {
+            return this.flowLatestModifiedTime;
+        }
+
         public ListCardInfoResponseBodyDataList setIccid(String iccid) {
             this.iccid = iccid;
             return this;
@@ -349,6 +363,14 @@ public class ListCardInfoResponseBody extends TeaModel {
         }
         public java.util.List<String> getMsisdn() {
             return this.msisdn;
+        }
+
+        public ListCardInfoResponseBodyDataList setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public ListCardInfoResponseBodyDataList setNotifyId(String notifyId) {
