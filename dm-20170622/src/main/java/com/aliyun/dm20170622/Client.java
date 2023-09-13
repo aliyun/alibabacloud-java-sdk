@@ -868,6 +868,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getAccountListWithOptions(request, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request GetMailAddressMsgCallBackUrlRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return GetMailAddressMsgCallBackUrlResponse
+     */
+    // Deprecated
     public GetMailAddressMsgCallBackUrlResponse getMailAddressMsgCallBackUrlWithOptions(GetMailAddressMsgCallBackUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -904,6 +912,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetMailAddressMsgCallBackUrlResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request GetMailAddressMsgCallBackUrlRequest
+      * @return GetMailAddressMsgCallBackUrlResponse
+     */
+    // Deprecated
     public GetMailAddressMsgCallBackUrlResponse getMailAddressMsgCallBackUrl(GetMailAddressMsgCallBackUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMailAddressMsgCallBackUrlWithOptions(request, runtime);

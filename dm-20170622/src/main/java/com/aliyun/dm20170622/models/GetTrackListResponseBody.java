@@ -88,53 +88,53 @@ public class GetTrackListResponseBody extends TeaModel {
 
     public static class GetTrackListResponseBodyDataStat extends TeaModel {
         @NameInMap("CreateTime")
-        public String createTime;
+        public Long createTime;
 
         @NameInMap("RcptClickCount")
-        public String rcptClickCount;
+        public Long rcptClickCount;
 
         @NameInMap("RcptClickRate")
         public String rcptClickRate;
 
         @NameInMap("RcptOpenCount")
-        public String rcptOpenCount;
+        public Long rcptOpenCount;
 
         @NameInMap("RcptOpenRate")
         public String rcptOpenRate;
 
         @NameInMap("RcptUniqueClickCount")
-        public String rcptUniqueClickCount;
+        public Long rcptUniqueClickCount;
 
         @NameInMap("RcptUniqueClickRate")
         public String rcptUniqueClickRate;
 
         @NameInMap("RcptUniqueOpenCount")
-        public String rcptUniqueOpenCount;
+        public Long rcptUniqueOpenCount;
 
         @NameInMap("RcptUniqueOpenRate")
         public String rcptUniqueOpenRate;
 
         @NameInMap("TotalNumber")
-        public String totalNumber;
+        public Long totalNumber;
 
         public static GetTrackListResponseBodyDataStat build(java.util.Map<String, ?> map) throws Exception {
             GetTrackListResponseBodyDataStat self = new GetTrackListResponseBodyDataStat();
             return TeaModel.build(map, self);
         }
 
-        public GetTrackListResponseBodyDataStat setCreateTime(String createTime) {
+        public GetTrackListResponseBodyDataStat setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
-        public String getCreateTime() {
+        public Long getCreateTime() {
             return this.createTime;
         }
 
-        public GetTrackListResponseBodyDataStat setRcptClickCount(String rcptClickCount) {
+        public GetTrackListResponseBodyDataStat setRcptClickCount(Long rcptClickCount) {
             this.rcptClickCount = rcptClickCount;
             return this;
         }
-        public String getRcptClickCount() {
+        public Long getRcptClickCount() {
             return this.rcptClickCount;
         }
 
@@ -146,11 +146,11 @@ public class GetTrackListResponseBody extends TeaModel {
             return this.rcptClickRate;
         }
 
-        public GetTrackListResponseBodyDataStat setRcptOpenCount(String rcptOpenCount) {
+        public GetTrackListResponseBodyDataStat setRcptOpenCount(Long rcptOpenCount) {
             this.rcptOpenCount = rcptOpenCount;
             return this;
         }
-        public String getRcptOpenCount() {
+        public Long getRcptOpenCount() {
             return this.rcptOpenCount;
         }
 
@@ -162,11 +162,11 @@ public class GetTrackListResponseBody extends TeaModel {
             return this.rcptOpenRate;
         }
 
-        public GetTrackListResponseBodyDataStat setRcptUniqueClickCount(String rcptUniqueClickCount) {
+        public GetTrackListResponseBodyDataStat setRcptUniqueClickCount(Long rcptUniqueClickCount) {
             this.rcptUniqueClickCount = rcptUniqueClickCount;
             return this;
         }
-        public String getRcptUniqueClickCount() {
+        public Long getRcptUniqueClickCount() {
             return this.rcptUniqueClickCount;
         }
 
@@ -178,11 +178,11 @@ public class GetTrackListResponseBody extends TeaModel {
             return this.rcptUniqueClickRate;
         }
 
-        public GetTrackListResponseBodyDataStat setRcptUniqueOpenCount(String rcptUniqueOpenCount) {
+        public GetTrackListResponseBodyDataStat setRcptUniqueOpenCount(Long rcptUniqueOpenCount) {
             this.rcptUniqueOpenCount = rcptUniqueOpenCount;
             return this;
         }
-        public String getRcptUniqueOpenCount() {
+        public Long getRcptUniqueOpenCount() {
             return this.rcptUniqueOpenCount;
         }
 
@@ -194,11 +194,11 @@ public class GetTrackListResponseBody extends TeaModel {
             return this.rcptUniqueOpenRate;
         }
 
-        public GetTrackListResponseBodyDataStat setTotalNumber(String totalNumber) {
+        public GetTrackListResponseBodyDataStat setTotalNumber(Long totalNumber) {
             this.totalNumber = totalNumber;
             return this;
         }
-        public String getTotalNumber() {
+        public Long getTotalNumber() {
             return this.totalNumber;
         }
 
