@@ -38,6 +38,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("AlertName")
     public String alertName;
 
+    @NameInMap("AlertPiplines")
+    public String alertPiplines;
+
     /**
      * <p>The content of the Application Monitoring or Browser Monitoring alert rule. The following code provides an example of the **AlertRuleContent** parameter. For more information about the meaning of each field, see the supplementary description.</p>
      * <br>
@@ -109,6 +112,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("DataConfig")
+    public String dataConfig;
+
     /**
      * <p>The duration of the Prometheus alert rule. Unit: minutes.</p>
      */
@@ -175,6 +181,9 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
      */
     @NameInMap("MetricsType")
     public String metricsType;
+
+    @NameInMap("Notice")
+    public String notice;
 
     /**
      * <p>The notification policy.</p>
@@ -243,6 +252,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
         return this.alertName;
     }
 
+    public CreateOrUpdateAlertRuleRequest setAlertPiplines(String alertPiplines) {
+        this.alertPiplines = alertPiplines;
+        return this;
+    }
+    public String getAlertPiplines() {
+        return this.alertPiplines;
+    }
+
     public CreateOrUpdateAlertRuleRequest setAlertRuleContent(String alertRuleContent) {
         this.alertRuleContent = alertRuleContent;
         return this;
@@ -289,6 +306,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public CreateOrUpdateAlertRuleRequest setDataConfig(String dataConfig) {
+        this.dataConfig = dataConfig;
+        return this;
+    }
+    public String getDataConfig() {
+        return this.dataConfig;
     }
 
     public CreateOrUpdateAlertRuleRequest setDuration(Long duration) {
@@ -353,6 +378,14 @@ public class CreateOrUpdateAlertRuleRequest extends TeaModel {
     }
     public String getMetricsType() {
         return this.metricsType;
+    }
+
+    public CreateOrUpdateAlertRuleRequest setNotice(String notice) {
+        this.notice = notice;
+        return this;
+    }
+    public String getNotice() {
+        return this.notice;
     }
 
     public CreateOrUpdateAlertRuleRequest setNotifyStrategy(String notifyStrategy) {

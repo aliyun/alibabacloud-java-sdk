@@ -902,6 +902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AlertName", request.alertName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.alertPiplines)) {
+            body.put("AlertPiplines", request.alertPiplines);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alertRuleContent)) {
             body.put("AlertRuleContent", request.alertRuleContent);
         }
@@ -924,6 +928,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             body.put("ClusterId", request.clusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataConfig)) {
+            body.put("DataConfig", request.dataConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
@@ -956,6 +964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.metricsType)) {
             body.put("MetricsType", request.metricsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notice)) {
+            body.put("Notice", request.notice);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyStrategy)) {
