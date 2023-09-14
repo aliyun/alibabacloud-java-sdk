@@ -48,10 +48,8 @@ public class UpdateEndpointGroupRequest extends TeaModel {
      * <p>*   **HTTP**</p>
      * <p>*   **HTTPS**</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</p>
-     * <p>*   For an HTTP listener, the backend service protocol must be HTTP.</p>
+     * <p>> *   You can set this parameter only when the listener that is associated with the endpoint group uses the HTTP or HTTPS protocol.</p>
+     * <p>> *   For an HTTP listener, the backend service protocol must be HTTP.</p>
      */
     @NameInMap("EndpointRequestProtocol")
     public String endpointRequestProtocol;
@@ -285,6 +283,9 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("SubAddress")
+        public String subAddress;
+
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
@@ -296,11 +297,9 @@ public class UpdateEndpointGroupRequest extends TeaModel {
          * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
          * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
-         * <p>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
-         * <p>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
+         * <p>> *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
+         * <p>> *   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
+         * <p>> *   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
          * <br>
          * <p>For more information, see [Service-linked roles](~~178360~~).</p>
          */
@@ -346,6 +345,14 @@ public class UpdateEndpointGroupRequest extends TeaModel {
             return this.endpoint;
         }
 
+        public UpdateEndpointGroupRequestEndpointConfigurations setSubAddress(String subAddress) {
+            this.subAddress = subAddress;
+            return this;
+        }
+        public String getSubAddress() {
+            return this.subAddress;
+        }
+
         public UpdateEndpointGroupRequestEndpointConfigurations setType(String type) {
             this.type = type;
             return this;
@@ -374,10 +381,8 @@ public class UpdateEndpointGroupRequest extends TeaModel {
         /**
          * <p>The listener port that is mapped to the endpoint port.</p>
          * <br>
-         * <p>> </p>
-         * <br>
-         * <p>*   Only HTTP and HTTPS listeners support port mappings.</p>
-         * <p>*   The listener port in a port mapping must be the one used by the current listener.</p>
+         * <p>> *   Only HTTP and HTTPS listeners support port mappings.</p>
+         * <p>> *   The listener port in a port mapping must be the one used by the current listener.</p>
          */
         @NameInMap("ListenerPort")
         public Integer listenerPort;

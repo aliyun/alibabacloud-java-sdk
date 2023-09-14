@@ -4,18 +4,43 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceManagedControlRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The region ID of the GA instance. Set the value to cn-hangzhou.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource whose control mode you want to change.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource whose control mode you want to change. Valid value:</p>
+     * <br>
+     * <p>*   **Accelerator**: standard GA instance.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Specifies the control mode of the resource. Valid value:</p>
+     * <br>
+     * <p>*   false: changes the control mode of the resource from managed mode to unmanaged mode.</p>
+     * <br>
+     * <p>>  You can change the control mode only from managed mode to unmanaged mode.</p>
+     */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 

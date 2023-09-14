@@ -116,6 +116,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
 
+        @NameInMap("SubAddress")
+        public String subAddress;
+
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
@@ -179,6 +182,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public String getProbeProtocol() {
             return this.probeProtocol;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setSubAddress(String subAddress) {
+            this.subAddress = subAddress;
+            return this;
+        }
+        public String getSubAddress() {
+            return this.subAddress;
         }
 
         public ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations setType(String type) {

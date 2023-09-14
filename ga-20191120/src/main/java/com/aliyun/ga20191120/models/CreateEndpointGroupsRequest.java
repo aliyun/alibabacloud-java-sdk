@@ -113,6 +113,9 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("SubAddress")
+        public String subAddress;
+
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
@@ -163,6 +166,14 @@ public class CreateEndpointGroupsRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setSubAddress(String subAddress) {
+            this.subAddress = subAddress;
+            return this;
+        }
+        public String getSubAddress() {
+            return this.subAddress;
         }
 
         public CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations setType(String type) {

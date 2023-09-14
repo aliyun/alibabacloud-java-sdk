@@ -49,8 +49,7 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>The tags of the basic GA instance.</p>
-     * <p>You can specify at most 20 tags in each call.</p>
+     * <p>The tags of the GA instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListBasicAcceleratorsRequestTag> tag;
@@ -118,7 +117,7 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
 
     public static class ListBasicAcceleratorsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the basic GA resource. The tag key cannot be an empty string.</p>
+         * <p>The key of tag N of the basic GA instance. The tag key cannot be an empty string.</p>
          * <br>
          * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>
@@ -128,7 +127,7 @@ public class ListBasicAcceleratorsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the basic GA instance. The tag value cannot be an empty string.</p>
+         * <p>The value of tag N of the basic GA instance. The tag value can be an empty string.</p>
          * <br>
          * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>
