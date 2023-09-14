@@ -141,7 +141,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String deadline;
 
         /**
-         * <p>The ID of the precheck task.</p>
+         * <p>The task ID.</p>
          */
         @NameInMap("Id")
         public Integer id;
@@ -207,7 +207,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task status.</p>
          * <br>
          * <p>*   **3**: pending</p>
          * <p>*   **4**: being processed</p>
@@ -230,6 +230,9 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
         @NameInMap("SwitchTime")
         public String switchTime;
 
+        /**
+         * <p>The task parameters.</p>
+         */
         @NameInMap("TaskParams")
         public String taskParams;
 
@@ -239,7 +242,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
          * <p>*   **rds_apsaradb_ha**: primary/secondary switchover</p>
          * <p>*   **rds_apsaradb_transfer**: instance migration</p>
          * <p>*   **rds_apsaradb_upgrade**: update of the minor engine version</p>
-         * <p>*   **rds_apsaradb_maxscale**: update of the minor version of the proxy</p>
+         * <p>*   **rds_apsaradb_maxscale**: upgrade of the database proxy version</p>
          */
         @NameInMap("TaskType")
         public String taskType;

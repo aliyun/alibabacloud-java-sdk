@@ -59,7 +59,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
         public String diagnosticTime;
 
         /**
-         * <p>The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.</p>
+         * <p>The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.</p>
          */
         @NameInMap("DownloadURL")
         public String downloadURL;

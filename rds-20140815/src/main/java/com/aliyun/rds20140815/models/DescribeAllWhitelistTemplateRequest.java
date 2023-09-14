@@ -4,14 +4,32 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllWhitelistTemplateRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable fuzzy search. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("FuzzySearch")
     public Boolean fuzzySearch;
 
+    /**
+     * <p>The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.</p>
+     */
     @NameInMap("MaxRecordsPerPage")
     public Integer maxRecordsPerPage;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
+
+    /**
+     * <p>资源组ID。 关于资源组的更多信息，请参见什么是资源组。</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -19,6 +37,9 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The name of the IP whitelist template. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist template during the fuzzy search.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
@@ -49,6 +70,14 @@ public class DescribeAllWhitelistTemplateRequest extends TeaModel {
     }
     public Integer getPageNumbers() {
         return this.pageNumbers;
+    }
+
+    public DescribeAllWhitelistTemplateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeAllWhitelistTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {

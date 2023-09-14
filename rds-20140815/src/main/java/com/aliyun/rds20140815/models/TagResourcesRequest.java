@@ -14,7 +14,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the instances. You can specify up to 50 instance IDs.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -32,7 +32,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to be added to the resources. You can specify up to 20 tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -100,13 +100,13 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that you want to add to the instance. The value of this parameter cannot be an empty string.</p>
+         * <p>The key of the tag. You can create N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value that is associated with the specified tag key. This parameter can be an empty string.</p>
+         * <p>The value of the tag. You can create N tag values at a time. Valid values of N: **1** to **20**. The value of this parameter can be an empty string.</p>
          */
         @NameInMap("Value")
         public String value;

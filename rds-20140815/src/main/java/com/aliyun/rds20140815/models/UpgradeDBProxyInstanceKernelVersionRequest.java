@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
@@ -36,9 +36,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends TeaModel {
     /**
      * <p>The time when you want to upgrade the database proxy version of the instance. Valid values:</p>
      * <br>
-     * <p>*   **MaintainTime**: ApsaraDB RDS performs the upgrade during the maintenance window that you specified. This is the default value. For more information, see [Modify the maintenance window](~~26249~~).</p>
-     * <p>*   **Immediate**: ApsaraDB RDS immediately performs the upgrade.</p>
-     * <p>*   **SpecificTime**: ApsaraDB RDS performs the upgrade at a specified point in time.</p>
+     * <p>*   **MaintainTime** (default): performs the upgrade during the maintenance window that you specified. For more information, see [Modify the maintenance window](~~610402~~).</p>
+     * <p>*   **Immediate**: performs the upgrade immediately.</p>
+     * <p>*   **SpecificTime**: performs the upgrade at a specified point in time.</p>
      * <br>
      * <p>> </p>
      * <br>

@@ -4,8 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
+    /**
+     * <p>The name of the instance.</p>
+     */
     @NameInMap("InsName")
     public String insName;
+
+    /**
+     * <p>The ID of the resource group. For more information about resource groups, see Resource groups.</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,6 +22,9 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+     */
     @NameInMap("TemplateId")
     public Integer templateId;
 
@@ -27,6 +39,14 @@ public class AttachWhitelistTemplateToInstanceRequest extends TeaModel {
     }
     public String getInsName() {
         return this.insName;
+    }
+
+    public AttachWhitelistTemplateToInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public AttachWhitelistTemplateToInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {

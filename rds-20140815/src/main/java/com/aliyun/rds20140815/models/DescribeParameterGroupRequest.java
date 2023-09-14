@@ -8,13 +8,13 @@ public class DescribeParameterGroupRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the IDs of parameter templates.</p>
+     * <p>The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the parameter template ID.</p>
      */
     @NameInMap("ParameterGroupId")
     public String parameterGroupId;
 
     /**
-     * <p>The region ID of the parameter template. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

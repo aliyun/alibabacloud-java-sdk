@@ -5,17 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The endpoint of the instance.</p>
-     * <br>
-     * <p>> The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.</p>
+     * <p>The internal endpoint of the instance.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;
 
     /**
-     * <p>The ID of the instance If the value of the **Amount** parameter is greater than **1**, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).</p>
+     * <p>The instance ID. If the value of the **Amount** parameter is greater than **1**, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).</p>
      * <br>
-     * <p>For example, if the value of the **Amount** parameter is **3**, three instance IDs are returned. Example: `rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3`</p>
+     * <p>For example, if the value of the **Amount** parameter is **3**, three instance IDs are returned. Examples: `rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3`</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -33,9 +31,12 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * <p>Indicates whether the request passed the dry run. Valid values:</p>
      * <br>
      * <p>*   **true**</p>
-     * <p>*   **false** </p>
+     * <p>*   **false**</p>
+     * <br>
+     * <p>> </p>
      * <br>
      * <p>*   If the system does not perform a dry run, this parameter is not returned.</p>
+     * <br>
      * <p>*   If the request failed the dry run, an error message is returned.</p>
      */
     @NameInMap("DryRunResult")
@@ -50,15 +51,13 @@ public class CreateDBInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>The port that is used to connect to the instance.</p>
-     * <br>
-     * <p>> The **DBInstanceNetType** parameter indicates whether the port number is internal or public.</p>
+     * <p>The internal IP address and port number that are used to connect to the instance.</p>
      */
     @NameInMap("Port")
     public String port;
@@ -84,7 +83,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
      * <p>The ID of the task that is run to create multiple instances.</p>
      * <br>
      * <p>*   This parameter is returned only when the value of **Amount** is greater than 1.</p>
-     * <p>*   **TaskID** cannot be used to query a task.</p>
+     * <p>*   The **TaskID** parameter cannot be used to query a task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

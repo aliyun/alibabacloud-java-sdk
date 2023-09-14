@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -16,10 +16,10 @@ public class DescribePriceRequest extends TeaModel {
      * <p>*   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).</p>
      * <p>*   **rds**: The instance is a subscription primary instance. This is the default value. This value is available at the China site (aliyun.com).</p>
      * <p>*   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).</p>
-     * <p>*   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available on the China site (aliyun.com).</p>
-     * <p>*   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available on the International site (alibabacloud.com).</p>
-     * <p>*   **rds_intl**: The instance is a subscription primary instance. This value is available on the International site (alibabacloud.com).</p>
-     * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available on the International site (alibabacloud.com).</p>
+     * <p>*   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).</p>
+     * <p>*   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).</p>
+     * <p>*   **rds_intl**: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).</p>
+     * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).</p>
      * <p>*   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available on the International site (alibabacloud.com).</p>
      * <br>
      * <p>> If you want to query the price of a read-only instance, you must specify this parameter.</p>
@@ -36,7 +36,11 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The ID of the instance for which you want to change the specifications or the instance that you want to renew.</p>
      * <br>
-     * <p>> *   If you want to query the price of an specification change order or a renewal order, you must specify this parameter. - If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you want to query the price of an specification change order or a renewal order, you must specify this parameter.</p>
+     * <br>
+     * <p>*   If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -83,7 +87,7 @@ public class DescribePriceRequest extends TeaModel {
      * <br>
      * <p>*   Valid values when you set the Engine parameter to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**</p>
      * <p>*   Valid values when you set the Engine parameter to SQLServer: **2008r2**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**</p>
-     * <p>*   Valid values when you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
+     * <p>*   Valid values if you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**</p>
      * <p>*   Valid value when you set the Engine parameter to MariaDB: **10.3**</p>
      */
     @NameInMap("EngineVersion")
@@ -99,7 +103,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer instanceUsedType;
 
     /**
-     * <p>The type of the order. Valid values:</p>
+     * <p>The order type. Valid values:</p>
      * <br>
      * <p>*   **BUY**: purchase order</p>
      * <p>*   **UPGRADE**: specification change order</p>
@@ -130,7 +134,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -141,6 +145,11 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The settings of the serverless instance.</p>
+     * <br>
+     * <p>> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
+     */
     @NameInMap("ServerlessConfig")
     public DescribePriceRequestServerlessConfig serverlessConfig;
 
@@ -165,9 +174,9 @@ public class DescribePriceRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID of the primary instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.</p>
      * <br>
-     * <p>> This parameter is required to identify the zone for a vSwitch if you have specified the virtual private cloud (VPC) and the vSwitch.</p>
+     * <p>> If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -390,9 +399,15 @@ public class DescribePriceRequest extends TeaModel {
     }
 
     public static class DescribePriceRequestServerlessConfig extends TeaModel {
+        /**
+         * <p>The maximum number of RDS Capacity Units (RCUs).</p>
+         */
         @NameInMap("MaxCapacity")
         public Double maxCapacity;
 
+        /**
+         * <p>The minimum number of RCUs.</p>
+         */
         @NameInMap("MinCapacity")
         public Double minCapacity;
 

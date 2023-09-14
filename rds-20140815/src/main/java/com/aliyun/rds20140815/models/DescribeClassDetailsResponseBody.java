@@ -4,39 +4,94 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeClassDetailsResponseBody extends TeaModel {
+    /**
+     * <p>The RDS edition of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**: RDS Basic Edition</p>
+     * <p>*   **HighAvailability**: RDS High-availability Edition</p>
+     * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
+     * <p>*   **Finance**: RDS Enterprise Edition</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The code of the instance type.</p>
+     */
     @NameInMap("ClassCode")
     public String classCode;
 
+    /**
+     * <p>The instance family of the instance.</p>
+     */
     @NameInMap("ClassGroup")
     public String classGroup;
 
+    /**
+     * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
+     */
     @NameInMap("Cpu")
     public String cpu;
 
+    /**
+     * <p>The storage type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **local_ssd**: local SSDs</p>
+     * <p>*   **cloud_ssd**: standard SSDs</p>
+     * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
+     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
+     * <p>*   **cloud_essd3**: ESSD of PL3</p>
+     */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
 
+    /**
+     * <p>The architecture of the instance.</p>
+     */
     @NameInMap("InstructionSetArch")
     public String instructionSetArch;
 
+    /**
+     * <p>The maximum number of connections.</p>
+     */
     @NameInMap("MaxConnections")
     public String maxConnections;
 
+    /**
+     * <p>The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.</p>
+     */
     @NameInMap("MaxIOMBPS")
     public String maxIOMBPS;
 
+    /**
+     * <p>The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.</p>
+     */
     @NameInMap("MaxIOPS")
     public String maxIOPS;
 
+    /**
+     * <p>The memory size. Unit: GB.</p>
+     */
     @NameInMap("MemoryClass")
     public String memoryClass;
 
+    /**
+     * <p>The price.</p>
+     * <br>
+     * <p>Unit: cents (US dollars).</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.</p>
+     * <br>
+     * <p>*   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.</p>
+     */
     @NameInMap("ReferencePrice")
     public String referencePrice;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

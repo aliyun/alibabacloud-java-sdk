@@ -42,7 +42,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -66,7 +66,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>A deprecated parameter.</p>
+     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
      */
     @NameInMap("proxyId")
     public String proxyId;

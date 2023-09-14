@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
     /**
-     * <p>The error code returned.</p>
+     * <p>The response code returned.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The result data that is returned.</p>
+     * <p>The response result set.</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response code.</p>
      */
     @NameInMap("Message")
     public String message;
@@ -29,7 +29,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

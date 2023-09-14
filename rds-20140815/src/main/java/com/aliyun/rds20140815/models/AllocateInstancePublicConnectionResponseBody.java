@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The endpoint of the instance.</p>
+     * <p>The endpoint that is used to connect to the database instance.</p>
      */
     @NameInMap("ConnectionString")
     public String connectionString;

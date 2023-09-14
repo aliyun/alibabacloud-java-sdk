@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionInfosResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of regions.</p>
+     * <p>A list of regions.</p>
      */
     @NameInMap("Regions")
     public DescribeRegionInfosResponseBodyRegions regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DescribeRegionInfosResponseBody extends TeaModel {
 
     public static class DescribeRegionInfosResponseBodyRegionsRDSRegion extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;

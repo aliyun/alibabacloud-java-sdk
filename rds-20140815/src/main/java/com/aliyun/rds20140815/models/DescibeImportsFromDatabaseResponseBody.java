@@ -11,19 +11,19 @@ public class DescibeImportsFromDatabaseResponseBody extends TeaModel {
     public DescibeImportsFromDatabaseResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

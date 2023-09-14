@@ -4,6 +4,14 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
+    /**
+     * <p>The RDS edition of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**: RDS Basic Edition</p>
+     * <p>*   **HighAvailability**: RDS High-availability Edition</p>
+     * <p>*   **cluster**: RDS Cluster Edition</p>
+     * <p>*   **serverless_basic**: RDS Serverless Basic Edition</p>
+     */
     @NameInMap("Category")
     public String category;
 
@@ -37,7 +45,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -62,7 +70,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceType;
 
     /**
-     * <p>The ID of the dedicated cluster.</p>
+     * <p>The dedicated cluster ID.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -87,7 +95,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -102,7 +110,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String expired;
 
     /**
-     * <p>实例过滤条件参数及其值的JSON串</p>
+     * <p>The JSON string that consists of filter condition parameters and their values.</p>
      */
     @NameInMap("Filter")
     public String filter;
@@ -150,7 +158,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Valid values: any non-zero positive integer.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -175,7 +183,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -205,13 +213,13 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The vSwitch ID of the instance.</p>
+     * <p>The vSwitch ID.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The VPC ID of the instance.</p>
+     * <p>The VPC ID.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -223,7 +231,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The ID of the proxy mode.</p>
+     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
      */
     @NameInMap("proxyId")
     public String proxyId;

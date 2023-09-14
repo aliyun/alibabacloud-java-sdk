@@ -13,7 +13,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String babelfishPort;
 
     /**
-     * <p>The prefix of the public endpoint. A valid public endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.</p>
+     * <p>The prefix of the public endpoint. A valid public endpoint is in the following format: `Prefix.Database engine.rds.aliyuncs.com`. Example: `test1234.mysql.rds.aliyuncs.com`.</p>
      * <br>
      * <p>> The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ & \* = + | {} ; : \" " , <> / ?</p>
      */
@@ -21,13 +21,13 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.</p>
+     * <p>The name of the dedicated cluster to which the instance belongs. This parameter is available only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.</p>
      */
     @NameInMap("GeneralGroupName")
     public String generalGroupName;
@@ -38,6 +38,11 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The PgBouncer port.</p>
+     * <br>
+     * <p>> This parameter is available only for instances that run PostgreSQL.</p>
+     */
     @NameInMap("PGBouncerPort")
     public String PGBouncerPort;
 

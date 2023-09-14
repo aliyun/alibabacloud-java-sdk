@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetDBInstanceTopologyRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static GetDBInstanceTopologyRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDBInstanceTopologyRequest self = new GetDBInstanceTopologyRequest();
@@ -21,6 +27,22 @@ public class GetDBInstanceTopologyRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public GetDBInstanceTopologyRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetDBInstanceTopologyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

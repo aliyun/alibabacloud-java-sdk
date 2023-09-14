@@ -13,15 +13,15 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the destination instance. The value must be 2 to 256 characters in length. The value must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).</p>
+     * <p>The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      * <br>
-     * <p>> The value cannot start with http:// or https://.</p>
+     * <p>> : The name cannot start with http:// or https://.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the instance that you want to rebuild.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -36,14 +36,14 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public String DBInstanceNetType;
 
     /**
-     * <p>The network type of the destination instance. Valid values:</p>
+     * <p>The network type of the instance. Valid values:</p>
      * <br>
      * <p>*   **VPC**</p>
      * <p>*   **Classic**</p>
      * <br>
      * <p>Default value: Classic.</p>
      * <br>
-     * <p>> If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.</p>
+     * <p>> : If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -69,19 +69,19 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
      * <br>
-     * <p>> If you set PayType to **Prepaid**, you must also specify this parameter.</p>
+     * <p>> : If you set PayType to **Prepaid**, you must also specify this parameter.</p>
      */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can leave this parameter empty.</p>
+     * <p>The ID of the resource group. The value of this parameter can be NULL.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -93,10 +93,12 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
+     * <p>The IP address whitelist of the serverless instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:</p>
      * <br>
      * <p>*   IP addresses, such as 10.10.XX.XX.</p>
      * <p>*   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.</p>
+     * <br>
+     * <p>If this parameter is not specified, the default IP address whitelist is used.</p>
      */
     @NameInMap("SecurityIPList")
     public String securityIPList;
@@ -116,9 +118,9 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The VPC ID of the destination instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.</p>
+     * <p>The VPC ID of the instance. If you set **InstanceNetworkType** to **VPC**, you must specify this parameter.</p>
      * <br>
-     * <p>> If you specify this parameter, you must also specify **ZoneId**.</p>
+     * <p>> : If you specify this parameter, you must also specify **ZoneId**.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -130,7 +132,7 @@ public class CreateDBInstanceForRebuildRequest extends TeaModel {
      * <br>
      * <p>*   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.</p>
      * <br>
-     * <p>*   If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
+     * <p>*   If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

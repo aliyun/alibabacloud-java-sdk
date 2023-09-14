@@ -42,7 +42,7 @@ public class QueryNotifyRequest extends TeaModel {
      * <p>*   **true**</p>
      * <p>*   **false**</p>
      * <br>
-     * <p>    > A confirmed notification is a notification that has been marked as confirmed by calling the ConfirmNotify operation.</p>
+     * <p>> You can call the [ConfirmNotify](~~610444~~) operation to confirm notifications of an instance.</p>
      */
     @NameInMap("WithConfirmed")
     public Boolean withConfirmed;

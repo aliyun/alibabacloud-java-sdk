@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the instances.</p>
+     * <p>The details of the instances.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancesByExpireTimeResponseBodyItems items;
@@ -89,7 +89,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -101,9 +101,9 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         public String DBInstanceStatus;
 
         /**
-         * <p>The expiration date and time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
-         * <p>> Pay-as-you-go instances never expire.</p>
+         * <p>> : Pay-as-you-go instances never expire.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -124,8 +124,8 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Postpaid**: pay-as-you-go</p>
-         * <p>*   **Prepaid**: subscription</p>
+         * <p>*   **Postpaid**: pay-as-you-go.</p>
+         * <p>*   **Prepaid**: subscription.</p>
          */
         @NameInMap("PayType")
         public String payType;

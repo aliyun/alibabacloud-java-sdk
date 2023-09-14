@@ -4,8 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
+    /**
+     * <p>The instance name.</p>
+     */
     @NameInMap("InsName")
     public String insName;
+
+    /**
+     * <p>资源组ID，可以为空。</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -24,6 +33,14 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     }
     public String getInsName() {
         return this.insName;
+    }
+
+    public DescribeInstanceLinkedWhitelistTemplateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeInstanceLinkedWhitelistTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {

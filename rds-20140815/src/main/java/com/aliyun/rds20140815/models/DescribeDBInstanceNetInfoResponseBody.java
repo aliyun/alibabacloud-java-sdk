@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
-     * <p>Details of the endpoints of the instance.</p>
+     * <p>The information about the endpoints of the instance.</p>
      */
     @NameInMap("DBInstanceNetInfos")
     public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos DBInstanceNetInfos;
@@ -82,13 +82,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String availability;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The database engine of the instance. Valid values:</p>
+         * <p>The role of the instance. Valid values:</p>
          * <br>
          * <p>*   **Master**: primary instance</p>
          * <p>*   **Readonly**: read-only instance</p>
@@ -182,7 +182,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String securityIPGroupName;
 
         /**
-         * <p>The IP addresses contained in the IP address whitelist.</p>
+         * <p>The IP addresses that is contained in the IP address whitelist.</p>
          */
         @NameInMap("SecurityIPs")
         public String securityIPs;
@@ -239,22 +239,24 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String babelfishPort;
 
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The endpoints of the instance.</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
-         * <p>The type of the endpoint. Valid values:</p>
+         * <p>The types of the endpoints. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: regular endpoint</p>
-         * <p>*   **ReadWriteSplitting**: read/write splitting endpoint</p>
+         * <p>*   **Normal**: regular endpoints</p>
+         * <p>*   **ReadWriteSplitting**: read/write splitting endpoints</p>
          */
         @NameInMap("ConnectionStringType")
         public String connectionStringType;
 
         /**
-         * <p>Details of the weight. This parameter is returned only when the read/write splitting feature is enabled for the instance.</p>
+         * <p>The information about the instance weight.</p>
+         * <br>
+         * <p>> This parameter is returned only for instances that have read/write splitting endpoints.</p>
          */
         @NameInMap("DBInstanceWeights")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoDBInstanceWeights DBInstanceWeights;
@@ -263,32 +265,35 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
          * <p>The policy that is used to assign read weights. This parameter is returned only for a read/write splitting endpoint. Valid values:</p>
          * <br>
          * <p>*   **Standard**: The system automatically assigns read weights to the instance and its read-only instances based on the specifications of these instances.</p>
-         * <p>*   **Custom**: You must manually allocate read weights to the instance and its read-only instances.</p>
+         * <p>*   **Custom**: You must manually assign read weights to the instance and its read-only instances.</p>
          */
         @NameInMap("DistributionType")
         public String distributionType;
 
         /**
-         * <p>The remaining validity period of the instance of the classic network in hybrid access mode. Unit: seconds.</p>
+         * <p>The remaining validity period of the instance in the classic network in hybrid access mode. Unit: seconds.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>The IP address of the endpoint.</p>
+         * <p>The IP address.</p>
          */
         @NameInMap("IPAddress")
         public String IPAddress;
 
         /**
-         * <p>The type of the network.</p>
+         * <p>The network type.</p>
          * <br>
          * <p>*   Valid values when the instance resides in the classic network:</p>
-         * <p>*   **Inner:**: internal network</p>
-         * <p>*   **Public**: Internet</p>
-         * <p>*   Valid values when the instance resides in a VPC:</p>
-         * <p>*   **Private**: internal network</p>
-         * <p>*   **Public**: Internet</p>
+         * <br>
+         * <p>    *   **Inner:**: internal network</p>
+         * <p>    *   **Public**: Internet</p>
+         * <br>
+         * <p>*   Valid values when the instance resides in a virtual private cloud (VPC):</p>
+         * <br>
+         * <p>    *   **Private**: internal network</p>
+         * <p>    *   **Public**: Internet</p>
          */
         @NameInMap("IPType")
         public String IPType;
@@ -301,6 +306,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         @NameInMap("MaxDelayTime")
         public String maxDelayTime;
 
+        /**
+         * <p>The PgBouncer port.</p>
+         * <br>
+         * <p>> This parameter is returned only when PgBouncer is enabled for the instance that runs PostgreSQL.</p>
+         */
         @NameInMap("PGBouncerPort")
         public String PGBouncerPort;
 
@@ -311,7 +321,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String port;
 
         /**
-         * <p>An array that consists of the details about the IP address whitelists.</p>
+         * <p>The details of the IP address whitelist.</p>
          */
         @NameInMap("SecurityIPGroups")
         public DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosDBInstanceNetInfoSecurityIPGroups securityIPGroups;
@@ -328,13 +338,13 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         public String upgradeable;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VPCId")
         public String VPCId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

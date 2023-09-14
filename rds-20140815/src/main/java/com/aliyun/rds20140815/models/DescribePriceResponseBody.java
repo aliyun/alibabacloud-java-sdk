@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The information about the price.</p>
+     * <p>The price information.</p>
      */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
@@ -17,17 +17,26 @@ public class DescribePriceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the details of the promotion rule.</p>
+     * <p>The details of the promotion rule.</p>
      */
     @NameInMap("Rules")
     public DescribePriceResponseBodyRules rules;
 
+    /**
+     * <p>Indicates whether discounts can be used.</p>
+     */
     @NameInMap("ShowDiscount")
     public Boolean showDiscount;
 
+    /**
+     * <p>The estimated hourly fee that is calculated based on the maximum number of RCUs.</p>
+     */
     @NameInMap("TradeMaxRCUAmount")
     public Float tradeMaxRCUAmount;
 
+    /**
+     * <p>The estimated hourly fee that is calculated based on the minimum number of RCUs.</p>
+     */
     @NameInMap("TradeMinRCUAmount")
     public Float tradeMinRCUAmount;
 
@@ -136,7 +145,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfoCouponsCoupon extends TeaModel {
         /**
-         * <p>The ID of the coupon.</p>
+         * <p>The coupon ID.</p>
          */
         @NameInMap("CouponNo")
         public String couponNo;
@@ -244,7 +253,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public DescribePriceResponseBodyPriceInfoActivityInfo activityInfo;
 
         /**
-         * <p>An array that consists of information about the coupon.</p>
+         * <p>The information about the coupon.</p>
          */
         @NameInMap("Coupons")
         public DescribePriceResponseBodyPriceInfoCoupons coupons;

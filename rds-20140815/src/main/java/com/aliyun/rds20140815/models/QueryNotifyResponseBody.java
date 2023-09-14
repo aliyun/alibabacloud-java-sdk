@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryNotifyResponseBody extends TeaModel {
     /**
-     * <p>The details of the returned parameters.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public QueryNotifyResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -45,7 +45,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
-         * <p>Indicates whether the notification has been confirmed. You can call the ConfirmNotify operation to mark the notification as confirmed. Valid values:</p>
+         * <p>Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>
@@ -54,7 +54,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         public Boolean confirmFlag;
 
         /**
-         * <p>The UID of the contact who called the ConfirmNotify operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.</p>
+         * <p>The UID of the contact who called the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.</p>
          * <br>
          * <p>The value **0** indicates that the notification is automatically confirmed by the system.</p>
          */
@@ -244,25 +244,25 @@ public class QueryNotifyResponseBody extends TeaModel {
 
     public static class QueryNotifyResponseBodyData extends TeaModel {
         /**
-         * <p>The details of the notification.</p>
+         * <p>The details of notifications.</p>
          */
         @NameInMap("NotifyItemList")
         public java.util.List<QueryNotifyResponseBodyDataNotifyItemList> notifyItemList;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number of the page returned.</p>
          */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries returned on each page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalRecordCount")
         public Integer totalRecordCount;

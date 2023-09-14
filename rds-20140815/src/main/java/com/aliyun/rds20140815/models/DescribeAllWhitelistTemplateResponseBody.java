@@ -4,21 +4,52 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The response code returned. Valid values:</p>
+     * <br>
+     * <p>*   **200**: success</p>
+     * <p>*   **400**: client error</p>
+     * <p>*   **401**: identity authentication failed</p>
+     * <p>*   **404**: request page not found</p>
+     * <p>*   **500**: server error</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public DescribeAllWhitelistTemplateResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code returned. Valid values:</p>
+     * <br>
+     * <p>*   **200**: success</p>
+     * <p>*   **400**: client error</p>
+     * <p>*   **500**: server error</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The response parameters.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,18 +107,33 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeAllWhitelistTemplateResponseBodyDataTemplates extends TeaModel {
+        /**
+         * <p>The primary key of the data table.</p>
+         */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The IP addresses.</p>
+         */
         @NameInMap("Ips")
         public String ips;
 
+        /**
+         * <p>The ID of the whitelist template.</p>
+         */
         @NameInMap("TemplateId")
         public Integer templateId;
 
+        /**
+         * <p>The name of the whitelist template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>The user ID.</p>
+         */
         @NameInMap("UserId")
         public Integer userId;
 
@@ -139,24 +185,51 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     }
 
     public static class DescribeAllWhitelistTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("CurrPageNumbers")
         public Integer currPageNumbers;
 
+        /**
+         * <p>Indicates whether the data that meets the conditions is displayed on the next page. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
+        /**
+         * <p>Indicates whether the data that meets the conditions is displayed on the previous page. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("HasPrev")
         public Boolean hasPrev;
 
+        /**
+         * <p>The number of entries to return on each page.</p>
+         */
         @NameInMap("MaxRecordsPerPage")
         public Integer maxRecordsPerPage;
 
+        /**
+         * <p>The information about whitelist templates that are returned by page.</p>
+         */
         @NameInMap("Templates")
         public java.util.List<DescribeAllWhitelistTemplateResponseBodyDataTemplates> templates;
 
+        /**
+         * <p>The total number of pages returned.</p>
+         */
         @NameInMap("TotalPageNumbers")
         public Integer totalPageNumbers;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalRecords")
         public Integer totalRecords;
 

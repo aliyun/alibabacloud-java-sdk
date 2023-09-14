@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -23,7 +23,7 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
     public String targetMajorVersion;
 
     /**
-     * <p>The ID of the upgrade check task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

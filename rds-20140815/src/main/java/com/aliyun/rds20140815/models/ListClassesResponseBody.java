@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClassesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of available instance types.</p>
+     * <p>The list of instance specifications.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListClassesResponseBodyItems> items;
@@ -59,13 +59,13 @@ public class ListClassesResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The instance family. For more information, see [Instance families](~~57184~~).</p>
+         * <p>The instance family. For more information, see [Overview of instance families](~~57184~~).</p>
          */
         @NameInMap("ClassGroup")
         public String classGroup;
 
         /**
-         * <p>The number of cores that are supported by the instance type. Unit: core.</p>
+         * <p>The number of CPU cores that are supported by the instance type. Unit: cores.</p>
          */
         @NameInMap("Cpu")
         public String cpu;
@@ -86,7 +86,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String instructionSetArch;
 
         /**
-         * <p>The maximum number of connections that are supported by the instance type. Unit: core.</p>
+         * <p>The maximum number of connections that are supported by the instance type. Unit: connections.</p>
          */
         @NameInMap("MaxConnections")
         public String maxConnections;
@@ -104,7 +104,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String maxIOPS;
 
         /**
-         * <p>The memory capacity that is supported by the instance type. Unit: GB.</p>
+         * <p>The memory size that is supported by the instance type. Unit: GB.</p>
          */
         @NameInMap("MemoryClass")
         public String memoryClass;
@@ -112,7 +112,7 @@ public class ListClassesResponseBody extends TeaModel {
         /**
          * <p>The fee that you must pay for the instance type.</p>
          * <br>
-         * <p>*   Unit: cent (USD).</p>
+         * <p>*   Unit: cents (USD).</p>
          * <br>
          * <p>> </p>
          * <br>

@@ -87,6 +87,12 @@ public class DescribeSlotsResponseBody extends TeaModel {
         public String slotType;
 
         /**
+         * <p>The current Replication Slot corresponds to the specific delay of the logical subscription of the subscriber, in seconds (s)</p>
+         */
+        @NameInMap("SubReplayLag")
+        public String subReplayLag;
+
+        /**
          * <p>Indicates whether the replication slot is temporary.</p>
          * <br>
          * <p>Valid values:</p>
@@ -159,6 +165,14 @@ public class DescribeSlotsResponseBody extends TeaModel {
         }
         public String getSlotType() {
             return this.slotType;
+        }
+
+        public DescribeSlotsResponseBodySlots setSubReplayLag(String subReplayLag) {
+            this.subReplayLag = subReplayLag;
+            return this;
+        }
+        public String getSubReplayLag() {
+            return this.subReplayLag;
         }
 
         public DescribeSlotsResponseBodySlots setTemporary(String temporary) {

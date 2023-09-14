@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The end of the time range that is queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The end time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,13 +29,13 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The beginning of the time range that is queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
+     * <p>The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -101,7 +101,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         public String date;
 
         /**
-         * <p>The value of the performance metric.</p>
+         * <p>The queried values of the performance metric.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -150,19 +150,21 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     public static class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey extends TeaModel {
         /**
-         * <p>The name of the performance metric.</p>
+         * <p>Specify the name of the performance metric.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The unit of the performance metric.</p>
+         * <p>The unit of the performance metrics.</p>
          */
         @NameInMap("Unit")
         public String unit;
 
         /**
-         * <p>The format in which the value of the performance metric is returned. Multiple values of the performance metric are separated by the \&amp; string. Example: com_delete\&amp;com_insert\&amp;com_insert_select\&amp;com_replace.</p>
+         * <p>The format in which the value of the performance metric is returned.</p>
+         * <br>
+         * <p>>  Multiple performance metric values are separated with ampersands (&). Example: com_delete\&com_insert\&com_insert_select\&com_replace.</p>
          */
         @NameInMap("ValueFormat")
         public String valueFormat;

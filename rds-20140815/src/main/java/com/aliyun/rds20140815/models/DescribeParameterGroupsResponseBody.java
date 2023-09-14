@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeParameterGroupsResponseBody extends TeaModel {
     /**
-     * <p>The details of parameter templates.</p>
+     * <p>The details of the parameter templates.</p>
      */
     @NameInMap("ParameterGroups")
     public DescribeParameterGroupsResponseBodyParameterGroups parameterGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -62,13 +62,13 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The database engine.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The version of the database engine.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;

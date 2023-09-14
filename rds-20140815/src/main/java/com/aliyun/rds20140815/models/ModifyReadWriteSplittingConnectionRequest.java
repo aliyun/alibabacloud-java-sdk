@@ -13,7 +13,7 @@ public class ModifyReadWriteSplittingConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The ID of the primary instance.</p>
+     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

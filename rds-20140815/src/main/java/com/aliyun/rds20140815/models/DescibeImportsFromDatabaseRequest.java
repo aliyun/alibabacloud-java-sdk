@@ -11,7 +11,7 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -44,7 +44,7 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Valid values: any non-zero positive integer.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -63,6 +63,9 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -29,7 +29,7 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     public String currentConnectionString;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -46,6 +46,11 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The PgBouncer port.</p>
+     * <br>
+     * <p>> This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances. If you enable PgBouncer for your instance, you can change the PgBouncer port of the instance.</p>
+     */
     @NameInMap("PGBouncerPort")
     public String PGBouncerPort;
 

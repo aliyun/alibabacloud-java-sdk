@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeBinlogFilesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of information about the binary log file.</p>
+     * <p>The details of the log file.</p>
      */
     @NameInMap("Items")
     public DescribeBinlogFilesResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of binary log files returned on the current page.</p>
+     * <p>The number of log files on the current page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total size of the binary log files.</p>
+     * <p>The total size of the log file.</p>
      */
     @NameInMap("TotalFileSize")
     public Long totalFileSize;
 
     /**
-     * <p>The total number of binary log files returned.</p>
+     * <p>The total number of log files.</p>
      */
     @NameInMap("TotalRecordCount")
     public Integer totalRecordCount;
@@ -101,55 +101,67 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         public String checksum;
 
         /**
-         * <p>The HTTP-based download URL of the binary log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the file.</p>
+         * <p>The HTTP-based download URL of the log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the log file.</p>
          */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
         /**
-         * <p>The size of the binary log file. Unit: bytes.</p>
+         * <p>The size of the log file.</p>
+         * <br>
+         * <p>Unit: bytes.</p>
          */
         @NameInMap("FileSize")
         public Long fileSize;
 
         /**
-         * <p>The ID of the instance to which the binary log file belongs. This parameter is used to distinguish between the binary log files that are generated on a primary instance and those that are generated on a secondary instance.</p>
+         * <p>The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.</p>
+         * <br>
+         * <p>> You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click **Service Availability** to view the values of **Primary Instance No.** and **Secondary Instance No.**.</p>
          */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
 
         /**
-         * <p>The download URL that is used over an internal network.</p>
+         * <p>The URL that is used to download files over an internal network.</p>
          */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
         /**
-         * <p>The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the URL.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("LinkExpiredTime")
         public String linkExpiredTime;
 
         /**
-         * <p>The start time of the log data recorded in the binary log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The start time of the log file.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("LogBeginTime")
         public String logBeginTime;
 
         /**
-         * <p>The end time of the log data recorded in the binary log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The end time of the log file.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("LogEndTime")
         public String logEndTime;
 
         /**
-         * <p>The name of the binary log file.</p>
+         * <p>The log file name.</p>
          */
         @NameInMap("LogFileName")
         public String logFileName;
 
         /**
-         * <p>The status of the binary log file that is stored in the Object Storage Service (OSS) bucket. Valid values:</p>
+         * <p>The status of the log file that is stored in the Object Storage Service (OSS) bucket.</p>
+         * <br>
+         * <p>Valid values:</p>
          * <br>
          * <p>*   **Uploading**</p>
          * <p>*   **Completed**</p>

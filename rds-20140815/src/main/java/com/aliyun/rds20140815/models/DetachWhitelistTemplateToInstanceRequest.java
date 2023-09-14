@@ -4,8 +4,17 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
+    /**
+     * <p>The instance name.</p>
+     */
     @NameInMap("InsName")
     public String insName;
+
+    /**
+     * <p>资源组ID。 关于资源组的更多信息，请参见什么是资源组。</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
@@ -13,6 +22,9 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.</p>
+     */
     @NameInMap("TemplateId")
     public Integer templateId;
 
@@ -27,6 +39,14 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     }
     public String getInsName() {
         return this.insName;
+    }
+
+    public DetachWhitelistTemplateToInstanceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DetachWhitelistTemplateToInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {

@@ -4,21 +4,36 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RestoreDdrTableRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup set.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -28,18 +43,44 @@ public class RestoreDdrTableRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The point in time to which you want to restore data. The point in time that you specify must be earlier than the current time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <br>
+     * <p>> If **RestoreType** is set to **BackupTime**, you must specify this parameter.</p>
+     */
     @NameInMap("RestoreTime")
     public String restoreTime;
 
+    /**
+     * <p>The method that is used to restore data. Valid values:</p>
+     * <br>
+     * <p>*   **0**: restores data from a backup set. If you set this parameter to 0, you must also specify the **BackupSetId** parameter.</p>
+     * <p>*   **1**: restores data to a point in time. If you set this parameter to 1, you must also specify the **RestoreTime**, **SourceRegion**, and **SourceDBInstanceName** parameters.</p>
+     * <br>
+     * <p>Default value: **0**.</p>
+     */
     @NameInMap("RestoreType")
     public String restoreType;
 
+    /**
+     * <p>The ID of the source instance if you want to restore data to a point in time.</p>
+     * <br>
+     * <p>> : If you set **RestoreType** to **1**, you must also specify this parameter.</p>
+     */
     @NameInMap("SourceDBInstanceName")
     public String sourceDBInstanceName;
 
+    /**
+     * <p>The region ID of the source instance if you want to restore data to a point in time.</p>
+     * <br>
+     * <p>> : If you set **RestoreType** to **1**, you must also specify this parameter.</p>
+     */
     @NameInMap("SourceRegion")
     public String sourceRegion;
 
+    /**
+     * <p>The names of the databases and tables that you want to restore. The value is in the following format: `[{"type":"db","name":"<The name of Database 1 on the source instance>","newname":"<The name of Database 1 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 1 in Database 1 on the source instance>","newname":"<The name of Table 1 in Database 1 on the destination instance>"},{"type":"table","name":"<The name of Table 2 in Database 1 on the source instance>","newname":"<The name of Table 2 in Database 1 on the destination instance>"}]},{"type":"db","name":"<The name of Database 2 on the source instance>","newname":"<The name of Database 2 on the destination instance>","tables":[{"type":"table","name":"<The name of Table 3 in Database 2 on the source instance>","newname":"<The name of Table 3 in Database 2 on the destination instance>"},{"type":"table","name":"<The name of Table 4 in Database 2 on the source instance>","newname":"<The name of Table 4 in Database 2 on the destination instance>"}]}]`</p>
+     */
     @NameInMap("TableMeta")
     public String tableMeta;
 

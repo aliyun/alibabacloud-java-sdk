@@ -29,7 +29,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The details about the vSwitches.</p>
+     * <p>The information about the vSwitches.</p>
      */
     @NameInMap("VSwitchs")
     public java.util.List<DescribeVSwitchesResponseBodyVSwitchs> vSwitchs;
@@ -81,19 +81,19 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     public static class DescribeVSwitchesResponseBodyVSwitchs extends TeaModel {
         /**
-         * <p>交换机中可用的IP地址数量。</p>
+         * <p>The number of available IP addresses in the vSwitch.</p>
          */
         @NameInMap("AvailableIpAddressCount")
         public String availableIpAddressCount;
 
         /**
-         * <p>The CIDR blocks of the vSwitches.</p>
+         * <p>The CIDR block of the vSwitch.</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>The descriptions of the vSwitches.</p>
+         * <p>The description of the vSwitch.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -101,20 +101,20 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the vSwitch is the default vSwitch. Valid values:</p>
          * <br>
-         * <p>*   **true**: The vSwitch is the default vSwitch.</p>
-         * <p>*   **false**: The vSwitch is not the default vSwitch.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
-         * <p>The ID of the zone to which the vSwitches belong.</p>
+         * <p>The ID of the zone to which the vSwitch belongs.</p>
          */
         @NameInMap("IzNo")
         public String izNo;
 
         /**
-         * <p>The status of a vSwitch. Valid values:</p>
+         * <p>The status of the vSwitch. Valid values:</p>
          * <br>
          * <p>*   **Pending**: The vSwitch is being configured.</p>
          * <p>*   **Available**: The vSwitch is available.</p>
@@ -123,13 +123,13 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The name of the vSwitch.</p>
+         * <p>The vSwitch name.</p>
          */
         @NameInMap("VSwitchName")
         public String vSwitchName;
