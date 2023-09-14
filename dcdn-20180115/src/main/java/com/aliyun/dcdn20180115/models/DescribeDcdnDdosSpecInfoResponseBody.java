@@ -13,6 +13,9 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     @NameInMap("Enable")
     public String enable;
 
+    @NameInMap("IsSpecialPort")
+    public String isSpecialPort;
+
     @NameInMap("ProtectedArea")
     public String protectedArea;
 
@@ -52,6 +55,14 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     }
     public String getEnable() {
         return this.enable;
+    }
+
+    public DescribeDcdnDdosSpecInfoResponseBody setIsSpecialPort(String isSpecialPort) {
+        this.isSpecialPort = isSpecialPort;
+        return this;
+    }
+    public String getIsSpecialPort() {
+        return this.isSpecialPort;
     }
 
     public DescribeDcdnDdosSpecInfoResponseBody setProtectedArea(String protectedArea) {
