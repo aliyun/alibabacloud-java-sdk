@@ -4,7 +4,9 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class DeleteQuotaAlarmRequest extends TeaModel {
-    // The ID of the quota alert.
+    /**
+     * <p>The ID of the quota alert.</p>
+     */
     @NameInMap("AlarmId")
     public String alarmId;
 

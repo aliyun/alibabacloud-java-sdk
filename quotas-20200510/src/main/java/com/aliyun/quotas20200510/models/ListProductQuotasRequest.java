@@ -4,58 +4,78 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductQuotasRequest extends TeaModel {
-    // The quota dimensions.
+    /**
+     * <p>The quota dimensions.</p>
+     */
     @NameInMap("Dimensions")
     public java.util.List<ListProductQuotasRequestDimensions> dimensions;
 
-    // The code of the dimension group.
+    /**
+     * <p>The code of the dimension group.</p>
+     */
     @NameInMap("GroupCode")
     public String groupCode;
 
-    // The keyword that you want to use to search for the quotas.
+    /**
+     * <p>The keyword that you want to use to search for the quotas.</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
-    // The maximum number of records that can be returned for the query.
-    // 
-    // Valid values: 1 to 100. Default value: 30.
+    /**
+     * <p>The maximum number of records that can be returned for the query.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Default value: 30.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+    /**
+     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The abbreviation of the Alibaba Cloud service name.
-    // 
-    // > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <br>
+     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    // The ID of the quota.
+    /**
+     * <p>The ID of the quota.</p>
+     */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
-    // The type of the quota. Valid values:
-    // 
-    // *   CommonQuota: general quota
-    // *   FlowControl: API rate limit
-    // *   WhiteListLabel: whitelist quota
+    /**
+     * <p>The type of the quota. Valid values:</p>
+     * <br>
+     * <p>*   CommonQuota (default value): general quota</p>
+     * <p>*   FlowControl: API rate limit</p>
+     * <p>*   WhiteListLabel: whitelist quota</p>
+     */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 
-    // The field based on which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
-    // 
-    // *   TIME: The returned records are sorted by the last update time.
-    // *   TOTAL: The returned records are sorted by the usage of the total quota.
-    // *   RESERVED: The returned records are sorted by the usage of the reserved quota.
+    /**
+     * <p>The field based on which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:</p>
+     * <br>
+     * <p>*   TIME: The returned records are sorted by the last update time.</p>
+     * <p>*   TOTAL: The returned records are sorted by the usage of the total quota.</p>
+     * <p>*   RESERVED: The returned records are sorted by the usage of the reserved quota.</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
-    // The order in which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
-    // 
-    // *   Ascending: ascending order
-    // *   Descending: descending order
+    /**
+     * <p>The order in which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:</p>
+     * <br>
+     * <p>*   Ascending: ascending order</p>
+     * <p>*   Descending: descending order</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
@@ -145,15 +165,19 @@ public class ListProductQuotasRequest extends TeaModel {
     }
 
     public static class ListProductQuotasRequestDimensions extends TeaModel {
-        // The key of the dimension.
-        // 
-        // > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+        /**
+         * <p>The key of the dimension.</p>
+         * <br>
+         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The value of the dimension.
-        // 
-        // > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+        /**
+         * <p>The value of the dimension.</p>
+         * <br>
+         * <p>> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         */
         @NameInMap("Value")
         public String value;
 

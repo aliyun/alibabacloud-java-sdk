@@ -4,23 +4,33 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductDimensionGroupsResponseBody extends TeaModel {
-    // The dimension groups.
+    /**
+     * <p>The dimension groups.</p>
+     */
     @NameInMap("DimensionGroups")
     public java.util.List<ListProductDimensionGroupsResponseBodyDimensionGroups> dimensionGroups;
 
-    // The number of entries returned per page.
+    /**
+     * <p>The maximum number of records that are returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position at which the query ends. An empty value indicates that all data is returned.
+    /**
+     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of records that are returned for the query.
+    /**
+     * <p>The total number of records that are returned for the query.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,19 +80,27 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
     }
 
     public static class ListProductDimensionGroupsResponseBodyDimensionGroups extends TeaModel {
-        // The keys of the dimension group.
+        /**
+         * <p>The key of the dimension group.</p>
+         */
         @NameInMap("DimensionKeys")
         public java.util.List<String> dimensionKeys;
 
-        // The code of the dimension group.
+        /**
+         * <p>The code of the dimension group.</p>
+         */
         @NameInMap("GroupCode")
         public String groupCode;
 
-        // The name of the dimension group.
+        /**
+         * <p>The name of the dimension group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
-        // The service code.
+        /**
+         * <p>The service code.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 

@@ -4,11 +4,15 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetProductQuotaDimensionResponseBody extends TeaModel {
-    // The details about the quota dimension.
+    /**
+     * <p>The details of the quota dimension.</p>
+     */
     @NameInMap("QuotaDimension")
     public GetProductQuotaDimensionResponseBodyQuotaDimension quotaDimension;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,11 +38,15 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail extends TeaModel {
-        // The name of the dimension value.
+        /**
+         * <p>The name of the quota dimension value.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The dimension value.
+        /**
+         * <p>The quota dimension value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -66,28 +74,38 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaDimensionResponseBodyQuotaDimension extends TeaModel {
-        // The quota dimensions that are supported by the cloud service.
+        /**
+         * <p>The quota dimensions on which the quota dimension that you want to query is dependent.</p>
+         */
         @NameInMap("DependentDimensions")
         public java.util.List<String> dependentDimensions;
 
-        // The dimension key. Valid values:
-        // 
-        // *   regionId: region ID
-        // *   zoneId: zone ID
-        // *   chargeType: billing method
-        // *   networkType: network type
+        /**
+         * <p>The key of the quota dimension. Valid values:</p>
+         * <br>
+         * <p>*   regionId: the region ID.</p>
+         * <p>*   zoneId: the zone ID.</p>
+         * <p>*   chargeType: the billing method.</p>
+         * <p>*   networkType: the network type.</p>
+         */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
-        // The details about the dimension value.
+        /**
+         * <p>The details of the quota dimension value.</p>
+         */
         @NameInMap("DimensionValueDetail")
         public java.util.List<GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail> dimensionValueDetail;
 
-        // The dimension values.
+        /**
+         * <p>The values of the quota dimension.</p>
+         */
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
 
-        // The name of the dimension.
+        /**
+         * <p>The name of the quota dimension.</p>
+         */
         @NameInMap("Name")
         public String name;
 

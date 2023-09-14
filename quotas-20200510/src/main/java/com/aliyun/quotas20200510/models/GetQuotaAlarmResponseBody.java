@@ -4,11 +4,15 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaAlarmResponseBody extends TeaModel {
-    // The details of the quota alert.
+    /**
+     * <p>The percentage of the alert threshold.</p>
+     */
     @NameInMap("QuotaAlarm")
     public GetQuotaAlarmResponseBodyQuotaAlarm quotaAlarm;
 
-    // The ID of the request.
+    /**
+     * <p>The details of the quota alert.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,63 +38,83 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
     }
 
     public static class GetQuotaAlarmResponseBodyQuotaAlarm extends TeaModel {
-        // The ID of the quota alert.
+        /**
+         * <p>The numeric value of the alert threshold.</p>
+         */
         @NameInMap("AlarmId")
         public String alarmId;
 
-        // The name of the quota alert.
+        /**
+         * <p>security_groups</p>
+         */
         @NameInMap("AlarmName")
         public String alarmName;
 
-        // The time when the quota alert was created.
+        /**
+         * <p>The ID of the quota.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The notification methods of the quota alert. Valid values:
-        // 
-        // *   sms: SMS messages
-        // *   email: emails
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
-        // The alert contact.
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
-        // The abbreviation of the cloud service name.
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The ID of the quota.
+        /**
+         * <p>The name of the quota alert.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
-        // The quota dimension.
+        /**
+         * <p>The time when the quota alert was created.</p>
+         */
         @NameInMap("QuotaDimension")
         public java.util.Map<String, ?> quotaDimension;
 
-        // The used quota.
+        /**
+         * <p>The value of the quota.</p>
+         */
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
-        // The quota value.
+        /**
+         * <p>The ID of the quota alert.</p>
+         */
         @NameInMap("QuotaValue")
         public Float quotaValue;
 
-        // The numeric value of the alert threshold.
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
-        // The percentage of the alert threshold.
+        /**
+         * <p>The type of the quota alert. Valid values:</p>
+         * <br>
+         * <p>*   used: The alert is created for the used quota.</p>
+         * <p>*   usable: The alert is created for the available quota.</p>
+         */
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
 
-        // The type of the quota alert. Valid values:
-        // 
-        // *   used: The alert is created for the used quota.
-        // *   usable: The alert is created for the available quota.
+        /**
+         * <p>The quota dimension.</p>
+         */
         @NameInMap("ThresholdType")
         public String thresholdType;
+
+        @NameInMap("Webhook")
+        public String webhook;
 
         public static GetQuotaAlarmResponseBodyQuotaAlarm build(java.util.Map<String, ?> map) throws Exception {
             GetQuotaAlarmResponseBodyQuotaAlarm self = new GetQuotaAlarmResponseBodyQuotaAlarm();
@@ -199,6 +223,14 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         }
         public String getThresholdType() {
             return this.thresholdType;
+        }
+
+        public GetQuotaAlarmResponseBodyQuotaAlarm setWebhook(String webhook) {
+            this.webhook = webhook;
+            return this;
+        }
+        public String getWebhook() {
+            return this.webhook;
         }
 
     }

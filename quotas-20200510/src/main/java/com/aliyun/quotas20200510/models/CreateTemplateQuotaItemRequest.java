@@ -4,54 +4,73 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateQuotaItemRequest extends TeaModel {
-    // The requested value of the quota.
+    /**
+     * <p>The requested value of the quota.</p>
+     */
     @NameInMap("DesireValue")
     public Float desireValue;
 
-    // The quota dimensions.
+    /**
+     * <p>The quota dimensions.</p>
+     */
     @NameInMap("Dimensions")
     public java.util.List<CreateTemplateQuotaItemRequestDimensions> dimensions;
 
-    // The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-    // 
-    // > If you do not specify this parameter, the quota takes effect immediately.
+    /**
+     * <p>The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
+     * <br>
+     * <p>> If you leave this parameter empty, the quota takes effect immediately.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
-    // The language of the quota alert notification. Valid values:
-    // 
-    // *   zh (default value): Chinese
-    // *   en: English
+    /**
+     * <p>The language of the quota alert notification. Valid values:</p>
+     * <br>
+     * <p>*   zh (default value): Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("EnvLanguage")
     public String envLanguage;
 
-    // The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
-    // 
-    // > If the value of this parameter is empty, no end time is specified.
+    /**
+     * <p>The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
+     * <br>
+     * <p>> If you leave this parameter empty, no end time is specified.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
-    // Specifies whether to send a notification about the application result. Valid values:
-    // 
-    // *   0 (default value): no
-    // *   3: yes
+    /**
+     * <p>Specifies whether to send a notification about the application result. Valid values:</p>
+     * <br>
+     * <p>*   0 (default value): no</p>
+     * <p>*   3: yes</p>
+     */
     @NameInMap("NoticeType")
     public Long noticeType;
 
-    // The abbreviation of the Alibaba Cloud service name.
-    // 
-    // > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <br>
+     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    // The ID of the quota.
+    /**
+     * <p>The ID of the quota.</p>
+     */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
-    // The type of the quota. Valid values:
-    // 
-    // *   CommonQuota: general quota
-    // *   WhiteListLabel: whitelist quota
+    /**
+     * <p>The quota type. Valid values:</p>
+     * <br>
+     * <p>*   CommonQuota: general quota</p>
+     * <p>*   WhiteListLabel: privilege</p>
+     * <p>*   FlowControl: API rate limit</p>
+     */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 
@@ -133,19 +152,23 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     }
 
     public static class CreateTemplateQuotaItemRequestDimensions extends TeaModel {
-        // The dimension keys.
-        // 
-        // The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-        // 
-        // > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+        /**
+         * <p>The key of the dimension.</p>
+         * <br>
+         * <p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <br>
+         * <p>> This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The dimension values.
-        // 
-        // The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
-        // 
-        // > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+        /**
+         * <p>The value of the dimension.</p>
+         * <br>
+         * <p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <br>
+         * <p>> This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
+         */
         @NameInMap("Value")
         public String value;
 

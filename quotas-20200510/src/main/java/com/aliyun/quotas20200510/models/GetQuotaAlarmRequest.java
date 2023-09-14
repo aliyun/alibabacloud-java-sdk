@@ -4,9 +4,9 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaAlarmRequest extends TeaModel {
-    // The ID of the quota alert.
-    // 
-    // For more information about how to query the ID of a quota alert, see [ListQuotaAlarms](~~184348~~).
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("AlarmId")
     public String alarmId;
 

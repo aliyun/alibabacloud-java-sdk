@@ -4,7 +4,9 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaTemplateServiceStatusRequest extends TeaModel {
-    // The ID of the resource directory.
+    /**
+     * <p>The ID of the resource directory.</p>
+     */
     @NameInMap("ResourceDirectoryId")
     public String resourceDirectoryId;
 

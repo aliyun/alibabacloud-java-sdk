@@ -4,25 +4,35 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
-    // The maximum number of records that are returned for the query.
+    /**
+     * <p>The maximum number of records returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position at which the query ends.
-    // 
-    // > An empty value indicates that all data is returned.
+    /**
+     * <p>The token that marks the position at which the query ends.</p>
+     * <br>
+     * <p>> An empty value indicates that all data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The quota templates that are returned.
+    /**
+     * <p>The returned quota templates.</p>
+     */
     @NameInMap("QuotaApplicationTemplates")
     public java.util.List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> quotaApplicationTemplates;
 
-    // The ID of the request.
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of records that are returned for the query.
+    /**
+     * <p>The total number of records returned for the query.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -71,73 +81,150 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod extends TeaModel {
+        /**
+         * <p>The unit of the calculation cycle. Valid values:</p>
+         * <br>
+         * <p>*   second</p>
+         * <p>*   minute</p>
+         * <p>*   hour</p>
+         * <p>*   day</p>
+         * <p>*   week</p>
+         */
+        @NameInMap("PeriodUnit")
+        public String periodUnit;
+
+        /**
+         * <p>The value of the calculation cycle.</p>
+         */
+        @NameInMap("PeriodValue")
+        public Integer periodValue;
+
+        public static ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod build(java.util.Map<String, ?> map) throws Exception {
+            ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod self = new ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod();
+            return TeaModel.build(map, self);
+        }
+
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod setPeriodValue(Integer periodValue) {
+            this.periodValue = periodValue;
+            return this;
+        }
+        public Integer getPeriodValue() {
+            return this.periodValue;
+        }
+
+    }
+
     public static class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates extends TeaModel {
-        // None
+        /**
+         * <p>N/A</p>
+         */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
 
-        // The type of the adjustable value. Valid values:
-        // 
-        // *   continuous
-        // *   discontinuous
+        /**
+         * <p>The type of the adjustable value. Valid values:</p>
+         * <br>
+         * <p>*   continuous</p>
+         * <p>*   discontinuous</p>
+         */
         @NameInMap("ApplicableType")
         public String applicableType;
 
-        // The requested value of the quota.
+        /**
+         * <p>The requested value of the quota.</p>
+         */
         @NameInMap("DesireValue")
         public Float desireValue;
 
-        // The quota dimensions.
-        // 
-        // Format: {"regionId":"Region"}.
+        /**
+         * <p>The quota dimensions.</p>
+         * <br>
+         * <p>Format: {"regionId":"Region"}.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.Map<String, ?> dimensions;
 
-        // 配额生效的UTC时间。
+        /**
+         * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
-        // The language of the quota alert notification. Valid values:
-        // 
-        // *   zh: Chinese
-        // *   en: English
+        /**
+         * <p>The language of the quota alert notification. Valid values:</p>
+         * <br>
+         * <p>*   zh: Chinese</p>
+         * <p>*   en: English</p>
+         */
         @NameInMap("EnvLanguage")
         public String envLanguage;
 
-        // 配额失效的UTC时间。
+        /**
+         * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // The ID of the quota template.
+        /**
+         * <p>The ID of the quota template.</p>
+         */
         @NameInMap("Id")
         public String id;
 
-        // Indicates whether Quota Center sends a notification about the application result. Valid values:
-        // 
-        // *   0: no
-        // *   3: yes
+        /**
+         * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+         * <br>
+         * <p>*   0: no</p>
+         * <p>*   3: yes</p>
+         */
         @NameInMap("NoticeType")
         public Integer noticeType;
 
-        // The abbreviation of the Alibaba Cloud service name.
+        /**
+         * <p>The calculation cycle of the quota.</p>
+         */
+        @NameInMap("Period")
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod period;
+
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The ID of the quota.
+        /**
+         * <p>The ID of the quota.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
-        // 配额类型。
-        // - CommonQuota：通用配额。
-        // - WhiteListLabel：权益配额。
+        /**
+         * <p>The type of the quota.</p>
+         * <br>
+         * <p>*   CommonQuota: general quota</p>
+         * <p>*   WhiteListLabel: privilege</p>
+         */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 
-        // The description of the quota.
+        /**
+         * <p>The description of the quota.</p>
+         */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
-        // The name of the quota.
+        /**
+         * <p>The name of the quota.</p>
+         */
         @NameInMap("QuotaName")
         public String quotaName;
 
@@ -216,6 +303,14 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         }
         public Integer getNoticeType() {
             return this.noticeType;
+        }
+
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setPeriod(ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod period) {
+            this.period = period;
+            return this;
+        }
+        public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplatesPeriod getPeriod() {
+            return this.period;
         }
 
         public ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates setProductCode(String productCode) {

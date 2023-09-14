@@ -4,13 +4,17 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
-    // The maximum number of records to be returned for the query.
-    // 
-    // Valid values: 1 to 200. Default value: 30.
+    /**
+     * <p>The maximum number of records that can be returned for the query.</p>
+     * <br>
+     * <p>Valid values: 1 to 200. Default value: 30.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used to mark the location where the query is started. An empty value indicates that the query is executed from the start.
+    /**
+     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

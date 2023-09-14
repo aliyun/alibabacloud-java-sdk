@@ -4,31 +4,43 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesRequest extends TeaModel {
-    // The end of the time range to query.
+    /**
+     * <p>The end of the time range to query.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
-    // The keyword that is used to execute the query.
+    /**
+     * <p>The keyword that is used for the query.</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
-    // The maximum number of records to be returned for the query.
-    // 
-    // Valid values: 1 to 200. Default value: 30.
+    /**
+     * <p>The maximum number of records that can be returned for the query.</p>
+     * <br>
+     * <p>Valid values: 1 to 200. Default value: 30.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used to mark the location where the query is started. An empty value indicates that the query is executed from the start.
+    /**
+     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The abbreviation of the cloud service name.
-    // 
-    // >  For more information about the Alibaba Cloud services that support Quota Center, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <br>
+     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    // The start of the time range to query.
+    /**
+     * <p>The beginning of the time range to query.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

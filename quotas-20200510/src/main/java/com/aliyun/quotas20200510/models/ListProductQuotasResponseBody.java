@@ -4,23 +4,33 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductQuotasResponseBody extends TeaModel {
-    // The maximum number of records that are returned for the query.
+    /**
+     * <p>The maximum number of records that are returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position at which the query ends. An empty value indicates that all data is returned.
+    /**
+     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The details of the quotas.
+    /**
+     * <p>The details of the quotas.</p>
+     */
     @NameInMap("Quotas")
     public java.util.List<ListProductQuotasResponseBodyQuotas> quotas;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of records that are returned for the query.
+    /**
+     * <p>The total number of records that are returned for the query.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,17 +80,21 @@ public class ListProductQuotasResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotasResponseBodyQuotasPeriod extends TeaModel {
-        // The unit of the calculation cycle. Valid values:
-        // 
-        // *   second
-        // *   minute
-        // *   hour
-        // *   day
-        // *   week
+        /**
+         * <p>The unit of the calculation cycle. Valid values:</p>
+         * <br>
+         * <p>*   second</p>
+         * <p>*   minute</p>
+         * <p>*   hour</p>
+         * <p>*   day</p>
+         * <p>*   week</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        // The value of the calculation cycle.
+        /**
+         * <p>The value of the calculation cycle.</p>
+         */
         @NameInMap("PeriodValue")
         public Integer periodValue;
 
@@ -108,26 +122,34 @@ public class ListProductQuotasResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotasResponseBodyQuotasQuotaItems extends TeaModel {
-        // The value of the quota.
+        /**
+         * <p>The value of the quota.</p>
+         */
         @NameInMap("Quota")
         public String quota;
 
-        // The unit of the new quota value.
-        // 
-        // **
-        // 
-        // **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+        /**
+         * <p>The unit of the new quota value.</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
-        // The category of the quota. Valid values:
-        // 
-        // *   BaseQuota: base quota
-        // *   ReservedQuota: reserved quota
+        /**
+         * <p>The category of the quota. Valid values:</p>
+         * <br>
+         * <p>*   BaseQuota: base quota</p>
+         * <p>*   ReservedQuota: reserved quota</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The used quota.
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("Usage")
         public String usage;
 
@@ -171,111 +193,156 @@ public class ListProductQuotasResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotasResponseBodyQuotas extends TeaModel {
-        // Indicates whether the quota is adjustable. Valid values:
-        // 
-        // *   true: The quota is adjustable.
-        // *   false: The quota is not adjustable.
+        /**
+         * <p>Indicates whether the quota is adjustable. Valid values:</p>
+         * <br>
+         * <p>*   true: The quota is adjustable.</p>
+         * <p>*   false: The quota is not adjustable.</p>
+         */
         @NameInMap("Adjustable")
         public Boolean adjustable;
 
-        // None.
+        /**
+         * <p>None</p>
+         */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
 
-        // The type of the adjustable value. Valid values:
-        // 
-        // *   continuous
-        // *   discontinuous
+        /**
+         * <p>The type of the adjustable value. Valid values:</p>
+         * <br>
+         * <p>*   continuous</p>
+         * <p>*   discontinuous</p>
+         */
         @NameInMap("ApplicableType")
         public String applicableType;
 
-        // Indicates whether the system shows the used value of the quota. Valid values:
-        // 
-        // *   true: The system shows the used value of the quota.
-        // *   false: The system does not show the used value of the quota.
+        @NameInMap("ApplyReasonTips")
+        public String applyReasonTips;
+
+        /**
+         * <p>Indicates whether the system shows the used value of the quota. Valid values:</p>
+         * <br>
+         * <p>*   true: The system shows the used value of the quota.</p>
+         * <p>*   false: The system does not show the used value of the quota.</p>
+         */
         @NameInMap("Consumable")
         public Boolean consumable;
 
-        // The quota dimensions. Format: `{"regionId":"Region"}`.
+        /**
+         * <p>The quota dimension. Format: `{"regionId":"Region"}`.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.Map<String, ?> dimensions;
 
-        // The start time of the validity period of the quota. The value is displayed in UTC.
+        /**
+         * <p>The start time of the validity period of the quota. Specify the value in UTC.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
-        // The end time of the validity period of the quota. The value is displayed in UTC.
+        /**
+         * <p>The end time of the validity period of the quota. Specify the value in UTC.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // The calculation cycle of the quota.
+        /**
+         * <p>The calculation cycle of the quota.</p>
+         */
         @NameInMap("Period")
         public ListProductQuotasResponseBodyQuotasPeriod period;
 
-        // The abbreviation of the Alibaba Cloud service name.
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The ID of the quota.
+        /**
+         * <p>The ID of the quota.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
-        // The Alibaba Cloud Resource Name (ARN) of the quota.
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+         */
         @NameInMap("QuotaArn")
         public String quotaArn;
 
-        // The type of the quota.
-        // 
-        // *   CommonQuota: general quota
-        // *   FlowControl: API rate limit
-        // *   WhiteListLabel: whitelist quota
+        /**
+         * <p>The type of the quota.</p>
+         * <br>
+         * <p>*   CommonQuota: general quota</p>
+         * <p>*   FlowControl: API rate limit</p>
+         * <p>*   WhiteListLabel: whitelist quota</p>
+         */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 
-        // The description of the quota.
+        /**
+         * <p>The description of the quota.</p>
+         */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
-        // The details of the quotas.
+        /**
+         * <p>The details of the quotas.</p>
+         */
         @NameInMap("QuotaItems")
         public java.util.List<ListProductQuotasResponseBodyQuotasQuotaItems> quotaItems;
 
-        // The name of the quota.
+        /**
+         * <p>The name of the quota.</p>
+         */
         @NameInMap("QuotaName")
         public String quotaName;
 
-        // The type of the quota. Valid values:
-        // 
-        // *   privilege
-        // *   normal
+        /**
+         * <p>The type of the quota. Valid values:</p>
+         * <br>
+         * <p>*   privilege</p>
+         * <p>*   normal</p>
+         */
         @NameInMap("QuotaType")
         public String quotaType;
 
-        // The unit of the new quota value.
-        // 
-        // **
-        // 
-        // **The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+        /**
+         * <p>The unit of the new quota value.</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
-        // None.
+        /**
+         * <p>None</p>
+         */
         @NameInMap("SupportedRange")
         public java.util.List<Float> supportedRange;
 
-        // The value of the quota.
+        /**
+         * <p>The value of the quota.</p>
+         */
         @NameInMap("TotalQuota")
         public Float totalQuota;
 
-        // The used quota.
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("TotalUsage")
         public Float totalUsage;
 
-        // The reason why the quota is not adjustable. Valid values:
-        // 
-        // *   nonactivated: The service is not activated.
-        // *   applicationProcess: The application is being processed.
-        // *   limitReached: The quota limit is reached.
+        /**
+         * <p>The reason why the quota is not adjustable. Valid values:</p>
+         * <br>
+         * <p>*   nonactivated: The service is not activated.</p>
+         * <p>*   applicationProcess: The application is being processed.</p>
+         * <p>*   limitReached: The quota limit is reached.</p>
+         */
         @NameInMap("UnadjustableDetail")
         public String unadjustableDetail;
 
@@ -306,6 +373,14 @@ public class ListProductQuotasResponseBody extends TeaModel {
         }
         public String getApplicableType() {
             return this.applicableType;
+        }
+
+        public ListProductQuotasResponseBodyQuotas setApplyReasonTips(String applyReasonTips) {
+            this.applyReasonTips = applyReasonTips;
+            return this;
+        }
+        public String getApplyReasonTips() {
+            return this.applyReasonTips;
         }
 
         public ListProductQuotasResponseBodyQuotas setConsumable(Boolean consumable) {

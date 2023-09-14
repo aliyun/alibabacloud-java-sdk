@@ -4,23 +4,33 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsResponseBody extends TeaModel {
-    // The number of records that are returned for the query.
+    /**
+     * <p>The maximum number of records that are returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position at which the query ends. An empty value indicates that all data is returned.
+    /**
+     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The details about the applications.
+    /**
+     * <p>The details of the applications.</p>
+     */
     @NameInMap("QuotaApplications")
     public java.util.List<ListQuotaApplicationsResponseBodyQuotaApplications> quotaApplications;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of applications.
+    /**
+     * <p>The total number of applications.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,17 +80,21 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod extends TeaModel {
-        // The unit of the calculation cycle of the quota. Valid values:
-        // 
-        // *   second
-        // *   minute
-        // *   hour
-        // *   day
-        // *   week
+        /**
+         * <p>The unit of the calculation cycle. Valid values:</p>
+         * <br>
+         * <p>*   second</p>
+         * <p>*   minute</p>
+         * <p>*   hour</p>
+         * <p>*   day</p>
+         * <p>*   week</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        // The value of the calculation cycle of the quota.
+        /**
+         * <p>The value of the calculation cycle.</p>
+         */
         @NameInMap("PeriodValue")
         public Long periodValue;
 
@@ -108,87 +122,125 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     }
 
     public static class ListQuotaApplicationsResponseBodyQuotaApplications extends TeaModel {
-        // The ID of the application.
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("ApplicationId")
         public String applicationId;
 
-        // The time when the application was submitted.
+        /**
+         * <p>The time when the application was submitted.</p>
+         */
         @NameInMap("ApplyTime")
         public String applyTime;
 
-        // The quota value that is approved.
+        /**
+         * <p>The quota value that is approved.</p>
+         */
         @NameInMap("ApproveValue")
         public Float approveValue;
 
-        // The result of the application.
+        /**
+         * <p>The result of the application.</p>
+         */
         @NameInMap("AuditReason")
         public String auditReason;
 
-        // The remarks of the application.
+        /**
+         * <p>The remarks of the application.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
-        // The quota value that is approved.
+        /**
+         * <p>The quota value that is approved.</p>
+         */
         @NameInMap("DesireValue")
         public Float desireValue;
 
-        // The quota dimension of the application.
+        /**
+         * <p>The dimension of the application.</p>
+         */
         @NameInMap("Dimension")
         public java.util.Map<String, ?> dimension;
 
-        // The time when the application took effect.
+        /**
+         * <p>The time when the application took effect.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
-        // The time when the application expired.
+        /**
+         * <p>The time when the application expired.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // Indicates whether Quota Center sends a notification about the application result. Valid values:
-        // 
-        // *   0: Quota Center sends a notification.
-        // *   3: Quota Center does not send a notification.
+        /**
+         * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+         * <br>
+         * <p>*   0: A notification about the application result is not sent.</p>
+         * <p>*   3: A notification about the application result is sent.</p>
+         */
         @NameInMap("NoticeType")
         public Integer noticeType;
 
-        // The calculation cycle of the quota.
+        /**
+         * <p>The calculation cycle of the quota.</p>
+         */
         @NameInMap("Period")
         public ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod period;
 
-        // The abbreviation of the cloud service name.
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The ID of the quota.
+        /**
+         * <p>The ID of the quota.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
-        // The Alibaba Cloud Resource Name (ARN) of the quota.
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+         */
         @NameInMap("QuotaArn")
         public String quotaArn;
 
-        // The description of the quota.
+        /**
+         * <p>The description of the quota.</p>
+         */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
-        // The name of the quota.
+        /**
+         * <p>The name of the quota.</p>
+         */
         @NameInMap("QuotaName")
         public String quotaName;
 
-        // The unit of the quota.
+        /**
+         * <p>The unit of the new quota value.</p>
+         */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
-        // The reason for the application.
+        /**
+         * <p>The reason for the application.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
-        // The status of the application. Valid values:
-        // 
-        // *   Disagree: The application is rejected.
-        // *   Agree: The application is approved.
-        // *   Process: The application is pending approval.
-        // *   Cancel: The application is closed.
+        /**
+         * <p>The status of the application. Valid values:</p>
+         * <br>
+         * <p>*   Disagree: The application is rejected.</p>
+         * <p>*   Agree: The application is approved.</p>
+         * <p>*   Process: The application is being reviewed.</p>
+         * <p>*   Cancel: The application is canceled.</p>
+         */
         @NameInMap("Status")
         public String status;
 

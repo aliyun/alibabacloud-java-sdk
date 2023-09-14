@@ -4,83 +4,119 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class CreateQuotaApplicationResponseBody extends TeaModel {
-    // The ID of the application.
+    /**
+     * <p>The ID of the application.</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
-    // The time when the application was submitted.
+    /**
+     * <p>The time when the application was submitted.</p>
+     */
     @NameInMap("ApplyTime")
     public String applyTime;
 
-    // The quota value that is approved.
+    /**
+     * <p>The quota value that is approved.</p>
+     */
     @NameInMap("ApproveValue")
     public Float approveValue;
 
-    // The result of the application.
+    /**
+     * <p>The result of the application.</p>
+     */
     @NameInMap("AuditReason")
     public String auditReason;
 
-    // The requested value of the quota.
+    /**
+     * <p>The requested value of the quota.</p>
+     */
     @NameInMap("DesireValue")
     public Integer desireValue;
 
-    // The quota dimensions.
+    /**
+     * <p>The quota dimension.</p>
+     */
     @NameInMap("Dimension")
     public java.util.Map<String, ?> dimension;
 
-    // The time when the new quota value takes effect.
+    /**
+     * <p>The time when the new quota value takes effect.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
-    // The time when the new quota expires.
+    /**
+     * <p>The time when the new quota expires.</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
-    // Indicates whether Quota Center sends a notification about the application result. Valid values:
-    // 
-    // *   0: Quota Center sends a notification.
-    // *   3: Quota Center does not send a notification.
+    /**
+     * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+     * <br>
+     * <p>*   0: Quota Center sends a notification.</p>
+     * <p>*   3: Quota Center does not send a notification.</p>
+     */
     @NameInMap("NoticeType")
     public Long noticeType;
 
-    // The abbreviation of the Alibaba Cloud service name.
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    // The ID of the quota.
+    /**
+     * <p>The ID of the quota.</p>
+     */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
-    // The Alibaba Cloud Resource Name (ARN) of the quota.
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+     */
     @NameInMap("QuotaArn")
     public String quotaArn;
 
-    // The description of the quota.
+    /**
+     * <p>The description of the quota.</p>
+     */
     @NameInMap("QuotaDescription")
     public String quotaDescription;
 
-    // The name of the quota.
+    /**
+     * <p>The name of the quota.</p>
+     */
     @NameInMap("QuotaName")
     public String quotaName;
 
-    // The unit of the new quota value.
+    /**
+     * <p>The unit of the new quota value.</p>
+     */
     @NameInMap("QuotaUnit")
     public String quotaUnit;
 
-    // The reason for the application.
+    /**
+     * <p>The reason for the application.</p>
+     */
     @NameInMap("Reason")
     public String reason;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The status of the application. Valid values:
-    // 
-    // *   Disagree: The application is rejected.
-    // *   Agree: The application is approved.
-    // *   Process: The application is being reviewed.
-    // *   Cancel: The application is canceled.
+    /**
+     * <p>The status of the application. Valid values:</p>
+     * <br>
+     * <p>*   Disagree: The application is rejected.</p>
+     * <p>*   Agree: The application is approved.</p>
+     * <p>*   Process: The application is being reviewed.</p>
+     * <p>*   Cancel: The application is canceled.</p>
+     */
     @NameInMap("Status")
     public String status;
 

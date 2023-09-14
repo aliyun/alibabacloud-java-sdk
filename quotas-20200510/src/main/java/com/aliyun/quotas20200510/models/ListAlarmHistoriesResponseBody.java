@@ -4,23 +4,33 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesResponseBody extends TeaModel {
-    // The details of the alert records.
+    /**
+     * <p>The details of the alert records.</p>
+     */
     @NameInMap("AlarmHistories")
     public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories;
 
-    // The maximum number of records returned for the query.
+    /**
+     * <p>The maximum number of records that are returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that is used to mark the location where the query is ended. An empty value indicates that all the data is queried.
+    /**
+     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of records returned for the query.
+    /**
+     * <p>The total number of records that are returned for the query.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,42 +80,54 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     }
 
     public static class ListAlarmHistoriesResponseBodyAlarmHistories extends TeaModel {
-        // The name of the quota alert.
+        /**
+         * <p>The name of the quota alert.</p>
+         */
         @NameInMap("AlarmName")
         public String alarmName;
 
-        // The time when the quota alert was created.
+        /**
+         * <p>The time when the quota alert was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // The notification methods of the quota alert. Valid values:
-        // 
-        // *   sms: short messages
-        // *   email: emails
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
-        // The alert contact.
+        /**
+         * <p>The alert contact.</p>
+         */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
-        // The abbreviation of the cloud service name.
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The ID of the quota.
+        /**
+         * <p>The ID of the quota.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
-        // The used quota.
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
-        // The numeric value of the alert threshold.
+        /**
+         * <p>The numeric value of the alert threshold.</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
-        // The percentage of the alert threshold.
+        /**
+         * <p>The percentage of the alert threshold.</p>
+         */
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
 

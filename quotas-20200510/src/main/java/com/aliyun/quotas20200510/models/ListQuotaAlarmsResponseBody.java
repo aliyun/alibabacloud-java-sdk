@@ -4,25 +4,35 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListQuotaAlarmsResponseBody extends TeaModel {
-    // The maximum number of records that are returned for the query.
+    /**
+     * <p>The maximum number of records that are returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position at which the query ends.
-    // 
-    // >  If an empty value is returned, all data is queried.
+    /**
+     * <p>The token that marks the position at which the query ends.</p>
+     * <br>
+     * <p>> An empty value indicates that all data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The details about the quota alert.
+    /**
+     * <p>The details about the quota alert.</p>
+     */
     @NameInMap("QuotaAlarms")
     public java.util.List<ListQuotaAlarmsResponseBodyQuotaAlarms> quotaAlarms;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of quota alerts.
+    /**
+     * <p>The total number of quota alerts.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -72,72 +82,96 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     }
 
     public static class ListQuotaAlarmsResponseBodyQuotaAlarms extends TeaModel {
-        // The ID of the quota alert.
+        /**
+         * <p>The ID of the alert.</p>
+         */
         @NameInMap("AlarmId")
         public String alarmId;
 
-        // The name of the quota alert.
+        /**
+         * <p>The name of the alert event.</p>
+         */
         @NameInMap("AlarmName")
         public String alarmName;
 
-        // The time when the quota alert was created.
+        /**
+         * <p>The time when the quota alert was created.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        // Indicates whether the alert threshold was reached. Valid values:
-        // 
-        // *   false
-        // *   true
+        /**
+         * <p>Indicates whether the alert threshold was reached. Valid values:</p>
+         * <br>
+         * <p>*   false</p>
+         * <p>*   true</p>
+         */
         @NameInMap("ExceedThreshold")
         public Boolean exceedThreshold;
 
-        // The notification method. Valid values:
-        // 
-        // *   sms: SMS messages
-        // *   email: emails
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
-        // The alert contact. Valid value: accountContact.
+        /**
+         * <p>The alert contact. The value is accountContact.</p>
+         */
         @NameInMap("NotifyTarget")
         public String notifyTarget;
 
-        // The abbreviation of the cloud service name.
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The ID of the quota.
+        /**
+         * <p>The ID of the quota.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
-        // The quota dimensions.
+        /**
+         * <p>The quota dimensions.</p>
+         */
         @NameInMap("QuotaDimensions")
         public java.util.Map<String, ?> quotaDimensions;
 
-        // The used quota.
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("QuotaUsage")
         public Float quotaUsage;
 
-        // The value of the quota.
+        /**
+         * <p>The value of the quota.</p>
+         */
         @NameInMap("QuotaValue")
         public Float quotaValue;
 
-        // The numeric value of the alert threshold.
+        /**
+         * <p>The numeric value of the alert threshold.</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
-        // The percentage of the alert threshold.
+        /**
+         * <p>The percentage of the alert threshold.</p>
+         */
         @NameInMap("ThresholdPercent")
         public Float thresholdPercent;
 
-        // The type of the quota alert. Valid values:
-        // 
-        // *   used: The alert is created for the used quota.
-        // *   usable: The alert is created for the available quota.
+        /**
+         * <p>The type of the quota alert. Valid values:</p>
+         * <br>
+         * <p>*   used: The alert is created for the used quota.</p>
+         * <p>*   usable: The alert is created for the available quota.</p>
+         */
         @NameInMap("ThresholdType")
         public String thresholdType;
 
-        // The webhook URL.
+        /**
+         * <p>The webhook URL.</p>
+         */
         @NameInMap("WebHook")
         public String webHook;
 
