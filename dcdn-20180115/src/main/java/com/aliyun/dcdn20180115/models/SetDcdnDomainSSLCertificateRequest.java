@@ -37,6 +37,9 @@ public class SetDcdnDomainSSLCertificateRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
+    @NameInMap("Env")
+    public String env;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -107,6 +110,14 @@ public class SetDcdnDomainSSLCertificateRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public SetDcdnDomainSSLCertificateRequest setEnv(String env) {
+        this.env = env;
+        return this;
+    }
+    public String getEnv() {
+        return this.env;
     }
 
     public SetDcdnDomainSSLCertificateRequest setOwnerId(Long ownerId) {
