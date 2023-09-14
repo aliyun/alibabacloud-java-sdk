@@ -4,15 +4,36 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatFirewallPolicyPriorUsedRequest extends TeaModel {
+    /**
+     * <p>The direction of the traffic to which the access control policy applies.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **out**: outbound traffic</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The IP version supported by the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   **4**: IPv4 (default)</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>The language of the content within the request and response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 

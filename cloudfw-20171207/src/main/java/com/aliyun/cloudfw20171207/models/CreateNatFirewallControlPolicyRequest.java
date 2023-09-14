@@ -4,57 +4,194 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateNatFirewallControlPolicyRequest extends TeaModel {
+    /**
+     * <p>The action that Cloud Firewall performs on the traffic.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **accept**: allows the traffic.</p>
+     * <p>*   **drop**: denies the traffic.</p>
+     * <p>*   **log**: monitors the traffic.</p>
+     */
     @NameInMap("AclAction")
     public String aclAction;
 
+    /**
+     * <p>The application types supported by the access control policy.</p>
+     */
     @NameInMap("ApplicationNameList")
     public java.util.List<String> applicationNameList;
 
+    /**
+     * <p>The description of the access control policy.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination port in the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   If Proto is set to ICMP, DestPort is automatically left empty.</p>
+     * <br>
+     * <p>> If Proto is set to ICMP, access control does not take effect on the destination port.</p>
+     * <br>
+     * <p>*   If Proto is set to TCP, UDP, or ANY and DestPortType is set to group, DestPort is empty.</p>
+     * <br>
+     * <p>> If DestPortType is set to group, you do not need to specify the destination port number. All ports on which the access control policy takes effect are included in the destination port address book.</p>
+     * <br>
+     * <p>*   If Proto is set to TCP, UDP, or ANY and DestPortType is set to port, the value of DestPort is the destination port number.</p>
+     */
     @NameInMap("DestPort")
     public String destPort;
 
+    /**
+     * <p>The name of the destination port address book in the access control policy.</p>
+     * <br>
+     * <p>> If DestPortType is set to group, you must specify the name of the destination port address book.</p>
+     */
     @NameInMap("DestPortGroup")
     public String destPortGroup;
 
+    /**
+     * <p>The type of the destination port in the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   **port**: port</p>
+     * <p>*   **group**: port address book</p>
+     */
     @NameInMap("DestPortType")
     public String destPortType;
 
+    /**
+     * <p>The destination address in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   If DestinationType is set to net, the value of this parameter is a CIDR block.</p>
+     * <br>
+     * <p>    Example: 1.2.XX.XX/24</p>
+     * <br>
+     * <p>*   If DestinationType is set to group, the value of this parameter is an address book.</p>
+     * <br>
+     * <p>    Example: db_group</p>
+     * <br>
+     * <p>*   If DestinationType is set to domain, the value of this parameter is a domain name.</p>
+     * <br>
+     * <p>    Example: \*.aliyuncs.com</p>
+     * <br>
+     * <p>*   If DestinationType is set to location, the value of this parameter is a location.</p>
+     * <br>
+     * <p>    Example: \["BJ11", "ZB"]</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
+    /**
+     * <p>The type of the destination address in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **net**: CIDR block</p>
+     * <p>*   **group**: address book</p>
+     * <p>*   **domain**: domain name</p>
+     */
     @NameInMap("DestinationType")
     public String destinationType;
 
+    /**
+     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+     * <br>
+     * <p>*   **out**: outbound traffic</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The domain name resolution method of the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <br>
+     * <p>*   **0**: Fully qualified domain name (FQDN)-based resolution</p>
+     * <p>*   **1**: Domain Name System (DNS)-based dynamic resolution</p>
+     * <p>*   **2**: FQDN and DNS-based dynamic resolution</p>
+     */
     @NameInMap("DomainResolveType")
     public Integer domainResolveType;
 
+    /**
+     * <p>The IP version supported by the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   **4**: IPv4 (default)</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
+    /**
+     * <p>The language of the content within the response.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The new priority of the access control policy.</p>
+     */
     @NameInMap("NewOrder")
     public String newOrder;
 
+    /**
+     * <p>The protocol type in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   ANY: all types of protocols</p>
+     * <p>*   TCP</p>
+     * <p>*   UDP</p>
+     * <p>*   ICMP</p>
+     */
     @NameInMap("Proto")
     public String proto;
 
+    /**
+     * <p>Specifies whether to enable the access control policy. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Release")
     public String release;
 
+    /**
+     * <p>The source address in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   If **SourceType** is set to `net`, the value of Source is a CIDR block.</p>
+     * <br>
+     * <p>    Example: 10.2.4.0/24</p>
+     * <br>
+     * <p>*   If **SourceType** is set to `group`, the value of this parameter must be an address book name.</p>
+     * <br>
+     * <p>    Example: db_group</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The type of the source address in the access control policy.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **net**: source CIDR block</p>
+     * <p>*   **group**: source address book</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 

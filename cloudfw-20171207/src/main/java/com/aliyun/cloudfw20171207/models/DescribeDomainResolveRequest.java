@@ -11,9 +11,7 @@ public class DescribeDomainResolveRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The IP version of the asset that is protected by Cloud Firewall.</p>
-     * <br>
-     * <p>Valid values:</p>
+     * <p>The IP version of the asset that is protected by Cloud Firewall. Valid values:</p>
      * <br>
      * <p>*   **4**: IPv4 (default)</p>
      * <p>*   **6**: IPv6</p>
@@ -22,7 +20,7 @@ public class DescribeDomainResolveRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The natural language of the response.</p>
+     * <p>The language of the content within the response.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>

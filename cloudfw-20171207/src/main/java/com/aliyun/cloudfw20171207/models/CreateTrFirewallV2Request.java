@@ -4,42 +4,87 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateTrFirewallV2Request extends TeaModel {
+    /**
+     * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+     */
     @NameInMap("CenId")
     public String cenId;
 
+    /**
+     * <p>The description of the firewall.</p>
+     */
     @NameInMap("FirewallDescription")
     public String firewallDescription;
 
+    /**
+     * <p>The name of the firewall.</p>
+     */
     @NameInMap("FirewallName")
     public String firewallName;
 
+    /**
+     * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+     */
     @NameInMap("FirewallSubnetCidr")
     public String firewallSubnetCidr;
 
+    /**
+     * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+     */
     @NameInMap("FirewallVpcCidr")
     public String firewallVpcCidr;
 
+    /**
+     * <p>The ID of the VPC in which the ENI associated with the VPC firewall is created in manual mode.</p>
+     */
     @NameInMap("FirewallVpcId")
     public String firewallVpcId;
 
+    /**
+     * <p>The ID of the vSwitch that is used to create the ENI in manual mode.</p>
+     */
     @NameInMap("FirewallVswitchId")
     public String firewallVswitchId;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The region ID of the route router.</p>
+     */
     @NameInMap("RegionNo")
     public String regionNo;
 
+    /**
+     * <p>The routing mode of the VPC firewall. Valid values:</p>
+     * <br>
+     * <p>*   **managed**: automatic mode</p>
+     * <p>*   **manual**: manual mode</p>
+     */
     @NameInMap("RouteMode")
     public String routeMode;
 
+    /**
+     * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     */
     @NameInMap("TrAttachmentMasterCidr")
     public String trAttachmentMasterCidr;
 
+    /**
+     * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     */
     @NameInMap("TrAttachmentSlaveCidr")
     public String trAttachmentSlaveCidr;
 
+    /**
+     * <p>The ID of the transit router.</p>
+     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 

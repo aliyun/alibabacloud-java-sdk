@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersResponseBody extends TeaModel {
     /**
-     * <p>The information about the member in Cloud Firewall.</p>
+     * <p>The information about the member.</p>
      */
     @NameInMap("Members")
     public java.util.List<DescribeInstanceMembersResponseBodyMembers> members;
@@ -17,7 +17,7 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
     public DescribeInstanceMembersResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -53,27 +53,25 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
 
     public static class DescribeInstanceMembersResponseBodyMembers extends TeaModel {
         /**
-         * <p>The time when the member was added to Cloud Firewall.</p>
-         * <br>
-         * <p>>  The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.</p>
          */
         @NameInMap("CreateTime")
         public Integer createTime;
 
         /**
-         * <p>The remarks of the member in Cloud Firewall.</p>
+         * <p>The remarks of the member.</p>
          */
         @NameInMap("MemberDesc")
         public String memberDesc;
 
         /**
-         * <p>The name of the member in Cloud Firewall.</p>
+         * <p>The name of the member.</p>
          */
         @NameInMap("MemberDisplayName")
         public String memberDisplayName;
 
         /**
-         * <p>The status of the member in Cloud Firewall. Valid values:</p>
+         * <p>The status of the member. Valid values:</p>
          * <br>
          * <p>*   **normal**</p>
          * <p>*   **deleting**</p>
@@ -82,15 +80,13 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
         public String memberStatus;
 
         /**
-         * <p>The UID of the member in Cloud Firewall.</p>
+         * <p>The UID of the member.</p>
          */
         @NameInMap("MemberUid")
         public Long memberUid;
 
         /**
-         * <p>The time when the member in Cloud Firewall was last modified.</p>
-         * <br>
-         * <p>>  The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the member was last modified. The value is a timestamp. Unit: seconds.</p>
          */
         @NameInMap("ModifyTime")
         public Integer modifyTime;
@@ -152,19 +148,19 @@ public class DescribeInstanceMembersResponseBody extends TeaModel {
 
     public static class DescribeInstanceMembersResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the current page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of the members in Cloud Firewall.</p>
+         * <p>The total number of the members.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

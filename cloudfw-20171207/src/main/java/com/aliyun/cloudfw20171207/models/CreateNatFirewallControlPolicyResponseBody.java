@@ -4,9 +4,17 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The UUID of the access control policy.</p>
+     * <br>
+     * <p>> If you want to modify an access control policy, you must provide the UUID of the policy. You can call the DescribeNatFirewallControlPolicy operation to query the UUIDs of access control policies.</p>
+     */
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
