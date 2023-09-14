@@ -744,6 +744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("CloducodeFlowNo", request.cloducodeFlowNo);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.outerCustomerId)) {
+            body.put("OuterCustomerId", request.outerCustomerId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
