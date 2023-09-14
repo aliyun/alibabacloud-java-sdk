@@ -55,6 +55,9 @@ public class GetAvatarResponseBody extends TeaModel {
         @NameInMap("AvatarType")
         public String avatarType;
 
+        @NameInMap("Height")
+        public Integer height;
+
         @NameInMap("Portrait")
         public String portrait;
 
@@ -63,6 +66,9 @@ public class GetAvatarResponseBody extends TeaModel {
 
         @NameInMap("Transparent")
         public Boolean transparent;
+
+        @NameInMap("Width")
+        public Integer width;
 
         public static GetAvatarResponseBodyDataAvatar build(java.util.Map<String, ?> map) throws Exception {
             GetAvatarResponseBodyDataAvatar self = new GetAvatarResponseBodyDataAvatar();
@@ -101,6 +107,14 @@ public class GetAvatarResponseBody extends TeaModel {
             return this.avatarType;
         }
 
+        public GetAvatarResponseBodyDataAvatar setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
         public GetAvatarResponseBodyDataAvatar setPortrait(String portrait) {
             this.portrait = portrait;
             return this;
@@ -123,6 +137,14 @@ public class GetAvatarResponseBody extends TeaModel {
         }
         public Boolean getTransparent() {
             return this.transparent;
+        }
+
+        public GetAvatarResponseBodyDataAvatar setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
         }
 
     }

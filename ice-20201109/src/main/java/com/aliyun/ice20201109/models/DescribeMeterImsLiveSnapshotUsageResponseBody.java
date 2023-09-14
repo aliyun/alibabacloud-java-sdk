@@ -7,6 +7,9 @@ public class DescribeMeterImsLiveSnapshotUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsLiveSnapshotUsageResponseBodyData> data;
 
+    /**
+     * <p>Id</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
