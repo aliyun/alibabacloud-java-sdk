@@ -4,12 +4,21 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetNodeGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the node group.</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>The ID of the region in which you want to create the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

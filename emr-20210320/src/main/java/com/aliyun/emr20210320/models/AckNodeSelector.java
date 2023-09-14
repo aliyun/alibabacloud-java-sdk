@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class AckNodeSelector extends TeaModel {
+    /**
+     * <p>污点列表。</p>
+     */
     @NameInMap("Labels")
     public java.util.List<Labels> labels;
 
+    /**
+     * <p>污点列表。</p>
+     */
     @NameInMap("Taints")
     public java.util.List<Taints> taints;
 
@@ -32,9 +38,15 @@ public class AckNodeSelector extends TeaModel {
     }
 
     public static class Labels extends TeaModel {
+        /**
+         * <p>标签键。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>标签值。</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -62,12 +74,21 @@ public class AckNodeSelector extends TeaModel {
     }
 
     public static class Taints extends TeaModel {
+        /**
+         * <p>污点效果。</p>
+         */
         @NameInMap("Effect")
         public String effect;
 
+        /**
+         * <p>污点键。</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>污点值。</p>
+         */
         @NameInMap("Value")
         public String value;
 

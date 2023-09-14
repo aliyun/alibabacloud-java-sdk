@@ -4,18 +4,33 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class NodeAttributes extends TeaModel {
+    /**
+     * <p>ECS ssh登录秘钥。</p>
+     */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
+    /**
+     * <p>ECS访问资源绑定的角色。</p>
+     */
     @NameInMap("RamRole")
     public String ramRole;
 
+    /**
+     * <p>安全组ID。EMR只支持普通安全组，不支持企业安全组。</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>专有网络ID。</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>可用区ID。</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

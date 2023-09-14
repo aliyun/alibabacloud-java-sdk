@@ -4,45 +4,101 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ClusterSummary extends TeaModel {
+    /**
+     * <p>集群ID。</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>集群名称。</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>集群状态。取值范围：</p>
+     * <p>- STARTING：启动中。</p>
+     * <p>- START_FAILED：启动失败。</p>
+     * <p>- BOOTSTRAPPING：引导操作初始化。</p>
+     * <p>- RUNNING：运行中。</p>
+     * <p>- TERMINATING：终止中。</p>
+     * <p>- TERMINATED：已终止。</p>
+     * <p>- TERMINATED_WITH_ERRORS：发生异常导致终止。</p>
+     * <p>- TERMINATE_FAILED：终止失败。</p>
+     */
     @NameInMap("ClusterState")
     public String clusterState;
 
+    /**
+     * <p>集群类型。取值范围：</p>
+     * <p>- DATALAKE：新版数据湖。</p>
+     * <p>- OLAP：数据分析。</p>
+     * <p>- DATAFLOW：实时数据流。</p>
+     * <p>- DATASERVING：数据服务。</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <p>创建时间。</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>EMR服务角色。</p>
+     */
     @NameInMap("EmrDefaultRole")
     public String emrDefaultRole;
 
+    /**
+     * <p>删除时间。</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>过期时间。</p>
+     */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
+    /**
+     * <p>付费类型。取值范围：</p>
+     * <p>- PayAsYouGo：后付费。</p>
+     * <p>- Subscription：预付费。</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>可用时间。</p>
+     */
     @NameInMap("ReadyTime")
     public Long readyTime;
 
+    /**
+     * <p>EMR发行版。</p>
+     */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
+    /**
+     * <p>资源组ID。</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>失败原因。</p>
+     */
     @NameInMap("StateChangeReason")
     public ClusterStateChangeReason stateChangeReason;
 
+    /**
+     * <p>标签列表。</p>
+     */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
 

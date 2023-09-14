@@ -4,30 +4,57 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class Operation extends TeaModel {
+    /**
+     * <p>集群ID。</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>创建时间。</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>描述。</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>结束时间。</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>操作ID。</p>
+     */
     @NameInMap("OperationId")
     public String operationId;
 
+    /**
+     * <p>操作状态。</p>
+     */
     @NameInMap("OperationState")
     public String operationState;
 
+    /**
+     * <p>操作类型。</p>
+     */
     @NameInMap("OperationType")
     public String operationType;
 
+    /**
+     * <p>开始时间。</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
+    /**
+     * <p>状态转换原因。</p>
+     */
     @NameInMap("StateChangeReason")
     public OperationStateChangeReason stateChangeReason;
 

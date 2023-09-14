@@ -4,47 +4,33 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationConfig extends TeaModel {
-    @NameInMap("ConfigAction")
-    public String configAction;
-
+    /**
+     * <p>修改描述。</p>
+     */
     @NameInMap("ConfigDescription")
     public String configDescription;
 
+    /**
+     * <p>应用配置文件名。</p>
+     */
     @NameInMap("ConfigFileName")
     public String configFileName;
 
+    /**
+     * <p>配置项键。</p>
+     */
     @NameInMap("ConfigItemKey")
     public String configItemKey;
 
+    /**
+     * <p>配置项值。</p>
+     */
     @NameInMap("ConfigItemValue")
     public String configItemValue;
-
-    @NameInMap("ConfigScope")
-    public String configScope;
-
-    @NameInMap("EffectiveActions")
-    public String effectiveActions;
-
-    @NameInMap("EffectiveType")
-    public String effectiveType;
-
-    @NameInMap("NodeGroupId")
-    public String nodeGroupId;
-
-    @NameInMap("NodeId")
-    public String nodeId;
 
     public static UpdateApplicationConfig build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationConfig self = new UpdateApplicationConfig();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateApplicationConfig setConfigAction(String configAction) {
-        this.configAction = configAction;
-        return this;
-    }
-    public String getConfigAction() {
-        return this.configAction;
     }
 
     public UpdateApplicationConfig setConfigDescription(String configDescription) {
@@ -77,46 +63,6 @@ public class UpdateApplicationConfig extends TeaModel {
     }
     public String getConfigItemValue() {
         return this.configItemValue;
-    }
-
-    public UpdateApplicationConfig setConfigScope(String configScope) {
-        this.configScope = configScope;
-        return this;
-    }
-    public String getConfigScope() {
-        return this.configScope;
-    }
-
-    public UpdateApplicationConfig setEffectiveActions(String effectiveActions) {
-        this.effectiveActions = effectiveActions;
-        return this;
-    }
-    public String getEffectiveActions() {
-        return this.effectiveActions;
-    }
-
-    public UpdateApplicationConfig setEffectiveType(String effectiveType) {
-        this.effectiveType = effectiveType;
-        return this;
-    }
-    public String getEffectiveType() {
-        return this.effectiveType;
-    }
-
-    public UpdateApplicationConfig setNodeGroupId(String nodeGroupId) {
-        this.nodeGroupId = nodeGroupId;
-        return this;
-    }
-    public String getNodeGroupId() {
-        return this.nodeGroupId;
-    }
-
-    public UpdateApplicationConfig setNodeId(String nodeId) {
-        this.nodeId = nodeId;
-        return this;
-    }
-    public String getNodeId() {
-        return this.nodeId;
     }
 
 }

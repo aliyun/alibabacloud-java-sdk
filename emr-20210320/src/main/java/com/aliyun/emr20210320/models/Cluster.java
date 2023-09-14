@@ -4,60 +4,114 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class Cluster extends TeaModel {
+    /**
+     * <p>集群ID。</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>集群名称。</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>集群状态。</p>
+     */
     @NameInMap("ClusterState")
     public String clusterState;
 
+    /**
+     * <p>集群类型。</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <p>创建时间。</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>部署模式。</p>
+     */
     @NameInMap("DeployMode")
     public String deployMode;
 
+    /**
+     * <p>EMR默认角色。</p>
+     */
     @NameInMap("EmrDefaultRole")
     public String emrDefaultRole;
 
+    /**
+     * <p>删除时间。</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>过期时间。</p>
+     */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
+    /**
+     * <p>节点属性。</p>
+     */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
+    /**
+     * <p>付费类型。</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>可用时间。</p>
+     */
     @NameInMap("ReadyTime")
     public Long readyTime;
 
+    /**
+     * <p>区域ID。</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>EMR发行版。</p>
+     */
     @NameInMap("ReleaseVersion")
     public String releaseVersion;
 
+    /**
+     * <p>资源组ID。</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Kerberos安全模式。</p>
+     */
     @NameInMap("SecurityMode")
     public String securityMode;
 
     @NameInMap("StateChangeReason")
     public ClusterStateChangeReason stateChangeReason;
 
+    /**
+     * <p>预付费配置。</p>
+     */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
+    /**
+     * <p>集群标签。</p>
+     */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
 

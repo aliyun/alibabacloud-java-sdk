@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetOperationResponseBody extends TeaModel {
+    /**
+     * <p>The operation that is performed.</p>
+     */
     @NameInMap("Operation")
     public Operation operation;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

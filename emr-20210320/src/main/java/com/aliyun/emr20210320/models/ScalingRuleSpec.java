@@ -4,24 +4,45 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ScalingRuleSpec extends TeaModel {
+    /**
+     * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
+     */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
+    /**
+     * <p>按照负载伸缩描述。</p>
+     */
     @NameInMap("ByLoadScalingRuleSpec")
     public ByLoadScalingRuleSpec byLoadScalingRuleSpec;
 
+    /**
+     * <p>按照时间伸缩描述。</p>
+     */
     @NameInMap("ByTimeScalingRuleSpec")
     public ByTimeScalingRuleSpec byTimeScalingRuleSpec;
 
+    /**
+     * <p>冷却时间。单位为秒，取值范围在30~10800秒之间。</p>
+     */
     @NameInMap("CoolDownInterval")
     public Integer coolDownInterval;
 
+    /**
+     * <p>伸缩活动类型。</p>
+     */
     @NameInMap("ScalingActivityType")
     public String scalingActivityType;
 
+    /**
+     * <p>规则名称。</p>
+     */
     @NameInMap("ScalingRuleName")
     public String scalingRuleName;
 
+    /**
+     * <p>伸缩规则类型。</p>
+     */
     @NameInMap("ScalingRuleType")
     public String scalingRuleType;
 
@@ -87,21 +108,39 @@ public class ScalingRuleSpec extends TeaModel {
     }
 
     public static class ByLoadScalingRuleSpec extends TeaModel {
+        /**
+         * <p>比较符。</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>统计次数。</p>
+         */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
+        /**
+         * <p>指标名称。指标名称需要在 ListAutoScalingMetrics 接口返回的指标名称列表中。</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>统计量名称。</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>阈值。</p>
+         */
         @NameInMap("Threshold")
         public Double threshold;
 
+        /**
+         * <p>统计窗口。单位为秒。</p>
+         */
         @NameInMap("TimeWindow")
         public Integer timeWindow;
 
@@ -161,15 +200,27 @@ public class ScalingRuleSpec extends TeaModel {
     }
 
     public static class ByTimeScalingRuleSpec extends TeaModel {
+        /**
+         * <p>重复执行定时任务的结束时间戳。单位为毫秒。</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>启动时间戳。单位为毫秒。</p>
+         */
         @NameInMap("LaunchTime")
         public Long launchTime;
 
+        /**
+         * <p>指定时间规则的执行类型。</p>
+         */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
+        /**
+         * <p>重复执行定时任务的数值。具体取值取决于 recurrenceType 设置。</p>
+         */
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;
 

@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetNodeGroupResponseBody extends TeaModel {
+    /**
+     * <p>The node group.</p>
+     */
     @NameInMap("NodeGroup")
     public NodeGroup nodeGroup;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

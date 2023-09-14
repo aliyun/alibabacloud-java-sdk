@@ -4,27 +4,51 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListNodeGroupsRequest extends TeaModel {
+    /**
+     * <p>集群ID。</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>一次获取的最大记录数。取值范围：1~100。</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>节点组ID列表。</p>
+     */
     @NameInMap("NodeGroupIds")
     public java.util.List<String> nodeGroupIds;
 
+    /**
+     * <p>节点组名称列表。</p>
+     */
     @NameInMap("NodeGroupNames")
     public java.util.List<String> nodeGroupNames;
 
+    /**
+     * <p>节点组状态。</p>
+     */
     @NameInMap("NodeGroupStates")
     public java.util.List<String> nodeGroupStates;
 
+    /**
+     * <p>节点组类型列表。</p>
+     */
     @NameInMap("NodeGroupTypes")
     public java.util.List<String> nodeGroupTypes;
 
+    /**
+     * <p>区域ID。</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

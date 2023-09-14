@@ -4,18 +4,30 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListNodeGroupsResponseBody extends TeaModel {
+    /**
+     * <p>本次请求所返回的最大记录条数。</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("NodeGroups")
     public java.util.List<NodeGroup> nodeGroups;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>本次请求条件下的数据总量。</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

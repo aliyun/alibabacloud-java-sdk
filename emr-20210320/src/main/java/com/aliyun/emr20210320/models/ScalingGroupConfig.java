@@ -4,45 +4,87 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ScalingGroupConfig extends TeaModel {
+    /**
+     * <p>数据盘类型。</p>
+     */
     @NameInMap("DataDiskCategory")
     public String dataDiskCategory;
 
+    /**
+     * <p>数据盘个数。</p>
+     */
     @NameInMap("DataDiskCount")
     public Integer dataDiskCount;
 
+    /**
+     * <p>数据盘大小,单位GB。</p>
+     */
     @NameInMap("DataDiskSize")
     public Long dataDiskSize;
 
+    /**
+     * <p>默认冷却时间。</p>
+     */
     @NameInMap("DefaultCoolDownTime")
     public Long defaultCoolDownTime;
 
+    /**
+     * <p>抢占实例列表。</p>
+     */
     @NameInMap("InstanceTypeList")
     public java.util.List<InstanceTypeList> instanceTypeList;
 
+    /**
+     * <p>资源可用性策略(成本优化参数)。</p>
+     */
     @NameInMap("MultiAvailablePolicy")
     public MultiAvailablePolicy multiAvailablePolicy;
 
+    /**
+     * <p>节点下线策略。</p>
+     */
     @NameInMap("NodeOfflinePolicy")
     public NodeOfflinePolicy nodeOfflinePolicy;
 
+    /**
+     * <p>私有池选项	。</p>
+     */
     @NameInMap("PrivatePoolOptions")
     public PrivatePoolOptions privatePoolOptions;
 
+    /**
+     * <p>伸缩组节点最大个数。</p>
+     */
     @NameInMap("ScalingMaxSize")
     public Integer scalingMaxSize;
 
+    /**
+     * <p>伸缩组节点最小个数。</p>
+     */
     @NameInMap("ScalingMinSize")
     public Integer scalingMinSize;
 
+    /**
+     * <p>抢占式Spot实例策略。</p>
+     */
     @NameInMap("SpotStrategy")
     public String spotStrategy;
 
+    /**
+     * <p>系统盘类型。</p>
+     */
     @NameInMap("SysDiskCategory")
     public String sysDiskCategory;
 
+    /**
+     * <p>系统盘大小,单位GB。</p>
+     */
     @NameInMap("SysDiskSize")
     public Long sysDiskSize;
 
+    /**
+     * <p>伸缩活动触发模式。</p>
+     */
     @NameInMap("TriggerMode")
     public String triggerMode;
 
@@ -164,9 +206,15 @@ public class ScalingGroupConfig extends TeaModel {
     }
 
     public static class InstanceTypeList extends TeaModel {
+        /**
+         * <p>Ecs类型。</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <p>抢占价格上限,可空。</p>
+         */
         @NameInMap("SpotPriceLimit")
         public Float spotPriceLimit;
 
@@ -194,15 +242,27 @@ public class ScalingGroupConfig extends TeaModel {
     }
 
     public static class PolicyParam extends TeaModel {
+        /**
+         * <p>按需实例最小个数。</p>
+         */
         @NameInMap("OnDemandBaseCapacity")
         public Integer onDemandBaseCapacity;
 
+        /**
+         * <p>按需实例百分比。</p>
+         */
         @NameInMap("OnDemandPercentageAboveBaseCapacity")
         public Integer onDemandPercentageAboveBaseCapacity;
 
+        /**
+         * <p>抢占实例类型池规模。</p>
+         */
         @NameInMap("SpotInstancePools")
         public Integer spotInstancePools;
 
+        /**
+         * <p>是否使用按量补偿。</p>
+         */
         @NameInMap("SpotInstanceRemedy")
         public Boolean spotInstanceRemedy;
 
@@ -246,9 +306,15 @@ public class ScalingGroupConfig extends TeaModel {
     }
 
     public static class MultiAvailablePolicy extends TeaModel {
+        /**
+         * <p>资源可用性策略(成本优化参数)。</p>
+         */
         @NameInMap("PolicyParam")
         public PolicyParam policyParam;
 
+        /**
+         * <p>策略类型。</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
@@ -276,9 +342,15 @@ public class ScalingGroupConfig extends TeaModel {
     }
 
     public static class NodeOfflinePolicy extends TeaModel {
+        /**
+         * <p>下线模式,是否为优雅下线。</p>
+         */
         @NameInMap("Mode")
         public String mode;
 
+        /**
+         * <p>下线超时时间,单位毫秒。</p>
+         */
         @NameInMap("TimeoutMs")
         public Long timeoutMs;
 
@@ -306,9 +378,15 @@ public class ScalingGroupConfig extends TeaModel {
     }
 
     public static class PrivatePoolOptions extends TeaModel {
+        /**
+         * <p>私有池id。</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>实例启动的私有池容量选项。。</p>
+         */
         @NameInMap("MatchCriteria")
         public String matchCriteria;
 

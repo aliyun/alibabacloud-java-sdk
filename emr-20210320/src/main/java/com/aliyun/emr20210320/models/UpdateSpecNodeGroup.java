@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class UpdateSpecNodeGroup extends TeaModel {
+    /**
+     * <p>新实例类型。</p>
+     */
     @NameInMap("NewInstanceType")
     public String newInstanceType;
 
+    /**
+     * <p>节点组ID。</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 

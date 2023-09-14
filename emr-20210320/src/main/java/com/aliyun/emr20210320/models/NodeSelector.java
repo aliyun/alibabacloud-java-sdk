@@ -4,18 +4,36 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class NodeSelector extends TeaModel {
+    /**
+     * <p>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。</p>
+     */
     @NameInMap("NodeGroupName")
     public String nodeGroupName;
 
+    /**
+     * <p>节点组类型。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效。数组元数个数N取值范围：0~10。</p>
+     */
     @NameInMap("NodeGroupTypes")
     public java.util.List<String> nodeGroupTypes;
 
+    /**
+     * <p>节点名称列表。当NodeSelectType取值Node时，该参数生效。</p>
+     */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <p>节点选择类型。取值范围：</p>
+     * <p>- CLUSTER：集群。</p>
+     * <p>- NODE_GROUP：节点组。</p>
+     * <p>- NODE：节点。</p>
+     */
     @NameInMap("NodeSelectType")
     public String nodeSelectType;
 
@@ -62,77 +80,6 @@ public class NodeSelector extends TeaModel {
     }
     public String getNodeSelectType() {
         return this.nodeSelectType;
-    }
-
-    public static class Labels extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static Labels build(java.util.Map<String, ?> map) throws Exception {
-            Labels self = new Labels();
-            return TeaModel.build(map, self);
-        }
-
-        public Labels setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public Labels setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class Taints extends TeaModel {
-        @NameInMap("Effect")
-        public String effect;
-
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static Taints build(java.util.Map<String, ?> map) throws Exception {
-            Taints self = new Taints();
-            return TeaModel.build(map, self);
-        }
-
-        public Taints setEffect(String effect) {
-            this.effect = effect;
-            return this;
-        }
-        public String getEffect() {
-            return this.effect;
-        }
-
-        public Taints setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public Taints setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }

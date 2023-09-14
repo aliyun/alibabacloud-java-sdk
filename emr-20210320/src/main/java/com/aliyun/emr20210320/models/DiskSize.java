@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class DiskSize extends TeaModel {
+    /**
+     * <p>磁盘类型。</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>单位GB。</p>
+     */
     @NameInMap("Size")
     public Integer size;
 

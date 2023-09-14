@@ -4,12 +4,21 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ComponentLayout extends TeaModel {
+    /**
+     * <p>应用名称。</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    /**
+     * <p>组件名称。</p>
+     */
     @NameInMap("ComponentName")
     public String componentName;
 
+    /**
+     * <p>节点选择器。</p>
+     */
     @NameInMap("NodeSelector")
     public NodeSelector nodeSelector;
 
@@ -43,27 +52,51 @@ public class ComponentLayout extends TeaModel {
     }
 
     public static class NodeSelector extends TeaModel {
+        /**
+         * <p>节点结束编号，包含结束编号。</p>
+         */
         @NameInMap("NodeEndIndex")
         public Integer nodeEndIndex;
 
+        /**
+         * <p>节点组ID。</p>
+         */
         @NameInMap("NodeGroupId")
         public String nodeGroupId;
 
+        /**
+         * <p>机器组下标编号。</p>
+         */
         @NameInMap("NodeGroupIndex")
         public Integer nodeGroupIndex;
 
+        /**
+         * <p>机器组名。</p>
+         */
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
+        /**
+         * <p>SelectType = NODE_GROUP 且 nodeGroupId 不存在时使用</p>
+         */
         @NameInMap("NodeGroupTypes")
         public java.util.List<String> nodeGroupTypes;
 
+        /**
+         * <p>节点名称列表。</p>
+         */
         @NameInMap("NodeNames")
         public java.util.List<String> nodeNames;
 
+        /**
+         * <p>节点选择类型。</p>
+         */
         @NameInMap("NodeSelectType")
         public String nodeSelectType;
 
+        /**
+         * <p>节点开始编号，包含开始编号。</p>
+         */
         @NameInMap("NodeStartIndex")
         public Integer nodeStartIndex;
 

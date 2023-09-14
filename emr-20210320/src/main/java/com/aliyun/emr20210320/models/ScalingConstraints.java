@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ScalingConstraints extends TeaModel {
+    /**
+     * <p>最大值。</p>
+     */
     @NameInMap("MaxCapacity")
     public Integer maxCapacity;
 
+    /**
+     * <p>最小值。</p>
+     */
     @NameInMap("MinCapacity")
     public Integer minCapacity;
 

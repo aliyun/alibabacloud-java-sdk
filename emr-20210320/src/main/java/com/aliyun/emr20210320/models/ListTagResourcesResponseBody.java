@@ -4,18 +4,33 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Returns the location of the data that was read. Empty indicates that the data has been read.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details about the tag. Contains the resource ID, resource type, and tag key-value information.</p>
+     */
     @NameInMap("TagResources")
     public java.util.List<TagResources> tagResources;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +80,27 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class TagResources extends TeaModel {
+        /**
+         * <p>Indicates the ID of a resource.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The tag key of the ENI.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value of the ENI.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 

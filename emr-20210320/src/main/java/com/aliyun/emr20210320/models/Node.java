@@ -4,45 +4,97 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class Node extends TeaModel {
+    /**
+     * <p>节点是否自动续费。</p>
+     */
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    /**
+     * <p>节点自动续费时长。</p>
+     */
     @NameInMap("AutoRenewDuration")
     public Integer autoRenewDuration;
 
+    /**
+     * <p>节点自动续费时长单位。</p>
+     */
     @NameInMap("AutoRenewDurationUnit")
     public String autoRenewDurationUnit;
 
+    /**
+     * <p>节点过期时间。</p>
+     */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
+    /**
+     * <p>实例类型。</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>运维模式状态。取值范围：</p>
+     * <p>- ON：处于运维模式。</p>
+     * <p>- OFF：处于非运维模式。</p>
+     * <br>
+     * <p>为空表示处于非运维模式。</p>
+     */
     @NameInMap("MaintenanceStatus")
     public String maintenanceStatus;
 
+    /**
+     * <p>节点组ID。</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>节点组类型。</p>
+     */
     @NameInMap("NodeGroupType")
     public String nodeGroupType;
 
+    /**
+     * <p>节点ID。</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>节点名称。</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>节点状态。取值范围：</p>
+     * <p>- Pending：创建中。</p>
+     * <p>- Starting：启动中。</p>
+     * <p>- Running：运行中。</p>
+     * <p>- Stopping：停止中。</p>
+     * <p>- Stopped：已停止。</p>
+     * <p>- Terminated：已终止。</p>
+     */
     @NameInMap("NodeState")
     public String nodeState;
 
+    /**
+     * <p>私网IP。</p>
+     */
     @NameInMap("PrivateIp")
     public String privateIp;
 
+    /**
+     * <p>公网IP。</p>
+     */
     @NameInMap("PublicIp")
     public String publicIp;
 
+    /**
+     * <p>可用区ID。</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
