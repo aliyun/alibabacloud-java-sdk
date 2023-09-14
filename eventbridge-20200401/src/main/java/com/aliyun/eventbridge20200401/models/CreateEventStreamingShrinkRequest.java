@@ -4,21 +4,39 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class CreateEventStreamingShrinkRequest extends TeaModel {
+    /**
+     * <p>The description of the event stream.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The name of the event stream.</p>
+     */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;
 
+    /**
+     * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
+     */
     @NameInMap("FilterPattern")
     public String filterPattern;
 
+    /**
+     * <p>The parameters that are configured for the runtime environment.</p>
+     */
     @NameInMap("RunOptions")
     public String runOptionsShrink;
 
+    /**
+     * <p>The event target. You must and can specify only one event target.</p>
+     */
     @NameInMap("Sink")
     public String sinkShrink;
 
+    /**
+     * <p>The event provider, which is also known as the event source. You must and can specify only one event source.</p>
+     */
     @NameInMap("Source")
     public String sourceShrink;
 

@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class QueryTracedEventsResponseBody extends TeaModel {
+    /**
+     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public QueryTracedEventsResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +80,33 @@ public class QueryTracedEventsResponseBody extends TeaModel {
     }
 
     public static class QueryTracedEventsResponseBodyDataEvents extends TeaModel {
+        /**
+         * <p>The name of the event bus.</p>
+         */
         @NameInMap("EventBusName")
         public String eventBusName;
 
+        /**
+         * <p>The event ID.</p>
+         */
         @NameInMap("EventId")
         public String eventId;
 
+        /**
+         * <p>The time when the event was delivered to the event bus.</p>
+         */
         @NameInMap("EventReceivedTime")
         public Long eventReceivedTime;
 
+        /**
+         * <p>The name of the event source.</p>
+         */
         @NameInMap("EventSource")
         public String eventSource;
 
+        /**
+         * <p>The event type.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
@@ -128,12 +158,21 @@ public class QueryTracedEventsResponseBody extends TeaModel {
     }
 
     public static class QueryTracedEventsResponseBodyData extends TeaModel {
+        /**
+         * <p>The event type.</p>
+         */
         @NameInMap("Events")
         public java.util.List<QueryTracedEventsResponseBodyDataEvents> events;
 
+        /**
+         * <p>If excess return values exist, this parameter is returned.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

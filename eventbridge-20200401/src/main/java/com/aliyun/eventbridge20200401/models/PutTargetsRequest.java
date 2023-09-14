@@ -4,12 +4,21 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class PutTargetsRequest extends TeaModel {
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    /**
+     * <p>The name of the event rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The event targets to be created or updated. For more information, see [Limits.](https://www.alibabacloud.com/help/en/eventbridge/latest/limits)</p>
+     */
     @NameInMap("Targets")
     public java.util.List<PutTargetsRequestTargets> targets;
 
@@ -43,6 +52,9 @@ public class PutTargetsRequest extends TeaModel {
     }
 
     public static class PutTargetsRequestTargetsDeadLetterQueue extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
@@ -62,15 +74,27 @@ public class PutTargetsRequest extends TeaModel {
     }
 
     public static class PutTargetsRequestTargetsParamList extends TeaModel {
+        /**
+         * <p>The method that is used to deliver events to the event target. For more information,see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The resource parameter of the event target. For more information,see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)</p>
+         */
         @NameInMap("ResourceKey")
         public String resourceKey;
 
+        /**
+         * <p>The template based on which events are delivered to the event target.</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value of the event target parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,24 +138,53 @@ public class PutTargetsRequest extends TeaModel {
     }
 
     public static class PutTargetsRequestTargets extends TeaModel {
+        /**
+         * <p>The dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue. The dead-letter queue feature supports the following queue types: Message Queue for Apache RocketMQ, Message Service, Message Queue for Apache Kafka, and event bus.</p>
+         */
         @NameInMap("DeadLetterQueue")
         public PutTargetsRequestTargetsDeadLetterQueue deadLetterQueue;
 
+        /**
+         * <p>The endpoint of the event target.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The fault tolerance policy. Valid values:</p>
+         * <br>
+         * <p>* **ALL**: ignores the error. Fault tolerance is allowed. If an error occurs, event processing is not blocked. If the message exceeds the number of retries specified by the retry policy, the message is delivered to a dead-letter queue or discarded based on your configurations.</p>
+         * <br>
+         * <p>* **NONE**: does not ignore the error. Fault tolerance is prohibited. If an error occurs and the message exceeds the number of retries specified by the retry policy, event processing is blocked.</p>
+         */
         @NameInMap("ErrorsTolerance")
         public String errorsTolerance;
 
+        /**
+         * <p>The ID of the custom event target.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The parameters that are configured for the event target.</p>
+         */
         @NameInMap("ParamList")
         public java.util.List<PutTargetsRequestTargetsParamList> paramList;
 
+        /**
+         * <p>The retry policy for pushing the event. Valid values:</p>
+         * <br>
+         * <p>* **BACKOFF_RETRY**: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value from 10 to 20. Unit: seconds.</p>
+         * <br>
+         * <p>* **EXPONENTIAL_DECAY_RETRY**: exponential decay retry. The request can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds can be used up to one hundred and sixty-seven times in total.</p>
+         */
         @NameInMap("PushRetryStrategy")
         public String pushRetryStrategy;
 
+        /**
+         * <p>The type of the event target. For more information, see [Event target parameters.](https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters)</p>
+         */
         @NameInMap("Type")
         public String type;
 

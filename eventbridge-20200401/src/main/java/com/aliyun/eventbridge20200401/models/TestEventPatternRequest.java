@@ -4,9 +4,15 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class TestEventPatternRequest extends TeaModel {
+    /**
+     * <p>The event.</p>
+     */
     @NameInMap("Event")
     public String event;
 
+    /**
+     * <p>The event pattern.</p>
+     */
     @NameInMap("EventPattern")
     public String eventPattern;
 

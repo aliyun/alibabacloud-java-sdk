@@ -4,15 +4,27 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The value Success indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the connections returned.</p>
+     */
     @NameInMap("Data")
     public ListConnectionsResponseBodyData data;
 
+    /**
+     * <p>The message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request. This parameter is a common parameter. Each request has a unique ID. You can use the ID to troubleshoot issues.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,15 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters extends TeaModel {
+        /**
+         * <p>The API key.</p>
+         */
         @NameInMap("ApiKeyName")
         public String apiKeyName;
 
+        /**
+         * <p>The value of the API key.</p>
+         */
         @NameInMap("ApiKeyValue")
         public String apiKeyValue;
 
@@ -84,9 +102,15 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters extends TeaModel {
+        /**
+         * <p>The password for basic authentication.</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <p>The username for basic authentication.</p>
+         */
         @NameInMap("Username")
         public String username;
 
@@ -113,141 +137,16 @@ public class ListConnectionsResponseBody extends TeaModel {
 
     }
 
-    public static class ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters build(java.util.Map<String, ?> map) throws Exception {
-            ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters self = new ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters build(java.util.Map<String, ?> map) throws Exception {
-            ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters self = new ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters build(java.util.Map<String, ?> map) throws Exception {
-            ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters self = new ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters extends TeaModel {
-        @NameInMap("BodyParameters")
-        public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters> bodyParameters;
-
-        @NameInMap("HeaderParameters")
-        public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters> headerParameters;
-
-        @NameInMap("QueryStringParameters")
-        public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters> queryStringParameters;
-
-        public static ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters build(java.util.Map<String, ?> map) throws Exception {
-            ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters self = new ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters setBodyParameters(java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters> bodyParameters) {
-            this.bodyParameters = bodyParameters;
-            return this;
-        }
-        public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersBodyParameters> getBodyParameters() {
-            return this.bodyParameters;
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters setHeaderParameters(java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters> headerParameters) {
-            this.headerParameters = headerParameters;
-            return this;
-        }
-        public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersHeaderParameters> getHeaderParameters() {
-            return this.headerParameters;
-        }
-
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters setQueryStringParameters(java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters> queryStringParameters) {
-            this.queryStringParameters = queryStringParameters;
-            return this;
-        }
-        public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParametersQueryStringParameters> getQueryStringParameters() {
-            return this.queryStringParameters;
-        }
-
-    }
-
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersClientParameters extends TeaModel {
+        /**
+         * <p>The client ID.</p>
+         */
         @NameInMap("ClientID")
         public String clientID;
 
+        /**
+         * <p>The client key secret of the application.</p>
+         */
         @NameInMap("ClientSecret")
         public String clientSecret;
 
@@ -275,12 +174,21 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters extends TeaModel {
+        /**
+         * <p>Indicates whether authentication is enabled.</p>
+         */
         @NameInMap("IsValueSecret")
         public String isValueSecret;
 
+        /**
+         * <p>The key in the request body.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the key in the request body.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -316,12 +224,21 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters extends TeaModel {
+        /**
+         * <p>Indicates whether authentication is enabled.</p>
+         */
         @NameInMap("IsValueSecret")
         public String isValueSecret;
 
+        /**
+         * <p>The key in the request header.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the key in the request header.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -357,12 +274,21 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters extends TeaModel {
+        /**
+         * <p>Indicates whether authentication is enabled.</p>
+         */
         @NameInMap("IsValueSecret")
         public String isValueSecret;
 
+        /**
+         * <p>The key in the request path.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the key in the request path.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -398,12 +324,21 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters extends TeaModel {
+        /**
+         * <p>The parameters that are configured for the request.</p>
+         */
         @NameInMap("BodyParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> bodyParameters;
 
+        /**
+         * <p>The parameters that are configured for the request header.</p>
+         */
         @NameInMap("HeaderParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersHeaderParameters> headerParameters;
 
+        /**
+         * <p>The parameters that are configured for the request path.</p>
+         */
         @NameInMap("QueryStringParameters")
         public java.util.List<ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParametersQueryStringParameters> queryStringParameters;
 
@@ -439,15 +374,33 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters extends TeaModel {
+        /**
+         * <p>The endpoint that is used to obtain the OAuth token.</p>
+         */
         @NameInMap("AuthorizationEndpoint")
         public String authorizationEndpoint;
 
+        /**
+         * <p>The parameters that are configured for the client.</p>
+         */
         @NameInMap("ClientParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersClientParameters clientParameters;
 
+        /**
+         * <p>The HTTP request method. Valid values:</p>
+         * <br>
+         * <p>- GET</p>
+         * <br>
+         * <p>- POST</p>
+         * <br>
+         * <p>- HEAD</p>
+         */
         @NameInMap("HttpMethod")
         public String httpMethod;
 
+        /**
+         * <p>The request parameters for OAuth authentication.</p>
+         */
         @NameInMap("OAuthHttpParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParametersOAuthHttpParameters OAuthHttpParameters;
 
@@ -491,18 +444,33 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsAuthParameters extends TeaModel {
+        /**
+         * <p>The parameters that are configured for API key authentication.</p>
+         */
         @NameInMap("ApiKeyAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersApiKeyAuthParameters apiKeyAuthParameters;
 
+        /**
+         * <p>The authentication type. Valid values:</p>
+         * <br>
+         * <p>- BASIC_AUTH: basic authentication.</p>
+         * <br>
+         * <p>- API_KEY_AUTH: API key authentication.</p>
+         * <br>
+         * <p>- OAUTH_AUTH: OAuth authentication.</p>
+         */
         @NameInMap("AuthorizationType")
         public String authorizationType;
 
+        /**
+         * <p>The parameters that are configured for basic authentication.</p>
+         */
         @NameInMap("BasicAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersBasicAuthParameters basicAuthParameters;
 
-        @NameInMap("InvocationHttpParameters")
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters invocationHttpParameters;
-
+        /**
+         * <p>The parameters that are configured for OAuth authentication.</p>
+         */
         @NameInMap("OAuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters OAuthParameters;
 
@@ -535,14 +503,6 @@ public class ListConnectionsResponseBody extends TeaModel {
             return this.basicAuthParameters;
         }
 
-        public ListConnectionsResponseBodyDataConnectionsAuthParameters setInvocationHttpParameters(ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters invocationHttpParameters) {
-            this.invocationHttpParameters = invocationHttpParameters;
-            return this;
-        }
-        public ListConnectionsResponseBodyDataConnectionsAuthParametersInvocationHttpParameters getInvocationHttpParameters() {
-            return this.invocationHttpParameters;
-        }
-
         public ListConnectionsResponseBodyDataConnectionsAuthParameters setOAuthParameters(ListConnectionsResponseBodyDataConnectionsAuthParametersOAuthParameters OAuthParameters) {
             this.OAuthParameters = OAuthParameters;
             return this;
@@ -554,15 +514,27 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnectionsNetworkParameters extends TeaModel {
+        /**
+         * <p>The network type. Valid values:PublicNetwork and PrivateNetwork.</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <p>The security group ID.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The virtual private cloud (VPC) ID.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VswitcheId")
         public String vswitcheId;
 
@@ -606,18 +578,33 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyDataConnections extends TeaModel {
+        /**
+         * <p>The parameters that are configured for authentication.</p>
+         */
         @NameInMap("AuthParameters")
         public ListConnectionsResponseBodyDataConnectionsAuthParameters authParameters;
 
+        /**
+         * <p>The connection name.</p>
+         */
         @NameInMap("ConnectionName")
         public String connectionName;
 
+        /**
+         * <p>The connection description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the connection was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The connection ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
@@ -680,15 +667,27 @@ public class ListConnectionsResponseBody extends TeaModel {
     }
 
     public static class ListConnectionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The value of the key in the request path.</p>
+         */
         @NameInMap("Connections")
         public java.util.List<ListConnectionsResponseBodyDataConnections> connections;
 
+        /**
+         * <p>The number of entries returned per page.</p>
+         */
         @NameInMap("MaxResults")
         public Float maxResults;
 
+        /**
+         * <p>If excess return values exist, this parameter is returned.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("Total")
         public Float total;
 

@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListTargetsRequest extends TeaModel {
+    /**
+     * <p>The Alibaba Cloud Resource Name (ARN) of the event rule.</p>
+     */
     @NameInMap("Arn")
     public String arn;
 
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    /**
+     * <p>The maximum number of entries returned per page.</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The name of the event rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 

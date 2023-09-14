@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class CreateEventStreamingResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code. The HTTP status code 200 indicates that the request is successful. Other HTTP codes indicate that the request failed. For more information about error codes, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateEventStreamingResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +80,9 @@ public class CreateEventStreamingResponseBody extends TeaModel {
     }
 
     public static class CreateEventStreamingResponseBodyData extends TeaModel {
+        /**
+         * <p>The ARN of the event stream.</p>
+         */
         @NameInMap("EventStreamingARN")
         public String eventStreamingARN;
 

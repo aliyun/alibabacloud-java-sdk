@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class GetApiDestinationRequest extends TeaModel {
+    /**
+     * <p>The name of the API destination.</p>
+     */
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
 

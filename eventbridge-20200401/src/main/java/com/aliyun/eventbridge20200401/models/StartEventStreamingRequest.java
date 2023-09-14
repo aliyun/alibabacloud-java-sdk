@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class StartEventStreamingRequest extends TeaModel {
+    /**
+     * <p>The name of the event stream that you want to enable.</p>
+     */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;
 

@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class QueryEventTracesResponseBody extends TeaModel {
+    /**
+     * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The name of the event source.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryEventTracesResponseBodyData> data;
 
+    /**
+     * <p>The error message that is returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +80,75 @@ public class QueryEventTracesResponseBody extends TeaModel {
     }
 
     public static class QueryEventTracesResponseBodyData extends TeaModel {
+        /**
+         * <p>The type of the event trace. Valid values: PutEvent: a delivery event. FilterEvent: a filtering event. PushEvent: a pushing event.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The execution time of the event trace.</p>
+         */
         @NameInMap("ActionTime")
         public Long actionTime;
 
+        /**
+         * <p>The endpoint of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The name of the event bus.</p>
+         */
         @NameInMap("EventBusName")
         public String eventBusName;
 
+        /**
+         * <p>The event ID.</p>
+         */
         @NameInMap("EventId")
         public String eventId;
 
+        /**
+         * <p>The name of the event source.</p>
+         */
         @NameInMap("EventSource")
         public String eventSource;
 
+        /**
+         * <p>The delivery delay of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         */
         @NameInMap("NotifyLatency")
         public String notifyLatency;
 
+        /**
+         * <p>The event target delivery status.</p>
+         */
         @NameInMap("NotifyStatus")
         public String notifyStatus;
 
+        /**
+         * <p>The delivery time of the event target. This parameter is returned if the value of the Action parameter is PushEvent.</p>
+         */
         @NameInMap("NotifyTime")
         public Long notifyTime;
 
+        /**
+         * <p>The time when the event was delivered to the event bus. This parameter is returned if the value of the Action parameter is PutEvent.</p>
+         */
         @NameInMap("ReceivedTime")
         public Long receivedTime;
 
+        /**
+         * <p>The time when the event rule was matched. This parameter is returned if the value of the Action parameter is FilterEvent.</p>
+         */
         @NameInMap("RuleMatchingTime")
         public String ruleMatchingTime;
 
+        /**
+         * <p>The name of the event rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

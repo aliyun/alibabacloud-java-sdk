@@ -10,12 +10,21 @@ public class UpdateApiDestinationResponseBody extends TeaModel {
     @NameInMap("ApiDestinationName")
     public String apiDestinationName;
 
+    /**
+     * <p>The response code. If the request is successful, Success is returned.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned message. If the request is successful, success is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

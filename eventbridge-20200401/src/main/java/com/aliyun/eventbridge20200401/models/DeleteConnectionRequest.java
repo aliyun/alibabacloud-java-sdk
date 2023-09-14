@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class DeleteConnectionRequest extends TeaModel {
+    /**
+     * <p>The name of the connection that you want to delete.</p>
+     */
     @NameInMap("ConnectionName")
     public String connectionName;
 

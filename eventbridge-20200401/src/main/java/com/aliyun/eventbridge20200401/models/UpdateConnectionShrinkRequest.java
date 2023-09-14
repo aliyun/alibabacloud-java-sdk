@@ -4,15 +4,27 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class UpdateConnectionShrinkRequest extends TeaModel {
+    /**
+     * <p>The parameters that are configured for authentication.</p>
+     */
     @NameInMap("AuthParameters")
     public String authParametersShrink;
 
+    /**
+     * <p>The name of the connection that you want to update. The name must be 2 to 127 characters in length.</p>
+     */
     @NameInMap("ConnectionName")
     public String connectionName;
 
+    /**
+     * <p>The description of the connection. The description can be up to 255 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The parameters that are configured for the network.</p>
+     */
     @NameInMap("NetworkParameters")
     public String networkParametersShrink;
 

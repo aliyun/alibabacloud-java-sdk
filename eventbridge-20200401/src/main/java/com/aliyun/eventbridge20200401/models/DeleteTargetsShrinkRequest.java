@@ -4,12 +4,21 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class DeleteTargetsShrinkRequest extends TeaModel {
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    /**
+     * <p>The name of the event rule.</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>The IDs of the event targets that you want to delete.</p>
+     */
     @NameInMap("TargetIds")
     public String targetIdsShrink;
 

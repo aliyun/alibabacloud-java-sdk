@@ -4,18 +4,41 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The returned response code. Valid values:</p>
+     * <br>
+     * <p>    Success: The request is successful. </p>
+     * <br>
+     * <p>    Other codes: The request failed. For more information about error codes, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListTargetsResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>    true: The request is successful. </p>
+     * <br>
+     * <p>    false: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -120,6 +143,9 @@ public class ListTargetsResponseBody extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("ErrorsTolerance")
+        public String errorsTolerance;
+
         @NameInMap("EventBusName")
         public String eventBusName;
 
@@ -146,6 +172,14 @@ public class ListTargetsResponseBody extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public ListTargetsResponseBodyDataTargets setErrorsTolerance(String errorsTolerance) {
+            this.errorsTolerance = errorsTolerance;
+            return this;
+        }
+        public String getErrorsTolerance() {
+            return this.errorsTolerance;
         }
 
         public ListTargetsResponseBodyDataTargets setEventBusName(String eventBusName) {
@@ -191,12 +225,21 @@ public class ListTargetsResponseBody extends TeaModel {
     }
 
     public static class ListTargetsResponseBodyData extends TeaModel {
+        /**
+         * <p>If excess return values exist, this parameter is returned.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The name of the event rule.</p>
+         */
         @NameInMap("Targets")
         public java.util.List<ListTargetsResponseBodyDataTargets> targets;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

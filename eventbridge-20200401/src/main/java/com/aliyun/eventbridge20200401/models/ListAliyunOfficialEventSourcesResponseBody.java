@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
+    /**
+     * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListAliyunOfficialEventSourcesResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,27 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListAliyunOfficialEventSourcesResponseBodyDataEventSourceListEventTypes extends TeaModel {
+        /**
+         * <p>The name of the event source.</p>
+         */
         @NameInMap("EventSourceName")
         public String eventSourceName;
 
+        /**
+         * <p>The name of the group to which the queried event type belongs.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The full name of the queried event type.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The short name of the queried event type.</p>
+         */
         @NameInMap("ShortName")
         public String shortName;
 
@@ -117,30 +144,54 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListAliyunOfficialEventSourcesResponseBodyDataEventSourceList extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
+         */
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <p>The time when the event source was created. Unit: milliseconds.</p>
+         */
         @NameInMap("Ctime")
         public Float ctime;
 
+        /**
+         * <p>The description of the queried event source.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the event source to which the queried event type belongs.</p>
+         */
         @NameInMap("EventBusName")
         public String eventBusName;
 
+        /**
+         * <p>The queried event types.</p>
+         */
         @NameInMap("EventTypes")
         public java.util.List<ListAliyunOfficialEventSourcesResponseBodyDataEventSourceListEventTypes> eventTypes;
 
         @NameInMap("FullName")
         public String fullName;
 
+        /**
+         * <p>The name of the queried event source.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The status of the queried event source. Valid value: Activated.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The type of the queried event source.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -224,6 +275,9 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     }
 
     public static class ListAliyunOfficialEventSourcesResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the event source to which the queried event type belongs.</p>
+         */
         @NameInMap("EventSourceList")
         public java.util.List<ListAliyunOfficialEventSourcesResponseBodyDataEventSourceList> eventSourceList;
 

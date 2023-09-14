@@ -4,15 +4,31 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListApiDestinationsRequest extends TeaModel {
+    /**
+     * <p>The prefix of the API destination name.</p>
+     */
     @NameInMap("ApiDestinationNamePrefix")
     public String apiDestinationNamePrefix;
 
+    /**
+     * <p>The connection name.</p>
+     */
     @NameInMap("ConnectionName")
     public String connectionName;
 
+    /**
+     * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging.</p>
+     * <br>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>If you set Limit and excess return values exist, this parameter is returned.</p>
+     * <br>
+     * <p>*   Default value: 0.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

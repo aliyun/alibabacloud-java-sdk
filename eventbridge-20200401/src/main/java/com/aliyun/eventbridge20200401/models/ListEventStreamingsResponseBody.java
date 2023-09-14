@@ -4,18 +4,37 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListEventStreamingsResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <br>
+     * <p>Success: The request is successful.</p>
+     * <br>
+     * <p>Other codes: The request failed. For more information about error codes, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about the event streams.</p>
+     */
     @NameInMap("Data")
     public ListEventStreamingsResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. The value true indicates that the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -533,6 +552,222 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFcParametersServiceName getServiceName() {
             return this.serviceName;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters extends TeaModel {
+        @NameInMap("ExecutionName")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName executionName;
+
+        @NameInMap("FlowName")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName flowName;
+
+        @NameInMap("Input")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput input;
+
+        @NameInMap("RoleName")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName roleName;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters setExecutionName(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName executionName) {
+            this.executionName = executionName;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersExecutionName getExecutionName() {
+            return this.executionName;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters setFlowName(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName flowName) {
+            this.flowName = flowName;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersFlowName getFlowName() {
+            return this.flowName;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters setInput(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput input) {
+            this.input = input;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersInput getInput() {
+            return this.input;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters setRoleName(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParametersRoleName getRoleName() {
+            return this.roleName;
         }
 
     }
@@ -2037,6 +2272,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @NameInMap("SinkFcParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFcParameters sinkFcParameters;
 
+        @NameInMap("SinkFnfParameters")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters sinkFnfParameters;
+
         @NameInMap("SinkKafkaParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParameters sinkKafkaParameters;
 
@@ -2069,6 +2307,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFcParameters getSinkFcParameters() {
             return this.sinkFcParameters;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkFnfParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters sinkFnfParameters) {
+            this.sinkFnfParameters = sinkFnfParameters;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkFnfParameters getSinkFnfParameters() {
+            return this.sinkFnfParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkKafkaParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParameters sinkKafkaParameters) {
@@ -2770,12 +3016,21 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     }
 
     public static class ListEventStreamingsResponseBodyData extends TeaModel {
+        /**
+         * <p>The status of the event stream that is returned.</p>
+         */
         @NameInMap("EventStreamings")
         public java.util.List<ListEventStreamingsResponseBodyDataEventStreamings> eventStreamings;
 
+        /**
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. You must specify the pagination token in the next request.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of records.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

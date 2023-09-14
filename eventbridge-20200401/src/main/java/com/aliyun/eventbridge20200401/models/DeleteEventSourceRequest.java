@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventSourceRequest extends TeaModel {
     /**
-     * <p>事件源ID</p>
+     * <p>The name of the event source.</p>
      */
     @NameInMap("EventSourceName")
     public String eventSourceName;

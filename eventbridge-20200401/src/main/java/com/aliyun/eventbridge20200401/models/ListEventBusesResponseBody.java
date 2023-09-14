@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListEventBusesResponseBody extends TeaModel {
+    /**
+     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListEventBusesResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the event buses are successfully queried. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +80,27 @@ public class ListEventBusesResponseBody extends TeaModel {
     }
 
     public static class ListEventBusesResponseBodyDataEventBuses extends TeaModel {
+        /**
+         * <p>The timestamp that indicates when the event bus was created.</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The description of the queried event bus.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the queried event bus.</p>
+         */
         @NameInMap("EventBusARN")
         public String eventBusARN;
 
+        /**
+         * <p>The name of the queried event bus.</p>
+         */
         @NameInMap("EventBusName")
         public String eventBusName;
 
@@ -117,12 +144,21 @@ public class ListEventBusesResponseBody extends TeaModel {
     }
 
     public static class ListEventBusesResponseBodyData extends TeaModel {
+        /**
+         * <p>The timestamp that indicates when the event bus was created.</p>
+         */
         @NameInMap("EventBuses")
         public java.util.List<ListEventBusesResponseBodyDataEventBuses> eventBuses;
 
+        /**
+         * <p>If excess return values exist, this parameter is returned.</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
