@@ -16,6 +16,12 @@ public class MigrateConnectionToOtherZoneRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
      * <p>The ID of the zone.</p>
      */
@@ -41,6 +47,22 @@ public class MigrateConnectionToOtherZoneRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public MigrateConnectionToOtherZoneRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public MigrateConnectionToOtherZoneRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public MigrateConnectionToOtherZoneRequest setZoneId(String zoneId) {

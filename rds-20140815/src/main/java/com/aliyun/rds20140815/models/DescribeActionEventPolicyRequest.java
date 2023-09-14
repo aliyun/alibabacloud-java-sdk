@@ -8,13 +8,13 @@ public class DescribeActionEventPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

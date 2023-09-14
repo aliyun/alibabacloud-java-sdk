@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can specify up to 30 instance IDs in a single request. If you specify multiple instance IDs, separate the instance IDs with commas (,).</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Warning**: Do not query the details of multiple instances at a time by using multiple instance IDs. Otherwise, the query times out and fails.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

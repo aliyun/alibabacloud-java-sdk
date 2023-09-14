@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UnlockAccountRequest extends TeaModel {
     /**
-     * <p>The account that you want to unlock. You can unlock only one account at a time.</p>
+     * <p>The account that you want to unlock. You can unlock a single account at a time.</p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
-     * <p>The ID of the ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

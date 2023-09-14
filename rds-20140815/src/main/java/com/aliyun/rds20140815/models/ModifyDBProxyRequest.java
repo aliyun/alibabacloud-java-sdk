@@ -14,21 +14,21 @@ public class ModifyDBProxyRequest extends TeaModel {
     public String configDBProxyService;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>An internal parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("DBProxyEngineType")
     public String DBProxyEngineType;
 
     /**
-     * <p>The number of proxy instances that are enabled. Valid values: **1** to **60**. Default value: **1**.</p>
+     * <p>The number of proxy instances that are enabled. Valid values: **1** to **16**. Default value: **1**.</p>
      * <br>
-     * <p>> The capability to process requests increases in proportion with the number of proxy instances. You can specify a proper number of proxy instances based on the monitoring information of database loads.</p>
+     * <p>>  The capability of the database proxy to process requests increases with the number of proxy instances that are enabled. You can monitor the load on the instance and specify an appropriate number of proxy instances based on the load monitoring data.</p>
      */
     @NameInMap("DBProxyInstanceNum")
     public String DBProxyInstanceNum;
@@ -45,13 +45,13 @@ public class ModifyDBProxyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -63,17 +63,17 @@ public class ModifyDBProxyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the instance belongs. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the instance.</p>
      * <br>
-     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>>  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch that is associated with the specified VPC. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.</p>
+     * <p>The vSwitch ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the vSwitch ID of the instance.</p>
      * <br>
-     * <p>> This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>>  This parameter is required if you enable the database proxy feature for an ApsaraDB RDS for MySQL instance that uses cloud disks or an ApsaraDB RDS for PostgreSQL instance.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

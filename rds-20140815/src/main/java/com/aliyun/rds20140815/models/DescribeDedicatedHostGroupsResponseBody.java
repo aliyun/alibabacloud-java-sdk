@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of dedicated clusters returned.</p>
+     * <p>The information about dedicated clusters returned.</p>
      */
     @NameInMap("DedicatedHostGroups")
     public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroups dedicatedHostGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -99,8 +99,8 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of storage media that is used for the hosts in the dedicated cluster. Valid values:</p>
          * <br>
-         * <p>*   **dhg_cloud_ssd**: standard or enhanced solid-state drive (SSD)</p>
-         * <p>*   **dhg_local_ssd**: local SSD</p>
+         * <p>*   **dhg_cloud_ssd**: cloud disks</p>
+         * <p>*   **dhg_local_ssd**: local disks</p>
          */
         @NameInMap("DedicatedHostCountGroupByHostType")
         public java.util.Map<String, ?> dedicatedHostCountGroupByHostType;
@@ -130,7 +130,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Float diskAllocatedAmount;
 
         /**
-         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the disk overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The disk overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
          */
         @NameInMap("DiskAllocationRatio")
         public Integer diskAllocationRatio;
@@ -148,7 +148,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Float diskUtility;
 
         /**
-         * <p>The database engine that is run on the instances in the dedicated cluster.</p>
+         * <p>The database engine of the instances in the dedicated cluster.</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -160,7 +160,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Integer hostNumber;
 
         /**
-         * <p>The policy based on which the system handles host failures. Valid values:</p>
+         * <p>The policy that is used to handle host failures. Valid values:</p>
          * <br>
          * <p>*   **Auto**: The system automatically replaces faulty hosts.</p>
          * <p>*   **Manual**: You must manually replace faulty hosts.</p>
@@ -187,7 +187,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Float memAllocatedAmount;
 
         /**
-         * <p>The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the memory overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
+         * <p>The memory overcommitment ratio of the dedicated cluster. Unit: %. For more information about the core overcommitment ratio, see [Manage a dedicated cluster](~~182328~~).</p>
          */
         @NameInMap("MemAllocationRatio")
         public Integer memAllocationRatio;
@@ -205,7 +205,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public Float memUtility;
 
         /**
-         * <p>Indicates whether the operating system permissions of the hosts in the dedicated cluster can be granted. Valid values:</p>
+         * <p>Indicates whether the feature that allows you to have the OS permissions on the host is enabled. Valid values:</p>
          * <br>
          * <p>*   **0** or **null**: The permissions cannot be granted.</p>
          * <p>*   **1**: The permissions can be granted.</p>
@@ -215,7 +215,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public String openPermission;
 
         /**
-         * <p>The name and ID of the dedicated cluster. The value of this parameter consists of two parts: the value of the **DedicatedHostGroupDesc** parameter and the value of the **DedicatedHostGroupId** parameter. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.</p>
+         * <p>The name and ID of the dedicated cluster. The value consists of **DedicatedHostGroupDesc** and **DedicatedHostGroupId**. Format: DedicatedHostGroupDesc/DedicatedHostGroupId.</p>
          */
         @NameInMap("Text")
         public String text;
@@ -227,7 +227,7 @@ public class DescribeDedicatedHostGroupsResponseBody extends TeaModel {
         public String VPCId;
 
         /**
-         * <p>A list of zones to which the hosts of the dedicated cluster belong.</p>
+         * <p>The zones to which the hosts of the dedicated cluster belong.</p>
          */
         @NameInMap("ZoneIDList")
         public DescribeDedicatedHostGroupsResponseBodyDedicatedHostGroupsDedicatedHostGroupsZoneIDList zoneIDList;

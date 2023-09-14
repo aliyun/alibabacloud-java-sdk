@@ -67,13 +67,13 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class GetDBInstanceTopologyResponseBodyDataConnections extends TeaModel {
         /**
-         * <p>The endpoint of the instance.</p>
+         * <p>The endpoint that is used to connect to the database instance.</p>
          */
         @NameInMap("ConnectionString")
         public String connectionString;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
@@ -142,29 +142,29 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
         /**
          * <p>The ID of the dedicated cluster.</p>
          * <br>
-         * <p>> If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * <p>> : If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
 
         /**
-         * <p>The ID of the host on which the instance resides in the dedicated cluster.</p>
+         * <p>The host ID of the instance in the dedicated cluster.</p>
          * <br>
-         * <p>> If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
+         * <p>> : If the instance does not reside in the specified dedicated cluster, no value is returned.</p>
          */
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
         /**
-         * <p>The unique identifier of the instance.</p>
+         * <p>The ID of the instance.</p>
          * <br>
-         * <p>> The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.</p>
+         * <p>> : The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The type of the node. Valid values:</p>
+         * <p>The type of the node. The following result is returned:</p>
          * <br>
          * <p>*   **Master**: a primary node</p>
          * <p>*   **Slave**: a secondary node</p>
@@ -235,19 +235,19 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
 
     public static class GetDBInstanceTopologyResponseBodyData extends TeaModel {
         /**
-         * <p>The network connection of the instance.</p>
+         * <p>The network connection information of the instance.</p>
          */
         @NameInMap("Connections")
         public java.util.List<GetDBInstanceTopologyResponseBodyDataConnections> connections;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
         /**
-         * <p>The node information.</p>
+         * <p>The queried nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<GetDBInstanceTopologyResponseBodyDataNodes> nodes;

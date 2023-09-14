@@ -84,8 +84,8 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         /**
          * <p>The connection mode of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Performance**: standard mode</p>
-         * <p>*   **Safety**: enhanced mode</p>
+         * <p>*   **Performance**: standard mode.</p>
+         * <p>*   **Safety**: safe mode.</p>
          */
         @NameInMap("ConnectionMode")
         public String connectionMode;
@@ -97,13 +97,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The time when the audio or video file was created.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The number of cores that are configured for the instance.</p>
+         * <p>The number of CPU cores.</p>
          */
         @NameInMap("DBInstanceCPU")
         public String DBInstanceCPU;
@@ -127,13 +127,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The memory size of the instance. Unit: MB.</p>
+         * <p>The memory capacity of the instance. Unit: MB.</p>
          */
         @NameInMap("DBInstanceMemory")
         public Long DBInstanceMemory;
@@ -141,8 +141,8 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Internet**</p>
-         * <p>*   **Intranet**</p>
+         * <p>*   **Internet**: Internet</p>
+         * <p>*   **Intranet**: internal network</p>
          */
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
@@ -177,7 +177,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public Integer DBMaxQuantity;
 
         /**
-         * <p>The type of the database engine.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
@@ -194,6 +194,9 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        /**
+         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         */
         @NameInMap("ExportKey")
         public String exportKey;
 
@@ -210,7 +213,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public String incrementSourceDBInstanceId;
 
         /**
-         * <p>The type of the network.</p>
+         * <p>The network type.</p>
          */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
@@ -240,13 +243,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public String masterInstanceId;
 
         /**
-         * <p>The maximum number of concurrent connections that are allowed by the instance.</p>
+         * <p>The maximum number of concurrent connections.</p>
          */
         @NameInMap("MaxConnections")
         public Integer maxConnections;
 
         /**
-         * <p>The maximum number of I/O requests that is processed by the instance per second.</p>
+         * <p>The maximum number of I/O requests per second.</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
@@ -270,28 +273,31 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public String readDelayTime;
 
         /**
-         * <p>The ID of the region in which the instance resides.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The IP address whitelist of the instance.</p>
+         * <p>The IP address whitelist.</p>
          */
         @NameInMap("SecurityIPList")
         public String securityIPList;
 
+        /**
+         * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+         */
         @NameInMap("SlaveZones")
         public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttributeSlaveZones slaveZones;
 
         /**
-         * <p>None.</p>
+         * <p>N/A.</p>
          */
         @NameInMap("SupportUpgradeAccountType")
         public String supportUpgradeAccountType;
 
         /**
-         * <p>The tag.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public String tags;
@@ -303,19 +309,19 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         public String tempDBInstanceId;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the zone in which the instance resides.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

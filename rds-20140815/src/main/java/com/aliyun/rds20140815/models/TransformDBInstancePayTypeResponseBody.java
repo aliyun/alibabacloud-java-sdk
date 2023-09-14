@@ -11,7 +11,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -25,7 +25,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>The ID of the order.</p>
+     * <p>The order ID.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;

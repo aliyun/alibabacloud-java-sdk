@@ -23,7 +23,7 @@ public class DeleteBackupFileRequest extends TeaModel {
     public String backupTime;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -38,7 +38,7 @@ public class DeleteBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

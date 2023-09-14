@@ -11,7 +11,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end date of the time range that was queried.</p>
+     * <p>The end date of the query.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -23,13 +23,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>An array that consists of the information about each slow query.</p>
+     * <p>An array that consists of the information about each slow query log.</p>
      */
     @NameInMap("Items")
     public DescribeSlowLogsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the page returned.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -41,13 +41,13 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The start date of the time range that was queried.</p>
+     * <p>The start date of the query.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -139,7 +139,9 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average execution duration per SQL statement in the query. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>**</p>
+         * <br>
+         * <p>****</p>
          */
         @NameInMap("AvgExecutionTime")
         public Long avgExecutionTime;
@@ -147,15 +149,15 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of I/O writes per SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("AvgIOWriteCounts")
         public Long avgIOWriteCounts;
 
         /**
-         * <p>The average number of rows that are affected by the last SQL statement in the query.</p>
+         * <p>The average number of rows that were affected by the last SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("AvgLastRowsAffectedCounts")
         public Long avgLastRowsAffectedCounts;
@@ -163,7 +165,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of logical reads per SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("AvgLogicalReadCounts")
         public Long avgLogicalReadCounts;
@@ -171,7 +173,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of physical reads per SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("AvgPhysicalReadCounts")
         public Long avgPhysicalReadCounts;
@@ -179,7 +181,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average number of rows that were affected per SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("AvgRowsAffectedCounts")
         public Long avgRowsAffectedCounts;
@@ -191,7 +193,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The name of the database that was queried.</p>
+         * <p>The name of the database.</p>
          */
         @NameInMap("DBName")
         public String DBName;
@@ -202,13 +204,16 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         @NameInMap("MaxExecutionTime")
         public Long maxExecutionTime;
 
+        /**
+         * <p>The longest execution duration of a specific SQL statement in the query. Unit: milliseconds.</p>
+         */
         @NameInMap("MaxExecutionTimeMS")
         public Long maxExecutionTimeMS;
 
         /**
          * <p>The largest number of I/O writes that were performed by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MaxIOWriteCounts")
         public Long maxIOWriteCounts;
@@ -216,7 +221,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of rows that were affected by the last SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MaxLastRowsAffectedCounts")
         public Long maxLastRowsAffectedCounts;
@@ -227,13 +232,16 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         @NameInMap("MaxLockTime")
         public Long maxLockTime;
 
+        /**
+         * <p>The longest lock duration that was caused by a specific SQL statement in the query. Unit: milliseconds.</p>
+         */
         @NameInMap("MaxLockTimeMS")
         public Long maxLockTimeMS;
 
         /**
          * <p>The largest number of logical reads that were performed by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MaxLogicalReadCounts")
         public Long maxLogicalReadCounts;
@@ -241,7 +249,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of physical reads that were performed by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MaxPhysicalReadCounts")
         public Long maxPhysicalReadCounts;
@@ -249,7 +257,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest number of rows that were affected by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MaxRowsAffectedCounts")
         public Long maxRowsAffectedCounts;
@@ -257,7 +265,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of I/O writes that were performed by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MinIOWriteCounts")
         public Long minIOWriteCounts;
@@ -265,7 +273,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of rows that were affected by the last SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MinLastRowsAffectedCounts")
         public Long minLastRowsAffectedCounts;
@@ -273,7 +281,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of logical reads that were performed by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MinLogicalReadCounts")
         public Long minLogicalReadCounts;
@@ -281,7 +289,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of physical reads that were performed by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MinPhysicalReadCounts")
         public Long minPhysicalReadCounts;
@@ -289,7 +297,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest number of rows that were affected by a specific SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("MinRowsAffectedCounts")
         public Long minRowsAffectedCounts;
@@ -301,7 +309,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         public Long mySQLTotalExecutionCounts;
 
         /**
-         * <p>The total execution duration of all SQL statements in the query. This parameter is returned only for instances that run MySQL. Unit: seconds.</p>
+         * <p>The total execution duration of all SQL statements in the query. Unit: seconds. This parameter is returned only for instances that run MySQL.</p>
          */
         @NameInMap("MySQLTotalExecutionTimes")
         public Long mySQLTotalExecutionTimes;
@@ -351,7 +359,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average amount of CPU time per SQL statement in the query. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("SQLServerAvgCpuTime")
         public Long SQLServerAvgCpuTime;
@@ -359,7 +367,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The average execution duration per SQL statement in the query. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("SQLServerAvgExecutionTime")
         public Long SQLServerAvgExecutionTime;
@@ -367,7 +375,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The largest amount of CPU time that was used by a specific SQL statement in the query. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("SQLServerMaxCpuTime")
         public Long SQLServerMaxCpuTime;
@@ -375,7 +383,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest amount of CPU time that was used by a specific SQL statement. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("SQLServerMinCpuTime")
         public Long SQLServerMinCpuTime;
@@ -383,7 +391,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The smallest execution duration of a specific SQL statement in the query. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("SQLServerMinExecutionTime")
         public Long SQLServerMinExecutionTime;
@@ -391,7 +399,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The total amount of CPU time that was used by all SQL statements in the query. Unit: seconds.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("SQLServerTotalCpuTime")
         public Long SQLServerTotalCpuTime;
@@ -423,7 +431,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The total number of I/O writes that were performed by all SQL statements in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("TotalIOWriteCounts")
         public Long totalIOWriteCounts;
@@ -431,7 +439,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         /**
          * <p>The total number of rows that were affected by the last SQL statement in the query.</p>
          * <br>
-         * <p>>  This parameter is returned only for instances that run SQL Server.</p>
+         * <p>> This parameter is returned only for instances that run SQL Server.</p>
          */
         @NameInMap("TotalLastRowsAffectedCounts")
         public Long totalLastRowsAffectedCounts;
@@ -449,7 +457,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
         public Long totalLogicalReadCounts;
 
         /**
-         * <p>The total number of physical reads that were performed by all SQL statements in the query.</p>
+         * <p>The total number of physical reads that were performed by all SQL statements in the query .</p>
          */
         @NameInMap("TotalPhysicalReadCounts")
         public Long totalPhysicalReadCounts;

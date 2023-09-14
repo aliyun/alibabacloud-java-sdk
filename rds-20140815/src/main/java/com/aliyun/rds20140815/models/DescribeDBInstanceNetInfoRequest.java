@@ -11,7 +11,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -28,7 +28,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public String DBInstanceNetRWSplitType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("Flag")
     public Integer flag;

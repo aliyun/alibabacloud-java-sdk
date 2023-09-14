@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CloneDBInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Default value: true. Valid values:</p>
+     * <p>Specifies whether to automatically complete the payment. Valid values:</p>
      * <br>
-     * <p>*   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.</p>
-     * <p>*   **false**: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click **Expenses**. On the page that appears, select **Orders** from the left-side navigation pane. On the Orders page, find the order and complete the payment.</p>
+     * <p>1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.</p>
+     * <p>2.  **false**: does not automatically complete the payment. An unpaid order is generated.</p>
+     * <br>
+     * <p>> The default value is true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -33,13 +35,13 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String backupType;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("BpeEnabled")
     public String bpeEnabled;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
@@ -52,7 +54,12 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
      * <p>*   **AlwaysOn**: RDS Cluster Edition for SQL Server.</p>
      * <p>*   **cluster**: RDS Cluster Edition for MySQL.</p>
      * <p>*   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).</p>
-     * <p>*   **serverless_basic**: RDS Serverless Basic Edition.</p>
+     * <br>
+     * <p>**Serverless instances**</p>
+     * <br>
+     * <p>*   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.</p>
+     * <p>*   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.</p>
+     * <p>*   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.</p>
      */
     @NameInMap("Category")
     public String category;
@@ -80,13 +87,15 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the new instance. Valid values:</p>
+     * <p>The storage type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **local_ssd**: local SSD</p>
-     * <p>*   **cloud_ssd**: standard SSD</p>
-     * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)</p>
-     * <p>*   **cloud_essd2**: ESSD of PL2</p>
+     * <p>*   **local_ssd**: local SSDs</p>
+     * <p>*   **cloud_ssd**: standard SSDs</p>
+     * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
+     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
      * <p>*   **cloud_essd3**: ESSD of PL3</p>
+     * <br>
+     * <p>> Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -104,12 +113,10 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to enable the release protection feature for the new instance. Valid values:</p>
+     * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
      * <br>
-     * <p>*   **true**</p>
-     * <p>*   **false**</p>
-     * <br>
-     * <p>Default value: **false**.</p>
+     * <p>*   **true**: enables the feature.</p>
+     * <p>*   **false** (default): disables the feature.</p>
      */
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
@@ -126,11 +133,11 @@ public class CloneDBInstanceShrinkRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The billing method of the read-only instance. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Postpaid**: pay-as-you-go</p>
-     * <p>*   **Prepaid**: subscription</p>
-     * <p>*   **Serverless**: serverless. This value is supported only for instances that run MySQL. For more information, see [Overview](~~411291~~).</p>
+     * <p>*   **Postpaid**: pay-as-you-go.</p>
+     * <p>*   **Prepaid**: subscription.</p>
+     * <p>*   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).</p>
      */
     @NameInMap("PayType")
     public String payType;

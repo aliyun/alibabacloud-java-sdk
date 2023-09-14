@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeCharacterSetNameResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the character sets that are supported for the instance.</p>
+     * <p>The character sets that are supported.</p>
      */
     @NameInMap("CharacterSetNameItems")
     public DescribeCharacterSetNameResponseBodyCharacterSetNameItems characterSetNameItems;
 
     /**
-     * <p>The database engine that is run on the instance.</p>
+     * <p>The type of the database engine.</p>
      */
     @NameInMap("Engine")
     public String engine;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

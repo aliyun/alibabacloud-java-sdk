@@ -4,15 +4,31 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database.</p>
+     */
     @NameInMap("DBName")
     public String DBName;
 
+    /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.**</p>
+     * <br>
+     * <p>> The end time must be later than the start time.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the node.</p>
+     * <br>
+     * <p>> This parameter is available only for instances that run RDS Cluster Edition. You can specify this parameter to query the logs of a specified node. If this parameter is not specified, the logs of the primary node are returned by default.</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
@@ -22,9 +38,15 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid value: **30 to 200**. Default value: **30**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -34,9 +56,15 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The unique ID of the SQL statement. The ID is used to obtain the slow query logs of the SQL statement.</p>
+     */
     @NameInMap("SQLHASH")
     public String SQLHASH;
 
+    /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

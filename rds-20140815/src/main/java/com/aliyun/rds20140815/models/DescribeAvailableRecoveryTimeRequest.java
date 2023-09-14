@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
     /**
-     * <p>The ID of the cross-region backup file. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query IDs of backup files.</p>
+     * <p>The ID of the cross-region data backup file. You can call the [DescribeCrossRegionBackups](~~121733~~) operation to query IDs of backup files.</p>
      */
     @NameInMap("CrossBackupId")
     public Integer crossBackupId;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The IDs of the instances. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -20,13 +20,13 @@ public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of a resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

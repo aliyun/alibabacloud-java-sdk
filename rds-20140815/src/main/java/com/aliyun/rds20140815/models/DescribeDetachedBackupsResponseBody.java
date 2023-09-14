@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDetachedBackupsResponseBody extends TeaModel {
     /**
-     * <p>The details of the returned data backup files.</p>
+     * <p>The queried backup sets.</p>
      */
     @NameInMap("Items")
     public DescribeDetachedBackupsResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The number of data backup files on the page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public String pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -81,13 +81,13 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
 
     public static class DescribeDetachedBackupsResponseBodyItemsBackup extends TeaModel {
         /**
-         * <p>The URL that is used to download the data backup file over the Internet. If the data backup file cannot be downloaded, an empty string is returned.</p>
+         * <p>The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.</p>
          */
         @NameInMap("BackupDownloadURL")
         public String backupDownloadURL;
 
         /**
-         * <p>The end time of the backup.</p>
+         * <p>The end time of the backup task.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
          */
@@ -95,13 +95,13 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String backupEndTime;
 
         /**
-         * <p>The ID of the data backup file.</p>
+         * <p>The ID of the backup set.</p>
          */
         @NameInMap("BackupId")
         public String backupId;
 
         /**
-         * <p>The URL that is used to download the data backup file over an internal network. If the data backup file cannot be downloaded, an empty string is returned.</p>
+         * <p>The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned.</p>
          */
         @NameInMap("BackupIntranetDownloadURL")
         public String backupIntranetDownloadURL;
@@ -116,7 +116,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
-         * <p>The backup mode of the data backup file. Valid values:</p>
+         * <p>The backup method. Valid values:</p>
          * <br>
          * <p>*   **Automated**</p>
          * <p>*   **Manual**</p>
@@ -125,13 +125,13 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String backupMode;
 
         /**
-         * <p>The size of the data backup file. Unit: bytes.</p>
+         * <p>The backup size. Unit: bytes.</p>
          */
         @NameInMap("BackupSize")
         public Long backupSize;
 
         /**
-         * <p>The start time of the backup.</p>
+         * <p>The start time of the backup task.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.</p>
          */
@@ -139,7 +139,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String backupStartTime;
 
         /**
-         * <p>The status of the data backup file. Valid values:</p>
+         * <p>The status of the backup set. Valid values:</p>
          * <br>
          * <p>*   **Success**</p>
          * <p>*   **Failed**</p>
@@ -148,7 +148,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String backupStatus;
 
         /**
-         * <p>The backup type. Valid values:</p>
+         * <p>The backup type of the backup file. Valid values:</p>
          * <br>
          * <p>*   **FullBackup**</p>
          * <p>*   **IncrementalBackup**</p>
@@ -157,9 +157,9 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String backupType;
 
         /**
-         * <p>The point in time at which the data in the data backup file is consistent. The return value of this parameter is a timestamp.</p>
+         * <p>The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.</p>
          * <br>
-         * <p>>  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
+         * <p>> If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.</p>
          */
         @NameInMap("ConsistentTime")
         public Long consistentTime;
@@ -177,26 +177,26 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         public String DBInstanceId;
 
         /**
-         * <p>The No. of the instance that generates the data backup file. This parameter is used to indicate whether the instance that generates the data backup file is a primary instance or a secondary instance.</p>
+         * <p>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
          */
         @NameInMap("HostInstanceID")
         public String hostInstanceID;
 
         /**
-         * <p>Indicates whether the data backup file is available. Valid values:</p>
+         * <p>Indicates whether the backup set is available. Valid values:</p>
          * <br>
-         * <p>*   **0**: The data backup file is unavailable.</p>
-         * <p>*   **1**: The data backup file is available.</p>
+         * <p>*   **0**: The backup set is unavailable.</p>
+         * <p>*   **1**: The backup set is available.</p>
          */
         @NameInMap("IsAvail")
         public Integer isAvail;
 
         /**
-         * <p>The status of the data backup file that is used to restore individual databases or tables. Valid values:</p>
+         * <p>The status of the backup set that is used to restore individual databases or tables. Valid values:</p>
          * <br>
-         * <p>*   **OK**: The data backup file is normal.</p>
-         * <p>*   **LARGE**: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</p>
-         * <p>*   **EMPTY**: The data backup file is generated from a failed backup task.</p>
+         * <p>*   **OK**: The backup set is normal.</p>
+         * <p>*   **LARGE**: The backup set contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.</p>
+         * <p>*   **EMPTY**: The backup set is generated from a failed backup task.</p>
          */
         @NameInMap("MetaStatus")
         public String metaStatus;
@@ -204,8 +204,8 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the data backup file can be deleted. Valid values:</p>
          * <br>
-         * <p>*   **Enabled**: The data backup file can be deleted.</p>
-         * <p>*   **Disabled**: The data backup file cannot be deleted.</p>
+         * <p>*   **Enabled**</p>
+         * <p>*   **Disabled**</p>
          */
         @NameInMap("StoreStatus")
         public String storeStatus;

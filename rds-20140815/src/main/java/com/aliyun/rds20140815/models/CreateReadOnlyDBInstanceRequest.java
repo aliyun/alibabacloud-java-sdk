@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether payment is automatically made during renewal. Valid values:</p>
+     * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
      * <br>
-     * <p>*   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.</p>
-     * <p>*   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.</p>
+     * <p>1.  **true**: enables the feature. You must make sure that your account balance is sufficient.</p>
+     * <p>2.  **false**: disables the feature. An unpaid order is generated.</p>
+     * <br>
+     * <p>>  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
@@ -26,23 +28,23 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("BpeEnabled")
     public String bpeEnabled;
 
     /**
-     * <p>This parameter is not publicly available.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("BurstingEnabled")
     public Boolean burstingEnabled;
 
     /**
-     * <p>The RDS edition of the read-only instance. Valid values:</p>
+     * <p>The RDS edition of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Basic**: RDS Basic Edition.</p>
-     * <p>*   **HighAvailability**: RDS High-availability Edition. This is the default value.</p>
-     * <p>*   **AlwaysOn**: RDS Cluster Edition.</p>
+     * <p>*   **Basic**: RDS Basic Edition</p>
+     * <p>*   **HighAvailability** (default): RDS High-availability Edition</p>
+     * <p>*   **AlwaysOn**: RDS Cluster Edition</p>
      * <br>
      * <p>> If the primary instance runs PostgreSQL with cloud disks, you must set this parameter to **Basic**.</p>
      */
@@ -64,13 +66,13 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     /**
      * <p>The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter</p>
      * <br>
-     * <p>> The value cannot start with `http://` or `https://`.</p>
+     * <p>> The value cannot start with [http:// or https://.](http://https://。)</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the primary instance.</p>
+     * <p>The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance IDs.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -82,16 +84,19 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the read-only instance. Valid values:</p>
+     * <p>The storage type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **local_ssd**: local SSD</p>
-     * <p>*   **cloud_ssd**: standard SSD</p>
-     * <p>*   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)</p>
-     * <p>*   **cloud_essd2**: ESSD of PL2</p>
-     * <p>*   **cloud_essd3**: ESSD of PL3</p>
+     * <p>*   **local_ssd**: local SSDs</p>
+     * <p>*   **cloud_ssd**: standard SSDs</p>
+     * <p>*   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)</p>
+     * <p>*   **cloud_essd2**: ESSDs of PL2</p>
+     * <p>*   **cloud_essd3**: ESSDs of PL3</p>
      * <br>
-     * <p>> * If the primary instance runs MySQL with local disks, you must set this parameter to **local\_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.</p>
-     * <p>> * If the primary instance runs SQL Server, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.</p>
+     * <p>> </p>
+     * <br>
+     * <p>*   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
+     * <br>
+     * <p>*   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.</p>
      */
     @NameInMap("DBInstanceStorageType")
     public String DBInstanceStorageType;
@@ -106,7 +111,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
      * <p>Specifies whether to enable the release protection feature for the read-only instance. Valid values:</p>
      * <br>
      * <p>*   **true**: enables the feature.</p>
-     * <p>*   **false**: disables the feature. This is the default value.</p>
+     * <p>*   **false** (default): disables the feature.</p>
      * <br>
      * <p>> This feature can be enabled only when you set the **PayType** parameter to **Postpaid**.</p>
      */
@@ -173,13 +178,19 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>Supports initializing the port when creating a read-only instance on the RDS MySQL master instance. Valid values: **1000 to 65534**.</p>
+     */
+    @NameInMap("Port")
+    public String port;
+
+    /**
      * <p>The private IP address of the read-only instance. The private IP address must be within the CIDR block that is supported by the specified vSwitch. The system assigns a private IP address to the read-only instance based on the values of the **VPCId** and **VSwitchId** parameters.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     /**
-     * <p>The region ID of the read-only instance. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -241,7 +252,7 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the read-only instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.</p>
+     * <p>The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -417,6 +428,14 @@ public class CreateReadOnlyDBInstanceRequest extends TeaModel {
     }
     public String getPeriod() {
         return this.period;
+    }
+
+    public CreateReadOnlyDBInstanceRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
     }
 
     public CreateReadOnlyDBInstanceRequest setPrivateIpAddress(String privateIpAddress) {

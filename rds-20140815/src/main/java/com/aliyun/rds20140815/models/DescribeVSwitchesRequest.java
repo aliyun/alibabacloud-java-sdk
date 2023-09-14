@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster. If you configure this parameter, the details about all vSwitches in the VPC to which the dedicated cluster belongs are returned.</p>
+     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~610640~~) operation to query the ID of the dedicated cluster. If you configure this parameter, the details of all vSwitches in the VPC to which the dedicated cluster belongs are returned.</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>You must configure this parameter or the **VpcId** parameter.</p>
+     * <p>> You must configure this parameter or **VpcId**.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -33,7 +31,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the vSwitch. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the vSwitch. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -54,17 +52,15 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the VPC to which the vSwitches belong.</p>
+     * <p>The ID of the VPC to which the vSwitch belongs.</p>
      * <br>
-     * <p>**</p>
-     * <br>
-     * <p>You must configure this parameter or the **DedicatedHostGroupId** parameter.</p>
+     * <p>> You must configure this parameter or **DedicatedHostGroupId**.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the zone to which the vSwitches belong. You can call the [DescribeAvailableZones](~~169126~~) operation to query the ID of the zone. If you configure this parameter, the query results are filtered based on the value of this parameter and only the details about the vSwitches that are deployed in the specified zone are returned.</p>
+     * <p>The ID of the zone to which the vSwitch belongs. You can call the [DescribeAvailableZones](~~610392~~) operation to query the ID of the zone. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the vSwitch that is deployed in the specified zone is returned.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -105,6 +105,18 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("BackupPolicyMode")
     public String backupPolicyMode;
 
+    /**
+     * <p>Specifies whether the backup settings of a secondary instance are configured. Valid values:</p>
+     * <br>
+     * <p>*   **1**: secondary instance preferred</p>
+     * <p>*   **2**: primary instance preferred</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   This parameter is suitable only for instances that run SQL Server on RDS Cluster Edition.</p>
+     * <br>
+     * <p>*   This parameter takes effect only when **BackupMethod** is set to **Physical**. If **BackupMethod** is set to **Snapshot**, backups are forcefully performed on the primary instance that runs SQL Server on RDS Cluster Edition.</p>
+     */
     @NameInMap("BackupPriority")
     public Integer backupPriority;
 
@@ -146,7 +158,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String compressType;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -167,7 +179,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>Specifies whether to enable the incremental backup feature. Valid values:</p>
+     * <p>Specifies whether to enable incremental backup. Valid values:</p>
      * <br>
      * <p>*   **false** (default): disables the feature.</p>
      * <p>*   **true**: enables the feature.</p>

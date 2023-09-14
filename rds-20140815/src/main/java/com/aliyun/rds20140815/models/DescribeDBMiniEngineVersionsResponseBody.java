@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -17,25 +17,25 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
     public Integer maxRecordsPerPage;
 
     /**
-     * <p>An array that consists of details of the minor engine versions.</p>
+     * <p>An array that consists of details of the minor engine version.</p>
      */
     @NameInMap("MinorVersionItems")
     public java.util.List<DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems> minorVersionItems;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number returned.</p>
      */
     @NameInMap("PageNumbers")
     public Integer pageNumbers;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -97,7 +97,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](~~126002~~).</p>
          * <br>
-         * <p>>  This parameter is valid only when the Engine parameter is set to **PostgreSQL**.</p>
+         * <p>> This parameter is valid only when the instance runs **PostgreSQL**.</p>
          */
         @NameInMap("CommunityMinorVersion")
         public String communityMinorVersion;
@@ -115,13 +115,19 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>An internal parameter. You can ignore this parameter.</p>
+         * <p>内核版本过期状态：vaild-有效；expired-过期</p>
+         */
+        @NameInMap("ExpireStatus")
+        public String expireStatus;
+
+        /**
+         * <p>An internal parameter. You do not need to specify this parameter.</p>
          */
         @NameInMap("IsHotfixVersion")
         public Boolean isHotfixVersion;
 
         /**
-         * <p>The version of the minor engine.</p>
+         * <p>The minor engine version.</p>
          */
         @NameInMap("MinorVersion")
         public String minorVersion;
@@ -160,10 +166,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         /**
          * <p>The tag that corresponds to the minor engine version. Valid values:</p>
          * <br>
-         * <p>*   **pgsql_docker_image**: tag of common instances</p>
+         * <p>*   **pgsql_docker_image**: tag of the common instance</p>
          * <p>*   **pgsql_babelfish_image**: tag of the instance for which Babelfish is enabled</p>
          * <br>
-         * <p>>  This parameter is valid only when the Engine parameter is set to **PostgreSQL**.</p>
+         * <p>> This parameter is valid only when the instance runs **PostgreSQL**.</p>
          */
         @NameInMap("Tag")
         public String tag;
@@ -195,6 +201,14 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        public DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems setExpireStatus(String expireStatus) {
+            this.expireStatus = expireStatus;
+            return this;
+        }
+        public String getExpireStatus() {
+            return this.expireStatus;
         }
 
         public DescribeDBMiniEngineVersionsResponseBodyMinorVersionItems setIsHotfixVersion(Boolean isHotfixVersion) {

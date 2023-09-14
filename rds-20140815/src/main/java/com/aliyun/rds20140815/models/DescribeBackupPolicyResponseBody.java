@@ -51,6 +51,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupMethod")
     public String backupMethod;
 
+    /**
+     * <p>The backup settings of the secondary instance. Valid values:</p>
+     * <br>
+     * <p>*   **1**: Secondary instance preferred</p>
+     * <p>*   **2**: Primary instance preferred</p>
+     * <br>
+     * <p>> This parameter is valid only when the instance runs SQL Server on RDS Cluster Edition. This parameter is returned only when SupportModifyBackupPriority is set to True.</p>
+     */
     @NameInMap("BackupPriority")
     public Integer backupPriority;
 
@@ -187,6 +195,12 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the backup settings of a secondary instance can be modified. Valid values:</p>
+     * <br>
+     * <p>*   **True**</p>
+     * <p>*   **False**</p>
+     */
     @NameInMap("SupportModifyBackupPriority")
     public Boolean supportModifyBackupPriority;
 

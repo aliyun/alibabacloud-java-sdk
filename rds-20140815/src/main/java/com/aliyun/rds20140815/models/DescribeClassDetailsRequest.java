@@ -4,27 +4,57 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeClassDetailsRequest extends TeaModel {
+    /**
+     * <p>The code of the instance type.</p>
+     */
     @NameInMap("ClassCode")
     public String classCode;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The commodity code of the instance. Valid values:</p>
+     * <br>
+     * <p>*   ****</p>
+     * <p>*   ****</p>
+     * <p>*   ****</p>
+     * <p>*   ****</p>
+     * <p>*   **bards_intl**: The instance is a pay-as-you-go primary instance.</p>
+     * <p>*   **rds_intl**: The instance is a subscription primary instance.</p>
+     * <p>*   **rords_intl**: The instance is a pay-as-you-go read-only instance.</p>
+     * <p>*   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.</p>
+     */
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    /**
+     * <p>The type of the database engine.</p>
+     */
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The database engine version of the instance.</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)获取。</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

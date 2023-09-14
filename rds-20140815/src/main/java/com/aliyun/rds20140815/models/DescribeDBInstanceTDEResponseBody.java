@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     /**
-     * <p>The details of the TDE status at the database level.</p>
+     * <p>The TDE status at the database level.</p>
      * <br>
-     * <p>> For the instances that run SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.</p>
+     * <p>>  If your instance runs SQL Server 2019 SE or SQL Server EE, you can specify whether to enable TDE at the database level when you enable TDE at the instance level.</p>
      */
     @NameInMap("Databases")
     public DescribeDBInstanceTDEResponseBodyDatabases databases;
@@ -19,7 +19,19 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The TDE status at the instance level. Valid values: **Enabled and Disabled**.</p>
+     * <p>The key method for instance level TDE encryption, with values:</p>
+     * <p>- **Aliyun_Generate_Key**</p>
+     * <p>- **Customer_Provided_Key**</p>
+     * <p>- **Unknown**</p>
+     */
+    @NameInMap("TDEMode")
+    public String TDEMode;
+
+    /**
+     * <p>The TDE status of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **Enabled**</p>
+     * <p>*   **Disabled**</p>
      */
     @NameInMap("TDEStatus")
     public String TDEStatus;
@@ -45,6 +57,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDBInstanceTDEResponseBody setTDEMode(String TDEMode) {
+        this.TDEMode = TDEMode;
+        return this;
+    }
+    public String getTDEMode() {
+        return this.TDEMode;
+    }
+
     public DescribeDBInstanceTDEResponseBody setTDEStatus(String TDEStatus) {
         this.TDEStatus = TDEStatus;
         return this;
@@ -61,7 +81,10 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The TDE status at the database level. Valid values: **Enabled and Disabled**.</p>
+         * <p>The TDE status at the database level. Valid values:</p>
+         * <br>
+         * <p>*   **Enabled**</p>
+         * <p>*   **Disabled**</p>
          */
         @NameInMap("TDEStatus")
         public String TDEStatus;

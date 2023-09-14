@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cross-region backup file.</p>
+     * <p>The ID of the cross-region data backup file.</p>
      */
     @NameInMap("CrossBackupId")
     public Integer crossBackupId;
@@ -23,13 +23,13 @@ public class DescribeAvailableRecoveryTimeResponseBody extends TeaModel {
     public String recoveryEndTime;
 
     /**
-     * <p>The region ID of the source instance.</p>
+     * <p>The region where the source instance resides.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -32,7 +32,7 @@ public class CloneParameterGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group. You can leave this parameter empty.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

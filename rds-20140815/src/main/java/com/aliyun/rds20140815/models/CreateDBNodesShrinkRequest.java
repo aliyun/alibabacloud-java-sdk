@@ -13,7 +13,7 @@ public class CreateDBNodesShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -31,7 +31,7 @@ public class CreateDBNodesShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

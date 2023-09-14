@@ -4,15 +4,32 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConfigRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The name of the configuration item that you want to modify.</p>
+     * <br>
+     * <p>*   **pgbouncer**</p>
+     */
     @NameInMap("ConfigName")
     public String configName;
 
+    /**
+     * <p>The value of the configuration item that you want to modify.</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("ConfigValue")
     public String configValue;
 
+    /**
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
@@ -22,6 +39,9 @@ public class ModifyDBInstanceConfigRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

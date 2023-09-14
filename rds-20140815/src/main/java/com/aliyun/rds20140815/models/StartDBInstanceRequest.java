@@ -5,49 +5,41 @@ import com.aliyun.tea.*;
 
 public class StartDBInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The policy based on which the system migrates the data of the instance. Valid values:</p>
+     * <p>The data migration method of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values:</p>
      * <br>
-     * <p>*   **0**: the default value. The system preferentially upgrades or downgrades the instance without a migration. If the resources on the host on which the instance resides are insufficient, the system migrates the instance to another suitable host.</p>
+     * <p>*   **0** (default): The system preferentially upgrades or downgrades the instance without a migration. If the resources on the host on which the instance resides are insufficient, the system migrates the instance to another suitable host.</p>
      * <p>*   **1**: The system upgrades or downgrades the instance without a migration. If the upgrade or downgrade is not supported, the system reports an error.</p>
-     * <p>*   **2**: The system migrates the data of the instance from the host on which the instance resides to another host. You must also specify the **DedicatedHostGroupId**, **TargetDedicatedHostIdForMaster**, and **TargetDedicatedHostIdForSlave** parameters. If you set the DBInstanceTransType parameter to 2, you cannot migrate the data of the instance to the host on which the instance resides. If you migrate the data of the instance to the host on which the instance resides, the migration fails.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>*   **2**: The system migrates the data of the instance from the host on which the instance resides to another host. You must also specify **DedicatedHostGroupId**, **TargetDedicatedHostIdForMaster**, and **TargetDedicatedHostIdForSlave**. If you set DBInstanceTransType to 2, you cannot migrate the data of the instance to the host on which the instance resides. If you migrate the data of the instance to the host on which the instance resides, the migration fails.</p>
      */
     @NameInMap("DBInstanceTransType")
     public Integer DBInstanceTransType;
 
     /**
-     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>The ID of the dedicated cluster. This parameter is required when you want to resume an instance in a dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~610640~~) operation to query the ID of the dedicated cluster.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The time at which you want the change to take effect. Valid values:</p>
+     * <p>The effective time. This parameter is available only for instances that are created in dedicated clusters.</p>
      * <br>
-     * <p>*   **Immediate**: The change immediately takes effect.</p>
-     * <p>*   **MaintainTime**: The change takes effect during the maintenance window that you specified. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
-     * <p>*   **SpecificTime**: The change takes effect at a specified point in time.</p>
+     * <p>*   **Immediate**</p>
+     * <p>*   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).</p>
+     * <p>*   **SpecificTime**: The effective time is specified.</p>
      * <br>
      * <p>Default value: MaintainTime.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
      */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
     /**
-     * <p>The database engine version of the instance.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>The database engine version of the instance. This parameter is available only for instances that are created in dedicated clusters.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -56,7 +48,7 @@ public class StartDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID of the instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -68,79 +60,55 @@ public class StartDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The custom time at which you want the change to take effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The switching time. This parameter is available only for instances that are created in dedicated clusters. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter must be specified when you set the **EffectiveTime** parameter to **Specified**.</p>
-     * <br>
-     * <p>*   Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>> This parameter must be specified when **EffectiveTime** is set to **Specified**.</p>
      */
     @NameInMap("SpecifiedTime")
     public String specifiedTime;
 
     /**
-     * <p>The storage capacity of the instance. Valid values: **5 to 2000**. Unit: GB. If you do not specify this parameter, the storage capacity of the instance remains unchanged.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>The storage capacity of the instance. This parameter is available only for instances that are created in dedicated clusters. Valid values: **5 to 2000**. Unit: GB. If you do not specify this parameter, the storage capacity of the instance remains unchanged.</p>
      */
     @NameInMap("Storage")
     public Integer storage;
 
     /**
-     * <p>The instance type of the instance.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>The instance type of the required instance. This parameter is available only for instances that are created in dedicated clusters.</p>
      */
     @NameInMap("TargetDBInstanceClass")
     public String targetDBInstanceClass;
 
     /**
-     * <p>The ID of the host on which the logger instance is created.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter is invalid.</p>
+     * <p>A deprecated parameter. You do not need to specify this parameter.</p>
      */
     @NameInMap("TargetDedicatedHostIdForLog")
     public String targetDedicatedHostIdForLog;
 
     /**
-     * <p>The ID of the host on which the primary instance is created.</p>
+     * <p>The ID of the host on which the primary instance is created. This parameter is available only for instances that are created in dedicated clusters.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter must be specified when you set the **DBInstanceTransType** parameter to **2**.</p>
-     * <br>
-     * <p>*   Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>> This parameter must be specified when **DBInstanceTransType** is set to **2**.</p>
      */
     @NameInMap("TargetDedicatedHostIdForMaster")
     public String targetDedicatedHostIdForMaster;
 
     /**
-     * <p>The ID of the host on which the secondary instance is created.</p>
+     * <p>The ID of the host on which the secondary instance is created. This parameter is available only for instances that are created in dedicated clusters.</p>
      * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   This parameter must be specified when you set the **DBInstanceTransType** parameter to **2**.</p>
-     * <br>
-     * <p>*   Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>> This parameter must be specified when **DBInstanceTransType** is set to **2**.</p>
      */
     @NameInMap("TargetDedicatedHostIdForSlave")
     public String targetDedicatedHostIdForSlave;
 
     /**
-     * <p>The ID of the vSwitch.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>The vSwitch ID. This parameter is available only for instances that are created in dedicated clusters.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the instance.</p>
-     * <br>
-     * <p>> Only the instances that are created in dedicated clusters are supported.</p>
+     * <p>The zone ID. This parameter is available only for instances that are created in dedicated clusters.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

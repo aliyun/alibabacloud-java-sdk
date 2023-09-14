@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
     /**
-     * <p>The list of parameters that are being synchronized. After you modify and submit the parameter settings, you must wait for the parameter modifications to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</p>
+     * <p>The list of parameters that are being synchronized.</p>
+     * <br>
+     * <p>> After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.</p>
      */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
@@ -17,13 +19,13 @@ public class DescribeParametersResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The version of the database engine.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>Parameter template information.</p>
+     * <p>The information about the parameter template.</p>
      */
     @NameInMap("ParamGroupInfo")
     public DescribeParametersResponseBodyParamGroupInfo paramGroupInfo;
@@ -164,25 +166,25 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     public static class DescribeParametersResponseBodyParamGroupInfo extends TeaModel {
         /**
-         * <p>Parameter template ID.</p>
+         * <p>The ID of the parameter template.</p>
          */
         @NameInMap("ParamGroupId")
         public String paramGroupId;
 
         /**
-         * <p>Parameter template description.</p>
+         * <p>The description of the parameter template.</p>
          */
         @NameInMap("ParameterGroupDesc")
         public String parameterGroupDesc;
 
         /**
-         * <p>Parameter template name.</p>
+         * <p>The name of the parameter template.</p>
          */
         @NameInMap("ParameterGroupName")
         public String parameterGroupName;
 
         /**
-         * <p>Parameter template type.</p>
+         * <p>The type of the parameter template.</p>
          */
         @NameInMap("ParameterGroupType")
         public String parameterGroupType;

@@ -36,13 +36,13 @@ public class CreateDBInstanceEndpointShrinkRequest extends TeaModel {
     public String DBInstanceEndpointType;
 
     /**
-     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The node that is configured for the endpoint.</p>
+     * <p>The information about the node that is configured for the endpoint.</p>
      */
     @NameInMap("NodeItems")
     public String nodeItemsShrink;
@@ -62,7 +62,7 @@ public class CreateDBInstanceEndpointShrinkRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

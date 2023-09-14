@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeletePostgresExtensionsRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The database on which the extension is installed. If you want to specify multiple databases, separate the databases with commas (,).</p>
+     */
     @NameInMap("DBNames")
     public String DBNames;
 
+    /**
+     * <p>The name of the extension. If you want to specify multiple extensions, separate the extension names with commas (,).</p>
+     */
     @NameInMap("Extensions")
     public String extensions;
 
@@ -22,6 +34,9 @@ public class DeletePostgresExtensionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

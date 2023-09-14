@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>The name of the database that you want to query.</p>
+     * <p>The name of the database.</p>
      */
     @NameInMap("DBName")
     public String DBName;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.</p>
+     * <p>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*Z format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -29,7 +29,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Valid values: any non-zero positive integer.</p>
+     * <p>The page number. Valid values: any non-zero positive integer.</p>
      * <br>
      * <p>Default value: **1**.</p>
      */
@@ -49,20 +49,20 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The dimension based on which ApsaraDB RDS sorts the returned entries. Valid values:</p>
+     * <p>The dimension based on which the system sorts the entries to return. Valid values:</p>
      * <br>
-     * <p>*   **TotalExecutionCounts**: ApsaraDB RDS sorts the returned entries based on the total number of SQL statements that are executed.</p>
-     * <p>*   **TotalQueryTimes**: ApsaraDB RDS sorts the returned entries based on the total execution duration.</p>
-     * <p>*   **TotalLogicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of logical reads.</p>
-     * <p>*   **TotalPhysicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of physical reads.</p>
+     * <p>*   **TotalExecutionCounts**: The system sorts the entries to return based on the number of times that SQL statements are executed.</p>
+     * <p>*   **TotalQueryTimes**: The system sorts the entries to return based on the total execution duration.</p>
+     * <p>*   **TotalLogicalReads**: The system sorts the entries to return based on the total number of logical reads.</p>
+     * <p>*   **TotalPhysicalReads**: The system sorts the entries to return based on the total number of physical reads.</p>
      * <br>
-     * <p>>  This parameter is supported only for instances that run SQL Server 2008 R2.</p>
+     * <p>> This parameter is supported only for instances that run SQL Server 2008 R2.</p>
      */
     @NameInMap("SortKey")
     public String sortKey;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

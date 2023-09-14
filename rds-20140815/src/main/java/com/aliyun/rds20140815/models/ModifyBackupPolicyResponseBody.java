@@ -17,7 +17,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
     public String compressType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceID")
     public String DBInstanceID;

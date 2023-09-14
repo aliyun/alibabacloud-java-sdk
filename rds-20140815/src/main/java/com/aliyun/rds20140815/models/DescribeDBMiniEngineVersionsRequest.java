@@ -11,7 +11,7 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.</p>
+     * <p>The dedicated cluster ID. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.</p>
      */
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
@@ -23,10 +23,10 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance.</p>
+     * <p>The database engine version of the instance. Valid values:</p>
      * <br>
      * <p>*   Valid values when you set the Engine parameter to MySQL: **8.0**, **5.7**, **5.6**, and **5.5**</p>
-     * <p>*   Valid values when you set the Engine parameter to PostgreSQL: **14.0**, **13.0**, **12.0**, **11.0**, and **10.0**</p>
+     * <p>*   Valid values when you set the Engine parameter to PostgreSQL: **15.0**, **14.0**, **13.0**, **12.0**, **11.0**, and **10.0**</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -48,7 +48,7 @@ public class DescribeDBMiniEngineVersionsRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

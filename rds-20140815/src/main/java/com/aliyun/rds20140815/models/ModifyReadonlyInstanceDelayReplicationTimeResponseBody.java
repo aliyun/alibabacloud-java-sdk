@@ -11,19 +11,19 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
     public String DBInstanceId;
 
     /**
-     * <p>The latency at which data is replicated from the primary instance to the read-only instance. Unit: seconds.</p>
+     * <p>The latency at which to replicate data from the primary instance to the read-only instance. Unit: seconds.</p>
      */
     @NameInMap("ReadSQLReplicationTime")
     public String readSQLReplicationTime;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the replication task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

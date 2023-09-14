@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the instance.</p>
+     * <p>The information of instances.</p>
      */
     @NameInMap("Items")
     public DescribeDBInstancesResponseBodyItems items;
@@ -139,9 +139,21 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
+        /**
+         * <p>Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **1**: The feature is enabled.</p>
+         * <p>*   **0**: The feature is disabled.</p>
+         */
         @NameInMap("BpeEnabled")
         public String bpeEnabled;
 
+        /**
+         * <p>Indicates whether the I/O burst feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**: The feature is enabled.</p>
+         * <p>*   **false**: The feature is disabled.</p>
+         */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
 
@@ -149,7 +161,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The RDS edition of the instance. Valid values:</p>
          * <br>
          * <p>*   **Basic**: RDS Basic Edition</p>
-         * <p>*   **HighAvailability**: RDS High-availability Edition</p>
+         * <p>*   **HighAvailability**: High-availability Edition</p>
          * <p>*   **Finance**: RDS Enterprise Edition</p>
          * <br>
          * <p>> This parameter is returned only when **InstanceLevel** is set to **1**.</p>
@@ -185,13 +197,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceClass;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          */
         @NameInMap("DBInstanceDescription")
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
@@ -229,7 +241,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The ID of the dedicated cluster.</p>
+         * <p>The dedicated cluster ID.</p>
          */
         @NameInMap("DedicatedHostGroupId")
         public String dedicatedHostGroupId;
@@ -310,13 +322,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String destroyTime;
 
         /**
-         * <p>The database engine of the instance.</p>
+         * <p>The database engine of the serverless instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The database engine version of the instance.</p>
+         * <p>The database engine version.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -354,8 +366,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The lock mode of the instance. Valid values:</p>
          * <br>
          * <p>*   **Unlock**: The instance is not locked.</p>
-         * <p>*   \*\* ManualLock\*\*: The instance is manually locked.</p>
-         * <p>*   **LockByExpiration**: The instance is automatically locked after it expires.</p>
+         * <p>*   **ManualLock**: The instance is manually locked.</p>
+         * <p>*   **LockByExpiration**: The instance is automatically locked due to instance expiration.</p>
          * <p>*   **LockByRestoration**: The instance is automatically locked before it is rolled back.</p>
          * <p>*   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.</p>
          * <p>*   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.</p>
@@ -376,7 +388,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String masterInstanceId;
 
         /**
-         * <p>Indicates whether the multi-zone deployment method is used for the instance. Valid values: **true and false**.</p>
+         * <p>Indicates whether the multi-zone deployment method is used for the instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          * <br>
          * <p>> If the multi-zone deployment method is used for the instance, the zone ID of the instance contains MAZ. Example: `cn-hangzhou-MAZ10(h,i)`.</p>
          */
@@ -399,7 +414,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public DescribeDBInstancesResponseBodyItemsDBInstanceReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -441,25 +456,25 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer tipsLevel;
 
         /**
-         * <p>The vSwitch ID of the instance.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID of the instance. This parameter is returned only when the instance resides in a VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The VPC ID of the instance.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The VPC name.</p>
          */
         @NameInMap("VpcName")
         public String vpcName;

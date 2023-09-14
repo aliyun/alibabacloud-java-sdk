@@ -23,7 +23,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -56,13 +56,13 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the resource group.</p>
+     * <p>The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

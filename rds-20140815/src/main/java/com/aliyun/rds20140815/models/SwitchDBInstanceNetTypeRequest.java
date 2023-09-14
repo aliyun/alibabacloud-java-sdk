@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchDBInstanceNetTypeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -28,7 +28,7 @@ public class SwitchDBInstanceNetTypeRequest extends TeaModel {
     public String connectionStringType;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -40,7 +40,7 @@ public class SwitchDBInstanceNetTypeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port associated with the endpoint. Valid values: **3001 to 3999**.</p>
+     * <p>The number of the port that is used to connect to the instance. Valid values: **3001 to 3999**.</p>
      */
     @NameInMap("Port")
     public String port;

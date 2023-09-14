@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSupportOnlineResizeDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the instance</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;

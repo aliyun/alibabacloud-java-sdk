@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribePostgresExtensionsResponseBody extends TeaModel {
+    /**
+     * <p>The extensions that are installed on the database.</p>
+     */
     @NameInMap("InstalledExtensions")
     public java.util.List<DescribePostgresExtensionsResponseBodyInstalledExtensions> installedExtensions;
 
+    /**
+     * <p>The overview of the extension.</p>
+     */
     @NameInMap("Overview")
     public java.util.Map<String, ?> overview;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The extensions that are not installed on the database.</p>
+     */
     @NameInMap("UninstalledExtensions")
     public java.util.List<DescribePostgresExtensionsResponseBodyUninstalledExtensions> uninstalledExtensions;
 
@@ -54,27 +66,66 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
     }
 
     public static class DescribePostgresExtensionsResponseBodyInstalledExtensions extends TeaModel {
+        /**
+         * <p>The category of the extension.</p>
+         * <br>
+         * <p>*   **external_access**</p>
+         * <p>*   **index_support**</p>
+         * <p>*   **information_stat**</p>
+         * <p>*   **geography_space**</p>
+         * <p>*   **vector_engine**</p>
+         * <p>*   **timing_engine**</p>
+         * <p>*   **data_type**</p>
+         * <p>*   **encrypt_secure**</p>
+         * <p>*   **text_process**</p>
+         * <p>*   **operation_maintenance**</p>
+         * <p>*   **self_develop**</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The purpose of the extension.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The default version of the extension.</p>
+         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
+        /**
+         * <p>The current version of the extension.</p>
+         */
         @NameInMap("InstalledVersion")
         public String installedVersion;
 
+        /**
+         * <p>The name of the extension.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The user of the extension.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The priority of the extension.</p>
+         * <br>
+         * <p>*   **0**: The extension is displayed by default.</p>
+         * <p>*   **1**: The extension is preferentially displayed.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The extensions on which the current extension depends when it is installed.</p>
+         */
         @NameInMap("Requires")
         public String requires;
 
@@ -150,27 +201,51 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
     }
 
     public static class DescribePostgresExtensionsResponseBodyUninstalledExtensions extends TeaModel {
+        /**
+         * <p>The category of the extension.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The purpose of the extension.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The default version of the extension.</p>
+         */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
+        /**
+         * <p>The current version of the extension.</p>
+         */
         @NameInMap("InstalledVersion")
         public String installedVersion;
 
+        /**
+         * <p>The name of the extension.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The user of the extension.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The priority of the extension.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The extensions on which the current extension depends when it is installed.</p>
+         */
         @NameInMap("Requires")
         public String requires;
 

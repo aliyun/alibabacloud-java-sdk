@@ -11,15 +11,15 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
     public DescribeParameterGroupResponseBodyParamGroup paramGroup;
 
     /**
-     * <p>The instance to which the parameter template was applied. </p>
+     * <p>The instance to which the parameter template was applied.</p>
      * <br>
-     * <p>>  The RelatedCustinsInfo parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>> This parameter is available only for ApsaraDB RDS for PostgreSQL instances.</p>
      */
     @NameInMap("RelatedCustinsInfo")
     public DescribeParameterGroupResponseBodyRelatedCustinsInfo relatedCustinsInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -116,13 +116,13 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The database engine.</p>
+         * <p>The database engine of the instance.</p>
          */
         @NameInMap("Engine")
         public String engine;
 
         /**
-         * <p>The database engine version.</p>
+         * <p>The version of the database engine.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -143,7 +143,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public Integer paramCounts;
 
         /**
-         * <p>The array of parameters.</p>
+         * <p>The details of the parameters.</p>
          */
         @NameInMap("ParamDetail")
         public DescribeParameterGroupResponseBodyParamGroupParameterGroupParamDetail paramDetail;
@@ -304,7 +304,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         public String appliedTime;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;

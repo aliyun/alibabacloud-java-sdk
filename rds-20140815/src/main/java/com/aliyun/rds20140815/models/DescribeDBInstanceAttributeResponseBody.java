@@ -41,7 +41,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The switch to enable or disable Babelfish.</p>
          * <br>
-         * <p>> If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.</p>
+         * <p>>  If Babelfish is enabled when you purchase an ApsaraDB RDS for PostgreSQL instance, this parameter is fixed as **true**.</p>
          */
         @NameInMap("BabelfishEnabled")
         public String babelfishEnabled;
@@ -52,7 +52,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **single-db**</p>
          * <p>*   **multi-db**</p>
          * <br>
-         * <p>> For more information about migration modes for Babelfish, see [Migration mode](~~428613~~).</p>
+         * <p>>  For more information about migration modes for Babelfish, see [Migration modes](~~428613~~).</p>
          */
         @NameInMap("MigrationMode")
         public String migrationMode;
@@ -88,13 +88,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("NodeRegionId")
         public String nodeRegionId;
@@ -109,7 +109,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String nodeRole;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("NodeZoneId")
         public String nodeZoneId;
@@ -201,7 +201,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtra extends TeaModel {
         /**
-         * <p>The details of the instance.</p>
+         * <p>The IDs of the instances.</p>
          */
         @NameInMap("DBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeExtraDBInstanceIds DBInstanceIds;
@@ -269,13 +269,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **true**: The feature is enabled.</p>
          * <p>*   **false** (default): The feature is disabled.</p>
          * <br>
-         * <p>> After the automatic start and stop feature is enabled, if no connections are established to the instance within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance automatically resumes.</p>
+         * <p>>  After the automatic suspension feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.</p>
          */
         @NameInMap("AutoPause")
         public Boolean autoPause;
 
         /**
-         * <p>The maximum number of RDS Capacity Units (RCUs).</p>
+         * <p>The maximum number of RCUs.</p>
          */
         @NameInMap("ScaleMax")
         public Double scaleMax;
@@ -292,7 +292,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **true**: The feature is enabled.</p>
          * <p>*   **false** (default): The feature is disabled.</p>
          * <br>
-         * <p>> In most cases, the RCU scaling of a serverless instance immediately takes effect. In some cases, the RCU scaling does not immediately take effect. If this happens, you can enable the forced scaling feature to forcefully scale the RCUs of the serverless instance.</p>
+         * <p>>  In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance.</p>
          */
         @NameInMap("SwitchForce")
         public Boolean switchForce;
@@ -338,7 +338,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZonesSlaveZone extends TeaModel {
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -397,7 +397,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>The method that is used to update the minor engine version of the instance. Valid values:</p>
          * <br>
          * <p>*   **Auto:** automatic update.</p>
-         * <p>*   **Manual**: manual update. ApsaraDB RDS automatically updates the minor engine version of the instance only when the minor engine version is phased out.</p>
+         * <p>*   **Manual**: manual update. The minor engine version of the instance is forcefully updated only when the in-use minor engine version is phased out.</p>
          */
         @NameInMap("AutoUpgradeMinorVersion")
         public String autoUpgradeMinorVersion;
@@ -411,21 +411,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The configuration of the Babelfish feature for the ApsaraDB RDS for PostgreSQL instance.</p>
          * <br>
-         * <p>> This parameter applies only to ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see [Introduction to Babelfish](~~428613~~).</p>
+         * <p>>  This parameter is suitable only for ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled. For more information, see Introduction to Babelfish.[](~~428613~~)</p>
          */
         @NameInMap("BabelfishConfig")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
 
         /**
-         * <p><props="china">预留参数，无需配置。</props></p>
-         * <p><props="intl">无效参数，无需配置。</props></p>
+         * <p>An invalid parameter. You can ignore this parameter.</p>
          */
         @NameInMap("BpeEnabled")
         public String bpeEnabled;
 
         /**
-         * <p><props="china">预留参数，无需配置。</props></p>
-         * <p><props="intl">无效参数，无需配置。</props></p>
+         * <p>An invalid parameter. You can ignore this parameter.</p>
          */
         @NameInMap("BurstingEnabled")
         public Boolean burstingEnabled;
@@ -470,7 +468,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>*   **1**: shared proxy</p>
          * <p>*   **2**: dedicated proxy</p>
          * <br>
-         * <p>> We recommend that you use the **ProxyType** parameter instead of this parameter.</p>
+         * <p>>  We recommend that you use the ProxyType parameter instead of this parameter.</p>
          */
         @NameInMap("ConsoleVersion")
         public String consoleVersion;
@@ -482,7 +480,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The minor engine version of the instance.</p>
+         * <p>The version of the database engine.</p>
          */
         @NameInMap("CurrentKernelVersion")
         public String currentKernelVersion;
@@ -494,7 +492,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeDBClusterNodes DBClusterNodes;
 
         /**
-         * <p>The number of cores that are configured for the instance.</p>
+         * <p>The number of CPU cores.</p>
          */
         @NameInMap("DBInstanceCPU")
         public String DBInstanceCPU;
@@ -523,13 +521,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The memory size of the instance. Unit: MB.</p>
+         * <p>The memory capacity of the instance. Unit: MB.</p>
          */
         @NameInMap("DBInstanceMemory")
         public Long DBInstanceMemory;
@@ -560,7 +558,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <br>
          * <p>*   **local_ssd** and **ephemeral_ssd**: local SSD</p>
          * <p>*   **cloud_ssd**: standard SSD</p>
-         * <p>*   **cloud_essd**: enhanced SSD</p>
+         * <p>*   **cloud_essd**: enhanced SSD (ESSD)</p>
          */
         @NameInMap("DBInstanceStorageType")
         public String DBInstanceStorageType;
@@ -609,7 +607,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The version of the database engine.</p>
+         * <p>The database engine version of the serverless instance.</p>
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
@@ -617,7 +615,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The expiration time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
-         * <p>> Pay-as-you-go instances never expire.</p>
+         * <p>**</p>
+         * <br>
+         * <p>**Description** Pay-as-you-go instances never expire.</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
@@ -647,7 +647,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String IPType;
 
         /**
-         * <p>The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
+         * <p>The ID of the instance from which the incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.</p>
          */
         @NameInMap("IncrementSourceDBInstanceId")
         public String incrementSourceDBInstanceId;
@@ -655,8 +655,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Classic**: classic network</p>
-         * <p>*   **VPC**: virtual private cloud (VPC)</p>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
          */
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
@@ -704,7 +704,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The ID of the primary instance.</p>
          * <br>
-         * <p>> If this parameter is not returned, the instance is the primary instance.</p>
+         * <p>**</p>
+         * <br>
+         * <p>**Description** If this parameter is not returned, the instance is the primary instance.</p>
          */
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
@@ -728,11 +730,16 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer maxIOMBPS;
 
         /**
-         * <p>The maximum number of I/O requests that is processed by the instance per second.</p>
+         * <p>The maximum number of I/O requests per second.</p>
          */
         @NameInMap("MaxIOPS")
         public Integer maxIOPS;
 
+        /**
+         * <p>Indicates whether PgBouncer is enabled.</p>
+         * <br>
+         * <p>>  This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is **true**.</p>
+         */
         @NameInMap("PGBouncerEnabled")
         public String PGBouncerEnabled;
 
@@ -762,7 +769,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer proxyType;
 
         /**
-         * <p>An array consisting of the IDs of the read-only instances that are attached to the primary instance.</p>
+         * <p>The IDs of the read-only instances that are attached to the primary instance.</p>
          */
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds readOnlyDBInstanceIds;
@@ -774,13 +781,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String readonlyInstanceSQLDelayedTime;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -807,16 +814,16 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeServerlessConfig serverlessConfig;
 
         /**
-         * <p>An array that consists of the details about the secondary zones.</p>
+         * <p>Information about the zone of the secondary instance.</p>
          */
         @NameInMap("SlaveZones")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeSlaveZones slaveZones;
 
         /**
-         * <p>Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.</p>
+         * <p>Indicates whether the instance supports privileged accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.</p>
          * <br>
-         * <p>*   **Enable**: Superuser accounts are supported.</p>
-         * <p>*   **Disabled**: Superuser accounts are not supported.</p>
+         * <p>*   **Enable**: Privileged accounts are supported.</p>
+         * <p>*   **Disabled**: Privileged accounts are not supported.</p>
          */
         @NameInMap("SuperPermissionMode")
         public String superPermissionMode;
@@ -849,19 +856,19 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer tipsLevel;
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>The vSwitch ID.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The VPC ID of the instance. This parameter is returned only when the instance resides in a VPC.</p>
+         * <p>The VPC ID.</p>
          */
         @NameInMap("VpcCloudInstanceId")
         public String vpcCloudInstanceId;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

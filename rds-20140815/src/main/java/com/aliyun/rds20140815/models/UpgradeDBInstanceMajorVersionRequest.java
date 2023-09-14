@@ -128,12 +128,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The time at which the system switches your workloads over to the new instance. This parameter is used together with SwitchOver and takes effect only when you set SwitchOver to true.</p>
+     * <p>The cutover time. This parameter is used together with SwitchOver. This parameter is available only when **SwitchOver** is set to **true**.</p>
      * <br>
      * <p>Valid values:</p>
      * <br>
-     * <p>*   Immediate: After data is migrated to the new instance, the system immediately switches your workloads over to the new instance.</p>
-     * <p>*   MaintainTime: After data is migrated to the new instance, the system switches your workloads over to the new instance during the maintenance window that you specify. You can call the [ModifyDBInstanceMaintainTime](~~26249~~) operation to change the maintenance window of an instance.</p>
+     * <p>*   Immediate: The settings immediately take effect.</p>
+     * <p>*   MaintainTime: The settings take effect during the maintenance window of the instance. You can call the [ModifyDBInstanceMaintainTime](~~610402~~) operation to change the maintenance window of an instance.</p>
      */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
@@ -141,7 +141,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     /**
      * <p>The major engine version of the new instance. The value of this parameter must be the major engine version on which an upgrade check is performed.</p>
      * <br>
-     * <p>> You can call the [UpgradeDBInstanceMajorVersionPrecheck](~~330050~~) operation to perform an upgrade check.</p>
+     * <p>> You can call the [UpgradeDBInstanceMajorVersionPrecheck](~~610417~~) operation to perform an upgrade check.</p>
      */
     @NameInMap("TargetMajorVersion")
     public String targetMajorVersion;
@@ -153,7 +153,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The ID of the VPC in which the original instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the VPC ID of the instance.</p>
+     * <p>The VPC ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to query the VPC ID of the original instance.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -168,7 +168,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The zone ID of the new instance. You can call the [DescribeRegions](~~26243~~) operation to query the zone ID.</p>
+     * <p>The zone ID of the new instance. You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.</p>
      * <br>
      * <p>You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.</p>
      */
@@ -180,7 +180,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends TeaModel {
      * <br>
      * <p>You can select a zone that belongs to the region in which the original instance resides. The zone can be different from the zone of the original instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~26243~~) operation to query the zone ID.</p>
+     * <p>You can call the [DescribeRegions](~~610399~~) operation to query the zone ID.</p>
      */
     @NameInMap("ZoneIdSlave1")
     public String zoneIdSlave1;

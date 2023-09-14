@@ -4,15 +4,27 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class UpdatePostgresExtensionsRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The name of the database. You can call the [DescribeDatabases](~~610471~~) operation to obtain the database name.</p>
+     */
     @NameInMap("DBNames")
     public String DBNames;
 
+    /**
+     * <p>The name of the extension. Separate multiple extensions with commas (,).</p>
+     */
     @NameInMap("Extensions")
     public String extensions;
 
@@ -22,6 +34,9 @@ public class UpdatePostgresExtensionsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of price information.</p>
+     * <p>Details of price information.</p>
      */
     @NameInMap("PriceInfo")
     public DescribeRenewalPriceResponseBodyPriceInfo priceInfo;
@@ -53,7 +53,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoActivityInfo extends TeaModel {
         /**
-         * <p>The description of the error.</p>
+         * <p>The returned message.</p>
          */
         @NameInMap("CheckErrMsg")
         public String checkErrMsg;
@@ -103,7 +103,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyPriceInfoCouponsCoupon extends TeaModel {
         /**
-         * <p>The ID of the coupon.</p>
+         * <p>The coupon ID.</p>
          */
         @NameInMap("CouponNo")
         public String couponNo;
@@ -311,13 +311,13 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
 
     public static class DescribeRenewalPriceResponseBodyRulesRule extends TeaModel {
         /**
-         * <p>The description of the promotion rule.</p>
+         * <p>The description of the activity.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The name of the promotion rule.</p>
+         * <p>The name of the rule.</p>
          */
         @NameInMap("Name")
         public String name;

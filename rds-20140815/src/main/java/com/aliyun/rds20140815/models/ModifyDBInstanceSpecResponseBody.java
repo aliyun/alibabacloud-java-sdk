@@ -4,12 +4,21 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceSpecResponseBody extends TeaModel {
+    /**
+     * <p>The instance ID.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

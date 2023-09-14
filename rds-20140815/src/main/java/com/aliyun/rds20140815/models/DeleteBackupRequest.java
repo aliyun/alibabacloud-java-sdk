@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteBackupRequest extends TeaModel {
     /**
-     * <p>The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query backup set IDs. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.</p>
+     * <p>The ID of the backup set. You can call the [DescribeBackups](~~610544~~) operation to query backup set IDs. Separate multiple values with commas (,). You can specify a maximum of 100 values in a single request.</p>
      * <br>
-     * <p>> After you call the [DescribeBackups](~~26273~~) operation, the returned backup sets whose **StoreStatus** is **Enabled** can be deleted.</p>
+     * <p>> After you call the [DescribeBackups](~~610544~~) operation, the returned backup sets whose **StoreStatus** is **Enabled** can be deleted.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
