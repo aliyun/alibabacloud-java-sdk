@@ -564,6 +564,25 @@ public class ListEventsResponseBody extends TeaModel {
 
     }
 
+    public static class ListEventsResponseBodyEventsRichTextDescription extends TeaModel {
+        @NameInMap("Text")
+        public String text;
+
+        public static ListEventsResponseBodyEventsRichTextDescription build(java.util.Map<String, ?> map) throws Exception {
+            ListEventsResponseBodyEventsRichTextDescription self = new ListEventsResponseBodyEventsRichTextDescription();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventsResponseBodyEventsRichTextDescription setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
     public static class ListEventsResponseBodyEventsStart extends TeaModel {
         @NameInMap("Date")
         public String date;
@@ -650,6 +669,9 @@ public class ListEventsResponseBody extends TeaModel {
 
         @NameInMap("Reminders")
         public java.util.List<ListEventsResponseBodyEventsReminders> reminders;
+
+        @NameInMap("RichTextDescription")
+        public ListEventsResponseBodyEventsRichTextDescription richTextDescription;
 
         @NameInMap("SeriesMasterId")
         public String seriesMasterId;
@@ -789,6 +811,14 @@ public class ListEventsResponseBody extends TeaModel {
         }
         public java.util.List<ListEventsResponseBodyEventsReminders> getReminders() {
             return this.reminders;
+        }
+
+        public ListEventsResponseBodyEvents setRichTextDescription(ListEventsResponseBodyEventsRichTextDescription richTextDescription) {
+            this.richTextDescription = richTextDescription;
+            return this;
+        }
+        public ListEventsResponseBodyEventsRichTextDescription getRichTextDescription() {
+            return this.richTextDescription;
         }
 
         public ListEventsResponseBodyEvents setSeriesMasterId(String seriesMasterId) {
