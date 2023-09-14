@@ -4,15 +4,27 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ConvertNodeGroup extends TeaModel {
+    /**
+     * <p>节点组ID。</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>付费时长。</p>
+     */
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
 
+    /**
+     * <p>付费时长单位。</p>
+     */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <p>付费类型。</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 

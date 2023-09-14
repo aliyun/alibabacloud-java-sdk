@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class OperationStateChangeReason extends TeaModel {
+    /**
+     * <p>状态码。</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>状态变化信息。</p>
+     */
     @NameInMap("Message")
     public String message;
 

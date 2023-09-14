@@ -4,21 +4,39 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class IncreaseNodeGroup extends TeaModel {
+    /**
+     * <p>描述。</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>节点数量。</p>
+     */
     @NameInMap("NodeCount")
     public Integer nodeCount;
 
+    /**
+     * <p>节点组ID。</p>
+     */
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    /**
+     * <p>付费时长。</p>
+     */
     @NameInMap("PaymentDuration")
     public Integer paymentDuration;
 
+    /**
+     * <p>付费时长单位。</p>
+     */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
 
+    /**
+     * <p>虚拟机交换机ID。</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

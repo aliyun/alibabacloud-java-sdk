@@ -4,18 +4,33 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListNodesResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The position at which the next read starts. If null is returned, the data has been read.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>Details about nodes.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<Node> nodes;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of records in this request.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

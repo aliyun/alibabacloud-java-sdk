@@ -4,24 +4,45 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ScalingRule extends TeaModel {
+    /**
+     * <p>伸缩活动类型。取值范围：</p>
+     * <p>- SCALE_OUT：扩容。</p>
+     * <p>- SCALE_IN：缩容。</p>
+     */
     @NameInMap("ActivityType")
     public String activityType;
 
-    @NameInMap("AdjustmentType")
-    public String adjustmentType;
-
+    /**
+     * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
+     */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
+    /**
+     * <p>按照负载伸缩描述。</p>
+     * <p><p></p>
+     */
     @NameInMap("MetricsTrigger")
     public MetricsTrigger metricsTrigger;
 
+    /**
+     * <p>规则名称。</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>按照时间伸缩描述。</p>
+     * <p><p></p>
+     */
     @NameInMap("TimeTrigger")
     public TimeTrigger timeTrigger;
 
+    /**
+     * <p>伸缩规则类型。 取值范围：</p>
+     * <p>- TIME_TRIGGER: 按时间伸缩。</p>
+     * <p>- METRICS_TRIGGER: 按负载伸缩。</p>
+     */
     @NameInMap("TriggerType")
     public String triggerType;
 
@@ -36,14 +57,6 @@ public class ScalingRule extends TeaModel {
     }
     public String getActivityType() {
         return this.activityType;
-    }
-
-    public ScalingRule setAdjustmentType(String adjustmentType) {
-        this.adjustmentType = adjustmentType;
-        return this;
-    }
-    public String getAdjustmentType() {
-        return this.adjustmentType;
     }
 
     public ScalingRule setAdjustmentValue(Integer adjustmentValue) {

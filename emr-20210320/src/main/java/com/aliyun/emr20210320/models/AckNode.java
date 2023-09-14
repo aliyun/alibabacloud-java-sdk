@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class AckNode extends TeaModel {
+    /**
+     * <p>节点ID。</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>ACK节点选择器。</p>
+     */
     @NameInMap("NodeSelector")
     public AckNodeSelector nodeSelector;
 

@@ -4,33 +4,89 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
+    /**
+     * <p>The IDs of the clusters. You can specify a maximum of 100 items.</p>
+     */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
 
+    /**
+     * <p>The name of the cluster.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>The states of clusters. You can specify a maximum of 100 items.</p>
+     */
     @NameInMap("ClusterStates")
     public java.util.List<String> clusterStates;
 
+    /**
+     * <p>The types of the clusters. You can specify a maximum of 100 items.</p>
+     */
     @NameInMap("ClusterTypes")
     public java.util.List<String> clusterTypes;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The starting point of the current query. If you do not configure this parameter, the query starts from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The billing methods. You can specify a maximum of 2 items.</p>
+     */
     @NameInMap("PaymentTypes")
     public java.util.List<String> paymentTypes;
 
+    /**
+     * <p>The region ID.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   center</p>
+     * <p>*   cn-hangzhou</p>
+     * <p>*   cn-shanghai</p>
+     * <p>*   cn-qingdao</p>
+     * <p>*   cn-beijing</p>
+     * <p>*   cn-zhangjiakou</p>
+     * <p>*   cn-huhehaote</p>
+     * <p>*   cn-wulanchabu</p>
+     * <p>*   cn-shenzhen</p>
+     * <p>*   cn-chengdu</p>
+     * <p>*   cn-hongkong</p>
+     * <p>*   ap-southeast-1</p>
+     * <p>*   ap-southeast-2</p>
+     * <p>*   ap-southeast-3</p>
+     * <p>*   ap-southeast-5</p>
+     * <p>*   ap-northeast-1</p>
+     * <p>*   eu-central-1</p>
+     * <p>*   eu-west-1</p>
+     * <p>*   us-west-1</p>
+     * <p>*   us-east-1</p>
+     * <p>*   ap-south-1</p>
+     * <p>*   me-east-1</p>
+     * <p>*   me-central-1</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags. You can specify a maximum of 20 items.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
 

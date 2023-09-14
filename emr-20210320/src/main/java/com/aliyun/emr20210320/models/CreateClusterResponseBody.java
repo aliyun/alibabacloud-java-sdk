@@ -4,12 +4,21 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterResponseBody extends TeaModel {
+    /**
+     * <p>集群ID。</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>操作ID。</p>
+     */
     @NameInMap("OperationId")
     public String operationId;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

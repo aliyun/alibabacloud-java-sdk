@@ -4,36 +4,69 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ListNodesRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The number of maximum number of records to obtain at a time. Valid values: 1 to 100.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>Marks the current position where reading starts. If you set this value to null, you can start from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The IDs of node groups.</p>
+     */
     @NameInMap("NodeGroupIds")
     public java.util.List<String> nodeGroupIds;
 
+    /**
+     * <p>An array that consists of information about the ID of the node.</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
+    /**
+     * <p>The names of the nodes.</p>
+     */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <p>The status of the node.</p>
+     */
     @NameInMap("NodeStates")
     public java.util.List<String> nodeStates;
 
+    /**
+     * <p>The private IP address.</p>
+     */
     @NameInMap("PrivateIps")
     public java.util.List<String> privateIps;
 
+    /**
+     * <p>The public IP address.</p>
+     */
     @NameInMap("PublicIps")
     public java.util.List<String> publicIps;
 
+    /**
+     * <p>The ID of the region in which you want to create the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of tags to be bound.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
 

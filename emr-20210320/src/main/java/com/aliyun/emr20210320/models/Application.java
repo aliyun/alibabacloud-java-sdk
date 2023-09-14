@@ -4,6 +4,9 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class Application extends TeaModel {
+    /**
+     * <p>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</p>
+     */
     @NameInMap("ApplicationName")
     public String applicationName;
 

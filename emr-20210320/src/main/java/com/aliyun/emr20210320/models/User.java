@@ -4,18 +4,33 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class User extends TeaModel {
+    /**
+     * <p>用户组。</p>
+     */
     @NameInMap("Group")
     public String group;
 
+    /**
+     * <p>用户密码。</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>用户ID。</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>用户名称。</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>用户类型。</p>
+     */
     @NameInMap("UserType")
     public String userType;
 

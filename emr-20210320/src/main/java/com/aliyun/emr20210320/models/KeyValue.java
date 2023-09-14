@@ -4,9 +4,15 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class KeyValue extends TeaModel {
+    /**
+     * <p>键。</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>值。</p>
+     */
     @NameInMap("Value")
     public String value;
 

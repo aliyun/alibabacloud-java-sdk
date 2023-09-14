@@ -4,12 +4,21 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class GetOperationRequest extends TeaModel {
+    /**
+     * <p>The ID of the cluster that you want to query.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ID of the operation.</p>
+     */
     @NameInMap("OperationId")
     public String operationId;
 
+    /**
+     * <p>The district ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -4,24 +4,45 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ScalingRuleV1 extends TeaModel {
+    /**
+     * <p>调整类型。</p>
+     */
     @NameInMap("AdjustmentType")
     public String adjustmentType;
 
+    /**
+     * <p>调整值,正数为扩容,负数为缩容。</p>
+     */
     @NameInMap("AdjustmentValue")
     public Integer adjustmentValue;
 
+    /**
+     * <p>冷却时间,单位秒。</p>
+     */
     @NameInMap("CoolDownTime")
     public Integer coolDownTime;
 
+    /**
+     * <p>规则名称。</p>
+     */
     @NameInMap("RuleName")
     public String ruleName;
 
+    /**
+     * <p>规则参数。</p>
+     */
     @NameInMap("RuleParam")
     public RuleParam ruleParam;
 
+    /**
+     * <p>规则类型。</p>
+     */
     @NameInMap("RuleType")
     public String ruleType;
 
+    /**
+     * <p>弹性规则配置ID。</p>
+     */
     @NameInMap("ScalingConfigBizId")
     public String scalingConfigBizId;
 
@@ -87,36 +108,69 @@ public class ScalingRuleV1 extends TeaModel {
     }
 
     public static class RuleParam extends TeaModel {
+        /**
+         * <p>[负载触发参数] 比较符。</p>
+         */
         @NameInMap("ComparisonOperator")
         public String comparisonOperator;
 
+        /**
+         * <p>[负载触发参数] 统计次数。</p>
+         */
         @NameInMap("EvaluationCount")
         public Integer evaluationCount;
 
+        /**
+         * <p>[时间调度参数] 周期类型周期过期时间。</p>
+         */
         @NameInMap("LaunchExpirationTime")
         public Integer launchExpirationTime;
 
+        /**
+         * <p>[时间调度参数] 周期类型周期开始时间。</p>
+         */
         @NameInMap("LaunchTime")
         public String launchTime;
 
+        /**
+         * <p>[负载触发参数] 度量名称。</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>[负载触发参数] 统计时长,单位分钟。</p>
+         */
         @NameInMap("Period")
         public Integer period;
 
+        /**
+         * <p>[时间调度参数] 周期类型周期结束时间。</p>
+         */
         @NameInMap("RecurrenceEndTime")
         public String recurrenceEndTime;
 
+        /**
+         * <p>[时间调度参数] 周期类型。</p>
+         */
         @NameInMap("RecurrenceType")
         public String recurrenceType;
 
+        /**
+         * <p>[时间调度参数] 周期类型周期值。</p>
+         */
         @NameInMap("RecurrenceValue")
         public String recurrenceValue;
 
+        /**
+         * <p>[负载触发参数] 统计方式。</p>
+         */
         @NameInMap("Statistics")
         public String statistics;
 
+        /**
+         * <p>[负载触发参数] 阈值。</p>
+         */
         @NameInMap("Threshold")
         public Integer threshold;
 

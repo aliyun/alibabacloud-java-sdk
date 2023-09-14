@@ -4,27 +4,41 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class MetricsTrigger extends TeaModel {
-    @NameInMap("ComparisonOperator")
-    public String comparisonOperator;
+    /**
+     * <p>多指标逻辑关系。默认：Or。取值范围：</p>
+     * <p>- And:与</p>
+     * <p>- Or：或</p>
+     */
+    @NameInMap("ConditionLogicOperator")
+    public String conditionLogicOperator;
 
+    /**
+     * <p>指标触发条件列表。</p>
+     */
+    @NameInMap("Conditions")
+    public java.util.List<TriggerCondition> conditions;
+
+    /**
+     * <p>冷却时间。 单位为秒</p>
+     */
     @NameInMap("CoolDownInterval")
     public Integer coolDownInterval;
 
+    /**
+     * <p>统计次数。</p>
+     */
     @NameInMap("EvaluationCount")
     public Integer evaluationCount;
 
-    @NameInMap("MetricName")
-    public String metricName;
+    /**
+     * <p>时间限制。</p>
+     */
+    @NameInMap("TimeConstraints")
+    public java.util.List<TimeConstraint> timeConstraints;
 
-    @NameInMap("Statistics")
-    public String statistics;
-
-    @NameInMap("Tags")
-    public java.util.List<Tag> tags;
-
-    @NameInMap("Threshold")
-    public Double threshold;
-
+    /**
+     * <p>统计窗口。单位为秒。</p>
+     */
     @NameInMap("TimeWindow")
     public Integer timeWindow;
 
@@ -33,12 +47,20 @@ public class MetricsTrigger extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public MetricsTrigger setComparisonOperator(String comparisonOperator) {
-        this.comparisonOperator = comparisonOperator;
+    public MetricsTrigger setConditionLogicOperator(String conditionLogicOperator) {
+        this.conditionLogicOperator = conditionLogicOperator;
         return this;
     }
-    public String getComparisonOperator() {
-        return this.comparisonOperator;
+    public String getConditionLogicOperator() {
+        return this.conditionLogicOperator;
+    }
+
+    public MetricsTrigger setConditions(java.util.List<TriggerCondition> conditions) {
+        this.conditions = conditions;
+        return this;
+    }
+    public java.util.List<TriggerCondition> getConditions() {
+        return this.conditions;
     }
 
     public MetricsTrigger setCoolDownInterval(Integer coolDownInterval) {
@@ -57,36 +79,12 @@ public class MetricsTrigger extends TeaModel {
         return this.evaluationCount;
     }
 
-    public MetricsTrigger setMetricName(String metricName) {
-        this.metricName = metricName;
+    public MetricsTrigger setTimeConstraints(java.util.List<TimeConstraint> timeConstraints) {
+        this.timeConstraints = timeConstraints;
         return this;
     }
-    public String getMetricName() {
-        return this.metricName;
-    }
-
-    public MetricsTrigger setStatistics(String statistics) {
-        this.statistics = statistics;
-        return this;
-    }
-    public String getStatistics() {
-        return this.statistics;
-    }
-
-    public MetricsTrigger setTags(java.util.List<Tag> tags) {
-        this.tags = tags;
-        return this;
-    }
-    public java.util.List<Tag> getTags() {
-        return this.tags;
-    }
-
-    public MetricsTrigger setThreshold(Double threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-    public Double getThreshold() {
-        return this.threshold;
+    public java.util.List<TimeConstraint> getTimeConstraints() {
+        return this.timeConstraints;
     }
 
     public MetricsTrigger setTimeWindow(Integer timeWindow) {

@@ -4,15 +4,29 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class JoinResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the region in which you want to create the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   cluster: cluster</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

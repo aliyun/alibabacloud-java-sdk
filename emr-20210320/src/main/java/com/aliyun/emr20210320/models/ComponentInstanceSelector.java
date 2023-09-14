@@ -4,24 +4,28 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class ComponentInstanceSelector extends TeaModel {
-    @NameInMap("ActionScope")
-    public String actionScope;
+    /**
+     * <p>应用名称。</p>
+     */
+    @NameInMap("ApplicationName")
+    public String applicationName;
 
-    @NameInMap("ApplicationNames")
-    public java.util.List<String> applicationNames;
-
+    /**
+     * <p>组件实例列表。actionScope为COPONENT_INSTANCE时使用。</p>
+     */
     @NameInMap("ComponentInstances")
     public java.util.List<ComponentInstances> componentInstances;
 
+    /**
+     * <p>组件列表。</p>
+     * <p>actionScope为COPONENT时使用。</p>
+     */
     @NameInMap("Components")
     public java.util.List<Components> components;
 
-    @NameInMap("NodeGroupIds")
-    public java.util.List<String> nodeGroupIds;
-
-    @NameInMap("NodeIds")
-    public java.util.List<String> nodeIds;
-
+    /**
+     * <p>执行范围。</p>
+     */
     @NameInMap("RunActionScope")
     public String runActionScope;
 
@@ -30,20 +34,12 @@ public class ComponentInstanceSelector extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ComponentInstanceSelector setActionScope(String actionScope) {
-        this.actionScope = actionScope;
+    public ComponentInstanceSelector setApplicationName(String applicationName) {
+        this.applicationName = applicationName;
         return this;
     }
-    public String getActionScope() {
-        return this.actionScope;
-    }
-
-    public ComponentInstanceSelector setApplicationNames(java.util.List<String> applicationNames) {
-        this.applicationNames = applicationNames;
-        return this;
-    }
-    public java.util.List<String> getApplicationNames() {
-        return this.applicationNames;
+    public String getApplicationName() {
+        return this.applicationName;
     }
 
     public ComponentInstanceSelector setComponentInstances(java.util.List<ComponentInstances> componentInstances) {
@@ -62,22 +58,6 @@ public class ComponentInstanceSelector extends TeaModel {
         return this.components;
     }
 
-    public ComponentInstanceSelector setNodeGroupIds(java.util.List<String> nodeGroupIds) {
-        this.nodeGroupIds = nodeGroupIds;
-        return this;
-    }
-    public java.util.List<String> getNodeGroupIds() {
-        return this.nodeGroupIds;
-    }
-
-    public ComponentInstanceSelector setNodeIds(java.util.List<String> nodeIds) {
-        this.nodeIds = nodeIds;
-        return this;
-    }
-    public java.util.List<String> getNodeIds() {
-        return this.nodeIds;
-    }
-
     public ComponentInstanceSelector setRunActionScope(String runActionScope) {
         this.runActionScope = runActionScope;
         return this;
@@ -87,12 +67,21 @@ public class ComponentInstanceSelector extends TeaModel {
     }
 
     public static class ComponentInstances extends TeaModel {
+        /**
+         * <p>应用名称。</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>组件名称。</p>
+         */
         @NameInMap("ComponentName")
         public String componentName;
 
+        /**
+         * <p>节点ID。</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
@@ -128,9 +117,15 @@ public class ComponentInstanceSelector extends TeaModel {
     }
 
     public static class Components extends TeaModel {
+        /**
+         * <p>应用名称。</p>
+         */
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        /**
+         * <p>组件名称。</p>
+         */
         @NameInMap("ComponentName")
         public String componentName;
 

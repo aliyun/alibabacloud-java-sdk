@@ -7,6 +7,9 @@ public class GetClusterResponseBody extends TeaModel {
     @NameInMap("Cluster")
     public Cluster cluster;
 
+    /**
+     * <p>请求ID。</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

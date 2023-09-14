@@ -4,15 +4,27 @@ package com.aliyun.emr20210320.models;
 import com.aliyun.tea.*;
 
 public class Disk extends TeaModel {
+    /**
+     * <p>磁盘类型。</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>每个节点磁盘数量。</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>性能级别。</p>
+     */
     @NameInMap("PerformanceLevel")
     public String performanceLevel;
 
+    /**
+     * <p>单位GB。</p>
+     */
     @NameInMap("Size")
     public Integer size;
 
