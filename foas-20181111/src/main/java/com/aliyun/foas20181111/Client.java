@@ -2761,6 +2761,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListTaskResponse listTaskWithOptions(String projectName, ListTaskRequest request, ListTaskHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
             query.put("pageIndex", request.pageIndex);
         }
