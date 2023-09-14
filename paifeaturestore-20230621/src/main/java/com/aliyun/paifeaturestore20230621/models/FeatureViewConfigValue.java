@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FeatureViewConfigValue extends TeaModel {
     @NameInMap("Partitions")
-    public java.util.Map<String, java.util.Map<String, ?>> partitions;
+    public java.util.Map<String, FeatureViewConfigValuePartitionsValue> partitions;
 
     @NameInMap("EventTime")
     public String eventTime;
@@ -18,11 +18,11 @@ public class FeatureViewConfigValue extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FeatureViewConfigValue setPartitions(java.util.Map<String, java.util.Map<String, ?>> partitions) {
+    public FeatureViewConfigValue setPartitions(java.util.Map<String, FeatureViewConfigValuePartitionsValue> partitions) {
         this.partitions = partitions;
         return this;
     }
-    public java.util.Map<String, java.util.Map<String, ?>> getPartitions() {
+    public java.util.Map<String, FeatureViewConfigValuePartitionsValue> getPartitions() {
         return this.partitions;
     }
 

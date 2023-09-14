@@ -7,6 +7,9 @@ public class ExportModelFeatureTrainingSetTableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static ExportModelFeatureTrainingSetTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ExportModelFeatureTrainingSetTableResponseBody self = new ExportModelFeatureTrainingSetTableResponseBody();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ExportModelFeatureTrainingSetTableResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ExportModelFeatureTrainingSetTableResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }
