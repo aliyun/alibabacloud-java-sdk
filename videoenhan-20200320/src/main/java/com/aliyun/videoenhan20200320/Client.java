@@ -1755,6 +1755,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AddWatermark", request.addWatermark);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enhance)) {
+            body.put("Enhance", request.enhance);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.faceImageURL)) {
             body.put("FaceImageURL", request.faceImageURL);
         }
