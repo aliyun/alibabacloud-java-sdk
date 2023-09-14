@@ -95,6 +95,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("ApplicationName")
         public String applicationName;
 
+        @NameInMap("ApplicationNameList")
+        public java.util.List<String> applicationNameList;
+
         /**
          * <p>The description of the access control policy.</p>
          */
@@ -163,17 +166,23 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationType")
         public String destinationType;
 
+        @NameInMap("HitLastTime")
+        public Long hitLastTime;
+
         /**
          * <p>The number of hits for the access control policy.</p>
          */
         @NameInMap("HitTimes")
-        public Integer hitTimes;
+        public Long hitTimes;
 
         /**
          * <p>The UID of the member that is managed by your Alibaba Cloud account.</p>
          */
         @NameInMap("MemberUid")
         public String memberUid;
+
+        @NameInMap("ModifyTime")
+        public Long modifyTime;
 
         /**
          * <p>The priority of the access control policy.</p>
@@ -270,6 +279,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.applicationName;
         }
 
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setApplicationNameList(java.util.List<String> applicationNameList) {
+            this.applicationNameList = applicationNameList;
+            return this;
+        }
+        public java.util.List<String> getApplicationNameList() {
+            return this.applicationNameList;
+        }
+
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDescription(String description) {
             this.description = description;
             return this;
@@ -342,11 +359,19 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.destinationType;
         }
 
-        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setHitTimes(Integer hitTimes) {
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setHitLastTime(Long hitLastTime) {
+            this.hitLastTime = hitLastTime;
+            return this;
+        }
+        public Long getHitLastTime() {
+            return this.hitLastTime;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setHitTimes(Long hitTimes) {
             this.hitTimes = hitTimes;
             return this;
         }
-        public Integer getHitTimes() {
+        public Long getHitTimes() {
             return this.hitTimes;
         }
 
@@ -356,6 +381,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
         public String getMemberUid() {
             return this.memberUid;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setModifyTime(Long modifyTime) {
+            this.modifyTime = modifyTime;
+            return this;
+        }
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setOrder(Integer order) {

@@ -4,39 +4,111 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
+    /**
+     * <p>The action that Cloud Firewall performs on the traffic.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   **accept**: allows the traffic.</p>
+     * <p>*   **drop**: denies the traffic.</p>
+     * <p>*   **log**: monitors the traffic.</p>
+     */
     @NameInMap("AclAction")
     public String aclAction;
 
+    /**
+     * <p>The UUID of the access control policy.</p>
+     */
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>The description of the access control policy. Fuzzy match is supported.</p>
+     * <br>
+     * <p>> If you do not specify this parameter, the descriptions of all policies are queried.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the DestinationType parameter.</p>
+     * <br>
+     * <p>*   If DestinationType is set to `net`, the value of Destination must be a CIDR block. Example: 10.0.3.0/24.</p>
+     * <p>*   If DestinationType is set to `domain`, the value of Destination must be a domain name. Example: aliyun.</p>
+     * <p>*   If DestinationType is set to `group`, the value of Destination must be the name of an address book. Example: db_group.</p>
+     * <p>*   If DestinationType is set to `location`, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](~~474128~~). Example: \["BJ11", "ZB"].</p>
+     * <br>
+     * <p>> If you do not specify this parameter, all types of destination addresses are queried.</p>
+     */
     @NameInMap("Destination")
     public String destination;
 
+    /**
+     * <p>The direction of the traffic to which the access control policy applies. Valid values:</p>
+     * <br>
+     * <p>*   **out**: outbound traffic</p>
+     */
     @NameInMap("Direction")
     public String direction;
 
+    /**
+     * <p>The language of the content within the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh**: Chinese (default)</p>
+     * <p>*   **en**: English</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The ID of the NAT gateway.</p>
+     */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
 
+    /**
+     * <p>The number of entries per page. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public String pageSize;
 
+    /**
+     * <p>The type of the protocol in the access control policy. Valid values:</p>
+     * <br>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP**</p>
+     * <p>*   **ICMP**</p>
+     * <p>*   **ANY**: all types of protocols</p>
+     * <br>
+     * <p>> If you do not specify this parameter, access control policies of all protocol types are queried.</p>
+     */
     @NameInMap("Proto")
     public String proto;
 
+    /**
+     * <p>Specifies whether the access control policy is enabled. By default, an access control policy is enabled after it is created. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Release")
     public String release;
 
+    /**
+     * <p>The source address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the SourceType parameter.</p>
+     * <br>
+     * <p>*   If SourceType is set to `net`, the value of Source must be a CIDR block. Example: 192.0.XX.XX/24.</p>
+     * <p>*   If SourceType is set to `group`, the value of Source must be the name of an address book. Example: db_group. If the db_group address book does not contain addresses, all source addresses are queried.</p>
+     * <p>*   If SourceType is set to `location`, the value of Source must be a location. Example: beijing.</p>
+     * <br>
+     * <p>> If you do not specify this parameter, all types of source addresses are queried.</p>
+     */
     @NameInMap("Source")
     public String source;
 

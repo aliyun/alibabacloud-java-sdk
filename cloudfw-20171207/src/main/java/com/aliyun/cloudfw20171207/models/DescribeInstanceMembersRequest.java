@@ -5,33 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMembersRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
-     * <p>The remarks of the member in Cloud Firewall. The length is 1 ~ 256 characters.</p>
+     * <p>The remarks of the member. The remarks must be 1 to 256 characters in length.</p>
      */
     @NameInMap("MemberDesc")
     public String memberDesc;
 
     /**
-     * <p>The name of the member in Cloud Firewall.</p>
+     * <p>The name of the member.</p>
      */
     @NameInMap("MemberDisplayName")
     public String memberDisplayName;
 
     /**
-     * <p>The unique identifier (UID) of the member in Cloud Firewall.</p>
+     * <p>The UID of the member.</p>
      */
     @NameInMap("MemberUid")
     public String memberUid;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <br>
      * <p>Default value: **20**.</p>
      */

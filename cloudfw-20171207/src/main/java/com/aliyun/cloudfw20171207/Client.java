@@ -108,15 +108,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addAddressBookWithOptions(request, runtime);
     }
 
-    /**
-      * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request AddControlPolicyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return AddControlPolicyResponse
-     */
     public AddControlPolicyResponse addControlPolicyWithOptions(AddControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -209,14 +200,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddControlPolicyResponse());
     }
 
-    /**
-      * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request AddControlPolicyRequest
-      * @return AddControlPolicyResponse
-     */
     public AddControlPolicyResponse addControlPolicy(AddControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addControlPolicyWithOptions(request, runtime);
@@ -332,6 +315,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchCopyVpcFirewallControlPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+      *
+      * @param request CreateNatFirewallControlPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateNatFirewallControlPolicyResponse
+     */
     public CreateNatFirewallControlPolicyResponse createNatFirewallControlPolicyWithOptions(CreateNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -424,6 +414,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNatFirewallControlPolicyResponse());
     }
 
+    /**
+      * You can use this operation to create an access control policy to allow, deny, or monitor traffic that passes through a NAT firewall.
+      *
+      * @param request CreateNatFirewallControlPolicyRequest
+      * @return CreateNatFirewallControlPolicyResponse
+     */
     public CreateNatFirewallControlPolicyResponse createNatFirewallControlPolicy(CreateNatFirewallControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createNatFirewallControlPolicyWithOptions(request, runtime);
@@ -757,6 +753,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationName", request.applicationName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationNameList)) {
+            query.put("ApplicationNameList", request.applicationNameList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -1038,6 +1038,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteInstanceMembersWithOptions(request, runtime);
     }
 
+    /**
+      * You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
+      *
+      * @param request DeleteNatFirewallControlPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteNatFirewallControlPolicyResponse
+     */
     public DeleteNatFirewallControlPolicyResponse deleteNatFirewallControlPolicyWithOptions(DeleteNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1074,6 +1081,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNatFirewallControlPolicyResponse());
     }
 
+    /**
+      * You can use this operation to delete an outbound access control policy that is created for a NAT firewall.
+      *
+      * @param request DeleteNatFirewallControlPolicyRequest
+      * @return DeleteNatFirewallControlPolicyResponse
+     */
     public DeleteNatFirewallControlPolicyResponse deleteNatFirewallControlPolicy(DeleteNatFirewallControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNatFirewallControlPolicyWithOptions(request, runtime);
@@ -1562,7 +1575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+      * You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -1611,7 +1624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the DescribeDomainResolve operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.  
+      * You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -1624,7 +1637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+      * You can use this operation to query the information about members in Cloud Firewall.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -1673,7 +1686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the DescribeInstanceMembers operation to query the information about members in Cloud Firewall.  
+      * You can use this operation to query the information about members in Cloud Firewall.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -1683,6 +1696,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceMembersResponse describeInstanceMembers(DescribeInstanceMembersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeInstanceMembersWithOptions(request, runtime);
+    }
+
+    public DescribeInternetOpenIpResponse describeInternetOpenIpWithOptions(DescribeInternetOpenIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetsInstanceId)) {
+            query.put("AssetsInstanceId", request.assetsInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetsInstanceName)) {
+            query.put("AssetsInstanceName", request.assetsInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.assetsType)) {
+            query.put("AssetsType", request.assetsType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.publicIp)) {
+            query.put("PublicIp", request.publicIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionNo)) {
+            query.put("RegionNo", request.regionNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.riskLevel)) {
+            query.put("RiskLevel", request.riskLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            query.put("ServiceName", request.serviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeInternetOpenIp"),
+            new TeaPair("version", "2017-12-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeInternetOpenIpResponse());
+    }
+
+    public DescribeInternetOpenIpResponse describeInternetOpenIp(DescribeInternetOpenIpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInternetOpenIpWithOptions(request, runtime);
     }
 
     public DescribeInternetTrafficTrendResponse describeInternetTrafficTrendWithOptions(DescribeInternetTrafficTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1839,6 +1929,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeInvadeEventListWithOptions(request, runtime);
     }
 
+    /**
+      * You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
+      *
+      * @param request DescribeNatFirewallControlPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeNatFirewallControlPolicyResponse
+     */
     public DescribeNatFirewallControlPolicyResponse describeNatFirewallControlPolicyWithOptions(DescribeNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1907,11 +2004,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNatFirewallControlPolicyResponse());
     }
 
+    /**
+      * You can use this operation to query the information about all access control policies that are created for NAT firewalls by page.
+      *
+      * @param request DescribeNatFirewallControlPolicyRequest
+      * @return DescribeNatFirewallControlPolicyResponse
+     */
     public DescribeNatFirewallControlPolicyResponse describeNatFirewallControlPolicy(DescribeNatFirewallControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNatFirewallControlPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
+      *
+      * @param request DescribeNatFirewallPolicyPriorUsedRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeNatFirewallPolicyPriorUsedResponse
+     */
     public DescribeNatFirewallPolicyPriorUsedResponse describeNatFirewallPolicyPriorUsedWithOptions(DescribeNatFirewallPolicyPriorUsedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1948,6 +2058,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNatFirewallPolicyPriorUsedResponse());
     }
 
+    /**
+      * You can use this operation to query the priority range of access control policies that are created for a NAT firewall.
+      *
+      * @param request DescribeNatFirewallPolicyPriorUsedRequest
+      * @return DescribeNatFirewallPolicyPriorUsedResponse
+     */
     public DescribeNatFirewallPolicyPriorUsedResponse describeNatFirewallPolicyPriorUsed(DescribeNatFirewallPolicyPriorUsedRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeNatFirewallPolicyPriorUsedWithOptions(request, runtime);
@@ -3762,6 +3878,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyInstanceMemberAttributesWithOptions(request, runtime);
     }
 
+    /**
+      * You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
+      *
+      * @param request ModifyNatFirewallControlPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ModifyNatFirewallControlPolicyResponse
+     */
     public ModifyNatFirewallControlPolicyResponse modifyNatFirewallControlPolicyWithOptions(ModifyNatFirewallControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3846,6 +3969,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyNatFirewallControlPolicyResponse());
     }
 
+    /**
+      * You can use this operation to modify the configurations of an access control policy. The policy is used to allow, deny, or monitor traffic that reaches a NAT firewall.
+      *
+      * @param request ModifyNatFirewallControlPolicyRequest
+      * @return ModifyNatFirewallControlPolicyResponse
+     */
     public ModifyNatFirewallControlPolicyResponse modifyNatFirewallControlPolicy(ModifyNatFirewallControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyNatFirewallControlPolicyWithOptions(request, runtime);
@@ -4303,6 +4432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationName", request.applicationName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationNameList)) {
+            query.put("ApplicationNameList", request.applicationNameList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -4382,7 +4515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+      * You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -4431,7 +4564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the ModifyVpcFirewallControlPolicyPosition operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.  
+      * You can use this operation to modify the priority of an access control policy that is created for a VPC firewall in a specific policy group.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *

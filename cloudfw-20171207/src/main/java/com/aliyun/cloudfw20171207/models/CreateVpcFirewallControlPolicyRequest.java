@@ -36,6 +36,9 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    @NameInMap("ApplicationNameList")
+    public java.util.List<String> applicationNameList;
+
     /**
      * <p>The description of the access control policy.</p>
      */
@@ -178,6 +181,14 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     }
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    public CreateVpcFirewallControlPolicyRequest setApplicationNameList(java.util.List<String> applicationNameList) {
+        this.applicationNameList = applicationNameList;
+        return this;
+    }
+    public java.util.List<String> getApplicationNameList() {
+        return this.applicationNameList;
     }
 
     public CreateVpcFirewallControlPolicyRequest setDescription(String description) {
