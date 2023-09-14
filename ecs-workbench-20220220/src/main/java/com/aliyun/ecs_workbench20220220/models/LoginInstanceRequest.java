@@ -316,6 +316,9 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("Username")
         public String username;
 
@@ -453,6 +456,14 @@ public class LoginInstanceRequest extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfo setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public LoginInstanceRequestInstanceLoginInfo setUsername(String username) {
