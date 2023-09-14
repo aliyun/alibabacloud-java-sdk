@@ -274,6 +274,9 @@ public class LoginInstanceRequest extends TeaModel {
         @NameInMap("Certificate")
         public String certificate;
 
+        @NameInMap("CredentialToken")
+        public String credentialToken;
+
         @NameInMap("DockerContainerName")
         public String dockerContainerName;
 
@@ -294,6 +297,9 @@ public class LoginInstanceRequest extends TeaModel {
 
         @NameInMap("InstanceType")
         public String instanceType;
+
+        @NameInMap("LoginByInstanceCredential")
+        public Boolean loginByInstanceCredential;
 
         @NameInMap("NetworkAccessMode")
         public String networkAccessMode;
@@ -344,6 +350,14 @@ public class LoginInstanceRequest extends TeaModel {
         }
         public String getCertificate() {
             return this.certificate;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfo setCredentialToken(String credentialToken) {
+            this.credentialToken = credentialToken;
+            return this;
+        }
+        public String getCredentialToken() {
+            return this.credentialToken;
         }
 
         public LoginInstanceRequestInstanceLoginInfo setDockerContainerName(String dockerContainerName) {
@@ -400,6 +414,14 @@ public class LoginInstanceRequest extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public LoginInstanceRequestInstanceLoginInfo setLoginByInstanceCredential(Boolean loginByInstanceCredential) {
+            this.loginByInstanceCredential = loginByInstanceCredential;
+            return this;
+        }
+        public Boolean getLoginByInstanceCredential() {
+            return this.loginByInstanceCredential;
         }
 
         public LoginInstanceRequestInstanceLoginInfo setNetworkAccessMode(String networkAccessMode) {
