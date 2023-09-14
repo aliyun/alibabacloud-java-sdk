@@ -159,7 +159,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         public Long appId;
 
         /**
-         * <p>PID。</p>
+         * <p>PID.</p>
          */
         @NameInMap("Pid")
         public String pid;
