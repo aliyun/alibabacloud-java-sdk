@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class CreateEventBusResponseBody extends TeaModel {
+    /**
+     * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateEventBusResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. The value true indicates that the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +80,9 @@ public class CreateEventBusResponseBody extends TeaModel {
     }
 
     public static class CreateEventBusResponseBodyData extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the event bus.</p>
+         */
         @NameInMap("EventBusARN")
         public String eventBusARN;
 

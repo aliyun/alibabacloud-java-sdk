@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionRequest extends TeaModel {
+    /**
+     * <p>The connection name.</p>
+     */
     @NameInMap("ConnectionName")
     public String connectionName;
 

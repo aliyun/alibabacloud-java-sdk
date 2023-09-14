@@ -4,12 +4,21 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class QueryTracedEventByEventIdRequest extends TeaModel {
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    /**
+     * <p>The event ID.</p>
+     */
     @NameInMap("EventId")
     public String eventId;
 
+    /**
+     * <p>The name of the event source.</p>
+     */
     @NameInMap("EventSource")
     public String eventSource;
 

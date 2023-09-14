@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleForProductRequest extends TeaModel {
+    /**
+     * <p>The name of the cloud service or the name of the service-linked role with which the cloud service is associated.</p>
+     */
     @NameInMap("ProductName")
     public String productName;
 

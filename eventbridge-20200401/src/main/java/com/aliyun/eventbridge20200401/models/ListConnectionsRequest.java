@@ -4,12 +4,25 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class ListConnectionsRequest extends TeaModel {
+    /**
+     * <p>The key word that you specify to query connections. Connections can be queried by prefixes.</p>
+     */
     @NameInMap("ConnectionNamePrefix")
     public String connectionNamePrefix;
 
+    /**
+     * <p>The maximum number of entries to be returned in a single call. You can use this parameter and the NextToken parameter to implement paging.</p>
+     * <br>
+     * <p>*   Default value: 10.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>If you set the Limit parameter and excess return values exist, this parameter is returned.</p>
+     * <br>
+     * <p>*   Default value: 0.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

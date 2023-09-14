@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class GetEventBusRequest extends TeaModel {
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 

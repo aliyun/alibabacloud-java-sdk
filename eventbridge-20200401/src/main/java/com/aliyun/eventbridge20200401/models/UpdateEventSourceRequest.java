@@ -5,32 +5,50 @@ import com.aliyun.tea.*;
 
 public class UpdateEventSourceRequest extends TeaModel {
     /**
-     * <p>事件源描述详情</p>
+     * <p>The description of the event source.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The associated event bus.</p>
+     */
     @NameInMap("EventBusName")
-    public byte[] eventBusName;
+    public String eventBusName;
 
     /**
-     * <p>事件源英文Code</p>
+     * <p>The name of the event source.</p>
      */
     @NameInMap("EventSourceName")
     public String eventSourceName;
 
+    /**
+     * <p>The parameters that are configured if the event source is HTTP events.</p>
+     */
     @NameInMap("SourceHttpEventParameters")
     public UpdateEventSourceRequestSourceHttpEventParameters sourceHttpEventParameters;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Queue for Apache Kafka.</p>
+     */
     @NameInMap("SourceKafkaParameters")
     public UpdateEventSourceRequestSourceKafkaParameters sourceKafkaParameters;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Service (MNS).</p>
+     */
     @NameInMap("SourceMNSParameters")
     public UpdateEventSourceRequestSourceMNSParameters sourceMNSParameters;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Queue for RabbitMQ.</p>
+     */
     @NameInMap("SourceRabbitMQParameters")
     public UpdateEventSourceRequestSourceRabbitMQParameters sourceRabbitMQParameters;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Queue for Apache RocketMQ.</p>
+     */
     @NameInMap("SourceRocketMQParameters")
     public UpdateEventSourceRequestSourceRocketMQParameters sourceRocketMQParameters;
 
@@ -40,6 +58,9 @@ public class UpdateEventSourceRequest extends TeaModel {
     @NameInMap("SourceSLSParameters")
     public UpdateEventSourceRequestSourceSLSParameters sourceSLSParameters;
 
+    /**
+     * <p>The parameters that are configured if the event source is scheduled events.</p>
+     */
     @NameInMap("SourceScheduledEventParameters")
     public UpdateEventSourceRequestSourceScheduledEventParameters sourceScheduledEventParameters;
 
@@ -56,11 +77,11 @@ public class UpdateEventSourceRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateEventSourceRequest setEventBusName(byte[] eventBusName) {
+    public UpdateEventSourceRequest setEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
     }
-    public byte[] getEventBusName() {
+    public String getEventBusName() {
         return this.eventBusName;
     }
 
@@ -129,18 +150,33 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
 
     public static class UpdateEventSourceRequestSourceHttpEventParameters extends TeaModel {
+        /**
+         * <p>The CIDR blocks used for security settings. This parameter is required only if you set SecurityConfig to ip. You can enter CIDR blocks or IP addresses.</p>
+         */
         @NameInMap("Ip")
         public java.util.List<String> ip;
 
+        /**
+         * <p>The HTTP request method supported by the generated webhook URL. You can select multiple values. Valid values: GET POST PUT PATCH DELETE HEAD OPTIONS TRACE CONNECT</p>
+         */
         @NameInMap("Method")
         public java.util.List<String> method;
 
+        /**
+         * <p>The security domain names. This parameter is required only if SecurityConfig is set to referer. You can enter domain names.</p>
+         */
         @NameInMap("Referer")
         public java.util.List<String> referer;
 
+        /**
+         * <p>The type of security settings. Valid values: none: No configuration is required. ip: CIDR blocks. referer: security domain names.</p>
+         */
         @NameInMap("SecurityConfig")
         public String securityConfig;
 
+        /**
+         * <p>The protocol type supported by the generated webhook URL. Valid values: HTTP HTTPS HTTP\&HTTPS</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -192,33 +228,63 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
 
     public static class UpdateEventSourceRequestSourceKafkaParameters extends TeaModel {
+        /**
+         * <p>The ID of the consumer group that subscribes to the topic.</p>
+         */
         @NameInMap("ConsumerGroup")
         public String consumerGroup;
 
+        /**
+         * <p>The instance ID.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The concurrency quota, which is the number of consumers.</p>
+         */
         @NameInMap("MaximumTasks")
         public Integer maximumTasks;
 
+        /**
+         * <p>The network. Valid values: Default and PublicNetwork.</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <p>The consumer offset.</p>
+         */
         @NameInMap("OffsetReset")
         public String offsetReset;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The ID of the security group to which the Message Queue for Apache Kafka instance belongs. This parameter is required if you set Network to PublicNetwork.</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>The topic name.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <p>The ID of the vSwitch with which the Message Queue for Apache Kafka instance is associated. This parameter is required if you set Network to PublicNetwork.</p>
+         */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <p>The ID of the VPC in which the Message Queue for Apache Kafka instance resides. This parameter is required if you set Network to PublicNetwork.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -310,12 +376,21 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
 
     public static class UpdateEventSourceRequestSourceMNSParameters extends TeaModel {
+        /**
+         * <p>Specifies whether to enable Base64 decoding. Default value: true.</p>
+         */
         @NameInMap("IsBase64Decode")
-        public String isBase64Decode;
+        public Boolean isBase64Decode;
 
+        /**
+         * <p>The name of the MNS queue.</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <p>The region where the MNS queue resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -324,11 +399,11 @@ public class UpdateEventSourceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateEventSourceRequestSourceMNSParameters setIsBase64Decode(String isBase64Decode) {
+        public UpdateEventSourceRequestSourceMNSParameters setIsBase64Decode(Boolean isBase64Decode) {
             this.isBase64Decode = isBase64Decode;
             return this;
         }
-        public String getIsBase64Decode() {
+        public Boolean getIsBase64Decode() {
             return this.isBase64Decode;
         }
 
@@ -351,15 +426,27 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
 
     public static class UpdateEventSourceRequestSourceRabbitMQParameters extends TeaModel {
+        /**
+         * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The name of the queue in the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <p>The ID of the region where the Message Queue for RabbitMQ instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The vhost name of the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+         */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
 
@@ -403,39 +490,91 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
 
     public static class UpdateEventSourceRequestSourceRocketMQParameters extends TeaModel {
+        @NameInMap("AuthType")
+        public String authType;
+
+        /**
+         * <p>The ID of the consumer group in the Message Queue for Apache RocketMQ instance.</p>
+         */
         @NameInMap("GroupID")
         public String groupID;
 
+        @NameInMap("InstanceEndpoint")
+        public String instanceEndpoint;
+
+        /**
+         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see Limits.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>None</p>
+         */
         @NameInMap("InstanceNetwork")
         public String instanceNetwork;
 
+        @NameInMap("InstancePassword")
+        public String instancePassword;
+
+        /**
+         * <p>The ID of the security group to which the Message Queue for Apache RocketMQ instance belongs.</p>
+         */
         @NameInMap("InstanceSecurityGroupId")
         public String instanceSecurityGroupId;
 
+        /**
+         * <p>The type of the Message Queue for Apache RocketMQ instance. Valid values:</p>
+         * <br>
+         * <p>- Cloud\_4: Message Queue for Apache RocketMQ 4.0 instances.</p>
+         * <br>
+         * <p>- Cloud\_5: Message Queue for Apache RocketMQ 5.0 instances.</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("InstanceUsername")
+        public String instanceUsername;
+
+        /**
+         * <p>The ID of the vSwitch with which the Message Queue for Apache RocketMQ instance is associated.</p>
+         */
         @NameInMap("InstanceVSwitchIds")
         public String instanceVSwitchIds;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) in which the Message Queue for Apache RocketMQ instance resides.</p>
+         */
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;
 
+        /**
+         * <p>The consumer offset of the message. Valid values: CONSUME_FROM_LAST_OFFSET: Start consumption from the latest offset. CONSUME_FROM_FIRST_OFFSET: Start consumption from the earliest offset. CONSUME_FROM_TIMESTAMP: Start consumption from the offset at the specified point in time. Default value: CONSUME_FROM_LAST_OFFSET.</p>
+         */
         @NameInMap("Offset")
         public String offset;
 
+        /**
+         * <p>The region in which the Message Queue for Apache RocketMQ instance resides.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The tags that are used to filter messages.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The timestamp of the offset from which consumption starts. This parameter is valid only if you set the Offset parameter to CONSUME_FROM_TIMESTAMP.</p>
+         */
         @NameInMap("Timestamp")
-        public Float timestamp;
+        public Long timestamp;
 
+        /**
+         * <p>The name of the topic in the Message Queue for Apache RocketMQ instance. For more information, see Limits.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -444,12 +583,28 @@ public class UpdateEventSourceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public UpdateEventSourceRequestSourceRocketMQParameters setAuthType(String authType) {
+            this.authType = authType;
+            return this;
+        }
+        public String getAuthType() {
+            return this.authType;
+        }
+
         public UpdateEventSourceRequestSourceRocketMQParameters setGroupID(String groupID) {
             this.groupID = groupID;
             return this;
         }
         public String getGroupID() {
             return this.groupID;
+        }
+
+        public UpdateEventSourceRequestSourceRocketMQParameters setInstanceEndpoint(String instanceEndpoint) {
+            this.instanceEndpoint = instanceEndpoint;
+            return this;
+        }
+        public String getInstanceEndpoint() {
+            return this.instanceEndpoint;
         }
 
         public UpdateEventSourceRequestSourceRocketMQParameters setInstanceId(String instanceId) {
@@ -468,6 +623,14 @@ public class UpdateEventSourceRequest extends TeaModel {
             return this.instanceNetwork;
         }
 
+        public UpdateEventSourceRequestSourceRocketMQParameters setInstancePassword(String instancePassword) {
+            this.instancePassword = instancePassword;
+            return this;
+        }
+        public String getInstancePassword() {
+            return this.instancePassword;
+        }
+
         public UpdateEventSourceRequestSourceRocketMQParameters setInstanceSecurityGroupId(String instanceSecurityGroupId) {
             this.instanceSecurityGroupId = instanceSecurityGroupId;
             return this;
@@ -482,6 +645,14 @@ public class UpdateEventSourceRequest extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public UpdateEventSourceRequestSourceRocketMQParameters setInstanceUsername(String instanceUsername) {
+            this.instanceUsername = instanceUsername;
+            return this;
+        }
+        public String getInstanceUsername() {
+            return this.instanceUsername;
         }
 
         public UpdateEventSourceRequestSourceRocketMQParameters setInstanceVSwitchIds(String instanceVSwitchIds) {
@@ -524,11 +695,11 @@ public class UpdateEventSourceRequest extends TeaModel {
             return this.tag;
         }
 
-        public UpdateEventSourceRequestSourceRocketMQParameters setTimestamp(Float timestamp) {
+        public UpdateEventSourceRequestSourceRocketMQParameters setTimestamp(Long timestamp) {
             this.timestamp = timestamp;
             return this;
         }
-        public Float getTimestamp() {
+        public Long getTimestamp() {
             return this.timestamp;
         }
 
@@ -543,15 +714,27 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
 
     public static class UpdateEventSourceRequestSourceSLSParameters extends TeaModel {
+        /**
+         * <p>The starting consumer offset. The value begin indicates the earliest offset, and the value end indicates the latest offset. You can also specify a time in seconds to start consumption.</p>
+         */
         @NameInMap("ConsumePosition")
         public String consumePosition;
 
+        /**
+         * <p>The Log Service Logstore.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
+        /**
+         * <p>The Log Service project.</p>
+         */
         @NameInMap("Project")
         public String project;
 
+        /**
+         * <p>The role name. If you want to authorize EventBridge to use this role to read logs in Log Service, you must select Alibaba Cloud Service for Selected Trusted Entity and EventBridge for Select Trusted Service when you create the role in the RAM console. For information about the permission policy of this role, see Create a custom event source of the Log Service type.</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
@@ -595,9 +778,15 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
 
     public static class UpdateEventSourceRequestSourceScheduledEventParameters extends TeaModel {
+        /**
+         * <p>The Cron expression.</p>
+         */
         @NameInMap("Schedule")
         public String schedule;
 
+        /**
+         * <p>The time zone in which the Cron expression is executed.</p>
+         */
         @NameInMap("TimeZone")
         public String timeZone;
 

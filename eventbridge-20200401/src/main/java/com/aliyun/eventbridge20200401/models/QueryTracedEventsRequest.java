@@ -4,27 +4,51 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class QueryTracedEventsRequest extends TeaModel {
+    /**
+     * <p>The end of the time range when event traces are queried. Unit: milliseconds.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>The name of the event bus.</p>
+     */
     @NameInMap("EventBusName")
     public String eventBusName;
 
+    /**
+     * <p>The name of the event source.</p>
+     */
     @NameInMap("EventSource")
     public String eventSource;
 
+    /**
+     * <p>The event type.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The maximum number of entries to be returned in a call. You can use this parameter and NextToken to implement paging. Up to 100 entries can be returned in a call.</p>
+     */
     @NameInMap("Limit")
     public Integer limit;
 
+    /**
+     * <p>The name of the event rule that is matched.</p>
+     */
     @NameInMap("MatchedRule")
     public String matchedRule;
 
+    /**
+     * <p>If you configure Limit and excess return values exist, this parameter is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The beginning of the time range to query event traces. Unit: milliseconds.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 

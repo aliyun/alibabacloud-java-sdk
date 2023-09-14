@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class TestEventPatternResponseBody extends TeaModel {
+    /**
+     * <p>The returned response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public TestEventPatternResponseBodyData data;
 
+    /**
+     * <p>The error message returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +80,9 @@ public class TestEventPatternResponseBody extends TeaModel {
     }
 
     public static class TestEventPatternResponseBodyData extends TeaModel {
+        /**
+         * <p>The value true indicates that the event pattern matches the provided JSON format. The value false indicates that the event pattern does not match the provided JSON format.</p>
+         */
         @NameInMap("Result")
         public Boolean result;
 

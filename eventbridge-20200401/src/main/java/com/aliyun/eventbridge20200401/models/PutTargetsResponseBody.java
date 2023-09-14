@@ -4,18 +4,39 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class PutTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The response code. Valid values:</p>
+     * <br>
+     * <p>*   Success: The call succeeded.</p>
+     * <p>*   Other codes: The call failed. For more information about error codes, see Error codes.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Data")
     public PutTargetsResponseBodyData data;
 
+    /**
+     * <p>The error message that is returned if the request failed.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The request is successful.</p>
+     * <p>*   **false**: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +86,21 @@ public class PutTargetsResponseBody extends TeaModel {
     }
 
     public static class PutTargetsResponseBodyDataErrorEntries extends TeaModel {
+        /**
+         * <p>The ID of the failed event target.</p>
+         */
         @NameInMap("EntryId")
         public String entryId;
 
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -106,9 +136,18 @@ public class PutTargetsResponseBody extends TeaModel {
     }
 
     public static class PutTargetsResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the failed event target.</p>
+         */
         @NameInMap("ErrorEntries")
         public java.util.List<PutTargetsResponseBodyDataErrorEntries> errorEntries;
 
+        /**
+         * <p>The number of failed event targets. Valid values:</p>
+         * <br>
+         * <p>*   0: All event targets succeeded.</p>
+         * <p>*   An integer other than 0: indicates the number of failed event targets.</p>
+         */
         @NameInMap("ErrorEntriesCount")
         public Integer errorEntriesCount;
 

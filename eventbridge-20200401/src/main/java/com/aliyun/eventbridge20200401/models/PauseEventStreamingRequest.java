@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class PauseEventStreamingRequest extends TeaModel {
+    /**
+     * <p>The name of the event stream that you want to stop.</p>
+     */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;
 

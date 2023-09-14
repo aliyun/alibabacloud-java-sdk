@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleResponseBody extends TeaModel {
+    /**
+     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateRuleResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,6 +80,9 @@ public class CreateRuleResponseBody extends TeaModel {
     }
 
     public static class CreateRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>The ARN of the event rule. The ARN is used for authorization.</p>
+         */
         @NameInMap("RuleARN")
         public String ruleARN;
 

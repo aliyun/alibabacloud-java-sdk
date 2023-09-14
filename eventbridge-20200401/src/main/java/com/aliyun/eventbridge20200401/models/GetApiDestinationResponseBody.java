@@ -4,15 +4,27 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class GetApiDestinationResponseBody extends TeaModel {
+    /**
+     * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetApiDestinationResponseBodyData data;
 
+    /**
+     * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +66,23 @@ public class GetApiDestinationResponseBody extends TeaModel {
     }
 
     public static class GetApiDestinationResponseBodyDataHttpApiParameters extends TeaModel {
+        /**
+         * <p>The endpoint of the API destination.</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The HTTP request method. Valid values:</p>
+         * <br>
+         * <p>*   POST</p>
+         * <p>*   GET</p>
+         * <p>*   DELETE</p>
+         * <p>*   PUT</p>
+         * <p>*   HEAD</p>
+         * <p>*   TRACE</p>
+         * <p>*   PATCH</p>
+         */
         @NameInMap("Method")
         public String method;
 
@@ -84,18 +110,33 @@ public class GetApiDestinationResponseBody extends TeaModel {
     }
 
     public static class GetApiDestinationResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the API destination.</p>
+         */
         @NameInMap("ApiDestinationName")
         public String apiDestinationName;
 
+        /**
+         * <p>The connection name.</p>
+         */
         @NameInMap("ConnectionName")
         public String connectionName;
 
+        /**
+         * <p>The description of the API destination.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time when the API destination was created.</p>
+         */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>The request parameters that are configured for the API destination.</p>
+         */
         @NameInMap("HttpApiParameters")
         public GetApiDestinationResponseBodyDataHttpApiParameters httpApiParameters;
 

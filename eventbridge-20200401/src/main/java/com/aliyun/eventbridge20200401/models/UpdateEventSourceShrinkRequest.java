@@ -5,32 +5,50 @@ import com.aliyun.tea.*;
 
 public class UpdateEventSourceShrinkRequest extends TeaModel {
     /**
-     * <p>事件源描述详情</p>
+     * <p>The description of the event source.</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The associated event bus.</p>
+     */
     @NameInMap("EventBusName")
-    public byte[] eventBusName;
+    public String eventBusName;
 
     /**
-     * <p>事件源英文Code</p>
+     * <p>The name of the event source.</p>
      */
     @NameInMap("EventSourceName")
     public String eventSourceName;
 
+    /**
+     * <p>The parameters that are configured if the event source is HTTP events.</p>
+     */
     @NameInMap("SourceHttpEventParameters")
     public String sourceHttpEventParametersShrink;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Queue for Apache Kafka.</p>
+     */
     @NameInMap("SourceKafkaParameters")
     public String sourceKafkaParametersShrink;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Service (MNS).</p>
+     */
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Queue for RabbitMQ.</p>
+     */
     @NameInMap("SourceRabbitMQParameters")
     public String sourceRabbitMQParametersShrink;
 
+    /**
+     * <p>The parameters that are configured if the event source is Message Queue for Apache RocketMQ.</p>
+     */
     @NameInMap("SourceRocketMQParameters")
     public String sourceRocketMQParametersShrink;
 
@@ -40,6 +58,9 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     @NameInMap("SourceSLSParameters")
     public String sourceSLSParametersShrink;
 
+    /**
+     * <p>The parameters that are configured if the event source is scheduled events.</p>
+     */
     @NameInMap("SourceScheduledEventParameters")
     public String sourceScheduledEventParametersShrink;
 
@@ -56,11 +77,11 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateEventSourceShrinkRequest setEventBusName(byte[] eventBusName) {
+    public UpdateEventSourceShrinkRequest setEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
     }
-    public byte[] getEventBusName() {
+    public String getEventBusName() {
         return this.eventBusName;
     }
 

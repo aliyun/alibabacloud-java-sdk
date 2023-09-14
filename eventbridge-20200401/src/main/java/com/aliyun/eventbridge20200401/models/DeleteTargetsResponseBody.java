@@ -4,18 +4,33 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class DeleteTargetsResponseBody extends TeaModel {
+    /**
+     * <p>The returned HTTP status code. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public DeleteTargetsResponseBodyData data;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the operation is successful. Valid values: true and false.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +80,21 @@ public class DeleteTargetsResponseBody extends TeaModel {
     }
 
     public static class DeleteTargetsResponseBodyDataErrorEntries extends TeaModel {
+        /**
+         * <p>The ID of the event body that failed to be processed.</p>
+         */
         @NameInMap("EntryId")
         public String entryId;
 
+        /**
+         * <p>The returned error code.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>The returned error message.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
@@ -106,9 +130,15 @@ public class DeleteTargetsResponseBody extends TeaModel {
     }
 
     public static class DeleteTargetsResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the event body that failed to be processed.</p>
+         */
         @NameInMap("ErrorEntries")
         public java.util.List<DeleteTargetsResponseBodyDataErrorEntries> errorEntries;
 
+        /**
+         * <p>The number of event bodies that failed to be processed. Valid values: 0: No event bodies failed to be processed. An integer other than 0: the number of event bodies that failed to be processed.</p>
+         */
         @NameInMap("ErrorEntriesCount")
         public Integer errorEntriesCount;
 

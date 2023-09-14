@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class GetEventStreamingRequest extends TeaModel {
+    /**
+     * <p>The name of the event stream whose details you want to query.</p>
+     */
     @NameInMap("EventStreamingName")
     public String eventStreamingName;
 
