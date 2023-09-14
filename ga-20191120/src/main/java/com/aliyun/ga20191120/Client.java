@@ -8252,7 +8252,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
       *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
       *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
@@ -8347,7 +8346,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Description
       * *   **UpdateEndpointGroup** is an asynchronous operation. After you send a request, the system returns a request ID, but the operation is still being performed in the system background. You can call the [DescribeEndpointGroup](~~153260~~) operation to query the state of an endpoint group.
       *     *   If the endpoint group is in the **updating** state, it indicates that the configurations of the endpoint group are being modified. In this case, you can perform only query operations.
       *     *   If the endpoint group is in the **active** state, it indicates that the configurations of the endpoint group are modified.
@@ -8748,6 +8746,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateListenerWithOptions(request, runtime);
     }
 
+    /**
+      * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
+      * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
+      * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
+      *     **
+      *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+      *
+      * @param request UpdateServiceManagedControlRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateServiceManagedControlResponse
+     */
     public UpdateServiceManagedControlResponse updateServiceManagedControlWithOptions(UpdateServiceManagedControlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -8788,6 +8797,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServiceManagedControlResponse());
     }
 
+    /**
+      * *   This operation is applicable only to **managed** Global Accelerator (GA) instances.
+      * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you cannot change the mode of the instance to managed mode.
+      * *   After you change the control mode of a GA instance from managed mode to unmanaged mode, you can obtain all operation permissions on the instance.
+      *     **
+      *     **Warning** If you change or delete a configuration of a GA instance whose control mode is changed from managed mode to unmanaged mode, the cloud services that depend on the instance may not work as expected. Proceed with caution.
+      *
+      * @param request UpdateServiceManagedControlRequest
+      * @return UpdateServiceManagedControlResponse
+     */
     public UpdateServiceManagedControlResponse updateServiceManagedControl(UpdateServiceManagedControlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateServiceManagedControlWithOptions(request, runtime);

@@ -152,27 +152,27 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>托管实例所属的服务方ID。</p>
-     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+     * <p>The service ID to which the managed instance belongs.</p>
+     * <br>
+     * <p>>  Valid only when the ServiceManaged parameter is True.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>是否为托管实例。取值：</p>
+     * <p>Is it a managed instance. Value:</p>
      * <br>
-     * <p>- **true**：是托管实例。</p>
-     * <br>
-     * <p>- **false**：不是托管实例。</p>
+     * <p>- true</p>
+     * <p>- false</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
-     * <p>用户在此托管实例下可执行的动作策略列表。</p>
+     * <p>A list of action policies that users can execute on this managed instance.</p>
      * <br>
-     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
-     * <p>> - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。</p>
+     * <p>> Valid only when the ServiceManaged parameter is True.</p>
+     * <p>>* When an instance is hosted, user operations on the instance are restricted and some operations are prohibited.</p>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos;
@@ -514,6 +514,9 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
 
+        @NameInMap("SubAddress")
+        public String subAddress;
+
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
@@ -579,6 +582,14 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
             return this.probeProtocol;
         }
 
+        public DescribeEndpointGroupResponseBodyEndpointConfigurations setSubAddress(String subAddress) {
+            this.subAddress = subAddress;
+            return this;
+        }
+        public String getSubAddress() {
+            return this.subAddress;
+        }
+
         public DescribeEndpointGroupResponseBodyEndpointConfigurations setType(String type) {
             this.type = type;
             return this;
@@ -635,43 +646,40 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
 
     public static class DescribeEndpointGroupResponseBodyServiceManagedInfos extends TeaModel {
         /**
-         * <p>托管策略动作名称，取值：</p>
-         * <p>- **Create**：创建实例。</p>
-         * <p>- **Update**：更新当前实例。</p>
-         * <p>- **Delete**：删除当前实例。</p>
-         * <p>- **Associate**：引用/被引用当前实例。</p>
-         * <p>- **UserUnmanaged**：用户解托管实例。</p>
-         * <p>- **CreateChild**：在当前实例下创建子资源。</p>
+         * <p>Managed policy action name, Valid values:</p>
+         * <br>
+         * <p>- Create</p>
+         * <p>- Update</p>
+         * <p>- Delete</p>
+         * <p>- Associate</p>
+         * <p>- UserUnmanaged</p>
+         * <p>- CreateChild</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>子资源类型，取值：</p>
+         * <p>Sub resource type, Valid values:</p>
          * <br>
-         * <p>- **Listener**：监听资源。</p>
+         * <p>- Listener</p>
+         * <p>- IpSet</p>
+         * <p>- EndpointGroup</p>
+         * <p>- ForwardingRule</p>
+         * <p>- Endpoint</p>
+         * <p>- EndpointGroupDestination</p>
+         * <p>- EndpointPolicy</p>
          * <br>
-         * <p>- **IpSet**：加速地域资源。</p>
-         * <br>
-         * <p>- **EndpointGroup**：终端节点组资源。</p>
-         * <br>
-         * <p>- **ForwardingRule**：转发策略资源。</p>
-         * <br>
-         * <p>- **Endpoint**：终端节点资源。</p>
-         * <br>
-         * <p>- **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。</p>
-         * <br>
-         * <p>- **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。</p>
-         * <br>
-         * <p>> 仅在**Action**参数为**CreateChild**时有效。</p>
+         * <p>>Only valid when the Action parameter is CreateChild.</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>托管策略动作是否被托管，取值：</p>
-         * <p>- **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。</p>
-         * <p>- **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。</p>
+         * <p>Is the managed policy action managed, Valid values:</p>
+         * <br>
+         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <br>
+         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;

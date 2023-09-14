@@ -29,7 +29,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The configurations of the endpoint.</p>
+     * <p>The configurations of endpoints in the endpoint group.</p>
      */
     @NameInMap("EndpointConfigurations")
     public java.util.List<CreateEndpointGroupRequestEndpointConfigurations> endpointConfigurations;
@@ -307,46 +307,48 @@ public class CreateEndpointGroupRequest extends TeaModel {
 
     public static class CreateEndpointGroupRequestEndpointConfigurations extends TeaModel {
         /**
-         * <p>Specifies whether to preserve client IP addresses by using the TCP Option Address (TOA) module. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use the TCP Option Address (TOA) module to preserve client IP addresses. Valid values:</p>
          * <br>
-         * <p>*   **true**: preserves client IP addresses by using the TOA module.</p>
-         * <p>*   **false**: does not preserve client IP addresses by using the TOA module.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
 
         /**
-         * <p>Specifies whether to preserve client IP addresses by using the ProxyProtocol module. Default value: false. Valid values:</p>
+         * <p>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</p>
          * <br>
-         * <p>*   **true**: preserves client IP addresses by using the ProxyProtocol module.</p>
-         * <p>*   **false**: does not preserve client IP addresses by using the ProxyProtocol module.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false** (default)</p>
          */
         @NameInMap("EnableProxyProtocol")
         public Boolean enableProxyProtocol;
 
         /**
-         * <p>The IP address, domain name or instance id according to the type of the endpoint.</p>
+         * <p>Enter the IP address, domain name, or instance ID based on the value of the Type parameter.</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        @NameInMap("SubAddress")
+        public String subAddress;
+
         /**
          * <p>The type of the endpoint. Valid values:</p>
          * <br>
-         * <p>*   **Domain**: a custom domain name</p>
-         * <p>*   **Ip**: a custom IP address</p>
-         * <p>*   **PublicIp**: a public IP address provided by Alibaba Cloud</p>
-         * <p>*   **ECS**: an Elastic Compute Service (ECS) instance</p>
-         * <p>*   **SLB**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **ALB**: an Application Load Balancer (ALB) instance</p>
-         * <p>*   **OSS**: an Object Storage Service (OSS) bucket</p>
+         * <p>*   **Domain:** a custom domain name.</p>
+         * <p>*   **Ip:** a custom IP address.</p>
+         * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
+         * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
+         * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
+         * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
          * <br>
-         * <p>> </p>
-         * <p>*   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
-         * <p>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
-         * <p>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
+         * <p>> *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
+         * <p>>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>
+         * <p>>*   If you set this parameter to **OSS** and the service-linked role AliyunServiceRoleForGaOss does not exist, the system automatically creates the service-linked role.</p>
          * <br>
-         * <p>    For more information, see [Service-linked roles](~~178360~~).</p>
+         * <p>For more information, see [Service linked roles](~~178360~~).</p>
          */
         @NameInMap("Type")
         public String type;
@@ -356,7 +358,7 @@ public class CreateEndpointGroupRequest extends TeaModel {
          * <br>
          * <p>Valid values: **0** to **255**.</p>
          * <br>
-         * <p>>  If the weight of an endpoint is set to 0, GA stops distributing network traffic to the endpoint. Proceed with caution.</p>
+         * <p>>  If you set the weight of an endpoint to 0, the GA instance stops distributing traffic to the endpoint.</p>
          */
         @NameInMap("Weight")
         public Integer weight;
@@ -388,6 +390,14 @@ public class CreateEndpointGroupRequest extends TeaModel {
         }
         public String getEndpoint() {
             return this.endpoint;
+        }
+
+        public CreateEndpointGroupRequestEndpointConfigurations setSubAddress(String subAddress) {
+            this.subAddress = subAddress;
+            return this;
+        }
+        public String getSubAddress() {
+            return this.subAddress;
         }
 
         public CreateEndpointGroupRequestEndpointConfigurations setType(String type) {

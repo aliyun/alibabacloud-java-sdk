@@ -11,7 +11,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
     public java.util.List<ListBasicAcceleratorsResponseBodyAccelerators> accelerators;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -249,7 +249,7 @@ public class ListBasicAcceleratorsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Indicates whether cross-border acceleration is enabled for the basic GA instance. Valid values:</p>
+         * <p>Indicates whether cross-border acceleration is enabled for the GA instance. Valid values:</p>
          * <br>
          * <p>*   **true**</p>
          * <p>*   **false**</p>

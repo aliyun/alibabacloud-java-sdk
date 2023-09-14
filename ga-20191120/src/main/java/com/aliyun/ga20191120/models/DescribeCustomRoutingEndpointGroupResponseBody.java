@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the GA instance.</p>
+     * <p>The GA instance ID.</p>
      */
     @NameInMap("AcceleratorId")
     public String acceleratorId;
 
     /**
-     * <p>The status of the logs.</p>
+     * <p>Indicates the status of the binding between the Log Service project and the endpoint group. Valid values:</p>
      * <br>
-     * <p>*   **on**: associated</p>
-     * <p>*   **off**: not associated</p>
-     * <p>*   **binding**: being associated</p>
-     * <p>*   **unbinding**: being disassociated</p>
+     * <p>*   **on:** The endpoint group is bound to the Log Service project.</p>
+     * <p>*   **off:** The endpoint group is not bound to the Log Service project.</p>
+     * <p>*   **binding:** The endpoint group is being bound to the Log Service project.</p>
+     * <p>*   **unbinding:** The endpoint group is being unbound from the Log Service project.</p>
      */
     @NameInMap("AccessLogSwitch")
     public String accessLogSwitch;
@@ -28,40 +28,40 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether access logging is enabled.</p>
+     * <p>Indicates whether the access log feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **on**: enabled</p>
-     * <p>*   **off**: disabled</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableAccessLog")
     public Boolean enableAccessLog;
 
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The endpoint group ID.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The list of endpoint group IP addresses.</p>
+     * <p>The endpoint group IP addresses.</p>
      */
     @NameInMap("EndpointGroupIpList")
     public java.util.List<String> endpointGroupIpList;
 
     /**
-     * <p>The ID of the region where the endpoint group is created.</p>
+     * <p>The region ID of the endpoint group.</p>
      */
     @NameInMap("EndpointGroupRegion")
     public String endpointGroupRegion;
 
     /**
-     * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
+     * <p>The endpoint group IP addresses that need to be confirmed after the GA instance is upgraded.</p>
      */
     @NameInMap("EndpointGroupUnconfirmedIpList")
     public java.util.List<String> endpointGroupUnconfirmedIpList;
 
     /**
-     * <p>The ID of the custom routing listener.</p>
+     * <p>The custom routing listener ID.</p>
      */
     @NameInMap("ListenerId")
     public String listenerId;
@@ -73,30 +73,33 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The service ID to which the managed instance belongs.</p>
-     * <br>
-     * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+     * <p>托管实例所属的服务方ID。</p>
+     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>Is it a managed instance. Value:</p>
+     * <p>是否为托管实例。取值：</p>
      * <br>
-     * <p>- true</p>
-     * <p>- false</p>
+     * <p>- **true**：是托管实例。</p>
+     * <br>
+     * <p>- **false**：不是托管实例。</p>
      */
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
 
     /**
-     * <p>A list of action policies that users can execute on this managed instance.</p>
+     * <p>用户在此托管实例下可执行的动作策略列表。</p>
+     * <br>
+     * <p>> 仅在**ServiceManaged**参数为**True**时有效。</p>
+     * <p>> - 当实例处于托管状态时，用户对实例的操作会受到限制，某些操作行为会被禁止。</p>
      */
     @NameInMap("ServiceManagedInfos")
     public java.util.List<DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos> serviceManagedInfos;
@@ -120,12 +123,12 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
     public String slsRegion;
 
     /**
-     * <p>The status of the endpoint group.</p>
+     * <p>The status of the endpoint group. Valid values:</p>
      * <br>
-     * <p>*   **init**: being initialized</p>
-     * <p>*   **active**: running as expected</p>
-     * <p>*   **updating**: being updated</p>
-     * <p>*   **deleting**: being deleted</p>
+     * <p>*   **init:** The endpoint group is being initialized.</p>
+     * <p>*   **active:** The endpoint group is running normally.</p>
+     * <p>*   **updating:** The endpoint group is being updated.</p>
+     * <p>*   **deleting:** The ACL is being deleted.</p>
      */
     @NameInMap("State")
     public String state;
@@ -281,40 +284,35 @@ public class DescribeCustomRoutingEndpointGroupResponseBody extends TeaModel {
 
     public static class DescribeCustomRoutingEndpointGroupResponseBodyServiceManagedInfos extends TeaModel {
         /**
-         * <p>Managed policy action name, Valid values:</p>
-         * <br>
-         * <p>- Create</p>
-         * <p>- Update</p>
-         * <p>- Delete</p>
-         * <p>- Associate</p>
-         * <p>- UserUnmanaged</p>
-         * <p>- CreateChild</p>
+         * <p>托管策略动作名称，取值：</p>
+         * <p>- **Create**：创建实例。</p>
+         * <p>- **Update**：更新当前实例。</p>
+         * <p>- **Delete**：删除当前实例。</p>
+         * <p>- **Associate**：引用/被引用当前实例。</p>
+         * <p>- **UserUnmanaged**：用户解托管实例。</p>
+         * <p>- **CreateChild**：在当前实例下创建子资源。</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>Sub resource type, Valid values:</p>
-         * <br>
-         * <p>- Listener</p>
-         * <p>- IpSet</p>
-         * <p>- EndpointGroup</p>
-         * <p>- ForwardingRule</p>
-         * <p>- Endpoint</p>
-         * <p>- EndpointGroupDestination</p>
-         * <p>- EndpointPolicy</p>
-         * <br>
-         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         * <p>子资源类型，取值：</p>
+         * <p>- **Listener**：监听资源。</p>
+         * <p>- **IpSet**：加速地域资源。</p>
+         * <p>- **EndpointGroup**：终端节点组资源。</p>
+         * <p>- **ForwardingRule**：转发策略资源。</p>
+         * <p>- **Endpoint**：终端节点资源。</p>
+         * <p>- **EndpointGroupDestination**：自定义路由监听下的终端节点组协议映射资源。</p>
+         * <p>- **EndpointPolicy**：自定义路由监听下的终端节点通行策略资源。</p>
+         * <p>> 仅在**Action**参数为**CreateChild**时有效</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>Is the managed policy action managed, Valid values:</p>
-         * <br>
-         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <p>托管策略动作是否被托管，取值：</p>
+         * <p>- **true**：托管策略动作被托管，用户无权在托管实例下执行Action指定的操作。</p>
+         * <p>- **false**：托管策略动作未被托管，用户可在托管实例下执行Action指定的操作。</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
