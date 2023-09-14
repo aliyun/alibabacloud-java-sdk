@@ -4,6 +4,9 @@ package com.aliyun.foas20181111.models;
 import com.aliyun.tea.*;
 
 public class ListTaskRequest extends TeaModel {
+    @NameInMap("name")
+    public String name;
+
     @NameInMap("pageIndex")
     public Integer pageIndex;
 
@@ -13,6 +16,14 @@ public class ListTaskRequest extends TeaModel {
     public static ListTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaskRequest self = new ListTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTaskRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListTaskRequest setPageIndex(Integer pageIndex) {
