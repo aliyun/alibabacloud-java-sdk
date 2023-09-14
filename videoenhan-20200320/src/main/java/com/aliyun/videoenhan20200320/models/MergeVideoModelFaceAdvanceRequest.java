@@ -7,6 +7,9 @@ public class MergeVideoModelFaceAdvanceRequest extends TeaModel {
     @NameInMap("AddWatermark")
     public Boolean addWatermark;
 
+    @NameInMap("Enhance")
+    public Boolean enhance;
+
     @NameInMap("FaceImageURL")
     public java.io.InputStream faceImageURLObject;
 
@@ -27,6 +30,14 @@ public class MergeVideoModelFaceAdvanceRequest extends TeaModel {
     }
     public Boolean getAddWatermark() {
         return this.addWatermark;
+    }
+
+    public MergeVideoModelFaceAdvanceRequest setEnhance(Boolean enhance) {
+        this.enhance = enhance;
+        return this;
+    }
+    public Boolean getEnhance() {
+        return this.enhance;
     }
 
     public MergeVideoModelFaceAdvanceRequest setFaceImageURLObject(java.io.InputStream faceImageURLObject) {
