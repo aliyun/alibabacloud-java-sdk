@@ -4,11 +4,15 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateQuotaItemResponseBody extends TeaModel {
-    // The ID of the quota template.
+    /**
+     * <p>The ID of the quota template.</p>
+     */
     @NameInMap("Id")
     public String id;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

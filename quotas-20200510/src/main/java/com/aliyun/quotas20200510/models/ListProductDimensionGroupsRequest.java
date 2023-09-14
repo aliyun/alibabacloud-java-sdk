@@ -4,19 +4,23 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductDimensionGroupsRequest extends TeaModel {
-    // The maximum number of records that can be returned for the query.
-    // 
-    // Valid values: 1 to 200. Default value: 30.
+    /**
+     * <p>The maximum number of records that can be returned for the query. Valid values: 1 to 200. Default value: 30.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.
+    /**
+     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The service code.
-    // 
-    // >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+    /**
+     * <p>The service code.</p>
+     * <br>
+     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 

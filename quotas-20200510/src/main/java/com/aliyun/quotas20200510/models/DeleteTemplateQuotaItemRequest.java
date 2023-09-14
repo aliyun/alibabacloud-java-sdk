@@ -4,7 +4,9 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class DeleteTemplateQuotaItemRequest extends TeaModel {
-    // The ID of the quota template.
+    /**
+     * <p>The ID of the quota template.</p>
+     */
     @NameInMap("Id")
     public String id;
 

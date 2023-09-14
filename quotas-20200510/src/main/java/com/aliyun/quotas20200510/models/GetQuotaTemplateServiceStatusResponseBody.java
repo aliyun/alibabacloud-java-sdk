@@ -4,11 +4,15 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The status of the quota template.
+    /**
+     * <p>The status of the quota template.</p>
+     */
     @NameInMap("TemplateServiceStatus")
     public GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus templateServiceStatus;
 
@@ -34,14 +38,18 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
     }
 
     public static class GetQuotaTemplateServiceStatusResponseBodyTemplateServiceStatus extends TeaModel {
-        // The ID of the resource directory.
+        /**
+         * <p>The ID of the resource directory.</p>
+         */
         @NameInMap("ResourceDirectoryId")
         public String resourceDirectoryId;
 
-        // The status of the quota template. Valid values:
-        // 
-        // *   \-1: disabled
-        // *   1: enabled
+        /**
+         * <p>The state of the quota template. Valid values:</p>
+         * <br>
+         * <p>*   \-1: The quota template is disabled.</p>
+         * <p>*   1: The quota template is enabled.</p>
+         */
         @NameInMap("ServiceStatus")
         public Integer serviceStatus;
 

@@ -27,7 +27,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to create a quota alert for a quota whose ID is `q_hvnoqv`. This quota represents the maximum number of rules that can be created by a user. The quota belongs to Cloud Config whose service code is `config`.
+      * The ID of the alert.
       *
       * @param request CreateQuotaAlarmRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -86,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to create a quota alert for a quota whose ID is `q_hvnoqv`. This quota represents the maximum number of rules that can be created by a user. The quota belongs to Cloud Config whose service code is `config`.
+      * The ID of the alert.
       *
       * @param request CreateQuotaAlarmRequest
       * @return CreateQuotaAlarmResponse
@@ -97,7 +97,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to submit an application to increase the value of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The requested value of the quota is `804`, the application reason is `Scale Out`, and the region of the quota is `cn-hangzhou`.
+      * In this example, the operation is called to submit an application to increase the value of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. The quota belongs to Elastic Compute Service (ECS). The expected value of the quota is `804`, the application reason is `Scale Out`, and the ID of the region to which the quota belongs is `cn-hangzhou`.
       *
       * @param request CreateQuotaApplicationRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -168,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to submit an application to increase the value of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The requested value of the quota is `804`, the application reason is `Scale Out`, and the region of the quota is `cn-hangzhou`.
+      * In this example, the operation is called to submit an application to increase the value of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. The quota belongs to Elastic Compute Service (ECS). The expected value of the quota is `804`, the application reason is `Scale Out`, and the ID of the region to which the quota belongs is `cn-hangzhou`.
       *
       * @param request CreateQuotaApplicationRequest
       * @return CreateQuotaApplicationResponse
@@ -176,6 +176,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateQuotaApplicationResponse createQuotaApplication(CreateQuotaApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createQuotaApplicationWithOptions(request, runtime);
+    }
+
+    public CreateQuotaApplicationsForTemplateResponse createQuotaApplicationsForTemplateWithOptions(CreateQuotaApplicationsForTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunUids)) {
+            body.put("AliyunUids", request.aliyunUids);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.desireValue)) {
+            body.put("DesireValue", request.desireValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dimensions)) {
+            body.put("Dimensions", request.dimensions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveTime)) {
+            body.put("EffectiveTime", request.effectiveTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envLanguage)) {
+            body.put("EnvLanguage", request.envLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expireTime)) {
+            body.put("ExpireTime", request.expireTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noticeType)) {
+            body.put("NoticeType", request.noticeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaActionCode)) {
+            body.put("QuotaActionCode", request.quotaActionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaCategory)) {
+            body.put("QuotaCategory", request.quotaCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("Reason", request.reason);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateQuotaApplicationsForTemplate"),
+            new TeaPair("version", "2020-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateQuotaApplicationsForTemplateResponse());
+    }
+
+    public CreateQuotaApplicationsForTemplateResponse createQuotaApplicationsForTemplate(CreateQuotaApplicationsForTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createQuotaApplicationsForTemplateWithOptions(request, runtime);
     }
 
     public CreateTemplateQuotaItemResponse createTemplateQuotaItemWithOptions(CreateTemplateQuotaItemRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -311,7 +380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details about a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details about the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is `Maximum Number of Security Groups`. The quota ID is `q_security-groups`. The description is `The maximum number of security groups that can be created for the current account`. The quota value is `801`. The used quota is `26`. The quota unit is `security groups`. The quota dimension is `{"regionId":"cn-hangzhou"}`.
+      * In this example, the operation is called to query the details of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is `Maximum Number of Security Groups`. The quota ID is `q_security-groups`. The description is `The maximum number of security groups that can be created for the current account`. The quota value is `801`. The used quota is `26`. The quota unit is `Number of security groups`. The quota dimension is `{"regionId":"cn-hangzhou"}`.
       *
       * @param request GetProductQuotaRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -350,7 +419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details about a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details about the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is `Maximum Number of Security Groups`. The quota ID is `q_security-groups`. The description is `The maximum number of security groups that can be created for the current account`. The quota value is `801`. The used quota is `26`. The quota unit is `security groups`. The quota dimension is `{"regionId":"cn-hangzhou"}`.
+      * In this example, the operation is called to query the details of a quota whose ID is `q_security-groups` and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is `Maximum Number of Security Groups`. The quota ID is `q_security-groups`. The description is `The maximum number of security groups that can be created for the current account`. The quota value is `801`. The used quota is `26`. The quota unit is `Number of security groups`. The quota dimension is `{"regionId":"cn-hangzhou"}`.
       *
       * @param request GetProductQuotaRequest
       * @return GetProductQuotaResponse
@@ -361,7 +430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details about a quota dimension whose key is `regionId`. The quota dimension belongs to ECS Quotas by Instance Type whose service code is ecs-spec. The following query result is returned:
+      * In this example, the operation is called to query the details of a quota dimension whose key is `regionId`. The quota dimension belongs to Elastic Compute Service (ECS) Quotas by Instance Type whose service code is ecs-spec. The following query results are returned:
       * *   The values of the quota dimension include `cn-shenzhen`, `cn-beijing`, and `cn-hangzhou`.
       * *   The name of the quota dimension is `region`.
       *
@@ -402,7 +471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details about a quota dimension whose key is `regionId`. The quota dimension belongs to ECS Quotas by Instance Type whose service code is ecs-spec. The following query result is returned:
+      * In this example, the operation is called to query the details of a quota dimension whose key is `regionId`. The quota dimension belongs to Elastic Compute Service (ECS) Quotas by Instance Type whose service code is ecs-spec. The following query results are returned:
       * *   The values of the quota dimension include `cn-shenzhen`, `cn-beijing`, and `cn-hangzhou`.
       * *   The name of the quota dimension is `region`.
       *
@@ -415,7 +484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details of a quota alert whose ID is `78d7e436-4b25-4897-84b5-d7b656bb****`. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.
+      * For more information about common request parameters, see [Common parameters](~~171299~~).
       *
       * @param request GetQuotaAlarmRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -446,7 +515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details of a quota alert whose ID is `78d7e436-4b25-4897-84b5-d7b656bb****`. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.
+      * For more information about common request parameters, see [Common parameters](~~171299~~).
       *
       * @param request GetQuotaAlarmRequest
       * @return GetQuotaAlarmResponse
@@ -577,10 +646,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the list of quotas. A quota whose ID is `q_i5uzm3` depends on these quotas. The name of the quota is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result indicates that the specified quota depends on the following three quotas:
-      * *   An Elastic Compute Service (ECS) quota whose ID is `q_elastic-network-interfaces`. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by the current account. The regions of the quota dimension include `cn-shenzhen`, `cn-beijing`, `cn-hangzhou`.
+      * In this example, the operation is called to query the quotas on which a Container Service for Kubernetes (ACK) quota whose ID is `q_i5uzm3` depends. This quota is the maximum number of nodes that can be created in an ACK cluster. The query result indicates that the specified quota depends on the following three quotas:
+      * *   An Elastic Compute Service (ECS) quota whose ID is `q_elastic-network-interfaces`. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by an Alibaba Cloud account. The quota is available in the following regions: `cn-shenzhen`, `cn-beijing`, and `cn-hangzhou`.
       * *   A Server Load Balancer (SLB) quota whose ID is `q_fh20b0`. This quota is the number of servers that can be attached to the backend of an SLB instance.
-      * *   An SLB quota whose ID is `q_3mmbsp`. This quota is the number of SLB instances that can be owned by a user.
+      * *   An SLB quota whose ID is `q_3mmbsp`. This quota is the number of SLB instances that can be owned by an Alibaba Cloud account.
       *
       * @param request ListDependentQuotasRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -615,10 +684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the list of quotas. A quota whose ID is `q_i5uzm3` depends on these quotas. The name of the quota is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result indicates that the specified quota depends on the following three quotas:
-      * *   An Elastic Compute Service (ECS) quota whose ID is `q_elastic-network-interfaces`. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by the current account. The regions of the quota dimension include `cn-shenzhen`, `cn-beijing`, `cn-hangzhou`.
+      * In this example, the operation is called to query the quotas on which a Container Service for Kubernetes (ACK) quota whose ID is `q_i5uzm3` depends. This quota is the maximum number of nodes that can be created in an ACK cluster. The query result indicates that the specified quota depends on the following three quotas:
+      * *   An Elastic Compute Service (ECS) quota whose ID is `q_elastic-network-interfaces`. This quota is the maximum number of ENIs (Secondary ENIs) that can be owned by an Alibaba Cloud account. The quota is available in the following regions: `cn-shenzhen`, `cn-beijing`, and `cn-hangzhou`.
       * *   A Server Load Balancer (SLB) quota whose ID is `q_fh20b0`. This quota is the number of servers that can be attached to the backend of an SLB instance.
-      * *   An SLB quota whose ID is `q_3mmbsp`. This quota is the number of SLB instances that can be owned by a user.
+      * *   An SLB quota whose ID is `q_3mmbsp`. This quota is the number of SLB instances that can be owned by an Alibaba Cloud account.
       *
       * @param request ListDependentQuotasRequest
       * @return ListDependentQuotasResponse
@@ -679,7 +748,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query result shows all the quota dimensions that are supported by ECS.
+      * In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query results show all the quota dimensions that are supported by ECS.
       *
       * @param request ListProductQuotaDimensionsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -722,7 +791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query result shows all the quota dimensions that are supported by ECS.
+      * In this example, the operation is called to query the quota dimensions that are supported by Elastic Compute Service (ECS). The query results show all the quota dimensions that are supported by ECS.
       *
       * @param request ListProductQuotaDimensionsRequest
       * @return ListProductQuotaDimensionsResponse
@@ -733,7 +802,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the quotas whose instance type is `ecs.g5.2xlarge`. The quotas belong to ECS Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.
+      * In this example, the operation is called to query the quotas whose instance type is `ecs.g5.2xlarge`. The quotas belong to Elastic Compute Service (ECS) Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.
       *
       * @param request ListProductQuotasRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -800,7 +869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the quotas whose instance type is `ecs.g5.2xlarge`. The quotas belong to ECS Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.
+      * In this example, the operation is called to query the quotas whose instance type is `ecs.g5.2xlarge`. The quotas belong to Elastic Compute Service (ECS) Quotas by Instance Type. The query result includes the name, ID, unit, dimensions, and cycle of each quota.
       *
       * @param request ListProductQuotasRequest
       * @return ListProductQuotasResponse
@@ -948,7 +1017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details about an application that is submitted to increase a quota whose ID is `q_i5uzm3` and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details about the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is `b926571d-cc09-4711-b547-58a615f0****`. The application time is `2021-01-15T09:13:53Z`. The expected quota value is `101`. The application result is `Agree`.
+      * In this example, the operation is called to query the details of an application that is submitted to increase a quota whose ID is `q_i5uzm3` and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details of the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is `b926571d-cc09-4711-b547-58a615f0****`. The application time is `2021-01-15T09:13:53Z`. The expected quota value is `101`. The application result is `Agree`.
       *
       * @param request ListQuotaApplicationsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1007,7 +1076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to query the details about an application that is submitted to increase a quota whose ID is `q_i5uzm3` and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details about the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is `b926571d-cc09-4711-b547-58a615f0****`. The application time is `2021-01-15T09:13:53Z`. The expected quota value is `101`. The application result is `Agree`.
+      * In this example, the operation is called to query the details of an application that is submitted to increase a quota whose ID is `q_i5uzm3` and whose name is Maximum Number of Nodes. This quota belongs to Container Service for Kubernetes (ACK). The query result shows the details of the application. The details include the application ID, application time, requested quota, and application result. In this example, the application ID is `b926571d-cc09-4711-b547-58a615f0****`. The application time is `2021-01-15T09:13:53Z`. The expected quota value is `101`. The application result is `Agree`.
       *
       * @param request ListQuotaApplicationsRequest
       * @return ListQuotaApplicationsResponse
@@ -1017,8 +1086,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listQuotaApplicationsWithOptions(request, runtime);
     }
 
+    public ListQuotaApplicationsDetailForTemplateResponse listQuotaApplicationsDetailForTemplateWithOptions(ListQuotaApplicationsDetailForTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunUid)) {
+            body.put("AliyunUid", request.aliyunUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.batchQuotaApplicationId)) {
+            body.put("BatchQuotaApplicationId", request.batchQuotaApplicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaActionCode)) {
+            body.put("QuotaActionCode", request.quotaActionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaCategory)) {
+            body.put("QuotaCategory", request.quotaCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListQuotaApplicationsDetailForTemplate"),
+            new TeaPair("version", "2020-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotaApplicationsDetailForTemplateResponse());
+    }
+
+    public ListQuotaApplicationsDetailForTemplateResponse listQuotaApplicationsDetailForTemplate(ListQuotaApplicationsDetailForTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listQuotaApplicationsDetailForTemplateWithOptions(request, runtime);
+    }
+
+    public ListQuotaApplicationsForTemplateResponse listQuotaApplicationsForTemplateWithOptions(ListQuotaApplicationsForTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applyEndTime)) {
+            body.put("ApplyEndTime", request.applyEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applyStartTime)) {
+            body.put("ApplyStartTime", request.applyStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.batchQuotaApplicationId)) {
+            body.put("BatchQuotaApplicationId", request.batchQuotaApplicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaActionCode)) {
+            body.put("QuotaActionCode", request.quotaActionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaCategory)) {
+            body.put("QuotaCategory", request.quotaCategory);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListQuotaApplicationsForTemplate"),
+            new TeaPair("version", "2020-05-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListQuotaApplicationsForTemplateResponse());
+    }
+
+    public ListQuotaApplicationsForTemplateResponse listQuotaApplicationsForTemplate(ListQuotaApplicationsForTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listQuotaApplicationsForTemplateWithOptions(request, runtime);
+    }
+
     /**
-      * By default, the status of a quota template is enabled.
+      * By default, the quota template is enabled.
       *
       * @param request ModifyQuotaTemplateServiceStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1049,7 +1232,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * By default, the status of a quota template is enabled.
+      * By default, the quota template is enabled.
       *
       * @param request ModifyQuotaTemplateServiceStatusRequest
       * @return ModifyQuotaTemplateServiceStatusResponse
@@ -1127,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to modify the information about a quota alert whose ID is `a2efa7fc-832f-47bb-8054-39e28012****` and name is `rules`. The alert threshold is changed from `150` to `160`.
+      * In this example, the operation is called to modify the information about a quota alert whose ID is `a2efa7fc-832f-47bb-8054-39e28012****` and whose name is `rules`. The alert threshold is changed from `150` to `160`.
       *
       * @param request UpdateQuotaAlarmRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1178,7 +1361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * In this example, the operation is called to modify the information about a quota alert whose ID is `a2efa7fc-832f-47bb-8054-39e28012****` and name is `rules`. The alert threshold is changed from `150` to `160`.
+      * In this example, the operation is called to modify the information about a quota alert whose ID is `a2efa7fc-832f-47bb-8054-39e28012****` and whose name is `rules`. The alert threshold is changed from `150` to `160`.
       *
       * @param request UpdateQuotaAlarmRequest
       * @return UpdateQuotaAlarmResponse

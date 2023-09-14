@@ -4,26 +4,34 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductQuotaDimensionsRequest extends TeaModel {
-    // The maximum number of records that you want to return for the query.
-    // 
-    // Valid values: 1 to 200. Default value: 30.
+    /**
+     * <p>The maximum number of records that can be returned for the query.</p>
+     * <br>
+     * <p>Valid values: 1 to 200. Default value: 30.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position where you want to start the query. An empty value indicates that the query starts from the beginning.
+    /**
+     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The abbreviation of the cloud service name.
-    // 
-    // >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <br>
+     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
-    // The type of the quota. Valid values:
-    // 
-    // *   FlowControl: API rate limit
-    // *   CommonQuota: general quota
+    /**
+     * <p>The type of the quota. Valid values:</p>
+     * <br>
+     * <p>*   FlowControl: API rate limit.</p>
+     * <p>*   CommonQuota: general quota. This is the default value.</p>
+     */
     @NameInMap("QuotaCategory")
     public String quotaCategory;
 

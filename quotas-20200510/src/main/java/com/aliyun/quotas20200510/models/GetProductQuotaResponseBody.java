@@ -4,11 +4,15 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetProductQuotaResponseBody extends TeaModel {
-    // The details about the quota.
+    /**
+     * <p>The details of the quotas.</p>
+     */
     @NameInMap("Quota")
     public GetProductQuotaResponseBodyQuota quota;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -34,17 +38,21 @@ public class GetProductQuotaResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaResponseBodyQuotaPeriod extends TeaModel {
-        // The unit of the calculation cycle of the quota. Valid values:
-        // 
-        // *   second
-        // *   minute
-        // *   hour
-        // *   day
-        // *   week
+        /**
+         * <p>The unit of the calculation cycle of the quota. Valid values:</p>
+         * <br>
+         * <p>*   second</p>
+         * <p>*   minute</p>
+         * <p>*   hour</p>
+         * <p>*   day</p>
+         * <p>*   week</p>
+         */
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
-        // The value of the calculation cycle of the quota.
+        /**
+         * <p>The value of the calculation cycle of the quota.</p>
+         */
         @NameInMap("PeriodValue")
         public Integer periodValue;
 
@@ -72,24 +80,34 @@ public class GetProductQuotaResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaResponseBodyQuotaQuotaItems extends TeaModel {
-        // The value of the quota.
+        /**
+         * <p>The value of the quota.</p>
+         */
         @NameInMap("Quota")
         public String quota;
 
-        // The unit of the quota. 
-        // 
-        // >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is Number of security groups.
+        /**
+         * <p>The unit of the new quota value.</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of ACK clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
-        // The category of the quota. Valid values:
-        // 
-        // *   BaseQuota: base quota
-        // *   ReservedQuota: reserved quota
+        /**
+         * <p>The category of the quota. Valid values:</p>
+         * <br>
+         * <p>*   BaseQuota: base quota</p>
+         * <p>*   ReservedQuota: reserved quota</p>
+         */
         @NameInMap("Type")
         public String type;
 
-        // The used quota.
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("Usage")
         public String usage;
 
@@ -133,106 +151,157 @@ public class GetProductQuotaResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaResponseBodyQuota extends TeaModel {
-        // Indicates whether the quota is adjustable. Valid values:
-        // 
-        // *   true
-        // *   false
+        /**
+         * <p>Indicates whether the quota is adjustable. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Adjustable")
         public Boolean adjustable;
 
-        // The range of the quota value, for example, `[802,10000]`.
+        /**
+         * <p>The range of the quota value.</p>
+         */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
 
-        // The type of the adjustable value. Valid values:
-        // 
-        // *   continuous
-        // *   discontinuous
+        /**
+         * <p>The type of the adjustable value. Valid values:</p>
+         * <br>
+         * <p>*   continuous</p>
+         * <p>*   discontinuous</p>
+         */
         @NameInMap("ApplicableType")
         public String applicableType;
 
-        // Indicates whether the system shows the used value of the quota. Valid values:
-        // 
-        // *   true
-        // *   false
+        @NameInMap("ApplyReasonTips")
+        public String applyReasonTips;
+
+        /**
+         * <p>Indicates whether the system shows the used value of the quota. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Consumable")
         public Boolean consumable;
 
-        // The quota dimensions. Format: `{"regionId":"Region"}`.
+        /**
+         * <p>The quota dimension. Format: `{"regionId":"Region"}`.</p>
+         */
         @NameInMap("Dimensions")
         public java.util.Map<String, ?> dimensions;
 
+        /**
+         * <p>The start time of the validity period of the quota. Specify the value in UTC.</p>
+         */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
+        /**
+         * <p>The end time of the validity period of the quota. Specify the value in UTC.</p>
+         */
         @NameInMap("ExpireTime")
         public String expireTime;
 
-        // The calculation cycle of the quota.
+        /**
+         * <p>The calculation cycle of the quota.</p>
+         */
         @NameInMap("Period")
         public GetProductQuotaResponseBodyQuotaPeriod period;
 
-        // The abbreviation of the Alibaba Cloud service name.
+        /**
+         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
-        // The ID of the quota.
+        /**
+         * <p>The ID of the quota.</p>
+         */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
-        // The Alibaba Cloud Resource Name (ARN) of the quota.
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+         */
         @NameInMap("QuotaArn")
         public String quotaArn;
 
+        /**
+         * <p>The type of the quota. Valid values:</p>
+         * <br>
+         * <p>*   CommonQuota: general quota</p>
+         * <p>*   FlowControl: API rate limit</p>
+         * <p>*   WhiteListLabel: whitelist quota</p>
+         */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 
-        // The description of the quota.
+        /**
+         * <p>The description of the quota.</p>
+         */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
-        // The details about the quota.
+        /**
+         * <p>The details of the quotas.</p>
+         */
         @NameInMap("QuotaItems")
         public java.util.List<GetProductQuotaResponseBodyQuotaQuotaItems> quotaItems;
 
-        // The name of the quota.
+        /**
+         * <p>The name of the quota.</p>
+         */
         @NameInMap("QuotaName")
         public String quotaName;
 
-        // The type of the quota. Valid values:
-        // 
-        // - privilege
-        // - normal (default value)
+        /**
+         * <p>The type of the quota. Valid values:</p>
+         * <br>
+         * <p>*   privilege</p>
+         * <p>*   normal (default value)</p>
+         */
         @NameInMap("QuotaType")
         public String quotaType;
 
-        // The unit of the quota.
-        // 
-        // >  The unit of each quota is unique. For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.
+        /**
+         * <p>The unit of the new quota value.</p>
+         * <br>
+         * <p>**</p>
+         * <br>
+         * <p>**The unit of each quota is unique.** For example, the quota whose ID is `q_cbdch3` represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is `q_security-groups` represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
-        // The range of the quota value that can be requested for the current quota item. When you configure a quota template, you can use the range as a reference.  
-        // 
-        // - If the value of the ApplicableType parameter is continuous and the value of the ApplicableRange parameter is [802,1000], the quota value ranges from 802 to 1,000.
-        // - If the value of the ApplicableType parameter is discontinuous and the value of the ApplicableRange parameter is [10,20,50,100], the quota value is 10, 20, 50, or 100.
+        /**
+         * <p>The range of the quota value.</p>
+         */
         @NameInMap("SupportedRange")
         public java.util.List<Float> supportedRange;
 
-        // The value of the quota.
+        /**
+         * <p>The value of the quota.</p>
+         */
         @NameInMap("TotalQuota")
         public Float totalQuota;
 
-        // The used quota.
+        /**
+         * <p>The used quota.</p>
+         */
         @NameInMap("TotalUsage")
         public Float totalUsage;
 
-        // The reason why the quota is not adjustable. Valid values:
-        // 
-        // *   nonactivated: The service is not activated.
-        // *   applicationProcess: The application is being processed.
-        // *   limitReached: The quota limit is reached.
-        // *   supportTicketRequired: The quota can be increased only by submitting a ticket.
+        /**
+         * <p>The reason why the quota is not adjustable. Valid values:</p>
+         * <br>
+         * <p>*   nonactivated: The service is not activated.</p>
+         * <p>*   applicationProcess: The application is being processed.</p>
+         * <p>*   limitReached: The quota limit is reached.</p>
+         * <p>*   supportTicketRequired: The quota can be increased only by submitting a ticket.</p>
+         */
         @NameInMap("UnadjustableDetail")
         public String unadjustableDetail;
 
@@ -263,6 +332,14 @@ public class GetProductQuotaResponseBody extends TeaModel {
         }
         public String getApplicableType() {
             return this.applicableType;
+        }
+
+        public GetProductQuotaResponseBodyQuota setApplyReasonTips(String applyReasonTips) {
+            this.applyReasonTips = applyReasonTips;
+            return this;
+        }
+        public String getApplyReasonTips() {
+            return this.applyReasonTips;
         }
 
         public GetProductQuotaResponseBodyQuota setConsumable(Boolean consumable) {

@@ -4,17 +4,23 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class GetProductQuotaDimensionRequest extends TeaModel {
-    // The dimension details that are supported by the cloud service.
+    /**
+     * <p>The information about quota dimensions.</p>
+     */
     @NameInMap("DependentDimensions")
     public java.util.List<GetProductQuotaDimensionRequestDependentDimensions> dependentDimensions;
 
-    // The dimension key.
+    /**
+     * <p>The key of the quota dimension.</p>
+     */
     @NameInMap("DimensionKey")
     public String dimensionKey;
 
-    // The abbreviation of the cloud service name.
-    // 
-    // >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+    /**
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <br>
+     * <p>> For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
@@ -48,15 +54,19 @@ public class GetProductQuotaDimensionRequest extends TeaModel {
     }
 
     public static class GetProductQuotaDimensionRequestDependentDimensions extends TeaModel {
-        // The dimension keys that are supported by the cloud service.
-        // 
-        // >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+        /**
+         * <p>The key of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * <br>
+         * <p>> The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         */
         @NameInMap("Key")
         public String key;
 
-        // The dimension values that are supported by the cloud service.
-        // 
-        // >  The value range of N varies based on the number of dimensions that are supported by the related cloud service.
+        /**
+         * <p>The value of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * <br>
+         * <p>> The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         */
         @NameInMap("Value")
         public String value;
 

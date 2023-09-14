@@ -4,23 +4,33 @@ package com.aliyun.quotas20200510.models;
 import com.aliyun.tea.*;
 
 public class ListProductQuotaDimensionsResponseBody extends TeaModel {
-    // The number of records returned for the query.
+    /**
+     * <p>The maximum number of records that are returned for the query.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // The token that marks the position where the query ends. An empty value indicates that all the data is returned.
+    /**
+     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
-    // The quota dimensions.
+    /**
+     * <p>The information about quota dimensions.</p>
+     */
     @NameInMap("QuotaDimensions")
     public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions;
 
-    // The ID of the request.
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
-    // The total number of records returned for the query.
+    /**
+     * <p>The total number of records that are returned for the query.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -70,11 +80,15 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail extends TeaModel {
-        // The name of the dimension value.
+        /**
+         * <p>The name of the quota dimension value.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // The dimension value.
+        /**
+         * <p>The quota dimension value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -102,35 +116,41 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensions extends TeaModel {
-        // The quota dimensions that are supported by the cloud service.
         @NameInMap("DependentDimensions")
         public java.util.List<String> dependentDimensions;
 
-        // The dimension key. Valid values:
-        // 
-        // *   RegionId: the region ID
-        // *   zoneId: the zone ID
-        // *   chargeType: the billing method
-        // *   networkType: the network type
+        /**
+         * <p>The key of the quota dimension. Valid values:</p>
+         * <br>
+         * <p>*   regionId: the region ID.</p>
+         * <p>*   zoneId: the zone ID.</p>
+         * <p>*   chargeType: the billing method.</p>
+         * <p>*   networkType: the network type.</p>
+         */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
-        // The details about the dimension value.
+        /**
+         * <p>The details of the quota dimension value.</p>
+         */
         @NameInMap("DimensionValueDetail")
         public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> dimensionValueDetail;
 
-        // The list of the dimension values.
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
 
-        // The name of the quota dimension.
+        /**
+         * <p>The name of the quota dimension.</p>
+         */
         @NameInMap("Name")
         public String name;
 
-        // Indicates whether the quota dimension is required when you query quota dimensions. Valid values:
-        // 
-        // *   true
-        // *   false
+        /**
+         * <p>Indicates whether the quota dimension is required when you query quota dimensions. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Requisite")
         public Boolean requisite;
 
