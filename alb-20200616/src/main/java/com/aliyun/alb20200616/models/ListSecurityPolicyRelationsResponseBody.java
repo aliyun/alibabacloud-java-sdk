@@ -4,9 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The security policies and the listeners that are associated with the security policies.</p>
+     */
     @NameInMap("SecrityPolicyRelations")
     public java.util.List<ListSecurityPolicyRelationsResponseBodySecrityPolicyRelations> secrityPolicyRelations;
 
@@ -32,15 +38,27 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     }
 
     public static class ListSecurityPolicyRelationsResponseBodySecrityPolicyRelationsRelatedListeners extends TeaModel {
+        /**
+         * <p>The listener ID.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The listener port.</p>
+         */
         @NameInMap("ListenerPort")
         public Long listenerPort;
 
+        /**
+         * <p>The listener protocol.</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
+        /**
+         * <p>The Server Load Balancer (SLB) instance ID.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
@@ -84,9 +102,15 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     }
 
     public static class ListSecurityPolicyRelationsResponseBodySecrityPolicyRelations extends TeaModel {
+        /**
+         * <p>The listeners that are associated with the security policy.</p>
+         */
         @NameInMap("RelatedListeners")
         public java.util.List<ListSecurityPolicyRelationsResponseBodySecrityPolicyRelationsRelatedListeners> relatedListeners;
 
+        /**
+         * <p>The security policy ID.</p>
+         */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 

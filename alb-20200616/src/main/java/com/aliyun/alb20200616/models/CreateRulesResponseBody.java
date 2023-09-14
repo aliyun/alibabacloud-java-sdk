@@ -4,12 +4,23 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateRulesResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The priority of the forwarding rule. Valid values: **1 to 10000**. A lower value specifies a higher priority.</p>
+     * <br>
+     * <p>> The priorities of the forwarding rules created for the same listener is unique.</p>
+     */
     @NameInMap("RuleIds")
     public java.util.List<CreateRulesResponseBodyRuleIds> ruleIds;
 

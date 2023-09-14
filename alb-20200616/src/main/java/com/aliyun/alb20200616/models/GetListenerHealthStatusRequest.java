@@ -4,15 +4,33 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetListenerHealthStatusRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to return the health check results of forwarding rules. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     */
     @NameInMap("IncludeRule")
     public Boolean includeRule;
 
+    /**
+     * <p>The listener ID.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: **1** to **30**. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no next queries are to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

@@ -4,18 +4,36 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag keys.</p>
+     */
     @NameInMap("TagKeys")
     public java.util.List<ListTagKeysResponseBodyTagKeys> tagKeys;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +83,19 @@ public class ListTagKeysResponseBody extends TeaModel {
     }
 
     public static class ListTagKeysResponseBodyTagKeys extends TeaModel {
+        /**
+         * <p>The type of the tag.</p>
+         * <br>
+         * <p>Valid values: **Custom**, **System**, and **All**.</p>
+         * <br>
+         * <p>Default value: **All**.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The tag that matches all filter conditions.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 

@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetListenerAttributeRequest extends TeaModel {
+    /**
+     * <p>The listener ID.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 

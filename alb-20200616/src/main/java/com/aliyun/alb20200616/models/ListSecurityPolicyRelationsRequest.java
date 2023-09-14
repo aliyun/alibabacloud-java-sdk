@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListSecurityPolicyRelationsRequest extends TeaModel {
+    /**
+     * <p>The security policy IDs. You can specify up to five IDs.</p>
+     */
     @NameInMap("SecurityPolicyIds")
     public java.util.List<String> securityPolicyIds;
 

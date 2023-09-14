@@ -4,72 +4,177 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class GetLoadBalancerAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The configuration of the access log feature.</p>
+     */
     @NameInMap("AccessLogConfig")
     public GetLoadBalancerAttributeResponseBodyAccessLogConfig accessLogConfig;
 
+    /**
+     * <p>The mode in which IP addresses are allocated. Valid values:</p>
+     * <br>
+     * <p>*   **Fixed**: allocates a static IP address to the ALB instance.</p>
+     * <p>*   **Dynamic**: dynamically allocates an IP address to each zone of the ALB instance.</p>
+     */
     @NameInMap("AddressAllocatedMode")
     public String addressAllocatedMode;
 
+    /**
+     * <p>The IP version. Valid values:</p>
+     * <br>
+     * <p>*   **IPv4**</p>
+     * <p>*   **DualStack**</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
+    /**
+     * <p>The network type of the ALB instance. Valid values:</p>
+     * <br>
+     * <p>*   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
+     * <p>*   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. In this case, the ALB instance can be accessed over the virtual private cloud (VPC) where the ALB instance is deployed.</p>
+     */
     @NameInMap("AddressType")
     public String addressType;
 
+    /**
+     * <p>The ID of the elastic IP address (EIP) bandwidth plan that is associated with the Internet-facing ALB instance.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
+    /**
+     * <p>The time when the resource was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The domain name of the ALB instance.</p>
+     */
     @NameInMap("DNSName")
     public String DNSName;
 
+    /**
+     * <p>The configuration of deletion protection.</p>
+     */
     @NameInMap("DeletionProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig deletionProtectionConfig;
 
+    /**
+     * <p>The type of IPv6 address that is used by the ALB instance. Valid values:</p>
+     * <br>
+     * <p>*   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
+     * <p>*   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</p>
+     */
     @NameInMap("Ipv6AddressType")
     public String ipv6AddressType;
 
+    /**
+     * <p>The configuration of the billing method of the ALB instance.</p>
+     */
     @NameInMap("LoadBalancerBillingConfig")
     public GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig loadBalancerBillingConfig;
 
+    /**
+     * <p>The service status of the ALB instance. Valid values:</p>
+     * <br>
+     * <p>*   **Abnormal**</p>
+     * <p>*   **Normal**</p>
+     */
     @NameInMap("LoadBalancerBussinessStatus")
     public String loadBalancerBussinessStatus;
 
+    /**
+     * <p>The edition of the ALB instance. The features and billing rules vary based on the edition of the ALB instance. Valid values:</p>
+     * <br>
+     * <p>*   **Basic**</p>
+     * <p>*   **Standard**</p>
+     * <p>*   **StandardWithWaf**</p>
+     */
     @NameInMap("LoadBalancerEdition")
     public String loadBalancerEdition;
 
+    /**
+     * <p>The ALB instance ID.</p>
+     */
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
+    /**
+     * <p>The name of the ALB instance.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
+    /**
+     * <p>The type of the lock. Valid values:</p>
+     * <br>
+     * <p>*   **SecurityLocked**: The ALB instance is locked due to security reasons.</p>
+     * <p>*   **RelatedResourceLocked**: The ALB instance is locked due to association issues.</p>
+     * <p>*   **FinancialLocked**: The ALB instance is locked due to overdue payments.</p>
+     * <p>*   **ResidualLocked**: The ALB instance is locked because the associated resources have overdue payments and the resources are released.</p>
+     */
     @NameInMap("LoadBalancerOperationLocks")
     public java.util.List<GetLoadBalancerAttributeResponseBodyLoadBalancerOperationLocks> loadBalancerOperationLocks;
 
+    /**
+     * <p>The status of the ALB instance. Valid values:</p>
+     * <br>
+     * <p>*   **Inactive**: The ALB instance is disabled. ALB instances in the Inactive state do not forward traffic.</p>
+     * <p>*   **Active**: The ALB instance is running.</p>
+     * <p>*   **Provisioning**: The ALB instance is being created.</p>
+     * <p>*   **Configuring**: The ALB instance is being modified.</p>
+     * <p>*   **CreateFailed**: The system failed to create the ALB instance. In this case, you are not charged for the ALB instance. You can only delete the ALB instance.</p>
+     */
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
+    /**
+     * <p>The configuration of the configuration read-only mode.</p>
+     */
     @NameInMap("ModificationProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig modificationProtectionConfig;
 
+    /**
+     * <p>The region ID of the ALB instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tag value.</p>
+     * <br>
+     * <p>The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag value cannot contain `http://` or `https://`.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetLoadBalancerAttributeResponseBodyTags> tags;
 
+    /**
+     * <p>The ID of the VPC in which the ALB instance is deployed.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The zone ID of the ALB instance.</p>
+     * <br>
+     * <p>You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.</p>
+     */
     @NameInMap("ZoneMappings")
     public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappings> zoneMappings;
 
@@ -263,9 +368,15 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyAccessLogConfig extends TeaModel {
+        /**
+         * <p>The Log Service project.</p>
+         */
         @NameInMap("LogProject")
         public String logProject;
 
+        /**
+         * <p>The Logstore.</p>
+         */
         @NameInMap("LogStore")
         public String logStore;
 
@@ -293,9 +404,18 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig extends TeaModel {
+        /**
+         * <p>Indicates whether the deletion protection feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The time when the deletion protection feature was enabled. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EnabledTime")
         public String enabledTime;
 
@@ -323,6 +443,11 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerBillingConfig extends TeaModel {
+        /**
+         * <p>The billing method.</p>
+         * <br>
+         * <p>Only **PostPay** may be returned. The value indicates the pay-as-you-go billing method.</p>
+         */
         @NameInMap("PayType")
         public String payType;
 
@@ -342,9 +467,17 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyLoadBalancerOperationLocks extends TeaModel {
+        /**
+         * <p>The configuration of the configuration read-only mode.</p>
+         */
         @NameInMap("LockReason")
         public String lockReason;
 
+        /**
+         * <p>The reason why the configuration read-only mode was enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         * <br>
+         * <p>This parameter is valid only if you set the **ModificationProtectionStatus** parameter to **ConsoleProtection**.</p>
+         */
         @NameInMap("LockType")
         public String lockType;
 
@@ -372,9 +505,22 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig extends TeaModel {
+        /**
+         * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.</p>
+         * <br>
+         * <p>This parameter is valid only if **ModificationProtectionStatus** is set to **ConsoleProtection**.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>The status of the configuration read-only mode. Valid values:</p>
+         * <br>
+         * <p>*   **NonProtection**: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.</p>
+         * <p>*   **ConsoleProtection**: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.</p>
+         * <br>
+         * <p>> If you set this parameter to **ConsoleProtection**, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -402,9 +548,15 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyTags extends TeaModel {
+        /**
+         * <p>The zones and the vSwitches. You must specify at least two zones.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The IP addresses that are used by the ALB instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -432,9 +584,26 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses extends TeaModel {
+        /**
+         * <p>The ID of the zone where the ALB instance was deployed.</p>
+         * <br>
+         * <p>You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.</p>
+         */
         @NameInMap("Address")
         public String address;
 
+        @NameInMap("AllocationId")
+        public String allocationId;
+
+        @NameInMap("EipType")
+        public String eipType;
+
+        /**
+         * <p>The protocol version. Valid values:</p>
+         * <br>
+         * <p>*   **IPv4:** IPv4.</p>
+         * <p>*   **DualStack:** dual stack.</p>
+         */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
@@ -451,6 +620,22 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             return this.address;
         }
 
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setAllocationId(String allocationId) {
+            this.allocationId = allocationId;
+            return this;
+        }
+        public String getAllocationId() {
+            return this.allocationId;
+        }
+
+        public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setEipType(String eipType) {
+            this.eipType = eipType;
+            return this;
+        }
+        public String getEipType() {
+            return this.eipType;
+        }
+
         public GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses setIpv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
@@ -462,9 +647,18 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyZoneMappings extends TeaModel {
+        /**
+         * <p>The ID of the vSwitch in the zone. Each zone can contain only one vSwitch and one subnet.</p>
+         */
         @NameInMap("LoadBalancerAddresses")
         public java.util.List<GetLoadBalancerAttributeResponseBodyZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
+        /**
+         * <p>The type of IPv6 address that is used by the ALB instance. Valid values:</p>
+         * <br>
+         * <p>*   **Internet:** The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.</p>
+         * <p>*   **Intranet:** The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 

@@ -4,18 +4,36 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupServersResponseBody extends TeaModel {
+    /**
+     * <p>The maximum number of entries returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>A list of backend servers.</p>
+     */
     @NameInMap("Servers")
     public java.util.List<ListServerGroupServersResponseBodyServers> servers;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,30 +83,67 @@ public class ListServerGroupServersResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupServersResponseBodyServers extends TeaModel {
+        /**
+         * <p>The description of the backend server.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The port used by the backend server. Valid values: **1** to **65535**.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>Indicates whether the remote IP address feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("RemoteIpEnabled")
         public Boolean remoteIpEnabled;
 
+        /**
+         * <p>The ID of the server group.</p>
+         */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        /**
+         * <p>The ID of the backend server.</p>
+         * <br>
+         * <p>> If **ServerType** is set to **Fc**, **ServerId** is the ARN of a function.</p>
+         */
         @NameInMap("ServerId")
         public String serverId;
 
+        /**
+         * <p>The IP address in inclusive ENI mode.</p>
+         */
         @NameInMap("ServerIp")
         public String serverIp;
 
+        /**
+         * <p>The type of the backend server.</p>
+         */
         @NameInMap("ServerType")
         public String serverType;
 
+        /**
+         * <p>The status of the backend server. Valid values:</p>
+         * <br>
+         * <p>*   **Adding**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Configuring**</p>
+         * <p>*   **Removing**</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The weight of the backend server. An ECS instance with a higher weight receives more requests.</p>
+         */
         @NameInMap("Weight")
         public Integer weight;
 

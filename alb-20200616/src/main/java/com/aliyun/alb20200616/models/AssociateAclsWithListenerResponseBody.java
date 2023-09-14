@@ -4,9 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class AssociateAclsWithListenerResponseBody extends TeaModel {
+    /**
+     * <p>The synchronous task ID.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

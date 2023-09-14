@@ -26,6 +26,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+      * *   Each ACL can contain IP addresses or CIDR blocks. Take note of the following limits on ACLs:
+      *     *   The maximum number of IP entries that can be added to an ACL with each Alibaba Cloud account at a time: 20
+      *     *   The maximum number of IP entries that each ACL can contain: 1,000
+      * *   **AddEntriesToAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclEntries](~~213616~~) operation to query the status of the task.
+      *     *   If the ACL is in the **Adding** state, the IP entries are being added.
+      *     *   If the ACL is in the **Available** state, the IP entries are added.
+      *
+      * @param request AddEntriesToAclRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddEntriesToAclResponse
+     */
     public AddEntriesToAclResponse addEntriesToAclWithOptions(AddEntriesToAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -62,11 +74,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddEntriesToAclResponse());
     }
 
+    /**
+      * *   Each ACL can contain IP addresses or CIDR blocks. Take note of the following limits on ACLs:
+      *     *   The maximum number of IP entries that can be added to an ACL with each Alibaba Cloud account at a time: 20
+      *     *   The maximum number of IP entries that each ACL can contain: 1,000
+      * *   **AddEntriesToAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclEntries](~~213616~~) operation to query the status of the task.
+      *     *   If the ACL is in the **Adding** state, the IP entries are being added.
+      *     *   If the ACL is in the **Available** state, the IP entries are added.
+      *
+      * @param request AddEntriesToAclRequest
+      * @return AddEntriesToAclResponse
+     */
     public AddEntriesToAclResponse addEntriesToAcl(AddEntriesToAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addEntriesToAclWithOptions(request, runtime);
     }
 
+    /**
+      * **AddServersToServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      * *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      * *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      * *   If a backend server is in the **Adding** state, it indicates that the backend server is being added to a server group.
+      * *   If a backend server is in the **Available** state, it indicates that the server is running.
+      *
+      * @param request AddServersToServerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddServersToServerGroupResponse
+     */
     public AddServersToServerGroupResponse addServersToServerGroupWithOptions(AddServersToServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -103,6 +139,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddServersToServerGroupResponse());
     }
 
+    /**
+      * **AddServersToServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      * *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      * *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      * *   If a backend server is in the **Adding** state, it indicates that the backend server is being added to a server group.
+      * *   If a backend server is in the **Available** state, it indicates that the server is running.
+      *
+      * @param request AddServersToServerGroupRequest
+      * @return AddServersToServerGroupResponse
+     */
     public AddServersToServerGroupResponse addServersToServerGroup(AddServersToServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addServersToServerGroupWithOptions(request, runtime);
@@ -149,6 +197,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.applyHealthCheckTemplateToServerGroupWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclRelations](~~213618~~) operation to query the status of the task.
+      * *   If an ACL is in the **Associating** state, the ACL is being associated with a listener.
+      * *   If an ACL is in the **Associated** state, the ACL is associated with a listener.
+      *
+      * @param request AssociateAclsWithListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateAclsWithListenerResponse
+     */
     public AssociateAclsWithListenerResponse associateAclsWithListenerWithOptions(AssociateAclsWithListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -189,11 +246,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateAclsWithListenerResponse());
     }
 
+    /**
+      * **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclRelations](~~213618~~) operation to query the status of the task.
+      * *   If an ACL is in the **Associating** state, the ACL is being associated with a listener.
+      * *   If an ACL is in the **Associated** state, the ACL is associated with a listener.
+      *
+      * @param request AssociateAclsWithListenerRequest
+      * @return AssociateAclsWithListenerResponse
+     */
     public AssociateAclsWithListenerResponse associateAclsWithListener(AssociateAclsWithListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateAclsWithListenerWithOptions(request, runtime);
     }
 
+    /**
+      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task:
+      * *   If the HTTPS or QUIC listener is in the **Associating** state, the additional certificates are being associated.
+      * *   If the HTTPS or QUIC listener is in the **Associated** state, the additional certificates are associated.
+      *
+      * @param request AssociateAdditionalCertificatesWithListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateAdditionalCertificatesWithListenerResponse
+     */
     public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListenerWithOptions(AssociateAdditionalCertificatesWithListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -230,11 +304,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateAdditionalCertificatesWithListenerResponse());
     }
 
+    /**
+      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task:
+      * *   If the HTTPS or QUIC listener is in the **Associating** state, the additional certificates are being associated.
+      * *   If the HTTPS or QUIC listener is in the **Associated** state, the additional certificates are associated.
+      *
+      * @param request AssociateAdditionalCertificatesWithListenerRequest
+      * @return AssociateAdditionalCertificatesWithListenerResponse
+     */
     public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListener(AssociateAdditionalCertificatesWithListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateAdditionalCertificatesWithListenerWithOptions(request, runtime);
     }
 
+    /**
+      * **AttachCommonBandwidthPackageToLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If the ALB instance is in the **Configuring** state, the EIP bandwidth plan is being associated with the ALB instance.
+      * *   If the ALB instance is in the **Active** state, the EIP bandwidth plan is associated with the ALB instance.
+      *
+      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AttachCommonBandwidthPackageToLoadBalancerResponse
+     */
     public AttachCommonBandwidthPackageToLoadBalancerResponse attachCommonBandwidthPackageToLoadBalancerWithOptions(AttachCommonBandwidthPackageToLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -275,11 +366,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AttachCommonBandwidthPackageToLoadBalancerResponse());
     }
 
+    /**
+      * **AttachCommonBandwidthPackageToLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If the ALB instance is in the **Configuring** state, the EIP bandwidth plan is being associated with the ALB instance.
+      * *   If the ALB instance is in the **Active** state, the EIP bandwidth plan is associated with the ALB instance.
+      *
+      * @param request AttachCommonBandwidthPackageToLoadBalancerRequest
+      * @return AttachCommonBandwidthPackageToLoadBalancerResponse
+     */
     public AttachCommonBandwidthPackageToLoadBalancerResponse attachCommonBandwidthPackageToLoadBalancer(AttachCommonBandwidthPackageToLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.attachCommonBandwidthPackageToLoadBalancerWithOptions(request, runtime);
     }
 
+    /**
+      * ### Prerequisites
+      * *   A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see [CreateLoadBalancer](~~214358~~).
+      * *   By default, the feature to create and manage AScript rules is unavailable. Log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I). On the **Privileges** page, enter the quota ID `slb_user_visible_gray_label/ascript` and apply for the quota.
+      * ### Usage notes
+      * *   **CreateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](~~472574~~) operation to query the status of the task:
+      *     *   If an AScript rule is in the **Creating** state, the AScript rule is being created.
+      *     *   If an AScript rule is in the **Available** state, the AScript rule is created.
+      * *   In the following table, the value of **N** is **1**.
+      *
+      * @param request CreateAScriptsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateAScriptsResponse
+     */
+    public CreateAScriptsResponse createAScriptsWithOptions(CreateAScriptsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AScripts)) {
+            query.put("AScripts", request.AScripts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenerId)) {
+            query.put("ListenerId", request.listenerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAScripts"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAScriptsResponse());
+    }
+
+    /**
+      * ### Prerequisites
+      * *   A standard or WAF-enabled Application Load Balancer (ALB) instance is created. For more information, see [CreateLoadBalancer](~~214358~~).
+      * *   By default, the feature to create and manage AScript rules is unavailable. Log on to the [Quota Center console](https://quotas.console.aliyun.com/white-list-products/alb/quotas?spm=a2c4g.11186623.0.0.6e8834f6IFiF2I). On the **Privileges** page, enter the quota ID `slb_user_visible_gray_label/ascript` and apply for the quota.
+      * ### Usage notes
+      * *   **CreateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](~~472574~~) operation to query the status of the task:
+      *     *   If an AScript rule is in the **Creating** state, the AScript rule is being created.
+      *     *   If an AScript rule is in the **Available** state, the AScript rule is created.
+      * *   In the following table, the value of **N** is **1**.
+      *
+      * @param request CreateAScriptsRequest
+      * @return CreateAScriptsResponse
+     */
+    public CreateAScriptsResponse createAScripts(CreateAScriptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAScriptsWithOptions(request, runtime);
+    }
+
+    /**
+      * **CreateAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAcls](~~213617~~) operation to query the status of the task.
+      * *   If an ACL is in the **Creating** state, the ACL is being created.
+      * *   If an ACL is in the **Available** state, the ACL is created.
+      *
+      * @param request CreateAclRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateAclResponse
+     */
     public CreateAclResponse createAclWithOptions(CreateAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -299,6 +475,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceGroupId", request.resourceGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -316,6 +496,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAclResponse());
     }
 
+    /**
+      * **CreateAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAcls](~~213617~~) operation to query the status of the task.
+      * *   If an ACL is in the **Creating** state, the ACL is being created.
+      * *   If an ACL is in the **Available** state, the ACL is created.
+      *
+      * @param request CreateAclRequest
+      * @return CreateAclResponse
+     */
     public CreateAclResponse createAcl(CreateAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createAclWithOptions(request, runtime);
@@ -376,6 +564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("HealthyThreshold", request.healthyThreshold);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.unhealthyThreshold)) {
             query.put("UnhealthyThreshold", request.unhealthyThreshold);
         }
@@ -402,6 +594,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createHealthCheckTemplateWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, the listener is being created.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, the listener is created.
+      *
+      * @param request CreateListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateListenerResponse
+     */
     public CreateListenerResponse createListenerWithOptions(CreateListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -457,7 +658,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LoadBalancerId", request.loadBalancerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.quicConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.quicConfig)) {
             query.put("QuicConfig", request.quicConfig);
         }
 
@@ -469,7 +670,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityPolicyId", request.securityPolicyId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.XForwardedForConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedForConfig)) {
             query.put("XForwardedForConfig", request.XForwardedForConfig);
         }
 
@@ -490,11 +695,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateListenerResponse());
     }
 
+    /**
+      * **CreateListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Provisioning** state, the listener is being created.
+      * *   If the HTTP, HTTPS, or QUIC listener is in the **Running** state, the listener is created.
+      *
+      * @param request CreateListenerRequest
+      * @return CreateListenerResponse
+     */
     public CreateListenerResponse createListener(CreateListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createListenerWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of an ALB instance.
+      * *   If an ALB instance is in the **Provisioning** state, it indicates that the ALB instance is being created.
+      * *   If an ALB instance is in the **Active** state, it indicates that the ALB instance is created.
+      *
+      * @param request CreateLoadBalancerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateLoadBalancerResponse
+     */
     public CreateLoadBalancerResponse createLoadBalancerWithOptions(CreateLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -522,7 +744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.loadBalancerBillingConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerBillingConfig)) {
             query.put("LoadBalancerBillingConfig", request.loadBalancerBillingConfig);
         }
 
@@ -534,12 +756,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LoadBalancerName", request.loadBalancerName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.modificationProtectionConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.modificationProtectionConfig)) {
             query.put("ModificationProtectionConfig", request.modificationProtectionConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
@@ -567,11 +793,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLoadBalancerResponse());
     }
 
+    /**
+      * **CreateLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of an ALB instance.
+      * *   If an ALB instance is in the **Provisioning** state, it indicates that the ALB instance is being created.
+      * *   If an ALB instance is in the **Active** state, it indicates that the ALB instance is created.
+      *
+      * @param request CreateLoadBalancerRequest
+      * @return CreateLoadBalancerResponse
+     */
     public CreateLoadBalancerResponse createLoadBalancer(CreateLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLoadBalancerWithOptions(request, runtime);
     }
 
+    /**
+      * Take note of the following limits:
+      * *   When you configure the **Redirect** action, you can use the default value only for the **HttpCode** parameter. Do not use the default values for the other parameters.
+      * *   If you specify the **Rewrite** action together with other actions in a forwarding rule, make sure that the **ForwardGroup** action is specified.
+      * *   **CreateRule** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule.
+      *     *   If a forwarding rule is in the **Provisioning** state, the forwarding rule is being created.
+      *     *   If a forwarding rule is in the **Available** state, the forwarding rule is created.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. The limits on conditions and actions are:
+      *     *   Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.
+      *     *   Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.
+      *
+      * @param request CreateRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRuleResponse
+     */
     public CreateRuleResponse createRuleWithOptions(CreateRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -607,6 +856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleName", request.ruleName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -624,11 +877,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRuleResponse());
     }
 
+    /**
+      * Take note of the following limits:
+      * *   When you configure the **Redirect** action, you can use the default value only for the **HttpCode** parameter. Do not use the default values for the other parameters.
+      * *   If you specify the **Rewrite** action together with other actions in a forwarding rule, make sure that the **ForwardGroup** action is specified.
+      * *   **CreateRule** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule.
+      *     *   If a forwarding rule is in the **Provisioning** state, the forwarding rule is being created.
+      *     *   If a forwarding rule is in the **Available** state, the forwarding rule is created.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. The limits on conditions and actions are:
+      *     *   Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.
+      *     *   Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.
+      *
+      * @param request CreateRuleRequest
+      * @return CreateRuleResponse
+     */
     public CreateRuleResponse createRule(CreateRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRuleWithOptions(request, runtime);
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   When you configure the **Redirect** action, you can use the default value for the **HttpCode** parameter but you cannot use the default values for all of the other parameters.
+      * *   If you specify the **Rewrite** action and other actions in a forwarding rule, make sure that one of the actions is **ForwardGroup**.
+      * *   **CreateRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of forwarding rules.
+      *     *   If forwarding rules are in the **Provisioning** state, the forwarding rules are being created.
+      *     *   If forwarding rules are in the **Available** state, the forwarding rules have been created.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:
+      *     *   Limits on conditions: You can specify at most 5 conditions if you use a basic Application Load Balancer (ALB) instance, at most 10 conditions if you use a standard ALB instance, and at most 10 conditions if you use a WAF-enabled ALB instance.
+      *     *   Limits on actions: You can specify at most 3 actions if you use a basic ALB instance, at most 5 actions if you use a standard ALB instance, and at most 10 actions if you use a WAF-enabled ALB instance.
+      *
+      * @param request CreateRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateRulesResponse
+     */
     public CreateRulesResponse createRulesWithOptions(CreateRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -665,6 +947,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRulesResponse());
     }
 
+    /**
+      * When you call this operation, take note of the following limits:
+      * *   When you configure the **Redirect** action, you can use the default value for the **HttpCode** parameter but you cannot use the default values for all of the other parameters.
+      * *   If you specify the **Rewrite** action and other actions in a forwarding rule, make sure that one of the actions is **ForwardGroup**.
+      * *   **CreateRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of forwarding rules.
+      *     *   If forwarding rules are in the **Provisioning** state, the forwarding rules are being created.
+      *     *   If forwarding rules are in the **Available** state, the forwarding rules have been created.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:
+      *     *   Limits on conditions: You can specify at most 5 conditions if you use a basic Application Load Balancer (ALB) instance, at most 10 conditions if you use a standard ALB instance, and at most 10 conditions if you use a WAF-enabled ALB instance.
+      *     *   Limits on actions: You can specify at most 3 actions if you use a basic ALB instance, at most 5 actions if you use a standard ALB instance, and at most 10 actions if you use a WAF-enabled ALB instance.
+      *
+      * @param request CreateRulesRequest
+      * @return CreateRulesResponse
+     */
     public CreateRulesResponse createRules(CreateRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRulesWithOptions(request, runtime);
@@ -697,6 +993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TLSVersions", request.TLSVersions);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -719,6 +1019,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSecurityPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of the task.
+      * *   If a server group is in the **Creating** state, it indicates that the server group is being created.
+      * *   If a server group is in the **Available** state, it indicates that the server group is created.
+      *
+      * @param request CreateServerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateServerGroupResponse
+     */
     public CreateServerGroupResponse createServerGroupWithOptions(CreateServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -730,7 +1039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.healthCheckConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
         }
 
@@ -758,8 +1067,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceName", request.serviceName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.stickySessionConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.stickySessionConfig)) {
             query.put("StickySessionConfig", request.stickySessionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uchConfig)) {
+            query.put("UchConfig", request.uchConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
@@ -783,11 +1100,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateServerGroupResponse());
     }
 
+    /**
+      * **CreateServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of the task.
+      * *   If a server group is in the **Creating** state, it indicates that the server group is being created.
+      * *   If a server group is in the **Available** state, it indicates that the server group is created.
+      *
+      * @param request CreateServerGroupRequest
+      * @return CreateServerGroupResponse
+     */
     public CreateServerGroupResponse createServerGroup(CreateServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createServerGroupWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](~~472574~~) operation to query the status of the task:
+      * *   If an AScript rule is in the **Deleting** state, the AScript rule is being deleted.
+      * *   If an AScript rule cannot be found, the AScript rule is deleted.
+      *
+      * @param request DeleteAScriptsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteAScriptsResponse
+     */
+    public DeleteAScriptsResponse deleteAScriptsWithOptions(DeleteAScriptsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AScriptIds)) {
+            query.put("AScriptIds", request.AScriptIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAScripts"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAScriptsResponse());
+    }
+
+    /**
+      * **DeleteAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](~~472574~~) operation to query the status of the task:
+      * *   If an AScript rule is in the **Deleting** state, the AScript rule is being deleted.
+      * *   If an AScript rule cannot be found, the AScript rule is deleted.
+      *
+      * @param request DeleteAScriptsRequest
+      * @return DeleteAScriptsResponse
+     */
+    public DeleteAScriptsResponse deleteAScripts(DeleteAScriptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAScriptsWithOptions(request, runtime);
+    }
+
+    /**
+      * **DeleteAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAcls](~~213617~~) operation to query the status of the task.
+      * *   If the ACL is in the **Deleting** state, the ACL is being deleted.
+      * *   If the ACL cannot be found, the ACL is deleted.
+      *
+      * @param request DeleteAclRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteAclResponse
+     */
     public DeleteAclResponse deleteAclWithOptions(DeleteAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -820,6 +1208,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAclResponse());
     }
 
+    /**
+      * **DeleteAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAcls](~~213617~~) operation to query the status of the task.
+      * *   If the ACL is in the **Deleting** state, the ACL is being deleted.
+      * *   If the ACL cannot be found, the ACL is deleted.
+      *
+      * @param request DeleteAclRequest
+      * @return DeleteAclResponse
+     */
     public DeleteAclResponse deleteAcl(DeleteAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteAclWithOptions(request, runtime);
@@ -862,6 +1258,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteHealthCheckTemplatesWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetListenerAttribute](~~2254865~~) to query the status of the task.
+      * *   If the listener is in the **Deleting** state, the listener is being deleted.
+      * *   If the listener cannot be found, the listener is deleted.
+      *
+      * @param request DeleteListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteListenerResponse
+     */
     public DeleteListenerResponse deleteListenerWithOptions(DeleteListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -894,11 +1299,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteListenerResponse());
     }
 
+    /**
+      * **DeleteListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetListenerAttribute](~~2254865~~) to query the status of the task.
+      * *   If the listener is in the **Deleting** state, the listener is being deleted.
+      * *   If the listener cannot be found, the listener is deleted.
+      *
+      * @param request DeleteListenerRequest
+      * @return DeleteListenerResponse
+     */
     public DeleteListenerResponse deleteListener(DeleteListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteListenerWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If an ALB instance is in the **Deleting** state, the ALB instance is being deleted.
+      * *   If an ALB instance cannot be found, the ALB instance is deleted.
+      *
+      * @param request DeleteLoadBalancerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteLoadBalancerResponse
+     */
     public DeleteLoadBalancerResponse deleteLoadBalancerWithOptions(DeleteLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -931,11 +1353,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLoadBalancerResponse());
     }
 
+    /**
+      * **DeleteLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If an ALB instance is in the **Deleting** state, the ALB instance is being deleted.
+      * *   If an ALB instance cannot be found, the ALB instance is deleted.
+      *
+      * @param request DeleteLoadBalancerRequest
+      * @return DeleteLoadBalancerResponse
+     */
     public DeleteLoadBalancerResponse deleteLoadBalancer(DeleteLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteLoadBalancerWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteRule** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule:
+      * *   If the forwarding rule is in the **Deleting** state, the forwarding rule is being deleted.
+      * *   If the forwarding rule cannot be found, the forwarding rule is deleted.
+      *
+      * @param request DeleteRuleRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRuleResponse
+     */
     public DeleteRuleResponse deleteRuleWithOptions(DeleteRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -968,11 +1407,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRuleResponse());
     }
 
+    /**
+      * **DeleteRule** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule:
+      * *   If the forwarding rule is in the **Deleting** state, the forwarding rule is being deleted.
+      * *   If the forwarding rule cannot be found, the forwarding rule is deleted.
+      *
+      * @param request DeleteRuleRequest
+      * @return DeleteRuleResponse
+     */
     public DeleteRuleResponse deleteRule(DeleteRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRuleWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of forwarding rules.
+      * *   If the forwarding rules are in the **Deleting** state, the forwarding rules are being deleted.
+      * *   If the forwarding rules cannot be found, the forwarding rules are deleted.
+      *
+      * @param request DeleteRulesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteRulesResponse
+     */
     public DeleteRulesResponse deleteRulesWithOptions(DeleteRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1005,6 +1461,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteRulesResponse());
     }
 
+    /**
+      * **DeleteRules** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of forwarding rules.
+      * *   If the forwarding rules are in the **Deleting** state, the forwarding rules are being deleted.
+      * *   If the forwarding rules cannot be found, the forwarding rules are deleted.
+      *
+      * @param request DeleteRulesRequest
+      * @return DeleteRulesResponse
+     */
     public DeleteRulesResponse deleteRules(DeleteRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteRulesWithOptions(request, runtime);
@@ -1047,6 +1511,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteSecurityPolicyWithOptions(request, runtime);
     }
 
+    /**
+      * **DeleteServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of the task.
+      * *   If a server group is in the **Deleting** state, it indicates that the server group is being deleted.
+      * *   If a specified server group cannot be found, it indicates that the server group has been deleted.
+      *
+      * @param request DeleteServerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeleteServerGroupResponse
+     */
     public DeleteServerGroupResponse deleteServerGroupWithOptions(DeleteServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1079,6 +1552,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServerGroupResponse());
     }
 
+    /**
+      * **DeleteServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of the task.
+      * *   If a server group is in the **Deleting** state, it indicates that the server group is being deleted.
+      * *   If a specified server group cannot be found, it indicates that the server group has been deleted.
+      *
+      * @param request DeleteServerGroupRequest
+      * @return DeleteServerGroupResponse
+     */
     public DeleteServerGroupResponse deleteServerGroup(DeleteServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteServerGroupWithOptions(request, runtime);
@@ -1113,8 +1594,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeRegionsWithOptions(request, runtime);
     }
 
-    public DescribeZonesResponse describeZonesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+    public DescribeZonesResponse describeZonesWithOptions(DescribeZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DescribeZones"),
             new TeaPair("version", "2020-06-16"),
@@ -1129,11 +1618,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeZonesResponse());
     }
 
-    public DescribeZonesResponse describeZones() throws Exception {
+    public DescribeZonesResponse describeZones(DescribeZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeZonesWithOptions(runtime);
+        return this.describeZonesWithOptions(request, runtime);
     }
 
+    /**
+      * **DetachCommonBandwidthPackageFromLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214359~~) operation to query the status of the task.
+      * *   If an ALB instance is in the **Configuring** state, the EIP bandwidth plan is being disassociated from the ALB instance.
+      * *   If an ALB instance is in the **Active** state, the EIP bandwidth plan is disassociated from the ALB instance.
+      *
+      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DetachCommonBandwidthPackageFromLoadBalancerResponse
+     */
     public DetachCommonBandwidthPackageFromLoadBalancerResponse detachCommonBandwidthPackageFromLoadBalancerWithOptions(DetachCommonBandwidthPackageFromLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1174,6 +1672,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetachCommonBandwidthPackageFromLoadBalancerResponse());
     }
 
+    /**
+      * **DetachCommonBandwidthPackageFromLoadBalancer** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214359~~) operation to query the status of the task.
+      * *   If an ALB instance is in the **Configuring** state, the EIP bandwidth plan is being disassociated from the ALB instance.
+      * *   If an ALB instance is in the **Active** state, the EIP bandwidth plan is disassociated from the ALB instance.
+      *
+      * @param request DetachCommonBandwidthPackageFromLoadBalancerRequest
+      * @return DetachCommonBandwidthPackageFromLoadBalancerResponse
+     */
     public DetachCommonBandwidthPackageFromLoadBalancerResponse detachCommonBandwidthPackageFromLoadBalancer(DetachCommonBandwidthPackageFromLoadBalancerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachCommonBandwidthPackageFromLoadBalancerWithOptions(request, runtime);
@@ -1253,6 +1759,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.disableLoadBalancerAccessLogWithOptions(request, runtime);
     }
 
+    /**
+      * ### Prerequisites
+      * An ALB instance is created and IPv4/IPv6 dual stack is enabled for the instance. You can call the [CreateLoadBalancer](~~214358~~) operation and set **AddressIpVersion** to **DualStack** to create a dual-stack ALB instance.
+      * > If you set **AddressIpVersion** to **DualStack**:
+      * *   If you set **AddressType** to **Internet**, the ALB instance uses a public IPv4 IP address and a private IPv6 address.
+      * *   If you set **AddressType** to **Intranet**, the ALB instance uses a private IPv4 IP address and a private IPv6 address.
+      * ### Description
+      * *   After the DisableLoadBalancerIpv6Internet operation is called, the value of **Ipv6AddressType** is changed to **Intranet** and the type of the IPv6 address of the ALB instance is changed from public to private. If you upgrade the instance or the instance scales elastic network interfaces (ENIs) along with workloads, private IPv6 addresses are automatically enabled for the instance and the new ENIs. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the value of **Ipv6AddressType**.
+      * *   **DisableLoadBalancerIpv6Internet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of the task.
+      *     *   If the ALB instance is in the **Configuring** state, the network type of the IPv6 address that is used by the ALB instance is being changed.
+      *     *   If the ALB instance is in the **Active** state, the network type of the IPv6 address that is used by the ALB instance is changed.
+      *
+      * @param request DisableLoadBalancerIpv6InternetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DisableLoadBalancerIpv6InternetResponse
+     */
+    public DisableLoadBalancerIpv6InternetResponse disableLoadBalancerIpv6InternetWithOptions(DisableLoadBalancerIpv6InternetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
+            query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableLoadBalancerIpv6Internet"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableLoadBalancerIpv6InternetResponse());
+    }
+
+    /**
+      * ### Prerequisites
+      * An ALB instance is created and IPv4/IPv6 dual stack is enabled for the instance. You can call the [CreateLoadBalancer](~~214358~~) operation and set **AddressIpVersion** to **DualStack** to create a dual-stack ALB instance.
+      * > If you set **AddressIpVersion** to **DualStack**:
+      * *   If you set **AddressType** to **Internet**, the ALB instance uses a public IPv4 IP address and a private IPv6 address.
+      * *   If you set **AddressType** to **Intranet**, the ALB instance uses a private IPv4 IP address and a private IPv6 address.
+      * ### Description
+      * *   After the DisableLoadBalancerIpv6Internet operation is called, the value of **Ipv6AddressType** is changed to **Intranet** and the type of the IPv6 address of the ALB instance is changed from public to private. If you upgrade the instance or the instance scales elastic network interfaces (ENIs) along with workloads, private IPv6 addresses are automatically enabled for the instance and the new ENIs. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the value of **Ipv6AddressType**.
+      * *   **DisableLoadBalancerIpv6Internet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of the task.
+      *     *   If the ALB instance is in the **Configuring** state, the network type of the IPv6 address that is used by the ALB instance is being changed.
+      *     *   If the ALB instance is in the **Active** state, the network type of the IPv6 address that is used by the ALB instance is changed.
+      *
+      * @param request DisableLoadBalancerIpv6InternetRequest
+      * @return DisableLoadBalancerIpv6InternetResponse
+     */
+    public DisableLoadBalancerIpv6InternetResponse disableLoadBalancerIpv6Internet(DisableLoadBalancerIpv6InternetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableLoadBalancerIpv6InternetWithOptions(request, runtime);
+    }
+
+    /**
+      * **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclRelations](~~213618~~) operation to query the status of the task.
+      * *   If an ACL is in the **Dissociating** state, the ACL is being disassociated from the listener.
+      * *   If an ACL is in the **Dissociated** state, the ACL is disassociated from the listener.
+      *
+      * @param request DissociateAclsFromListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DissociateAclsFromListenerResponse
+     */
     public DissociateAclsFromListenerResponse dissociateAclsFromListenerWithOptions(DissociateAclsFromListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1289,11 +1872,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DissociateAclsFromListenerResponse());
     }
 
+    /**
+      * **DeleteDhcpOptionsSet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclRelations](~~213618~~) operation to query the status of the task.
+      * *   If an ACL is in the **Dissociating** state, the ACL is being disassociated from the listener.
+      * *   If an ACL is in the **Dissociated** state, the ACL is disassociated from the listener.
+      *
+      * @param request DissociateAclsFromListenerRequest
+      * @return DissociateAclsFromListenerResponse
+     */
     public DissociateAclsFromListenerResponse dissociateAclsFromListener(DissociateAclsFromListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dissociateAclsFromListenerWithOptions(request, runtime);
     }
 
+    /**
+      * **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~214354~~) operation to query the status of the task. - If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated. - If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+      *
+      * @param request DissociateAdditionalCertificatesFromListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DissociateAdditionalCertificatesFromListenerResponse
+     */
     public DissociateAdditionalCertificatesFromListenerResponse dissociateAdditionalCertificatesFromListenerWithOptions(DissociateAdditionalCertificatesFromListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1330,6 +1928,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DissociateAdditionalCertificatesFromListenerResponse());
     }
 
+    /**
+      * **DissociateAdditionalCertificatesFromListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~214354~~) operation to query the status of the task. - If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated. - If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+      *
+      * @param request DissociateAdditionalCertificatesFromListenerRequest
+      * @return DissociateAdditionalCertificatesFromListenerResponse
+     */
     public DissociateAdditionalCertificatesFromListenerResponse dissociateAdditionalCertificatesFromListener(DissociateAdditionalCertificatesFromListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.dissociateAdditionalCertificatesFromListenerWithOptions(request, runtime);
@@ -1415,6 +2019,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableLoadBalancerAccessLogResponse enableLoadBalancerAccessLog(EnableLoadBalancerAccessLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.enableLoadBalancerAccessLogWithOptions(request, runtime);
+    }
+
+    /**
+      * ### Prerequisites
+      * An ALB instance is created and IPv4/IPv6 dual stack is enabled for the instance. You can call the [CreateLoadBalancer](~~214358~~) operation and set **AddressIpVersion** to **DualStack** to create a dual-stack ALB instance.
+      * > If you set **AddressIpVersion** to **DualStack**:
+      * *   If you set **AddressType** to **Internet**, the ALB instance uses a public IPv4 IP address and a private IPv6 address.
+      * *   If you set **AddressType** to **Intranet**, the ALB instance uses a private IPv4 IP address and a private IPv6 address.
+      * ### Description
+      * *   After the EnableLoadBalancerIpv6Internet operation is called, the value of **Ipv6AddressType** is changed to **Internet** and the type of the IPv6 address of the ALB instance is changed from private to public. If you upgrade the instance or the instance scales elastic network interfaces (ENIs) along with workloads, public IPv6 addresses are automatically enabled for the instance and the new ENIs. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the value of **Ipv6AddressType**.
+      * *   **EnableLoadBalancerIpv6Internet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of the task.
+      *     *   If the ALB instance is in the **Configuring** state, the network type of the IPv6 address that is used by the ALB instance is being changed.
+      *     *   If the ALB instance is in the **Active** state, the network type of the IPv6 address that is used by the ALB instance is changed.
+      *
+      * @param request EnableLoadBalancerIpv6InternetRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return EnableLoadBalancerIpv6InternetResponse
+     */
+    public EnableLoadBalancerIpv6InternetResponse enableLoadBalancerIpv6InternetWithOptions(EnableLoadBalancerIpv6InternetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerId)) {
+            query.put("LoadBalancerId", request.loadBalancerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableLoadBalancerIpv6Internet"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableLoadBalancerIpv6InternetResponse());
+    }
+
+    /**
+      * ### Prerequisites
+      * An ALB instance is created and IPv4/IPv6 dual stack is enabled for the instance. You can call the [CreateLoadBalancer](~~214358~~) operation and set **AddressIpVersion** to **DualStack** to create a dual-stack ALB instance.
+      * > If you set **AddressIpVersion** to **DualStack**:
+      * *   If you set **AddressType** to **Internet**, the ALB instance uses a public IPv4 IP address and a private IPv6 address.
+      * *   If you set **AddressType** to **Intranet**, the ALB instance uses a private IPv4 IP address and a private IPv6 address.
+      * ### Description
+      * *   After the EnableLoadBalancerIpv6Internet operation is called, the value of **Ipv6AddressType** is changed to **Internet** and the type of the IPv6 address of the ALB instance is changed from private to public. If you upgrade the instance or the instance scales elastic network interfaces (ENIs) along with workloads, public IPv6 addresses are automatically enabled for the instance and the new ENIs. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the value of **Ipv6AddressType**.
+      * *   **EnableLoadBalancerIpv6Internet** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of the task.
+      *     *   If the ALB instance is in the **Configuring** state, the network type of the IPv6 address that is used by the ALB instance is being changed.
+      *     *   If the ALB instance is in the **Active** state, the network type of the IPv6 address that is used by the ALB instance is changed.
+      *
+      * @param request EnableLoadBalancerIpv6InternetRequest
+      * @return EnableLoadBalancerIpv6InternetResponse
+     */
+    public EnableLoadBalancerIpv6InternetResponse enableLoadBalancerIpv6Internet(EnableLoadBalancerIpv6InternetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableLoadBalancerIpv6InternetWithOptions(request, runtime);
     }
 
     public GetHealthCheckTemplateAttributeResponse getHealthCheckTemplateAttributeWithOptions(GetHealthCheckTemplateAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1545,6 +2217,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getLoadBalancerAttributeWithOptions(request, runtime);
     }
 
+    public ListAScriptsResponse listAScriptsWithOptions(ListAScriptsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AScriptIds)) {
+            query.put("AScriptIds", request.AScriptIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.AScriptNames)) {
+            query.put("AScriptNames", request.AScriptNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listenerIds)) {
+            query.put("ListenerIds", request.listenerIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAScripts"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAScriptsResponse());
+    }
+
+    public ListAScriptsResponse listAScripts(ListAScriptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAScriptsWithOptions(request, runtime);
+    }
+
     public ListAclEntriesResponse listAclEntriesWithOptions(ListAclEntriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1632,6 +2349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1732,6 +2453,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1816,6 +2541,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1940,6 +2669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RuleIds", request.ruleIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1983,6 +2716,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityPolicyNames)) {
             query.put("SecurityPolicyNames", request.securityPolicyNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2327,6 +3064,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.moveResourceGroupWithOptions(request, runtime);
     }
 
+    /**
+      * **RemoveEntriesFromAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclEntries](~~213616~~) operation to query the status of the task.
+      * *   If an ACL is in the **Removing** state, the entries are being removed.
+      * *   If an ACL cannot be found, the entries are removed.
+      *
+      * @param request RemoveEntriesFromAclRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveEntriesFromAclResponse
+     */
     public RemoveEntriesFromAclResponse removeEntriesFromAclWithOptions(RemoveEntriesFromAclRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2363,11 +3109,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveEntriesFromAclResponse());
     }
 
+    /**
+      * **RemoveEntriesFromAcl** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAclEntries](~~213616~~) operation to query the status of the task.
+      * *   If an ACL is in the **Removing** state, the entries are being removed.
+      * *   If an ACL cannot be found, the entries are removed.
+      *
+      * @param request RemoveEntriesFromAclRequest
+      * @return RemoveEntriesFromAclResponse
+     */
     public RemoveEntriesFromAclResponse removeEntriesFromAcl(RemoveEntriesFromAclRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeEntriesFromAclWithOptions(request, runtime);
     }
 
+    /**
+      * **RemoveServersFromServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      *     *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      *     *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      *     *   If a backend server is in the **Removing** state, the server is being removed from the server group.
+      *     *   If a backend server cannot be found, the server is no longer in the server group.
+      *
+      * @param request RemoveServersFromServerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RemoveServersFromServerGroupResponse
+     */
     public RemoveServersFromServerGroupResponse removeServersFromServerGroupWithOptions(RemoveServersFromServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2404,11 +3171,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveServersFromServerGroupResponse());
     }
 
+    /**
+      * **RemoveServersFromServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      *     *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      *     *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      *     *   If a backend server is in the **Removing** state, the server is being removed from the server group.
+      *     *   If a backend server cannot be found, the server is no longer in the server group.
+      *
+      * @param request RemoveServersFromServerGroupRequest
+      * @return RemoveServersFromServerGroupResponse
+     */
     public RemoveServersFromServerGroupResponse removeServersFromServerGroup(RemoveServersFromServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.removeServersFromServerGroupWithOptions(request, runtime);
     }
 
+    /**
+      * **ReplaceServersInServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      *     *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      *     *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      *     *   If a backend server is in the **Replacing** state, it indicates that the server is being removed from the server group and a new server is added to the server group.
+      *     *   If a backend server is in the \\*\\*Available\\*\\* state, it indicates that the server is running.
+      *
+      * @param request ReplaceServersInServerGroupRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return ReplaceServersInServerGroupResponse
+     */
     public ReplaceServersInServerGroupResponse replaceServersInServerGroupWithOptions(ReplaceServersInServerGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2449,11 +3241,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReplaceServersInServerGroupResponse());
     }
 
+    /**
+      * **ReplaceServersInServerGroup** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      *     *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      *     *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      *     *   If a backend server is in the **Replacing** state, it indicates that the server is being removed from the server group and a new server is added to the server group.
+      *     *   If a backend server is in the \\*\\*Available\\*\\* state, it indicates that the server is running.
+      *
+      * @param request ReplaceServersInServerGroupRequest
+      * @return ReplaceServersInServerGroupResponse
+     */
     public ReplaceServersInServerGroupResponse replaceServersInServerGroup(ReplaceServersInServerGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.replaceServersInServerGroupWithOptions(request, runtime);
     }
 
+    /**
+      * **StartListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetListenerAttribute](~~2254865~~) to query the status of the task.
+      * *   If a listener is in the **Configuring** state, the listener is being enabled.
+      * *   If a listener is in the **Running** state, the listener is enabled.
+      *
+      * @param request StartListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartListenerResponse
+     */
     public StartListenerResponse startListenerWithOptions(StartListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2486,11 +3299,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartListenerResponse());
     }
 
+    /**
+      * **StartListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetListenerAttribute](~~2254865~~) to query the status of the task.
+      * *   If a listener is in the **Configuring** state, the listener is being enabled.
+      * *   If a listener is in the **Running** state, the listener is enabled.
+      *
+      * @param request StartListenerRequest
+      * @return StartListenerResponse
+     */
     public StartListenerResponse startListener(StartListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startListenerWithOptions(request, runtime);
     }
 
+    /**
+      * **StopListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task:
+      * *   If a listener is in the **Configuring** state, the listener is being disabled.
+      * *   If a listener is in the **Stopped** state, the listener is disabled.
+      *
+      * @param request StopListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StopListenerResponse
+     */
     public StopListenerResponse stopListenerWithOptions(StopListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2523,6 +3353,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StopListenerResponse());
     }
 
+    /**
+      * **StopListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task:
+      * *   If a listener is in the **Configuring** state, the listener is being disabled.
+      * *   If a listener is in the **Stopped** state, the listener is disabled.
+      *
+      * @param request StopListenerRequest
+      * @return StopListenerResponse
+     */
     public StopListenerResponse stopListener(StopListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopListenerWithOptions(request, runtime);
@@ -2608,6 +3446,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UnTagResourcesResponse unTagResources(UnTagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.unTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+      * *   **UpdateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](~~472574~~) operation to query the status of the task.
+      *     *   If an AScript rule is in the **Configuring** state, the AScript rule is being updated.
+      *     *   If an AScript rule is in the **Available** state, the AScript rule is updated.
+      * *   In the following table, the maximum value of **N** is **4**.
+      *
+      * @param request UpdateAScriptsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateAScriptsResponse
+     */
+    public UpdateAScriptsResponse updateAScriptsWithOptions(UpdateAScriptsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AScripts)) {
+            query.put("AScripts", request.AScripts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAScripts"),
+            new TeaPair("version", "2020-06-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAScriptsResponse());
+    }
+
+    /**
+      * *   **UpdateAScripts** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListAScripts](~~472574~~) operation to query the status of the task.
+      *     *   If an AScript rule is in the **Configuring** state, the AScript rule is being updated.
+      *     *   If an AScript rule is in the **Available** state, the AScript rule is updated.
+      * *   In the following table, the maximum value of **N** is **4**.
+      *
+      * @param request UpdateAScriptsRequest
+      * @return UpdateAScriptsResponse
+     */
+    public UpdateAScriptsResponse updateAScripts(UpdateAScriptsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAScriptsWithOptions(request, runtime);
     }
 
     public UpdateAclAttributeResponse updateAclAttributeWithOptions(UpdateAclAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2736,6 +3630,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateHealthCheckTemplateAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * **UpdateListenerAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task.
+      * *   If a listener is in the **Configuring** state, the configuration of the listener is being modified.
+      * *   If a listener is in the **Running** state, the configuration of the listener is modified.
+      *
+      * @param request UpdateListenerAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateListenerAttributeResponse
+     */
     public UpdateListenerAttributeResponse updateListenerAttributeWithOptions(UpdateListenerAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2783,7 +3686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ListenerId", request.listenerId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.quicConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.quicConfig)) {
             query.put("QuicConfig", request.quicConfig);
         }
 
@@ -2795,7 +3698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SecurityPolicyId", request.securityPolicyId);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.XForwardedForConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.XForwardedForConfig)) {
             query.put("XForwardedForConfig", request.XForwardedForConfig);
         }
 
@@ -2816,11 +3719,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateListenerAttributeResponse());
     }
 
+    /**
+      * **UpdateListenerAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetListenerAttribute](~~2254865~~) operation to query the status of the task.
+      * *   If a listener is in the **Configuring** state, the configuration of the listener is being modified.
+      * *   If a listener is in the **Running** state, the configuration of the listener is modified.
+      *
+      * @param request UpdateListenerAttributeRequest
+      * @return UpdateListenerAttributeResponse
+     */
     public UpdateListenerAttributeResponse updateListenerAttribute(UpdateListenerAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateListenerAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * **UpdateListenerLogConfig** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetListenerAttribute](~~2254865~~) to query the status of the task:
+      * *   If a listener is in the **Configuring** state, the log configuration of the listener is being modified.
+      * *   If a listener is in the **Running** state, the log configuration of the listener is modified.
+      * > You can update the log configuration of a listener only after you enable the access log feature.
+      *
+      * @param request UpdateListenerLogConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateListenerLogConfigResponse
+     */
     public UpdateListenerLogConfigResponse updateListenerLogConfigWithOptions(UpdateListenerLogConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2828,7 +3749,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccessLogRecordCustomizedHeadersEnabled", request.accessLogRecordCustomizedHeadersEnabled);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.accessLogTracingConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.accessLogTracingConfig)) {
             query.put("AccessLogTracingConfig", request.accessLogTracingConfig);
         }
 
@@ -2861,11 +3782,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateListenerLogConfigResponse());
     }
 
+    /**
+      * **UpdateListenerLogConfig** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetListenerAttribute](~~2254865~~) to query the status of the task:
+      * *   If a listener is in the **Configuring** state, the log configuration of the listener is being modified.
+      * *   If a listener is in the **Running** state, the log configuration of the listener is modified.
+      * > You can update the log configuration of a listener only after you enable the access log feature.
+      *
+      * @param request UpdateListenerLogConfigRequest
+      * @return UpdateListenerLogConfigResponse
+     */
     public UpdateListenerLogConfigResponse updateListenerLogConfig(UpdateListenerLogConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateListenerLogConfigWithOptions(request, runtime);
     }
 
+    /**
+      * ## Prerequisites
+      * *   An ALB instance is created. For more information about how to create an ALB instance, see [CreateLoadBalancer](~~214358~~).
+      * *   If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see [AllocateEipAddress](~~120192~~).
+      * ## Usage notes
+      * **UpdateLoadBalancerAddressTypeConfig** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of the task.
+      * *   If an ALB instance is in the **Configuring** state, the network type is being changed.
+      * *   If an ALB instance is in the **Active** state, the network type has been changed.
+      *
+      * @param request UpdateLoadBalancerAddressTypeConfigRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoadBalancerAddressTypeConfigResponse
+     */
     public UpdateLoadBalancerAddressTypeConfigResponse updateLoadBalancerAddressTypeConfigWithOptions(UpdateLoadBalancerAddressTypeConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2906,11 +3849,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAddressTypeConfigResponse());
     }
 
+    /**
+      * ## Prerequisites
+      * *   An ALB instance is created. For more information about how to create an ALB instance, see [CreateLoadBalancer](~~214358~~).
+      * *   If you want to change the network type from internal-facing to Internet-facing, you must first create an elastic IP address (EIP). For more information, see [AllocateEipAddress](~~120192~~).
+      * ## Usage notes
+      * **UpdateLoadBalancerAddressTypeConfig** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetLoadBalancerAttribute](~~214362~~) operation to query the status of the task.
+      * *   If an ALB instance is in the **Configuring** state, the network type is being changed.
+      * *   If an ALB instance is in the **Active** state, the network type has been changed.
+      *
+      * @param request UpdateLoadBalancerAddressTypeConfigRequest
+      * @return UpdateLoadBalancerAddressTypeConfigResponse
+     */
     public UpdateLoadBalancerAddressTypeConfigResponse updateLoadBalancerAddressTypeConfig(UpdateLoadBalancerAddressTypeConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerAddressTypeConfigWithOptions(request, runtime);
     }
 
+    /**
+      * **UpdateLoadBalancerAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If the ALB instance is in the **Configuring** state, the ALB instance is being modified.
+      * *   If the ALB instance is in the **Active** state, the ALB instance is modified.
+      *
+      * @param request UpdateLoadBalancerAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoadBalancerAttributeResponse
+     */
     public UpdateLoadBalancerAttributeResponse updateLoadBalancerAttributeWithOptions(UpdateLoadBalancerAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2930,7 +3894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LoadBalancerName", request.loadBalancerName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.modificationProtectionConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.modificationProtectionConfig)) {
             query.put("ModificationProtectionConfig", request.modificationProtectionConfig);
         }
 
@@ -2951,11 +3915,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerAttributeResponse());
     }
 
+    /**
+      * **UpdateLoadBalancerAttribute** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If the ALB instance is in the **Configuring** state, the ALB instance is being modified.
+      * *   If the ALB instance is in the **Active** state, the ALB instance is modified.
+      *
+      * @param request UpdateLoadBalancerAttributeRequest
+      * @return UpdateLoadBalancerAttributeResponse
+     */
     public UpdateLoadBalancerAttributeResponse updateLoadBalancerAttribute(UpdateLoadBalancerAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * ##
+      * *   You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](~~214654~~).
+      * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      *     *   If the ALB instance is in the **Configuring** state, the edition of the ALB instance is being modified.
+      *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance has been modified.
+      *
+      * @param request UpdateLoadBalancerEditionRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoadBalancerEditionResponse
+     */
     public UpdateLoadBalancerEditionResponse updateLoadBalancerEditionWithOptions(UpdateLoadBalancerEditionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2992,11 +3975,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerEditionResponse());
     }
 
+    /**
+      * ##
+      * *   You can upgrade a basic ALB instance to a standard ALB instance or a WAF-enabled ALB instance but you cannot downgrade a standard ALB instance or a WAF-enabled ALB instance to a basic ALB instance. For more information, see [Upgrade an ALB instance](~~214654~~).
+      * *   **UpdateLoadBalancerEdition** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      *     *   If the ALB instance is in the **Configuring** state, the edition of the ALB instance is being modified.
+      *     *   If the ALB instance is in the **Active** state, the edition of the ALB instance has been modified.
+      *
+      * @param request UpdateLoadBalancerEditionRequest
+      * @return UpdateLoadBalancerEditionResponse
+     */
     public UpdateLoadBalancerEditionResponse updateLoadBalancerEdition(UpdateLoadBalancerEditionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerEditionWithOptions(request, runtime);
     }
 
+    /**
+      * **UpdateLoadBalancerZones** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If an ALB instance is in the **Configuring** state, the zones are being modified.
+      * *   If an ALB instance is in the **Active** state, the zones are modified.
+      * > You may be charged after you call UpdateLoadBalancerZones.
+      *
+      * @param request UpdateLoadBalancerZonesRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateLoadBalancerZonesResponse
+     */
     public UpdateLoadBalancerZonesResponse updateLoadBalancerZonesWithOptions(UpdateLoadBalancerZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3033,11 +4036,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLoadBalancerZonesResponse());
     }
 
+    /**
+      * **UpdateLoadBalancerZones** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [GetLoadBalancerAttribute](~~214362~~) to query the status of the task.
+      * *   If an ALB instance is in the **Configuring** state, the zones are being modified.
+      * *   If an ALB instance is in the **Active** state, the zones are modified.
+      * > You may be charged after you call UpdateLoadBalancerZones.
+      *
+      * @param request UpdateLoadBalancerZonesRequest
+      * @return UpdateLoadBalancerZonesResponse
+     */
     public UpdateLoadBalancerZonesResponse updateLoadBalancerZones(UpdateLoadBalancerZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateLoadBalancerZonesWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * *   **UpdateRuleAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule:
+      *     *   If a forwarding rule is in the **Configuring** state, the forwarding rule is being updated.
+      *     *   If a forwarding rule is in the **Available** state, the forwarding rule is updated.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:
+      *     *   Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.
+      *     *   Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.
+      *
+      * @param request UpdateRuleAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateRuleAttributeResponse
+     */
     public UpdateRuleAttributeResponse updateRuleAttributeWithOptions(UpdateRuleAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3086,11 +4111,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRuleAttributeResponse());
     }
 
+    /**
+      * ## Description
+      * *   **UpdateRuleAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of a forwarding rule:
+      *     *   If a forwarding rule is in the **Configuring** state, the forwarding rule is being updated.
+      *     *   If a forwarding rule is in the **Available** state, the forwarding rule is updated.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. Take note of the following limits on the number of conditions and the number of actions in each forwarding rule:
+      *     *   Number of conditions: You can specify at most 5 for a basic Application Load Balancer (ALB) instance, at most 10 for a standard ALB instance, and at most 10 for a WAF-enabled ALB instance.
+      *     *   Number of actions: You can specify at most 3 for a basic ALB instance, at most 5 for a standard ALB instance, and at most 5 for a WAF-enabled ALB instance.
+      *
+      * @param request UpdateRuleAttributeRequest
+      * @return UpdateRuleAttributeResponse
+     */
     public UpdateRuleAttributeResponse updateRuleAttribute(UpdateRuleAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRuleAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * **UpdateRulesAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of the task.
+      * *   If a forwarding rule is in the **Configuring** state, the forwarding rule is being updated.
+      * *   If a forwarding rule is in the **Available** state, the forwarding rule is updated.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:
+      *     *   Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.
+      *     *   Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.
+      *
+      * @param request UpdateRulesAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateRulesAttributeResponse
+     */
     public UpdateRulesAttributeResponse updateRulesAttributeWithOptions(UpdateRulesAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3123,11 +4172,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateRulesAttributeResponse());
     }
 
+    /**
+      * **UpdateRulesAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListRules](~~214379~~) operation to query the status of the task.
+      * *   If a forwarding rule is in the **Configuring** state, the forwarding rule is being updated.
+      * *   If a forwarding rule is in the **Available** state, the forwarding rule is updated.
+      * *   You can set **RuleConditions** and **RuleActions** to add conditions and actions to a forwarding rule. Take note of the following limits on the maximum number of conditions and the maximum number of actions in each forwarding rule:
+      *     *   Limits on conditions: 5 for a basic Application Load Balancer (ALB) instance, 10 for a standard ALB instance, and 10 for a WAF-enabled ALB instance.
+      *     *   Limits on actions: 3 for a basic ALB instance, 5 for a standard ALB instance, and 5 for a WAF-enabled ALB instance.
+      *
+      * @param request UpdateRulesAttributeRequest
+      * @return UpdateRulesAttributeResponse
+     */
     public UpdateRulesAttributeResponse updateRulesAttribute(UpdateRulesAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateRulesAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * ##
+      * **UpdateSecurityPolicyAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListSecurityPolicies](~~213609~~) to query the status of the task.
+      * *   If a security policy is in the **Configuring** state, the security policy is being updated.
+      * *   If a security policy is in the **Available** state, the security policy is updated.
+      *
+      * @param request UpdateSecurityPolicyAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateSecurityPolicyAttributeResponse
+     */
     public UpdateSecurityPolicyAttributeResponse updateSecurityPolicyAttributeWithOptions(UpdateSecurityPolicyAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3172,11 +4242,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSecurityPolicyAttributeResponse());
     }
 
+    /**
+      * ##
+      * **UpdateSecurityPolicyAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [ListSecurityPolicies](~~213609~~) to query the status of the task.
+      * *   If a security policy is in the **Configuring** state, the security policy is being updated.
+      * *   If a security policy is in the **Available** state, the security policy is updated.
+      *
+      * @param request UpdateSecurityPolicyAttributeRequest
+      * @return UpdateSecurityPolicyAttributeResponse
+     */
     public UpdateSecurityPolicyAttributeResponse updateSecurityPolicyAttribute(UpdateSecurityPolicyAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSecurityPolicyAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * ## Description
+      * **UpdateServerGroupAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group:
+      * *   If a server group is in the **Configuring** state, the configuration of the server group is being modified.
+      * *   If a server group is in the **Available** state, the configuration of the server group is modified.
+      *
+      * @param request UpdateServerGroupAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateServerGroupAttributeResponse
+     */
     public UpdateServerGroupAttributeResponse updateServerGroupAttributeWithOptions(UpdateServerGroupAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3188,7 +4277,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.healthCheckConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.healthCheckConfig)) {
             query.put("HealthCheckConfig", request.healthCheckConfig);
         }
 
@@ -3208,8 +4297,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceName", request.serviceName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.stickySessionConfig))) {
+        if (!com.aliyun.teautil.Common.isUnset(request.stickySessionConfig)) {
             query.put("StickySessionConfig", request.stickySessionConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uchConfig)) {
+            query.put("UchConfig", request.uchConfig);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3229,11 +4322,33 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupAttributeResponse());
     }
 
+    /**
+      * ## Description
+      * **UpdateServerGroupAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group:
+      * *   If a server group is in the **Configuring** state, the configuration of the server group is being modified.
+      * *   If a server group is in the **Available** state, the configuration of the server group is modified.
+      *
+      * @param request UpdateServerGroupAttributeRequest
+      * @return UpdateServerGroupAttributeResponse
+     */
     public UpdateServerGroupAttributeResponse updateServerGroupAttribute(UpdateServerGroupAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateServerGroupAttributeWithOptions(request, runtime);
     }
 
+    /**
+      * **UpdateServerGroupServersAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      *     *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      *     *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      *     *   If a backend server is in the **Configuring** state, it indicates that the backend server is being modified.
+      *     *   If a backend server is in the **Available** state, it indicates that the backend server is running.
+      *
+      * @param request UpdateServerGroupServersAttributeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return UpdateServerGroupServersAttributeResponse
+     */
     public UpdateServerGroupServersAttributeResponse updateServerGroupServersAttributeWithOptions(UpdateServerGroupServersAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3270,6 +4385,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateServerGroupServersAttributeResponse());
     }
 
+    /**
+      * **UpdateServerGroupServersAttribute** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.
+      * 1.  You can call the [ListServerGroups](~~213627~~) operation to query the status of a server group.
+      *     *   If a server group is in the **Configuring** state, it indicates that the server group is being modified.
+      *     *   If a server group is in the **Available** state, it indicates that the server group is running.
+      * 2.  You can call the [ListServerGroupServers](~~213628~~) operation to query the status of a backend server.
+      *     *   If a backend server is in the **Configuring** state, it indicates that the backend server is being modified.
+      *     *   If a backend server is in the **Available** state, it indicates that the backend server is running.
+      *
+      * @param request UpdateServerGroupServersAttributeRequest
+      * @return UpdateServerGroupServersAttributeResponse
+     */
     public UpdateServerGroupServersAttributeResponse updateServerGroupServersAttribute(UpdateServerGroupServersAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateServerGroupServersAttributeWithOptions(request, runtime);

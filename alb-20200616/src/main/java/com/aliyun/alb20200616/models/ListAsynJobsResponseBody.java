@@ -4,18 +4,36 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAsynJobsResponseBody extends TeaModel {
+    /**
+     * <p>The tasks.</p>
+     */
     @NameInMap("Jobs")
     public java.util.List<ListAsynJobsResponseBodyJobs> jobs;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -65,33 +83,82 @@ public class ListAsynJobsResponseBody extends TeaModel {
     }
 
     public static class ListAsynJobsResponseBodyJobs extends TeaModel {
+        /**
+         * <p>The name of the operation.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The timestamp that indicates the start time of the task. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>If the value of **Status** is Failed, an error code is returned.</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>If the value of **Status** is Failed, an error message is returned.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The timestamp that indicates the end time of the task. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public Long modifyTime;
 
+        /**
+         * <p>The type of the operation. Valid values:</p>
+         * <br>
+         * <p>*   **Create**</p>
+         * <p>*   **Update**</p>
+         * <p>*   **Delete**</p>
+         */
         @NameInMap("OperateType")
         public String operateType;
 
+        /**
+         * <p>The associated resource ID.</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the associated resource. Valid values:</p>
+         * <br>
+         * <p>*   **loadbalancer**: an ALB instance</p>
+         * <p>*   **listener**: a listener</p>
+         * <p>*   **rule**: a forwarding rule</p>
+         * <p>*   **acl**: an ACL</p>
+         * <p>*   **securitypolicy**: a security policy</p>
+         * <p>*   **servergroup**: a server group</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The status of the task. Valid values:</p>
+         * <br>
+         * <p>*   **Succeeded**</p>
+         * <p>*   **Failed**</p>
+         * <p>*   **Processing**</p>
+         */
         @NameInMap("Status")
         public String status;
 

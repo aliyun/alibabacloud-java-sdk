@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAclRelationsRequest extends TeaModel {
+    /**
+     * <p>The ACL IDs.</p>
+     */
     @NameInMap("AclIds")
     public java.util.List<String> aclIds;
 
