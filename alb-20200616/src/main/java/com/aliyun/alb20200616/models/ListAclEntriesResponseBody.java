@@ -4,18 +4,36 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAclEntriesResponseBody extends TeaModel {
+    /**
+     * <p>The ACL entries.</p>
+     */
     @NameInMap("AclEntries")
     public java.util.List<ListAclEntriesResponseBodyAclEntries> aclEntries;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,12 +83,25 @@ public class ListAclEntriesResponseBody extends TeaModel {
     }
 
     public static class ListAclEntriesResponseBodyAclEntries extends TeaModel {
+        /**
+         * <p>The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The CIDR block of the ACL entry.</p>
+         */
         @NameInMap("Entry")
         public String entry;
 
+        /**
+         * <p>The status of the ACL entry. Valid values:</p>
+         * <br>
+         * <p>*   **Adding**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Removing**</p>
+         */
         @NameInMap("Status")
         public String status;
 

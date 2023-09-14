@@ -4,12 +4,21 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateServerGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous job.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the server group.</p>
+     */
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 

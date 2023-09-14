@@ -4,9 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateHealthCheckTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the health check template.</p>
+     */
     @NameInMap("HealthCheckTemplateId")
     public String healthCheckTemplateId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

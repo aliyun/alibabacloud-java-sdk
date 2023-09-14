@@ -4,6 +4,13 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   **zh-CN**: Chinese</p>
+     * <p>*   **en-US**: English</p>
+     * <p>*   **ja**: Japanese</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

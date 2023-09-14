@@ -4,18 +4,33 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListListenersResponseBody extends TeaModel {
+    /**
+     * <p>The listeners.</p>
+     */
     @NameInMap("Listeners")
     public java.util.List<ListListenersResponseBodyListeners> listeners;
 
+    /**
+     * <p>The maximum number of entries returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The position where the query stopped. If this parameter is not returned, all data is queried.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,6 +80,9 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersDefaultActionsForwardGroupConfigServerGroupTuples extends TeaModel {
+        /**
+         * <p>The ID of the server group to which requests are forwarded.</p>
+         */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
@@ -84,6 +102,9 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersDefaultActionsForwardGroupConfig extends TeaModel {
+        /**
+         * <p>The server group to which requests are forwarded.</p>
+         */
         @NameInMap("ServerGroupTuples")
         public java.util.List<ListListenersResponseBodyListenersDefaultActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
 
@@ -103,9 +124,15 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersDefaultActions extends TeaModel {
+        /**
+         * <p>The configuration of the forwarding rule action. This parameter is required and takes effect only when the type of the action is **FowardGroup**.</p>
+         */
         @NameInMap("ForwardGroupConfig")
         public ListListenersResponseBodyListenersDefaultActionsForwardGroupConfig forwardGroupConfig;
 
+        /**
+         * <p>The type of the task. If **ForwardGroup** is returned, requests are forwarded to multiple vServer groups.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -133,12 +160,30 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersLogConfigAccessLogTracingConfig extends TeaModel {
+        /**
+         * <p>Indicates whether Xtrace is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> You can set this parameter to **true** only if the access log feature is enabled by specifying **AccessLogEnabled**.</p>
+         */
         @NameInMap("TracingEnabled")
         public Boolean tracingEnabled;
 
+        /**
+         * <p>The sampling rate of Xtrace. Valid values: **1 to 10000**.</p>
+         * <br>
+         * <p>> This parameter takes effect only if **TracingEnabled** is set to **true**.</p>
+         */
         @NameInMap("TracingSample")
         public Integer tracingSample;
 
+        /**
+         * <p>The Xtrace type. This parameter can be set to **Zipkin**.</p>
+         * <br>
+         * <p>> This parameter takes effect only if **TracingEnabled** is set to **true**.</p>
+         */
         @NameInMap("TracingType")
         public String tracingType;
 
@@ -174,9 +219,18 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersLogConfig extends TeaModel {
+        /**
+         * <p>Indicates whether custom headers are carried in the access log. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
         public Boolean accessLogRecordCustomizedHeadersEnabled;
 
+        /**
+         * <p>The configuration of Xtrace. Xtrace is used to record the requests sent to ALB.</p>
+         */
         @NameInMap("AccessLogTracingConfig")
         public ListListenersResponseBodyListenersLogConfigAccessLogTracingConfig accessLogTracingConfig;
 
@@ -204,9 +258,22 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListenersQuicConfig extends TeaModel {
+        /**
+         * <p>The QUIC listener ID. This parameter is required when **QuicUpgradeEnabled** is set to **true**. Only HTTPS listeners support this parameter.</p>
+         * <br>
+         * <p>> You must add the HTTPS listener and the QUIC listener to the same ALB instance. In addition, make sure that the QUIC listener has never been associated with another listener.</p>
+         */
         @NameInMap("QuicListenerId")
         public String quicListenerId;
 
+        /**
+         * <p>Indicates whether QUIC upgrade is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> Only HTTPS listeners support this parameter.</p>
+         */
         @NameInMap("QuicUpgradeEnabled")
         public Boolean quicUpgradeEnabled;
 
@@ -233,49 +300,192 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
 
+    public static class ListListenersResponseBodyListenersTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListListenersResponseBodyListenersTags build(java.util.Map<String, ?> map) throws Exception {
+            ListListenersResponseBodyListenersTags self = new ListListenersResponseBodyListenersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListListenersResponseBodyListenersTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListListenersResponseBodyListenersTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListListenersResponseBodyListenersXForwardedForConfig extends TeaModel {
+        /**
+         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertClientVerifyEnabled** is set to **true**.</p>
+         * <br>
+         * <p>The name is 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertClientVerifyAlias")
         public String XForwardedForClientCertClientVerifyAlias;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Clientcert-clientverify` header is used to obtain the verification result of the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertClientVerifyEnabled")
         public Boolean XForwardedForClientCertClientVerifyEnabled;
 
+        /**
+         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertFingerprintEnabled** is set to **true**.</p>
+         * <br>
+         * <p>The name is 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertFingerprintAlias")
         public String XForwardedForClientCertFingerprintAlias;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Clientcert-fingerprint` header is used to retrieve the fingerprint of the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertFingerprintEnabled")
         public Boolean XForwardedForClientCertFingerprintEnabled;
 
+        /**
+         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertIssuerDNEnabled** is set to **true**.</p>
+         * <br>
+         * <p>The name is 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertIssuerDNAlias")
         public String XForwardedForClientCertIssuerDNAlias;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Clientcert-issuerdn` header is used to retrieve information about the authority that issues the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertIssuerDNEnabled")
         public Boolean XForwardedForClientCertIssuerDNEnabled;
 
+        /**
+         * <p>The name of the custom header. This parameter takes effect only when **XForwardedForClientCertSubjectDNEnabled** is set to **true**.</p>
+         * <br>
+         * <p>The name is 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertSubjectDNAlias")
         public String XForwardedForClientCertSubjectDNAlias;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Clientcert-subjectdn` header is used to retrieve information about the owner of the client certificate. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientCertSubjectDNEnabled")
         public Boolean XForwardedForClientCertSubjectDNEnabled;
 
+        /**
+         * <p>Specifies whether to use the `X-Forwarded-Client-Ip` header to retrieve the source port of the ALB instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> HTTP, HTTPS, and QUIC listeners support this parameter.</p>
+         */
         @NameInMap("XForwardedForClientSourceIpsEnabled")
         public Boolean XForwardedForClientSourceIpsEnabled;
 
+        /**
+         * <p>The trusted proxy IP address.</p>
+         * <br>
+         * <p>ALB traverses `X-Forwarded-For` backward and selects the first IP address that is not in the trusted IP address list as the real IP address of the client. The IP address is used in source IP address throttling.</p>
+         */
         @NameInMap("XForwardedForClientSourceIpsTrusted")
         public String XForwardedForClientSourceIpsTrusted;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Client-Port` header is used to retrieve the client port. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTP or HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForClientSrcPortEnabled")
         public Boolean XForwardedForClientSrcPortEnabled;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-For` header is used to retrieve the client IP address. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTP or HTTPS listener.</p>
+         */
         @NameInMap("XForwardedForEnabled")
         public Boolean XForwardedForEnabled;
 
+        /**
+         * <p>Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol of the ALB instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         */
         @NameInMap("XForwardedForProtoEnabled")
         public Boolean XForwardedForProtoEnabled;
 
+        /**
+         * <p>Indicates whether the `SLB-ID` header is used to retrieve the ID of the ALB instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         */
         @NameInMap("XForwardedForSLBIdEnabled")
         public Boolean XForwardedForSLBIdEnabled;
 
+        /**
+         * <p>Indicates whether the `X-Forwarded-Port` header is used to retrieve the listener port of the ALB instance. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTP, HTTPS, or QUIC listener.</p>
+         */
         @NameInMap("XForwardedForSLBPortEnabled")
         public Boolean XForwardedForSLBPortEnabled;
 
@@ -407,48 +617,119 @@ public class ListListenersResponseBody extends TeaModel {
     }
 
     public static class ListListenersResponseBodyListeners extends TeaModel {
+        /**
+         * <p>The default actions in the forwarding rules.</p>
+         */
         @NameInMap("DefaultActions")
         public java.util.List<ListListenersResponseBodyListenersDefaultActions> defaultActions;
 
+        /**
+         * <p>Indicates whether GZIP compression is enabled to compress specific types of files. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("GzipEnabled")
         public Boolean gzipEnabled;
 
+        /**
+         * <p>Indicates whether HTTP/2 is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("Http2Enabled")
         public Boolean http2Enabled;
 
+        /**
+         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: **1 to 60**.</p>
+         * <br>
+         * <p>If no request is received within the specified timeout period, ALB closes the connection. ALB establishes the connection again when a new connection request is received.</p>
+         */
         @NameInMap("IdleTimeout")
         public Integer idleTimeout;
 
+        /**
+         * <p>The listener name.</p>
+         */
         @NameInMap("ListenerDescription")
         public String listenerDescription;
 
+        /**
+         * <p>The listener ID.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The frontend port that is used by the ALB instance. Valid values: **1 to 65535**.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <p>The listener protocol. Valid values:</p>
+         * <br>
+         * <p>*   **HTTP**</p>
+         * <p>*   **HTTPS**</p>
+         * <p>*   **QUIC**</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
+        /**
+         * <p>The status of the listener. Valid values:</p>
+         * <br>
+         * <p>*   **Provisioning**</p>
+         * <p>*   **Running**</p>
+         * <p>*   **Configuring**</p>
+         * <p>*   **Stopped**</p>
+         */
         @NameInMap("ListenerStatus")
         public String listenerStatus;
 
+        /**
+         * <p>The ALB instance ID.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The configuration of logs.</p>
+         */
         @NameInMap("LogConfig")
         public ListListenersResponseBodyListenersLogConfig logConfig;
 
+        /**
+         * <p>The configuration information when the listener is associated with a QUIC listener.</p>
+         */
         @NameInMap("QuicConfig")
         public ListListenersResponseBodyListenersQuicConfig quicConfig;
 
+        /**
+         * <p>The timeout period of a request. Unit: seconds. Valid values: **1 to 180**.</p>
+         * <br>
+         * <p>If no responses are received from the backend server within the specified timeout period, ALB returns an `HTTP 504` error code to the client.</p>
+         */
         @NameInMap("RequestTimeout")
         public Integer requestTimeout;
 
+        /**
+         * <p>The security policy.</p>
+         * <br>
+         * <p>> This parameter is available only when you create an HTTPS listener.</p>
+         */
         @NameInMap("SecurityPolicyId")
         public String securityPolicyId;
 
+        @NameInMap("Tags")
+        public java.util.List<ListListenersResponseBodyListenersTags> tags;
+
+        /**
+         * <p>Configuration of the `XForward` header.</p>
+         */
         @NameInMap("XForwardedForConfig")
         public ListListenersResponseBodyListenersXForwardedForConfig XForwardedForConfig;
 
@@ -567,6 +848,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public String getSecurityPolicyId() {
             return this.securityPolicyId;
+        }
+
+        public ListListenersResponseBodyListeners setTags(java.util.List<ListListenersResponseBodyListenersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListListenersResponseBodyListenersTags> getTags() {
+            return this.tags;
         }
 
         public ListListenersResponseBodyListeners setXForwardedForConfig(ListListenersResponseBodyListenersXForwardedForConfig XForwardedForConfig) {

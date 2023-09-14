@@ -4,9 +4,15 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListAclRelationsResponseBody extends TeaModel {
+    /**
+     * <p>The ACLs and the associated listeners.</p>
+     */
     @NameInMap("AclRelations")
     public java.util.List<ListAclRelationsResponseBodyAclRelations> aclRelations;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +38,37 @@ public class ListAclRelationsResponseBody extends TeaModel {
     }
 
     public static class ListAclRelationsResponseBodyAclRelationsRelatedListeners extends TeaModel {
+        /**
+         * <p>The listener ID.</p>
+         */
         @NameInMap("ListenerId")
         public String listenerId;
 
+        /**
+         * <p>The listener port.</p>
+         */
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
+        /**
+         * <p>The listener protocol.</p>
+         */
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
+        /**
+         * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+         */
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
+        /**
+         * <p>The association status between the ACL and the listener. Valid values:</p>
+         * <br>
+         * <p>*   **Associating**</p>
+         * <p>*   **Associated**</p>
+         * <p>*   **Dissociating**</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -95,9 +120,15 @@ public class ListAclRelationsResponseBody extends TeaModel {
     }
 
     public static class ListAclRelationsResponseBodyAclRelations extends TeaModel {
+        /**
+         * <p>ACL ID</p>
+         */
         @NameInMap("AclId")
         public String aclId;
 
+        /**
+         * <p>The listeners that are associated with the ACL.</p>
+         */
         @NameInMap("RelatedListeners")
         public java.util.List<ListAclRelationsResponseBodyAclRelationsRelatedListeners> relatedListeners;
 

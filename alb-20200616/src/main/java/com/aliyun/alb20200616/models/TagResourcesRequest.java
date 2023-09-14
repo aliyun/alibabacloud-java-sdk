@@ -4,12 +4,26 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **acl**: an access control list (ACL)</p>
+     * <p>*   **loadbalancer**: an Application Load Balancer (ALB) instance</p>
+     * <p>*   **securitypolicy**: a security policy</p>
+     * <p>*   **servergroup**: a server group</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -42,40 +56,16 @@ public class TagResourcesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class ListTagResourcesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class TagResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -93,36 +83,6 @@ public class TagResourcesRequest extends TeaModel {
         }
 
         public TagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
-    public static class UnTagResourcesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static UnTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            UnTagResourcesRequestTag self = new UnTagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public UnTagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public UnTagResourcesRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

@@ -4,6 +4,9 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -18,58 +21,6 @@ public class TagResourcesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("ResourceId")
-        public String resourceId;
-
-        @NameInMap("ResourceType")
-        public String resourceType;
-
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResources setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setResourceType(String resourceType) {
-            this.resourceType = resourceType;
-            return this;
-        }
-        public String getResourceType() {
-            return this.resourceType;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
     }
 
 }

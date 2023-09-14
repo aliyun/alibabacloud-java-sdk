@@ -4,18 +4,36 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesResponseBody extends TeaModel {
+    /**
+     * <p>The certificates.</p>
+     */
     @NameInMap("Certificates")
     public java.util.List<ListListenerCertificatesResponseBodyCertificates> certificates;
 
+    /**
+     * <p>The maximum number of entries returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,15 +83,34 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     }
 
     public static class ListListenerCertificatesResponseBodyCertificates extends TeaModel {
+        /**
+         * <p>The certificate ID. Only server certificates are supported.</p>
+         */
         @NameInMap("CertificateId")
         public String certificateId;
 
+        /**
+         * <p>The type of the certificate.</p>
+         */
         @NameInMap("CertificateType")
         public String certificateType;
 
+        /**
+         * <p>Indicates whether the certificate is the default certificate of the listener. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>Indicates whether the certificate is associated with the listener. Valid values:</p>
+         * <br>
+         * <p>*   **Associating**</p>
+         * <p>*   **Associated**</p>
+         * <p>*   **Diassociating**</p>
+         */
         @NameInMap("Status")
         public String status;
 

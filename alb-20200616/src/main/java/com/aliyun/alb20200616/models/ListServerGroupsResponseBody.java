@@ -4,18 +4,36 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListServerGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The backend server groups.</p>
+     */
     @NameInMap("ServerGroups")
     public java.util.List<ListServerGroupsResponseBodyServerGroups> serverGroups;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,39 +83,104 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsHealthCheckConfig extends TeaModel {
+        /**
+         * <p>The HTTP status codes that indicate whether the backend server passes the health check.</p>
+         */
         @NameInMap("HealthCheckCodes")
         public java.util.List<String> healthCheckCodes;
 
+        /**
+         * <p>The backend port that is used for health checks. Valid values: **0** to **65535**.</p>
+         * <br>
+         * <p>A value of **0** indicates that the port on a backend server is used for health checks.</p>
+         */
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
 
+        /**
+         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
 
+        /**
+         * <p>The domain name that is used for health checks. The domain name must meet the following requirements:</p>
+         * <br>
+         * <p>*   The domain name must be 1 to 80 characters in length.</p>
+         * <p>*   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).</p>
+         * <p>*   It must contain at least one period (.) but cannot start or end with a period (.).</p>
+         * <p>*   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).</p>
+         * <p>*   The domain name cannot start or end with a hyphen (-).</p>
+         * <br>
+         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.</p>
+         */
         @NameInMap("HealthCheckHost")
         public String healthCheckHost;
 
+        /**
+         * <p>The HTTP version that is used for health checks.</p>
+         * <br>
+         * <p>Valid values: **HTTP1.0** and **HTTP1.1**.</p>
+         * <br>
+         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.</p>
+         */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
+        /**
+         * <p>The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.</p>
+         */
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
 
+        /**
+         * <p>The method that you want to use for the health check. Valid values:</p>
+         * <br>
+         * <p>*   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.</p>
+         * <p>*   **POST**: gRPC health checks automatically use the POST method.</p>
+         * <p>*   **HEAD**: HTTP health checks automatically use the HEAD method.</p>
+         * <br>
+         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.</p>
+         */
         @NameInMap("HealthCheckMethod")
         public String healthCheckMethod;
 
+        /**
+         * <p>The path that is used for health checks.</p>
+         * <br>
+         * <p>> This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP**.</p>
+         */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
 
+        /**
+         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <br>
+         * <p>*   **HTTP**: To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.</p>
+         * <p>*   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</p>
+         * <p>*   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.</p>
+         */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
+        /**
+         * <p>The timeout period of a health check. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.</p>
+         */
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
 
+        /**
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status is changed from **fail** to **success**.</p>
+         */
         @NameInMap("HealthyThreshold")
         public Integer healthyThreshold;
 
+        /**
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status is changed from **success** to **fail**.</p>
+         */
         @NameInMap("UnhealthyThreshold")
         public Integer unhealthyThreshold;
 
@@ -205,15 +288,40 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsStickySessionConfig extends TeaModel {
+        /**
+         * <p>The cookie that is configured on the server.</p>
+         */
         @NameInMap("Cookie")
         public String cookie;
 
+        /**
+         * <p>The timeout period of a cookie. Unit: seconds. Valid values: **1** to **86400**.</p>
+         * <br>
+         * <p>> This parameter takes effect only when the **StickySessionEnabled** parameter is set to **true** and the **StickySessionType** parameter is set to **Insert**.</p>
+         */
         @NameInMap("CookieTimeout")
         public Integer cookieTimeout;
 
+        /**
+         * <p>Specifies whether to enable session persistence. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("StickySessionEnabled")
         public Boolean stickySessionEnabled;
 
+        /**
+         * <p>The method that is used to handle a cookie. Valid values:</p>
+         * <br>
+         * <p>*   **Insert**: inserts a cookie.</p>
+         * <br>
+         * <p>ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener forwards this request to the recorded backend server.</p>
+         * <br>
+         * <p>*   **Server**: rewrites a cookie.</p>
+         * <br>
+         * <p>When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.</p>
+         */
         @NameInMap("StickySessionType")
         public String stickySessionType;
 
@@ -257,9 +365,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
     }
 
     public static class ListServerGroupsResponseBodyServerGroupsTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -286,52 +400,161 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class ListServerGroupsResponseBodyServerGroupsUchConfig extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListServerGroupsResponseBodyServerGroupsUchConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListServerGroupsResponseBodyServerGroupsUchConfig self = new ListServerGroupsResponseBodyServerGroupsUchConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServerGroupsResponseBodyServerGroupsUchConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListServerGroupsResponseBodyServerGroupsUchConfig setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListServerGroupsResponseBodyServerGroups extends TeaModel {
+        /**
+         * <p>Indicates whether configuration management is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("ConfigManagedEnabled")
         public Boolean configManagedEnabled;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>The health check configurations.</p>
+         */
         @NameInMap("HealthCheckConfig")
         public ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig;
 
+        /**
+         * <p>Indicates whether IPv6 is supported. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("Ipv6Enabled")
         public Boolean ipv6Enabled;
 
+        /**
+         * <p>The backend protocol. Valid values:</p>
+         * <br>
+         * <p>*   **HTTP**: allows you to associate an HTTPS, HTTP, or QUIC listener with the server group.</p>
+         * <p>*   **HTTPS**: allows you to associate HTTPS listeners with backend servers.</p>
+         * <p>*   **GRPC**: allows you to associate an HTTPS or QUIC listener with the server group.</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The ID of the resource group to which the resource belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The scheduling algorithm. Valid values:</p>
+         * <br>
+         * <p>*   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.</p>
+         * <p>*   **Wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections is expected to receive more requests.</p>
+         * <p>*   **Sch**: The consistent hashing algorithm is used. Requests from the same source IP address are distributed to the same backend server.</p>
+         */
         @NameInMap("Scheduler")
         public String scheduler;
 
+        /**
+         * <p>The number of backend servers in the server group.</p>
+         */
         @NameInMap("ServerCount")
         public Integer serverCount;
 
+        /**
+         * <p>The server group ID.</p>
+         */
         @NameInMap("ServerGroupId")
         public String serverGroupId;
 
+        /**
+         * <p>The server group name.</p>
+         */
         @NameInMap("ServerGroupName")
         public String serverGroupName;
 
+        /**
+         * <p>The status of the server group. Valid values:</p>
+         * <br>
+         * <p>*   **Creating**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Configuring**</p>
+         */
         @NameInMap("ServerGroupStatus")
         public String serverGroupStatus;
 
+        /**
+         * <p>The type of server group. Valid values:</p>
+         * <br>
+         * <p>*   **Instance**</p>
+         * <p>*   **Ip**</p>
+         * <p>*   **Fc**</p>
+         */
         @NameInMap("ServerGroupType")
         public String serverGroupType;
 
+        /**
+         * <p>The service name.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The configuration of session persistence.</p>
+         */
         @NameInMap("StickySessionConfig")
         public ListServerGroupsResponseBodyServerGroupsStickySessionConfig stickySessionConfig;
 
+        /**
+         * <p>The tags that are added to the server group.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> tags;
 
+        @NameInMap("UchConfig")
+        public ListServerGroupsResponseBodyServerGroupsUchConfig uchConfig;
+
+        /**
+         * <p>Indicates whether persistent TCP connections are enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("UpstreamKeepaliveEnabled")
         public Boolean upstreamKeepaliveEnabled;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -346,6 +569,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public Boolean getConfigManagedEnabled() {
             return this.configManagedEnabled;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         public ListServerGroupsResponseBodyServerGroups setHealthCheckConfig(ListServerGroupsResponseBodyServerGroupsHealthCheckConfig healthCheckConfig) {
@@ -450,6 +681,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public java.util.List<ListServerGroupsResponseBodyServerGroupsTags> getTags() {
             return this.tags;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setUchConfig(ListServerGroupsResponseBodyServerGroupsUchConfig uchConfig) {
+            this.uchConfig = uchConfig;
+            return this;
+        }
+        public ListServerGroupsResponseBodyServerGroupsUchConfig getUchConfig() {
+            return this.uchConfig;
         }
 
         public ListServerGroupsResponseBodyServerGroups setUpstreamKeepaliveEnabled(Boolean upstreamKeepaliveEnabled) {

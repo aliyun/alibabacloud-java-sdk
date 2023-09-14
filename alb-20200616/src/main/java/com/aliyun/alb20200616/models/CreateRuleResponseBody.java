@@ -4,12 +4,21 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the asynchronous task.</p>
+     */
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The forwarding rule ID.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

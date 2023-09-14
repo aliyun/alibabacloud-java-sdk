@@ -4,15 +4,30 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
+    /**
+     * <p>The type of the certificate. Valid values: **Ca** and **Server**.</p>
+     */
     @NameInMap("CertificateType")
     public String certificateType;
 
+    /**
+     * <p>The listener ID. You must specify the ID of an HTTPS listener or a QUIC listener.</p>
+     */
     @NameInMap("ListenerId")
     public String listenerId;
 
+    /**
+     * <p>The maximum number of entries to return. Valid values: **1 to 100**. If you do not specify this parameter, the default value **20** is used.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

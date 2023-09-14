@@ -4,12 +4,28 @@ package com.aliyun.alb20200616.models;
 import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource group to which you want to move the resource.</p>
+     * <br>
+     * <p>> You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~)</p>
+     */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
+    /**
+     * <p>The resource ID.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The type of the resource. Valid values:</p>
+     * <br>
+     * <p>*   **loadbalancer**: Application Load Balancer (ALB) instance</p>
+     * <p>*   **acl**: access control list (ACL)</p>
+     * <p>*   **securitypolicy**: security policy</p>
+     * <p>*   **servergroup**: server group</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
