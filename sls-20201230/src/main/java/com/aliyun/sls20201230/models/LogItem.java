@@ -8,7 +8,7 @@ public class LogItem extends TeaModel {
     public java.util.List<LogContent> contents;
 
     @NameInMap("Time")
-    public Long time;
+    public Integer time;
 
     public static LogItem build(java.util.Map<String, ?> map) throws Exception {
         LogItem self = new LogItem();
@@ -23,11 +23,11 @@ public class LogItem extends TeaModel {
         return this.contents;
     }
 
-    public LogItem setTime(Long time) {
+    public LogItem setTime(Integer time) {
         this.time = time;
         return this;
     }
-    public Long getTime() {
+    public Integer getTime() {
         return this.time;
     }
 
