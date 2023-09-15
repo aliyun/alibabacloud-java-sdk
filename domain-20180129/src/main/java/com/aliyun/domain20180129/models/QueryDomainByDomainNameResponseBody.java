@@ -22,6 +22,9 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("DomainNameVerificationStatus")
     public String domainNameVerificationStatus;
 
+    @NameInMap("DomainStatus")
+    public String domainStatus;
+
     @NameInMap("DomainType")
     public String domainType;
 
@@ -79,6 +82,12 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public QueryDomainByDomainNameResponseBodyTag tag;
+
     @NameInMap("TransferOutStatus")
     public String transferOutStatus;
 
@@ -96,9 +105,6 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     @NameInMap("ZhRegistrantOrganization")
     public String zhRegistrantOrganization;
-
-    @NameInMap("domainStatus")
-    public String domainStatus;
 
     public static QueryDomainByDomainNameResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryDomainByDomainNameResponseBody self = new QueryDomainByDomainNameResponseBody();
@@ -151,6 +157,14 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     }
     public String getDomainNameVerificationStatus() {
         return this.domainNameVerificationStatus;
+    }
+
+    public QueryDomainByDomainNameResponseBody setDomainStatus(String domainStatus) {
+        this.domainStatus = domainStatus;
+        return this;
+    }
+    public String getDomainStatus() {
+        return this.domainStatus;
     }
 
     public QueryDomainByDomainNameResponseBody setDomainType(String domainType) {
@@ -305,6 +319,22 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public QueryDomainByDomainNameResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public QueryDomainByDomainNameResponseBody setTag(QueryDomainByDomainNameResponseBodyTag tag) {
+        this.tag = tag;
+        return this;
+    }
+    public QueryDomainByDomainNameResponseBodyTag getTag() {
+        return this.tag;
+    }
+
     public QueryDomainByDomainNameResponseBody setTransferOutStatus(String transferOutStatus) {
         this.transferOutStatus = transferOutStatus;
         return this;
@@ -353,14 +383,6 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         return this.zhRegistrantOrganization;
     }
 
-    public QueryDomainByDomainNameResponseBody setDomainStatus(String domainStatus) {
-        this.domainStatus = domainStatus;
-        return this;
-    }
-    public String getDomainStatus() {
-        return this.domainStatus;
-    }
-
     public static class QueryDomainByDomainNameResponseBodyDnsList extends TeaModel {
         @NameInMap("Dns")
         public java.util.List<String> dns;
@@ -376,6 +398,55 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
         }
         public java.util.List<String> getDns() {
             return this.dns;
+        }
+
+    }
+
+    public static class QueryDomainByDomainNameResponseBodyTagTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Vaue")
+        public String vaue;
+
+        public static QueryDomainByDomainNameResponseBodyTagTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryDomainByDomainNameResponseBodyTagTag self = new QueryDomainByDomainNameResponseBodyTagTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDomainByDomainNameResponseBodyTagTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QueryDomainByDomainNameResponseBodyTagTag setVaue(String vaue) {
+            this.vaue = vaue;
+            return this;
+        }
+        public String getVaue() {
+            return this.vaue;
+        }
+
+    }
+
+    public static class QueryDomainByDomainNameResponseBodyTag extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<QueryDomainByDomainNameResponseBodyTagTag> tag;
+
+        public static QueryDomainByDomainNameResponseBodyTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryDomainByDomainNameResponseBodyTag self = new QueryDomainByDomainNameResponseBodyTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDomainByDomainNameResponseBodyTag setTag(java.util.List<QueryDomainByDomainNameResponseBodyTagTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<QueryDomainByDomainNameResponseBodyTagTag> getTag() {
+            return this.tag;
         }
 
     }

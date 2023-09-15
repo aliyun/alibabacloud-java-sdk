@@ -22,6 +22,12 @@ public class ListServerLockRequest extends TeaModel {
     @NameInMap("LockProductId")
     public String lockProductId;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
+    @NameInMap("OrderByType")
+    public String orderByType;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -88,6 +94,22 @@ public class ListServerLockRequest extends TeaModel {
     }
     public String getLockProductId() {
         return this.lockProductId;
+    }
+
+    public ListServerLockRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    public ListServerLockRequest setOrderByType(String orderByType) {
+        this.orderByType = orderByType;
+        return this;
+    }
+    public String getOrderByType() {
+        return this.orderByType;
     }
 
     public ListServerLockRequest setPageNum(Integer pageNum) {

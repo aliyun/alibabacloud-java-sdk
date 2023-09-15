@@ -61,6 +61,9 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends TeaModel {
     @NameInMap("RegistrantType")
     public String registrantType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("SubscriptionDuration")
     public Integer subscriptionDuration;
 
@@ -255,6 +258,14 @@ public class SaveSingleTaskForCreatingOrderActivateRequest extends TeaModel {
     }
     public String getRegistrantType() {
         return this.registrantType;
+    }
+
+    public SaveSingleTaskForCreatingOrderActivateRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public SaveSingleTaskForCreatingOrderActivateRequest setSubscriptionDuration(Integer subscriptionDuration) {

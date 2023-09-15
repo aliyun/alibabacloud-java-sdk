@@ -49,6 +49,9 @@ public class ScrollDomainListRequest extends TeaModel {
     @NameInMap("ProductDomainType")
     public String productDomainType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ScrollId")
     public String scrollId;
 
@@ -193,6 +196,14 @@ public class ScrollDomainListRequest extends TeaModel {
     }
     public String getProductDomainType() {
         return this.productDomainType;
+    }
+
+    public ScrollDomainListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ScrollDomainListRequest setScrollId(String scrollId) {

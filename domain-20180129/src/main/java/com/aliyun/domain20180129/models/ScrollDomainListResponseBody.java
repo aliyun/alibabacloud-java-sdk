@@ -83,6 +83,55 @@ public class ScrollDomainListResponseBody extends TeaModel {
 
     }
 
+    public static class ScrollDomainListResponseBodyDataDomainTagTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ScrollDomainListResponseBodyDataDomainTagTag build(java.util.Map<String, ?> map) throws Exception {
+            ScrollDomainListResponseBodyDataDomainTagTag self = new ScrollDomainListResponseBodyDataDomainTagTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ScrollDomainListResponseBodyDataDomainTagTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ScrollDomainListResponseBodyDataDomainTagTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ScrollDomainListResponseBodyDataDomainTag extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ScrollDomainListResponseBodyDataDomainTagTag> tag;
+
+        public static ScrollDomainListResponseBodyDataDomainTag build(java.util.Map<String, ?> map) throws Exception {
+            ScrollDomainListResponseBodyDataDomainTag self = new ScrollDomainListResponseBodyDataDomainTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ScrollDomainListResponseBodyDataDomainTag setTag(java.util.List<ScrollDomainListResponseBodyDataDomainTagTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ScrollDomainListResponseBodyDataDomainTagTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ScrollDomainListResponseBodyDataDomain extends TeaModel {
         @NameInMap("DnsList")
         public ScrollDomainListResponseBodyDataDomainDnsList dnsList;
@@ -143,6 +192,12 @@ public class ScrollDomainListResponseBody extends TeaModel {
 
         @NameInMap("Remark")
         public String remark;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tag")
+        public ScrollDomainListResponseBodyDataDomainTag tag;
 
         @NameInMap("ZhRegistrantOrganization")
         public String zhRegistrantOrganization;
@@ -310,6 +365,22 @@ public class ScrollDomainListResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public ScrollDomainListResponseBodyDataDomain setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public ScrollDomainListResponseBodyDataDomain setTag(ScrollDomainListResponseBodyDataDomainTag tag) {
+            this.tag = tag;
+            return this;
+        }
+        public ScrollDomainListResponseBodyDataDomainTag getTag() {
+            return this.tag;
         }
 
         public ScrollDomainListResponseBodyDataDomain setZhRegistrantOrganization(String zhRegistrantOrganization) {

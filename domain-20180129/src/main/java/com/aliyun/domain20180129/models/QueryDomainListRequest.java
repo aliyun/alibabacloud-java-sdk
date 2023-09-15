@@ -37,11 +37,17 @@ public class QueryDomainListRequest extends TeaModel {
     @NameInMap("QueryType")
     public String queryType;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StartExpirationDate")
     public Long startExpirationDate;
 
     @NameInMap("StartRegistrationDate")
     public Long startRegistrationDate;
+
+    @NameInMap("Tag")
+    public java.util.List<QueryDomainListRequestTag> tag;
 
     @NameInMap("UserClientIp")
     public String userClientIp;
@@ -139,6 +145,14 @@ public class QueryDomainListRequest extends TeaModel {
         return this.queryType;
     }
 
+    public QueryDomainListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public QueryDomainListRequest setStartExpirationDate(Long startExpirationDate) {
         this.startExpirationDate = startExpirationDate;
         return this;
@@ -155,12 +169,50 @@ public class QueryDomainListRequest extends TeaModel {
         return this.startRegistrationDate;
     }
 
+    public QueryDomainListRequest setTag(java.util.List<QueryDomainListRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<QueryDomainListRequestTag> getTag() {
+        return this.tag;
+    }
+
     public QueryDomainListRequest setUserClientIp(String userClientIp) {
         this.userClientIp = userClientIp;
         return this;
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public static class QueryDomainListRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QueryDomainListRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryDomainListRequestTag self = new QueryDomainListRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDomainListRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QueryDomainListRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

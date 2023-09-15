@@ -20,34 +20,4 @@ public class RegistrantProfileRealNameVerificationResponseBody extends TeaModel 
         return this.requestId;
     }
 
-    public static class QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData extends TeaModel {
-        @NameInMap("Date")
-        public String date;
-
-        @NameInMap("FailReason")
-        public String failReason;
-
-        public static QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData self = new QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData setDate(String date) {
-            this.date = date;
-            return this;
-        }
-        public String getDate() {
-            return this.date;
-        }
-
-        public QueryFailReasonForRegistrantProfileRealNameVerificationResponseBodyData setFailReason(String failReason) {
-            this.failReason = failReason;
-            return this;
-        }
-        public String getFailReason() {
-            return this.failReason;
-        }
-
-    }
-
 }

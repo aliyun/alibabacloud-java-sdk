@@ -116,6 +116,55 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
 
     }
 
+    public static class QueryAdvancedDomainListResponseBodyDataDomainTagTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QueryAdvancedDomainListResponseBodyDataDomainTagTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryAdvancedDomainListResponseBodyDataDomainTagTag self = new QueryAdvancedDomainListResponseBodyDataDomainTagTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAdvancedDomainListResponseBodyDataDomainTagTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QueryAdvancedDomainListResponseBodyDataDomainTagTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class QueryAdvancedDomainListResponseBodyDataDomainTag extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<QueryAdvancedDomainListResponseBodyDataDomainTagTag> tag;
+
+        public static QueryAdvancedDomainListResponseBodyDataDomainTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryAdvancedDomainListResponseBodyDataDomainTag self = new QueryAdvancedDomainListResponseBodyDataDomainTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAdvancedDomainListResponseBodyDataDomainTag setTag(java.util.List<QueryAdvancedDomainListResponseBodyDataDomainTagTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<QueryAdvancedDomainListResponseBodyDataDomainTagTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class QueryAdvancedDomainListResponseBodyDataDomain extends TeaModel {
         @NameInMap("DnsList")
         public QueryAdvancedDomainListResponseBodyDataDomainDnsList dnsList;
@@ -176,6 +225,12 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
 
         @NameInMap("Remark")
         public String remark;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tag")
+        public QueryAdvancedDomainListResponseBodyDataDomainTag tag;
 
         @NameInMap("ZhRegistrantOrganization")
         public String zhRegistrantOrganization;
@@ -343,6 +398,22 @@ public class QueryAdvancedDomainListResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public QueryAdvancedDomainListResponseBodyDataDomain setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public QueryAdvancedDomainListResponseBodyDataDomain setTag(QueryAdvancedDomainListResponseBodyDataDomainTag tag) {
+            this.tag = tag;
+            return this;
+        }
+        public QueryAdvancedDomainListResponseBodyDataDomainTag getTag() {
+            return this.tag;
         }
 
         public QueryAdvancedDomainListResponseBodyDataDomain setZhRegistrantOrganization(String zhRegistrantOrganization) {

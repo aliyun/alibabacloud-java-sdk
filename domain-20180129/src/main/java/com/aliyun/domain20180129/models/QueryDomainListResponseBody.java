@@ -97,6 +97,55 @@ public class QueryDomainListResponseBody extends TeaModel {
         return this.totalPageNum;
     }
 
+    public static class QueryDomainListResponseBodyDataDomainTagTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QueryDomainListResponseBodyDataDomainTagTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryDomainListResponseBodyDataDomainTagTag self = new QueryDomainListResponseBodyDataDomainTagTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDomainListResponseBodyDataDomainTagTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QueryDomainListResponseBodyDataDomainTagTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class QueryDomainListResponseBodyDataDomainTag extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<QueryDomainListResponseBodyDataDomainTagTag> tag;
+
+        public static QueryDomainListResponseBodyDataDomainTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryDomainListResponseBodyDataDomainTag self = new QueryDomainListResponseBodyDataDomainTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDomainListResponseBodyDataDomainTag setTag(java.util.List<QueryDomainListResponseBodyDataDomainTagTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<QueryDomainListResponseBodyDataDomainTagTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class QueryDomainListResponseBodyDataDomain extends TeaModel {
         @NameInMap("DomainAuditStatus")
         public String domainAuditStatus;
@@ -148,6 +197,12 @@ public class QueryDomainListResponseBody extends TeaModel {
 
         @NameInMap("Remark")
         public String remark;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("Tag")
+        public QueryDomainListResponseBodyDataDomainTag tag;
 
         public static QueryDomainListResponseBodyDataDomain build(java.util.Map<String, ?> map) throws Exception {
             QueryDomainListResponseBodyDataDomain self = new QueryDomainListResponseBodyDataDomain();
@@ -288,6 +343,22 @@ public class QueryDomainListResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public QueryDomainListResponseBodyDataDomain setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public QueryDomainListResponseBodyDataDomain setTag(QueryDomainListResponseBodyDataDomainTag tag) {
+            this.tag = tag;
+            return this;
+        }
+        public QueryDomainListResponseBodyDataDomainTag getTag() {
+            return this.tag;
         }
 
     }
