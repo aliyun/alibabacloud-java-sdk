@@ -114,12 +114,36 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("action_type", request.actionType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCityCode)) {
+            query.put("arr_city_code", request.arrCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.arrCityName)) {
+            query.put("arr_city_name", request.arrCityName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.carScenesCode)) {
             query.put("car_scenes_code", request.carScenesCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.depCityCode)) {
+            query.put("dep_city_code", request.depCityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depCityName)) {
+            query.put("dep_city_name", request.depCityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depDate)) {
+            query.put("dep_date", request.depDate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.itineraryId)) {
             query.put("itinerary_id", request.itineraryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("order_Id", request.orderId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.phone)) {

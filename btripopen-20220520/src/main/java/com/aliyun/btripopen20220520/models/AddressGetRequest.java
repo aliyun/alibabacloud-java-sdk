@@ -7,11 +7,29 @@ public class AddressGetRequest extends TeaModel {
     @NameInMap("action_type")
     public Integer actionType;
 
+    @NameInMap("arr_city_code")
+    public String arrCityCode;
+
+    @NameInMap("arr_city_name")
+    public String arrCityName;
+
     @NameInMap("car_scenes_code")
     public String carScenesCode;
 
+    @NameInMap("dep_city_code")
+    public String depCityCode;
+
+    @NameInMap("dep_city_name")
+    public String depCityName;
+
+    @NameInMap("dep_date")
+    public String depDate;
+
     @NameInMap("itinerary_id")
     public String itineraryId;
+
+    @NameInMap("order_Id")
+    public String orderId;
 
     @NameInMap("phone")
     public String phone;
@@ -41,6 +59,22 @@ public class AddressGetRequest extends TeaModel {
         return this.actionType;
     }
 
+    public AddressGetRequest setArrCityCode(String arrCityCode) {
+        this.arrCityCode = arrCityCode;
+        return this;
+    }
+    public String getArrCityCode() {
+        return this.arrCityCode;
+    }
+
+    public AddressGetRequest setArrCityName(String arrCityName) {
+        this.arrCityName = arrCityName;
+        return this;
+    }
+    public String getArrCityName() {
+        return this.arrCityName;
+    }
+
     public AddressGetRequest setCarScenesCode(String carScenesCode) {
         this.carScenesCode = carScenesCode;
         return this;
@@ -49,12 +83,44 @@ public class AddressGetRequest extends TeaModel {
         return this.carScenesCode;
     }
 
+    public AddressGetRequest setDepCityCode(String depCityCode) {
+        this.depCityCode = depCityCode;
+        return this;
+    }
+    public String getDepCityCode() {
+        return this.depCityCode;
+    }
+
+    public AddressGetRequest setDepCityName(String depCityName) {
+        this.depCityName = depCityName;
+        return this;
+    }
+    public String getDepCityName() {
+        return this.depCityName;
+    }
+
+    public AddressGetRequest setDepDate(String depDate) {
+        this.depDate = depDate;
+        return this;
+    }
+    public String getDepDate() {
+        return this.depDate;
+    }
+
     public AddressGetRequest setItineraryId(String itineraryId) {
         this.itineraryId = itineraryId;
         return this;
     }
     public String getItineraryId() {
         return this.itineraryId;
+    }
+
+    public AddressGetRequest setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
     public AddressGetRequest setPhone(String phone) {

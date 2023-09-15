@@ -76,6 +76,9 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
     }
 
     public static class FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo extends TeaModel {
+        @NameInMap("arr_airport_name")
+        public String arrAirportName;
+
         @NameInMap("arr_city")
         public String arrCity;
 
@@ -93,6 +96,9 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
         @NameInMap("cabin_class_str")
         public String cabinClassStr;
+
+        @NameInMap("dep_airport_name")
+        public String depAirportName;
 
         @NameInMap("dep_city")
         public String depCity;
@@ -118,6 +124,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         public static FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo build(java.util.Map<String, ?> map) throws Exception {
             FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo self = new FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo();
             return TeaModel.build(map, self);
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo setArrAirportName(String arrAirportName) {
+            this.arrAirportName = arrAirportName;
+            return this;
+        }
+        public String getArrAirportName() {
+            return this.arrAirportName;
         }
 
         public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo setArrCity(String arrCity) {
@@ -166,6 +180,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         }
         public String getCabinClassStr() {
             return this.cabinClassStr;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo setDepAirportName(String depAirportName) {
+            this.depAirportName = depAirportName;
+            return this;
+        }
+        public String getDepAirportName() {
+            return this.depAirportName;
         }
 
         public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo setDepCity(String depCity) {
@@ -226,12 +248,166 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
 
     }
 
+    public static class FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights extends TeaModel {
+        @NameInMap("arr_airport_name")
+        public String arrAirportName;
+
+        @NameInMap("arr_city_name")
+        public String arrCityName;
+
+        @NameInMap("arr_time")
+        public String arrTime;
+
+        @NameInMap("cabin")
+        public String cabin;
+
+        @NameInMap("cabin_class")
+        public Integer cabinClass;
+
+        @NameInMap("cabin_class_str")
+        public String cabinClassStr;
+
+        @NameInMap("dep_airport_name")
+        public String depAirportName;
+
+        @NameInMap("dep_city_name")
+        public String depCityName;
+
+        @NameInMap("dep_time")
+        public String depTime;
+
+        @NameInMap("discount")
+        public String discount;
+
+        @NameInMap("flight_no")
+        public String flightNo;
+
+        @NameInMap("price")
+        public Long price;
+
+        @NameInMap("transfer_airport_name")
+        public String transferAirportName;
+
+        public static FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights build(java.util.Map<String, ?> map) throws Exception {
+            FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights self = new FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setArrAirportName(String arrAirportName) {
+            this.arrAirportName = arrAirportName;
+            return this;
+        }
+        public String getArrAirportName() {
+            return this.arrAirportName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setArrCityName(String arrCityName) {
+            this.arrCityName = arrCityName;
+            return this;
+        }
+        public String getArrCityName() {
+            return this.arrCityName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setArrTime(String arrTime) {
+            this.arrTime = arrTime;
+            return this;
+        }
+        public String getArrTime() {
+            return this.arrTime;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setCabin(String cabin) {
+            this.cabin = cabin;
+            return this;
+        }
+        public String getCabin() {
+            return this.cabin;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setCabinClass(Integer cabinClass) {
+            this.cabinClass = cabinClass;
+            return this;
+        }
+        public Integer getCabinClass() {
+            return this.cabinClass;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setCabinClassStr(String cabinClassStr) {
+            this.cabinClassStr = cabinClassStr;
+            return this;
+        }
+        public String getCabinClassStr() {
+            return this.cabinClassStr;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setDepAirportName(String depAirportName) {
+            this.depAirportName = depAirportName;
+            return this;
+        }
+        public String getDepAirportName() {
+            return this.depAirportName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setDepCityName(String depCityName) {
+            this.depCityName = depCityName;
+            return this;
+        }
+        public String getDepCityName() {
+            return this.depCityName;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setDepTime(String depTime) {
+            this.depTime = depTime;
+            return this;
+        }
+        public String getDepTime() {
+            return this.depTime;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setDiscount(String discount) {
+            this.discount = discount;
+            return this;
+        }
+        public String getDiscount() {
+            return this.discount;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setFlightNo(String flightNo) {
+            this.flightNo = flightNo;
+            return this;
+        }
+        public String getFlightNo() {
+            return this.flightNo;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setPrice(Long price) {
+            this.price = price;
+            return this;
+        }
+        public Long getPrice() {
+            return this.price;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights setTransferAirportName(String transferAirportName) {
+            this.transferAirportName = transferAirportName;
+            return this;
+        }
+        public String getTransferAirportName() {
+            return this.transferAirportName;
+        }
+
+    }
+
     public static class FlightExceedApplyQueryResponseBodyModule extends TeaModel {
         @NameInMap("apply_id")
         public Long applyId;
 
         @NameInMap("apply_intention_info_do")
         public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo applyIntentionInfoDo;
+
+        @NameInMap("apply_recommend_flights")
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights applyRecommendFlights;
 
         @NameInMap("btrip_cause")
         public String btripCause;
@@ -282,6 +458,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         }
         public FlightExceedApplyQueryResponseBodyModuleApplyIntentionInfoDo getApplyIntentionInfoDo() {
             return this.applyIntentionInfoDo;
+        }
+
+        public FlightExceedApplyQueryResponseBodyModule setApplyRecommendFlights(FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights applyRecommendFlights) {
+            this.applyRecommendFlights = applyRecommendFlights;
+            return this;
+        }
+        public FlightExceedApplyQueryResponseBodyModuleApplyRecommendFlights getApplyRecommendFlights() {
+            return this.applyRecommendFlights;
         }
 
         public FlightExceedApplyQueryResponseBodyModule setBtripCause(String btripCause) {
