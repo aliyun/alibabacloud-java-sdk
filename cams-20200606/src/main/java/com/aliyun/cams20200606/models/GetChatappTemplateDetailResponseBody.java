@@ -7,15 +7,30 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>*   Example: OK. This value indicates that the request is successful.</p>
+     * <p>*   Other codes indicate that the request fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetChatappTemplateDetailResponseBodyData data;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -167,6 +182,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("PackageName")
         public String packageName;
 
+        /**
+         * <p>The phone number. This parameter is valid only if the returned value of the Type parameter is **PHONE_NUMBER**.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
@@ -176,15 +194,42 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("SignatureHash")
         public String signatureHash;
 
+        /**
+         * <p>The display name of the button.</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The type of the button. Valid values:</p>
+         * <br>
+         * <p>*   **PHONE_NUMBER**: a phone call button</p>
+         * <p>*   **URL**: a URL button</p>
+         * <p>*   **QUICK_REPLY**: a quick reply button</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   A quick reply button cannot coexist with a phone call button or a URL button in a message template.</p>
+         * <br>
+         * <p>*   You can add a combination of two URL buttons or a combination of a URL button and a phone call button to a message template.</p>
+         * <br>
+         * <p>*   You can add only one button to a Viber message template, and the button must be a URL button.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The URL to be accessed when you click the URL button.</p>
+         */
         @NameInMap("Url")
         public String url;
 
+        /**
+         * <p>The type of the URL. Valid values:</p>
+         * <br>
+         * <p>*   **static**: a static URL</p>
+         * <p>*   **dynamic**: a dynamic URL</p>
+         */
         @NameInMap("UrlType")
         public String urlType;
 
@@ -282,9 +327,15 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("AddSecretRecommendation")
         public Boolean addSecretRecommendation;
 
+        /**
+         * <p>This parameter applies only to components of the **BUTTONS** type. This parameter is passed in by converting its original JSON structure into a string.</p>
+         */
         @NameInMap("Buttons")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsButtons> buttons;
 
+        /**
+         * <p>The description of the file.</p>
+         */
         @NameInMap("Caption")
         public String caption;
 
@@ -294,15 +345,27 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("CodeExpirationMinutes")
         public Integer codeExpirationMinutes;
 
+        /**
+         * <p>The length of the video in the Viber message template. Valid values: 0 to 600. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <p>The name of the file.</p>
+         */
         @NameInMap("FileName")
         public String fileName;
 
+        /**
+         * <p>The type of the file attached in the Viber message template.</p>
+         */
         @NameInMap("FileType")
         public String fileType;
 
+        /**
+         * <p>The type of the media resources that are included in the message.</p>
+         */
         @NameInMap("Format")
         public String format;
 
@@ -330,15 +393,44 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Longitude")
         public String longitude;
 
+        /**
+         * <p>The text of the message that you want to send.</p>
+         */
         @NameInMap("Text")
         public String text;
 
+        /**
+         * <p>The thumbnail URL of the video in the Viber message template.</p>
+         */
         @NameInMap("ThumbUrl")
         public String thumbUrl;
 
+        /**
+         * <p>The type of the component. Valid values:</p>
+         * <br>
+         * <p>*   **BODY**</p>
+         * <p>*   **HEADER**</p>
+         * <p>*   **FOOTER**</p>
+         * <p>*   **BUTTONS**</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   The following limits apply to components in WhatsApp message templates: A component of the **BODY** type cannot exceed 1,024 characters. A component of the **HEADER** or **FOOTER** type cannot exceed 60 characters in length.</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   **FOOTER** components are not supported in Viber message templates.</p>
+         * <br>
+         * <p>> </p>
+         * <br>
+         * <p>*   In a Viber message template, a media resource, such as an image, a video, or a file, is placed in the **HEADER** component. If a Viber message contains text and an image, the image is placed under the text in the message received on a device.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The URL of the material.</p>
+         */
         @NameInMap("Url")
         public String url;
 
@@ -478,33 +570,93 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The review status of the message template. Valid values:</p>
+         * <br>
+         * <p>*   **pass**: The message template is approved.</p>
+         * <p>*   **fail**: The message template is rejected.</p>
+         * <p>*   **auditing**: The message template is being reviewed.</p>
+         * <p>*   **unaudit**: The review is suspended.</p>
+         */
         @NameInMap("AuditStatus")
         public String auditStatus;
 
+        /**
+         * <p>The category of the template when the returned value of TemplateType is WHATSAPP. Valid values:</p>
+         * <br>
+         * <p>*   **UTILITY**: a transactional template</p>
+         * <p>*   **MARKETING**: a marketing template</p>
+         * <p>*   **AUTHENTICATION**: an identity authentication template</p>
+         * <br>
+         * <p>The category of the template when the returned value of the TemplateType parameter is VIBER. Valid values:</p>
+         * <br>
+         * <p>*   **text**: a template that contains only text</p>
+         * <p>*   **image**: a template that contains only images</p>
+         * <p>*   **text_image_button**: a template that contains text, images, and buttons</p>
+         * <p>*   **text_button**: a template that contains text and buttons</p>
+         * <p>*   **document**: a template that contains only files</p>
+         * <p>*   **video**: a template that contains only videos</p>
+         * <p>*   **text_video**: a template that contains text and videos</p>
+         * <p>*   **text_video_button**: a template that contains text, videos, and buttons</p>
+         * <p>*   **text_image**: a template that contains text and images</p>
+         * <br>
+         * <p>> If Category is set to text_video_button, users cannot open a web page by clicking the button. Users can open only the video in the message. In this case, you do not need to specify the Url parameter for the URL button in the template.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The components of the message template.</p>
+         */
         @NameInMap("Components")
         public java.util.List<GetChatappTemplateDetailResponseBodyDataComponents> components;
 
+        /**
+         * <p>The examples of variables.</p>
+         */
         @NameInMap("Example")
         public java.util.Map<String, String> example;
 
+        /**
+         * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>Whatsapp中Authentication类型模板发送消息时的消息有效期</p>
+         */
         @NameInMap("MessageSendTtlSeconds")
         public Integer messageSendTtlSeconds;
 
+        /**
+         * <p>The name of the message template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>模板质量</p>
+         */
         @NameInMap("QualityScore")
         public String qualityScore;
 
+        @NameInMap("Reason")
+        public String reason;
+
+        /**
+         * <p>The code of the message template.</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 
+        /**
+         * <p>The type of the message template. Valid values:</p>
+         * <br>
+         * <p>*   **WHATSAPP**</p>
+         * <p>*   **VIBER**</p>
+         * <p>*   LINE (developing)</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 
@@ -575,6 +727,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
         public String getQualityScore() {
             return this.qualityScore;
+        }
+
+        public GetChatappTemplateDetailResponseBodyData setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public GetChatappTemplateDetailResponseBodyData setTemplateCode(String templateCode) {

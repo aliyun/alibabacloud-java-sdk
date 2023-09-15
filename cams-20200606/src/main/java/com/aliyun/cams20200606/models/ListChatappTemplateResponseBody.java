@@ -121,6 +121,9 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        @NameInMap("Reason")
+        public String reason;
+
         /**
          * <p>The code of the message template.</p>
          */
@@ -166,6 +169,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
         public String getLanguage() {
             return this.language;
+        }
+
+        public ListChatappTemplateResponseBodyListTemplate setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
         }
 
         public ListChatappTemplateResponseBodyListTemplate setTemplateCode(String templateCode) {

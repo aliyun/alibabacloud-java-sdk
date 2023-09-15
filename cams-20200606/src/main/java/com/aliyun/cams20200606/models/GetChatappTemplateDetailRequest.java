@@ -4,18 +4,36 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateDetailRequest extends TeaModel {
+    /**
+     * <p>The space ID of the user under the ISV account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The ID of the WhatsApp account that you registered.</p>
+     */
     @NameInMap("CustWabaId")
     @Deprecated
     public String custWabaId;
 
+    /**
+     * <p>The independent software vendor (ISV) verification code. This parameter is used to verify whether the user is authorized by the ISV account.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
+    /**
+     * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+     */
     @NameInMap("Language")
     public String language;
+
+    /**
+     * <p>The code of the message template.</p>
+     */
+    @NameInMap("TemplateCode")
+    public String templateCode;
 
     /**
      * <p>The type of the message template. Valid values:</p>
@@ -24,9 +42,6 @@ public class GetChatappTemplateDetailRequest extends TeaModel {
      * <p>*   **VIBER**</p>
      * <p>*   LINE (developing)</p>
      */
-    @NameInMap("TemplateCode")
-    public String templateCode;
-
     @NameInMap("TemplateType")
     public String templateType;
 
