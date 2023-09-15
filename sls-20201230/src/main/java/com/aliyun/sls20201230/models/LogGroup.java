@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class LogGroup extends TeaModel {
     @NameInMap("LogTags")
-    public LogTag logTags;
+    public java.util.List<LogTag> logTags;
 
     @NameInMap("Logs")
-    public LogItem logs;
+    public java.util.List<LogItem> logs;
 
     @NameInMap("Source")
     public String source;
@@ -21,19 +21,19 @@ public class LogGroup extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public LogGroup setLogTags(LogTag logTags) {
+    public LogGroup setLogTags(java.util.List<LogTag> logTags) {
         this.logTags = logTags;
         return this;
     }
-    public LogTag getLogTags() {
+    public java.util.List<LogTag> getLogTags() {
         return this.logTags;
     }
 
-    public LogGroup setLogs(LogItem logs) {
+    public LogGroup setLogs(java.util.List<LogItem> logs) {
         this.logs = logs;
         return this;
     }
-    public LogItem getLogs() {
+    public java.util.List<LogItem> getLogs() {
         return this.logs;
     }
 
