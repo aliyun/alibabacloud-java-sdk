@@ -4,6 +4,9 @@ package com.aliyun.eais20190624.models;
 import com.aliyun.tea.*;
 
 public class DescribeEaisRequest extends TeaModel {
+    @NameInMap("ClientInstanceId")
+    public String clientInstanceId;
+
     @NameInMap("ElasticAcceleratedInstanceIds")
     public String elasticAcceleratedInstanceIds;
 
@@ -34,6 +37,14 @@ public class DescribeEaisRequest extends TeaModel {
     public static DescribeEaisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEaisRequest self = new DescribeEaisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEaisRequest setClientInstanceId(String clientInstanceId) {
+        this.clientInstanceId = clientInstanceId;
+        return this;
+    }
+    public String getClientInstanceId() {
+        return this.clientInstanceId;
     }
 
     public DescribeEaisRequest setElasticAcceleratedInstanceIds(String elasticAcceleratedInstanceIds) {
