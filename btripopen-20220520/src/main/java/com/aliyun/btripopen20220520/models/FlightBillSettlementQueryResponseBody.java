@@ -265,6 +265,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("refund_fee")
         public Double refundFee;
 
+        @NameInMap("refund_result")
+        public String refundResult;
+
         @NameInMap("refund_upgrade_cost")
         public Double refundUpgradeCost;
 
@@ -821,6 +824,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getRefundFee() {
             return this.refundFee;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setRefundResult(String refundResult) {
+            this.refundResult = refundResult;
+            return this;
+        }
+        public String getRefundResult() {
+            return this.refundResult;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setRefundUpgradeCost(Double refundUpgradeCost) {

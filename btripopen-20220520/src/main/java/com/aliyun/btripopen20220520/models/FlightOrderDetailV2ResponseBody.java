@@ -1340,6 +1340,47 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
 
     }
 
+    public static class FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList extends TeaModel {
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
+
+        @NameInMap("open_ticket_status")
+        public Integer openTicketStatus;
+
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
+
+        public static FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList build(java.util.Map<String, ?> map) throws Exception {
+            FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList self = new FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList();
+            return TeaModel.build(map, self);
+        }
+
+        public FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList setJourneyIndex(Integer journeyIndex) {
+            this.journeyIndex = journeyIndex;
+            return this;
+        }
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        public FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList setOpenTicketStatus(Integer openTicketStatus) {
+            this.openTicketStatus = openTicketStatus;
+            return this;
+        }
+        public Integer getOpenTicketStatus() {
+            return this.openTicketStatus;
+        }
+
+        public FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+    }
+
     public static class FlightOrderDetailV2ResponseBodyModulePassengerListTickets extends TeaModel {
         @NameInMap("channel")
         public String channel;
@@ -1355,6 +1396,9 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
          */
         @NameInMap("pcc")
         public String pcc;
+
+        @NameInMap("segment_open_ticket_list")
+        public java.util.List<FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList> segmentOpenTicketList;
 
         @NameInMap("ticket_auth_memo")
         public String ticketAuthMemo;
@@ -1406,6 +1450,14 @@ public class FlightOrderDetailV2ResponseBody extends TeaModel {
         }
         public String getPcc() {
             return this.pcc;
+        }
+
+        public FlightOrderDetailV2ResponseBodyModulePassengerListTickets setSegmentOpenTicketList(java.util.List<FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList> segmentOpenTicketList) {
+            this.segmentOpenTicketList = segmentOpenTicketList;
+            return this;
+        }
+        public java.util.List<FlightOrderDetailV2ResponseBodyModulePassengerListTicketsSegmentOpenTicketList> getSegmentOpenTicketList() {
+            return this.segmentOpenTicketList;
         }
 
         public FlightOrderDetailV2ResponseBodyModulePassengerListTickets setTicketAuthMemo(String ticketAuthMemo) {

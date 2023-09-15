@@ -160,6 +160,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fees")
         public Double fees;
 
+        @NameInMap("fines")
+        public Double fines;
+
         @NameInMap("fu_point_fee")
         public Double fuPointFee;
 
@@ -171,6 +174,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
+
+        @NameInMap("is_early_departure")
+        public String isEarlyDeparture;
 
         @NameInMap("is_negotiation")
         public String isNegotiation;
@@ -492,6 +498,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.fees;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setFines(Double fines) {
+            this.fines = fines;
+            return this;
+        }
+        public Double getFines() {
+            return this.fines;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setFuPointFee(Double fuPointFee) {
             this.fuPointFee = fuPointFee;
             return this;
@@ -522,6 +536,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setIsEarlyDeparture(String isEarlyDeparture) {
+            this.isEarlyDeparture = isEarlyDeparture;
+            return this;
+        }
+        public String getIsEarlyDeparture() {
+            return this.isEarlyDeparture;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setIsNegotiation(String isNegotiation) {
