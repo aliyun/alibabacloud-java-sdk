@@ -12,6 +12,12 @@ public class ModifyRouteEntryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("NewNextHopId")
+    public String newNextHopId;
+
+    @NameInMap("NewNextHopType")
+    public String newNextHopType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -57,6 +63,22 @@ public class ModifyRouteEntryRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyRouteEntryRequest setNewNextHopId(String newNextHopId) {
+        this.newNextHopId = newNextHopId;
+        return this;
+    }
+    public String getNewNextHopId() {
+        return this.newNextHopId;
+    }
+
+    public ModifyRouteEntryRequest setNewNextHopType(String newNextHopType) {
+        this.newNextHopType = newNextHopType;
+        return this;
+    }
+    public String getNewNextHopType() {
+        return this.newNextHopType;
     }
 
     public ModifyRouteEntryRequest setOwnerAccount(String ownerAccount) {

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP bandwidth plan.</p>
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
-     * <p>Specifies whether to forcibly delete the EIP bandwidth plan. Valid values:</p>
+     * <p>Specifies whether to forcefully delete the Internet Shared Bandwidth instance. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): deletes the EIP bandwidth plan only when no EIPs are associated with the EIP bandwidth plan.</p>
-     * <p>*   **true**: disassociates all EIPs from the EIP bandwidth plan and deletes the EIP bandwidth plan.</p>
+     * <p>*   **false** (default): deletes the Internet Shared Bandwidth instance only when no EIPs are associated with the Internet Shared Bandwidth instance.</p>
+     * <p>*   **true**: disassociates all EIPs from the Internet Shared Bandwidth instance and deletes the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("Force")
     public String force;
@@ -26,7 +26,7 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the EIP bandwidth plan is created.</p>
+     * <p>The ID of the region where the Internet Shared Bandwidth instance is created.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

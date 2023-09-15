@@ -23,7 +23,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public String businessStatus;
 
     /**
-     * <p>The timestamp generated when the VPN gateway was created. Unit: milliseconds.</p>
+     * <p>The timestamp is generated when the VPN gateway was created. Unit: milliseconds.</p>
      * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      */

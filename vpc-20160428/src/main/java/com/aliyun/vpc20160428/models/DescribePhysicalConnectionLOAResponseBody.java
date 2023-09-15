@@ -178,6 +178,12 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         @NameInMap("LineLabel")
         public String lineLabel;
 
+        @NameInMap("LineSPContactInfo")
+        public String lineSPContactInfo;
+
+        @NameInMap("LineServiceProvider")
+        public String lineServiceProvider;
+
         /**
          * <p>The type of the Express Connect circuit. Valid values:</p>
          * <br>
@@ -272,6 +278,22 @@ public class DescribePhysicalConnectionLOAResponseBody extends TeaModel {
         }
         public String getLineLabel() {
             return this.lineLabel;
+        }
+
+        public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType setLineSPContactInfo(String lineSPContactInfo) {
+            this.lineSPContactInfo = lineSPContactInfo;
+            return this;
+        }
+        public String getLineSPContactInfo() {
+            return this.lineSPContactInfo;
+        }
+
+        public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType setLineServiceProvider(String lineServiceProvider) {
+            this.lineServiceProvider = lineServiceProvider;
+            return this;
+        }
+        public String getLineServiceProvider() {
+            return this.lineServiceProvider;
         }
 
         public DescribePhysicalConnectionLOAResponseBodyPhysicalConnectionLOAType setLineType(String lineType) {

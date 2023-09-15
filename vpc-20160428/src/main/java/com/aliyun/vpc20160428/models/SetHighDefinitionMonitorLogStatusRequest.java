@@ -17,13 +17,13 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The name of the project of Log Service.</p>
+     * <p>The name of the Simple Log Service (SLS) project.</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
-     * <p>The name of the Logstore of Log Service.</p>
+     * <p>The name of the Logstore.</p>
      */
     @NameInMap("LogStore")
     public String logStore;
@@ -35,7 +35,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance is deployed.</p>
+     * <p>The region ID of the instance.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -51,8 +51,8 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     /**
      * <p>The status of fine-grained monitoring. Valid values:</p>
      * <br>
-     * <p>*   **ON**: enables fine-grained monitoring.</p>
-     * <p>*   **OFF**: disables fine-grained monitoring.</p>
+     * <p>*   **ON**</p>
+     * <p>*   **OFF**</p>
      */
     @NameInMap("Status")
     public String status;
