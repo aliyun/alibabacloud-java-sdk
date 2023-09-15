@@ -562,7 +562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following limits:
       * *   The CIDR block and the IP address pool must belong to the same region.
       * *   The CIDR block and the IP address pool must use the same line type.
-      * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      * *   **AddPublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
       *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
       *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
       * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
@@ -635,7 +635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * Before you call this operation, take note of the following limits:
       * *   The CIDR block and the IP address pool must belong to the same region.
       * *   The CIDR block and the IP address pool must use the same line type.
-      * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      * *   **AddPublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
       *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
       *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
       * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
@@ -2380,8 +2380,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
-      * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+      * Before you call this operation, take note of the following items:
+      * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.
+      * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation within a specific time period.
       *
       * @param request CancelCommonBandwidthPackageIpBandwidthRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2436,8 +2437,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the EIP bandwidth plan.
-      * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation to remove the maximum bandwidth configured for an EIP within the specified period of time.
+      * Before you call this operation, take note of the following items:
+      * *   After this operation is performed, the maximum bandwidth of the EIP equals that of the Internet Shared Bandwidth instance.
+      * *   You cannot repeatedly call the **CancelCommonBandwidthPackageIpBandwidth** operation within a specific time period.
       *
       * @param request CancelCommonBandwidthPackageIpBandwidthRequest
       * @return CancelCommonBandwidthPackageIpBandwidthResponse
@@ -2682,6 +2684,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.finishWork)) {
+            query.put("FinishWork", request.finishWork);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -2692,6 +2698,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.lineLabel)) {
             query.put("LineLabel", request.lineLabel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineSPContactInfo)) {
+            query.put("LineSPContactInfo", request.lineSPContactInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.lineServiceProvider)) {
+            query.put("LineServiceProvider", request.lineServiceProvider);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -6838,7 +6852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
-      * *   When you create a destination-based route for an IPsec-VPN connection, do not create a route that meets the following conditions: The destination CIDR block is 100.64.0.0/10 or one of its subnets. The next hop is the IPsec-VPN connection. Such a route results in one of the following errors: The status of the IPsec-VPN connection cannot be displayed in the console. The negotiations of the IPsec-VPN connection fail.
+      * *   Do not add a route whose destination CIDR block is 100.64.0.0/10, a subset of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. If such a route is added, the status of the IPsec-VPN connection cannot be displayed in the console or IPsec negotiations fail. 
       * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of a route based on the status of the associated IPsec-VPN connection.
       *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
       *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
@@ -6914,7 +6928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   You cannot create a destination-based route whose destination CIDR block is 0.0.0.0/0.
-      * *   When you create a destination-based route for an IPsec-VPN connection, do not create a route that meets the following conditions: The destination CIDR block is 100.64.0.0/10 or one of its subnets. The next hop is the IPsec-VPN connection. Such a route results in one of the following errors: The status of the IPsec-VPN connection cannot be displayed in the console. The negotiations of the IPsec-VPN connection fail.
+      * *   Do not add a route whose destination CIDR block is 100.64.0.0/10, a subset of 100.64.0.0/10, or a CIDR block that contains 100.64.0.0/10. If such a route is added, the status of the IPsec-VPN connection cannot be displayed in the console or IPsec negotiations fail. 
       * *   **CreateVcoRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeVpnConnection](~~53046~~) operation to query the status of a route based on the status of the associated IPsec-VPN connection.
       *     *   If the IPsec-VPN connection is in the **updating** state, the route is being created.
       *     *   If the IPsec-VPN connection is in the **attached** state, the route is created.
@@ -8394,7 +8408,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+      * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an Internet Shared Bandwidth instance within the specified period of time.
       *
       * @param request DeleteCommonBandwidthPackageRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8449,7 +8463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an EIP bandwidth plan within the specified period of time.
+      * You cannot repeatedly call the **DeleteCommonBandwidthPackage** operation to delete an Internet Shared Bandwidth instance within the specified period of time.
       *
       * @param request DeleteCommonBandwidthPackageRequest
       * @return DeleteCommonBandwidthPackageResponse
@@ -9966,12 +9980,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      * Before you call this operation, take note of the following items:
+      * *   Before you delete a CIDR block, make sure that it is not being used.
+      * *   **DeletePublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
       *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
       *     *   If you cannot query the CIDR block, the CIDR block is deleted.
       * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
-      * ## Prerequisites
-      * Before you delete a CIDR block, make sure that it is not being used.
       *
       * @param request DeletePublicIpAddressPoolCidrBlockRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -10034,12 +10048,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      * Before you call this operation, take note of the following items:
+      * *   Before you delete a CIDR block, make sure that it is not being used.
+      * *   **DeletePublicIpAddressPoolCidrBlock** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of the task.
       *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
       *     *   If you cannot query the CIDR block, the CIDR block is deleted.
       * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
-      * ## Prerequisites
-      * Before you delete a CIDR block, make sure that it is not being used.
       *
       * @param request DeletePublicIpAddressPoolCidrBlockRequest
       * @return DeletePublicIpAddressPoolCidrBlockResponse
@@ -10887,6 +10901,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVSwitchResponse deleteVSwitch(DeleteVSwitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVSwitchWithOptions(request, runtime);
+    }
+
+    public DeleteVSwitchCidrReservationResponse deleteVSwitchCidrReservationWithOptions(DeleteVSwitchCidrReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchCidrReservationId)) {
+            query.put("VSwitchCidrReservationId", request.vSwitchCidrReservationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVSwitchCidrReservation"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVSwitchCidrReservationResponse());
+    }
+
+    public DeleteVSwitchCidrReservationResponse deleteVSwitchCidrReservation(DeleteVSwitchCidrReservationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVSwitchCidrReservationWithOptions(request, runtime);
     }
 
     public DeleteVbrHaResponse deleteVbrHaWithOptions(DeleteVbrHaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -21736,6 +21799,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.newNextHopId)) {
+            query.put("NewNextHopId", request.newNextHopId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newNextHopType)) {
+            query.put("NewNextHopType", request.newNextHopType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -24165,7 +24236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
-      * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+      * *   **ReleaseEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
       *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
       *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
       * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
@@ -24224,7 +24295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * *   After you call the **ReleaseEipSegmentAddress** operation, all EIPs in the specified group are released.
-      * *   The **ReleaseEipSegmentAddress** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of a group of contiguous EIPs:
+      * *   **ReleaseEipSegmentAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](~~156063~~) operation to query the status of the task.
       *     *   If the group is in the **Releasing** state, EIPs in the group are being released. In this state, you can only query the group and cannot perform other operations.
       *     *   If you cannot query the group of contiguous EIPs, the contiguous EIPs are released.
       * *   You cannot repeatedly call the **ReleaseEipSegmentAddress** operation to release a group of contiguous EIPs within the specified period of time.
@@ -25318,10 +25389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+      * *   **UnassociateEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
       *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
       *     *   If the EIP is in the **Available** state, the EIP is disassociated.
-      * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+      * *   You cannot repeatedly call the **UnassociateEipAddress** operation within the specified period of time.
       *
       * @param request UnassociateEipAddressRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -25392,10 +25463,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+      * *   **UnassociateEipAddress** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of the task.
       *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
       *     *   If the EIP is in the **Available** state, the EIP is disassociated.
-      * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
+      * *   You cannot repeatedly call the **UnassociateEipAddress** operation within the specified period of time.
       *
       * @param request UnassociateEipAddressRequest
       * @return UnassociateEipAddressResponse

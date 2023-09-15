@@ -14,6 +14,9 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("FinishWork")
+    public Boolean finishWork;
+
     /**
      * <p>The ID of the Express Connect circuit.</p>
      */
@@ -31,6 +34,12 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
      */
     @NameInMap("LineLabel")
     public String lineLabel;
+
+    @NameInMap("LineSPContactInfo")
+    public String lineSPContactInfo;
+
+    @NameInMap("LineServiceProvider")
+    public String lineServiceProvider;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -65,6 +74,14 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CompletePhysicalConnectionLOARequest setFinishWork(Boolean finishWork) {
+        this.finishWork = finishWork;
+        return this;
+    }
+    public Boolean getFinishWork() {
+        return this.finishWork;
+    }
+
     public CompletePhysicalConnectionLOARequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -87,6 +104,22 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
     }
     public String getLineLabel() {
         return this.lineLabel;
+    }
+
+    public CompletePhysicalConnectionLOARequest setLineSPContactInfo(String lineSPContactInfo) {
+        this.lineSPContactInfo = lineSPContactInfo;
+        return this;
+    }
+    public String getLineSPContactInfo() {
+        return this.lineSPContactInfo;
+    }
+
+    public CompletePhysicalConnectionLOARequest setLineServiceProvider(String lineServiceProvider) {
+        this.lineServiceProvider = lineServiceProvider;
+        return this;
+    }
+    public String getLineServiceProvider() {
+        return this.lineServiceProvider;
     }
 
     public CompletePhysicalConnectionLOARequest setOwnerAccount(String ownerAccount) {

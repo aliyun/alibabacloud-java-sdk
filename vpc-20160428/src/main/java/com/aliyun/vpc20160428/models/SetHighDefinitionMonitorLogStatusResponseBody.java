@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetHighDefinitionMonitorLogStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -13,8 +13,8 @@ public class SetHighDefinitionMonitorLogStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation is performed. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public String success;
