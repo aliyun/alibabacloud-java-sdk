@@ -64,6 +64,9 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     @NameInMap("RegistrationDateSort")
     public Boolean registrationDateSort;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("StartExpirationDate")
     public Long startExpirationDate;
 
@@ -75,6 +78,9 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
 
     @NameInMap("Suffixs")
     public String suffixs;
+
+    @NameInMap("Tag")
+    public java.util.List<QueryAdvancedDomainListRequestTag> tag;
 
     @NameInMap("TradeType")
     public Integer tradeType;
@@ -247,6 +253,14 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
         return this.registrationDateSort;
     }
 
+    public QueryAdvancedDomainListRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public QueryAdvancedDomainListRequest setStartExpirationDate(Long startExpirationDate) {
         this.startExpirationDate = startExpirationDate;
         return this;
@@ -279,6 +293,14 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
         return this.suffixs;
     }
 
+    public QueryAdvancedDomainListRequest setTag(java.util.List<QueryAdvancedDomainListRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<QueryAdvancedDomainListRequestTag> getTag() {
+        return this.tag;
+    }
+
     public QueryAdvancedDomainListRequest setTradeType(Integer tradeType) {
         this.tradeType = tradeType;
         return this;
@@ -293,6 +315,36 @@ public class QueryAdvancedDomainListRequest extends TeaModel {
     }
     public String getUserClientIp() {
         return this.userClientIp;
+    }
+
+    public static class QueryAdvancedDomainListRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QueryAdvancedDomainListRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            QueryAdvancedDomainListRequestTag self = new QueryAdvancedDomainListRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryAdvancedDomainListRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QueryAdvancedDomainListRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

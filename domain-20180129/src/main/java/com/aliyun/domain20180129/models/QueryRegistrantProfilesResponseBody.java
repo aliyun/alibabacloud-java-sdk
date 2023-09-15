@@ -110,6 +110,12 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("CredentialNo")
+        public String credentialNo;
+
+        @NameInMap("CredentialType")
+        public String credentialType;
+
         @NameInMap("DefaultRegistrantProfile")
         public Boolean defaultRegistrantProfile;
 
@@ -205,6 +211,22 @@ public class QueryRegistrantProfilesResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setCredentialNo(String credentialNo) {
+            this.credentialNo = credentialNo;
+            return this;
+        }
+        public String getCredentialNo() {
+            return this.credentialNo;
+        }
+
+        public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setCredentialType(String credentialType) {
+            this.credentialType = credentialType;
+            return this;
+        }
+        public String getCredentialType() {
+            return this.credentialType;
         }
 
         public QueryRegistrantProfilesResponseBodyRegistrantProfilesRegistrantProfile setDefaultRegistrantProfile(Boolean defaultRegistrantProfile) {

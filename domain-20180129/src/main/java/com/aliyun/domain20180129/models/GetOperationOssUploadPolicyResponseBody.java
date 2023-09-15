@@ -16,6 +16,9 @@ public class GetOperationOssUploadPolicyResponseBody extends TeaModel {
     @NameInMap("FileDir")
     public String fileDir;
 
+    /**
+     * <p>OSS Endpoint。</p>
+     */
     @NameInMap("Host")
     public String host;
 
