@@ -711,6 +711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeEaisResponse describeEaisWithOptions(DescribeEaisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientInstanceId)) {
+            query.put("ClientInstanceId", request.clientInstanceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.elasticAcceleratedInstanceIds)) {
             query.put("ElasticAcceleratedInstanceIds", request.elasticAcceleratedInstanceIds);
         }
