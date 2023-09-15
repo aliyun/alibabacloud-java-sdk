@@ -4,15 +4,30 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class CreateChatappTemplateResponseBody extends TeaModel {
+    /**
+     * <p>访问被拒绝详细信息。</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public CreateChatappTemplateResponseBodyData data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -68,9 +83,15 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     }
 
     public static class CreateChatappTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The code of the message template.</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 
+        /**
+         * <p>The name of the message template.</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
