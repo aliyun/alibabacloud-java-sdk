@@ -11,7 +11,7 @@ public class MLDataParamPredictionsValue extends TeaModel {
     public Long updateTime;
 
     @NameInMap("results")
-    public java.util.List<String> results;
+    public java.util.List<java.util.Map<String, String>> results;
 
     public static MLDataParamPredictionsValue build(java.util.Map<String, ?> map) throws Exception {
         MLDataParamPredictionsValue self = new MLDataParamPredictionsValue();
@@ -34,11 +34,11 @@ public class MLDataParamPredictionsValue extends TeaModel {
         return this.updateTime;
     }
 
-    public MLDataParamPredictionsValue setResults(java.util.List<String> results) {
+    public MLDataParamPredictionsValue setResults(java.util.List<java.util.Map<String, String>> results) {
         this.results = results;
         return this;
     }
-    public java.util.List<String> getResults() {
+    public java.util.List<java.util.Map<String, String>> getResults() {
         return this.results;
     }
 
