@@ -81,6 +81,9 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("Protocol")
     public String protocol;
 
+    @NameInMap("QuicVersion")
+    public String quicVersion;
+
     /**
      * <p>The region ID of the NLB instance.</p>
      * <br>
@@ -213,6 +216,14 @@ public class CreateServerGroupRequest extends TeaModel {
     }
     public String getProtocol() {
         return this.protocol;
+    }
+
+    public CreateServerGroupRequest setQuicVersion(String quicVersion) {
+        this.quicVersion = quicVersion;
+        return this;
+    }
+    public String getQuicVersion() {
+        return this.quicVersion;
     }
 
     public CreateServerGroupRequest setRegionId(String regionId) {

@@ -554,6 +554,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Protocol", request.protocol);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.quicVersion)) {
+            body.put("QuicVersion", request.quicVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             body.put("RegionId", request.regionId);
         }
@@ -2543,6 +2547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.preserveClientIpEnabled)) {
             body.put("PreserveClientIpEnabled", request.preserveClientIpEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quicVersion)) {
+            body.put("QuicVersion", request.quicVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

@@ -53,6 +53,9 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     @NameInMap("PreserveClientIpEnabled")
     public Boolean preserveClientIpEnabled;
 
+    @NameInMap("QuicVersion")
+    public String quicVersion;
+
     /**
      * <p>The region ID of the NLB instance.</p>
      * <br>
@@ -138,6 +141,14 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
     }
     public Boolean getPreserveClientIpEnabled() {
         return this.preserveClientIpEnabled;
+    }
+
+    public UpdateServerGroupAttributeRequest setQuicVersion(String quicVersion) {
+        this.quicVersion = quicVersion;
+        return this;
+    }
+    public String getQuicVersion() {
+        return this.quicVersion;
     }
 
     public UpdateServerGroupAttributeRequest setRegionId(String regionId) {

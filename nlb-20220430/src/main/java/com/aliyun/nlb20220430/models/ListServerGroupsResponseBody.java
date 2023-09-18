@@ -371,6 +371,9 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
+        @NameInMap("QuicVersion")
+        public String quicVersion;
+
         /**
          * <p>The region ID of the NLB instance.</p>
          */
@@ -517,6 +520,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
         public String getProtocol() {
             return this.protocol;
+        }
+
+        public ListServerGroupsResponseBodyServerGroups setQuicVersion(String quicVersion) {
+            this.quicVersion = quicVersion;
+            return this;
+        }
+        public String getQuicVersion() {
+            return this.quicVersion;
         }
 
         public ListServerGroupsResponseBodyServerGroups setRegionId(String regionId) {
