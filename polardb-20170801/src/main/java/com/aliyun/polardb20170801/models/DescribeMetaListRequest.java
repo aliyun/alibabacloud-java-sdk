@@ -58,6 +58,9 @@ public class DescribeMetaListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RegionCode")
+    public String regionCode;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -134,6 +137,14 @@ public class DescribeMetaListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeMetaListRequest setRegionCode(String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+    }
+    public String getRegionCode() {
+        return this.regionCode;
     }
 
     public DescribeMetaListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
