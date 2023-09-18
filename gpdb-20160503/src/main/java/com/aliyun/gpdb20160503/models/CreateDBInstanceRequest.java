@@ -4,6 +4,11 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the backup set.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDataBackups](~~210093~~) operation to query the IDs of all backup sets in the instance.</p>
+     */
     @NameInMap("BackupId")
     public String backupId;
 
@@ -16,10 +21,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to load a sample dataset after the instance is created. Valid values:</p>
      * <br>
-     * <p>- **true**</p>
-     * <p>- **false**</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      * <br>
-     * <p>If you do not specify this parameter, no sample dataset is loaded.</p>
+     * <p>>  If you do not specify this parameter, no sample dataset is loaded.</p>
      */
     @NameInMap("CreateSampleData")
     public Boolean createSampleData;
@@ -112,11 +117,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer idleTime;
 
     /**
-     * <p>The network type of the instance. Set the value to VPC.</p>
+     * <p>The network type of the instance. Set the value to **VPC**.</p>
      * <br>
      * <p>> </p>
-     * <p>- Only the Virtual Private Cloud (VPC) type is supported.</p>
-     * <p>- If you do not specify this parameter, VPC is used.</p>
+     * <br>
+     * <p>*   Only the Virtual Private Cloud (VPC) type is supported in Alibaba Cloud public cloud.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, VPC is used.</p>
      */
     @NameInMap("InstanceNetworkType")
     public String instanceNetworkType;
@@ -147,6 +154,17 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("InstanceSpec")
     public String instanceSpec;
 
+    /**
+     * <p>The amount of coordinator node resources. Valid values:</p>
+     * <br>
+     * <p>*   2 CU</p>
+     * <p>*   4 CU</p>
+     * <p>*   8 CU</p>
+     * <p>*   16 CU</p>
+     * <p>*   32 CU</p>
+     * <br>
+     * <p>>  You are charged for coordinator node resources of more than 8 CUs.</p>
+     */
     @NameInMap("MasterCU")
     public Integer masterCU;
 
@@ -187,7 +205,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The private IP address of the instance.</p>
+     * <p>This parameter is no longer used.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -267,13 +285,18 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ServerlessResource")
     public Integer serverlessResource;
 
+    /**
+     * <p>The ID of the source instance.</p>
+     * <br>
+     * <p>>  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</p>
+     */
     @NameInMap("SrcDbInstanceName")
     public String srcDbInstanceName;
 
     /**
-     * <p>The storage capacity of the instance. Unit: GB. Valid values: 50 to 4000.</p>
+     * <p>The storage capacity of the instance. Unit: GB. Valid values: 50 to 6000.</p>
      * <br>
-     * <p>> This parameter must be specified when you create an instance in elastic storage mode.</p>
+     * <p>>  This parameter must be specified when you create an instance in elastic storage mode.</p>
      */
     @NameInMap("StorageSize")
     public Long storageSize;
@@ -304,8 +327,10 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The VPC ID of the instance.</p>
      * <br>
      * <p>> </p>
-     * <p>- This parameter must be specified.</p>
-     * <p>- The region where the VPC resides must be the same as the region that is specified by RegionId.</p>
+     * <br>
+     * <p>*   **This parameter** must be specified.</p>
+     * <br>
+     * <p>*   The region where the **VPC** resides must be the same as the region that is specified by **RegionId**.</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
@@ -314,21 +339,25 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The vSwitch ID of the instance.</p>
      * <br>
      * <p>> </p>
-     * <p>- This parameter must be specified.</p>
-     * <p>- The zone where the vSwitch resides must be the same as the zone that is specified by ZoneId.</p>
+     * <br>
+     * <p>*   **This parameter** must be specified.</p>
+     * <br>
+     * <p>*   The zone where the **vSwitch** resides must be the same as the zone that is specified by **ZoneId**.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>Specifies whether to enable vector engine optimization. Valid values:</p>
+     * <p>Specifies whether to enable vector search engine optimization. Valid values:</p>
      * <br>
-     * <p>- **enabled**</p>
-     * <p>- **disabled** (default)</p>
+     * <p>*   **enabled**</p>
+     * <p>*   **disabled** (default)</p>
      * <br>
      * <p>> </p>
-     * <p>- We recommend that you do not enable vector engine optimization in mainstream analysis and real-time data warehousing scenarios.</p>
-     * <p>- We recommend that you enable vector engine optimization in AI Generated Content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</p>
+     * <br>
+     * <p>*   We recommend that you **do not enable** vector search engine optimization in mainstream analysis, data warehousing, and real-time data warehousing scenarios.</p>
+     * <br>
+     * <p>*   We recommend that you **enable** vector search engine optimization in AI-generated content (AIGC) and vector retrieval scenarios that require the vector analysis engine.</p>
      */
     @NameInMap("VectorConfigurationStatus")
     public String vectorConfigurationStatus;

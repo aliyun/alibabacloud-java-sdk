@@ -24,7 +24,7 @@ public class DescribeAvailableResourcesRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <br>
-     * <p>> You can call the [DescribeRegions](~~86912~~)operation to query the most recent zone list.</p>
+     * <p>> You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
