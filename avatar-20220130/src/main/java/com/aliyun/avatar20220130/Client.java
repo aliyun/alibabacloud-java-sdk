@@ -69,6 +69,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.cancelVideoTaskWithOptions(request, runtime);
     }
 
+    public ClientAuthResponse clientAuthWithOptions(ClientAuthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceId)) {
+            query.put("DeviceId", request.deviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceInfo)) {
+            query.put("DeviceInfo", request.deviceInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            query.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.license)) {
+            query.put("License", request.license);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClientAuth"),
+            new TeaPair("version", "2022-01-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClientAuthResponse());
+    }
+
+    public ClientAuthResponse clientAuth(ClientAuthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clientAuthWithOptions(request, runtime);
+    }
+
+    public ClientStartResponse clientStartWithOptions(ClientStartRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ClientStart"),
+            new TeaPair("version", "2022-01-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ClientStartResponse());
+    }
+
+    public ClientStartResponse clientStart(ClientStartRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.clientStartWithOptions(request, runtime);
+    }
+
     public CloseTimedResetOperateResponse closeTimedResetOperateWithOptions(CloseTimedResetOperateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -554,6 +636,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryVideoTaskInfoResponse queryVideoTaskInfo(QueryVideoTaskInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryVideoTaskInfoWithOptions(request, runtime);
+    }
+
+    public Render3dAvatarResponse render3dAvatarWithOptions(Render3dAvatarRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.code)) {
+            query.put("Code", request.code);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Render3dAvatar"),
+            new TeaPair("version", "2022-01-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Render3dAvatarResponse());
+    }
+
+    public Render3dAvatarResponse render3dAvatar(Render3dAvatarRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.render3dAvatarWithOptions(request, runtime);
     }
 
     public SendCommandResponse sendCommandWithOptions(SendCommandRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
