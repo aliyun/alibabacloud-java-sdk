@@ -2513,8 +2513,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("configName", request.configName);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
-            query.put("logstore", request.logstore);
+        if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {
+            query.put("logstoreName", request.logstoreName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
