@@ -4,6 +4,9 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListSnapshotsRequest extends TeaModel {
+    @NameInMap("AcsProduct")
+    public String acsProduct;
+
     /**
      * <p>The disk ID.</p>
      */
@@ -56,6 +59,14 @@ public class ListSnapshotsRequest extends TeaModel {
     public static ListSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSnapshotsRequest self = new ListSnapshotsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSnapshotsRequest setAcsProduct(String acsProduct) {
+        this.acsProduct = acsProduct;
+        return this;
+    }
+    public String getAcsProduct() {
+        return this.acsProduct;
     }
 
     public ListSnapshotsRequest setDiskId(String diskId) {
