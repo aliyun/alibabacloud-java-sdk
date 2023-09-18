@@ -98,6 +98,9 @@ public class ListAdvertisingRequest extends TeaModel {
     }
 
     public static class ListAdvertisingRequestApp extends TeaModel {
+        @NameInMap("Appid")
+        public String appid;
+
         @NameInMap("Ext")
         public java.util.Map<String, ?> ext;
 
@@ -110,6 +113,14 @@ public class ListAdvertisingRequest extends TeaModel {
         public static ListAdvertisingRequestApp build(java.util.Map<String, ?> map) throws Exception {
             ListAdvertisingRequestApp self = new ListAdvertisingRequestApp();
             return TeaModel.build(map, self);
+        }
+
+        public ListAdvertisingRequestApp setAppid(String appid) {
+            this.appid = appid;
+            return this;
+        }
+        public String getAppid() {
+            return this.appid;
         }
 
         public ListAdvertisingRequestApp setExt(java.util.Map<String, ?> ext) {
