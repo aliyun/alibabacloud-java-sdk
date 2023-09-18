@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20230930.models;
 
 import com.aliyun.tea.*;
 
-public class ListSkuSaleInfosResponse extends TeaModel {
+public class GetSelectionProductSaleInfoResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class ListSkuSaleInfosResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public SkuSaleInfoListResult body;
+    public ProductSaleInfo body;
 
-    public static ListSkuSaleInfosResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListSkuSaleInfosResponse self = new ListSkuSaleInfosResponse();
+    public static GetSelectionProductSaleInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetSelectionProductSaleInfoResponse self = new GetSelectionProductSaleInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListSkuSaleInfosResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetSelectionProductSaleInfoResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListSkuSaleInfosResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListSkuSaleInfosResponse setStatusCode(Integer statusCode) {
+    public GetSelectionProductSaleInfoResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class ListSkuSaleInfosResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListSkuSaleInfosResponse setBody(SkuSaleInfoListResult body) {
+    public GetSelectionProductSaleInfoResponse setBody(ProductSaleInfo body) {
         this.body = body;
         return this;
     }
-    public SkuSaleInfoListResult getBody() {
+    public ProductSaleInfo getBody() {
         return this.body;
     }
 

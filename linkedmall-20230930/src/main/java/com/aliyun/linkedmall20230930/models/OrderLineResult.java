@@ -19,14 +19,14 @@ public class OrderLineResult extends TeaModel {
     @NameInMap("orderLineStatus")
     public String orderLineStatus;
 
+    @NameInMap("payFee")
+    public Long payFee;
+
     @NameInMap("productId")
     public String productId;
 
     @NameInMap("productPic")
     public String productPic;
-
-    @NameInMap("productPrice")
-    public java.util.List<ProductPrice> productPrice;
 
     @NameInMap("productTitle")
     public String productTitle;
@@ -82,6 +82,14 @@ public class OrderLineResult extends TeaModel {
         return this.orderLineStatus;
     }
 
+    public OrderLineResult setPayFee(Long payFee) {
+        this.payFee = payFee;
+        return this;
+    }
+    public Long getPayFee() {
+        return this.payFee;
+    }
+
     public OrderLineResult setProductId(String productId) {
         this.productId = productId;
         return this;
@@ -96,14 +104,6 @@ public class OrderLineResult extends TeaModel {
     }
     public String getProductPic() {
         return this.productPic;
-    }
-
-    public OrderLineResult setProductPrice(java.util.List<ProductPrice> productPrice) {
-        this.productPrice = productPrice;
-        return this;
-    }
-    public java.util.List<ProductPrice> getProductPrice() {
-        return this.productPrice;
     }
 
     public OrderLineResult setProductTitle(String productTitle) {

@@ -3,16 +3,16 @@ package com.aliyun.linkedmall20230930.models;
 
 import com.aliyun.tea.*;
 
-public class ListSkuSaleInfosRequest extends TeaModel {
+public class ListSelectionSkuSaleInfosRequest extends TeaModel {
     @NameInMap("body")
     public SkuSaleInfoListQuery body;
 
-    public static ListSkuSaleInfosRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListSkuSaleInfosRequest self = new ListSkuSaleInfosRequest();
+    public static ListSelectionSkuSaleInfosRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListSelectionSkuSaleInfosRequest self = new ListSelectionSkuSaleInfosRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListSkuSaleInfosRequest setBody(SkuSaleInfoListQuery body) {
+    public ListSelectionSkuSaleInfosRequest setBody(SkuSaleInfoListQuery body) {
         this.body = body;
         return this;
     }

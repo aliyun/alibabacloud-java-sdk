@@ -7,9 +7,6 @@ public class RefundRenderResult extends TeaModel {
     @NameInMap("bizClaimType")
     public Integer bizClaimType;
 
-    @NameInMap("mainOrderRefund")
-    public Boolean mainOrderRefund;
-
     @NameInMap("maxRefundFeeData")
     public DistributionMaxRefundFee maxRefundFeeData;
 
@@ -33,14 +30,6 @@ public class RefundRenderResult extends TeaModel {
     }
     public Integer getBizClaimType() {
         return this.bizClaimType;
-    }
-
-    public RefundRenderResult setMainOrderRefund(Boolean mainOrderRefund) {
-        this.mainOrderRefund = mainOrderRefund;
-        return this;
-    }
-    public Boolean getMainOrderRefund() {
-        return this.mainOrderRefund;
     }
 
     public RefundRenderResult setMaxRefundFeeData(DistributionMaxRefundFee maxRefundFeeData) {

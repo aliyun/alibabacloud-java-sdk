@@ -4,11 +4,14 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ShopPageDataResult extends TeaModel {
-    @NameInMap("channelSupplierId")
-    public String channelSupplierId;
+    @NameInMap("cooperationShops")
+    public java.util.List<CooperationShop> cooperationShops;
 
     @NameInMap("endDate")
     public String endDate;
+
+    @NameInMap("purchaserId")
+    public String purchaserId;
 
     @NameInMap("shopId")
     public String shopId;
@@ -30,12 +33,12 @@ public class ShopPageDataResult extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ShopPageDataResult setChannelSupplierId(String channelSupplierId) {
-        this.channelSupplierId = channelSupplierId;
+    public ShopPageDataResult setCooperationShops(java.util.List<CooperationShop> cooperationShops) {
+        this.cooperationShops = cooperationShops;
         return this;
     }
-    public String getChannelSupplierId() {
-        return this.channelSupplierId;
+    public java.util.List<CooperationShop> getCooperationShops() {
+        return this.cooperationShops;
     }
 
     public ShopPageDataResult setEndDate(String endDate) {
@@ -44,6 +47,14 @@ public class ShopPageDataResult extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public ShopPageDataResult setPurchaserId(String purchaserId) {
+        this.purchaserId = purchaserId;
+        return this;
+    }
+    public String getPurchaserId() {
+        return this.purchaserId;
     }
 
     public ShopPageDataResult setShopId(String shopId) {

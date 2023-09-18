@@ -4,14 +4,20 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class Shop extends TeaModel {
-    @NameInMap("channelSupplierId")
-    public String channelSupplierId;
+    @NameInMap("cooperationShops")
+    public java.util.List<CooperationShop> cooperationShops;
 
     @NameInMap("distributorId")
     public String distributorId;
 
     @NameInMap("endDate")
     public String endDate;
+
+    @NameInMap("purchaserId")
+    public String purchaserId;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     @NameInMap("shopId")
     public String shopId;
@@ -33,12 +39,12 @@ public class Shop extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public Shop setChannelSupplierId(String channelSupplierId) {
-        this.channelSupplierId = channelSupplierId;
+    public Shop setCooperationShops(java.util.List<CooperationShop> cooperationShops) {
+        this.cooperationShops = cooperationShops;
         return this;
     }
-    public String getChannelSupplierId() {
-        return this.channelSupplierId;
+    public java.util.List<CooperationShop> getCooperationShops() {
+        return this.cooperationShops;
     }
 
     public Shop setDistributorId(String distributorId) {
@@ -55,6 +61,22 @@ public class Shop extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public Shop setPurchaserId(String purchaserId) {
+        this.purchaserId = purchaserId;
+        return this;
+    }
+    public String getPurchaserId() {
+        return this.purchaserId;
+    }
+
+    public Shop setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public Shop setShopId(String shopId) {

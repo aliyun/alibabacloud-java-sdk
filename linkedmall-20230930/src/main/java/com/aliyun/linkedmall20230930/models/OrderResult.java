@@ -14,7 +14,7 @@ public class OrderResult extends TeaModel {
     public String logisticsStatus;
 
     @NameInMap("orderAmount")
-    public String orderAmount;
+    public Long orderAmount;
 
     @NameInMap("orderId")
     public String orderId;
@@ -57,11 +57,11 @@ public class OrderResult extends TeaModel {
         return this.logisticsStatus;
     }
 
-    public OrderResult setOrderAmount(String orderAmount) {
+    public OrderResult setOrderAmount(Long orderAmount) {
         this.orderAmount = orderAmount;
         return this;
     }
-    public String getOrderAmount() {
+    public Long getOrderAmount() {
         return this.orderAmount;
     }
 
