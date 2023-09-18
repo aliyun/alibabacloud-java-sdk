@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>partnerintl20181227</artifactId>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
   <packaging>jar</packaging>
   <name>partnerintl20181227</name>
   <description>Alibaba Cloud partnerintl (20181227) SDK for Java
