@@ -8,7 +8,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
+        this._endpointMap = TeaConverter.buildMap(
+            new TeaPair("cn-qingdao", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-beijing", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "mongodb.cn-zhangjiakou.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "mongodb.cn-huhehaote.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "mongodb.cn-chengdu.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "mongodb.aliyuncs.com"),
+            new TeaPair("ap-northeast-1", "mongodb.ap-northeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "mongodb.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "mongodb.ap-southeast-2.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "mongodb.ap-southeast-3.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "mongodb.ap-southeast-5.aliyuncs.com"),
+            new TeaPair("us-east-1", "mongodb.us-east-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "mongodb.us-west-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "mongodb.eu-west-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "mongodb.eu-central-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "mongodb.ap-south-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "mongodb.me-east-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-north-2-gov-1", "mongodb.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-pop", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-beijing-gov-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-beijing-nu16-b01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-edge-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-fujian", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-haidian-cm12-c01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-bj-b01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-prod-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-2", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-internal-test-3", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-test-306", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-hongkong-finance-pop", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-qingdao-nebula", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et15-b01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-et2-b01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-inner", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shanghai-internal-test-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-inner", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-st4-d01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-su18-b01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-wuhan", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-yushanfang", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-zhangbei-na61-b01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou-na62-a01", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-zhengzhou-nebula-1", "mongodb.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "mongodb.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com")
+        );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dds", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -2451,7 +2512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query the list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
+      * The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query a list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
       *
       * @param request DescribeDBInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2586,7 +2647,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query the list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
+      * The list of replica set and standalone instances is displayed when the **DBInstanceType** parameter uses the default value **replicate**. To query a list of sharded cluster instances, you must set the **DBInstanceType** parameter to **sharding**.
       *
       * @param request DescribeDBInstancesRequest
       * @return DescribeDBInstancesResponse
@@ -6514,7 +6575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation can also be used to restart a shard or mongos node in a sharded cluster instance.
+      * This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.
       *
       * @param request RestartDBInstanceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -6569,7 +6630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation can also be used to restart a shard or mongos node in a sharded cluster instance.
+      * This operation can also be used to restart an instance, or restart a shard or mongos node in a sharded cluster instance.
       *
       * @param request RestartDBInstanceRequest
       * @return RestartDBInstanceResponse

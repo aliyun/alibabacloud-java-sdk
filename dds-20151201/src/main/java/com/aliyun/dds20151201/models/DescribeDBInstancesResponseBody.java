@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
-     * <p>Details of the instances.</p>
+     * <p>The details of the instances.</p>
      */
     @NameInMap("DBInstances")
     public DescribeDBInstancesResponseBodyDBInstances DBInstances;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -247,13 +247,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstanceTagsTag extends TeaModel {
         /**
-         * <p>The tag key of the resource.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value of the resource.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -302,9 +302,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     public static class DescribeDBInstancesResponseBodyDBInstancesDBInstance extends TeaModel {
         /**
-         * <p>The I/O throughput consumed by the instance.</p>
+         * <p>The read and write throughput consumed by the instance.</p>
          * <br>
-         * <p>>  This parameter is returned when the instance is a serverless instance.</p>
+         * <p>> This parameter is returned when the instance is a serverless instance.</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
@@ -337,13 +337,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 
         /**
-         * <p>The state of the instance. For more information, see [Instance states](~~63870~~).</p>
+         * <p>The status of the instance. For more information, see [Instance states](~~63870~~).</p>
          */
         @NameInMap("DBInstanceStatus")
         public String DBInstanceStatus;
@@ -355,7 +355,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public Integer DBInstanceStorage;
 
         /**
-         * <p>The architecture of the instance.</p>
+         * <p>The architecture of the instance. Valid values:</p>
          * <br>
          * <p>*   **sharding**: sharded cluster instance</p>
          * <p>*   **replicate**: replica set or standalone instance</p>
@@ -364,10 +364,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String DBInstanceType;
 
         /**
-         * <p>The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.  </p>
+         * <p>The time when the instance data was destroyed. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          * <br>
-         * <p>> - Subscription instances are released 15 days after expiration. After an instance is released, its data is deleted and cannot be restored.</p>
-         * <p>> - Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.</p>
+         * <p>> </p>
+         * <br>
+         * <p>*   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.</p>
+         * <br>
+         * <p>*   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.</p>
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
@@ -421,6 +424,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>> </p>
          * <br>
          * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <br>
          * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
          */
         @NameInMap("HiddenZoneId")
@@ -430,7 +434,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>The kind code of the instance. Valid values:</p>
          * <br>
          * <p>*   **0**: physical machine</p>
-         * <p>*   **1**: Elastic Compute Service (ECS) instance</p>
+         * <p>*   **1**: ECS instance</p>
          * <p>*   **2**: Docker cluster</p>
          * <p>*   **18**: Kubernetes cluster</p>
          */
@@ -457,9 +461,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>Details of the mongos nodes.</p>
+         * <p>The details of the mongos nodes.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("MongosList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceMongosList mongosList;
@@ -467,8 +471,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The network type of the instance. Valid values:</p>
          * <br>
-         * <p>*   **Classic**: classic network</p>
-         * <p>*   **VPC**: VPC</p>
+         * <p>*   **Classic**</p>
+         * <p>*   **VPC**</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -482,7 +486,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>The number of nodes in the instance.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a replica set instance.</p>
+         * <p>> This parameter is returned if the instance is a replica set instance.</p>
          */
         @NameInMap("ReplicationFactor")
         public String replicationFactor;
@@ -518,15 +522,16 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          * <p>> </p>
          * <br>
          * <p>*   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.</p>
+         * <br>
          * <p>*   This parameter is returned only if you use the Chine site (aliyun.com).</p>
          */
         @NameInMap("SecondaryZoneId")
         public String secondaryZoneId;
 
         /**
-         * <p>Details of the shard nodes.</p>
+         * <p>The details of the shard nodes.</p>
          * <br>
-         * <p>>  This parameter is returned if the instance is a sharded cluster instance.</p>
+         * <p>> This parameter is returned if the instance is a sharded cluster instance.</p>
          */
         @NameInMap("ShardList")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceShardList shardList;
@@ -541,7 +546,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>Details of the resource tags.</p>
+         * <p>The details of the resource tags.</p>
          */
         @NameInMap("Tags")
         public DescribeDBInstancesResponseBodyDBInstancesDBInstanceTags tags;
@@ -549,8 +554,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether password-free access within a VPC is enabled. Valid values:</p>
          * <br>
-         * <p>- **Open**: Password-free access is enabled.</p>
-         * <p>- **Close**: Password-free access is disabled.</p>
+         * <p>*   **Open**: Password-free access is enabled.</p>
+         * <p>*   **Close**: Password-free access is disabled.</p>
          */
         @NameInMap("VpcAuthMode")
         public String vpcAuthMode;

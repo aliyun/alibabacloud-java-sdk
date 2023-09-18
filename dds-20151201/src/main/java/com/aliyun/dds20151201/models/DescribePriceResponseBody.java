@@ -306,6 +306,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("RuleIds")
         public DescribePriceResponseBodyOrderRuleIds ruleIds;
 
+        @NameInMap("ShowDiscountInfo")
+        public Boolean showDiscountInfo;
+
         /**
          * <p>The final price of the order.</p>
          */
@@ -355,6 +358,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public DescribePriceResponseBodyOrderRuleIds getRuleIds() {
             return this.ruleIds;
+        }
+
+        public DescribePriceResponseBodyOrder setShowDiscountInfo(Boolean showDiscountInfo) {
+            this.showDiscountInfo = showDiscountInfo;
+            return this;
+        }
+        public Boolean getShowDiscountInfo() {
+            return this.showDiscountInfo;
         }
 
         public DescribePriceResponseBodyOrder setTradeAmount(String tradeAmount) {

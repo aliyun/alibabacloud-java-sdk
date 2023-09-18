@@ -26,17 +26,17 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The name of the instance. Valid values:</p>
+     * <p>The name of the instance. The name must meet the following requirements:</p>
      * <br>
      * <p>*   The name must start with a letter.</p>
-     * <p>*   The name can contain digits, letters, underscores (\_), and hyphens (-).</p>
-     * <p>*   The name must be 2 to 256 characters in length.</p>
+     * <p>*   It can contain digits, letters, underscores (\_), and hyphens (-).</p>
+     * <p>*   It must be 2 to 256 characters in length.</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
@@ -48,7 +48,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceStatus;
 
     /**
-     * <p>The architecture of the instance. Default value: replicate. Valid values:</p>
+     * <p>The architecture of the instance. Valid values:</p>
      * <br>
      * <p>*   **sharding**: sharded cluster instance</p>
      * <p>*   **replicate**: replica set or standalone instance</p>
@@ -57,11 +57,11 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceType;
 
     /**
-     * <p>Used to filter standard instances or test instances</p>
+     * <p>The type of the node in the instance. This parameter is used to filter standard or test instance.</p>
      * <br>
-     * <p>1. Single node instance and dbfs instance: customized</p>
-     * <p>2. Standard instance (replicaset and shard cluster): standard</p>
-     * <p>3. Default (showing all instances): default</p>
+     * <p>1.  Valid value for a standalone or DBFS instance.</p>
+     * <p>2.  Valid value for a standard instance that comes in the replica set or sharded cluster architecture: standard</p>
+     * <p>3.  Valid value when all instances are displayed: default</p>
      */
     @NameInMap("DBNodeType")
     public String DBNodeType;
@@ -75,11 +75,11 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The database engine version of the instance. Valid values:</p>
      * <br>
-     * <p>* **5.0**</p>
-     * <p>* **4.4**</p>
-     * <p>* **4.2**</p>
-     * <p>* **4.0**</p>
-     * <p>* **3.4**</p>
+     * <p>*   **5.0**</p>
+     * <p>*   **4.4**</p>
+     * <p>*   **4.2**</p>
+     * <p>*   **4.0**</p>
+     * <p>*   **3.4**</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
@@ -93,8 +93,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether the instance has expired. Valid values:</p>
      * <br>
-     * <p>*   **true**: The instance has expired.</p>
-     * <p>*   **false**: The instance has not expired.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Expired")
     public String expired;
@@ -102,8 +102,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <br>
-     * <p>*   **Classic**: classic network</p>
-     * <p>*   **VPC**: Virtual Private Cloud (VPC)</p>
+     * <p>*   **Classic**</p>
+     * <p>*   **VPC**</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
@@ -121,9 +121,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 30. Valid values:</p>
+     * <p>The number of entries to return on each page. Valid values:</p>
      * <br>
-     * <p>*   **30**</p>
+     * <p>*   **30** (default)</p>
      * <p>*   **50**</p>
      * <p>*   **100**</p>
      */
@@ -162,19 +162,19 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The tags of instances.</p>
+     * <p>The tags of the instance.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDBInstancesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID of the instance.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID of the instance.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
@@ -408,21 +408,21 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     public static class DescribeDBInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the instance. Valid values of N: **1** to **20**.</p>
+         * <p>The tag key of the instance. Valid values of N: **1** to **20**.</p>
          * <br>
          * <p>*   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
-         * <p>*   The key can be up to 64 characters in length.</p>
-         * <p>*   The key cannot be an empty string.</p>
+         * <p>*   It can be up to 64 characters in length.</p>
+         * <p>*   It cannot be an empty string.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N of the instance. Valid values of N: **1** to **20**.</p>
+         * <p>The tag value of the instance. Valid values of N: **1** to **20**.</p>
          * <br>
          * <p>*   The value cannot start with `aliyun`, `acs:`, `http://`, or `https://`.</p>
          * <p>*   The value can be up to 128 characters in length.</p>
-         * <p>*   The value can be an empty string.</p>
+         * <p>*   It can be an empty string.</p>
          */
         @NameInMap("Value")
         public String value;
