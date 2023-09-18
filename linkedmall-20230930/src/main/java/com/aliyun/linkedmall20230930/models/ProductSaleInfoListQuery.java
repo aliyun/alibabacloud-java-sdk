@@ -4,26 +4,18 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class ProductSaleInfoListQuery extends TeaModel {
-    @NameInMap("distributorShopId")
-    public String distributorShopId;
-
     @NameInMap("divisionCode")
     public String divisionCode;
 
     @NameInMap("productIds")
     public java.util.List<String> productIds;
 
+    @NameInMap("purchaserId")
+    public String purchaserId;
+
     public static ProductSaleInfoListQuery build(java.util.Map<String, ?> map) throws Exception {
         ProductSaleInfoListQuery self = new ProductSaleInfoListQuery();
         return TeaModel.build(map, self);
-    }
-
-    public ProductSaleInfoListQuery setDistributorShopId(String distributorShopId) {
-        this.distributorShopId = distributorShopId;
-        return this;
-    }
-    public String getDistributorShopId() {
-        return this.distributorShopId;
     }
 
     public ProductSaleInfoListQuery setDivisionCode(String divisionCode) {
@@ -40,6 +32,14 @@ public class ProductSaleInfoListQuery extends TeaModel {
     }
     public java.util.List<String> getProductIds() {
         return this.productIds;
+    }
+
+    public ProductSaleInfoListQuery setPurchaserId(String purchaserId) {
+        this.purchaserId = purchaserId;
+        return this;
+    }
+    public String getPurchaserId() {
+        return this.purchaserId;
     }
 
 }

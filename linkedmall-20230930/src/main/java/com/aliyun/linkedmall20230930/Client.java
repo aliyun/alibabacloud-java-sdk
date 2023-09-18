@@ -90,7 +90,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CancelRefundOrder"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/" + com.aliyun.openapiutil.Client.getEncodeParam(disputeId) + "/commands/cancel"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/" + com.aliyun.openapiutil.Client.getEncodeParam(disputeId) + "/commands/cancel"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -116,7 +116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ConfirmDisburse"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/confirmDisburse"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/confirmDisburse"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -142,7 +142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateGoodsShippingNotice"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/command/createGoodsShippingNotice"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/command/createGoodsShippingNotice"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -168,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreatePurchaseOrder"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -194,7 +194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "CreateRefundOrder"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -218,7 +218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetOrder"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/" + com.aliyun.openapiutil.Client.getEncodeParam(orderId) + ""),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/" + com.aliyun.openapiutil.Client.getEncodeParam(orderId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -234,76 +234,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOrderWithOptions(orderId, headers, runtime);
     }
 
-    public GetProductResponse getProductWithOptions(String productId, GetProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorShopId)) {
-            query.put("distributorShopId", request.distributorShopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.divisionCode)) {
-            query.put("divisionCode", request.divisionCode);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetProduct"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductResponse());
-    }
-
-    public GetProductResponse getProduct(String productId, GetProductRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProductWithOptions(productId, request, headers, runtime);
-    }
-
-    public GetProductSaleInfoResponse getProductSaleInfoWithOptions(String productId, GetProductSaleInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorShopId)) {
-            query.put("distributorShopId", request.distributorShopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.divisionCode)) {
-            query.put("divisionCode", request.divisionCode);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetProductSaleInfo"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/saleInfo"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductSaleInfoResponse());
-    }
-
-    public GetProductSaleInfoResponse getProductSaleInfo(String productId, GetProductSaleInfoRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProductSaleInfoWithOptions(productId, request, headers, runtime);
-    }
-
     public GetPurchaseOrderStatusResponse getPurchaseOrderStatusWithOptions(String purchaseOrderId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -312,7 +242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetPurchaseOrderStatus"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/" + com.aliyun.openapiutil.Client.getEncodeParam(purchaseOrderId) + "/status"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/" + com.aliyun.openapiutil.Client.getEncodeParam(purchaseOrderId) + "/status"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -328,6 +258,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getPurchaseOrderStatusWithOptions(purchaseOrderId, headers, runtime);
     }
 
+    public GetPurchaserShopResponse getPurchaserShopWithOptions(String purchaserId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPurchaserShop"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops/" + com.aliyun.openapiutil.Client.getEncodeParam(purchaserId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPurchaserShopResponse());
+    }
+
+    public GetPurchaserShopResponse getPurchaserShop(String purchaserId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPurchaserShopWithOptions(purchaserId, headers, runtime);
+    }
+
     public GetRefundOrderResponse getRefundOrderWithOptions(String disputeId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
@@ -336,7 +290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "GetRefundOrder"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/" + com.aliyun.openapiutil.Client.getEncodeParam(disputeId) + ""),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/" + com.aliyun.openapiutil.Client.getEncodeParam(disputeId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -352,28 +306,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getRefundOrderWithOptions(disputeId, headers, runtime);
     }
 
-    public GetShopResponse getShopWithOptions(String shopId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetSelectionProductResponse getSelectionProductWithOptions(String productId, GetSelectionProductRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.divisionCode)) {
+            query.put("divisionCode", request.divisionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.purchaserId)) {
+            query.put("purchaserId", request.purchaserId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetShop"),
+            new TeaPair("action", "GetSelectionProduct"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops/" + com.aliyun.openapiutil.Client.getEncodeParam(shopId) + ""),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetShopResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSelectionProductResponse());
     }
 
-    public GetShopResponse getShop(String shopId) throws Exception {
+    public GetSelectionProductResponse getSelectionProduct(String productId, GetSelectionProductRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getShopWithOptions(shopId, headers, runtime);
+        return this.getSelectionProductWithOptions(productId, request, headers, runtime);
+    }
+
+    public GetSelectionProductSaleInfoResponse getSelectionProductSaleInfoWithOptions(String productId, GetSelectionProductSaleInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.divisionCode)) {
+            query.put("divisionCode", request.divisionCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.purchaserId)) {
+            query.put("purchaserId", request.purchaserId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSelectionProductSaleInfo"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/" + com.aliyun.openapiutil.Client.getEncodeParam(productId) + "/saleInfo"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSelectionProductSaleInfoResponse());
+    }
+
+    public GetSelectionProductSaleInfoResponse getSelectionProductSaleInfo(String productId, GetSelectionProductSaleInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSelectionProductSaleInfoWithOptions(productId, request, headers, runtime);
     }
 
     public ListLogisticsOrdersResponse listLogisticsOrdersWithOptions(String orderId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -384,7 +384,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "ListLogisticsOrders"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/" + com.aliyun.openapiutil.Client.getEncodeParam(orderId) + "/logisticsOrders"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/" + com.aliyun.openapiutil.Client.getEncodeParam(orderId) + "/logisticsOrders"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -400,65 +400,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listLogisticsOrdersWithOptions(orderId, headers, runtime);
     }
 
-    public ListProductGeneralBillsResponse listProductGeneralBillsWithOptions(ListProductGeneralBillsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProductGeneralBills"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/productGeneralBills"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductGeneralBillsResponse());
-    }
-
-    public ListProductGeneralBillsResponse listProductGeneralBills(ListProductGeneralBillsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProductGeneralBillsWithOptions(request, headers, runtime);
-    }
-
-    public ListProductSaleInfosResponse listProductSaleInfosWithOptions(ListProductSaleInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProductSaleInfos"),
-            new TeaPair("version", "2023-09-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products/saleInfo/commands/list"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductSaleInfosResponse());
-    }
-
-    public ListProductSaleInfosResponse listProductSaleInfos(ListProductSaleInfosRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProductSaleInfosWithOptions(request, headers, runtime);
-    }
-
-    public ListProductsResponse listProductsWithOptions(ListProductsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListPurchaserShopsResponse listPurchaserShopsWithOptions(ListPurchaserShopsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.distributorShopId)) {
-            query.put("distributorShopId", request.distributorShopId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
@@ -472,36 +416,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListProducts"),
+            new TeaPair("action", "ListPurchaserShops"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/products"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaserShops"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductsResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPurchaserShopsResponse());
     }
 
-    public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
+    public ListPurchaserShopsResponse listPurchaserShops(ListPurchaserShopsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listProductsWithOptions(request, headers, runtime);
+        return this.listPurchaserShopsWithOptions(request, headers, runtime);
     }
 
-    public ListShopsResponse listShopsWithOptions(ListShopsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListSelectionProductSaleInfosResponse listSelectionProductSaleInfosWithOptions(ListSelectionProductSaleInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSelectionProductSaleInfos"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products/saleInfo/commands/list"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSelectionProductSaleInfosResponse());
+    }
+
+    public ListSelectionProductSaleInfosResponse listSelectionProductSaleInfos(ListSelectionProductSaleInfosRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSelectionProductSaleInfosWithOptions(request, headers, runtime);
+    }
+
+    public ListSelectionProductsResponse listSelectionProductsWithOptions(ListSelectionProductsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channelSupplierId)) {
-            query.put("channelSupplierId", request.channelSupplierId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
-            query.put("endDate", request.endDate);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }
@@ -510,16 +472,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pageSize", request.pageSize);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.shopId)) {
-            query.put("shopId", request.shopId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.shopName)) {
-            query.put("shopName", request.shopName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
-            query.put("startDate", request.startDate);
+        if (!com.aliyun.teautil.Common.isUnset(request.purchaserId)) {
+            query.put("purchaserId", request.purchaserId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -527,49 +481,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListShops"),
+            new TeaPair("action", "ListSelectionProducts"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/shops"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/products"),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListShopsResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSelectionProductsResponse());
     }
 
-    public ListShopsResponse listShops(ListShopsRequest request) throws Exception {
+    public ListSelectionProductsResponse listSelectionProducts(ListSelectionProductsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listShopsWithOptions(request, headers, runtime);
+        return this.listSelectionProductsWithOptions(request, headers, runtime);
     }
 
-    public ListSkuSaleInfosResponse listSkuSaleInfosWithOptions(ListSkuSaleInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListSelectionSkuSaleInfosResponse listSelectionSkuSaleInfosWithOptions(ListSelectionSkuSaleInfosRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListSkuSaleInfos"),
+            new TeaPair("action", "ListSelectionSkuSaleInfos"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/skus/saleInfo/commands/list"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/selectionPool/skus/saleInfo/commands/list"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSkuSaleInfosResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSelectionSkuSaleInfosResponse());
     }
 
-    public ListSkuSaleInfosResponse listSkuSaleInfos(ListSkuSaleInfosRequest request) throws Exception {
+    public ListSelectionSkuSaleInfosResponse listSelectionSkuSaleInfos(ListSelectionSkuSaleInfosRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listSkuSaleInfosWithOptions(request, headers, runtime);
+        return this.listSelectionSkuSaleInfosWithOptions(request, headers, runtime);
     }
 
     public QueryChildDivisionCodeResponse queryChildDivisionCodeWithOptions(QueryChildDivisionCodeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -582,7 +536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "QueryChildDivisionCode"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/division/commands/queryChildDivisionCode"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/division/commands/queryChildDivisionCode"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -608,7 +562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "QueryOrders"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/orders/commands/query"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/orders/commands/query"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -634,7 +588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RenderPurchaseOrder"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/purchaseOrders/commands/render"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/purchaseOrders/commands/render"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -660,7 +614,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "RenderRefundOrder"),
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v1/refunds/commands/render"),
+            new TeaPair("pathname", "/opensaas-s2b/opensaas-s2b-biz-trade/v2/refunds/commands/render"),
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),

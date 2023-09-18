@@ -7,11 +7,11 @@ public class OrderRenderProductDTO extends TeaModel {
     @NameInMap("productId")
     public String productId;
 
+    @NameInMap("purchaserId")
+    public String purchaserId;
+
     @NameInMap("quantity")
     public Integer quantity;
-
-    @NameInMap("shopId")
-    public String shopId;
 
     @NameInMap("skuId")
     public String skuId;
@@ -29,20 +29,20 @@ public class OrderRenderProductDTO extends TeaModel {
         return this.productId;
     }
 
+    public OrderRenderProductDTO setPurchaserId(String purchaserId) {
+        this.purchaserId = purchaserId;
+        return this;
+    }
+    public String getPurchaserId() {
+        return this.purchaserId;
+    }
+
     public OrderRenderProductDTO setQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     public Integer getQuantity() {
         return this.quantity;
-    }
-
-    public OrderRenderProductDTO setShopId(String shopId) {
-        this.shopId = shopId;
-        return this;
-    }
-    public String getShopId() {
-        return this.shopId;
     }
 
     public OrderRenderProductDTO setSkuId(String skuId) {

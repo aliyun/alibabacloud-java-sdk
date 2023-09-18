@@ -10,9 +10,6 @@ public class RefundOrderResult extends TeaModel {
     @NameInMap("disputeStatus")
     public Integer disputeStatus;
 
-    @NameInMap("disputeType")
-    public Integer disputeType;
-
     @NameInMap("orderLineId")
     public String orderLineId;
 
@@ -38,14 +35,6 @@ public class RefundOrderResult extends TeaModel {
     }
     public Integer getDisputeStatus() {
         return this.disputeStatus;
-    }
-
-    public RefundOrderResult setDisputeType(Integer disputeType) {
-        this.disputeType = disputeType;
-        return this;
-    }
-    public Integer getDisputeType() {
-        return this.disputeType;
     }
 
     public RefundOrderResult setOrderLineId(String orderLineId) {

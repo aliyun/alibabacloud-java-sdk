@@ -4,11 +4,11 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class SkuSaleInfoListQuery extends TeaModel {
-    @NameInMap("distributorShopId")
-    public String distributorShopId;
-
     @NameInMap("divisionCode")
     public String divisionCode;
+
+    @NameInMap("purchaserId")
+    public String purchaserId;
 
     @NameInMap("skuQueryParams")
     public java.util.List<SkuQueryParam> skuQueryParams;
@@ -18,20 +18,20 @@ public class SkuSaleInfoListQuery extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SkuSaleInfoListQuery setDistributorShopId(String distributorShopId) {
-        this.distributorShopId = distributorShopId;
-        return this;
-    }
-    public String getDistributorShopId() {
-        return this.distributorShopId;
-    }
-
     public SkuSaleInfoListQuery setDivisionCode(String divisionCode) {
         this.divisionCode = divisionCode;
         return this;
     }
     public String getDivisionCode() {
         return this.divisionCode;
+    }
+
+    public SkuSaleInfoListQuery setPurchaserId(String purchaserId) {
+        this.purchaserId = purchaserId;
+        return this;
+    }
+    public String getPurchaserId() {
+        return this.purchaserId;
     }
 
     public SkuSaleInfoListQuery setSkuQueryParams(java.util.List<SkuQueryParam> skuQueryParams) {

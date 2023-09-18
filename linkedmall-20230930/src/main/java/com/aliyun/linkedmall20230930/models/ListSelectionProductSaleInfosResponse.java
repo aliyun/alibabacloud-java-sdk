@@ -3,7 +3,7 @@ package com.aliyun.linkedmall20230930.models;
 
 import com.aliyun.tea.*;
 
-public class ListProductSaleInfosResponse extends TeaModel {
+public class ListSelectionProductSaleInfosResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -16,12 +16,12 @@ public class ListProductSaleInfosResponse extends TeaModel {
     @Validation(required = true)
     public ProductSaleInfoListResult body;
 
-    public static ListProductSaleInfosResponse build(java.util.Map<String, ?> map) throws Exception {
-        ListProductSaleInfosResponse self = new ListProductSaleInfosResponse();
+    public static ListSelectionProductSaleInfosResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListSelectionProductSaleInfosResponse self = new ListSelectionProductSaleInfosResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListProductSaleInfosResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListSelectionProductSaleInfosResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class ListProductSaleInfosResponse extends TeaModel {
         return this.headers;
     }
 
-    public ListProductSaleInfosResponse setStatusCode(Integer statusCode) {
+    public ListSelectionProductSaleInfosResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,7 +37,7 @@ public class ListProductSaleInfosResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public ListProductSaleInfosResponse setBody(ProductSaleInfoListResult body) {
+    public ListSelectionProductSaleInfosResponse setBody(ProductSaleInfoListResult body) {
         this.body = body;
         return this;
     }
