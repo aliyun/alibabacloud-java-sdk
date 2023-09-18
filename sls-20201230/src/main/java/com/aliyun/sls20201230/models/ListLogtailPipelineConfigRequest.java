@@ -7,8 +7,8 @@ public class ListLogtailPipelineConfigRequest extends TeaModel {
     @NameInMap("configName")
     public String configName;
 
-    @NameInMap("logstore")
-    public String logstore;
+    @NameInMap("logstoreName")
+    public String logstoreName;
 
     @NameInMap("offset")
     public Long offset;
@@ -29,12 +29,12 @@ public class ListLogtailPipelineConfigRequest extends TeaModel {
         return this.configName;
     }
 
-    public ListLogtailPipelineConfigRequest setLogstore(String logstore) {
-        this.logstore = logstore;
+    public ListLogtailPipelineConfigRequest setLogstoreName(String logstoreName) {
+        this.logstoreName = logstoreName;
         return this;
     }
-    public String getLogstore() {
-        return this.logstore;
+    public String getLogstoreName() {
+        return this.logstoreName;
     }
 
     public ListLogtailPipelineConfigRequest setOffset(Long offset) {
