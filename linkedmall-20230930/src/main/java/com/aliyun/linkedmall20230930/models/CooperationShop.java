@@ -4,10 +4,10 @@ package com.aliyun.linkedmall20230930.models;
 import com.aliyun.tea.*;
 
 public class CooperationShop extends TeaModel {
-    @NameInMap("CooperationCompanyId")
+    @NameInMap("cooperationCompanyId")
     public String cooperationCompanyId;
 
-    @NameInMap("CooperationShopId")
+    @NameInMap("cooperationShopId")
     public String cooperationShopId;
 
     @NameInMap("shopId")
