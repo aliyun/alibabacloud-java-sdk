@@ -4,6 +4,9 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatabaseSlowLogRecordsRequest extends TeaModel {
+    @NameInMap("AcsProduct")
+    public String acsProduct;
+
     /**
      * <p>The ID of the Simple Database Service instance.</p>
      */
@@ -57,6 +60,14 @@ public class DescribeDatabaseSlowLogRecordsRequest extends TeaModel {
     public static DescribeDatabaseSlowLogRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDatabaseSlowLogRecordsRequest self = new DescribeDatabaseSlowLogRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDatabaseSlowLogRecordsRequest setAcsProduct(String acsProduct) {
+        this.acsProduct = acsProduct;
+        return this;
+    }
+    public String getAcsProduct() {
+        return this.acsProduct;
     }
 
     public DescribeDatabaseSlowLogRecordsRequest setDatabaseInstanceId(String databaseInstanceId) {

@@ -4,6 +4,9 @@ package com.aliyun.swas_open20200601.models;
 import com.aliyun.tea.*;
 
 public class ListInstancesTrafficPackagesRequest extends TeaModel {
+    @NameInMap("AcsProduct")
+    public String acsProduct;
+
     /**
      * <p>The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).</p>
      */
@@ -19,6 +22,14 @@ public class ListInstancesTrafficPackagesRequest extends TeaModel {
     public static ListInstancesTrafficPackagesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesTrafficPackagesRequest self = new ListInstancesTrafficPackagesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListInstancesTrafficPackagesRequest setAcsProduct(String acsProduct) {
+        this.acsProduct = acsProduct;
+        return this;
+    }
+    public String getAcsProduct() {
+        return this.acsProduct;
     }
 
     public ListInstancesTrafficPackagesRequest setInstanceIds(String instanceIds) {

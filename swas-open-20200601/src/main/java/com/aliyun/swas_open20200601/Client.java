@@ -1277,6 +1277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDatabaseSlowLogRecordsResponse describeDatabaseSlowLogRecordsWithOptions(DescribeDatabaseSlowLogRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsProduct)) {
+            query.put("AcsProduct", request.acsProduct);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.databaseInstanceId)) {
             query.put("DatabaseInstanceId", request.databaseInstanceId);
         }
@@ -2308,6 +2312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListInstancesTrafficPackagesResponse listInstancesTrafficPackagesWithOptions(ListInstancesTrafficPackagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsProduct)) {
+            query.put("AcsProduct", request.acsProduct);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
         }
@@ -2446,6 +2454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSnapshotsResponse listSnapshotsWithOptions(ListSnapshotsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsProduct)) {
+            query.put("AcsProduct", request.acsProduct);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
             query.put("DiskId", request.diskId);
         }
