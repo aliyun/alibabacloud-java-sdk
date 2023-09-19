@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
     /**
-     * <p>The detailed information of the SQL pattern.</p>
+     * <p>The queried SQL pattern.</p>
      */
     @NameInMap("PatternDetail")
     public DescribeSQLPatternAttributeResponseBodyPatternDetail patternDetail;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,19 +39,19 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
 
     public static class DescribeSQLPatternAttributeResponseBodyPatternDetail extends TeaModel {
         /**
-         * <p>The average memory consumption associated with the SQL pattern. Unit: MB.</p>
+         * <p>The average used memory associated with the SQL pattern. Unit: MB.</p>
          */
         @NameInMap("AverageMemory")
         public String averageMemory;
 
         /**
-         * <p>The average query time associated with the SQL pattern. Unit: milliseconds.</p>
+         * <p>The average query duration associated with the SQL pattern. Unit: milliseconds.</p>
          */
         @NameInMap("AverageQueryTime")
         public String averageQueryTime;
 
         /**
-         * <p>The number of queries performed based on the SQL pattern.</p>
+         * <p>The number of queries.</p>
          */
         @NameInMap("QueryCount")
         public Long queryCount;
@@ -63,7 +63,7 @@ public class DescribeSQLPatternAttributeResponseBody extends TeaModel {
         public String SQLPattern;
 
         /**
-         * <p>The total query time associated with the SQL pattern. Unit: milliseconds.</p>
+         * <p>The total query duration associated with the SQL pattern. Unit: milliseconds.</p>
          */
         @NameInMap("TotalQueryTime")
         public String totalQueryTime;

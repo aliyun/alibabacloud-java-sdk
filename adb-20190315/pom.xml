@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>adb20190315</artifactId>
-  <version>1.1.0</version>
+  <version>2.0.0</version>
   <packaging>jar</packaging>
   <name>adb20190315</name>
   <description>Alibaba Cloud adb (20190315) SDK for Java

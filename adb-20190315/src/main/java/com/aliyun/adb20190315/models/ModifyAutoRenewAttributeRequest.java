@@ -7,7 +7,7 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -16,10 +16,9 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
      * <p>The renewal duration. Default value: **1**.</p>
      * <br>
      * <p>*   Valid values when PeriodUnit is set to **Month**: 1 to 11. Data type: INTEGER.</p>
-     * <br>
      * <p>*   Valid values when PeriodUnit is set to **Year**: 1, 2, 3, and 5. Data type: INTEGER.</p>
      * <br>
-     * <p>> Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
+     * <p>> Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</p>
      */
     @NameInMap("Duration")
     public String duration;
@@ -31,7 +30,7 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The unit of the renewal duration. Default value: **Month**. Valid values:</p>
+     * <p>The unit of the renewal period. Default value: **Month**. Valid values:</p>
      * <br>
      * <p>*   **Year**</p>
      * <p>*   **Month**</p>
@@ -42,7 +41,7 @@ public class ModifyAutoRenewAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

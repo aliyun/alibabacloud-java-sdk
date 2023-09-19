@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The list of regions.</p>
+     * <p>The queried regions.</p>
      */
     @NameInMap("Regions")
     public DescribeRegionsResponseBodyRegions regions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,22 +39,22 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static class DescribeRegionsResponseBodyRegionsRegionZonesZone extends TeaModel {
         /**
-         * <p>The name of the region.</p>
+         * <p>The zone name.</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>Indicates whether Virtual Private Cloud (VPC) is available in the zone that you want to select. Valid values:</p>
+         * <p>Indicates whether Virtual Private Cloud (VPC) is supported in the zone. Valid values:</p>
          * <br>
-         * <p>*   **true**: VPC is available.</p>
-         * <p>*   **false**: VPC is unavailable.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("VpcEnabled")
         public Boolean vpcEnabled;
 
         /**
-         * <p>The ID of the zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
@@ -110,6 +110,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
+        /**
+         * <p>The region name.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
@@ -120,13 +123,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionEndpoint;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The list of zones.</p>
+         * <p>The queried zones.</p>
          */
         @NameInMap("Zones")
         public DescribeRegionsResponseBodyRegionsRegionZones zones;

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeComputeResourceResponseBody extends TeaModel {
     /**
-     * <p>Details of computing resource specifications.</p>
+     * <p>The queried specifications of computing resources.</p>
      */
     @NameInMap("ComputeResource")
     public java.util.List<DescribeComputeResourceResponseBodyComputeResource> computeResource;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

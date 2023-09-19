@@ -11,19 +11,19 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
     public DescribeAutoRenewAttributeResponseBodyItems items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageRecordCount")
     public Integer pageRecordCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -83,26 +83,26 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether auto-renewal is enabled for the cluster. Valid values:</p>
          * <br>
-         * <p>*   **true**: Auto-renewal is enabled.</p>
-         * <p>*   **false**: Auto-renewal is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
         /**
-         * <p>The renewal period.</p>
+         * <p>The renewal duration.</p>
          */
         @NameInMap("Duration")
         public Integer duration;
 
         /**
-         * <p>The unit of the renewal period. Valid values:</p>
+         * <p>The unit of the renewal duration. Valid values:</p>
          * <br>
          * <p>*   **Year**</p>
          * <p>*   **Month**</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAdviceServiceEnabledRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.</p>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,7 +15,7 @@ public class DescribeAdviceServiceEnabledRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

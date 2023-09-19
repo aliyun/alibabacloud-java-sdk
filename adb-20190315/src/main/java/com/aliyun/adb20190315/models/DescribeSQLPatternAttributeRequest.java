@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPatternAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the detailed information of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.</p>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -15,26 +15,26 @@ public class DescribeSQLPatternAttributeRequest extends TeaModel {
     /**
      * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
      * <br>
-     * <p>>  The end time must be later than the start time.</p>
+     * <p>> The end time must be later than the start time.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The languages available for file titles and some error messages. Default value: zh. Valid values:</p>
+     * <p>The language of file titles and error messages. Valid values:</p>
      * <br>
-     * <p>*   **zh**: Simplified Chinese</p>
-     * <p>*   **en**: English</p>
-     * <p>*   **ja**: Japanese</p>
-     * <p>*   **zh-tw**: Traditional Chinese</p>
+     * <p>*   **zh**: simplified Chinese.</p>
+     * <p>*   **en**: English.</p>
+     * <p>*   **ja**: Japanese.</p>
+     * <p>*   **zh-tw**: traditional Chinese.</p>
      */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The ID of the SQL pattern.</p>
+     * <p>The SQL pattern ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeSQLPatterns](~~321868~~) operation to query the list of SQL patterns within an AnalyticDB for MySQL cluster for a specific period of time, including SQL pattern IDs.</p>
+     * <p>> You can call the [DescribeSQLPatterns](~~321868~~) operation to query the information about all SQL patterns in an AnalyticDB for MySQL cluster within a period of time, including SQL pattern IDs.</p>
      */
     @NameInMap("PatternId")
     public Long patternId;
@@ -42,7 +42,7 @@ public class DescribeSQLPatternAttributeRequest extends TeaModel {
     /**
      * <p>The region ID of the cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.</p>
+     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -50,7 +50,7 @@ public class DescribeSQLPatternAttributeRequest extends TeaModel {
     /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mmZ* format. The time must be in UTC.</p>
      * <br>
-     * <p>>  Only data generated within the last 15 days can be viewed.</p>
+     * <p>> You can query the data only within the last 15 days.</p>
      */
     @NameInMap("StartTime")
     public String startTime;

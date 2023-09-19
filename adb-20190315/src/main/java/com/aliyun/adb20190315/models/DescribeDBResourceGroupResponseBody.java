@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeDBResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>Details of the resource group.</p>
+     * <p>The queried resource group.</p>
      */
     @NameInMap("GroupsInfo")
     public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfo> groupsInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,9 +68,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          * <p>The query execution mode. Valid values:</p>
          * <br>
          * <p>*   **interactive**</p>
-         * <p>*   **batch**</p>
+         * <p>*   **batch** (default)</p>
          * <br>
-         * <p>>  For more information, see [Query execution modes](~~189502~~).</p>
+         * <p>> For more information, see [Query execution modes](~~189502~~).</p>
          */
         @NameInMap("GroupType")
         public String groupType;
@@ -82,7 +82,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String groupUsers;
 
         /**
-         * <p>The number of nodes. Each node consumes 16 cores and 64 GB memory.</p>
+         * <p>The number of nodes. Each node provides 16 cores and 64 GB memory.</p>
          */
         @NameInMap("NodeNum")
         public Integer nodeNum;

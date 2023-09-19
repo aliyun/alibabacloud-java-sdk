@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyLogBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -20,9 +20,9 @@ public class ModifyLogBackupPolicyRequest extends TeaModel {
     public String enableBackupLog;
 
     /**
-     * <p>The number of days for which to retain data backup files. Valid values: 7 to 730.</p>
+     * <p>The number of days for which to retain backup files. Valid values: 7 to 730.</p>
      * <br>
-     * <p>>  If you leave this parameter empty, the default value 7 is used.</p>
+     * <p>> The default value is 7.</p>
      */
     @NameInMap("LogBackupRetentionPeriod")
     public String logBackupRetentionPeriod;

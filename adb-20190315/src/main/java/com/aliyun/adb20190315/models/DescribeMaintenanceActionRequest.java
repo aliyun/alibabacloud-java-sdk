@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeMaintenanceActionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return the details of pending or historical O\&M events. Valid values:</p>
+     * <p>Specifies whether to return the information about pending or historical O\&M events. Valid values:</p>
      * <br>
-     * <p>*   **0**: returns the details of pending O\&M event.</p>
-     * <p>*   **1**: returns the details of historical O\&M event.</p>
+     * <p>*   **0**: returns the information about pending O\&M event.</p>
+     * <p>*   **1**: returns the information about historical O\&M event.</p>
      * <br>
-     * <p>If you do not specify this parameter, the details of pending O\&M event are returned.</p>
+     * <p>If you do not specify this parameter, the information about pending O\&M event are returned.</p>
      */
     @NameInMap("IsHistory")
     public Integer isHistory;
@@ -22,22 +22,22 @@ public class DescribeMaintenanceActionRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.</p>
+     * <p>The page number. Pages start from page 1. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.</p>
+     * <p>The number of entries per page. Valid values: **30**, **50**, and **100**. Default value: 30.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the O\&M event occurs. Valid values:</p>
+     * <p>The region ID. Valid values:</p>
      * <br>
-     * <p>*   The ID of the region where the O\&M event occurs. Example: `cn-hangzhou`. You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including the region IDs.</p>
-     * <p>*   You can also set Region to `all` to view all the O\&M events in all regions. If `Region` is set to `all`, `TaskType` must be set to `all`.</p>
+     * <p>*   The ID of the region where the O\&M event occurs. Example: `cn-hangzhou`. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>*   You can also set Region to `all` to query the O\&M events in all regions. If you set `Region` to `all`, you must set `TaskType` to `all`.</p>
      */
     @NameInMap("Region")
     public String region;
@@ -45,7 +45,7 @@ public class DescribeMaintenanceActionRequest extends TeaModel {
     /**
      * <p>The ID of the region where the O\&M event occurs.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including the region IDs.</p>
+     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -59,8 +59,8 @@ public class DescribeMaintenanceActionRequest extends TeaModel {
     /**
      * <p>The type of the O\&M event. Valid values:</p>
      * <br>
-     * <p>*   **rds_apsaradb_upgrade**: indicates database software upgrades.</p>
-     * <p>*   **all**: indicates all the O\&M events in all regions within the current account. If `Region` is set to `all`, `TaskType` must be set to `all`.</p>
+     * <p>*   **rds_apsaradb_upgrade**: database software upgrades.</p>
+     * <p>*   **all**: all the O\&M events in all regions within the current account. If you set `Region` to `all`, you must set `TaskType` to `all`.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

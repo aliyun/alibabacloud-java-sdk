@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeMaintenanceActionResponseBody extends TeaModel {
     /**
-     * <p>The list of events.</p>
+     * <p>The queried O\&M events.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeMaintenanceActionResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,7 +87,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The ID of the cluster involved in the O\&M event.</p>
+         * <p>The ID of the cluster that is involved in the O\&M event.</p>
          */
         @NameInMap("DBClusterId")
         public String DBClusterId;
@@ -111,13 +111,13 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         public String deadline;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The ID of the O\&M event.</p>
          */
         @NameInMap("Id")
         public Integer id;
 
         /**
-         * <p>The point in time at which the O\&M event was switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The point in time at which the switchover time of the O\&M event was modified. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
@@ -137,7 +137,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         /**
          * <p>The execution result of the O\&M event.</p>
          * <br>
-         * <p>>  This parameter is valid only when `Status` is set to **FAILED** or **CANCEL**.</p>
+         * <p>> This parameter is returned only when the value of `Status` is **FAILED** or **CANCEL**.</p>
          */
         @NameInMap("ResultInfo")
         public String resultInfo;
@@ -155,7 +155,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
          * <br>
          * <p>    *   **WAITING_MODIFY**: The start time of the O\&M event is waiting to be set.</p>
          * <p>    *   **WAITING**: The O\&M event is waiting to be processed.</p>
-         * <p>    *   **PROCESSING**: The O\&M event is being processed. The switching time of an event in this state cannot be changed.</p>
+         * <p>    *   **PROCESSING**: The O\&M event is being processed. The switchover time of an event in this state cannot be changed.</p>
          * <br>
          * <p>*   If you set `IsHistory` to **1**, the state of the historical O\&M event is returned. Valid values:</p>
          * <br>
@@ -167,13 +167,13 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the pending event was switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         * <p>The time when the pending O\&M event is switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
          */
         @NameInMap("SwitchTime")
         public String switchTime;
 
         /**
-         * <p>The type of the O&M event.</p>
+         * <p>The type of the O\&M event.</p>
          */
         @NameInMap("TaskType")
         public String taskType;
