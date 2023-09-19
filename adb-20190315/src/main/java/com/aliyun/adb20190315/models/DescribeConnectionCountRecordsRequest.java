@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeConnectionCountRecordsRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.</p>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

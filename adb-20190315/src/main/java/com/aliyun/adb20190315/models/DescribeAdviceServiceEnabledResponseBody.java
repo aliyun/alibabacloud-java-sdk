@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     /**
-     * <p>The message returned for the operation. Valid values:</p>
+     * <p>The returned message.</p>
      * <br>
-     * <p>*   **Success** is returned if the operation is successful.</p>
-     * <p>*   An error message is returned if the operation fails.</p>
+     * <p>*   If the request was successful, **Success** is returned.</p>
+     * <p>*   If the request failed, an error message is returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -22,8 +22,8 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the suggestion feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   **True**: The suggestion feature is enabled.</p>
-     * <p>*   **False**: The suggestion feature is disabled.</p>
+     * <p>*   **True**</p>
+     * <p>*   **False**</p>
      */
     @NameInMap("Result")
     public Boolean result;

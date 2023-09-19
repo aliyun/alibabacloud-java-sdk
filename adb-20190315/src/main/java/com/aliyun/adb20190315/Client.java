@@ -982,8 +982,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Precautions
-      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * ### Precautions
+      * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
       * *   The default resource group USER_DEFAULT cannot be deleted.
       *
       * @param request DeleteDBResourceGroupRequest
@@ -1035,8 +1035,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Precautions
-      * *   This operation is applicable only for elastic clusters of 32 cores or more.
+      * ### Precautions
+      * *   You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
       * *   The default resource group USER_DEFAULT cannot be deleted.
       *
       * @param request DeleteDBResourceGroupRequest
@@ -2435,8 +2435,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Precautions
-      * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
       *
       * @param request DescribeDBResourceGroupRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2487,8 +2487,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * ## Precautions
-      * This operation is available only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.
       *
       * @param request DescribeDBResourceGroupRequest
       * @return DescribeDBResourceGroupResponse
@@ -2990,7 +2990,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
       *
       * @param request DescribeElasticPlanRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3049,7 +3050,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This operation is available only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
+      * ###
+      * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition that have 32 cores or more.
       *
       * @param request DescribeElasticPlanRequest
       * @return DescribeElasticPlanResponse
@@ -4274,6 +4276,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTaskInfoWithOptions(request, runtime);
     }
 
+    public DescribeVSwitchesResponse describeVSwitchesWithOptions(DescribeVSwitchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
+            query.put("SecurityToken", request.securityToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswId)) {
+            query.put("VswId", request.vswId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            query.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVSwitches"),
+            new TeaPair("version", "2019-03-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVSwitchesResponse());
+    }
+
+    public DescribeVSwitchesResponse describeVSwitches(DescribeVSwitchesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVSwitchesWithOptions(request, runtime);
+    }
+
     /**
       * You can call this operation only for AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters in elastic mode for Cluster Edition.
       *
@@ -4448,91 +4511,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DownloadDiagnosisRecordsResponse downloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.downloadDiagnosisRecordsWithOptions(request, runtime);
-    }
-
-    public DryRunClusterResponse dryRunClusterWithOptions(DryRunClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.computeResource)) {
-            query.put("ComputeResource", request.computeResource);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterDescription)) {
-            query.put("DBClusterDescription", request.DBClusterDescription);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
-            query.put("DBClusterId", request.DBClusterId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterNetworkType)) {
-            query.put("DBClusterNetworkType", request.DBClusterNetworkType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterVersion)) {
-            query.put("DBClusterVersion", request.DBClusterVersion);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.enableDefaultResourcePool)) {
-            query.put("EnableDefaultResourcePool", request.enableDefaultResourcePool);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.operation)) {
-            query.put("Operation", request.operation);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.payType)) {
-            query.put("PayType", request.payType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
-            query.put("Period", request.period);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
-            query.put("RegionId", request.regionId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.storageResource)) {
-            query.put("StorageResource", request.storageResource);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.usedTime)) {
-            query.put("UsedTime", request.usedTime);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.VPCId)) {
-            query.put("VPCId", request.VPCId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
-            query.put("VSwitchId", request.vSwitchId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
-            query.put("ZoneId", request.zoneId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DryRunCluster"),
-            new TeaPair("version", "2019-03-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DryRunClusterResponse());
-    }
-
-    public DryRunClusterResponse dryRunCluster(DryRunClusterRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.dryRunClusterWithOptions(request, runtime);
     }
 
     public EnableAdviceServiceResponse enableAdviceServiceWithOptions(EnableAdviceServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

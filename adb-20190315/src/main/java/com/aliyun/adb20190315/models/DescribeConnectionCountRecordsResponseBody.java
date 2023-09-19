@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
     /**
-     * <p>Details of the client IP addresses.</p>
+     * <p>The queried client IP addresses.</p>
      */
     @NameInMap("AccessIpRecords")
     public java.util.List<DescribeConnectionCountRecordsResponseBodyAccessIpRecords> accessIpRecords;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Details of the users.</p>
+     * <p>The queried database accounts.</p>
      */
     @NameInMap("UserRecords")
     public java.util.List<DescribeConnectionCountRecordsResponseBodyUserRecords> userRecords;
@@ -67,7 +67,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
 
     public static class DescribeConnectionCountRecordsResponseBodyAccessIpRecords extends TeaModel {
         /**
-         * <p>The IP address of the client used to connect to the cluster.</p>
+         * <p>The IP address of the client.</p>
          */
         @NameInMap("AccessIp")
         public String accessIp;
@@ -109,7 +109,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The name of the user used to connect to the cluster.</p>
+         * <p>The username of the database account.</p>
          */
         @NameInMap("User")
         public String user;

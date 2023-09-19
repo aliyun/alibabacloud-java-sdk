@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPlanRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query details about all AnalyticDB for MySQL clusters in a specific region, including cluster IDs.</p>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
@@ -19,9 +19,9 @@ public class DescribeSQLPlanRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The query ID.</p>
      * <br>
-     * <p>>  You can call the [DescribeSlowLogRecords](~~143382~~) operation to query the task ID of the SQL statement.</p>
+     * <p>> You can call the [DescribeProcessList](~~143382~~) operation to query the IDs of queries that are being executed.</p>
      */
     @NameInMap("ProcessId")
     public String processId;

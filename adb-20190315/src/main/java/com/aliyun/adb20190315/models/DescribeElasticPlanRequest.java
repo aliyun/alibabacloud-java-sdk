@@ -7,16 +7,16 @@ public class DescribeElasticPlanRequest extends TeaModel {
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
+     * <p>> You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether the scaling plan takes effect. Default value: true. Valid values:</p>
+     * <p>Specifies whether the scaling plan takes effect. Valid values:</p>
      * <br>
-     * <p>*   **true**: The scaling plan takes effect.</p>
-     * <p>*   **false**: The scaling plan does not take effect.</p>
+     * <p>*   **true** (default)</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("ElasticPlanEnable")
     public Boolean elasticPlanEnable;
@@ -25,10 +25,9 @@ public class DescribeElasticPlanRequest extends TeaModel {
      * <p>The name of the scaling plan.</p>
      * <br>
      * <p>*   The name must be 2 to 30 characters in length.</p>
-     * <br>
      * <p>*   The name can contain letters, digits, and underscores (\_).</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the details of all scaling plans for the specified cluster are returned.</p>
+     * <p>> If you do not specify this parameter, the information about all scaling plans for the specified cluster is returned.</p>
      */
     @NameInMap("ElasticPlanName")
     public String elasticPlanName;
@@ -48,7 +47,7 @@ public class DescribeElasticPlanRequest extends TeaModel {
     /**
      * <p>The name of the resource group.</p>
      * <br>
-     * <p>> *   You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.</p>
+     * <p>> You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.</p>
      */
     @NameInMap("ResourcePoolName")
     public String resourcePoolName;

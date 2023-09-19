@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     /**
-     * <p>Details of the suggestions.</p>
+     * <p>The queried suggestions.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeAppliedAdvicesResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
-     * <p>*   **30**</p>
+     * <p>*   **30** (default)</p>
      * <p>*   **50**</p>
      * <p>*   **100**</p>
      */
@@ -27,13 +27,13 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+     * <p>The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -103,9 +103,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String buildSQL;
 
         /**
-         * <p>The state of the suggestion execution task.</p>
-         * <br>
-         * <p>Valid values:</p>
+         * <p>The state of the suggestion execution task. Valid values:</p>
          * <br>
          * <p>*   **SUCCEED**</p>
          * <p>*   **FAILED**</p>
@@ -114,15 +112,15 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String jobStatus;
 
         /**
-         * <p>The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.</p>
+         * <p>The page number. Pages start from page 1. Default value: 1.</p>
          */
         @NameInMap("PageNumber")
         public Long pageNumber;
 
         /**
-         * <p>The number of entries returned per page. Default value: 30. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <br>
-         * <p>*   **30**</p>
+         * <p>*   **30** (default)</p>
          * <p>*   **50**</p>
          * <p>*   **100**</p>
          */
@@ -136,15 +134,13 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String rollbackSQL;
 
         /**
-         * <p>The SQL statement used to apply the suggestion.</p>
+         * <p>The SQL statement that is used to apply the suggestion.</p>
          */
         @NameInMap("SQL")
         public String SQL;
 
         /**
-         * <p>The submission state of the suggestion.</p>
-         * <br>
-         * <p>Valid values:</p>
+         * <p>The submission state of the suggestion. Valid values:</p>
          * <br>
          * <p>*   **SUCCEED**</p>
          * <p>*   **FAILED**</p>
@@ -153,13 +149,13 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         public String submitStatus;
 
         /**
-         * <p>The time when the suggestion was submitted. The time follows the yyMMddHHmm format. The time is displayed in UTC.</p>
+         * <p>The time when the suggestion was submitted. The time follows the ISO 8601 standard in the yyMMddHHmm format. The time is displayed in UTC.</p>
          */
         @NameInMap("SubmitTime")
         public String submitTime;
 
         /**
-         * <p>The total number of entries returned. The value must be an integer that is greater than or equal to 0. Default value: 0.</p>
+         * <p>The total number of entries returned. The value is an integer that is greater than or equal to 0. Default value: 0.</p>
          */
         @NameInMap("TotalCount")
         public Long totalCount;

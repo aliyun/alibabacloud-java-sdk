@@ -3,7 +3,7 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class DryRunClusterResponse extends TeaModel {
+public class DescribeVSwitchesResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class DryRunClusterResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DryRunClusterResponseBody body;
+    public DescribeVSwitchesResponseBody body;
 
-    public static DryRunClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        DryRunClusterResponse self = new DryRunClusterResponse();
+    public static DescribeVSwitchesResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeVSwitchesResponse self = new DescribeVSwitchesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DryRunClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeVSwitchesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class DryRunClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public DryRunClusterResponse setStatusCode(Integer statusCode) {
+    public DescribeVSwitchesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class DryRunClusterResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DryRunClusterResponse setBody(DryRunClusterResponseBody body) {
+    public DescribeVSwitchesResponse setBody(DescribeVSwitchesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DryRunClusterResponseBody getBody() {
+    public DescribeVSwitchesResponseBody getBody() {
         return this.body;
     }
 

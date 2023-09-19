@@ -7,6 +7,9 @@ public class DescribeComputeResourceRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The version of the AnalyticDB for MySQL Data Warehouse Edition cluster. Set the value to **3**.</p>
+     */
     @NameInMap("DBClusterVersion")
     public String DBClusterVersion;
 
@@ -20,9 +23,9 @@ public class DescribeComputeResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID of the cluster.</p>
      * <br>
-     * <p>>  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
+     * <p>> You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -33,6 +36,11 @@ public class DescribeComputeResourceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The zone ID of the cluster.</p>
+     * <br>
+     * <p>> You can call the [DescribeRegions](~~129857~~) operation to query the most recent zone list.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

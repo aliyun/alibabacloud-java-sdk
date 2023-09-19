@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticPlanResponseBody extends TeaModel {
     /**
-     * <p>Details of the scaling plans.</p>
+     * <p>The queried scaling plans.</p>
      */
     @NameInMap("ElasticPlanList")
     public java.util.List<DescribeElasticPlanResponseBodyElasticPlanList> elasticPlanList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
 
     public static class DescribeElasticPlanResponseBodyElasticPlanList extends TeaModel {
         /**
-         * <p>The number of nodes involved in the scaling plan.</p>
+         * <p>The number of nodes that are involved in the scaling plan.</p>
          * <br>
          * <p>*   If ElasticPlanType is set to **worker**, a value of 0 or null is returned.</p>
          * <p>*   If ElasticPlanType is set to **executorcombineworker** or **executor**, a value greater than 0 is returned.</p>
@@ -48,19 +48,19 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         public Integer elasticNodeNum;
 
         /**
-         * <p>The type of the scaling plan. Default value: executorcombineworker. Valid values:</p>
+         * <p>The type of the scaling plan. Valid values:</p>
          * <br>
          * <p>*   **worker**: scales only elastic I/O resources.</p>
          * <p>*   **executor**: scales only computing resources.</p>
-         * <p>*   **executorcombineworker**: scales both elastic I/O resources and computing resources by proportion.</p>
+         * <p>*   **executorcombineworker** (default): scales both elastic I/O resources and computing resources by proportion.</p>
          */
         @NameInMap("ElasticPlanType")
         public String elasticPlanType;
 
         /**
-         * <p>The resource specifications that can be scaled up by the scaling plan. Default value: 8 Core 64 GB. Valid values:</p>
+         * <p>The resource specifications that can be scaled up by the scaling plan. Valid values:</p>
          * <br>
-         * <p>*   8 Core 64 GB</p>
+         * <p>*   8 Core 64 GB (default)</p>
          * <p>*   16 Core 64 GB</p>
          * <p>*   32 Core 64 GB</p>
          * <p>*   64 Core 128 GB</p>
@@ -72,10 +72,10 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         public String elasticPlanWorkerSpec;
 
         /**
-         * <p>Specifies whether the scaling plan takes effect. Default value: true. Valid values:</p>
+         * <p>Indicates whether the scaling plan takes effect. Default value: true. Valid values:</p>
          * <br>
-         * <p>*   **true**: The scaling plan takes effect.</p>
-         * <p>*   **false**: The scaling plan does not take effect.</p>
+         * <p>*   **true** (default)</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
@@ -117,7 +117,7 @@ public class DescribeElasticPlanResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The days of the week when you want to execute the scaling plan. Valid values: 0 to 6, which indicate Sunday to Saturday. Multiple values are separated by commas (,).</p>
+         * <p>The days of the week when the scaling plan was executed. Valid values: 0 to 6, which indicate Sunday to Saturday. Multiple values are separated by commas (,).</p>
          */
         @NameInMap("WeeklyRepeat")
         public String weeklyRepeat;

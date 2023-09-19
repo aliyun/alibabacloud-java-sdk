@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlPatternResponseBody extends TeaModel {
     /**
-     * <p>Details about the SQL pattern.</p>
+     * <p>The queried SQL pattern.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeSqlPatternResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on the current page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -83,25 +83,25 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
          * <br>
-         * <p>>  This parameter is returned only when the `Type` parameter is set to `accessip`.</p>
+         * <p>> This parameter is returned only when `Type` is set to `accessip`.</p>
          */
         @NameInMap("AccessIP")
         public String accessIP;
 
         /**
-         * <p>The average CPU time. Unit: milliseconds.</p>
+         * <p>The average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</p>
          */
         @NameInMap("AvgCpuTime")
         public String avgCpuTime;
 
         /**
-         * <p>The average peak memory. Unit: KB.</p>
+         * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: KB.</p>
          */
         @NameInMap("AvgPeakMemory")
         public String avgPeakMemory;
 
         /**
-         * <p>The average scan size. Unit: KB.</p>
+         * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</p>
          */
         @NameInMap("AvgScanSize")
         public String avgScanSize;
@@ -119,25 +119,25 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String avgTaskCount;
 
         /**
-         * <p>The ID of the cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("InstanceName")
         public String instanceName;
 
         /**
-         * <p>The maximum CPU time. Unit: milliseconds.</p>
+         * <p>The maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</p>
          */
         @NameInMap("MaxCpuTime")
         public String maxCpuTime;
 
         /**
-         * <p>The maximum peak memory. Unit: KB.</p>
+         * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.</p>
          */
         @NameInMap("MaxPeakMemory")
         public String maxPeakMemory;
 
         /**
-         * <p>The maximum scan size. Unit: KB.</p>
+         * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</p>
          */
         @NameInMap("MaxScanSize")
         public String maxScanSize;
@@ -161,13 +161,13 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String pattern;
 
         /**
-         * <p>The total number of queries.</p>
+         * <p>The number of queries performed in association with the SQL pattern within the query time range.</p>
          */
         @NameInMap("QueryCount")
         public String queryCount;
 
         /**
-         * <p>The query date.</p>
+         * <p>The start date of the query.</p>
          */
         @NameInMap("ReportDate")
         public String reportDate;
@@ -175,7 +175,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         /**
          * <p>The username.</p>
          * <br>
-         * <p>>  This parameter is returned only when the `Type` parameter is left empty or set to `user`.</p>
+         * <p>> This parameter is returned only when `Type` is left empty or set to `user`.</p>
          */
         @NameInMap("User")
         public String user;

@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoRenewAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
-     * <br>
-     * <p>Separate multiple clusters with commas (,).</p>
+     * <p>The cluster ID. Separate multiple clusters with commas (,).</p>
      */
     @NameInMap("DBClusterIds")
     public String DBClusterIds;
@@ -19,21 +17,19 @@ public class DescribeAutoRenewAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. The value must be an integer that is greater than 0.</p>
-     * <br>
-     * <p>Default value: 1</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <br>
      * <p>*   30</p>
      * <p>*   50</p>
      * <p>*   100</p>
      * <br>
-     * <p>Default value: 30</p>
+     * <p>Default value: 30.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

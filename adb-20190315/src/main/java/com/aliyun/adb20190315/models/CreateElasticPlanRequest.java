@@ -69,12 +69,8 @@ public class CreateElasticPlanRequest extends TeaModel {
      * <p>*   **worker**: scales only elastic I/O resources.</p>
      * <p>*   **executor**: scales only computing resources.</p>
      * <p>*   **executorcombineworker** (default): scales both elastic I/O resources and computing resources by proportion.</p>
-     * <br>
-     * <p>> </p>
-     * <br>
-     * <p>*   If you want to set this parameter to **executorcombineworker**, make sure that the cluster runs a minor version of 3.1.3.2 or later.</p>
-     * <br>
-     * <p>*   If you want to set this parameter to **worker** or **executor**, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to **worker** or **executor**.</p>
+     * <p>> - If you want to set this parameter to **executorcombineworker**, make sure that the cluster runs a minor version of 3.1.3.2 or later.</p>
+     * <p>> - If you want to set this parameter to **worker** or **executor**, make sure that the cluster runs a minor version of 3.1.6.1 or later and a ticket is submitted. After your request is approved, you can set this parameter to **worker** or **executor**.</p>
      */
     @NameInMap("ElasticPlanType")
     public String elasticPlanType;
