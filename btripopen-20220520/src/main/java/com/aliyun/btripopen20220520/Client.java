@@ -2662,12 +2662,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("invoice_sub_task_id", request.invoiceSubTaskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.itineraryNum)) {
+            query.put("itinerary_num", request.itineraryNum);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("page_no", request.pageNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("page_size", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketNo)) {
+            query.put("ticket_no", request.ticketNo);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -7350,6 +7358,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("page_size", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serialNumber)) {
+            query.put("serial_number", request.serialNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ticketNo)) {
+            query.put("ticket_no", request.ticketNo);
         }
 
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();

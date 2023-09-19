@@ -13,11 +13,17 @@ public class FlightItineraryScanQueryRequest extends TeaModel {
     @NameInMap("invoice_sub_task_id")
     public Long invoiceSubTaskId;
 
+    @NameInMap("itinerary_num")
+    public String itineraryNum;
+
     @NameInMap("page_no")
     public Integer pageNo;
 
     @NameInMap("page_size")
     public Integer pageSize;
+
+    @NameInMap("ticket_no")
+    public String ticketNo;
 
     public static FlightItineraryScanQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         FlightItineraryScanQueryRequest self = new FlightItineraryScanQueryRequest();
@@ -48,6 +54,14 @@ public class FlightItineraryScanQueryRequest extends TeaModel {
         return this.invoiceSubTaskId;
     }
 
+    public FlightItineraryScanQueryRequest setItineraryNum(String itineraryNum) {
+        this.itineraryNum = itineraryNum;
+        return this;
+    }
+    public String getItineraryNum() {
+        return this.itineraryNum;
+    }
+
     public FlightItineraryScanQueryRequest setPageNo(Integer pageNo) {
         this.pageNo = pageNo;
         return this;
@@ -62,6 +76,14 @@ public class FlightItineraryScanQueryRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public FlightItineraryScanQueryRequest setTicketNo(String ticketNo) {
+        this.ticketNo = ticketNo;
+        return this;
+    }
+    public String getTicketNo() {
+        return this.ticketNo;
     }
 
 }

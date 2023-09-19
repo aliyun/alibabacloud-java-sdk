@@ -75,6 +75,99 @@ public class HotelSearchResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail extends TeaModel {
+        @NameInMap("label_name")
+        public java.util.List<String> labelName;
+
+        @NameInMap("money_desc")
+        public String moneyDesc;
+
+        public static HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail build(java.util.Map<String, ?> map) throws Exception {
+            HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail self = new HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail setLabelName(java.util.List<String> labelName) {
+            this.labelName = labelName;
+            return this;
+        }
+        public java.util.List<String> getLabelName() {
+            return this.labelName;
+        }
+
+        public HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail setMoneyDesc(String moneyDesc) {
+            this.moneyDesc = moneyDesc;
+            return this;
+        }
+        public String getMoneyDesc() {
+            return this.moneyDesc;
+        }
+
+    }
+
+    public static class HotelSearchResponseBodyModuleItemsDiscountDesc extends TeaModel {
+        @NameInMap("cash_reduce_total")
+        public String cashReduceTotal;
+
+        @NameInMap("dinamic_label")
+        public String dinamicLabel;
+
+        @NameInMap("discount_detail")
+        public java.util.List<HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail> discountDetail;
+
+        @NameInMap("sub_title")
+        public String subTitle;
+
+        @NameInMap("title")
+        public String title;
+
+        public static HotelSearchResponseBodyModuleItemsDiscountDesc build(java.util.Map<String, ?> map) throws Exception {
+            HotelSearchResponseBodyModuleItemsDiscountDesc self = new HotelSearchResponseBodyModuleItemsDiscountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelSearchResponseBodyModuleItemsDiscountDesc setCashReduceTotal(String cashReduceTotal) {
+            this.cashReduceTotal = cashReduceTotal;
+            return this;
+        }
+        public String getCashReduceTotal() {
+            return this.cashReduceTotal;
+        }
+
+        public HotelSearchResponseBodyModuleItemsDiscountDesc setDinamicLabel(String dinamicLabel) {
+            this.dinamicLabel = dinamicLabel;
+            return this;
+        }
+        public String getDinamicLabel() {
+            return this.dinamicLabel;
+        }
+
+        public HotelSearchResponseBodyModuleItemsDiscountDesc setDiscountDetail(java.util.List<HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail> discountDetail) {
+            this.discountDetail = discountDetail;
+            return this;
+        }
+        public java.util.List<HotelSearchResponseBodyModuleItemsDiscountDescDiscountDetail> getDiscountDetail() {
+            return this.discountDetail;
+        }
+
+        public HotelSearchResponseBodyModuleItemsDiscountDesc setSubTitle(String subTitle) {
+            this.subTitle = subTitle;
+            return this;
+        }
+        public String getSubTitle() {
+            return this.subTitle;
+        }
+
+        public HotelSearchResponseBodyModuleItemsDiscountDesc setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
     public static class HotelSearchResponseBodyModuleItems extends TeaModel {
         @NameInMap("brand_name")
         public String brandName;
@@ -84,6 +177,9 @@ public class HotelSearchResponseBody extends TeaModel {
 
         @NameInMap("city_code")
         public String cityCode;
+
+        @NameInMap("discount_desc")
+        public HotelSearchResponseBodyModuleItemsDiscountDesc discountDesc;
 
         @NameInMap("distance")
         public Integer distance;
@@ -157,6 +253,14 @@ public class HotelSearchResponseBody extends TeaModel {
         }
         public String getCityCode() {
             return this.cityCode;
+        }
+
+        public HotelSearchResponseBodyModuleItems setDiscountDesc(HotelSearchResponseBodyModuleItemsDiscountDesc discountDesc) {
+            this.discountDesc = discountDesc;
+            return this;
+        }
+        public HotelSearchResponseBodyModuleItemsDiscountDesc getDiscountDesc() {
+            return this.discountDesc;
         }
 
         public HotelSearchResponseBodyModuleItems setDistance(Integer distance) {
