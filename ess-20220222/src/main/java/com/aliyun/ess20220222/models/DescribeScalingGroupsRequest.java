@@ -40,6 +40,9 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     @NameInMap("ScalingGroupNames")
     public java.util.List<String> scalingGroupNames;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeScalingGroupsRequestTags> tags;
+
     public static DescribeScalingGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingGroupsRequest self = new DescribeScalingGroupsRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,44 @@ public class DescribeScalingGroupsRequest extends TeaModel {
     }
     public java.util.List<String> getScalingGroupNames() {
         return this.scalingGroupNames;
+    }
+
+    public DescribeScalingGroupsRequest setTags(java.util.List<DescribeScalingGroupsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeScalingGroupsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeScalingGroupsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeScalingGroupsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingGroupsRequestTags self = new DescribeScalingGroupsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingGroupsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeScalingGroupsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

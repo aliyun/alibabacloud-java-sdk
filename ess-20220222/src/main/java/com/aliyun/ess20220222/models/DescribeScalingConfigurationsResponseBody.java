@@ -79,36 +79,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("MatchCriteria")
-        public String matchCriteria;
-
-        public static DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions self = new DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions setMatchCriteria(String matchCriteria) {
-            this.matchCriteria = matchCriteria;
-            return this;
-        }
-        public String getMatchCriteria() {
-            return this.matchCriteria;
-        }
-
-    }
-
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurationsDataDisks extends TeaModel {
         /**
          * <p>The ID of the automatic snapshot policy that is applied to the data disk.</p>
@@ -570,9 +540,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
     }
 
     public static class DescribeScalingConfigurationsResponseBodyScalingConfigurations extends TeaModel {
-        @NameInMap("PrivatePoolOptions")
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions privatePoolOptions;
-
         /**
          * <p>Indicates whether the instance on the dedicated host is associated with the dedicated host. Valid values:</p>
          * <br>
@@ -791,6 +758,12 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
          */
         @NameInMap("PasswordInherit")
         public Boolean passwordInherit;
+
+        @NameInMap("PrivatePoolOptions.Id")
+        public String privatePoolOptions_id;
+
+        @NameInMap("PrivatePoolOptions.MatchCriteria")
+        public String privatePoolOptions_matchCriteria;
 
         /**
          * <p>The name of the RAM role that is associated with the ECS instance. The name is provided and maintained by Resource Access Management (RAM). You can call the ListRoles operation to query the available RAM roles.</p>
@@ -1012,14 +985,6 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         public static DescribeScalingConfigurationsResponseBodyScalingConfigurations build(java.util.Map<String, ?> map) throws Exception {
             DescribeScalingConfigurationsResponseBodyScalingConfigurations self = new DescribeScalingConfigurationsResponseBodyScalingConfigurations();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setPrivatePoolOptions(DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions privatePoolOptions) {
-            this.privatePoolOptions = privatePoolOptions;
-            return this;
-        }
-        public DescribeScalingConfigurationsResponseBodyScalingConfigurationsPrivatePoolOptions getPrivatePoolOptions() {
-            return this.privatePoolOptions;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setAffinity(String affinity) {
@@ -1268,6 +1233,22 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
         }
         public Boolean getPasswordInherit() {
             return this.passwordInherit;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setPrivatePoolOptions_id(String privatePoolOptions_id) {
+            this.privatePoolOptions_id = privatePoolOptions_id;
+            return this;
+        }
+        public String getPrivatePoolOptions_id() {
+            return this.privatePoolOptions_id;
+        }
+
+        public DescribeScalingConfigurationsResponseBodyScalingConfigurations setPrivatePoolOptions_matchCriteria(String privatePoolOptions_matchCriteria) {
+            this.privatePoolOptions_matchCriteria = privatePoolOptions_matchCriteria;
+            return this;
+        }
+        public String getPrivatePoolOptions_matchCriteria() {
+            return this.privatePoolOptions_matchCriteria;
         }
 
         public DescribeScalingConfigurationsResponseBodyScalingConfigurations setRamRoleName(String ramRoleName) {

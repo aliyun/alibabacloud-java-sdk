@@ -4,9 +4,15 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
+    /**
+     * <p>Details of the notifications.</p>
+     */
     @NameInMap("NotificationConfigurationModels")
     public java.util.List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels> notificationConfigurationModels;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +38,41 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
     }
 
     public static class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels extends TeaModel {
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:</p>
+         * <br>
+         * <p>*   If you use CloudMonitor as the notification method, the value format of this parameter is acs:ess:{region-id}:{account-id}:cloudmonitor.</p>
+         * <p>*   If you use a Message Service (MNS) queue as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:queue/{queuename}.</p>
+         * <p>*   If you use an MNS topic as the notification method, the value format of this parameter is acs:mns:{region-id}:{account-id}:topic/{topicname}.</p>
+         * <br>
+         * <p>The variables in the preceding formats have the following meanings:</p>
+         * <br>
+         * <p>*   region-id: the region ID of the scaling group.</p>
+         * <p>*   account-id: the ID of the Alibaba Cloud account.</p>
+         * <p>*   queuename: the name of the MNS queue.</p>
+         * <p>*   topicname: the name of the MNS topic.</p>
+         */
         @NameInMap("NotificationArn")
         public String notificationArn;
 
+        /**
+         * <p>The types of notifications for scaling activities and resource changes.</p>
+         * <br>
+         * <p>*   AUTOSCALING:SCALE_OUT_SUCCESS: The scale-out event is successful.</p>
+         * <p>*   AUTOSCALING:SCALE_IN_SUCCESS: The scale-in event is successful.</p>
+         * <p>*   AUTOSCALING:SCALE_OUT_ERROR: The scale-out event fails.</p>
+         * <p>*   AUTOSCALING:SCALE_IN_ERROR: The scale-in event fails.</p>
+         * <p>*   AUTOSCALING:SCALE_REJECT: The scaling activity is rejected.</p>
+         * <p>*   AUTOSCALING:SCALE_OUT_START: The scale-out event is started.</p>
+         * <p>*   AUTOSCALING:SCALE_IN_START: The scale-in event is started.</p>
+         * <p>*   AUTOSCALING:SCHEDULE_TASK_EXPIRING: Auto Scaling sends a notification when a scheduled task is about to expire.</p>
+         */
         @NameInMap("NotificationTypes")
         public java.util.List<String> notificationTypes;
 
+        /**
+         * <p>The ID of the scaling group.</p>
+         */
         @NameInMap("ScalingGroupId")
         public String scalingGroupId;
 
