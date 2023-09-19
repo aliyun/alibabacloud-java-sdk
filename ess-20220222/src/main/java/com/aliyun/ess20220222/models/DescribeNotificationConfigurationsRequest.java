@@ -7,12 +7,18 @@ public class DescribeNotificationConfigurationsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID of the scaling group.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The ID of the scaling group.</p>
+     */
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 

@@ -7,18 +7,30 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the Auto Scaling resources. You can specify 1 to 50 resource IDs.</p>
+     */
     @NameInMap("ResourceIds")
     public java.util.List<String> resourceIds;
 
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Details of the tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<TagResourcesRequestTags> tags;
 
@@ -76,12 +88,30 @@ public class TagResourcesRequest extends TeaModel {
     }
 
     public static class TagResourcesRequestTags extends TeaModel {
+        /**
+         * <p>The key of the tag that you want to add to the Auto Scaling resource.</p>
+         * <br>
+         * <p>You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>Specifies whether to propagate the tag that you want to add. Valid values:</p>
+         * <br>
+         * <p>*   true: propagates the tag only to instances that are newly created and does not propagate the tag to instances that are already running in the scaling group.</p>
+         * <p>*   false: does not propagate the tag to any instances.</p>
+         * <br>
+         * <p>Default value: false.</p>
+         */
         @NameInMap("Propagate")
         public Boolean propagate;
 
+        /**
+         * <p>The value of the tag that you want to add to the Auto Scaling resource.</p>
+         * <br>
+         * <p>You can specify empty strings as tag values. The tag value must be 0 to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 
