@@ -5,39 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     /**
-     * <p>The status information.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the instance. Separate multiple instance IDs with commas (,).</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The host status information.</p>
      */
     @NameInMap("NodeStatusList")
     public DescribeMonitoringAgentStatusesResponseBodyNodeStatusList nodeStatusList;
 
     /**
-     * <p>The status of SysOM. Valid values:</p>
-     * <br>
-     * <p>*   installing: SysOM is being installed.</p>
-     * <p>*   running: SysOM is running.</p>
-     * <p>*   stopped: SysOM is stopped.</p>
-     * <p>*   uninstalling: SysOM is being uninstalled.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the CloudMonitor agent is automatically installed. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true: The CloudMonitor agent is automatically installed.</p>
-     * <p>*   false: The CloudMonitor agent is not automatically installed.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -89,6 +86,30 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
 
     public static class DescribeMonitoringAgentStatusesResponseBodyNodeStatusListNodeStatus extends TeaModel {
         /**
+         * <p>Indicates whether the CloudMonitor agent is automatically installed. Valid values:</p>
+         * <br>
+         * <p>*   true: The CloudMonitor agent is automatically installed.</p>
+         * <p>*   false: The CloudMonitor agent is not automatically installed.</p>
+         */
+        @NameInMap("AutoInstall")
+        public Boolean autoInstall;
+
+        /**
+         * <p>The instance ID.</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>Indicates whether the SysAK monitoring feature is enabled.`` Valid values:</p>
+         * <br>
+         * <p>*   `true`: The SysAK monitoring feature is enabled.</p>
+         * <p>*   `false`: the SysAK monitoring feature is disabled.</p>
+         */
+        @NameInMap("OsMonitorConfig")
+        public String osMonitorConfig;
+
+        /**
          * <p>The error status of SysOM. Valid values:</p>
          * <br>
          * <p>*   `install_fail`: SysOM fails to be installed or an unknown error occurs.</p>
@@ -98,30 +119,35 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
          * <p>*   `uninstall_assist_invalid`: SysOM fails to be uninstalled because the status of Cloud Assistant is invalid.</p>
          * <p>*   `uninstall_assist_command_fail`: SysOM fails to be uninstalled because the uninstallation command fails to run.</p>
          */
-        @NameInMap("AutoInstall")
-        public Boolean autoInstall;
-
-        /**
-         * <p>The ID of the request.</p>
-         */
-        @NameInMap("InstanceId")
-        public String instanceId;
-
-        @NameInMap("OsMonitorConfig")
-        public String osMonitorConfig;
-
         @NameInMap("OsMonitorErrorCode")
         public String osMonitorErrorCode;
 
+        /**
+         * <p>The details of the execution error. Valid values:</p>
+         * <br>
+         * <p>*   `Command.ErrorCode.Fail.Downlaod.REGIN_ID`: Failed to obtain the region ID.</p>
+         * <p>*   `Command.ErrorCode.Fail.Downlaod.SYSAK`: Failed to download the .rpm package of System Analyse Kit (SysAK).</p>
+         * <p>*   `Command.ErrorCode.Fail.Downlaod.CMON_FILE`: Failed to download the CMON file.</p>
+         * <p>*   `Command.ErrorCode.Fail.Downlaod.BTF`: Failed to start SysAK because the BTF file is not found.</p>
+         * <p>*   `Command.ErrorCode.Fail.Start.SYSAK`: Failed to start SysAK due to an unknown error.</p>
+         */
         @NameInMap("OsMonitorErrorDetail")
         public String osMonitorErrorDetail;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The status of SysOM. Valid values:</p>
+         * <br>
+         * <p>*   installing: SysOM is being installed.</p>
+         * <p>*   running: SysOM is running.</p>
+         * <p>*   stopped: SysOM is stopped.</p>
+         * <p>*   uninstalling: SysOM is being uninstalled.</p>
          */
         @NameInMap("OsMonitorStatus")
         public String osMonitorStatus;
 
+        /**
+         * <p>The SysOM version.</p>
+         */
         @NameInMap("OsMonitorVersion")
         public String osMonitorVersion;
 

@@ -19,11 +19,14 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The group process information.</p>
+     */
     @NameInMap("Resource")
     public CreateGroupMonitoringAgentProcessResponseBodyResource resource;
 
@@ -82,6 +85,9 @@ public class CreateGroupMonitoringAgentProcessResponseBody extends TeaModel {
     }
 
     public static class CreateGroupMonitoringAgentProcessResponseBodyResource extends TeaModel {
+        /**
+         * <p>The ID of the group process.</p>
+         */
         @NameInMap("GroupProcessId")
         public String groupProcessId;
 

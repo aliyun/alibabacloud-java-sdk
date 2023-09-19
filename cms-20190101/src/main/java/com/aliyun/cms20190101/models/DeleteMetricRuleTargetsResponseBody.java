@@ -5,34 +5,38 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the message resource that failed to be deleted.</p>
+     * <p>The IDs of the resources that failed to be deleted.</p>
      */
     @NameInMap("FailIds")
     public DeleteMetricRuleTargetsResponseBodyFailIds failIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The message resources that failed to be deleted.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -103,7 +107,7 @@ public class DeleteMetricRuleTargetsResponseBody extends TeaModel {
 
     public static class DeleteMetricRuleTargetsResponseBodyFailIds extends TeaModel {
         /**
-         * <p>Deletes the message resources of an alert rule. This operation supports only Message Service (MNS) resources.</p>
+         * <p>The IDs of the resources that failed to be deleted.</p>
          */
         @NameInMap("TargetIds")
         public DeleteMetricRuleTargetsResponseBodyFailIdsTargetIds targetIds;

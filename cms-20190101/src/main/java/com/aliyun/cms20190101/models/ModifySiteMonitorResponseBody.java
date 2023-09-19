@@ -5,28 +5,36 @@ import com.aliyun.tea.*;
 
 public class ModifySiteMonitorResponseBody extends TeaModel {
     /**
-     * <p>The URL or IP address that is monitored by the task.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The result of modifying the task.</p>
+     */
     @NameInMap("Data")
     public ModifySiteMonitorResponseBodyData data;
 
     /**
-     * <p>The monitoring frequency. Valid values: 1, 5, 15, and 15000. Unit: milliseconds. Default value: 1.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The result of modifying the task.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public String success;
@@ -77,6 +85,9 @@ public class ModifySiteMonitorResponseBody extends TeaModel {
     }
 
     public static class ModifySiteMonitorResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of site monitoring tasks.</p>
+         */
         @NameInMap("count")
         public Integer count;
 

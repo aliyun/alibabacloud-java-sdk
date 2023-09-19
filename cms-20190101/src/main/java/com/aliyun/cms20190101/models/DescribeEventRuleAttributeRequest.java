@@ -8,13 +8,19 @@ public class DescribeEventRuleAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The error message.</p>
+     * <p>The name of the event-triggered alert rule.</p>
+     * <br>
+     * <p>For more information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The mute period during which new alerts are not sent even if the trigger conditions are met.</p>
+     * <br>
+     * <p>Unit: seconds. Default value: 86400, which indicates one day.</p>
+     * <br>
+     * <p>>  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
      */
     @NameInMap("SilenceTime")
     public String silenceTime;

@@ -4,13 +4,18 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutHybridMonitorMetricDataRequest extends TeaModel {
+    /**
+     * <p>The monitoring data.</p>
+     * <br>
+     * <p>Valid values of N: 1 to 100.</p>
+     */
     @NameInMap("MetricList")
     public java.util.List<PutHybridMonitorMetricDataRequestMetricList> metricList;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the namespace.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -49,15 +54,23 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
 
     public static class PutHybridMonitorMetricDataRequestMetricListLabels extends TeaModel {
         /**
-         * <p>The position of the error message in the array.</p>
+         * <p>The tag key of the metric.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>The key can contain letters, digits, and underscores (*). The key must start with a letter or an underscore (*).</p>
+         * <br>
+         * <p>>  You must specify both the Key and Value parameters.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The name of the namespace.</p>
+         * <p>The tag value of the metric.</p>
          * <br>
-         * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>>  You must specify both the Key and Value parameters.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -86,33 +99,40 @@ public class PutHybridMonitorMetricDataRequest extends TeaModel {
     }
 
     public static class PutHybridMonitorMetricDataRequestMetricList extends TeaModel {
+        /**
+         * <p>The tags of the metric.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         */
         @NameInMap("Labels")
         public java.util.List<PutHybridMonitorMetricDataRequestMetricListLabels> labels;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **PutHybridMonitorMetricData**.</p>
+         * <p>The metric name.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>The name can contain letters, digits, and underscores (\_). The name must start with a letter.</p>
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>The timestamp when the monitoring data is imported.</p>
+         * <br>
+         * <p>Valid values of N: 1 to 100.</p>
+         * <br>
+         * <p>Unit: milliseconds. By default, the current timestamp is used.</p>
+         */
+        @NameInMap("TS")
+        public Long TS;
 
         /**
          * <p>The value of the metric.</p>
          * <br>
          * <p>Valid values of N: 1 to 100.</p>
          * <br>
-         * <p>The value is an integer or a floating-point number.</p>
-         */
-        @NameInMap("TS")
-        public Long TS;
-
-        /**
-         * <p>The tag key of the metric.</p>
-         * <br>
-         * <p>Valid values of N: 1 to 100.</p>
-         * <br>
-         * <p>The key can contain letters, digits, and underscores (\_). The key must start with a letter or an underscore (\_).</p>
-         * <br>
-         * <p>>  You must specify a key and a value for a tag at the same time.</p>
+         * <p>The value must be an integer or a floating-point number.</p>
          */
         @NameInMap("Value")
         public String value;

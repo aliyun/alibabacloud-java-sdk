@@ -5,20 +5,31 @@ import com.aliyun.tea.*;
 
 public class DeleteHybridMonitorSLSGroupResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteHybridMonitorSLSGroup**.</p>
+     * <p>The status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public String success;
 

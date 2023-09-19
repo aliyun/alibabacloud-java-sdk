@@ -5,44 +5,47 @@ import com.aliyun.tea.*;
 
 public class ModifySiteMonitorRequest extends TeaModel {
     /**
-     * <p>The ID of the site monitoring task.</p>
+     * <p>The URL or IP address that is monitored by the task.</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see [DescribeMetricRuleList](~~114941~~).</p>
      */
     @NameInMap("AlertIds")
     public String alertIds;
 
+    /**
+     * <p>The custom detection period. You can only select a time period from Monday to Sunday for detection.</p>
+     */
     @NameInMap("CustomSchedule")
     public String customSchedule;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The interval at which detection requests are sent. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.</p>
      */
     @NameInMap("Interval")
     public String interval;
 
     /**
-     * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
+     * <p>The unit of the metric.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
      */
     @NameInMap("IntervalUnit")
     public String intervalUnit;
 
     /**
-     * <p>The operation that you want to perform. Set the value to ModifySiteMonitor.</p>
+     * <p>The information of the detection points. The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the `city` field indicate Beijing, Hangzhou, and Qingdao.</p>
+     * <br>
+     * <p>> You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see [DescribeSiteMonitorISPCityList](~~115045~~). If you leave this parameter empty, the system randomly selects three detection points.</p>
      */
     @NameInMap("IspCities")
     public String ispCities;
 
     /**
-     * <p>The detection points. The value is a JSON array. Example: `[{"city":"546","isp":"465"},{"city":"572","isp":"465"},{"city":"738","isp":"465"}]`. The values of the `city` field indicate Beijing, Hangzhou, and Qingdao.</p>
-     * <br>
-     * <p>>  You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see [DescribeSiteMonitorISPCityList](~~115045~~). If you leave this parameter empty, the system randomly selects three detection points.</p>
+     * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
      */
     @NameInMap("OptionsJson")
     public String optionsJson;
@@ -51,13 +54,13 @@ public class ModifySiteMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
+     * <p>The ID of the site monitoring task.</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
      */
     @NameInMap("TaskName")
     public String taskName;

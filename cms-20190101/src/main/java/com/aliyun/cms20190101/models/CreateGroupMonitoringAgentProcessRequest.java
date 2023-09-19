@@ -14,6 +14,8 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
 
     /**
      * <p>The ID of the application group.</p>
+     * <br>
+     * <p>For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -37,7 +39,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
     public String matchExpressFilterRelation;
 
     /**
-     * <p>The name of the process.</p>
+     * <p>The process name.</p>
      */
     @NameInMap("ProcessName")
     public String processName;
@@ -114,10 +116,10 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
          * <br>
          * <p>*   {Resource type}: the type of the resource that triggers the alert. Valid values:</p>
          * <br>
-         * <p>    *   **queues**: queue.</p>
-         * <p>    *   **topics**: topic.</p>
+         * <p>    *   **queues**</p>
+         * <p>    *   **topics**</p>
          * <br>
-         * <p>*   {Resource name}: the name of the resource.</p>
+         * <p>*   {Resource name}: the resource name.</p>
          * <br>
          * <p>    *   If the resource type is **queues**, the resource name is the queue name.</p>
          * <p>    *   If the resource type is **topics**, the resource name is the topic name.</p>
@@ -134,17 +136,17 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * <p>The parameters of the alert callback. Specify the parameters in the JSON format.</p>
          */
         @NameInMap("JsonParams")
         public String jsonParams;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <br>
-         * <p>*   INFO: Info</p>
-         * <p>*   WARN: Warn</p>
-         * <p>*   CRITICAL: Critical</p>
+         * <p>*   INFO</p>
+         * <p>*   WARN</p>
+         * <p>*   CRITICAL</p>
          */
         @NameInMap("Level")
         public String level;
@@ -218,11 +220,11 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         public String effectiveInterval;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <br>
-         * <p>*   critical (default value): Critical</p>
-         * <p>*   Warn</p>
-         * <p>*   Info</p>
+         * <p>*   critical (default)</p>
+         * <p>*   warn</p>
+         * <p>*   info</p>
          * <br>
          * <p>Valid values of N: 1 to 3.</p>
          */
@@ -238,11 +240,11 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
         public String noEffectiveInterval;
 
         /**
-         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</p>
+         * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to 1 hour. Default value: 86400, which is equivalent to one day.</p>
          * <br>
          * <p>Valid values of N: 1 to 3.</p>
          * <br>
-         * <p>> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
+         * <p>>  Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
          */
         @NameInMap("SilenceTime")
         public String silenceTime;
@@ -252,7 +254,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
          * <br>
          * <p>Valid values of N: 1 to 3.</p>
          * <br>
-         * <p>> Set the value to Average.</p>
+         * <p>>  Set the value to Average.</p>
          */
         @NameInMap("Statistics")
         public String statistics;
@@ -276,7 +278,7 @@ public class CreateGroupMonitoringAgentProcessRequest extends TeaModel {
          * <br>
          * <p>Valid values of N: 1 to 3.</p>
          * <br>
-         * <p>> An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.</p>
+         * <p>>  An alert is triggered only if the number of times for which the threshold can be consecutively exceeded is reached.</p>
          */
         @NameInMap("Times")
         public String times;

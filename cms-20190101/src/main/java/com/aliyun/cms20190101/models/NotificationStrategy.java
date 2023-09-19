@@ -440,6 +440,9 @@ public class NotificationStrategy extends TeaModel {
     }
 
     public static class NotificationStrategyPushingSetting extends TeaModel {
+        @NameInMap("PushingDataFormat")
+        public String pushingDataFormat;
+
         @NameInMap("Range")
         public String range;
 
@@ -452,6 +455,14 @@ public class NotificationStrategy extends TeaModel {
         public static NotificationStrategyPushingSetting build(java.util.Map<String, ?> map) throws Exception {
             NotificationStrategyPushingSetting self = new NotificationStrategyPushingSetting();
             return TeaModel.build(map, self);
+        }
+
+        public NotificationStrategyPushingSetting setPushingDataFormat(String pushingDataFormat) {
+            this.pushingDataFormat = pushingDataFormat;
+            return this;
+        }
+        public String getPushingDataFormat() {
+            return this.pushingDataFormat;
         }
 
         public NotificationStrategyPushingSetting setRange(String range) {

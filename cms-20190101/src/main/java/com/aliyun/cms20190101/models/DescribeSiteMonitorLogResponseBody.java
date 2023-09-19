@@ -7,7 +7,9 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code.</p>
      * <br>
-     * <p>> The status code 200 indicates that the call was successful.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
@@ -25,22 +27,22 @@ public class DescribeSiteMonitorLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token that is used to initiate the next request.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public String success;

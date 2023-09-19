@@ -5,18 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorLogRequest extends TeaModel {
     /**
+     * <p>浏览器类型。</p>
+     */
+    @NameInMap("Browser")
+    public String browser;
+
+    /**
+     * <p>该参数已废弃，无需关注。</p>
+     */
+    @NameInMap("BrowserInfo")
+    public String browserInfo;
+
+    /**
      * <p>The city identification code.</p>
      */
     @NameInMap("City")
     public String city;
 
     /**
-     * <p>The end of the time range to query data. The following formats are supported:</p>
+     * <p>设备类型（模拟屏幕大小类型）。</p>
+     */
+    @NameInMap("Device")
+    public String device;
+
+    /**
+     * <p>The end of the time range to query. Valid values:</p>
      * <br>
      * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
      * <p>*   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</p>
      * <br>
-     * <p>> We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+     * <p>>  We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -59,14 +77,15 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start of the time range to query data. The following formats are supported:</p>
+     * <p>The start of the time range to query. The following formats are supported:</p>
      * <br>
      * <p>*   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</p>
      * <p>*   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</p>
      * <br>
      * <p>> </p>
-     * <p>*   The specified time range includes the end time and excludes the start time. The `start time` must be earlier than the `end time`.</p>
-     * <p>*   We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
+     * <br>
+     * <p>*   The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\</p>
+     * <p>    We recommend that you use UNIX timestamps to prevent time zone-related issues.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -82,12 +101,36 @@ public class DescribeSiteMonitorLogRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSiteMonitorLogRequest setBrowser(String browser) {
+        this.browser = browser;
+        return this;
+    }
+    public String getBrowser() {
+        return this.browser;
+    }
+
+    public DescribeSiteMonitorLogRequest setBrowserInfo(String browserInfo) {
+        this.browserInfo = browserInfo;
+        return this;
+    }
+    public String getBrowserInfo() {
+        return this.browserInfo;
+    }
+
     public DescribeSiteMonitorLogRequest setCity(String city) {
         this.city = city;
         return this;
     }
     public String getCity() {
         return this.city;
+    }
+
+    public DescribeSiteMonitorLogRequest setDevice(String device) {
+        this.device = device;
+        return this;
+    }
+    public String getDevice() {
+        return this.device;
     }
 
     public DescribeSiteMonitorLogRequest setEndTime(String endTime) {

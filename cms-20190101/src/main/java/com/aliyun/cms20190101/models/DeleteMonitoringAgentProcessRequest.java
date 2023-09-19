@@ -5,23 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitoringAgentProcessRequest extends TeaModel {
     /**
-     * <p>The ID of the process.</p>
-     * <br>
-     * <p>>  You must specify either the `ProcessId` or the `ProcessName` parameter.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The process ID.</p>
+     * <br>
+     * <p>> You must configure either `ProcessId` or `ProcessName`.</p>
      */
     @NameInMap("ProcessId")
     public String processId;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The process name.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>> You must configure either `ProcessId` or `ProcessName`.</p>
      */
     @NameInMap("ProcessName")
     public String processName;

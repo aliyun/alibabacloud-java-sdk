@@ -5,34 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     /**
-     * <p>The end timestamp of queried alert logs in an interval. Unit: seconds.</p>
+     * <p>The number of alert logs that were generated during each interval of a time period.</p>
      */
     @NameInMap("AlertLogHistogramList")
     public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The response code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
-     * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The details about the number of alert logs that were generated during each interval of a time period.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The start timestamp of queried alert logs in an interval. Unit: seconds.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,19 +86,23 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
 
     public static class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList extends TeaModel {
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The number of alert logs.</p>
          */
         @NameInMap("Count")
         public Integer count;
 
         /**
-         * <p>The number of alert logs.</p>
+         * <p>The start timestamp of the queried alert logs.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
          */
         @NameInMap("From")
         public Long from;
 
         /**
-         * <p>This topic provides an example on how to query the number of alert logs of Elastic Compute Service (ECS) from the cloud service dimension.</p>
+         * <p>The end timestamp of the queried alert logs.</p>
+         * <br>
+         * <p>Unit: seconds.</p>
          */
         @NameInMap("To")
         public Long to;

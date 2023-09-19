@@ -261,17 +261,13 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         public String dynamicTagRuleId;
 
         /**
-         * <p>The timestamp when the application group was created.</p>
-         * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the application group was created. Unit: milliseconds.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>The timestamp when the application group was last modified.</p>
-         * <br>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp when the application group was modified. Unit: milliseconds.</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
@@ -300,6 +296,9 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The resource ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -315,6 +314,9 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTags tags;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("TemplateIds")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds;
 

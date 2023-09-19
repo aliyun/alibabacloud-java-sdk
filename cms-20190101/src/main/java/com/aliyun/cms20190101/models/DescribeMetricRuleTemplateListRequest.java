@@ -5,50 +5,54 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     /**
-     * <p>The name of the alert template.</p>
+     * <p>Specifies whether to display the history of applying the alert templates to application groups. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false (default)</p>
      */
     @NameInMap("History")
     public Boolean history;
 
     /**
-     * <p>The name of the application group.</p>
+     * <p>The keyword of the alert template name.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The name of the alert template.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The version of the alert template.</p>
+     * <p>The sorting order. Valid values:</p>
      * <br>
-     * <p>Default value: 0.</p>
+     * <p>*   true (default): ascending order</p>
+     * <p>*   false: descending order</p>
      */
     @NameInMap("Order")
     public Boolean order;
 
     /**
-     * <p>The timestamp when the alert template was created.</p>
+     * <p>The sorting basis. Valid values:</p>
      * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>*   gmtMotified: sorts alert templates by modification time</p>
+     * <p>*   gmtCreate (default): sorts alert templates by creation time</p>
      */
     @NameInMap("OrderBy")
     public String orderBy;
 
     /**
-     * <p>The error message.</p>
+     * <p>The page number.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>Specifies whether to display the application history of the alert templates. Default value: false. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
@@ -57,7 +61,7 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the alert template.</p>
+     * <p>The ID of the alert template.</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;

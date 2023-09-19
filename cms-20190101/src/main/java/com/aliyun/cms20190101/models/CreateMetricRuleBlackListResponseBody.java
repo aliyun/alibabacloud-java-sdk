@@ -5,32 +5,37 @@ import com.aliyun.tea.*;
 
 public class CreateMetricRuleBlackListResponseBody extends TeaModel {
     /**
-     * <p>The effective scope of the blacklist policy. Valid values:</p>
+     * <p>The status code.</p>
      * <br>
-     * <p>*   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.</p>
-     * <br>
-     * <p>*   GROUP: The blacklist policy takes effect only for the specified application group. This is the default value.</p>
-     * <br>
-     * <p>    For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the blacklist policy.</p>
+     */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

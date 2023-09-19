@@ -5,37 +5,36 @@ import com.aliyun.tea.*;
 
 public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>*   true: The call was successful.</p>
-     * <p>*   false: The call failed.</p>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The details of the event-triggered alert rule.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The type of the event. Valid values:</p>
-     * <br>
-     * <p>*   SYSTEM: system event</p>
-     * <p>*   CUSTOM: custom event</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the event-triggered alert rule.</p>
+     * <p>The details of the event-triggered alert rule.</p>
      */
     @NameInMap("Result")
     public DescribeEventRuleAttributeResponseBodyResult result;
 
     /**
-     * <p>The description of the event-triggered alert rule.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -104,6 +103,55 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords extends TeaModel {
+        @NameInMap("keyword")
+        public java.util.List<String> keyword;
+
+        public static DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords self = new DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords setKeyword(java.util.List<String> keyword) {
+            this.keyword = keyword;
+            return this;
+        }
+        public java.util.List<String> getKeyword() {
+            return this.keyword;
+        }
+
+    }
+
+    public static class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj extends TeaModel {
+        @NameInMap("Keywords")
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords keywords;
+
+        @NameInMap("Relation")
+        public String relation;
+
+        public static DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj self = new DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj setKeywords(DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords keywords) {
+            this.keywords = keywords;
+            return this;
+        }
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords getKeywords() {
+            return this.keywords;
+        }
+
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj setRelation(String relation) {
+            this.relation = relation;
+            return this;
+        }
+        public String getRelation() {
+            return this.relation;
+        }
+
+    }
+
     public static class DescribeEventRuleAttributeResponseBodyResultEventPatternLevelList extends TeaModel {
         @NameInMap("LevelList")
         public java.util.List<String> levelList;
@@ -162,12 +210,15 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventRuleAttributeResponseBodyResultEventPattern extends TeaModel {
+        /**
+         * <p>The types of the event-triggered alert rules.</p>
+         */
         @NameInMap("EventTypeList")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternEventTypeList eventTypeList;
 
-        /**
-         * <p>This topic provides an example on how to query the details of an event-triggered alert rule named `testRule`.</p>
-         */
+        @NameInMap("KeywordFilterObj")
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj keywordFilterObj;
+
         @NameInMap("LevelList")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternLevelList levelList;
 
@@ -175,14 +226,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         public DescribeEventRuleAttributeResponseBodyResultEventPatternNameList nameList;
 
         /**
-         * <p>The name of the event.</p>
+         * <p>The name of the cloud service.</p>
          */
         @NameInMap("Product")
         public String product;
 
-        /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
-         */
+        @NameInMap("SQLFilter")
+        public String SQLFilter;
+
         @NameInMap("StatusList")
         public DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList statusList;
 
@@ -197,6 +248,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
         }
         public DescribeEventRuleAttributeResponseBodyResultEventPatternEventTypeList getEventTypeList() {
             return this.eventTypeList;
+        }
+
+        public DescribeEventRuleAttributeResponseBodyResultEventPattern setKeywordFilterObj(DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj keywordFilterObj) {
+            this.keywordFilterObj = keywordFilterObj;
+            return this;
+        }
+        public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj getKeywordFilterObj() {
+            return this.keywordFilterObj;
         }
 
         public DescribeEventRuleAttributeResponseBodyResultEventPattern setLevelList(DescribeEventRuleAttributeResponseBodyResultEventPatternLevelList levelList) {
@@ -223,6 +282,14 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
             return this.product;
         }
 
+        public DescribeEventRuleAttributeResponseBodyResultEventPattern setSQLFilter(String SQLFilter) {
+            this.SQLFilter = SQLFilter;
+            return this;
+        }
+        public String getSQLFilter() {
+            return this.SQLFilter;
+        }
+
         public DescribeEventRuleAttributeResponseBodyResultEventPattern setStatusList(DescribeEventRuleAttributeResponseBodyResultEventPatternStatusList statusList) {
             this.statusList = statusList;
             return this;
@@ -235,44 +302,43 @@ public class DescribeEventRuleAttributeResponseBody extends TeaModel {
 
     public static class DescribeEventRuleAttributeResponseBodyResult extends TeaModel {
         /**
-         * <p>The status of the event-triggered alert rule. Valid values:</p>
-         * <br>
-         * <p>*   ENABLED: enabled</p>
-         * <p>*   DISABLED: disabled</p>
+         * <p>The description of the event-triggered alert rule.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The status of the event.</p>
+         * <p>The event pattern. This parameter specifies the trigger conditions of an event.</p>
          */
         @NameInMap("EventPattern")
         public DescribeEventRuleAttributeResponseBodyResultEventPattern eventPattern;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The type of the event. Valid values: Valid values:</p>
+         * <br>
+         * <p>*   SYSTEM: system event</p>
+         * <p>*   CUSTOM: custom event</p>
          */
         @NameInMap("EventType")
         public String eventType;
 
         /**
-         * <p>The name of the cloud service.</p>
+         * <p>The ID of the application group.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The event pattern. This parameter specifies the trigger conditions of an event.</p>
+         * <p>The name of the event-triggered alert rule.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The level of the event-triggered alert rule. Valid values:</p>
+         * <p>The status of the event-triggered alert rule. Valid values:</p>
          * <br>
-         * <p>*   CRITICAL: critical</p>
-         * <p>*   WARN: warning</p>
-         * <p>*   INFO: information</p>
+         * <p>*   ENABLED</p>
+         * <p>*   DISABLED</p>
          */
         @NameInMap("State")
         public String state;

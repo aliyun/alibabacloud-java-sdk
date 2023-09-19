@@ -5,30 +5,37 @@ import com.aliyun.tea.*;
 
 public class PutGroupMetricRuleResponseBody extends TeaModel {
     /**
-     * <p>The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,). Valid values:</p>
+     * <p>The HTTP status code.</p>
      * <br>
-     * <p>*   Average: the average value</p>
-     * <p>*   Minimum: the minimum value</p>
-     * <p>*   Maximum: the maximum value</p>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request.</p>
+     */
     @NameInMap("Result")
     public PutGroupMetricRuleResponseBodyResult result;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -78,6 +85,9 @@ public class PutGroupMetricRuleResponseBody extends TeaModel {
     }
 
     public static class PutGroupMetricRuleResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of the alert rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 

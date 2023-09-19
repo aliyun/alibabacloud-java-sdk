@@ -8,11 +8,14 @@ public class DeleteMetricRuleTargetsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the message resource. Valid values of N: 1 to 5.</p>
+     * <p>The ID of the alert rule.</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("TargetIds")
     public java.util.List<String> targetIds;
 

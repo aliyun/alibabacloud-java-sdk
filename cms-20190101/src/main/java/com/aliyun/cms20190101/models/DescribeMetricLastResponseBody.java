@@ -5,39 +5,50 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricLastResponseBody extends TeaModel {
     /**
-     * <p>Queries the latest monitoring data of a metric.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The monitoring data.</p>
      */
     @NameInMap("Datapoints")
     public String datapoints;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The interval at which the monitoring data is queried.</p>
-     * <br>
-     * <p>Unit: seconds.</p>
+     * <p>The pagination token.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The time interval.</p>
+     * <br>
+     * <p>Unit: seconds.</p>
+     */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The monitoring data.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;

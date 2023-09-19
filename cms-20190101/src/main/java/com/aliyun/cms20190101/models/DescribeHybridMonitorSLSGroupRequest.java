@@ -5,25 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorSLSGroupRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>The keyword that is used to search for Logstore groups.</p>
      */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
-     * <p>The timestamp that was generated when the Logstore group was created.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public String pageNumber;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call is successful.</p>
+     * <p>Minimum value: 1. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
@@ -32,7 +30,7 @@ public class DescribeHybridMonitorSLSGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeHybridMonitorSLSGroup**.</p>
+     * <p>The name of the Logstore group.</p>
      */
     @NameInMap("SLSGroupName")
     public String SLSGroupName;

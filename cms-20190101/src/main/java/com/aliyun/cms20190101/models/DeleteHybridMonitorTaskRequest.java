@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteHybridMonitorTaskRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the namespace.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).</p>
+     * <br>
+     * <p>> This parameter is required only if you call this operation to delete metric import tasks for Alibaba Cloud services. In this case, the `TaskType` parameter is set to `aliyun_fc`.</p>
      */
     @NameInMap("Namespace")
     public String namespace;
@@ -16,15 +18,19 @@ public class DeleteHybridMonitorTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the member account.</p>
+     * <br>
+     * <p>> This parameter is required only if you use a management account to call this operation to query metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.</p>
      */
     @NameInMap("TargetUserId")
     public String targetUserId;
 
     /**
-     * <p>The ID of the member account.</p>
+     * <p>The ID of the metric import task.</p>
      * <br>
-     * <p>>  This parameter is required only if you call this operation to delete metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.</p>
+     * <p>For information about how to obtain the ID of a metric import task, see [DescribeHybridMonitorTaskList](~~428624~~).</p>
+     * <br>
+     * <p>> This parameter is required only if you call this operation to delete metrics for the logs that are imported from Log Service. In this case, the `TaskType` parameter is set to `aliyun_sls`.</p>
      */
     @NameInMap("TaskId")
     public String taskId;

@@ -5,42 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     /**
-     * <p>The timestamp when the alert template was applied to the application group.</p>
+     * <p>The status code.</p>
      * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The list of alert templates.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The keyword of the alert template name.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the alert template.</p>
+     * <p>The queried alert templates.</p>
      */
     @NameInMap("Templates")
     public DescribeMetricRuleTemplateListResponseBodyTemplates templates;
 
     /**
-     * <p>The sorting basis. Default value: gmtCreate. Valid values:</p>
-     * <br>
-     * <p>*   gmtMotified: Sorts alert templates by modification time.</p>
-     * <p>*   gmtCreate: Sorts alert templates by creation time.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -99,15 +99,23 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory extends TeaModel {
+        /**
+         * <p>The timestamp when the alert template was applied to the application group.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
+         */
         @NameInMap("ApplyTime")
         public Long applyTime;
 
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The ID of the application group.</p>
          */
         @NameInMap("GroupId")
         public Long groupId;
 
+        /**
+         * <p>The name of the application group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
@@ -163,48 +171,49 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The history of applying the alert templates to application groups.</p>
          */
         @NameInMap("ApplyHistories")
         public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories applyHistories;
 
         /**
-         * <p>The order in which you want to sort alert templates. Default value: true. Valid values:</p>
-         * <br>
-         * <p>*   true: ascending order</p>
-         * <p>*   false: descending order</p>
+         * <p>The description of the alert template.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The timestamp when the alert template was created.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The timestamp when the alert template was modified.</p>
          * <br>
-         * <p>Default value: 1</p>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("GmtModified")
         public Long gmtModified;
 
         /**
-         * <p>The application history of the alert template.</p>
+         * <p>The name of the alert template.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the alert template.</p>
+         * <p>The version of the alert template.</p>
+         * <br>
+         * <p>Default value: 0.</p>
          */
         @NameInMap("RestVersion")
         public Long restVersion;
 
         /**
-         * <p>The description of the alert template.</p>
+         * <p>The ID of the alert template.</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;

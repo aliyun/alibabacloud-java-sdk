@@ -5,46 +5,55 @@ import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     /**
-     * <p>The error message.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The description of the Logstore group.</p>
+     * <p>The queried Logstore groups.</p>
      */
     @NameInMap("List")
     public java.util.List<DescribeHybridMonitorSLSGroupResponseBodyList> list;
 
     /**
-     * <p>The timestamp that was generated when the Logstore group was modified.</p>
-     * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The name of the Logstore group.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The keyword that is used to search for Logstore groups.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public String success;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Long total;
 
@@ -119,27 +128,27 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorSLSGroupResponseBodyListSLSGroupConfig extends TeaModel {
         /**
-         * <p>The name of the Logstore group.</p>
+         * <p>The Logstore.</p>
          */
         @NameInMap("SLSLogstore")
         public String SLSLogstore;
 
         /**
-         * <p>The ID of the member account.</p>
-         * <br>
-         * <p>>  This parameter is returned only when you call API operations by using a management account.</p>
+         * <p>The Simple Log Service project.</p>
          */
         @NameInMap("SLSProject")
         public String SLSProject;
 
         /**
-         * <p>The Logstore.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("SLSRegion")
         public String SLSRegion;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The member ID.</p>
+         * <br>
+         * <p>**Description** This parameter is returned when you call the operation by using an administrative account.</p>
          */
         @NameInMap("SLSUserId")
         public String SLSUserId;
@@ -185,31 +194,35 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorSLSGroupResponseBodyList extends TeaModel {
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The time when the Logstore group was created.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The Log Service project.</p>
+         * <p>The configurations of the Logstore group.</p>
          */
         @NameInMap("SLSGroupConfig")
         public java.util.List<DescribeHybridMonitorSLSGroupResponseBodyListSLSGroupConfig> SLSGroupConfig;
 
         /**
-         * <p>The configurations of the Logstore group.</p>
+         * <p>The description of the Logstore group.</p>
          */
         @NameInMap("SLSGroupDescription")
         public String SLSGroupDescription;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The name of the Logstore group.</p>
          */
         @NameInMap("SLSGroupName")
         public String SLSGroupName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The time when the Logstore group was modified.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

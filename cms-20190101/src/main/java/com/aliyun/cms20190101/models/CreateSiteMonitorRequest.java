@@ -5,27 +5,31 @@ import com.aliyun.tea.*;
 
 public class CreateSiteMonitorRequest extends TeaModel {
     /**
-     * <p>The name of the site monitoring task.</p>
-     * <br>
-     * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
+     * <p>The URL or IP address that is monitored by the task.</p>
      */
     @NameInMap("Address")
     public String address;
 
     /**
-     * <p>Indicates whether the existing alert rule was associated with the site monitoring task. Valid values:</p>
+     * <p>The ID of the alert rule.</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>For more information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
      */
     @NameInMap("AlertIds")
     public String alertIds;
 
+    /**
+     * <p>The custom detection period. You can only select a time period from Monday to Sunday for detection.</p>
+     */
     @NameInMap("CustomSchedule")
     public String customSchedule;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **CreateSiteMonitor**.</p>
+     * <p>The interval at which detection requests are sent.</p>
+     * <br>
+     * <p>Valid values: 1, 5, 15, 30, and 60. Unit: minutes.</p>
+     * <br>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Interval")
     public String interval;
@@ -41,7 +45,7 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String ispCities;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</p>
      */
     @NameInMap("OptionsJson")
     public String optionsJson;
@@ -50,17 +54,17 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The name of the site monitoring task.</p>
      * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (\_).</p>
      */
     @NameInMap("TaskName")
     public String taskName;
 
     /**
-     * <p>The ID of the alert rule.</p>
+     * <p>The type of the site monitoring task.</p>
      * <br>
-     * <p>For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
+     * <p>Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
      */
     @NameInMap("TaskType")
     public String taskType;

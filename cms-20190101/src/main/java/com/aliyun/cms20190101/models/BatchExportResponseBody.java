@@ -4,30 +4,67 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class BatchExportResponseBody extends TeaModel {
+    /**
+     * <p>The timestamp of the data requested by the backend. A larger timestamp indicates that the data export time is closer to the current time.</p>
+     */
     @NameInMap("Anchor")
     public Long anchor;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The Cursor information that is used to call this operation again.</p>
+     * <br>
+     * <p>>  If `null` is returned, the monitoring data is exported.</p>
+     */
     @NameInMap("Cursor")
     public String cursor;
 
+    /**
+     * <p>The data returned in this call.</p>
+     */
     @NameInMap("DataResults")
     public java.util.List<MetricStat> dataResults;
 
+    /**
+     * <p>Indicates whether the data has been exported. Valid values:</p>
+     * <br>
+     * <p>*   true: Some data is not exported.</p>
+     * <p>*   false: All the data is exported.</p>
+     */
     @NameInMap("HasNext")
     public Boolean hasNext;
 
+    /**
+     * <p>The number of data entries returned in this call.</p>
+     */
     @NameInMap("Length")
     public Integer length;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

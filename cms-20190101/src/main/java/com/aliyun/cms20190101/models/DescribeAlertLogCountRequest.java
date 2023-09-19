@@ -11,7 +11,13 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String contactGroup;
 
     /**
-     * <p>The statistical period of alert logs. Unit: minutes.</p>
+     * <p>The end timestamp of the alert logs to be queried.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     * <br>
+     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.</p>
+     * <br>
+     * <p>>  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -118,13 +124,20 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     @NameInMap("SendStatus")
     public String sendStatus;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
     /**
-     * <p>The name of the metric.</p>
+     * <p>The start timestamp of the alert logs to be queried.</p>
      * <br>
-     * <p>> For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>Unit: milliseconds.</p>
+     * <br>
+     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the `AlertLogCount` parameter is empty.</p>
+     * <br>
+     * <p>>  The interval between the start time (`StartTime`) and end time (`EndTime`) must be less than or equal to 15 days.</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
