@@ -600,6 +600,188 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList extends TeaModel {
+        @NameInMap("blocked_url_list")
+        public java.util.List<String> blockedUrlList;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList setBlockedUrlList(java.util.List<String> blockedUrlList) {
+            this.blockedUrlList = blockedUrlList;
+            return this;
+        }
+        public java.util.List<String> getBlockedUrlList() {
+            return this.blockedUrlList;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders extends TeaModel {
+        @NameInMap("browser_headers")
+        public java.util.List<java.util.Map<String, ?>> browserHeaders;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders setBrowserHeaders(java.util.List<java.util.Map<String, ?>> browserHeaders) {
+            this.browserHeaders = browserHeaders;
+            return this;
+        }
+        public java.util.List<java.util.Map<String, ?>> getBrowserHeaders() {
+            return this.browserHeaders;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts extends TeaModel {
+        @NameInMap("browser_hosts")
+        public java.util.List<String> browserHosts;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts setBrowserHosts(java.util.List<String> browserHosts) {
+            this.browserHosts = browserHosts;
+            return this;
+        }
+        public java.util.List<String> getBrowserHosts() {
+            return this.browserHosts;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo extends TeaModel {
+        @NameInMap("browser")
+        public String browser;
+
+        @NameInMap("device")
+        public String device;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo setBrowser(String browser) {
+            this.browser = browser;
+            return this;
+        }
+        public String getBrowser() {
+            return this.browser;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo extends TeaModel {
+        @NameInMap("browser_info")
+        public java.util.List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo> browserInfo;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo setBrowserInfo(java.util.List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo> browserInfo) {
+            this.browserInfo = browserInfo;
+            return this;
+        }
+        public java.util.List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo> getBrowserInfo() {
+            return this.browserInfo;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString extends TeaModel {
+        @NameInMap("expect_exist_string")
+        public java.util.List<String> expectExistString;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString setExpectExistString(java.util.List<String> expectExistString) {
+            this.expectExistString = expectExistString;
+            return this;
+        }
+        public java.util.List<String> getExpectExistString() {
+            return this.expectExistString;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString extends TeaModel {
+        @NameInMap("expect_non_exist_string")
+        public java.util.List<String> expectNonExistString;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString setExpectNonExistString(java.util.List<String> expectNonExistString) {
+            this.expectNonExistString = expectNonExistString;
+            return this;
+        }
+        public java.util.List<String> getExpectNonExistString() {
+            return this.expectNonExistString;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist extends TeaModel {
+        @NameInMap("traffic_hijack_element_blacklist")
+        public java.util.List<String> trafficHijackElementBlacklist;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist setTrafficHijackElementBlacklist(java.util.List<String> trafficHijackElementBlacklist) {
+            this.trafficHijackElementBlacklist = trafficHijackElementBlacklist;
+            return this;
+        }
+        public java.util.List<String> getTrafficHijackElementBlacklist() {
+            return this.trafficHijackElementBlacklist;
+        }
+
+    }
+
+    public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist extends TeaModel {
+        @NameInMap("traffic_hijack_element_whitelist")
+        public java.util.List<String> trafficHijackElementWhitelist;
+
+        public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist setTrafficHijackElementWhitelist(java.util.List<String> trafficHijackElementWhitelist) {
+            this.trafficHijackElementWhitelist = trafficHijackElementWhitelist;
+            return this;
+        }
+        public java.util.List<String> getTrafficHijackElementWhitelist() {
+            return this.trafficHijackElementWhitelist;
+        }
+
+    }
+
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson extends TeaModel {
         @NameInMap("assertions")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertions assertions;
@@ -609,6 +791,24 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @NameInMap("authentication")
         public Integer authentication;
+
+        @NameInMap("blocked_url_list")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList blockedUrlList;
+
+        @NameInMap("browser_headers")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders browserHeaders;
+
+        @NameInMap("browser_hosts")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts browserHosts;
+
+        @NameInMap("browser_info")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo browserInfo;
+
+        @NameInMap("browser_insecure")
+        public Boolean browserInsecure;
+
+        @NameInMap("browser_task_version")
+        public String browserTaskVersion;
 
         @NameInMap("cookie")
         public String cookie;
@@ -630,6 +830,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         @NameInMap("dns_type")
         public String dnsType;
+
+        @NameInMap("expect_exist_string")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString expectExistString;
+
+        @NameInMap("expect_non_exist_string")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString expectNonExistString;
 
         @NameInMap("expect_value")
         public String expectValue;
@@ -658,6 +864,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("ping_num")
         public Integer pingNum;
 
+        @NameInMap("ping_port")
+        public Integer pingPort;
+
+        @NameInMap("ping_type")
+        public String pingType;
+
         @NameInMap("port")
         public Integer port;
 
@@ -679,11 +891,26 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("retry_delay")
         public Integer retryDelay;
 
+        @NameInMap("strict_mode")
+        public Boolean strictMode;
+
         @NameInMap("time_out")
         public Long timeOut;
 
+        @NameInMap("traffic_hijack_element_blacklist")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist trafficHijackElementBlacklist;
+
+        @NameInMap("traffic_hijack_element_count")
+        public Integer trafficHijackElementCount;
+
+        @NameInMap("traffic_hijack_element_whitelist")
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist trafficHijackElementWhitelist;
+
         @NameInMap("username")
         public String username;
+
+        @NameInMap("waitTime_after_completion")
+        public Integer waitTimeAfterCompletion;
 
         public static DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson build(java.util.Map<String, ?> map) throws Exception {
             DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson self = new DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson();
@@ -712,6 +939,54 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public Integer getAuthentication() {
             return this.authentication;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setBlockedUrlList(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList blockedUrlList) {
+            this.blockedUrlList = blockedUrlList;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList getBlockedUrlList() {
+            return this.blockedUrlList;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setBrowserHeaders(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders browserHeaders) {
+            this.browserHeaders = browserHeaders;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders getBrowserHeaders() {
+            return this.browserHeaders;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setBrowserHosts(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts browserHosts) {
+            this.browserHosts = browserHosts;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts getBrowserHosts() {
+            return this.browserHosts;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setBrowserInfo(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo browserInfo) {
+            this.browserInfo = browserInfo;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo getBrowserInfo() {
+            return this.browserInfo;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setBrowserInsecure(Boolean browserInsecure) {
+            this.browserInsecure = browserInsecure;
+            return this;
+        }
+        public Boolean getBrowserInsecure() {
+            return this.browserInsecure;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setBrowserTaskVersion(String browserTaskVersion) {
+            this.browserTaskVersion = browserTaskVersion;
+            return this;
+        }
+        public String getBrowserTaskVersion() {
+            return this.browserTaskVersion;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setCookie(String cookie) {
@@ -768,6 +1043,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
         public String getDnsType() {
             return this.dnsType;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setExpectExistString(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString expectExistString) {
+            this.expectExistString = expectExistString;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString getExpectExistString() {
+            return this.expectExistString;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setExpectNonExistString(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString expectNonExistString) {
+            this.expectNonExistString = expectNonExistString;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString getExpectNonExistString() {
+            return this.expectNonExistString;
         }
 
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setExpectValue(String expectValue) {
@@ -842,6 +1133,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.pingNum;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setPingPort(Integer pingPort) {
+            this.pingPort = pingPort;
+            return this;
+        }
+        public Integer getPingPort() {
+            return this.pingPort;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setPingType(String pingType) {
+            this.pingType = pingType;
+            return this;
+        }
+        public String getPingType() {
+            return this.pingType;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setPort(Integer port) {
             this.port = port;
             return this;
@@ -898,6 +1205,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.retryDelay;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setStrictMode(Boolean strictMode) {
+            this.strictMode = strictMode;
+            return this;
+        }
+        public Boolean getStrictMode() {
+            return this.strictMode;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setTimeOut(Long timeOut) {
             this.timeOut = timeOut;
             return this;
@@ -906,12 +1221,44 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.timeOut;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setTrafficHijackElementBlacklist(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist trafficHijackElementBlacklist) {
+            this.trafficHijackElementBlacklist = trafficHijackElementBlacklist;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist getTrafficHijackElementBlacklist() {
+            return this.trafficHijackElementBlacklist;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setTrafficHijackElementCount(Integer trafficHijackElementCount) {
+            this.trafficHijackElementCount = trafficHijackElementCount;
+            return this;
+        }
+        public Integer getTrafficHijackElementCount() {
+            return this.trafficHijackElementCount;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setTrafficHijackElementWhitelist(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist trafficHijackElementWhitelist) {
+            this.trafficHijackElementWhitelist = trafficHijackElementWhitelist;
+            return this;
+        }
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist getTrafficHijackElementWhitelist() {
+            return this.trafficHijackElementWhitelist;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setUsername(String username) {
             this.username = username;
             return this;
         }
         public String getUsername() {
             return this.username;
+        }
+
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setWaitTimeAfterCompletion(Integer waitTimeAfterCompletion) {
+            this.waitTimeAfterCompletion = waitTimeAfterCompletion;
+            return this;
+        }
+        public Integer getWaitTimeAfterCompletion() {
+            return this.waitTimeAfterCompletion;
         }
 
     }

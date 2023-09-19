@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertingMetricRuleResourcesRequest extends TeaModel {
     /**
-     * <p>The namespace of the cloud service.</p>
-     * <br>
-     * <p>For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
+     * <p>The dimensions that specify the resources whose monitoring data you want to query.</p>
      */
     @NameInMap("Dimensions")
     public String dimensions;
 
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the application group. For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The resources that are monitored.</p>
+     * <p>The namespace of the cloud service.</p>
+     * <br>
+     * <p>For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The timestamp when the last alert was triggered for the resource based on the alert rule.</p>
+     * <p>The page number.</p>
      * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>Default value: 1.</p>
      */
     @NameInMap("Page")
     public Integer page;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeAlertingMetricRuleResources**.</p>
+     * <p>The number of entries per page.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -44,14 +44,7 @@ public class DescribeAlertingMetricRuleResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
-     * <br>
-     * <p>*   `>=`</p>
-     * <p>*   `=`</p>
-     * <p>*   `<=`</p>
-     * <p>*   `>`</p>
-     * <p>*   `<`</p>
-     * <p>*   `!=`</p>
+     * <p>The ID of the alert rule. For information about how to obtain the ID of an alert rule, see [DescribeMetricRuleList](~~114941~~).</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

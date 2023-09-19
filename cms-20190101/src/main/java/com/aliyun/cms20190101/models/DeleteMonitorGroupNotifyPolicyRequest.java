@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The policy type.</p>
+     * <br>
+     * <p>Valid value: PauseNotify.</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

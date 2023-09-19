@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteDynamicTagGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the tag rule.</p>
+     * <br>
+     * <p>For information about how to obtain the ID of a tag rule, see [DescribeDynamicTagRuleList](~~150126~~).</p>
      */
     @NameInMap("DynamicTagRuleId")
     public String dynamicTagRuleId;

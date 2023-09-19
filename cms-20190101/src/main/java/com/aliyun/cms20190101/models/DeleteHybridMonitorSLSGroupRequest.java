@@ -8,7 +8,9 @@ public class DeleteHybridMonitorSLSGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the Logstore group.</p>
+     * <br>
+     * <p>For information about how to obtain the name of a Logstore group, see [DescribeHybridMonitorSLSGroup](~~429526~~).</p>
      */
     @NameInMap("SLSGroupName")
     public String SLSGroupName;

@@ -4,63 +4,58 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The configurations of the logs that are imported from Log Service.</p>
+     * <p>The returned message.</p>
+     * <br>
+     * <p>*   If the request was successful, the value `successful` is returned.</p>
+     * <p>*   If the request failed, an error message is returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The method that is used to aggregate on-premises log data.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The conditions that are used to match the instances in the application group.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The alias of the extended field that indicates the result of basic operations that are performed on aggregation results.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The timeout period during which the CloudMonitor agent collects host monitoring data. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <br>
-     * <p>*   0</p>
-     * <p>*   15</p>
-     * <p>*   30</p>
-     * <p>*   60</p>
-     * <br>
-     * <p>Unit: seconds.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The ID of the metric import task.</p>
+     * <p>The metric import tasks.</p>
      */
     @NameInMap("TaskList")
     public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskList> taskList;
 
     /**
-     * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
-     * <br>
-     * <p>*   `contain`: contains</p>
-     * <p>*   `notContain`: does not contain</p>
-     * <p>*   `>`: greater than</p>
-     * <p>*   `<`: less than</p>
-     * <p>*   `=`: equal to</p>
-     * <p>*   `! =`: not equal to</p>
-     * <p>*   `>=`: greater than or equal to</p>
-     * <p>*   `<=`: less than or equal to</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -136,15 +131,13 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListAttachLabels extends TeaModel {
         /**
-         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The number of entries to return on each page.</p>
-         * <br>
-         * <p>Minimum value: 1. Default value: 10.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -174,21 +167,26 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListMatchExpress extends TeaModel {
         /**
-         * <p>The extended fields that indicate the results of basic operations that are performed on aggregation results.</p>
+         * <p>The method that is used to match the instance name. Valid values:</p>
+         * <br>
+         * <p>*   startWith: starts with a prefix</p>
+         * <p>*   endWith: ends with a suffix</p>
+         * <p>*   all: matches all</p>
+         * <p>*   equals: equals</p>
+         * <p>*   contains: contains</p>
+         * <p>*   notContains: does not contain</p>
          */
         @NameInMap("Function")
         public String function;
 
         /**
-         * <p>The number of the page to return.</p>
-         * <br>
-         * <p>Pages start from page 1. Default value: 1.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The keyword that corresponds to the instance name.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -225,9 +223,15 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress extends TeaModel {
+        /**
+         * <p>The alias of the extended field that indicates the result of basic operations that are performed on aggregation results.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The extended field that indicates the result of basic operations that are performed on aggregation results.</p>
+         */
         @NameInMap("Express")
         public String express;
 
@@ -256,19 +260,28 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters extends TeaModel {
         /**
-         * <p>The value of the tag.</p>
+         * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
+         * <br>
+         * <p>*   `contain`: contains</p>
+         * <p>*   `notContain`: does not contain</p>
+         * <p>*   `>`: greater than</p>
+         * <p>*   `<`: less than</p>
+         * <p>*   `=`: equal to</p>
+         * <p>*   `! =`: not equal to</p>
+         * <p>*   `>=`: greater than or equal to</p>
+         * <p>*   `<=`: less than or equal to</p>
          */
         @NameInMap("Operator")
         public String operator;
 
         /**
-         * <p>The type of the monitoring data. Valid values: Spring, Tomcat, Nginx, Tengine, JVM, Redis, and MySQL.</p>
+         * <p>The name of the key that is used to filter logs imported from Log Service.</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The value of the key that is used to filter logs imported from Log Service.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -306,15 +319,16 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter extends TeaModel {
         /**
-         * <p>The extended field that indicates the result of basic operations that are performed on aggregation results.</p>
+         * <p>The conditions that are used to filter logs imported from Log Service.</p>
          */
         @NameInMap("Filters")
         public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilterFilters> filters;
 
         /**
-         * <p>The ID of the member account.</p>
+         * <p>The relationship between multiple filter conditions. Valid values:</p>
          * <br>
-         * <p>>  This parameter is required only if you call this operation to delete metric import tasks that belong to a member in a resource directory. In this case, the `TaskType` parameter is set to `aliyun_fc`.</p>
+         * <p>*   and (default): Logs are processed only if all filter conditions are met.</p>
+         * <p>*   or: Logs are processed if one of the filter conditions is met.</p>
          */
         @NameInMap("Relation")
         public String relation;
@@ -344,13 +358,13 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The alias of the aggregation result.</p>
          */
         @NameInMap("Alias")
         public String alias;
 
         /**
-         * <p>The alias of the aggregation result.</p>
+         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
          */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
@@ -379,18 +393,50 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics extends TeaModel {
+        /**
+         * <p>The alias of the aggregation result.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The function that is used to aggregate log data within a statistical period. Valid values:</p>
+         * <br>
+         * <p>*   count: counts the number.</p>
+         * <p>*   sum: calculates the total value.</p>
+         * <p>*   avg: calculates the average value.</p>
+         * <p>*   max: calculates the maximum value.</p>
+         * <p>*   min: calculates the minimum value.</p>
+         * <p>*   value: collects samples within the statistical period.</p>
+         * <p>*   countps: calculates the average number of the specified field per second by using the following formula: Counted number of the specified field/Total number of seconds within the statistical period.</p>
+         * <p>*   sumps: calculates the average number of the specified field per second by using the following formula: Total value of the specified field/Total number of seconds within the statistical period.</p>
+         * <p>*   distinct: counts the number of logs where the specified field appears within the statistical period.</p>
+         * <p>*   distribution: counts the number of logs that meet a specified condition within the statistical period.</p>
+         * <p>*   percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</p>
+         */
         @NameInMap("Function")
         public String function;
 
+        /**
+         * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
+         * <br>
+         * <p>*   If the `Function` parameter is set to `distribution`, this parameter indicates the lower limit of the statistical interval. For example, 200 indicates that the number of HTTP requests whose status code is 2XX is calculated.</p>
+         * <p>*   If the `Function` parameter is set to `percentile`, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</p>
+         */
         @NameInMap("Parameter1")
         public String parameter1;
 
+        /**
+         * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
+         * <br>
+         * <p>> This parameter is returned only if the `Function` parameter is set to `distribution`. This parameter indicates the upper limit of the statistical interval. For example, 299 indicates that the number of HTTP requests whose status code is 2XX is calculated.</p>
+         */
         @NameInMap("Parameter2")
         public String parameter2;
 
+        /**
+         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         */
         @NameInMap("SLSKeyName")
         public String SLSKeyName;
 
@@ -443,23 +489,26 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig extends TeaModel {
         /**
-         * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+         * <p>The extended fields that indicate the results of basic operations that are performed on aggregation results.</p>
          */
         @NameInMap("Express")
         public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigExpress> express;
 
         /**
-         * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
+         * <p>The conditions that are used to filter logs imported from Log Service.</p>
          */
         @NameInMap("Filter")
         public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigFilter filter;
 
         /**
-         * <p>The sample on-premises log.</p>
+         * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
          */
         @NameInMap("GroupBy")
         public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigGroupBy> groupBy;
 
+        /**
+         * <p>The methods that are used to aggregate logs imported from Log Service.</p>
+         */
         @NameInMap("Statistics")
         public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfigStatistics> statistics;
 
@@ -504,17 +553,114 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     public static class DescribeHybridMonitorTaskListResponseBodyTaskList extends TeaModel {
         /**
-         * <p>The method that is used to match the instance name. Valid values:</p>
-         * <br>
-         * <p>*   startWith: starts with a prefix</p>
-         * <p>*   endWith: ends with a suffix</p>
-         * <p>*   all: includes all</p>
-         * <p>*   equals: equals</p>
-         * <p>*   contains: contains</p>
-         * <p>*   notContains: excludes</p>
+         * <p>The tags of the metric import task.</p>
          */
         @NameInMap("AttachLabels")
         public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListAttachLabels> attachLabels;
+
+        /**
+         * <p>The interval at which the CloudMonitor agent collects host monitoring data. Valid values:</p>
+         * <br>
+         * <p>*   15</p>
+         * <p>*   30</p>
+         * <p>*   60</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         */
+        @NameInMap("CollectInterval")
+        public Integer collectInterval;
+
+        /**
+         * <p>The URL of the destination from which the CloudMonitor agent collects host monitoring data.</p>
+         */
+        @NameInMap("CollectTargetEndpoint")
+        public String collectTargetEndpoint;
+
+        /**
+         * <p>The relative path from which the CloudMonitor agent collects monitoring data.</p>
+         */
+        @NameInMap("CollectTargetPath")
+        public String collectTargetPath;
+
+        /**
+         * <p>The type of the monitoring data. Valid values: Spring, Tomcat, Nginx, Tengine, JVM, Redis, and MySQL.</p>
+         */
+        @NameInMap("CollectTargetType")
+        public String collectTargetType;
+
+        /**
+         * <p>The timeout period during which the CloudMonitor agent collects host monitoring data. Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <p>*   15</p>
+         * <p>*   30</p>
+         * <p>*   60</p>
+         * <br>
+         * <p>Unit: seconds.</p>
+         */
+        @NameInMap("CollectTimout")
+        public Integer collectTimout;
+
+        /**
+         * <p>The timestamp when the metric import task was created.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
+         */
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        /**
+         * <p>The description of the metric import task.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The additional information of the instance.</p>
+         */
+        @NameInMap("ExtraInfo")
+        public String extraInfo;
+
+        /**
+         * <p>The ID of the application group.</p>
+         */
+        @NameInMap("GroupId")
+        public String groupId;
+
+        /**
+         * <p>The instances where monitoring data is collected in batches.</p>
+         */
+        @NameInMap("Instances")
+        public java.util.List<String> instances;
+
+        @NameInMap("LogFilePath")
+        public String logFilePath;
+
+        /**
+         * <p>The method that is used to aggregate on-premises log data.</p>
+         */
+        @NameInMap("LogProcess")
+        public String logProcess;
+
+        /**
+         * <p>The sample on-premises log.</p>
+         */
+        @NameInMap("LogSample")
+        public String logSample;
+
+        /**
+         * <p>The result that is returned after on-premises log data is split based on the specified matching mode.</p>
+         * <br>
+         * <p>> The matching modes of on-premises log data include full regex mode, delimiter mode, and JSON mode.</p>
+         */
+        @NameInMap("LogSplit")
+        public String logSplit;
+
+        /**
+         * <p>The conditions that are used to match the instances in the application group.</p>
+         */
+        @NameInMap("MatchExpress")
+        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListMatchExpress> matchExpress;
 
         /**
          * <p>The relationship between the conditions that are used to filter metric import tasks. Valid values:</p>
@@ -522,84 +668,57 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
          * <p>*   or</p>
          * <p>*   and</p>
          */
-        @NameInMap("CollectInterval")
-        public Integer collectInterval;
+        @NameInMap("MatchExpressRelation")
+        public String matchExpressRelation;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The namespace to which the host belongs.</p>
          */
-        @NameInMap("CollectTargetEndpoint")
-        public String collectTargetEndpoint;
-
-        /**
-         * <p>The conditions that are used to filter logs imported from Log Service.</p>
-         */
-        @NameInMap("CollectTargetPath")
-        public String collectTargetPath;
-
-        /**
-         * <p>The ID of the application group.</p>
-         */
-        @NameInMap("CollectTargetType")
-        public String collectTargetType;
-
-        /**
-         * <p>The name of the namespace.</p>
-         * <br>
-         * <p>For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).</p>
-         */
-        @NameInMap("CollectTimout")
-        public Integer collectTimout;
-
-        /**
-         * <p>The metric import tasks.</p>
-         */
-        @NameInMap("CreateTime")
-        public String createTime;
-
-        /**
-         * <p>The result that is returned after on-premises log data is split based on the specified matching mode.</p>
-         * <br>
-         * <p>>  The matching modes of on-premises log data include full regex mode, delimiter mode, and JSON mode.</p>
-         */
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("Namespace")
+        public String namespace;
 
         /**
          * <p>The network type of the host. Valid values:</p>
          * <br>
-         * <p>*   `vpc`: a virtual private cloud (VPC)</p>
-         * <p>*   `Internet`: Internet</p>
+         * <p>*   `vpc`</p>
+         * <p>*   `Internet`</p>
          */
-        @NameInMap("ExtraInfo")
-        public String extraInfo;
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        /**
+         * <p>The configurations of the logs that are imported from Log Service.</p>
+         */
+        @NameInMap("SLSProcess")
+        public String SLSProcess;
+
+        /**
+         * <p>The configurations of the logs that are imported from Log Service.</p>
+         * <br>
+         * <p>> This parameter is returned only if the `TaskType` parameter is set to `aliyun_sls`.</p>
+         */
+        @NameInMap("SLSProcessConfig")
+        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig SLSProcessConfig;
+
+        /**
+         * <p>The ID of the member account.</p>
+         * <br>
+         * <p>> This parameter is displayed only when you call this operation by using a management account.</p>
+         */
+        @NameInMap("TargetUserId")
+        public String targetUserId;
+
+        /**
+         * <p>The ID of the metric import task.</p>
+         */
+        @NameInMap("TaskId")
+        public String taskId;
 
         /**
          * <p>The name of the metric import task.</p>
          */
-        @NameInMap("GroupId")
-        public String groupId;
-
-        /**
-         * <p>The name of the key that is used to filter logs imported from Log Service.</p>
-         */
-        @NameInMap("Instances")
-        public java.util.List<String> instances;
-
-        /**
-         * <p>The relationship between multiple filter conditions. Valid values:</p>
-         * <br>
-         * <p>*   and (default value): Logs are processed only if all filter conditions are met.</p>
-         * <p>*   or: Logs are processed if one of the filter conditions is met.</p>
-         */
-        @NameInMap("LogFilePath")
-        public String logFilePath;
-
-        /**
-         * <p>The description of the metric import task.</p>
-         */
-        @NameInMap("LogProcess")
-        public String logProcess;
+        @NameInMap("TaskName")
+        public String taskName;
 
         /**
          * <p>The type of the metric import task. Valid values:</p>
@@ -607,95 +726,20 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
          * <p>*   aliyun_fc: metric import tasks for Alibaba Cloud services</p>
          * <p>*   aliyun_sls: metrics for logs imported from Log Service</p>
          */
-        @NameInMap("LogSample")
-        public String logSample;
-
-        /**
-         * <p>The total number of returned entries.</p>
-         */
-        @NameInMap("LogSplit")
-        public String logSplit;
-
-        /**
-         * <p>The returned message.</p>
-         * <br>
-         * <p>*   If the call is successful, the value `successful` is returned.</p>
-         * <p>*   If the call fails, an error message is returned.</p>
-         */
-        @NameInMap("MatchExpress")
-        public java.util.List<DescribeHybridMonitorTaskListResponseBodyTaskListMatchExpress> matchExpress;
-
-        /**
-         * <p>The URL of the destination from which the CloudMonitor agent collects host monitoring data.</p>
-         */
-        @NameInMap("MatchExpressRelation")
-        public String matchExpressRelation;
-
-        /**
-         * <p>The relative path from which the CloudMonitor agent collects monitoring data.</p>
-         */
-        @NameInMap("Namespace")
-        public String namespace;
-
-        /**
-         * <p>The keyword that corresponds to the instance name.</p>
-         */
-        @NameInMap("NetworkType")
-        public String networkType;
-
-        /**
-         * <p>Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:</p>
-         * <br>
-         * <p>*   true (default value): includes metric import tasks for Alibaba Cloud services.</p>
-         * <p>*   false: excludes metric import tasks for Alibaba Cloud services.</p>
-         */
-        @NameInMap("SLSProcess")
-        public String SLSProcess;
-
-        /**
-         * <p>The key of the tag.</p>
-         */
-        @NameInMap("SLSProcessConfig")
-        public DescribeHybridMonitorTaskListResponseBodyTaskListSLSProcessConfig SLSProcessConfig;
-
-        /**
-         * <p>The ID of the metric import task.</p>
-         */
-        @NameInMap("TargetUserId")
-        public String targetUserId;
-
-        /**
-         * <p>The configurations of the logs that are imported from Log Service.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the `TaskType` parameter is set to `aliyun_sls`.</p>
-         */
-        @NameInMap("TaskId")
-        public String taskId;
-
-        /**
-         * <p>The ID of the instance.</p>
-         */
-        @NameInMap("TaskName")
-        public String taskName;
-
-        /**
-         * <p>The region where the host resides.</p>
-         */
         @NameInMap("TaskType")
         public String taskType;
 
         /**
-         * <p>The ID of the member account.</p>
-         * <br>
-         * <p>>  This parameter is returned only if you call this operation by using a management account.</p>
+         * <p>The region where the host resides.</p>
          */
         @NameInMap("UploadRegion")
         public String uploadRegion;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</p>
          * <br>
-         * <p>For information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).</p>
+         * <p>*   namespace: the namespace of the Alibaba Cloud service.</p>
+         * <p>*   metric_list: the metrics of the Alibaba Cloud service.</p>
          */
         @NameInMap("YARMConfig")
         public String YARMConfig;

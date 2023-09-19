@@ -10,6 +10,9 @@ public class DescribeEventRuleListRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("IsEnable")
+    public Boolean isEnable;
+
     /**
      * <p>The HTTP status code.</p>
      * <br>
@@ -47,6 +50,14 @@ public class DescribeEventRuleListRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeEventRuleListRequest setIsEnable(Boolean isEnable) {
+        this.isEnable = isEnable;
+        return this;
+    }
+    public Boolean getIsEnable() {
+        return this.isEnable;
     }
 
     public DescribeEventRuleListRequest setNamePrefix(String namePrefix) {

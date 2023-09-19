@@ -5,26 +5,37 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleBlackListResponseBody extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteMetricRuleBlackList**.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The number of blacklist policies that are deleted.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
     /**
-     * <p>The number of blacklist policies that are deleted.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -5,29 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupNotifyPolicyListRequest extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <br>
-     * <p>>  The status code 200 indicates that the call was successful.</p>
+     * <p>The ID of the application group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The page number. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The timestamp that specifies the end of the time range to query.</p>
-     * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The policy type.</p>
+     * <br>
+     * <p>Valid value: PauseNotify.</p>
      */
     @NameInMap("PolicyType")
     public String policyType;

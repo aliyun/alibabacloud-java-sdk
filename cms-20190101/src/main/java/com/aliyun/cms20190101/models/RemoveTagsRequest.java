@@ -4,12 +4,18 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the application groups.</p>
+     */
     @NameInMap("GroupIds")
     public java.util.List<String> groupIds;
 
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<RemoveTagsRequestTag> tag;
 
@@ -44,18 +50,17 @@ public class RemoveTagsRequest extends TeaModel {
 
     public static class RemoveTagsRequestTag extends TeaModel {
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
+         * <p>The tag key.</p>
          * <br>
-         * <p>*   true: The call was successful.</p>
-         * <p>*   false: The call failed.</p>
+         * <p>> The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <br>
-         * <p>>  The `Tag.N.Key` and `Tag.N.Value` parameters must be used in pairs.</p>
+         * <p>> The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.</p>
          */
         @NameInMap("Value")
         public String value;

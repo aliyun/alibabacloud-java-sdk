@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentStatusesRequest extends TeaModel {
     /**
-     * <p>The error message.</p>
+     * <p>The ID of the availability monitoring task.</p>
      */
     @NameInMap("HostAvailabilityTaskId")
     public String hostAvailabilityTaskId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeMonitoringAgentStatuses**.</p>
+     * <p>The instance IDs. Separate multiple instance IDs with commas (,).</p>
      */
     @NameInMap("InstanceIds")
     public String instanceIds;

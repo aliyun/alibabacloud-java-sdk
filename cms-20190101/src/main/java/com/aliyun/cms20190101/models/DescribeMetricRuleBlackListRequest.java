@@ -13,12 +13,28 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     @NameInMap("Ids")
     public java.util.List<String> ids;
 
+    /**
+     * <p>The IDs of the instances in the blacklist policy.</p>
+     * <br>
+     * <p>Valid values of N: 0 to 10.</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    /**
+     * <p>The status of the blacklist policy. Valid values:</p>
+     * <br>
+     * <p>*   true: The blacklist policy is enabled.</p>
+     * <p>*   false: The blacklist policy is disabled.</p>
+     */
     @NameInMap("IsEnable")
     public Boolean isEnable;
 
+    /**
+     * <p>The name of the blacklist policy.</p>
+     * <br>
+     * <p>This parameter supports fuzzy match.</p>
+     */
     @NameInMap("Name")
     public String name;
 
@@ -53,6 +69,12 @@ public class DescribeMetricRuleBlackListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The effective scope of the blacklist policy. Valid values:</p>
+     * <br>
+     * <p>*   USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</p>
+     * <p>*   GROUP: The blacklist policy takes effect only within the specified application group.</p>
+     */
     @NameInMap("ScopeType")
     public String scopeType;
 

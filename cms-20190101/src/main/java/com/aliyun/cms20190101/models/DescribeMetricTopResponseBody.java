@@ -5,25 +5,33 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricTopResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code.</p>
+     * <br>
+     * <p>>  The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The monitoring data.</p>
+     */
     @NameInMap("Datapoints")
     public String datapoints;
 
     /**
-     * <p>The monitoring data.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The statistical period of the monitoring data. Unit: seconds. Valid values: 15, 60, 900, and 3600.</p>
+     */
     @NameInMap("Period")
     public String period;
 
     /**
-     * <p>For more information about common request parameters, see [Common parameters](~~199331~~).</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -99,6 +99,16 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The type of the application group. Valid values:</p>
+     * <br>
+     * <p>*   custom: a self-managed application group</p>
+     * <p>*   ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster</p>
+     * <p>*   kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster</p>
+     * <p>*   tag: an application group that is automatically created by using tags</p>
+     * <p>*   resMgr: an application group that is created by using resource groups</p>
+     * <p>*   ess: an application group that is synchronized from Auto Scaling (ESS)</p>
+     */
     @NameInMap("Types")
     public String types;
 

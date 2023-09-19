@@ -5,41 +5,42 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The status code.</p>
+     * <br>
+     * <p>> The status code 200 indicates that the request was successful.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The policies that were returned.</p>
+     * <p>The error message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The type of the policy.</p>
-     * <br>
-     * <p>Valid value: PauseNotify.</p>
+     * <p>The returned policies.</p>
      */
     @NameInMap("NotifyPolicyList")
     public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList notifyPolicyList;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribeMonitorGroupNotifyPolicyList**.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The error message.</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
      */
     @NameInMap("Success")
     public String success;
 
     /**
-     * <p>The timestamp that specifies the beginning of the time range to query.</p>
-     * <br>
-     * <p>Unit: milliseconds.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -99,25 +100,35 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
 
     public static class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy extends TeaModel {
         /**
-         * <p>The ID of the policy.</p>
+         * <p>The end of the time range to query.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The ID of the application group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The policy ID.</p>
+         */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The beginning of the time range to query.</p>
+         * <br>
+         * <p>Unit: milliseconds.</p>
          */
         @NameInMap("StartTime")
         public Long startTime;
 
         /**
-         * <p>The ID of the application group.</p>
+         * <p>The policy type.</p>
          */
         @NameInMap("Type")
         public String type;
