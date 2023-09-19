@@ -4,29 +4,36 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class TriggerExecutionRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The message body to be sent to the trigger task.</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the event-, alert-, or timer-triggered execution.</p>
      */
     @NameInMap("ExecutionId")
     public String executionId;
 
     /**
-     * <p>The message body to be sent to the trigger task.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to TriggerExecution.</p>
+     * <p>The type of the trigger. Valid values:</p>
+     * <br>
+     * <p>*   Event</p>
+     * <p>*   Alarm</p>
+     * <p>*   Timer</p>
      */
     @NameInMap("Type")
     public String type;

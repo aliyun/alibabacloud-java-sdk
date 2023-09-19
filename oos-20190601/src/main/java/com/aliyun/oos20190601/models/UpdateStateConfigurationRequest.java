@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class UpdateStateConfigurationRequest extends TeaModel {
     /**
-     * <p>The schedule type.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the desired-state configuration.</p>
+     * <p>The configuration mode. Valid values: ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.</p>
      */
     @NameInMap("ConfigureMode")
     public String configureMode;
 
     /**
-     * <p>The schedule expression.</p>
+     * <p>The description.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
     /**
-     * <p>The configuration mode.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The parameters.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The schedule expression.</p>
      */
     @NameInMap("ScheduleExpression")
     public String scheduleExpression;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The schedule type.</p>
      */
     @NameInMap("ScheduleType")
     public String scheduleType;
@@ -59,13 +59,13 @@ public class UpdateStateConfigurationRequest extends TeaModel {
     public String stateConfigurationId;
 
     /**
-     * <p>The tag.</p>
+     * <p>The tags to be added to the configuration.</p>
      */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
     /**
-     * <p>The required resources.</p>
+     * <p>The resources to be queried.</p>
      */
     @NameInMap("Targets")
     public String targets;

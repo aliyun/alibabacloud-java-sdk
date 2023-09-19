@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetInventorySchemaResponseBody extends TeaModel {
     /**
-     * <p>Max results.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The detailed configurations of the component.</p>
+     * <p>The detailed configurations of the configuration list.</p>
      */
     @NameInMap("Schemas")
     public java.util.List<GetInventorySchemaResponseBodySchemas> schemas;
@@ -103,19 +103,19 @@ public class GetInventorySchemaResponseBody extends TeaModel {
 
     public static class GetInventorySchemaResponseBodySchemas extends TeaModel {
         /**
-         * <p>The properties of component.</p>
+         * <p>The properties of the configuration list.</p>
          */
         @NameInMap("Attributes")
         public java.util.List<GetInventorySchemaResponseBodySchemasAttributes> attributes;
 
         /**
-         * <p>The name of the component.</p>
+         * <p>The name of the configuration list.</p>
          */
         @NameInMap("TypeName")
         public String typeName;
 
         /**
-         * <p>The version of the component.</p>
+         * <p>The version of the configuration list.</p>
          */
         @NameInMap("Version")
         public String version;

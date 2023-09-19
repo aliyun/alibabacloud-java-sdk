@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class UpdateParameterRequest extends TeaModel {
     /**
-     * <p>The ID of the common parameter.</p>
+     * <p>The description of the common parameter. The description must be 1 to 200 characters in length.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The data type of the common parameter.</p>
+     * <p>The name of the common parameter. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The version number of the common parameter.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to UpdateParameter.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the common parameter.</p>
+     * <p>The tags to be added to common parameter.</p>
      */
     @NameInMap("Tags")
     public String tags;
 
     /**
-     * <p>The value of the common parameter. The value must be 1 to 4096 characters in length.</p>
+     * <p>The value of the common parameter. The value must be 1 to 4,096 characters in length.</p>
      */
     @NameInMap("Value")
     public String value;

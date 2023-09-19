@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetSecretParametersByPathResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The information of the encryption parameter.</p>
+     * <p>The information about the encryption parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<GetSecretParametersByPathResponseBodyParameters> parameters;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -111,7 +111,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The AccessKey ID.</p>
+         * <p>The ID of the key.</p>
          */
         @NameInMap("KeyId")
         public String keyId;

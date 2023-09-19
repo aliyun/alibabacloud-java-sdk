@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The applications.</p>
+     * <p>The details of the application.</p>
      */
     @NameInMap("Applications")
     public java.util.List<ListApplicationsResponseBodyApplications> applications;
@@ -91,13 +91,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>A tag of the resource.</p>
+         * <p>The tags added to the application.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;

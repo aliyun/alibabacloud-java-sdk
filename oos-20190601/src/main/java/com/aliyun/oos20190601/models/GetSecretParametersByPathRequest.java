@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetSecretParametersByPathRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 10. Default value: 10.</p>
+     * <p>The number of entries per page. Valid values: 1 to 10. Default value: 10.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -23,27 +23,25 @@ public class GetSecretParametersByPathRequest extends TeaModel {
     public String path;
 
     /**
-     * <p>Specifies whether to recursively query encryption parameters from all levels of directories in the specified path. Valid values: true and false. For example, if you want to query the /secretParameter/mySecretParameter and /secretParameter/secretParameter 1/mySecretParameter parameters, the valid values specify the parameters to return.</p>
+     * <p>Specifies whether to recursively query encryption parameters from all levels of directories in the specified path. Valid values: true and false. For example, if you want to query the /secretParameter/mySecretParameter and /secretParameter/secretParameter 1/mySecretParameter parameters, the valid values specify the parameters to be returned.</p>
      * <br>
-     * <p>*   true: Returns both of the /secretParameter/mySecretParameter and /secretParameter/secretParameter1/mySecretParameter parameters.</p>
-     * <p>*   false: Returns only the /parameter/myparameter parameter.</p>
+     * <p>*   true: returns both of the /secretParameter/mySecretParameter and /secretParameter/secretParameter1/mySecretParameter parameters.</p>
+     * <p>*   false: returns only the /secretParameter/mySecretParameter parameter.</p>
      */
     @NameInMap("Recursive")
     public Boolean recursive;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Specifies whether to decrypt the parameter value.</p>
-     * <br>
-     * <p>Valid values:</p>
+     * <p>Specifies whether to decrypt the parameter value. Default value: false. Valid values:</p>
      * <br>
      * <p>*   true</p>
-     * <p>*   false (Default)</p>
+     * <p>*   false</p>
      */
     @NameInMap("WithDecryption")
     public Boolean withDecryption;

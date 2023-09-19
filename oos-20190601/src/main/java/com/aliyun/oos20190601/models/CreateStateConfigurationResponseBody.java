@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateStateConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The configuration mode.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tag.</p>
+     * <p>The information about the desired-state configuration.</p>
      */
     @NameInMap("StateConfiguration")
     public CreateStateConfigurationResponseBodyStateConfiguration stateConfiguration;
@@ -39,62 +39,68 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
 
     public static class CreateStateConfigurationResponseBodyStateConfiguration extends TeaModel {
         /**
-         * <p>The parameters.</p>
+         * <p>The configuration mode. Valid values:</p>
          */
         @NameInMap("ConfigureMode")
         public String configureMode;
 
         /**
-         * <p>The desired-state configuration.</p>
+         * <p>The time when the desired-state configuration was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>WB502027</p>
+         * <p>The description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>CreateStateConfiguration</p>
+         * <p>The parameters.</p>
          */
         @NameInMap("Parameters")
         public java.util.Map<String, ?> parameters;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The version number. If you do not specify this parameter, the system uses the latest version.</p>
+         * <p>The schedule expression.</p>
          */
         @NameInMap("ScheduleExpression")
         public String scheduleExpression;
 
         /**
-         * <p>Creates a desired-state configuration.</p>
+         * <p>The schedule type.</p>
          */
         @NameInMap("ScheduleType")
         public String scheduleType;
 
         /**
-         * <p>收集Inventory数据</p>
+         * <p>The ID of the desired-state configuration.</p>
          */
         @NameInMap("StateConfigurationId")
         public String stateConfigurationId;
 
         /**
-         * <p>The required resources.</p>
+         * <p>The tags added to the configuration.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>1 hour 或 30 minutes</p>
+         * <p>The queried resources.</p>
          */
         @NameInMap("Targets")
         public String targets;
 
+        /**
+         * <p>The template ID.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -105,7 +111,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The name of the template version.</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;

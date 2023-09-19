@@ -11,7 +11,7 @@ public class UpdateExecutionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>执行的描述。</p>
+     * <p>The description of the execution.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -23,7 +23,7 @@ public class UpdateExecutionRequest extends TeaModel {
     public String executionId;
 
     /**
-     * <p>A JSON string consisting of a collection of parameters. Default value: {}.</p>
+     * <p>The information about the parameters.</p>
      */
     @NameInMap("Parameters")
     public String parameters;
@@ -33,6 +33,12 @@ public class UpdateExecutionRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tags")
+    public String tags;
 
     public static UpdateExecutionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateExecutionRequest self = new UpdateExecutionRequest();
@@ -77,6 +83,22 @@ public class UpdateExecutionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpdateExecutionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public UpdateExecutionRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

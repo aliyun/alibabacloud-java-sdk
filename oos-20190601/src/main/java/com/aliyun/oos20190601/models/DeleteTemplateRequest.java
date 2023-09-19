@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteTemplateRequest extends TeaModel {
     /**
-     * <p>You can call this operation to delete a template.</p>
+     * <p>Specifies whether to delete the related executions when a template is deleted.</p>
      */
     @NameInMap("AutoDeleteExecutions")
     public Boolean autoDeleteExecutions;
 
     /**
-     * <p>Specifies whether to delete the related executions when a template is deleted.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

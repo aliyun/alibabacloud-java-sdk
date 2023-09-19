@@ -5,49 +5,49 @@ import com.aliyun.tea.*;
 
 public class ListStateConfigurationsShrinkRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return on each page.</p>
+     * <p>The maximum number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token of the next page.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The ID of each desired-state configuration.</p>
+     * <p>The ID of the desired-state configuration.</p>
      */
     @NameInMap("StateConfigurationIds")
     public String stateConfigurationIds;
 
     /**
-     * <p>The tag.</p>
+     * <p>The tags to be added to the configuration.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The version number. If you do not specify this parameter, the system uses the latest version.</p>
+     * <p>The version number of the template. If you do not specify this parameter, the latest version of the template is used.</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;

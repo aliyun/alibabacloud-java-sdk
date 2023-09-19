@@ -6,6 +6,32 @@ import com.aliyun.tea.*;
 public class ListApplicationsShrinkRequest extends TeaModel {
     /**
      * <p>The type of the application.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   ComputeNest</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Custom</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   DingTalk</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ApplicationType")
     public String applicationType;
