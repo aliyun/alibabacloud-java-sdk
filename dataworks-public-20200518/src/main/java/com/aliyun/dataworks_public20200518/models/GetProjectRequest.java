@@ -10,6 +10,9 @@ public class GetProjectRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
+
     public static GetProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         GetProjectRequest self = new GetProjectRequest();
         return TeaModel.build(map, self);
@@ -21,6 +24,14 @@ public class GetProjectRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public GetProjectRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
     }
 
 }

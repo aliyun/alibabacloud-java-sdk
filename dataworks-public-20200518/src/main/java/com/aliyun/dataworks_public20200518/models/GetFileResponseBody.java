@@ -188,6 +188,9 @@ public class GetFileResponseBody extends TeaModel {
         @NameInMap("FileFolderId")
         public String fileFolderId;
 
+        @NameInMap("FileId")
+        public Long fileId;
+
         /**
          * <p>The name of the file.</p>
          */
@@ -358,6 +361,14 @@ public class GetFileResponseBody extends TeaModel {
         }
         public String getFileFolderId() {
             return this.fileFolderId;
+        }
+
+        public GetFileResponseBodyDataFile setFileId(Long fileId) {
+            this.fileId = fileId;
+            return this;
+        }
+        public Long getFileId() {
+            return this.fileId;
         }
 
         public GetFileResponseBodyDataFile setFileName(String fileName) {
