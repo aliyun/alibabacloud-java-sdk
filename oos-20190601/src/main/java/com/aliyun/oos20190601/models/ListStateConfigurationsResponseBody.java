@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListStateConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The desired-state configurations.</p>
+     * <p>The information about the desired-state configurations.</p>
      */
     @NameInMap("StateConfigurations")
     public java.util.List<ListStateConfigurationsResponseBodyStateConfigurations> stateConfigurations;
@@ -53,13 +53,13 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
 
     public static class ListStateConfigurationsResponseBodyStateConfigurations extends TeaModel {
         /**
-         * <p>The configuration mode.</p>
+         * <p>The configuration mode. Valid values:</p>
          */
         @NameInMap("ConfigureMode")
         public String configureMode;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the desired-state configuration was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -77,7 +77,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         public String parameters;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -101,19 +101,19 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         public String stateConfigurationId;
 
         /**
-         * <p>The tag of the auxiliary media asset.</p>
+         * <p>The tags added to the configuration.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The target EMR resource.</p>
+         * <p>The queried resources.</p>
          */
         @NameInMap("Targets")
         public String targets;
 
         /**
-         * <p>The ID of the cluster template.</p>
+         * <p>The template ID.</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
@@ -131,7 +131,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         public String templateVersion;
 
         /**
-         * <p>The time when the configuration is updated.</p>
+         * <p>The time when the configuration was updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

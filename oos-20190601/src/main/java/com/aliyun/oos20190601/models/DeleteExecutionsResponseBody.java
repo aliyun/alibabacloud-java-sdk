@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteExecutionsResponseBody extends TeaModel {
     /**
-     * <p>Deletes multiple executions.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

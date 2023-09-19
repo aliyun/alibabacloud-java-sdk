@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteExecutionsRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The execution IDs.</p>
+     * <br>
+     * <p>You can specify multiple execution IDs in a JSON array in the format of `["xxxxxxxxx", "yyyyyyyyy", ... "zzzzzzzzz"]`. You can specify up to 100 execution IDs at a time. Separate multiple IDs with commas (,).</p>
      */
     @NameInMap("ExecutionIds")
     public String executionIds;
 
     /**
-     * <p>A JSON array that consists of multiple instance IDs. The format of the JSON array is [“xxxxxxxxx”, “yyyyyyyyy”, … “zzzzzzzzz”]. Separate multiple instance IDs with commas (,). A maximum of 100 instance IDs can be specified at a time.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

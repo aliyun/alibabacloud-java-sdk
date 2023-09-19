@@ -4,62 +4,78 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListPatchBaselinesRequest extends TeaModel {
+    /**
+     * <p>The approved patches.</p>
+     */
     @NameInMap("ApprovedPatches")
     public java.util.List<String> approvedPatches;
 
+    /**
+     * <p>Whether the approved patch includes updates other than security.</p>
+     */
     @NameInMap("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The share type of the patch baseline.</p>
+     * <p>The name of the patch baseline.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The type of the operating system. Valid values:</p>
+     * <br>
+     * <p>*   Windows</p>
+     * <p>*   Ubuntu</p>
+     * <p>*   CentOS</p>
+     * <p>*   Debian</p>
+     * <p>*   AliyunLinux</p>
+     * <p>*   RedhatEnterpriseLinux</p>
+     * <p>*   Anolis</p>
+     * <p>*   AlmaLinux</p>
      */
     @NameInMap("OperationSystem")
     public String operationSystem;
 
     /**
-     * <p>The type of the operating system. Valid values:</p>
-     * <br>
-     * <p>*   AliyunLinux</p>
-     * <p>*   Windows</p>
-     * <p>*   Ubuntu</p>
-     * <p>*   Centos</p>
-     * <p>*   Debian</p>
-     * <p>*   RedhatEnterpriseLinux</p>
-     * <p>*   Anolis</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ResourceGroupld")
-    public String resourceGroupld;
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>The share type of the template. Valid values:</p>
+     * <br>
+     * <p>*   **Public**</p>
+     * <p>*   **Private**</p>
      */
     @NameInMap("ShareType")
     public String shareType;
 
+    /**
+     * <p>The list of patch source configurations.</p>
+     */
     @NameInMap("Sources")
     public java.util.List<String> sources;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListPatchBaselinesRequestTags> tags;
 
@@ -124,12 +140,12 @@ public class ListPatchBaselinesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListPatchBaselinesRequest setResourceGroupld(String resourceGroupld) {
-        this.resourceGroupld = resourceGroupld;
+    public ListPatchBaselinesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
-    public String getResourceGroupld() {
-        return this.resourceGroupld;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListPatchBaselinesRequest setShareType(String shareType) {
@@ -157,9 +173,15 @@ public class ListPatchBaselinesRequest extends TeaModel {
     }
 
     public static class ListPatchBaselinesRequestTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 

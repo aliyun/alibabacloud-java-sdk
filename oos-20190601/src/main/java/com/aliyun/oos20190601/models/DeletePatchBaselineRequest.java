@@ -11,7 +11,7 @@ public class DeletePatchBaselineRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

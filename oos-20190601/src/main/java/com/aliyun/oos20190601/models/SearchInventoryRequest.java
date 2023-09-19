@@ -20,7 +20,7 @@ public class SearchInventoryRequest extends TeaModel {
     public java.util.List<SearchInventoryRequestFilter> filter;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 50.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

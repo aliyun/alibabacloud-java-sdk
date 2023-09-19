@@ -5,67 +5,67 @@ import com.aliyun.tea.*;
 
 public class ListParameterVersionsResponseBody extends TeaModel {
     /**
-     * <p>The name of the common parameter.</p>
+     * <p>The user who created the common parameter.</p>
      */
     @NameInMap("CreatedBy")
     public String createdBy;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The time when the common parameter was created.</p>
      */
     @NameInMap("CreatedDate")
     public String createdDate;
 
     /**
-     * <p>The user who created the common parameter.</p>
+     * <p>The description of the common parameter.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The version number of the common parameter.</p>
+     * <p>The ID of the common parameter.</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The time when the common parameter was created.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The ID of the common parameter.</p>
+     * <p>The name of the common parameter.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The description of the common parameter.</p>
+     * <p>The pagination token that was used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The value of the common parameter.</p>
+     * <p>The information about the version of the common parameter.</p>
      */
     @NameInMap("ParameterVersions")
     public java.util.List<ListParameterVersionsResponseBodyParameterVersions> parameterVersions;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The version information of the common parameter.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The data type of the common parameter.</p>
      */
     @NameInMap("Type")
     public String type;
@@ -165,27 +165,25 @@ public class ListParameterVersionsResponseBody extends TeaModel {
 
     public static class ListParameterVersionsResponseBodyParameterVersions extends TeaModel {
         /**
-         * <p>The time when the common parameter was updated.</p>
+         * <p>The version number of the common parameter.</p>
          */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
         /**
-         * <p>Queries versions of a common parameter.</p>
+         * <p>The user who updated the common parameter.</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
-         * <p>## Debugging</p>
-         * <br>
-         * <p>[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=oos\&api=ListParameterVersions\&type=RPC\&version=2019-06-01)</p>
+         * <p>The time when the common parameter was last updated.</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
-         * <p>The user who updated the common parameter.</p>
+         * <p>The value of the common parameter.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteStateConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>Deletes desired-state configurations in batches.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

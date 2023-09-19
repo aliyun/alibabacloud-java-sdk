@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetParameterRequest extends TeaModel {
     /**
-     * <p>The operation that you want to perform. Set the value to GetParameter.</p>
+     * <p>The name of the common parameter. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The time when the common parameter was updated.</p>
+     * <p>The version number of the common parameter. Valid values: 1 to 100.</p>
      */
     @NameInMap("ParameterVersion")
     public Integer parameterVersion;
 
     /**
-     * <p>The name of the common parameter.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The user who created the common parameter.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

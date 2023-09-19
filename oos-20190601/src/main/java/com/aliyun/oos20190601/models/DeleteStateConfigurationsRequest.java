@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteStateConfigurationsRequest extends TeaModel {
     /**
-     * <p>Deletes desired-state configurations in batches</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>## Debugging</p>
-     * <br>
-     * <p>[OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=oos\&api=DeleteStateConfigurations\&type=RPC\&version=2019-06-01)</p>
+     * <p>The IDs of desired-state configurations.</p>
      */
     @NameInMap("StateConfigurationIds")
     public String stateConfigurationIds;

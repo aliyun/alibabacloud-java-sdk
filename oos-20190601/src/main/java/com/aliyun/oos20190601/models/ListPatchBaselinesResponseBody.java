@@ -66,9 +66,15 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
     }
 
     public static class ListPatchBaselinesResponseBodyPatchBaselinesTags extends TeaModel {
+        /**
+         * <p>标签键。</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>标签值。</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -96,9 +102,15 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
     }
 
     public static class ListPatchBaselinesResponseBodyPatchBaselines extends TeaModel {
+        /**
+         * <p>批准补丁的列表。</p>
+         */
         @NameInMap("ApprovedPatches")
         public java.util.List<String> approvedPatches;
 
+        /**
+         * <p>批准补丁是否包括除安全性之外的更新</p>
+         */
         @NameInMap("ApprovedPatchesEnableNonSecurity")
         public Boolean approvedPatchesEnableNonSecurity;
 
@@ -144,8 +156,8 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         @NameInMap("OperationSystem")
         public String operationSystem;
 
-        @NameInMap("ResourceGroupld")
-        public String resourceGroupld;
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         /**
          * <p>Queries the details of patch baselines.</p>
@@ -153,9 +165,15 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>补丁源配置列表。</p>
+         */
         @NameInMap("Sources")
         public java.util.List<String> sources;
 
+        /**
+         * <p>标签。</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListPatchBaselinesResponseBodyPatchBaselinesTags> tags;
 
@@ -248,12 +266,12 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             return this.operationSystem;
         }
 
-        public ListPatchBaselinesResponseBodyPatchBaselines setResourceGroupld(String resourceGroupld) {
-            this.resourceGroupld = resourceGroupld;
+        public ListPatchBaselinesResponseBodyPatchBaselines setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public String getResourceGroupld() {
-            return this.resourceGroupld;
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListPatchBaselinesResponseBodyPatchBaselines setShareType(String shareType) {

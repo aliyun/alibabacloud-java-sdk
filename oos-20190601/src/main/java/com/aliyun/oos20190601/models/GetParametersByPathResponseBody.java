@@ -10,6 +10,9 @@ public class GetParametersByPathResponseBody extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The information about the common parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<GetParametersByPathResponseBodyParameters> parameters;
 
@@ -65,42 +68,81 @@ public class GetParametersByPathResponseBody extends TeaModel {
     }
 
     public static class GetParametersByPathResponseBodyParameters extends TeaModel {
+        /**
+         * <p>The constraints of the common parameter.</p>
+         */
         @NameInMap("Constraints")
         public String constraints;
 
+        /**
+         * <p>The user who created the common parameter.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the common parameter was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the common parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the common parameter.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the common parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version number of the common parameter.</p>
+         */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
+        /**
+         * <p>The share type of the common parameter.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The tags added to the common parameters.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The type of the common parameter.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The user who updated the common parameter.</p>
+         */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
+        /**
+         * <p>The time when the common parameter was last updated.</p>
+         */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
+        /**
+         * <p>The value of the common parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 

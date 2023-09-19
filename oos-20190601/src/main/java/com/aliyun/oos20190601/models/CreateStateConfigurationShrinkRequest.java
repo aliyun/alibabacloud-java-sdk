@@ -5,79 +5,73 @@ import com.aliyun.tea.*;
 
 public class CreateStateConfigurationShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the desired-state configuration.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>收集Inventory数据</p>
+     * <p>The configuration mode. Valid values: ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.</p>
      */
     @NameInMap("ConfigureMode")
     public String configureMode;
 
     /**
-     * <p>The configuration mode.</p>
-     * <br>
-     * <p>ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied.</p>
-     * <br>
-     * <p>ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future.</p>
-     * <br>
-     * <p>ApplyAndAutoCorrect: The configuration is always applied.</p>
+     * <p>The description of the desired-state configuration.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of resource group.</p>
+     * <p>The parameters.</p>
      */
     @NameInMap("Parameters")
     public String parameters;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the schedule. Valid value: rate.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The description.</p>
+     * <p>The schedule expression. The interval between two schedules must be a minimum of 30 minutes.</p>
      */
     @NameInMap("ScheduleExpression")
     public String scheduleExpression;
 
     /**
-     * <p>The schedule expression.</p>
+     * <p>The schedule type. Set the value to rate.</p>
      */
     @NameInMap("ScheduleType")
     public String scheduleType;
 
     /**
-     * <p>The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).</p>
+     * <p>The tags to be added to the configuration.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
 
     /**
-     * <p>The schedule expression. The interval between two schedules must be a minimum of 30 minutes.</p>
+     * <p>The resources to be queried.</p>
      */
     @NameInMap("Targets")
     public String targets;
 
     /**
-     * <p>The version of the template.</p>
+     * <p>The name of the template. The name must be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The required resources.</p>
+     * <p>The version number of the template. If you do not specify this parameter, the latest version of the template is used.</p>
      */
     @NameInMap("TemplateVersion")
     public String templateVersion;

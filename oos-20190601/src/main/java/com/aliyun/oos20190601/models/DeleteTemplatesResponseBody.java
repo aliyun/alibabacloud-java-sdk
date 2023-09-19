@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTemplatesResponseBody extends TeaModel {
     /**
-     * <p>Deletes multiple templates.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

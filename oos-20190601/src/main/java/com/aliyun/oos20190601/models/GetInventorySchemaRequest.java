@@ -5,36 +5,34 @@ import com.aliyun.tea.*;
 
 public class GetInventorySchemaRequest extends TeaModel {
     /**
-     * <p>Specifies whether only to return a combination of specified properties.</p>
+     * <p>Specifies whether to return only properties that support the aggregate feature in the configuration list. Valid values:</p>
      * <br>
-     * <p>Valid values:</p>
-     * <br>
-     * <p>*   true: only returns a combination of specified properties</p>
-     * <p>*   false: returns all properties of the component</p>
+     * <p>*   true: only returns properties that support the aggregate feature in the configuration list.</p>
+     * <p>*   false: returns all properties in the configuration list.</p>
      */
     @NameInMap("Aggregator")
     public Boolean aggregator;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 50.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used to retrieve the next page of results.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The name of the component. Valid values:</p>
+     * <p>The configuration list type name. Valid values:</p>
      * <br>
      * <p>*   ACS:InstanceInformation</p>
      * <p>*   ACS:Application</p>

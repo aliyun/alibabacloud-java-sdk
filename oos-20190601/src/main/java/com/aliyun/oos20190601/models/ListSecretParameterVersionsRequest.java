@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSecretParameterVersionsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;

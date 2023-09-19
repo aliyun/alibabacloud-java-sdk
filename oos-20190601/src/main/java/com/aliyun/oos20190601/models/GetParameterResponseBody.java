@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetParameterResponseBody extends TeaModel {
     /**
-     * <p>The description of the common parameter.</p>
+     * <p>The information about the common parameter.</p>
      */
     @NameInMap("Parameter")
     public GetParameterResponseBodyParameter parameter;
 
     /**
-     * <p>The user who updated the common parameter.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,59 +38,86 @@ public class GetParameterResponseBody extends TeaModel {
     }
 
     public static class GetParameterResponseBodyParameter extends TeaModel {
+        /**
+         * <p>The constraints of the common parameter.</p>
+         */
         @NameInMap("Constraints")
         public String constraints;
 
+        /**
+         * <p>The user who created the common parameter.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The time when the common parameter was created.</p>
+         */
         @NameInMap("CreatedDate")
         public String createdDate;
 
+        /**
+         * <p>The description of the common parameter.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the common parameter.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the common parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version number of the common parameter.</p>
+         */
         @NameInMap("ParameterVersion")
         public Integer parameterVersion;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The share type of the common parameter.</p>
+         */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The tags added to the common parameter.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The region ID of the resource.</p>
+         * <p>The data type of the common parameter.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The value of the common parameter.</p>
+         * <p>The user who updated the common parameter.</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
-         * <p>The information of the common parameter.</p>
+         * <p>The time when the common parameter was updated.</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;
 
         /**
-         * <p>Queries a common parameter and its value.</p>
+         * <p>The value of the common parameter.</p>
          */
         @NameInMap("Value")
         public String value;

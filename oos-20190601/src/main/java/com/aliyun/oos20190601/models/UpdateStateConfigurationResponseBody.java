@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateStateConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The idempotency token.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The description.</p>
+     * <p>The details of the configuration.</p>
      */
     @NameInMap("StateConfiguration")
     public java.util.List<UpdateStateConfigurationResponseBodyStateConfiguration> stateConfiguration;
@@ -39,79 +39,85 @@ public class UpdateStateConfigurationResponseBody extends TeaModel {
 
     public static class UpdateStateConfigurationResponseBodyStateConfiguration extends TeaModel {
         /**
-         * <p>The configuration mode. ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied. ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future. ApplyAndAutoCorrect: The configuration is always applied.</p>
+         * <p>The configuration mode. Valid values:</p>
          */
         @NameInMap("ConfigureMode")
         public String configureMode;
 
         /**
-         * <p>The parameters.</p>
+         * <p>The time when the configuration was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>Updates a desired-state configuration.</p>
+         * <p>The description of the desired-state configuration.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The parameters.</p>
          */
         @NameInMap("Parameters")
         public String parameters;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The configuration list.</p>
+         * <p>The CRON expression.</p>
          */
         @NameInMap("ScheduleExpression")
         public String scheduleExpression;
 
         /**
-         * <p>The update time.</p>
+         * <p>The schedule type.</p>
          */
         @NameInMap("ScheduleType")
         public String scheduleType;
 
         /**
-         * <p>The schedule expression.</p>
+         * <p>The ID of the desired-state configuration.</p>
          */
         @NameInMap("StateConfigurationId")
         public String stateConfigurationId;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The tags added to the configuration.</p>
          */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
         /**
-         * <p>The required resources.</p>
+         * <p>The queried resources.</p>
          */
         @NameInMap("Targets")
         public String targets;
 
+        /**
+         * <p>The template ID.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
-         * <p>The ID of the desired-state configuration.</p>
+         * <p>The name of the template.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
-         * <p>The ID of the template.</p>
+         * <p>The name of the template version.</p>
          */
         @NameInMap("TemplateVersion")
         public String templateVersion;
 
         /**
-         * <p>The version of the template.</p>
+         * <p>The time when the configuration was updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
