@@ -125,6 +125,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DelayRuleTime", request.delayRuleTime);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destCaCertificateOssUrl)) {
+            query.put("DestCaCertificateOssUrl", request.destCaCertificateOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destCaCertificatePassword)) {
+            query.put("DestCaCertificatePassword", request.destCaCertificatePassword);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.destinationEndpointDataBaseName)) {
             query.put("DestinationEndpointDataBaseName", request.destinationEndpointDataBaseName);
         }
@@ -267,6 +275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceEndpointVSwitchID)) {
             query.put("SourceEndpointVSwitchID", request.sourceEndpointVSwitchID);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcCaCertificateOssUrl)) {
+            query.put("SrcCaCertificateOssUrl", request.srcCaCertificateOssUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.srcCaCertificatePassword)) {
+            query.put("SrcCaCertificatePassword", request.srcCaCertificatePassword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.structureInitialization)) {

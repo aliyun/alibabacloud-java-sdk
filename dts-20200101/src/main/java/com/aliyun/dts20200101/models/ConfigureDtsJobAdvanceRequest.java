@@ -71,6 +71,12 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("DelayRuleTime")
     public Long delayRuleTime;
 
+    @NameInMap("DestCaCertificateOssUrl")
+    public String destCaCertificateOssUrl;
+
+    @NameInMap("DestCaCertificatePassword")
+    public String destCaCertificatePassword;
+
     /**
      * <p>The password of the destination database account.</p>
      * <br>
@@ -441,6 +447,12 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     @NameInMap("SourceEndpointVSwitchID")
     public String sourceEndpointVSwitchID;
 
+    @NameInMap("SrcCaCertificateOssUrl")
+    public String srcCaCertificateOssUrl;
+
+    @NameInMap("SrcCaCertificatePassword")
+    public String srcCaCertificatePassword;
+
     /**
      * <p>Specifies whether to perform incremental data migration or synchronization. Default value: false. Valid values:</p>
      * <br>
@@ -533,6 +545,22 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public Long getDelayRuleTime() {
         return this.delayRuleTime;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDestCaCertificateOssUrl(String destCaCertificateOssUrl) {
+        this.destCaCertificateOssUrl = destCaCertificateOssUrl;
+        return this;
+    }
+    public String getDestCaCertificateOssUrl() {
+        return this.destCaCertificateOssUrl;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setDestCaCertificatePassword(String destCaCertificatePassword) {
+        this.destCaCertificatePassword = destCaCertificatePassword;
+        return this;
+    }
+    public String getDestCaCertificatePassword() {
+        return this.destCaCertificatePassword;
     }
 
     public ConfigureDtsJobAdvanceRequest setDestinationEndpointDataBaseName(String destinationEndpointDataBaseName) {
@@ -829,6 +857,22 @@ public class ConfigureDtsJobAdvanceRequest extends TeaModel {
     }
     public String getSourceEndpointVSwitchID() {
         return this.sourceEndpointVSwitchID;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setSrcCaCertificateOssUrl(String srcCaCertificateOssUrl) {
+        this.srcCaCertificateOssUrl = srcCaCertificateOssUrl;
+        return this;
+    }
+    public String getSrcCaCertificateOssUrl() {
+        return this.srcCaCertificateOssUrl;
+    }
+
+    public ConfigureDtsJobAdvanceRequest setSrcCaCertificatePassword(String srcCaCertificatePassword) {
+        this.srcCaCertificatePassword = srcCaCertificatePassword;
+        return this;
+    }
+    public String getSrcCaCertificatePassword() {
+        return this.srcCaCertificatePassword;
     }
 
     public ConfigureDtsJobAdvanceRequest setStructureInitialization(Boolean structureInitialization) {
