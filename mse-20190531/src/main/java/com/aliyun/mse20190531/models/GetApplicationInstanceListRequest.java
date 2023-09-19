@@ -18,10 +18,10 @@ public class GetApplicationInstanceListRequest extends TeaModel {
     public String namespace;
 
     @NameInMap("PageNumber")
-    public String pageNumber;
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     @NameInMap("Region")
     public String region;
@@ -66,19 +66,19 @@ public class GetApplicationInstanceListRequest extends TeaModel {
         return this.namespace;
     }
 
-    public GetApplicationInstanceListRequest setPageNumber(String pageNumber) {
+    public GetApplicationInstanceListRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
-    public GetApplicationInstanceListRequest setPageSize(String pageSize) {
+    public GetApplicationInstanceListRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

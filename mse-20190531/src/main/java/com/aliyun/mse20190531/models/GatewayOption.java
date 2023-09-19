@@ -109,8 +109,17 @@ public class GatewayOption extends TeaModel {
         @NameInMap("Sample")
         public Long sample;
 
+        @NameInMap("ServiceId")
+        public Long serviceId;
+
+        @NameInMap("ServicePort")
+        public String servicePort;
+
         @NameInMap("TraceEnabled")
         public Boolean traceEnabled;
+
+        @NameInMap("TraceType")
+        public String traceType;
 
         public static GatewayOptionTraceDetails build(java.util.Map<String, ?> map) throws Exception {
             GatewayOptionTraceDetails self = new GatewayOptionTraceDetails();
@@ -125,12 +134,36 @@ public class GatewayOption extends TeaModel {
             return this.sample;
         }
 
+        public GatewayOptionTraceDetails setServiceId(Long serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public Long getServiceId() {
+            return this.serviceId;
+        }
+
+        public GatewayOptionTraceDetails setServicePort(String servicePort) {
+            this.servicePort = servicePort;
+            return this;
+        }
+        public String getServicePort() {
+            return this.servicePort;
+        }
+
         public GatewayOptionTraceDetails setTraceEnabled(Boolean traceEnabled) {
             this.traceEnabled = traceEnabled;
             return this;
         }
         public Boolean getTraceEnabled() {
             return this.traceEnabled;
+        }
+
+        public GatewayOptionTraceDetails setTraceType(String traceType) {
+            this.traceType = traceType;
+            return this;
+        }
+        public String getTraceType() {
+            return this.traceType;
         }
 
     }
