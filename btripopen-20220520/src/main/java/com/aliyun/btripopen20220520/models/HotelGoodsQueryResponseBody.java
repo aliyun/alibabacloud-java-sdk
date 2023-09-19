@@ -206,6 +206,99 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
     }
 
+    public static class HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail extends TeaModel {
+        @NameInMap("label_name")
+        public java.util.List<String> labelName;
+
+        @NameInMap("money_desc")
+        public String moneyDesc;
+
+        public static HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail build(java.util.Map<String, ?> map) throws Exception {
+            HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail self = new HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail setLabelName(java.util.List<String> labelName) {
+            this.labelName = labelName;
+            return this;
+        }
+        public java.util.List<String> getLabelName() {
+            return this.labelName;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail setMoneyDesc(String moneyDesc) {
+            this.moneyDesc = moneyDesc;
+            return this;
+        }
+        public String getMoneyDesc() {
+            return this.moneyDesc;
+        }
+
+    }
+
+    public static class HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc extends TeaModel {
+        @NameInMap("cash_reduce_total")
+        public String cashReduceTotal;
+
+        @NameInMap("dinamic_label")
+        public String dinamicLabel;
+
+        @NameInMap("discount_detail")
+        public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail> discountDetail;
+
+        @NameInMap("sub_title")
+        public String subTitle;
+
+        @NameInMap("title")
+        public String title;
+
+        public static HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc build(java.util.Map<String, ?> map) throws Exception {
+            HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc self = new HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc();
+            return TeaModel.build(map, self);
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc setCashReduceTotal(String cashReduceTotal) {
+            this.cashReduceTotal = cashReduceTotal;
+            return this;
+        }
+        public String getCashReduceTotal() {
+            return this.cashReduceTotal;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc setDinamicLabel(String dinamicLabel) {
+            this.dinamicLabel = dinamicLabel;
+            return this;
+        }
+        public String getDinamicLabel() {
+            return this.dinamicLabel;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc setDiscountDetail(java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail> discountDetail) {
+            this.discountDetail = discountDetail;
+            return this;
+        }
+        public java.util.List<HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDescDiscountDetail> getDiscountDetail() {
+            return this.discountDetail;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc setSubTitle(String subTitle) {
+            this.subTitle = subTitle;
+            return this;
+        }
+        public String getSubTitle() {
+            return this.subTitle;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+    }
+
     public static class HotelGoodsQueryResponseBodyModuleRoomsRatesHotelDetailRatePriceDTO extends TeaModel {
         @NameInMap("before_discount_price")
         public Long beforeDiscountPrice;
@@ -341,6 +434,9 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
 
         @NameInMap("daily_price_view")
         public String dailyPriceView;
+
+        @NameInMap("discount_desc")
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc discountDesc;
 
         @NameInMap("end_time_daily")
         public String endTimeDaily;
@@ -533,6 +629,14 @@ public class HotelGoodsQueryResponseBody extends TeaModel {
         }
         public String getDailyPriceView() {
             return this.dailyPriceView;
+        }
+
+        public HotelGoodsQueryResponseBodyModuleRoomsRates setDiscountDesc(HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc discountDesc) {
+            this.discountDesc = discountDesc;
+            return this;
+        }
+        public HotelGoodsQueryResponseBodyModuleRoomsRatesDiscountDesc getDiscountDesc() {
+            return this.discountDesc;
         }
 
         public HotelGoodsQueryResponseBodyModuleRoomsRates setEndTimeDaily(String endTimeDaily) {

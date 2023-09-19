@@ -19,6 +19,12 @@ public class TrainTicketScanQueryRequest extends TeaModel {
     @NameInMap("page_size")
     public Integer pageSize;
 
+    @NameInMap("serial_number")
+    public String serialNumber;
+
+    @NameInMap("ticket_no")
+    public String ticketNo;
+
     public static TrainTicketScanQueryRequest build(java.util.Map<String, ?> map) throws Exception {
         TrainTicketScanQueryRequest self = new TrainTicketScanQueryRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,22 @@ public class TrainTicketScanQueryRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public TrainTicketScanQueryRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
+    public TrainTicketScanQueryRequest setTicketNo(String ticketNo) {
+        this.ticketNo = ticketNo;
+        return this;
+    }
+    public String getTicketNo() {
+        return this.ticketNo;
     }
 
 }
