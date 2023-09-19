@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>carbonfootprint20230711</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>carbonfootprint20230711</name>
   <description>Alibaba Cloud CarbonFootprint (20230711) SDK for Java
