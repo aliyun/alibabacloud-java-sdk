@@ -99,6 +99,9 @@ public class IsvUserSaveRequest extends TeaModel {
         @NameInMap("gender")
         public String gender;
 
+        @NameInMap("is_admin")
+        public Boolean isAdmin;
+
         @NameInMap("job_no")
         public String jobNo;
 
@@ -175,6 +178,14 @@ public class IsvUserSaveRequest extends TeaModel {
         }
         public String getGender() {
             return this.gender;
+        }
+
+        public IsvUserSaveRequestUserList setIsAdmin(Boolean isAdmin) {
+            this.isAdmin = isAdmin;
+            return this;
+        }
+        public Boolean getIsAdmin() {
+            return this.isAdmin;
         }
 
         public IsvUserSaveRequestUserList setJobNo(String jobNo) {
