@@ -13,6 +13,9 @@ public class ImportServicesShrinkRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("FcAlias")
+    public String fcAlias;
+
     @NameInMap("FcServiceName")
     public String fcServiceName;
 
@@ -65,6 +68,14 @@ public class ImportServicesShrinkRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public ImportServicesShrinkRequest setFcAlias(String fcAlias) {
+        this.fcAlias = fcAlias;
+        return this;
+    }
+    public String getFcAlias() {
+        return this.fcAlias;
     }
 
     public ImportServicesShrinkRequest setFcServiceName(String fcServiceName) {
