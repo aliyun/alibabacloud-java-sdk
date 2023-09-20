@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The domain names that are added to WAF in CNAME record mode.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<DescribeDomainsResponseBodyDomains> domains;
 
@@ -43,6 +46,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsBackedsHttp extends TeaModel {
+        /**
+         * <p>The HTTP address of the origin server.</p>
+         */
         @NameInMap("Backend")
         public String backend;
 
@@ -62,6 +68,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsBackedsHttps extends TeaModel {
+        /**
+         * <p>The HTTPS address of the origin server.</p>
+         */
         @NameInMap("Backend")
         public String backend;
 
@@ -81,9 +90,15 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsBackeds extends TeaModel {
+        /**
+         * <p>The HTTP addresses of the origin server.</p>
+         */
         @NameInMap("Http")
         public java.util.List<DescribeDomainsResponseBodyDomainsBackedsHttp> http;
 
+        /**
+         * <p>The HTTPS addresses of the origin server.</p>
+         */
         @NameInMap("Https")
         public java.util.List<DescribeDomainsResponseBodyDomainsBackedsHttps> https;
 
@@ -111,9 +126,15 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomainsListenPorts extends TeaModel {
+        /**
+         * <p>The HTTP listener ports.</p>
+         */
         @NameInMap("Http")
         public java.util.List<Long> http;
 
+        /**
+         * <p>The HTTPS listener ports.</p>
+         */
         @NameInMap("Https")
         public java.util.List<Long> https;
 
@@ -141,24 +162,45 @@ public class DescribeDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainsResponseBodyDomains extends TeaModel {
+        /**
+         * <p>The back-to-origin settings.</p>
+         */
         @NameInMap("Backeds")
         public DescribeDomainsResponseBodyDomainsBackeds backeds;
 
+        /**
+         * <p>The CNAME assigned by WAF to the domain name.</p>
+         */
         @NameInMap("Cname")
         public String cname;
 
+        /**
+         * <p>The domain name that is added to WAF in CNAME record mode.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The configurations of the listeners.</p>
+         */
         @NameInMap("ListenPorts")
         public DescribeDomainsResponseBodyDomainsListenPorts listenPorts;
 
         /**
-         * <p>阿里云资源组ID。</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceManagerResourceGroupId")
         public String resourceManagerResourceGroupId;
 
+        /**
+         * <p>The status of the domain name. Valid values:</p>
+         * <br>
+         * <p>*   **1:** The domain name is in a normal state.</p>
+         * <p>*   **2:** The domain name is being created.</p>
+         * <p>*   **3:** The domain name is being modified.</p>
+         * <p>*   **4:** The domain name is being released.</p>
+         * <p>*   **5:** WAF no longer forwards traffic that is sent to the domain name.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 

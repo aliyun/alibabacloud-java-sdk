@@ -53,6 +53,36 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourcesResponseBodyResources extends TeaModel {
         /**
+         * <p>跟踪cookie开关状态。</p>
+         * <br>
+         * <p>- **0**：表示关闭。</p>
+         * <br>
+         * <p>- **1**：表示开启。</p>
+         */
+        @NameInMap("AcwCookieStatus")
+        public Integer acwCookieStatus;
+
+        /**
+         * <p>跟踪cookie的secure属性状态。</p>
+         * <br>
+         * <p>- **0**：表示关闭。</p>
+         * <br>
+         * <p>- **1**：表示开启。</p>
+         */
+        @NameInMap("AcwSecureStatus")
+        public Integer acwSecureStatus;
+
+        /**
+         * <p>滑块cookie的secure属性状态。</p>
+         * <br>
+         * <p>- **0**：表示关闭。</p>
+         * <br>
+         * <p>- **1**：表示开启。</p>
+         */
+        @NameInMap("AcwV3SecureStatus")
+        public Integer acwV3SecureStatus;
+
+        /**
          * <p>An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.</p>
          */
         @NameInMap("CustomHeaders")
@@ -127,6 +157,30 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public static DescribeDefenseResourcesResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
             DescribeDefenseResourcesResponseBodyResources self = new DescribeDefenseResourcesResponseBodyResources();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDefenseResourcesResponseBodyResources setAcwCookieStatus(Integer acwCookieStatus) {
+            this.acwCookieStatus = acwCookieStatus;
+            return this;
+        }
+        public Integer getAcwCookieStatus() {
+            return this.acwCookieStatus;
+        }
+
+        public DescribeDefenseResourcesResponseBodyResources setAcwSecureStatus(Integer acwSecureStatus) {
+            this.acwSecureStatus = acwSecureStatus;
+            return this;
+        }
+        public Integer getAcwSecureStatus() {
+            return this.acwSecureStatus;
+        }
+
+        public DescribeDefenseResourcesResponseBodyResources setAcwV3SecureStatus(Integer acwV3SecureStatus) {
+            this.acwV3SecureStatus = acwV3SecureStatus;
+            return this;
+        }
+        public Integer getAcwV3SecureStatus() {
+            return this.acwV3SecureStatus;
         }
 
         public DescribeDefenseResourcesResponseBodyResources setCustomHeaders(java.util.List<String> customHeaders) {

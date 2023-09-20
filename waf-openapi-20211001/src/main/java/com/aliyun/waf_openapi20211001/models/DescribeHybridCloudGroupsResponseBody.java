@@ -4,12 +4,21 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
+    /**
+     * <p>The hybrid cloud node groups.</p>
+     */
     @NameInMap("Groups")
     public java.util.List<DescribeHybridCloudGroupsResponseBodyGroups> groups;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -49,30 +58,56 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
         @NameInMap("ContinentsValue")
         public Integer continentsValue;
 
+        /**
+         * <p>The ID of the hybrid cloud node group.</p>
+         */
         @NameInMap("GroupId")
         public Integer groupId;
 
+        /**
+         * <p>The name of the hybrid cloud node group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The type of the hybrid cloud node group. Valid values:</p>
+         * <br>
+         * <p>*   **protect**</p>
+         * <p>*   **control**</p>
+         * <p>*   **storage**</p>
+         * <p>*   **controlStorage**</p>
+         */
         @NameInMap("GroupType")
         public String groupType;
 
+        /**
+         * <p>The IP address of the server for load balancing.</p>
+         */
         @NameInMap("LoadBalanceIp")
         public String loadBalanceIp;
 
+        /**
+         * <p>The ID of the protection node.</p>
+         */
         @NameInMap("LocationId")
         public Long locationId;
 
         @NameInMap("OperatorValue")
         public Integer operatorValue;
 
+        /**
+         * <p>The port that is used by the hybrid cloud cluster. The value of this parameter is a string. If multiple ports are returned, the value is in the **port1,port2,port3** format.</p>
+         */
         @NameInMap("Ports")
         public String ports;
 
         @NameInMap("RegionCodeValue")
         public Integer regionCodeValue;
 
+        /**
+         * <p>The description of the hybrid cloud node group.</p>
+         */
         @NameInMap("Remark")
         public String remark;
 

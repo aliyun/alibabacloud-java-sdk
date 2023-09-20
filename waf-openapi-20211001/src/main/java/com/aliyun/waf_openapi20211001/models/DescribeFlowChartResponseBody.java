@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowChartResponseBody extends TeaModel {
     /**
-     * <p>The array of the traffic statistics.</p>
+     * <p>The traffic statistics.</p>
      */
     @NameInMap("FlowChart")
     public java.util.List<DescribeFlowChartResponseBodyFlowChart> flowChart;
@@ -81,19 +81,19 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public String blacklistBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by the IP address blacklist module.</p>
+         * <p>The number of requests that are monitored by IP address blacklist rules.</p>
          */
         @NameInMap("BlacklistReportsSum")
         public Long blacklistReportsSum;
 
         /**
-         * <p>The number of requests that are blocked by HTTP flood protection rules created by the user.</p>
+         * <p>The number of requests that are blocked by custom HTTP flood protection rules.</p>
          */
         @NameInMap("CcCustomBlockSum")
         public Long ccCustomBlockSum;
 
         /**
-         * <p>The number of requests that are monitored by HTTP flood protection rules created by the user.</p>
+         * <p>The number of requests that are monitored by custom HTTP flood protection rules.</p>
          */
         @NameInMap("CcCustomReportsSum")
         public Long ccCustomReportsSum;
@@ -140,6 +140,12 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         @NameInMap("OutBytes")
         public Long outBytes;
 
+        @NameInMap("RatelimitBlockSum")
+        public Long ratelimitBlockSum;
+
+        @NameInMap("RatelimitReportSum")
+        public Long ratelimitReportSum;
+
         /**
          * <p>The number of requests that are blocked by region blacklist rules.</p>
          */
@@ -152,6 +158,9 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         @NameInMap("RegionBlockReportsSum")
         public Long regionBlockReportsSum;
 
+        @NameInMap("RobotCount")
+        public Long robotCount;
+
         /**
          * <p>The number of requests that are blocked by basic protection rules.</p>
          */
@@ -159,7 +168,7 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         public Long wafBlockSum;
 
         /**
-         * <p>The number of request that are monitored by basic protection rules.</p>
+         * <p>The number of requests that are monitored by basic protection rules.</p>
          */
         @NameInMap("WafReportSum")
         public String wafReportSum;
@@ -305,6 +314,22 @@ public class DescribeFlowChartResponseBody extends TeaModel {
             return this.outBytes;
         }
 
+        public DescribeFlowChartResponseBodyFlowChart setRatelimitBlockSum(Long ratelimitBlockSum) {
+            this.ratelimitBlockSum = ratelimitBlockSum;
+            return this;
+        }
+        public Long getRatelimitBlockSum() {
+            return this.ratelimitBlockSum;
+        }
+
+        public DescribeFlowChartResponseBodyFlowChart setRatelimitReportSum(Long ratelimitReportSum) {
+            this.ratelimitReportSum = ratelimitReportSum;
+            return this;
+        }
+        public Long getRatelimitReportSum() {
+            return this.ratelimitReportSum;
+        }
+
         public DescribeFlowChartResponseBodyFlowChart setRegionBlockBlocksSum(Long regionBlockBlocksSum) {
             this.regionBlockBlocksSum = regionBlockBlocksSum;
             return this;
@@ -319,6 +344,14 @@ public class DescribeFlowChartResponseBody extends TeaModel {
         }
         public Long getRegionBlockReportsSum() {
             return this.regionBlockReportsSum;
+        }
+
+        public DescribeFlowChartResponseBodyFlowChart setRobotCount(Long robotCount) {
+            this.robotCount = robotCount;
+            return this;
+        }
+        public Long getRobotCount() {
+            return this.robotCount;
         }
 
         public DescribeFlowChartResponseBodyFlowChart setWafBlockSum(Long wafBlockSum) {

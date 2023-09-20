@@ -4,9 +4,15 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DescribeVisitUasResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The array of the top 10 user agents that are used to initiate requests.</p>
+     */
     @NameInMap("Uas")
     public java.util.List<DescribeVisitUasResponseBodyUas> uas;
 
@@ -32,9 +38,15 @@ public class DescribeVisitUasResponseBody extends TeaModel {
     }
 
     public static class DescribeVisitUasResponseBodyUas extends TeaModel {
+        /**
+         * <p>The number of requests that use the user agent.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The user agent.</p>
+         */
         @NameInMap("Ua")
         public String ua;
 

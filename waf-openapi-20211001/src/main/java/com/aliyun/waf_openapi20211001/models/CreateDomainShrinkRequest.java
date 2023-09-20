@@ -5,46 +5,57 @@ import com.aliyun.tea.*;
 
 public class CreateDomainShrinkRequest extends TeaModel {
     /**
-     * <p>$.parameters[3].schema.properties.ExclusiveIp.description</p>
+     * <p>The mode in which you want to add the domain name to WAF. Valid values:</p>
+     * <br>
+     * <p>*   **share:** adds the domain name to WAF in CNAME record mode. This is the default value.</p>
+     * <p>*   **hybrid_cloud_cname:** adds the domain name to WAF in hybrid cloud reverse proxy mode.</p>
      */
     @NameInMap("AccessType")
     public String accessType;
 
     /**
-     * <p>$.parameters[3].schema.properties.Http2Enabled.description</p>
+     * <p>The domain name that you want to add to WAF.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
     /**
-     * <p>$.parameters[3].schema.properties.HttpPorts.enumValueTitles</p>
+     * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+     * <br>
+     * <p>> You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>$.parameters[3].schema.properties.Http2Enabled.example</p>
+     * <p>The configurations of the listeners.</p>
      */
     @NameInMap("Listen")
     public String listenShrink;
 
     /**
-     * <p>$.parameters[3].schema.properties.CustomCiphers.enumValueTitles</p>
+     * <p>The configurations of the forwarding rule.</p>
      */
     @NameInMap("Redirect")
     public String redirectShrink;
 
     /**
-     * <p>$.parameters[3].schema.properties.ProtectionResource.enumValueTitles</p>
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: the Chinese mainland</p>
+     * <p>*   **ap-southeast-1**: outside the Chinese mainland</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>$.parameters[3].schema.properties.ExclusiveIp.example</p>
+     * <p>The source IP address of the request. You do not need to specify this parameter. It is automatically obtained by the system.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;

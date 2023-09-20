@@ -11,7 +11,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The configurations of the protection rule. The value of this parameter is a string that contains multiple parameters in the JSON format.</p>
+     * <p>The configurations of the protection rule. The value is a JSON string that contains multiple parameters.</p>
      */
     @NameInMap("Rule")
     public DescribeDefenseRuleResponseBodyRule rule;
@@ -39,7 +39,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
 
     public static class DescribeDefenseRuleResponseBodyRule extends TeaModel {
         /**
-         * <p>The details of the protection rule. The value of this parameter is a string that contains multiple parameters in the JSON format. For more information, see the "**Protection rule parameters**" section in the [CreateDefenseRule](~~ID~~) topic.</p>
+         * <p>The details of the protection rule. The value is a JSON string that contains multiple parameters. For more information, see the "**Protection rule parameters**" section of the [CreateDefenseRule](~~CreateDefenseRule~~) topic.</p>
          */
         @NameInMap("Config")
         public String config;
@@ -54,7 +54,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         public String defenseOrigin;
 
         /**
-         * <p>The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.</p>
+         * <p>The scenario in which the protection rule is used. For more information, see the description of **DefenseScene** in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;

@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyDomainShrinkRequest extends TeaModel {
     /**
-     * <p>The mode in which you want to add the domain name to WAF. Set the value to share.</p>
+     * <p>The mode in which you want to add the domain name to WAF. Valid values:</p>
      * <br>
      * <p>*   **share:** adds the domain name to WAF in CNAME record mode. This is the default value.</p>
+     * <p>*   **hybrid_cloud_cname:** adds the domain name to WAF in hybrid cloud reverse proxy mode.</p>
      */
     @NameInMap("AccessType")
     public String accessType;
