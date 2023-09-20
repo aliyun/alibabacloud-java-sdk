@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
+    @NameInMap("DBInstanceIPArrayName")
+    public String DBInstanceIPArrayName;
+
     /**
      * <p>The instance ID.</p>
      * <br>
@@ -21,6 +24,14 @@ public class DescribeDBInstanceIPArrayListRequest extends TeaModel {
     public static DescribeDBInstanceIPArrayListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstanceIPArrayListRequest self = new DescribeDBInstanceIPArrayListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstanceIPArrayListRequest setDBInstanceIPArrayName(String DBInstanceIPArrayName) {
+        this.DBInstanceIPArrayName = DBInstanceIPArrayName;
+        return this;
+    }
+    public String getDBInstanceIPArrayName() {
+        return this.DBInstanceIPArrayName;
     }
 
     public DescribeDBInstanceIPArrayListRequest setDBInstanceId(String DBInstanceId) {
