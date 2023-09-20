@@ -80,6 +80,9 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
+        @NameInMap("uuid")
+        public String uuid;
+
         public static ListServiceConnectionsResponseBodyServiceConnections build(java.util.Map<String, ?> map) throws Exception {
             ListServiceConnectionsResponseBodyServiceConnections self = new ListServiceConnectionsResponseBodyServiceConnections();
             return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListServiceConnectionsResponseBodyServiceConnections setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
         }
 
     }
