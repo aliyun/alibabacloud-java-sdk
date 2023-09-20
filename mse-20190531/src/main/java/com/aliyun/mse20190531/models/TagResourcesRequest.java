@@ -24,8 +24,8 @@ public class TagResourcesRequest extends TeaModel {
      * <br>
      * <p>> This parameter specifies the instance ID that is passed. Examples:</p>
      * <br>
-     * <p>*   **ResourceId.1** specifies that the first instance ID is passed.</p>
-     * <p>*   **ResourceId.2** specifies that the second instance ID is passed.</p>
+     * <p>- ResourceId.0 specifies the first instance ID that is passed.</p>
+     * <p>- ResourceId.1 specifies the second instance ID that is passed.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
