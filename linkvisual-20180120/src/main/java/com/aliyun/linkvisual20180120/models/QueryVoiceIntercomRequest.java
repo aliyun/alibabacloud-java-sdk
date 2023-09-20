@@ -16,6 +16,9 @@ public class QueryVoiceIntercomRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("Scheme")
+    public String scheme;
+
     public static QueryVoiceIntercomRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryVoiceIntercomRequest self = new QueryVoiceIntercomRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class QueryVoiceIntercomRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
+    }
+
+    public QueryVoiceIntercomRequest setScheme(String scheme) {
+        this.scheme = scheme;
+        return this;
+    }
+    public String getScheme() {
+        return this.scheme;
     }
 
 }
