@@ -11,7 +11,7 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the protection rule template.</p>
+     * <p>The information about the template.</p>
      */
     @NameInMap("Template")
     public DescribeDefenseTemplateResponseBodyTemplate template;
@@ -39,10 +39,13 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
 
     public static class DescribeDefenseTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>The scenario in which the protection rule template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~ID~~) topic.</p>
+         * <p>The scenario in which the template is used. For more information, see the description of the **DefenseScene** parameter in the [CreateDefenseRule](~~CreateDefenseRule~~) topic.</p>
          */
         @NameInMap("DefenseScene")
         public String defenseScene;
+
+        @NameInMap("DefenseSubScene")
+        public String defenseSubScene;
 
         /**
          * <p>The description of the protection rule template.</p>
@@ -103,6 +106,14 @@ public class DescribeDefenseTemplateResponseBody extends TeaModel {
         }
         public String getDefenseScene() {
             return this.defenseScene;
+        }
+
+        public DescribeDefenseTemplateResponseBodyTemplate setDefenseSubScene(String defenseSubScene) {
+            this.defenseSubScene = defenseSubScene;
+            return this;
+        }
+        public String getDefenseSubScene() {
+            return this.defenseSubScene;
         }
 
         public DescribeDefenseTemplateResponseBodyTemplate setDescription(String description) {

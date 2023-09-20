@@ -34,20 +34,29 @@ public class DescribeDomainsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <p>The region where the WAF instance resides. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou:** the Chinese mainland.</p>
+     * <p>*   **ap-southeast-1:** outside the Chinese mainland.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
     /**
-     * <p>请求源IP。无需填写，系统自动获取。</p>
+     * <p>The source IP address. The value of this parameter is specified by the system.</p>
      */
     @NameInMap("SourceIp")
     public String sourceIp;
 
     /**
-     * <p>资源的标签，最多支持20个子项。</p>
+     * <p>The tag of the resource. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDomainsRequestTag> tag;
@@ -131,13 +140,13 @@ public class DescribeDomainsRequest extends TeaModel {
 
     public static class DescribeDomainsRequestTag extends TeaModel {
         /**
-         * <p>标签键。</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>标签值</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;

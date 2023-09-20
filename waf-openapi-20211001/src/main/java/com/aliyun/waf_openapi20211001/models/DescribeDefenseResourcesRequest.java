@@ -53,6 +53,9 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>The tag of the resource. You can specify up to 20 tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeDefenseResourcesRequestTag> tag;
 
@@ -126,9 +129,15 @@ public class DescribeDefenseResourcesRequest extends TeaModel {
     }
 
     public static class DescribeDefenseResourcesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

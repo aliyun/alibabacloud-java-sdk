@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     /**
-     * <p>The number of requests that match the rules of the protection module.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The type of rules. For details, see the description of **RuleType** in [DescribeRuleHitsTopRuleId](~~DescribeRuleHitsTopRuleId~~).</p>
+     * <p>The top 10 protection modules that are matched.</p>
      */
     @NameInMap("RuleHitsTopTuleType")
     public java.util.List<DescribeRuleHitsTopTuleTypeResponseBodyRuleHitsTopTuleType> ruleHitsTopTuleType;
@@ -38,9 +38,24 @@ public class DescribeRuleHitsTopTuleTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleHitsTopTuleTypeResponseBodyRuleHitsTopTuleType extends TeaModel {
+        /**
+         * <p>The number of requests that match protection rules.</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The type of rule that is matched. By default, this parameter is not returned. This indicates that all types of rules that are matched are returned.</p>
+         * <br>
+         * <p>*   **waf:** basic protection rules.</p>
+         * <p>*   **blacklist:** IP address blacklist rules.</p>
+         * <p>*   **custom:** custom rules.</p>
+         * <p>*   **antiscan:** scan protection rules.</p>
+         * <p>*   **cc_system:** HTTP flood protection rules.</p>
+         * <p>*   **region_block:** region blacklist rules.</p>
+         * <p>*   **scene:** bot management rules.</p>
+         * <p>*   **dlp:** data leakage prevention rules.</p>
+         */
         @NameInMap("RuleType")
         public String ruleType;
 
