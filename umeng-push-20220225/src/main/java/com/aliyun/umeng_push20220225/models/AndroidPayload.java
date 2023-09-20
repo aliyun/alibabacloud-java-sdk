@@ -11,7 +11,7 @@ public class AndroidPayload extends TeaModel {
     public String displayType;
 
     @NameInMap("extra")
-    public java.util.Map<String, String> extra;
+    public java.util.Map<String, ?> extra;
 
     public static AndroidPayload build(java.util.Map<String, ?> map) throws Exception {
         AndroidPayload self = new AndroidPayload();
@@ -34,11 +34,11 @@ public class AndroidPayload extends TeaModel {
         return this.displayType;
     }
 
-    public AndroidPayload setExtra(java.util.Map<String, String> extra) {
+    public AndroidPayload setExtra(java.util.Map<String, ?> extra) {
         this.extra = extra;
         return this;
     }
-    public java.util.Map<String, String> getExtra() {
+    public java.util.Map<String, ?> getExtra() {
         return this.extra;
     }
 

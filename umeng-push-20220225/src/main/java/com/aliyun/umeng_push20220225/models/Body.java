@@ -28,9 +28,6 @@ public class Body extends TeaModel {
     @NameInMap("img")
     public String img;
 
-    @NameInMap("largeIcon")
-    public String largeIcon;
-
     @NameInMap("playLights")
     public Boolean playLights;
 
@@ -125,14 +122,6 @@ public class Body extends TeaModel {
     }
     public String getImg() {
         return this.img;
-    }
-
-    public Body setLargeIcon(String largeIcon) {
-        this.largeIcon = largeIcon;
-        return this;
-    }
-    public String getLargeIcon() {
-        return this.largeIcon;
     }
 
     public Body setPlayLights(Boolean playLights) {
