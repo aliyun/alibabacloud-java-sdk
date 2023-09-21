@@ -35,11 +35,10 @@ public class ListInterceptionHistoryRequest extends TeaModel {
     public java.util.List<Integer> interceptionTypes;
 
     /**
-     * <p>设置请求和接收消息的语言类型。默认值**zh**。取值：</p>
+     * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
-     * <br>
-     * <p>- **zh**：中文</p>
-     * <p>- **en**：英文</p>
+     * <p>*   **zh**: Chinese</p>
+     * <p>*   **en**: English</p>
      */
     @NameInMap("Lang")
     public String lang;

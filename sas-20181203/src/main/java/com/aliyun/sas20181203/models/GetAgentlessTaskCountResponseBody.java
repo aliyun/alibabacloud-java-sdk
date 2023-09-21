@@ -4,33 +4,63 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAgentlessTaskCountResponseBody extends TeaModel {
+    /**
+     * <p>The number of baseline checks.</p>
+     */
     @NameInMap("BaselineCheckCount")
     public Integer baselineCheckCount;
 
+    /**
+     * <p>The number of system vulnerabilities.</p>
+     */
     @NameInMap("CveVulCount")
     public Integer cveVulCount;
 
+    /**
+     * <p>The timestamp generated when the last detection is performed.</p>
+     */
     @NameInMap("LastTaskTime")
     public Long lastTaskTime;
 
+    /**
+     * <p>The number of malicious files.</p>
+     */
     @NameInMap("MaliciousFile")
     public Integer maliciousFile;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of risky hosts.</p>
+     */
     @NameInMap("RiskMachine")
     public Integer riskMachine;
 
+    /**
+     * <p>The number of application vulnerabilities.</p>
+     */
     @NameInMap("ScaVulCount")
     public Integer scaVulCount;
 
+    /**
+     * <p>The number of hosts that are scanned.</p>
+     */
     @NameInMap("ScanMachine")
     public Integer scanMachine;
 
+    /**
+     * <p>The number of windows system vulnerabilities.</p>
+     */
     @NameInMap("SysVulCount")
     public String sysVulCount;
 
+    /**
+     * <p>The number of vulnerabilities.</p>
+     */
     @NameInMap("Vulnerability")
     public Integer vulnerability;
 

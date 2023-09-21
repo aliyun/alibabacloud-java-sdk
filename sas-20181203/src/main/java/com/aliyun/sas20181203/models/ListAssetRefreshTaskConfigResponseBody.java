@@ -38,6 +38,9 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
     }
 
     public static class ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig extends TeaModel {
+        @NameInMap("RefreshConfigType")
+        public Integer refreshConfigType;
+
         /**
          * <p>The synchronization cycle. Valid values:</p>
          * <br>
@@ -73,6 +76,14 @@ public class ListAssetRefreshTaskConfigResponseBody extends TeaModel {
         public static ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig build(java.util.Map<String, ?> map) throws Exception {
             ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig self = new ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig setRefreshConfigType(Integer refreshConfigType) {
+            this.refreshConfigType = refreshConfigType;
+            return this;
+        }
+        public Integer getRefreshConfigType() {
+            return this.refreshConfigType;
         }
 
         public ListAssetRefreshTaskConfigResponseBodyAssetRefreshConfig setSchedulePeriod(Integer schedulePeriod) {

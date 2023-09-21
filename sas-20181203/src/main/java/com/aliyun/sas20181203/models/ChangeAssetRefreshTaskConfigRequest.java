@@ -38,6 +38,9 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
     }
 
     public static class ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs extends TeaModel {
+        @NameInMap("RefreshConfigType")
+        public Integer refreshConfigType;
+
         /**
          * <p>The interval at which assets are synchronized. Unit: minutes. Valid values:</p>
          * <br>
@@ -60,6 +63,9 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("TargetId")
+        public Long targetId;
+
         /**
          * <p>The service provider of the cloud asset. Valid values:</p>
          * <br>
@@ -73,6 +79,14 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
         public static ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs build(java.util.Map<String, ?> map) throws Exception {
             ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs self = new ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs();
             return TeaModel.build(map, self);
+        }
+
+        public ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs setRefreshConfigType(Integer refreshConfigType) {
+            this.refreshConfigType = refreshConfigType;
+            return this;
+        }
+        public Integer getRefreshConfigType() {
+            return this.refreshConfigType;
         }
 
         public ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs setSchedulePeriod(Integer schedulePeriod) {
@@ -89,6 +103,14 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs setTargetId(Long targetId) {
+            this.targetId = targetId;
+            return this;
+        }
+        public Long getTargetId() {
+            return this.targetId;
         }
 
         public ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs setVendor(Integer vendor) {

@@ -13,6 +13,9 @@ public class RefreshAssetsRequest extends TeaModel {
     @NameInMap("CloudAssetType")
     public Integer cloudAssetType;
 
+    @NameInMap("Vendor")
+    public Integer vendor;
+
     public static RefreshAssetsRequest build(java.util.Map<String, ?> map) throws Exception {
         RefreshAssetsRequest self = new RefreshAssetsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class RefreshAssetsRequest extends TeaModel {
     }
     public Integer getCloudAssetType() {
         return this.cloudAssetType;
+    }
+
+    public RefreshAssetsRequest setVendor(Integer vendor) {
+        this.vendor = vendor;
+        return this;
+    }
+    public Integer getVendor() {
+        return this.vendor;
     }
 
 }
