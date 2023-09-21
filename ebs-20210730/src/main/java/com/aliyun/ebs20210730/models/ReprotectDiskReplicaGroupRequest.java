@@ -22,6 +22,9 @@ public class ReprotectDiskReplicaGroupRequest extends TeaModel {
     @NameInMap("ReplicaGroupId")
     public String replicaGroupId;
 
+    @NameInMap("ReverseReplicate")
+    public Boolean reverseReplicate;
+
     public static ReprotectDiskReplicaGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ReprotectDiskReplicaGroupRequest self = new ReprotectDiskReplicaGroupRequest();
         return TeaModel.build(map, self);
@@ -49,6 +52,14 @@ public class ReprotectDiskReplicaGroupRequest extends TeaModel {
     }
     public String getReplicaGroupId() {
         return this.replicaGroupId;
+    }
+
+    public ReprotectDiskReplicaGroupRequest setReverseReplicate(Boolean reverseReplicate) {
+        this.reverseReplicate = reverseReplicate;
+        return this;
+    }
+    public Boolean getReverseReplicate() {
+        return this.reverseReplicate;
     }
 
 }

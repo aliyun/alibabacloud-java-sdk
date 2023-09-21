@@ -1656,6 +1656,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ReplicaGroupId", request.replicaGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.reverseReplicate)) {
+            query.put("ReverseReplicate", request.reverseReplicate);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -1704,6 +1708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.replicaPairId)) {
             query.put("ReplicaPairId", request.replicaPairId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reverseReplicate)) {
+            query.put("ReverseReplicate", request.reverseReplicate);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
