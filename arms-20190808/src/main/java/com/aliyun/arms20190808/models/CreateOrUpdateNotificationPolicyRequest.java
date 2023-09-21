@@ -4,6 +4,9 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateOrUpdateNotificationPolicyRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable simple mode.</p>
+     */
     @NameInMap("DirectedMode")
     public Boolean directedMode;
 

@@ -440,6 +440,9 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     }
 
     public static class CreateOrUpdateNotificationPolicyResponseBodyNotificationPolicy extends TeaModel {
+        /**
+         * <p>极简模式</p>
+         */
         @NameInMap("DirectedMode")
         public Boolean directedMode;
 

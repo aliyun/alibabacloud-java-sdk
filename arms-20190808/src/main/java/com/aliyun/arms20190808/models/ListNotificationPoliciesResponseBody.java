@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNotificationPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The pages that are returned.</p>
+     * <p>The returned pages.</p>
      */
     @NameInMap("PageBean")
     public ListNotificationPoliciesResponseBodyPageBean pageBean;
@@ -39,7 +39,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesGroupRule extends TeaModel {
         /**
-         * <p>The time interval for grouping. Unit: seconds. Default value: 30.</p>
+         * <p>The time interval of grouping. Unit: seconds. Default value: 30.</p>
          */
         @NameInMap("GroupInterval")
         public Long groupInterval;
@@ -52,6 +52,9 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
         /**
          * <p>The fields that are used to group events.</p>
+         * <br>
+         * <p>*   If this parameter is not returned, all alert notifications are sent to the alert contacts that belong to the `alertname` group. By default, this parameter is not returned.</p>
+         * <p>*   If this parameter is returned, alerts with the same fields are sent to the alert contacts in one notification.</p>
          */
         @NameInMap("GroupingFields")
         public java.util.List<String> groupingFields;
@@ -97,12 +100,12 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         /**
          * <p>The logical operator of the matching condition. Valid values:</p>
          * <br>
-         * <p>*   `eq`: equal to.</p>
-         * <p>*   `neq`: not equal to.</p>
-         * <p>*   `in`: contains.</p>
-         * <p>*   `nin`: does not contain.</p>
-         * <p>*   `re`: regular expression match.</p>
-         * <p>*   `nre`: regular expression mismatch.</p>
+         * <p>*   `eq`: equal to</p>
+         * <p>*   `neq`: not equal to</p>
+         * <p>*   `in`: contains</p>
+         * <p>*   `nin`: does not contain</p>
+         * <p>*   `re`: regular expression match</p>
+         * <p>*   `nre`: regular expression mismatch</p>
          */
         @NameInMap("Operator")
         public String operator;
@@ -146,7 +149,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesMatchingRules extends TeaModel {
         /**
-         * <p>The alert event matching conditions.</p>
+         * <p>The matching conditions.</p>
          */
         @NameInMap("MatchingConditions")
         public java.util.List<ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesMatchingRulesMatchingConditions> matchingConditions;
@@ -168,30 +171,30 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesNotifyRuleNotifyObjects extends TeaModel {
         /**
-         * <p>通知对象为联系人时单独的联系方式</p>
+         * <p>The notification methods specified for a contact.</p>
          */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
         /**
-         * <p>The ID of the contact.</p>
+         * <p>The ID of the notification object.</p>
          */
         @NameInMap("NotifyObjectId")
         public Long notifyObjectId;
 
         /**
-         * <p>The name of the contact.</p>
+         * <p>The name of the notification object.</p>
          */
         @NameInMap("NotifyObjectName")
         public String notifyObjectName;
 
         /**
-         * <p>The type of the contact. Valid values: </p>
+         * <p>The type of the notification object. Valid values:</p>
          * <br>
-         * <p>- CONTACT: an individual contact</p>
-         * <p>- CONTACT_GROUP: a contact group</p>
-         * <p>- DING_ROBOT: an instant messaging (IM) robot</p>
-         * <p>- CONTACT_SCHEDULE: a person on duty based on an established schedule</p>
+         * <p>*   CONTACT: an individual contact</p>
+         * <p>*   CONTACT_GROUP: a contact group</p>
+         * <p>*   DING_ROBOT: an instant messaging (IM) chatbot</p>
+         * <p>*   CONTACT_SCHEDULE: a person on duty based on an established schedule</p>
          */
         @NameInMap("NotifyObjectType")
         public String notifyObjectType;
@@ -237,7 +240,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesNotifyRule extends TeaModel {
         /**
-         * <p>The notification method.</p>
+         * <p>The notification methods.</p>
          */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
@@ -249,7 +252,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public String notifyEndTime;
 
         /**
-         * <p>The contacts.</p>
+         * <p>The notification objects.</p>
          */
         @NameInMap("NotifyObjects")
         public java.util.List<ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesNotifyRuleNotifyObjects> notifyObjects;
@@ -325,7 +328,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public String emailTitle;
 
         /**
-         * <p>The content of the alert notification sent by an IM robot.</p>
+         * <p>The content of the alert notification sent by an IM chatbot.</p>
          */
         @NameInMap("RobotContent")
         public String robotContent;
@@ -434,11 +437,14 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies extends TeaModel {
+        /**
+         * <p>Indicates whether simple mode is enabled.</p>
+         */
         @NameInMap("DirectedMode")
         public Boolean directedMode;
 
         /**
-         * <p>The ID of the escalation rule.</p>
+         * <p>The ID of the escalation policy.</p>
          */
         @NameInMap("EscalationPolicyId")
         public Long escalationPolicyId;
@@ -462,7 +468,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public Long integrationId;
 
         /**
-         * <p>The alert event matching rules.</p>
+         * <p>The matching rules for alert events.</p>
          */
         @NameInMap("MatchingRules")
         public java.util.List<ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesMatchingRules> matchingRules;
@@ -486,25 +492,25 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         public ListNotificationPoliciesResponseBodyPageBeanNotificationPoliciesNotifyTemplate notifyTemplate;
 
         /**
-         * <p>Indicates whether the system repeatedly sends notifications for a long-lasting unresolved alert. Default value: true. Valid values:  </p>
+         * <p>Indicates whether the system resends notifications for a long-lasting unresolved alert. Valid values:</p>
          * <br>
-         * <p>- `true`: The system repeatedly sends notifications for a long-lasting unresolved alert at a specified time interval.</p>
-         * <p>- `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.</p>
+         * <p>*   `true` (default): The system resends notifications for a long-lasting unresolved alert at a specified time interval.</p>
+         * <p>*   `false`: The system resends notifications for a long-lasting unresolved alert based on an escalation policy.</p>
          */
         @NameInMap("Repeat")
         public Boolean repeat;
 
         /**
-         * <p>The time interval at which notifications are sent for a long-lasting unresolved alert. Unit: seconds.</p>
+         * <p>The time interval at which notifications are resent for a long-lasting unresolved alert. Unit: seconds.</p>
          */
         @NameInMap("RepeatInterval")
         public Long repeatInterval;
 
         /**
-         * <p>Specifies whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. The system notifies contacts when the alert status changes to Resolved.  </p>
+         * <p>Indicates whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. The system sends a notification to the alert contacts when the alert status changes to Resolved.</p>
          * <br>
-         * <p>- `true`: The system sends a notification. This is the default value.</p>
-         * <p>- `false`: The system does not send a notification.</p>
+         * <p>*   `true` (default): The system sends a notification.</p>
+         * <p>*   `false`: The system does not send a notification.</p>
          */
         @NameInMap("SendRecoverMessage")
         public Boolean sendRecoverMessage;
@@ -614,7 +620,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     public static class ListNotificationPoliciesResponseBodyPageBean extends TeaModel {
         /**
-         * <p>The information about the notification policies.</p>
+         * <p>The queried notification policies.</p>
          */
         @NameInMap("NotificationPolicies")
         public java.util.List<ListNotificationPoliciesResponseBodyPageBeanNotificationPolicies> notificationPolicies;
