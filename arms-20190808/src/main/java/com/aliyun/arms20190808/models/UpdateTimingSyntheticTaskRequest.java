@@ -496,6 +496,15 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("TransmissionSize")
         public Long transmissionSize;
 
+        @NameInMap("ValidateKeywords")
+        public String validateKeywords;
+
+        @NameInMap("VerifyWay")
+        public Integer verifyWay;
+
+        @NameInMap("WhiteList")
+        public String whiteList;
+
         public static UpdateTimingSyntheticTaskRequestMonitorConfFileDownload build(java.util.Map<String, ?> map) throws Exception {
             UpdateTimingSyntheticTaskRequestMonitorConfFileDownload self = new UpdateTimingSyntheticTaskRequestMonitorConfFileDownload();
             return TeaModel.build(map, self);
@@ -619,6 +628,30 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         }
         public Long getTransmissionSize() {
             return this.transmissionSize;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfFileDownload setValidateKeywords(String validateKeywords) {
+            this.validateKeywords = validateKeywords;
+            return this;
+        }
+        public String getValidateKeywords() {
+            return this.validateKeywords;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfFileDownload setVerifyWay(Integer verifyWay) {
+            this.verifyWay = verifyWay;
+            return this;
+        }
+        public Integer getVerifyWay() {
+            return this.verifyWay;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfFileDownload setWhiteList(String whiteList) {
+            this.whiteList = whiteList;
+            return this;
+        }
+        public String getWhiteList() {
+            return this.whiteList;
         }
 
     }
@@ -899,20 +932,35 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
+        @NameInMap("DNSHijackWhitelist")
+        public String DNSHijackWhitelist;
+
         @NameInMap("DisableCache")
         public Integer disableCache;
 
         @NameInMap("DisableCompression")
         public Integer disableCompression;
 
+        @NameInMap("ElementBlacklist")
+        public String elementBlacklist;
+
         @NameInMap("FilterInvalidIP")
         public Integer filterInvalidIP;
+
+        @NameInMap("FlowHijackJumpTimes")
+        public Integer flowHijackJumpTimes;
+
+        @NameInMap("FlowHijackLogo")
+        public String flowHijackLogo;
 
         @NameInMap("IgnoreCertificateError")
         public Integer ignoreCertificateError;
 
         @NameInMap("MonitorTimeout")
         public Long monitorTimeout;
+
+        @NameInMap("PageTamper")
+        public String pageTamper;
 
         @NameInMap("Redirection")
         public Integer redirection;
@@ -922,6 +970,12 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
 
         @NameInMap("TargetUrl")
         public String targetUrl;
+
+        @NameInMap("VerifyStringBlacklist")
+        public String verifyStringBlacklist;
+
+        @NameInMap("VerifyStringWhitelist")
+        public String verifyStringWhitelist;
 
         @NameInMap("WaitCompletionTime")
         public Long waitCompletionTime;
@@ -955,6 +1009,14 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
             return this.customHeaderContent;
         }
 
+        public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setDNSHijackWhitelist(String DNSHijackWhitelist) {
+            this.DNSHijackWhitelist = DNSHijackWhitelist;
+            return this;
+        }
+        public String getDNSHijackWhitelist() {
+            return this.DNSHijackWhitelist;
+        }
+
         public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setDisableCache(Integer disableCache) {
             this.disableCache = disableCache;
             return this;
@@ -971,12 +1033,36 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
             return this.disableCompression;
         }
 
+        public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setElementBlacklist(String elementBlacklist) {
+            this.elementBlacklist = elementBlacklist;
+            return this;
+        }
+        public String getElementBlacklist() {
+            return this.elementBlacklist;
+        }
+
         public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setFilterInvalidIP(Integer filterInvalidIP) {
             this.filterInvalidIP = filterInvalidIP;
             return this;
         }
         public Integer getFilterInvalidIP() {
             return this.filterInvalidIP;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setFlowHijackJumpTimes(Integer flowHijackJumpTimes) {
+            this.flowHijackJumpTimes = flowHijackJumpTimes;
+            return this;
+        }
+        public Integer getFlowHijackJumpTimes() {
+            return this.flowHijackJumpTimes;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setFlowHijackLogo(String flowHijackLogo) {
+            this.flowHijackLogo = flowHijackLogo;
+            return this;
+        }
+        public String getFlowHijackLogo() {
+            return this.flowHijackLogo;
         }
 
         public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setIgnoreCertificateError(Integer ignoreCertificateError) {
@@ -993,6 +1079,14 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         }
         public Long getMonitorTimeout() {
             return this.monitorTimeout;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setPageTamper(String pageTamper) {
+            this.pageTamper = pageTamper;
+            return this;
+        }
+        public String getPageTamper() {
+            return this.pageTamper;
         }
 
         public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setRedirection(Integer redirection) {
@@ -1017,6 +1111,22 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
         }
         public String getTargetUrl() {
             return this.targetUrl;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setVerifyStringBlacklist(String verifyStringBlacklist) {
+            this.verifyStringBlacklist = verifyStringBlacklist;
+            return this;
+        }
+        public String getVerifyStringBlacklist() {
+            return this.verifyStringBlacklist;
+        }
+
+        public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setVerifyStringWhitelist(String verifyStringWhitelist) {
+            this.verifyStringWhitelist = verifyStringWhitelist;
+            return this;
+        }
+        public String getVerifyStringWhitelist() {
+            return this.verifyStringWhitelist;
         }
 
         public UpdateTimingSyntheticTaskRequestMonitorConfWebsite setWaitCompletionTime(Long waitCompletionTime) {

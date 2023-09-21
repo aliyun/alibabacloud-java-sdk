@@ -397,6 +397,15 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         @NameInMap("TransmissionSize")
         public Long transmissionSize;
 
+        @NameInMap("ValidateKeywords")
+        public String validateKeywords;
+
+        @NameInMap("VerifyWay")
+        public Integer verifyWay;
+
+        @NameInMap("WhiteList")
+        public String whiteList;
+
         public static GetTimingSyntheticTaskResponseBodyDataMonitorConfFileDownload build(java.util.Map<String, ?> map) throws Exception {
             GetTimingSyntheticTaskResponseBodyDataMonitorConfFileDownload self = new GetTimingSyntheticTaskResponseBodyDataMonitorConfFileDownload();
             return TeaModel.build(map, self);
@@ -520,6 +529,30 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
         public Long getTransmissionSize() {
             return this.transmissionSize;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfFileDownload setValidateKeywords(String validateKeywords) {
+            this.validateKeywords = validateKeywords;
+            return this;
+        }
+        public String getValidateKeywords() {
+            return this.validateKeywords;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfFileDownload setVerifyWay(Integer verifyWay) {
+            this.verifyWay = verifyWay;
+            return this;
+        }
+        public Integer getVerifyWay() {
+            return this.verifyWay;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfFileDownload setWhiteList(String whiteList) {
+            this.whiteList = whiteList;
+            return this;
+        }
+        public String getWhiteList() {
+            return this.whiteList;
         }
 
     }
@@ -779,6 +812,91 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
     }
 
+    public static class GetTimingSyntheticTaskResponseBodyDataMonitorConfStream extends TeaModel {
+        @NameInMap("CustomHeaderContent")
+        public java.util.Map<String, String> customHeaderContent;
+
+        @NameInMap("PlayerType")
+        public Integer playerType;
+
+        @NameInMap("StreamAddressType")
+        public Integer streamAddressType;
+
+        @NameInMap("StreamMonitorTimeout")
+        public Integer streamMonitorTimeout;
+
+        @NameInMap("StreamType")
+        public Integer streamType;
+
+        @NameInMap("TargetUrl")
+        public String targetUrl;
+
+        @NameInMap("WhiteList")
+        public String whiteList;
+
+        public static GetTimingSyntheticTaskResponseBodyDataMonitorConfStream build(java.util.Map<String, ?> map) throws Exception {
+            GetTimingSyntheticTaskResponseBodyDataMonitorConfStream self = new GetTimingSyntheticTaskResponseBodyDataMonitorConfStream();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream setCustomHeaderContent(java.util.Map<String, String> customHeaderContent) {
+            this.customHeaderContent = customHeaderContent;
+            return this;
+        }
+        public java.util.Map<String, String> getCustomHeaderContent() {
+            return this.customHeaderContent;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream setPlayerType(Integer playerType) {
+            this.playerType = playerType;
+            return this;
+        }
+        public Integer getPlayerType() {
+            return this.playerType;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream setStreamAddressType(Integer streamAddressType) {
+            this.streamAddressType = streamAddressType;
+            return this;
+        }
+        public Integer getStreamAddressType() {
+            return this.streamAddressType;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream setStreamMonitorTimeout(Integer streamMonitorTimeout) {
+            this.streamMonitorTimeout = streamMonitorTimeout;
+            return this;
+        }
+        public Integer getStreamMonitorTimeout() {
+            return this.streamMonitorTimeout;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream setStreamType(Integer streamType) {
+            this.streamType = streamType;
+            return this;
+        }
+        public Integer getStreamType() {
+            return this.streamType;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream setTargetUrl(String targetUrl) {
+            this.targetUrl = targetUrl;
+            return this;
+        }
+        public String getTargetUrl() {
+            return this.targetUrl;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream setWhiteList(String whiteList) {
+            this.whiteList = whiteList;
+            return this;
+        }
+        public String getWhiteList() {
+            return this.whiteList;
+        }
+
+    }
+
     public static class GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite extends TeaModel {
         @NameInMap("AutomaticScrolling")
         public Integer automaticScrolling;
@@ -789,20 +907,35 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         @NameInMap("CustomHeaderContent")
         public java.util.Map<String, String> customHeaderContent;
 
+        @NameInMap("DNSHijackWhitelist")
+        public String DNSHijackWhitelist;
+
         @NameInMap("DisableCache")
         public Integer disableCache;
 
         @NameInMap("DisableCompression")
         public Integer disableCompression;
 
+        @NameInMap("ElementBlacklist")
+        public String elementBlacklist;
+
         @NameInMap("FilterInvalidIP")
         public Integer filterInvalidIP;
+
+        @NameInMap("FlowHijackJumpTimes")
+        public Integer flowHijackJumpTimes;
+
+        @NameInMap("FlowHijackLogo")
+        public String flowHijackLogo;
 
         @NameInMap("IgnoreCertificateError")
         public Integer ignoreCertificateError;
 
         @NameInMap("MonitorTimeout")
         public Integer monitorTimeout;
+
+        @NameInMap("PageTamper")
+        public String pageTamper;
 
         @NameInMap("Redirection")
         public Integer redirection;
@@ -812,6 +945,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
         @NameInMap("TargetUrl")
         public String targetUrl;
+
+        @NameInMap("VerifyStringBlacklist")
+        public String verifyStringBlacklist;
+
+        @NameInMap("VerifyStringWhitelist")
+        public String verifyStringWhitelist;
 
         @NameInMap("WaitCompletionTime")
         public Long waitCompletionTime;
@@ -845,6 +984,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             return this.customHeaderContent;
         }
 
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setDNSHijackWhitelist(String DNSHijackWhitelist) {
+            this.DNSHijackWhitelist = DNSHijackWhitelist;
+            return this;
+        }
+        public String getDNSHijackWhitelist() {
+            return this.DNSHijackWhitelist;
+        }
+
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setDisableCache(Integer disableCache) {
             this.disableCache = disableCache;
             return this;
@@ -861,12 +1008,36 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             return this.disableCompression;
         }
 
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setElementBlacklist(String elementBlacklist) {
+            this.elementBlacklist = elementBlacklist;
+            return this;
+        }
+        public String getElementBlacklist() {
+            return this.elementBlacklist;
+        }
+
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setFilterInvalidIP(Integer filterInvalidIP) {
             this.filterInvalidIP = filterInvalidIP;
             return this;
         }
         public Integer getFilterInvalidIP() {
             return this.filterInvalidIP;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setFlowHijackJumpTimes(Integer flowHijackJumpTimes) {
+            this.flowHijackJumpTimes = flowHijackJumpTimes;
+            return this;
+        }
+        public Integer getFlowHijackJumpTimes() {
+            return this.flowHijackJumpTimes;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setFlowHijackLogo(String flowHijackLogo) {
+            this.flowHijackLogo = flowHijackLogo;
+            return this;
+        }
+        public String getFlowHijackLogo() {
+            return this.flowHijackLogo;
         }
 
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setIgnoreCertificateError(Integer ignoreCertificateError) {
@@ -883,6 +1054,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
         public Integer getMonitorTimeout() {
             return this.monitorTimeout;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setPageTamper(String pageTamper) {
+            this.pageTamper = pageTamper;
+            return this;
+        }
+        public String getPageTamper() {
+            return this.pageTamper;
         }
 
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setRedirection(Integer redirection) {
@@ -907,6 +1086,22 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
         public String getTargetUrl() {
             return this.targetUrl;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setVerifyStringBlacklist(String verifyStringBlacklist) {
+            this.verifyStringBlacklist = verifyStringBlacklist;
+            return this;
+        }
+        public String getVerifyStringBlacklist() {
+            return this.verifyStringBlacklist;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setVerifyStringWhitelist(String verifyStringWhitelist) {
+            this.verifyStringWhitelist = verifyStringWhitelist;
+            return this;
+        }
+        public String getVerifyStringWhitelist() {
+            return this.verifyStringWhitelist;
         }
 
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite setWaitCompletionTime(Long waitCompletionTime) {
@@ -934,6 +1129,9 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
 
         @NameInMap("NetTCP")
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfNetTCP netTCP;
+
+        @NameInMap("Stream")
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream stream;
 
         @NameInMap("Website")
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite website;
@@ -981,6 +1179,14 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
         public GetTimingSyntheticTaskResponseBodyDataMonitorConfNetTCP getNetTCP() {
             return this.netTCP;
+        }
+
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConf setStream(GetTimingSyntheticTaskResponseBodyDataMonitorConfStream stream) {
+            this.stream = stream;
+            return this;
+        }
+        public GetTimingSyntheticTaskResponseBodyDataMonitorConfStream getStream() {
+            return this.stream;
         }
 
         public GetTimingSyntheticTaskResponseBodyDataMonitorConf setWebsite(GetTimingSyntheticTaskResponseBodyDataMonitorConfWebsite website) {
