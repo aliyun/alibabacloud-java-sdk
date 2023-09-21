@@ -40,6 +40,9 @@ public class CreateServiceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Resellable")
+    public Boolean resellable;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -175,6 +178,14 @@ public class CreateServiceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateServiceRequest setResellable(Boolean resellable) {
+        this.resellable = resellable;
+        return this;
+    }
+    public Boolean getResellable() {
+        return this.resellable;
     }
 
     public CreateServiceRequest setResourceGroupId(String resourceGroupId) {
