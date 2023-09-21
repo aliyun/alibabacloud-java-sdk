@@ -70,6 +70,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Resellable")
+    public Boolean resellable;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -141,6 +144,9 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("VersionName")
     public String versionName;
+
+    @NameInMap("VirtualInternetService")
+    public String virtualInternetService;
 
     public static GetServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetServiceResponseBody self = new GetServiceResponseBody();
@@ -321,6 +327,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetServiceResponseBody setResellable(Boolean resellable) {
+        this.resellable = resellable;
+        return this;
+    }
+    public Boolean getResellable() {
+        return this.resellable;
     }
 
     public GetServiceResponseBody setResourceGroupId(String resourceGroupId) {
@@ -513,6 +527,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public String getVersionName() {
         return this.versionName;
+    }
+
+    public GetServiceResponseBody setVirtualInternetService(String virtualInternetService) {
+        this.virtualInternetService = virtualInternetService;
+        return this;
+    }
+    public String getVirtualInternetService() {
+        return this.virtualInternetService;
     }
 
     public static class GetServiceResponseBodyCommodityEntities extends TeaModel {

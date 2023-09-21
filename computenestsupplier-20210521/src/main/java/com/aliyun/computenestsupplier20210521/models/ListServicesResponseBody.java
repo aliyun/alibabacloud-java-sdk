@@ -177,6 +177,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("RelationType")
         public String relationType;
 
+        @NameInMap("ResellApplyStatus")
+        public String resellApplyStatus;
+
         @NameInMap("ResellServiceId")
         public String resellServiceId;
 
@@ -233,6 +236,9 @@ public class ListServicesResponseBody extends TeaModel {
 
         @NameInMap("VersionName")
         public String versionName;
+
+        @NameInMap("VirtualInternetService")
+        public String virtualInternetService;
 
         public static ListServicesResponseBodyServices build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyServices self = new ListServicesResponseBodyServices();
@@ -317,6 +323,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getRelationType() {
             return this.relationType;
+        }
+
+        public ListServicesResponseBodyServices setResellApplyStatus(String resellApplyStatus) {
+            this.resellApplyStatus = resellApplyStatus;
+            return this;
+        }
+        public String getResellApplyStatus() {
+            return this.resellApplyStatus;
         }
 
         public ListServicesResponseBodyServices setResellServiceId(String resellServiceId) {
@@ -469,6 +483,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getVersionName() {
             return this.versionName;
+        }
+
+        public ListServicesResponseBodyServices setVirtualInternetService(String virtualInternetService) {
+            this.virtualInternetService = virtualInternetService;
+            return this;
+        }
+        public String getVirtualInternetService() {
+            return this.virtualInternetService;
         }
 
     }

@@ -68,6 +68,18 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         @NameInMap("Company")
         public String company;
 
+        @NameInMap("ContactEmail")
+        public String contactEmail;
+
+        @NameInMap("ContactNumber")
+        public String contactNumber;
+
+        @NameInMap("ContactPerson")
+        public String contactPerson;
+
+        @NameInMap("ContactPersonTitle")
+        public String contactPersonTitle;
+
         @NameInMap("Country")
         public String country;
 
@@ -80,8 +92,26 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ProductBusiness")
+        public String productBusiness;
+
+        @NameInMap("ProductDeliveryTypes")
+        public String productDeliveryTypes;
+
+        @NameInMap("ProductSellTypes")
+        public String productSellTypes;
+
         @NameInMap("Source")
         public String source;
+
+        @NameInMap("SupplierDesc")
+        public String supplierDesc;
+
+        @NameInMap("SupplierName")
+        public String supplierName;
+
+        @NameInMap("SupplierUrl")
+        public String supplierUrl;
 
         @NameInMap("Telephone")
         public String telephone;
@@ -100,6 +130,38 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
         public String getCompany() {
             return this.company;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setContactEmail(String contactEmail) {
+            this.contactEmail = contactEmail;
+            return this;
+        }
+        public String getContactEmail() {
+            return this.contactEmail;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setContactNumber(String contactNumber) {
+            this.contactNumber = contactNumber;
+            return this;
+        }
+        public String getContactNumber() {
+            return this.contactNumber;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setContactPerson(String contactPerson) {
+            this.contactPerson = contactPerson;
+            return this;
+        }
+        public String getContactPerson() {
+            return this.contactPerson;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setContactPersonTitle(String contactPersonTitle) {
+            this.contactPersonTitle = contactPersonTitle;
+            return this;
+        }
+        public String getContactPersonTitle() {
+            return this.contactPersonTitle;
         }
 
         public ListServiceUsagesResponseBodyServiceUsagesUserInformation setCountry(String country) {
@@ -134,12 +196,60 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setProductBusiness(String productBusiness) {
+            this.productBusiness = productBusiness;
+            return this;
+        }
+        public String getProductBusiness() {
+            return this.productBusiness;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setProductDeliveryTypes(String productDeliveryTypes) {
+            this.productDeliveryTypes = productDeliveryTypes;
+            return this;
+        }
+        public String getProductDeliveryTypes() {
+            return this.productDeliveryTypes;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setProductSellTypes(String productSellTypes) {
+            this.productSellTypes = productSellTypes;
+            return this;
+        }
+        public String getProductSellTypes() {
+            return this.productSellTypes;
+        }
+
         public ListServiceUsagesResponseBodyServiceUsagesUserInformation setSource(String source) {
             this.source = source;
             return this;
         }
         public String getSource() {
             return this.source;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setSupplierDesc(String supplierDesc) {
+            this.supplierDesc = supplierDesc;
+            return this;
+        }
+        public String getSupplierDesc() {
+            return this.supplierDesc;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setSupplierName(String supplierName) {
+            this.supplierName = supplierName;
+            return this;
+        }
+        public String getSupplierName() {
+            return this.supplierName;
+        }
+
+        public ListServiceUsagesResponseBodyServiceUsagesUserInformation setSupplierUrl(String supplierUrl) {
+            this.supplierUrl = supplierUrl;
+            return this;
+        }
+        public String getSupplierUrl() {
+            return this.supplierUrl;
         }
 
         public ListServiceUsagesResponseBodyServiceUsagesUserInformation setTelephone(String telephone) {
