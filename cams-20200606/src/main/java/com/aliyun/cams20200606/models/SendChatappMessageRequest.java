@@ -69,9 +69,6 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
-    /**
-     * <p>消息在指定时间内未返回回执回落</p>
-     */
     @NameInMap("FallBackDuration")
     public Integer fallBackDuration;
 
@@ -80,6 +77,9 @@ public class SendChatappMessageRequest extends TeaModel {
      */
     @NameInMap("FallBackId")
     public String fallBackId;
+
+    @NameInMap("FallBackRule")
+    public String fallBackRule;
 
     /**
      * <p>The phone number of the message sender.</p>
@@ -146,6 +146,9 @@ public class SendChatappMessageRequest extends TeaModel {
     @NameInMap("Payload")
     public java.util.List<String> payload;
 
+    /**
+     * <p>The information about the products included in the WhatsApp catalog message or multi-product message (MPM).</p>
+     */
     @NameInMap("ProductAction")
     public SendChatappMessageRequestProductAction productAction;
 
@@ -269,6 +272,14 @@ public class SendChatappMessageRequest extends TeaModel {
         return this.fallBackId;
     }
 
+    public SendChatappMessageRequest setFallBackRule(String fallBackRule) {
+        this.fallBackRule = fallBackRule;
+        return this;
+    }
+    public String getFallBackRule() {
+        return this.fallBackRule;
+    }
+
     public SendChatappMessageRequest setFrom(String from) {
         this.from = from;
         return this;
@@ -390,6 +401,9 @@ public class SendChatappMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMessageRequestProductActionSectionsProductItems extends TeaModel {
+        /**
+         * <p>The retailer ID of the product.</p>
+         */
         @NameInMap("ProductRetailerId")
         public String productRetailerId;
 
@@ -409,9 +423,15 @@ public class SendChatappMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMessageRequestProductActionSections extends TeaModel {
+        /**
+         * <p>The products.</p>
+         */
         @NameInMap("ProductItems")
         public java.util.List<SendChatappMessageRequestProductActionSectionsProductItems> productItems;
 
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("Title")
         public String title;
 
@@ -439,9 +459,15 @@ public class SendChatappMessageRequest extends TeaModel {
     }
 
     public static class SendChatappMessageRequestProductAction extends TeaModel {
+        /**
+         * <p>The products. Up to 30 products can be added. The products can be divided into up to 10 categories.</p>
+         */
         @NameInMap("Sections")
         public java.util.List<SendChatappMessageRequestProductActionSections> sections;
 
+        /**
+         * <p>The retailer ID of the product.</p>
+         */
         @NameInMap("ThumbnailProductRetailerId")
         public String thumbnailProductRetailerId;
 
