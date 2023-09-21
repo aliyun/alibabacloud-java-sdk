@@ -7,9 +7,8 @@ public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>The ID of the data backup file.</p>
      * <br>
-     * <p>> </p>
-     * <p>*   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.</p>
-     * <p>*   You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.</p>
+     * <p>>*   When you run a query, you must specify the `BackId` or `RestoreTime` parameter.</p>
+     * <p>>*   You can call the [DescribeBackups](~~98102~~) operation to query the ID of the backup set.</p>
      */
     @NameInMap("BackupId")
     public String backupId;
@@ -25,9 +24,8 @@ public class DescribeMetaListRequest extends TeaModel {
     /**
      * <p>Specify the specific database name (such as `test_db`) to query the names of all data tables that can be restored in the desired database.</p>
      * <br>
-     * <p>> </p>
-     * <p>*   You can specify only one database name each time.</p>
-     * <p>*   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.</p>
+     * <p>>*   You can specify only one database name each time.</p>
+     * <p>>*   If you do not specify this parameter, you can query the names of all databases that can be restored in the current backup set. However, you cannot query the names of data tables in each database.</p>
      */
     @NameInMap("GetDbName")
     public String getDbName;
