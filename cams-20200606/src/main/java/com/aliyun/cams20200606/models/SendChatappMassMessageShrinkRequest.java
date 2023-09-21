@@ -41,6 +41,9 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     @NameInMap("FallBackId")
     public String fallBackId;
 
+    @NameInMap("FallBackRule")
+    public String fallBackRule;
+
     /**
      * <p>The phone number of the message sender.</p>
      */
@@ -146,6 +149,14 @@ public class SendChatappMassMessageShrinkRequest extends TeaModel {
     }
     public String getFallBackId() {
         return this.fallBackId;
+    }
+
+    public SendChatappMassMessageShrinkRequest setFallBackRule(String fallBackRule) {
+        this.fallBackRule = fallBackRule;
+        return this;
+    }
+    public String getFallBackRule() {
+        return this.fallBackRule;
     }
 
     public SendChatappMassMessageShrinkRequest setFrom(String from) {

@@ -1896,6 +1896,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FallBackId", request.fallBackId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackRule)) {
+            body.put("FallBackRule", request.fallBackRule);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
             body.put("From", request.from);
         }
@@ -2020,6 +2024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
             body.put("FallBackId", request.fallBackId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackRule)) {
+            body.put("FallBackRule", request.fallBackRule);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {

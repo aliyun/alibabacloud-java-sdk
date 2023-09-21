@@ -69,9 +69,6 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
-    /**
-     * <p>消息在指定时间内未返回回执回落</p>
-     */
     @NameInMap("FallBackDuration")
     public Integer fallBackDuration;
 
@@ -80,6 +77,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
      */
     @NameInMap("FallBackId")
     public String fallBackId;
+
+    @NameInMap("FallBackRule")
+    public String fallBackRule;
 
     /**
      * <p>The phone number of the message sender.</p>
@@ -146,6 +146,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("Payload")
     public String payloadShrink;
 
+    /**
+     * <p>The information about the products included in the WhatsApp catalog message or multi-product message (MPM).</p>
+     */
     @NameInMap("ProductAction")
     public String productActionShrink;
 
@@ -267,6 +270,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getFallBackId() {
         return this.fallBackId;
+    }
+
+    public SendChatappMessageShrinkRequest setFallBackRule(String fallBackRule) {
+        this.fallBackRule = fallBackRule;
+        return this;
+    }
+    public String getFallBackRule() {
+        return this.fallBackRule;
     }
 
     public SendChatappMessageShrinkRequest setFrom(String from) {

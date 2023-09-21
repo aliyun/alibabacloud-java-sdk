@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListChatappTemplateResponseBody extends TeaModel {
+    /**
+     * <p>访问被拒绝详细信息。</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -121,6 +124,9 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>模板审核被拒的原因</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
