@@ -19,6 +19,9 @@ public class DescribeNodeResponseBody extends TeaModel {
     @NameInMap("Hostname")
     public String hostname;
 
+    @NameInMap("HpnZone")
+    public String hpnZone;
+
     @NameInMap("ImageId")
     public String imageId;
 
@@ -98,6 +101,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
     public String getHostname() {
         return this.hostname;
+    }
+
+    public DescribeNodeResponseBody setHpnZone(String hpnZone) {
+        this.hpnZone = hpnZone;
+        return this;
+    }
+    public String getHpnZone() {
+        return this.hpnZone;
     }
 
     public DescribeNodeResponseBody setImageId(String imageId) {

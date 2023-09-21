@@ -49,6 +49,9 @@ public class ListFreeNodesResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        @NameInMap("HpnZone")
+        public String hpnZone;
+
         @NameInMap("MachineType")
         public String machineType;
 
@@ -80,6 +83,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public ListFreeNodesResponseBodyNodes setHpnZone(String hpnZone) {
+            this.hpnZone = hpnZone;
+            return this;
+        }
+        public String getHpnZone() {
+            return this.hpnZone;
         }
 
         public ListFreeNodesResponseBodyNodes setMachineType(String machineType) {

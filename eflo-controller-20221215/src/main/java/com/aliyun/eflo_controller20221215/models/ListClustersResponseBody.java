@@ -61,6 +61,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("HpnZone")
+        public String hpnZone;
+
         @NameInMap("NodeCount")
         public Long nodeCount;
 
@@ -78,6 +81,9 @@ public class ListClustersResponseBody extends TeaModel {
 
         @NameInMap("UpdateTime")
         public String updateTime;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static ListClustersResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
             ListClustersResponseBodyClusters self = new ListClustersResponseBodyClusters();
@@ -132,6 +138,14 @@ public class ListClustersResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListClustersResponseBodyClusters setHpnZone(String hpnZone) {
+            this.hpnZone = hpnZone;
+            return this;
+        }
+        public String getHpnZone() {
+            return this.hpnZone;
+        }
+
         public ListClustersResponseBodyClusters setNodeCount(Long nodeCount) {
             this.nodeCount = nodeCount;
             return this;
@@ -178,6 +192,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListClustersResponseBodyClusters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

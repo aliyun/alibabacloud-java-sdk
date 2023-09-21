@@ -13,6 +13,9 @@ public class ReimageNodesShrinkRequest extends TeaModel {
     @NameInMap("Nodes")
     public String nodesShrink;
 
+    @NameInMap("UserData")
+    public String userData;
+
     public static ReimageNodesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ReimageNodesShrinkRequest self = new ReimageNodesShrinkRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ReimageNodesShrinkRequest extends TeaModel {
     }
     public String getNodesShrink() {
         return this.nodesShrink;
+    }
+
+    public ReimageNodesShrinkRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

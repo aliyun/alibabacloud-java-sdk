@@ -75,6 +75,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.networksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.networks, "Networks", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.nimizVSwitches)) {
+            request.nimizVSwitchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nimizVSwitches, "NimizVSwitches", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.nodeGroups)) {
             request.nodeGroupsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.nodeGroups, "NodeGroups", "json");
         }
@@ -101,12 +105,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Components", request.componentsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hpnZone)) {
+            body.put("HpnZone", request.hpnZone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ignoreFailedNodeTasks)) {
             body.put("IgnoreFailedNodeTasks", request.ignoreFailedNodeTasks);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networksShrink)) {
             body.put("Networks", request.networksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nimizVSwitchesShrink)) {
+            body.put("NimizVSwitches", request.nimizVSwitchesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupsShrink)) {
@@ -454,6 +466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFreeNodesResponse listFreeNodesWithOptions(ListFreeNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hpnZone)) {
+            body.put("HpnZone", request.hpnZone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.machineType)) {
             body.put("MachineType", request.machineType);
         }
@@ -595,6 +611,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodesShrink)) {
             body.put("Nodes", request.nodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            body.put("UserData", request.userData);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
