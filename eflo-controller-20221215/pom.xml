@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>eflo_controller20221215</artifactId>
-  <version>1.0.2</version>
+  <version>1.0.3</version>
   <packaging>jar</packaging>
   <name>eflo_controller20221215</name>
   <description>Alibaba Cloud eflo-controller (20221215) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.16</version>
+      <version>0.2.20</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

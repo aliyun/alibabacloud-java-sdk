@@ -16,11 +16,17 @@ public class CreateClusterShrinkRequest extends TeaModel {
     @NameInMap("Components")
     public String componentsShrink;
 
+    @NameInMap("HpnZone")
+    public String hpnZone;
+
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
     @NameInMap("Networks")
     public String networksShrink;
+
+    @NameInMap("NimizVSwitches")
+    public String nimizVSwitchesShrink;
 
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;
@@ -68,6 +74,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
         return this.componentsShrink;
     }
 
+    public CreateClusterShrinkRequest setHpnZone(String hpnZone) {
+        this.hpnZone = hpnZone;
+        return this;
+    }
+    public String getHpnZone() {
+        return this.hpnZone;
+    }
+
     public CreateClusterShrinkRequest setIgnoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
         this.ignoreFailedNodeTasks = ignoreFailedNodeTasks;
         return this;
@@ -82,6 +96,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
     }
     public String getNetworksShrink() {
         return this.networksShrink;
+    }
+
+    public CreateClusterShrinkRequest setNimizVSwitchesShrink(String nimizVSwitchesShrink) {
+        this.nimizVSwitchesShrink = nimizVSwitchesShrink;
+        return this;
+    }
+    public String getNimizVSwitchesShrink() {
+        return this.nimizVSwitchesShrink;
     }
 
     public CreateClusterShrinkRequest setNodeGroupsShrink(String nodeGroupsShrink) {

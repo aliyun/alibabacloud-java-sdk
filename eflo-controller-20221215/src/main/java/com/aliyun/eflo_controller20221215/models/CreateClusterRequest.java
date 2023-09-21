@@ -16,11 +16,17 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("Components")
     public java.util.List<CreateClusterRequestComponents> components;
 
+    @NameInMap("HpnZone")
+    public String hpnZone;
+
     @NameInMap("IgnoreFailedNodeTasks")
     public Boolean ignoreFailedNodeTasks;
 
     @NameInMap("Networks")
     public CreateClusterRequestNetworks networks;
+
+    @NameInMap("NimizVSwitches")
+    public java.util.List<String> nimizVSwitches;
 
     @NameInMap("NodeGroups")
     public java.util.List<CreateClusterRequestNodeGroups> nodeGroups;
@@ -68,6 +74,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.components;
     }
 
+    public CreateClusterRequest setHpnZone(String hpnZone) {
+        this.hpnZone = hpnZone;
+        return this;
+    }
+    public String getHpnZone() {
+        return this.hpnZone;
+    }
+
     public CreateClusterRequest setIgnoreFailedNodeTasks(Boolean ignoreFailedNodeTasks) {
         this.ignoreFailedNodeTasks = ignoreFailedNodeTasks;
         return this;
@@ -82,6 +96,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public CreateClusterRequestNetworks getNetworks() {
         return this.networks;
+    }
+
+    public CreateClusterRequest setNimizVSwitches(java.util.List<String> nimizVSwitches) {
+        this.nimizVSwitches = nimizVSwitches;
+        return this;
+    }
+    public java.util.List<String> getNimizVSwitches() {
+        return this.nimizVSwitches;
     }
 
     public CreateClusterRequest setNodeGroups(java.util.List<CreateClusterRequestNodeGroups> nodeGroups) {
@@ -605,6 +627,12 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static CreateClusterRequestNodeGroupsNodes build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterRequestNodeGroupsNodes self = new CreateClusterRequestNodeGroupsNodes();
             return TeaModel.build(map, self);
@@ -634,6 +662,22 @@ public class CreateClusterRequest extends TeaModel {
             return this.nodeId;
         }
 
+        public CreateClusterRequestNodeGroupsNodes setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public CreateClusterRequestNodeGroupsNodes setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
     }
 
     public static class CreateClusterRequestNodeGroups extends TeaModel {
@@ -651,6 +695,9 @@ public class CreateClusterRequest extends TeaModel {
 
         @NameInMap("Nodes")
         public java.util.List<CreateClusterRequestNodeGroupsNodes> nodes;
+
+        @NameInMap("UserData")
+        public String userData;
 
         @NameInMap("ZoneId")
         public String zoneId;
@@ -698,6 +745,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public java.util.List<CreateClusterRequestNodeGroupsNodes> getNodes() {
             return this.nodes;
+        }
+
+        public CreateClusterRequestNodeGroups setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
         public CreateClusterRequestNodeGroups setZoneId(String zoneId) {

@@ -22,6 +22,9 @@ public class DescribeClusterResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("HpnZone")
+    public String hpnZone;
+
     @NameInMap("Networks")
     public java.util.List<DescribeClusterResponseBodyNetworks> networks;
 
@@ -45,6 +48,9 @@ public class DescribeClusterResponseBody extends TeaModel {
 
     @NameInMap("UpdateTime")
     public String updateTime;
+
+    @NameInMap("VpcId")
+    public String vpcId;
 
     public static DescribeClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterResponseBody self = new DescribeClusterResponseBody();
@@ -97,6 +103,14 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
     public String getCreateTime() {
         return this.createTime;
+    }
+
+    public DescribeClusterResponseBody setHpnZone(String hpnZone) {
+        this.hpnZone = hpnZone;
+        return this;
+    }
+    public String getHpnZone() {
+        return this.hpnZone;
     }
 
     public DescribeClusterResponseBody setNetworks(java.util.List<DescribeClusterResponseBodyNetworks> networks) {
@@ -161,6 +175,14 @@ public class DescribeClusterResponseBody extends TeaModel {
     }
     public String getUpdateTime() {
         return this.updateTime;
+    }
+
+    public DescribeClusterResponseBody setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static class DescribeClusterResponseBodyComponents extends TeaModel {

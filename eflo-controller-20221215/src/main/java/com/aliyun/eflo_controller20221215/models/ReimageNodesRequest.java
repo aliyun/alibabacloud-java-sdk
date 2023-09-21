@@ -13,6 +13,9 @@ public class ReimageNodesRequest extends TeaModel {
     @NameInMap("Nodes")
     public java.util.List<ReimageNodesRequestNodes> nodes;
 
+    @NameInMap("UserData")
+    public String userData;
+
     public static ReimageNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ReimageNodesRequest self = new ReimageNodesRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ReimageNodesRequest extends TeaModel {
     }
     public java.util.List<ReimageNodesRequestNodes> getNodes() {
         return this.nodes;
+    }
+
+    public ReimageNodesRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public static class ReimageNodesRequestNodes extends TeaModel {

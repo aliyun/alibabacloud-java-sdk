@@ -104,6 +104,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
         @NameInMap("Hostname")
         public String hostname;
 
+        @NameInMap("HpnZone")
+        public String hpnZone;
+
         @NameInMap("ImageId")
         public String imageId;
 
@@ -158,6 +161,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
         public String getHostname() {
             return this.hostname;
+        }
+
+        public ListClusterNodesResponseBodyNodes setHpnZone(String hpnZone) {
+            this.hpnZone = hpnZone;
+            return this;
+        }
+        public String getHpnZone() {
+            return this.hpnZone;
         }
 
         public ListClusterNodesResponseBodyNodes setImageId(String imageId) {

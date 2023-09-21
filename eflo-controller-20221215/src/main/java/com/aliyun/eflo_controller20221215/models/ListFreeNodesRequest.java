@@ -4,6 +4,9 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListFreeNodesRequest extends TeaModel {
+    @NameInMap("HpnZone")
+    public String hpnZone;
+
     @NameInMap("MachineType")
     public String machineType;
 
@@ -16,6 +19,14 @@ public class ListFreeNodesRequest extends TeaModel {
     public static ListFreeNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFreeNodesRequest self = new ListFreeNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFreeNodesRequest setHpnZone(String hpnZone) {
+        this.hpnZone = hpnZone;
+        return this;
+    }
+    public String getHpnZone() {
+        return this.hpnZone;
     }
 
     public ListFreeNodesRequest setMachineType(String machineType) {

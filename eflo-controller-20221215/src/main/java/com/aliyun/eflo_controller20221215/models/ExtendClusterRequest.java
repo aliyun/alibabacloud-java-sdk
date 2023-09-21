@@ -295,6 +295,12 @@ public class ExtendClusterRequest extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static ExtendClusterRequestNodeGroupsNodes build(java.util.Map<String, ?> map) throws Exception {
             ExtendClusterRequestNodeGroupsNodes self = new ExtendClusterRequestNodeGroupsNodes();
             return TeaModel.build(map, self);
@@ -324,6 +330,22 @@ public class ExtendClusterRequest extends TeaModel {
             return this.nodeId;
         }
 
+        public ExtendClusterRequestNodeGroupsNodes setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public ExtendClusterRequestNodeGroupsNodes setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
     }
 
     public static class ExtendClusterRequestNodeGroups extends TeaModel {
@@ -332,6 +354,9 @@ public class ExtendClusterRequest extends TeaModel {
 
         @NameInMap("Nodes")
         public java.util.List<ExtendClusterRequestNodeGroupsNodes> nodes;
+
+        @NameInMap("UserData")
+        public String userData;
 
         public static ExtendClusterRequestNodeGroups build(java.util.Map<String, ?> map) throws Exception {
             ExtendClusterRequestNodeGroups self = new ExtendClusterRequestNodeGroups();
@@ -352,6 +377,14 @@ public class ExtendClusterRequest extends TeaModel {
         }
         public java.util.List<ExtendClusterRequestNodeGroupsNodes> getNodes() {
             return this.nodes;
+        }
+
+        public ExtendClusterRequestNodeGroups setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
     }
