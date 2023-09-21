@@ -124,6 +124,9 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         @NameInMap("AssetType")
         public Integer assetType;
 
+        @NameInMap("Vendor")
+        public Integer vendor;
+
         public static ListCloudAssetInstancesRequestCloudAssetTypes build(java.util.Map<String, ?> map) throws Exception {
             ListCloudAssetInstancesRequestCloudAssetTypes self = new ListCloudAssetInstancesRequestCloudAssetTypes();
             return TeaModel.build(map, self);
@@ -143,6 +146,14 @@ public class ListCloudAssetInstancesRequest extends TeaModel {
         }
         public Integer getAssetType() {
             return this.assetType;
+        }
+
+        public ListCloudAssetInstancesRequestCloudAssetTypes setVendor(Integer vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public Integer getVendor() {
+            return this.vendor;
         }
 
     }

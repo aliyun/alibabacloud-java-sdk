@@ -44,6 +44,9 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         @NameInMap("InstanceRiskCount")
         public Integer instanceRiskCount;
 
+        @NameInMap("Vendor")
+        public Integer vendor;
+
         public static GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas build(java.util.Map<String, ?> map) throws Exception {
             GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas self = new GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class GetCloudAssetSummaryResponseBody extends TeaModel {
         }
         public Integer getInstanceRiskCount() {
             return this.instanceRiskCount;
+        }
+
+        public GetCloudAssetSummaryResponseBodyGroupedFieldsCloudAssetSummaryMetas setVendor(Integer vendor) {
+            this.vendor = vendor;
+            return this;
+        }
+        public Integer getVendor() {
+            return this.vendor;
         }
 
     }
