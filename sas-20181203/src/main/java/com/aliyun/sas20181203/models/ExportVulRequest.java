@@ -18,6 +18,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("AttachTypes")
     public String attachTypes;
 
+    @NameInMap("CveId")
+    public String cveId;
+
     /**
      * <p>Specifies whether the vulnerability is fixed. Valid values:</p>
      * <br>
@@ -112,6 +115,14 @@ public class ExportVulRequest extends TeaModel {
     }
     public String getAttachTypes() {
         return this.attachTypes;
+    }
+
+    public ExportVulRequest setCveId(String cveId) {
+        this.cveId = cveId;
+        return this;
+    }
+    public String getCveId() {
+        return this.cveId;
     }
 
     public ExportVulRequest setDealed(String dealed) {

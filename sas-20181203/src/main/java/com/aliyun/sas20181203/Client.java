@@ -13643,6 +13643,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AttachTypes", request.attachTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
+            query.put("CveId", request.cveId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dealed)) {
             query.put("Dealed", request.dealed);
         }
