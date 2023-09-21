@@ -531,6 +531,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.changeColumnSecLevelWithOptions(request, runtime);
     }
 
+    public ChangeColumnSecurityLevelResponse changeColumnSecurityLevelWithOptions(ChangeColumnSecurityLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.columnName)) {
+            query.put("ColumnName", request.columnName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isLogic)) {
+            query.put("IsLogic", request.isLogic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newSensitivityLevel)) {
+            query.put("NewSensitivityLevel", request.newSensitivityLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("SchemaName", request.schemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ChangeColumnSecurityLevel"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeColumnSecurityLevelResponse());
+    }
+
+    public ChangeColumnSecurityLevelResponse changeColumnSecurityLevel(ChangeColumnSecurityLevelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeColumnSecurityLevelWithOptions(request, runtime);
+    }
+
     /**
       * Usage notes:
       * *   If you call this operation to transfer the ownership of a published task flow, the ownership transfer does not take effect.
@@ -1380,6 +1433,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateOrderResponse createOrder(CreateOrderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createOrderWithOptions(request, runtime);
+    }
+
+    public CreateProcCorrectOrderResponse createProcCorrectOrderWithOptions(CreateProcCorrectOrderRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateProcCorrectOrderShrinkRequest request = new CreateProcCorrectOrderShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.param)) {
+            request.paramShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.param, "Param", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relatedUserList)) {
+            request.relatedUserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relatedUserList, "RelatedUserList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachmentKey)) {
+            query.put("AttachmentKey", request.attachmentKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("Comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramShrink)) {
+            query.put("Param", request.paramShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relatedUserListShrink)) {
+            query.put("RelatedUserList", request.relatedUserListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateProcCorrectOrder"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProcCorrectOrderResponse());
+    }
+
+    public CreateProcCorrectOrderResponse createProcCorrectOrder(CreateProcCorrectOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createProcCorrectOrderWithOptions(request, runtime);
     }
 
     /**
@@ -2981,6 +3089,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAuthorityTemplateItemResponse getAuthorityTemplateItem(GetAuthorityTemplateItemRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAuthorityTemplateItemWithOptions(request, runtime);
+    }
+
+    public GetClassificationTemplateResponse getClassificationTemplateWithOptions(GetClassificationTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetClassificationTemplate"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetClassificationTemplateResponse());
+    }
+
+    public GetClassificationTemplateResponse getClassificationTemplate(GetClassificationTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getClassificationTemplateWithOptions(request, runtime);
     }
 
     public GetDBTaskSQLJobLogResponse getDBTaskSQLJobLogWithOptions(GetDBTaskSQLJobLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -6625,6 +6766,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListSensitiveDataAuditLogResponse listSensitiveDataAuditLog(ListSensitiveDataAuditLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSensitiveDataAuditLogWithOptions(request, runtime);
+    }
+
+    public ListSensitivityLevelResponse listSensitivityLevelWithOptions(ListSensitivityLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSensitivityLevel"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSensitivityLevelResponse());
+    }
+
+    public ListSensitivityLevelResponse listSensitivityLevel(ListSensitivityLevelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSensitivityLevelWithOptions(request, runtime);
     }
 
     public ListStandardGroupsResponse listStandardGroupsWithOptions(ListStandardGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class RefundPayAsYouGoOrderRequest extends TeaModel {
+    /**
+     * <p>The ID of the sales order instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
