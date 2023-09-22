@@ -7,8 +7,8 @@ public class Category extends TeaModel {
     @NameInMap("categoryId")
     public Long categoryId;
 
-    @NameInMap("leaf")
-    public Boolean leaf;
+    @NameInMap("isLeaf")
+    public Boolean isLeaf;
 
     @NameInMap("level")
     public Integer level;
@@ -32,12 +32,12 @@ public class Category extends TeaModel {
         return this.categoryId;
     }
 
-    public Category setLeaf(Boolean leaf) {
-        this.leaf = leaf;
+    public Category setIsLeaf(Boolean isLeaf) {
+        this.isLeaf = isLeaf;
         return this;
     }
-    public Boolean getLeaf() {
-        return this.leaf;
+    public Boolean getIsLeaf() {
+        return this.isLeaf;
     }
 
     public Category setLevel(Integer level) {
