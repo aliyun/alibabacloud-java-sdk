@@ -55,6 +55,9 @@ public class RefundResult extends TeaModel {
     @NameInMap("refunderZipCode")
     public String refunderZipCode;
 
+    @NameInMap("requestId")
+    public String requestId;
+
     @NameInMap("returnGoodLogisticsStatus")
     public Integer returnGoodLogisticsStatus;
 
@@ -206,6 +209,14 @@ public class RefundResult extends TeaModel {
     }
     public String getRefunderZipCode() {
         return this.refunderZipCode;
+    }
+
+    public RefundResult setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public RefundResult setReturnGoodLogisticsStatus(Integer returnGoodLogisticsStatus) {

@@ -8,7 +8,7 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
     public String cpCode;
 
     @NameInMap("disputeId")
-    public Long disputeId;
+    public String disputeId;
 
     @NameInMap("logisticsNo")
     public String logisticsNo;
@@ -26,11 +26,11 @@ public class GoodsShippingNoticeCreateCmd extends TeaModel {
         return this.cpCode;
     }
 
-    public GoodsShippingNoticeCreateCmd setDisputeId(Long disputeId) {
+    public GoodsShippingNoticeCreateCmd setDisputeId(String disputeId) {
         this.disputeId = disputeId;
         return this;
     }
-    public Long getDisputeId() {
+    public String getDisputeId() {
         return this.disputeId;
     }
 
