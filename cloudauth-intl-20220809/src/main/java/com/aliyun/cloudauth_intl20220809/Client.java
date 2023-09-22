@@ -422,6 +422,125 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeTransactionsListWithOptions(request, runtime);
     }
 
+    public DescribeWeb3AddressLabelsResponse describeWeb3AddressLabelsWithOptions(DescribeWeb3AddressLabelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chainShortName)) {
+            query.put("ChainShortName", request.chainShortName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWeb3AddressLabels"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWeb3AddressLabelsResponse());
+    }
+
+    public DescribeWeb3AddressLabelsResponse describeWeb3AddressLabels(DescribeWeb3AddressLabelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeWeb3AddressLabelsWithOptions(request, runtime);
+    }
+
+    public DescribeWeb3RiskScoreResponse describeWeb3RiskScoreWithOptions(DescribeWeb3RiskScoreRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chainShortName)) {
+            query.put("ChainShortName", request.chainShortName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.depth)) {
+            query.put("Depth", request.depth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectId)) {
+            query.put("ObjectId", request.objectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.objectType)) {
+            query.put("ObjectType", request.objectType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWeb3RiskScore"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWeb3RiskScoreResponse());
+    }
+
+    public DescribeWeb3RiskScoreResponse describeWeb3RiskScore(DescribeWeb3RiskScoreRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeWeb3RiskScoreWithOptions(request, runtime);
+    }
+
+    public DescribeWeb3TransactionLabelsResponse describeWeb3TransactionLabelsWithOptions(DescribeWeb3TransactionLabelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chainShortName)) {
+            query.put("ChainShortName", request.chainShortName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.merchantBizId)) {
+            query.put("MerchantBizId", request.merchantBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transaction)) {
+            query.put("Transaction", request.transaction);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeWeb3TransactionLabels"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeWeb3TransactionLabelsResponse());
+    }
+
+    public DescribeWeb3TransactionLabelsResponse describeWeb3TransactionLabels(DescribeWeb3TransactionLabelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeWeb3TransactionLabelsWithOptions(request, runtime);
+    }
+
     public DocOcrResponse docOcrWithOptions(DocOcrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
