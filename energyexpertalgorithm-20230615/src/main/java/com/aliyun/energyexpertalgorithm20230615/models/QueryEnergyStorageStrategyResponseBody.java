@@ -4,6 +4,9 @@ package com.aliyun.energyexpertalgorithm20230615.models;
 import com.aliyun.tea.*;
 
 public class QueryEnergyStorageStrategyResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("code")
     public String code;
 
@@ -22,6 +25,14 @@ public class QueryEnergyStorageStrategyResponseBody extends TeaModel {
     public static QueryEnergyStorageStrategyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEnergyStorageStrategyResponseBody self = new QueryEnergyStorageStrategyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEnergyStorageStrategyResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryEnergyStorageStrategyResponseBody setCode(String code) {
@@ -131,6 +142,12 @@ public class QueryEnergyStorageStrategyResponseBody extends TeaModel {
         @NameInMap("deviceSn")
         public String deviceSn;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
         @NameInMap("recordList")
         public java.util.List<QueryEnergyStorageStrategyResponseBodyDataRecordList> recordList;
 
@@ -145,6 +162,22 @@ public class QueryEnergyStorageStrategyResponseBody extends TeaModel {
         }
         public String getDeviceSn() {
             return this.deviceSn;
+        }
+
+        public QueryEnergyStorageStrategyResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public QueryEnergyStorageStrategyResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public QueryEnergyStorageStrategyResponseBodyData setRecordList(java.util.List<QueryEnergyStorageStrategyResponseBodyDataRecordList> recordList) {
