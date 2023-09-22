@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     /**
-     * <p>The number of times you can change domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.</p>
+     * <p>The number of times that you can change the domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of the custom edition.</p>
      */
     @NameInMap("BindCount")
     public Long bindCount;
 
     /**
-     * <p>The number of domain names that you can bind to the DNS instance.</p>
+     * <p>The number of domain names that can be bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of Personal Edition, Enterprise Standard Edition, and Enterprise Ultimate Edition.</p>
      */
     @NameInMap("BindDomainCount")
     public Long bindDomainCount;
 
     /**
-     * <p>The number of domain names that have been bound to the DNS instance.</p>
+     * <p>The number of domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of Personal Edition, Enterprise Standard Edition, and Enterprise Ultimate Edition.</p>
      */
     @NameInMap("BindDomainUsedCount")
     public Long bindDomainUsedCount;
 
     /**
-     * <p>The number of times you have changed domain names that are bound to the DNS instance. It can be specified by the user who uses Alibaba Cloud DNS of the custom version.</p>
+     * <p>The number of times that you have changed the domain names that are bound to the paid Alibaba Cloud DNS instance. This parameter applies to Alibaba Cloud DNS instances of the custom edition.</p>
      */
     @NameInMap("BindUsedCount")
     public Long bindUsedCount;
@@ -35,82 +35,88 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public Long DDosDefendFlow;
 
     /**
-     * <p>The DDoS protection frequency. Unit: 10,000 QPS.</p>
+     * <p>The DDoS protection frequency. Unit: 10,000 QPS. This parameter applies to Alibaba Cloud DNS instances of the custom edition.</p>
      */
     @NameInMap("DDosDefendQuery")
     public Long DDosDefendQuery;
 
     /**
-     * <p>The number of IP addresses supported by a domain name or line.</p>
+     * <p>The maximum number of IP addresses that are used for load balancing in a single line of a domain name.</p>
      */
     @NameInMap("DnsSLBCount")
     public Long dnsSLBCount;
 
     /**
-     * <p>The DNS security policy. Valid values:</p>
+     * <p>The DNS protection level. Valid values:</p>
      * <br>
-     * <p>*   **no**: not required.</p>
-     * <p>*   **basic**: anti-DDoS basic.</p>
-     * <p>*   **advanced**: anti-DDoS advanced.</p>
+     * <p>*   **no**: DNS protection is not provided.</p>
+     * <p>*   **basic**: Basic DNS attack defense is provided.</p>
+     * <p>*   **advanced**: Advanced DNS attack defense is provided.</p>
      */
     @NameInMap("DnsSecurity")
     public String dnsSecurity;
 
     /**
-     * <p>The list of DNS servers.</p>
+     * <p>The DNS servers configured for the domain names.</p>
      */
     @NameInMap("DnsServers")
     public DescribeDnsProductInstanceResponseBodyDnsServers dnsServers;
 
     /**
-     * <p>The bound domain name.</p>
+     * <p>The domain name that is bound to the paid instance.</p>
      * <br>
-     * <p>If this parameter is not specified, no domain name is bound.</p>
+     * <p>If no value is returned for this parameter, no domain name is bound to the paid instance.</p>
      */
     @NameInMap("Domain")
     public String domain;
 
+    /**
+     * <p>The type of the instance. Valid values:</p>
+     * <br>
+     * <p>*   PUBLIC: authoritative domain name</p>
+     * <p>*   CACHE: cache-accelerated domain name</p>
+     */
     @NameInMap("DomainType")
     public String domainType;
 
     /**
-     * <p>The time at which the instance expired.</p>
+     * <p>The time when the instance expired. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
-     * <p>The UNIX timestamp representing the expiration time of the instance.</p>
+     * <p>The time when the instance expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("EndTimestamp")
     public Long endTimestamp;
 
     /**
-     * <p>Indicates whether GSLB was allowed.</p>
+     * <p>Indicates whether global server load balancing (GSLB) is supported.</p>
      */
     @NameInMap("Gslb")
     public Boolean gslb;
 
     /**
-     * <p>The list of ISP lines.</p>
+     * <p>The Internet service provider (ISP) lines for DNS resolution.</p>
      */
     @NameInMap("ISPLines")
     public String ISPLines;
 
     /**
-     * <p>The list of ISP line subdivisions.</p>
+     * <p>The regional ISP lines for DNS resolution.</p>
      */
     @NameInMap("ISPRegionLines")
     public String ISPRegionLines;
 
     /**
-     * <p>Indicates whether the request for domain name resolution was in the black hole.</p>
+     * <p>Indicates whether the Domain Name System (DNS) servers stopped responding to all requests sent to the domain names.</p>
      */
     @NameInMap("InBlackHole")
     public Boolean inBlackHole;
 
     /**
-     * <p>Indicates whether the request for domain name resolution was being cleared.</p>
+     * <p>Indicates whether the DNS servers stopped responding to abnormal requests sent to the domain names.</p>
      */
     @NameInMap("InClean")
     public Boolean inClean;
@@ -122,13 +128,13 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The monitoring frequency. Unit: minutes.</p>
+     * <p>The interval at which the instance is monitored. Unit: minutes.</p>
      */
     @NameInMap("MonitorFrequency")
     public Long monitorFrequency;
 
     /**
-     * <p>The number of monitored nodes.</p>
+     * <p>The number of monitoring nodes.</p>
      */
     @NameInMap("MonitorNodeCount")
     public Long monitorNodeCount;
@@ -140,46 +146,49 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public Long monitorTaskCount;
 
     /**
-     * <p>DDoS protection traffic outside China. Unit: GB.</p>
+     * <p>The DDoS protection traffic outside the Chinese mainland. Unit: GB.</p>
      */
     @NameInMap("OverseaDDosDefendFlow")
     public Long overseaDDosDefendFlow;
 
     /**
-     * <p>The type of the overseas line.</p>
+     * <p>The line outside the Chinese mainland.</p>
      */
     @NameInMap("OverseaLine")
     public String overseaLine;
 
+    /**
+     * <p>The billing method.</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
     /**
-     * <p>Indicates whether regional lines were allowed.</p>
+     * <p>Indicates whether regional lines are supported.</p>
      */
     @NameInMap("RegionLines")
     public Boolean regionLines;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of search engine lines.</p>
+     * <p>The search engine lines for DNS resolution.</p>
      */
     @NameInMap("SearchEngineLines")
     public String searchEngineLines;
 
     /**
-     * <p>The time when the DNS instance was purchased.</p>
+     * <p>The time when the instance was purchased. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The UNIX timestamp representing when the DNS instance was purchased.</p>
+     * <p>The time when the instance was purchased. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("StartTimestamp")
     public Long startTimestamp;
@@ -191,25 +200,25 @@ public class DescribeDnsProductInstanceResponseBody extends TeaModel {
     public Long subDomainLevel;
 
     /**
-     * <p>The minimum TTL. Unit: seconds.</p>
+     * <p>The minimum time-to-live (TTL) period. Unit: seconds.</p>
      */
     @NameInMap("TTLMinValue")
     public Long TTLMinValue;
 
     /**
-     * <p>The URL forwarding quantity.</p>
+     * <p>The number of the forwarded URLs.</p>
      */
     @NameInMap("URLForwardCount")
     public Long URLForwardCount;
 
     /**
-     * <p>The version code of the Alibaba Cloud DNS instance.</p>
+     * <p>The version code of Alibaba Cloud DNS.</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;
 
     /**
-     * <p>The version name of the Alibaba Cloud DNS instance.</p>
+     * <p>The edition of Alibaba Cloud DNS.</p>
      */
     @NameInMap("VersionName")
     public String versionName;

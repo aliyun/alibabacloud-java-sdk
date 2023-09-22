@@ -4,39 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLinesResponseBody extends TeaModel {
-    /**
-     * <p>The list of custom lines.</p>
-     */
     @NameInMap("CustomLines")
     public java.util.List<DescribeCustomLinesResponseBodyCustomLines> customLines;
 
-    /**
-     * <p>The number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries that were returned on each page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of custom lines.</p>
-     */
     @NameInMap("TotalItems")
     public Integer totalItems;
 
-    /**
-     * <p>The number of pages that were returned.</p>
-     */
     @NameInMap("TotalPages")
     public Integer totalPages;
 
@@ -94,21 +76,12 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
     }
 
     public static class DescribeCustomLinesResponseBodyCustomLines extends TeaModel {
-        /**
-         * <p>The code of the custom line.</p>
-         */
         @NameInMap("Code")
         public String code;
 
-        /**
-         * <p>The unique ID of the custom line.</p>
-         */
         @NameInMap("Id")
         public Long id;
 
-        /**
-         * <p>The name of the custom line.</p>
-         */
         @NameInMap("Name")
         public String name;
 

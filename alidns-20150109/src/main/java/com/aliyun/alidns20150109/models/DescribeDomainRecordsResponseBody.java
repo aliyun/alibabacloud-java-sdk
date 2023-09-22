@@ -80,6 +80,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainRecordsResponseBodyDomainRecordsRecord extends TeaModel {
+        @NameInMap("CreateTimestamp")
+        public Long createTimestamp;
+
         /**
          * <p>The domain name to which the DNS record belongs.</p>
          */
@@ -140,6 +143,9 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("UpdateTimestamp")
+        public Long updateTimestamp;
+
         /**
          * <p>The record value.</p>
          */
@@ -155,6 +161,14 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         public static DescribeDomainRecordsResponseBodyDomainRecordsRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeDomainRecordsResponseBodyDomainRecordsRecord self = new DescribeDomainRecordsResponseBodyDomainRecordsRecord();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainRecordsResponseBodyDomainRecordsRecord setCreateTimestamp(Long createTimestamp) {
+            this.createTimestamp = createTimestamp;
+            return this;
+        }
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
         }
 
         public DescribeDomainRecordsResponseBodyDomainRecordsRecord setDomainName(String domainName) {
@@ -235,6 +249,14 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public DescribeDomainRecordsResponseBodyDomainRecordsRecord setUpdateTimestamp(Long updateTimestamp) {
+            this.updateTimestamp = updateTimestamp;
+            return this;
+        }
+        public Long getUpdateTimestamp() {
+            return this.updateTimestamp;
         }
 
         public DescribeDomainRecordsResponseBodyDomainRecordsRecord setValue(String value) {

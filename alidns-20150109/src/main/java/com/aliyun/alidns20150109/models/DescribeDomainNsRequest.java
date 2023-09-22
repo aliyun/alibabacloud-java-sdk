@@ -4,9 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainNsRequest extends TeaModel {
+    /**
+     * <p>Indicates whether all the name servers were Alibaba Cloud DNS servers.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The domain name that you want to resolve.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

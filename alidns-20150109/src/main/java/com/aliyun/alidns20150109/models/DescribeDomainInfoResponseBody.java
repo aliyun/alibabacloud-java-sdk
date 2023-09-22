@@ -130,6 +130,9 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     @NameInMap("SlaveDns")
     public Boolean slaveDns;
 
+    @NameInMap("SubDomain")
+    public Boolean subDomain;
+
     /**
      * <p>The version of the Alibaba Cloud DNS instance.</p>
      */
@@ -313,6 +316,14 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     }
     public Boolean getSlaveDns() {
         return this.slaveDns;
+    }
+
+    public DescribeDomainInfoResponseBody setSubDomain(Boolean subDomain) {
+        this.subDomain = subDomain;
+        return this;
+    }
+    public Boolean getSubDomain() {
+        return this.subDomain;
     }
 
     public DescribeDomainInfoResponseBody setVersionCode(String versionCode) {
