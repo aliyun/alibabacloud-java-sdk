@@ -4,6 +4,9 @@ package com.aliyun.energyexpertalgorithm20230615.models;
 import com.aliyun.tea.*;
 
 public class QueryUltraShortTermLoadForecastDataResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("code")
     public String code;
 
@@ -22,6 +25,14 @@ public class QueryUltraShortTermLoadForecastDataResponseBody extends TeaModel {
     public static QueryUltraShortTermLoadForecastDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryUltraShortTermLoadForecastDataResponseBody self = new QueryUltraShortTermLoadForecastDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryUltraShortTermLoadForecastDataResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryUltraShortTermLoadForecastDataResponseBody setCode(String code) {
@@ -109,6 +120,12 @@ public class QueryUltraShortTermLoadForecastDataResponseBody extends TeaModel {
         @NameInMap("deviceSn")
         public String deviceSn;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
         @NameInMap("recordList")
         public java.util.List<QueryUltraShortTermLoadForecastDataResponseBodyDataRecordList> recordList;
 
@@ -123,6 +140,22 @@ public class QueryUltraShortTermLoadForecastDataResponseBody extends TeaModel {
         }
         public String getDeviceSn() {
             return this.deviceSn;
+        }
+
+        public QueryUltraShortTermLoadForecastDataResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public QueryUltraShortTermLoadForecastDataResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public QueryUltraShortTermLoadForecastDataResponseBodyData setRecordList(java.util.List<QueryUltraShortTermLoadForecastDataResponseBodyDataRecordList> recordList) {

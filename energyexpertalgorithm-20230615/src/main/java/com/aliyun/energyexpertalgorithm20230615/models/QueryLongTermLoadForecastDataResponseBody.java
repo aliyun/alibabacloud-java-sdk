@@ -4,6 +4,9 @@ package com.aliyun.energyexpertalgorithm20230615.models;
 import com.aliyun.tea.*;
 
 public class QueryLongTermLoadForecastDataResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("code")
     public String code;
 
@@ -22,6 +25,14 @@ public class QueryLongTermLoadForecastDataResponseBody extends TeaModel {
     public static QueryLongTermLoadForecastDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryLongTermLoadForecastDataResponseBody self = new QueryLongTermLoadForecastDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryLongTermLoadForecastDataResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryLongTermLoadForecastDataResponseBody setCode(String code) {
@@ -109,6 +120,12 @@ public class QueryLongTermLoadForecastDataResponseBody extends TeaModel {
         @NameInMap("deviceSn")
         public String deviceSn;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
         @NameInMap("recordList")
         public java.util.List<QueryLongTermLoadForecastDataResponseBodyDataRecordList> recordList;
 
@@ -123,6 +140,22 @@ public class QueryLongTermLoadForecastDataResponseBody extends TeaModel {
         }
         public String getDeviceSn() {
             return this.deviceSn;
+        }
+
+        public QueryLongTermLoadForecastDataResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public QueryLongTermLoadForecastDataResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public QueryLongTermLoadForecastDataResponseBodyData setRecordList(java.util.List<QueryLongTermLoadForecastDataResponseBodyDataRecordList> recordList) {

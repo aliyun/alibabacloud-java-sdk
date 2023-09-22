@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>energyexpertalgorithm20230615</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>energyexpertalgorithm20230615</name>
   <description>Alibaba Cloud EnergyExpertAlgorithm (20230615) SDK for Java

@@ -4,6 +4,9 @@ package com.aliyun.energyexpertalgorithm20230615.models;
 import com.aliyun.tea.*;
 
 public class QueryLongTermPvForecastDataResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("code")
     public String code;
 
@@ -22,6 +25,14 @@ public class QueryLongTermPvForecastDataResponseBody extends TeaModel {
     public static QueryLongTermPvForecastDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryLongTermPvForecastDataResponseBody self = new QueryLongTermPvForecastDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryLongTermPvForecastDataResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryLongTermPvForecastDataResponseBody setCode(String code) {
@@ -109,6 +120,12 @@ public class QueryLongTermPvForecastDataResponseBody extends TeaModel {
         @NameInMap("deviceSn")
         public String deviceSn;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
         @NameInMap("recordList")
         public java.util.List<QueryLongTermPvForecastDataResponseBodyDataRecordList> recordList;
 
@@ -123,6 +140,22 @@ public class QueryLongTermPvForecastDataResponseBody extends TeaModel {
         }
         public String getDeviceSn() {
             return this.deviceSn;
+        }
+
+        public QueryLongTermPvForecastDataResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public QueryLongTermPvForecastDataResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public QueryLongTermPvForecastDataResponseBodyData setRecordList(java.util.List<QueryLongTermPvForecastDataResponseBodyDataRecordList> recordList) {

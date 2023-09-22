@@ -4,6 +4,9 @@ package com.aliyun.energyexpertalgorithm20230615.models;
 import com.aliyun.tea.*;
 
 public class QueryCostCurveContrastResponseBody extends TeaModel {
+    @NameInMap("accessDeniedDetail")
+    public String accessDeniedDetail;
+
     @NameInMap("code")
     public String code;
 
@@ -22,6 +25,14 @@ public class QueryCostCurveContrastResponseBody extends TeaModel {
     public static QueryCostCurveContrastResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCostCurveContrastResponseBody self = new QueryCostCurveContrastResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCostCurveContrastResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public QueryCostCurveContrastResponseBody setCode(String code) {
@@ -197,6 +208,12 @@ public class QueryCostCurveContrastResponseBody extends TeaModel {
         @NameInMap("deviceSn")
         public String deviceSn;
 
+        @NameInMap("errorCode")
+        public String errorCode;
+
+        @NameInMap("errorMessage")
+        public String errorMessage;
+
         @NameInMap("recordList")
         public java.util.List<QueryCostCurveContrastResponseBodyDataRecordList> recordList;
 
@@ -211,6 +228,22 @@ public class QueryCostCurveContrastResponseBody extends TeaModel {
         }
         public String getDeviceSn() {
             return this.deviceSn;
+        }
+
+        public QueryCostCurveContrastResponseBodyData setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public QueryCostCurveContrastResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public QueryCostCurveContrastResponseBodyData setRecordList(java.util.List<QueryCostCurveContrastResponseBodyDataRecordList> recordList) {
