@@ -11,7 +11,7 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String domainType;
 
     /**
-     * <p>The IP address of the client.</p>
+     * <p>The version code of the Alibaba Cloud DNS instance.</p>
      */
     @NameInMap("Lang")
     public String lang;
@@ -20,25 +20,25 @@ public class DescribeDnsProductInstancesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **20**.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The version code of the Alibaba Cloud DNS instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The number of the page to return. Pages start from page **1**. Default value: **1**.</p>
+     * <p>The total number of domain names.</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The total number of domain names.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("VersionCode")
     public String versionCode;

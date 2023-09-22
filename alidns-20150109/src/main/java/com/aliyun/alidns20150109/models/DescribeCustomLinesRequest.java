@@ -4,27 +4,15 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLinesRequest extends TeaModel {
-    /**
-     * <p>The domain name for which the custom lines to be queried are configured.</p>
-     */
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>The language type.</p>
-     */
     @NameInMap("Lang")
     public String lang;
 
-    /**
-     * <p>The number of the page to return.</p>
-     */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 

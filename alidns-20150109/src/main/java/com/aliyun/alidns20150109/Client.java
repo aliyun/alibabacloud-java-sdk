@@ -2299,7 +2299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeDnsProductInstances**.
+      * The number of the page to return. Pages start from page **1**. Default value: **1**.
       *
       * @param request DescribeDnsProductInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2358,7 +2358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **DescribeDnsProductInstances**.
+      * The number of the page to return. Pages start from page **1**. Default value: **1**.
       *
       * @param request DescribeDnsProductInstancesRequest
       * @return DescribeDnsProductInstancesResponse
@@ -2807,6 +2807,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeDomainLogsWithOptions(request, runtime);
     }
 
+    /**
+      * > This operation queries the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
+      *
+      * @param request DescribeDomainNsRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DescribeDomainNsResponse
+     */
     public DescribeDomainNsResponse describeDomainNsWithOptions(DescribeDomainNsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2835,6 +2842,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDomainNsResponse());
     }
 
+    /**
+      * > This operation queries the authoritative servers of a domain name registry to obtain the name servers for a domain name. If the domain name is in an invalid state, such as serverHold or clientHold, an error may be returned.
+      *
+      * @param request DescribeDomainNsRequest
+      * @return DescribeDomainNsResponse
+     */
     public DescribeDomainNsResponse describeDomainNs(DescribeDomainNsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDomainNsWithOptions(request, runtime);
