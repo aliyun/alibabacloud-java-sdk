@@ -305,6 +305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ExcludeEndUserIds", request.excludeEndUserIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
             body.put("OrgId", request.orgId);
         }

@@ -22,6 +22,9 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("GroupId")
+    public String groupId;
+
     /**
      * <p>The number of entries per page.</p>
      * <br>
@@ -71,6 +74,14 @@ public class DescribeUsersRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public DescribeUsersRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
     public DescribeUsersRequest setMaxResults(Long maxResults) {
