@@ -115,6 +115,12 @@ public class SearchCondition extends TeaModel {
     @NameInMap("excludeAuthorNameIdx")
     public String excludeAuthorNameIdx;
 
+    @NameInMap("excludeIpLocationFilter")
+    public String excludeIpLocationFilter;
+
+    @NameInMap("excludeProfileTagsUsualActiveCityFilter")
+    public String excludeProfileTagsUsualActiveCityFilter;
+
     @NameInMap("excludingMediaHostsFilter")
     public String excludingMediaHostsFilter;
 
@@ -156,6 +162,9 @@ public class SearchCondition extends TeaModel {
 
     @NameInMap("imageCountMinFilter")
     public Long imageCountMinFilter;
+
+    @NameInMap("ipLocationFilter")
+    public String ipLocationFilter;
 
     @NameInMap("keywordTreeIdsExcludeIdx")
     public String keywordTreeIdsExcludeIdx;
@@ -219,6 +228,36 @@ public class SearchCondition extends TeaModel {
 
     @NameInMap("primaryKeyIdx")
     public String primaryKeyIdx;
+
+    @NameInMap("profileTagsAgeGroupFilter")
+    public String profileTagsAgeGroupFilter;
+
+    @NameInMap("profileTagsAgeLayerFilter")
+    public String profileTagsAgeLayerFilter;
+
+    @NameInMap("profileTagsBizPrefFilter")
+    public String profileTagsBizPrefFilter;
+
+    @NameInMap("profileTagsCityLineFilter")
+    public String profileTagsCityLineFilter;
+
+    @NameInMap("profileTagsPltCertFilter")
+    public String profileTagsPltCertFilter;
+
+    @NameInMap("profileTagsRegisteredAgeMaxFilter")
+    public Integer profileTagsRegisteredAgeMaxFilter;
+
+    @NameInMap("profileTagsRegisteredAgeMinFilter")
+    public Integer profileTagsRegisteredAgeMinFilter;
+
+    @NameInMap("profileTagsUserInterest")
+    public String profileTagsUserInterest;
+
+    @NameInMap("profileTagsUsualActiveCityFilter")
+    public String profileTagsUsualActiveCityFilter;
+
+    @NameInMap("profileTagsUsualActiveProvinceFilter")
+    public String profileTagsUsualActiveProvinceFilter;
 
     @NameInMap("projectId")
     public Long projectId;
@@ -575,6 +614,22 @@ public class SearchCondition extends TeaModel {
         return this.excludeAuthorNameIdx;
     }
 
+    public SearchCondition setExcludeIpLocationFilter(String excludeIpLocationFilter) {
+        this.excludeIpLocationFilter = excludeIpLocationFilter;
+        return this;
+    }
+    public String getExcludeIpLocationFilter() {
+        return this.excludeIpLocationFilter;
+    }
+
+    public SearchCondition setExcludeProfileTagsUsualActiveCityFilter(String excludeProfileTagsUsualActiveCityFilter) {
+        this.excludeProfileTagsUsualActiveCityFilter = excludeProfileTagsUsualActiveCityFilter;
+        return this;
+    }
+    public String getExcludeProfileTagsUsualActiveCityFilter() {
+        return this.excludeProfileTagsUsualActiveCityFilter;
+    }
+
     public SearchCondition setExcludingMediaHostsFilter(String excludingMediaHostsFilter) {
         this.excludingMediaHostsFilter = excludingMediaHostsFilter;
         return this;
@@ -685,6 +740,14 @@ public class SearchCondition extends TeaModel {
     }
     public Long getImageCountMinFilter() {
         return this.imageCountMinFilter;
+    }
+
+    public SearchCondition setIpLocationFilter(String ipLocationFilter) {
+        this.ipLocationFilter = ipLocationFilter;
+        return this;
+    }
+    public String getIpLocationFilter() {
+        return this.ipLocationFilter;
     }
 
     public SearchCondition setKeywordTreeIdsExcludeIdx(String keywordTreeIdsExcludeIdx) {
@@ -853,6 +916,86 @@ public class SearchCondition extends TeaModel {
     }
     public String getPrimaryKeyIdx() {
         return this.primaryKeyIdx;
+    }
+
+    public SearchCondition setProfileTagsAgeGroupFilter(String profileTagsAgeGroupFilter) {
+        this.profileTagsAgeGroupFilter = profileTagsAgeGroupFilter;
+        return this;
+    }
+    public String getProfileTagsAgeGroupFilter() {
+        return this.profileTagsAgeGroupFilter;
+    }
+
+    public SearchCondition setProfileTagsAgeLayerFilter(String profileTagsAgeLayerFilter) {
+        this.profileTagsAgeLayerFilter = profileTagsAgeLayerFilter;
+        return this;
+    }
+    public String getProfileTagsAgeLayerFilter() {
+        return this.profileTagsAgeLayerFilter;
+    }
+
+    public SearchCondition setProfileTagsBizPrefFilter(String profileTagsBizPrefFilter) {
+        this.profileTagsBizPrefFilter = profileTagsBizPrefFilter;
+        return this;
+    }
+    public String getProfileTagsBizPrefFilter() {
+        return this.profileTagsBizPrefFilter;
+    }
+
+    public SearchCondition setProfileTagsCityLineFilter(String profileTagsCityLineFilter) {
+        this.profileTagsCityLineFilter = profileTagsCityLineFilter;
+        return this;
+    }
+    public String getProfileTagsCityLineFilter() {
+        return this.profileTagsCityLineFilter;
+    }
+
+    public SearchCondition setProfileTagsPltCertFilter(String profileTagsPltCertFilter) {
+        this.profileTagsPltCertFilter = profileTagsPltCertFilter;
+        return this;
+    }
+    public String getProfileTagsPltCertFilter() {
+        return this.profileTagsPltCertFilter;
+    }
+
+    public SearchCondition setProfileTagsRegisteredAgeMaxFilter(Integer profileTagsRegisteredAgeMaxFilter) {
+        this.profileTagsRegisteredAgeMaxFilter = profileTagsRegisteredAgeMaxFilter;
+        return this;
+    }
+    public Integer getProfileTagsRegisteredAgeMaxFilter() {
+        return this.profileTagsRegisteredAgeMaxFilter;
+    }
+
+    public SearchCondition setProfileTagsRegisteredAgeMinFilter(Integer profileTagsRegisteredAgeMinFilter) {
+        this.profileTagsRegisteredAgeMinFilter = profileTagsRegisteredAgeMinFilter;
+        return this;
+    }
+    public Integer getProfileTagsRegisteredAgeMinFilter() {
+        return this.profileTagsRegisteredAgeMinFilter;
+    }
+
+    public SearchCondition setProfileTagsUserInterest(String profileTagsUserInterest) {
+        this.profileTagsUserInterest = profileTagsUserInterest;
+        return this;
+    }
+    public String getProfileTagsUserInterest() {
+        return this.profileTagsUserInterest;
+    }
+
+    public SearchCondition setProfileTagsUsualActiveCityFilter(String profileTagsUsualActiveCityFilter) {
+        this.profileTagsUsualActiveCityFilter = profileTagsUsualActiveCityFilter;
+        return this;
+    }
+    public String getProfileTagsUsualActiveCityFilter() {
+        return this.profileTagsUsualActiveCityFilter;
+    }
+
+    public SearchCondition setProfileTagsUsualActiveProvinceFilter(String profileTagsUsualActiveProvinceFilter) {
+        this.profileTagsUsualActiveProvinceFilter = profileTagsUsualActiveProvinceFilter;
+        return this;
+    }
+    public String getProfileTagsUsualActiveProvinceFilter() {
+        return this.profileTagsUsualActiveProvinceFilter;
     }
 
     public SearchCondition setProjectId(Long projectId) {

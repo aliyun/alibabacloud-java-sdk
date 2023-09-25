@@ -31,6 +31,9 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("authorFriendsCount")
     public Long authorFriendsCount;
 
+    @NameInMap("authorGender")
+    public String authorGender;
+
     @NameInMap("authorId")
     public String authorId;
 
@@ -163,6 +166,9 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("imageCount")
     public Long imageCount;
 
+    @NameInMap("ipLocation")
+    public String ipLocation;
+
     @NameInMap("mediaHosts")
     public java.util.List<String> mediaHosts;
 
@@ -195,6 +201,33 @@ public class YuqingMessage extends TeaModel {
 
     @NameInMap("originalMedia")
     public java.util.List<String> originalMedia;
+
+    @NameInMap("profileTagsAgeGroup")
+    public String profileTagsAgeGroup;
+
+    @NameInMap("profileTagsAgeLayer")
+    public String profileTagsAgeLayer;
+
+    @NameInMap("profileTagsBizPref")
+    public String profileTagsBizPref;
+
+    @NameInMap("profileTagsCityLine")
+    public String profileTagsCityLine;
+
+    @NameInMap("profileTagsPltCert")
+    public String profileTagsPltCert;
+
+    @NameInMap("profileTagsRegisteredAge")
+    public String profileTagsRegisteredAge;
+
+    @NameInMap("profileTagsUserInterest")
+    public String profileTagsUserInterest;
+
+    @NameInMap("profileTagsUsualActiveCity")
+    public String profileTagsUsualActiveCity;
+
+    @NameInMap("profileTagsUsualActiveProvince")
+    public String profileTagsUsualActiveProvince;
 
     @NameInMap("relevanceScoreFmt")
     public String relevanceScoreFmt;
@@ -289,6 +322,14 @@ public class YuqingMessage extends TeaModel {
     }
     public Long getAuthorFriendsCount() {
         return this.authorFriendsCount;
+    }
+
+    public YuqingMessage setAuthorGender(String authorGender) {
+        this.authorGender = authorGender;
+        return this;
+    }
+    public String getAuthorGender() {
+        return this.authorGender;
     }
 
     public YuqingMessage setAuthorId(String authorId) {
@@ -643,6 +684,14 @@ public class YuqingMessage extends TeaModel {
         return this.imageCount;
     }
 
+    public YuqingMessage setIpLocation(String ipLocation) {
+        this.ipLocation = ipLocation;
+        return this;
+    }
+    public String getIpLocation() {
+        return this.ipLocation;
+    }
+
     public YuqingMessage setMediaHosts(java.util.List<String> mediaHosts) {
         this.mediaHosts = mediaHosts;
         return this;
@@ -729,6 +778,78 @@ public class YuqingMessage extends TeaModel {
     }
     public java.util.List<String> getOriginalMedia() {
         return this.originalMedia;
+    }
+
+    public YuqingMessage setProfileTagsAgeGroup(String profileTagsAgeGroup) {
+        this.profileTagsAgeGroup = profileTagsAgeGroup;
+        return this;
+    }
+    public String getProfileTagsAgeGroup() {
+        return this.profileTagsAgeGroup;
+    }
+
+    public YuqingMessage setProfileTagsAgeLayer(String profileTagsAgeLayer) {
+        this.profileTagsAgeLayer = profileTagsAgeLayer;
+        return this;
+    }
+    public String getProfileTagsAgeLayer() {
+        return this.profileTagsAgeLayer;
+    }
+
+    public YuqingMessage setProfileTagsBizPref(String profileTagsBizPref) {
+        this.profileTagsBizPref = profileTagsBizPref;
+        return this;
+    }
+    public String getProfileTagsBizPref() {
+        return this.profileTagsBizPref;
+    }
+
+    public YuqingMessage setProfileTagsCityLine(String profileTagsCityLine) {
+        this.profileTagsCityLine = profileTagsCityLine;
+        return this;
+    }
+    public String getProfileTagsCityLine() {
+        return this.profileTagsCityLine;
+    }
+
+    public YuqingMessage setProfileTagsPltCert(String profileTagsPltCert) {
+        this.profileTagsPltCert = profileTagsPltCert;
+        return this;
+    }
+    public String getProfileTagsPltCert() {
+        return this.profileTagsPltCert;
+    }
+
+    public YuqingMessage setProfileTagsRegisteredAge(String profileTagsRegisteredAge) {
+        this.profileTagsRegisteredAge = profileTagsRegisteredAge;
+        return this;
+    }
+    public String getProfileTagsRegisteredAge() {
+        return this.profileTagsRegisteredAge;
+    }
+
+    public YuqingMessage setProfileTagsUserInterest(String profileTagsUserInterest) {
+        this.profileTagsUserInterest = profileTagsUserInterest;
+        return this;
+    }
+    public String getProfileTagsUserInterest() {
+        return this.profileTagsUserInterest;
+    }
+
+    public YuqingMessage setProfileTagsUsualActiveCity(String profileTagsUsualActiveCity) {
+        this.profileTagsUsualActiveCity = profileTagsUsualActiveCity;
+        return this;
+    }
+    public String getProfileTagsUsualActiveCity() {
+        return this.profileTagsUsualActiveCity;
+    }
+
+    public YuqingMessage setProfileTagsUsualActiveProvince(String profileTagsUsualActiveProvince) {
+        this.profileTagsUsualActiveProvince = profileTagsUsualActiveProvince;
+        return this;
+    }
+    public String getProfileTagsUsualActiveProvince() {
+        return this.profileTagsUsualActiveProvince;
     }
 
     public YuqingMessage setRelevanceScoreFmt(String relevanceScoreFmt) {
