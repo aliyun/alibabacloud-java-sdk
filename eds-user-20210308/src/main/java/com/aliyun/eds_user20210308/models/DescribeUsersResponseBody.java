@@ -45,7 +45,73 @@ public class DescribeUsersResponseBody extends TeaModel {
         return this.users;
     }
 
+    public static class DescribeUsersResponseBodyUsersGroups extends TeaModel {
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("GroupName")
+        public String groupName;
+
+        public static DescribeUsersResponseBodyUsersGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersResponseBodyUsersGroups self = new DescribeUsersResponseBodyUsersGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersResponseBodyUsersGroups setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public DescribeUsersResponseBodyUsersGroups setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+    }
+
+    public static class DescribeUsersResponseBodyUsersOrgs extends TeaModel {
+        @NameInMap("OrgId")
+        public String orgId;
+
+        @NameInMap("OrgName")
+        public String orgName;
+
+        public static DescribeUsersResponseBodyUsersOrgs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUsersResponseBodyUsersOrgs self = new DescribeUsersResponseBodyUsersOrgs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUsersResponseBodyUsersOrgs setOrgId(String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        public DescribeUsersResponseBodyUsersOrgs setOrgName(String orgName) {
+            this.orgName = orgName;
+            return this;
+        }
+        public String getOrgName() {
+            return this.orgName;
+        }
+
+    }
+
     public static class DescribeUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("Address")
+        public String address;
+
+        @NameInMap("Avatar")
+        public String avatar;
+
         /**
          * <p>The email address.</p>
          */
@@ -57,6 +123,9 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         @NameInMap("EndUserId")
         public String endUserId;
+
+        @NameInMap("Groups")
+        public java.util.List<DescribeUsersResponseBodyUsersGroups> groups;
 
         /**
          * <p>The ID of the user.</p>
@@ -70,6 +139,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("IsTenantManager")
         public Boolean isTenantManager;
 
+        @NameInMap("JobNumber")
+        public String jobNumber;
+
         /**
          * <p>The nickname of the user.</p>
          */
@@ -81,6 +153,9 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         @NameInMap("OrgId")
         public String orgId;
+
+        @NameInMap("Orgs")
+        public java.util.List<DescribeUsersResponseBodyUsersOrgs> orgs;
 
         /**
          * <p>The type of the convenience account.</p>
@@ -142,6 +217,22 @@ public class DescribeUsersResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeUsersResponseBodyUsers setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public DescribeUsersResponseBodyUsers setAvatar(String avatar) {
+            this.avatar = avatar;
+            return this;
+        }
+        public String getAvatar() {
+            return this.avatar;
+        }
+
         public DescribeUsersResponseBodyUsers setEmail(String email) {
             this.email = email;
             return this;
@@ -156,6 +247,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        public DescribeUsersResponseBodyUsers setGroups(java.util.List<DescribeUsersResponseBodyUsersGroups> groups) {
+            this.groups = groups;
+            return this;
+        }
+        public java.util.List<DescribeUsersResponseBodyUsersGroups> getGroups() {
+            return this.groups;
         }
 
         public DescribeUsersResponseBodyUsers setId(Long id) {
@@ -174,6 +273,14 @@ public class DescribeUsersResponseBody extends TeaModel {
             return this.isTenantManager;
         }
 
+        public DescribeUsersResponseBodyUsers setJobNumber(String jobNumber) {
+            this.jobNumber = jobNumber;
+            return this;
+        }
+        public String getJobNumber() {
+            return this.jobNumber;
+        }
+
         public DescribeUsersResponseBodyUsers setNickName(String nickName) {
             this.nickName = nickName;
             return this;
@@ -188,6 +295,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getOrgId() {
             return this.orgId;
+        }
+
+        public DescribeUsersResponseBodyUsers setOrgs(java.util.List<DescribeUsersResponseBodyUsersOrgs> orgs) {
+            this.orgs = orgs;
+            return this;
+        }
+        public java.util.List<DescribeUsersResponseBodyUsersOrgs> getOrgs() {
+            return this.orgs;
         }
 
         public DescribeUsersResponseBodyUsers setOwnerType(String ownerType) {
