@@ -40,6 +40,12 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ScaleApRoNumMax")
+    public String scaleApRoNumMax;
+
+    @NameInMap("ScaleApRoNumMin")
+    public String scaleApRoNumMin;
+
     /**
      * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
      */
@@ -145,6 +151,22 @@ public class ModifyDBClusterServerlessConfRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBClusterServerlessConfRequest setScaleApRoNumMax(String scaleApRoNumMax) {
+        this.scaleApRoNumMax = scaleApRoNumMax;
+        return this;
+    }
+    public String getScaleApRoNumMax() {
+        return this.scaleApRoNumMax;
+    }
+
+    public ModifyDBClusterServerlessConfRequest setScaleApRoNumMin(String scaleApRoNumMin) {
+        this.scaleApRoNumMin = scaleApRoNumMin;
+        return this;
+    }
+    public String getScaleApRoNumMin() {
+        return this.scaleApRoNumMin;
     }
 
     public ModifyDBClusterServerlessConfRequest setScaleMax(String scaleMax) {
