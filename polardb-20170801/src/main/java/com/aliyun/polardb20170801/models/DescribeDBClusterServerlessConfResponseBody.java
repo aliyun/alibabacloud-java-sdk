@@ -25,6 +25,12 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ScaleApRoNumMax")
+    public String scaleApRoNumMax;
+
+    @NameInMap("ScaleApRoNumMin")
+    public String scaleApRoNumMin;
+
     /**
      * <p>The maximum number of PCUs per node for scaling. Valid values: 1 PCU to 32 PCUs.</p>
      */
@@ -55,6 +61,9 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @NameInMap("SecondsUntilAutoPause")
     public String secondsUntilAutoPause;
 
+    @NameInMap("Switchs")
+    public String switchs;
+
     public static DescribeDBClusterServerlessConfResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterServerlessConfResponseBody self = new DescribeDBClusterServerlessConfResponseBody();
         return TeaModel.build(map, self);
@@ -82,6 +91,22 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setScaleApRoNumMax(String scaleApRoNumMax) {
+        this.scaleApRoNumMax = scaleApRoNumMax;
+        return this;
+    }
+    public String getScaleApRoNumMax() {
+        return this.scaleApRoNumMax;
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setScaleApRoNumMin(String scaleApRoNumMin) {
+        this.scaleApRoNumMin = scaleApRoNumMin;
+        return this;
+    }
+    public String getScaleApRoNumMin() {
+        return this.scaleApRoNumMin;
     }
 
     public DescribeDBClusterServerlessConfResponseBody setScaleMax(String scaleMax) {
@@ -122,6 +147,14 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     }
     public String getSecondsUntilAutoPause() {
         return this.secondsUntilAutoPause;
+    }
+
+    public DescribeDBClusterServerlessConfResponseBody setSwitchs(String switchs) {
+        this.switchs = switchs;
+        return this;
+    }
+    public String getSwitchs() {
+        return this.switchs;
     }
 
 }
