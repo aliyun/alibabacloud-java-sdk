@@ -148,6 +148,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("build_fee")
         public Double buildFee;
 
+        @NameInMap("business_trip_result")
+        public String businessTripResult;
+
         @NameInMap("cabin")
         public String cabin;
 
@@ -163,8 +166,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("change_fee")
         public Double changeFee;
 
+        @NameInMap("change_result")
+        public String changeResult;
+
         @NameInMap("corp_pay_order_fee")
         public Double corpPayOrderFee;
+
+        @NameInMap("corp_settle_price")
+        public Double corpSettlePrice;
 
         @NameInMap("cost_center")
         public String costCenter;
@@ -202,6 +211,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("discount")
         public String discount;
 
+        @NameInMap("exceed_reason")
+        public String exceedReason;
+
         @NameInMap("fee_type")
         public String feeType;
 
@@ -211,8 +223,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("index")
         public String index;
 
+        @NameInMap("ins_order_id")
+        public String insOrderId;
+
         @NameInMap("insurance_fee")
         public Double insuranceFee;
+
+        @NameInMap("insurance_number")
+        public String insuranceNumber;
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
@@ -222,6 +240,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("itinerary_price")
         public Double itineraryPrice;
+
+        @NameInMap("mileage")
+        public String mileage;
 
         @NameInMap("most_difference_dept_time")
         public String mostDifferenceDeptTime;
@@ -252,6 +273,12 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("over_apply_id")
         public String overApplyId;
+
+        @NameInMap("person_settle_price")
+        public Double personSettlePrice;
+
+        @NameInMap("pre_book_tip")
+        public String preBookTip;
 
         @NameInMap("primary_id")
         public Long primaryId;
@@ -309,6 +336,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("ticket_id")
         public String ticketId;
+
+        @NameInMap("trade")
+        public String trade;
 
         @NameInMap("traveler_id")
         public String travelerId;
@@ -514,6 +544,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.buildFee;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setBusinessTripResult(String businessTripResult) {
+            this.businessTripResult = businessTripResult;
+            return this;
+        }
+        public String getBusinessTripResult() {
+            return this.businessTripResult;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setCabin(String cabin) {
             this.cabin = cabin;
             return this;
@@ -554,12 +592,28 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.changeFee;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setChangeResult(String changeResult) {
+            this.changeResult = changeResult;
+            return this;
+        }
+        public String getChangeResult() {
+            return this.changeResult;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setCorpPayOrderFee(Double corpPayOrderFee) {
             this.corpPayOrderFee = corpPayOrderFee;
             return this;
         }
         public Double getCorpPayOrderFee() {
             return this.corpPayOrderFee;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setCorpSettlePrice(Double corpSettlePrice) {
+            this.corpSettlePrice = corpSettlePrice;
+            return this;
+        }
+        public Double getCorpSettlePrice() {
+            return this.corpSettlePrice;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setCostCenter(String costCenter) {
@@ -658,6 +712,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.discount;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setExceedReason(String exceedReason) {
+            this.exceedReason = exceedReason;
+            return this;
+        }
+        public String getExceedReason() {
+            return this.exceedReason;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setFeeType(String feeType) {
             this.feeType = feeType;
             return this;
@@ -682,12 +744,28 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
             return this.index;
         }
 
+        public FlightBillSettlementQueryResponseBodyModuleDataList setInsOrderId(String insOrderId) {
+            this.insOrderId = insOrderId;
+            return this;
+        }
+        public String getInsOrderId() {
+            return this.insOrderId;
+        }
+
         public FlightBillSettlementQueryResponseBodyModuleDataList setInsuranceFee(Double insuranceFee) {
             this.insuranceFee = insuranceFee;
             return this;
         }
         public Double getInsuranceFee() {
             return this.insuranceFee;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setInsuranceNumber(String insuranceNumber) {
+            this.insuranceNumber = insuranceNumber;
+            return this;
+        }
+        public String getInsuranceNumber() {
+            return this.insuranceNumber;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setInvoiceTitle(String invoiceTitle) {
@@ -712,6 +790,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getItineraryPrice() {
             return this.itineraryPrice;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setMileage(String mileage) {
+            this.mileage = mileage;
+            return this;
+        }
+        public String getMileage() {
+            return this.mileage;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setMostDifferenceDeptTime(String mostDifferenceDeptTime) {
@@ -792,6 +878,22 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getOverApplyId() {
             return this.overApplyId;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setPersonSettlePrice(Double personSettlePrice) {
+            this.personSettlePrice = personSettlePrice;
+            return this;
+        }
+        public Double getPersonSettlePrice() {
+            return this.personSettlePrice;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setPreBookTip(String preBookTip) {
+            this.preBookTip = preBookTip;
+            return this;
+        }
+        public String getPreBookTip() {
+            return this.preBookTip;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setPrimaryId(Long primaryId) {
@@ -936,6 +1038,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTicketId() {
             return this.ticketId;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setTrade(String trade) {
+            this.trade = trade;
+            return this;
+        }
+        public String getTrade() {
+            return this.trade;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {

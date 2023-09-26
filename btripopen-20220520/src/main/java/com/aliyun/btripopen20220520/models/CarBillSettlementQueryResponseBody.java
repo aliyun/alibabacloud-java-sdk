@@ -178,6 +178,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("dept_time")
         public String deptTime;
 
+        @NameInMap("driver_add_detail")
+        public String driverAddDetail;
+
+        @NameInMap("driver_add_fee")
+        public Double driverAddFee;
+
         @NameInMap("estimate_drive_distance")
         public String estimateDriveDistance;
 
@@ -192,6 +198,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
+
+        @NameInMap("level_name")
+        public String levelName;
 
         @NameInMap("memo")
         public String memo;
@@ -258,6 +267,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("sub_order_id")
         public String subOrderId;
+
+        @NameInMap("supplement_apply_id")
+        public String supplementApplyId;
 
         /**
          * <p>税率</p>
@@ -555,6 +567,22 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.deptTime;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setDriverAddDetail(String driverAddDetail) {
+            this.driverAddDetail = driverAddDetail;
+            return this;
+        }
+        public String getDriverAddDetail() {
+            return this.driverAddDetail;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setDriverAddFee(Double driverAddFee) {
+            this.driverAddFee = driverAddFee;
+            return this;
+        }
+        public Double getDriverAddFee() {
+            return this.driverAddFee;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setEstimateDriveDistance(String estimateDriveDistance) {
             this.estimateDriveDistance = estimateDriveDistance;
             return this;
@@ -593,6 +621,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setLevelName(String levelName) {
+            this.levelName = levelName;
+            return this;
+        }
+        public String getLevelName() {
+            return this.levelName;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setMemo(String memo) {
@@ -769,6 +805,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getSubOrderId() {
             return this.subOrderId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setSupplementApplyId(String supplementApplyId) {
+            this.supplementApplyId = supplementApplyId;
+            return this;
+        }
+        public String getSupplementApplyId() {
+            return this.supplementApplyId;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setTaxRate(String taxRate) {
