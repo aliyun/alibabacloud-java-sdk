@@ -5513,6 +5513,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScrollToken", request.scrollToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.searchLibName)) {
+            query.put("SearchLibName", request.searchLibName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
             query.put("SortBy", request.sortBy);
         }
