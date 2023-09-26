@@ -159,6 +159,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("btrip_coupon_fee")
         public Double btripCouponFee;
 
+        @NameInMap("business_trip_result")
+        public String businessTripResult;
+
         @NameInMap("cabin")
         public String cabin;
 
@@ -173,6 +176,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("change_fee")
         public Double changeFee;
+
+        @NameInMap("change_result")
+        public String changeResult;
 
         @NameInMap("corp_pay_order_fee")
         public Double corpPayOrderFee;
@@ -212,6 +218,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("discount")
         public String discount;
+
+        @NameInMap("exceed_reason")
+        public String exceedReason;
 
         @NameInMap("fee_type")
         public String feeType;
@@ -272,6 +281,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("refund_fee")
         public Double refundFee;
+
+        @NameInMap("refund_result")
+        public String refundResult;
 
         @NameInMap("remark")
         public String remark;
@@ -525,6 +537,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.btripCouponFee;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setBusinessTripResult(String businessTripResult) {
+            this.businessTripResult = businessTripResult;
+            return this;
+        }
+        public String getBusinessTripResult() {
+            return this.businessTripResult;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setCabin(String cabin) {
             this.cabin = cabin;
             return this;
@@ -563,6 +583,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getChangeFee() {
             return this.changeFee;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setChangeResult(String changeResult) {
+            this.changeResult = changeResult;
+            return this;
+        }
+        public String getChangeResult() {
+            return this.changeResult;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setCorpPayOrderFee(Double corpPayOrderFee) {
@@ -667,6 +695,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getDiscount() {
             return this.discount;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setExceedReason(String exceedReason) {
+            this.exceedReason = exceedReason;
+            return this;
+        }
+        public String getExceedReason() {
+            return this.exceedReason;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setFeeType(String feeType) {
@@ -827,6 +863,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getRefundFee() {
             return this.refundFee;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setRefundResult(String refundResult) {
+            this.refundResult = refundResult;
+            return this;
+        }
+        public String getRefundResult() {
+            return this.refundResult;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setRemark(String remark) {

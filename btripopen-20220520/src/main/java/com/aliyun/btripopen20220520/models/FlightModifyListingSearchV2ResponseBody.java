@@ -859,6 +859,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_time")
         public String arrTime;
 
+        @NameInMap("cabinClass")
+        public String cabinClass;
+
+        @NameInMap("cabinClassName")
+        public String cabinClassName;
+
         @NameInMap("dep_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListDepAirportInfo depAirportInfo;
 
@@ -957,6 +963,22 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         }
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightList setCabinClass(String cabinClass) {
+            this.cabinClass = cabinClass;
+            return this;
+        }
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightList setCabinClassName(String cabinClassName) {
+            this.cabinClassName = cabinClassName;
+            return this;
+        }
+        public String getCabinClassName() {
+            return this.cabinClassName;
         }
 
         public FlightModifyListingSearchV2ResponseBodyModuleDirectFlightList setDepAirportInfo(FlightModifyListingSearchV2ResponseBodyModuleDirectFlightListDepAirportInfo depAirportInfo) {
@@ -1904,6 +1926,12 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         @NameInMap("arr_time")
         public String arrTime;
 
+        @NameInMap("cabinClass")
+        public String cabinClass;
+
+        @NameInMap("cabinClassName")
+        public String cabinClassName;
+
         @NameInMap("dep_airport_info")
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListDepAirportInfo depAirportInfo;
 
@@ -2002,6 +2030,22 @@ public class FlightModifyListingSearchV2ResponseBody extends TeaModel {
         }
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightList setCabinClass(String cabinClass) {
+            this.cabinClass = cabinClass;
+            return this;
+        }
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightList setCabinClassName(String cabinClassName) {
+            this.cabinClassName = cabinClassName;
+            return this;
+        }
+        public String getCabinClassName() {
+            return this.cabinClassName;
         }
 
         public FlightModifyListingSearchV2ResponseBodyModuleTransferFlightList setDepAirportInfo(FlightModifyListingSearchV2ResponseBodyModuleTransferFlightListDepAirportInfo depAirportInfo) {

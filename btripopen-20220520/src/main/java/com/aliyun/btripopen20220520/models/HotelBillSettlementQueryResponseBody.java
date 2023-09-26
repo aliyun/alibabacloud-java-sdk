@@ -106,6 +106,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         public String billRecordTime;
 
+        @NameInMap("book_reason")
+        public String bookReason;
+
         @NameInMap("book_time")
         public String bookTime;
 
@@ -117,6 +120,15 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("booker_name")
         public String bookerName;
+
+        @NameInMap("brand_group")
+        public String brandGroup;
+
+        @NameInMap("brand_name")
+        public String brandName;
+
+        @NameInMap("business_trip_result")
+        public String businessTripResult;
 
         @NameInMap("capital_direction")
         public String capitalDirection;
@@ -136,6 +148,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("city_code")
         public String cityCode;
 
+        @NameInMap("city_county")
+        public String cityCounty;
+
+        @NameInMap("city_county_code")
+        public String cityCountyCode;
+
         @NameInMap("corp_refund_fee")
         public Double corpRefundFee;
 
@@ -153,6 +171,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("department_id")
         public String departmentId;
+
+        @NameInMap("exceed_reason")
+        public String exceedReason;
 
         @NameInMap("fee_type")
         public String feeType;
@@ -354,6 +375,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.billRecordTime;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBookReason(String bookReason) {
+            this.bookReason = bookReason;
+            return this;
+        }
+        public String getBookReason() {
+            return this.bookReason;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setBookTime(String bookTime) {
             this.bookTime = bookTime;
             return this;
@@ -384,6 +413,30 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getBookerName() {
             return this.bookerName;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBrandGroup(String brandGroup) {
+            this.brandGroup = brandGroup;
+            return this;
+        }
+        public String getBrandGroup() {
+            return this.brandGroup;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBrandName(String brandName) {
+            this.brandName = brandName;
+            return this;
+        }
+        public String getBrandName() {
+            return this.brandName;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBusinessTripResult(String businessTripResult) {
+            this.businessTripResult = businessTripResult;
+            return this;
+        }
+        public String getBusinessTripResult() {
+            return this.businessTripResult;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setCapitalDirection(String capitalDirection) {
@@ -434,6 +487,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.cityCode;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCityCounty(String cityCounty) {
+            this.cityCounty = cityCounty;
+            return this;
+        }
+        public String getCityCounty() {
+            return this.cityCounty;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCityCountyCode(String cityCountyCode) {
+            this.cityCountyCode = cityCountyCode;
+            return this;
+        }
+        public String getCityCountyCode() {
+            return this.cityCountyCode;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setCorpRefundFee(Double corpRefundFee) {
             this.corpRefundFee = corpRefundFee;
             return this;
@@ -480,6 +549,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getDepartmentId() {
             return this.departmentId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setExceedReason(String exceedReason) {
+            this.exceedReason = exceedReason;
+            return this;
+        }
+        public String getExceedReason() {
+            return this.exceedReason;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setFeeType(String feeType) {
