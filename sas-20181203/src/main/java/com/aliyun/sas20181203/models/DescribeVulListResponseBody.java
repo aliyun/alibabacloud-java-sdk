@@ -380,6 +380,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("EmgProof")
+        public String emgProof;
+
         /**
          * <p>The public IP address of the asset that is associated with the vulnerability.</p>
          */
@@ -448,6 +451,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @NameInMap("Tag")
         public String tag;
 
+        @NameInMap("Target")
+        public String target;
+
         /**
          * <p>The CVE list.</p>
          */
@@ -481,6 +487,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeVulListResponseBodyVulRecordsExtendContentJson setEmgProof(String emgProof) {
+            this.emgProof = emgProof;
+            return this;
+        }
+        public String getEmgProof() {
+            return this.emgProof;
         }
 
         public DescribeVulListResponseBodyVulRecordsExtendContentJson setIp(String ip) {
@@ -553,6 +567,14 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public DescribeVulListResponseBodyVulRecordsExtendContentJson setTarget(String target) {
+            this.target = target;
+            return this;
+        }
+        public String getTarget() {
+            return this.target;
         }
 
         public DescribeVulListResponseBodyVulRecordsExtendContentJson setCveList(java.util.List<String> cveList) {

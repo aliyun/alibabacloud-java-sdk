@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOpaPluginStatusResponseBody extends TeaModel {
+    /**
+     * <p>The installation status of the components that are required for clusters protected by proactive defense for containers.</p>
+     */
     @NameInMap("InstallStatus")
     public java.util.List<GetOpaPluginStatusResponseBodyInstallStatus> installStatus;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,18 @@ public class GetOpaPluginStatusResponseBody extends TeaModel {
     }
 
     public static class GetOpaPluginStatusResponseBodyInstallStatus extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>Indicates whether the component is installed. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("InstallStatus")
         public Boolean installStatus;
 

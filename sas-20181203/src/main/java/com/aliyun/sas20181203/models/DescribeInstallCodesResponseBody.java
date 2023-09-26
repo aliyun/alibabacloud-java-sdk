@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstallCodesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the information about the installation command.</p>
+     * <p>The information about the installation commands.</p>
      */
     @NameInMap("InstallCodes")
     public java.util.List<DescribeInstallCodesResponseBodyInstallCodes> installCodes;
@@ -39,13 +39,13 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
 
     public static class DescribeInstallCodesResponseBodyInstallCodes extends TeaModel {
         /**
-         * <p>The installation verification code for you to manually install the Security Center agent.</p>
+         * <p>The verification code for you to manually install the Security Center agent.</p>
          */
         @NameInMap("CaptchaCode")
         public String captchaCode;
 
         /**
-         * <p>The timestamp when the installation command expires. Unit: milliseconds.</p>
+         * <p>The timestamp generated when the commands used to install the Security Center agent expire. Unit: milliseconds.</p>
          */
         @NameInMap("ExpiredDate")
         public Long expiredDate;
@@ -65,20 +65,24 @@ public class DescribeInstallCodesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether an image is used to install the Security Center agent. Valid values:</p>
          * <br>
-         * <p>*   **true**: An image is used to install the Security Center agent.</p>
-         * <p>*   **false**: An image is not used to install the Security Center agent.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("OnlyImage")
         public Boolean onlyImage;
 
         /**
          * <p>The operating system of the server. Valid values:</p>
-         * <p>*   **linux**: Linux.</p>
-         * <p>*   **windows**: Windows.</p>
+         * <br>
+         * <p>*   **linux**</p>
+         * <p>*   **windows**</p>
          */
         @NameInMap("Os")
         public String os;
 
+        /**
+         * <p>The name of the proxy cluster.</p>
+         */
         @NameInMap("ProxyCluster")
         public String proxyCluster;
 

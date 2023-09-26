@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesRequest extends TeaModel {
     /**
-     * <p>The search conditions that are used to filter assets. The value of this parameter is in the JSON format and is case-sensitive.</p>
+     * <p>The search conditions. The value of this parameter is in the JSON format and is case-sensitive.</p>
      * <br>
-     * <p>> A search condition can be an instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.</p>
+     * <p>>  You can search for an asset by using the search conditions, such as the instance ID, instance name, VPC ID, region, or public IP address. You can call the [DescribeCriteria](~~149773~~) operation to query the supported search conditions.</p>
      */
     @NameInMap("Criteria")
     public String criteria;
@@ -19,7 +19,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The importance level of the asset. Valid values:</p>
+     * <p>The importance of the asset. Valid values:</p>
      * <br>
      * <p>*   **2**: an important asset</p>
      * <p>*   **1**: a common asset</p>
@@ -38,10 +38,10 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The logical operator that you want to use to evaluate multiple search conditions. Default value: **OR**. Valid values:</p>
+     * <p>The logical relationship among multiple search conditions. Valid values:</p>
      * <br>
-     * <p>*   **OR**: The search conditions are evaluated by using a logical **OR**.</p>
-     * <p>*   **AND**: The search conditions are evaluated by using a logical **AND**.</p>
+     * <p>*   **OR**: The logical relationship among search conditions is **OR**.</p>
+     * <p>*   **AND**: The logical relationship among search conditions is **AND**.</p>
      */
     @NameInMap("LogicalExp")
     public String logicalExp;
@@ -50,19 +50,22 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
      * <p>The type of the assets that you want to query. Valid values:</p>
      * <br>
      * <p>*   **ecs**: servers</p>
-     * <p>*   **cloud_product**: Alibaba Cloud services</p>
+     * <p>*   **cloud_product**: Alibaba Cloud service</p>
      */
     @NameInMap("MachineTypes")
     public String machineTypes;
 
+    /**
+     * <p>使用NextToken方式下返回的NextToken值。第一次拉取传空。</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>Specifies whether to internationalize the name of the **default** group. Default value: **false**. Valid values:</p>
+     * <p>Specifies whether to internationalize the name of the default group. Valid values:</p>
      * <br>
-     * <p>*   **true**: The system returns the Chinese name of the default group for the **GroupTrace** response parameter.********</p>
-     * <p>*   **false**: The system returns default for the **GroupTrace** response parameter.</p>
+     * <p>*   **true**: The system returns the Chinese name of the default group for the GroupTrace response parameter.</p>
+     * <p>*   **false**: The system returns default for the GroupTrace response parameter.</p>
      */
     @NameInMap("NoGroupTrace")
     public Boolean noGroupTrace;
@@ -79,9 +82,19 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>资源目录成员账号主账号ID。</p>
+     * <p>>调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
+    /**
+     * <p>是否使用NextToken方式拉取资产列表数据。如果使用此参数TotalCount不再返回。取值：</p>
+     * <br>
+     * <p>- **true**：使用NextToken方式</p>
+     * <p>- **false**：不使用NextToken方式</p>
+     */
     @NameInMap("UseNextToken")
     public Boolean useNextToken;
 

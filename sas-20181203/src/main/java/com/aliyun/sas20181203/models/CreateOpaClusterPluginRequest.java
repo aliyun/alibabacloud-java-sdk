@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateOpaClusterPluginRequest extends TeaModel {
+    /**
+     * <p>The cluster IDs.</p>
+     * <br>
+     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
 

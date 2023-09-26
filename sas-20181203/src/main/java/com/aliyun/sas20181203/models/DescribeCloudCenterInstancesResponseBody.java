@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     /**
-     * <p>An array that consists of the details about the assets.</p>
+     * <p>An array that consists of the details about the asset.</p>
      */
     @NameInMap("Instances")
     public java.util.List<DescribeCloudCenterInstancesResponseBodyInstances> instances;
@@ -23,10 +23,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: The request was successful.</p>
-     * <p>*   **false**: The request failed.</p>
+     * <p>*   **true**: The call is successful.</p>
+     * <p>*   **false**: The call fails.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -83,7 +83,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          * <br>
          * <p>*   **0**: an ECS instance</p>
          * <p>*   **1**: a Server Load Balancer (SLB) instance</p>
-         * <p>*   **2**: a NAT gateway</p>
+         * <p>*   **2**: a Network Address Translation (NAT) gateway</p>
          * <p>*   **3**: an ApsaraDB RDS instance</p>
          * <p>*   **4**: an ApsaraDB for MongoDB instance</p>
          * <p>*   **5**: an ApsaraDB for Redis instance</p>
@@ -94,19 +94,20 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String assetType;
 
         /**
-         * <p>The timestamp when Security Center is authorized to scan the asset. Unit: milliseconds.</p>
+         * <p>The timestamp when Security Center is authorized to scan the asset.</p>
          */
         @NameInMap("AuthModifyTime")
         public Long authModifyTime;
 
         /**
-         * <p>The edition of Security Center that is authorized to protect the asset. Valid values:</p>
+         * <p>The edition of Security Center that is authorized to scan the asset. Valid values:</p>
          * <br>
          * <p>*   **1**: Basic edition</p>
          * <p>*   **6**: Anti-virus edition</p>
          * <p>*   **5**: Advanced edition</p>
          * <p>*   **3**: Enterprise edition</p>
          * <p>*   **7**: Ultimate edition</p>
+         * <p>*   **10**: Value-added Plan edition</p>
          */
         @NameInMap("AuthVersion")
         public Integer authVersion;
@@ -125,10 +126,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String authVersionName;
 
         /**
-         * <p>Indicates whether Security Center is authorized to protect the asset. Valid values:</p>
+         * <p>Indicates whether Security Center is authorized to scan the asset. Valid values:</p>
          * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>*   **true**: Security Center is authorized to scan the asset.</p>
+         * <p>*   **false**: Security Center is not authorized to scan the asset.</p>
          */
         @NameInMap("Bind")
         public Boolean bind;
@@ -156,7 +157,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>The number of the CPU cores for the asset.</p>
+         * <p>The number of the CPU cores used by the asset.</p>
          */
         @NameInMap("Cores")
         public Integer cores;
@@ -176,8 +177,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asset is exposed. Valid values:</p>
          * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <p>*   **0**: The asset is not exposed.</p>
+         * <p>*   **1**: The asset is exposed.</p>
          */
         @NameInMap("ExposedStatus")
         public Integer exposedStatus;
@@ -185,8 +186,8 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the asset is an Alibaba Cloud asset. Valid values:</p>
          * <br>
-         * <p>*   **0**: yes</p>
-         * <p>*   **1**: no</p>
+         * <p>*   **0**: The asset is an Alibaba Cloud asset.</p>
+         * <p>*   **1**: The asset is not an Alibaba Cloud asset.</p>
          */
         @NameInMap("Flag")
         public Integer flag;
@@ -204,7 +205,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String groupTrace;
 
         /**
-         * <p>Indicates whether baseline risk items are detected on the asset. Valid values:</p>
+         * <p>Indicates whether baseline risks are detected on the asset. Valid values:</p>
          * <br>
          * <p>*   **YES**</p>
          * <p>*   **NO**</p>
@@ -219,7 +220,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer healthCheckCount;
 
         /**
-         * <p>The importance level of the asset. Valid values:</p>
+         * <p>The importance of the asset. Valid values:</p>
          * <br>
          * <p>*   **2**: an important asset</p>
          * <p>*   **1**: a common asset</p>
@@ -277,13 +278,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Long lastLoginTimestamp;
 
         /**
-         * <p>The MAC address of the system.</p>
+         * <p>The MAC addresses of the system.</p>
          */
         @NameInMap("MacListString")
         public String macListString;
 
         /**
-         * <p>The memory size. Unit: MB.</p>
+         * <p>The size of the memory. Unit: MB.</p>
          */
         @NameInMap("Mem")
         public Integer mem;
@@ -295,7 +296,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String os;
 
         /**
-         * <p>The version of the operating system that the asset runs.</p>
+         * <p>The kernel version of the asset.</p>
          */
         @NameInMap("OsName")
         public String osName;
@@ -325,25 +326,25 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String regionName;
 
         /**
-         * <p>The statistics about baseline risks that are detected on the asset. The value of this parameter is in the JSON format and contains the following fields:</p>
+         * <p>The total number of baseline risks that are detected on the asset. The value of this parameter is in the JSON format and contains the following fields:</p>
          * <br>
          * <p>*   **account**: the number of accounts that are used to log on from unapproved logon locations and whose passwords are cracked</p>
          * <p>*   **appNum**: the number of scanners</p>
-         * <p>*   **asapVulCount**: the total number of high-risk vulnerabilities</p>
+         * <p>*   **asapVulCount**: the total number of high-severity vulnerabilities</p>
          * <p>*   **baselineHigh**: the number of high-risk baseline risks</p>
          * <p>*   **baselineLow**: the number of low-risk baseline risks</p>
          * <p>*   **baselineMedium**: the number of medium-risk baseline risks</p>
          * <p>*   **baselineNum**: the total number of baseline risks</p>
          * <p>*   **cmsNum**: the number of Web-CMS vulnerabilities</p>
-         * <p>*   **containerAsap**: the number of high-risk vulnerabilities that are detected on containers</p>
-         * <p>*   **containerLater**: the number of medium-risk vulnerabilities that are detected on containers</p>
-         * <p>*   **containerNntf**: the number of low-risk vulnerabilities that are detected on containers</p>
+         * <p>*   **containerAsap**: the number of high-severity vulnerabilities that are detected on containers</p>
+         * <p>*   **containerLater**: the number of medium-severity vulnerabilities that are detected on containers</p>
+         * <p>*   **containerNntf**: the number of low-severity vulnerabilities that are detected on containers</p>
          * <p>*   **containerRemind**: the number of alerts whose Emergency level is Reminder on containers</p>
-         * <p>*   **containerSerious**: the number of alerts whose Emergency level is Urgent on containers</p>
+         * <p>*   **containerSerious**: the number of alerts Emergency level is Urgent on containers</p>
          * <p>*   **containerSuspicious**: the number of alerts whose Emergency level is Suspicious on containers</p>
          * <p>*   **cveNum**: the number of Linux software vulnerabilities</p>
          * <p>*   **emgNum**: the number of urgent vulnerabilities</p>
-         * <p>*   **health**: the number of baseline risks that are unhandled</p>
+         * <p>*   **health**: the number of baseline alerts that are unhandled</p>
          * <p>*   **imageBaselineHigh**: the number of high-risk baseline risks that are detected on images</p>
          * <p>*   **imageBaselineLow**: the number of low-risk baseline risks that are detected on images</p>
          * <p>*   **imageBaselineMedium**: the number of medium-risk baseline risks that are detected on images</p>
@@ -351,12 +352,12 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          * <p>*   **imageMaliciousFileRemind**: the number of malicious files that are detected on images and have the Emergency level of Reminder</p>
          * <p>*   **imageMaliciousFileSerious**: the number of malicious files that are detected on images and have the Emergency level of Urgent</p>
          * <p>*   **imageMaliciousFileSuspicious**: the number of malicious files that are detected on images and have the Emergency level of Suspicious</p>
-         * <p>*   **imageVulAsap**: the number of high-risk vulnerabilities that are detected on images</p>
-         * <p>*   **imageVulLater**: the number of medium-risk vulnerabilities that are detected on an image</p>
-         * <p>*   **imageVulNntf**: the number of low-risk vulnerabilities that are detected on an image</p>
-         * <p>*   **laterVulCount**: the number of medium-risk vulnerabilities</p>
+         * <p>*   **imageVulAsap**: the number of high-severity vulnerabilities that are detected on images</p>
+         * <p>*   **imageVulLater**: the number of medium-severity vulnerabilities that are detected on an image</p>
+         * <p>*   **imageVulNntf**: the number of low-severity vulnerabilities that are detected on an image</p>
+         * <p>*   **laterVulCount**: the number of medium-severity vulnerabilities</p>
          * <p>*   **newSuspicious**: the number of alerts</p>
-         * <p>*   **nntfVulCount**: the number of low-risk vulnerabilities</p>
+         * <p>*   **nntfVulCount**: the number of low-severity vulnerabilities.</p>
          * <p>*   **remindNum**: the number of alerts whose Emergency level is Reminder</p>
          * <p>*   **scaNum**: the number of vulnerabilities that are detected based on software component analysis</p>
          * <p>*   **seriousNum**: the number of alerts whose Emergency level is Urgent</p>
@@ -364,7 +365,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          * <p>*   **suspicious**: the total number of alerts</p>
          * <p>*   **sysNum**: the number of Windows system vulnerabilities</p>
          * <p>*   **trojan**: the number of trojans</p>
-         * <p>*   **uuid**: the UUID of the asset</p>
+         * <p>*   **uuid**: the UUIDs of assets</p>
          * <p>*   **vul**: the number of vulnerabilities</p>
          * <p>*   **weakPWNum**: the number of weak passwords</p>
          */
@@ -414,30 +415,23 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public String uuid;
 
         /**
-         * <p>The category of the service provider (SP) for the asset. Valid values:</p>
+         * <p>The type of the asset by source. Valid values:</p>
          * <br>
-         * <p>*   **0**: The asset is provided by Alibaba Cloud.</p>
-         * <p>*   **1**: The asset is not provided by Alibaba Cloud.</p>
-         * <p>*   **2**: The asset resides in a data center.</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset.</p>
-         * <p>*   **8**: a light-weight asset.</p>
+         * <p>*   **0**: an ECS instance.</p>
+         * <p>*   **1**: a third-party cloud server.</p>
+         * <p>*   **2**: a server in a data center.</p>
+         * <p>*   **3**: a server deployed on Tencent Cloud. This value is returned only after the asset is protected by Security Center.</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;
 
         /**
-         * <p>The name of the SP for the asset.</p>
+         * <p>The name of the service provider (SP) for the asset.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   **ALIYUN**: Alibaba Cloud</p>
-         * <p>*   **OUT**: a third-party service provider</p>
-         * <p>*   **IDC**: a data center</p>
          * <p>*   **TENCENT**: Tencent Cloud</p>
-         * <p>*   **HUAWEICLOUD**: HUAWEI CLOUD</p>
-         * <p>*   **Microsoft**: Microsoft Azure</p>
-         * <p>*   **AWS**: Amazon Web Services (AWS)</p>
-         * <p>*   **TRIPARTITE**: a lightweight server</p>
+         * <p>*   **ALIYUN**: Alibaba Cloud</p>
          */
         @NameInMap("VendorName")
         public String vendorName;
@@ -859,6 +853,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @NameInMap("CurrentPage")
         public Integer currentPage;
 
+        /**
+         * <p>使用NextToken方式下返回的NextToken值。</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 

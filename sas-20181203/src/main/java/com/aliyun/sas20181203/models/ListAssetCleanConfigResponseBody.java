@@ -4,12 +4,21 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListAssetCleanConfigResponseBody extends TeaModel {
+    /**
+     * <p>The number of cleanup configurations.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The asset cleanup configurations.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListAssetCleanConfigResponseBodyData> data;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,12 +52,26 @@ public class ListAssetCleanConfigResponseBody extends TeaModel {
     }
 
     public static class ListAssetCleanConfigResponseBodyData extends TeaModel {
+        /**
+         * <p>The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.</p>
+         */
         @NameInMap("CleanDays")
         public Integer cleanDays;
 
+        /**
+         * <p>Indicates whether the configuration takes effect. Valid values:</p>
+         * <br>
+         * <p>*   **0**: The configuration does not take effect.</p>
+         * <p>*   **1**: The configuration takes effect.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The type of hosts that are cleaned.</p>
+         * <br>
+         * <p>*   The value is set to **1**, which indicates hosts whose provider cannot be identified.</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
