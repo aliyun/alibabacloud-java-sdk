@@ -19,6 +19,9 @@ public class SearchMediaRequest extends TeaModel {
     @NameInMap("ScrollToken")
     public String scrollToken;
 
+    @NameInMap("SearchLibName")
+    public String searchLibName;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -65,6 +68,14 @@ public class SearchMediaRequest extends TeaModel {
     }
     public String getScrollToken() {
         return this.scrollToken;
+    }
+
+    public SearchMediaRequest setSearchLibName(String searchLibName) {
+        this.searchLibName = searchLibName;
+        return this;
+    }
+    public String getSearchLibName() {
+        return this.searchLibName;
     }
 
     public SearchMediaRequest setSortBy(String sortBy) {
