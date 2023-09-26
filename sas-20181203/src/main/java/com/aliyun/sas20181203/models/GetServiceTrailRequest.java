@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetServiceTrailRequest extends TeaModel {
+    /**
+     * <p>The ID of the region in which the instance resides. Valid value:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: center.</p>
+     * <p>*   **ap-southeast-1**: Singapore.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

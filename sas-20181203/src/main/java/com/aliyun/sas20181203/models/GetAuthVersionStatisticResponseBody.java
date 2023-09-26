@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetAuthVersionStatisticResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics about the numbers of assets protected by each edition of Security Center.</p>
+     */
     @NameInMap("Statistics")
     public java.util.List<GetAuthVersionStatisticResponseBodyStatistics> statistics;
 
@@ -32,9 +38,22 @@ public class GetAuthVersionStatisticResponseBody extends TeaModel {
     }
 
     public static class GetAuthVersionStatisticResponseBodyStatistics extends TeaModel {
+        /**
+         * <p>The edition of Security Center. Valid values:</p>
+         * <br>
+         * <p>*   **1**: Basic edition (Unauthorized)</p>
+         * <p>*   **6**: Anti-virus edition</p>
+         * <p>*   **5**: Advanced edition</p>
+         * <p>*   **3**: Enterprise edition</p>
+         * <p>*   **7**: Ultimate edition</p>
+         * <p>*   **10**: Value-added Plan edition</p>
+         */
         @NameInMap("AuthVersion")
         public Integer authVersion;
 
+        /**
+         * <p>The number of authorized servers.</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

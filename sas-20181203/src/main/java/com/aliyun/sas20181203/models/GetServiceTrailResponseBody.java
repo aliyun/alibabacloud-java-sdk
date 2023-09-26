@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetServiceTrailResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The configurations of the service trail.</p>
+     */
     @NameInMap("ServiceTrail")
     public GetServiceTrailResponseBodyServiceTrail serviceTrail;
 
@@ -32,12 +38,24 @@ public class GetServiceTrailResponseBody extends TeaModel {
     }
 
     public static class GetServiceTrailResponseBodyServiceTrail extends TeaModel {
+        /**
+         * <p>The status of the service trail. Valid values:</p>
+         * <br>
+         * <p>*   **on:**</p>
+         * <p>*   **off:**</p>
+         */
         @NameInMap("Config")
         public String config;
 
+        /**
+         * <p>The timestamp generated when the service trail was created. Unit: milliseconds.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The timestamp generated when the service trail was last updated. Unit: milliseconds.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

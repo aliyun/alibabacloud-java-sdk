@@ -68,7 +68,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         public Integer assetSubType;
 
         /**
-         * <p>The subtype name of the cloud asset.</p>
+         * <p>The name of the cloud asset subtype.</p>
          */
         @NameInMap("AssetSubTypeName")
         public String assetSubTypeName;
@@ -76,37 +76,37 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         /**
          * <p>The type of the cloud asset. Valid values:</p>
          * <br>
-         * <p>*   **0**: ECS</p>
-         * <p>*   **1**: SLB</p>
-         * <p>*   **3**: ApsaraDB RDS</p>
-         * <p>*   **4**: MongoDB</p>
-         * <p>*   **5**: Redis</p>
-         * <p>*   **6**: Container Registry</p>
-         * <p>*   **8**: ACK</p>
-         * <p>*   **9**: VPC</p>
-         * <p>*   **11**: ActionTrail</p>
-         * <p>*   **12**: CDN</p>
-         * <p>*   **13**: Certificate Management Service (formerly SSL Certificates Service)</p>
-         * <p>*   **14**: Apsara Devops</p>
-         * <p>*   **15**: RAM</p>
-         * <p>*   **16**: Anti-DDoS</p>
-         * <p>*   **17**: WAF</p>
-         * <p>*   **18**: OSS</p>
-         * <p>*   **19**: PolarDB</p>
-         * <p>*   **20**: ApsaraDB RDS for PostgreSQL</p>
-         * <p>*   **21**: MSE</p>
-         * <p>*   **22**: NAS</p>
-         * <p>*   **23**: DSC</p>
-         * <p>*   **24**: EIP</p>
-         * <p>*   **25**: IDaaS EIAM</p>
-         * <p>*   **26**: PolarDB-X</p>
-         * <p>*   **27**: Elasticsearch</p>
+         * <p>*   **0**: ECS.</p>
+         * <p>*   **1**: SLB.</p>
+         * <p>*   **3**: ApsaraDB RDS.</p>
+         * <p>*   **4**: ApsaraDB for MongoDB.</p>
+         * <p>*   **5**: ApsaraDB for Redis.</p>
+         * <p>*   **6**: Container Registry.</p>
+         * <p>*   **8**: Container Service for Kubernetes.</p>
+         * <p>*   **9**: VPC.</p>
+         * <p>*   **11**: ActionTrail.</p>
+         * <p>*   **12**: CDN.</p>
+         * <p>*   **13**: Certificate Management Service.</p>
+         * <p>*   **14**: Apsara Devops.</p>
+         * <p>*   **15**: RAM.</p>
+         * <p>*   **16**: Anti-DDoS.</p>
+         * <p>*   **17**: WAF.</p>
+         * <p>*   **18**: OSS.</p>
+         * <p>*   **19**: PolarDB.</p>
+         * <p>*   **20**: ApsaraDB RDS for PostgreSQL.</p>
+         * <p>*   **21**: MSE.</p>
+         * <p>*   **22**: NAS.</p>
+         * <p>*   **23**: DSC.</p>
+         * <p>*   **24**: EIP.</p>
+         * <p>*   **25**: IDaaS-EIAM.</p>
+         * <p>*   **26**: PolarDB-X.</p>
+         * <p>*   **27**: Elasticsearch.</p>
          */
         @NameInMap("AssetType")
         public Integer assetType;
 
         /**
-         * <p>The type name of the cloud asset.</p>
+         * <p>The name of the cloud asset type.</p>
          */
         @NameInMap("AssetTypeName")
         public String assetTypeName;
@@ -142,7 +142,7 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The region where the cloud asset resides.</p>
+         * <p>The region in which the cloud asset resides.</p>
          * <br>
          * <p>> For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).</p>
          */
@@ -167,11 +167,11 @@ public class GetCloudAssetDetailResponseBody extends TeaModel {
         /**
          * <p>The service provider of the cloud asset. Valid values:</p>
          * <br>
-         * <p>*   **0**: The asset is provided by Alibaba Cloud.</p>
-         * <p>*   **1**: The asset is not provided by Alibaba Cloud.</p>
-         * <p>*   **2**: The asset resides in a data center.</p>
-         * <p>*   **3**, **4**, **5**, and **7**: other cloud asset.</p>
-         * <p>*   **8**: The asset is a simple application server.</p>
+         * <p>*   **0**: Alibaba Cloud.</p>
+         * <p>*   **1**: service provider that is unrecognized.</p>
+         * <p>*   **2**: data center.</p>
+         * <p>*   **3**, **4**, **5**, and **7**: third-party service provider.</p>
+         * <p>*   **8**: simple application server.</p>
          */
         @NameInMap("Vendor")
         public Integer vendor;

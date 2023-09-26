@@ -4,18 +4,41 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class ListCriteriaStrategyRequest extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * <br>
+     * <p>>  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The name of the image.</p>
+     * <br>
+     * <p>>  You can call the [GetOpaClusterImageList](~~GetOpaClusterImageList~~) operation to query the names of images.</p>
+     */
     @NameInMap("ImageName")
     public String imageName;
 
+    /**
+     * <p>The tag that is added to the container.</p>
+     * <br>
+     * <p>>  You can call the [GetOpaClusterLabelList](~~GetOpaClusterLabelList~~) operation to query the tags that are added to containers.</p>
+     */
     @NameInMap("Label")
     public String label;
 
+    /**
+     * <p>The namespace of the cluster.</p>
+     * <br>
+     * <p>>  You can call the [GetOpaClusterNamespaceList](~~GetOpaClusterNamespaceList~~) operation to query the namespaces of clusters.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("StrategyName")
     public String strategyName;
 

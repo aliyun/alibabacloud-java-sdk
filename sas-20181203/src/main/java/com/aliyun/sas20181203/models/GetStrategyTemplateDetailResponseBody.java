@@ -4,18 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetStrategyTemplateDetailResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The details of the template.</p>
+     */
     @NameInMap("Data")
     public GetStrategyTemplateDetailResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +83,15 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailBaselineItem extends TeaModel {
+        /**
+         * <p>The unique identifier of the baseline check item.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the baseline check item.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -95,9 +119,19 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailBaseline extends TeaModel {
+        /**
+         * <p>The baseline items.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetStrategyTemplateDetailResponseBodyDataAlarmDetailBaselineItem> item;
 
+        /**
+         * <p>The severities of the baselines. Valid values:</p>
+         * <br>
+         * <p>*   **high**</p>
+         * <p>*   **medium**</p>
+         * <p>*   **low**</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -125,9 +159,15 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailMaliciousFileItem extends TeaModel {
+        /**
+         * <p>The unique identifier of the malicious sample.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the malicious sample.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -155,9 +195,15 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailMaliciousFile extends TeaModel {
+        /**
+         * <p>The items on which malicious samples are detected.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetStrategyTemplateDetailResponseBodyDataAlarmDetailMaliciousFileItem> item;
 
+        /**
+         * <p>The severities of the malicious samples.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -185,9 +231,15 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailVulItem extends TeaModel {
+        /**
+         * <p>The ID of the vulnerability.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The alias of the vulnerability.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -215,9 +267,15 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetailVul extends TeaModel {
+        /**
+         * <p>The items on which vulnerabilities are detected.</p>
+         */
         @NameInMap("Item")
         public java.util.List<GetStrategyTemplateDetailResponseBodyDataAlarmDetailVulItem> item;
 
+        /**
+         * <p>The severities of the vulnerabilities.</p>
+         */
         @NameInMap("RiskLevel")
         public java.util.List<String> riskLevel;
 
@@ -245,12 +303,21 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyDataAlarmDetail extends TeaModel {
+        /**
+         * <p>The configuration of the baseline.</p>
+         */
         @NameInMap("Baseline")
         public GetStrategyTemplateDetailResponseBodyDataAlarmDetailBaseline baseline;
 
+        /**
+         * <p>The configuration of the alert rule for the malicious sample.</p>
+         */
         @NameInMap("MaliciousFile")
         public GetStrategyTemplateDetailResponseBodyDataAlarmDetailMaliciousFile maliciousFile;
 
+        /**
+         * <p>The configuration of the vulnerability detection rule.</p>
+         */
         @NameInMap("Vul")
         public GetStrategyTemplateDetailResponseBodyDataAlarmDetailVul vul;
 
@@ -286,45 +353,97 @@ public class GetStrategyTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetStrategyTemplateDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The configuration of the rule.</p>
+         */
         @NameInMap("AlarmDetail")
         public GetStrategyTemplateDetailResponseBodyDataAlarmDetail alarmDetail;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>The name of the cluster.</p>
+         */
         @NameInMap("ClusterName")
         public String clusterName;
 
+        /**
+         * <p>The description of the rule.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The names of images.</p>
+         */
         @NameInMap("ImageName")
         public java.util.List<String> imageName;
 
+        /**
+         * <p>The tags that are added to the containers.</p>
+         */
         @NameInMap("Label")
         public java.util.List<String> label;
 
+        /**
+         * <p>Indicates whether the rule supports malicious Internet images. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("MaliciousImage")
         public Boolean maliciousImage;
 
+        /**
+         * <p>The namespaces.</p>
+         */
         @NameInMap("Namespace")
         public java.util.List<String> namespace;
 
+        /**
+         * <p>The action on requests. Valid values:</p>
+         * <br>
+         * <p>*   **1**: trigger alerts</p>
+         * <p>*   **2**: block</p>
+         * <p>*   **3**: allow</p>
+         */
         @NameInMap("RuleAction")
         public Integer ruleAction;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("StrategyId")
         public Long strategyId;
 
+        /**
+         * <p>The name of the rule.</p>
+         */
         @NameInMap("StrategyName")
         public String strategyName;
 
+        /**
+         * <p>The ID of the template.</p>
+         */
         @NameInMap("StrategyTemplateId")
         public Long strategyTemplateId;
 
+        /**
+         * <p>Indicates whether the rule supports unscanned images. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("UnScanedImage")
         public Boolean unScanedImage;
 
+        /**
+         * <p>The whitelists of tags that are added to images.</p>
+         */
         @NameInMap("WhiteList")
         public java.util.List<String> whiteList;
 

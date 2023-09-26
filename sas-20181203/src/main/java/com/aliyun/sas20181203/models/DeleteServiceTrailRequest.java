@@ -4,6 +4,12 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DeleteServiceTrailRequest extends TeaModel {
+    /**
+     * <p>The region in which your Security Center service is deployed. Valid values:</p>
+     * <br>
+     * <p>*   **cn-hangzhou**: center.</p>
+     * <p>*   **ap-southeast-1**: Singapore.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

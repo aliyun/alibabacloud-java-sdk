@@ -4,18 +4,36 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
+    /**
+     * <p>The response code. The status code **200** indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The information about baselines.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetOpaClusterBaseLineListResponseBodyData> data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +83,27 @@ public class GetOpaClusterBaseLineListResponseBody extends TeaModel {
     }
 
     public static class GetOpaClusterBaseLineListResponseBodyData extends TeaModel {
+        /**
+         * <p>The alias of the baseline.</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>The key of the baseline type.</p>
+         */
         @NameInMap("ClassKey")
         public String classKey;
 
+        /**
+         * <p>The key of the name for the baseline check item.</p>
+         */
         @NameInMap("ItemKey")
         public String itemKey;
 
+        /**
+         * <p>The key of the name for the baseline.</p>
+         */
         @NameInMap("NameKey")
         public String nameKey;
 
