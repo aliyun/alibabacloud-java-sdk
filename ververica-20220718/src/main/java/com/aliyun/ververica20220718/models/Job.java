@@ -67,6 +67,9 @@ public class Job extends TeaModel {
     @NameInMap("streamingResourceSetting")
     public StreamingResourceSetting streamingResourceSetting;
 
+    @NameInMap("userFlinkConf")
+    public java.util.Map<String, ?> userFlinkConf;
+
     public static Job build(java.util.Map<String, ?> map) throws Exception {
         Job self = new Job();
         return TeaModel.build(map, self);
@@ -238,6 +241,14 @@ public class Job extends TeaModel {
     }
     public StreamingResourceSetting getStreamingResourceSetting() {
         return this.streamingResourceSetting;
+    }
+
+    public Job setUserFlinkConf(java.util.Map<String, ?> userFlinkConf) {
+        this.userFlinkConf = userFlinkConf;
+        return this;
+    }
+    public java.util.Map<String, ?> getUserFlinkConf() {
+        return this.userFlinkConf;
     }
 
 }
