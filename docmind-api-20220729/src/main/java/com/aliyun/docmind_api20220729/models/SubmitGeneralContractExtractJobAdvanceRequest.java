@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220729.models;
 import com.aliyun.tea.*;
 
 public class SubmitGeneralContractExtractJobAdvanceRequest extends TeaModel {
+    @NameInMap("ContractModel")
+    public String contractModel;
+
     @NameInMap("FileName")
     public String fileName;
 
@@ -16,6 +19,14 @@ public class SubmitGeneralContractExtractJobAdvanceRequest extends TeaModel {
     public static SubmitGeneralContractExtractJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitGeneralContractExtractJobAdvanceRequest self = new SubmitGeneralContractExtractJobAdvanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitGeneralContractExtractJobAdvanceRequest setContractModel(String contractModel) {
+        this.contractModel = contractModel;
+        return this;
+    }
+    public String getContractModel() {
+        return this.contractModel;
     }
 
     public SubmitGeneralContractExtractJobAdvanceRequest setFileName(String fileName) {
