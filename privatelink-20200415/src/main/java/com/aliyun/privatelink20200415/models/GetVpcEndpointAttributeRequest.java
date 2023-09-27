@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetVpcEndpointAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the endpoint that you want to query.</p>
+     * <p>The ID of the endpoint whose attributes you want to query.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The status of the endpoint. Valid values:</p>
+     * <p>The region ID of the endpoint whose attributes you want to query.</p>
      * <br>
-     * <p>*   **Creating**: being created</p>
-     * <p>*   **Active**: available</p>
-     * <p>*   **Pending**: being modified</p>
-     * <p>*   **Deleting**: being deleted</p>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,64 +5,71 @@ import com.aliyun.tea.*;
 
 public class CreateVpcEndpointRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
      * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
-    @NameInMap("ClientToken")
-    public String clientToken;
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>The description of the endpoint.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     */
+    @NameInMap("EndpointDescription")
+    public String endpointDescription;
 
     /**
      * <p>The name of the endpoint.</p>
      * <br>
      * <p>The name must be 2 to 128 characters in length, and can contain digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
-    @NameInMap("DryRun")
-    public Boolean dryRun;
-
-    /**
-     * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
-     */
-    @NameInMap("EndpointDescription")
-    public String endpointDescription;
+    @NameInMap("EndpointName")
+    public String endpointName;
 
     /**
      * <p>The type of the endpoint.</p>
      * <br>
      * <p>Set the value to **Interface**. Then, you can specify Application Load Balancer (ALB) and Classic Load Balancer (CLB) instances as service resources for the endpoint service.</p>
      */
-    @NameInMap("EndpointName")
-    public String endpointName;
-
-    /**
-     * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to **1**.</p>
-     */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>Specifies whether to enable user authentication. This parameter is available in Security Token Service (STS) mode. Valid values:</p>
+     * <br>
+     * <p>*   **true**: enables user authentication. After user authentication is enabled, only the user who creates the endpoint can modify or delete the endpoint in STS mode.</p>
+     * <p>*   **false** (default): disables user authentication.</p>
      */
     @NameInMap("ProtectedEnabled")
     public Boolean protectedEnabled;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>The region ID of the endpoint.</p>
      * <br>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The domain name of the endpoint.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The information about the array object.</p>
+     * <p>The ID of the security group that is associated with the endpoint ENI. The security group can be used to control data transfer between the VPC and the endpoint ENI.</p>
      * <br>
      * <p>The endpoint can be associated with up to 10 security groups.</p>
      */
@@ -70,39 +77,37 @@ public class CreateVpcEndpointRequest extends TeaModel {
     public java.util.List<String> securityGroupId;
 
     /**
-     * <p>The name of the endpoint service with which the endpoint is associated.</p>
+     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>The zones where the endpoint is deployed.</p>
+     * <p>The name of the endpoint service with which the endpoint is associated.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
-     * <p>The key of the tag.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVpcEndpointRequestTag> tag;
 
     /**
-     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.</p>
+     * <p>The zones where the endpoint is deployed.</p>
      */
     @NameInMap("Zone")
     public java.util.List<CreateVpcEndpointRequestZone> zone;
 
     /**
-     * <p>The description of the endpoint.</p>
-     * <br>
-     * <p>The description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Set the value to **1**.</p>
      */
     @NameInMap("ZonePrivateIpAddressCount")
     public Long zonePrivateIpAddressCount;
@@ -234,13 +239,13 @@ public class CreateVpcEndpointRequest extends TeaModel {
 
     public static class CreateVpcEndpointRequestTag extends TeaModel {
         /**
-         * <p>The value of the tag.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -270,25 +275,23 @@ public class CreateVpcEndpointRequest extends TeaModel {
 
     public static class CreateVpcEndpointRequestZone extends TeaModel {
         /**
-         * <p>The ID of the zone in which the endpoint is deployed.</p>
-         * <br>
-         * <p>You can specify up to 10 zone IDs.</p>
+         * <p>The ID of the vSwitch where you want to create the endpoint ENI in the zone. You can specify up to 10 vSwitch IDs.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The IP address of the zone in which the endpoint is deployed.</p>
+         * <p>The ID of the zone in which the endpoint is deployed.</p>
          * <br>
-         * <p>You can specify up to 10 IP addresses.</p>
+         * <p>You can specify up to 10 zone IDs.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;
 
         /**
-         * <p>The ID of the security group that is associated with the endpoint ENI. The security group can be used to control data transfer between the VPC and the endpoint ENI.</p>
+         * <p>The IP address of the zone in which the endpoint is deployed.</p>
          * <br>
-         * <p>The endpoint can be associated with up to 10 security groups.</p>
+         * <p>You can specify up to 10 IP addresses.</p>
          */
         @NameInMap("ip")
         public String ip;

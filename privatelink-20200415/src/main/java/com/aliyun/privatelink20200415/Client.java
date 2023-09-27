@@ -93,7 +93,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The request ID.
+      * *   **AddZoneToVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpointZones](~~183560~~) operation to query the state of the zone.
+      *     *   If the zone is in the **Creating** state, the zone is being added.
+      *     *   If the zone is in the Wait state, the zone is added.
+      * *   You cannot repeatedly call the **AddZoneToVpcEndpoint** operation to add a zone to an endpoint within a specified period of time.
       *
       * @param request AddZoneToVpcEndpointRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -152,7 +155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The request ID.
+      * *   **AddZoneToVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpointZones](~~183560~~) operation to query the state of the zone.
+      *     *   If the zone is in the **Creating** state, the zone is being added.
+      *     *   If the zone is in the Wait state, the zone is added.
+      * *   You cannot repeatedly call the **AddZoneToVpcEndpoint** operation to add a zone to an endpoint within a specified period of time.
       *
       * @param request AddZoneToVpcEndpointRequest
       * @return AddZoneToVpcEndpointResponse
@@ -358,46 +364,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkProductOpenWithOptions(runtime);
     }
 
-    public CheckResourceSupportOperateResponse checkResourceSupportOperateWithOptions(CheckResourceSupportOperateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
-            query.put("ResourceId", request.resourceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
-            query.put("ResourceType", request.resourceType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
-            query.put("ZoneId", request.zoneId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CheckResourceSupportOperate"),
-            new TeaPair("version", "2020-04-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckResourceSupportOperateResponse());
-    }
-
-    public CheckResourceSupportOperateResponse checkResourceSupportOperate(CheckResourceSupportOperateRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.checkResourceSupportOperateWithOptions(request, runtime);
-    }
-
     /**
-      * The region ID of the endpoint.
-      * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+      * **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointAttribute](~~183568~~) operation to check whether the endpoint is created.
+      * *   If the endpoint is in the **Creating** state, the endpoint is being created.
+      * *   If the endpoint is in the **Active** state, the endpoint is created.
       *
       * @param request CreateVpcEndpointRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -488,8 +458,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The region ID of the endpoint.
-      * You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.
+      * **CreateIpv6Gateway** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointAttribute](~~183568~~) operation to check whether the endpoint is created.
+      * *   If the endpoint is in the **Creating** state, the endpoint is being created.
+      * *   If the endpoint is in the **Active** state, the endpoint is created.
       *
       * @param request CreateVpcEndpointRequest
       * @return CreateVpcEndpointResponse
@@ -500,7 +471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The resource group ID.
+      * **CreateVpcEndpointService** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointServiceAttribute](~~183542~~) operation to query the state of the endpoint service.
+      * *   If the endpoint service is in the **Creating** state, the endpoint service is being created.
+      * *   If the endpoint service is in the **Active** state, the endpoint service is created.
       *
       * @param request CreateVpcEndpointServiceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -579,7 +552,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The resource group ID.
+      * **CreateVpcEndpointService** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [GetVpcEndpointServiceAttribute](~~183542~~) operation to query the state of the endpoint service.
+      * *   If the endpoint service is in the **Creating** state, the endpoint service is being created.
+      * *   If the endpoint service is in the **Active** state, the endpoint service is created.
       *
       * @param request CreateVpcEndpointServiceRequest
       * @return CreateVpcEndpointServiceResponse
@@ -839,7 +814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 671231
+      * *   **DetachSecurityGroupFromVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpoints](~~183558~~) to check whether the endpoint is disassociated from the security group.
+      *     *   If the endpoint is in the **Pending** state, the endpoint is being disassociated from the security group.
+      *     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.
+      * *   You cannot repeatedly call the **DetachSecurityGroupFromVpcEndpoint** operation to disassociate an endpoint from a security group within a specified period of time.
       *
       * @param request DetachSecurityGroupFromVpcEndpointRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -890,7 +868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * 671231
+      * *   **DetachSecurityGroupFromVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListVpcEndpoints](~~183558~~) to check whether the endpoint is disassociated from the security group.
+      *     *   If the endpoint is in the **Pending** state, the endpoint is being disassociated from the security group.
+      *     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.
+      * *   You cannot repeatedly call the **DetachSecurityGroupFromVpcEndpoint** operation to disassociate an endpoint from a security group within a specified period of time.
       *
       * @param request DetachSecurityGroupFromVpcEndpointRequest
       * @return DetachSecurityGroupFromVpcEndpointResponse
@@ -969,9 +950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specifies whether to only precheck the request. Valid values:
-      * *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-      * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+      * > You can call this operation only when the state of the endpoint is **Connected** and the state of the zone that is associated with the endpoint is **Connected** or **Migrated**.
       *
       * @param request DisableVpcEndpointZoneConnectionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1030,9 +1009,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specifies whether to only precheck the request. Valid values:
-      * *   **true**: only prechecks the API request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-      * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
+      * > You can call this operation only when the state of the endpoint is **Connected** and the state of the zone that is associated with the endpoint is **Connected** or **Migrated**.
       *
       * @param request DisableVpcEndpointZoneConnectionRequest
       * @return DisableVpcEndpointZoneConnectionResponse
@@ -1265,10 +1242,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListVpcEndpointConnectionsResponse listVpcEndpointConnectionsWithOptions(ListVpcEndpointConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.connectionId)) {
-            query.put("ConnectionId", request.connectionId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.connectionStatus)) {
             query.put("ConnectionStatus", request.connectionStatus);
         }
@@ -1746,60 +1719,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listVpcEndpointsWithOptions(request, runtime);
     }
 
-    /**
-      * The ID of the request.
-      *
-      * @param request NotifyResourceAddressFamilyRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return NotifyResourceAddressFamilyResponse
-     */
-    public NotifyResourceAddressFamilyResponse notifyResourceAddressFamilyWithOptions(NotifyResourceAddressFamilyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.addressFamily)) {
-            query.put("AddressFamily", request.addressFamily);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.ipv6Address)) {
-            query.put("Ipv6Address", request.ipv6Address);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
-            query.put("ResourceId", request.resourceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
-            query.put("ResourceType", request.resourceType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "NotifyResourceAddressFamily"),
-            new TeaPair("version", "2020-04-15"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new NotifyResourceAddressFamilyResponse());
-    }
-
-    /**
-      * The ID of the request.
-      *
-      * @param request NotifyResourceAddressFamilyRequest
-      * @return NotifyResourceAddressFamilyResponse
-     */
-    public NotifyResourceAddressFamilyResponse notifyResourceAddressFamily(NotifyResourceAddressFamilyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.notifyResourceAddressFamilyWithOptions(request, runtime);
-    }
-
     public OpenPrivateLinkServiceResponse openPrivateLinkServiceWithOptions(OpenPrivateLinkServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2097,7 +2016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the endpoint service.
+      * You cannot repeatedly call the **UpdateVpcEndpointConnectionAttribute** operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.
       *
       * @param request UpdateVpcEndpointConnectionAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2152,7 +2071,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * The ID of the endpoint service.
+      * You cannot repeatedly call the **UpdateVpcEndpointConnectionAttribute** operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.
       *
       * @param request UpdateVpcEndpointConnectionAttributeRequest
       * @return UpdateVpcEndpointConnectionAttributeResponse
@@ -2242,6 +2161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You cannot repeatedly call the **UpdateVpcEndpointServiceResourceAttribute** operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.
+      * ### Limits
+      * *   By default, the feature of replacing a service resource with another service resource in the same zone is disabled. If you want to enable this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/products?spm=5176.12818093.ProductAndResource--ali--widget-product-recent.dre9.3be916d0NAkhTD), search for the quota ID `privatelink_whitelist/svc_res_mgt_uat`, and then click Apply in the Actions column to submit an application.
+      * *   All instances except for the Network Load Balancer (NLB) instances that serve as service resources of endpoint services can be replaced by other service resources in the same zone.
       *
       * @param request UpdateVpcEndpointServiceResourceAttributeRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2301,6 +2223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * You cannot repeatedly call the **UpdateVpcEndpointServiceResourceAttribute** operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.
+      * ### Limits
+      * *   By default, the feature of replacing a service resource with another service resource in the same zone is disabled. If you want to enable this feature, log on to the [Quota Center console](https://quotas.console.aliyun.com/products?spm=5176.12818093.ProductAndResource--ali--widget-product-recent.dre9.3be916d0NAkhTD), search for the quota ID `privatelink_whitelist/svc_res_mgt_uat`, and then click Apply in the Actions column to submit an application.
+      * *   All instances except for the Network Load Balancer (NLB) instances that serve as service resources of endpoint services can be replaced by other service resources in the same zone.
       *
       * @param request UpdateVpcEndpointServiceResourceAttributeRequest
       * @return UpdateVpcEndpointServiceResourceAttributeResponse

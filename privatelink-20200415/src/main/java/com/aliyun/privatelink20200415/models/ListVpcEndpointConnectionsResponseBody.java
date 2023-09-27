@@ -81,22 +81,6 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
 
     public static class ListVpcEndpointConnectionsResponseBodyConnectionsZones extends TeaModel {
         /**
-         * <p>The endpoint connection ID.</p>
-         * <br>
-         * <p>> This parameter is returned only when a gateway is used for load balancing.</p>
-         */
-        @NameInMap("ConnectionId")
-        public Long connectionId;
-
-        /**
-         * <p>The endpoint connection ID.</p>
-         * <br>
-         * <p>> This parameter is returned only when a gateway is used for load balancing. The value of this parameter is the value of the **ConnectionId** parameter in **string** format.</p>
-         */
-        @NameInMap("ConnectionStringId")
-        public String connectionStringId;
-
-        /**
          * <p>The endpoint ENI ID.</p>
          */
         @NameInMap("EniId")
@@ -157,22 +141,6 @@ public class ListVpcEndpointConnectionsResponseBody extends TeaModel {
         public static ListVpcEndpointConnectionsResponseBodyConnectionsZones build(java.util.Map<String, ?> map) throws Exception {
             ListVpcEndpointConnectionsResponseBodyConnectionsZones self = new ListVpcEndpointConnectionsResponseBodyConnectionsZones();
             return TeaModel.build(map, self);
-        }
-
-        public ListVpcEndpointConnectionsResponseBodyConnectionsZones setConnectionId(Long connectionId) {
-            this.connectionId = connectionId;
-            return this;
-        }
-        public Long getConnectionId() {
-            return this.connectionId;
-        }
-
-        public ListVpcEndpointConnectionsResponseBodyConnectionsZones setConnectionStringId(String connectionStringId) {
-            this.connectionStringId = connectionStringId;
-            return this;
-        }
-        public String getConnectionStringId() {
-            return this.connectionStringId;
         }
 
         public ListVpcEndpointConnectionsResponseBodyConnectionsZones setEniId(String eniId) {
