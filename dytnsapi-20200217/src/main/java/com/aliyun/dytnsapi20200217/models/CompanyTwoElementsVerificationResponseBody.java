@@ -64,9 +64,42 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class CompanyTwoElementsVerificationResponseBodyDataDetailInfo extends TeaModel {
+        @NameInMap("EnterpriseStatus")
+        public String enterpriseStatus;
+
+        @NameInMap("OpenTime")
+        public String openTime;
+
+        public static CompanyTwoElementsVerificationResponseBodyDataDetailInfo build(java.util.Map<String, ?> map) throws Exception {
+            CompanyTwoElementsVerificationResponseBodyDataDetailInfo self = new CompanyTwoElementsVerificationResponseBodyDataDetailInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CompanyTwoElementsVerificationResponseBodyDataDetailInfo setEnterpriseStatus(String enterpriseStatus) {
+            this.enterpriseStatus = enterpriseStatus;
+            return this;
+        }
+        public String getEnterpriseStatus() {
+            return this.enterpriseStatus;
+        }
+
+        public CompanyTwoElementsVerificationResponseBodyDataDetailInfo setOpenTime(String openTime) {
+            this.openTime = openTime;
+            return this;
+        }
+        public String getOpenTime() {
+            return this.openTime;
+        }
+
+    }
+
     public static class CompanyTwoElementsVerificationResponseBodyData extends TeaModel {
         @NameInMap("DetailInfo")
-        public java.util.Map<String, ?> detailInfo;
+        public CompanyTwoElementsVerificationResponseBodyDataDetailInfo detailInfo;
+
+        @NameInMap("InconsistentData")
+        public java.util.List<String> inconsistentData;
 
         @NameInMap("ReasonCode")
         public String reasonCode;
@@ -79,12 +112,20 @@ public class CompanyTwoElementsVerificationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CompanyTwoElementsVerificationResponseBodyData setDetailInfo(java.util.Map<String, ?> detailInfo) {
+        public CompanyTwoElementsVerificationResponseBodyData setDetailInfo(CompanyTwoElementsVerificationResponseBodyDataDetailInfo detailInfo) {
             this.detailInfo = detailInfo;
             return this;
         }
-        public java.util.Map<String, ?> getDetailInfo() {
+        public CompanyTwoElementsVerificationResponseBodyDataDetailInfo getDetailInfo() {
             return this.detailInfo;
+        }
+
+        public CompanyTwoElementsVerificationResponseBodyData setInconsistentData(java.util.List<String> inconsistentData) {
+            this.inconsistentData = inconsistentData;
+            return this;
+        }
+        public java.util.List<String> getInconsistentData() {
+            return this.inconsistentData;
         }
 
         public CompanyTwoElementsVerificationResponseBodyData setReasonCode(String reasonCode) {

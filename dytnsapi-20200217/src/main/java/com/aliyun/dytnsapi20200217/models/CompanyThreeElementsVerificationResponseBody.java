@@ -64,9 +64,42 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class CompanyThreeElementsVerificationResponseBodyDataDetailInfo extends TeaModel {
+        @NameInMap("EnterpriseStatus")
+        public String enterpriseStatus;
+
+        @NameInMap("OpenTime")
+        public String openTime;
+
+        public static CompanyThreeElementsVerificationResponseBodyDataDetailInfo build(java.util.Map<String, ?> map) throws Exception {
+            CompanyThreeElementsVerificationResponseBodyDataDetailInfo self = new CompanyThreeElementsVerificationResponseBodyDataDetailInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CompanyThreeElementsVerificationResponseBodyDataDetailInfo setEnterpriseStatus(String enterpriseStatus) {
+            this.enterpriseStatus = enterpriseStatus;
+            return this;
+        }
+        public String getEnterpriseStatus() {
+            return this.enterpriseStatus;
+        }
+
+        public CompanyThreeElementsVerificationResponseBodyDataDetailInfo setOpenTime(String openTime) {
+            this.openTime = openTime;
+            return this;
+        }
+        public String getOpenTime() {
+            return this.openTime;
+        }
+
+    }
+
     public static class CompanyThreeElementsVerificationResponseBodyData extends TeaModel {
         @NameInMap("DetailInfo")
-        public java.util.Map<String, ?> detailInfo;
+        public CompanyThreeElementsVerificationResponseBodyDataDetailInfo detailInfo;
+
+        @NameInMap("InconsistentData")
+        public java.util.List<String> inconsistentData;
 
         @NameInMap("ReasonCode")
         public Long reasonCode;
@@ -79,12 +112,20 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CompanyThreeElementsVerificationResponseBodyData setDetailInfo(java.util.Map<String, ?> detailInfo) {
+        public CompanyThreeElementsVerificationResponseBodyData setDetailInfo(CompanyThreeElementsVerificationResponseBodyDataDetailInfo detailInfo) {
             this.detailInfo = detailInfo;
             return this;
         }
-        public java.util.Map<String, ?> getDetailInfo() {
+        public CompanyThreeElementsVerificationResponseBodyDataDetailInfo getDetailInfo() {
             return this.detailInfo;
+        }
+
+        public CompanyThreeElementsVerificationResponseBodyData setInconsistentData(java.util.List<String> inconsistentData) {
+            this.inconsistentData = inconsistentData;
+            return this;
+        }
+        public java.util.List<String> getInconsistentData() {
+            return this.inconsistentData;
         }
 
         public CompanyThreeElementsVerificationResponseBodyData setReasonCode(Long reasonCode) {
