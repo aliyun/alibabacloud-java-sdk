@@ -7,6 +7,9 @@ public class Deployment extends TeaModel {
     @NameInMap("artifact")
     public Artifact artifact;
 
+    @NameInMap("batchResourceSetting")
+    public BatchResourceSetting batchResourceSetting;
+
     @NameInMap("creator")
     public String creator;
 
@@ -52,6 +55,9 @@ public class Deployment extends TeaModel {
     @NameInMap("namespace")
     public String namespace;
 
+    @NameInMap("streamingResourceSetting")
+    public StreamingResourceSetting streamingResourceSetting;
+
     public static Deployment build(java.util.Map<String, ?> map) throws Exception {
         Deployment self = new Deployment();
         return TeaModel.build(map, self);
@@ -63,6 +69,14 @@ public class Deployment extends TeaModel {
     }
     public Artifact getArtifact() {
         return this.artifact;
+    }
+
+    public Deployment setBatchResourceSetting(BatchResourceSetting batchResourceSetting) {
+        this.batchResourceSetting = batchResourceSetting;
+        return this;
+    }
+    public BatchResourceSetting getBatchResourceSetting() {
+        return this.batchResourceSetting;
     }
 
     public Deployment setCreator(String creator) {
@@ -183,6 +197,14 @@ public class Deployment extends TeaModel {
     }
     public String getNamespace() {
         return this.namespace;
+    }
+
+    public Deployment setStreamingResourceSetting(StreamingResourceSetting streamingResourceSetting) {
+        this.streamingResourceSetting = streamingResourceSetting;
+        return this;
+    }
+    public StreamingResourceSetting getStreamingResourceSetting() {
+        return this.streamingResourceSetting;
     }
 
 }

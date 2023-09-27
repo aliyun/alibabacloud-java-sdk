@@ -542,6 +542,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDeploymentsResponse listDeploymentsWithOptions(String namespace, ListDeploymentsRequest request, ListDeploymentsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.executionMode)) {
+            query.put("executionMode", request.executionMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("name", request.name);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageIndex)) {
             query.put("pageIndex", request.pageIndex);
         }
@@ -760,6 +768,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listVariablesWithOptions(namespace, request, headers, runtime);
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request StartJobRequest
+      * @param headers StartJobHeaders
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return StartJobResponse
+     */
+    // Deprecated
     public StartJobResponse startJobWithOptions(String namespace, StartJobRequest request, StartJobHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
@@ -789,10 +806,52 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartJobResponse());
     }
 
+    /**
+      * @deprecated
+      *
+      * @param request StartJobRequest
+      * @return StartJobResponse
+     */
+    // Deprecated
     public StartJobResponse startJob(String namespace, StartJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         StartJobHeaders headers = new StartJobHeaders();
         return this.startJobWithOptions(namespace, request, headers, runtime);
+    }
+
+    public StartJobWithParamsResponse startJobWithParamsWithOptions(String namespace, StartJobWithParamsRequest request, StartJobWithParamsHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.workspace)) {
+            realHeaders.put("workspace", com.aliyun.teautil.Common.toJSONString(headers.workspace));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartJobWithParams"),
+            new TeaPair("version", "2022-07-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/jobs%3Astart"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartJobWithParamsResponse());
+    }
+
+    public StartJobWithParamsResponse startJobWithParams(String namespace, StartJobWithParamsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        StartJobWithParamsHeaders headers = new StartJobWithParamsHeaders();
+        return this.startJobWithParamsWithOptions(namespace, request, headers, runtime);
     }
 
     public StopJobResponse stopJobWithOptions(String namespace, String jobId, StopJobRequest request, StopJobHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
