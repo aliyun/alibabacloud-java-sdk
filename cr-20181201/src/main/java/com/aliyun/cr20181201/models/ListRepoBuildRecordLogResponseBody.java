@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoBuildRecordLogResponseBody extends TeaModel {
+    /**
+     * <p>The log content of the image building record.</p>
+     */
     @NameInMap("BuildRecordLogs")
     public java.util.List<ListRepoBuildRecordLogResponseBodyBuildRecordLogs> buildRecordLogs;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,12 +108,21 @@ public class ListRepoBuildRecordLogResponseBody extends TeaModel {
     }
 
     public static class ListRepoBuildRecordLogResponseBodyBuildRecordLogs extends TeaModel {
+        /**
+         * <p>The stage of the building that is recorded in the log entry.</p>
+         */
         @NameInMap("BuildStage")
         public String buildStage;
 
+        /**
+         * <p>The line number of the log entry.</p>
+         */
         @NameInMap("LineNumber")
         public Integer lineNumber;
 
+        /**
+         * <p>The content of the log.</p>
+         */
         @NameInMap("Message")
         public String message;
 

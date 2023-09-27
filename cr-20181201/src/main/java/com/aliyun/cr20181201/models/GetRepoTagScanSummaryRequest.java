@@ -4,18 +4,33 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagScanSummaryRequest extends TeaModel {
+    /**
+     * <p>The number of unknown-severity vulnerabilities.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the image tag.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The digest of the image.</p>
+     */
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
+    /**
+     * <p>The ID of the security scan task.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

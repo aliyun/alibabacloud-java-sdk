@@ -4,24 +4,48 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoBuildRuleResponseBody extends TeaModel {
+    /**
+     * <p>The list of image building rules.</p>
+     */
     @NameInMap("BuildRules")
     public java.util.List<ListRepoBuildRuleResponseBodyBuildRules> buildRules;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request fails.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -90,24 +114,45 @@ public class ListRepoBuildRuleResponseBody extends TeaModel {
         @NameInMap("BuildArgs")
         public java.util.List<String> buildArgs;
 
+        /**
+         * <p>The ID of the image building rule.</p>
+         */
         @NameInMap("BuildRuleId")
         public String buildRuleId;
 
+        /**
+         * <p>The directory of the Dockerfile.</p>
+         */
         @NameInMap("DockerfileLocation")
         public String dockerfileLocation;
 
+        /**
+         * <p>The name of the Dockerfile.</p>
+         */
         @NameInMap("DockerfileName")
         public String dockerfileName;
 
+        /**
+         * <p>The tag of the image.</p>
+         */
         @NameInMap("ImageTag")
         public String imageTag;
 
         @NameInMap("Platforms")
         public java.util.List<String> platforms;
 
+        /**
+         * <p>The name of the push that triggers the building rule.</p>
+         */
         @NameInMap("PushName")
         public String pushName;
 
+        /**
+         * <p>The type of the push that triggers the image building rule. Valid values:</p>
+         * <br>
+         * <p>*   GIT_BRANCH: branch push</p>
+         * <p>*   GIT_TAG: tag push</p>
+         */
         @NameInMap("PushType")
         public String pushType;
 

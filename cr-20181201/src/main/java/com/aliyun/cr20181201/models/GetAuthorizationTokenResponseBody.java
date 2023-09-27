@@ -4,21 +4,46 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetAuthorizationTokenResponseBody extends TeaModel {
+    /**
+     * <p>The temporary password returned after you call this API operation is a Security Token Service (STS) token whose validity period is 1 hour. Take note of the following items when you log on to Container Registry instances by using an STS token:</p>
+     * <br>
+     * <p>*   If the STS token belongs to an Alibaba Cloud account, you can use the STS token to log on to all Container Registry instances that belong to the Alibaba Cloud account.</p>
+     * <p>*   If the STS token belongs to a Resource Access Management (RAM) user, you can use the STS token to log on to all Container Registry instances that belong to the RAM user.</p>
+     * <p>*   You can use an STS token to access only Container Registry instances to which the STS token is scoped.</p>
+     */
     @NameInMap("AuthorizationToken")
     public String authorizationToken;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     * <br>
+     * <p>*   `true`: successful</p>
+     * <p>*   `false`: failed</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("ExpireTime")
     public Long expireTime;
 
+    /**
+     * <p>The username that is used to log on to the Container Registry instance.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The timestamp when the temporary password expires. Unit: milliseconds.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The password that is used to log on to the Container Registry instance.</p>
+     */
     @NameInMap("TempUsername")
     public String tempUsername;
 

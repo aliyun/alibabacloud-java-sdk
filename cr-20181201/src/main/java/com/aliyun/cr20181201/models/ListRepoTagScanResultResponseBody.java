@@ -4,24 +4,48 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTagScanResultResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of vulnerabilities detected on images.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>The details about the detected vulnerabilities.</p>
+     */
     @NameInMap("Vulnerabilities")
     public java.util.List<ListRepoTagScanResultResponseBodyVulnerabilities> vulnerabilities;
 
@@ -87,42 +111,84 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
     }
 
     public static class ListRepoTagScanResultResponseBodyVulnerabilities extends TeaModel {
+        /**
+         * <p>The ID of the image layer where the vulnerability was detected.</p>
+         */
         @NameInMap("AddedBy")
         public String addedBy;
 
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("AliasName")
         public String aliasName;
 
+        /**
+         * <p>The URL of the vulnerability.</p>
+         */
         @NameInMap("CveLink")
         public String cveLink;
 
+        /**
+         * <p>The directory of the vulnerability.</p>
+         */
         @NameInMap("CveLocation")
         public String cveLocation;
 
+        /**
+         * <p>The name of the vulnerability.</p>
+         */
         @NameInMap("CveName")
         public String cveName;
 
+        /**
+         * <p>The description of the vulnerability.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The cause of the vulnerability.</p>
+         */
         @NameInMap("Feature")
         public String feature;
 
+        /**
+         * <p>The command used to fix the vulnerability.</p>
+         */
         @NameInMap("FixCmd")
         public String fixCmd;
 
+        /**
+         * <p>The type of the vulnerability. Valid values:</p>
+         * <br>
+         * <p>*   `cve`: image system vulnerability</p>
+         * <p>*   `sca`: image application vulnerability</p>
+         */
         @NameInMap("ScanType")
         public String scanType;
 
+        /**
+         * <p>The severity of the vulnerability.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The version of the vulnerability.</p>
+         */
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <p>The version where the vulnerability was fixed.</p>
+         */
         @NameInMap("VersionFixed")
         public String versionFixed;
 
+        /**
+         * <p>The format of the vulnerability.</p>
+         */
         @NameInMap("VersionFormat")
         public String versionFormat;
 

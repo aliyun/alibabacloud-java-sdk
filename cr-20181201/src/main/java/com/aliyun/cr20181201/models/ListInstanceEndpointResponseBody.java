@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The endpoints of the instance.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.List<ListInstanceEndpointResponseBodyEndpoints> endpoints;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +66,9 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     }
 
     public static class ListInstanceEndpointResponseBodyEndpointsAclEntries extends TeaModel {
+        /**
+         * <p>Details about the ACL.</p>
+         */
         @NameInMap("Entry")
         public String entry;
 
@@ -73,9 +88,15 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     }
 
     public static class ListInstanceEndpointResponseBodyEndpointsDomains extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>Type</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -103,6 +124,9 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     }
 
     public static class ListInstanceEndpointResponseBodyEndpointsLinkedVpcs extends TeaModel {
+        /**
+         * <p>VPC ID</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -122,24 +146,45 @@ public class ListInstanceEndpointResponseBody extends TeaModel {
     }
 
     public static class ListInstanceEndpointResponseBodyEndpoints extends TeaModel {
+        /**
+         * <p>Indicates whether the access control list (ACL) feature is enabled.</p>
+         */
         @NameInMap("AclEnable")
         public Boolean aclEnable;
 
+        /**
+         * <p>The ACL configured for the instance.</p>
+         */
         @NameInMap("AclEntries")
         public java.util.List<ListInstanceEndpointResponseBodyEndpointsAclEntries> aclEntries;
 
+        /**
+         * <p>Domain names.</p>
+         */
         @NameInMap("Domains")
         public java.util.List<ListInstanceEndpointResponseBodyEndpointsDomains> domains;
 
+        /**
+         * <p>Indicates whether the ACL feature is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The type of the endpoint.</p>
+         */
         @NameInMap("EndpointType")
         public String endpointType;
 
+        /**
+         * <p>The virtual private clouds (VPCs) that are associated with the instance.</p>
+         */
         @NameInMap("LinkedVpcs")
         public java.util.List<ListInstanceEndpointResponseBodyEndpointsLinkedVpcs> linkedVpcs;
 
+        /**
+         * <p>The status of the instance.</p>
+         */
         @NameInMap("Status")
         public String status;
 

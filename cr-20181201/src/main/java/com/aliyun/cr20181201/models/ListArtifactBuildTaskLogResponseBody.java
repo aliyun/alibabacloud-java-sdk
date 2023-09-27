@@ -4,18 +4,36 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
+    /**
+     * <p>The log entries of the artifact build task.</p>
+     */
     @NameInMap("BuildTaskLogs")
     public java.util.List<ListArtifactBuildTaskLogResponseBodyBuildTaskLogs> buildTaskLogs;
 
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the API call is successful.</p>
+     * <br>
+     * <p>*   `true`: successful</p>
+     * <p>*   `false`: failed</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of log entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +83,15 @@ public class ListArtifactBuildTaskLogResponseBody extends TeaModel {
     }
 
     public static class ListArtifactBuildTaskLogResponseBodyBuildTaskLogs extends TeaModel {
+        /**
+         * <p>The row number of the log entry.</p>
+         */
         @NameInMap("LineNumber")
         public Integer lineNumber;
 
+        /**
+         * <p>The content of the log entry.</p>
+         */
         @NameInMap("Message")
         public String message;
 

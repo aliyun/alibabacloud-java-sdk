@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagManifestRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The schema version of the manifest. Valid values: 1 and 2.</p>
+     */
     @NameInMap("SchemaVersion")
     public Integer schemaVersion;
 
+    /**
+     * <p>The tag of the image.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

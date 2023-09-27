@@ -4,21 +4,39 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartReleaseRequest extends TeaModel {
+    /**
+     * <p>The chart whose versions you want to query.</p>
+     */
     @NameInMap("Chart")
     public String chart;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 

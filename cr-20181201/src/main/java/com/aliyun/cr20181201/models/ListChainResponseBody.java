@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChainResponseBody extends TeaModel {
+    /**
+     * <p>The list of delivery chains.</p>
+     */
     @NameInMap("Chains")
     public java.util.List<ListChainResponseBodyChains> chains;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of delivery chains.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,30 +108,57 @@ public class ListChainResponseBody extends TeaModel {
     }
 
     public static class ListChainResponseBodyChains extends TeaModel {
+        /**
+         * <p>The ID of the delivery chain.</p>
+         */
         @NameInMap("ChainId")
         public String chainId;
 
+        /**
+         * <p>The time when the delivery chain was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The description of the delivery chain.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the delivery chain was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The name of the delivery chain.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Repositories to which the delivery chain does not apply.</p>
+         */
         @NameInMap("ScopeExclude")
         public java.util.List<String> scopeExclude;
 
+        /**
+         * <p>The ID of the delivery chain scope.</p>
+         */
         @NameInMap("ScopeId")
         public String scopeId;
 
+        /**
+         * <p>The type of the delivery chain scope.</p>
+         */
         @NameInMap("ScopeType")
         public String scopeType;
 

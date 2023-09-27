@@ -4,9 +4,15 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 

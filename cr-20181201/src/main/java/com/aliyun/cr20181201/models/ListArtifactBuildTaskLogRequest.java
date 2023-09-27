@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListArtifactBuildTaskLogRequest extends TeaModel {
+    /**
+     * <p>The ID of the artifact build task.</p>
+     */
     @NameInMap("BuildTaskId")
     public String buildTaskId;
 
+    /**
+     * <p>The ID of the Container Registry instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

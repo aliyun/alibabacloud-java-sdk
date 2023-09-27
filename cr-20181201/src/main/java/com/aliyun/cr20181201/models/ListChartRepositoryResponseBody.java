@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartRepositoryResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The queried repositories.</p>
+     */
     @NameInMap("Repositories")
     public java.util.List<ListChartRepositoryResponseBodyRepositories> repositories;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,33 +108,69 @@ public class ListChartRepositoryResponseBody extends TeaModel {
     }
 
     public static class ListChartRepositoryResponseBodyRepositories extends TeaModel {
+        /**
+         * <p>The time when the repository was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the repository was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The ID of the repository.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The name of the repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The name of the namespace to which the repository belongs.</p>
+         */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
+        /**
+         * <p>The status of the repository. Valid values:</p>
+         * <br>
+         * <p>*   `NORMAL`: The repository is normal.</p>
+         * <p>*   `DELETING`: The repository is being deleted.</p>
+         */
         @NameInMap("RepoStatus")
         public String repoStatus;
 
+        /**
+         * <p>The type of the repository. Valid values:</p>
+         * <br>
+         * <p>*   `PRIVATE`: a private repository</p>
+         * <p>*   `PUBLIC`: a public repository</p>
+         */
         @NameInMap("RepoType")
         public String repoType;
 
+        /**
+         * <p>The ID of the resource group to which the repository belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The summary about the repository.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 

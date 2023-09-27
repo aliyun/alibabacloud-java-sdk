@@ -4,21 +4,43 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartRepositoryRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the namespace to which the repository belongs.</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
+    /**
+     * <p>The status of the chart repositories that you want to query. Valid values:</p>
+     * <br>
+     * <p>*   `ALL`: query repositories of all status.</p>
+     * <p>*   `NORMAL`: query normal repositories.</p>
+     * <p>*   `DELETING`: query repositories that are being deleted.</p>
+     */
     @NameInMap("RepoStatus")
     public String repoStatus;
 

@@ -4,15 +4,34 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateChartNamespaceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically create repositories in the namespace. Valid values:</p>
+     * <br>
+     * <p>\-`  true `: automatically creates repositories in the namespace.</p>
+     * <br>
+     * <p>\-`  false `: does not automatically create repositories in the namespace.</p>
+     */
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
+    /**
+     * <p>The default repository type. Valid values:</p>
+     * <br>
+     * <p>*   `PUBLIC`: a public repository</p>
+     * <p>*   `PRIVATE`: a private repository</p>
+     */
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 

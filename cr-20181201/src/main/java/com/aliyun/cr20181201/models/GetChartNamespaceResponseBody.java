@@ -4,30 +4,69 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetChartNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether a repository was automatically created in the namespace. Valid values:</p>
+     * <br>
+     * <p>*   `true`: A repository was automatically created in the namespace.</p>
+     * <p>*   `false`: No repository was automatically created in the namespace.</p>
+     */
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The default repository type. Valid values:</p>
+     * <br>
+     * <p>*   `PUBLIC`: a public repository.</p>
+     * <p>*   `PRIVATE`: a private repository.</p>
+     */
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request fails.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <p>The status of the namespace. Valid values:</p>
+     * <br>
+     * <p>*   `NORMAL`: The namespace is normal.</p>
+     * <p>*   `DELETING`: The namespace is being deleted.</p>
+     */
     @NameInMap("NamespaceStatus")
     public String namespaceStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,18 +4,39 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListEventCenterRecordRequest extends TeaModel {
+    /**
+     * <p>The type of the event. Valid values:</p>
+     * <br>
+     * <p>*   `cr:Artifact:DeliveryChainCompleted`: The delivery chain is processed.</p>
+     * <p>*   `cr:Artifact:SynchronizationCompleted`: The image is replicated.</p>
+     * <p>*   `cr:Artifact:BuildCompleted`: The image is built.</p>
+     * <p>*   `cr:Artifact:ScanCompleted`: The image is scanned.</p>
+     * <p>*   `cr:Artifact:SigningCompleted`: The image is signed.</p>
+     */
     @NameInMap("EventType")
     public String eventType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the event notification rule.</p>
+     */
     @NameInMap("RuleId")
     public String ruleId;
 

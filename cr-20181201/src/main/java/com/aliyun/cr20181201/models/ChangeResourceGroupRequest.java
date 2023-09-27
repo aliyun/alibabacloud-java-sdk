@@ -7,6 +7,9 @@ public class ChangeResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>Id of the request</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 

@@ -4,24 +4,51 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepositoryRequest extends TeaModel {
+    /**
+     * <p>The description of the repository.</p>
+     */
     @NameInMap("Detail")
     public String detail;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the image repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the namespace to which the image repository belongs.</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
+    /**
+     * <p>The type of the repository. Valid values:</p>
+     * <br>
+     * <p>*   `PUBLIC`: The repository is a public repository.</p>
+     * <p>*   `PRIVATE`: The repository is a private repository.</p>
+     */
     @NameInMap("RepoType")
     public String repoType;
 
+    /**
+     * <p>The summary about the repository.</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
+    /**
+     * <p>Specifies whether to enable the feature of image tag immutability. Valid values:</p>
+     * <br>
+     * <p>*   `true`: enables the feature of image tag immutability.</p>
+     * <p>*   `false`: disables the feature of image tag immutability.</p>
+     */
     @NameInMap("TagImmutability")
     public Boolean tagImmutability;
 

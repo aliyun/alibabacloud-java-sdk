@@ -4,33 +4,63 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the image.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The size of the image. Unit: Bytes.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>crr-tquyps22md8p****</p>
+     */
     @NameInMap("ImageCreate")
     public Long imageCreate;
 
     @NameInMap("ImageId")
     public String imageId;
 
+    /**
+     * <p>The number of milliseconds that have elapsed since the image was last updated.</p>
+     */
     @NameInMap("ImageSize")
     public Long imageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("ImageUpdate")
     public Long imageUpdate;
 
+    /**
+     * <p>The status of the image. Valid values:</p>
+     * <br>
+     * <p>*   `NORMAL`: The image is normal.</p>
+     * <p>*   `DELETING`: The image is being deleted.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>1.0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The version of the repository.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

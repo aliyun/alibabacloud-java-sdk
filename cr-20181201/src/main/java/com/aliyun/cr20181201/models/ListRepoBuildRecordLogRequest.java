@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoBuildRecordLogRequest extends TeaModel {
+    /**
+     * <p>The ID of the image building record.</p>
+     */
     @NameInMap("BuildRecordId")
     public String buildRecordId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The offset of log lines.</p>
+     */
     @NameInMap("Offset")
     public Integer offset;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 

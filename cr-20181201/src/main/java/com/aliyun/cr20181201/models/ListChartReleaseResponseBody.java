@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartReleaseResponseBody extends TeaModel {
+    /**
+     * <p>The list of chart versions.</p>
+     */
     @NameInMap("ChartReleases")
     public java.util.List<ListChartReleaseResponseBodyChartReleases> chartReleases;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,24 +108,45 @@ public class ListChartReleaseResponseBody extends TeaModel {
     }
 
     public static class ListChartReleaseResponseBodyChartReleases extends TeaModel {
+        /**
+         * <p>The name of the chart version.</p>
+         */
         @NameInMap("Chart")
         public String chart;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The time when the chart was last modified.</p>
+         */
         @NameInMap("ModifiedTime")
         public Long modifiedTime;
 
+        /**
+         * <p>The version number of the chart.</p>
+         */
         @NameInMap("Release")
         public String release;
 
+        /**
+         * <p>The ID of the chart repository.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The size of the chart of the version. Unit: bytes.</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The status of the chart.</p>
+         */
         @NameInMap("Status")
         public String status;
 

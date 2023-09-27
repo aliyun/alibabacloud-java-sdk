@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListEventCenterRecordResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of historical events.</p>
+     */
     @NameInMap("Records")
     public java.util.List<ListEventCenterRecordResponseBodyRecords> records;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total entries of historical events.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -87,42 +108,85 @@ public class ListEventCenterRecordResponseBody extends TeaModel {
     }
 
     public static class ListEventCenterRecordResponseBodyRecords extends TeaModel {
+        /**
+         * <p>The time when the event was created.</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The event notification channel.</p>
+         */
         @NameInMap("EventChannel")
         public String eventChannel;
 
+        /**
+         * <p>The ID of the event notification.</p>
+         */
         @NameInMap("EventNotifyId")
         public String eventNotifyId;
 
+        /**
+         * <p>The notification method. Valid values:</p>
+         * <br>
+         * <p>*   `http`: The notification is sent over HTTP.</p>
+         * <p>*   `https`: The notification is sent over HTTPS.</p>
+         * <p>*   `dingding`: The notification is sent by using DingTalk.</p>
+         */
         @NameInMap("EventNotifyMethod")
         public String eventNotifyMethod;
 
+        /**
+         * <p>The type of the event.</p>
+         */
         @NameInMap("EventType")
         public String eventType;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The ID of the event record.</p>
+         */
         @NameInMap("RecordId")
         public String recordId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The ID of the event notification rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the event notification rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The time when the event was last updated.</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

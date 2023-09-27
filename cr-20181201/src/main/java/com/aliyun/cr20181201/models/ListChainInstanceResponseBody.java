@@ -4,27 +4,51 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChainInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("ChainInstances")
     public java.util.List<ListChainInstanceResponseBodyChainInstances> chainInstances;
 
+    /**
+     * <p>The version of the delivery chain.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The page number of the page to return.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The execution record of the delivery chain.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>30</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>Indicates whether the operation is successful.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the Container Registry instance.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The name of the repository.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -98,12 +122,21 @@ public class ListChainInstanceResponseBody extends TeaModel {
     }
 
     public static class ListChainInstanceResponseBodyChainInstancesChain extends TeaModel {
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("ChainId")
         public String chainId;
 
+        /**
+         * <p>The number of entries returned on each page.</p>
+         */
         @NameInMap("ChainName")
         public String chainName;
 
+        /**
+         * <p>The ID of the request.</p>
+         */
         @NameInMap("Version")
         public Long version;
 
@@ -139,27 +172,61 @@ public class ListChainInstanceResponseBody extends TeaModel {
     }
 
     public static class ListChainInstanceResponseBodyChainInstances extends TeaModel {
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("Chain")
         public ListChainInstanceResponseBodyChainInstancesChain chain;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("ChainInstanceId")
         public String chainInstanceId;
 
+        /**
+         * <p>The ID of the Container Registry instance.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The ID of the delivery chain.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The execution result of the delivery chain. Valid values:</p>
+         * <br>
+         * <p>*   `SUCCESS`</p>
+         * <p>*   `FAILED`</p>
+         * <p>*   `CANCELED`</p>
+         * <p>*   `DENIED`</p>
+         */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
+        /**
+         * <p>The list of the execution records of delivery chains.</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>test-repo</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The status of the delivery chain. Valid values:</p>
+         * <br>
+         * <p>*   `RUNNING`</p>
+         * <p>*   `COMPLETE`</p>
+         * <p>*   `CANCELING`</p>
+         * <p>*   `CANCELED`</p>
+         */
         @NameInMap("Status")
         public String status;
 

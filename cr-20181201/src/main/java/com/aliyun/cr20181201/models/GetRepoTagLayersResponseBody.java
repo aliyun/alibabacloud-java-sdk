@@ -4,15 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagLayersResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request fails.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The queried image layers.</p>
+     */
     @NameInMap("Layers")
     public java.util.List<GetRepoTagLayersResponseBodyLayers> layers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,18 +69,33 @@ public class GetRepoTagLayersResponseBody extends TeaModel {
     }
 
     public static class GetRepoTagLayersResponseBodyLayers extends TeaModel {
+        /**
+         * <p>The digest of a single image layer.</p>
+         */
         @NameInMap("BlobDigest")
         public String blobDigest;
 
+        /**
+         * <p>The size of the image layer.</p>
+         */
         @NameInMap("BlobSize")
         public Long blobSize;
 
+        /**
+         * <p>Operation on the image layer.</p>
+         */
         @NameInMap("LayerCMD")
         public String layerCMD;
 
+        /**
+         * <p>The sequence number of the layer stack.</p>
+         */
         @NameInMap("LayerIndex")
         public Integer layerIndex;
 
+        /**
+         * <p>The command for the image layer.</p>
+         */
         @NameInMap("LayerInstruction")
         public String layerInstruction;
 

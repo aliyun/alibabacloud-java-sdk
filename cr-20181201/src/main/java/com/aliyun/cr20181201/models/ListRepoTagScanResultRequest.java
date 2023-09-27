@@ -4,36 +4,77 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTagScanResultRequest extends TeaModel {
+    /**
+     * <p>The digest of the image.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>The parameter whose value that you want to query. Fox example, if the value is `FixCmd`, only the `FixCmd` parameter is returned.</p>
+     */
     @NameInMap("FilterValue")
     public String filterValue;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the security scan task.</p>
+     */
     @NameInMap("ScanTaskId")
     public String scanTaskId;
 
+    /**
+     * <p>The type of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   `cve`: image system vulnerability</p>
+     * <p>*   `sca`: image application vulnerability</p>
+     */
     @NameInMap("ScanType")
     public String scanType;
 
+    /**
+     * <p>The severity of the vulnerability. Valid values:</p>
+     * <br>
+     * <p>*   `High`</p>
+     * <p>*   `Medium`</p>
+     * <p>*   `Low`</p>
+     * <p>*   `Unknown`</p>
+     */
     @NameInMap("Severity")
     public String severity;
 
+    /**
+     * <p>The name of the image tag.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 
+    /**
+     * <p>The keyword for fuzzy search used in scanning. The value can be a CVE name.</p>
+     */
     @NameInMap("VulQueryKey")
     public String vulQueryKey;
 

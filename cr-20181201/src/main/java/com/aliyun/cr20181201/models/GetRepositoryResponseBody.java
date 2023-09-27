@@ -4,51 +4,105 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepositoryResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The time when the repository was created.</p>
+     */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The details of the repository.</p>
+     */
     @NameInMap("Detail")
     public String detail;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The time when the repository was last modified.</p>
+     */
     @NameInMap("ModifiedTime")
     public Long modifiedTime;
 
+    /**
+     * <p>Indicates how the repository was created. Valid values:</p>
+     * <br>
+     * <p>*   `MANUAL`: The repository was manually created.</p>
+     * <p>*   `AUTO`: The repository was automatically created.</p>
+     */
     @NameInMap("RepoBuildType")
     public String repoBuildType;
 
+    /**
+     * <p>The ID of the repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The name of the repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
+    /**
+     * <p>The status of the repository.</p>
+     */
     @NameInMap("RepoStatus")
     public String repoStatus;
 
+    /**
+     * <p>The type of the repository. Valid values:</p>
+     * <br>
+     * <p>*   `PUBLIC`: public repository.</p>
+     * <p>*   `PRIVATE`: private repository.</p>
+     */
     @NameInMap("RepoType")
     public String repoType;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The summary of the repository.</p>
+     */
     @NameInMap("Summary")
     public String summary;
 
+    /**
+     * <p>Indicates whether the feature of image tag immutability is enabled. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The feature of image tag immutability is enabled.</p>
+     * <p>*   `false`: The feature of image tag immutability is disabled.</p>
+     */
     @NameInMap("TagImmutability")
     public Boolean tagImmutability;
 

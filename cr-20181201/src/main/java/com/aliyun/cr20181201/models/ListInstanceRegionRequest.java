@@ -4,6 +4,9 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRegionRequest extends TeaModel {
+    /**
+     * <p>The language used for response parameters. Set this parameter to `zh-CN`.</p>
+     */
     @NameInMap("Lang")
     public String lang;
 

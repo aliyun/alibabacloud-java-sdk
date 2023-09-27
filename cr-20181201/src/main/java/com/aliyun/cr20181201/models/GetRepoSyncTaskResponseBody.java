@@ -4,48 +4,96 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoSyncTaskResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the synchronization task is performed across Alibaba Cloud accounts.</p>
+     */
     @NameInMap("CrossUser")
     public Boolean crossUser;
 
+    /**
+     * <p>The source address of the image.</p>
+     */
     @NameInMap("ImageFrom")
     public GetRepoSyncTaskResponseBodyImageFrom imageFrom;
 
+    /**
+     * <p>The destination address of the image.</p>
+     */
     @NameInMap("ImageTo")
     public GetRepoSyncTaskResponseBodyImageTo imageTo;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The synchronization tasks for the image layer.</p>
+     */
     @NameInMap("LayerTasks")
     public java.util.List<GetRepoSyncTaskResponseBodyLayerTasks> layerTasks;
 
+    /**
+     * <p>The synchronization progress. Valid values:</p>
+     * <br>
+     * <p>*   `0`: The synchronization starts or failed.</p>
+     * <p>*   `1`: The synchronization is successful.</p>
+     */
     @NameInMap("Progress")
     public Long progress;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the synchronization task in which multiple images are synchronized at a time.</p>
+     */
     @NameInMap("SyncBatchTaskId")
     public String syncBatchTaskId;
 
+    /**
+     * <p>The ID of the synchronization rule.</p>
+     */
     @NameInMap("SyncRuleId")
     public String syncRuleId;
 
+    /**
+     * <p>The ID of the synchronization task.</p>
+     */
     @NameInMap("SyncTaskId")
     public String syncTaskId;
 
+    /**
+     * <p>Indicates whether transfer acceleration is enabled in the synchronization process.</p>
+     */
     @NameInMap("SyncTransAccelerate")
     public Boolean syncTransAccelerate;
 
+    /**
+     * <p>The size of the image layer that is synchronized. Unit: bytes.</p>
+     */
     @NameInMap("SyncedSize")
     public Long syncedSize;
 
+    /**
+     * <p>The status of the task. Valid values:</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
+    /**
+     * <p>The policy that is used to trigger the synchronization task.</p>
+     */
     @NameInMap("TaskTrigger")
     public String taskTrigger;
 
@@ -175,18 +223,33 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     }
 
     public static class GetRepoSyncTaskResponseBodyImageFrom extends TeaModel {
+        /**
+         * <p>The tag of the image.</p>
+         */
         @NameInMap("ImageTag")
         public String imageTag;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
@@ -238,18 +301,33 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     }
 
     public static class GetRepoSyncTaskResponseBodyImageTo extends TeaModel {
+        /**
+         * <p>The tag of the image.</p>
+         */
         @NameInMap("ImageTag")
         public String imageTag;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the image repository.</p>
+         */
         @NameInMap("RepoName")
         public String repoName;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("RepoNamespaceName")
         public String repoNamespaceName;
 
@@ -301,21 +379,39 @@ public class GetRepoSyncTaskResponseBody extends TeaModel {
     }
 
     public static class GetRepoSyncTaskResponseBodyLayerTasks extends TeaModel {
+        /**
+         * <p>The digest of the artifact.</p>
+         */
         @NameInMap("ArtifactDigest")
         public String artifactDigest;
 
+        /**
+         * <p>The digest of the image layer.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>The size of synchronized image layers.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The ID of the synchronization task for the image layer.</p>
+         */
         @NameInMap("SyncLayerTaskId")
         public String syncLayerTaskId;
 
+        /**
+         * <p>The size of the image layer that is synchronized.</p>
+         */
         @NameInMap("SyncedSize")
         public Long syncedSize;
 
+        /**
+         * <p>The status of the synchronization task. Valid values:</p>
+         */
         @NameInMap("TaskStatus")
         public String taskStatus;
 

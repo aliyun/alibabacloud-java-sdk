@@ -4,36 +4,81 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoSourceCodeRepoResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether image building is automatically triggered when source code is committed. Valid values:</p>
+     * <br>
+     * <p>*   `true`: Image building is automatically triggered when source code is committed.</p>
+     * <p>*   `false`: Image building is not triggered when source code is committed.</p>
+     */
     @NameInMap("AutoBuild")
     public String autoBuild;
 
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The address of the source code repository.</p>
+     */
     @NameInMap("CodeRepoDomain")
     public String codeRepoDomain;
 
+    /**
+     * <p>The name of the source code repository.</p>
+     */
     @NameInMap("CodeRepoName")
     public String codeRepoName;
 
+    /**
+     * <p>The namespace to which the source code repository belongs.</p>
+     */
     @NameInMap("CodeRepoNamespaceName")
     public String codeRepoNamespaceName;
 
+    /**
+     * <p>The type of the code hosting platform. Valid values: `GITHUB`, `GITLAB`, `GITEE`, `CODE`, and `CODEUP`.</p>
+     */
     @NameInMap("CodeRepoType")
     public String codeRepoType;
 
+    /**
+     * <p>Indicates whether build cache is disabled. Valid values:</p>
+     * <br>
+     * <p>*   `true`: Build cache is disabled.</p>
+     * <p>*   `false`: Build cache is enabled.</p>
+     */
     @NameInMap("DisableCacheBuild")
     public String disableCacheBuild;
 
+    /**
+     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: successful</p>
+     * <p>*   `false`: failed</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>Indicates whether image building is accelerated for servers outside the Chinese mainland. Valid values:</p>
+     * <br>
+     * <p>*   `true`: Image building is accelerated for servers outside the Chinese mainland.</p>
+     * <p>*   `false`: Image building is not accelerated for servers outside the Chinese mainland.</p>
+     */
     @NameInMap("OverseaBuild")
     public String overseaBuild;
 
+    /**
+     * <p>The ID of the repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

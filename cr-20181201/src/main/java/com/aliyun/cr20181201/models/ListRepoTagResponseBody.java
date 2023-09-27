@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTagResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The images.</p>
+     */
     @NameInMap("Images")
     public java.util.List<ListRepoTagResponseBodyImages> images;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,24 +108,45 @@ public class ListRepoTagResponseBody extends TeaModel {
     }
 
     public static class ListRepoTagResponseBodyImages extends TeaModel {
+        /**
+         * <p>The digest of the image.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>The time when the image was created.</p>
+         */
         @NameInMap("ImageCreate")
         public String imageCreate;
 
+        /**
+         * <p>The ID of the image.</p>
+         */
         @NameInMap("ImageId")
         public String imageId;
 
+        /**
+         * <p>The size of the image.</p>
+         */
         @NameInMap("ImageSize")
         public Long imageSize;
 
+        /**
+         * <p>The time when the image was last updated.</p>
+         */
         @NameInMap("ImageUpdate")
         public String imageUpdate;
 
+        /**
+         * <p>The status of the image.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag of the image.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

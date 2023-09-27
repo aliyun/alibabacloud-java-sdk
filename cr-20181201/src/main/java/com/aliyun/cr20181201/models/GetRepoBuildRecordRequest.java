@@ -4,9 +4,15 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoBuildRecordRequest extends TeaModel {
+    /**
+     * <p>The ID of the image building record.</p>
+     */
     @NameInMap("BuildRecordId")
     public String buildRecordId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 

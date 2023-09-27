@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListEventCenterRuleNameResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of names of event notification rules.</p>
+     */
     @NameInMap("RuleNames")
     public java.util.List<ListEventCenterRuleNameResponseBodyRuleNames> ruleNames;
 
@@ -54,9 +66,15 @@ public class ListEventCenterRuleNameResponseBody extends TeaModel {
     }
 
     public static class ListEventCenterRuleNameResponseBodyRuleNames extends TeaModel {
+        /**
+         * <p>The ID of the event notification rule.</p>
+         */
         @NameInMap("RuleId")
         public String ruleId;
 
+        /**
+         * <p>The name of the event notification rule.</p>
+         */
         @NameInMap("RuleName")
         public String ruleName;
 

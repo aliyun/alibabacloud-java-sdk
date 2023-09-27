@@ -4,9 +4,15 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactBuildTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the artifact building task.</p>
+     */
     @NameInMap("BuildTaskId")
     public String buildTaskId;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
