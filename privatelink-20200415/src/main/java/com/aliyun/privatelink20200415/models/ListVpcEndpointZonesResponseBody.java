@@ -88,17 +88,6 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The state of the endpoint service. Valid values:</p>
-         * <br>
-         * <p>*   **Creating**: The endpoint service is being created.</p>
-         * <p>*   **Pending**: The endpoint service is being modified.</p>
-         * <p>*   **Active**: The endpoint service is available.</p>
-         * <p>*   **Deleting**: The endpoint service is being deleted.</p>
-         */
-        @NameInMap("ServiceStatus")
-        public String serviceStatus;
-
-        /**
          * <p>The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</p>
          */
         @NameInMap("VSwitchId")
@@ -168,14 +157,6 @@ public class ListVpcEndpointZonesResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
-        }
-
-        public ListVpcEndpointZonesResponseBodyZones setServiceStatus(String serviceStatus) {
-            this.serviceStatus = serviceStatus;
-            return this;
-        }
-        public String getServiceStatus() {
-            return this.serviceStatus;
         }
 
         public ListVpcEndpointZonesResponseBodyZones setVSwitchId(String vSwitchId) {

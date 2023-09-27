@@ -4,39 +4,93 @@ package com.aliyun.privatelink20200415.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcEndpointServiceResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the endpoint service automatically accepts endpoint connection requests. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("AutoAcceptEnabled")
     public Boolean autoAcceptEnabled;
 
+    /**
+     * <p>The time when the endpoint service was created.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The service state of the endpoint service. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: The endpoint service runs as expected.</p>
+     * <p>*   **FinacialLocked**: The endpoint service is locked due to overdue payments.</p>
+     */
     @NameInMap("ServiceBusinessStatus")
     public String serviceBusinessStatus;
 
+    /**
+     * <p>The description of the endpoint service.</p>
+     */
     @NameInMap("ServiceDescription")
     public String serviceDescription;
 
+    /**
+     * <p>The domain name of the endpoint service.</p>
+     */
     @NameInMap("ServiceDomain")
     public String serviceDomain;
 
+    /**
+     * <p>The endpoint service ID.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The name of the endpoint service.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The state of the endpoint service. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: The endpoint service is being created.</p>
+     * <p>*   **Pending**: The endpoint service is being modified.</p>
+     * <p>*   **Active**: The endpoint service is available.</p>
+     * <p>*   **Deleting**: The endpoint service is being deleted.</p>
+     * <p>*   **Inactive**: The endpoint service is unavailable.</p>
+     */
     @NameInMap("ServiceStatus")
     public String serviceStatus;
 
+    /**
+     * <p>Indicates whether IPv6 was enabled for the endpoint service. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("ServiceSupportIPv6")
     public Boolean serviceSupportIPv6;
 
+    /**
+     * <p>Indicates whether the domain name of the nearest endpoint that is associated with the endpoint service is resolved first. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 

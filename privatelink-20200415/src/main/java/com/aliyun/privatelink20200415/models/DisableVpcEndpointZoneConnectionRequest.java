@@ -5,43 +5,56 @@ import com.aliyun.tea.*;
 
 public class DisableVpcEndpointZoneConnectionRequest extends TeaModel {
     /**
-     * <p>The ID of the endpoint service.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs only a dry run. The system checks the AccessKey pair, the permissions of the RAM user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the endpoint.</p>
+     * <p>The endpoint ID.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>Specifies whether to disconnect the endpoint from previous connections after migration. Valid values:</p>
+     * <p>The ID of the region where the connection request from the endpoint is rejected.</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
-     * <br>
-     * <p>>  Set the value to true if you want to disconnect the endpoint from the previous connections in the zone after migration.</p>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>Specifies whether to disconnect the endpoint from the previous connection after the service resource is smoothly migrated. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
+     * <br>
+     * <p>> Set the value to true if you want to disconnect the endpoint from the previous connection in the zone after the service resource is smoothly migrated.</p>
+     */
     @NameInMap("ReplacedResource")
     public Boolean replacedResource;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DisableVpcEndpointZoneConnection**.</p>
+     * <p>The endpoint service ID.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The ID of the zone that is associated with the endpoint.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

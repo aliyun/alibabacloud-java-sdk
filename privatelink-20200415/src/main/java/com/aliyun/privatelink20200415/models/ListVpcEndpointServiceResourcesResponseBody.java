@@ -5,27 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     /**
-     * <p>The vSwitch to which the service resource belongs.</p>
+     * <p>The number of entries returned on each page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The type of the service resource.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>The value is set to **slb**, which indicates Classic Load Balancer (CLB).</p>
+     * <p>*   If no value is returned for **NextToken**, no next requests are performed.</p>
+     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListVpcEndpointServiceResources**.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of service resources.</p>
+     * <p>The service resources.</p>
      */
     @NameInMap("Resources")
     public java.util.List<ListVpcEndpointServiceResourcesResponseBodyResources> resources;
@@ -68,56 +69,76 @@ public class ListVpcEndpointServiceResourcesResponseBody extends TeaModel {
     }
 
     public static class ListVpcEndpointServiceResourcesResponseBodyResources extends TeaModel {
+        /**
+         * <p>Indicates whether automatic resource allocation is enabled. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("AutoAllocatedEnabled")
         public Boolean autoAllocatedEnabled;
 
         /**
-         * <p>The ID of the endpoint service.</p>
+         * <p>The IP address of the service resource.</p>
          */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The ID of the region where the service resource is deployed.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The number of endpoints that are associated with the service resource that is smoothly migrated.</p>
+         */
         @NameInMap("RelatedDeprecatedEndpointCount")
         public Long relatedDeprecatedEndpointCount;
 
+        /**
+         * <p>The number of endpoints that are associated with the service resource.</p>
+         */
         @NameInMap("RelatedEndpointCount")
         public Long relatedEndpointCount;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The service resource ID.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         */
         @NameInMap("ResourceSupportIPv6")
         public Boolean resourceSupportIPv6;
 
         /**
-         * <p>The number of replaced connections to the endpoint associated with the endpoint service in smooth migration scenarios.</p>
+         * <p>The type of the service resource.</p>
+         * <br>
+         * <p>Only **slb** is returned. This value indicates a Classic Load Balancer (CLB) instance.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>Indicates whether automatic resource allocation is allowed. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The ID of the vSwitch to which the service resource belongs.</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the region where the service resource is deployed.</p>
+         * <p>The ID of the virtual private cloud (VPC) to which the service resource belongs.</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The ID of the zone where the service resource is deployed.</p>
+         * <p>The ID of the zone to which the service resource belongs.</p>
          */
         @NameInMap("ZoneId")
         public String zoneId;

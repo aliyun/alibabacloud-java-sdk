@@ -5,14 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointConnectionsRequest extends TeaModel {
     /**
-     * <p>The ID of the endpoint connection.</p>
-     * <br>
-     * <p>> This parameter is required only when a gateway is used for load balancing.</p>
-     */
-    @NameInMap("ConnectionId")
-    public Long connectionId;
-
-    /**
      * <p>The state of the endpoint connection. Valid values:</p>
      * <br>
      * <p>*   **Pending**: The endpoint connection is being modified.</p>
@@ -94,14 +86,6 @@ public class ListVpcEndpointConnectionsRequest extends TeaModel {
     public static ListVpcEndpointConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcEndpointConnectionsRequest self = new ListVpcEndpointConnectionsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListVpcEndpointConnectionsRequest setConnectionId(Long connectionId) {
-        this.connectionId = connectionId;
-        return this;
-    }
-    public Long getConnectionId() {
-        return this.connectionId;
     }
 
     public ListVpcEndpointConnectionsRequest setConnectionStatus(String connectionStatus) {

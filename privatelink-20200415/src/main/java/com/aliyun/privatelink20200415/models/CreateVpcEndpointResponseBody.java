@@ -5,40 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateVpcEndpointResponseBody extends TeaModel {
     /**
-     * <p>The endpoint ID.</p>
+     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
-
-    @NameInMap("ConnectionStatus")
-    public String connectionStatus;
-
-    /**
-     * <p>The service state of the endpoint. Valid values:</p>
-     * <br>
-     * <p>*   **Normal**: The endpoint runs as expected.</p>
-     * <p>*   **FinacialLocked**: The endpoint is locked due to overdue payments.</p>
-     */
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    /**
-     * <p>The description of the endpoint.</p>
-     */
-    @NameInMap("EndpointBusinessStatus")
-    public String endpointBusinessStatus;
-
-    /**
-     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
-     */
-    @NameInMap("EndpointDescription")
-    public String endpointDescription;
-
-    /**
-     * <p>The request ID.</p>
-     */
-    @NameInMap("EndpointDomain")
-    public String endpointDomain;
 
     /**
      * <p>The state of the endpoint connection. Valid values:</p>
@@ -50,26 +20,47 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
      * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
      * <p>*   **Deleting**: The connection is being deleted.</p>
      */
-    @NameInMap("EndpointId")
-    public String endpointId;
-
-    /**
-     * <p>The name of the endpoint service with which the endpoint is associated.</p>
-     */
-    @NameInMap("EndpointName")
-    public String endpointName;
-
-    /**
-     * <p>The ID of the VPC to which the endpoint belongs.</p>
-     */
-    @NameInMap("EndpointStatus")
-    public String endpointStatus;
+    @NameInMap("ConnectionStatus")
+    public String connectionStatus;
 
     /**
      * <p>The time when the endpoint was created.</p>
      */
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    /**
+     * <p>The service state of the endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **Normal**: The endpoint runs as expected.</p>
+     * <p>*   **FinacialLocked**: The endpoint is locked due to overdue payments.</p>
+     */
+    @NameInMap("EndpointBusinessStatus")
+    public String endpointBusinessStatus;
+
+    /**
+     * <p>The description of the endpoint.</p>
+     */
+    @NameInMap("EndpointDescription")
+    public String endpointDescription;
+
+    /**
+     * <p>The domain name of the endpoint.</p>
+     */
+    @NameInMap("EndpointDomain")
+    public String endpointDomain;
+
+    /**
+     * <p>The endpoint ID.</p>
+     */
+    @NameInMap("EndpointId")
+    public String endpointId;
+
+    /**
+     * <p>The name of the endpoint.</p>
+     */
+    @NameInMap("EndpointName")
+    public String endpointName;
 
     /**
      * <p>The state of the endpoint. Valid values:</p>
@@ -79,17 +70,29 @@ public class CreateVpcEndpointResponseBody extends TeaModel {
      * <p>*   **Pending**: The endpoint is being modified.</p>
      * <p>*   **Deleting**: The endpoint is being deleted.</p>
      */
+    @NameInMap("EndpointStatus")
+    public String endpointStatus;
+
+    /**
+     * <p>The request ID.</p>
+     */
+    @NameInMap("RequestId")
+    public String requestId;
+
+    /**
+     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     * <p>The name of the endpoint service with which the endpoint is associated.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
-     * <p>The name of the endpoint.</p>
+     * <p>The ID of the VPC to which the endpoint belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

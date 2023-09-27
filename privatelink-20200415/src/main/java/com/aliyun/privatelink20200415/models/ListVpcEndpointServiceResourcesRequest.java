@@ -5,28 +5,30 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServiceResourcesRequest extends TeaModel {
     /**
-     * <p>The virtual private cloud (VPC) to which the service resource belongs.</p>
+     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: **1** to **50**. Default value: **50**.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</p>
+     * <p>*   If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the service resource.</p>
+     * <p>The region ID of the service resource.</p>
+     * <br>
+     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Indicates whether the endpoint service supports IPv6. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>The endpoint service ID.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;

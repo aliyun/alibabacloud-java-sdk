@@ -50,6 +50,9 @@ public class UpdateVpcEndpointServiceResourceAttributeRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The zone ID of the service resource.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

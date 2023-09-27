@@ -5,39 +5,36 @@ import com.aliyun.tea.*;
 
 public class DetachSecurityGroupFromVpcEndpointRequest extends TeaModel {
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>*   **true**: sends a request for check purpose only. If you select this option, the endpoint is still associated with the security group after the request passes the check. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails to pass the check, the corresponding error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends a common request. If the request passes the check, the 2xx HTTP status code is returned, and the operation is performed.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the endpoint that you want to disassociate from the security group.</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the security group from which you want to disassociate the endpoint.</p>
+     * <p>The ID of the endpoint that you want to disassociate from the security group.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>*   **DetachSecurityGroupFromVpcEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListVpcEndpoints](~~183558#doc-api-Privatelink-ListVpcEndpoints~~) operation to query whether the endpoint is disassociated from the security group.</p>
-     * <br>
-     * <p>    *   If the endpoint is in the **Pending** state, it indicates that the endpoint is being disassociated from the security group.</p>
-     * <p>    *   If the endpoint is in the **Active** state, it indicates that the endpoint is disassociated from the security group.</p>
-     * <br>
-     * <p>*   You cannot use the **DetachSecurityGroupFromVpcEndpoint** operation to disassociate an endpoint from multiple security groups at the same time.</p>
+     * <p>The region ID of the endpoint that you want to disassociate from the security group. You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the region to which the endpoint belongs. You can call the [DescribeRegions](~~120468#doc-api-Privatelink-DescribeRegions~~) operation to query the most recent region list.</p>
+     * <p>The ID of the security group from which you want to disassociate the endpoint.</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;

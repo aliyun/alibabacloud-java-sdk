@@ -5,141 +5,147 @@ import com.aliyun.tea.*;
 
 public class GetVpcEndpointAttributeResponseBody extends TeaModel {
     /**
-     * <p>The description of the endpoint.</p>
+     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
     /**
-     * <p>The ID of the endpoint.</p>
+     * <p>The state of the endpoint connection. Valid values:</p>
+     * <br>
+     * <p>*   **Pending**: The connection is being modified.</p>
+     * <p>*   **Connecting**: The connection is being established.</p>
+     * <p>*   **Connected**: The connection is established.</p>
+     * <p>*   **Disconnecting**: The endpoint is being disconnected from the endpoint service.</p>
+     * <p>*   **Disconnected**: The endpoint is disconnected from the endpoint service.</p>
+     * <p>*   **Deleting**: The connection is being deleted.</p>
      */
     @NameInMap("ConnectionStatus")
     public String connectionStatus;
 
     /**
-     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
+     * <p>The time when the endpoint was created.</p>
      */
     @NameInMap("CreateTime")
     public String createTime;
 
     /**
-     * <p>The business status of the endpoint. Valid values:</p>
+     * <p>The service state of the endpoint. Valid values:</p>
      * <br>
-     * <p>*   **Normal**: normal</p>
-     * <p>*   **FinacialLocked**: locked due to overdue payments</p>
+     * <p>*   **Normal**: The endpoint runs as expected.</p>
+     * <p>*   **FinacialLocked**: The endpoint is locked due to overdue payments.</p>
      */
     @NameInMap("EndpointBusinessStatus")
     public String endpointBusinessStatus;
 
     /**
-     * <p>The name of the endpoint.</p>
+     * <p>The description of the endpoint.</p>
      */
     @NameInMap("EndpointDescription")
     public String endpointDescription;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
+     * <p>The domain name of the endpoint.</p>
      */
     @NameInMap("EndpointDomain")
     public String endpointDomain;
 
     /**
-     * <p>The bandwidth of the endpoint connection. Unit: Mbit/s.</p>
+     * <p>The endpoint ID.</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The time when the endpoint was created.</p>
+     * <p>The name of the endpoint.</p>
      */
     @NameInMap("EndpointName")
     public String endpointName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetVpcEndpointAttribute**.</p>
+     * <p>The state of the endpoint. Valid values:</p>
+     * <br>
+     * <p>*   **Creating**: The endpoint is being created.</p>
+     * <p>*   **Active**: The endpoint is available.</p>
+     * <p>*   **Pending**: The endpoint is being modified.</p>
+     * <p>*   **Deleting**: The endpoint is being deleted.</p>
      */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
 
     /**
-     * <p>The payer. Valid values:</p>
+     * <p>The type of the endpoint.</p>
      * <br>
-     * <p>*   **Endpoint**: the service consumer</p>
-     * <p>*   **EndpointService**: the service provider</p>
+     * <p>**Interface** is returned. The value indicates the interface endpoint with which the Classic Load Balancer (CLB) instances are associated.</p>
      */
     @NameInMap("EndpointType")
     public String endpointType;
 
     /**
-     * <p>The name of the endpoint service that is associated with the endpoint.</p>
+     * <p>The payer. Valid values:</p>
+     * <br>
+     * <p>*   **Endpoint**: the service consumer.</p>
+     * <p>*   **EndpointService**: the service provider.</p>
      */
     @NameInMap("Payer")
     public String payer;
 
     /**
-     * <p>The number of private IP addresses that can be used by an elastic network interface (ENI) in each zone. The value is set to **1**.</p>
+     * <p>The region ID of the endpoint.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The type of the endpoint.</p>
-     * <br>
-     * <p>The value is set to **Interface**, which indicates that the resource type of **ServiceId** is Classic Load Balancer (CLB).</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Queries the details about a specified endpoint.</p>
+     * <p>The resource group ID.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The region ID of the endpoint.</p>
+     * <p>Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:</p>
+     * <br>
+     * <p>*   **true**: The endpoint and the endpoint service belong to the same Alibaba Cloud account.</p>
+     * <p>*   **false**: The endpoint and the endpoint service do not belong to the same Alibaba Cloud account.</p>
      */
     @NameInMap("ResourceOwner")
     public Boolean resourceOwner;
 
     /**
-     * <p>Indicates whether zone affinity is enabled. Valid values:</p>
-     * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>The ID of the endpoint service with which the endpoint is associated.</p>
      */
     @NameInMap("ServiceId")
     public String serviceId;
 
     /**
-     * <p>The status of the endpoint connection. Valid values:</p>
-     * <br>
-     * <p>*   **Pending**: being modified</p>
-     * <p>*   **Connecting**: connecting</p>
-     * <p>*   **Connected**: connected</p>
-     * <p>*   **Disconnecting**: disconnecting</p>
-     * <p>*   **Disconnected**: disconnected</p>
-     * <p>*   **Deleting**: being deleted</p>
+     * <p>The name of the endpoint service with which the endpoint is associated.</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;
 
     /**
-     * <p>The domain name of the endpoint.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the endpoint belongs.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Indicates whether zone affinity is enabled. Valid values:</p>
+     * <br>
+     * <p>*   **true**: Zone affinity is enabled.</p>
+     * <p>*   **false**: Zone affinity is disabled.</p>
      */
     @NameInMap("ZoneAffinityEnabled")
     public Boolean zoneAffinityEnabled;
 
     /**
-     * <p>The region ID of the endpoint.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~120468~~) operation to query the most recent region list.</p>
+     * <p>The number of private IP addresses that are assigned to an elastic network interface (ENI) in each zone. Only **1** is returned.</p>
      */
     @NameInMap("ZonePrivateIpAddressCount")
     public Long zonePrivateIpAddressCount;
