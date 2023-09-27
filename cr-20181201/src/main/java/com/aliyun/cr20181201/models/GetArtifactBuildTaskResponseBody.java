@@ -4,36 +4,74 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetArtifactBuildTaskResponseBody extends TeaModel {
+    /**
+     * <p>The type of the artifact building task. Valid values:</p>
+     * <br>
+     * <p>*   `IMAGE_TO_ACCELERATED_IMAGE`: builds accelerated images for Container Service for Kubernetes (ACK) clusters.</p>
+     * <p>*   `IMAGE_TO_ECI_ACCELERATED_IMAGE`: builds accelerated images for elastic container instances.</p>
+     */
     @NameInMap("ArtifactBuildType")
     public String artifactBuildType;
 
+    /**
+     * <p>The ID of the artifact building task.</p>
+     */
     @NameInMap("BuildTaskId")
     public String buildTaskId;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The time when the artifact building task ends.</p>
+     */
     @NameInMap("EndTime")
     public Integer endTime;
 
     @NameInMap("Instructions")
     public java.util.List<String> instructions;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the source artifact.</p>
+     */
     @NameInMap("SourceArtifact")
     public GetArtifactBuildTaskResponseBodySourceArtifact sourceArtifact;
 
+    /**
+     * <p>The time when the artifact building task starts.</p>
+     */
     @NameInMap("StartTime")
     public Integer startTime;
 
+    /**
+     * <p>The artifact that is built in the task.</p>
+     */
     @NameInMap("TargetArtifact")
     public GetArtifactBuildTaskResponseBodyTargetArtifact targetArtifact;
 
+    /**
+     * <p>The status of the artifact that is built in the task. Valid values:</p>
+     * <br>
+     * <p>*   `PENDING`: The artifact is being scheduled.</p>
+     * <p>*   `BUILDING`: The artifact is being built.</p>
+     * <p>*   `SUCCESS`: The artifact is built.</p>
+     * <p>*   `FAILED`: The artifact fails to be built.</p>
+     */
     @NameInMap("TaskStatus")
     public String taskStatus;
 
@@ -131,12 +169,21 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     }
 
     public static class GetArtifactBuildTaskResponseBodySourceArtifact extends TeaModel {
+        /**
+         * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+         */
         @NameInMap("ArtifactType")
         public String artifactType;
 
+        /**
+         * <p>The ID of the repository to which the source artifact belongs. The repository can only be an image repository.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The version of the artifact. The artifact can only be an image.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -172,12 +219,21 @@ public class GetArtifactBuildTaskResponseBody extends TeaModel {
     }
 
     public static class GetArtifactBuildTaskResponseBodyTargetArtifact extends TeaModel {
+        /**
+         * <p>The type of the artifact that is built in the task. The value can only be IMAGE.</p>
+         */
         @NameInMap("ArtifactType")
         public String artifactType;
 
+        /**
+         * <p>The ID of the repository to which the artifact that is built in the task belongs. The repository can only be an image repository. The value is the same as the ID of the repository to which the source artifact belongs.</p>
+         */
         @NameInMap("RepoId")
         public String repoId;
 
+        /**
+         * <p>The version of the artifact that is built in the task. The artifact can only be an image.</p>
+         */
         @NameInMap("Version")
         public String version;
 

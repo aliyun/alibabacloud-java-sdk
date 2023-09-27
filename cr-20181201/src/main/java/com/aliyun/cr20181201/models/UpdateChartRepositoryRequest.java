@@ -4,18 +4,36 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateChartRepositoryRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the namespace to which the repository belongs.</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 
+    /**
+     * <p>The type of the repository. Valid values:</p>
+     * <br>
+     * <p>*   `PUBLIC`: a public repository.</p>
+     * <p>*   `PRIVATE`: a private repository.</p>
+     */
     @NameInMap("RepoType")
     public String repoType;
 
+    /**
+     * <p>The summary of the repository.</p>
+     */
     @NameInMap("Summary")
     public String summary;
 

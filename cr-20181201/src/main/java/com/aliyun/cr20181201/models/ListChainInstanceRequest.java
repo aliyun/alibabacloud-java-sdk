@@ -4,18 +4,33 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChainInstanceRequest extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set this parameter to **ListChainInstance**.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The time when the delivery chain started.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The name of the image repository.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The time when the delivery chain is completed.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The name of the delivery chain.</p>
+     */
     @NameInMap("RepoNamespaceName")
     public String repoNamespaceName;
 

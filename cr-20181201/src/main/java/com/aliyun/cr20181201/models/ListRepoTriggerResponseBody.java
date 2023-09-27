@@ -4,15 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoTriggerResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request fails.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The triggers of the repository.</p>
+     */
     @NameInMap("Triggers")
     public java.util.List<ListRepoTriggerResponseBodyTriggers> triggers;
 
@@ -54,21 +69,46 @@ public class ListRepoTriggerResponseBody extends TeaModel {
     }
 
     public static class ListRepoTriggerResponseBodyTriggers extends TeaModel {
+        /**
+         * <p>The type of the event that activates the trigger. Valid values:</p>
+         * <br>
+         * <p>*   `BUILD_SUCCESS`: The trigger is activated when an image building task is successful.</p>
+         * <p>*   `BUILD_Fail`: The trigger is activated when an image building task fails.</p>
+         */
         @NameInMap("RepoEvent")
         public String repoEvent;
 
+        /**
+         * <p>The ID of the trigger.</p>
+         */
         @NameInMap("TriggerId")
         public String triggerId;
 
+        /**
+         * <p>The name of the trigger.</p>
+         */
         @NameInMap("TriggerName")
         public String triggerName;
 
+        /**
+         * <p>The image tag based on which the trigger is set.</p>
+         */
         @NameInMap("TriggerTag")
         public String triggerTag;
 
+        /**
+         * <p>The type of the trigger. Valid values:</p>
+         * <br>
+         * <p>*   `ALL`: a trigger that supports both tags and regular expressions.</p>
+         * <p>*   `TAG_LISTTAG`: a tag-based trigger.</p>
+         * <p>*   `TAG_REG_EXP`: a regular expression-based trigger.</p>
+         */
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <p>The URL of the trigger.</p>
+         */
         @NameInMap("TriggerUrl")
         public String triggerUrl;
 

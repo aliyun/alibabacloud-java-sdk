@@ -4,12 +4,21 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteRepoTriggerRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the trigger.</p>
+     */
     @NameInMap("TriggerId")
     public String triggerId;
 

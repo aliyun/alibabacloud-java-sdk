@@ -4,18 +4,36 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoTagScanTaskRequest extends TeaModel {
+    /**
+     * <p>The digest of the image.</p>
+     */
     @NameInMap("Digest")
     public String digest;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The type of the scanning engine.</p>
+     * <br>
+     * <p>*   `SAS_SCAN_SERVICE`: Security Center scan engine (paid service)</p>
+     * <p>*   `ACR_SCAN_SERVICE`: Container Registry scan engine</p>
+     */
     @NameInMap("ScanService")
     public String scanService;
 
+    /**
+     * <p>The version of the image.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

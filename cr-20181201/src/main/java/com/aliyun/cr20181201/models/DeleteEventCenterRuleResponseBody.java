@@ -4,9 +4,15 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventCenterRuleResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,15 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateNamespaceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to automatically create an image repository in the namespace.</p>
+     */
     @NameInMap("AutoCreateRepo")
     public Boolean autoCreateRepo;
 
+    /**
+     * <p>The default type of the repository that is automatically created. Valid values:</p>
+     * <br>
+     * <p>*   `PUBLIC`: a public repository</p>
+     * <p>*   `PRIVATE`: a private repository</p>
+     */
     @NameInMap("DefaultRepoType")
     public String defaultRepoType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the namespace. The name must be 2 to 120 characters in length, and can contain lowercase letters, digits, and the following delimiters: underscores (\_), hyphens (-), and periods (.). The name cannot start or end with a delimiter.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 

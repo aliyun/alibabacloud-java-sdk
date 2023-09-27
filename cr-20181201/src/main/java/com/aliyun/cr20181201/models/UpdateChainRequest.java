@@ -4,21 +4,39 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateChainRequest extends TeaModel {
+    /**
+     * <p>The configuration of the delivery chain in the JSON format.</p>
+     */
     @NameInMap("ChainConfig")
     public String chainConfig;
 
+    /**
+     * <p>The ID of the delivery chain.</p>
+     */
     @NameInMap("ChainId")
     public String chainId;
 
+    /**
+     * <p>The description of the delivery chain.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the delivery chain.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Repositories in which the delivery chain does not take effect.</p>
+     */
     @NameInMap("ScopeExclude")
     public java.util.List<String> scopeExclude;
 

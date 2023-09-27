@@ -4,21 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceVpcEndpointResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Domains")
     public java.util.List<String> domains;
 
+    /**
+     * <p>Indicates whether the access control list (ACL) feature is enabled. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The ACL feature is enabled.</p>
+     * <p>*   `false`: The ACL feature is disabled.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request fails.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The VPCs in which the instance is deployed.</p>
+     */
     @NameInMap("LinkedVpcs")
     public java.util.List<GetInstanceVpcEndpointResponseBodyLinkedVpcs> linkedVpcs;
 
+    @NameInMap("ModuleName")
+    public String moduleName;
+
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -67,6 +91,14 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         return this.linkedVpcs;
     }
 
+    public GetInstanceVpcEndpointResponseBody setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+        return this;
+    }
+    public String getModuleName() {
+        return this.moduleName;
+    }
+
     public GetInstanceVpcEndpointResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -76,18 +108,36 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
     }
 
     public static class GetInstanceVpcEndpointResponseBodyLinkedVpcs extends TeaModel {
+        /**
+         * <p>Indicates whether the default ACL is used.</p>
+         */
         @NameInMap("DefaultAccess")
         public Boolean defaultAccess;
 
+        /**
+         * <p>IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The status of the VPC. Valid values:</p>
+         * <br>
+         * <p>*   `CREATING`: The VPC is being created.</p>
+         * <p>*   `RUNNING`: The VPC is running.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>VPC ID</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The ID of the vSwitch.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 

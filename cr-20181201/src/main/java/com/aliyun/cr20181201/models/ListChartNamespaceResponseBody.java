@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListChartNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The namespaces.</p>
+     */
     @NameInMap("Namespaces")
     public java.util.List<ListChartNamespaceResponseBodyNamespaces> namespaces;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -87,21 +108,45 @@ public class ListChartNamespaceResponseBody extends TeaModel {
     }
 
     public static class ListChartNamespaceResponseBodyNamespaces extends TeaModel {
+        /**
+         * <p>Indicates whether a repository was automatically created when a chart is pushed to the namespace.</p>
+         */
         @NameInMap("AutoCreateRepo")
         public Boolean autoCreateRepo;
 
+        /**
+         * <p>The default repository type. Valid values:</p>
+         * <br>
+         * <p>*   `PUBLIC`: a public repository</p>
+         * <p>*   `PRIVATE`: a private repository</p>
+         */
         @NameInMap("DefaultRepoType")
         public String defaultRepoType;
 
+        /**
+         * <p>The ID of the instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The ID of the namespace.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("NamespaceName")
         public String namespaceName;
 
+        /**
+         * <p>The status of the namespace. Valid values:</p>
+         * <br>
+         * <p>*   `NORMAL`: The namespace is normal.</p>
+         * <p>*   `DELETING`: The namespace is being deleted.</p>
+         */
         @NameInMap("NamespaceStatus")
         public String namespaceStatus;
 

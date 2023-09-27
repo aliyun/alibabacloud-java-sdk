@@ -93,6 +93,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("InstanceIssue")
+        public String instanceIssue;
+
         @NameInMap("InstanceName")
         public String instanceName;
 
@@ -130,6 +133,14 @@ public class ListInstanceResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListInstanceResponseBodyInstances setInstanceIssue(String instanceIssue) {
+            this.instanceIssue = instanceIssue;
+            return this;
+        }
+        public String getInstanceIssue() {
+            return this.instanceIssue;
         }
 
         public ListInstanceResponseBodyInstances setInstanceName(String instanceName) {

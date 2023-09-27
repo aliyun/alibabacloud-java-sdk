@@ -4,12 +4,21 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class UpdateNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

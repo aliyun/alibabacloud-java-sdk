@@ -4,24 +4,45 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListRepoSyncRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The number of entries to return on each page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the image repository.</p>
+     */
     @NameInMap("RepoName")
     public String repoName;
 
+    /**
+     * <p>The ID of the destination instance.</p>
+     */
     @NameInMap("TargetInstanceId")
     public String targetInstanceId;
 
+    /**
+     * <p>The region ID of the destination instance.</p>
+     */
     @NameInMap("TargetRegionId")
     public String targetRegionId;
 

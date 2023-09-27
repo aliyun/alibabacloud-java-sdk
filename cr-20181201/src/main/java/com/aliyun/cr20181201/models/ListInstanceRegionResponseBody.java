@@ -4,15 +4,30 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceRegionResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request fails.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The list of regions.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListInstanceRegionResponseBodyRegions> regions;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +69,15 @@ public class ListInstanceRegionResponseBody extends TeaModel {
     }
 
     public static class ListInstanceRegionResponseBodyRegions extends TeaModel {
+        /**
+         * <p>The name of the region.</p>
+         */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>The ID of the region.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

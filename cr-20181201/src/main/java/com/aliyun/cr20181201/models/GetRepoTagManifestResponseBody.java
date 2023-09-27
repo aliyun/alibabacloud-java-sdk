@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagManifestResponseBody extends TeaModel {
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The information about the image manifest.</p>
+     */
     @NameInMap("Manifest")
     public GetRepoTagManifestResponseBodyManifest manifest;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +66,21 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
     }
 
     public static class GetRepoTagManifestResponseBodyManifestConfig extends TeaModel {
+        /**
+         * <p>The digest of the image.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>The MIME type of the configuration file.</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <p>Size</p>
+         */
         @NameInMap("Size")
         public Long size;
 
@@ -95,6 +116,9 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
     }
 
     public static class GetRepoTagManifestResponseBodyManifestFsLayers extends TeaModel {
+        /**
+         * <p>A list of filesystem layer blob sums contained in this image.</p>
+         */
         @NameInMap("BlobSum")
         public String blobSum;
 
@@ -114,6 +138,9 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
     }
 
     public static class GetRepoTagManifestResponseBodyManifestHistory extends TeaModel {
+        /**
+         * <p>The raw V1 compatibility information.</p>
+         */
         @NameInMap("V1Compatibility")
         public java.util.Map<String, ?> v1Compatibility;
 
@@ -133,12 +160,21 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
     }
 
     public static class GetRepoTagManifestResponseBodyManifestLayers extends TeaModel {
+        /**
+         * <p>The digest of the image.</p>
+         */
         @NameInMap("Digest")
         public String digest;
 
+        /**
+         * <p>The MIME type of the configuration file.</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <p>Size.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
@@ -174,12 +210,21 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
     }
 
     public static class GetRepoTagManifestResponseBodyManifestSignatures extends TeaModel {
+        /**
+         * <p>The header information of the signature.</p>
+         */
         @NameInMap("Header")
         public java.util.Map<String, ?> header;
 
+        /**
+         * <p>The signed protected header.</p>
+         */
         @NameInMap("Protected")
         public String _protected;
 
+        /**
+         * <p>The signature for the image manifest.</p>
+         */
         @NameInMap("Signature")
         public String signature;
 
@@ -215,33 +260,63 @@ public class GetRepoTagManifestResponseBody extends TeaModel {
     }
 
     public static class GetRepoTagManifestResponseBodyManifest extends TeaModel {
+        /**
+         * <p>Architecture.</p>
+         */
         @NameInMap("Architecture")
         public String architecture;
 
+        /**
+         * <p>The configuration information.</p>
+         */
         @NameInMap("Config")
         public GetRepoTagManifestResponseBodyManifestConfig config;
 
+        /**
+         * <p>The digest of the referenced filesystem image layer.</p>
+         */
         @NameInMap("FsLayers")
         public java.util.List<GetRepoTagManifestResponseBodyManifestFsLayers> fsLayers;
 
+        /**
+         * <p>A list of unstructured historical data for V1 compatibility.</p>
+         */
         @NameInMap("History")
         public java.util.List<GetRepoTagManifestResponseBodyManifestHistory> history;
 
+        /**
+         * <p>The information about image layers.</p>
+         */
         @NameInMap("Layers")
         public java.util.List<GetRepoTagManifestResponseBodyManifestLayers> layers;
 
+        /**
+         * <p>The type.</p>
+         */
         @NameInMap("MediaType")
         public String mediaType;
 
+        /**
+         * <p>The name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The schema version of the manifest.</p>
+         */
         @NameInMap("SchemaVersion")
         public Integer schemaVersion;
 
+        /**
+         * <p>The information about signatures.</p>
+         */
         @NameInMap("Signatures")
         public java.util.List<GetRepoTagManifestResponseBodyManifestSignatures> signatures;
 
+        /**
+         * <p>The tag of the image.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 

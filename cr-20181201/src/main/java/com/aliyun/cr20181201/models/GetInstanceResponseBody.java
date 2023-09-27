@@ -13,6 +13,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InstanceIssue")
+    public String instanceIssue;
+
     @NameInMap("InstanceName")
     public String instanceName;
 
@@ -61,6 +64,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public GetInstanceResponseBody setInstanceIssue(String instanceIssue) {
+        this.instanceIssue = instanceIssue;
+        return this;
+    }
+    public String getInstanceIssue() {
+        return this.instanceIssue;
     }
 
     public GetInstanceResponseBody setInstanceName(String instanceName) {

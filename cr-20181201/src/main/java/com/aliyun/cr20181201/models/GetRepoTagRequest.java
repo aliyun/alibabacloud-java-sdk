@@ -4,12 +4,21 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetRepoTagRequest extends TeaModel {
+    /**
+     * <p>The return value of status code.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The operation that you want to perform. Set the value to **GetRepoTag**.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The number of milliseconds that have elapsed since the image was created.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

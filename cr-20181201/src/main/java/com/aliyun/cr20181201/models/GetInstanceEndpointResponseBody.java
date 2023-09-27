@@ -4,27 +4,51 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceEndpointResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether the access control list (ACL) feature is enabled.</p>
+     */
     @NameInMap("AclEnable")
     public Boolean aclEnable;
 
+    /**
+     * <p>The ACLs.</p>
+     */
     @NameInMap("AclEntries")
     public java.util.List<GetInstanceEndpointResponseBodyAclEntries> aclEntries;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Domain names.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<GetInstanceEndpointResponseBodyDomains> domains;
 
+    /**
+     * <p>Indicates whether the ACL feature is enabled.</p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the instance.</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -98,9 +122,15 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     }
 
     public static class GetInstanceEndpointResponseBodyAclEntries extends TeaModel {
+        /**
+         * <p>Remarks for public IP address whitelists.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The public IP address whitelist.</p>
+         */
         @NameInMap("Entry")
         public String entry;
 
@@ -128,9 +158,18 @@ public class GetInstanceEndpointResponseBody extends TeaModel {
     }
 
     public static class GetInstanceEndpointResponseBodyDomains extends TeaModel {
+        /**
+         * <p>The domain name that is used to access the Container Registry Enterprise Edition instance.</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The type of the domain name. Valid values:</p>
+         * <br>
+         * <p>*   `SYSTEM`: a system domain name.</p>
+         * <p>*   `USER`: a user domain name.</p>
+         */
         @NameInMap("Type")
         public String type;
 

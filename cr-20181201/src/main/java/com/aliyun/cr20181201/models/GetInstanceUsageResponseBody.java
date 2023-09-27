@@ -4,36 +4,72 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceUsageResponseBody extends TeaModel {
+    /**
+     * <p>The quota of chart namespaces.</p>
+     */
     @NameInMap("ChartNamespaceQuota")
     public String chartNamespaceQuota;
 
+    /**
+     * <p>The number of chart namespaces that are created in the instance.</p>
+     */
     @NameInMap("ChartNamespaceUsage")
     public String chartNamespaceUsage;
 
+    /**
+     * <p>The quota of chart repositories for the instance.</p>
+     */
     @NameInMap("ChartRepoQuota")
     public String chartRepoQuota;
 
+    /**
+     * <p>The number of chart repositories that are created.</p>
+     */
     @NameInMap("ChartRepoUsage")
     public String chartRepoUsage;
 
+    /**
+     * <p>The return value.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request is successful.</p>
+     * <p>*   `false`: The request fails.</p>
+     */
     @NameInMap("IsSuccess")
     public Boolean isSuccess;
 
+    /**
+     * <p>The quota of image namespaces for the instance.</p>
+     */
     @NameInMap("NamespaceQuota")
     public String namespaceQuota;
 
+    /**
+     * <p>The number of image namespaces that are created in the instance.</p>
+     */
     @NameInMap("NamespaceUsage")
     public String namespaceUsage;
 
+    /**
+     * <p>The quota of image repositories for the instance.</p>
+     */
     @NameInMap("RepoQuota")
     public String repoQuota;
 
+    /**
+     * <p>The number of image repositories that are created in the instance.</p>
+     */
     @NameInMap("RepoUsage")
     public String repoUsage;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

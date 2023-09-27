@@ -4,9 +4,18 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListInstanceEndpointRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the module that you want to access. Valid values:</p>
+     * <br>
+     * <p>*   `Registry`: the image repository.</p>
+     * <p>*   `Chart`: a Helm chart.</p>
+     */
     @NameInMap("ModuleName")
     public String moduleName;
 

@@ -4,15 +4,27 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class CreateRepoSyncTaskByRuleRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the image repository.</p>
+     */
     @NameInMap("RepoId")
     public String repoId;
 
+    /**
+     * <p>The ID of the synchronization rule.</p>
+     */
     @NameInMap("SyncRuleId")
     public String syncRuleId;
 
+    /**
+     * <p>The version of the image to be synchronized.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

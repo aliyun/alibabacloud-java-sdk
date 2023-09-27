@@ -4,18 +4,33 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class ListNamespaceRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceStatus")
     public String namespaceStatus;
 
+    /**
+     * <p>The list of namespaces.</p>
+     */
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

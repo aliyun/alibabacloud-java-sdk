@@ -4,12 +4,21 @@ package com.aliyun.cr20181201.models;
 import com.aliyun.tea.*;
 
 public class GetNamespaceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the namespace.</p>
+     */
     @NameInMap("NamespaceId")
     public String namespaceId;
 
+    /**
+     * <p>The name of the namespace.</p>
+     */
     @NameInMap("NamespaceName")
     public String namespaceName;
 
