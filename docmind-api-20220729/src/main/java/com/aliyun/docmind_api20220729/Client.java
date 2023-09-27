@@ -977,6 +977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitGeneralContractExtractJobResponse submitGeneralContractExtractJobWithOptions(SubmitGeneralContractExtractJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contractModel)) {
+            query.put("ContractModel", request.contractModel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
         }
