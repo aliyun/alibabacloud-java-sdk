@@ -4,15 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdatePortfolioResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the product portfolio.</p>
-     */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

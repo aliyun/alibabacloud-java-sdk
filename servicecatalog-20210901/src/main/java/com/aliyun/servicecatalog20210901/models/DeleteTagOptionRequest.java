@@ -4,6 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class DeleteTagOptionRequest extends TeaModel {
+    /**
+     * <p>The ID of the tag option.</p>
+     */
     @NameInMap("TagOptionId")
     public String tagOptionId;
 

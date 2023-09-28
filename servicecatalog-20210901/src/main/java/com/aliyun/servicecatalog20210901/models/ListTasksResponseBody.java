@@ -4,33 +4,18 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The tasks.</p>
-     */
     @NameInMap("TaskDetails")
     public java.util.List<ListTasksResponseBodyTaskDetails> taskDetails;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -80,31 +65,12 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetailsLogTerraformLogs extends TeaModel {
-        /**
-         * <p>The name of the Terraform command that is run. Valid values:</p>
-         * <br>
-         * <p>*   apply</p>
-         * <p>*   plan</p>
-         * <p>*   destroy</p>
-         * <p>*   version</p>
-         * <br>
-         * <p>For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).</p>
-         */
         @NameInMap("Command")
         public String command;
 
-        /**
-         * <p>The content of the output stream that is returned after the command is run.</p>
-         */
         @NameInMap("Content")
         public String content;
 
-        /**
-         * <p>The output stream. Valid values:</p>
-         * <br>
-         * <p>*   stdout: a standard output stream</p>
-         * <p>*   stderr: a standard error stream</p>
-         */
         @NameInMap("Stream")
         public String stream;
 
@@ -140,9 +106,6 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetailsLog extends TeaModel {
-        /**
-         * <p>The Terraform logs.</p>
-         */
         @NameInMap("TerraformLogs")
         public java.util.List<ListTasksResponseBodyTaskDetailsLogTerraformLogs> terraformLogs;
 
@@ -162,21 +125,12 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetailsOutputs extends TeaModel {
-        /**
-         * <p>The description of the output parameter for the template.</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The name of the output parameter for the template.</p>
-         */
         @NameInMap("OutputKey")
         public String outputKey;
 
-        /**
-         * <p>The value of the output parameter for the template.</p>
-         */
         @NameInMap("OutputValue")
         public String outputValue;
 
@@ -212,15 +166,9 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetailsParameters extends TeaModel {
-        /**
-         * <p>The name of the input parameter for the template.</p>
-         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
-        /**
-         * <p>The value of the input parameter for the template.</p>
-         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -248,113 +196,54 @@ public class ListTasksResponseBody extends TeaModel {
     }
 
     public static class ListTasksResponseBodyTaskDetails extends TeaModel {
-        /**
-         * <p>The time when the task was created.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("CreateTime")
         public String createTime;
 
-        /**
-         * <p>The logs of the product instance.</p>
-         */
         @NameInMap("Log")
         public ListTasksResponseBodyTaskDetailsLog log;
 
-        /**
-         * <p>The output parameters of the template.</p>
-         */
         @NameInMap("Outputs")
         public java.util.List<ListTasksResponseBodyTaskDetailsOutputs> outputs;
 
-        /**
-         * <p>The input parameters of the template.</p>
-         */
         @NameInMap("Parameters")
         public java.util.List<ListTasksResponseBodyTaskDetailsParameters> parameters;
 
-        /**
-         * <p>The ID of the product portfolio.</p>
-         */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
-        /**
-         * <p>The ID of the product.</p>
-         */
         @NameInMap("ProductId")
         public String productId;
 
-        /**
-         * <p>The name of the product.</p>
-         */
         @NameInMap("ProductName")
         public String productName;
 
-        /**
-         * <p>The ID of the product version.</p>
-         */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
-        /**
-         * <p>The name of the product version.</p>
-         */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
-        /**
-         * <p>The ID of the product instance.</p>
-         */
         @NameInMap("ProvisionedProductId")
         public String provisionedProductId;
 
-        /**
-         * <p>The name of the product instance.</p>
-         */
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
-        /**
-         * <p>The state of the task. Valid values:</p>
-         * <br>
-         * <p>*   Succeeded: The task was successful.</p>
-         * <p>*   InProgress: The task was in progress.</p>
-         * <p>*   Failed: The task failed.</p>
-         */
         @NameInMap("Status")
         public String status;
 
-        /**
-         * <p>The message that is returned for the status of the task.</p>
-         * <br>
-         * <p>> This parameter is returned only when Failed is returned for the Status parameter.</p>
-         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>代表资源名称的资源属性字段</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
-        /**
-         * <p>The type of the task. Valid values:</p>
-         * <br>
-         * <p>*   LaunchProduct: a task that launches the product.</p>
-         * <p>*   UpdateProvisionedProduct: a task that updates the information about the product instance.</p>
-         * <p>*   TerminateProvisionedProduct: a task that terminates the product instance.</p>
-         */
         @NameInMap("TaskType")
         public String taskType;
 
-        /**
-         * <p>The time when the task was last modified.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

@@ -4,28 +4,12 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class AssociatePrincipalWithPortfolioRequest extends TeaModel {
-    /**
-     * <p>The ID of the product portfolio.</p>
-     */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
-    /**
-     * <p>The ID of the RAM entity.</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a RAM user, see [GetUser](~~28681~~).</p>
-     * <br>
-     * <p>For more information about how to obtain the ID of a RAM role, see [GetRole](~~28711~~).</p>
-     */
     @NameInMap("PrincipalId")
     public String principalId;
 
-    /**
-     * <p>The type of the RAM entity. Valid values:</p>
-     * <br>
-     * <p>*   RamUser: a RAM user</p>
-     * <p>*   RamRole: a RAM role</p>
-     */
     @NameInMap("PrincipalType")
     public String principalType;
 

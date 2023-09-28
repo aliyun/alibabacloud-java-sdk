@@ -4,9 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateTagOptionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the tag option.</p>
+     */
     @NameInMap("TagOptionDetail")
     public UpdateTagOptionResponseBodyTagOptionDetail tagOptionDetail;
 
@@ -32,18 +38,40 @@ public class UpdateTagOptionResponseBody extends TeaModel {
     }
 
     public static class UpdateTagOptionResponseBodyTagOptionDetail extends TeaModel {
+        /**
+         * <p>Indicates whether the tag option is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true (default)</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The key of the tag option.</p>
+         * <br>
+         * <p>The key must be 1 to 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the tag option belongs.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the tag option.</p>
+         */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
+        /**
+         * <p>The value of the tag option.</p>
+         * <br>
+         * <p>The value must be 1 to 128 characters in length. It cannot contain `http://` or `https://` and cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

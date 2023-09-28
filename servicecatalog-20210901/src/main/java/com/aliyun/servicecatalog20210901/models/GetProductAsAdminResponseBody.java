@@ -16,6 +16,9 @@ public class GetProductAsAdminResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tag options associated with the product.</p>
+     */
     @NameInMap("TagOptions")
     public java.util.List<GetProductAsAdminResponseBodyTagOptions> tagOptions;
 
@@ -50,7 +53,7 @@ public class GetProductAsAdminResponseBody extends TeaModel {
 
     public static class GetProductAsAdminResponseBodyProductDetail extends TeaModel {
         /**
-         * <p>The time when the product is created.</p>
+         * <p>The creation time.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
@@ -159,18 +162,36 @@ public class GetProductAsAdminResponseBody extends TeaModel {
     }
 
     public static class GetProductAsAdminResponseBodyTagOptions extends TeaModel {
+        /**
+         * <p>Indicates whether the tag option is enabled. Valid values:</p>
+         * <br>
+         * <p>- true (default)</p>
+         * <p>- false</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The key of the tag option.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the owner of the tag option.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the tag option.</p>
+         */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
+        /**
+         * <p>The value of the tag option.</p>
+         */
         @NameInMap("Value")
         public String value;
 

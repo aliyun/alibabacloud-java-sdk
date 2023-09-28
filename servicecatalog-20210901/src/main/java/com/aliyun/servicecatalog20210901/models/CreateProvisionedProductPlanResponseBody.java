@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateProvisionedProductPlanResponseBody extends TeaModel {
     /**
-     * <p>The ID of the plan.</p>
+     * <p>The plan ID.</p>
      */
     @NameInMap("PlanId")
     public String planId;
 
     /**
-     * <p>The ID of the product instance.</p>
+     * <p>The product instance ID.</p>
      */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

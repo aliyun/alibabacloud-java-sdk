@@ -4,24 +4,36 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class CreateProvisionedProductPlanRequest extends TeaModel {
+    /**
+     * <p>The description of the plan.</p>
+     * <br>
+     * <p>The value must be 1 to 128 characters in length.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The type of the operation that you want the plan to perform. Valid values:</p>
+     * <br>
+     * <p>*   LaunchProduct: launches the product. This is the default value.</p>
+     * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
+     * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+     */
     @NameInMap("OperationType")
     public String operationType;
 
     /**
-     * <p>An array that consists of the parameters in the template. The parameters are specified by the administrator.</p>
+     * <p>An array that consists of the parameters in the template.</p>
      * <br>
      * <p>You can specify up to 200 parameters.</p>
      * <br>
-     * <p>>  This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</p>
+     * <p>> If you specify Parameters, you must specify ParameterKey and ParameterValue.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<CreateProvisionedProductPlanRequestParameters> parameters;
 
     /**
-     * <p>The name of the plan.</p>
+     * <p>The plan name.</p>
      * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
      */
@@ -29,7 +41,7 @@ public class CreateProvisionedProductPlanRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>The type of the plan.</p>
+     * <p>The plan type.</p>
      * <br>
      * <p>Set the value to Ros, which specifies Resource Orchestration Service (ROS).</p>
      */
@@ -37,27 +49,27 @@ public class CreateProvisionedProductPlanRequest extends TeaModel {
     public String planType;
 
     /**
-     * <p>The ID of the product portfolio.</p>
+     * <p>The product portfolio ID.</p>
      * <br>
-     * <p>>  If the PortfolioId parameter is not required, you do not need to specify the PortfolioId parameter. If the PortfolioId parameter is required, you must specify the PortfolioId parameter. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).</p>
+     * <p>> If PortfolioId is not required, you do not need to specify PortfolioId. If PortfolioId is required, you must specify PortfolioId. For more information about how to obtain the value of PortfolioId, see [ListLaunchOptions](~~ListLaunchOptions~~).</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
     /**
-     * <p>The ID of the product.</p>
+     * <p>The product ID.</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
-     * <p>The ID of the product version.</p>
+     * <p>The product version ID.</p>
      */
     @NameInMap("ProductVersionId")
     public String productVersionId;
 
     /**
-     * <p>The name of the product instance.</p>
+     * <p>The product instance name.</p>
      * <br>
      * <p>The value must be 1 to 128 characters in length.</p>
      */
@@ -72,6 +84,15 @@ public class CreateProvisionedProductPlanRequest extends TeaModel {
     @NameInMap("StackRegionId")
     public String stackRegionId;
 
+    /**
+     * <p>An array that consists of custom tags.</p>
+     * <br>
+     * <p>Maximum value of N: 20.</p>
+     * <br>
+     * <p>> </p>
+     * <p>*   If you specify Tags, you must specify Tags.N.Key and Tags.N.Value.</p>
+     * <p>*   The tag of a stack is propagated to each resource that supports the tag feature in the stack.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<CreateProvisionedProductPlanRequestTags> tags;
 
@@ -205,9 +226,19 @@ public class CreateProvisionedProductPlanRequest extends TeaModel {
     }
 
     public static class CreateProvisionedProductPlanRequestTags extends TeaModel {
+        /**
+         * <p>The key of the custom tag.</p>
+         * <br>
+         * <p>The key can be up to 128 characters in length, and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the custom tag.</p>
+         * <br>
+         * <p>The value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

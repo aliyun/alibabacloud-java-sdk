@@ -4,33 +4,18 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListPortfoliosResponseBody extends TeaModel {
-    /**
-     * <p>The page number of the returned page.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries returned per page.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The product portfolios.</p>
-     */
     @NameInMap("PortfolioDetails")
     public java.util.List<ListPortfoliosResponseBodyPortfolioDetails> portfolioDetails;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The total number of entries returned.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -81,39 +66,34 @@ public class ListPortfoliosResponseBody extends TeaModel {
 
     public static class ListPortfoliosResponseBodyPortfolioDetails extends TeaModel {
         /**
-         * <p>The time when the product portfolio was created.</p>
-         * <br>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>代表创建时间的资源属性字段</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The description of the product portfolio.</p>
+         * <p>产品组合描述</p>
          */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the product portfolio.</p>
-         */
         @NameInMap("PortfolioArn")
         public String portfolioArn;
 
         /**
-         * <p>The ID of the product portfolio.</p>
+         * <p>代表资源一级ID的资源属性字段</p>
          */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
         /**
-         * <p>The name of the product portfolio.</p>
+         * <p>代表资源名称的资源属性字段</p>
          */
         @NameInMap("PortfolioName")
         public String portfolioName;
 
         /**
-         * <p>The provider of the product portfolio.</p>
+         * <p>产品组合提供方</p>
          */
         @NameInMap("ProviderName")
         public String providerName;

@@ -9,10 +9,8 @@ public class UpdateProvisionedProductRequest extends TeaModel {
      * <br>
      * <p>You can specify up to 200 parameters.</p>
      * <br>
-     * <p>> </p>
-     * <p>*   This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</p>
-     * <p>> </p>
-     * <p>*   If the values of the ProductVersionId and Parameters parameters are not changed, you are not allowed to update the information about the product instance.</p>
+     * <p>> - This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</p>
+     * <p>> - If the values of the ProductVersionId and Parameters parameters are not changed, you are not allowed to update the information about the product instance.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<UpdateProvisionedProductRequestParameters> parameters;
@@ -50,10 +48,8 @@ public class UpdateProvisionedProductRequest extends TeaModel {
      * <br>
      * <p>Maximum value of N: 20.</p>
      * <br>
-     * <p>> </p>
-     * <p>*   The Tags parameter is optional. If you need to specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.</p>
-     * <p>> </p>
-     * <p>*   The tag is propagated to each stack resource that supports the tag feature.</p>
+     * <p>> - The Tags parameter is optional. If you need to specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.</p>
+     * <p>> - The tag is propagated to each stack resource that supports the tag feature.</p>
      */
     @NameInMap("Tags")
     public java.util.List<UpdateProvisionedProductRequestTags> tags;

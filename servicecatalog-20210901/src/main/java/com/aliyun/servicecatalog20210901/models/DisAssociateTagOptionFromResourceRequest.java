@@ -4,9 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class DisAssociateTagOptionFromResourceRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource with which the tag option is associated.</p>
+     */
     @NameInMap("ResourceId")
     public String resourceId;
 
+    /**
+     * <p>The ID of the tag option.</p>
+     */
     @NameInMap("TagOptionId")
     public String tagOptionId;
 
