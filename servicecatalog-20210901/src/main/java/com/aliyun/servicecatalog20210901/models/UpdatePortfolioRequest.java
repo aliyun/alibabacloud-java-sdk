@@ -5,31 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdatePortfolioRequest extends TeaModel {
     /**
-     * <p>The description of the product portfolio.</p>
-     * <br>
-     * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>产品组合描述</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the product portfolio.</p>
+     * <p>代表资源一级ID的资源属性字段</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
 
     /**
-     * <p>The name of the product portfolio.</p>
-     * <br>
-     * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>代表资源名称的资源属性字段</p>
      */
     @NameInMap("PortfolioName")
     public String portfolioName;
 
     /**
-     * <p>The provider of the product portfolio.</p>
-     * <br>
-     * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>产品组合提供方</p>
      */
     @NameInMap("ProviderName")
     public String providerName;

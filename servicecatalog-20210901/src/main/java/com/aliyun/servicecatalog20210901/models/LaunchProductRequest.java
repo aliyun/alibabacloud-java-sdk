@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class LaunchProductRequest extends TeaModel {
     /**
-     * <p>An array that consists of the parameters in the template. The parameters are specified by the administrator.</p>
+     * <p>The input parameters of the template.</p>
      * <br>
      * <p>You can specify up to 200 parameters.</p>
      * <br>
-     * <p>>  This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</p>
+     * <p>> This parameter is optional. If you specify the Parameters parameter, you must specify the ParameterKey and ParameterValue parameters.</p>
      */
     @NameInMap("Parameters")
     public java.util.List<LaunchProductRequestParameters> parameters;
@@ -17,7 +17,7 @@ public class LaunchProductRequest extends TeaModel {
     /**
      * <p>The ID of the product portfolio.</p>
      * <br>
-     * <p>>  If the PortfolioId parameter is not required, you do not need to specify the PortfolioId parameter. If the PortfolioId parameter is required, you must specify the PortfolioId parameter. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).</p>
+     * <p>> If the PortfolioId parameter is not required, you do not need to specify the PortfolioId parameter. If the PortfolioId parameter is required, you must specify the PortfolioId parameter. For more information about how to obtain the value of the PortfolioId parameter, see [ListLaunchOptions](~~ListLaunchOptions~~).</p>
      */
     @NameInMap("PortfolioId")
     public String portfolioId;
@@ -50,6 +50,17 @@ public class LaunchProductRequest extends TeaModel {
     @NameInMap("StackRegionId")
     public String stackRegionId;
 
+    /**
+     * <p>The custom tags that are specified by the end user.</p>
+     * <br>
+     * <p>Maximum value of N: 20.</p>
+     * <br>
+     * <p>> </p>
+     * <br>
+     * <p>*   The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key and Tags.N.Value parameters.</p>
+     * <br>
+     * <p>*   The tag is propagated to each stack resource that supports the tag feature.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<LaunchProductRequestTags> tags;
 
@@ -116,13 +127,13 @@ public class LaunchProductRequest extends TeaModel {
 
     public static class LaunchProductRequestParameters extends TeaModel {
         /**
-         * <p>The name of the parameter in the template.</p>
+         * <p>The name of the input parameter for the template.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The value of the parameter in the template.</p>
+         * <p>The value of the input parameter for the template.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -151,9 +162,19 @@ public class LaunchProductRequest extends TeaModel {
     }
 
     public static class LaunchProductRequestTags extends TeaModel {
+        /**
+         * <p>The tag key of the custom tag.</p>
+         * <br>
+         * <p>The tag key must be 1 to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value of the custom tag.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot start with `acs:`. It cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

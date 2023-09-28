@@ -4,58 +4,24 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListPortfoliosRequest extends TeaModel {
-    /**
-     * <p>The filter conditions.</p>
-     */
     @NameInMap("Filters")
     public java.util.List<ListPortfoliosRequestFilters> filters;
 
-    /**
-     * <p>The number of the page to return.</p>
-     * <br>
-     * <p>Pages start from page 1. Default value: 1.</p>
-     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    /**
-     * <p>The number of entries to return on each page.</p>
-     * <br>
-     * <p>Valid values: 1 to 100. Default value: 10.</p>
-     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    /**
-     * <p>The ID of the product.</p>
-     */
     @NameInMap("ProductId")
     public String productId;
 
-    /**
-     * <p>The query scope. Valid values:</p>
-     * <br>
-     * <p>*   Local: the product portfolios that are created by using the current account. This is the default value.</p>
-     * <p>*   Import: the product portfolios that are imported from other accounts.</p>
-     * <p>*   All: all available product portfolios.</p>
-     */
     @NameInMap("Scope")
     public String scope;
 
-    /**
-     * <p>The field that is used to sort the queried data.</p>
-     * <br>
-     * <p>The value is fixed as CreateTime, which specifies the time when the product portfolio was created.</p>
-     */
     @NameInMap("SortBy")
     public String sortBy;
 
-    /**
-     * <p>The order in which you want to sort the queried data. Valid values:</p>
-     * <br>
-     * <p>*   Asc: the ascending order</p>
-     * <p>*   Desc: the descending order</p>
-     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
@@ -121,18 +87,9 @@ public class ListPortfoliosRequest extends TeaModel {
     }
 
     public static class ListPortfoliosRequestFilters extends TeaModel {
-        /**
-         * <p>The name of the filter condition. Valid values:</p>
-         * <br>
-         * <p>*   PortfolioName: performs exact matches by product portfolio name. Product portfolio names are not case-sensitive.</p>
-         * <p>*   FullTextSearch: performs full-text searches by product portfolio name, product portfolio provider, or product portfolio description. Fuzzy match is supported.</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The value of the filter condition.</p>
-         */
         @NameInMap("Value")
         public String value;
 

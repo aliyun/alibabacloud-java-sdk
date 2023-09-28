@@ -4,15 +4,9 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class UpdateProductResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the product.</p>
-     */
     @NameInMap("ProductId")
     public String productId;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

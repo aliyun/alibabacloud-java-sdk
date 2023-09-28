@@ -4,18 +4,37 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListProvisionedProductPlansResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     * <br>
+     * <p>Pages start from page 1. Default value: 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>An array that consists of plans.</p>
+     */
     @NameInMap("PlanDetails")
     public java.util.List<ListProvisionedProductPlansResponseBodyPlanDetails> planDetails;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +84,18 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     }
 
     public static class ListProvisionedProductPlansResponseBodyPlanDetailsAssignedApprovers extends TeaModel {
+        /**
+         * <p>The RAM entity name of the reviewer.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The type of the RAM entity of the reviewer. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
@@ -95,9 +123,15 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     }
 
     public static class ListProvisionedProductPlansResponseBodyPlanDetailsParameters extends TeaModel {
+        /**
+         * <p>The name of the parameter in the template.</p>
+         */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
+        /**
+         * <p>The value of the parameter in the template.</p>
+         */
         @NameInMap("ParameterValue")
         public String parameterValue;
 
@@ -125,9 +159,15 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     }
 
     public static class ListProvisionedProductPlansResponseBodyPlanDetailsTags extends TeaModel {
+        /**
+         * <p>The key of the custom tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the custom tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -155,75 +195,173 @@ public class ListProvisionedProductPlansResponseBody extends TeaModel {
     }
 
     public static class ListProvisionedProductPlansResponseBodyPlanDetails extends TeaModel {
+        /**
+         * <p>An array that consists of reviewers.</p>
+         */
         @NameInMap("AssignedApprovers")
         public java.util.List<ListProvisionedProductPlansResponseBodyPlanDetailsAssignedApprovers> assignedApprovers;
 
+        /**
+         * <p>The time when the plan was created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the plan.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The purpose of the plan. Valid values:</p>
+         * <br>
+         * <p>*   LaunchProduct: launches the product. This is the default value.</p>
+         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
+         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The ID of the RAM entity to which the plan belongs.</p>
+         */
         @NameInMap("OwnerPrincipalId")
         public String ownerPrincipalId;
 
+        /**
+         * <p>The name of the RAM entity to which the plan belongs.</p>
+         */
         @NameInMap("OwnerPrincipalName")
         public String ownerPrincipalName;
 
+        /**
+         * <p>The type of the RAM entity to which the plan belongs. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("OwnerPrincipalType")
         public String ownerPrincipalType;
 
+        /**
+         * <p>An array that consists of the parameters in the template.</p>
+         */
         @NameInMap("Parameters")
         public java.util.List<ListProvisionedProductPlansResponseBodyPlanDetailsParameters> parameters;
 
+        /**
+         * <p>The ID of the plan.</p>
+         */
         @NameInMap("PlanId")
         public String planId;
 
+        /**
+         * <p>The name of the plan.</p>
+         */
         @NameInMap("PlanName")
         public String planName;
 
+        /**
+         * <p>The type of the plan.</p>
+         * <br>
+         * <p>The value is fixed as Ros, which indicates Resource Orchestration Service (ROS).</p>
+         */
         @NameInMap("PlanType")
         public String planType;
 
+        /**
+         * <p>The ID of the product portfolio.</p>
+         */
         @NameInMap("PortfolioId")
         public String portfolioId;
 
+        /**
+         * <p>The ID of the product.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The ID of the product version.</p>
+         */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
+        /**
+         * <p>The ID of the product instance.</p>
+         */
         @NameInMap("ProvisionedProductId")
         public String provisionedProductId;
 
+        /**
+         * <p>The name of the product instance.</p>
+         */
         @NameInMap("ProvisionedProductName")
         public String provisionedProductName;
 
+        /**
+         * <p>The ID of the ROS stack.</p>
+         */
         @NameInMap("StackId")
         public String stackId;
 
+        /**
+         * <p>The ID of the region to which the ROS stack belongs.</p>
+         */
         @NameInMap("StackRegionId")
         public String stackRegionId;
 
+        /**
+         * <p>The state of the plan. Valid values:</p>
+         * <br>
+         * <p>*   PreviewInProgress: The plan is being prechecked.</p>
+         * <p>*   PreviewSuccess: The precheck is successful.</p>
+         * <p>*   PreviewFailed: The precheck fails.</p>
+         * <p>*   ApplicationInProgress: The plan is being reviewed.</p>
+         * <p>*   ApplicationApproved: The plan is approved.</p>
+         * <p>*   ApplicationRejected: The approval is rejected.</p>
+         * <p>*   ExecuteInProgress: The plan is being run.</p>
+         * <p>*   ExecuteSuccess: The plan is run.</p>
+         * <p>*   ExecuteFailed: The plan fails to be run.</p>
+         * <p>*   Canceled: The plan is canceled.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The message returned for the state.</p>
+         * <br>
+         * <p>> This parameter is returned only when PreviewFailed or ExecuteFailed is returned for the Status parameter.</p>
+         */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>An array that consists of custom tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListProvisionedProductPlansResponseBodyPlanDetailsTags> tags;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the plan belongs.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
+        /**
+         * <p>The last time when the task was modified.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

@@ -4,18 +4,35 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListTagOptionsResponseBody extends TeaModel {
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * <br>
+     * <p>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the details of the tag option.</p>
+     */
     @NameInMap("TagOptionDetails")
     public java.util.List<ListTagOptionsResponseBodyTagOptionDetails> tagOptionDetails;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +82,36 @@ public class ListTagOptionsResponseBody extends TeaModel {
     }
 
     public static class ListTagOptionsResponseBodyTagOptionDetails extends TeaModel {
+        /**
+         * <p>Indicates whether the tag option is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The key of the tag option.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the tag option belongs.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the tag option.</p>
+         */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
+        /**
+         * <p>The value of the tag option.</p>
+         */
         @NameInMap("Value")
         public String value;
 

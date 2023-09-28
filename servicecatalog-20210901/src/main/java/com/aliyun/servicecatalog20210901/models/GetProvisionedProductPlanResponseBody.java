@@ -10,9 +10,15 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     @NameInMap("PlanDetail")
     public GetProvisionedProductPlanResponseBodyPlanDetail planDetail;
 
+    /**
+     * <p>The details of the product.</p>
+     */
     @NameInMap("ProductDetail")
     public GetProvisionedProductPlanResponseBodyProductDetail productDetail;
 
+    /**
+     * <p>The details of the product version.</p>
+     */
     @NameInMap("ProductVersionDetail")
     public GetProvisionedProductPlanResponseBodyProductVersionDetail productVersionDetail;
 
@@ -22,6 +28,9 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>An array that consists of the resources to be changed in the plan.</p>
+     */
     @NameInMap("ResourceChanges")
     public java.util.List<GetProvisionedProductPlanResponseBodyResourceChanges> resourceChanges;
 
@@ -71,12 +80,24 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailOperationRecordsOperator extends TeaModel {
+        /**
+         * <p>The RAM entity ID of the operator.</p>
+         */
         @NameInMap("PrincipalId")
         public String principalId;
 
+        /**
+         * <p>The RAM entity name of the operator.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The RAM entity type of the operator. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
@@ -112,15 +133,32 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailOperationRecords extends TeaModel {
+        /**
+         * <p>The operation that is performed by the operator on the plan. Valid values:</p>
+         * <br>
+         * <p>*   Submit: submits the plan.</p>
+         * <p>*   Cancel: cancels the plan.</p>
+         * <p>*   Approve: approves the plan.</p>
+         * <p>*   reject: rejectes the plan.</p>
+         */
         @NameInMap("ApprovalAction")
         public String approvalAction;
 
+        /**
+         * <p>The review comment of the operator.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
+        /**
+         * <p>The time when the operation was performed.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The operator who performs operations on the plan.</p>
+         */
         @NameInMap("Operator")
         public GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailOperationRecordsOperator operator;
 
@@ -164,9 +202,18 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailTodoTaskActivitiesTasksOperator extends TeaModel {
+        /**
+         * <p>The RAM entity name of the operator.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The RAM entity type of the operator. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
@@ -194,6 +241,9 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailTodoTaskActivitiesTasks extends TeaModel {
+        /**
+         * <p>The operator who performs operations on the plan.</p>
+         */
         @NameInMap("Operator")
         public GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailTodoTaskActivitiesTasksOperator operator;
 
@@ -213,9 +263,15 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailTodoTaskActivities extends TeaModel {
+        /**
+         * <p>The name of the operation that is being performed by the plan.</p>
+         */
         @NameInMap("ActivityName")
         public String activityName;
 
+        /**
+         * <p>An array consisting of tasks that are pending for review.</p>
+         */
         @NameInMap("Tasks")
         public java.util.List<GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailTodoTaskActivitiesTasks> tasks;
 
@@ -243,9 +299,15 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetail extends TeaModel {
+        /**
+         * <p>An array that consists of operations that are performed by the operator.</p>
+         */
         @NameInMap("OperationRecords")
         public java.util.List<GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailOperationRecords> operationRecords;
 
+        /**
+         * <p>An array that consists of operations that are being performed by the plan.</p>
+         */
         @NameInMap("TodoTaskActivities")
         public java.util.List<GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetailTodoTaskActivities> todoTaskActivities;
 
@@ -273,9 +335,18 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailAssignedApprovers extends TeaModel {
+        /**
+         * <p>The RAM entity name of the reviewer.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The type of the Resource Access Management (RAM) entity of the reviewer. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 
@@ -339,9 +410,15 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetailTags extends TeaModel {
+        /**
+         * <p>The key of the custom tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the custom tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -369,37 +446,65 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyPlanDetail extends TeaModel {
+        /**
+         * <p>The review details of the plan.</p>
+         */
         @NameInMap("ApprovalDetail")
         public GetProvisionedProductPlanResponseBodyPlanDetailApprovalDetail approvalDetail;
 
+        /**
+         * <p>An array that consists of reviewers.</p>
+         */
         @NameInMap("AssignedApprovers")
         public java.util.List<GetProvisionedProductPlanResponseBodyPlanDetailAssignedApprovers> assignedApprovers;
 
         /**
-         * <p>The time when the plan is created.</p>
+         * <p>The time when the plan was created.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the plan.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The purpose of the plan. Valid values:</p>
+         * <br>
+         * <p>*   LaunchProduct: launches the product.</p>
+         * <p>*   UpdateProvisionedProduct: updates the information about the product instance.</p>
+         * <p>*   TerminateProvisionedProduct: terminates the product instance.</p>
+         */
         @NameInMap("OperationType")
         public String operationType;
 
+        /**
+         * <p>The ID of the RAM entity to which the plan belongs.</p>
+         */
         @NameInMap("OwnerPrincipalId")
         public String ownerPrincipalId;
 
+        /**
+         * <p>The name of the RAM entity to which the plan belongs.</p>
+         */
         @NameInMap("OwnerPrincipalName")
         public String ownerPrincipalName;
 
+        /**
+         * <p>The type of the RAM entity to which the plan belongs. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("OwnerPrincipalType")
         public String ownerPrincipalType;
 
         /**
-         * <p>An array that consists of the parameters in the template. The parameters are specified by the administrator.</p>
+         * <p>An array that consists of the parameters in the template.</p>
          */
         @NameInMap("Parameters")
         public java.util.List<GetProvisionedProductPlanResponseBodyPlanDetailParameters> parameters;
@@ -482,19 +587,25 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
         /**
          * <p>The message returned for the state.</p>
          * <br>
-         * <p>> : This parameter is returned only when PreviewFailed or ExecuteFailed is returned for the Status parameter.</p>
+         * <p>> This parameter is returned only when PreviewFailed or ExecuteFailed is returned for Status.</p>
          */
         @NameInMap("StatusMessage")
         public String statusMessage;
 
+        /**
+         * <p>An array that consists of custom tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetProvisionedProductPlanResponseBodyPlanDetailTags> tags;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the plan belongs.</p>
+         */
         @NameInMap("Uid")
         public String uid;
 
         /**
-         * <p>The last time when the task is modified.</p>
+         * <p>The last time when the task was modified.</p>
          * <br>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
@@ -701,24 +812,49 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyProductDetail extends TeaModel {
+        /**
+         * <p>The creation time.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the product.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the product.</p>
+         */
         @NameInMap("ProductArn")
         public String productArn;
 
+        /**
+         * <p>The ID of the product.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <p>The name of the product.</p>
+         */
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The type of the product.</p>
+         * <br>
+         * <p>The value is fixed as Ros, which indicates ROS.</p>
+         */
         @NameInMap("ProductType")
         public String productType;
 
+        /**
+         * <p>The provider of the product.</p>
+         */
         @NameInMap("ProviderName")
         public String providerName;
 
@@ -786,30 +922,69 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyProductVersionDetail extends TeaModel {
+        /**
+         * <p>Indicates whether the product version is visible to end users. Valid values:</p>
+         * <br>
+         * <p>*   true (defaut)</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The time when the product version was created.</p>
+         * <br>
+         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the product version.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The recommendation information. Valid values:</p>
+         * <br>
+         * <p>*   Default: No recommendation information is provided. This is the default value.</p>
+         * <p>*   Recommended: the recommendation version.</p>
+         * <p>*   Latest: the latest version.</p>
+         * <p>*   Deprecated: the version that is about to be deprecated.</p>
+         */
         @NameInMap("Guidance")
         public String guidance;
 
+        /**
+         * <p>The ID of the product to which the product version belongs.</p>
+         */
         @NameInMap("ProductId")
         public String productId;
 
+        /**
+         * <p>The ID of the product version.</p>
+         */
         @NameInMap("ProductVersionId")
         public String productVersionId;
 
+        /**
+         * <p>The name for the version of the product.</p>
+         */
         @NameInMap("ProductVersionName")
         public String productVersionName;
 
+        /**
+         * <p>The type of the template.</p>
+         * <br>
+         * <p>The value is fixed as RosTerraformTemplate, which indicates that the Terraform template is supported by ROS.</p>
+         */
         @NameInMap("TemplateType")
         public String templateType;
 
+        /**
+         * <p>The URL of the template.</p>
+         */
         @NameInMap("TemplateUrl")
         public String templateUrl;
 
@@ -893,18 +1068,46 @@ public class GetProvisionedProductPlanResponseBody extends TeaModel {
     }
 
     public static class GetProvisionedProductPlanResponseBodyResourceChanges extends TeaModel {
+        /**
+         * <p>The action that is performed on the resource. Valid values:</p>
+         * <br>
+         * <p>*   Add</p>
+         * <p>*   Modify</p>
+         * <p>*   Remove</p>
+         * <p>*   None</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The logical ID of the resource.</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The physical ID of the resource.</p>
+         * <br>
+         * <p>> This parameter is returned only when Action is set to Modify or Remove.</p>
+         */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
+        /**
+         * <p>Indicates whether a replacement update is performed on the template. Valid values:</p>
+         * <br>
+         * <p>*   True: A replacement update is performed on the template.</p>
+         * <p>*   False: A change is made on the template.</p>
+         * <p>*   Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</p>
+         * <br>
+         * <p>> This parameter is returned only when Action is set to Modify.</p>
+         */
         @NameInMap("Replacement")
         public String replacement;
 
+        /**
+         * <p>The type of the resource.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 

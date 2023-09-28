@@ -4,9 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
+    /**
+     * <p>An array that consists of reviewers.</p>
+     */
     @NameInMap("Approvers")
     public java.util.List<ListProvisionedProductPlanApproversResponseBodyApprovers> approvers;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +38,18 @@ public class ListProvisionedProductPlanApproversResponseBody extends TeaModel {
     }
 
     public static class ListProvisionedProductPlanApproversResponseBodyApprovers extends TeaModel {
+        /**
+         * <p>The name of the reviewer.</p>
+         */
         @NameInMap("PrincipalName")
         public String principalName;
 
+        /**
+         * <p>The type of the Resource Access Management (RAM) entity of the reviewer. Valid values:</p>
+         * <br>
+         * <p>*   RamUser: a RAM user</p>
+         * <p>*   RamRole: a RAM role</p>
+         */
         @NameInMap("PrincipalType")
         public String principalType;
 

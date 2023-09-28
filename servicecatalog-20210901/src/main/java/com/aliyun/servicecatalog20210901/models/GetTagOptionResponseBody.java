@@ -4,9 +4,15 @@ package com.aliyun.servicecatalog20210901.models;
 import com.aliyun.tea.*;
 
 public class GetTagOptionResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the tag option.</p>
+     */
     @NameInMap("TagOptionDetail")
     public GetTagOptionResponseBodyTagOptionDetail tagOptionDetail;
 
@@ -32,18 +38,36 @@ public class GetTagOptionResponseBody extends TeaModel {
     }
 
     public static class GetTagOptionResponseBodyTagOptionDetail extends TeaModel {
+        /**
+         * <p>Indicates whether the tag option is enabled. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Active")
         public Boolean active;
 
+        /**
+         * <p>The key of the tag option.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the tag option belongs.</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>The ID of the tag option.</p>
+         */
         @NameInMap("TagOptionId")
         public String tagOptionId;
 
+        /**
+         * <p>The value of the tag option.</p>
+         */
         @NameInMap("Value")
         public String value;
 

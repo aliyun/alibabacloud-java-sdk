@@ -5,31 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateProductRequest extends TeaModel {
     /**
-     * <p>The description of the product.</p>
-     * <br>
-     * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>产品描述</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the product.</p>
+     * <p>代表资源一级ID的资源属性字段</p>
      */
     @NameInMap("ProductId")
     public String productId;
 
     /**
-     * <p>The name of the product.</p>
-     * <br>
-     * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>代表资源名称的资源属性字段</p>
      */
     @NameInMap("ProductName")
     public String productName;
 
     /**
-     * <p>The provider of the product.</p>
-     * <br>
-     * <p>The value must be 1 to 128 characters in length.</p>
+     * <p>产品提供方</p>
      */
     @NameInMap("ProviderName")
     public String providerName;

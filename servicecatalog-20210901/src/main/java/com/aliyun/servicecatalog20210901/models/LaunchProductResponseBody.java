@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LaunchProductResponseBody extends TeaModel {
     /**
-     * <p>The ID of the product instance.</p>
+     * <p>The ID of the instance</p>
      */
     @NameInMap("ProvisionedProductId")
     public String provisionedProductId;

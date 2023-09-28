@@ -44,10 +44,10 @@ public class ListProvisionedProductsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The order in which you want to sort the queried data. Valid values:</p>
+     * <p>The sorting method. Valid values:</p>
      * <br>
-     * <p>*   Asc: the ascending order</p>
-     * <p>*   Desc: the descending order</p>
+     * <p>*   Asc: the ascending order.</p>
+     * <p>*   Desc (default): the descending order.</p>
      */
     @NameInMap("SortOrder")
     public String sortOrder;
