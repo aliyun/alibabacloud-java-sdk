@@ -1,3 +1,6 @@
+2023-10-07 Version: 1.1.12
+- Generated java 2021-09-24 for serverless.
+
 2023-10-07 Version: 1.1.11
 - Generated java 2021-09-24 for serverless.
 
