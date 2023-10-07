@@ -10,6 +10,9 @@ public class TaskStatus extends TeaModel {
     @NameInMap("invocations")
     public java.util.List<TaskInvocation> invocations;
 
+    @NameInMap("latestExecError")
+    public TaskExecError latestExecError;
+
     @NameInMap("phase")
     public String phase;
 
@@ -35,6 +38,14 @@ public class TaskStatus extends TeaModel {
     }
     public java.util.List<TaskInvocation> getInvocations() {
         return this.invocations;
+    }
+
+    public TaskStatus setLatestExecError(TaskExecError latestExecError) {
+        this.latestExecError = latestExecError;
+        return this;
+    }
+    public TaskExecError getLatestExecError() {
+        return this.latestExecError;
     }
 
     public TaskStatus setPhase(String phase) {

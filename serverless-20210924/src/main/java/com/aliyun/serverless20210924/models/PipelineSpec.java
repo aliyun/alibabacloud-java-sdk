@@ -10,6 +10,9 @@ public class PipelineSpec extends TeaModel {
     @NameInMap("templateName")
     public String templateName;
 
+    @NameInMap("templateSpec")
+    public PipelineTemplateSpec templateSpec;
+
     public static PipelineSpec build(java.util.Map<String, ?> map) throws Exception {
         PipelineSpec self = new PipelineSpec();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class PipelineSpec extends TeaModel {
     }
     public String getTemplateName() {
         return this.templateName;
+    }
+
+    public PipelineSpec setTemplateSpec(PipelineTemplateSpec templateSpec) {
+        this.templateSpec = templateSpec;
+        return this;
+    }
+    public PipelineTemplateSpec getTemplateSpec() {
+        return this.templateSpec;
     }
 
 }
