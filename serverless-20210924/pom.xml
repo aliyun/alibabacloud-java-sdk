@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>serverless20210924</artifactId>
-  <version>1.1.10</version>
+  <version>1.1.11</version>
   <packaging>jar</packaging>
   <name>serverless20210924</name>
   <description>Alibaba Cloud serverless (20210924) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.18</version>
+      <version>0.2.20</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

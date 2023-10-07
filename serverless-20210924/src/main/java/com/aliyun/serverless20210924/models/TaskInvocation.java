@@ -19,6 +19,12 @@ public class TaskInvocation extends TeaModel {
     @NameInMap("requestID")
     public String requestID;
 
+    @NameInMap("slsLogStore")
+    public String slsLogStore;
+
+    @NameInMap("slsProject")
+    public String slsProject;
+
     @NameInMap("status")
     public String status;
 
@@ -65,6 +71,22 @@ public class TaskInvocation extends TeaModel {
     }
     public String getRequestID() {
         return this.requestID;
+    }
+
+    public TaskInvocation setSlsLogStore(String slsLogStore) {
+        this.slsLogStore = slsLogStore;
+        return this;
+    }
+    public String getSlsLogStore() {
+        return this.slsLogStore;
+    }
+
+    public TaskInvocation setSlsProject(String slsProject) {
+        this.slsProject = slsProject;
+        return this;
+    }
+    public String getSlsProject() {
+        return this.slsProject;
     }
 
     public TaskInvocation setStatus(String status) {
