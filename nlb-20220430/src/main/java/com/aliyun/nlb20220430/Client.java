@@ -76,6 +76,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addServersToServerGroupWithOptions(request, runtime);
     }
 
+    /**
+      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+      * *   If the listener is in the **Associated** state, the additional certificates are associated.
+      *
+      * @param request AssociateAdditionalCertificatesWithListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AssociateAdditionalCertificatesWithListenerResponse
+     */
     public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListenerWithOptions(AssociateAdditionalCertificatesWithListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -116,6 +125,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateAdditionalCertificatesWithListenerResponse());
     }
 
+    /**
+      * **AssociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If the listener is in the **Associating** state, the additional certificates are being associated.
+      * *   If the listener is in the **Associated** state, the additional certificates are associated.
+      *
+      * @param request AssociateAdditionalCertificatesWithListenerRequest
+      * @return AssociateAdditionalCertificatesWithListenerResponse
+     */
     public AssociateAdditionalCertificatesWithListenerResponse associateAdditionalCertificatesWithListener(AssociateAdditionalCertificatesWithListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateAdditionalCertificatesWithListenerWithOptions(request, runtime);
@@ -554,10 +571,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Protocol", request.protocol);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.quicVersion)) {
-            body.put("QuicVersion", request.quicVersion);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             body.put("RegionId", request.regionId);
         }
@@ -965,6 +978,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.disableLoadBalancerIpv6InternetWithOptions(request, runtime);
     }
 
+    /**
+      * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+      * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+      *
+      * @param request DisassociateAdditionalCertificatesWithListenerRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DisassociateAdditionalCertificatesWithListenerResponse
+     */
     public DisassociateAdditionalCertificatesWithListenerResponse disassociateAdditionalCertificatesWithListenerWithOptions(DisassociateAdditionalCertificatesWithListenerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1005,6 +1027,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateAdditionalCertificatesWithListenerResponse());
     }
 
+    /**
+      * **DisassociateAdditionalCertificatesWithListener** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the [ListListenerCertificates](~~615175~~) operation to query the status of the task:
+      * *   If an additional certificate is in the **Dissociating** state, the additional certificate is being disassociated.
+      * *   If an additional certificate is in the **Dissociated** state, the additional certificate is disassociated.
+      *
+      * @param request DisassociateAdditionalCertificatesWithListenerRequest
+      * @return DisassociateAdditionalCertificatesWithListenerResponse
+     */
     public DisassociateAdditionalCertificatesWithListenerResponse disassociateAdditionalCertificatesWithListener(DisassociateAdditionalCertificatesWithListenerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.disassociateAdditionalCertificatesWithListenerWithOptions(request, runtime);
@@ -2547,10 +2577,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.preserveClientIpEnabled)) {
             body.put("PreserveClientIpEnabled", request.preserveClientIpEnabled);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.quicVersion)) {
-            body.put("QuicVersion", request.quicVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

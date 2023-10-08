@@ -4,6 +4,12 @@ package com.aliyun.nlb20220430.models;
 import com.aliyun.tea.*;
 
 public class GetLoadBalancerAttributeResponseBody extends TeaModel {
+    /**
+     * <p>The protocol version. Valid values:</p>
+     * <br>
+     * <p>*   **ipv4**: IPv4</p>
+     * <p>*   **DualStack**: dual stack</p>
+     */
     @NameInMap("AddressIpVersion")
     public String addressIpVersion;
 
@@ -16,6 +22,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("AddressType")
     public String addressType;
 
+    /**
+     * <p>The ID of the EIP bandwidth plan.</p>
+     */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
@@ -27,6 +36,11 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("Cps")
     public Integer cps;
 
+    /**
+     * <p>The time when the NLB instance was created. This value is a UNIX timestamp.</p>
+     * <br>
+     * <p>Unit: milliseconds.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
@@ -39,9 +53,15 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("CrossZoneEnabled")
     public Boolean crossZoneEnabled;
 
+    /**
+     * <p>The domain name of the NLB instance.</p>
+     */
     @NameInMap("DNSName")
     public String DNSName;
 
+    /**
+     * <p>The configuration of the deletion protection feature.</p>
+     */
     @NameInMap("DeletionProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig deletionProtectionConfig;
 
@@ -95,9 +115,15 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
+    /**
+     * <p>The type of the Server Load Balancer (SLB) instance. Set the value to **network**, which specifies NLB.</p>
+     */
     @NameInMap("LoadBalancerType")
     public String loadBalancerType;
 
+    /**
+     * <p>The configuration of the configuration read-only mode.</p>
+     */
     @NameInMap("ModificationProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig modificationProtectionConfig;
 
@@ -113,9 +139,15 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -341,12 +373,24 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyDeletionProtectionConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to enable deletion protection. Valid values:</p>
+         * <br>
+         * <p>*   **true**: yes</p>
+         * <p>*   **false** (default): no</p>
+         */
         @NameInMap("Enabled")
         public Boolean enabled;
 
+        /**
+         * <p>The time when the deletion protection feature was enabled. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EnabledTime")
         public String enabledTime;
 
+        /**
+         * <p>The reason why the deletion protection feature is enabled or disabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
@@ -404,12 +448,28 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     public static class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig extends TeaModel {
+        /**
+         * <p>The time when the modification protection feature was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("EnabledTime")
         public String enabledTime;
 
+        /**
+         * <p>The reason why the configuration read-only mode is enabled. The value must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter.</p>
+         * <br>
+         * <p>>  This parameter takes effect only if the **Status** parameter is set to **ConsoleProtection**.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
+         * <br>
+         * <p>*   **NonProtection**: does not enable the configuration read-only mode. You cannot set the **Reason** parameter. If the **Reason** parameter is set, the value is cleared.</p>
+         * <p>*   **ConsoleProtection**: enables the configuration read-only mode. You can set the **Reason** parameter.</p>
+         * <br>
+         * <p>>  If you set this parameter to **ConsoleProtection**, you cannot use the NLB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         */
         @NameInMap("Status")
         public String status;
 
