@@ -316,9 +316,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("PrivateIPv4Address")
         public String privateIPv4Address;
 
+        /**
+         * <p>The health check status of the private IPv4 address.</p>
+         */
         @NameInMap("PrivateIPv4HcStatus")
         public String privateIPv4HcStatus;
 
+        /**
+         * <p>The health check status of the private IPv6 address.</p>
+         */
         @NameInMap("PrivateIPv6HcStatus")
         public String privateIPv6HcStatus;
 
@@ -398,6 +404,12 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @NameInMap("LoadBalancerAddresses")
         public java.util.List<ListLoadBalancersResponseBodyLoadBalancersZoneMappingsLoadBalancerAddresses> loadBalancerAddresses;
 
+        /**
+         * <p>The state of the task. Valid values:</p>
+         * <br>
+         * <p>*   **Succeeded**: The task is successful.</p>
+         * <p>*   **processing**: The ticket is being executed.</p>
+         */
         @NameInMap("Status")
         public String status;
 
