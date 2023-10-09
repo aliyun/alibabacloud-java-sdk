@@ -4,15 +4,27 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class UpdateConsumerOffsetResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code that is returned. The status code **200** indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the call was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

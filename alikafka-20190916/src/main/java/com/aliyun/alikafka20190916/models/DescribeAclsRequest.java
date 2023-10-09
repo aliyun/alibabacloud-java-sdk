@@ -4,21 +4,48 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DescribeAclsRequest extends TeaModel {
+    /**
+     * <p>The name or ID of the resource.</p>
+     * <br>
+     * <p>*   The value can be the name of a topic or a consumer group.</p>
+     * <p>*   You can use an asterisk (\*) to represent the names of all topics or consumer groups.</p>
+     */
     @NameInMap("AclResourceName")
     public String aclResourceName;
 
+    /**
+     * <p>The match mode. Valid values:</p>
+     * <br>
+     * <p>*   LITERAL: full-name match</p>
+     * <p>*   PREFIXED: prefix match</p>
+     */
     @NameInMap("AclResourcePatternType")
     public String aclResourcePatternType;
 
+    /**
+     * <p>The resource type. Valid values:</p>
+     * <br>
+     * <p>*   **Topic**</p>
+     * <p>*   **Group**</p>
+     */
     @NameInMap("AclResourceType")
     public String aclResourceType;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the user.</p>
+     */
     @NameInMap("Username")
     public String username;
 

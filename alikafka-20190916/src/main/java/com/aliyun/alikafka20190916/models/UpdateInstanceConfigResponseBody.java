@@ -5,38 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceConfigResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>## **Permissions**</p>
-     * <br>
-     * <p>If a RAM user wants to call the **UpdateInstanceConfig** operation, the RAM user must be granted the required permissions. For more information about how to grant permissions, see [RAM policies](~~185815~~).</p>
-     * <br>
-     * <p>|API|Action|Resource|</p>
-     * <p>|---|---|---|</p>
-     * <p>|UpdateInstanceConfig|alikafka: UpdateInstance|acs:alikafka:*:*:{instanceId}|</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>### Config parameters</p>
-     * <br>
-     * <p>|Parameter|Type|Valid values|Default value|Description|</p>
-     * <p>|---|---|---|---|---|</p>
-     * <p>|enable.vpc\_sasl\_ssl|Boolean|true/false|false|Specifies whether to enable virtual private cloud (VPC) transmission encryption. If VPC transmission encryption is enabled, you must also enable the access control list (ACL) feature.|</p>
-     * <p>|enable.acl|Boolean|true/false|false|Specifies whether to enable the ACL feature.|</p>
-     * <p>|kafka.log.retention.hours|Integer|24~480|72|The retention period of messages. Unit: hours.|</p>
-     * <p>|kafka.message.max.bytes|Integer|1048576~10485760|1048576|The maximum size of a message. Unit: bytes.|</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Modifies the configuration of a Message Queue for Apache Kafka instance.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

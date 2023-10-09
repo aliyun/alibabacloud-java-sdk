@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the Message Queue for Apache RocketMQ instance which contains the resource to which you want to attach tags.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -17,7 +17,13 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The type of the resources to which you want to attach tags. Valid values:</p>
+     * <p>The list of resource IDs.</p>
+     */
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
+
+    /**
+     * <p>The type of the resources. The value is an enumerated value. Valid values:</p>
      * <br>
      * <p>*   **INSTANCE**</p>
      * <p>*   **TOPIC**</p>
@@ -25,23 +31,11 @@ public class TagResourcesRequest extends TeaModel {
      * <br>
      * <p>>  The value of this parameter is not case-sensitive.</p>
      */
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
-
-    /**
-     * <p>The ID of the resource to which you want to attach tags. Take note of the following rules when you specify a resource ID:</p>
-     * <br>
-     * <p>*   The resource ID of an instance is the value of the instanceId parameter.</p>
-     * <p>*   The resource ID of a topic is the value of the Kafka_alikafka_instanceId_topic parameter.</p>
-     * <p>*   The resource ID of a group is the value of the Kafka_alikafka_instanceId_consumerGroup parameter.</p>
-     * <br>
-     * <p>For example, the resources to which you want to attach tags include the alikafka_post-cn-v0h1fgs2xxxx instance, the test-topic topic, and the test-consumer-group group. In this case, their resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.</p>
-     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags that you want to associate with the instances.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;

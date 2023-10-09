@@ -4,6 +4,9 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetAllInstanceIdListRequest extends TeaModel {
+    /**
+     * <p>The region ID of the instance. This parameter is reserved.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

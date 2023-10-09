@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class GetTopicStatusResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The status information about messages in the topic.</p>
+     */
     @NameInMap("TopicStatus")
     public GetTopicStatusResponseBodyTopicStatus topicStatus;
 
@@ -65,18 +80,33 @@ public class GetTopicStatusResponseBody extends TeaModel {
     }
 
     public static class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable extends TeaModel {
+        /**
+         * <p>The last time when the partition was modified.</p>
+         */
         @NameInMap("LastUpdateTimestamp")
         public Long lastUpdateTimestamp;
 
+        /**
+         * <p>The latest offset in the partition of the topic.</p>
+         */
         @NameInMap("MaxOffset")
         public Long maxOffset;
 
+        /**
+         * <p>The earliest offset in the partition of the topic.</p>
+         */
         @NameInMap("MinOffset")
         public Long minOffset;
 
+        /**
+         * <p>The ID of the partition.</p>
+         */
         @NameInMap("Partition")
         public Integer partition;
 
+        /**
+         * <p>The name of the topic.</p>
+         */
         @NameInMap("Topic")
         public String topic;
 
@@ -147,12 +177,21 @@ public class GetTopicStatusResponseBody extends TeaModel {
     }
 
     public static class GetTopicStatusResponseBodyTopicStatus extends TeaModel {
+        /**
+         * <p>The time when the last consumed message was generated.</p>
+         */
         @NameInMap("LastTimeStamp")
         public Long lastTimeStamp;
 
+        /**
+         * <p>The information about offsets in the topic.</p>
+         */
         @NameInMap("OffsetTable")
         public GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable;
 
+        /**
+         * <p>The number of messages in the topic.</p>
+         */
         @NameInMap("TotalCount")
         public Long totalCount;
 

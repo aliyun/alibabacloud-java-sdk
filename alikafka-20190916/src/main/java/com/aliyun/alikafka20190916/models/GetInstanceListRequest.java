@@ -81,19 +81,19 @@ public class GetInstanceListRequest extends TeaModel {
 
     public static class GetInstanceListRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag that is attached to the resource.</p>
+         * <p>The key of the resource tag.</p>
          * <br>
          * <p>*   If this parameter is left empty, all tag keys are matched.</p>
-         * <p>*   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>*   The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag that is attached to the resource.</p>
+         * <p>The value of the resource tag.</p>
          * <br>
-         * <p>*   If the Key parameter is left empty, this parameter must be left empty. If this parameter is left empty, all tag values are matched.</p>
-         * <p>*   A tag key can be up to 128 characters in length and cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)</p>
+         * <p>*   This parameter must be left empty if the Key parameter is left empty. If this parameter is left empty, the values of all tags are matched.</p>
+         * <p>*   The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

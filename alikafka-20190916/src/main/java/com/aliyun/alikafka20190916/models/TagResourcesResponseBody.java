@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The key of the tag that is attached to the resource.</p>
-     * <br>
-     * <p>*   If you want to configure this parameter, specify at least one tag key and at most 20 tag keys.</p>
-     * <p>*   This parameter is required.</p>
-     * <p>*   The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://或者https://。)</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

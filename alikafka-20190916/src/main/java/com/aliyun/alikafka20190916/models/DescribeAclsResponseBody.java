@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DescribeAclsResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The ACLs.</p>
+     */
     @NameInMap("KafkaAclList")
     public DescribeAclsResponseBodyKafkaAclList kafkaAclList;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,21 +80,51 @@ public class DescribeAclsResponseBody extends TeaModel {
     }
 
     public static class DescribeAclsResponseBodyKafkaAclListKafkaAclVO extends TeaModel {
+        /**
+         * <p>The type of the operation. Valid values:</p>
+         * <br>
+         * <p>*   **Write**</p>
+         * <p>*   **Read**</p>
+         */
         @NameInMap("AclOperationType")
         public String aclOperationType;
 
+        /**
+         * <p>The name of the resource.</p>
+         * <br>
+         * <p>*   The value can be the name of a topic or a consumer group.</p>
+         * <p>*   An asterisk (\*) represents the names of all topics or consumer groups.</p>
+         */
         @NameInMap("AclResourceName")
         public String aclResourceName;
 
+        /**
+         * <p>The match mode. Valid values:</p>
+         * <br>
+         * <p>*   **LITERAL**: full-name match</p>
+         * <p>*   **PREFIXED**: prefix match</p>
+         */
         @NameInMap("AclResourcePatternType")
         public String aclResourcePatternType;
 
+        /**
+         * <p>The type of the resources to which you want to attach tags. Valid values:</p>
+         * <br>
+         * <p>*   **Topic**</p>
+         * <p>*   **Group**</p>
+         */
         @NameInMap("AclResourceType")
         public String aclResourceType;
 
+        /**
+         * <p>The host.</p>
+         */
         @NameInMap("Host")
         public String host;
 
+        /**
+         * <p>The name of the user.</p>
+         */
         @NameInMap("Username")
         public String username;
 

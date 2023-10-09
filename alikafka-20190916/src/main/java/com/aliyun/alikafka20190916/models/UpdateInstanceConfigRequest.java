@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceConfigRequest extends TeaModel {
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The configuration of the instance that you want to update. The value must be a valid JSON string.</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The instance ID.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

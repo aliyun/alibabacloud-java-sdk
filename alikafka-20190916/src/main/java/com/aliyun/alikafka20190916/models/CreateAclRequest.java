@@ -9,8 +9,8 @@ public class CreateAclRequest extends TeaModel {
      * <br>
      * <p>*   **Write**: data writes.</p>
      * <p>*   **Read**: data reads.</p>
-     * <p>*   **Describe**: reads of transaction IDs.****</p>
-     * <p>*   **IdempotentWrite**: idempotent data writes to clusters.</p>
+     * <p>*   **Describe**: reads of **transaction IDs**.</p>
+     * <p>*   **IdempotentWrite**: idempotent data writes to **clusters**.</p>
      */
     @NameInMap("AclOperationType")
     public String aclOperationType;
@@ -25,7 +25,7 @@ public class CreateAclRequest extends TeaModel {
     public String aclResourceName;
 
     /**
-     * <p>The mode that is used to match resources. Valid values:</p>
+     * <p>The matching mode. Valid values:</p>
      * <br>
      * <p>*   **LITERAL**: exact match</p>
      * <p>*   **PREFIXED**: prefix match</p>
@@ -36,10 +36,10 @@ public class CreateAclRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <br>
-     * <p>*   **Topic**: specifies topics.</p>
-     * <p>*   **Group**: specifies consumer groups.</p>
-     * <p>*   **Cluster**: specifies instances.</p>
-     * <p>*   **TransactionalId**: specifies transactions.</p>
+     * <p>*   **Topic**: topic</p>
+     * <p>*   **Group**: consumer group</p>
+     * <p>*   **Cluster**: cluster</p>
+     * <p>*   **TransactionalId**: transaction</p>
      */
     @NameInMap("AclResourceType")
     public String aclResourceType;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAllowedIpListResponseBody extends TeaModel {
     /**
-     * <p>The IP address whitelist of the instance.</p>
+     * <p>The IP address whitelist.</p>
      */
     @NameInMap("AllowedList")
     public GetAllowedIpListResponseBodyAllowedList allowedList;
@@ -81,16 +81,19 @@ public class GetAllowedIpListResponseBody extends TeaModel {
 
     public static class GetAllowedIpListResponseBodyAllowedListInternetList extends TeaModel {
         /**
-         * <p>The IP address whitelist group.</p>
+         * <p>The group to which the IP address whitelist belongs.</p>
          */
         @NameInMap("AllowedIpGroup")
         public java.util.Map<String, String> allowedIpGroup;
 
+        /**
+         * <p>The information about the IP address whitelist.</p>
+         */
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
         /**
-         * <p>The port range. Valid values:</p>
+         * <p>The port range. Valid value:</p>
          * <br>
          * <p>**9093/9093**.</p>
          */
@@ -129,14 +132,20 @@ public class GetAllowedIpListResponseBody extends TeaModel {
     }
 
     public static class GetAllowedIpListResponseBodyAllowedListVpcList extends TeaModel {
+        /**
+         * <p>The group to which the IP address whitelist belongs.</p>
+         */
         @NameInMap("AllowedIpGroup")
         public java.util.Map<String, String> allowedIpGroup;
 
+        /**
+         * <p>The information about the IP address whitelist.</p>
+         */
         @NameInMap("AllowedIpList")
         public java.util.List<String> allowedIpList;
 
         /**
-         * <p>The port range. Valid values:</p>
+         * <p>The port range. Valid value:</p>
          * <br>
          * <p>**9092/9092**.</p>
          */
@@ -193,7 +202,7 @@ public class GetAllowedIpListResponseBody extends TeaModel {
         public java.util.List<GetAllowedIpListResponseBodyAllowedListInternetList> internetList;
 
         /**
-         * <p>The whitelist for access from a VPC.</p>
+         * <p>The whitelist for access from a virtual private cloud (VPC).</p>
          */
         @NameInMap("VpcList")
         public java.util.List<GetAllowedIpListResponseBodyAllowedListVpcList> vpcList;

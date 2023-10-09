@@ -4,12 +4,25 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class ConvertPostPayOrderRequest extends TeaModel {
+    /**
+     * <p>The subscription duration. Unit: months. Valid values:</p>
+     * <br>
+     * <p>*   **1~12**</p>
+     * <p>*   **24**</p>
+     * <p>*   **36**</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

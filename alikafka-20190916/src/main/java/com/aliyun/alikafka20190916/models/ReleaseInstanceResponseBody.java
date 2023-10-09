@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>You cannot call this operation to release a subscription Message Queue for Apache Kafka instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Releases a pay-as-you-go Message Queue for Apache Kafka instance.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

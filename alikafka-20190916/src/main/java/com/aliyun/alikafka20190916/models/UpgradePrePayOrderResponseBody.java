@@ -5,20 +5,26 @@ import com.aliyun.tea.*;
 
 public class UpgradePrePayOrderResponseBody extends TeaModel {
     /**
-     * <p>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</p>
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>261860</p>
+     * <p>The error message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

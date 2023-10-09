@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetTopicListRequest extends TeaModel {
     /**
-     * <p>The name of the topic that you want to query.</p>
+     * <p>The page number of the page to return. Default value: 1.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
 
     /**
-     * <p>The region ID of the instance whose topics you want to query.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The number of entries to return on each page. Default value: 10</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The region ID of the instance to which the topics that you want to query belong.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>The name of the topic that you want to query.</p>
      */
     @NameInMap("Topic")
     public String topic;
