@@ -146,6 +146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("autoRenewPeriod", request.autoRenewPeriod);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
+            body.put("commodityCode", request.commodityCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("instanceName", request.instanceName);
         }

@@ -121,6 +121,25 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListInstancesResponseBodyDataListProductInfo extends TeaModel {
+        @NameInMap("traceOn")
+        public Boolean traceOn;
+
+        public static ListInstancesResponseBodyDataListProductInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyDataListProductInfo self = new ListInstancesResponseBodyDataListProductInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyDataListProductInfo setTraceOn(Boolean traceOn) {
+            this.traceOn = traceOn;
+            return this;
+        }
+        public Boolean getTraceOn() {
+            return this.traceOn;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyDataListTags extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
@@ -204,6 +223,9 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         @NameInMap("paymentType")
         public String paymentType;
+
+        @NameInMap("productInfo")
+        public ListInstancesResponseBodyDataListProductInfo productInfo;
 
         /**
          * <p>The ID of the region in which the instance resides.</p>
@@ -361,6 +383,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        public ListInstancesResponseBodyDataList setProductInfo(ListInstancesResponseBodyDataListProductInfo productInfo) {
+            this.productInfo = productInfo;
+            return this;
+        }
+        public ListInstancesResponseBodyDataListProductInfo getProductInfo() {
+            return this.productInfo;
         }
 
         public ListInstancesResponseBodyDataList setRegionId(String regionId) {

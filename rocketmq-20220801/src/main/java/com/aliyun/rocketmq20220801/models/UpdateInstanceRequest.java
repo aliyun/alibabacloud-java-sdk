@@ -146,6 +146,9 @@ public class UpdateInstanceRequest extends TeaModel {
         @NameInMap("sendReceiveRatio")
         public Float sendReceiveRatio;
 
+        @NameInMap("traceOn")
+        public Boolean traceOn;
+
         public static UpdateInstanceRequestProductInfo build(java.util.Map<String, ?> map) throws Exception {
             UpdateInstanceRequestProductInfo self = new UpdateInstanceRequestProductInfo();
             return TeaModel.build(map, self);
@@ -173,6 +176,14 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public Float getSendReceiveRatio() {
             return this.sendReceiveRatio;
+        }
+
+        public UpdateInstanceRequestProductInfo setTraceOn(Boolean traceOn) {
+            this.traceOn = traceOn;
+            return this;
+        }
+        public Boolean getTraceOn() {
+            return this.traceOn;
         }
 
     }
