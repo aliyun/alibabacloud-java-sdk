@@ -4,9 +4,15 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DescribeSaslUsersRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

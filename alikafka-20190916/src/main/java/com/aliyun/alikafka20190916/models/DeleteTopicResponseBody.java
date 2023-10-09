@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DeleteTopicResponseBody extends TeaModel {
     /**
-     * <p>The returned message.</p>
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Deletes a topic.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

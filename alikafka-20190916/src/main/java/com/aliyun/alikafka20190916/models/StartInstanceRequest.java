@@ -4,60 +4,166 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceRequest extends TeaModel {
+    /**
+     * <p>The initial configuration of the instance. The value must be a valid JSON string.</p>
+     * <br>
+     * <p>If you do not specify a value for this parameter, the value is left empty by default.</p>
+     * <br>
+     * <p>The following parameters can be configured for **Config**:</p>
+     * <br>
+     * <p>*   **enable.vpc_sasl_ssl**: specifies whether to enable VPC transmission encryption. Valid values:</p>
+     * <br>
+     * <p>    *   **true**: enables VPC transmission encryption. If VPC transmission encryption is enabled, you must also enable the access control list (ACL) feature.</p>
+     * <p>    *   **false**: disables VPC transmission encryption. This is the default value.</p>
+     * <br>
+     * <p>*   **enable.acl**: specifies whether to enable ACL. Valid values:</p>
+     * <br>
+     * <p>    *   **true**: enables the ACL feature.</p>
+     * <p>    *   **false**: disables the ACL feature. This is the default value.</p>
+     * <br>
+     * <p>*   **kafka.log.retention.hours**: the maximum period for which messages can be retained when the remaining disk space is sufficient. Unit: hours. Valid values: 24 to 480. Default value: **72**. When the disk usage reaches 85%, the system deletes messages in the order in which they are stored, starting from the earliest stored message. This ensures that the performance of the service is not degraded.</p>
+     * <br>
+     * <p>*   **kafka.message.max.bytes**: the maximum size of messages that Message Queue for Apache Kafka can send and receive. Unit: bytes. Valid values: 1048576 to 10485760. Default value: **1048576**. Before you change the maximum message size to a new value, make sure that the new value matches the configuration on the producers and consumers in the instance.</p>
+     */
     @NameInMap("Config")
     public String config;
 
+    @NameInMap("CrossZone")
+    public Boolean crossZone;
+
+    /**
+     * <p>The deployment mode of the instance. Valid values:</p>
+     * <br>
+     * <p>*   **vpc**: deploys the instance that allows access only from a VPC.</p>
+     * <p>*   **eip**: deploys the instance that allows access from the Internet and a VPC.</p>
+     * <br>
+     * <p>The deployment mode of the instance must match the type of the instance. If the instance allows access only from a VPC, set the value to **vpc**. If the instance allows access from the Internet and a VPC, set the value to **eip**.</p>
+     */
     @NameInMap("DeployModule")
     public String deployModule;
 
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether the instance supports elastic IP addresses (EIPs). Valid values:</p>
+     * <br>
+     * <p>*   **true**: supports EIPs and allows access from the Internet and a VPC.</p>
+     * <p>*   **false**: does not support EIPs and allows access only from a VPC.</p>
+     * <br>
+     * <p>The value of this parameter must match the type of the instance. For example, if the instance allows access only from a VPC, set this parameter to **false**.</p>
+     */
     @NameInMap("IsEipInner")
     public Boolean isEipInner;
 
+    /**
+     * <p>Specifies whether to forcibly deploy the instance in the selected zones.</p>
+     */
     @NameInMap("IsForceSelectedZones")
     public Boolean isForceSelectedZones;
 
+    /**
+     * <p>Specifies whether to set a new username and password. Valid values:</p>
+     * <br>
+     * <p>*   **true**: sets a new username and password.</p>
+     * <p>*   **false**: does not set a new username or password.</p>
+     * <br>
+     * <p>This parameter is available only if you deploy an instance that allows access from the Internet and a VPC.</p>
+     */
     @NameInMap("IsSetUserAndPassword")
     public Boolean isSetUserAndPassword;
 
+    /**
+     * <p>The ID of the key that is used for disk encryption in the region where the instance is deployed. You can obtain the ID of the key in the [Key Management Service (KMS) console](https://kms.console.aliyun.com/?spm=a2c4g.11186623.2.5.336745b8hfiU21) or create a key. For more information, see [Manage CMKs](~~181610~~).</p>
+     * <br>
+     * <p>If this parameter is configured, disk encryption is enabled for the instance. You cannot disable disk encryption after disk encryption is enabled. When you call this operation, the system checks whether the AliyunServiceRoleForAlikafkaInstanceEncryption service-linked role is created. If the role is not created, the system automatically creates the role. For more information, see [Service-linked roles](~~190460~~).</p>
+     */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
+    /**
+     * <p>The name of the instance.</p>
+     * <br>
+     * <p>>  If you specify a value for this parameter, make sure that the specified value is unique in the region of the instance.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The alert contact.</p>
+     */
     @NameInMap("Notifier")
     public String notifier;
 
+    /**
+     * <p>The password that corresponds to the username.</p>
+     * <br>
+     * <p>This parameter is available only if you deploy an instance that allows access from the Internet and a VPC.</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The region ID of the instance.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The security group of the instance.</p>
+     * <br>
+     * <p>If you do not configure this parameter, Message Queue for Apache Kafka automatically configures a security group for the instance. If you want to configure this parameter, you must create a security group for the instance in advance. For more information, see [Create a security group](~~25468~~).</p>
+     */
     @NameInMap("SecurityGroup")
     public String securityGroup;
 
+    /**
+     * <p>The zones among which you want to deploy the instance.</p>
+     */
     @NameInMap("SelectedZones")
     public String selectedZones;
 
+    /**
+     * <p>The version number of the instance. Valid values: 0.10.2 and 2.2.0.</p>
+     */
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    /**
+     * <p>The mobile phone number of the alert contact.</p>
+     */
     @NameInMap("UserPhoneNum")
     public String userPhoneNum;
 
+    /**
+     * <p>The username that is used to access the instance.</p>
+     * <br>
+     * <p>This parameter is available only if you deploy an instance that allows access from the Internet and a VPC.</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The ID of the vSwitch to which you want to connect the instance.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the virtual private cloud (VPC) in which you want to deploy the instance.</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
+    /**
+     * <p>The ID of the zone in which you want to deploy the instance.</p>
+     * <br>
+     * <p>*   The zone ID of the instance must be the same as that of the vSwitch.</p>
+     * <p>*   The value must be in the format of zoneX or Region ID-X. For example, you can set this parameter to zonea or cn-hangzhou-k.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -72,6 +178,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public String getConfig() {
         return this.config;
+    }
+
+    public StartInstanceRequest setCrossZone(Boolean crossZone) {
+        this.crossZone = crossZone;
+        return this;
+    }
+    public Boolean getCrossZone() {
+        return this.crossZone;
     }
 
     public StartInstanceRequest setDeployModule(String deployModule) {

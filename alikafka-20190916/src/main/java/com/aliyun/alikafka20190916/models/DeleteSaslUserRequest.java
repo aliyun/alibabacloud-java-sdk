@@ -5,22 +5,16 @@ import com.aliyun.tea.*;
 
 public class DeleteSaslUserRequest extends TeaModel {
     /**
-     * <p>The name of the user.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the region.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
-
-    /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
-     */
-    @NameInMap("Type")
-    public String type;
 
     /**
      * <p>The SASL mechanism. Valid values:</p>
@@ -29,6 +23,12 @@ public class DeleteSaslUserRequest extends TeaModel {
      * <p>*   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.</p>
      * <br>
      * <p>Default value: **plain**.</p>
+     */
+    @NameInMap("Type")
+    public String type;
+
+    /**
+     * <p>The name of the user.</p>
      */
     @NameInMap("Username")
     public String username;

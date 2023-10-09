@@ -4,18 +4,33 @@ package com.aliyun.alikafka20190916.models;
 import com.aliyun.tea.*;
 
 public class DescribeSaslUsersResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The SASL users.</p>
+     */
     @NameInMap("SaslUserList")
     public DescribeSaslUsersResponseBodySaslUserList saslUserList;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,12 +80,26 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     }
 
     public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
+        /**
+         * <p>The password that is used to access the Elasticsearch cluster.</p>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <p>The request type. Valid values:</p>
+         * <br>
+         * <p>*   **plain**: a simple mechanism that uses usernames and passwords to verify user identities. Message Queue for Apache Kafka provides an optimized PLAIN mechanism that allows you to dynamically create SASL users for an instance without the need to restart the instance.</p>
+         * <p>*   **scram**: a mechanism that uses usernames and passwords to verify user identities. This mechanism provides better security protection than the PLAIN mechanism. Message Queue for Apache Kafka uses SCRAM-SHA-256.</p>
+         * <br>
+         * <p>Default value: **plain**.</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The name of the user.</p>
+         */
         @NameInMap("Username")
         public String username;
 

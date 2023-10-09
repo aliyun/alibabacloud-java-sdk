@@ -5,30 +5,32 @@ import com.aliyun.tea.*;
 
 public class CreatePrePayOrderResponseBody extends TeaModel {
     /**
-     * <p>The number of partitions. We recommend that you configure this parameter.</p>
-     * <br>
-     * <p>*   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.</p>
-     * <p>*   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.</p>
-     * <p>*   For more information about the valid values, see [Billing](~~84737~~).</p>
+     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
      */
     @NameInMap("Code")
     public Integer code;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the order.</p>
+     */
     @NameInMap("OrderId")
     public String orderId;
 
     /**
-     * <p>Creates a subscription Message Queue for Apache Kafka instance.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

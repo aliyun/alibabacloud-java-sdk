@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the instance.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The HTTP status code returned. The HTTP status code 200 indicates that the request is successful.</p>
+     * <p>The region ID of the instance.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
