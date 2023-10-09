@@ -569,6 +569,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataNetworkInfoVpcInfo extends TeaModel {
+        @NameInMap("securityGroupIds")
+        public String securityGroupIds;
+
         /**
          * <p>The ID of the vSwitch with which the instance is associated.</p>
          */
@@ -584,6 +587,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static GetInstanceResponseBodyDataNetworkInfoVpcInfo build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyDataNetworkInfoVpcInfo self = new GetInstanceResponseBodyDataNetworkInfoVpcInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyDataNetworkInfoVpcInfo setSecurityGroupIds(String securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public String getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
         public GetInstanceResponseBodyDataNetworkInfoVpcInfo setVSwitchId(String vSwitchId) {
@@ -705,6 +716,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("supportAutoScaling")
         public Boolean supportAutoScaling;
 
+        @NameInMap("traceOn")
+        public Boolean traceOn;
+
         public static GetInstanceResponseBodyDataProductInfo build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseBodyDataProductInfo self = new GetInstanceResponseBodyDataProductInfo();
             return TeaModel.build(map, self);
@@ -748,6 +762,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public Boolean getSupportAutoScaling() {
             return this.supportAutoScaling;
+        }
+
+        public GetInstanceResponseBodyDataProductInfo setTraceOn(Boolean traceOn) {
+            this.traceOn = traceOn;
+            return this;
+        }
+        public Boolean getTraceOn() {
+            return this.traceOn;
         }
 
     }

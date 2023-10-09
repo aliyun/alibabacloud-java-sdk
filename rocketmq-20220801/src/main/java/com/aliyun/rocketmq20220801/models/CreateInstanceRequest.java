@@ -23,6 +23,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("autoRenewPeriod")
     public Integer autoRenewPeriod;
 
+    @NameInMap("commodityCode")
+    public String commodityCode;
+
     /**
      * <p>The name of the instance that you want to create.</p>
      * <br>
@@ -150,6 +153,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Integer getAutoRenewPeriod() {
         return this.autoRenewPeriod;
+    }
+
+    public CreateInstanceRequest setCommodityCode(String commodityCode) {
+        this.commodityCode = commodityCode;
+        return this;
+    }
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     public CreateInstanceRequest setInstanceName(String instanceName) {
@@ -332,6 +343,9 @@ public class CreateInstanceRequest extends TeaModel {
     }
 
     public static class CreateInstanceRequestNetworkInfoVpcInfo extends TeaModel {
+        @NameInMap("securityGroupIds")
+        public String securityGroupIds;
+
         /**
          * <p>The ID of the vSwitch with which the instance is associated.</p>
          * <br>
@@ -351,6 +365,14 @@ public class CreateInstanceRequest extends TeaModel {
         public static CreateInstanceRequestNetworkInfoVpcInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateInstanceRequestNetworkInfoVpcInfo self = new CreateInstanceRequestNetworkInfoVpcInfo();
             return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestNetworkInfoVpcInfo setSecurityGroupIds(String securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public String getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
         public CreateInstanceRequestNetworkInfoVpcInfo setVSwitchId(String vSwitchId) {
@@ -423,6 +445,12 @@ public class CreateInstanceRequest extends TeaModel {
         @NameInMap("autoScaling")
         public Boolean autoScaling;
 
+        @NameInMap("chargeType")
+        public String chargeType;
+
+        @NameInMap("intranetSpec")
+        public String intranetSpec;
+
         /**
          * <p>The retention period of messages. Unit: hours.</p>
          * <br>
@@ -458,6 +486,22 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public Boolean getAutoScaling() {
             return this.autoScaling;
+        }
+
+        public CreateInstanceRequestProductInfo setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
+        public CreateInstanceRequestProductInfo setIntranetSpec(String intranetSpec) {
+            this.intranetSpec = intranetSpec;
+            return this;
+        }
+        public String getIntranetSpec() {
+            return this.intranetSpec;
         }
 
         public CreateInstanceRequestProductInfo setMessageRetentionTime(Integer messageRetentionTime) {
