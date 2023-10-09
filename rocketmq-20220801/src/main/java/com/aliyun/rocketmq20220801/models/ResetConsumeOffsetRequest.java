@@ -4,9 +4,15 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ResetConsumeOffsetRequest extends TeaModel {
+    /**
+     * <p>The time when the consumer offset is reset.</p>
+     */
     @NameInMap("resetTime")
     public String resetTime;
 
+    /**
+     * <p>The method that is used to reset the consumer offset. Valid values: LATEST_OFFSET and SPECIFIED_TIME.</p>
+     */
     @NameInMap("resetType")
     public String resetType;
 

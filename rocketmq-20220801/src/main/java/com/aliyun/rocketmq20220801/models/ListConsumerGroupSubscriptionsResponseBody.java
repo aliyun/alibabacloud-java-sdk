@@ -4,27 +4,51 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
+    /**
+     * <p>The returned error code.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public java.util.List<ListConsumerGroupSubscriptionsResponseBodyData> data;
 
+    /**
+     * <p>The returned dynamic error code.</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The returned dynamic error message.</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The returned HTTP status code.</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -98,24 +122,45 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     }
 
     public static class ListConsumerGroupSubscriptionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The consumer group ID.</p>
+         */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
+        /**
+         * <p>The filter expression.</p>
+         */
         @NameInMap("filterExpression")
         public String filterExpression;
 
+        /**
+         * <p>The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED.</p>
+         */
         @NameInMap("filterExpressionType")
         public String filterExpressionType;
 
+        /**
+         * <p>The consumption mode. Valid values: BROADCASTING and CLUSTERING.</p>
+         */
         @NameInMap("messageModel")
         public String messageModel;
 
+        /**
+         * <p>The subscription status. Valid values: ONLINE and OFFLINE.</p>
+         */
         @NameInMap("subscriptionStatus")
         public String subscriptionStatus;
 
+        /**
+         * <p>Indicates whether the topic is created.</p>
+         */
         @NameInMap("topicCreated")
         public Boolean topicCreated;
 
+        /**
+         * <p>The topic to which the consumer group subscribes.</p>
+         */
         @NameInMap("topicName")
         public String topicName;
 

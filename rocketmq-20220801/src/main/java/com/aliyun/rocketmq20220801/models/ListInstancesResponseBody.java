@@ -11,7 +11,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public ListInstancesResponseBodyData data;
@@ -122,9 +122,15 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyDataListTags extends TeaModel {
+        /**
+         * <p>The tag key of the resource.</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value of the resource.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -153,7 +159,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyDataList extends TeaModel {
         /**
-         * <p>The commodity code of the instance. The commodity code of a ApsaraMQ for RocketMQ 5.0 instance has a similar format as ons_rmqsub_public_cn.</p>
+         * <p>The commodity code of the instance. The commodity code of ApsaraMQ for RocketMQ 5.0 instances has a similar format to ons_rmqsub_public_cn.</p>
          */
         @NameInMap("commodityCode")
         public String commodityCode;
@@ -171,19 +177,19 @@ public class ListInstancesResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The number of consumer groups created in the instance.</p>
+         * <p>The number of consumer groups that are created on the instance.</p>
          */
         @NameInMap("groupCount")
         public Long groupCount;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The instance name.</p>
          */
         @NameInMap("instanceName")
         public String instanceName;
@@ -193,7 +199,7 @@ public class ListInstancesResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   PayAsYouGo: pay-as-you-go</p>
+         * <p>*   PayAsYouGo</p>
          * <p>*   Subscription</p>
          */
         @NameInMap("paymentType")
@@ -212,7 +218,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String releaseTime;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          */
         @NameInMap("remark")
         public String remark;
@@ -236,7 +242,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String seriesCode;
 
         /**
-         * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
+         * <p>The code of the service to which the instance belongs. The service code of ApsaraMQ for RocketMQ is rmq.</p>
          */
         @NameInMap("serviceCode")
         public String serviceCode;
@@ -248,7 +254,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the instance.</p>
+         * <p>The instance status.</p>
          * <br>
          * <p>Valid values:</p>
          * <br>
@@ -272,11 +278,14 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
 
+        /**
+         * <p>The resource tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<ListInstancesResponseBodyDataListTags> tags;
 
         /**
-         * <p>The number of topics created in the instance.</p>
+         * <p>The number of topics that are created on the instance.</p>
          */
         @NameInMap("topicCount")
         public Long topicCount;
@@ -462,7 +471,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyData extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The paginated data.</p>
          */
         @NameInMap("list")
         public java.util.List<ListInstancesResponseBodyDataList> list;

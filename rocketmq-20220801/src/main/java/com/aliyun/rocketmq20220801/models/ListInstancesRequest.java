@@ -36,6 +36,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags that are used to filter instances.</p>
+     */
     @NameInMap("tags")
     public String tags;
 

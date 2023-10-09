@@ -11,7 +11,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetInstanceResponseBodyData data;
@@ -342,29 +342,29 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyDataInstanceQuotas extends TeaModel {
         /**
-         * <p>The number of free topics in the instance.</p>
+         * <p>The number of topics that are free of charge on the instance.</p>
          */
         @NameInMap("freeCount")
         public Double freeCount;
 
         /**
-         * <p>The name of the quota.</p>
+         * <p>The quota name.</p>
          * <br>
-         * <p>Valid values:</p>
+         * <p>Valid value:</p>
          * <br>
-         * <p>*   TOPIC_COUNT: the number of topics that you can create in the instance</p>
+         * <p>*   TOPIC_COUNT: the number of topics that can be created on the instance</p>
          */
         @NameInMap("quotaName")
         public String quotaName;
 
         /**
-         * <p>The total number of topics in the instance.</p>
+         * <p>The total number of topics on the instance.</p>
          */
         @NameInMap("totalCount")
         public Double totalCount;
 
         /**
-         * <p>The number of used topics in the instance.</p>
+         * <p>The number of used topics on the instance.</p>
          */
         @NameInMap("usedCount")
         public Double usedCount;
@@ -414,8 +414,29 @@ public class GetInstanceResponseBody extends TeaModel {
          * <br>
          * <p>Valid values:</p>
          * <br>
-         * <p>*   TCP_VPC: VPC endpoint</p>
-         * <p>*   TCP_INTERNET: public endpoint</p>
+         * <p>*   TCP_VPC</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    VPC endpoint</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   TCP_INTERNET</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    public endpoint</p>
+         * <br>
+         * <p>    <!-- --></p>
          */
         @NameInMap("endpointType")
         public String endpointType;
@@ -427,12 +448,12 @@ public class GetInstanceResponseBody extends TeaModel {
         public String endpointUrl;
 
         /**
-         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only when you use a public endpoint to access the ApsaraMQ for RocketMQ broker.</p>
+         * <p>The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the ApsaraMQ for RocketMQ broker.</p>
          * <br>
-         * <p>*   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
-         * <p>*   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.</p>
+         * <p>*   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.</p>
          * <br>
-         * <p>We recommend that you configure the internetInfo.ipWhitelist parameter instead of this parameter.</p>
+         * <p>We recommend that you configure internetInfo.ipWhitelist instead of this parameter.</p>
          */
         @NameInMap("ipWhitelist")
         public java.util.List<String> ipWhitelist;
@@ -732,12 +753,27 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataSoftware extends TeaModel {
+        /**
+         * <p>The period of upgrade time.</p>
+         */
         @NameInMap("maintainTime")
         public String maintainTime;
 
+        /**
+         * <p>The version of software.</p>
+         */
         @NameInMap("softwareVersion")
         public String softwareVersion;
 
+        /**
+         * <p>The upgrade method.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>- Auto: automatic upgrade</p>
+         * <br>
+         * <p>- Manual: manual upgrade</p>
+         */
         @NameInMap("upgradeMethod")
         public String upgradeMethod;
 
@@ -773,9 +809,15 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key of the resource.</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The tag value of the resource.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -845,6 +887,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("extConfig")
         public GetInstanceResponseBodyDataExtConfig extConfig;
 
+        /**
+         * <p>The number of groups.</p>
+         */
         @NameInMap("groupCount")
         public Long groupCount;
 
@@ -931,6 +976,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("serviceCode")
         public String serviceCode;
 
+        /**
+         * <p>The instance software information.</p>
+         */
         @NameInMap("software")
         public GetInstanceResponseBodyDataSoftware software;
 
@@ -965,9 +1013,15 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("subSeriesCode")
         public String subSeriesCode;
 
+        /**
+         * <p>The resource tags.</p>
+         */
         @NameInMap("tags")
         public java.util.List<GetInstanceResponseBodyDataTags> tags;
 
+        /**
+         * <p>The number of topics.</p>
+         */
         @NameInMap("topicCount")
         public Long topicCount;
 

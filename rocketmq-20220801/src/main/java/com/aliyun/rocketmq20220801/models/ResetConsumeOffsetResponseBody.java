@@ -4,24 +4,45 @@ package com.aliyun.rocketmq20220801.models;
 import com.aliyun.tea.*;
 
 public class ResetConsumeOffsetResponseBody extends TeaModel {
+    /**
+     * <p>The returned error code.</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>The returned dynamic error code.</p>
+     */
     @NameInMap("dynamicCode")
     public String dynamicCode;
 
+    /**
+     * <p>The returned dynamic error message.</p>
+     */
     @NameInMap("dynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The returned HTTP status code.</p>
+     */
     @NameInMap("httpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned error message.</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
