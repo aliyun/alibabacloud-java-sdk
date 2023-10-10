@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>sgx_dcap_server20200726</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>sgx_dcap_server20200726</name>
   <description>Alibaba Cloud sgx-dcap-server (20200726) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.20</version>
+      <version>0.2.21</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

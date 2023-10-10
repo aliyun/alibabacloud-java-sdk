@@ -27,9 +27,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public GetQeIdentityResponse getQeIdentityWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetQeIdentityResponse getQeIdentityWithOptions(GetQeIdentityRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsHost)) {
+            query.put("AcsHost", request.acsHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVpcId)) {
+            query.put("ClientVpcId", request.clientVpcId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetQeIdentity"),
@@ -45,15 +56,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetQeIdentityResponse());
     }
 
-    public GetQeIdentityResponse getQeIdentity() throws Exception {
+    public GetQeIdentityResponse getQeIdentity(GetQeIdentityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getQeIdentityWithOptions(headers, runtime);
+        return this.getQeIdentityWithOptions(request, headers, runtime);
     }
 
-    public GetQveIdentityResponse getQveIdentityWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetQveIdentityResponse getQveIdentityWithOptions(GetQveIdentityRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsHost)) {
+            query.put("AcsHost", request.acsHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVpcId)) {
+            query.put("ClientVpcId", request.clientVpcId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetQveIdentity"),
@@ -69,15 +91,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetQveIdentityResponse());
     }
 
-    public GetQveIdentityResponse getQveIdentity() throws Exception {
+    public GetQveIdentityResponse getQveIdentity(GetQveIdentityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getQveIdentityWithOptions(headers, runtime);
+        return this.getQveIdentityWithOptions(request, headers, runtime);
     }
 
     public GetTcbInfoResponse getTcbInfoWithOptions(GetTcbInfoRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsHost)) {
+            query.put("AcsHost", request.acsHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVpcId)) {
+            query.put("ClientVpcId", request.clientVpcId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fmspc)) {
             query.put("fmspc", request.fmspc);
         }
@@ -109,6 +139,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PckCrlResponse pckCrlWithOptions(PckCrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsHost)) {
+            query.put("AcsHost", request.acsHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVpcId)) {
+            query.put("ClientVpcId", request.clientVpcId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ca)) {
             query.put("ca", request.ca);
         }
@@ -137,9 +175,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.pckCrlWithOptions(request, headers, runtime);
     }
 
-    public RootCaCrlResponse rootCaCrlWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public RootCaCrlResponse rootCaCrlWithOptions(RootCaCrlRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsHost)) {
+            query.put("AcsHost", request.acsHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVpcId)) {
+            query.put("ClientVpcId", request.clientVpcId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RootCaCrl"),
@@ -155,15 +204,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RootCaCrlResponse());
     }
 
-    public RootCaCrlResponse rootCaCrl() throws Exception {
+    public RootCaCrlResponse rootCaCrl(RootCaCrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.rootCaCrlWithOptions(headers, runtime);
+        return this.rootCaCrlWithOptions(request, headers, runtime);
     }
 
     public SimplePackagePckCertResponse simplePackagePckCertWithOptions(SimplePackagePckCertRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acsHost)) {
+            query.put("AcsHost", request.acsHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientVpcId)) {
+            query.put("ClientVpcId", request.clientVpcId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpusvn)) {
             query.put("cpusvn", request.cpusvn);
         }
