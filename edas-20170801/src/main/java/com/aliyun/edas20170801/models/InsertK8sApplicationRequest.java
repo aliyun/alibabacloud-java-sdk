@@ -189,6 +189,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("Envs")
     public String envs;
 
+    @NameInMap("ImagePlatforms")
+    public String imagePlatforms;
+
     /**
      * <p>The URL of the image. This parameter is required if you set the `PackageType` parameter to `Image`.</p>
      */
@@ -522,6 +525,9 @@ public class InsertK8sApplicationRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    @NameInMap("Startup")
+    public String startup;
+
     /**
      * <p>The storage type of the NAS file system.</p>
      * <br>
@@ -797,6 +803,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     }
     public String getEnvs() {
         return this.envs;
+    }
+
+    public InsertK8sApplicationRequest setImagePlatforms(String imagePlatforms) {
+        this.imagePlatforms = imagePlatforms;
+        return this;
+    }
+    public String getImagePlatforms() {
+        return this.imagePlatforms;
     }
 
     public InsertK8sApplicationRequest setImageUrl(String imageUrl) {
@@ -1181,6 +1195,14 @@ public class InsertK8sApplicationRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public InsertK8sApplicationRequest setStartup(String startup) {
+        this.startup = startup;
+        return this;
+    }
+    public String getStartup() {
+        return this.startup;
     }
 
     public InsertK8sApplicationRequest setStorageType(String storageType) {
