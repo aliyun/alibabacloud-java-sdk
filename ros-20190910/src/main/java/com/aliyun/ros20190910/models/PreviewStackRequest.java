@@ -57,11 +57,10 @@ public class PreviewStackRequest extends TeaModel {
     /**
      * <p>The stack ID. You can use this parameter to preview a stack that you want to update.</p>
      * <br>
-     * <p>> </p>
      * <br>
-     * <p>*   You must and can specify only one of StackName and StackId.</p>
      * <br>
-     * <p>*   In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.</p>
+     * <p>> -  You must and can specify only one of StackName and StackId.</p>
+     * <p>> - In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.</p>
      */
     @NameInMap("StackId")
     public String stackId;

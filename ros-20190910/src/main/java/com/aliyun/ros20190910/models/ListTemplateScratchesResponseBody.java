@@ -298,6 +298,9 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         @NameInMap("PreferenceParameters")
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> preferenceParameters;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The source resource group.</p>
          */
@@ -402,6 +405,14 @@ public class ListTemplateScratchesResponseBody extends TeaModel {
         }
         public java.util.List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> getPreferenceParameters() {
             return this.preferenceParameters;
+        }
+
+        public ListTemplateScratchesResponseBodyTemplateScratches setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListTemplateScratchesResponseBodyTemplateScratches setSourceResourceGroup(ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup sourceResourceGroup) {

@@ -105,7 +105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to continue to create a stack that failed to be created. In this example, the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` failed to be created in the China (Hangzhou) region.
+      * This topic provides an example on how to continue to create a stack after the stack fails to be created. In this example, the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is created in the China (Hangzhou) region.
       *
       * @param request ContinueCreateStackRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -184,7 +184,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to continue to create a stack that failed to be created. In this example, the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` failed to be created in the China (Hangzhou) region.
+      * This topic provides an example on how to continue to create a stack after the stack fails to be created. In this example, the stack whose ID is `4a6c9851-3b0f-4f5f-b4ca-a14bf691****` is created in the China (Hangzhou) region.
       *
       * @param request ContinueCreateStackRequest
       * @return ContinueCreateStackResponse
@@ -598,7 +598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, make sure that a stack group is created. For more information, see [CreateStackGroup](~~151333~~).
-      * This topic provides an example on how to create stacks in a stack group. In this example, stacks are created in a stack group named `MyStackGroup`. The stacks are created within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      * In this topic, the stack group named `MyStackGroup` is used. The stack group is created in the China (Hangzhou) region and granted the self-managed permissions. In this example, stacks are created by using Alibaba Cloud accounts whose IDs are `151266687691****` and `141261387191****` in the China (Hangzhou) region and China (Beijing) region.
       *
       * @param tmpReq CreateStackInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -688,7 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * Before you call this operation, make sure that a stack group is created. For more information, see [CreateStackGroup](~~151333~~).
-      * This topic provides an example on how to create stacks in a stack group. In this example, stacks are created in a stack group named `MyStackGroup`. The stacks are created within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.
+      * In this topic, the stack group named `MyStackGroup` is used. The stack group is created in the China (Hangzhou) region and granted the self-managed permissions. In this example, stacks are created by using Alibaba Cloud accounts whose IDs are `151266687691****` and `141261387191****` in the China (Hangzhou) region and China (Beijing) region.
       *
       * @param request CreateStackInstancesRequest
       * @return CreateStackInstancesResponse
@@ -812,6 +812,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceResourceGroupShrink)) {
@@ -1020,7 +1024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to delete stacks from a stack group. In this example, the stacks that are deployed within the `151266687691****` Alibaba Cloud account in the China (Beijing) region are deleted from a stack group named `MyStackGroup`. The stack group is deployed in the China (Hangzhou) region and granted self-managed permissions.
+      * In this topic, the stack group named `MyStackGroup` that is created in the China (Hangzhou) region is used. In this example, the stacks of the stack group that are deployed in the China (Beijing) region by using the Alibaba Cloud account whose ID is `151266687691****` are deleted.
       *
       * @param tmpReq DeleteStackInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1101,7 +1105,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to delete stacks from a stack group. In this example, the stacks that are deployed within the `151266687691****` Alibaba Cloud account in the China (Beijing) region are deleted from a stack group named `MyStackGroup`. The stack group is deployed in the China (Hangzhou) region and granted self-managed permissions.
+      * In this topic, the stack group named `MyStackGroup` that is created in the China (Hangzhou) region is used. In this example, the stacks of the stack group that are deployed in the China (Beijing) region by using the Alibaba Cloud account whose ID is `151266687691****` are deleted.
       *
       * @param request DeleteStackInstancesRequest
       * @return DeleteStackInstancesResponse
@@ -1199,6 +1203,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteTemplateScratchWithOptions(request, runtime);
     }
 
+    /**
+      * *   If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).
+      * *   If you delete a version of a resource type, you can no longer use the version in ROS.
+      * *   If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.
+      * *   When a resource type has more than one version, you cannot delete the default version by calling the operation.
+      * *   When a resource type has only one version, you can delete the resource type and the version by calling the operation.
+      *
+      * @param request DeregisterResourceTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return DeregisterResourceTypeResponse
+     */
     public DeregisterResourceTypeResponse deregisterResourceTypeWithOptions(DeregisterResourceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1227,6 +1242,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeregisterResourceTypeResponse());
     }
 
+    /**
+      * *   If you delete a resource type, you can no longer use the resource type in Resource Orchestration Service (ROS).
+      * *   If you delete a version of a resource type, you can no longer use the version in ROS.
+      * *   If a resource type has only one version, you can delete the version by calling the operation. If a resource type has more than one version, you must manually delete the remaining versions.
+      * *   When a resource type has more than one version, you cannot delete the default version by calling the operation.
+      * *   When a resource type has only one version, you can delete the resource type and the version by calling the operation.
+      *
+      * @param request DeregisterResourceTypeRequest
+      * @return DeregisterResourceTypeResponse
+     */
     public DeregisterResourceTypeResponse deregisterResourceType(DeregisterResourceTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deregisterResourceTypeWithOptions(request, runtime);
@@ -3607,6 +3632,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
         }
@@ -3901,6 +3930,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.previewStackWithOptions(request, runtime);
     }
 
+    /**
+      * *   Versions increase from v1.
+      * *   If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.
+      *
+      * @param request RegisterResourceTypeRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return RegisterResourceTypeResponse
+     */
     public RegisterResourceTypeResponse registerResourceTypeWithOptions(RegisterResourceTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3947,6 +3984,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RegisterResourceTypeResponse());
     }
 
+    /**
+      * *   Versions increase from v1.
+      * *   If you create a new resource type, v1 is used as the default version of the resource type. You can call the SetResourceType operation to change the default version of a resource type.
+      *
+      * @param request RegisterResourceTypeRequest
+      * @return RegisterResourceTypeResponse
+     */
     public RegisterResourceTypeResponse registerResourceType(RegisterResourceTypeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.registerResourceTypeWithOptions(request, runtime);
@@ -4622,7 +4666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to update stacks in a stack group. In this example, the stacks that are deployed in a stack group named `MyStackGroup` are updated. The stacks are deployed within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      * In this topic, the stack group named `MyStackGroup` that is created in the China (Hangzhou) region is used. The stack group is granted the self-managed permissions. In this example, stacks of the stack group are updated by using the Alibaba Cloud accounts whose IDs are `151266687691****` and `141261387191****` in the China (Hangzhou) region and China (Beijing) region.
       *
       * @param tmpReq UpdateStackInstancesRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -4707,7 +4751,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * This topic provides an example on how to update stacks in a stack group. In this example, the stacks that are deployed in a stack group named `MyStackGroup` are updated. The stacks are deployed within the `151266687691****` and `141261387191****` Alibaba Cloud accounts in the China (Hangzhou) and China (Beijing) regions. The stack group is granted self-managed permissions and deployed in the China (Hangzhou) region.
+      * In this topic, the stack group named `MyStackGroup` that is created in the China (Hangzhou) region is used. The stack group is granted the self-managed permissions. In this example, stacks of the stack group are updated by using the Alibaba Cloud accounts whose IDs are `151266687691****` and `141261387191****` in the China (Hangzhou) region and China (Beijing) region.
       *
       * @param request UpdateStackInstancesRequest
       * @return UpdateStackInstancesResponse
@@ -4895,6 +4939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceResourceGroupShrink)) {

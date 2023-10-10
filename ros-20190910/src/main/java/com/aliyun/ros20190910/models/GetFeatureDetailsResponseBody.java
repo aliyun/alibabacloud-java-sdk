@@ -349,6 +349,9 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         @NameInMap("SourceTagSupported")
         public Boolean sourceTagSupported;
 
+        @NameInMap("SupportedTemplateScratchTypes")
+        public java.util.List<String> supportedTemplateScratchTypes;
+
         public static GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes build(java.util.Map<String, ?> map) throws Exception {
             GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes self = new GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes();
             return TeaModel.build(map, self);
@@ -392,6 +395,14 @@ public class GetFeatureDetailsResponseBody extends TeaModel {
         }
         public Boolean getSourceTagSupported() {
             return this.sourceTagSupported;
+        }
+
+        public GetFeatureDetailsResponseBodyTemplateScratchSupportedResourceTypes setSupportedTemplateScratchTypes(java.util.List<String> supportedTemplateScratchTypes) {
+            this.supportedTemplateScratchTypes = supportedTemplateScratchTypes;
+            return this;
+        }
+        public java.util.List<String> getSupportedTemplateScratchTypes() {
+            return this.supportedTemplateScratchTypes;
         }
 
     }

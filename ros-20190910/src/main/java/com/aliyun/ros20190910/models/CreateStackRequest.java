@@ -13,19 +13,20 @@ public class CreateStackRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The option for the stack after the stack is created. Valid values:</p>
+     * <p>The creation option for the stack. Valid values:</p>
      * <br>
-     * <p>*   KeepStackOnCreationComplete (default): retains the stack and its resources after the stack is created. In this case, your stack quota in ROS is consumed.</p>
-     * <p>*   AbandonStackOnCreationComplete: deletes the stack, but retains its resources after the stack is created. In this case, your stack quota in ROS is not consumed. If the stack fails to be created, the stack is retained.</p>
-     * <p>*   AbandonStackOnCreationRollbackComplete: deletes the stack when its resources are rolled back after the stack fails to be created. In this case, your stack quota in ROS is not consumed. In other rollback scenarios, the stack is retained.</p>
+     * <p>*   KeepStackOnCreationComplete (default): After the stack is created, the stack and its resources are retained. The quota for the maximum number of stacks that can be created in ROS is consumed.</p>
+     * <p>*   AbandonStackOnCreationComplete: After the stack is created, the stack is deleted, but its resources are retained. The quota for the maximum number of stacks that can be created in ROS is not consumed. If the stack fails to be created, the stack is retained.</p>
+     * <p>*   AbandonStackOnCreationRollbackComplete: When the resources of the stack are rolled back after the stack fails to be created, the stack is deleted. The quota for the maximum number of stacks that can be created in ROS is not consumed. In other rollback scenarios, the stack is retained.</p>
+     * <p>*   ManuallyPay: When you create the stack, you must manually pay for the subscription resources that are used. The following resource types support manual payment: `ALIYUN::ECS::InstanceGroup`, `ALIYUN::RDS::DBInstance`, `ALIYUN::SLB::LoadBalancer`, `ALIYUN::VPC::EIP`, and `ALIYUN::VPC::VpnGateway`.</p>
      * <br>
-     * <p>> You can specify only one of CreateOption and CreateOptions.</p>
+     * <p>>  You can specify only one of CreateOption and CreateOptions.</p>
      */
     @NameInMap("CreateOption")
     public String createOption;
 
     /**
-     * <p>The options for the stack after the stack is created.</p>
+     * <p>The creation options for the stack.</p>
      */
     @NameInMap("CreateOptions")
     public java.util.List<String> createOptions;

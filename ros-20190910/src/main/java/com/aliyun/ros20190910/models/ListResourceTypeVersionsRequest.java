@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypeVersionsRequest extends TeaModel {
+    /**
+     * <p>The resource type.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

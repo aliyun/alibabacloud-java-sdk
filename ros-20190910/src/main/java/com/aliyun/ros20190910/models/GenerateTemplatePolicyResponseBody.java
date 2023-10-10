@@ -44,6 +44,9 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         @NameInMap("Action")
         public java.util.List<String> action;
 
+        /**
+         * <p>The condition that is required for the policy to take effect.</p>
+         */
         @NameInMap("Condition")
         public java.util.Map<String, ?> condition;
 
@@ -57,7 +60,7 @@ public class GenerateTemplatePolicyResponseBody extends TeaModel {
         public String effect;
 
         /**
-         * <p>The object that the statement covers. An asterisk (\*) indicates all resources.</p>
+         * <p>The objects that the statement covers. An asterisk (\*) indicates all resources.</p>
          */
         @NameInMap("Resource")
         public String resource;

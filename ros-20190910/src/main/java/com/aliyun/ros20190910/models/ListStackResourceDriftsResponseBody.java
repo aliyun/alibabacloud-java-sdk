@@ -4,14 +4,20 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStackResourceDriftsResponseBody extends TeaModel {
+    /**
+     * <p>The query token returned in this call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The property differences of the resource.</p>
+     * <p>The resource drifts.</p>
      */
     @NameInMap("ResourceDrifts")
     public java.util.List<ListStackResourceDriftsResponseBodyResourceDrifts> resourceDrifts;
@@ -46,9 +52,23 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     }
 
     public static class ListStackResourceDriftsResponseBodyResourceDriftsModuleInfo extends TeaModel {
+        /**
+         * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (`/`).</p>
+         * <br>
+         * <p>In the following example, the resource is created from Module B nested within Parent Module A:</p>
+         * <br>
+         * <p>`moduleA/moduleB`</p>
+         */
         @NameInMap("LogicalIdHierarchy")
         public String logicalIdHierarchy;
 
+        /**
+         * <p>The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (`/`).</p>
+         * <br>
+         * <p>In the following example, the resource is created from a module of the `MODULE::ROS::Child::Example` type that is nested within a parent module of the `MODULE::ROS::Parent::Example` type:</p>
+         * <br>
+         * <p>`MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example`</p>
+         */
         @NameInMap("TypeHierarchy")
         public String typeHierarchy;
 
@@ -77,25 +97,29 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
 
     public static class ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences extends TeaModel {
         /**
-         * <p>__null__</p>
+         * <p>The actual value of the resource property.</p>
          */
         @NameInMap("ActualValue")
         public String actualValue;
 
         /**
-         * <p>__null__</p>
+         * <p>The drift type of the resource property. Valid values:</p>
+         * <br>
+         * <p>*   ADD: The value is added to a resource property whose data type is Array or List.</p>
+         * <p>*   REMOVE: The property is deleted from the current resource configuration.</p>
+         * <p>*   NOT_EQUAL: The current property value differs from the expected value that is defined in the stack template.</p>
          */
         @NameInMap("DifferenceType")
         public String differenceType;
 
         /**
-         * <p>ListStackResourceDrifts</p>
+         * <p>The expected value of the resource property that is defined in the template.</p>
          */
         @NameInMap("ExpectedValue")
         public String expectedValue;
 
         /**
-         * <p>__null__</p>
+         * <p>The path of the resource property.</p>
          */
         @NameInMap("PropertyPath")
         public String propertyPath;
@@ -140,60 +164,67 @@ public class ListStackResourceDriftsResponseBody extends TeaModel {
     }
 
     public static class ListStackResourceDriftsResponseBodyResourceDrifts extends TeaModel {
+        /**
+         * <p>The actual JSON-formatted resource properties.</p>
+         */
         @NameInMap("ActualProperties")
         public String actualProperties;
 
         /**
-         * <p>The expected value of the resource property as defined in the template.</p>
+         * <p>The time when the drift detection operation was performed on the resource.</p>
          */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
         /**
-         * <p>The query token value returned in this call.</p>
+         * <p>The JSON-formatted resource properties that are defined in the template.</p>
          */
         @NameInMap("ExpectedProperties")
         public String expectedProperties;
 
         /**
-         * <p>The actual value of the resource property.</p>
+         * <p>The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.</p>
          */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The information about the modules from which the resource was created. This parameter is returned only if the resource is created from modules.</p>
+         */
         @NameInMap("ModuleInfo")
         public ListStackResourceDriftsResponseBodyResourceDriftsModuleInfo moduleInfo;
 
         /**
-         * <p>The path of the resource property.</p>
+         * <p>The physical ID of the resource.</p>
          */
         @NameInMap("PhysicalResourceId")
         public String physicalResourceId;
 
         /**
-         * <p>http://ros.aliyun-inc.com:8080/V2/ListStackResourceDrifts</p>
+         * <p>The property drifts of the resource.</p>
          */
         @NameInMap("PropertyDifferences")
         public java.util.List<ListStackResourceDriftsResponseBodyResourceDriftsPropertyDifferences> propertyDifferences;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The drift state of the resource. Valid values:</p>
+         * <br>
+         * <p>*   DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</p>
+         * <p>*   MODIFIED: The actual configuration of the resource differs from its expected template configuration.</p>
+         * <p>*   NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</p>
+         * <p>*   IN_SYNC: The actual configuration of the resource matches its expected template configuration.</p>
          */
         @NameInMap("ResourceDriftStatus")
         public String resourceDriftStatus;
 
         /**
-         * <p>The actual resource properties in JSON format.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
-         * <p>The drift type of the resource property. Valid values:</p>
-         * <br>
-         * <p>*   ADD: The value has been added to a resource property whose data type was Array or List.</p>
-         * <p>*   REMOVE: The property has been deleted from the current resource configuration.</p>
-         * <p>*   NOT_EQUAL: The current property value differs from the expected value defined in the stack template.</p>
+         * <p>The stack ID.</p>
          */
         @NameInMap("StackId")
         public String stackId;

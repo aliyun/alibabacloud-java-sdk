@@ -36,6 +36,9 @@ public class GetStackResourceResponseBody extends TeaModel {
     @NameInMap("Metadata")
     public java.util.Map<String, ?> metadata;
 
+    /**
+     * <p>The information about the modules from which the resource is created. This parameter is returned only if the resource is created from modules.</p>
+     */
     @NameInMap("ModuleInfo")
     public GetStackResourceResponseBodyModuleInfo moduleInfo;
 
@@ -236,9 +239,23 @@ public class GetStackResourceResponseBody extends TeaModel {
     }
 
     public static class GetStackResourceResponseBodyModuleInfo extends TeaModel {
+        /**
+         * <p>The concatenated logical IDs of one or more modules that contain the resource. The modules are listed from the outermost layer and separated by forward slashes (`/`).</p>
+         * <br>
+         * <p>In the following example, the resource is created from Module B nested within Parent Module A:</p>
+         * <br>
+         * <p>`moduleA/moduleB`</p>
+         */
         @NameInMap("LogicalIdHierarchy")
         public String logicalIdHierarchy;
 
+        /**
+         * <p>The concatenated types of one or more modules that contain the resource. The module types are listed from the outermost layer and separated by forward slashes (`/`).</p>
+         * <br>
+         * <p>In the following example, the resource is created from a module of the `MODULE::ROS::Child::Example` type that is nested within a parent module of the `MODULE::ROS::Parent::Example` type:</p>
+         * <br>
+         * <p>`MODULE::ROS::Parent::Example/MODULE::ROS::Child::Example`</p>
+         */
         @NameInMap("TypeHierarchy")
         public String typeHierarchy;
 

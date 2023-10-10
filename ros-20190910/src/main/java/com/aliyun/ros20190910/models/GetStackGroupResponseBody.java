@@ -11,7 +11,7 @@ public class GetStackGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the stack group.</p>
+     * <p>Details of the stack group.</p>
      */
     @NameInMap("StackGroup")
     public GetStackGroupResponseBodyStackGroup stackGroup;
@@ -84,13 +84,13 @@ public class GetStackGroupResponseBody extends TeaModel {
 
     public static class GetStackGroupResponseBodyStackGroupParameters extends TeaModel {
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The name of the parameter.</p>
          */
         @NameInMap("ParameterKey")
         public String parameterKey;
 
         /**
-         * <p>The description of the stack group.</p>
+         * <p>The value of the parameter.</p>
          */
         @NameInMap("ParameterValue")
         public String parameterValue;
@@ -361,11 +361,16 @@ public class GetStackGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The details of the last drift detection that was performed on the stack group.</p>
+         * <p>The structure that contains the template body.</p>
+         * <br>
+         * <p>> We recommend that you use TemplateContent instead of TemplateBody.</p>
          */
         @NameInMap("TemplateBody")
         public String templateBody;
 
+        /**
+         * <p>The JSON-formatted structure that contains the template body. For more information, see [Template syntax](~~28857~~).</p>
+         */
         @NameInMap("TemplateContent")
         public String templateContent;
 

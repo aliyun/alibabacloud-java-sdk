@@ -46,8 +46,6 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
-         * <br>
-         * <p>You can call the [ListResourceTypes](~~133957~~) operation to query the resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -76,15 +74,27 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
     }
 
     public static class GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints extends TeaModel {
+        /**
+         * <p>The values of the parameter.</p>
+         */
         @NameInMap("AllowedValues")
         public java.util.List<?> allowedValues;
 
+        /**
+         * <p>The name of the resource property.</p>
+         */
         @NameInMap("PropertyName")
         public String propertyName;
 
+        /**
+         * <p>The name of the resource that is defined in the template.</p>
+         */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -135,7 +145,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
@@ -197,7 +207,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
          * <p>*   NotSupport: The value of this parameter cannot be queried.</p>
          * <p>*   QueryError: This parameter failed to be queried.</p>
          * <br>
-         * <p>>  If the AllowedValues parameter is not returned, the Behavior and BehaviorReason parameters are returned.</p>
+         * <p>> If AllowedValues is not returned, Behavior and BehaviorReason are returned.</p>
          */
         @NameInMap("Behavior")
         public String behavior;
@@ -211,7 +221,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         /**
          * <p>The values that do not conform to the parameter constraints.</p>
          * <br>
-         * <p>>  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.</p>
+         * <p>> If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
          */
         @NameInMap("IllegalValueByParameterConstraints")
         public java.util.List<?> illegalValueByParameterConstraints;
@@ -219,17 +229,20 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         /**
          * <p>The values that do not match the rules in the template.</p>
          * <br>
-         * <p>>  If the `AllowedValues` parameter is returned, the `IllegalValueByParameterConstraints` and `IllegalValueByRules` parameters are returned at the same time.</p>
+         * <p>> If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</p>
          */
         @NameInMap("IllegalValueByRules")
         public java.util.List<?> illegalValueByRules;
 
         /**
-         * <p>The unsupported resources in the template.</p>
+         * <p>The unsupported resource in the template.</p>
          */
         @NameInMap("NotSupportResources")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsNotSupportResources> notSupportResources;
 
+        /**
+         * <p>The original constraint information.</p>
+         */
         @NameInMap("OriginalConstraints")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> originalConstraints;
 
@@ -240,13 +253,13 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         public String parameterKey;
 
         /**
-         * <p>The error details that are returned if the request fails.</p>
+         * <p>The error that is returned when the request fails.</p>
          */
         @NameInMap("QueryErrors")
         public java.util.List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> queryErrors;
 
         /**
-         * <p>The type of the parameter.</p>
+         * <p>The data type of the parameter.</p>
          */
         @NameInMap("Type")
         public String type;
