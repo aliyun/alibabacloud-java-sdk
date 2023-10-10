@@ -11,13 +11,13 @@ public class CreateClusterResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("request_id")
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("task_id")
     public String taskId;

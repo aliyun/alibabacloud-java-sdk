@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeUserQuotaResponseBody extends TeaModel {
     /**
-     * <p>The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).</p>
+     * <p>The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
      */
     @NameInMap("amk_cluster_quota")
     public Long amkClusterQuota;
 
     /**
-     * <p>The quota of serverless Kubernetes (ASK) clusters. Default value: 20. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).</p>
+     * <p>The quota of ACK Serverless clusters. Default value: 20. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
      */
     @NameInMap("ask_cluster_quota")
     public Long askClusterQuota;
 
     /**
-     * <p>The quota of node pools in an ACK cluster. Default value: 20. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).</p>
+     * <p>The quota of node pools in an ACK cluster. Default value: 20. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
      */
     @NameInMap("cluster_nodepool_quota")
     public Long clusterNodepoolQuota;
 
     /**
-     * <p>The quota of clusters within an Alibaba Cloud account. Default value: 50. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).</p>
+     * <p>The quota of clusters that belong to an Alibaba Cloud account. Default value: 50. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
      */
     @NameInMap("cluster_quota")
     public Long clusterQuota;
@@ -35,11 +35,14 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public DescribeUserQuotaResponseBodyEdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota;
 
     /**
-     * <p>The quota of nodes in an ACK cluster. Default value: 100. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).</p>
+     * <p>The quota of nodes in an ACK cluster. Default value: 100. If the default quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
      */
     @NameInMap("node_quota")
     public Long nodeQuota;
 
+    /**
+     * <p>Information about the new quota.</p>
+     */
     @NameInMap("quotas")
     public java.util.Map<String, QuotasValue> quotas;
 
@@ -112,7 +115,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The quota of enhanced edge node pools within an Alibaba Cloud account.</p>
+         * <p>The quota of enhanced edge node pools that belong to an Alibaba Cloud account.</p>
          */
         @NameInMap("count")
         public Integer count;
@@ -120,7 +123,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         /**
          * <p>The maximum subscription duration of an enhanced edge node pool. Unit: months.</p>
          * <br>
-         * <p>>  Enhanced node pools use the pay-as-you-go billing method. Therefore, this parameter is not required.</p>
+         * <p>> You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.</p>
          */
         @NameInMap("period")
         public Integer period;

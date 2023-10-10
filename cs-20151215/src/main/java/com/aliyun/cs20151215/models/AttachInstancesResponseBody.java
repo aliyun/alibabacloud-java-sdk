@@ -11,7 +11,7 @@ public class AttachInstancesResponseBody extends TeaModel {
     public java.util.List<AttachInstancesResponseBodyList> list;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("task_id")
     public String taskId;
@@ -45,13 +45,13 @@ public class AttachInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the ECS instance.</p>
          */
         @NameInMap("instanceId")
         public String instanceId;
 
         /**
-         * <p>Indicates whether the ECS instances are successfully added to the ACK cluster.</p>
+         * <p>Indicates whether the ECS instance is successfully added to the ACK cluster.</p>
          */
         @NameInMap("message")
         public String message;

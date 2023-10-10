@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterEventsResponseBody extends TeaModel {
+    /**
+     * <p>The list of events.</p>
+     */
     @NameInMap("events")
     public java.util.List<DescribeClusterEventsResponseBodyEvents> events;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("page_info")
     public DescribeClusterEventsResponseBodyPageInfo pageInfo;
 
@@ -32,12 +38,47 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterEventsResponseBodyEventsData extends TeaModel {
+        /**
+         * <p>The severity level of the event.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   warning</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   error</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   info</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("level")
         public String level;
 
+        /**
+         * <p>The details of the event.</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <p>The status of the event.</p>
+         */
         @NameInMap("reason")
         public String reason;
 
@@ -73,24 +114,45 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterEventsResponseBodyEvents extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The description of the event.</p>
+         */
         @NameInMap("data")
         public DescribeClusterEventsResponseBodyEventsData data;
 
+        /**
+         * <p>The event ID.</p>
+         */
         @NameInMap("event_id")
         public String eventId;
 
+        /**
+         * <p>The event source.</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>The subject related to the event.</p>
+         */
         @NameInMap("subject")
         public String subject;
 
+        /**
+         * <p>The time when the event started.</p>
+         */
         @NameInMap("time")
         public String time;
 
+        /**
+         * <p>The type of event. Valid values:</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -158,12 +220,21 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterEventsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of the page to return.</p>
+         */
         @NameInMap("page_number")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+         */
         @NameInMap("page_size")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("total_count")
         public Long totalCount;
 

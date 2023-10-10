@@ -4,6 +4,13 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class OpenAckServiceRequest extends TeaModel {
+    /**
+     * <p>The type of ACK service that you want to activate. Valid values:</p>
+     * <br>
+     * <p>*   `propayasgo`: ACK Pro</p>
+     * <p>*   `edgepayasgo`: ACK Edge</p>
+     * <p>*   `gspayasgo`: ACK for Alibaba Cloud Genomics Service (AGS)</p>
+     */
     @NameInMap("type")
     public String type;
 

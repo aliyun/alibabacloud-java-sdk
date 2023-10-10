@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterNodepoolResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

@@ -4,15 +4,30 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyInstanceRequest extends TeaModel {
+    /**
+     * <p>The action of the policy. Valid values:</p>
+     * <br>
+     * <p>*   `deny`: Deployments that match the policy are denied.</p>
+     * <p>*   `warn`: Alerts are generated for deployments that match the policy.</p>
+     */
     @NameInMap("action")
     public String action;
 
+    /**
+     * <p>The ID of the policy instance.</p>
+     */
     @NameInMap("instance_name")
     public String instanceName;
 
+    /**
+     * <p>The namespaces to which the policy is applied. The policy is applied to all namespaces if this parameter is left empty.</p>
+     */
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
+    /**
+     * <p>The parameters of the policy instance. For more information, see [Predefined security policies of ACK](~~359819~~).</p>
+     */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 

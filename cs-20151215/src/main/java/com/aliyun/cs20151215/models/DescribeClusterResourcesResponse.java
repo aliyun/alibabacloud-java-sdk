@@ -46,24 +46,57 @@ public class DescribeClusterResourcesResponse extends TeaModel {
     }
 
     public static class DescribeClusterResourcesResponseBody extends TeaModel {
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The time when the resource was created.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The ID of the resource.</p>
+         */
         @NameInMap("instance_id")
         public String instanceId;
 
+        /**
+         * <p>The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](~~133836~~).</p>
+         */
         @NameInMap("resource_info")
         public String resourceInfo;
 
+        /**
+         * <p>The type of resource.</p>
+         */
         @NameInMap("resource_type")
         public String resourceType;
 
+        /**
+         * <p>The status of the resource. Valid values:</p>
+         * <br>
+         * <p>*   `CREATE_COMPLETE`: The resource is created.</p>
+         * <p>*   `CREATE_FAILED`: The resource failed to be created.</p>
+         * <p>*   `CREATE_IN_PROGRESS`: The resource is being created.</p>
+         * <p>*   `DELETE_FAILED`: The resource failed to be deleted.</p>
+         * <p>*   `DELETE_IN_PROGRESS`: The resource is being deleted.</p>
+         * <p>*   `ROLLBACK_COMPLETE`: The resource is rolled back.</p>
+         * <p>*   `ROLLBACK_FAILED`: The resource failed to be rolled back.</p>
+         * <p>*   `ROLLBACK_IN_PROGRESS`: The resource is being rolled back.</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>Indicates whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</p>
+         * <br>
+         * <p>*   1: The resource is created by ACK.</p>
+         * <p>*   0: The resource is an existing resource.</p>
+         */
         @NameInMap("auto_create")
         public Long autoCreate;
 

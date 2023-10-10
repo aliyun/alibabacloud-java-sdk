@@ -4,9 +4,15 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class MigrateClusterRequest extends TeaModel {
+    /**
+     * <p>The endpoint of the OSS bucket.</p>
+     */
     @NameInMap("oss_bucket_endpoint")
     public String ossBucketEndpoint;
 
+    /**
+     * <p>The name of the Object Storage Service (OSS) bucket.</p>
+     */
     @NameInMap("oss_bucket_name")
     public String ossBucketName;
 

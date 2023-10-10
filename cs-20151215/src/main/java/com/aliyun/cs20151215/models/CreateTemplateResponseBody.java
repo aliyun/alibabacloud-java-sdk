@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
     /**
-     * <p>The ID of the template.</p>
+     * <p>The ID of the orchestration template.</p>
      */
     @NameInMap("template_id")
     public String templateId;

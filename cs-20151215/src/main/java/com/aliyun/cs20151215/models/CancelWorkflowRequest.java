@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CancelWorkflowRequest extends TeaModel {
+    /**
+     * <p>The operation that you want to perform. Set the value to cancel.</p>
+     */
     @NameInMap("action")
     public String action;
 

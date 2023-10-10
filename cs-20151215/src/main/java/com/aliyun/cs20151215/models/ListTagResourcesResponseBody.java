@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The token that is used to start the next query.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("next_token")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("request_id")
     public String requestId;
@@ -117,7 +117,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The labels of the resource.</p>
+         * <p>The resource and label.</p>
          */
         @NameInMap("tag_resource")
         public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;

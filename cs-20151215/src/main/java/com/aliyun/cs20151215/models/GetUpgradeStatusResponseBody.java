@@ -32,7 +32,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
      * <br>
      * <p>*   `not_start`: The update is not started.</p>
      * <p>*   `prechecking`: The precheck is in progress.</p>
-     * <p>*   `upgrading`: The update is in progress.</p>
+     * <p>*   `upgrading`: The cluster is being updated.</p>
      * <p>*   `pause`: The update is paused.</p>
      * <p>*   `success`: The update is successful.</p>
      */

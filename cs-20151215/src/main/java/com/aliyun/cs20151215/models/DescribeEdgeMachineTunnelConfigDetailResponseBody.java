@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel {
     /**
-     * <p>The name of the cloud-native box.</p>
+     * <p>The device name.</p>
      */
     @NameInMap("device_name")
     public String deviceName;
@@ -17,13 +17,13 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
     public String model;
 
     /**
-     * <p>The product key.</p>
+     * <p>Product Key</p>
      */
     @NameInMap("product_key")
     public String productKey;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID</p>
      */
     @NameInMap("request_id")
     public String requestId;
@@ -35,13 +35,13 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
     public String sn;
 
     /**
-     * <p>The token.</p>
+     * <p>Token</p>
      */
     @NameInMap("token")
     public String token;
 
     /**
-     * <p>The backend endpoint of the tunnel.</p>
+     * <p>The tunnel endpoint.</p>
      */
     @NameInMap("tunnel_endpoint")
     public String tunnelEndpoint;

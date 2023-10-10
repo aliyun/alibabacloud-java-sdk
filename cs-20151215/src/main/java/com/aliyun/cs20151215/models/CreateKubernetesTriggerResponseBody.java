@@ -11,7 +11,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>The ID of the ACK cluster.</p>
+     * <p>The ID of the cluster.</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
@@ -23,7 +23,7 @@ public class CreateKubernetesTriggerResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The name of the trigger project.</p>
      */
     @NameInMap("project_id")
     public String projectId;

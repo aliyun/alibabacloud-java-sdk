@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
+    /**
+     * <p>The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.</p>
+     */
     @NameInMap("nodes")
     public java.util.List<String> nodes;
 

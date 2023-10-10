@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClustersV1ResponseBody extends TeaModel {
     /**
-     * <p>The list of the details of the queried cluster.</p>
+     * <p>The details of the clusters.</p>
      */
     @NameInMap("clusters")
     public java.util.List<DescribeClustersV1ResponseBodyClusters> clusters;
 
     /**
-     * <p>The pagination details.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("page_info")
     public DescribeClustersV1ResponseBodyPageInfo pageInfo;
@@ -39,27 +39,27 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
     public static class DescribeClustersV1ResponseBodyClusters extends TeaModel {
         /**
-         * <p>The ID of the queried cluster.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
 
         /**
-         * <p>The type of the managed Kubernetes cluster. This parameter is returned for a managed Kubernetes cluster. Valid values:</p>
+         * <p>The type of ACK managed cluster. This parameter is available only for ACK managed clusters. Valid values:</p>
          * <br>
-         * <p>*   `ack.pro.small`: professional managed Kubernetes cluster</p>
-         * <p>*   `ack.standard`: standard managed Kubernetes cluster</p>
+         * <p>*   `ack.pro.small`: ACK Pro cluster</p>
+         * <p>*   `ack.standard`: ACK Basic cluster</p>
          */
         @NameInMap("cluster_spec")
         public String clusterSpec;
 
         /**
-         * <p>The type of the cluster. Valid values:</p>
+         * <p>The cluster type. Valid values:</p>
          * <br>
-         * <p>*   `Kubernetes`: dedicated Kubernetes cluster</p>
-         * <p>*   `ManagedKubernetes`: managed Kubernetes cluster</p>
-         * <p>*   `Ask`: ASK cluster</p>
-         * <p>*   `ExternalKubernetes`: registered external cluster</p>
+         * <p>*   `Kubernetes`: ACK dedicated cluster</p>
+         * <p>*   `ManagedKubernetes`: ACK managed cluster</p>
+         * <p>*   `Ask`: ACK Serverless cluster</p>
+         * <p>*   `ExternalKubernetes`: registered cluster</p>
          */
         @NameInMap("cluster_type")
         public String clusterType;
@@ -77,10 +77,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>Indicates whether deletion protection is enabled for the cluster. After deletion protection is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
+         * <p>Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</p>
          * <br>
-         * <p>*   `true`: deletion protection is enabled for the cluster. The cluster cannot be deleted in the ACK console or by calling API operations.</p>
-         * <p>*   `false`: deletion protection is disabled for the cluster. The cluster can be deleted in the ACK console or by calling API operations.</p>
+         * <p>*   `true`: Deletion protection is enabled for the cluster. The cluster cannot be deleted in the ACK console or by calling API operations.</p>
+         * <p>*   `false`: Deletion protection is disabled for the cluster. The cluster can be deleted in the ACK console or by calling API operations.</p>
          */
         @NameInMap("deletion_protection")
         public Boolean deletionProtection;
@@ -100,21 +100,21 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String externalLoadbalancerId;
 
         /**
-         * <p>The Kubernetes version of the cluster. The Kubernetes versions provided by ACK are consistent with the open source Kubernetes versions. We recommend that you select the latest Kubernetes version. If you do not specify a Kubernetes version, the latest Kubernetes version is used by default.</p>
+         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</p>
          * <br>
-         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. You can create ACK clusters of earlier Kubernetes versions by calling API operations. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).</p>
+         * <p>You can create clusters of the latest two Kubernetes versions in the ACK console. You can call a specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).</p>
          */
         @NameInMap("init_version")
         public String initVersion;
 
         /**
-         * <p>The maintenance window of the cluster. This feature is available only in professional managed Kubernetes clusters.</p>
+         * <p>The maintenance window of the cluster. This feature is available only for ACK Pro clusters.</p>
          */
         @NameInMap("maintenance_window")
         public MaintenanceWindow maintenanceWindow;
 
         /**
-         * <p>The address of the cluster API server. It includes an internal endpoint and a public endpoint.</p>
+         * <p>The endpoint of the cluster API server, including an internal endpoint and a public endpoint.</p>
          */
         @NameInMap("master_url")
         public String masterUrl;
@@ -128,7 +128,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The name of the cluster.</p>
          * <br>
-         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
          */
         @NameInMap("name")
         public String name;
@@ -145,7 +145,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String networkMode;
 
         /**
-         * <p>The Kubernetes version to which the cluster can be upgraded.</p>
+         * <p>The Kubernetes version to which the cluster can be updated.</p>
          */
         @NameInMap("next_version")
         public String nextVersion;
@@ -160,16 +160,16 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Boolean privateZone;
 
         /**
-         * <p>The identifier of the cluster. Valid values:</p>
+         * <p>The cluster identifier. Valid values:</p>
          * <br>
-         * <p>*   `Edge`: The cluster is a managed edge Kubernetes cluster.</p>
-         * <p>*   `Default`: The cluster is not a managed edge Kubernetes cluster.</p>
+         * <p>*   `Edge`: ACK Edge cluster</p>
+         * <p>*   `Default`: non-ACK Edge cluster</p>
          */
         @NameInMap("profile")
         public String profile;
 
         /**
-         * <p>The ID of the region where the cluster is deployed.</p>
+         * <p>The region ID of the associated cluster.</p>
          */
         @NameInMap("region_id")
         public String regionId;
@@ -181,13 +181,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the security group to which the instances of the cluster belong.</p>
+         * <p>The ID of the security group to which the cluster belongs.</p>
          */
         @NameInMap("security_group_id")
         public String securityGroupId;
 
         /**
-         * <p>The number of nodes in the cluster. Master nodes and worker nodes are included.</p>
+         * <p>The number of nodes in the cluster, including master nodes and worker nodes.</p>
          */
         @NameInMap("size")
         public Long size;
@@ -198,8 +198,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>*   `initial`: The cluster is being created.</p>
          * <p>*   `failed`: The cluster failed to be created.</p>
          * <p>*   `running`: The cluster is running.</p>
-         * <p>*   `updating`: The cluster is being upgraded.</p>
-         * <p>*   `updating_failed`: The cluster failed to be upgraded.</p>
+         * <p>*   `updating`: The cluster is being updated.</p>
+         * <p>*   `updating_failed`: The cluster failed to be updated.</p>
          * <p>*   `scaling`: The cluster is being scaled.</p>
          * <p>*   `stopped`: The cluster is stopped.</p>
          * <p>*   `deleting`: The cluster is being deleted.</p>
@@ -218,7 +218,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <br>
          * <p>The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.</p>
          * <br>
-         * <p>For more information about subnetting for ACK clusters, see [Plan CIDR blocks for ACK clusters in a VPC](~~86500~~).</p>
+         * <p>For more information, see [Plan CIDR blocks for an ACK cluster](~~86500~~).</p>
          */
         @NameInMap("subnet_cidr")
         public String subnetCidr;
@@ -236,7 +236,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String updated;
 
         /**
-         * <p>The ID of the VPC where the cluster is deployed. You must specify a VPC when you create a cluster.</p>
+         * <p>The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.</p>
          */
         @NameInMap("vpc_id")
         public String vpcId;
@@ -248,13 +248,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String vswitchId;
 
         /**
-         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes that are created on Elastic Compute Service (ECS) instances.</p>
+         * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.</p>
          */
         @NameInMap("worker_ram_role_name")
         public String workerRamRoleName;
 
         /**
-         * <p>The ID of the zone where the cluster is deployed.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("zone_id")
         public String zoneId;
@@ -500,13 +500,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
     public static class DescribeClustersV1ResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of the returned page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("page_number")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("page_size")
         public Integer pageSize;

@@ -46,18 +46,33 @@ public class DescribeClusterLogsResponse extends TeaModel {
     }
 
     public static class DescribeClusterLogsResponseBody extends TeaModel {
+        /**
+         * <p>The ID of the log entry.</p>
+         */
         @NameInMap("ID")
         public Long ID;
 
+        /**
+         * <p>The cluster ID.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The log content.</p>
+         */
         @NameInMap("cluster_log")
         public String clusterLog;
 
+        /**
+         * <p>The time when the log entry was generated.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The time when the log entry was updated.</p>
+         */
         @NameInMap("updated")
         public String updated;
 

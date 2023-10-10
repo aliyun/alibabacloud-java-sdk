@@ -5,10 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node pool that is created.</p>
+     * <p>The node pool ID.</p>
      */
     @NameInMap("nodepool_id")
     public String nodepoolId;
+
+    /**
+     * <p>任务ID</p>
+     */
+    @NameInMap("task_id")
+    public String taskId;
 
     public static CreateClusterNodePoolResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterNodePoolResponseBody self = new CreateClusterNodePoolResponseBody();
@@ -21,6 +27,14 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
     }
     public String getNodepoolId() {
         return this.nodepoolId;
+    }
+
+    public CreateClusterNodePoolResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

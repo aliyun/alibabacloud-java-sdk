@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyClusterNodePoolResponseBody extends TeaModel {
     /**
-     * <p>The ID of the node pool.</p>
+     * <p>The node pool ID.</p>
      */
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("task_id")
     public String taskId;

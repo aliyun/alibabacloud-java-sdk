@@ -46,24 +46,56 @@ public class DescribeTriggerResponse extends TeaModel {
     }
 
     public static class DescribeTriggerResponseBody extends TeaModel {
+        /**
+         * <p>The ID of the trigger.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The name of the trigger.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The ID of the associated cluster.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The name of the project.</p>
+         * <br>
+         * <p>The name consists of the namespace where the application is deployed and the name of the application. The format is `${namespace}/${name}`. Example: default/test-app.</p>
+         */
         @NameInMap("project_id")
         public String projectId;
 
+        /**
+         * <p>The type of trigger.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   `deployment`: performs actions on Deployments.</p>
+         * <p>*   `application`: performs actions on applications that are deployed in Application Center.</p>
+         * <br>
+         * <p>Default value: `deployment`.</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>The action that the trigger performs. The value is set to redeploy.</p>
+         * <br>
+         * <p>`redeploy`: redeploys the resource specified by project_id.</p>
+         */
         @NameInMap("action")
         public String action;
 
+        /**
+         * <p>The token information.</p>
+         */
         @NameInMap("token")
         public String token;
 

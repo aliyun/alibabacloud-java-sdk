@@ -4,15 +4,27 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class QuotasValue extends TeaModel {
+    /**
+     * <p>The value of the quota. If the quota limit is reached, submit an application in the [Quota Center console](https://quotas.console.aliyun.com/products/csk/quotas) to increase the quota.</p>
+     */
     @NameInMap("quota")
     public String quota;
 
+    /**
+     * <p>The quota code.</p>
+     */
     @NameInMap("operation_code")
     public String operationCode;
 
+    /**
+     * <p>Indicates whether the quota is adjustable.</p>
+     */
     @NameInMap("adjustable")
     public Boolean adjustable;
 
+    /**
+     * <p>The unit.</p>
+     */
     @NameInMap("unit")
     public String unit;
 

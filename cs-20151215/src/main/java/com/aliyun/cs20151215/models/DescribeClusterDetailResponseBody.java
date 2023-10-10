@@ -5,27 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
-     * <p>The ID of the queried ACK cluster.</p>
+     * <p>The cluster ID.</p>
      */
     @NameInMap("cluster_id")
     public String clusterId;
 
     /**
-     * <p>The type of the managed Kubernetes cluster. This parameter is returned for a managed Kubernetes cluster. Valid values:</p>
+     * <p>The edition of the cluster if the cluster is an ACK managed cluster. Valid values:</p>
      * <br>
-     * <p>*   `ack.pro.small`: professional managed Kubernetes cluster.</p>
-     * <p>*   `ack.standard`: standard managed Kubernetes cluster.</p>
+     * <p>*   `ack.pro.small`: ACK Pro</p>
+     * <p>*   `ack.standard`: ACK Basic</p>
      */
     @NameInMap("cluster_spec")
     public String clusterSpec;
 
     /**
-     * <p>The type of the cluster. Valid values:</p>
+     * <p>The type of cluster. Valid values:</p>
      * <br>
-     * <p>*   `Kubernetes`: dedicated Kubernetes cluster</p>
-     * <p>*   `ManagedKubernetes`: managed Kubernetes cluster</p>
-     * <p>*   `Ask`: ASK cluster</p>
-     * <p>*   `ExternalKubernetes`: registered external Kubernetes cluster</p>
+     * <p>*   `Kubernetes`: ACK dedicated cluster</p>
+     * <p>*   `ManagedKubernetes`: ACK managed cluster</p>
+     * <p>*   `Ask`: ACK Serverless cluster</p>
+     * <p>*   `ExternalKubernetes`: registered cluster</p>
      */
     @NameInMap("cluster_type")
     public String clusterType;
@@ -43,10 +43,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String currentVersion;
 
     /**
-     * <p>Indicates whether deletion protection is enabled. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling the API. Valid values:</p>
+     * <p>Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the Container Service console or by calling API operations. Valid values:</p>
      * <br>
-     * <p>*   `true`: Deletion protection is enabled. You cannot delete the cluster in the ACK console or by calling the API.</p>
-     * <p>*   `false`: Deletion protection is not enabled. You can delete the cluster in the ACK console or by calling the API.</p>
+     * <p>*   `true`: deletion protection is enabled for the cluster. This way, the cluster cannot be deleted in the Container Service console or by calling API operations.</p>
+     * <p>*   `false`: deletion protection is disabled for the cluster. This way, the cluster can be deleted in the Container Service console or by calling API operations.</p>
      */
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
@@ -64,19 +64,19 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String externalLoadbalancerId;
 
     /**
-     * <p>The Kubernetes version that is initially used by the cluster.</p>
+     * <p>The initial Kubernetes version of the cluster.</p>
      */
     @NameInMap("init_version")
     public String initVersion;
 
     /**
-     * <p>The maintenance window of the cluster. This feature is available in only professional managed Kubernetes clusters.</p>
+     * <p>The maintenance window of the cluster. This feature is available only in ACK Pro clusters.</p>
      */
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
     /**
-     * <p>The address of the cluster. It includes an internal endpoint and a public endpoint.</p>
+     * <p>The endpoints of the cluster, including an internal endpoint and a public endpoint.</p>
      */
     @NameInMap("master_url")
     public String masterUrl;
@@ -90,7 +90,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * <p>The name of the cluster.</p>
      * <br>
-     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
      */
     @NameInMap("name")
     public String name;
@@ -98,30 +98,33 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * <p>The network mode of the cluster. Valid values:</p>
      * <br>
-     * <p>*   `classic`: the classic network</p>
+     * <p>*   `classic`: classic network</p>
      * <p>*   `vpc`: virtual private cloud (VPC)</p>
      * <p>*   `overlay`: overlay network</p>
      * <p>*   `calico`: network powered by Calico</p>
      * <br>
-     * <p>Default value`: vpc`.</p>
+     * <p>Default value: `vpc`.</p>
      */
     @NameInMap("network_mode")
     public String networkMode;
 
     /**
-     * <p>The Kubernetes version to which the cluster can be upgraded.</p>
+     * <p>The Kubernetes version to which the cluster can be updated.</p>
      */
     @NameInMap("next_version")
     public String nextVersion;
 
+    /**
+     * <p>The ROS parameters of the cluster.</p>
+     */
     @NameInMap("parameters")
     public java.util.Map<String, String> parameters;
 
     /**
      * <p>Indicates whether Alibaba Cloud DNS PrivateZone is enabled.</p>
      * <br>
-     * <p>*   `true`: indicates that Alibaba Cloud DNS PrivateZone is enabled.</p>
-     * <p>*   `false`: indicates that Alibaba Cloud DNS PrivateZone is not enabled.</p>
+     * <p>*   `true`: Alibaba Cloud DNS PrivateZone is enabled.</p>
+     * <p>*   `false`: Alibaba Cloud DNS PrivateZone is disabled.</p>
      */
     @NameInMap("private_zone")
     public Boolean privateZone;
@@ -129,14 +132,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     /**
      * <p>Indicates the scenario in which the cluster is used. Valid values:</p>
      * <br>
-     * <p>*   `Default`: indicates that the cluster is used in non-edge computing scenarios.</p>
-     * <p>*   `Edge`: indicates that the ACK cluster is used in edge computing scenarios.</p>
+     * <p>*   `Default`: non-edge computing scenarios</p>
+     * <p>*   `Edge`: edge computing scenarios</p>
      */
     @NameInMap("profile")
     public String profile;
 
     /**
-     * <p>The ID of the region where the cluster is deployed.</p>
+     * <p>The region ID of the cluster.</p>
      */
     @NameInMap("region_id")
     public String regionId;
@@ -148,7 +151,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the security group to which the instances of the cluster belong.</p>
+     * <p>The ID of the security group to which the cluster belongs.</p>
      */
     @NameInMap("security_group_id")
     public String securityGroupId;
@@ -160,16 +163,16 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Long size;
 
     /**
-     * <p>The state of the cluster. Valid values:</p>
+     * <p>The status of the cluster. Valid values:</p>
      * <br>
      * <p>*   `initial`: The cluster is being created.</p>
      * <p>*   `failed`: The cluster failed to be created.</p>
      * <p>*   `running`: The cluster is running.</p>
-     * <p>*   `updating`: The cluster is being upgraded.</p>
-     * <p>*   `updating_failed`: The cluster failed to be upgraded.</p>
+     * <p>*   `updating`: The cluster is being updated.</p>
+     * <p>*   `updating_failed`: The cluster failed to be updated.</p>
      * <p>*   `scaling`: The cluster is being scaled.</p>
-     * <p>*   `waiting`: The registered cluster is waiting for connecting.</p>
-     * <p>*   `disconnected`: The registeredcluster is disconnected.</p>
+     * <p>*   `waiting`: The cluster is waiting for connection requests.</p>
+     * <p>*   `disconnected`: The cluster is disconnected.</p>
      * <p>*   `stopped`: The cluster is stopped.</p>
      * <p>*   `deleting`: The cluster is being deleted.</p>
      * <p>*   `deleted`: The cluster is deleted.</p>
@@ -185,15 +188,15 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>*   172.16-31.0.0/12-16</p>
      * <p>*   192.168.0.0/16</p>
      * <br>
-     * <p>The pod CIDR block cannot overlap with that of the VPC or those of the ACK clusters that are deployed in the VPC.</p>
+     * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC or the CIDR blocks of the clusters in the VPC.</p>
      * <br>
-     * <p>For more information about the network segmentation of ACK clusters, see [Plan CIDR blocks for ACK clusters in a VPC](~~186964~~).</p>
+     * <p>For more information, see [Plan CIDR blocks for an ACK cluster](~~186964~~).</p>
      */
     @NameInMap("subnet_cidr")
     public String subnetCidr;
 
     /**
-     * <p>The labels of the cluster.</p>
+     * <p>The resource labels of the cluster.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -205,19 +208,19 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String updated;
 
     /**
-     * <p>The ID of the VPC where the cluster is deployed. This parameter is required when you create an ACK cluster.</p>
+     * <p>The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.</p>
      */
     @NameInMap("vpc_id")
     public String vpcId;
 
     /**
-     * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create an ACK cluster. vSwitches in different zones are recommended to ensure high availability.</p>
+     * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.</p>
      */
     @NameInMap("vswitch_id")
     public String vswitchId;
 
     /**
-     * <p>The name of the worker RAM role. The RAM role is assigned to the worker nodes of the cluster and allows the worker nodes to manage Elastic Compute Service (ECS) instances.</p>
+     * <p>The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.</p>
      */
     @NameInMap("worker_ram_role_name")
     public String workerRamRoleName;

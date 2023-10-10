@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The pagination details.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("page_info")
     public DescribeTemplatesResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>The list of the templates returned .</p>
+     * <p>The list of returned templates.</p>
      */
     @NameInMap("templates")
     public java.util.List<DescribeTemplatesResponseBodyTemplates> templates;
@@ -39,13 +39,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     public static class DescribeTemplatesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("page_number")
         public Long pageNumber;
 
         /**
-         * <p>The maximum number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("page_size")
         public Long pageSize;
@@ -125,22 +125,22 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The tag of the template. By default, the value is the name of the template.</p>
+         * <p>The label of the template. By default, the value is the name of the template.</p>
          */
         @NameInMap("tags")
         public String tags;
 
         /**
-         * <p>The template content in YAML format.</p>
+         * <p>The template content in the YAML format.</p>
          */
         @NameInMap("template")
         public String template;
 
         /**
-         * <p>The type of the template. The value can be a custom value.</p>
+         * <p>The type of template. This parameter can be set to a custom value.</p>
          * <br>
-         * <p>*   If the value is `kubernetes`, it indicates that the template is displayed on the Templates page in the ACK console.</p>
-         * <p>*   If the value is `compose`, it indicates that the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.</p>
+         * <p>*   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.</p>
+         * <p>*   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.</p>
          */
         @NameInMap("template_type")
         public String templateType;

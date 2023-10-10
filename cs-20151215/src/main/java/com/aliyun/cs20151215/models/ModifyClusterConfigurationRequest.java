@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterConfigurationRequest extends TeaModel {
+    /**
+     * <p>The custom configuration.</p>
+     */
     @NameInMap("customize_config")
     public java.util.List<ModifyClusterConfigurationRequestCustomizeConfig> customizeConfig;
 
@@ -21,9 +24,15 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyClusterConfigurationRequestCustomizeConfigConfigs extends TeaModel {
+        /**
+         * <p>The name of the configuration item.</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the configuration item.</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -51,9 +60,15 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
     }
 
     public static class ModifyClusterConfigurationRequestCustomizeConfig extends TeaModel {
+        /**
+         * <p>The custom configuration.</p>
+         */
         @NameInMap("configs")
         public java.util.List<ModifyClusterConfigurationRequestCustomizeConfigConfigs> configs;
 
+        /**
+         * <p>The name of the component.</p>
+         */
         @NameInMap("name")
         public String name;
 

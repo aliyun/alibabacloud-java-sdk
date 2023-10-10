@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
+    /**
+     * <p>The node pool ID.</p>
+     */
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("request_id")
     public String requestId;
 
+    /**
+     * <p>The task ID.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

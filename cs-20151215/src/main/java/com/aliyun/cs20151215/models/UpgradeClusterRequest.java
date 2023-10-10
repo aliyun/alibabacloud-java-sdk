@@ -4,16 +4,31 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
+    /**
+     * <p>The name of the component. Set the value to `k8s`.</p>
+     */
     @NameInMap("component_name")
     @Deprecated
     public String componentName;
 
+    /**
+     * <p>Specifies whether to upgrade only master nodes. Valid values:</p>
+     * <br>
+     * <p>*   true: upgrade only master nodes.</p>
+     * <p>*   false: upgrade master and worker nodes.</p>
+     */
     @NameInMap("master_only")
     public Boolean masterOnly;
 
+    /**
+     * <p>The Kubernetes version to which the cluster can be upgraded.</p>
+     */
     @NameInMap("next_version")
     public String nextVersion;
 
+    /**
+     * <p>The current Kubernetes version of the cluster. For more information, see [Kubernetes versions](~~185269~~).</p>
+     */
     @NameInMap("version")
     @Deprecated
     public String version;

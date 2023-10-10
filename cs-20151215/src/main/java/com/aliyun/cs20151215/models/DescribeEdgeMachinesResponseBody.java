@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeEdgeMachinesResponseBody extends TeaModel {
     /**
-     * <p>The list of details about cloud-native boxes.</p>
+     * <p>The list of cloud-native boxes.</p>
      */
     @NameInMap("edge_machines")
     public java.util.List<DescribeEdgeMachinesResponseBodyEdgeMachines> edgeMachines;
 
     /**
-     * <p>The pagination details.</p>
+     * <p>The paging information.</p>
      */
     @NameInMap("page_info")
     public DescribeEdgeMachinesResponseBodyPageInfo pageInfo;
@@ -51,7 +51,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The ID of the cloud-native box.</p>
+         * <p>The device ID.</p>
          */
         @NameInMap("edge_machine_id")
         public String edgeMachineId;
@@ -63,7 +63,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The lifecycle status of the cloud-native box.</p>
+         * <p>The lifecycle of the cloud-native box.</p>
          */
         @NameInMap("life_state")
         public String lifeState;
@@ -75,19 +75,19 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The name of the cloud-native box.</p>
+         * <p>The machine name.</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The online status of the cloud-native box.</p>
+         * <p>The status of the cloud-native box.</p>
          */
         @NameInMap("online_state")
         public String onlineState;
 
         /**
-         * <p>The serial number of the cloud-native box.</p>
+         * <p>The serial number.</p>
          */
         @NameInMap("sn")
         public String sn;
@@ -187,19 +187,23 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
 
     public static class DescribeEdgeMachinesResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
+         * <br>
+         * <p>Default value: 1.</p>
          */
         @NameInMap("page_number")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
+         * <br>
+         * <p>Default value: 10.</p>
          */
         @NameInMap("page_size")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of pages returned.</p>
          */
         @NameInMap("total_count")
         public Integer totalCount;

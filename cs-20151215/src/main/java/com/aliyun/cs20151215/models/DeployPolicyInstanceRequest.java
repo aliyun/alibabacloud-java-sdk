@@ -4,12 +4,24 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeployPolicyInstanceRequest extends TeaModel {
+    /**
+     * <p>The action of the policy. Valid values:</p>
+     * <br>
+     * <p>*   `deny`: Deployments that match the policy are denied.</p>
+     * <p>*   `warn`: Alerts are generated for Deployments that match the policy.</p>
+     */
     @NameInMap("action")
     public String action;
 
+    /**
+     * <p>The applicable scope of the policy instance. If you leave this parameter empty, the policy instance is applicable to all namespaces.</p>
+     */
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
+    /**
+     * <p>The parameters of the policy instance.</p>
+     */
     @NameInMap("parameters")
     public java.util.Map<String, ?> parameters;
 

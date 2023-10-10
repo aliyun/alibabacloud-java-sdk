@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterAddonRequest extends TeaModel {
+    /**
+     * <p>The custom parameter settings that you want to use.</p>
+     */
     @NameInMap("config")
     public String config;
 

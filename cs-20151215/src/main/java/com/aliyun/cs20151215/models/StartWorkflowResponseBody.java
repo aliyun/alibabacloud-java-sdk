@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartWorkflowResponseBody extends TeaModel {
     /**
-     * <p>The name of the workflow that is created.</p>
+     * <p>The name of the workflow.</p>
      */
     @NameInMap("JobName")
     public String jobName;
