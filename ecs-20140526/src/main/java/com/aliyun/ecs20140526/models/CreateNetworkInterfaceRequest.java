@@ -16,6 +16,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("DeleteOnRelease")
+    public Boolean deleteOnRelease;
+
     /**
      * <p>The description of the ENI. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
      * <br>
@@ -210,6 +213,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateNetworkInterfaceRequest setDeleteOnRelease(Boolean deleteOnRelease) {
+        this.deleteOnRelease = deleteOnRelease;
+        return this;
+    }
+    public Boolean getDeleteOnRelease() {
+        return this.deleteOnRelease;
     }
 
     public CreateNetworkInterfaceRequest setDescription(String description) {

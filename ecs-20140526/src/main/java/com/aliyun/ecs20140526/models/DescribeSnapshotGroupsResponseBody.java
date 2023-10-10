@@ -109,6 +109,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot extends TeaModel {
+        @NameInMap("Available")
+        public Boolean available;
+
         /**
          * <p>Indicates whether the instant access feature was enabled. Valid values:</p>
          * <br>
@@ -160,6 +163,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         public static DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot self = new DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot setAvailable(Boolean available) {
+            this.available = available;
+            return this;
+        }
+        public Boolean getAvailable() {
+            return this.available;
         }
 
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroupSnapshotsSnapshot setInstantAccess(Boolean instantAccess) {

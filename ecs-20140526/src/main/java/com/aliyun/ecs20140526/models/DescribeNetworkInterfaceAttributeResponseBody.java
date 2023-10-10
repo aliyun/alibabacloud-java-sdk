@@ -28,6 +28,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("CreationTime")
     public String creationTime;
 
+    @NameInMap("DeleteOnRelease")
+    public Boolean deleteOnRelease;
+
     /**
      * <p>The description of the ENI.</p>
      */
@@ -253,6 +256,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     }
     public String getCreationTime() {
         return this.creationTime;
+    }
+
+    public DescribeNetworkInterfaceAttributeResponseBody setDeleteOnRelease(Boolean deleteOnRelease) {
+        this.deleteOnRelease = deleteOnRelease;
+        return this;
+    }
+    public Boolean getDeleteOnRelease() {
+        return this.deleteOnRelease;
     }
 
     public DescribeNetworkInterfaceAttributeResponseBody setDescription(String description) {

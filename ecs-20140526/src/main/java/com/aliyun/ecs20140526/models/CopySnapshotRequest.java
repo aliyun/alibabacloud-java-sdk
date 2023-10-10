@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CopySnapshotRequest extends TeaModel {
     /**
-     * <p>> This parameter is currently in invitational preview and unavailable for public use.</p>
+     * <p>>This parameter is currently in invitational preview and unavailable for public use.</p>
      */
     @NameInMap("Arn")
     public java.util.List<CopySnapshotRequestArn> arn;
 
     /**
-     * <p>The region ID of the new snapshot.</p>
+     * <p>The ID of the destination region to which to copy the source snapshot.</p>
      */
     @NameInMap("DestinationRegionId")
     public String destinationRegionId;
 
     /**
-     * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
@@ -25,21 +25,24 @@ public class CopySnapshotRequest extends TeaModel {
     public String destinationSnapshotDescription;
 
     /**
-     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`.</p>
+     * <p>The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).</p>
      * <br>
      * <p>This parameter is empty by default.</p>
      */
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
 
+    /**
+     * <p>> This parameter is not publicly available.</p>
+     */
     @NameInMap("DestinationStorageLocationArn")
     public String destinationStorageLocationArn;
 
     /**
-     * <p>Specifies whether to encrypt the disk. Valid values:</p>
+     * <p>Specifies whether to encrypt the new snapshot. Valid values:</p>
      * <br>
-     * <p>*   true: encrypts the disk.</p>
-     * <p>*   false: does not encrypt the disk.</p>
+     * <p>*   true</p>
+     * <p>*   false</p>
      * <br>
      * <p>Default value: false.</p>
      */
@@ -47,7 +50,7 @@ public class CopySnapshotRequest extends TeaModel {
     public Boolean encrypted;
 
     /**
-     * <p>The customer master keys (CMK) managed by Key Management Service (KMS) in the destination region.</p>
+     * <p>The ID of the customer master key (CMK) in Key Management Service (KMS) in the destination region.</p>
      */
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
@@ -56,13 +59,13 @@ public class CopySnapshotRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.</p>
+     * <p>The region ID of the source snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>This parameter is unavailable.</p>
+     * <p>This parameter is not publicly available.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -220,19 +223,19 @@ public class CopySnapshotRequest extends TeaModel {
 
     public static class CopySnapshotRequestArn extends TeaModel {
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("AssumeRoleFor")
         public Long assumeRoleFor;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("RoleType")
         public String roleType;
 
         /**
-         * <p>> This parameter is unavailable.</p>
+         * <p>> This parameter is not publicly available.</p>
          */
         @NameInMap("Rolearn")
         public String rolearn;
@@ -270,13 +273,13 @@ public class CopySnapshotRequest extends TeaModel {
 
     public static class CopySnapshotRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain http:// or https://.[](http://https://。)</p>
+         * <p>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of tag N to add to the new snapshot. The tag value can be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with `acs:` or `aliyun` or contain `http://` or `https://`.</p>
+         * <p>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</p>
          */
         @NameInMap("Value")
         public String value;

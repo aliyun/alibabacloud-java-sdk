@@ -526,6 +526,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("DeleteOnRelease")
+        public Boolean deleteOnRelease;
+
         /**
          * <p>The description of the ENI.</p>
          */
@@ -709,6 +712,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setDeleteOnRelease(Boolean deleteOnRelease) {
+            this.deleteOnRelease = deleteOnRelease;
+            return this;
+        }
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
         }
 
         public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setDescription(String description) {

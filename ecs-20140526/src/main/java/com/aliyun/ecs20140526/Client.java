@@ -891,7 +891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
       *
       * @param request AssociateEipAddressRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -951,7 +951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
       *
       * @param request AssociateEipAddressRequest
       * @return AssociateEipAddressResponse
@@ -2472,9 +2472,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-      * *   Encrypted snapshots cannot be copied.
-      * *   Local snapshots cannot be copied.
+      * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
+      * - Encrypted snapshots cannot be copied.
+      * - Local snapshots cannot be copied.
       *
       * @param request CopySnapshotRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2562,9 +2562,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
       * When you call this operation, take note of the following items:
-      * *   New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
-      * *   Encrypted snapshots cannot be copied.
-      * *   Local snapshots cannot be copied.
+      * - New snapshots (copies) cannot be used to roll back disks from which the source snapshots (originals) were created.
+      * - Encrypted snapshots cannot be copied.
+      * - Local snapshots cannot be copied.
       *
       * @param request CopySnapshotRequest
       * @return CopySnapshotResponse
@@ -5383,6 +5383,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteOnRelease)) {
+            query.put("DeleteOnRelease", request.deleteOnRelease);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
@@ -8295,7 +8299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
       *
       * @param request DeleteNetworkInterfacePermissionRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8355,7 +8359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : DeleteNetworkInterfacePermission is deprecated, please use Ecs::2014-05-26::DeleteNetworkInterface instead.
       *
       * @param request DeleteNetworkInterfacePermissionRequest
       * @return DeleteNetworkInterfacePermissionResponse
@@ -16622,6 +16626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.invocationStatus)) {
+            query.put("InvocationStatus", request.invocationStatus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.invokeId)) {
             query.put("InvokeId", request.invokeId);
         }
@@ -23740,6 +23748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyNetworkInterfaceAttributeResponse modifyNetworkInterfaceAttributeWithOptions(ModifyNetworkInterfaceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deleteOnRelease)) {
+            query.put("DeleteOnRelease", request.deleteOnRelease);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
         }
@@ -24936,6 +24948,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retentionDays)) {
+            query.put("RetentionDays", request.retentionDays);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
@@ -28689,6 +28705,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartTerminalSessionResponse startTerminalSessionWithOptions(StartTerminalSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.commandLine)) {
+            query.put("CommandLine", request.commandLine);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -28719,6 +28739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetServer)) {
+            query.put("TargetServer", request.targetServer);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
