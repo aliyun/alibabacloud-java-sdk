@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("InputGroup")
     public java.util.List<SubmitTranscodeJobRequestInputGroup> inputGroup;
 
@@ -22,6 +25,14 @@ public class SubmitTranscodeJobRequest extends TeaModel {
     public static SubmitTranscodeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitTranscodeJobRequest self = new SubmitTranscodeJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitTranscodeJobRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public SubmitTranscodeJobRequest setInputGroup(java.util.List<SubmitTranscodeJobRequestInputGroup> inputGroup) {
