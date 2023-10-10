@@ -193,6 +193,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
     @NameInMap("Image")
     public String image;
 
+    @NameInMap("ImagePlatforms")
+    public String imagePlatforms;
+
     /**
      * <p>The tag of the image.</p>
      */
@@ -413,6 +416,9 @@ public class DeployK8sApplicationRequest extends TeaModel {
      */
     @NameInMap("SlsConfigs")
     public String slsConfigs;
+
+    @NameInMap("Startup")
+    public String startup;
 
     /**
      * <p>The storage type of the NAS file system.</p>
@@ -712,6 +718,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
         return this.image;
     }
 
+    public DeployK8sApplicationRequest setImagePlatforms(String imagePlatforms) {
+        this.imagePlatforms = imagePlatforms;
+        return this;
+    }
+    public String getImagePlatforms() {
+        return this.imagePlatforms;
+    }
+
     public DeployK8sApplicationRequest setImageTag(String imageTag) {
         this.imageTag = imageTag;
         return this;
@@ -958,6 +972,14 @@ public class DeployK8sApplicationRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public DeployK8sApplicationRequest setStartup(String startup) {
+        this.startup = startup;
+        return this;
+    }
+    public String getStartup() {
+        return this.startup;
     }
 
     public DeployK8sApplicationRequest setStorageType(String storageType) {

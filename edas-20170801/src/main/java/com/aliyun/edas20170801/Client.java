@@ -1706,6 +1706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Image", request.image);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imagePlatforms)) {
+            query.put("ImagePlatforms", request.imagePlatforms);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageTag)) {
             query.put("ImageTag", request.imageTag);
         }
@@ -1828,6 +1832,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
             query.put("SlsConfigs", request.slsConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startup)) {
+            query.put("Startup", request.startup);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
@@ -3371,6 +3379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Envs", request.envs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imagePlatforms)) {
+            query.put("ImagePlatforms", request.imagePlatforms);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             query.put("ImageUrl", request.imageUrl);
         }
@@ -3561,6 +3573,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
             query.put("SlsConfigs", request.slsConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startup)) {
+            query.put("Startup", request.startup);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
