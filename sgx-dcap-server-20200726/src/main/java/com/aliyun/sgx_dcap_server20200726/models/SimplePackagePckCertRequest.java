@@ -4,6 +4,12 @@ package com.aliyun.sgx_dcap_server20200726.models;
 import com.aliyun.tea.*;
 
 public class SimplePackagePckCertRequest extends TeaModel {
+    @NameInMap("AcsHost")
+    public String acsHost;
+
+    @NameInMap("ClientVpcId")
+    public String clientVpcId;
+
     @NameInMap("cpusvn")
     public String cpusvn;
 
@@ -22,6 +28,22 @@ public class SimplePackagePckCertRequest extends TeaModel {
     public static SimplePackagePckCertRequest build(java.util.Map<String, ?> map) throws Exception {
         SimplePackagePckCertRequest self = new SimplePackagePckCertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SimplePackagePckCertRequest setAcsHost(String acsHost) {
+        this.acsHost = acsHost;
+        return this;
+    }
+    public String getAcsHost() {
+        return this.acsHost;
+    }
+
+    public SimplePackagePckCertRequest setClientVpcId(String clientVpcId) {
+        this.clientVpcId = clientVpcId;
+        return this;
+    }
+    public String getClientVpcId() {
+        return this.clientVpcId;
     }
 
     public SimplePackagePckCertRequest setCpusvn(String cpusvn) {
