@@ -16,6 +16,9 @@ public class MergeVideoFaceRequest extends TeaModel {
     @NameInMap("VideoURL")
     public String videoURL;
 
+    @NameInMap("WatermarkType")
+    public String watermarkType;
+
     public static MergeVideoFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoFaceRequest self = new MergeVideoFaceRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class MergeVideoFaceRequest extends TeaModel {
     }
     public String getVideoURL() {
         return this.videoURL;
+    }
+
+    public MergeVideoFaceRequest setWatermarkType(String watermarkType) {
+        this.watermarkType = watermarkType;
+        return this;
+    }
+    public String getWatermarkType() {
+        return this.watermarkType;
     }
 
 }
