@@ -7,6 +7,11 @@ public class GetResourceTypeTemplateRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.</p>
+     * <br>
+     * <p>> This parameter is supported only for modules.</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 

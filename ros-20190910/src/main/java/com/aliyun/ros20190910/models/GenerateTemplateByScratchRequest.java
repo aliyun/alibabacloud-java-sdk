@@ -26,6 +26,9 @@ public class GenerateTemplateByScratchRequest extends TeaModel {
     @NameInMap("TemplateScratchId")
     public String templateScratchId;
 
+    /**
+     * <p>The type of the template that Resource Orchestration Service (ROS) generates. ROS can generate templates of the ROS and Terraform types. Default value: ROS.</p>
+     */
     @NameInMap("TemplateType")
     public String templateType;
 

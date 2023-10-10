@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeregisterResourceTypeResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

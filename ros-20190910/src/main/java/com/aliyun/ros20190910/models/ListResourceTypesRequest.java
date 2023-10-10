@@ -5,14 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListResourceTypesRequest extends TeaModel {
     /**
-     * <p>The array of resource types.</p>
+     * <p>The entity type. Valid values:</p>
+     * <br>
+     * <p>*   All: all types of resources.</p>
+     * <p>*   Resource (default): regular resources. For more information, see [Resources](~~28863~~).</p>
+     * <p>*   DataSource: DataSource resources. For more information, see [DataSource resources](~~404753~~).</p>
+     * <p>*   Module: modules.</p>
      */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>The provider of the resource type. Valid values:</p>
+     * <br>
+     * <p>*   ROS (default): The resource type is provided by Resource Orchestration Service (ROS).</p>
+     * <p>*   Self: The resource type is provided by you.</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
+    /**
+     * <p>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\*). You can use an asterisk (\*) to perform a fuzzy match.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

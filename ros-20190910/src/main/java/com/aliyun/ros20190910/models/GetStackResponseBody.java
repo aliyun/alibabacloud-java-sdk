@@ -4,6 +4,11 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetStackResponseBody extends TeaModel {
+    /**
+     * <p>The number of resources on which drift detection is performed.</p>
+     * <br>
+     * <p>>  This parameter is returned only if the drift detection on the stack is successful.</p>
+     */
     @NameInMap("CheckedStackResourceCount")
     public Integer checkedStackResourceCount;
 
@@ -57,6 +62,11 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("Log")
     public GetStackResponseBodyLog log;
 
+    /**
+     * <p>The number of resources on which drift detection is not performed.</p>
+     * <br>
+     * <p>>  This parameter is returned only if the drift detection on the stack is successful.</p>
+     */
     @NameInMap("NotCheckedStackResourceCount")
     public Integer notCheckedStackResourceCount;
 
@@ -593,7 +603,7 @@ public class GetStackResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The keywords.</p>
+         * <p>The keywords of a resource log.</p>
          */
         @NameInMap("Keys")
         public java.util.List<String> keys;
@@ -659,12 +669,12 @@ public class GetStackResponseBody extends TeaModel {
 
     public static class GetStackResponseBodyLogTerraformLogs extends TeaModel {
         /**
-         * <p>The name of a Terraform command that is run. Valid values:</p>
+         * <p>The name of the Terraform command that is run. Valid values:</p>
          * <br>
-         * <p>- apply</p>
-         * <p>- plan</p>
-         * <p>- destroy</p>
-         * <p>- version</p>
+         * <p>*   apply</p>
+         * <p>*   plan</p>
+         * <p>*   destroy</p>
+         * <p>*   version</p>
          * <br>
          * <p>For more information about Terraform commands, see [Basic CLI Features](https://www.terraform.io/cli/commands).</p>
          */
@@ -680,8 +690,8 @@ public class GetStackResponseBody extends TeaModel {
         /**
          * <p>The output stream. Valid values:</p>
          * <br>
-         * <p>- stdout: the standard output stream.</p>
-         * <p>- stderr: the standard error stream.</p>
+         * <p>*   stdout: standard output stream</p>
+         * <p>*   stderr: standard error stream</p>
          */
         @NameInMap("Stream")
         public String stream;
@@ -901,13 +911,13 @@ public class GetStackResponseBody extends TeaModel {
         public Float progressValue;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;

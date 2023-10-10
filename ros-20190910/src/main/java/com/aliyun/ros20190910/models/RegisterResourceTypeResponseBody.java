@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class RegisterResourceTypeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the registration record. You can call the [ListResourceTypeRegistrations](~~2330740~~) operation to query registration records.</p>
+     */
     @NameInMap("RegistrationId")
     public String registrationId;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

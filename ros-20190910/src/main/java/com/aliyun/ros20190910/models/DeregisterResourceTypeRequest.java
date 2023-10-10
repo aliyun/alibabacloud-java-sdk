@@ -4,9 +4,15 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeregisterResourceTypeRequest extends TeaModel {
+    /**
+     * <p>The resource type.</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The version ID. If you want to delete a version of the resource type, you must specify this parameter.</p>
+     */
     @NameInMap("VersionId")
     public String versionId;
 

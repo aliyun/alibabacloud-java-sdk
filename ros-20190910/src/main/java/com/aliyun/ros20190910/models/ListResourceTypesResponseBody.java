@@ -7,6 +7,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource type summaries.</p>
+     */
     @NameInMap("ResourceTypeSummaries")
     public java.util.List<ListResourceTypesResponseBodyResourceTypeSummaries> resourceTypeSummaries;
 
@@ -46,30 +49,64 @@ public class ListResourceTypesResponseBody extends TeaModel {
     }
 
     public static class ListResourceTypesResponseBodyResourceTypeSummaries extends TeaModel {
+        /**
+         * <p>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The ID of the default version.</p>
+         */
         @NameInMap("DefaultVersionId")
         public String defaultVersionId;
 
+        /**
+         * <p>The description of the resource type.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The entity type. Valid values:</p>
+         * <br>
+         * <p>*   Resource: regular resources.</p>
+         * <p>*   DataSource: DataSource resources.</p>
+         * <p>*   Module: modules.</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The ID of the latest version.</p>
+         */
         @NameInMap("LatestVersionId")
         public String latestVersionId;
 
+        /**
+         * <p>The provider of the resource type. Valid values:</p>
+         * <br>
+         * <p>*   ROS: The resource type is provided by ROS.</p>
+         * <p>*   Self: The resource type is provided by you.</p>
+         */
         @NameInMap("Provider")
         public String provider;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The number of versions.</p>
+         */
         @NameInMap("TotalVersionCount")
         public Integer totalVersionCount;
 
+        /**
+         * <p>The update time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 

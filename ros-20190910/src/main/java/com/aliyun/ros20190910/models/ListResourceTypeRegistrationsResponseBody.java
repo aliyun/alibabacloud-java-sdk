@@ -4,15 +4,27 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The registration records.</p>
+     */
     @NameInMap("Registrations")
     public java.util.List<ListResourceTypeRegistrationsResponseBodyRegistrations> registrations;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of registration records.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -54,24 +66,49 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
     }
 
     public static class ListResourceTypeRegistrationsResponseBodyRegistrations extends TeaModel {
+        /**
+         * <p>The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The entity type. Only Module may be returned.</p>
+         */
         @NameInMap("EntityType")
         public String entityType;
 
+        /**
+         * <p>The ID of the registration record.</p>
+         */
         @NameInMap("RegistrationId")
         public String registrationId;
 
+        /**
+         * <p>The resource type.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The registration state. Valid values:</p>
+         * <br>
+         * <p>*   IN_PROGRESS</p>
+         * <p>*   COMPLETE</p>
+         * <p>*   FAILED</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The reason for the state.</p>
+         */
         @NameInMap("StatusReason")
         public String statusReason;
 
+        /**
+         * <p>The version ID.</p>
+         */
         @NameInMap("VersionId")
         public String versionId;
 

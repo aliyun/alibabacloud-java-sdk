@@ -32,6 +32,9 @@ public class ListTemplateScratchesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The status of the scenario. Valid values:</p>
      * <br>
@@ -90,6 +93,14 @@ public class ListTemplateScratchesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListTemplateScratchesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListTemplateScratchesRequest setStatus(String status) {

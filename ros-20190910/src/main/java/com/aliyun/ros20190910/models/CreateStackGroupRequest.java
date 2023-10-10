@@ -21,7 +21,7 @@ public class CreateStackGroupRequest extends TeaModel {
     public CreateStackGroupRequestAutoDeployment autoDeployment;
 
     /**
-     * <p>资源栈组选项列表，最大长度为1。</p>
+     * <p>The options for the stack group. You can specify up to one option.</p>
      */
     @NameInMap("Capabilities")
     public java.util.List<String> capabilities;

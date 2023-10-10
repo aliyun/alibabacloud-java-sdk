@@ -11,13 +11,13 @@ public class ContinueCreateStackResponseBody extends TeaModel {
     public ContinueCreateStackResponseBodyDryRunResult dryRunResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the stack.</p>
+     * <p>The stack ID.</p>
      */
     @NameInMap("StackId")
     public String stackId;
@@ -53,27 +53,19 @@ public class ContinueCreateStackResponseBody extends TeaModel {
 
     public static class ContinueCreateStackResponseBodyDryRunResult extends TeaModel {
         /**
-         * <p>The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the DryRun parameter is set to `true`. The value of the ParametersAllowedToBeModified parameter varies based on the values of the Mode, Template\*, RecreatingResources.N, and RecreatingOptions.N parameters.</p>
+         * <p>The parameters that can be modified.</p>
          */
         @NameInMap("ParametersAllowedToBeModified")
         public java.util.List<String> parametersAllowedToBeModified;
 
         /**
          * <p>The parameters that can be modified under specific conditions.</p>
-         * <br>
-         * <p>The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the DryRun parameter is set to `true`. The value of the ParametersConditionallyAllowedToBeModified parameter varies based on the values of the Mode, Template\*, RecreatingResources.N, and RecreatingOptions.N parameters.</p>
          */
         @NameInMap("ParametersConditionallyAllowedToBeModified")
         public java.util.List<String> parametersConditionallyAllowedToBeModified;
 
         /**
-         * <p>The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.</p>
-         * <br>
-         * <p>>  This parameter is returned only if the DryRun parameter is set to `true`. The value of the ParametersNotAllowedToBeModified parameter varies based on the values of the Mode, Template\*, RecreatingResources.N, and RecreatingOptions.N parameters.</p>
+         * <p>The parameters that cannot be modified.</p>
          */
         @NameInMap("ParametersNotAllowedToBeModified")
         public java.util.List<String> parametersNotAllowedToBeModified;

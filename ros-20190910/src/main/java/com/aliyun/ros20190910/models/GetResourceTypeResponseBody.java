@@ -10,21 +10,52 @@ public class GetResourceTypeResponseBody extends TeaModel {
     @NameInMap("Attributes")
     public java.util.Map<String, ?> attributes;
 
+    /**
+     * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The default version ID.</p>
+     * <br>
+     * <p>> This parameter is returned only if the resource type is queried.</p>
+     */
     @NameInMap("DefaultVersionId")
     public String defaultVersionId;
 
+    /**
+     * <p>The description of the resource type.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The entity type. Valid values:</p>
+     * <br>
+     * <p>*   Resource: regular resource. For more information, see [Resources](~~28863~~).</p>
+     * <p>*   DataSource: DataSource resource. For more information, see [DataSource resources](~~404753~~).</p>
+     * <p>*   module: module.</p>
+     */
     @NameInMap("EntityType")
     public String entityType;
 
+    /**
+     * <p>Indicates whether the version is the default version. Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <p>*   false</p>
+     * <br>
+     * <p>> This parameter is returned only if a specific version of the resource type is queried.</p>
+     */
     @NameInMap("IsDefaultVersion")
     public Boolean isDefaultVersion;
 
+    /**
+     * <p>The latest version ID.</p>
+     * <br>
+     * <p>> This parameter is returned only if the resource type is queried.</p>
+     */
     @NameInMap("LatestVersionId")
     public String latestVersionId;
 
@@ -37,6 +68,12 @@ public class GetResourceTypeResponseBody extends TeaModel {
     @NameInMap("Properties")
     public java.util.Map<String, ?> properties;
 
+    /**
+     * <p>The provider of the resource type. Valid values:</p>
+     * <br>
+     * <p>*   ROS: The resource type is provided by Resource Orchestration Service (ROS).</p>
+     * <p>*   Self: The resource type is provided by you.</p>
+     */
     @NameInMap("Provider")
     public String provider;
 
@@ -70,12 +107,25 @@ public class GetResourceTypeResponseBody extends TeaModel {
     @NameInMap("SupportScratchDetection")
     public Boolean supportScratchDetection;
 
+    /**
+     * <p>The template content in the module.</p>
+     * <br>
+     * <p>> This parameter is returned only if a specific version of the resource type is queried.</p>
+     */
     @NameInMap("TemplateBody")
     public String templateBody;
 
+    /**
+     * <p>The total number of versions.</p>
+     * <br>
+     * <p>> This parameter is returned only if the resource type is queried.</p>
+     */
     @NameInMap("TotalVersionCount")
     public Integer totalVersionCount;
 
+    /**
+     * <p>The update time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     */
     @NameInMap("UpdateTime")
     public String updateTime;
 
