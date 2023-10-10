@@ -1626,6 +1626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("VideoURL", request.videoURL);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkType)) {
+            body.put("WatermarkType", request.watermarkType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
@@ -1769,6 +1773,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
             body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.watermarkType)) {
+            body.put("WatermarkType", request.watermarkType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
