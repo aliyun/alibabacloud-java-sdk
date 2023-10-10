@@ -11,6 +11,24 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The overall sending state of the file. The overall sending state of the file depends on its sending state on all the destination instances. Valid values:</p>
+     * <br>
+     * <p>- Pending: The file is being verified or sent.</p>
+     * <p>- Invalid: The file is invalid.</p>
+     * <p>- Running: The file is being sent to the instances.</p>
+     * <p>- Aborted: The file failed to be sent to the instances. To send a file to an instance, make sure that the instance is in the Running state and the file can be sent within 1 minute.</p>
+     * <p>- Success: The file is sent.</p>
+     * <p>- Failed: The file failed to be created on the instances.</p>
+     * <p>- Error: An error occurs and interrupts the file sending task.</p>
+     * <p>- Timeout: The file sending task times out.</p>
+     * <p>- Cancelled: The file sending task is canceled.</p>
+     * <p>- Stopping: The file sending task is being stopped.</p>
+     * <p>- Terminated: The file sending task is terminated.</p>
+     */
+    @NameInMap("InvocationStatus")
+    public String invocationStatus;
+
+    /**
      * <p>The ID of the file sending task.</p>
      */
     @NameInMap("InvokeId")
@@ -83,6 +101,14 @@ public class DescribeSendFileResultsRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeSendFileResultsRequest setInvocationStatus(String invocationStatus) {
+        this.invocationStatus = invocationStatus;
+        return this;
+    }
+    public String getInvocationStatus() {
+        return this.invocationStatus;
     }
 
     public DescribeSendFileResultsRequest setInvokeId(String invokeId) {

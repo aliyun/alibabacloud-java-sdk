@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class StartTerminalSessionRequest extends TeaModel {
     /**
+     * <p>If you set this parameter to the IP address of an instance, the PortNumber parameter specifies the port number of the instance.</p>
+     * <br>
+     * <p>>If you specify `CommandLine`, you do not need to specify `PortNumber` or `TargetServer`.</p>
+     */
+    @NameInMap("CommandLine")
+    public String commandLine;
+
+    /**
      * <p>The instance IDs.</p>
      */
     @NameInMap("InstanceId")
@@ -36,9 +44,25 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The IP address of the instance.</p>
+     * <br>
+     * <p>>If you set this parameter to the IP address of an instance, the `PortNumber` parameter specifies the port number of the instance.</p>
+     */
+    @NameInMap("TargetServer")
+    public String targetServer;
+
     public static StartTerminalSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         StartTerminalSessionRequest self = new StartTerminalSessionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartTerminalSessionRequest setCommandLine(String commandLine) {
+        this.commandLine = commandLine;
+        return this;
+    }
+    public String getCommandLine() {
+        return this.commandLine;
     }
 
     public StartTerminalSessionRequest setInstanceId(java.util.List<String> instanceId) {
@@ -95,6 +119,14 @@ public class StartTerminalSessionRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public StartTerminalSessionRequest setTargetServer(String targetServer) {
+        this.targetServer = targetServer;
+        return this;
+    }
+    public String getTargetServer() {
+        return this.targetServer;
     }
 
 }

@@ -149,6 +149,9 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     }
 
     public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
+        @NameInMap("Available")
+        public Boolean available;
+
         /**
          * <p>The type of the snapshot.</p>
          * <br>
@@ -333,6 +336,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public static DescribeSnapshotsResponseBodySnapshotsSnapshot build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotsResponseBodySnapshotsSnapshot self = new DescribeSnapshotsResponseBodySnapshotsSnapshot();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setAvailable(Boolean available) {
+            this.available = available;
+            return this;
+        }
+        public Boolean getAvailable() {
+            return this.available;
         }
 
         public DescribeSnapshotsResponseBodySnapshotsSnapshot setCategory(String category) {

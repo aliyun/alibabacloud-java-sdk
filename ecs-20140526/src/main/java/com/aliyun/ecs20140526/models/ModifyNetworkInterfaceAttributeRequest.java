@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
+    @NameInMap("DeleteOnRelease")
+    public Boolean deleteOnRelease;
+
     /**
      * <p>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with [http:// or https://](http://https://。).</p>
      * <br>
@@ -65,6 +68,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public static ModifyNetworkInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkInterfaceAttributeRequest self = new ModifyNetworkInterfaceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setDeleteOnRelease(Boolean deleteOnRelease) {
+        this.deleteOnRelease = deleteOnRelease;
+        return this;
+    }
+    public Boolean getDeleteOnRelease() {
+        return this.deleteOnRelease;
     }
 
     public ModifyNetworkInterfaceAttributeRequest setDescription(String description) {

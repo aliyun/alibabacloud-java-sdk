@@ -361,6 +361,12 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("Rack")
         public String rack;
 
+        /**
+         * <p>The response result of the event. Valid values:</p>
+         * <br>
+         * <p>- true: The event was handled.</p>
+         * <p>- false: The event failed to be handled.</p>
+         */
         @NameInMap("ResponseResult")
         public String responseResult;
 

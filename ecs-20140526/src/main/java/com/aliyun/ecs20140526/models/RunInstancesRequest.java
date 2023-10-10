@@ -47,6 +47,17 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("Arn")
     public java.util.List<RunInstancesRequestArn> arn;
 
+    /**
+     * <p>Specifies whether to automatically complete the payment for instance creation. Valid values:</p>
+     * <br>
+     * <p>- true: The payment is automatically completed.true: The payment is automatically completed.</p>
+     * <p>  >Make sure that your account balance is sufficient. Otherwise, your order becomes invalid and is canceled. If your account balance is insufficient, you can set `AutoPay` to `false` to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</p>
+     * <br>
+     * <p>- false: An order is generated but no payment is made.</p>
+     * <p>  >When `InstanceChargeType` is set to `PostPaid`, `AutoPay` cannot be set to `false`.</p>
+     * <br>
+     * <p>Default value: true.</p>
+     */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -2021,6 +2032,9 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestNetworkInterface extends TeaModel {
+        @NameInMap("DeleteOnRelease")
+        public Boolean deleteOnRelease;
+
         /**
          * <p>The description of ENI N.</p>
          * <br>
@@ -2080,6 +2094,9 @@ public class RunInstancesRequest extends TeaModel {
          */
         @NameInMap("NetworkCardIndex")
         public Integer networkCardIndex;
+
+        @NameInMap("NetworkInterfaceId")
+        public String networkInterfaceId;
 
         /**
          * <p>The name of ENI N.</p>
@@ -2187,6 +2204,14 @@ public class RunInstancesRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public RunInstancesRequestNetworkInterface setDeleteOnRelease(Boolean deleteOnRelease) {
+            this.deleteOnRelease = deleteOnRelease;
+            return this;
+        }
+        public Boolean getDeleteOnRelease() {
+            return this.deleteOnRelease;
+        }
+
         public RunInstancesRequestNetworkInterface setDescription(String description) {
             this.description = description;
             return this;
@@ -2225,6 +2250,14 @@ public class RunInstancesRequest extends TeaModel {
         }
         public Integer getNetworkCardIndex() {
             return this.networkCardIndex;
+        }
+
+        public RunInstancesRequestNetworkInterface setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
         }
 
         public RunInstancesRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {

@@ -33,6 +33,9 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("RetentionDays")
+    public Integer retentionDays;
+
     /**
      * <p>The ID of the snapshot.</p>
      */
@@ -98,6 +101,14 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifySnapshotAttributeRequest setRetentionDays(Integer retentionDays) {
+        this.retentionDays = retentionDays;
+        return this;
+    }
+    public Integer getRetentionDays() {
+        return this.retentionDays;
     }
 
     public ModifySnapshotAttributeRequest setSnapshotId(String snapshotId) {
