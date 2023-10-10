@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class InstallClusterAddonsRequest extends TeaModel {
+    /**
+     * <p>The request body.</p>
+     */
     @NameInMap("body")
     public java.util.List<InstallClusterAddonsRequestBody> body;
 
@@ -21,12 +24,23 @@ public class InstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class InstallClusterAddonsRequestBody extends TeaModel {
+        /**
+         * <p>The custom component settings that you want to use. The value is a JSON string.</p>
+         */
         @NameInMap("config")
         public String config;
 
+        /**
+         * <p>The component name.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The component version.</p>
+         * <br>
+         * <p>>  You can call the [DescribeClusterAddonsVersion](~~197434~~) operation to query the version of a component.</p>
+         */
         @NameInMap("version")
         public String version;
 

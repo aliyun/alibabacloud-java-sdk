@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicyInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the policy instance.</p>
+     */
     @NameInMap("instance_name")
     public String instanceName;
 

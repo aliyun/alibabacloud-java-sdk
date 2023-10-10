@@ -459,6 +459,25 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        public KubeletConfig kubeletConfiguration;
+
+        public static DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig self = new DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig setKubeletConfiguration(KubeletConfig kubeletConfiguration) {
+            this.kubeletConfiguration = kubeletConfiguration;
+            return this;
+        }
+        public KubeletConfig getKubeletConfiguration() {
+            return this.kubeletConfiguration;
+        }
+
+    }
+
     public static class DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo extends TeaModel {
         /**
          * <p>The time when the node pool was created.</p>
@@ -1371,6 +1390,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("max_nodes")
         public Long maxNodes;
 
+        @NameInMap("node_config")
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig nodeConfig;
+
         /**
          * <p>The information about the node pool.</p>
          */
@@ -1446,6 +1468,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public Long getMaxNodes() {
             return this.maxNodes;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepools setNodeConfig(DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig nodeConfig) {
+            this.nodeConfig = nodeConfig;
+            return this;
+        }
+        public DescribeClusterNodePoolsResponseBodyNodepoolsNodeConfig getNodeConfig() {
+            return this.nodeConfig;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepools setNodepoolInfo(DescribeClusterNodePoolsResponseBodyNodepoolsNodepoolInfo nodepoolInfo) {

@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterTasksResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("page_info")
     public DescribeClusterTasksResponseBodyPageInfo pageInfo;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The information about the tasks.</p>
+     */
     @NameInMap("tasks")
     public java.util.List<DescribeClusterTasksResponseBodyTasks> tasks;
 
@@ -43,12 +52,21 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterTasksResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The number of the page returned.</p>
+         */
         @NameInMap("page_number")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("page_size")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("total_count")
         public Long totalCount;
 
@@ -84,9 +102,15 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterTasksResponseBodyTasksError extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>The error message returned.</p>
+         */
         @NameInMap("message")
         public String message;
 
@@ -114,21 +138,39 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterTasksResponseBodyTasks extends TeaModel {
+        /**
+         * <p>The time when the task was created.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The error returned for the task.</p>
+         */
         @NameInMap("error")
         public DescribeClusterTasksResponseBodyTasksError error;
 
+        /**
+         * <p>The status of the task.</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The task ID.</p>
+         */
         @NameInMap("task_id")
         public String taskId;
 
+        /**
+         * <p>The type of task.</p>
+         */
         @NameInMap("task_type")
         public String taskType;
 
+        /**
+         * <p>The time when the task was updated.</p>
+         */
         @NameInMap("updated")
         public String updated;
 

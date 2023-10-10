@@ -4,12 +4,23 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeMachineRequest extends TeaModel {
+    /**
+     * <p>The `hostname` of the cloud-native box.</p>
+     * <br>
+     * <p>>  After the cloud-native box is activated, the `hostname` is automatically modified. The `hostname` is prefixed with the model and the prefix is followed by a random string.</p>
+     */
     @NameInMap("hostname")
     public String hostname;
 
+    /**
+     * <p>The model of the cloud-native box.</p>
+     */
     @NameInMap("model")
     public String model;
 
+    /**
+     * <p>The serial number of the cloud-native box.</p>
+     */
     @NameInMap("sn")
     public String sn;
 

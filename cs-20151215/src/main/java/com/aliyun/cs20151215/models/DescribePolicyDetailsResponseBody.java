@@ -35,7 +35,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public Integer isDeleted;
 
     /**
-     * <p>The name of the policy that is returned.</p>
+     * <p>The name of the policy.</p>
      */
     @NameInMap("name")
     public String name;
@@ -50,11 +50,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public Integer noConfig;
 
     /**
-     * <p>The severity level of the policy. Valid values:</p>
-     * <br>
-     * <p>*   `high`</p>
-     * <p>*   `medium`</p>
-     * <p>*   `low`</p>
+     * <p>The severity level of the policy.</p>
      */
     @NameInMap("severity")
     public String severity;

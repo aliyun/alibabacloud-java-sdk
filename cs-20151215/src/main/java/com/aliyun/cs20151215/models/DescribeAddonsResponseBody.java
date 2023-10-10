@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonsResponseBody extends TeaModel {
     /**
-     * <p>The details of the returned components.</p>
+     * <p>The list of the returned components.</p>
      */
     @NameInMap("ComponentGroups")
     public java.util.List<DescribeAddonsResponseBodyComponentGroups> componentGroups;
 
+    /**
+     * <p>Standard components.</p>
+     */
     @NameInMap("StandardComponents")
     public java.util.Map<String, StandardComponentsValue> standardComponents;
 

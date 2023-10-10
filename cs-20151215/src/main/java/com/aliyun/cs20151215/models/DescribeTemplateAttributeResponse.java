@@ -46,33 +46,69 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
     }
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
+        /**
+         * <p>The ID of the template. When you update a template, a new template ID is generated.</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>The access control policy of the template.</p>
+         */
         @NameInMap("acl")
         public String acl;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The template content in the YAML format.</p>
+         */
         @NameInMap("template")
         public String template;
 
+        /**
+         * <p>The type of template. The value can be a custom value.</p>
+         * <br>
+         * <p>*   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.</p>
+         * <p>*   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</p>
+         * <p>*   If the value of the parameter is not `kubernetes`, the template is not displayed on the Templates page in the console. We recommend that you set the parameter to `kubernetes`.</p>
+         * <br>
+         * <p>Default value: `kubernetes`.</p>
+         */
         @NameInMap("template_type")
         public String templateType;
 
+        /**
+         * <p>The description of the template.</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The label of the template.</p>
+         */
         @NameInMap("tags")
         public String tags;
 
+        /**
+         * <p>The unique ID of the template. The value remains unchanged after the template is updated.</p>
+         */
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
 
+        /**
+         * <p>The time when the template was created.</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The time when the template was updated.</p>
+         */
         @NameInMap("updated")
         public String updated;
 

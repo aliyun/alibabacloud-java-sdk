@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
     /**
-     * <p>The schema of component parameters.</p>
+     * <p>The component schema parameters.</p>
      */
     @NameInMap("config_schema")
     public String configSchema;
 
     /**
-     * <p>The name of the component.</p>
+     * <p>The component name.</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The version of the component.</p>
+     * <p>The component version.</p>
      */
     @NameInMap("version")
     public String version;

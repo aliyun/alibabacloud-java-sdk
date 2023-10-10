@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     /**
-     * <p>The audit logs of policies in the cluster.</p>
+     * <p>The audit logs of the policies in the cluster.</p>
      */
     @NameInMap("admit_log")
     public DescribePolicyGovernanceInClusterResponseBodyAdmitLog admitLog;
@@ -16,9 +16,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     @NameInMap("on_state")
     public java.util.List<DescribePolicyGovernanceInClusterResponseBodyOnState> onState;
 
+    /**
+     * <p>Details about the blocking and alerting events that are triggered by policies of different severity levels.</p>
+     */
     @NameInMap("totalViolations")
     public DescribePolicyGovernanceInClusterResponseBodyTotalViolations totalViolations;
 
+    /**
+     * <p>Details about the blocking and alerting events that are triggered by different policies.</p>
+     */
     @NameInMap("violations")
     public DescribePolicyGovernanceInClusterResponseBodyViolations violations;
 
@@ -61,13 +67,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
 
     public static class DescribePolicyGovernanceInClusterResponseBodyAdmitLogLog extends TeaModel {
         /**
-         * <p>The ID of the cluster that you want to query.</p>
+         * <p>The cluster ID.</p>
          */
         @NameInMap("cluster_id")
         public String clusterId;
 
         /**
-         * <p>The type of the policy.</p>
+         * <p>The policy type.</p>
          */
         @NameInMap("constraint_kind")
         public String constraintKind;
@@ -79,13 +85,13 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The type of the resource.</p>
+         * <p>The resource type.</p>
          */
         @NameInMap("resource_kind")
         public String resourceKind;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          */
         @NameInMap("resource_name")
         public String resourceName;
@@ -255,9 +261,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny extends TeaModel {
+        /**
+         * <p>The severity level of the policy.</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The number of blocking events that are triggered.</p>
+         */
         @NameInMap("violations")
         public Long violations;
 
@@ -285,9 +297,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn extends TeaModel {
+        /**
+         * <p>The severity level of the policy.</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The number of alerting events that are triggered.</p>
+         */
         @NameInMap("violations")
         public Long violations;
 
@@ -315,9 +333,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyTotalViolations extends TeaModel {
+        /**
+         * <p>Details about the blocking events that are triggered by the policies of each severity level.</p>
+         */
         @NameInMap("deny")
         public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsDeny deny;
 
+        /**
+         * <p>Details about the alerting events that are triggered by the policies of each severity level.</p>
+         */
         @NameInMap("warn")
         public DescribePolicyGovernanceInClusterResponseBodyTotalViolationsWarn warn;
 
@@ -345,15 +369,27 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationsDeny extends TeaModel {
+        /**
+         * <p>The policy description.</p>
+         */
         @NameInMap("policyDescription")
         public String policyDescription;
 
+        /**
+         * <p>The policy name.</p>
+         */
         @NameInMap("policyName")
         public String policyName;
 
+        /**
+         * <p>The severity level of the policy.</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The total number of blocking events that are triggered by the policy.</p>
+         */
         @NameInMap("violations")
         public Long violations;
 
@@ -397,15 +433,27 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationsWarn extends TeaModel {
+        /**
+         * <p>The policy description.</p>
+         */
         @NameInMap("policyDescription")
         public String policyDescription;
 
+        /**
+         * <p>The policy name.</p>
+         */
         @NameInMap("policyName")
         public String policyName;
 
+        /**
+         * <p>The severity level of the policy.</p>
+         */
         @NameInMap("severity")
         public String severity;
 
+        /**
+         * <p>The total number of alerting events that are triggered by the policy.</p>
+         */
         @NameInMap("violations")
         public Long violations;
 
@@ -449,9 +497,15 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     }
 
     public static class DescribePolicyGovernanceInClusterResponseBodyViolations extends TeaModel {
+        /**
+         * <p>Details about the blocking events that are triggered by each policy.</p>
+         */
         @NameInMap("deny")
         public DescribePolicyGovernanceInClusterResponseBodyViolationsDeny deny;
 
+        /**
+         * <p>Details about the alerting events that are triggered by the policies of each severity level.</p>
+         */
         @NameInMap("warn")
         public DescribePolicyGovernanceInClusterResponseBodyViolationsWarn warn;
 

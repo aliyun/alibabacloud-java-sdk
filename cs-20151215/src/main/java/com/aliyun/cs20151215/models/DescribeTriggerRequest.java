@@ -4,15 +4,38 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeTriggerRequest extends TeaModel {
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The namespace to which the application belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The type of trigger. Valid values:</p>
+     * <br>
+     * <p>*   `deployment`: performs actions on Deployments.</p>
+     * <p>*   `application`: performs actions on applications that are deployed in Application Center.</p>
+     * <br>
+     * <p>Default value: `deployment`.</p>
+     * <br>
+     * <p>If you do not set this parameter, triggers are not filtered by type.</p>
+     */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>The action that the trigger performs. Set the value to redeploy.</p>
+     * <br>
+     * <p>`redeploy`: redeploys the resources specified by `project_id`.</p>
+     * <br>
+     * <p>If you do not specify this parameter, triggers are not filtered by action.</p>
+     */
     @NameInMap("action")
     public String action;
 

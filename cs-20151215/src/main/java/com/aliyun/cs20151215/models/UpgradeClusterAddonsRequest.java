@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsRequest extends TeaModel {
+    /**
+     * <p>The request parameters.</p>
+     */
     @NameInMap("body")
     public java.util.List<UpgradeClusterAddonsRequestBody> body;
 
@@ -21,18 +24,36 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
     }
 
     public static class UpgradeClusterAddonsRequestBody extends TeaModel {
+        /**
+         * <p>The name of the component.</p>
+         */
         @NameInMap("component_name")
         public String componentName;
 
+        /**
+         * <p>The custom component settings that you want to use. The value is a JSON string.</p>
+         */
         @NameInMap("config")
         public String config;
 
+        /**
+         * <p>The version to which the component can be updated. You can call the `DescribeClusterAddonsVersion` operation to query the version to which the component can be updated.</p>
+         */
         @NameInMap("next_version")
         public String nextVersion;
 
+        /**
+         * <p>The update policy. Valid values:</p>
+         * <br>
+         * <p>*   overwrite</p>
+         * <p>*   canary</p>
+         */
         @NameInMap("policy")
         public String policy;
 
+        /**
+         * <p>The current version of the component.</p>
+         */
         @NameInMap("version")
         public String version;
 

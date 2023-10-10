@@ -21,12 +21,23 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
+        @NameInMap("cleanup_cloud_resources")
+        public Boolean cleanupCloudResources;
+
         @NameInMap("name")
         public String name;
 
         public static UnInstallClusterAddonsRequestAddons build(java.util.Map<String, ?> map) throws Exception {
             UnInstallClusterAddonsRequestAddons self = new UnInstallClusterAddonsRequestAddons();
             return TeaModel.build(map, self);
+        }
+
+        public UnInstallClusterAddonsRequestAddons setCleanupCloudResources(Boolean cleanupCloudResources) {
+            this.cleanupCloudResources = cleanupCloudResources;
+            return this;
+        }
+        public Boolean getCleanupCloudResources() {
+            return this.cleanupCloudResources;
         }
 
         public UnInstallClusterAddonsRequestAddons setName(String name) {

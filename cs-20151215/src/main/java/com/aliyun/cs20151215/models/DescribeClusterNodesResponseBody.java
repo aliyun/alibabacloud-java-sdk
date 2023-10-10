@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterNodesResponseBody extends TeaModel {
     /**
-     * <p>The details of the nodes that are returned.</p>
+     * <p>The details of the nodes in the cluster.</p>
      */
     @NameInMap("nodes")
     public java.util.List<DescribeClusterNodesResponseBodyNodes> nodes;
 
     /**
-     * <p>The pagination details.</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("page")
     public DescribeClusterNodesResponseBodyPage page;
@@ -45,13 +45,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The error message that was generated when the node was created.</p>
+         * <p>The error message generated when the node was created.</p>
          */
         @NameInMap("error_message")
         public String errorMessage;
 
         /**
-         * <p>The expiration time of the node.</p>
+         * <p>The expiration date of the node.</p>
          */
         @NameInMap("expired_time")
         public String expiredTime;
@@ -69,7 +69,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The billing method of the instance on which the node is deployed. Valid values:</p>
+         * <p>The billing method of the node. Valid values:</p>
          * <br>
          * <p>*   `PrePaid`: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.</p>
          * <p>*   `PostPaid`: the pay-as-you-go billing method.</p>
@@ -78,7 +78,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>The ID of the instance on which the node is deployed.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("instance_id")
         public String instanceId;
@@ -105,13 +105,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>The instance type of the node.</p>
+         * <p>The type of the node.</p>
          */
         @NameInMap("instance_type")
         public String instanceType;
 
         /**
-         * <p>The Elastic Compute Service (ECS) instance family of the node.</p>
+         * <p>The ECS instance family of the node.</p>
          */
         @NameInMap("instance_type_family")
         public String instanceTypeFamily;
@@ -149,7 +149,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String nodeStatus;
 
         /**
-         * <p>The ID of the node pool.</p>
+         * <p>The node pool ID.</p>
          */
         @NameInMap("nodepool_id")
         public String nodepoolId;
@@ -161,7 +161,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The type of the preemptible instance. Valid values:</p>
+         * <p>The type of preemptible instance. Valid values:</p>
          * <br>
          * <p>*   NoSpot: a non-preemptible instance.</p>
          * <p>*   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.</p>
@@ -351,13 +351,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
 
     public static class DescribeClusterNodesResponseBodyPage extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          */
         @NameInMap("page_number")
         public Integer pageNumber;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          */
         @NameInMap("page_size")
         public Integer pageSize;

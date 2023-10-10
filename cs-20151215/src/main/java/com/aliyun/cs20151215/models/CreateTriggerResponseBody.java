@@ -23,7 +23,7 @@ public class CreateTriggerResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the project.</p>
+     * <p>The name of the trigger project.</p>
      */
     @NameInMap("project_id")
     public String projectId;

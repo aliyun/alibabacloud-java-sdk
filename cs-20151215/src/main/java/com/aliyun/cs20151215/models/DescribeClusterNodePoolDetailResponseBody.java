@@ -37,6 +37,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     @NameInMap("max_nodes")
     public Long maxNodes;
 
+    @NameInMap("node_config")
+    public DescribeClusterNodePoolDetailResponseBodyNodeConfig nodeConfig;
+
     /**
      * <p>The configurations of the node pool.</p>
      */
@@ -109,6 +112,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
     public Long getMaxNodes() {
         return this.maxNodes;
+    }
+
+    public DescribeClusterNodePoolDetailResponseBody setNodeConfig(DescribeClusterNodePoolDetailResponseBodyNodeConfig nodeConfig) {
+        this.nodeConfig = nodeConfig;
+        return this;
+    }
+    public DescribeClusterNodePoolDetailResponseBodyNodeConfig getNodeConfig() {
+        return this.nodeConfig;
     }
 
     public DescribeClusterNodePoolDetailResponseBody setNodepoolInfo(DescribeClusterNodePoolDetailResponseBodyNodepoolInfo nodepoolInfo) {
@@ -581,6 +592,25 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public DescribeClusterNodePoolDetailResponseBodyManagementUpgradeConfig getUpgradeConfig() {
             return this.upgradeConfig;
+        }
+
+    }
+
+    public static class DescribeClusterNodePoolDetailResponseBodyNodeConfig extends TeaModel {
+        @NameInMap("kubelet_configuration")
+        public KubeletConfig kubeletConfiguration;
+
+        public static DescribeClusterNodePoolDetailResponseBodyNodeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterNodePoolDetailResponseBodyNodeConfig self = new DescribeClusterNodePoolDetailResponseBodyNodeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyNodeConfig setKubeletConfiguration(KubeletConfig kubeletConfiguration) {
+            this.kubeletConfiguration = kubeletConfiguration;
+            return this;
+        }
+        public KubeletConfig getKubeletConfiguration() {
+            return this.kubeletConfiguration;
         }
 
     }

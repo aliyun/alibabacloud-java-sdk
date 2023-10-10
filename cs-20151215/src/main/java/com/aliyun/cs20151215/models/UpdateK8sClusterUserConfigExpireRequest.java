@@ -4,9 +4,17 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateK8sClusterUserConfigExpireRequest extends TeaModel {
+    /**
+     * <p>The validity period of the kubeconfig file. Unit: hours.</p>
+     * <br>
+     * <p>> The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).</p>
+     */
     @NameInMap("expire_hour")
     public Long expireHour;
 
+    /**
+     * <p>The user ID.</p>
+     */
     @NameInMap("user")
     public String user;
 

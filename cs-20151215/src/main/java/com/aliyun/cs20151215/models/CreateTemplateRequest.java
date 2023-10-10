@@ -4,18 +4,42 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
+    /**
+     * <p>The description of the template.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The name of the orchestration template.</p>
+     * <br>
+     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The label of the template.</p>
+     */
     @NameInMap("tags")
     public String tags;
 
+    /**
+     * <p>The template content in the YAML format.</p>
+     */
     @NameInMap("template")
     public String template;
 
+    /**
+     * <p>The type of template. You can set the parameter to a custom value.</p>
+     * <br>
+     * <p>*   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.</p>
+     * <p>*   If you set the parameter to `compose`, the template is not displayed in the console.</p>
+     * <br>
+     * <p>We recommend that you set the parameter to `kubernetes`.</p>
+     * <br>
+     * <p>Default value: `compose`.</p>
+     */
     @NameInMap("template_type")
     public String templateType;
 

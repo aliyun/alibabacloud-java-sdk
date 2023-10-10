@@ -46,33 +46,70 @@ public class DescribePolicyInstancesResponse extends TeaModel {
     }
 
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
+        /**
+         * <p>The UID of the Alibaba Cloud account that is used to deploy the policy instance.</p>
+         */
         @NameInMap("ali_uid")
         public String aliUid;
 
+        /**
+         * <p>The ID of the cluster.</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The name of the policy instance.</p>
+         */
         @NameInMap("instance_name")
         public String instanceName;
 
+        /**
+         * <p>The name of the policy.</p>
+         */
         @NameInMap("policy_name")
         public String policyName;
 
+        /**
+         * <p>The type of policy.</p>
+         */
         @NameInMap("policy_category")
         public String policyCategory;
 
+        /**
+         * <p>The description of the policy template.</p>
+         */
         @NameInMap("policy_description")
         public String policyDescription;
 
+        /**
+         * <p>The parameters of the policy instance.</p>
+         */
         @NameInMap("policy_parameters")
         public String policyParameters;
 
+        /**
+         * <p>The severity level of the policy instance.</p>
+         */
         @NameInMap("policy_severity")
         public String policySeverity;
 
+        /**
+         * <p>The applicable scope of the policy instance.</p>
+         * <br>
+         * <p>A value of \* indicates all namespaces in the cluster. This is the default value.</p>
+         * <br>
+         * <p>Multiple namespaces are separated by commas (,).</p>
+         */
         @NameInMap("policy_scope")
         public String policyScope;
 
+        /**
+         * <p>The action of the policy. Valid values:</p>
+         * <br>
+         * <p>*   `deny`: Deployments that match the policy are denied.</p>
+         * <p>*   `warn`: Alerts are generated for deployments that match the policy.</p>
+         */
         @NameInMap("policy_action")
         public String policyAction;
 

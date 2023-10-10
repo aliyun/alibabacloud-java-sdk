@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployPolicyInstanceResponseBody extends TeaModel {
     /**
-     * <p>The policy instances that are deployed.</p>
+     * <p>A list of policy instances.</p>
      */
     @NameInMap("instances")
     public java.util.List<String> instances;

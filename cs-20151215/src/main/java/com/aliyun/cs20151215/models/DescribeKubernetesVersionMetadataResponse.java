@@ -46,27 +46,74 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     }
 
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
+        /**
+         * <p>The image ID.</p>
+         */
         @NameInMap("image_id")
         public String imageId;
 
+        /**
+         * <p>The image name.</p>
+         */
         @NameInMap("image_name")
         public String imageName;
 
+        /**
+         * <p>The OS platform. Valid values:</p>
+         * <br>
+         * <p>*   `AliyunLinux`</p>
+         * <p>*   `CentOS`</p>
+         * <p>*   `Windows`</p>
+         * <p>*   `WindowsCore`</p>
+         */
         @NameInMap("platform")
         public String platform;
 
+        /**
+         * <p>The version of the image.</p>
+         */
         @NameInMap("os_version")
         public String osVersion;
 
+        /**
+         * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
+         * <br>
+         * <p>*   `CentOS`</p>
+         * <p>*   `AliyunLinux`</p>
+         * <p>*   `AliyunLinux Qboot`</p>
+         * <p>*   `AliyunLinuxUEFI`</p>
+         * <p>*   `AliyunLinux3`</p>
+         * <p>*   `Windows`</p>
+         * <p>*   `WindowsCore`</p>
+         * <p>*   `AliyunLinux3Arm64`</p>
+         * <p>*   `ContainerOS`</p>
+         */
         @NameInMap("image_type")
         public String imageType;
 
+        /**
+         * <p>The type of operating system. Examples:</p>
+         * <br>
+         * <p>*   `Windows`</p>
+         * <p>*   `Linux`</p>
+         */
         @NameInMap("os_type")
         public String osType;
 
+        /**
+         * <p>The type of image. Valid values:</p>
+         * <br>
+         * <p>*   `system`: public image</p>
+         * <p>*   `self`: custom image</p>
+         * <p>*   `others`: shared image from other Alibaba Cloud accounts</p>
+         * <p>*   `marketplace`: image from the marketplace</p>
+         */
         @NameInMap("image_category")
         public String imageCategory;
 
+        /**
+         * <p>The architecture of the image.</p>
+         */
         @NameInMap("architecture")
         public String architecture;
 
@@ -142,27 +189,51 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
     }
 
     public static class DescribeKubernetesVersionMetadataResponseBody extends TeaModel {
+        /**
+         * <p>Features of the queried Kubernetes version.</p>
+         */
         @NameInMap("capabilities")
         public java.util.Map<String, ?> capabilities;
 
+        /**
+         * <p>The OS images that are returned.</p>
+         */
         @NameInMap("images")
         public java.util.List<DescribeKubernetesVersionMetadataResponseBodyImages> images;
 
+        /**
+         * <p>The metadata of the Kubernetes version.</p>
+         */
         @NameInMap("meta_data")
         public java.util.Map<String, ?> metaData;
 
+        /**
+         * <p>Details of the supported container runtimes.</p>
+         */
         @NameInMap("runtimes")
         public java.util.List<Runtime> runtimes;
 
+        /**
+         * <p>The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](~~185269~~).</p>
+         */
         @NameInMap("version")
         public String version;
 
+        /**
+         * <p>The release date of the Kubernetes version.</p>
+         */
         @NameInMap("release_date")
         public String releaseDate;
 
+        /**
+         * <p>The expiration date of the Kubernetes version.</p>
+         */
         @NameInMap("expiration_date")
         public String expirationDate;
 
+        /**
+         * <p>Indicates whether you can create clusters that run the Kubernetes version.</p>
+         */
         @NameInMap("creatable")
         public Boolean creatable;
 

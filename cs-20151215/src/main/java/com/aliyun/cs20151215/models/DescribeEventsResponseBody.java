@@ -10,6 +10,9 @@ public class DescribeEventsResponseBody extends TeaModel {
     @NameInMap("events")
     public java.util.List<DescribeEventsResponseBodyEvents> events;
 
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("page_info")
     public DescribeEventsResponseBodyPageInfo pageInfo;
 
@@ -36,7 +39,7 @@ public class DescribeEventsResponseBody extends TeaModel {
 
     public static class DescribeEventsResponseBodyEventsData extends TeaModel {
         /**
-         * <p>The level of the event.</p>
+         * <p>The severity level of the event.</p>
          */
         @NameInMap("level")
         public String level;
@@ -48,7 +51,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The state of the event.</p>
+         * <p>The status of the event.</p>
          */
         @NameInMap("reason")
         public String reason;
@@ -98,7 +101,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public DescribeEventsResponseBodyEventsData data;
 
         /**
-         * <p>The ID of the event.</p>
+         * <p>The event ID.</p>
          */
         @NameInMap("event_id")
         public String eventId;
@@ -122,22 +125,22 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String time;
 
         /**
-         * <p>The type of the event. Valid values:</p>
+         * <p>The event type. Valid values:</p>
          * <br>
          * <p>*   `cluster_create`: cluster creation.</p>
          * <p>*   `cluster_scaleout`: cluster scale-out.</p>
-         * <p>*   `cluster_attach`: adding existing nodes.</p>
+         * <p>*   `cluster_attach`: node addition.</p>
          * <p>*   `cluster_delete`: cluster deletion.</p>
          * <p>*   `cluster_upgrade`: cluster upgrades.</p>
          * <p>*   `cluster_migrate`: cluster migration.</p>
          * <p>*   `cluster_node_delete`: node removal.</p>
          * <p>*   `cluster_node_drain`: node draining.</p>
          * <p>*   `cluster_modify`: cluster modifications.</p>
-         * <p>*   `cluster_configuration_modify`: modifications to cluster control configurations.</p>
+         * <p>*   `cluster_configuration_modify`: modifications of control plane configurations.</p>
          * <p>*   `cluster_addon_install`: component installation.</p>
-         * <p>*   `cluster_addon_upgrade`: component upgrades.</p>
+         * <p>*   `cluster_addon_upgrade`: component updates.</p>
          * <p>*   `cluster_addon_uninstall`: component uninstallation.</p>
-         * <p>*   `runtime_upgrade`: runtime upgrades.</p>
+         * <p>*   `runtime_upgrade`: runtime updates.</p>
          * <p>*   `nodepool_upgrade`: node pool upgrades.</p>
          * <p>*   `nodepool_update`: node pool updates.</p>
          */
@@ -208,12 +211,21 @@ public class DescribeEventsResponseBody extends TeaModel {
     }
 
     public static class DescribeEventsResponseBodyPageInfo extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("page_number")
         public Long pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("page_size")
         public Long pageSize;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("total_count")
         public Long totalCount;
 

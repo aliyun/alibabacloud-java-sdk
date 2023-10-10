@@ -4,18 +4,39 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class StandardComponentsValue extends TeaModel {
+    /**
+     * <p>The name of the component.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The version of the component.</p>
+     */
     @NameInMap("version")
     public String version;
 
+    /**
+     * <p>The description of the component.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Indicates whether the component is a required component. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The component is required and must be installed when a cluster is created.</p>
+     * <p>*   `false`: The component is optional. After a cluster is created, you can go to the `Add-ons` page to install the component.</p>
+     */
     @NameInMap("required")
     public String required;
 
+    /**
+     * <p>Indicates whether the automatic installation of the component is disabled. By default, some optional components, such as components for logging and Ingresses, are installed when a cluster is created. You can set this parameter to disable automatic component installation. Valid values:</p>
+     * <br>
+     * <p>*   `true`: disables automatic component installation.</p>
+     * <p>*   `false`: enables automatic component installation.</p>
+     */
     @NameInMap("disabled")
     public Boolean disabled;
 

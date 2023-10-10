@@ -4,18 +4,36 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to remove all custom labels. This parameter takes effect only when `tag_keys` is left empty. Valid values:</p>
+     * <br>
+     * <p>*   `true`: Remove all custom labels.</p>
+     * <p>*   `false`: Do not remove all custom labels.</p>
+     */
     @NameInMap("all")
     public Boolean all;
 
+    /**
+     * <p>The region ID of the resources.</p>
+     */
     @NameInMap("region_id")
     public String regionId;
 
+    /**
+     * <p>The list of resource IDs.</p>
+     */
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The type of resource. Set the value to `CLUSTER`.</p>
+     */
     @NameInMap("resource_type")
     public String resourceType;
 
+    /**
+     * <p>The list of keys of the labels that you want to remove.</p>
+     */
     @NameInMap("tag_keys")
     public java.util.List<String> tagKeys;
 

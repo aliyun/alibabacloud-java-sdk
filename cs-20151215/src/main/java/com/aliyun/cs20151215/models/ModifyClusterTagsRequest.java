@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterTagsRequest extends TeaModel {
+    /**
+     * <p>The data of the labels that you want to modify.</p>
+     */
     @NameInMap("body")
     public java.util.List<Tag> body;
 

@@ -4,18 +4,36 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
+    /**
+     * <p>The description of the template.</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The name of the template.</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The label of the template.</p>
+     */
     @NameInMap("tags")
     public String tags;
 
+    /**
+     * <p>The YAML content of the template.</p>
+     */
     @NameInMap("template")
     public String template;
 
+    /**
+     * <p>The type of template. This parameter can be set to a custom value.</p>
+     * <br>
+     * <p>*   If the parameter is set to `kubernetes`, the template is displayed on the Templates page in the console.</p>
+     * <p>*   If the parameter is set to `compose`, the template is displayed on the Container Service - Swarm page in the console. Container Service for Swarm is deprecated.</p>
+     */
     @NameInMap("template_type")
     public String templateType;
 

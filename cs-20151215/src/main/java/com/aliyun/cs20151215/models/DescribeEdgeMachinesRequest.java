@@ -4,21 +4,42 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeEdgeMachinesRequest extends TeaModel {
+    /**
+     * <p>The `hostname` of the cloud-native box.</p>
+     */
     @NameInMap("hostname")
     public String hostname;
 
+    /**
+     * <p>The lifecycle status.</p>
+     */
     @NameInMap("life_state")
     public String lifeState;
 
+    /**
+     * <p>The type of cloud-native box.</p>
+     */
     @NameInMap("model")
     public String model;
 
+    /**
+     * <p>The status of the cloud-native box. Valid values:</p>
+     * <br>
+     * <p>*   `offline`</p>
+     * <p>*   `online`</p>
+     */
     @NameInMap("online_state")
     public String onlineState;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("page_number")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("page_size")
     public Long pageSize;
 

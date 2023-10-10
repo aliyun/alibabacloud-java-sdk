@@ -17,7 +17,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
     public String duration;
 
     /**
-     * <p>The time when the workflow ended.</p>
+     * <p>The end time of the task.</p>
      */
     @NameInMap("finish_time")
     public String finishTime;

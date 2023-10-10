@@ -4,15 +4,31 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>The region ID of the resource.</p>
+     */
     @NameInMap("region_id")
     public String regionId;
 
+    /**
+     * <p>The IDs of the resources that you want to label.</p>
+     */
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
 
+    /**
+     * <p>The type of resource that you want to label. Set the value to `CLUSTER`.</p>
+     */
     @NameInMap("resource_type")
     public String resourceType;
 
+    /**
+     * <p>The labels that you want to add to the resources in key-value pairs. You can add up to 20 labels. Note:</p>
+     * <br>
+     * <p>*   A value cannot be empty and can contain up to 128 characters.</p>
+     * <p>*   A key or value must not start with `aliyun` or `acs:`.</p>
+     * <p>*   A key or value must not contain `http://` or `https://`.</p>
+     */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 

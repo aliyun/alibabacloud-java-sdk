@@ -4,12 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterEventsRequest extends TeaModel {
+    /**
+     * <p>The number of the page to return.</p>
+     */
     @NameInMap("page_number")
     public Long pageNumber;
 
+    /**
+     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
+     */
     @NameInMap("page_size")
     public Long pageSize;
 
+    /**
+     * <p>The ID of the query task.</p>
+     */
     @NameInMap("task_id")
     public String taskId;
 

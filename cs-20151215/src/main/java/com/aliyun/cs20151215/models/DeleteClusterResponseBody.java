@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterResponseBody extends TeaModel {
     /**
-     * <p>任务ID。</p>
+     * <p>The task ID.</p>
      */
     @NameInMap("task_id")
     public String taskId;

@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAddonsUpgradeStatusShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of component names.</p>
+     */
     @NameInMap("componentIds")
     public String componentIdsShrink;
 

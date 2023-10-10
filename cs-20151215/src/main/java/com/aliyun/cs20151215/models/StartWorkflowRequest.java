@@ -4,60 +4,121 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class StartWorkflowRequest extends TeaModel {
+    /**
+     * <p>The name of the output BAM file.</p>
+     */
     @NameInMap("mapping_bam_out_filename")
     public String mappingBamOutFilename;
 
+    /**
+     * <p>The output path of the Binary Alignment Map (BAM) file.</p>
+     */
     @NameInMap("mapping_bam_out_path")
     public String mappingBamOutPath;
 
+    /**
+     * <p>The name of the OSS bucket that stores the data of the mapping workflow.</p>
+     */
     @NameInMap("mapping_bucket_name")
     public String mappingBucketName;
 
+    /**
+     * <p>The name of the first FASTQ file of the mapping workflow.</p>
+     */
     @NameInMap("mapping_fastq_first_filename")
     public String mappingFastqFirstFilename;
 
+    /**
+     * <p>The path of the FASTQ files of the mapping workflow.</p>
+     */
     @NameInMap("mapping_fastq_path")
     public String mappingFastqPath;
 
+    /**
+     * <p>The name of the second FASTQ file of the mapping workflow.</p>
+     */
     @NameInMap("mapping_fastq_second_filename")
     public String mappingFastqSecondFilename;
 
+    /**
+     * <p>Specifies whether to mark duplicate values.</p>
+     */
     @NameInMap("mapping_is_mark_dup")
     public String mappingIsMarkDup;
 
+    /**
+     * <p>The region where the Object Storage Service (OSS) bucket that stores the data of the mapping workflow is deployed.</p>
+     */
     @NameInMap("mapping_oss_region")
     public String mappingOssRegion;
 
+    /**
+     * <p>The path of the reference files of the mapping workflow.</p>
+     */
     @NameInMap("mapping_reference_path")
     public String mappingReferencePath;
 
+    /**
+     * <p>The type of service-level agreement (SLA). Valid values:</p>
+     * <br>
+     * <p>*   s: the silver level (S-level). It requires 1 extra minute to process every 1.5 billion base pairs beyond the limit of 90 billion base pairs.</p>
+     * <p>*   g: the gold level (G-level). It requires 1 extra minute to process every 2 billion base pairs beyond the limit of 90 billion base pairs.</p>
+     * <p>*   p: the platinum level (P-level). It requires 1 extra minute to process every 3 billion base pairs beyond the limit of 90 billion base pairs.</p>
+     */
     @NameInMap("service")
     public String service;
 
+    /**
+     * <p>The name of the OSS bucket that stores the data of the WGS workflow.</p>
+     */
     @NameInMap("wgs_bucket_name")
     public String wgsBucketName;
 
+    /**
+     * <p>The name of the first FASTQ file of the WGS workflow.</p>
+     */
     @NameInMap("wgs_fastq_first_filename")
     public String wgsFastqFirstFilename;
 
+    /**
+     * <p>The path of the FASTQ files of the WGS workflow.</p>
+     */
     @NameInMap("wgs_fastq_path")
     public String wgsFastqPath;
 
+    /**
+     * <p>The name of the second FASTQ file of the WGS workflow.</p>
+     */
     @NameInMap("wgs_fastq_second_filename")
     public String wgsFastqSecondFilename;
 
+    /**
+     * <p>The region where the OSS bucket that stores the data of the whole genome sequencing (WGS) workflow is deployed.</p>
+     */
     @NameInMap("wgs_oss_region")
     public String wgsOssRegion;
 
+    /**
+     * <p>The path of the reference files of the WGS workflow.</p>
+     */
     @NameInMap("wgs_reference_path")
     public String wgsReferencePath;
 
+    /**
+     * <p>The name of the output VCF file.</p>
+     */
     @NameInMap("wgs_vcf_out_filename")
     public String wgsVcfOutFilename;
 
+    /**
+     * <p>The output path of the Variant Call Format (VCF) file.</p>
+     */
     @NameInMap("wgs_vcf_out_path")
     public String wgsVcfOutPath;
 
+    /**
+     * <p>The type of workflow. Valid values: wgs and mapping.</p>
+     */
     @NameInMap("workflow_type")
     public String workflowType;
 
