@@ -105,12 +105,42 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
 
     }
 
+    public static class CreateDataArchiveOrderRequestParamVariables extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Pattern")
+        public String pattern;
+
+        public static CreateDataArchiveOrderRequestParamVariables build(java.util.Map<String, ?> map) throws Exception {
+            CreateDataArchiveOrderRequestParamVariables self = new CreateDataArchiveOrderRequestParamVariables();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDataArchiveOrderRequestParamVariables setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateDataArchiveOrderRequestParamVariables setPattern(String pattern) {
+            this.pattern = pattern;
+            return this;
+        }
+        public String getPattern() {
+            return this.pattern;
+        }
+
+    }
+
     public static class CreateDataArchiveOrderRequestParam extends TeaModel {
         @NameInMap("ArchiveMethod")
         public String archiveMethod;
 
-        @NameInMap("DbSchema")
-        public String dbSchema;
+        @NameInMap("CronStr")
+        public String cronStr;
 
         @NameInMap("Logic")
         public Boolean logic;
@@ -121,8 +151,14 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         @NameInMap("RunMethod")
         public String runMethod;
 
-        @NameInMap("SourceDatabaseId")
-        public Long sourceDatabaseId;
+        @NameInMap("SourceCatalogName")
+        public String sourceCatalogName;
+
+        @NameInMap("SourceInstanceName")
+        public String sourceInstanceName;
+
+        @NameInMap("SourceSchemaName")
+        public String sourceSchemaName;
 
         @NameInMap("TableIncludes")
         public java.util.List<CreateDataArchiveOrderRequestParamTableIncludes> tableIncludes;
@@ -130,11 +166,11 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
         @NameInMap("TableMapping")
         public java.util.List<String> tableMapping;
 
-        @NameInMap("TargetInstanceId")
-        public String targetInstanceId;
+        @NameInMap("TargetInstanceHost")
+        public String targetInstanceHost;
 
         @NameInMap("Variables")
-        public java.util.List<String> variables;
+        public java.util.List<CreateDataArchiveOrderRequestParamVariables> variables;
 
         public static CreateDataArchiveOrderRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateDataArchiveOrderRequestParam self = new CreateDataArchiveOrderRequestParam();
@@ -149,12 +185,12 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
             return this.archiveMethod;
         }
 
-        public CreateDataArchiveOrderRequestParam setDbSchema(String dbSchema) {
-            this.dbSchema = dbSchema;
+        public CreateDataArchiveOrderRequestParam setCronStr(String cronStr) {
+            this.cronStr = cronStr;
             return this;
         }
-        public String getDbSchema() {
-            return this.dbSchema;
+        public String getCronStr() {
+            return this.cronStr;
         }
 
         public CreateDataArchiveOrderRequestParam setLogic(Boolean logic) {
@@ -181,12 +217,28 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
             return this.runMethod;
         }
 
-        public CreateDataArchiveOrderRequestParam setSourceDatabaseId(Long sourceDatabaseId) {
-            this.sourceDatabaseId = sourceDatabaseId;
+        public CreateDataArchiveOrderRequestParam setSourceCatalogName(String sourceCatalogName) {
+            this.sourceCatalogName = sourceCatalogName;
             return this;
         }
-        public Long getSourceDatabaseId() {
-            return this.sourceDatabaseId;
+        public String getSourceCatalogName() {
+            return this.sourceCatalogName;
+        }
+
+        public CreateDataArchiveOrderRequestParam setSourceInstanceName(String sourceInstanceName) {
+            this.sourceInstanceName = sourceInstanceName;
+            return this;
+        }
+        public String getSourceInstanceName() {
+            return this.sourceInstanceName;
+        }
+
+        public CreateDataArchiveOrderRequestParam setSourceSchemaName(String sourceSchemaName) {
+            this.sourceSchemaName = sourceSchemaName;
+            return this;
+        }
+        public String getSourceSchemaName() {
+            return this.sourceSchemaName;
         }
 
         public CreateDataArchiveOrderRequestParam setTableIncludes(java.util.List<CreateDataArchiveOrderRequestParamTableIncludes> tableIncludes) {
@@ -205,19 +257,19 @@ public class CreateDataArchiveOrderRequest extends TeaModel {
             return this.tableMapping;
         }
 
-        public CreateDataArchiveOrderRequestParam setTargetInstanceId(String targetInstanceId) {
-            this.targetInstanceId = targetInstanceId;
+        public CreateDataArchiveOrderRequestParam setTargetInstanceHost(String targetInstanceHost) {
+            this.targetInstanceHost = targetInstanceHost;
             return this;
         }
-        public String getTargetInstanceId() {
-            return this.targetInstanceId;
+        public String getTargetInstanceHost() {
+            return this.targetInstanceHost;
         }
 
-        public CreateDataArchiveOrderRequestParam setVariables(java.util.List<String> variables) {
+        public CreateDataArchiveOrderRequestParam setVariables(java.util.List<CreateDataArchiveOrderRequestParamVariables> variables) {
             this.variables = variables;
             return this;
         }
-        public java.util.List<String> getVariables() {
+        public java.util.List<CreateDataArchiveOrderRequestParamVariables> getVariables() {
             return this.variables;
         }
 
