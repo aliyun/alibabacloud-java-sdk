@@ -14,6 +14,13 @@ public class AssumeRoleRequest extends TeaModel {
     @NameInMap("DurationSeconds")
     public Long durationSeconds;
 
+    /**
+     * <p>The external ID of the RAM role.</p>
+     * <br>
+     * <p>This parameter is provided by an external party and is used to prevent the confused deputy problem.</p>
+     * <br>
+     * <p>The value must be 2 to 1,224 characters in length and can contain letters, digits, and the following special characters: `= , . @ : / - _`. The regular expression for this parameter is `[\w+=,.@:\/-]*`.</p>
+     */
     @NameInMap("ExternalId")
     public String externalId;
 
@@ -24,6 +31,8 @@ public class AssumeRoleRequest extends TeaModel {
      * <p>*   If you do not specify this parameter, the returned STS token has all the permissions of the RAM role.</p>
      * <br>
      * <p>The value must be 1 to 2,048 characters in length.</p>
+     * <br>
+     * <p>For more information about policy elements and sample policies, see [Policy elements](~~93738~~) and [Overview of sample policies](~~210969~~).</p>
      */
     @NameInMap("Policy")
     public String policy;
@@ -35,7 +44,7 @@ public class AssumeRoleRequest extends TeaModel {
      * <br>
      * <p>Format: `acs:ram::<account_id>:role/<role_name>`.</p>
      * <br>
-     * <p>You can view the ARN in the RAM console or by calling operations.</p>
+     * <p>You can view the ARN in the RAM console or by calling operations. The following items describe the validity periods of storage addresses:</p>
      * <br>
      * <p>*   For more information about how to view the ARN in the RAM console, see [How do I find the ARN of the RAM role?](~~39744~~)</p>
      * <p>*   For more information about how to view the ARN by calling operations, see [ListRoles](~~28713~~) or [GetRole](~~28711~~).</p>
@@ -48,7 +57,7 @@ public class AssumeRoleRequest extends TeaModel {
      * <br>
      * <p>Set this parameter based on your business requirements. In most cases, you can set this parameter to the identity of the API caller. For example, you can specify a username. You can specify `RoleSessionName` to identify API callers that assume the same RAM role in ActionTrail logs. This allows you to track the users that perform the operations.</p>
      * <br>
-     * <p>The value must be 2 to 64 characters in length and can contain letters, digits, periods (.), at signs (@), hyphens (-), and underscores (\_).</p>
+     * <p>The value must be 2 to 64 characters in length and can contain letters, digits, and the following special characters: `. @ - _`.</p>
      */
     @NameInMap("RoleSessionName")
     public String roleSessionName;
