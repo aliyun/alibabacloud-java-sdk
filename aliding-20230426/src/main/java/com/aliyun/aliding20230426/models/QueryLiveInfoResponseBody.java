@@ -17,10 +17,13 @@ public class QueryLiveInfoResponseBody extends TeaModel {
     public String introduction;
 
     @NameInMap("liveId")
-    public Integer liveId;
+    public String liveId;
 
     @NameInMap("livePlayUrl")
     public String livePlayUrl;
+
+    @NameInMap("liveStatus")
+    public Integer liveStatus;
 
     @NameInMap("playbackDuration")
     public Long playbackDuration;
@@ -80,11 +83,11 @@ public class QueryLiveInfoResponseBody extends TeaModel {
         return this.introduction;
     }
 
-    public QueryLiveInfoResponseBody setLiveId(Integer liveId) {
+    public QueryLiveInfoResponseBody setLiveId(String liveId) {
         this.liveId = liveId;
         return this;
     }
-    public Integer getLiveId() {
+    public String getLiveId() {
         return this.liveId;
     }
 
@@ -94,6 +97,14 @@ public class QueryLiveInfoResponseBody extends TeaModel {
     }
     public String getLivePlayUrl() {
         return this.livePlayUrl;
+    }
+
+    public QueryLiveInfoResponseBody setLiveStatus(Integer liveStatus) {
+        this.liveStatus = liveStatus;
+        return this;
+    }
+    public Integer getLiveStatus() {
+        return this.liveStatus;
     }
 
     public QueryLiveInfoResponseBody setPlaybackDuration(Long playbackDuration) {
