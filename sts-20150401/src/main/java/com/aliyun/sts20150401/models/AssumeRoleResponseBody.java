@@ -108,6 +108,8 @@ public class AssumeRoleResponseBody extends TeaModel {
 
         /**
          * <p>The STS token.</p>
+         * <br>
+         * <p>> Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
          */
         @NameInMap("SecurityToken")
         public String securityToken;

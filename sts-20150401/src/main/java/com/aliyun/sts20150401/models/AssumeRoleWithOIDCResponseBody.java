@@ -122,6 +122,8 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
 
         /**
          * <p>The STS token.</p>
+         * <br>
+         * <p>> Alibaba Cloud STS does not impose limits on the length of STS tokens. We strongly recommend that you do not specify a maximum length for STS tokens.</p>
          */
         @NameInMap("SecurityToken")
         public String securityToken;
@@ -174,6 +176,12 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         @NameInMap("ClientIds")
         public String clientIds;
 
+        @NameInMap("ExpirationTime")
+        public String expirationTime;
+
+        @NameInMap("IssuanceTime")
+        public String issuanceTime;
+
         /**
          * <p>The URL of the issuer,</p>
          * <br>
@@ -190,6 +198,9 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         @NameInMap("Subject")
         public String subject;
 
+        @NameInMap("VerificationInfo")
+        public String verificationInfo;
+
         public static AssumeRoleWithOIDCResponseBodyOIDCTokenInfo build(java.util.Map<String, ?> map) throws Exception {
             AssumeRoleWithOIDCResponseBodyOIDCTokenInfo self = new AssumeRoleWithOIDCResponseBodyOIDCTokenInfo();
             return TeaModel.build(map, self);
@@ -201,6 +212,22 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
         public String getClientIds() {
             return this.clientIds;
+        }
+
+        public AssumeRoleWithOIDCResponseBodyOIDCTokenInfo setExpirationTime(String expirationTime) {
+            this.expirationTime = expirationTime;
+            return this;
+        }
+        public String getExpirationTime() {
+            return this.expirationTime;
+        }
+
+        public AssumeRoleWithOIDCResponseBodyOIDCTokenInfo setIssuanceTime(String issuanceTime) {
+            this.issuanceTime = issuanceTime;
+            return this;
+        }
+        public String getIssuanceTime() {
+            return this.issuanceTime;
         }
 
         public AssumeRoleWithOIDCResponseBodyOIDCTokenInfo setIssuer(String issuer) {
@@ -217,6 +244,14 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         }
         public String getSubject() {
             return this.subject;
+        }
+
+        public AssumeRoleWithOIDCResponseBodyOIDCTokenInfo setVerificationInfo(String verificationInfo) {
+            this.verificationInfo = verificationInfo;
+            return this;
+        }
+        public String getVerificationInfo() {
+            return this.verificationInfo;
         }
 
     }

@@ -17,8 +17,8 @@ public class AssumeRoleWithSAMLRequest extends TeaModel {
     /**
      * <p>The policy that specifies the permissions of the returned STS token. You can use this parameter to grant the STS token fewer permissions than the permissions granted to the RAM role.</p>
      * <br>
-     * <p>- If you specify this parameter, the permissions of the returned STS token are the permissions that are included in the value of this parameter and owned by the RAM role.</p>
-     * <p>- If you do not specify this parameter, the returned STS token has all the permissions of the RAM role.</p>
+     * <p>*   If you specify this parameter, the permissions of the returned STS token are the permissions that are included in the value of this parameter and owned by the RAM role.</p>
+     * <p>*   If you do not specify this parameter, the returned STS token has all the permissions of the RAM role.</p>
      * <br>
      * <p>The value must be 1 to 2,048 characters in length.</p>
      */
@@ -34,8 +34,8 @@ public class AssumeRoleWithSAMLRequest extends TeaModel {
      * <br>
      * <p>You can view the ARN in the RAM console or by calling operations.</p>
      * <br>
-     * <p>- For more information about how to view the ARN in the RAM console, see [How do I view the ARN of the RAM role?](~~39744~~).</p>
-     * <p>- For more information about how to view the ARN by calling operations, see [ListRoles](~~28713~~) or [GetRole](~~28711~~).</p>
+     * <p>*   For more information about how to view the ARN in the RAM console, see [How do I view the ARN of the RAM role?](~~39744~~).</p>
+     * <p>*   For more information about how to view the ARN by calling operations, see [ListRoles](~~28713~~) or [GetRole](~~28711~~).</p>
      */
     @NameInMap("RoleArn")
     public String roleArn;
@@ -57,8 +57,8 @@ public class AssumeRoleWithSAMLRequest extends TeaModel {
      * <br>
      * <p>You can view the ARN in the RAM console or by calling operations.</p>
      * <br>
-     * <p>- For more information about how to view the ARN in the RAM console, see [How do I view the ARN of a RAM role?](~~116795~~)</p>
-     * <p>- For more information about how to view the ARN by calling operations, see [GetSAMLProvider](~~186833~~) or [ListSAMLProviders](~~186851~~).</p>
+     * <p>*   For more information about how to view the ARN in the RAM console, see [How do I view the ARN of a RAM role?](~~116795~~)</p>
+     * <p>*   For more information about how to view the ARN by calling operations, see [GetSAMLProvider](~~186833~~) or [ListSAMLProviders](~~186851~~).</p>
      */
     @NameInMap("SAMLProviderArn")
     public String SAMLProviderArn;
