@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetParametersRequest extends TeaModel {
+    /**
+     * <p>The names of the common parameters.</p>
+     */
     @NameInMap("Names")
     public String names;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

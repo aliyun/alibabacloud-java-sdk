@@ -176,6 +176,9 @@ public class ListExecutionsResponseBody extends TeaModel {
         @NameInMap("LastSuccessfulTriggerTime")
         public String lastSuccessfulTriggerTime;
 
+        /**
+         * <p>The outputs of last trigger.</p>
+         */
         @NameInMap("LastTriggerOutputs")
         public String lastTriggerOutputs;
 
@@ -185,6 +188,9 @@ public class ListExecutionsResponseBody extends TeaModel {
         @NameInMap("LastTriggerStatus")
         public String lastTriggerStatus;
 
+        /**
+         * <p>The status message of last trigger.</p>
+         */
         @NameInMap("LastTriggerStatusMessage")
         public String lastTriggerStatusMessage;
 

@@ -109,6 +109,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("ServiceId")
+        public String serviceId;
+
         /**
          * <p>The tags.</p>
          */
@@ -172,6 +175,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public GetApplicationResponseBodyApplication setServiceId(String serviceId) {
+            this.serviceId = serviceId;
+            return this;
+        }
+        public String getServiceId() {
+            return this.serviceId;
         }
 
         public GetApplicationResponseBodyApplication setTags(java.util.Map<String, ?> tags) {

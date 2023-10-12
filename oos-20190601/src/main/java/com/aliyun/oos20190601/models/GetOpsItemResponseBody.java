@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetOpsItemResponseBody extends TeaModel {
+    /**
+     * <p>The information about the O\&M item.</p>
+     */
     @NameInMap("OpsItem")
     public GetOpsItemResponseBodyOpsItem opsItem;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,57 +38,111 @@ public class GetOpsItemResponseBody extends TeaModel {
     }
 
     public static class GetOpsItemResponseBodyOpsItem extends TeaModel {
+        /**
+         * <p>The information about the attributes of the O\&M item.</p>
+         */
         @NameInMap("Attributes")
         public java.util.Map<String, ?> attributes;
 
+        /**
+         * <p>The category of the O\&M item.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The user who created the O\&M item.</p>
+         */
         @NameInMap("CreateBy")
         public String createBy;
 
+        /**
+         * <p>The time when the O\&M item was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The duplicated string.</p>
+         */
         @NameInMap("DedupString")
         public String dedupString;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The user who modified the O\&M item.</p>
+         */
         @NameInMap("LastModifiedBy")
         public String lastModifiedBy;
 
+        /**
+         * <p>The O\&M item ID.</p>
+         */
         @NameInMap("OpsItemId")
         public String opsItemId;
 
+        /**
+         * <p>The priority of the O\&M item.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The Alibaba Cloud Resource Names (ARNs) of the associated resources.</p>
+         */
         @NameInMap("Resources")
         public java.util.List<String> resources;
 
+        /**
+         * <p>The severity level of the O\&M item.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The solutions to the O\&M item.</p>
+         */
         @NameInMap("Solutions")
         public java.util.List<java.util.Map<String, ?>> solutions;
 
+        /**
+         * <p>The source business of the O\&M item.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the O\&M item.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags attached to the O\&M item.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The title of the O\&M item.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The time when the O\&M item was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

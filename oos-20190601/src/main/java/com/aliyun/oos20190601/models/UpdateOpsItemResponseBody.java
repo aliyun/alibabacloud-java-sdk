@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateOpsItemResponseBody extends TeaModel {
+    /**
+     * <p>The O\&M item.</p>
+     */
     @NameInMap("OpsItem")
     public UpdateOpsItemResponseBodyOpsItem opsItem;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,54 +38,105 @@ public class UpdateOpsItemResponseBody extends TeaModel {
     }
 
     public static class UpdateOpsItemResponseBodyOpsItem extends TeaModel {
+        /**
+         * <p>The information about the properties of the O\&M item.</p>
+         */
         @NameInMap("Attributes")
         public String attributes;
 
+        /**
+         * <p>The category.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The time when the O\&M item was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The user who created the patch baseline.</p>
+         */
         @NameInMap("CreatedBy")
         public String createdBy;
 
+        /**
+         * <p>The description.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The user who modified the O\&M item.</p>
+         */
         @NameInMap("LastModifiedBy")
         public String lastModifiedBy;
 
+        /**
+         * <p>The ID of the O\&M item.</p>
+         */
         @NameInMap("OpsItemId")
         public String opsItemId;
 
+        /**
+         * <p>The priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The ARNs of the associated resources.</p>
+         */
         @NameInMap("Resources")
         public java.util.List<String> resources;
 
+        /**
+         * <p>The severity level.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The list of solutions.</p>
+         */
         @NameInMap("Solutions")
         public java.util.List<String> solutions;
 
+        /**
+         * <p>The source business.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The title of the O\&M item.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The time when the O\&M item was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

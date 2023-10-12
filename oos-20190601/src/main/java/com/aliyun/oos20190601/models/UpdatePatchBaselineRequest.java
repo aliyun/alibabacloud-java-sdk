@@ -10,9 +10,15 @@ public class UpdatePatchBaselineRequest extends TeaModel {
     @NameInMap("ApprovalRules")
     public String approvalRules;
 
+    /**
+     * <p>The approved patches.</p>
+     */
     @NameInMap("ApprovedPatches")
     public java.util.List<String> approvedPatches;
 
+    /**
+     * <p>Indicates whether the approved patch involves updates other than security-related updates.</p>
+     */
     @NameInMap("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
 
@@ -40,18 +46,33 @@ public class UpdatePatchBaselineRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The rejected patches.</p>
+     */
     @NameInMap("RejectedPatches")
     public java.util.List<String> rejectedPatches;
 
+    /**
+     * <p>The action of the rejected patch.</p>
+     */
     @NameInMap("RejectedPatchesAction")
     public String rejectedPatchesAction;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The patch source configurations.</p>
+     */
     @NameInMap("Sources")
     public java.util.List<String> sources;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<UpdatePatchBaselineRequestTags> tags;
 
@@ -157,9 +178,15 @@ public class UpdatePatchBaselineRequest extends TeaModel {
     }
 
     public static class UpdatePatchBaselineRequestTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

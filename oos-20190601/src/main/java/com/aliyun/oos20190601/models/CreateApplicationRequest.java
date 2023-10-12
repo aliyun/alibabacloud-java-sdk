@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
+    /**
+     * <p>The configurations of application alerts.</p>
+     */
     @NameInMap("AlarmConfig")
     public CreateApplicationRequestAlarmConfig alarmConfig;
 
@@ -36,6 +39,9 @@ public class CreateApplicationRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     /**
      * <p>The tags.</p>
@@ -96,6 +102,14 @@ public class CreateApplicationRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CreateApplicationRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
     public CreateApplicationRequest setTags(java.util.Map<String, ?> tags) {
         this.tags = tags;
         return this;
@@ -105,12 +119,21 @@ public class CreateApplicationRequest extends TeaModel {
     }
 
     public static class CreateApplicationRequestAlarmConfig extends TeaModel {
+        /**
+         * <p>The alert contact groups.</p>
+         */
         @NameInMap("ContactGroups")
         public java.util.List<String> contactGroups;
 
+        /**
+         * <p>The health check URL of the application.</p>
+         */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
+        /**
+         * <p>The alert templates.</p>
+         */
         @NameInMap("TemplateIds")
         public java.util.List<String> templateIds;
 

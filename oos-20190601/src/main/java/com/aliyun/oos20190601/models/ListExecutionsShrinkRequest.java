@@ -22,6 +22,9 @@ public class ListExecutionsShrinkRequest extends TeaModel {
     @NameInMap("Depth")
     public String depth;
 
+    /**
+     * <p>The description of the execution.</p>
+     */
     @NameInMap("Description")
     public String description;
 

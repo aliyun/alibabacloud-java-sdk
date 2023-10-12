@@ -4,12 +4,21 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the template. The name can be 1 to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). The name cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>The version of the template. The default value is the latest version of the template.</p>
+     */
     @NameInMap("TemplateVersion")
     public String templateVersion;
 

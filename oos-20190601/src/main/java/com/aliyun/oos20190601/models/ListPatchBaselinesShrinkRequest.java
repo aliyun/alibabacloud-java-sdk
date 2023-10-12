@@ -11,7 +11,7 @@ public class ListPatchBaselinesShrinkRequest extends TeaModel {
     public String approvedPatchesShrink;
 
     /**
-     * <p>Whether the approved patch includes updates other than security.</p>
+     * <p>Specifies whether the approved patch involves updates other than security-related updates.</p>
      */
     @NameInMap("ApprovedPatchesEnableNonSecurity")
     public Boolean approvedPatchesEnableNonSecurity;
@@ -55,6 +55,9 @@ public class ListPatchBaselinesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -68,7 +71,7 @@ public class ListPatchBaselinesShrinkRequest extends TeaModel {
     public String shareType;
 
     /**
-     * <p>The list of patch source configurations.</p>
+     * <p>The patch source configurations.</p>
      */
     @NameInMap("Sources")
     public String sourcesShrink;

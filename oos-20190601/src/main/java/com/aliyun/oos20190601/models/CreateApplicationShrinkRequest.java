@@ -4,6 +4,9 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CreateApplicationShrinkRequest extends TeaModel {
+    /**
+     * <p>The configurations of application alerts.</p>
+     */
     @NameInMap("AlarmConfig")
     public String alarmConfigShrink;
 
@@ -36,6 +39,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     /**
      * <p>The tags.</p>
@@ -94,6 +100,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateApplicationShrinkRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
     }
 
     public CreateApplicationShrinkRequest setTagsShrink(String tagsShrink) {

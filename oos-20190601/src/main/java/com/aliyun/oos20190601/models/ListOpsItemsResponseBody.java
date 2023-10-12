@@ -4,18 +4,33 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListOpsItemsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned on each page.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of O\&M items.</p>
+     */
     @NameInMap("OpsItems")
     public java.util.List<ListOpsItemsResponseBodyOpsItems> opsItems;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,36 +80,69 @@ public class ListOpsItemsResponseBody extends TeaModel {
     }
 
     public static class ListOpsItemsResponseBodyOpsItems extends TeaModel {
+        /**
+         * <p>The category.</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The time when the O\&M item was created.</p>
+         */
         @NameInMap("CreateDate")
         public String createDate;
 
+        /**
+         * <p>The ID of the O\&M item.</p>
+         */
         @NameInMap("OpsItemId")
         public String opsItemId;
 
+        /**
+         * <p>The priority.</p>
+         */
         @NameInMap("Priority")
         public Integer priority;
 
+        /**
+         * <p>The Alibaba Resource Names (ARNs) of the associated resources.</p>
+         */
         @NameInMap("Resources")
         public java.util.List<String> resources;
 
+        /**
+         * <p>The severity level.</p>
+         */
         @NameInMap("Severity")
         public String severity;
 
+        /**
+         * <p>The source business.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status of the O\&M item.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.Map<String, ?> tags;
 
+        /**
+         * <p>The title of the O\&M item.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The time when the O\&M item was updated.</p>
+         */
         @NameInMap("UpdateDate")
         public String updateDate;
 

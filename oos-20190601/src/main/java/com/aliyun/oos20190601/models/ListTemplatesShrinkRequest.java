@@ -117,6 +117,32 @@ public class ListTemplatesShrinkRequest extends TeaModel {
 
     /**
      * <p>The type of the template.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   Automation</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   State</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   Package</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("TemplateType")
     public String templateType;

@@ -4,21 +4,39 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListOpsItemsRequest extends TeaModel {
+    /**
+     * <p>The filter rules for the component.</p>
+     */
     @NameInMap("Filter")
     public java.util.List<ListOpsItemsRequestFilter> filter;
 
+    /**
+     * <p>The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The token that is used to retrieve the next page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The information about resource tags.</p>
+     */
     @NameInMap("ResourceTags")
     public java.util.Map<String, ?> resourceTags;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
@@ -76,12 +94,21 @@ public class ListOpsItemsRequest extends TeaModel {
     }
 
     public static class ListOpsItemsRequestFilter extends TeaModel {
+        /**
+         * <p>The parameter name of the filter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The comparison operator that is used to filter property values.</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The parameter values of the filter.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

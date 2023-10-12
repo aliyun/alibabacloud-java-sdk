@@ -4,39 +4,86 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class ListParametersShrinkRequest extends TeaModel {
+    /**
+     * <p>The number of entries per page. Valid values: 10 to 100. Default value: 50.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The name of the common parameter.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The pagination token that can be used in the next request to retrieve a new page of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.</p>
+     */
     @NameInMap("Recursive")
     public Boolean recursive;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The share type of the common parameter. Valid values:</p>
+     * <br>
+     * <p>*   Public</p>
+     * <p>*   Private</p>
+     * <br>
+     * <p>Default value: Private.</p>
+     */
     @NameInMap("ShareType")
     public String shareType;
 
+    /**
+     * <p>The field used to sort the query results. Valid values:</p>
+     * <br>
+     * <p>*   Name</p>
+     * <p>*   CreatedDate</p>
+     */
     @NameInMap("SortField")
     public String sortField;
 
+    /**
+     * <p>The order in which the entries are sorted. Valid values:</p>
+     * <br>
+     * <p>*   Ascending</p>
+     * <p>*   Descending (Default)</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public String tagsShrink;
 
+    /**
+     * <p>The data type of the common parameter.</p>
+     */
     @NameInMap("Type")
     public String type;
 

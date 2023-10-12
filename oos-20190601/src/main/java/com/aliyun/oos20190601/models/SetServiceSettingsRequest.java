@@ -4,24 +4,45 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class SetServiceSettingsRequest extends TeaModel {
+    /**
+     * <p>The name of OSS bucket to deliver.</p>
+     */
     @NameInMap("DeliveryOssBucketName")
     public String deliveryOssBucketName;
 
+    /**
+     * <p>Whether to enable OSS delivery.</p>
+     */
     @NameInMap("DeliveryOssEnabled")
     public Boolean deliveryOssEnabled;
 
+    /**
+     * <p>The key prefix of OSS to deliver.</p>
+     */
     @NameInMap("DeliveryOssKeyPrefix")
     public String deliveryOssKeyPrefix;
 
+    /**
+     * <p>Whether to enable SLS delivery.</p>
+     */
     @NameInMap("DeliverySlsEnabled")
     public Boolean deliverySlsEnabled;
 
+    /**
+     * <p>The name of SLS project to deliver.</p>
+     */
     @NameInMap("DeliverySlsProjectName")
     public String deliverySlsProjectName;
 
+    /**
+     * <p>The id of RDC Enterprise.</p>
+     */
     @NameInMap("RdcEnterpriseId")
     public String rdcEnterpriseId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

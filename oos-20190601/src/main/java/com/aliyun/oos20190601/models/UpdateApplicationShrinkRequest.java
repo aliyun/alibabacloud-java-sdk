@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationShrinkRequest extends TeaModel {
+    /**
+     * <p>The configurations of application alerts.</p>
+     */
     @NameInMap("AlarmConfig")
     public String alarmConfigShrink;
 
+    /**
+     * <p>Specifies whether to delete existing alert rules before applying the alert template. Default value: false.</p>
+     */
     @NameInMap("DeleteAlarmRulesBeforeUpdate")
     public Boolean deleteAlarmRulesBeforeUpdate;
 

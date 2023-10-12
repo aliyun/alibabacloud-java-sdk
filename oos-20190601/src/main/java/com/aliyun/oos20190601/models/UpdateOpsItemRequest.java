@@ -4,48 +4,93 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateOpsItemRequest extends TeaModel {
+    /**
+     * <p>The category.</p>
+     */
     @NameInMap("Category")
     public String category;
 
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The string to be deduplicated.</p>
+     */
     @NameInMap("DedupString")
     public String dedupString;
 
+    /**
+     * <p>The description of the O\&M item.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The ID of the O\&M item.</p>
+     */
     @NameInMap("OpsItemId")
     public String opsItemId;
 
+    /**
+     * <p>The priority.</p>
+     */
     @NameInMap("Priority")
     public Integer priority;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The Alibaba Resource Names (ARNs) of the associated resources.</p>
+     */
     @NameInMap("Resources")
     public String resources;
 
+    /**
+     * <p>The severity level.</p>
+     */
     @NameInMap("Severity")
     public String severity;
 
+    /**
+     * <p>The list of solutions.</p>
+     */
     @NameInMap("Solutions")
     public String solutions;
 
+    /**
+     * <p>The source business.</p>
+     */
     @NameInMap("Source")
     public String source;
 
+    /**
+     * <p>The status.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.Map<String, ?> tags;
 
+    /**
+     * <p>The title of the O\&M item.</p>
+     */
     @NameInMap("Title")
     public String title;
 

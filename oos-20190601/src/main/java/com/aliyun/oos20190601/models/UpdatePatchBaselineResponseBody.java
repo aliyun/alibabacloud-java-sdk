@@ -38,9 +38,15 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
     }
 
     public static class UpdatePatchBaselineResponseBodyPatchBaselineTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -74,9 +80,15 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         @NameInMap("ApprovalRules")
         public String approvalRules;
 
+        /**
+         * <p>The approved patches.</p>
+         */
         @NameInMap("ApprovedPatches")
         public java.util.List<String> approvedPatches;
 
+        /**
+         * <p>Indicates whether the approved patch involves updates other than security-related updates.</p>
+         */
         @NameInMap("ApprovedPatchesEnableNonSecurity")
         public Boolean approvedPatchesEnableNonSecurity;
 
@@ -116,12 +128,21 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        /**
+         * <p>The rejected patches.</p>
+         */
         @NameInMap("RejectedPatches")
         public java.util.List<String> rejectedPatches;
 
+        /**
+         * <p>The action of the rejected patch.</p>
+         */
         @NameInMap("RejectedPatchesAction")
         public String rejectedPatchesAction;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -131,9 +152,15 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         @NameInMap("ShareType")
         public String shareType;
 
+        /**
+         * <p>The patch source configurations.</p>
+         */
         @NameInMap("Sources")
         public java.util.List<String> sources;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<UpdatePatchBaselineResponseBodyPatchBaselineTags> tags;
 

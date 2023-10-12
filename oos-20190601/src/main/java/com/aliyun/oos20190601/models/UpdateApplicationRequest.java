@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class UpdateApplicationRequest extends TeaModel {
+    /**
+     * <p>The configurations of application alerts.</p>
+     */
     @NameInMap("AlarmConfig")
     public UpdateApplicationRequestAlarmConfig alarmConfig;
 
+    /**
+     * <p>Specifies whether to delete existing alert rules before applying the alert template. Default value: false.</p>
+     */
     @NameInMap("DeleteAlarmRulesBeforeUpdate")
     public Boolean deleteAlarmRulesBeforeUpdate;
 
@@ -88,12 +94,21 @@ public class UpdateApplicationRequest extends TeaModel {
     }
 
     public static class UpdateApplicationRequestAlarmConfig extends TeaModel {
+        /**
+         * <p>The alert contact groups.</p>
+         */
         @NameInMap("ContactGroups")
         public java.util.List<String> contactGroups;
 
+        /**
+         * <p>The health check URL of the application.</p>
+         */
         @NameInMap("HealthCheckUrl")
         public String healthCheckUrl;
 
+        /**
+         * <p>The alert templates.</p>
+         */
         @NameInMap("TemplateIds")
         public java.util.List<String> templateIds;
 

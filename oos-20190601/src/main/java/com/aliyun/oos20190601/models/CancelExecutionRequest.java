@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class CancelExecutionRequest extends TeaModel {
+    /**
+     * <p>The ID of the execution.</p>
+     */
     @NameInMap("ExecutionId")
     public String executionId;
 
+    /**
+     * <p>The ID of the region.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
