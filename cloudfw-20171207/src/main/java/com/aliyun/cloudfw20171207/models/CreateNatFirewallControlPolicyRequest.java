@@ -115,6 +115,9 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("DomainResolveType")
     public Integer domainResolveType;
 
+    @NameInMap("EndTime")
+    public Long endTime;
+
     /**
      * <p>The IP version supported by the access control policy. Valid values:</p>
      * <br>
@@ -168,6 +171,18 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("RepeatDays")
+    public java.util.List<Long> repeatDays;
+
+    @NameInMap("RepeatEndTime")
+    public String repeatEndTime;
+
+    @NameInMap("RepeatStartTime")
+    public String repeatStartTime;
+
+    @NameInMap("RepeatType")
+    public String repeatType;
+
     /**
      * <p>The source address in the access control policy.</p>
      * <br>
@@ -194,6 +209,9 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
      */
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static CreateNatFirewallControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNatFirewallControlPolicyRequest self = new CreateNatFirewallControlPolicyRequest();
@@ -280,6 +298,14 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
         return this.domainResolveType;
     }
 
+    public CreateNatFirewallControlPolicyRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public CreateNatFirewallControlPolicyRequest setIpVersion(String ipVersion) {
         this.ipVersion = ipVersion;
         return this;
@@ -328,6 +354,38 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
         return this.release;
     }
 
+    public CreateNatFirewallControlPolicyRequest setRepeatDays(java.util.List<Long> repeatDays) {
+        this.repeatDays = repeatDays;
+        return this;
+    }
+    public java.util.List<Long> getRepeatDays() {
+        return this.repeatDays;
+    }
+
+    public CreateNatFirewallControlPolicyRequest setRepeatEndTime(String repeatEndTime) {
+        this.repeatEndTime = repeatEndTime;
+        return this;
+    }
+    public String getRepeatEndTime() {
+        return this.repeatEndTime;
+    }
+
+    public CreateNatFirewallControlPolicyRequest setRepeatStartTime(String repeatStartTime) {
+        this.repeatStartTime = repeatStartTime;
+        return this;
+    }
+    public String getRepeatStartTime() {
+        return this.repeatStartTime;
+    }
+
+    public CreateNatFirewallControlPolicyRequest setRepeatType(String repeatType) {
+        this.repeatType = repeatType;
+        return this;
+    }
+    public String getRepeatType() {
+        return this.repeatType;
+    }
+
     public CreateNatFirewallControlPolicyRequest setSource(String source) {
         this.source = source;
         return this;
@@ -342,6 +400,14 @@ public class CreateNatFirewallControlPolicyRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public CreateNatFirewallControlPolicyRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

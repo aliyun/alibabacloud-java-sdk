@@ -56,6 +56,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @NameInMap("FirewallStatus")
     public String firewallStatus;
 
+    /**
+     * <p>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</p>
+     */
     @NameInMap("FirewallSubnetCidr")
     public String firewallSubnetCidr;
 
@@ -75,6 +78,9 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
+    /**
+     * <p>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</p>
+     */
     @NameInMap("FirewallVpcCidr")
     public String firewallVpcCidr;
 
@@ -99,9 +105,15 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @NameInMap("RouteMode")
     public String routeMode;
 
+    /**
+     * <p>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     */
     @NameInMap("TrAttachmentMasterCidr")
     public String trAttachmentMasterCidr;
 
+    /**
+     * <p>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</p>
+     */
     @NameInMap("TrAttachmentSlaveCidr")
     public String trAttachmentSlaveCidr;
 

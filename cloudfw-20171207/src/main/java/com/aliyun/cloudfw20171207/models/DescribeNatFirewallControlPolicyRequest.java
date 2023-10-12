@@ -100,6 +100,9 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("RepeatType")
+    public String repeatType;
+
     /**
      * <p>The source address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the value of the SourceType parameter.</p>
      * <br>
@@ -203,6 +206,14 @@ public class DescribeNatFirewallControlPolicyRequest extends TeaModel {
     }
     public String getRelease() {
         return this.release;
+    }
+
+    public DescribeNatFirewallControlPolicyRequest setRepeatType(String repeatType) {
+        this.repeatType = repeatType;
+        return this;
+    }
+    public String getRepeatType() {
+        return this.repeatType;
     }
 
     public DescribeNatFirewallControlPolicyRequest setSource(String source) {

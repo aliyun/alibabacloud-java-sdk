@@ -88,7 +88,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>入侵防御事件的名称。</p>
+     * <p>The name of the intrusion event.</p>
      */
     @NameInMap("EventName")
     public String eventName;

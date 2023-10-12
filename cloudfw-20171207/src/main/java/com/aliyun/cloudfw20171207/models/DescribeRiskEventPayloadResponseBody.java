@@ -4,39 +4,78 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeRiskEventPayloadResponseBody extends TeaModel {
+    /**
+     * <p>The destination IP address of the intrusion event.</p>
+     */
     @NameInMap("DstIP")
     public String dstIP;
 
+    /**
+     * <p>The destination port of the intrusion event.</p>
+     */
     @NameInMap("DstPort")
     public Integer dstPort;
 
+    /**
+     * <p>The destination VPC ID of the intrusion event.</p>
+     */
     @NameInMap("DstVpcId")
     public String dstVpcId;
 
+    /**
+     * <p>The attack payload of the intrusion event.</p>
+     */
     @NameInMap("Payload")
     public String payload;
 
+    /**
+     * <p>The length of the attack payload of the intrusion event.</p>
+     */
     @NameInMap("PayloadLen")
     public Integer payloadLen;
 
+    /**
+     * <p>The protocol type of intrusion event. Valid values:</p>
+     * <br>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP**</p>
+     */
     @NameInMap("Proto")
     public String proto;
 
+    /**
+     * <p>The HTTP X-Real-IP field.</p>
+     */
     @NameInMap("RealIp")
     public String realIp;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The source IP address of the intrusion event.</p>
+     */
     @NameInMap("SrcIP")
     public String srcIP;
 
+    /**
+     * <p>The source port of the intrusion event.</p>
+     */
     @NameInMap("SrcPort")
     public Integer srcPort;
 
+    /**
+     * <p>The source VPC ID of the intrusion event.</p>
+     */
     @NameInMap("SrcVpcId")
     public String srcVpcId;
 
+    /**
+     * <p>The HTTP X-Forwarded-For field.</p>
+     */
     @NameInMap("XForwardFor")
     public String XForwardFor;
 

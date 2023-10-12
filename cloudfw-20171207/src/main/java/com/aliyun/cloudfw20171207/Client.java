@@ -108,6 +108,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addAddressBookWithOptions(request, runtime);
     }
 
+    /**
+      * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request AddControlPolicyRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return AddControlPolicyResponse
+     */
     public AddControlPolicyResponse addControlPolicyWithOptions(AddControlPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -151,6 +160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Direction", request.direction);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
             query.put("IpVersion", request.ipVersion);
         }
@@ -171,6 +184,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatDays)) {
+            query.put("RepeatDays", request.repeatDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatEndTime)) {
+            query.put("RepeatEndTime", request.repeatEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatStartTime)) {
+            query.put("RepeatStartTime", request.repeatStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -181,6 +210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -200,6 +233,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AddControlPolicyResponse());
     }
 
+    /**
+      * You can call the AddControlPolicy operation to create an access control policy to allow, block, or monitor traffic that reaches Cloud Firewall.
+      * ## Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+      * @param request AddControlPolicyRequest
+      * @return AddControlPolicyResponse
+     */
     public AddControlPolicyResponse addControlPolicy(AddControlPolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addControlPolicyWithOptions(request, runtime);
@@ -365,6 +406,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DomainResolveType", request.domainResolveType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
             query.put("IpVersion", request.ipVersion);
         }
@@ -389,12 +434,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatDays)) {
+            query.put("RepeatDays", request.repeatDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatEndTime)) {
+            query.put("RepeatEndTime", request.repeatEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatStartTime)) {
+            query.put("RepeatStartTime", request.repeatStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -781,6 +846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationType", request.destinationType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -801,12 +870,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatDays)) {
+            query.put("RepeatDays", request.repeatDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatEndTime)) {
+            query.put("RepeatEndTime", request.repeatEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatStartTime)) {
+            query.put("RepeatStartTime", request.repeatStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcFirewallId)) {
@@ -1507,6 +1596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -1981,6 +2074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.release)) {
             query.put("Release", request.release);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
@@ -3087,6 +3184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
@@ -3610,6 +3711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Direction", request.direction);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -3622,12 +3727,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatDays)) {
+            query.put("RepeatDays", request.repeatDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatEndTime)) {
+            query.put("RepeatEndTime", request.repeatEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatStartTime)) {
+            query.put("RepeatStartTime", request.repeatStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3928,6 +4053,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DomainResolveType", request.domainResolveType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -3944,12 +4073,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatDays)) {
+            query.put("RepeatDays", request.repeatDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatEndTime)) {
+            query.put("RepeatEndTime", request.repeatEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatStartTime)) {
+            query.put("RepeatStartTime", request.repeatStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4460,6 +4609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationType", request.destinationType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -4472,12 +4625,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Release", request.release);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatDays)) {
+            query.put("RepeatDays", request.repeatDays);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatEndTime)) {
+            query.put("RepeatEndTime", request.repeatEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatStartTime)) {
+            query.put("RepeatStartTime", request.repeatStartTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.repeatType)) {
+            query.put("RepeatType", request.repeatType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("Source", request.source);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
             query.put("SourceType", request.sourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcFirewallId)) {

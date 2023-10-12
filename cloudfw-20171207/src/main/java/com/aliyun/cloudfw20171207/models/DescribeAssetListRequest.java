@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAssetListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number. Valid values: 1 to 50.</p>
      */
     @NameInMap("CurrentPage")
     public String currentPage;
@@ -34,11 +34,18 @@ public class DescribeAssetListRequest extends TeaModel {
     @NameInMap("MemberUid")
     public Long memberUid;
 
+    /**
+     * <p>The time when the asset was added. Valid values:</p>
+     * <br>
+     * <p>*   **discovered in 1 hour**: within one hour.</p>
+     * <p>*   **discovered in 1 day**: within one day.</p>
+     * <p>*   **discovered in 7 days**: within seven days.</p>
+     */
     @NameInMap("NewResourceTag")
     public String newResourceTag;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;

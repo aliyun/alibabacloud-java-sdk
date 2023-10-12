@@ -19,12 +19,33 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     @NameInMap("FirewallSwitch")
     public String firewallSwitch;
 
+    /**
+     * <p>The CIDR block of the vSwitch that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VSWITCH VPC that is automatically created for the VPC firewall for traffic redirection. The CIDR block does not conflict with your network plan. The subnet mask of the CIDR block must be less than or equal to 29 bits in length. The CIDR block of the vSwitch must be within the network segment of the VPC.</p>
+     * <br>
+     * <p>If you do not specify a value, the CIDR block 10.219.219.216/29 is automatically allocated.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+     */
     @NameInMap("FirewallVSwitchCidrBlock")
     public String firewallVSwitchCidrBlock;
 
+    /**
+     * <p>The CIDR block of the VPC that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VPC VPC that is automatically created for the VPC firewall for traffic redirection. The subnet mask of the CIDR block must be less than or equal to 28 bits in length.</p>
+     * <br>
+     * <p>If you do not specify a value, the CIDR block 10.0.0.0/8 is automatically allocated.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</p>
+     */
     @NameInMap("FirewallVpcCidrBlock")
     public String firewallVpcCidrBlock;
 
+    /**
+     * <p>The ID of the zone to which the vSwitch belongs. If your service is latency-sensitive, you can specify the same zone for the vSwitch of the firewall and the vSwitch of your business VPC to minimize latency.</p>
+     * <br>
+     * <p>If you do not specify a value, a zone is automatically assigned for the vSwitch.</p>
+     * <br>
+     * <p>>  This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see [Query zones](~~36064~~).</p>
+     */
     @NameInMap("FirewallVpcZoneId")
     public String firewallVpcZoneId;
 
@@ -49,6 +70,9 @@ public class CreateVpcFirewallCenConfigureRequest extends TeaModel {
     @NameInMap("NetworkInstanceId")
     public String networkInstanceId;
 
+    /**
+     * <p>The ID of the vSwitch that is used to associate with the elastic network interface (ENI) required by the VPC firewall.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 

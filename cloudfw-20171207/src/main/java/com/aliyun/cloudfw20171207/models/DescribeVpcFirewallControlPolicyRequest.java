@@ -89,6 +89,9 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("RepeatType")
+    public String repeatType;
+
     /**
      * <p>The source address in the access control policy. Fuzzy match is supported.</p>
      * <br>
@@ -191,6 +194,14 @@ public class DescribeVpcFirewallControlPolicyRequest extends TeaModel {
     }
     public String getRelease() {
         return this.release;
+    }
+
+    public DescribeVpcFirewallControlPolicyRequest setRepeatType(String repeatType) {
+        this.repeatType = repeatType;
+        return this;
+    }
+    public String getRepeatType() {
+        return this.repeatType;
     }
 
     public DescribeVpcFirewallControlPolicyRequest setSource(String source) {

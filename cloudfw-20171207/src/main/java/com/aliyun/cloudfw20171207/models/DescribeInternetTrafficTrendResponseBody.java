@@ -202,6 +202,9 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         @NameInMap("Time")
         public Integer time;
 
+        @NameInMap("TotalBps")
+        public Long totalBps;
+
         public static DescribeInternetTrafficTrendResponseBodyDataList build(java.util.Map<String, ?> map) throws Exception {
             DescribeInternetTrafficTrendResponseBodyDataList self = new DescribeInternetTrafficTrendResponseBodyDataList();
             return TeaModel.build(map, self);
@@ -277,6 +280,14 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
         public Integer getTime() {
             return this.time;
+        }
+
+        public DescribeInternetTrafficTrendResponseBodyDataList setTotalBps(Long totalBps) {
+            this.totalBps = totalBps;
+            return this;
+        }
+        public Long getTotalBps() {
+            return this.totalBps;
         }
 
     }

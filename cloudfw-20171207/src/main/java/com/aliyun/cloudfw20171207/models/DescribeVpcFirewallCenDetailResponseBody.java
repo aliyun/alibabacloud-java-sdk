@@ -20,6 +20,9 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     @NameInMap("FirewallSwitchStatus")
     public String firewallSwitchStatus;
 
+    /**
+     * <p>The VPC that is automatically created for the firewall.</p>
+     */
     @NameInMap("FirewallVpc")
     public DescribeVpcFirewallCenDetailResponseBodyFirewallVpc firewallVpc;
 
@@ -109,21 +112,42 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenDetailResponseBodyFirewallVpc extends TeaModel {
+        /**
+         * <p>Indicates whether you can specify a CIDR block when you create a VPC firewall for a Basic Edition transit router of a CEN instance. Valid values:</p>
+         * <br>
+         * <p>*   **1**: yes</p>
+         * <p>*   **0**: no</p>
+         */
         @NameInMap("AllowConfiguration")
         public Integer allowConfiguration;
 
+        /**
+         * <p>The CIDR block of the VPC.</p>
+         */
         @NameInMap("VpcCidr")
         public String vpcCidr;
 
+        /**
+         * <p>The VPC ID.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
+        /**
+         * <p>The CIDR block of the vSwitch.</p>
+         */
         @NameInMap("VswitchCidr")
         public String vswitchCidr;
 
+        /**
+         * <p>The vSwitch ID.</p>
+         */
         @NameInMap("VswitchId")
         public String vswitchId;
 
+        /**
+         * <p>The zone ID.</p>
+         */
         @NameInMap("ZoneId")
         public String zoneId;
 
@@ -195,6 +219,9 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         @NameInMap("EniPrivateIpAddress")
         public String eniPrivateIpAddress;
 
+        /**
+         * <p>The ID of the vSwitch to which the ENI is connected.</p>
+         */
         @NameInMap("EniVSwitchId")
         public String eniVSwitchId;
 
@@ -267,7 +294,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableList extends TeaModel {
         /**
-         * <p>An array that consists of the route entries for the VPC.</p>
+         * <p>The route entries for the VPC.</p>
          */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
@@ -321,7 +348,7 @@ public class DescribeVpcFirewallCenDetailResponseBody extends TeaModel {
         public java.util.List<String> defendCidrList;
 
         /**
-         * <p>An array that consists of the elastic network interfaces (ENIs).</p>
+         * <p>The Elastic Network Interfaces (ENIs).</p>
          */
         @NameInMap("EniList")
         public java.util.List<DescribeVpcFirewallCenDetailResponseBodyLocalVpcEniList> eniList;

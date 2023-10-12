@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class PutEnableFwSwitchResponseBody extends TeaModel {
+    /**
+     * <p>The status information of the asset when it is not synchronized to Cloud Firewall.</p>
+     */
     @NameInMap("AbnormalResourceStatusList")
     public java.util.List<PutEnableFwSwitchResponseBodyAbnormalResourceStatusList> abnormalResourceStatusList;
 
@@ -35,12 +38,25 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     }
 
     public static class PutEnableFwSwitchResponseBodyAbnormalResourceStatusList extends TeaModel {
+        /**
+         * <p>The message displayed when the asset is not synchronized to Cloud Firewall. Valid values:</p>
+         * <br>
+         * <p>*   cloudfirewall do not sync this ip address: This IP address is not synchronized to Cloud Firewall.</p>
+         */
         @NameInMap("Msg")
         public String msg;
 
+        /**
+         * <p>The IP address of the asset.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>The status of the asset when it is not synchronized to Cloud Firewall. Valid values:</p>
+         * <br>
+         * <p>*   ip_not_sync: The asset is not synchronized.</p>
+         */
         @NameInMap("Status")
         public String status;
 
