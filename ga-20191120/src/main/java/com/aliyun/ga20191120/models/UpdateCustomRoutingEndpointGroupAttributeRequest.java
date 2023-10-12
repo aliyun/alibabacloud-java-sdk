@@ -7,29 +7,29 @@ public class UpdateCustomRoutingEndpointGroupAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the endpoint group.</p>
+     * <p>The endpoint group description.</p>
      * <br>
-     * <p>The description cannot exceed 256 characters in length and cannot contain `http://` or `https://`.</p>
+     * <p>The description can be up to 256 characters in length and cannot contain `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the endpoint group.</p>
+     * <p>The endpoint group ID.</p>
      */
     @NameInMap("EndpointGroupId")
     public String endpointGroupId;
 
     /**
-     * <p>The name of the endpoint group.</p>
+     * <p>The endpoint group name.</p>
      * <br>
      * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
      */
@@ -37,7 +37,7 @@ public class UpdateCustomRoutingEndpointGroupAttributeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.</p>
+     * <p>The region ID of the Global Accelerator (GA) instance. Set the value to **cn-hangzhou**.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

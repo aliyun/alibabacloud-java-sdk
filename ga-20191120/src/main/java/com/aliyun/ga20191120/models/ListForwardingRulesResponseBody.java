@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListForwardingRulesResponseBody extends TeaModel {
     /**
-     * <p>The information about the forwarding rules.</p>
+     * <p>The forwarding rules.</p>
      */
     @NameInMap("ForwardingRules")
     public java.util.List<ListForwardingRulesResponseBodyForwardingRules> forwardingRules;
@@ -84,9 +84,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples extends TeaModel {
         /**
-         * <p>The ID of the endpoint group.</p>
+         * <p>The endpoint group ID.</p>
          * <br>
-         * <p>>  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you call **RuleActionType** and **RuleActionValue** to query forwarding actions.</p>
+         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
@@ -108,9 +108,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfig extends TeaModel {
         /**
-         * <p>The information about the endpoint group.</p>
+         * <p>The information about the endpoint groups.</p>
          * <br>
-         * <p>>  For GA instances created after July 12, 2022, all forwarding condition types and forwarding action types are supported. We recommend that you call **RuleActionType** and **RuleActionValue** to query forwarding actions.</p>
+         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
          */
         @NameInMap("ServerGroupTuples")
         public java.util.List<ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfigServerGroupTuples> serverGroupTuples;
@@ -132,9 +132,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleActions extends TeaModel {
         /**
-         * <p>The forwarding configurations.</p>
+         * <p>The forwarding action configuration.</p>
          * <br>
-         * <p>>  We recommend that you do not use this parameter. We recommend that you use the **RuleActionType** and **RuleActionValue** parameters to configure forwarding actions.</p>
+         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
          */
         @NameInMap("ForwardGroupConfig")
         public ListForwardingRulesResponseBodyForwardingRulesRuleActionsForwardGroupConfig forwardGroupConfig;
@@ -142,7 +142,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The forwarding priority.</p>
          * <br>
-         * <p>>  This parameter does not take effect. Ignore this parameter.</p>
+         * <p>>  This parameter does not take effect.</p>
          */
         @NameInMap("Order")
         public Integer order;
@@ -150,12 +150,12 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The type of the forwarding action. Valid values:</p>
          * <br>
-         * <p>*   **ForwardGroup**: forwards a request.</p>
-         * <p>*   **Redirect**: redirects a request.</p>
-         * <p>*   **FixResponse**: returns a fixed response.</p>
-         * <p>*   **Rewrite**: rewrites a request.</p>
-         * <p>*   **AddHeader**: adds a header to a request.</p>
-         * <p>*   **RemoveHeader**: deletes the header of a request.</p>
+         * <p>*   **ForwardGroup:** forwards a request.</p>
+         * <p>*   **Redirect:** redirects a request.</p>
+         * <p>*   **FixResponse:** returns a fixed response.</p>
+         * <p>*   **Rewrite:** rewrites a request.</p>
+         * <p>*   **AddHeader:** adds a header to a request.</p>
+         * <p>*   **RemoveHeaderConfig:** deletes the header of a request.</p>
          */
         @NameInMap("RuleActionType")
         public String ruleActionType;
@@ -163,43 +163,41 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The value of the forwarding action type.</p>
          * <br>
-         * <p>You must specify different JSON strings based on the **RuleActionType** parameter.</p>
+         * <p>Different JSON strings are returned based on the value of the **RuleActionType** parameter.</p>
          * <br>
-         * <p>A forwarding rule can contain only one forwarding action whose type is **ForwardGroup**, **Redirect**, or **FixResponse**. You must specify a forwarding action whose type is **Rewrite**, **AddHeader**, or **RemoveHeader** before a forwarding action whose type is **ForwardGroup**.</p>
+         * <p>*   If you set **RuleActionType** to **ForwardGroup**, the information about a virtual endpoint group is returned. Parameter configuration:</p>
          * <br>
-         * <p>*   If **RuleActionType** is set to **ForwardGroup**, this parameter specifies the information of a virtual endpoint group. You can forward requests to only one virtual endpoint group. Example: `{"type":"endpointgroup", "value":"epg-bp1enpdcrqhl78g6r****"}`.</p>
+         * <p>    *   `type:` the type of the resource that is returned. The value is `endpointgroup`.</p>
+         * <p>    *   `value:` the ID of the virtual endpoint group that is returned.</p>
          * <br>
-         * <p>    *   `type`: set this parameter to `endpointgroup`.</p>
-         * <p>    *   `value`: set this parameter to the ID of a virtual endpoint group.</p>
+         * <p>*   If you set **RuleActionType** to **Redirect**, the redirecting configuration is returned. Parameter configuration:</p>
          * <br>
-         * <p>*   If **RuleActionType** is set to **Redirect**, this parameter specifies redirecting configurations. You cannot leave all of the following parameters empty or configure all of these parameters to use the default values for a forwarding action whose type is **Redirect**: `protocol`, `domain`, `port`, `path`, and `query`. Example: `{"protocol":"HTTP", "domain":"www.example.com", "port":"80", "path":"/a","query":"value1", "code":"301" }`.</p>
+         * <p>    *   `protocol:` the protocol of requests after the requests are redirected.</p>
+         * <p>    *   `domain:` the domain name to which requests are redirected.</p>
+         * <p>    *   `port:` the port to which requests are redirected.</p>
+         * <p>    *   `path:` the path to which requests are redirected.</p>
+         * <p>    *   `query:` the query string of the requests that are redirected.</p>
+         * <p>    *   `code:` the redirecting code.</p>
          * <br>
-         * <p>    *   `protocol`: the protocol of requests after the requests are redirected. Valid values: `${protocol}` (default), `HTTP`, and `HTTPS`.</p>
-         * <p>    *   `domain`: the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ &  ( ) [ ]`.</p>
-         * <p>    *   `port`: the port to which requests are redirected. Default value: `${port}`. You can enter a port number that ranges from 1 to 63335.</p>
-         * <p>    *   `path`: the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + `. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).</p>
-         * <p>    *   `query`: the query string of the requests to be redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > #  &`.</p>
-         * <p>    *   `code`: the redirecting code. Valid values: `301`, `302`, `303`, `307`, and `308`.</p>
+         * <p>*   If you set **RuleActionType** to **FixResponse**, the information about the fixed response that you configured is returned. Parameter configuration:</p>
          * <br>
-         * <p>*   If **RuleActionType** is set to **FixResponse**, this parameter specifies a fixed response. Example: `{"code":"200", "type":"text/plain", "content":"dssacav" }`.</p>
+         * <p>    *   `code:` the HTTP status code that is returned.</p>
+         * <p>    *   `type:` the type of the response content that is returned.</p>
+         * <p>    *   `content:` the response content that is returned.</p>
          * <br>
-         * <p>    *   `code`: the HTTP status code to return. The response status code must be one of the following numeric strings: `2xx`, `4xx`, and `5xx`. The letter `x` indicates a number from 0 to 9.</p>
-         * <p>    *   `type`: the type of the response content. Valid values: **text/plain**, **text/css**, **text/html**, **application/javascript**, and **application/json**.</p>
-         * <p>    *   `content`: the response content. The response content cannot exceed 1,000 characters in length and does not support Chinese characters.</p>
+         * <p>*   If **RuleActionType** is set to **AddHeader**, the information about the HTTP header that is added is returned. Parameter configuration:</p>
          * <br>
-         * <p>*   If **RuleActionType** is set to **AddHeader**, this parameter specifies an HTTP header to be added. If a forwarding rule contains a forwarding action whose type is **AddHeader**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `[{"name":"header1","type":"userdefined", "value":"value"}]`.</p>
+         * <p>    *   `name:` the name of the HTTP header that is returned.</p>
+         * <p>    *   `type:` the content type of the HTTP header that is returned.</p>
+         * <p>    *   `value:` the content of the HTTP header that is returned.</p>
          * <br>
-         * <p>    *   `name`: the name of the HTTP header. The name must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The name of the HTTP header specified by **AddHeader** must be unique and cannot be the same as the name of the HTTP header specified by **RemoveHeader**.</p>
-         * <p>    *   `type`: the content type of the HTTP header. Valid values: `user-defined`, `ref`, and `system-defined`.</p>
-         * <p>    *   `value`: the content of the HTTP header. You cannot leave this parameter empty. If you set `type` to `user-defined`, the content must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The content can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `ref`, the content must be 1 to 128 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). The content cannot start or end with a space character. If you set `type` to `system-defined`, only `ClientSrcIp` is supported.</p>
+         * <p>*   If you set **RuleActionType** to **RemoveHeader**, the information about the HTTP header that is deleted is returned.</p>
          * <br>
-         * <p>*   If **RuleActionType** is set to **RemoveHeader**, this parameter specifies an HTTP header to be removed. If a forwarding rule contains a forwarding action whose type is **RemoveHeader**, you must specify another forwarding action whose type is **ForwardGroup**. The header must be 1 to 40 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). Example: `["header1"]`.</p>
+         * <p>*   If you set **RuleActionType** to **Rewrite**, the rewriting configuration is returned. Parameter configuration:</p>
          * <br>
-         * <p>*   If **RuleActionType** is set to **Rewrite**, this parameter specifies the rewriting configuration. If a forwarding rule contains a forwarding action whose type is **Rewrite**, you must specify another forwarding action whose type is **ForwardGroup**. Example: `{"domain":"value1", "path":"value2", "query":"value3"}`.</p>
-         * <br>
-         * <p>    *   `domain`: the domain name to which requests are redirected. Default value: `${host}`. You can also enter a domain name. The domain name must be 3 to 128 characters in length, and can contain only lowercase letters, digits, and the following special characters: `. - ? = ~ _ - + / ^ * ! $ &  ( ) [ ]`.</p>
-         * <p>    *   `path`: the path to which requests are redirected. Default value: `${path}`. The path must be 1 to 128 characters in length. To use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? ~ ^ * $ : ( ) [ ] + `. The path must start with a tilde (~). If you do not want to use a regular expression, the path can contain letters, digits, and the following special characters: `. - _ / = ? :`. The path must start with a forward slash (/).</p>
-         * <p>    *   `query`: the query string of the requests to be redirected. Default value: `${query}`. You can also specify a query string. The query string must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. The query string cannot contain uppercase letters, space characters, or the following special characters: `[ ] { } < > #  &`.</p>
+         * <p>    *   `domain:` the domain name to which requests are redirected.</p>
+         * <p>    *   `path:` the path to which requests are redirected.</p>
+         * <p>    *   `query:` the query string of the requests that are redirected.</p>
          */
         @NameInMap("RuleActionValue")
         public String ruleActionValue;
@@ -245,11 +243,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleConditionsHostConfig extends TeaModel {
         /**
-         * <p>The domain name.</p>
+         * <p>The domain name configuration.</p>
          * <br>
-         * <p>The domain name must be 3 to 128 characters in length, and can contain letters, digits, hyphens (-), and periods (.). Supported wildcard characters are asterisks (\*) and question marks (?).</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions by calling the **RuleConditionType** and **RuleConditionValue** operations.</p>
+         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -271,11 +267,9 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleConditionsPathConfig extends TeaModel {
         /**
-         * <p>The path.</p>
+         * <p>The path configuration.</p>
          * <br>
-         * <p>The path must be 1 to 128 characters in length and must start with a forward slash (/). The path can contain only letters, digits, and the following special characters: $ - \_ . + / & ~ @ : \". Supported wildcard characters are asterisks (\*) and question marks (?).</p>
-         * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions by calling the **RuleConditionType** and **RuleConditionValue** operations.</p>
+         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -297,31 +291,31 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     public static class ListForwardingRulesResponseBodyForwardingRulesRuleConditions extends TeaModel {
         /**
-         * <p>The configuration of the domain name.</p>
+         * <p>The domain name configuration.</p>
          * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions by calling the **RuleConditionType** and **RuleConditionValue** operations.</p>
+         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
          */
         @NameInMap("HostConfig")
         public ListForwardingRulesResponseBodyForwardingRulesRuleConditionsHostConfig hostConfig;
 
         /**
-         * <p>The configuration of the path.</p>
+         * <p>The path configuration.</p>
          * <br>
-         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions by calling the **RuleConditionType** and **RuleConditionValue** operations.</p>
+         * <p>>  GA instances created after July 12, 2022 support all forwarding condition types and action types. We recommend that you query forwarding conditions and actions by calling the **RuleActionType** and **RuleActionValue** operations.</p>
          */
         @NameInMap("PathConfig")
         public ListForwardingRulesResponseBodyForwardingRulesRuleConditionsPathConfig pathConfig;
 
         /**
-         * <p>The type of the forwarding condition.</p>
+         * <p>The type of the forwarding condition. Valid values:</p>
          * <br>
-         * <p>*   **Host**: domain name</p>
-         * <p>*   **Path**: path</p>
-         * <p>*   **RequestHeader**: HTTP header</p>
-         * <p>*   **Query**: query string</p>
-         * <p>*   **Method**: HTTP method</p>
-         * <p>*   **Cookie**: cookie</p>
-         * <p>*   **SourceIP**: source IP address</p>
+         * <p>*   **Host:** domain name.</p>
+         * <p>*   **Path:** path.</p>
+         * <p>*   **RequestHeader:** HTTP header.</p>
+         * <p>*   **Query:** query string.</p>
+         * <p>*   **Method:** HTTP method.</p>
+         * <p>*   **Cookie:** cookie.</p>
+         * <p>*   **SourceIP:** source IP address.</p>
          */
         @NameInMap("RuleConditionType")
         public String ruleConditionType;
@@ -329,15 +323,15 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The value of the forwarding condition type.</p>
          * <br>
-         * <p>Different JSON strings are returned based on the **RuleConditionType** parameter.</p>
+         * <p>Different JSON strings are returned based on the value of the **RuleConditionType** parameter.</p>
          * <br>
-         * <p>*   If **RuleConditionType** is set to **Host**, a domain name condition is returned. If multiple domain names are returned in a forwarding condition, the relationship between the domain names is OR.</p>
-         * <p>*   If **RuleConditionType** is set to **Path**, a path condition is returned. If multiple forwarding conditions whose types are path are returned in a forwarding rule, the relationship between the forwarding conditions is OR. If multiple paths are returned in a forwarding condition, the relationship between the paths is OR.</p>
-         * <p>*   If **RuleConditionType** is set to **RequestHeader**, an HTTP header condition that consists of key-value pairs is returned.</p>
-         * <p>*   If **RuleConditionType** is set to **Query**, a query string condition that consists of key-value pairs is returned.</p>
-         * <p>*   If **RuleConditionType** is set to **Method**, an HTTP method condition is returned.</p>
-         * <p>*   If **RuleConditionType** is set to **Cookie**, a cookie condition that consists of key-value pairs is returned.</p>
-         * <p>*   If **RuleConditionType** is set to **SourceIP**, a source IP address condition is returned. If multiple source IP addresses are returned in a forwarding condition, the relationship between the source IP addresses is OR.</p>
+         * <p>*   If you set **RuleConditionType** to **Host**, a domain name condition is returned. If multiple domain names are returned in a forwarding condition, the relationship between the domain names is OR.</p>
+         * <p>*   If you set **RuleConditionType** to **Path**, a path condition is returned. If multiple forwarding conditions of the path type are returned in a forwarding rule, the relationship between the forwarding conditions is OR. If multiple paths are returned in a forwarding condition, the relationship between the paths is OR.</p>
+         * <p>*   If you set **RuleConditionType** to **RequestHeader**, an HTTP header condition that consists of key-value pairs is returned.</p>
+         * <p>*   If you set **RuleConditionType** to **Query**, a query string condition that consists of key-value pairs is returned.</p>
+         * <p>*   If you set **RuleConditionType** to **Method**, an HTTP method condition is returned.</p>
+         * <p>*   If you set **RuleConditionType** to **Cookie**, a cookie condition that consists of key-value pairs is returned.</p>
+         * <p>*   If you set **RuleConditionType** to **SourceIP**, a source IP address condition is returned. If multiple source IP addresses are returned in a forwarding condition, the relationship between the source IP addresses is OR.</p>
          */
         @NameInMap("RuleConditionValue")
         public String ruleConditionValue;
@@ -461,29 +455,29 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         public String forwardingRuleDirection;
 
         /**
-         * <p>The ID of the forwarding rule.</p>
+         * <p>The forwarding rule ID.</p>
          */
         @NameInMap("ForwardingRuleId")
         public String forwardingRuleId;
 
         /**
-         * <p>The name of the forwarding rule.</p>
+         * <p>The forwarding rule name.</p>
          */
         @NameInMap("ForwardingRuleName")
         public String forwardingRuleName;
 
         /**
-         * <p>The status of the forwarding rule.</p>
+         * <p>The state of the forwarding rule. Valid values:</p>
          * <br>
-         * <p>*   **active**: The forwarding rule is normal.</p>
-         * <p>*   **configuring**: The forwarding rule is being modified.</p>
-         * <p>*   **deleting**: The forwarding rule is being deleted.</p>
+         * <p>*   **active:** The forwarding rule is normal.</p>
+         * <p>*   **configuring:** The forwarding rule is being modified.</p>
+         * <p>*   **deleting:** The forwarding rule is being deleted.</p>
          */
         @NameInMap("ForwardingRuleStatus")
         public String forwardingRuleStatus;
 
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The listener ID.</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
@@ -491,19 +485,19 @@ public class ListForwardingRulesResponseBody extends TeaModel {
         /**
          * <p>The priority of the forwarding rule.</p>
          * <br>
-         * <p>Valid values: **1** to **10000**. A lower value indicates a higher priority.</p>
+         * <p>A value between **1** and **10000** is returned. A smaller value indicates a higher priority.</p>
          */
         @NameInMap("Priority")
         public Integer priority;
 
         /**
-         * <p>The forwarding action.</p>
+         * <p>The forwarding actions.</p>
          */
         @NameInMap("RuleActions")
         public java.util.List<ListForwardingRulesResponseBodyForwardingRulesRuleActions> ruleActions;
 
         /**
-         * <p>The forwarding conditions.</p>
+         * <p>The conditions that trigger the forwarding rule.</p>
          */
         @NameInMap("RuleConditions")
         public java.util.List<ListForwardingRulesResponseBodyForwardingRulesRuleConditions> ruleConditions;
