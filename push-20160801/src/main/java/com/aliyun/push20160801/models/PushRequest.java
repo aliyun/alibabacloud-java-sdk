@@ -19,6 +19,9 @@ public class PushRequest extends TeaModel {
     @NameInMap("AndroidExtParameters")
     public String androidExtParameters;
 
+    @NameInMap("AndroidHonorTargetUserType")
+    public Integer androidHonorTargetUserType;
+
     @NameInMap("AndroidHuaweiReceiptId")
     public String androidHuaweiReceiptId;
 
@@ -93,6 +96,9 @@ public class PushRequest extends TeaModel {
 
     @NameInMap("AndroidRenderStyle")
     public Integer androidRenderStyle;
+
+    @NameInMap("AndroidTargetUserType")
+    public Integer androidTargetUserType;
 
     @NameInMap("AndroidVivoPushMode")
     public Integer androidVivoPushMode;
@@ -261,6 +267,14 @@ public class PushRequest extends TeaModel {
     }
     public String getAndroidExtParameters() {
         return this.androidExtParameters;
+    }
+
+    public PushRequest setAndroidHonorTargetUserType(Integer androidHonorTargetUserType) {
+        this.androidHonorTargetUserType = androidHonorTargetUserType;
+        return this;
+    }
+    public Integer getAndroidHonorTargetUserType() {
+        return this.androidHonorTargetUserType;
     }
 
     public PushRequest setAndroidHuaweiReceiptId(String androidHuaweiReceiptId) {
@@ -461,6 +475,14 @@ public class PushRequest extends TeaModel {
     }
     public Integer getAndroidRenderStyle() {
         return this.androidRenderStyle;
+    }
+
+    public PushRequest setAndroidTargetUserType(Integer androidTargetUserType) {
+        this.androidTargetUserType = androidTargetUserType;
+        return this;
+    }
+    public Integer getAndroidTargetUserType() {
+        return this.androidTargetUserType;
     }
 
     public PushRequest setAndroidVivoPushMode(Integer androidVivoPushMode) {

@@ -260,7 +260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
       *
       * @param request CheckDeviceRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -296,7 +296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : CheckDevice is deprecated, please use Push::2016-08-01::CheckDevices instead.
       *
       * @param request CheckDeviceRequest
       * @return CheckDeviceResponse
@@ -415,7 +415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
       *
       * @param request ListSummaryAppsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -439,7 +439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated
+      * @deprecated : ListSummaryApps is deprecated, please use Mhub::2017-08-25::ListApps instead.
       *
       * @return ListSummaryAppsResponse
      */
@@ -534,6 +534,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidExtParameters)) {
             query.put("AndroidExtParameters", request.androidExtParameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidHonorTargetUserType)) {
+            query.put("AndroidHonorTargetUserType", request.androidHonorTargetUserType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidHuaweiReceiptId)) {
@@ -634,6 +638,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidRenderStyle)) {
             query.put("AndroidRenderStyle", request.androidRenderStyle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.androidTargetUserType)) {
+            query.put("AndroidTargetUserType", request.androidTargetUserType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.androidVivoPushMode)) {
@@ -833,6 +841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("JobKey", request.jobKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.storeOffline)) {
+            query.put("StoreOffline", request.storeOffline);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
             query.put("Target", request.target);
         }
@@ -880,6 +892,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobKey)) {
             query.put("JobKey", request.jobKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storeOffline)) {
+            query.put("StoreOffline", request.storeOffline);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
@@ -933,6 +949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.jobKey)) {
             query.put("JobKey", request.jobKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storeOffline)) {
+            query.put("StoreOffline", request.storeOffline);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {

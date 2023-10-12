@@ -38,6 +38,9 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         @NameInMap("Alias")
         public String alias;
 
+        @NameInMap("Brand")
+        public String brand;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
@@ -49,6 +52,9 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
 
         @NameInMap("LastOnlineTime")
         public String lastOnlineTime;
+
+        @NameInMap("Model")
+        public String model;
 
         @NameInMap("Online")
         public Boolean online;
@@ -83,6 +89,14 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
             return this.alias;
         }
 
+        public QueryDeviceInfoResponseBodyDeviceInfo setBrand(String brand) {
+            this.brand = brand;
+            return this;
+        }
+        public String getBrand() {
+            return this.brand;
+        }
+
         public QueryDeviceInfoResponseBodyDeviceInfo setDeviceId(String deviceId) {
             this.deviceId = deviceId;
             return this;
@@ -113,6 +127,14 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
         }
         public String getLastOnlineTime() {
             return this.lastOnlineTime;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
         }
 
         public QueryDeviceInfoResponseBodyDeviceInfo setOnline(Boolean online) {
