@@ -4,9 +4,15 @@ package com.aliyun.oos20190601.models;
 import com.aliyun.tea.*;
 
 public class GetOpsItemRequest extends TeaModel {
+    /**
+     * <p>The O\&M item ID.</p>
+     */
     @NameInMap("OpsItemId")
     public String opsItemId;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

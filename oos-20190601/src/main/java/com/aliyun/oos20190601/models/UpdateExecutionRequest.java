@@ -34,9 +34,15 @@ public class UpdateExecutionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource group ID.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The tags of the execution.</p>
+     */
     @NameInMap("Tags")
     public String tags;
 

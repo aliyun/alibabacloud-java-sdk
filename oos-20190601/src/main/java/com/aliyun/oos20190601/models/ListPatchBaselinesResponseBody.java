@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class ListPatchBaselinesResponseBody extends TeaModel {
     /**
-     * <p>The type of the operating system.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC</p>
+     * <p>The token that is used to retrieve the next page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>Indicates whether the patch baseline is set as the default patch baseline.</p>
+     * <p>The patch baselines.</p>
      */
     @NameInMap("PatchBaselines")
     public java.util.List<ListPatchBaselinesResponseBodyPatchBaselines> patchBaselines;
 
     /**
-     * <p>The details of the patch baselines.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,13 +67,13 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
     public static class ListPatchBaselinesResponseBodyPatchBaselinesTags extends TeaModel {
         /**
-         * <p>标签键。</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
-         * <p>标签值。</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("TagValue")
         public String tagValue;
@@ -103,88 +103,91 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
     public static class ListPatchBaselinesResponseBodyPatchBaselines extends TeaModel {
         /**
-         * <p>批准补丁的列表。</p>
+         * <p>The approved patches.</p>
          */
         @NameInMap("ApprovedPatches")
         public java.util.List<String> approvedPatches;
 
         /**
-         * <p>批准补丁是否包括除安全性之外的更新</p>
+         * <p>Indicates whether the approved patch involves updates other than security-related updates.</p>
          */
         @NameInMap("ApprovedPatchesEnableNonSecurity")
         public Boolean approvedPatchesEnableNonSecurity;
 
         /**
-         * <p>The name of the patch baseline.</p>
+         * <p>The user who created the patch baseline.</p>
          */
         @NameInMap("CreatedBy")
         public String createdBy;
 
         /**
-         * <p>The ID of the patch baseline.</p>
+         * <p>The time when the patch baseline was created.</p>
          */
         @NameInMap("CreatedDate")
         public String createdDate;
 
         /**
-         * <p>The user who last modified the patch baseline.</p>
+         * <p>The description of the patch baseline.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Queries the details of patch baselines.</p>
+         * <p>The ID of the patch baseline.</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
-         * <p>The time when the patch baseline was last modified.</p>
+         * <p>Indicates whether the patch baseline is set as the default patch baseline.</p>
          */
         @NameInMap("IsDefault")
         public Boolean isDefault;
 
         /**
-         * <p>The share type of the patch baseline.</p>
+         * <p>The name of the patch baseline.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The description of the patch baseline.</p>
+         * <p>The type of the operating system.</p>
          */
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        /**
+         * <p>The resource group ID.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>Queries the details of patch baselines.</p>
+         * <p>The share type of the patch baseline.</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
-         * <p>补丁源配置列表。</p>
+         * <p>The patch source configurations.</p>
          */
         @NameInMap("Sources")
         public java.util.List<String> sources;
 
         /**
-         * <p>标签。</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListPatchBaselinesResponseBodyPatchBaselinesTags> tags;
 
         /**
-         * <p>The time when the patch baseline was created.</p>
+         * <p>The user who last updated the patch baseline.</p>
          */
         @NameInMap("UpdatedBy")
         public String updatedBy;
 
         /**
-         * <p>The creator of the patch baseline.</p>
+         * <p>The time when the patch baseline was updated.</p>
          */
         @NameInMap("UpdatedDate")
         public String updatedDate;

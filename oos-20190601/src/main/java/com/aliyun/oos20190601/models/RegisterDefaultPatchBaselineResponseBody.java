@@ -11,7 +11,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
     public RegisterDefaultPatchBaselineResponseBodyPatchBaseline patchBaseline;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -75,11 +75,14 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the operating system.</p>
+         * <p>The operating system.</p>
          */
         @NameInMap("OperationSystem")
         public String operationSystem;
 
+        /**
+         * <p>The ID of the resource group.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
