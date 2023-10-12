@@ -220,6 +220,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("ProvisionedIops")
+    public String provisionedIops;
+
     /**
      * <p>The number of CPU cores for PolarProxy.</p>
      */
@@ -629,6 +632,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public DescribeDBClusterAttributeResponseBody setProvisionedIops(String provisionedIops) {
+        this.provisionedIops = provisionedIops;
+        return this;
+    }
+    public String getProvisionedIops() {
+        return this.provisionedIops;
     }
 
     public DescribeDBClusterAttributeResponseBody setProxyCpuCores(String proxyCpuCores) {
