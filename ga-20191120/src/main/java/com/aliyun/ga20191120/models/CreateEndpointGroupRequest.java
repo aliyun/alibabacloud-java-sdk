@@ -330,6 +330,10 @@ public class CreateEndpointGroupRequest extends TeaModel {
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The private IP address of the ENI.</p>
+         * <p>> - When the Endpoint type is **ENI**, this parameter can be configured. If not configured, it defaults to the primary private IP address of ENI.</p>
+         */
         @NameInMap("SubAddress")
         public String subAddress;
 
@@ -339,10 +343,12 @@ public class CreateEndpointGroupRequest extends TeaModel {
          * <p>*   **Domain:** a custom domain name.</p>
          * <p>*   **Ip:** a custom IP address.</p>
          * <p>*   **PublicIp:** a public IP address provided by Alibaba Cloud.</p>
-         * <p>*   **ECS:** an Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **SLB:** a Server Load Balancer (SLB) instance.</p>
-         * <p>*   **ALB:** an Application Load Balancer (ALB) instance.</p>
-         * <p>*   **OSS:** an Object Storage Service (OSS) bucket.</p>
+         * <p>*   **ECS:** Elastic Compute Service (ECS) instance.</p>
+         * <p>*   **SLB:** Server Load Balancer (SLB) instance.</p>
+         * <p>*   **ALB:** Application Load Balancer (ALB) instance.</p>
+         * <p>*   **OSS:** Object Storage Service (OSS) bucket.</p>
+         * <p>*   **ENI:** Elastic Network interface (ENI).</p>
+         * <p>*   **NLB:** Network Load Balancer (NLB) instance.</p>
          * <br>
          * <p>> *   If you set this parameter to **ECS** or **SLB** and the service-linked role AliyunServiceRoleForGaVpcEndpoint does not exist, the system automatically creates the service-linked role.</p>
          * <p>>*   If you set this parameter to **ALB** and the service-linked role AliyunServiceRoleForGaAlb does not exist, the system automatically creates the service-linked role.</p>

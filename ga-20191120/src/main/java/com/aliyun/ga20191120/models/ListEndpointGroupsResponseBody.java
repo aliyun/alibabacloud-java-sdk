@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEndpointGroupsResponseBody extends TeaModel {
     /**
-     * <p>The configurations of the endpoint group.</p>
+     * <p>The configurations of the endpoint groups.</p>
      */
     @NameInMap("EndpointGroups")
     public java.util.List<ListEndpointGroupsResponseBodyEndpointGroups> endpointGroups;
@@ -83,8 +83,8 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the client IP address preservation feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: The client IP address preservation feature is enabled.</p>
-         * <p>*   **false**: The client IP address preservation feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableClientIPPreservation")
         public Boolean enableClientIPPreservation;
@@ -96,7 +96,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The ID of the endpoint.</p>
+         * <p>The endpoint ID.</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
@@ -110,12 +110,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used to monitor latency. Valid values:</p>
          * <br>
-         * <p>*   **icmp**: ICMP</p>
-         * <p>*   **tcp**: TCP</p>
+         * <p>*   **icmp**</p>
+         * <p>*   **tcp**</p>
          */
         @NameInMap("ProbeProtocol")
         public String probeProtocol;
 
+        /**
+         * <p>弹性网卡的私网IP地址。</p>
+         */
         @NameInMap("SubAddress")
         public String subAddress;
 
@@ -248,38 +251,39 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     public static class ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos extends TeaModel {
         /**
-         * <p>Managed policy action name, Valid values:</p>
-         * <p>- Create</p>
-         * <p>- Update</p>
-         * <p>- Delete</p>
-         * <p>- Associate</p>
-         * <p>- UserUnmanaged</p>
-         * <p>- CreateChild</p>
+         * <p>The name of the action on the managed instance. Valid values:</p>
+         * <br>
+         * <p>*   **Create**</p>
+         * <p>*   **Update**</p>
+         * <p>*   **Delete**</p>
+         * <p>*   **Associate**</p>
+         * <p>*   **UserUnmanaged**</p>
+         * <p>*   **CreateChild**</p>
          */
         @NameInMap("Action")
         public String action;
 
         /**
-         * <p>Sub resource type, Valid values:</p>
+         * <p>The type of the child resource. Valid values:</p>
          * <br>
-         * <p>- Listener</p>
-         * <p>- IpSet</p>
-         * <p>- EndpointGroup</p>
-         * <p>- ForwardingRule</p>
-         * <p>- Endpoint</p>
-         * <p>- EndpointGroupDestination</p>
-         * <p>- EndpointPolicy</p>
-         * <p>>Only valid when the Action parameter is CreateChild.</p>
+         * <p>*   **Listener**: listener</p>
+         * <p>*   **IpSet**: acceleration region</p>
+         * <p>*   **EndpointGroup**: endpoint group</p>
+         * <p>*   **ForwardingRule**: forwarding rule</p>
+         * <p>*   **Endpoint**: endpoint</p>
+         * <p>*   **EndpointGroupDestination**: protocol mapping of an endpoint group associated with a custom routing listener</p>
+         * <p>*   **EndpointPolicy**: traffic policy of an endpoint associated with a custom routing listener</p>
+         * <br>
+         * <p>>  This parameter is valid only if **Action** is set to **CreateChild**.</p>
          */
         @NameInMap("ChildType")
         public String childType;
 
         /**
-         * <p>Is the managed policy action managed, Valid values:</p>
+         * <p>Indicates whether the specified actions are managed. Valid values:</p>
          * <br>
-         * <p>- true: The managed policy action is managed, and users do not have permission to perform the operation specified in the Action on the managed instance.</p>
-         * <br>
-         * <p>- false: The managed policy action is not managed, and users have permission to perform the operation specified in the Action on the managed instance.</p>
+         * <p>*   **true**: The specified actions are managed, and users cannot perform the specified actions on the managed instance.</p>
+         * <p>*   **false**: The specified actions are not managed, and users can perform the specified actions on the managed instance.</p>
          */
         @NameInMap("IsManaged")
         public Boolean isManaged;
@@ -353,7 +357,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     public static class ListEndpointGroupsResponseBodyEndpointGroups extends TeaModel {
         /**
-         * <p>The ID of the GA instance.</p>
+         * <p>The GA instance ID.</p>
          */
         @NameInMap("AcceleratorId")
         public String acceleratorId;
@@ -365,25 +369,25 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The configurations of the endpoint.</p>
+         * <p>The configurations of the endpoints in the endpoint group.</p>
          */
         @NameInMap("EndpointConfigurations")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> endpointConfigurations;
 
         /**
-         * <p>The ID of an endpoint group.</p>
+         * <p>The endpoint group ID.</p>
          */
         @NameInMap("EndpointGroupId")
         public String endpointGroupId;
 
         /**
-         * <p>The list of endpoint group IP addresses.</p>
+         * <p>The endpoint group IP addresses.</p>
          */
         @NameInMap("EndpointGroupIpList")
         public java.util.List<String> endpointGroupIpList;
 
         /**
-         * <p>The ID of the region where the endpoint group is deployed.</p>
+         * <p>The region ID of the endpoint group.</p>
          */
         @NameInMap("EndpointGroupRegion")
         public String endpointGroupRegion;
@@ -391,14 +395,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The type of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **default**: a default endpoint group</p>
-         * <p>*   **virtual**: a virtual endpoint group</p>
+         * <p>*   **default**</p>
+         * <p>*   **virtual**</p>
          */
         @NameInMap("EndpointGroupType")
         public String endpointGroupType;
 
         /**
-         * <p>The endpoint group IP addresses to be confirmed after the GA instance is upgraded.</p>
+         * <p>The endpoint group IP addresses to be confirmed. After the GA instance is upgraded, the IP addresses that are added to the endpoint group need to be confirmed.</p>
          */
         @NameInMap("EndpointGroupUnconfirmedIpList")
         public java.util.List<String> endpointGroupUnconfirmedIpList;
@@ -406,14 +410,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used by the backend service. Valid values:</p>
          * <br>
-         * <p>*   **HTTP**: HTTP</p>
-         * <p>*   **HTTPS**: HTTPS</p>
+         * <p>*   **HTTP**</p>
+         * <p>*   **HTTPS**</p>
          */
         @NameInMap("EndpointRequestProtocol")
         public String endpointRequestProtocol;
 
         /**
-         * <p>The ID of the forwarding rule that is associated with the endpoint group.</p>
+         * <p>The IDs of the forwarding rules that are associated with the endpoint group.</p>
          */
         @NameInMap("ForwardingRuleIds")
         public java.util.List<String> forwardingRuleIds;
@@ -421,8 +425,8 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the health check feature is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: The health check feature is enabled.</p>
-         * <p>*   **false**: The health check feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("HealthCheckEnabled")
         public Boolean healthCheckEnabled;
@@ -434,7 +438,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public Integer healthCheckIntervalSeconds;
 
         /**
-         * <p>The path to which health check requests are sent.</p>
+         * <p>The path based on which the system performs health checks.</p>
          */
         @NameInMap("HealthCheckPath")
         public String healthCheckPath;
@@ -448,15 +452,15 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         /**
          * <p>The protocol over which health check requests are sent. Valid values:</p>
          * <br>
-         * <p>*   **tcp**: TCP</p>
-         * <p>*   **http**: HTTP</p>
-         * <p>*   **https**: HTTPS</p>
+         * <p>*   **tcp**</p>
+         * <p>*   **http**</p>
+         * <p>*   **https**</p>
          */
         @NameInMap("HealthCheckProtocol")
         public String healthCheckProtocol;
 
         /**
-         * <p>The ID of the listener.</p>
+         * <p>The listener ID.</p>
          */
         @NameInMap("ListenerId")
         public String listenerId;
@@ -468,47 +472,51 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The mappings between ports.</p>
+         * <p>The port mapping.</p>
          */
         @NameInMap("PortOverrides")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsPortOverrides> portOverrides;
 
         /**
-         * <p>The service ID to which the managed instance belongs.</p>
+         * <p>The service that manages the instance.</p>
          * <br>
-         * <p>>  Valid only when the ServiceManaged parameter is True.</p>
+         * <p>>  This parameter is valid only if **ServiceManaged** is set to **True**.</p>
          */
         @NameInMap("ServiceId")
         public String serviceId;
 
         /**
-         * <p>Is it a managed instance. Valid values:</p>
+         * <p>Indicates whether the GA instance is managed. Valid values:</p>
          * <br>
-         * <p>- true</p>
-         * <p>- false</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
         /**
-         * <p>A list of action policies that users can execute on this managed instance.</p>
+         * <p>The actions that users can perform on the managed instance.</p>
+         * <br>
+         * <p>>  This parameter is valid only if **ServiceManaged** is set to **True**.</p>
+         * <br>
+         * <p>*   Users can perform only specific actions on a managed instance.</p>
          */
         @NameInMap("ServiceManagedInfos")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsServiceManagedInfos> serviceManagedInfos;
 
         /**
-         * <p>The state of the endpoint group. Valid values:</p>
+         * <p>The status of the endpoint group. Valid values:</p>
          * <br>
-         * <p>*   **init**: The endpoint group is being initialized.</p>
-         * <p>*   **active**: The endpoint group is running normally.</p>
-         * <p>*   **updating**:The endpoint group is being updated.</p>
-         * <p>*   **deleteing**: The endpoint group is being deleted.</p>
+         * <p>*   **init**</p>
+         * <p>*   **active**</p>
+         * <p>*   **updating**</p>
+         * <p>*   **deleteing**</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The tags of the endpoint groups.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsTags> tags;

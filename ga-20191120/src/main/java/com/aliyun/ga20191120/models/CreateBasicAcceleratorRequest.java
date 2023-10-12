@@ -54,9 +54,10 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     public String bandwidthBillingType;
 
     /**
-     * <p>The billing method of the basic GA instance. Valid values:</p>
-     * <p>- **PREPAY**: subscription. This is the default value.</p>
-     * <p>- **POSTPAY**: pay-as-you-go.</p>
+     * <p>The billing method. Valid values:</p>
+     * <br>
+     * <p>*   **PREPAY** (default)</p>
+     * <p>*   **POSTPAY**</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -83,17 +84,17 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
     /**
      * <p>The subscription duration of the GA instance.</p>
      * <br>
-     * <p>*   If you set the **PricingCycle** parameter to **Month**, the valid values for the **Duration** parameter are **1** to **9**.</p>
-     * <p>*   If you set the **PricingCycle** parameter to **Year**, the valid values for the **Duration** parameter are **1** to **3**.</p>
+     * <p>*   If you set **PricingCycle** to **Month**, the valid values for **Duration** are **1** to **9**.</p>
+     * <p>*   If you set **PricingCycle** to **Year**, the valid values for **Duration** are **1** to **3**.</p>
      */
     @NameInMap("Duration")
     public Integer duration;
 
     /**
-     * <p>The billing cycle of the basic GA instance. Valid values:</p>
+     * <p>The billing cycle. Valid values:</p>
      * <br>
-     * <p>*   **Month:** billed on a monthly basis.</p>
-     * <p>*   **Year:** billed on an annual basis.</p>
+     * <p>*   **Month**</p>
+     * <p>*   **Year**</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
@@ -243,9 +244,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
 
     public static class CreateBasicAcceleratorRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the basic GA instance. The tag key cannot be an empty string.</p>
+         * <p>The tag key. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>You can specify up to 20 tag keys.</p>
          */
@@ -253,9 +254,9 @@ public class CreateBasicAcceleratorRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the basic GA instance. The tag value cannot be an empty string.</p>
+         * <p>The tag value. The tag value cannot be an empty string.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.</p>
          * <br>
          * <p>You can specify up to 20 tag values.</p>
          */

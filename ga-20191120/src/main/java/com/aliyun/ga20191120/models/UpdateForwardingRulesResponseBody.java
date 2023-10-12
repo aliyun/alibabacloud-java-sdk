@@ -11,7 +11,7 @@ public class UpdateForwardingRulesResponseBody extends TeaModel {
     public java.util.List<UpdateForwardingRulesResponseBodyForwardingRules> forwardingRules;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class UpdateForwardingRulesResponseBody extends TeaModel {
 
     public static class UpdateForwardingRulesResponseBodyForwardingRules extends TeaModel {
         /**
-         * <p>The ID of the forwarding rule.</p>
+         * <p>The forwarding rule ID.</p>
          */
         @NameInMap("ForwardingRuleId")
         public String forwardingRuleId;

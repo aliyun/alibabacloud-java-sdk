@@ -113,7 +113,7 @@ public class TagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value of the GA resource. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value can be up to 128 characters in length and and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.</p>
          * <br>
          * <p>You can specify up to 20 tag values.</p>
          */

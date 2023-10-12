@@ -80,6 +80,22 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     public Integer silenceTime;
 
     /**
+     * <p>The state of the application monitor task. Valid values:</p>
+     * <br>
+     * <p>- **init**</p>
+     * <br>
+     * <p>- **active**</p>
+     * <br>
+     * <p>- **updating**</p>
+     * <br>
+     * <p>- **inactive**</p>
+     * <br>
+     * <p>- **deleting**</p>
+     */
+    @NameInMap("State")
+    public String state;
+
+    /**
      * <p>The ID of the origin probing task.</p>
      */
     @NameInMap("TaskId")
@@ -182,6 +198,14 @@ public class DescribeApplicationMonitorResponseBody extends TeaModel {
     }
     public Integer getSilenceTime() {
         return this.silenceTime;
+    }
+
+    public DescribeApplicationMonitorResponseBody setState(String state) {
+        this.state = state;
+        return this;
+    }
+    public String getState() {
+        return this.state;
     }
 
     public DescribeApplicationMonitorResponseBody setTaskId(String taskId) {
