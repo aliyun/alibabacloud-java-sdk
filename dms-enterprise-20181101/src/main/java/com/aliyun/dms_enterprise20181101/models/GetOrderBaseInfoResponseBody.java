@@ -118,6 +118,9 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
     }
 
     public static class GetOrderBaseInfoResponseBodyOrderBaseInfo extends TeaModel {
+        @NameInMap("AttachmentKey")
+        public String attachmentKey;
+
         /**
          * <p>The remarks of the ticket.</p>
          */
@@ -153,6 +156,9 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
          */
         @NameInMap("OrderId")
         public Long orderId;
+
+        @NameInMap("OriginAttachmentName")
+        public String originAttachmentName;
 
         /**
          * <p>The type of the ticket. For more information about the value of this parameter, see the request parameters of the [CreateOrder](~~465865~~) operation.</p>
@@ -209,6 +215,14 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetOrderBaseInfoResponseBodyOrderBaseInfo setAttachmentKey(String attachmentKey) {
+            this.attachmentKey = attachmentKey;
+            return this;
+        }
+        public String getAttachmentKey() {
+            return this.attachmentKey;
+        }
+
         public GetOrderBaseInfoResponseBodyOrderBaseInfo setComment(String comment) {
             this.comment = comment;
             return this;
@@ -255,6 +269,14 @@ public class GetOrderBaseInfoResponseBody extends TeaModel {
         }
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        public GetOrderBaseInfoResponseBodyOrderBaseInfo setOriginAttachmentName(String originAttachmentName) {
+            this.originAttachmentName = originAttachmentName;
+            return this;
+        }
+        public String getOriginAttachmentName() {
+            return this.originAttachmentName;
         }
 
         public GetOrderBaseInfoResponseBodyOrderBaseInfo setPluginType(String pluginType) {
