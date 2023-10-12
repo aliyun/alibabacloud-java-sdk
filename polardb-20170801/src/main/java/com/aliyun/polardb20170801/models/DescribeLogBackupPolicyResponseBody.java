@@ -5,31 +5,43 @@ import com.aliyun.tea.*;
 
 public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the log backup feature was enabled. Valid values:</p>
+     * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
      * <br>
-     * <p>*   0: disabled.</p>
-     * <p>*   1: enabled. By default, the log backup feature is enabled and cannot be disabled.</p>
+     * <p>*   0: The log backup feature is disabled.</p>
+     * <p>*   1: The log backup feature is enabled. By default, the log backup feature is enabled and cannot be disabled.</p>
      */
     @NameInMap("EnableBackupLog")
     public Integer enableBackupLog;
 
+    /**
+     * <p>The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see [Overview](~~72672~~).</p>
+     */
     @NameInMap("LogBackupAnotherRegionRegion")
     public String logBackupAnotherRegionRegion;
 
+    /**
+     * <p>The retention period of cross-region log backups. Valid values:</p>
+     * <br>
+     * <p>*   **0**: The cross-region backup feature is disabled.</p>
+     * <p>*   **30 to 7300**: Cross-region log backups are retained for 30 to 7,300 days.</p>
+     * <p>*   **-1**: The log backups are permanently retained.</p>
+     * <br>
+     * <p>>  When you create a cluster, the default value of this parameter is **0**.</p>
+     */
     @NameInMap("LogBackupAnotherRegionRetentionPeriod")
     public String logBackupAnotherRegionRetentionPeriod;
 
     /**
-     * <p>The retention period of the logs. Valid values:</p>
+     * <p>The retention period of the log backups. Valid values:</p>
      * <br>
-     * <p>*   7 to 7300: The logs are retained for 7 to 7,300 days.</p>
-     * <p>*   \-1: The logs are permanently retained.</p>
+     * <p>*   3 to 7300: The log backups are retained for 3 to 7,300 days.</p>
+     * <p>*   \-1: The log backups are permanently retained.</p>
      */
     @NameInMap("LogBackupRetentionPeriod")
     public Integer logBackupRetentionPeriod;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
