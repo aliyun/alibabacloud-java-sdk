@@ -22,6 +22,9 @@ public class DeleteDBClusterRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static DeleteDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDBClusterRequest self = new DeleteDBClusterRequest();
         return TeaModel.build(map, self);
@@ -57,6 +60,14 @@ public class DeleteDBClusterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DeleteDBClusterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -13,6 +13,9 @@ public class StopBEClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static StopBEClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         StopBEClusterRequest self = new StopBEClusterRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class StopBEClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public StopBEClusterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }
