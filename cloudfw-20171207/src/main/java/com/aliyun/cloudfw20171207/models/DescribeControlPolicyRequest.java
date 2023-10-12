@@ -106,6 +106,9 @@ public class DescribeControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("RepeatType")
+    public String repeatType;
+
     /**
      * <p>The source address in the access control policy. Fuzzy match is supported. The value of this parameter depends on the value of the SourceType parameter.</p>
      * <br>
@@ -209,6 +212,14 @@ public class DescribeControlPolicyRequest extends TeaModel {
     }
     public String getRelease() {
         return this.release;
+    }
+
+    public DescribeControlPolicyRequest setRepeatType(String repeatType) {
+        this.repeatType = repeatType;
+        return this;
+    }
+    public String getRepeatType() {
+        return this.repeatType;
     }
 
     public DescribeControlPolicyRequest setSource(String source) {

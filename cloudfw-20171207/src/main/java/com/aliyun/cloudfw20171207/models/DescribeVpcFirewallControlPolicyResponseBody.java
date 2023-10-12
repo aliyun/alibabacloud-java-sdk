@@ -98,6 +98,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
+        @NameInMap("CreateTime")
+        public Long createTime;
+
         /**
          * <p>The description of the access control policy.</p>
          */
@@ -166,6 +169,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DestinationType")
         public String destinationType;
 
+        @NameInMap("EndTime")
+        public Long endTime;
+
         @NameInMap("HitLastTime")
         public Long hitLastTime;
 
@@ -212,6 +218,18 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("Release")
         public String release;
 
+        @NameInMap("RepeatDays")
+        public java.util.List<Long> repeatDays;
+
+        @NameInMap("RepeatEndTime")
+        public String repeatEndTime;
+
+        @NameInMap("RepeatStartTime")
+        public String repeatStartTime;
+
+        @NameInMap("RepeatType")
+        public String repeatType;
+
         /**
          * <p>The source address in the access control policy. Valid values:</p>
          * <br>
@@ -241,6 +259,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
          */
         @NameInMap("SourceType")
         public String sourceType;
+
+        @NameInMap("SpreadCnt")
+        public Long spreadCnt;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static DescribeVpcFirewallControlPolicyResponseBodyPolicys build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcFirewallControlPolicyResponseBodyPolicys self = new DescribeVpcFirewallControlPolicyResponseBodyPolicys();
@@ -285,6 +309,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
         public java.util.List<String> getApplicationNameList() {
             return this.applicationNameList;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDescription(String description) {
@@ -359,6 +391,14 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.destinationType;
         }
 
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setHitLastTime(Long hitLastTime) {
             this.hitLastTime = hitLastTime;
             return this;
@@ -415,6 +455,38 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.release;
         }
 
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setRepeatDays(java.util.List<Long> repeatDays) {
+            this.repeatDays = repeatDays;
+            return this;
+        }
+        public java.util.List<Long> getRepeatDays() {
+            return this.repeatDays;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setRepeatEndTime(String repeatEndTime) {
+            this.repeatEndTime = repeatEndTime;
+            return this;
+        }
+        public String getRepeatEndTime() {
+            return this.repeatEndTime;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setRepeatStartTime(String repeatStartTime) {
+            this.repeatStartTime = repeatStartTime;
+            return this;
+        }
+        public String getRepeatStartTime() {
+            return this.repeatStartTime;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setRepeatType(String repeatType) {
+            this.repeatType = repeatType;
+            return this;
+        }
+        public String getRepeatType() {
+            return this.repeatType;
+        }
+
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setSource(String source) {
             this.source = source;
             return this;
@@ -445,6 +517,22 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
         public String getSourceType() {
             return this.sourceType;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setSpreadCnt(Long spreadCnt) {
+            this.spreadCnt = spreadCnt;
+            return this;
+        }
+        public Long getSpreadCnt() {
+            return this.spreadCnt;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

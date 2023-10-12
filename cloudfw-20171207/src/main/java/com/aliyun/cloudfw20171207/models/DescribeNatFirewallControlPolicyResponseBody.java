@@ -172,6 +172,9 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("DomainResolveType")
         public Integer domainResolveType;
 
+        @NameInMap("EndTime")
+        public Long endTime;
+
         /**
          * <p>The times when the access control policy was last hit. The value is a timestamp. Unit: seconds.</p>
          */
@@ -224,6 +227,18 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("Release")
         public String release;
 
+        @NameInMap("RepeatDays")
+        public java.util.List<Long> repeatDays;
+
+        @NameInMap("RepeatEndTime")
+        public String repeatEndTime;
+
+        @NameInMap("RepeatStartTime")
+        public String repeatStartTime;
+
+        @NameInMap("RepeatType")
+        public String repeatType;
+
         /**
          * <p>The source address in the access control policy. Valid values:</p>
          * <br>
@@ -261,6 +276,9 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
          */
         @NameInMap("SpreadCnt")
         public String spreadCnt;
+
+        @NameInMap("StartTime")
+        public Long startTime;
 
         public static DescribeNatFirewallControlPolicyResponseBodyPolicys build(java.util.Map<String, ?> map) throws Exception {
             DescribeNatFirewallControlPolicyResponseBodyPolicys self = new DescribeNatFirewallControlPolicyResponseBodyPolicys();
@@ -395,6 +413,14 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             return this.domainResolveType;
         }
 
+        public DescribeNatFirewallControlPolicyResponseBodyPolicys setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
         public DescribeNatFirewallControlPolicyResponseBodyPolicys setHitLastTime(Long hitLastTime) {
             this.hitLastTime = hitLastTime;
             return this;
@@ -451,6 +477,38 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             return this.release;
         }
 
+        public DescribeNatFirewallControlPolicyResponseBodyPolicys setRepeatDays(java.util.List<Long> repeatDays) {
+            this.repeatDays = repeatDays;
+            return this;
+        }
+        public java.util.List<Long> getRepeatDays() {
+            return this.repeatDays;
+        }
+
+        public DescribeNatFirewallControlPolicyResponseBodyPolicys setRepeatEndTime(String repeatEndTime) {
+            this.repeatEndTime = repeatEndTime;
+            return this;
+        }
+        public String getRepeatEndTime() {
+            return this.repeatEndTime;
+        }
+
+        public DescribeNatFirewallControlPolicyResponseBodyPolicys setRepeatStartTime(String repeatStartTime) {
+            this.repeatStartTime = repeatStartTime;
+            return this;
+        }
+        public String getRepeatStartTime() {
+            return this.repeatStartTime;
+        }
+
+        public DescribeNatFirewallControlPolicyResponseBodyPolicys setRepeatType(String repeatType) {
+            this.repeatType = repeatType;
+            return this;
+        }
+        public String getRepeatType() {
+            return this.repeatType;
+        }
+
         public DescribeNatFirewallControlPolicyResponseBodyPolicys setSource(String source) {
             this.source = source;
             return this;
@@ -489,6 +547,14 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
         }
         public String getSpreadCnt() {
             return this.spreadCnt;
+        }
+
+        public DescribeNatFirewallControlPolicyResponseBodyPolicys setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
         }
 
     }

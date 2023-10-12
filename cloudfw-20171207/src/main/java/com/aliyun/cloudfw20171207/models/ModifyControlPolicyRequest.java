@@ -109,6 +109,9 @@ public class ModifyControlPolicyRequest extends TeaModel {
     @NameInMap("Direction")
     public String direction;
 
+    @NameInMap("EndTime")
+    public Long endTime;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -140,6 +143,18 @@ public class ModifyControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("RepeatDays")
+    public java.util.List<Long> repeatDays;
+
+    @NameInMap("RepeatEndTime")
+    public String repeatEndTime;
+
+    @NameInMap("RepeatStartTime")
+    public String repeatStartTime;
+
+    @NameInMap("RepeatType")
+    public String repeatType;
+
     /**
      * <p>The source address in the access control policy.</p>
      * <br>
@@ -159,6 +174,9 @@ public class ModifyControlPolicyRequest extends TeaModel {
      */
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     public static ModifyControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyControlPolicyRequest self = new ModifyControlPolicyRequest();
@@ -253,6 +271,14 @@ public class ModifyControlPolicyRequest extends TeaModel {
         return this.direction;
     }
 
+    public ModifyControlPolicyRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public ModifyControlPolicyRequest setLang(String lang) {
         this.lang = lang;
         return this;
@@ -277,6 +303,38 @@ public class ModifyControlPolicyRequest extends TeaModel {
         return this.release;
     }
 
+    public ModifyControlPolicyRequest setRepeatDays(java.util.List<Long> repeatDays) {
+        this.repeatDays = repeatDays;
+        return this;
+    }
+    public java.util.List<Long> getRepeatDays() {
+        return this.repeatDays;
+    }
+
+    public ModifyControlPolicyRequest setRepeatEndTime(String repeatEndTime) {
+        this.repeatEndTime = repeatEndTime;
+        return this;
+    }
+    public String getRepeatEndTime() {
+        return this.repeatEndTime;
+    }
+
+    public ModifyControlPolicyRequest setRepeatStartTime(String repeatStartTime) {
+        this.repeatStartTime = repeatStartTime;
+        return this;
+    }
+    public String getRepeatStartTime() {
+        return this.repeatStartTime;
+    }
+
+    public ModifyControlPolicyRequest setRepeatType(String repeatType) {
+        this.repeatType = repeatType;
+        return this;
+    }
+    public String getRepeatType() {
+        return this.repeatType;
+    }
+
     public ModifyControlPolicyRequest setSource(String source) {
         this.source = source;
         return this;
@@ -291,6 +349,14 @@ public class ModifyControlPolicyRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public ModifyControlPolicyRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

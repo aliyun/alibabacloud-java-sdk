@@ -55,13 +55,13 @@ public class DescribeAssetListResponseBody extends TeaModel {
         /**
          * <p>The UID of the Alibaba Cloud account.</p>
          * <br>
-         * <p>> The value of this parameter indicates the management account to which the member is added.</p>
+         * <p>>  The value of this parameter indicates the management account to which the member is added.</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
 
         /**
-         * <p>The instance ID of the asset.</p>
+         * <p>The ID of the cloud resource with which the asset is associated.</p>
          */
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
@@ -72,6 +72,9 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @NameInMap("BindInstanceName")
         public String bindInstanceName;
 
+        /**
+         * <p>The timestamp when the asset is added to Cloud Firewall.</p>
+         */
         @NameInMap("CreateTimeStamp")
         public String createTimeStamp;
 
@@ -99,7 +102,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The UID of the member that is added to Cloud Firewall.</p>
+         * <p>The UID of the member.</p>
          */
         @NameInMap("MemberUid")
         public Long memberUid;
@@ -110,6 +113,13 @@ public class DescribeAssetListResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The time when the asset was added. Valid values:</p>
+         * <br>
+         * <p>*   **discovered in 1 hour**: within one hour.</p>
+         * <p>*   **discovered in 1 day**: within one day.</p>
+         * <p>*   **discovered in 7 days**: within seven days.</p>
+         */
         @NameInMap("NewResourceTag")
         public String newResourceTag;
 
@@ -125,10 +135,10 @@ public class DescribeAssetListResponseBody extends TeaModel {
         /**
          * <p>The status of the firewall. Valid values:</p>
          * <br>
-         * <p>*   **open**: The firewall is enabled.</p>
-         * <p>*   **opening**: The firewall is being enabled.</p>
-         * <p>*   **closed**: The firewall is disabled.</p>
-         * <p>*   **closing**: The firewall is being disabled.</p>
+         * <p>*   **open**: enabled.</p>
+         * <p>*   **opening**: being enabled.</p>
+         * <p>*   **closed**: disabled.</p>
+         * <p>*   **closing**: being disabled.</p>
          */
         @NameInMap("ProtectStatus")
         public String protectStatus;
@@ -142,8 +152,8 @@ public class DescribeAssetListResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the firewall is supported in the region in which the asset resides. Valid values:</p>
          * <br>
-         * <p>*   **enable**: supported</p>
-         * <p>*   **disable**: unsupported</p>
+         * <p>*   **enable**: yes</p>
+         * <p>*   **disable**: no</p>
          */
         @NameInMap("RegionStatus")
         public String regionStatus;
@@ -159,15 +169,15 @@ public class DescribeAssetListResponseBody extends TeaModel {
          * <br>
          * <p>*   **BastionHostEgressIP**: the egress IP address of a bastion host</p>
          * <p>*   **BastionHostIngressIP**: the ingress IP address of a bastion host</p>
-         * <p>*   **EcsEIP**: the EIP of an ECS instance</p>
+         * <p>*   **EcsEIP**: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</p>
          * <p>*   **EcsPublicIP**: the public IP address of an ECS instance</p>
          * <p>*   **EIP**: the EIP</p>
-         * <p>*   **EniEIP**: the EIP of an ENI</p>
+         * <p>*   **EniEIP**: the EIP of an elastic network interface (ENI)</p>
          * <p>*   **NatEIP**: the EIP of a NAT gateway</p>
-         * <p>*   **SlbEIP**: the EIP of an SLB instance</p>
+         * <p>*   **SlbEIP**: the EIP of a Server Load Balancer (SLB) instance</p>
          * <p>*   **SlbPublicIP**: the public IP address of an SLB instance</p>
          * <p>*   **NatPublicIP**: the public IP address of a NAT gateway</p>
-         * <p>*   **HAVIP**: the HAVIP</p>
+         * <p>*   **HAVIP**: the high-availability virtual IP address (HAVIP)</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -179,7 +189,7 @@ public class DescribeAssetListResponseBody extends TeaModel {
          * <p>*   **middle**: medium</p>
          * <p>*   **hight**: high</p>
          * <br>
-         * <p>> The value of this parameter is returned only when the UserType parameter is set to free.</p>
+         * <p>>  The value of this parameter is returned only when the UserType parameter is set to free.</p>
          */
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -187,24 +197,24 @@ public class DescribeAssetListResponseBody extends TeaModel {
         /**
          * <p>The status of the security group policy. Valid values:</p>
          * <br>
-         * <p>*   **pass**: delivered</p>
-         * <p>*   **block**: undelivered</p>
+         * <p>*   **pass**: applied</p>
+         * <p>*   **block**: not applied</p>
          * <p>*   **unsupport**: unsupported</p>
          */
         @NameInMap("SgStatus")
         public String sgStatus;
 
         /**
-         * <p>The time when the status of the security group policy was last checked. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the status of the security group was last checked. The value is a UNIX timestamp. Unit: seconds.</p>
          */
         @NameInMap("SgStatusTime")
         public Long sgStatusTime;
 
         /**
-         * <p>The status of traffic redirection for the asset. Valid values:</p>
+         * <p>Indicates whether traffic redirection is supported for the asset. Valid values:</p>
          * <br>
-         * <p>*   **enable**: Traffic redirection is enabled.</p>
-         * <p>*   **disable**: Traffic redirection is disabled.</p>
+         * <p>*   **enable**: yes</p>
+         * <p>*   **disable**: no</p>
          */
         @NameInMap("SyncStatus")
         public String syncStatus;

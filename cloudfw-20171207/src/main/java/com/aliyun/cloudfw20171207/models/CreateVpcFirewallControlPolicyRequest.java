@@ -90,6 +90,9 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("DestinationType")
     public String destinationType;
 
+    @NameInMap("EndTime")
+    public Long endTime;
+
     /**
      * <p>The language of the content within the request and response. Valid values:</p>
      * <br>
@@ -133,6 +136,18 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("RepeatDays")
+    public java.util.List<Long> repeatDays;
+
+    @NameInMap("RepeatEndTime")
+    public String repeatEndTime;
+
+    @NameInMap("RepeatStartTime")
+    public String repeatStartTime;
+
+    @NameInMap("RepeatType")
+    public String repeatType;
+
     /**
      * <p>The source address in the access control policy. </p>
      * <br>
@@ -150,6 +165,9 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
      */
     @NameInMap("SourceType")
     public String sourceType;
+
+    @NameInMap("StartTime")
+    public Long startTime;
 
     /**
      * <p>The ID of the policy group in which you want to create the access control policy. </p>
@@ -239,6 +257,14 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
         return this.destinationType;
     }
 
+    public CreateVpcFirewallControlPolicyRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public CreateVpcFirewallControlPolicyRequest setLang(String lang) {
         this.lang = lang;
         return this;
@@ -279,6 +305,38 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
         return this.release;
     }
 
+    public CreateVpcFirewallControlPolicyRequest setRepeatDays(java.util.List<Long> repeatDays) {
+        this.repeatDays = repeatDays;
+        return this;
+    }
+    public java.util.List<Long> getRepeatDays() {
+        return this.repeatDays;
+    }
+
+    public CreateVpcFirewallControlPolicyRequest setRepeatEndTime(String repeatEndTime) {
+        this.repeatEndTime = repeatEndTime;
+        return this;
+    }
+    public String getRepeatEndTime() {
+        return this.repeatEndTime;
+    }
+
+    public CreateVpcFirewallControlPolicyRequest setRepeatStartTime(String repeatStartTime) {
+        this.repeatStartTime = repeatStartTime;
+        return this;
+    }
+    public String getRepeatStartTime() {
+        return this.repeatStartTime;
+    }
+
+    public CreateVpcFirewallControlPolicyRequest setRepeatType(String repeatType) {
+        this.repeatType = repeatType;
+        return this;
+    }
+    public String getRepeatType() {
+        return this.repeatType;
+    }
+
     public CreateVpcFirewallControlPolicyRequest setSource(String source) {
         this.source = source;
         return this;
@@ -293,6 +351,14 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     }
     public String getSourceType() {
         return this.sourceType;
+    }
+
+    public CreateVpcFirewallControlPolicyRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public CreateVpcFirewallControlPolicyRequest setVpcFirewallId(String vpcFirewallId) {
