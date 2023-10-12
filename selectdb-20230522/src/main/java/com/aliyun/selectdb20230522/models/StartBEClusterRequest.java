@@ -13,6 +13,9 @@ public class StartBEClusterRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static StartBEClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         StartBEClusterRequest self = new StartBEClusterRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class StartBEClusterRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public StartBEClusterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

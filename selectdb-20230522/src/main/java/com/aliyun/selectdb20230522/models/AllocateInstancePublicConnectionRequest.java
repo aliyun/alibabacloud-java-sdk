@@ -16,6 +16,9 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static AllocateInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateInstancePublicConnectionRequest self = new AllocateInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public AllocateInstancePublicConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

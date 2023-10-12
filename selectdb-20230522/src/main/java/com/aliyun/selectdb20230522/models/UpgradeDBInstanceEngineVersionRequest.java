@@ -13,6 +13,9 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static UpgradeDBInstanceEngineVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceEngineVersionRequest self = new UpgradeDBInstanceEngineVersionRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpgradeDBInstanceEngineVersionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }
