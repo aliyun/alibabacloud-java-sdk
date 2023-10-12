@@ -16,6 +16,9 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     @NameInMap("JobKey")
     public String jobKey;
 
+    @NameInMap("StoreOffline")
+    public Boolean storeOffline;
+
     @NameInMap("Target")
     public String target;
 
@@ -60,6 +63,14 @@ public class PushNoticeToAndroidRequest extends TeaModel {
     }
     public String getJobKey() {
         return this.jobKey;
+    }
+
+    public PushNoticeToAndroidRequest setStoreOffline(Boolean storeOffline) {
+        this.storeOffline = storeOffline;
+        return this;
+    }
+    public Boolean getStoreOffline() {
+        return this.storeOffline;
     }
 
     public PushNoticeToAndroidRequest setTarget(String target) {

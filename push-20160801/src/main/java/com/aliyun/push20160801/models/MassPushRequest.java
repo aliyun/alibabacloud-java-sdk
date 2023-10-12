@@ -47,6 +47,9 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("AndroidExtParameters")
         public String androidExtParameters;
 
+        @NameInMap("AndroidHonorTargetUserType")
+        public Integer androidHonorTargetUserType;
+
         @NameInMap("AndroidHuaweiReceiptId")
         public String androidHuaweiReceiptId;
 
@@ -121,6 +124,9 @@ public class MassPushRequest extends TeaModel {
 
         @NameInMap("AndroidRenderStyle")
         public String androidRenderStyle;
+
+        @NameInMap("AndroidTargetUserType")
+        public Integer androidTargetUserType;
 
         @NameInMap("AndroidVivoPushMode")
         public Integer androidVivoPushMode;
@@ -271,6 +277,14 @@ public class MassPushRequest extends TeaModel {
         }
         public String getAndroidExtParameters() {
             return this.androidExtParameters;
+        }
+
+        public MassPushRequestPushTask setAndroidHonorTargetUserType(Integer androidHonorTargetUserType) {
+            this.androidHonorTargetUserType = androidHonorTargetUserType;
+            return this;
+        }
+        public Integer getAndroidHonorTargetUserType() {
+            return this.androidHonorTargetUserType;
         }
 
         public MassPushRequestPushTask setAndroidHuaweiReceiptId(String androidHuaweiReceiptId) {
@@ -471,6 +485,14 @@ public class MassPushRequest extends TeaModel {
         }
         public String getAndroidRenderStyle() {
             return this.androidRenderStyle;
+        }
+
+        public MassPushRequestPushTask setAndroidTargetUserType(Integer androidTargetUserType) {
+            this.androidTargetUserType = androidTargetUserType;
+            return this;
+        }
+        public Integer getAndroidTargetUserType() {
+            return this.androidTargetUserType;
         }
 
         public MassPushRequestPushTask setAndroidVivoPushMode(Integer androidVivoPushMode) {
