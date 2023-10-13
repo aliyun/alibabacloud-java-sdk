@@ -4,6 +4,9 @@ package com.aliyun.fc20230330.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTagsOutput extends TeaModel {
+    @NameInMap("resouceType")
+    public String resouceType;
+
     @NameInMap("resourceArn")
     public String resourceArn;
 
@@ -13,6 +16,14 @@ public class GetResourceTagsOutput extends TeaModel {
     public static GetResourceTagsOutput build(java.util.Map<String, ?> map) throws Exception {
         GetResourceTagsOutput self = new GetResourceTagsOutput();
         return TeaModel.build(map, self);
+    }
+
+    public GetResourceTagsOutput setResouceType(String resouceType) {
+        this.resouceType = resouceType;
+        return this;
+    }
+    public String getResouceType() {
+        return this.resouceType;
     }
 
     public GetResourceTagsOutput setResourceArn(String resourceArn) {
