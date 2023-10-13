@@ -10,6 +10,9 @@ public class ListTaggedResourcesRequest extends TeaModel {
     @NameInMap("nextToken")
     public String nextToken;
 
+    @NameInMap("resourceType")
+    public String resourceType;
+
     public static ListTaggedResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaggedResourcesRequest self = new ListTaggedResourcesRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListTaggedResourcesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListTaggedResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }
