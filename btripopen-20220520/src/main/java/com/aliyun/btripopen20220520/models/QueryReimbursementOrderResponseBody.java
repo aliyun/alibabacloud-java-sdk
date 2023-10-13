@@ -91,6 +91,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("fee_type")
         public String feeType;
 
+        @NameInMap("order_id")
+        public String orderId;
+
         @NameInMap("remark")
         public String remark;
 
@@ -133,6 +136,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getFeeType() {
             return this.feeType;
+        }
+
+        public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
         }
 
         public QueryReimbursementOrderResponseBodyModuleExpensesExpenseCompositions setRemark(String remark) {
@@ -409,8 +420,23 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("corp_id")
         public String corpId;
 
+        @NameInMap("cost_center_code")
+        public String costCenterCode;
+
+        @NameInMap("cost_center_name")
+        public String costCenterName;
+
         @NameInMap("expenses")
         public java.util.List<QueryReimbursementOrderResponseBodyModuleExpenses> expenses;
+
+        @NameInMap("expenses_cover_dept_id")
+        public String expensesCoverDeptId;
+
+        @NameInMap("expenses_cover_dept_name")
+        public String expensesCoverDeptName;
+
+        @NameInMap("expenses_cover_invoice_title")
+        public String expensesCoverInvoiceTitle;
 
         @NameInMap("gmt_create")
         public String gmtCreate;
@@ -429,6 +455,12 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
 
         @NameInMap("personal_amount")
         public String personalAmount;
+
+        @NameInMap("project_code")
+        public String projectCode;
+
+        @NameInMap("project_name")
+        public String projectName;
 
         @NameInMap("reason")
         public String reason;
@@ -480,12 +512,52 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             return this.corpId;
         }
 
+        public QueryReimbursementOrderResponseBodyModule setCostCenterCode(String costCenterCode) {
+            this.costCenterCode = costCenterCode;
+            return this;
+        }
+        public String getCostCenterCode() {
+            return this.costCenterCode;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setCostCenterName(String costCenterName) {
+            this.costCenterName = costCenterName;
+            return this;
+        }
+        public String getCostCenterName() {
+            return this.costCenterName;
+        }
+
         public QueryReimbursementOrderResponseBodyModule setExpenses(java.util.List<QueryReimbursementOrderResponseBodyModuleExpenses> expenses) {
             this.expenses = expenses;
             return this;
         }
         public java.util.List<QueryReimbursementOrderResponseBodyModuleExpenses> getExpenses() {
             return this.expenses;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setExpensesCoverDeptId(String expensesCoverDeptId) {
+            this.expensesCoverDeptId = expensesCoverDeptId;
+            return this;
+        }
+        public String getExpensesCoverDeptId() {
+            return this.expensesCoverDeptId;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setExpensesCoverDeptName(String expensesCoverDeptName) {
+            this.expensesCoverDeptName = expensesCoverDeptName;
+            return this;
+        }
+        public String getExpensesCoverDeptName() {
+            return this.expensesCoverDeptName;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setExpensesCoverInvoiceTitle(String expensesCoverInvoiceTitle) {
+            this.expensesCoverInvoiceTitle = expensesCoverInvoiceTitle;
+            return this;
+        }
+        public String getExpensesCoverInvoiceTitle() {
+            return this.expensesCoverInvoiceTitle;
         }
 
         public QueryReimbursementOrderResponseBodyModule setGmtCreate(String gmtCreate) {
@@ -534,6 +606,22 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         }
         public String getPersonalAmount() {
             return this.personalAmount;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setProjectCode(String projectCode) {
+            this.projectCode = projectCode;
+            return this;
+        }
+        public String getProjectCode() {
+            return this.projectCode;
+        }
+
+        public QueryReimbursementOrderResponseBodyModule setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
         }
 
         public QueryReimbursementOrderResponseBodyModule setReason(String reason) {

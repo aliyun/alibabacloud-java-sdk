@@ -338,6 +338,25 @@ public class ApplyQueryResponseBody extends TeaModel {
 
     }
 
+    public static class ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard extends TeaModel {
+        @NameInMap("hotel_available_nights_per_day")
+        public Integer hotelAvailableNightsPerDay;
+
+        public static ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard build(java.util.Map<String, ?> map) throws Exception {
+            ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard self = new ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard setHotelAvailableNightsPerDay(Integer hotelAvailableNightsPerDay) {
+            this.hotelAvailableNightsPerDay = hotelAvailableNightsPerDay;
+            return this;
+        }
+        public Integer getHotelAvailableNightsPerDay() {
+            return this.hotelAvailableNightsPerDay;
+        }
+
+    }
+
     public static class ApplyQueryResponseBodyModuleItineraryList extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
@@ -366,11 +385,17 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        @NameInMap("itinerary_travel_standard")
+        public ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard itineraryTravelStandard;
+
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_title")
         public String projectTitle;
+
+        @NameInMap("thirdpart_itinerary_id")
+        public String thirdpartItineraryId;
 
         @NameInMap("traffic_type")
         public Integer trafficType;
@@ -455,6 +480,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             return this.itineraryId;
         }
 
+        public ApplyQueryResponseBodyModuleItineraryList setItineraryTravelStandard(ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard itineraryTravelStandard) {
+            this.itineraryTravelStandard = itineraryTravelStandard;
+            return this;
+        }
+        public ApplyQueryResponseBodyModuleItineraryListItineraryTravelStandard getItineraryTravelStandard() {
+            return this.itineraryTravelStandard;
+        }
+
         public ApplyQueryResponseBodyModuleItineraryList setProjectCode(String projectCode) {
             this.projectCode = projectCode;
             return this;
@@ -471,6 +504,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             return this.projectTitle;
         }
 
+        public ApplyQueryResponseBodyModuleItineraryList setThirdpartItineraryId(String thirdpartItineraryId) {
+            this.thirdpartItineraryId = thirdpartItineraryId;
+            return this;
+        }
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
+        }
+
         public ApplyQueryResponseBodyModuleItineraryList setTrafficType(Integer trafficType) {
             this.trafficType = trafficType;
             return this;
@@ -485,6 +526,25 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public Integer getTripWay() {
             return this.tripWay;
+        }
+
+    }
+
+    public static class ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard extends TeaModel {
+        @NameInMap("hotel_available_nights_per_day")
+        public Integer hotelAvailableNightsPerDay;
+
+        public static ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard build(java.util.Map<String, ?> map) throws Exception {
+            ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard self = new ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard setHotelAvailableNightsPerDay(Integer hotelAvailableNightsPerDay) {
+            this.hotelAvailableNightsPerDay = hotelAvailableNightsPerDay;
+            return this;
+        }
+        public Integer getHotelAvailableNightsPerDay() {
+            return this.hotelAvailableNightsPerDay;
         }
 
     }
@@ -511,11 +571,17 @@ public class ApplyQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_id")
         public String itineraryId;
 
+        @NameInMap("itinerary_travel_standard")
+        public ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard itineraryTravelStandard;
+
         @NameInMap("project_code")
         public String projectCode;
 
         @NameInMap("project_title")
         public String projectTitle;
+
+        @NameInMap("thirdpart_itinerary_id")
+        public String thirdpartItineraryId;
 
         @NameInMap("traffic_type")
         public Integer trafficType;
@@ -581,6 +647,14 @@ public class ApplyQueryResponseBody extends TeaModel {
             return this.itineraryId;
         }
 
+        public ApplyQueryResponseBodyModuleItinerarySetList setItineraryTravelStandard(ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard itineraryTravelStandard) {
+            this.itineraryTravelStandard = itineraryTravelStandard;
+            return this;
+        }
+        public ApplyQueryResponseBodyModuleItinerarySetListItineraryTravelStandard getItineraryTravelStandard() {
+            return this.itineraryTravelStandard;
+        }
+
         public ApplyQueryResponseBodyModuleItinerarySetList setProjectCode(String projectCode) {
             this.projectCode = projectCode;
             return this;
@@ -595,6 +669,14 @@ public class ApplyQueryResponseBody extends TeaModel {
         }
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        public ApplyQueryResponseBodyModuleItinerarySetList setThirdpartItineraryId(String thirdpartItineraryId) {
+            this.thirdpartItineraryId = thirdpartItineraryId;
+            return this;
+        }
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
         }
 
         public ApplyQueryResponseBodyModuleItinerarySetList setTrafficType(Integer trafficType) {
