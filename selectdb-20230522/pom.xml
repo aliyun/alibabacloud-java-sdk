@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>selectdb20230522</artifactId>
-  <version>1.0.1</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>selectdb20230522</name>
   <description>Alibaba Cloud selectdb (20230522) SDK for Java
