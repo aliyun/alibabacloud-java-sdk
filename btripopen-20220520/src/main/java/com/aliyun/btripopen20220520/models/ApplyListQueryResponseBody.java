@@ -207,6 +207,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("project_title")
         public String projectTitle;
 
+        @NameInMap("thirdpart_itinerary_id")
+        public String thirdpartItineraryId;
+
         @NameInMap("traffic_type")
         public Integer trafficType;
 
@@ -290,6 +293,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
             return this.projectTitle;
         }
 
+        public ApplyListQueryResponseBodyModuleListItineraryList setThirdpartItineraryId(String thirdpartItineraryId) {
+            this.thirdpartItineraryId = thirdpartItineraryId;
+            return this;
+        }
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
+        }
+
         public ApplyListQueryResponseBodyModuleListItineraryList setTrafficType(Integer trafficType) {
             this.trafficType = trafficType;
             return this;
@@ -335,6 +346,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         @NameInMap("project_title")
         public String projectTitle;
+
+        @NameInMap("thirdpart_itinerary_id")
+        public String thirdpartItineraryId;
 
         @NameInMap("traffic_type")
         public Integer trafficType;
@@ -414,6 +428,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        public ApplyListQueryResponseBodyModuleListItinerarySetList setThirdpartItineraryId(String thirdpartItineraryId) {
+            this.thirdpartItineraryId = thirdpartItineraryId;
+            return this;
+        }
+        public String getThirdpartItineraryId() {
+            return this.thirdpartItineraryId;
         }
 
         public ApplyListQueryResponseBodyModuleListItinerarySetList setTrafficType(Integer trafficType) {

@@ -572,6 +572,25 @@ public class ApplyAddRequest extends TeaModel {
 
     }
 
+    public static class ApplyAddRequestItineraryListItineraryTravelStandard extends TeaModel {
+        @NameInMap("hotel_available_nights_per_day")
+        public Integer hotelAvailableNightsPerDay;
+
+        public static ApplyAddRequestItineraryListItineraryTravelStandard build(java.util.Map<String, ?> map) throws Exception {
+            ApplyAddRequestItineraryListItineraryTravelStandard self = new ApplyAddRequestItineraryListItineraryTravelStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestItineraryListItineraryTravelStandard setHotelAvailableNightsPerDay(Integer hotelAvailableNightsPerDay) {
+            this.hotelAvailableNightsPerDay = hotelAvailableNightsPerDay;
+            return this;
+        }
+        public Integer getHotelAvailableNightsPerDay() {
+            return this.hotelAvailableNightsPerDay;
+        }
+
+    }
+
     public static class ApplyAddRequestItineraryList extends TeaModel {
         @NameInMap("arr_city")
         public String arrCity;
@@ -599,6 +618,9 @@ public class ApplyAddRequest extends TeaModel {
 
         @NameInMap("itinerary_id")
         public String itineraryId;
+
+        @NameInMap("itinerary_travel_standard")
+        public ApplyAddRequestItineraryListItineraryTravelStandard itineraryTravelStandard;
 
         @NameInMap("need_hotel")
         public Boolean needHotel;
@@ -701,6 +723,14 @@ public class ApplyAddRequest extends TeaModel {
             return this.itineraryId;
         }
 
+        public ApplyAddRequestItineraryList setItineraryTravelStandard(ApplyAddRequestItineraryListItineraryTravelStandard itineraryTravelStandard) {
+            this.itineraryTravelStandard = itineraryTravelStandard;
+            return this;
+        }
+        public ApplyAddRequestItineraryListItineraryTravelStandard getItineraryTravelStandard() {
+            return this.itineraryTravelStandard;
+        }
+
         public ApplyAddRequestItineraryList setNeedHotel(Boolean needHotel) {
             this.needHotel = needHotel;
             return this;
@@ -767,6 +797,25 @@ public class ApplyAddRequest extends TeaModel {
 
     }
 
+    public static class ApplyAddRequestItinerarySetListItineraryTravelStandard extends TeaModel {
+        @NameInMap("hotel_available_nights_per_day")
+        public Integer hotelAvailableNightsPerDay;
+
+        public static ApplyAddRequestItinerarySetListItineraryTravelStandard build(java.util.Map<String, ?> map) throws Exception {
+            ApplyAddRequestItinerarySetListItineraryTravelStandard self = new ApplyAddRequestItinerarySetListItineraryTravelStandard();
+            return TeaModel.build(map, self);
+        }
+
+        public ApplyAddRequestItinerarySetListItineraryTravelStandard setHotelAvailableNightsPerDay(Integer hotelAvailableNightsPerDay) {
+            this.hotelAvailableNightsPerDay = hotelAvailableNightsPerDay;
+            return this;
+        }
+        public Integer getHotelAvailableNightsPerDay() {
+            return this.hotelAvailableNightsPerDay;
+        }
+
+    }
+
     public static class ApplyAddRequestItinerarySetList extends TeaModel {
         @NameInMap("arr_date")
         public String arrDate;
@@ -788,6 +837,9 @@ public class ApplyAddRequest extends TeaModel {
 
         @NameInMap("itinerary_id")
         public String itineraryId;
+
+        @NameInMap("itinerary_travel_standard")
+        public ApplyAddRequestItinerarySetListItineraryTravelStandard itineraryTravelStandard;
 
         @NameInMap("project_code")
         public String projectCode;
@@ -863,6 +915,14 @@ public class ApplyAddRequest extends TeaModel {
         }
         public String getItineraryId() {
             return this.itineraryId;
+        }
+
+        public ApplyAddRequestItinerarySetList setItineraryTravelStandard(ApplyAddRequestItinerarySetListItineraryTravelStandard itineraryTravelStandard) {
+            this.itineraryTravelStandard = itineraryTravelStandard;
+            return this;
+        }
+        public ApplyAddRequestItinerarySetListItineraryTravelStandard getItineraryTravelStandard() {
+            return this.itineraryTravelStandard;
         }
 
         public ApplyAddRequestItinerarySetList setProjectCode(String projectCode) {
