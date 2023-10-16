@@ -63,6 +63,9 @@ public class HandleSecurityEventsRequest extends TeaModel {
     @NameInMap("OperationParams")
     public String operationParams;
 
+    /**
+     * <p>The remarks of the handling operation.</p>
+     */
     @NameInMap("Remark")
     public String remark;
 

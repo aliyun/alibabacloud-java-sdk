@@ -56,7 +56,7 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String machineTypes;
 
     /**
-     * <p>使用NextToken方式下返回的NextToken值。第一次拉取传空。</p>
+     * <p>The value of NextToken that is returned when the NextToken method is used. You do not need to specify this parameter for the first request.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -83,17 +83,18 @@ public class DescribeCloudCenterInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源目录成员账号主账号ID。</p>
-     * <p>>调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。</p>
+     * <p>The Alibaba Cloud account ID of the member in the resource directory.</p>
+     * <br>
+     * <p>>  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>是否使用NextToken方式拉取资产列表数据。如果使用此参数TotalCount不再返回。取值：</p>
+     * <p>Specifies whether to use the NextToken method to retrieve a new page of results. If you set UseNextToken to true, the value of TotalCount is not returned. Valid values:</p>
      * <br>
-     * <p>- **true**：使用NextToken方式</p>
-     * <p>- **false**：不使用NextToken方式</p>
+     * <p>- **true**: The NextToken method is used.</p>
+     * <p>- **false**: The NextToken method is not used.</p>
      */
     @NameInMap("UseNextToken")
     public Boolean useNextToken;

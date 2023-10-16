@@ -4,6 +4,11 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class DescribeVersionConfigResponseBody extends TeaModel {
+    /**
+     * <p>The quota for agentless detection.</p>
+     * <br>
+     * <p>>  The agentless detection feature is unavailable for purchase. You can ignore this parameter.</p>
+     */
     @NameInMap("AgentlessCapacity")
     public Long agentlessCapacity;
 
@@ -39,6 +44,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("AssetLevel")
     public Integer assetLevel;
 
+    /**
+     * <p>The quota for configuration assessment. Unit: times/month.</p>
+     */
     @NameInMap("CspmCapacity")
     public Long cspmCapacity;
 
@@ -135,6 +143,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("OpenTime")
     public Long openTime;
 
+    /**
+     * <p>The quota for application protection. Unit: process/month.</p>
+     */
     @NameInMap("RaspCapacity")
     public Long raspCapacity;
 
@@ -211,6 +222,9 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
     @NameInMap("VmCores")
     public Integer vmCores;
 
+    /**
+     * <p>The quota for vulnerability fixing. Unit: times/month.</p>
+     */
     @NameInMap("VulFixCapacity")
     public Long vulFixCapacity;
 

@@ -4,18 +4,43 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentlessScanTaskRequest extends TeaModel {
+    /**
+     * <p>The retention period of images. Unit: days.</p>
+     */
     @NameInMap("AutoDeleteDays")
     public Integer autoDeleteDays;
 
+    /**
+     * <p>Specifies whether to enable the cost-saving mode. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("ReleaseAfterScan")
     public Boolean releaseAfterScan;
 
+    /**
+     * <p>Specifies whether to check data disks. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("ScanDataDisk")
     public Boolean scanDataDisk;
 
+    /**
+     * <p>The type of the detection object. Valid values:</p>
+     * <br>
+     * <p>*   **2**: image</p>
+     */
     @NameInMap("TargetType")
     public Integer targetType;
 
+    /**
+     * <p>The UUIDs of the assets on which you want to run the detection task.</p>
+     * <br>
+     * <p>>  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.</p>
+     */
     @NameInMap("UuidList")
     public java.util.List<String> uuidList;
 

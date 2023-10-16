@@ -854,7 +854,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>使用NextToken方式下返回的NextToken值。</p>
+         * <p>The value of NextToken that is returned when the NextToken method is used.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
