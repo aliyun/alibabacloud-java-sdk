@@ -3,19 +3,19 @@ package com.aliyun.sas20181203.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAgentlessScanTaskResponseBody extends TeaModel {
+public class UpdateFileUploadLimitResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateAgentlessScanTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateAgentlessScanTaskResponseBody self = new CreateAgentlessScanTaskResponseBody();
+    public static UpdateFileUploadLimitResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateFileUploadLimitResponseBody self = new UpdateFileUploadLimitResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateAgentlessScanTaskResponseBody setRequestId(String requestId) {
+    public UpdateFileUploadLimitResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

@@ -11,62 +11,38 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "tds.aliyuncs.com"),
+            new TeaPair("cn-qingdao", "tds.aliyuncs.com"),
+            new TeaPair("cn-beijing", "tds.aliyuncs.com"),
+            new TeaPair("cn-zhangjiakou", "tds.aliyuncs.com"),
+            new TeaPair("cn-huhehaote", "tds.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "tds.aliyuncs.com"),
+            new TeaPair("cn-shanghai", "tds.aliyuncs.com"),
+            new TeaPair("cn-nanjing", "tds.aliyuncs.com"),
+            new TeaPair("cn-fuzhou", "tds.aliyuncs.com"),
+            new TeaPair("cn-shenzhen", "tds.aliyuncs.com"),
+            new TeaPair("cn-heyuan", "tds.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "tds.aliyuncs.com"),
+            new TeaPair("cn-chengdu", "tds.aliyuncs.com"),
+            new TeaPair("cn-hongkong", "tds.aliyuncs.com"),
             new TeaPair("ap-southeast-1", "tds.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "tds.ap-southeast-3.aliyuncs.com"),
-            new TeaPair("ap-northeast-1", "sas.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "sas.aliyuncs.com"),
-            new TeaPair("ap-south-1", "sas.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "sas.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "sas.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-fujian", "sas.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "sas.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "sas.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "sas.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "sas.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "sas.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "sas.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "sas.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "sas.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "sas.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "sas.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhangbei", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "sas.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "sas.aliyuncs.com"),
-            new TeaPair("eu-central-1", "sas.aliyuncs.com"),
-            new TeaPair("eu-west-1", "sas.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "sas.aliyuncs.com"),
-            new TeaPair("me-east-1", "sas.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "sas.aliyuncs.com"),
-            new TeaPair("us-east-1", "sas.aliyuncs.com"),
-            new TeaPair("us-west-1", "sas.aliyuncs.com")
+            new TeaPair("ap-northeast-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-northeast-2", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-6", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-southeast-7", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("us-east-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("us-west-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-west-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("eu-central-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("ap-south-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-east-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("me-central-1", "tds.ap-southeast-1.aliyuncs.com"),
+            new TeaPair("cn-hangzhou-finance", "tds.aliyuncs.com"),
+            new TeaPair("cn-shanghai-finance-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "tds.aliyuncs.com"),
+            new TeaPair("cn-beijing-finance-1", "tds.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("sas", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1620,6 +1596,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFileProtectRuleResponse createFileProtectRule(CreateFileProtectRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFileProtectRuleWithOptions(request, runtime);
+    }
+
+    public CreateFileUploadLimitResponse createFileUploadLimitWithOptions(CreateFileUploadLimitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFileUploadLimit"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFileUploadLimitResponse());
+    }
+
+    public CreateFileUploadLimitResponse createFileUploadLimit(CreateFileUploadLimitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFileUploadLimitWithOptions(request, runtime);
     }
 
     public CreateHoneypotResponse createHoneypotWithOptions(CreateHoneypotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -13556,6 +13561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("From", request.from);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
@@ -13566,6 +13575,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operateErrorCodeList)) {
+            query.put("OperateErrorCodeList", request.operateErrorCodeList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
@@ -13598,6 +13611,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeStart)) {
             query.put("TimeStart", request.timeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uniqueInfo)) {
+            query.put("UniqueInfo", request.uniqueInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uuid)) {
+            query.put("Uuid", request.uuid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -13643,6 +13664,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AttachTypes", request.attachTypes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.containerName)) {
+            query.put("ContainerName", request.containerName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {
             query.put("CveId", request.cveId);
         }
@@ -13655,12 +13680,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupId", request.groupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imageName)) {
+            query.put("ImageName", request.imageName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
             query.put("Lang", request.lang);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.necessity)) {
             query.put("Necessity", request.necessity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            query.put("Path", request.path);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.searchTags)) {
@@ -14906,6 +14939,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getFileProtectRuleWithOptions(request, runtime);
     }
 
+    public GetFileUploadLimitResponse getFileUploadLimitWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFileUploadLimit"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFileUploadLimitResponse());
+    }
+
+    public GetFileUploadLimitResponse getFileUploadLimit() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFileUploadLimitWithOptions(runtime);
+    }
+
     public GetHoneypotAttackStatisticsResponse getHoneypotAttackStatisticsWithOptions(GetHoneypotAttackStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -15291,6 +15345,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLastOnceTaskInfoResponse getLastOnceTaskInfo(GetLastOnceTaskInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getLastOnceTaskInfoWithOptions(request, runtime);
+    }
+
+    public GetLogMetaResponse getLogMetaWithOptions(GetLogMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logStore)) {
+            query.put("LogStore", request.logStore);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogMeta"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLogMetaResponse());
+    }
+
+    public GetLogMetaResponse getLogMeta(GetLogMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLogMetaWithOptions(request, runtime);
     }
 
     public GetModuleConfigResponse getModuleConfigWithOptions(GetModuleConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -23278,6 +23361,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateFileProtectRuleResponse updateFileProtectRule(UpdateFileProtectRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateFileProtectRuleWithOptions(request, runtime);
+    }
+
+    public UpdateFileUploadLimitResponse updateFileUploadLimitWithOptions(UpdateFileUploadLimitRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
+            query.put("Limit", request.limit);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateFileUploadLimit"),
+            new TeaPair("version", "2018-12-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFileUploadLimitResponse());
+    }
+
+    public UpdateFileUploadLimitResponse updateFileUploadLimit(UpdateFileUploadLimitRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateFileUploadLimitWithOptions(request, runtime);
     }
 
     public UpdateHoneypotResponse updateHoneypotWithOptions(UpdateHoneypotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {

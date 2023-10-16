@@ -64,6 +64,9 @@ public class ExportSuspEventsRequest extends TeaModel {
     @NameInMap("From")
     public String from;
 
+    @NameInMap("Id")
+    public Long id;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
@@ -88,6 +91,9 @@ public class ExportSuspEventsRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("OperateErrorCodeList")
+    public java.util.List<String> operateErrorCodeList;
 
     /**
      * <p>The number of entries to return on each page. Default value: **20**.</p>
@@ -175,6 +181,12 @@ public class ExportSuspEventsRequest extends TeaModel {
     @NameInMap("TimeStart")
     public String timeStart;
 
+    @NameInMap("UniqueInfo")
+    public String uniqueInfo;
+
+    @NameInMap("Uuid")
+    public String uuid;
+
     public static ExportSuspEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         ExportSuspEventsRequest self = new ExportSuspEventsRequest();
         return TeaModel.build(map, self);
@@ -236,6 +248,14 @@ public class ExportSuspEventsRequest extends TeaModel {
         return this.from;
     }
 
+    public ExportSuspEventsRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
     public ExportSuspEventsRequest setLang(String lang) {
         this.lang = lang;
         return this;
@@ -258,6 +278,14 @@ public class ExportSuspEventsRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ExportSuspEventsRequest setOperateErrorCodeList(java.util.List<String> operateErrorCodeList) {
+        this.operateErrorCodeList = operateErrorCodeList;
+        return this;
+    }
+    public java.util.List<String> getOperateErrorCodeList() {
+        return this.operateErrorCodeList;
     }
 
     public ExportSuspEventsRequest setPageSize(String pageSize) {
@@ -322,6 +350,22 @@ public class ExportSuspEventsRequest extends TeaModel {
     }
     public String getTimeStart() {
         return this.timeStart;
+    }
+
+    public ExportSuspEventsRequest setUniqueInfo(String uniqueInfo) {
+        this.uniqueInfo = uniqueInfo;
+        return this;
+    }
+    public String getUniqueInfo() {
+        return this.uniqueInfo;
+    }
+
+    public ExportSuspEventsRequest setUuid(String uuid) {
+        this.uuid = uuid;
+        return this;
+    }
+    public String getUuid() {
+        return this.uuid;
     }
 
 }

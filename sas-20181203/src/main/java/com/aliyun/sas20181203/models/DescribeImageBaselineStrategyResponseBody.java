@@ -11,7 +11,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the information about the baseline check policy.</p>
+     * <p>The information about the baseline check policy.</p>
      */
     @NameInMap("Strategy")
     public DescribeImageBaselineStrategyResponseBodyStrategy strategy;

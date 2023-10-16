@@ -18,6 +18,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("AttachTypes")
     public String attachTypes;
 
+    @NameInMap("ContainerName")
+    public String containerName;
+
     @NameInMap("CveId")
     public String cveId;
 
@@ -38,6 +41,9 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("ImageName")
+    public String imageName;
+
     /**
      * <p>The language of the content within the request and response. Default value: **zh**. Valid values:</p>
      * <br>
@@ -56,6 +62,9 @@ public class ExportVulRequest extends TeaModel {
      */
     @NameInMap("Necessity")
     public String necessity;
+
+    @NameInMap("Path")
+    public String path;
 
     /**
      * <p>The tag that is used to search for the vulnerabilities. Valid values:</p>
@@ -117,6 +126,14 @@ public class ExportVulRequest extends TeaModel {
         return this.attachTypes;
     }
 
+    public ExportVulRequest setContainerName(String containerName) {
+        this.containerName = containerName;
+        return this;
+    }
+    public String getContainerName() {
+        return this.containerName;
+    }
+
     public ExportVulRequest setCveId(String cveId) {
         this.cveId = cveId;
         return this;
@@ -141,6 +158,14 @@ public class ExportVulRequest extends TeaModel {
         return this.groupId;
     }
 
+    public ExportVulRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
+    }
+
     public ExportVulRequest setLang(String lang) {
         this.lang = lang;
         return this;
@@ -155,6 +180,14 @@ public class ExportVulRequest extends TeaModel {
     }
     public String getNecessity() {
         return this.necessity;
+    }
+
+    public ExportVulRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
     }
 
     public ExportVulRequest setSearchTags(String searchTags) {
