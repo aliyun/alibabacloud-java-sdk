@@ -5,24 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersRequest extends TeaModel {
     /**
-     * <p>The type of the database account. Valid values:</p>
+     * <p>The role of the instance. Valid values:</p>
      * <br>
-     * <p>*   mongos: an account that can be used to log on to a mongos node.</p>
-     * <p>*   shard: an account that can be used to log on to a shard node.</p>
+     * <p>*   db: a shard node.</p>
+     * <p>*   cs: a Configserver node.</p>
+     * <p>*   mongos: a mongos node.</p>
      */
     @NameInMap("CharacterType")
     public String characterType;
 
     /**
-     * <p>The ID of the instance</p>
+     * <p>The instance ID.</p>
      * <br>
-     * <p>> If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
+     * <p>>  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.</p>
      */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
     /**
-     * <p>terrform use</p>
+     * <p>The parameter that is available in the future.</p>
      */
     @NameInMap("ExtraParam")
     public String extraParam;
@@ -30,7 +31,7 @@ public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The ID of the mongos or shard node in the specified sharded cluster instance.</p>
      * <br>
-     * <p>> This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.</p>
+     * <p>>  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a sharded cluster instance.</p>
      */
     @NameInMap("NodeId")
     public String nodeId;

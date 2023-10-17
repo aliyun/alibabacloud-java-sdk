@@ -1110,6 +1110,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTags tags;
 
+        @NameInMap("UseClusterBackup")
+        public Boolean useClusterBackup;
+
         /**
          * <p>The instance ID.</p>
          * <br>
@@ -1513,6 +1516,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceTags getTags() {
             return this.tags;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setUseClusterBackup(Boolean useClusterBackup) {
+            this.useClusterBackup = useClusterBackup;
+            return this;
+        }
+        public Boolean getUseClusterBackup() {
+            return this.useClusterBackup;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setVPCCloudInstanceIds(String VPCCloudInstanceIds) {
