@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeParametersResponseBody extends TeaModel {
     /**
-     * <p>The parameter settings in the configuration template.</p>
+     * <p>The settings of parameters that are being configured.</p>
      */
     @NameInMap("ConfigParameters")
     public DescribeParametersResponseBodyConfigParameters configParameters;
@@ -17,19 +17,19 @@ public class DescribeParametersResponseBody extends TeaModel {
     public String engine;
 
     /**
-     * <p>The version of the database engine.</p>
+     * <p>The database engine version of the instance.</p>
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The parameter settings for the running instance.</p>
+     * <p>The settings of the parameters that have taken effect.</p>
      */
     @NameInMap("RunningParameters")
     public DescribeParametersResponseBodyRunningParameters runningParameters;
@@ -87,7 +87,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String checkingCode;
 
         /**
-         * <p>Indicates whether a restart is required for parameter modifications to take effect.</p>
+         * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
          * <br>
          * <p>*   **false**: A restart is not required. Modifications take effect immediately.</p>
          * <p>*   **true**: A restart is required for parameter modifications to take effect.</p>
@@ -96,10 +96,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         public Boolean forceRestart;
 
         /**
-         * <p>Indicates whether the parameter value can be changed.</p>
+         * <p>Indicates whether the parameter value can be modified. Valid values:</p>
          * <br>
-         * <p>*   **false**: The parameter value cannot be changed.</p>
-         * <p>*   **true**: The parameter value can be changed.</p>
+         * <p>*   **false**: The parameter value cannot be modified.</p>
+         * <p>*   **true**: The parameter value can be modified.</p>
          */
         @NameInMap("ModifiableStatus")
         public Boolean modifiableStatus;
@@ -198,11 +198,11 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     public static class DescribeParametersResponseBodyRunningParametersParameter extends TeaModel {
         /**
-         * <p>实例的角色类型，取值说明：</p>
+         * <p>The role of the instance. Valid values:</p>
          * <br>
-         * <p>- **db**：shard角色。</p>
-         * <p>- **cs**：config server角色。</p>
-         * <p>- **mongos**：mongos角色。</p>
+         * <p>*   **db**: a shard node.</p>
+         * <p>*   **cs**: a Configserver node.</p>
+         * <p>*   **mongos**: a mongos node.</p>
          */
         @NameInMap("CharacterType")
         public String characterType;
@@ -214,7 +214,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String checkingCode;
 
         /**
-         * <p>Indicates whether a restart is required for parameter modifications to take effect.</p>
+         * <p>Indicates whether a restart is required for parameter modifications to take effect. Valid values:</p>
          * <br>
          * <p>*   **false**: A restart is not required. Modifications take effect immediately.</p>
          * <p>*   **true**: A restart is required for parameter modifications to take effect.</p>
@@ -223,10 +223,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         public String forceRestart;
 
         /**
-         * <p>Indicates whether the parameter value can be changed.</p>
+         * <p>Indicates whether the parameter value can be modified. Valid values:</p>
          * <br>
-         * <p>*   **false**: The parameter value cannot be changed.</p>
-         * <p>*   **true**: The parameter value can be changed.</p>
+         * <p>*   **false**: The parameter value cannot be modified.</p>
+         * <p>*   **true**: The parameter value can be modified.</p>
          */
         @NameInMap("ModifiableStatus")
         public String modifiableStatus;
