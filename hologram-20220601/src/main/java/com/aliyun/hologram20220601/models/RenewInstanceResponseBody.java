@@ -4,24 +4,39 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public RenewInstanceResponseBodyData data;
 
+    /**
+     * <p>The error code returned.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public String httpStatusCode;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The request result, which indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public String success;
 
@@ -79,15 +94,30 @@ public class RenewInstanceResponseBody extends TeaModel {
     }
 
     public static class RenewInstanceResponseBodyData extends TeaModel {
+        /**
+         * <p>The error code returned.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The error details.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the order.</p>
+         */
         @NameInMap("OrderId")
         public String orderId;
 
+        /**
+         * <p>Indicates whether the renewal was successful.</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

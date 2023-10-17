@@ -660,6 +660,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Long memory;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <p>The ID of the resource group.</p>
          */
@@ -861,6 +864,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public Long getMemory() {
             return this.memory;
+        }
+
+        public GetInstanceResponseBodyInstance setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public GetInstanceResponseBodyInstance setResourceGroupId(String resourceGroupId) {
