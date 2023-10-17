@@ -4,6 +4,9 @@ package com.aliyun.hologram20220601.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the region in which the Hologres instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 

@@ -472,6 +472,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("LeaderInstanceId")
         public String leaderInstanceId;
 
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <p>The ID of the resource group.</p>
          */
@@ -495,6 +498,9 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         @NameInMap("Version")
         public String version;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static ListInstancesResponseBodyInstanceList build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstanceList self = new ListInstancesResponseBodyInstanceList();
@@ -589,6 +595,14 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.leaderInstanceId;
         }
 
+        public ListInstancesResponseBodyInstanceList setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
         public ListInstancesResponseBodyInstanceList setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -619,6 +633,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public ListInstancesResponseBodyInstanceList setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
