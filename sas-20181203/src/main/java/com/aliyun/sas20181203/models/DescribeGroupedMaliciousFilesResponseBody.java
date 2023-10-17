@@ -84,6 +84,9 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("MaliciousKey")
+        public String maliciousKey;
+
         /**
          * <p>The MD5 hash value of the malicious image sample.</p>
          */
@@ -142,6 +145,14 @@ public class DescribeGroupedMaliciousFilesResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse setMaliciousKey(String maliciousKey) {
+            this.maliciousKey = maliciousKey;
+            return this;
+        }
+        public String getMaliciousKey() {
+            return this.maliciousKey;
         }
 
         public DescribeGroupedMaliciousFilesResponseBodyGroupedMaliciousFileResponse setMaliciousMd5(String maliciousMd5) {

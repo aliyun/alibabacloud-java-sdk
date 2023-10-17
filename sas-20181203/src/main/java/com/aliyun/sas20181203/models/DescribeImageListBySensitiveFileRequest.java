@@ -192,6 +192,9 @@ public class DescribeImageListBySensitiveFileRequest extends TeaModel {
     @NameInMap("SensitiveFileKey")
     public String sensitiveFileKey;
 
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeImageListBySensitiveFileRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageListBySensitiveFileRequest self = new DescribeImageListBySensitiveFileRequest();
         return TeaModel.build(map, self);
@@ -275,6 +278,14 @@ public class DescribeImageListBySensitiveFileRequest extends TeaModel {
     }
     public String getSensitiveFileKey() {
         return this.sensitiveFileKey;
+    }
+
+    public DescribeImageListBySensitiveFileRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

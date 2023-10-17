@@ -189,6 +189,12 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
     }
 
     public static class DescribeImageSensitiveFileListResponseBodySensitiveFileList extends TeaModel {
+        @NameInMap("ClassKey")
+        public String classKey;
+
+        @NameInMap("ClassName")
+        public String className;
+
         /**
          * <p>The number of scans that are performed on the sensitive file.</p>
          */
@@ -345,6 +351,22 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         public static DescribeImageSensitiveFileListResponseBodySensitiveFileList build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSensitiveFileListResponseBodySensitiveFileList self = new DescribeImageSensitiveFileListResponseBodySensitiveFileList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSensitiveFileListResponseBodySensitiveFileList setClassKey(String classKey) {
+            this.classKey = classKey;
+            return this;
+        }
+        public String getClassKey() {
+            return this.classKey;
+        }
+
+        public DescribeImageSensitiveFileListResponseBodySensitiveFileList setClassName(String className) {
+            this.className = className;
+            return this;
+        }
+        public String getClassName() {
+            return this.className;
         }
 
         public DescribeImageSensitiveFileListResponseBodySensitiveFileList setCount(Integer count) {

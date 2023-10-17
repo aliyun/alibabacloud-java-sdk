@@ -21,6 +21,12 @@ public class ExportVulRequest extends TeaModel {
     @NameInMap("ContainerName")
     public String containerName;
 
+    @NameInMap("CreateTsEnd")
+    public Long createTsEnd;
+
+    @NameInMap("CreateTsStart")
+    public Long createTsStart;
+
     @NameInMap("CveId")
     public String cveId;
 
@@ -132,6 +138,22 @@ public class ExportVulRequest extends TeaModel {
     }
     public String getContainerName() {
         return this.containerName;
+    }
+
+    public ExportVulRequest setCreateTsEnd(Long createTsEnd) {
+        this.createTsEnd = createTsEnd;
+        return this;
+    }
+    public Long getCreateTsEnd() {
+        return this.createTsEnd;
+    }
+
+    public ExportVulRequest setCreateTsStart(Long createTsStart) {
+        this.createTsStart = createTsStart;
+        return this;
+    }
+    public Long getCreateTsStart() {
+        return this.createTsStart;
     }
 
     public ExportVulRequest setCveId(String cveId) {

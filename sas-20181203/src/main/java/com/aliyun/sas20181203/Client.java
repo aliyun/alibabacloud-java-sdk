@@ -3788,6 +3788,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScanRange", request.scanRange);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -7702,6 +7706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sensitiveFileKey)) {
             query.put("SensitiveFileKey", request.sensitiveFileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -13666,6 +13674,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.containerName)) {
             query.put("ContainerName", request.containerName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTsEnd)) {
+            query.put("CreateTsEnd", request.createTsEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTsStart)) {
+            query.put("CreateTsStart", request.createTsStart);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cveId)) {

@@ -195,6 +195,9 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         @NameInMap("Advice")
         public String advice;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The file path.</p>
          */
@@ -218,6 +221,9 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
          */
         @NameInMap("LayerDigest")
         public String layerDigest;
+
+        @NameInMap("Md5")
+        public String md5;
 
         /**
          * <p>The sensitive content.</p>
@@ -373,6 +379,14 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
             return this.advice;
         }
 
+        public DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
         public DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList setFilePath(String filePath) {
             this.filePath = filePath;
             return this;
@@ -403,6 +417,14 @@ public class DescribeImageSensitiveFileByKeyResponseBody extends TeaModel {
         }
         public String getLayerDigest() {
             return this.layerDigest;
+        }
+
+        public DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList setMd5(String md5) {
+            this.md5 = md5;
+            return this;
+        }
+        public String getMd5() {
+            return this.md5;
         }
 
         public DescribeImageSensitiveFileByKeyResponseBodySensitiveFileList setPromt(String promt) {
