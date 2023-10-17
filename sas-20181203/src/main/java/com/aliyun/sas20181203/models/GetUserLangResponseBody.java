@@ -4,9 +4,15 @@ package com.aliyun.sas20181203.models;
 import com.aliyun.tea.*;
 
 public class GetUserLangResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The language settings.</p>
+     */
     @NameInMap("SasUserLang")
     public GetUserLangResponseBodySasUserLang sasUserLang;
 
@@ -32,6 +38,12 @@ public class GetUserLangResponseBody extends TeaModel {
     }
 
     public static class GetUserLangResponseBodySasUserLang extends TeaModel {
+        /**
+         * <p>The language specified for log analysis. Valid values:</p>
+         * <br>
+         * <p>*   zh: Chinese</p>
+         * <p>*   en: English</p>
+         */
         @NameInMap("Lang")
         public String lang;
 

@@ -153,6 +153,9 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;
 
+    @NameInMap("Status")
+    public String status;
+
     public static DescribeAffectedMaliciousFileImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAffectedMaliciousFileImagesRequest self = new DescribeAffectedMaliciousFileImagesRequest();
         return TeaModel.build(map, self);
@@ -316,6 +319,14 @@ public class DescribeAffectedMaliciousFileImagesRequest extends TeaModel {
     }
     public java.util.List<String> getScanRange() {
         return this.scanRange;
+    }
+
+    public DescribeAffectedMaliciousFileImagesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

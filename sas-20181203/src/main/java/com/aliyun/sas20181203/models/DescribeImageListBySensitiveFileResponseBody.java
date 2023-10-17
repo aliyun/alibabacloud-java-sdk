@@ -162,6 +162,9 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         @NameInMap("RiskLevel")
         public String riskLevel;
 
+        @NameInMap("Status")
+        public String status;
+
         /**
          * <p>The tag of the image.</p>
          */
@@ -241,6 +244,14 @@ public class DescribeImageListBySensitiveFileResponseBody extends TeaModel {
         }
         public String getRiskLevel() {
             return this.riskLevel;
+        }
+
+        public DescribeImageListBySensitiveFileResponseBodyImageInfos setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeImageListBySensitiveFileResponseBodyImageInfos setTag(String tag) {
