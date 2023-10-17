@@ -2376,7 +2376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
+      * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnSSLCertificateList instead.
       * > You can call this operation up to 30 times per second per account.
       *
       * @param request DescribeDcdnCertificateListRequest
@@ -2417,7 +2417,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnCertificateList instead.
+      * @deprecated : DescribeDcdnCertificateList is deprecated, please use dcdn::2018-01-15::DescribeDcdnSSLCertificateList instead.
       * > You can call this operation up to 30 times per second per account.
       *
       * @param request DescribeDcdnCertificateListRequest
@@ -7003,6 +7003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.funcId)) {
             query.put("FuncId", request.funcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchType)) {
+            query.put("MatchType", request.matchType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
