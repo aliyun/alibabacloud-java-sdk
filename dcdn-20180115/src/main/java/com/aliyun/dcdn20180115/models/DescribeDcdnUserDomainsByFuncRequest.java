@@ -25,6 +25,9 @@ public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
     @NameInMap("FuncId")
     public Integer funcId;
 
+    @NameInMap("MatchType")
+    public String matchType;
+
     /**
      * <p>The number of the page to return. Default value: **1**. Valid values: **1 to 100000**.</p>
      */
@@ -70,6 +73,14 @@ public class DescribeDcdnUserDomainsByFuncRequest extends TeaModel {
     }
     public Integer getFuncId() {
         return this.funcId;
+    }
+
+    public DescribeDcdnUserDomainsByFuncRequest setMatchType(String matchType) {
+        this.matchType = matchType;
+        return this;
+    }
+    public String getMatchType() {
+        return this.matchType;
     }
 
     public DescribeDcdnUserDomainsByFuncRequest setPageNumber(Integer pageNumber) {
