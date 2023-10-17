@@ -4,6 +4,9 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class RefreshDcdnObjectCachesRequest extends TeaModel {
+    @NameInMap("Force")
+    public Boolean force;
+
     /**
      * <p>The path of the objects that you want to refresh. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).</p>
      */
@@ -28,6 +31,14 @@ public class RefreshDcdnObjectCachesRequest extends TeaModel {
     public static RefreshDcdnObjectCachesRequest build(java.util.Map<String, ?> map) throws Exception {
         RefreshDcdnObjectCachesRequest self = new RefreshDcdnObjectCachesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RefreshDcdnObjectCachesRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public RefreshDcdnObjectCachesRequest setObjectPath(String objectPath) {
