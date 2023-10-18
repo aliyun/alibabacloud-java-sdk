@@ -741,6 +741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceFamilyLevel", request.instanceFamilyLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypes)) {
+            query.put("InstanceTypes", request.instanceTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressCount)) {
             query.put("Ipv6AddressCount", request.ipv6AddressCount);
         }
@@ -4159,6 +4163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceFamilyLevel", request.instanceFamilyLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceTypes)) {
+            query.put("InstanceTypes", request.instanceTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6AddressCount)) {
             query.put("Ipv6AddressCount", request.ipv6AddressCount);
         }
@@ -4667,6 +4675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.desiredCapacity)) {
             query.put("DesiredCapacity", request.desiredCapacity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disableDesiredCapacity)) {
+            query.put("DisableDesiredCapacity", request.disableDesiredCapacity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupDeletionProtection)) {
