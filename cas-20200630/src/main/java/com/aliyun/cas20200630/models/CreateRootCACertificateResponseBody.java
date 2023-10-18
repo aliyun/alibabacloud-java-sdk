@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateRootCACertificateResponseBody extends TeaModel {
     /**
-     * <p>The root CA certificate in the PEM format.</p>
+     * <p>The name of the city in which the organization is located. The value can contain letters.</p>
      */
     @NameInMap("Certificate")
     public String certificate;
 
     /**
-     * <p>The certificate chain of the root CA certificate.</p>
+     * <p>RSA_2048</p>
      */
     @NameInMap("CertificateChain")
     public String certificateChain;
@@ -23,7 +23,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
     public String identifier;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>Zhejiang</p>
      */
     @NameInMap("RequestId")
     public String requestId;

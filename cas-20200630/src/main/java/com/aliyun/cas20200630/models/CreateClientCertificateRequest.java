@@ -51,12 +51,6 @@ public class CreateClientCertificateRequest extends TeaModel {
     public String country;
 
     /**
-     * <p>The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).</p>
-     */
-    @NameInMap("Csr")
-    public String csr;
-
-    /**
      * <p>The validity period of the client certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:</p>
      * <br>
      * <p>*   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.********</p>
@@ -70,6 +64,9 @@ public class CreateClientCertificateRequest extends TeaModel {
      */
     @NameInMap("Days")
     public Integer days;
+
+    @NameInMap("EnableCrl")
+    public Long enableCrl;
 
     /**
      * <p>Specifies whether to return the certificate. Valid values:</p>
@@ -185,20 +182,20 @@ public class CreateClientCertificateRequest extends TeaModel {
         return this.country;
     }
 
-    public CreateClientCertificateRequest setCsr(String csr) {
-        this.csr = csr;
-        return this;
-    }
-    public String getCsr() {
-        return this.csr;
-    }
-
     public CreateClientCertificateRequest setDays(Integer days) {
         this.days = days;
         return this;
     }
     public Integer getDays() {
         return this.days;
+    }
+
+    public CreateClientCertificateRequest setEnableCrl(Long enableCrl) {
+        this.enableCrl = enableCrl;
+        return this;
+    }
+    public Long getEnableCrl() {
+        return this.enableCrl;
     }
 
     public CreateClientCertificateRequest setImmediately(Integer immediately) {

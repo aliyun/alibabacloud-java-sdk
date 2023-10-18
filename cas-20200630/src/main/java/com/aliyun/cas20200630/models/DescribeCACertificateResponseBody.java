@@ -74,6 +74,15 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("BeforeDate")
         public Long beforeDate;
 
+        @NameInMap("CertIssuedCount")
+        public Long certIssuedCount;
+
+        @NameInMap("CertRemainingCount")
+        public Long certRemainingCount;
+
+        @NameInMap("CertTotalCount")
+        public Long certTotalCount;
+
         /**
          * <p>The type of the CA certificate. Valid values:</p>
          * <br>
@@ -238,6 +247,30 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
         public Long getBeforeDate() {
             return this.beforeDate;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setCertIssuedCount(Long certIssuedCount) {
+            this.certIssuedCount = certIssuedCount;
+            return this;
+        }
+        public Long getCertIssuedCount() {
+            return this.certIssuedCount;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setCertRemainingCount(Long certRemainingCount) {
+            this.certRemainingCount = certRemainingCount;
+            return this;
+        }
+        public Long getCertRemainingCount() {
+            return this.certRemainingCount;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setCertTotalCount(Long certTotalCount) {
+            this.certTotalCount = certTotalCount;
+            return this;
+        }
+        public Long getCertTotalCount() {
+            return this.certTotalCount;
         }
 
         public DescribeCACertificateResponseBodyCertificate setCertificateType(String certificateType) {

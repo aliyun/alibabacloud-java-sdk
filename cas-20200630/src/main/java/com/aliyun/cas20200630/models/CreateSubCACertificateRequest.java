@@ -15,7 +15,7 @@ public class CreateSubCACertificateRequest extends TeaModel {
      * <br>
      * <p>The encryption algorithm of an intermediate CA certificate must be consistent with the encryption algorithm of a root CA certificate. The length of the keys can be different. For example, if the key algorithm of the root CA certificate is **RSA\_2048**, the key algorithm of the intermediate CA certificate must be **RSA\_1024**, **RSA\_2048**, or **RSA\_4096**.</p>
      * <br>
-     * <p>>  You can call the [DescribeCACertificate](~~328096~~) operation to query the key algorithm of a root CA certificate.</p>
+     * <p>> You can call the [DescribeCACertificate](~~465954~~) operation to query the key algorithm of a root CA certificate.</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
@@ -29,11 +29,20 @@ public class CreateSubCACertificateRequest extends TeaModel {
     /**
      * <p>The code of the country or region in which the organization is located. You can enter an alpha-2 or alpha-3 code. For example, you can use **CN** to indicate China and use **US** to indicate the United States.</p>
      * <br>
-     * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
+     * <p>For more information about country codes, see the **"Country codes"** section in [Manage company profiles](~~198289~~).</p>
      */
     @NameInMap("CountryCode")
     public String countryCode;
 
+    @NameInMap("CrlDay")
+    public Integer crlDay;
+
+    @NameInMap("EnableCrl")
+    public Boolean enableCrl;
+
+    /**
+     * <p>The extended key usages of the certificate.</p>
+     */
     @NameInMap("ExtendedKeyUsages")
     public java.util.List<String> extendedKeyUsages;
 
@@ -58,16 +67,19 @@ public class CreateSubCACertificateRequest extends TeaModel {
     /**
      * <p>The unique identifier of the root CA certificate.</p>
      * <br>
-     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifiers of all CA certificates.</p>
+     * <p>> You can call the [DescribeCACertificateList](~~465957~~) operation to query the unique identifiers of all CA certificates.</p>
      */
     @NameInMap("ParentIdentifier")
     public String parentIdentifier;
 
+    /**
+     * <p>The path length constraint of the certificate. Default value: 0.</p>
+     */
     @NameInMap("PathLenConstraint")
     public Integer pathLenConstraint;
 
     /**
-     * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
+     * <p>The name of the province or state in which the organization is located. The value can contain letters.</p>
      */
     @NameInMap("State")
     public String state;
@@ -77,7 +89,7 @@ public class CreateSubCACertificateRequest extends TeaModel {
      * <br>
      * <p>We recommend that you set this parameter to 5 to 10.</p>
      * <br>
-     * <p>>  The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate](~~328095~~) operation to query the validity period of a root CA certificate.</p>
+     * <p>> The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate](~~465954~~) operation to query the validity period of a root CA certificate.</p>
      */
     @NameInMap("Years")
     public Integer years;
@@ -109,6 +121,22 @@ public class CreateSubCACertificateRequest extends TeaModel {
     }
     public String getCountryCode() {
         return this.countryCode;
+    }
+
+    public CreateSubCACertificateRequest setCrlDay(Integer crlDay) {
+        this.crlDay = crlDay;
+        return this;
+    }
+    public Integer getCrlDay() {
+        return this.crlDay;
+    }
+
+    public CreateSubCACertificateRequest setEnableCrl(Boolean enableCrl) {
+        this.enableCrl = enableCrl;
+        return this;
+    }
+    public Boolean getEnableCrl() {
+        return this.enableCrl;
     }
 
     public CreateSubCACertificateRequest setExtendedKeyUsages(java.util.List<String> extendedKeyUsages) {

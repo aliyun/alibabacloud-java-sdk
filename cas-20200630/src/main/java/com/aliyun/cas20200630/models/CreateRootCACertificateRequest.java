@@ -21,47 +21,45 @@ public class CreateRootCACertificateRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
+     * <p>10</p>
      */
     @NameInMap("CommonName")
     public String commonName;
 
     /**
-     * <p>The code of the country or region in which the organization is located. You can enter an alpha-2 code. For example, you can use **CN** to indicate China and use **US** to indicate the United States.</p>
-     * <br>
-     * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
+     * <p>The certificate chain of the root CA certificate.</p>
      */
     @NameInMap("CountryCode")
     public String countryCode;
 
     /**
-     * <p>The name of the city in which the organization is located. The value can contain letters.</p>
+     * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
      */
     @NameInMap("Locality")
     public String locality;
 
     /**
-     * <p>The name of the organization that is associated with the root CA certificate. You can enter the name of your enterprise or company. The value can contain letters.</p>
+     * <p>The validity period of the root CA certificate. Unit: years.</p>
+     * <br>
+     * <p>>  We recommend that you set this parameter to a value from 5 to 10.</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
-     * <p>The name of the department or branch in the organization. The value can contain letters.</p>
+     * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
      */
     @NameInMap("OrganizationUnit")
     public String organizationUnit;
 
     /**
-     * <p>The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.</p>
+     * <p>Alibaba</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
-     * <p>The validity period of the root CA certificate. Unit: years.</p>
-     * <br>
-     * <p>>  We recommend that you set this parameter to a value from 5 to 10.</p>
+     * <p>The name of the department or branch in the organization. The value can contain letters.</p>
      */
     @NameInMap("Years")
     public Integer years;

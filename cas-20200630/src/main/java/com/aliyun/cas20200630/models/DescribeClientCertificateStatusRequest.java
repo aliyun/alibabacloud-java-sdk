@@ -4,11 +4,6 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusRequest extends TeaModel {
-    /**
-     * <p>The unique identifiers of the client certificates or server certificates that you want to query. Separate multiple unique identifiers with commas (,).</p>
-     * <br>
-     * <p>>  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.</p>
-     */
     @NameInMap("Identifier")
     public String identifier;
 
