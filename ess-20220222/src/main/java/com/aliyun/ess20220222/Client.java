@@ -3163,6 +3163,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetachInstancesResponse detachInstancesWithOptions(DetachInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.decreaseDesiredCapacity)) {
             query.put("DecreaseDesiredCapacity", request.decreaseDesiredCapacity);
         }
@@ -5110,6 +5114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RemoveInstancesResponse removeInstancesWithOptions(RemoveInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.decreaseDesiredCapacity)) {
             query.put("DecreaseDesiredCapacity", request.decreaseDesiredCapacity);
         }
