@@ -16,6 +16,9 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     @NameInMap("RedisProxyList")
     public DescribeLogicInstanceTopologyResponseBodyRedisProxyList redisProxyList;
 
+    /**
+     * <p>Details of data shards, including node information such as NodeInfo.</p>
+     */
     @NameInMap("RedisShardList")
     public DescribeLogicInstanceTopologyResponseBodyRedisShardList redisShardList;
 
@@ -64,7 +67,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisProxyListNodeInfo extends TeaModel {
         /**
-         * <p>The bandwidth throttling of the node. Unit: MB/s.</p>
+         * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
@@ -82,7 +85,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         public String connection;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -163,21 +166,45 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
     }
 
     public static class DescribeLogicInstanceTopologyResponseBodyRedisShardListNodeInfo extends TeaModel {
+        /**
+         * <p>The maximum bandwidth of the node. Unit: Mbit/s.</p>
+         */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
+        /**
+         * <p>The storage capacity of the node. Unit: MB.</p>
+         */
         @NameInMap("Capacity")
         public String capacity;
 
+        /**
+         * <p>The maximum number of connections.</p>
+         */
         @NameInMap("Connection")
         public String connection;
 
+        /**
+         * <p>The node ID.</p>
+         */
         @NameInMap("NodeId")
         public String nodeId;
 
+        /**
+         * <p>The node type. Valid values:</p>
+         * <br>
+         * <p>*   **proxy**: proxy node</p>
+         * <p>*   **db**: data node</p>
+         */
         @NameInMap("NodeType")
         public String nodeType;
 
+        /**
+         * <p>The type of the child instance. Valid values:</p>
+         * <br>
+         * <p>*   **master**: master node</p>
+         * <p>*   **readonly**: read-only instance</p>
+         */
         @NameInMap("SubInstanceType")
         public String subInstanceType;
 

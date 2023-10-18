@@ -4,9 +4,20 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class MigrateToOtherZoneRequest extends TeaModel {
+    /**
+     * <p>The ID of the ApsaraDB for Redis instance.</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>Specifies the time when the database is switched after data is migrated. Valid values:</p>
+     * <br>
+     * <p>*   **Immediately**: immediately switched after the data is migrated.</p>
+     * <p>*   **MaintainTime**: switched within the maintenance window.</p>
+     * <br>
+     * <p>>  Default value: **Immediately**.</p>
+     */
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -22,15 +33,29 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The ID of the destination secondary zone. You can call the [DescribeZones](~~DescribeZones~~) operation to query zone IDs.</p>
+     * <br>
+     * <p>>  You can specify this parameter to deploy the master node and replica node in different zones to implement zone-disaster recovery. This helps withstand data center-level breakdowns.</p>
+     */
     @NameInMap("SecondaryZoneId")
     public String secondaryZoneId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The ID of the vSwitch.</p>
+     * <br>
+     * <p>> *   The vSwitch must be deployed in the zone that is specified by the ZoneId parameter.</p>
+     * <p>> *   If the network type of the instance is VPC, this parameter is required.</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
+    /**
+     * <p>The ID of the destination primary zone. You can call the [DescribeZones](~~94527~~) operation to query zone IDs.</p>
+     */
     @NameInMap("ZoneId")
     public String zoneId;
 

@@ -4,11 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).</p>
+     */
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
     /**
-     * <p>The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).</p>
+     * <p>The ID of the instance that you want to release.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

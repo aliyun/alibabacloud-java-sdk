@@ -424,6 +424,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ShardCount")
         public Integer shardCount;
 
+        @NameInMap("Storage")
+        public String storage;
+
+        @NameInMap("StorageType")
+        public String storageType;
+
         /**
          * <p>Details of the tags.</p>
          */
@@ -819,6 +825,22 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getShardCount() {
             return this.shardCount;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setStorage(String storage) {
+            this.storage = storage;
+            return this;
+        }
+        public String getStorage() {
+            return this.storage;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttribute setTags(DescribeInstanceAttributeResponseBodyInstancesDBInstanceAttributeTags tags) {

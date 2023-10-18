@@ -41,6 +41,13 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Redis产品系列，取值如下：</p>
+     * <br>
+     * <p>- **professional**：标准版，支持单副本、主备、读写分离、集群四种架构，扩展性强。</p>
+     * <p> <props="china"></p>
+     * <p>-  **economical**：仅支持主备架构，具有价格优势，更多信息请参见[经济版实例](~~2489678~~)。</props></p>
+     */
     @NameInMap("InstanceScene")
     public String instanceScene;
 
