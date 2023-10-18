@@ -7,15 +7,17 @@ public class GetVpnGatewayDiagnoseResultRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The ID of each request may be different.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the diagnostic.</p>
+     * <p>The ID of the diagnostic operation.</p>
      * <br>
      * <p>When you call the [DiagnoseVpnGateway](~~469751~~) operation, the system returns a corresponding ID.</p>
      */
@@ -25,7 +27,7 @@ public class GetVpnGatewayDiagnoseResultRequest extends TeaModel {
     /**
      * <p>The region ID of the VPN gateway.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     /**
-     * <p>The timestamp generated when the policy-based route was created. Unit: milliseconds.</p>
+     * <p>The time when the policy-based route was created.</p>
      * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
@@ -25,7 +25,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.</p>
+     * <p>The tunneling protocol. The value is **Ipsec**.</p>
      */
     @NameInMap("OverlayMode")
     public String overlayMode;
@@ -37,7 +37,7 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -64,13 +64,13 @@ public class CreateVpnPbrRouteEntryResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The ID of the VPN gateway.</p>
+     * <p>The VPN gateway ID.</p>
      */
     @NameInMap("VpnInstanceId")
     public String vpnInstanceId;
 
     /**
-     * <p>The weight of the policy-based route.</p>
+     * <p>The weight of the policy-based route. Valid values:</p>
      * <br>
      * <p>*   **100**: The IPsec-VPN connection associated with the policy-based route serves as an active connection.</p>
      * <p>*   **0**: The IPsec-VPN connection associated with the policy-based route serves as a standby connection.</p>

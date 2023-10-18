@@ -7,9 +7,9 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -39,7 +39,7 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
      * <br>
      * <p>*   If the route was assigned a priority, this parameter is optional.</p>
      * <br>
-     * <p>    If you set this parameter, set the value to the priority that was assigned to the route. Otherwise, the operation fails.</p>
+     * <p>        If you specify this parameter, set the value to the priority configured for the policy-based route. Otherwise, the operation cannot be performed.</p>
      */
     @NameInMap("Priority")
     public Integer priority;

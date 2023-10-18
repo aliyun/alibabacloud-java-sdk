@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateCommonBandwidthPackageResponseBody extends TeaModel {
     /**
-     * <p>The ID of the EIP bandwidth plan.</p>
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

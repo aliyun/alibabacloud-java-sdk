@@ -16,9 +16,9 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -32,10 +32,10 @@ public class CreateVpcRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -43,30 +43,33 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable IPv6. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
+    /**
+     * <p>The ID of the IP Address Manager (IPAM) pool of the IPv4 type.</p>
+     */
     @NameInMap("Ipv4IpamPoolId")
     public String ipv4IpamPoolId;
 
     /**
-     * <p>The IPv6 CIDR blocks of the VPC.</p>
+     * <p>The IPv6 CIDR block of the VPC.</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
     /**
-     * <p>The type of the IPv6 CIDR block. Valid values:</p>
+     * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
      * <br>
-     * <p>*   **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP)</p>
-     * <p>*   **ChinaMobile**: China Mobile (single ISP).</p>
-     * <p>*   **ChinaUnicom**: China Unicom (single ISP).</p>
-     * <p>*   **ChinaTelecom**: China Telecom (single ISP).</p>
+     * <p>*   **BGP** (default)</p>
+     * <p>*   **ChinaMobile**</p>
+     * <p>*   **ChinaUnicom**</p>
+     * <p>*   **ChinaTelecom**</p>
      * <br>
-     * <p>>  If your Alibaba Cloud account is allowed to use single-ISP bandwidth, you can set this parameter to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
+     * <p>>  If you are allowed to use single-ISP bandwidth, you can set the value to **ChinaTelecom**, **ChinaUnicom**, or **ChinaMobile**.</p>
      */
     @NameInMap("Ipv6Isp")
     public String ipv6Isp;
@@ -99,6 +102,9 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag of the resource.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateVpcRequestTag> tag;
 
@@ -260,9 +266,19 @@ public class CreateVpcRequest extends TeaModel {
     }
 
     public static class CreateVpcRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be at most 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

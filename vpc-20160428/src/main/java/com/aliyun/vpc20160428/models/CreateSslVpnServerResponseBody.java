@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateSslVpnServerResponseBody extends TeaModel {
     /**
-     * <p>The name of the SSL server.</p>
+     * <p>The SSL server name.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

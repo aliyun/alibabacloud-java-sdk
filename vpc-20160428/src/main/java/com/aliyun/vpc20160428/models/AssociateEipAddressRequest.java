@@ -13,9 +13,9 @@ public class AssociateEipAddressRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,24 +29,24 @@ public class AssociateEipAddressRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the instance with which you want to associate the EIP.</p>
+     * <p>The ID of the region in which the instance with which you want to associate the EIP resides.</p>
      * <br>
-     * <p>>  This parameter is required only when the EIP is associated with a shared-bandwidth Global Accelerator (GA) instance.</p>
+     * <p>>  This parameter is required only when the EIP is added to a shared Global Accelerator (GA) instance.</p>
      */
     @NameInMap("InstanceRegionId")
     public String instanceRegionId;
 
     /**
-     * <p>The type of instance with which you want to associate the EIP. Valid values:</p>
+     * <p>The type of the instance with which you want to associate the EIP. Valid values:</p>
      * <br>
-     * <p>*   **Nat**: a NAT gateway</p>
-     * <p>*   **SlbInstance**: a CLB instance</p>
-     * <p>*   **EcsInstance** (default): an ECS instance in a VPC</p>
-     * <p>*   **NetworkInterface**: a secondary ENI</p>
-     * <p>*   **HaVip**: an HAVIP</p>
-     * <p>*   **IpAddress**: an IP address</p>
+     * <p>*   **Nat**: NAT gateway</p>
+     * <p>*   **SlbInstance**: CLB instance</p>
+     * <p>*   **EcsInstance** (default): ECS instance</p>
+     * <p>*   **NetworkInterface**: secondary ENI</p>
+     * <p>*   **HaVip**: HAVIP</p>
+     * <p>*   **IpAddress**: IP address</p>
      * <br>
-     * <p>>  If you do not set this parameter, the type of the instance with which you want to associate the EIP is **EcsInstance**. If the type of the instance with which you want to associate the EIP is not **EcsInstance**, this parameter is required.</p>
+     * <p>>  The default value is **EcsInstance**. If the instance with which you want to associate the EIP is not an ECS instance, this parameter is required.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -56,7 +56,7 @@ public class AssociateEipAddressRequest extends TeaModel {
      * <br>
      * <p>*   **NAT** (default): NAT mode</p>
      * <p>*   **MULTI_BINDED**: multi-EIP-to-ENI mode</p>
-     * <p>*   **BINDED**: cut-through mode</p>
+     * <p>*   **BINDED**: cut-network interface controller mode</p>
      * <br>
      * <p>>  This parameter is required only when **InstanceType** is set to **NetworkInterface**.</p>
      */
@@ -70,9 +70,9 @@ public class AssociateEipAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>An IP address in the CIDR block of the vSwitch.</p>
+     * <p>The IP address in the CIDR block of the vSwitch.</p>
      * <br>
-     * <p>If you do not set this parameter, the system allocates a private IP address based on the VPC ID and vSwitch ID.</p>
+     * <p>If you leave this parameter empty, the system allocates a private IP address based on the VPC ID and vSwitch ID.</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -80,7 +80,7 @@ public class AssociateEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the region to which the EIP belongs.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -92,11 +92,11 @@ public class AssociateEipAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP.</p>
+     * <p>The ID of the VPC in which an IPv4 gateway is created. The VPC and the EIP must be in the same region.</p>
      * <br>
      * <p>When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations.</p>
      * <br>
-     * <p>>  This parameter is required if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.</p>
+     * <p>>  This parameter is required if **InstanceType** is set to **IpAddress**, which indicates that the EIP is to be associated with an IP address.</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

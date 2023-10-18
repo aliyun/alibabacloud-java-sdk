@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -16,21 +16,21 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <br>
-     * <p>*   **BGP** (default): BGP (Multi-ISP) lines</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines</p>
+     * <p>*   **BGP** (default): BGP (Multi-ISP) line</p>
+     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line</p>
      * <br>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).</p>
+     * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](~~32321~~)</p>
      * <br>
      * <p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
      * <br>
-     * <p>*   **ChinaTelecom**: China Telecom</p>
-     * <p>*   **ChinaUnicom**: China Unicom</p>
-     * <p>*   **ChinaMobile**: China Mobile</p>
-     * <p>*   **ChinaTelecom_L2**: China Telecom L2</p>
-     * <p>*   **ChinaUnicom_L2**: China Unicom L2</p>
-     * <p>*   **ChinaMobile_L2**: China Mobile L2</p>
+     * <p>*   **ChinaTelecom**</p>
+     * <p>*   **ChinaUnicom**</p>
+     * <p>*   **ChinaMobile**</p>
+     * <p>*   **ChinaTelecom_L2**</p>
+     * <p>*   **ChinaUnicom_L2**</p>
+     * <p>*   **ChinaMobile_L2**</p>
      * <br>
-     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
+     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the parameter to **BGP_FinanceCloud**.</p>
      */
     @NameInMap("Isp")
     public String isp;
@@ -44,16 +44,16 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
      * <p>The name of the IP address pool.</p>
      * <br>
-     * <p>This parameter is optional. The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>If you enter a name, the name must be 1 to 128 characters in length and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <br>
-     * <p>*   If this is your first query and no subsequent queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a subsequent query is to be sent, set the parameter to the value of NextToken that is returned from the last call.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -64,13 +64,18 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The IDs of the IP address pool.</p>
+     * <br>
+     * <p>You can enter up to 100 IDs.</p>
+     */
     @NameInMap("PublicIpAddressPoolIds")
     public java.util.List<String> publicIpAddressPoolIds;
 
     /**
-     * <p>The ID of the region where you want to query IP address pools.</p>
+     * <p>The ID of the region in which the IP address pool that you want to query resides.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -90,13 +95,16 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
      * <p>The status of the IP address pool. Valid values:</p>
      * <br>
-     * <p>*   **Created**: The IP address pool is available.</p>
-     * <p>*   **Deleting**: The IP address pool is being deleted.</p>
-     * <p>*   **Modifying**: The IP address pool is being modified.</p>
+     * <p>*   **Created**</p>
+     * <p>*   **Deleting**</p>
+     * <p>*   **Modifying**</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags to add to the resource.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListPublicIpAddressPoolsRequestTags> tags;
 
@@ -219,17 +227,17 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
 
     public static class ListPublicIpAddressPoolsRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
          * <br>
-         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The value of the tag. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
          * <br>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.</p>
          */
         @NameInMap("Value")
         public String value;

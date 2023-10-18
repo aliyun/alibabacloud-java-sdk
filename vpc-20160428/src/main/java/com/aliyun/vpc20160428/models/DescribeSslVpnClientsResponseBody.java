@@ -11,31 +11,31 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
     public java.util.List<DescribeSslVpnClientsResponseBodyClientInfoList> clientInfoList;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the VPN gateway.</p>
+     * <p>The region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -111,13 +111,15 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         /**
          * <p>The SSL client certificate used by the client.</p>
          * <br>
-         * <p>> If the client uses two-factor authentication to establish an SSL-VPN connection to Alibaba Cloud, the value is the username of the client.</p>
+         * <p>>  If the client uses two-factor authentication to establish an SSL-VPN connection to Alibaba Cloud, the return value is the username of the client.</p>
          */
         @NameInMap("CommonName")
         public String commonName;
 
         /**
-         * <p>The timestamp that indicates when the client connected to Alibaba Cloud through an SSL-VPN connection. Unit: milliseconds. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp that indicates when the client connected to Alibaba Cloud through an SSL-VPN connection. Unit: milliseconds.</p>
+         * <br>
+         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("ConnectedTime")
         public Long connectedTime;
@@ -153,7 +155,9 @@ public class DescribeSslVpnClientsResponseBody extends TeaModel {
         public Long sendBytes;
 
         /**
-         * <p>The status of the SSL-VPN connection. The value is set to **online**, which indicates that the client has connected to Alibaba Cloud through an SSL-VPN connection.</p>
+         * <p>The status of the SSL-VPN connection.</p>
+         * <br>
+         * <p>The value is set to **online**, which indicates that the client has connected to Alibaba Cloud through an SSL-VPN connection.</p>
          */
         @NameInMap("Status")
         public String status;

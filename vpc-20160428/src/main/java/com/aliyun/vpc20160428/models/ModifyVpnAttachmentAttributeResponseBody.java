@@ -11,11 +11,11 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public String attachInstanceId;
 
     /**
-     * <p>The type of resource that is associated with the IPsec-VPN connection.</p>
+     * <p>The type of the resource that is associated with the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **CEN:** indicates that the IPsec-VPN connection is associated with a transit router.</p>
-     * <p>*   **VPNGW:** indicates that the IPsec-VPN connection is associated with a VPN gateway.</p>
-     * <p>*   **NO_ASSOCIATED:** indicates that the IPsec-VPN connection is not associated with any resource.</p>
+     * <p>*   **CEN**: The IPsec-VPN connection is associated with a transit router.</p>
+     * <p>*   **VPNGW**: The IPsec-VPN connection is associated with a VPN gateway.</p>
+     * <p>*   **NO_ASSOCIATED**: The IPsec-VPN connection is not associated with any resource.</p>
      */
     @NameInMap("AttachType")
     public String attachType;
@@ -41,46 +41,46 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether IPsec negotiations immediately start after the configuration is complete. Valid values:</p>
+     * <p>Indicates whether IPsec negotiations immediately start after the configuration takes effect. Valid values:</p>
      * <br>
-     * <p>*   **true:** IPsec negotiations immediately start after the configuration is complete.</p>
-     * <p>*   **false:** IPsec negotiations start when inbound traffic is detected.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EffectImmediately")
     public Boolean effectImmediately;
 
     /**
-     * <p>Indicates whether the DPD feature is enabled for the IPsec-VPN connection.</p>
+     * <p>Indicates whether the DPD feature is enabled for the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **true:** The DPD feature is enabled.</p>
-     * <p>*   **false:** The DPD feature is disabled.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableDpd")
     public Boolean enableDpd;
 
     /**
-     * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection.</p>
+     * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **true:** NAT traversal is enabled.</p>
-     * <p>*   **false:** NAT traversal is disabled.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
     /**
-     * <p>The configurations of Phase 1 negotiations.</p>
+     * <p>The configuration of Phase 1 negotiations.</p>
      */
     @NameInMap("IkeConfig")
     public ModifyVpnAttachmentAttributeResponseBodyIkeConfig ikeConfig;
 
     /**
-     * <p>The configurations of Phase 2 negotiations.</p>
+     * <p>The configuration of Phase 2 negotiations.</p>
      */
     @NameInMap("IpsecConfig")
     public ModifyVpnAttachmentAttributeResponseBodyIpsecConfig ipsecConfig;
 
     /**
-     * <p>The CIDR block on the VPC side.</p>
+     * <p>The CIDR block of the VPC with which the data center can communicate.</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
@@ -92,22 +92,22 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The network type of the IPsec-VPN connection.</p>
+     * <p>The network type of the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **public:** Internet.</p>
-     * <p>*   **private:** private networks.</p>
+     * <p>*   **public**: an encrypted connection over the Internet</p>
+     * <p>*   **private**: an encrypted connection over private networks</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
-     * <p>The CIDR block on the data center side.</p>
+     * <p>The CIDR block of the data center with which the VPC can communicate.</p>
      */
     @NameInMap("RemoteSubnet")
     public String remoteSubnet;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -115,30 +115,30 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
     /**
      * <p>The bandwidth specification of the IPsec-VPN connection.</p>
      * <br>
-     * <p>**M** in the response indicates **Mbit/s**.</p>
+     * <p>A value of **M** in the response indicates **Mbit/s**.</p>
      */
     @NameInMap("Spec")
     public String spec;
 
     /**
-     * <p>The status of the IPsec-VPN connection.</p>
+     * <p>The state of the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **ike_sa_not_established:** Phase 1 negotiations failed.</p>
-     * <p>*   **ike_sa_established:** Phase 1 negotiations were successful.</p>
-     * <p>*   **ipsec_sa_not_established:** Phase 2 negotiations failed.</p>
-     * <p>*   **ipsec_sa_established:** Phase 2 negotiations were successful.</p>
+     * <p>*   **ike_sa_not_established**: Phase 1 negotiations failed.</p>
+     * <p>*   **ike_sa_established**: Phase 1 negotiations succeeded.</p>
+     * <p>*   **ipsec_sa_not_established**: Phase 2 negotiations failed.</p>
+     * <p>*   **ipsec_sa_established**: Phase 2 negotiations succeeded.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The health check configurations of the IPsec-VPN connection.</p>
+     * <p>The health check configuration of the IPsec-VPN connection.</p>
      */
     @NameInMap("VcoHealthCheck")
     public ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck vcoHealthCheck;
 
     /**
-     * <p>The BGP configurations of the IPsec-VPN connection.</p>
+     * <p>The BGP configuration of the IPsec-VPN connection.</p>
      */
     @NameInMap("VpnBgpConfig")
     public ModifyVpnAttachmentAttributeResponseBodyVpnBgpConfig vpnBgpConfig;
@@ -330,19 +330,19 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnAttachmentAttributeResponseBodyIkeConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm that was used in Phase 1 negotiations.</p>
+         * <p>The authentication algorithm that is used in Phase 1 negotiations.</p>
          */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
         /**
-         * <p>The encryption algorithm that was used in Phase 1 negotiations.</p>
+         * <p>The encryption algorithm that is used in Phase 1 negotiations.</p>
          */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
         /**
-         * <p>The SA lifetime that was determined by Phase 1 negotiations. Unit: seconds.</p>
+         * <p>The SA lifetime that is determined by Phase 1 negotiations. Unit: seconds.</p>
          */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
@@ -354,7 +354,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public String ikeMode;
 
         /**
-         * <p>The Diffie-Hellman key exchange algorithm that was used in Phase 1 negotiations.</p>
+         * <p>The DH key exchange algorithm that is used in Phase 1 negotiations.</p>
          */
         @NameInMap("IkePfs")
         public String ikePfs;
@@ -366,13 +366,13 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The identifier on the Alibaba Cloud side.</p>
+         * <p>The identifier of the IPsec-VPN connection on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalId")
         public String localId;
 
         /**
-         * <p>The pre-shared key that was used for identity authentication between the VPN gateway and the data center.</p>
+         * <p>The pre-shared key that is used for identity authentication between the VPN gateway and the data center.</p>
          * <br>
          * <p>>  The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, you cannot establish a connection between the data center and the VPN gateway.</p>
          */
@@ -380,7 +380,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The identifier on the data center side.</p>
+         * <p>The identifier of the IPsec-VPN connection on the data center side.</p>
          */
         @NameInMap("RemoteId")
         public String remoteId;
@@ -466,25 +466,25 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnAttachmentAttributeResponseBodyIpsecConfig extends TeaModel {
         /**
-         * <p>The authentication algorithm that was used in Phase 2 negotiations.</p>
+         * <p>The authentication algorithm that is used in Phase 2 negotiations.</p>
          */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
         /**
-         * <p>The encryption algorithm that was used in Phase 2 negotiations.</p>
+         * <p>The encryption algorithm that is used in Phase 2 negotiations.</p>
          */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
         /**
-         * <p>The SA lifetime that was determined by Phase 2 negotiations. Unit: seconds.</p>
+         * <p>The SA lifetime that is determined by Phase 2 negotiations. Unit: seconds.</p>
          */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
         /**
-         * <p>The Diffie-Hellman key exchange algorithm that was used in Phase 2 negotiations.</p>
+         * <p>The DH key exchange algorithm that is used in Phase 2 negotiations.</p>
          */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
@@ -530,16 +530,16 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnAttachmentAttributeResponseBodyVcoHealthCheck extends TeaModel {
         /**
-         * <p>The destination IP address that was used for health checks.</p>
+         * <p>The destination IP address that is used for health checks.</p>
          */
         @NameInMap("Dip")
         public String dip;
 
         /**
-         * <p>Indicates whether the health check feature is enabled for the IPsec-VPN connection.</p>
+         * <p>Indicates whether the health check feature is enabled for the IPsec-VPN connection. Valid values:</p>
          * <br>
-         * <p>*   **true:** The health check feature is enabled.</p>
-         * <p>*   **false:** The health check feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Enable")
         public String enable;
@@ -551,10 +551,10 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>Indicates whether published routes are withdrawn when the health check fails.</p>
+         * <p>Indicates whether advertised routes are withdrawn when the health check fails. Valid values:</p>
          * <br>
-         * <p>*   **revoke_route:** Published routes were withdrawn when the health check failed.</p>
-         * <p>*   **reserve_route:** Published routes were not withdrawn when the health check failed.</p>
+         * <p>*   **revoke_route**: Advertised routes are withdrawn.</p>
+         * <p>*   **reserve_route**: Advertised routes are not withdrawn.</p>
          */
         @NameInMap("Policy")
         public String policy;
@@ -566,7 +566,7 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public Integer retry;
 
         /**
-         * <p>The source IP address that was used for health checks.</p>
+         * <p>The source IP address that is used for health checks.</p>
          */
         @NameInMap("Sip")
         public String sip;
@@ -628,10 +628,10 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnAttachmentAttributeResponseBodyVpnBgpConfig extends TeaModel {
         /**
-         * <p>Indicates whether BGP is enabled for the IPsec-VPN connection.</p>
+         * <p>Indicates whether BGP is enabled for the IPsec-VPN connection. Valid values:</p>
          * <br>
-         * <p>*   **true:** BGP is enabled.</p>
-         * <p>*   **false:** BGP is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableBgp")
         public String enableBgp;
@@ -661,10 +661,10 @@ public class ModifyVpnAttachmentAttributeResponseBody extends TeaModel {
         public String peerBgpIp;
 
         /**
-         * <p>The negotiation status of BGP.</p>
+         * <p>The negotiation state of BGP. Valid values:</p>
          * <br>
-         * <p>*   **success:** normal.</p>
-         * <p>*   **false:** abnormal.</p>
+         * <p>*   **success**: normal</p>
+         * <p>*   **false**: abnormal</p>
          */
         @NameInMap("Status")
         public String status;

@@ -7,8 +7,8 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete the health check IP addresses configured on the router interface. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("DeleteHealthCheckIp")
     public Boolean deleteHealthCheckIp;
@@ -22,7 +22,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The rate of the heath check. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.</p>
+     * <p>The rate of health checks. Unit: milliseconds. The recommended value is **2000**. This value specifies the interval at which probe packets are sent during a health check.</p>
      * <br>
      * <p>In this example, **HcThreshold** is set to **8** and **HcRate** is set to **2000**. In this example, probe packets are sent from **HealthCheckSourceIp** (source address) to **HealthCheckTargetIp** (destination address) every 2,000 seconds. If no response is returned for eight consecutive times, the health check fails.</p>
      */
@@ -30,7 +30,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     public Integer hcRate;
 
     /**
-     * <p>The health check threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.</p>
+     * <p>The healthy threshold. Unit: packets. We recommend that you set the value to **8**. This value specifies the number of probe packets that are sent during a health check.</p>
      */
     @NameInMap("HcThreshold")
     public Integer hcThreshold;
@@ -38,7 +38,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     /**
      * <p>The source IP address that is used to perform health checks. The source IP address must be an idle IP address of the local virtual private cloud (VPC).</p>
      * <br>
-     * <p>>  You can set this parameter if an Express Connect circuit is used.</p>
+     * <p>>  You can set this parameter when an Express Connect circuit is used.</p>
      */
     @NameInMap("HealthCheckSourceIp")
     public String healthCheckSourceIp;
@@ -46,7 +46,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     /**
      * <p>The destination IP address that is used to perform health checks.</p>
      * <br>
-     * <p>>  This parameter is required when the **HealthCheckSourceIp** parameter is set.</p>
+     * <p>>  This parameter is required when **HealthCheckSourceIp** is specified.</p>
      */
     @NameInMap("HealthCheckTargetIp")
     public String healthCheckTargetIp;
@@ -80,8 +80,8 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     /**
      * <p>The type of router to which the peer router interface belongs. Valid values:</p>
      * <br>
-     * <p>*   **VRouter**: vRouter</p>
-     * <p>*   **VBR** (default): virtual border router (VBR)</p>
+     * <p>*   **VRouter**</p>
+     * <p>*   **VBR** (default)</p>
      */
     @NameInMap("OppositeRouterType")
     public String oppositeRouterType;
@@ -90,7 +90,7 @@ public class ModifyRouterInterfaceAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the router interface belongs.</p>
+     * <p>The region ID of the router interface.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

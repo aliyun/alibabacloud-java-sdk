@@ -55,6 +55,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateTrafficMirrorFilterRequestTag> tag;
 
@@ -424,9 +427,19 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     }
 
     public static class CreateTrafficMirrorFilterRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N to add to the resource. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         * <br>
+         * <p>You can add up to 20 tags in each call.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N that is added to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

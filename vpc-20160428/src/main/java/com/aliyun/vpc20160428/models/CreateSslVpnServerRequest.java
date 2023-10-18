@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSslVpnServerRequest extends TeaModel {
     /**
-     * <p>The encryption algorithm that is used in the SSL-VPN connection. Valid values:</p>
+     * <p>The encryption algorithm that is used for the SSL-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **AES-128-CBC** (default): AES-128-CBC</p>
-     * <p>*   **AES-192-CBC**: AES-192-CBC</p>
-     * <p>*   **AES-256-CBC**: AES-256-CBC</p>
-     * <p>*   **none**: does not use an encryption algorithm.</p>
+     * <p>*   **AES-128-CBC** (default)</p>
+     * <p>*   **AES-192-CBC**</p>
+     * <p>*   **AES-256-CBC**</p>
+     * <p>*   **none**</p>
      */
     @NameInMap("Cipher")
     public String cipher;
@@ -18,11 +18,11 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>The client CIDR block.</p>
      * <br>
-     * <p>The CIDR block that is allocated to the virtual network interface of the client. It is not the CIDR block where the client resides.</p>
+     * <p>The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client. It is not the CIDR block where the client resides.</p>
      * <br>
-     * <p>When the client accesses the destination network through an SSL-VPN connection, the VPN gateway allocates an IP address from the client CIDR block to the client.</p>
+     * <p>When the client accesses the local virtual private cloud (VPC) by using an SSL-VPN connection, the VPN gateway allocates an IP address from the client CIDR block to the client.</p>
      * <br>
-     * <p>>  This CIDR block cannot conflict with the CIDR block specified by **LocalSubnet**.</p>
+     * <p>>  This CIDR block cannot overlap with the CIDR block specified by **LocalSubnet**.</p>
      */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
@@ -30,9 +30,9 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -40,8 +40,8 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable data compression. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("Compress")
     public Boolean compress;
@@ -49,16 +49,16 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable two-factor authentication. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default):</p>
      * <br>
-     * <p>>  To enable two-factor authentication, make sure that the VPN gateway was created after 00:00:00 (UTC+8), March 5, 2020. Otherwise, two-factor authentication is not supported.</p>
+     * <p>>  If you want to use the two-factor authentication feature, you must make sure that your VPN gateway is created after 00:00:00, March 5, 2020. Otherwise, the two-factor authentication feature is not supported.</p>
      */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
 
     /**
-     * <p>The ID of the IDaaS instance.</p>
+     * <p>The Identity as a Service (IDaaS) instance ID.</p>
      */
     @NameInMap("IDaaSInstanceId")
     public String IDaaSInstanceId;
@@ -72,17 +72,17 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>The local CIDR block.</p>
      * <br>
-     * <p>The CIDR block to be accessed by the client through the SSL-VPN connection.</p>
+     * <p>The CIDR block to be accessed by the client by using the SSL-VPN connection.</p>
      * <br>
-     * <p>This value can be the CIDR block of a virtual private cloud (VPC), a vSwitch, a data center that is connected to a VPC through an Express Connect circuit, or Object Storage Service (OSS).</p>
+     * <p>This value can be the CIDR block of a VPC, a vSwitch, a data center that is connected to a VPC by using an Express Connect circuit, or an Alibaba Cloud service such as Object Storage Service (OSS).</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
 
     /**
-     * <p>The name of the SSL server.</p>
+     * <p>The SSL server name.</p>
      * <br>
-     * <p>The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -94,7 +94,7 @@ public class CreateSslVpnServerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port used by the SSL server. Default value: **1194**. The following ports cannot be used:</p>
+     * <p>The port that is used by the SSL server. Default value: **1194**. The following ports cannot be used:</p>
      * <br>
      * <p>**22, 2222, 22222, 9000, 9001, 9002, 7505, 80, 443, 53, 68, 123, 4510, 4560, 500, and 4500**.</p>
      */
@@ -104,14 +104,14 @@ public class CreateSslVpnServerRequest extends TeaModel {
     /**
      * <p>The protocol that is used by the SSL server. Valid values:</p>
      * <br>
-     * <p>*   **TCP**: TCP</p>
-     * <p>*   **UDP** (default): UDP</p>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP** (default)</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created.</p>
+     * <p>The region ID of the VPN gateway.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

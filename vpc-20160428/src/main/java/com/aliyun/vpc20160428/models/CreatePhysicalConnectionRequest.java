@@ -34,6 +34,9 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DeviceAdvancedCapacity")
+    public java.util.List<String> deviceAdvancedCapacity;
+
     /**
      * <p>The connectivity provider of the Express Connect circuit. Valid values:</p>
      * <br>
@@ -161,6 +164,14 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreatePhysicalConnectionRequest setDeviceAdvancedCapacity(java.util.List<String> deviceAdvancedCapacity) {
+        this.deviceAdvancedCapacity = deviceAdvancedCapacity;
+        return this;
+    }
+    public java.util.List<String> getDeviceAdvancedCapacity() {
+        return this.deviceAdvancedCapacity;
     }
 
     public CreatePhysicalConnectionRequest setLineOperator(String lineOperator) {

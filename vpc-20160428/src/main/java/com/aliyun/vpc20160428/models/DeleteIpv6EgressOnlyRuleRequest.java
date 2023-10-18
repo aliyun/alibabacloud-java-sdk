@@ -7,9 +7,9 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate a value, but you must make sure that the value is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the **client token**. The value of **RequestId** is different for each API request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;

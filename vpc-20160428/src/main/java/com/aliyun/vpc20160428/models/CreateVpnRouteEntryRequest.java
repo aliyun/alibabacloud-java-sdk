@@ -7,9 +7,9 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -29,7 +29,7 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to **Ipsec**.</p>
+     * <p>The tunneling protocol. The value is set to **Ipsec**, which indicates the IPsec tunneling protocol.</p>
      */
     @NameInMap("OverlayMode")
     public String overlayMode;
@@ -43,8 +43,8 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to advertise the destination-based route to a virtual private cloud (VPC) route table. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("PublishVpc")
     public Boolean publishVpc;

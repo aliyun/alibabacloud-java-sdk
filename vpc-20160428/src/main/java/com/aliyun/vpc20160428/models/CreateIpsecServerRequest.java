@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateIpsecServerRequest extends TeaModel {
     /**
-     * <p>The client CIDR block. It refers to the CIDR block that is used to allocate an IP address to the client.</p>
+     * <p>The client CIDR block from which an IP address is allocated to the virtual network interface controller (NIC) of the client.</p>
      * <br>
-     * <p>>  The client CIDR block must not overlap with the CIDR block of the virtual private cloud (VPC).</p>
+     * <p>>  The client CIDR block must not overlap with the CIDR blocks of the VPC.</p>
      */
     @NameInMap("ClientIpPool")
     public String clientIpPool;
@@ -15,48 +15,48 @@ public class CreateIpsecServerRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to only precheck this request. Valid values:</p>
      * <br>
-     * <p>*   **true**: only prechecks the request. After the request passes the precheck, the system does not create the IPsec server. The system checks the required parameters, the request format, and the service limits. If the request fails the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): prechecks the request. After the request passes the precheck, the system creates the IPsec server.</p>
+     * <p>*   **true**: prechecks the request without creating the IPsec server. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): sends the request. This is the default value. If the request passes the precheck, the system creates the IPsec server.</p>
      */
     @NameInMap("DryRun")
     public String dryRun;
 
     /**
-     * <p>Specifies whether you want the configuration to immediately take effect. Valid values:</p>
+     * <p>Specify whether to start connection negotiations immediately. Valid values:</p>
      * <br>
-     * <p>*   **true**: initiates negotiations after the configuration is completed.</p>
-     * <p>*   **false** (default): initiates negotiations when inbound traffic is detected.</p>
+     * <p>*   **true**: immediately initiates negotiations after the configuration is complete.</p>
+     * <p>*   **false** (default): initiates negotiations when inbound traffic is detected. This is the default value.</p>
      */
     @NameInMap("EffectImmediately")
     public Boolean effectImmediately;
 
     /**
-     * <p>The configuration of Phase 1 negotiations. Valid values:</p>
+     * <p>The configuration of Phase 1 negotiation. Valid values:</p>
      * <br>
      * <p>*   **IkeVersion**: the IKE version. Valid values: **ikev1** and **ikev2**. Default value: **ikev2**.</p>
      * <p>*   **IkeMode**: the IKE negotiation mode. Default value: **main**.</p>
-     * <p>*   **IkeEncAlg**: the encryption algorithm that is used in Phase 1 negotiations. Default value: **aes**.</p>
-     * <p>*   **IkeAuthAlg**: the authentication algorithm that is used in Phase 1 negotiations. Default value: **sha1**.</p>
-     * <p>*   **IkePfs**: the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Default value: **group2**.</p>
-     * <p>*   **IkeLifetime**: the security association (SA) lifetime determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.</p>
+     * <p>*   **IkeEncAlg**: the encryption algorithm that is used in Phase 1 negotiation. Default value: **aes**.</p>
+     * <p>*   **IkeAuthAlg**: the authentication algorithm that is used in Phase 1 negotiation. Default value: **sha1**.</p>
+     * <p>*   **IkePfs**: the Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiation. Default value: **group2**.</p>
+     * <p>*   **IkeLifetime**: the security association (SA) lifetime determined by Phase 1 negotiation. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.</p>
      * <p>*   **LocalId**: the identifier of the IPsec server. The value can be a fully qualified domain name (FQDN) or an IP address. The default value is the public IP address of the VPN gateway.</p>
-     * <p>*   **RemoteId**: the identifier of the peer. The value can be an FQDN or an IP address. By default, this parameter is not specified.</p>
+     * <p>*   **RemoteId**: the peer identifier. The value can be an FQDN or an IP address. The default value is empty.</p>
      */
     @NameInMap("IkeConfig")
     public String ikeConfig;
 
     /**
-     * <p>The name of the IPsec server.</p>
+     * <p>The IPsec server name.</p>
      * <br>
      * <p>The name must be 1 to 100 characters in length and cannot start with `http://` or `https://`.</p>
      */
@@ -64,20 +64,20 @@ public class CreateIpsecServerRequest extends TeaModel {
     public String ipSecServerName;
 
     /**
-     * <p>The configuration of Phase 2 negotiations. Valid values:</p>
+     * <p>The configuration of Phase 2 negotiation. Valid values:</p>
      * <br>
-     * <p>*   **IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiations. Default value: **aes**.</p>
-     * <p>*   **IpsecAuthAlg**: the authentication algorithm that is used in Phase 2 negotiations. Default value: **sha1**.</p>
-     * <p>*   **IpsecPfs**: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm used in Phase 2 negotiations. Default value: **group2**.</p>
-     * <p>*   **IpsecLifetime**: the SA lifetime determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.</p>
+     * <p>*   **IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiation. Default value: **aes**.</p>
+     * <p>*   **IpsecAuthAlg**: the authentication algorithm that is used in Phase 2 negotiation. Default value: **sha1**.</p>
+     * <p>*   **IpsecPfs**: forwards packets of all protocols. The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiation. Default value: **group2**.</p>
+     * <p>*   **IpsecLifetime**: the SA lifetime determined by Phase 2 negotiation. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.</p>
      */
     @NameInMap("IpsecConfig")
     public String ipsecConfig;
 
     /**
-     * <p>The local CIDR blocks, which refer to the CIDR blocks on the virtual private cloud (VPC) side.</p>
+     * <p>The local CIDR blocks, which are the CIDR blocks of the virtual private cloud (VPC) for the client to access.</p>
      * <br>
-     * <p>Separate multiple CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</p>
+     * <p>Multiple CIDR blocks are separated with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.</p>
      */
     @NameInMap("LocalSubnet")
     public String localSubnet;
@@ -89,7 +89,7 @@ public class CreateIpsecServerRequest extends TeaModel {
      * <br>
      * <p>If you do not specify a pre-shared key, the system randomly generates a 16-character string as the pre-shared key. You can call the [ListIpsecServers](~~205453~~) operation to query the pre-shared keys that are generated by the system.</p>
      * <br>
-     * <p>>  The pre-shared key of the IPsec server must be the same as the authentication key of the client. Otherwise, a connection cannot be established between the IPsec server and the client.</p>
+     * <p>>  The pre-shared key of the IPsec server must be the same as the client key. Otherwise, the IPsec server cannot be connected to the client.</p>
      */
     @NameInMap("Psk")
     public String psk;

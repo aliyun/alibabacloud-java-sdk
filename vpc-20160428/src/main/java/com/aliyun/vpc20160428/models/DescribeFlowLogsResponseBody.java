@@ -17,13 +17,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -31,8 +31,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public String success;
@@ -98,13 +98,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -172,7 +172,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLog extends TeaModel {
         /**
-         * <p>The sampling interval of the flow log. Unit: seconds.</p>
+         * <p>The sampling interval of the flow log. Unit: minutes.</p>
          */
         @NameInMap("AggregationInterval")
         public Integer aggregationInterval;
@@ -180,8 +180,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         /**
          * <p>The business status of the flow log. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: active</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
@@ -198,9 +198,21 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>If the flow log failed to be delivered, you can troubleshoot based on the following error messages that may be returned:</p>
+         * <br>
+         * <p>*   **UnavaliableTarget**: The Logstore of SLS is unavailable and cannot receive logs. Check whether the Logstore is available.</p>
+         * <p>*   **ProjectNotExist**: The project of SLS does not exist. We recommend that you delete the project and create a new one.</p>
+         * <p>*   **UnknownError**: An internal error occurred. Try again later.</p>
+         */
         @NameInMap("FlowLogDeliverErrorMessage")
         public String flowLogDeliverErrorMessage;
 
+        /**
+         * <p>Indicates whether the flow log is delivered. Valid values:</p>
+         * <p>- **SUCCESS** </p>
+         * <p>- **FAILED**</p>
+         */
         @NameInMap("FlowLogDeliverStatus")
         public String flowLogDeliverStatus;
 
@@ -249,7 +261,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         /**
          * <p>The type of the resource from which traffic is captured. Valid values:</p>
          * <br>
-         * <p>*   **NetworkInterface**: an ENI</p>
+         * <p>*   **NetworkInterface**: ENI</p>
          * <p>*   **VSwitch**: all ENIs in a vSwitch</p>
          * <p>*   **VPC**: all ENIs in a VPC</p>
          */
@@ -260,9 +272,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
          * <p>The hosting type of the cloud service.</p>
          * <br>
          * <p>*   This parameter can be empty, which indicates that the flow log is created by the user.</p>
-         * <p>*   If this parameter is not empty, the value is fixed as **sls**. The value sls indicates that the flow log is created in the Log Service console.</p>
+         * <p>*   If this parameter is not empty, the value is set to **sls**. The value sls indicates that the flow log is created in the Simple Log Service (SLS) console.</p>
          * <br>
-         * <p>>  A flow log that is created in the Log Service console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the [Log Service console](https://sls.console.aliyun.com) and perform required operations.</p>
+         * <p>> A flow log that is created in the SLS console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the [SLS console](https://sls.console.aliyun.com) and perform required operations.</p>
          */
         @NameInMap("ServiceType")
         public String serviceType;
@@ -270,26 +282,26 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         /**
          * <p>The status of the flow log. Valid values:</p>
          * <br>
-         * <p>*   **Active**: enabled</p>
-         * <p>*   **Activating**: being enabled</p>
-         * <p>*   **Inactive**: disabled</p>
+         * <p>*   **Active**</p>
+         * <p>*   **Activating**</p>
+         * <p>*   **Inactive**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>An array that consists of the details of the returned tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTags tags;
 
         /**
-         * <p>The scope of the traffic that you want to capture. Valid values:</p>
+         * <p>The sampling scope of the traffic that is collected. Valid values:</p>
          * <br>
          * <p>*   **all** (default value): all traffic</p>
          * <p>*   **internetGateway**: Internet traffic</p>
          * <br>
-         * <p>>  By default, the traffic path feature is unavailable. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).</p>
+         * <p>> By default, the traffic path feature is unavailable. To use this feature, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex).</p>
          */
         @NameInMap("TrafficPath")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath;

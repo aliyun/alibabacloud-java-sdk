@@ -7,8 +7,8 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically advertise BGP routes to the virtual private cloud (VPC). Valid values:</p>
      * <br>
-     * <p>*   **true:** yes.</p>
-     * <p>*   **false:** no.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("AutoPropagate")
     public Boolean autoPropagate;
@@ -16,9 +16,9 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that it is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The value of RequestId may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,7 +34,7 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
     /**
      * <p>The new name of the VPN gateway.</p>
      * <br>
-     * <p>The name must be 1 to 100 characters in length, and cannot start with `http://` or `https://`.</p>
+     * <p>The name must be 2 to 100 characters in length and cannot start with `http://` or `https://`. It must start with a letter and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). Other characters are not supported.</p>
      */
     @NameInMap("Name")
     public String name;

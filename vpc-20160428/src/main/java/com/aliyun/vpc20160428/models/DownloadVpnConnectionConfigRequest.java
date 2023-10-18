@@ -11,7 +11,7 @@ public class DownloadVpnConnectionConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where you want to create the IPsec-VPN connection.</p>
+     * <p>The ID of the region where the IPsec-VPN connection is created.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

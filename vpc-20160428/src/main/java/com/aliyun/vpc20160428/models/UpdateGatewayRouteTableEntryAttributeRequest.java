@@ -7,9 +7,9 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,16 +23,16 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination CIDR block of the route entry.</p>
+     * <p>The destination CIDR block of the route entry in the gateway route table.</p>
      */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
     /**
-     * <p>Specifies whether to check the request without performing the operation. Valid values:</p>
+     * <p>Specifies whether to precheck only this request. Valid values:</p>
      * <br>
-     * <p>*   **true**: checks the request but does not modify the route entry. The system checks the required parameters, request syntax, and limits. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the route entry is modified.</p>
+     * <p>*   **true**: prechecks the request without modifying the gateway route table. The system checks the required parameters, request format, and service limits. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: sends the request. This is the default value. If the request passes the precheck, a 2xx HTTP status code is returned and the gateway route table is modified.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -52,23 +52,23 @@ public class UpdateGatewayRouteTableEntryAttributeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The next hop ID of the route entry after the route entry is modified.</p>
+     * <p>The new next hop ID of the route entry.</p>
      * <br>
-     * <p>*   If you set **NextHopType** to **Instance**, specify an ECS instance ID for the **NextHopId** parameter.</p>
-     * <p>*   If you set **NextHopType** to **NetworkInterface**, specify an ENI ID for the **NextHopId** parameter.</p>
-     * <p>*   If you set **NextHopType** to **Local**, leave the **NextHopId** parameter empty, which specifies a local next hop.</p>
+     * <p>*   If you set **NextHopType** to **Instance**, specify an ECS instance ID for **NextHopId**.</p>
+     * <p>*   If you set **NextHopType** to **NetworkInterface**, specify an ENI ID for **NextHopId**.</p>
+     * <p>*   If you set **NextHopType** to **Local**, leave **NextHopId** empty. This indicates a local next hop.</p>
      * <br>
-     * <p>>  If you want to modify a route entry whose next hop type is **Instance** or **NetworkInterface**, you must first change the value of the **NextHopType** parameter to **Local**. Then, change the value of **NextHopType** to **Instance** or **NetworkInterface** and specify the **NextHopId** parameter. When you modify a route entry whose next hop type is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.</p>
+     * <p>>  If the value of NextHopType is **Instance** or **NetworkInterface**, and you want to modify the next hop, you must set **NextHopType** to **Local** first. Then, set **NextHopType** to **Instance** or **NetworkInterface** and specify **NextHopId** based on your requirements. If the next hop type of a route entry is Instance or NetworkInterface, you cannot directly specify a different ENI ID or ECS instance ID for the NextHopId parameter.</p>
      */
     @NameInMap("NextHopId")
     public String nextHopId;
 
     /**
-     * <p>The next hop type of the route entry after the route entry is modified. Valid values:</p>
+     * <p>The new next hop type of the route entry. Valid values:</p>
      * <br>
-     * <p>*   **EcsInstance**: an Elastic Compute Service (ECS) instance</p>
-     * <p>*   **NetworkInterface**: an elastic network interface (ENI)</p>
-     * <p>*   **Local**: a local next hop</p>
+     * <p>*   **EcsInstance**: an Elastic Compute Service (ECS) instance.</p>
+     * <p>*   **NetworkInterface**: an elastic network interface (ENI).</p>
+     * <p>*   **Local**: a local next hop.</p>
      */
     @NameInMap("NextHopType")
     public String nextHopType;

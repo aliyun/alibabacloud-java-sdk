@@ -40,7 +40,9 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the DNAT table.</p>
      * <br>
-     * <p>>  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** You must specify at least one of **ForwardTableId** and **NatGatewayId**.</p>
      */
     @NameInMap("ForwardTableId")
     public String forwardTableId;
@@ -64,9 +66,9 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
      * <p>The protocol. Valid values:</p>
      * <br>
-     * <p>*   **TCP**: The NAT gateway forwards TCP packets.</p>
-     * <p>*   **UDP**: The NAT gateway forwards UDP packets.</p>
-     * <p>*   **Any**: The NAT gateway forwards packets of all protocols.</p>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP**</p>
+     * <p>*   **Any**</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -74,7 +76,9 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the NAT gateway.</p>
      * <br>
-     * <p>>  You must set at least one of the **ForwardTableId** and **NatGatewayId** parameters.</p>
+     * <p>**</p>
+     * <br>
+     * <p>**Description** You must specify at least one of **ForwardTableId** and **NatGatewayId**.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -86,19 +90,19 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the NAT gateway.</p>
+     * <p>The ID of the region where you want to create the NAT gateway.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

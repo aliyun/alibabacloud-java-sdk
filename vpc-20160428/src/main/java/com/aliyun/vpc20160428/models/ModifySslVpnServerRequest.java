@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifySslVpnServerRequest extends TeaModel {
     /**
-     * <p>The encryption algorithm that is used by the SSL server. Valid values:</p>
+     * <p>The encryption algorithm that is used in the SSL-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **AES-128-CBC** (default): AES-128-CBC</p>
-     * <p>*   **AES-192-CBC**: AES-192-CBC</p>
-     * <p>*   **AES-256-CBC**: AES-256-CBC</p>
-     * <p>*   **none**: does not use an encryption algorithm.</p>
+     * <p>*   **AES-128-CBC** (default)</p>
+     * <p>*   **AES-192-CBC**</p>
+     * <p>*   **AES-256-CBC**</p>
+     * <p>*   **none**</p>
      */
     @NameInMap("Cipher")
     public String cipher;
@@ -24,9 +24,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,8 +34,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable data compression. Valid values:</p>
      * <br>
-     * <p>*   **true** (default): yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true** (default)</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Compress")
     public Boolean compress;
@@ -43,8 +43,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable two-factor authentication.</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false** (default): no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
@@ -92,14 +92,14 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>The protocol that is used by the SSL server. Valid values:</p>
      * <br>
-     * <p>*   **TCP**: TCP</p>
-     * <p>*   **UDP** (default): UDP</p>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP** (default)</p>
      */
     @NameInMap("Proto")
     public String proto;
 
     /**
-     * <p>The ID of the region where the VPN gateway is created.</p>
+     * <p>The region ID of the VPN gateway.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

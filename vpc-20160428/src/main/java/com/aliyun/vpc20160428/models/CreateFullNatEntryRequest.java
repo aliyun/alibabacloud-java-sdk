@@ -11,7 +11,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String accessIp;
 
     /**
-     * <p>The backend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.</p>
+     * <p>The backend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.</p>
      */
     @NameInMap("AccessPort")
     public String accessPort;
@@ -19,18 +19,18 @@ public class CreateFullNatEntryRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a value, and you must make sure that each request has a unique token value. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the value of **ClientToken**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>Specifies whether only to precheck this request. Valid values:</p>
+     * <p>Specifies whether to only precheck this request. Valid values:</p>
      * <br>
-     * <p>*   **true**: prechecks the request but does not add the FULLNAT entry. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: sends the API request. After the request passes the precheck, a 2XX HTTP status code is returned and the FULLNAT entry is added. This is the default value.</p>
+     * <p>*   **true**: prechecks the request without adding the FULLNAT entry. The system checks whether your AccessKey pair is valid, whether RAM users are granted required permissions, and whether the required parameters are set. If the request fails to pass the precheck, an error code is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false**: sends the API request. This is the default value. After the request passes the precheck, a 2XX HTTP status code is returned and the FULLNAT entry is added.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -44,7 +44,7 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String fullNatEntryDescription;
 
     /**
-     * <p>The name of the FULLNAT entry. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
+     * <p>The FULLNAT entry name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://.</p>
      */
     @NameInMap("FullNatEntryName")
     public String fullNatEntryName;
@@ -58,8 +58,8 @@ public class CreateFullNatEntryRequest extends TeaModel {
     /**
      * <p>The protocol of the packets that are forwarded by the port. Valid values:</p>
      * <br>
-     * <p>*   **TCP**: forwards TCP packets.</p>
-     * <p>*   **UDP**: forwards UDP packets.</p>
+     * <p>*   **TCP**</p>
+     * <p>*   **UDP**</p>
      */
     @NameInMap("IpProtocol")
     public String ipProtocol;
@@ -71,13 +71,13 @@ public class CreateFullNatEntryRequest extends TeaModel {
     public String natIp;
 
     /**
-     * <p>The frontend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.</p>
+     * <p>The frontend port to be modified in the mapping of FULLNAT port. Valid values: **1** to **65535**.</p>
      */
     @NameInMap("NatIpPort")
     public String natIpPort;
 
     /**
-     * <p>The ID of the elastic network interface (ENI).</p>
+     * <p>The elastic network interface (ENI) ID.</p>
      */
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;

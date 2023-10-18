@@ -11,7 +11,7 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
+     * <p>The end of the time range to query. The time must be in UTC. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. For example, `2013-01-10T12:00:00Z` specifies 20:00:00 (UTC+8) on January 10, 2013.</p>
      * <br>
      * <p>If the value of seconds (ss) is not 00, the end time is automatically rounded up to the next minute.</p>
      */
@@ -34,9 +34,7 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The ID of the region to which the EIP belongs.</p>
-     * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query available regions.</p>
+     * <p>The ID of the region to which the EIP belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

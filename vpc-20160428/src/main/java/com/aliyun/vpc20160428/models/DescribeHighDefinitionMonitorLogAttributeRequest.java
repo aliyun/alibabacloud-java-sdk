@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the fine-grained monitoring instance.</p>
+     * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The ID of the instance. Set the value to **EIP**.</p>
+     * <p>The type of the instance. Set the value to **EIP**.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
@@ -23,9 +23,9 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the instance is deployed.</p>
+     * <p>The region ID of the instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

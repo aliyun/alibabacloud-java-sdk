@@ -31,7 +31,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
     public String overlayMode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

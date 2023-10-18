@@ -31,6 +31,9 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     @NameInMap("Services")
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> services;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("TotalCount")
     public String totalCount;
 
@@ -107,8 +110,8 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         /**
          * <p>Indicate whether the endpoint service supports the access policy. Valid values:</p>
          * <br>
-         * <p>*   **false**: no</p>
-         * <p>*   **true**: yes</p>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("SupportPolicy")
         public Boolean supportPolicy;

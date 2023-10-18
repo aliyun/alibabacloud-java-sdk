@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     /**
-     * <p>The Internet bandwidth for the IPv6 CIDR block. Valid values: **1** to **5000**. Unit: Mbit/s.</p>
+     * <p>The Internet bandwidth for the IPv6 CIDR block. Unit: Mbit/s. Valid values: **1** to **5000**.</p>
      */
     @NameInMap("Bandwidth")
     public Long bandwidth;
@@ -13,9 +13,9 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must ensure that the value is unique among all requests. ClientToken can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -23,15 +23,15 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     /**
      * <p>The ID of the IPv6 address.</p>
      * <br>
-     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     * <p>>  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.</p>
      */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
 
     /**
-     * <p>The ID of the Internet bandwidth that you purchase for the IPv6 CIDR block.</p>
+     * <p>The ID of the Internet bandwidth that you purchased for the IPv6 CIDR block.</p>
      * <br>
-     * <p>>  You must set one of the **Ipv6AddressId** and **Ipv6InternetBandwidthId** parameters.</p>
+     * <p>>  You must specify one of **Ipv6AddressId** and **Ipv6InternetBandwidthId**.</p>
      */
     @NameInMap("Ipv6InternetBandwidthId")
     public String ipv6InternetBandwidthId;
@@ -43,7 +43,7 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>The ID of the region where the IPv6 gateway is deployed. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

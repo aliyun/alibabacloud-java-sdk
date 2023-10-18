@@ -35,7 +35,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
