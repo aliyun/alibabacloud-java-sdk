@@ -175,6 +175,9 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     @NameInMap("InstanceFamilyLevel")
     public String instanceFamilyLevel;
 
+    @NameInMap("InstanceTypes")
+    public java.util.List<String> instanceTypes;
+
     /**
      * <p>The number of IPv6 addresses.</p>
      */
@@ -511,6 +514,14 @@ public class CreateEciScalingConfigurationRequest extends TeaModel {
     }
     public String getInstanceFamilyLevel() {
         return this.instanceFamilyLevel;
+    }
+
+    public CreateEciScalingConfigurationRequest setInstanceTypes(java.util.List<String> instanceTypes) {
+        this.instanceTypes = instanceTypes;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypes() {
+        return this.instanceTypes;
     }
 
     public CreateEciScalingConfigurationRequest setIpv6AddressCount(Integer ipv6AddressCount) {

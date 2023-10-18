@@ -228,6 +228,36 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeScalingGroupsResponseBodyScalingGroupsTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeScalingGroupsResponseBodyScalingGroupsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScalingGroupsResponseBodyScalingGroupsTags self = new DescribeScalingGroupsResponseBodyScalingGroupsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroupsTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeScalingGroupsResponseBodyScalingGroupsVServerGroupsVServerGroupAttributes extends TeaModel {
         @NameInMap("Port")
         public Integer port;
@@ -452,6 +482,9 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
 
         @NameInMap("SystemSuspended")
         public Boolean systemSuspended;
+
+        @NameInMap("Tags")
+        public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsTags> tags;
 
         @NameInMap("TotalCapacity")
         public Integer totalCapacity;
@@ -882,6 +915,14 @@ public class DescribeScalingGroupsResponseBody extends TeaModel {
         }
         public Boolean getSystemSuspended() {
             return this.systemSuspended;
+        }
+
+        public DescribeScalingGroupsResponseBodyScalingGroups setTags(java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeScalingGroupsResponseBodyScalingGroupsTags> getTags() {
+            return this.tags;
         }
 
         public DescribeScalingGroupsResponseBodyScalingGroups setTotalCapacity(Integer totalCapacity) {

@@ -1904,6 +1904,9 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         @NameInMap("InstanceFamilyLevel")
         public String instanceFamilyLevel;
 
+        @NameInMap("InstanceTypes")
+        public java.util.List<String> instanceTypes;
+
         /**
          * <p>The bandwidth of the EIP. Default value: 5 Mbit/s.</p>
          */
@@ -2253,6 +2256,14 @@ public class DescribeEciScalingConfigurationsResponseBody extends TeaModel {
         }
         public String getInstanceFamilyLevel() {
             return this.instanceFamilyLevel;
+        }
+
+        public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
         }
 
         public DescribeEciScalingConfigurationsResponseBodyScalingConfigurations setIpv6AddressCount(Integer ipv6AddressCount) {

@@ -68,6 +68,9 @@ public class ModifyScalingGroupRequest extends TeaModel {
     @NameInMap("DesiredCapacity")
     public Integer desiredCapacity;
 
+    @NameInMap("DisableDesiredCapacity")
+    public Boolean disableDesiredCapacity;
+
     /**
      * <p>The scaling policy for the multi-zone scaling group that contains ECS instances. Valid values:</p>
      * <br>
@@ -289,6 +292,14 @@ public class ModifyScalingGroupRequest extends TeaModel {
     }
     public Integer getDesiredCapacity() {
         return this.desiredCapacity;
+    }
+
+    public ModifyScalingGroupRequest setDisableDesiredCapacity(Boolean disableDesiredCapacity) {
+        this.disableDesiredCapacity = disableDesiredCapacity;
+        return this;
+    }
+    public Boolean getDisableDesiredCapacity() {
+        return this.disableDesiredCapacity;
     }
 
     public ModifyScalingGroupRequest setGroupDeletionProtection(Boolean groupDeletionProtection) {
