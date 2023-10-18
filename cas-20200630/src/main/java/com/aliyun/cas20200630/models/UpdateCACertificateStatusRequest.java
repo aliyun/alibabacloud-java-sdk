@@ -4,19 +4,9 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class UpdateCACertificateStatusRequest extends TeaModel {
-    /**
-     * <p>The unique identifier of the CA certificate whose status you want to change.</p>
-     * <br>
-     * <p>>  You can call the [DescribeCACertificateList](~~328095~~) operation to query the unique identifiers of all CA certificates.</p>
-     */
     @NameInMap("Identifier")
     public String identifier;
 
-    /**
-     * <p>The state to which you want to change the CA certificate. Set to the value to **REVOKE**. After this operation is called, the status of the CA certificate is changed to **REVOKE**.</p>
-     * <br>
-     * <p>>  You can call this operation only if the status of a CA certificate is **ISSUE**. You can call the [DescribeCACertificate](~~328096~~) operation to query the status of a CA certificate.</p>
-     */
     @NameInMap("Status")
     public String status;
 

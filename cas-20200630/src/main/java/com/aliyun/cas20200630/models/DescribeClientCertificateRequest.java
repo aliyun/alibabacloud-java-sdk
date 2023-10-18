@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the client certificate or the server certificate that you want to query.</p>
-     * <br>
-     * <p>>  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.</p>
+     * <p>The SHA-256 fingerprint of the certificate.</p>
      */
     @NameInMap("Identifier")
     public String identifier;

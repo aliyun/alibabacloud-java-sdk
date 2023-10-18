@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRevokeCertificateRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
     /**
-     * <p>The number of revoked certificates to return on each page. Default value: **20**.</p>
+     * <p>The signature algorithm of the certificate.</p>
      */
     @NameInMap("ShowSize")
     public Integer showSize;

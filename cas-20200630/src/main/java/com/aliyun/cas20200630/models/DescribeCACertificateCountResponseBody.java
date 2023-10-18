@@ -4,15 +4,9 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeCACertificateCountResponseBody extends TeaModel {
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
-    /**
-     * <p>The number of created CA certificates, which includes root CA certificates and intermediate CA certificates.</p>
-     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 

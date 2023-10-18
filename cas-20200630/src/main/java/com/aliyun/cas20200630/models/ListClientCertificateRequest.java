@@ -11,6 +11,14 @@ public class ListClientCertificateRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The unique identifier of the client certificate or the server certificate that you want to query.</p>
+     * <br>
+     * <p>>  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.</p>
+     */
+    @NameInMap("Identifier")
+    public String identifier;
+
+    /**
      * <p>The number of certificates to return on each page. Default value: **20**.</p>
      */
     @NameInMap("ShowSize")
@@ -27,6 +35,14 @@ public class ListClientCertificateRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListClientCertificateRequest setIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    public String getIdentifier() {
+        return this.identifier;
     }
 
     public ListClientCertificateRequest setShowSize(Integer showSize) {

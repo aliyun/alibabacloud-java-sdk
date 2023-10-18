@@ -4,27 +4,15 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateSubCACertificateResponseBody extends TeaModel {
-    /**
-     * <p>The intermediate CA certificate in the PEM format.</p>
-     */
     @NameInMap("Certificate")
     public String certificate;
 
-    /**
-     * <p>The certificate chain of the intermediate CA certificate.</p>
-     */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
-    /**
-     * <p>The unique identifier of the intermediate CA certificate.</p>
-     */
     @NameInMap("Identifier")
     public String identifier;
 
-    /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -5,14 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeClientCertificateResponseBody extends TeaModel {
     /**
-     * <p>The details about the client certificate or the server certificate.</p>
+     * <p>The unique identifier of the client certificate or the server certificate that you want to query.</p>
+     * <br>
+     * <p>>  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.</p>
      */
     @NameInMap("Certificate")
     public DescribeClientCertificateResponseBodyCertificate certificate;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -39,10 +38,46 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
 
     public static class DescribeClientCertificateResponseBodyCertificate extends TeaModel {
         /**
-         * <p>The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
          */
         @NameInMap("AfterDate")
         public Long afterDate;
+
+        /**
+         * <p>The common name of the certificate.</p>
+         */
+        @NameInMap("Algorithm")
+        public String algorithm;
+
+        /**
+         * <p>The expiration date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         */
+        @NameInMap("BeforeDate")
+        public Long beforeDate;
+
+        /**
+         * <p>The ID of the request.</p>
+         */
+        @NameInMap("CertificateType")
+        public String certificateType;
+
+        /**
+         * <p>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</p>
+         */
+        @NameInMap("CommonName")
+        public String commonName;
+
+        /**
+         * <p>The type of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **CLIENT**: client certificate</p>
+         * <p>*   **SERVER**: server certificate</p>
+         */
+        @NameInMap("CountryCode")
+        public String countryCode;
+
+        @NameInMap("Days")
+        public Integer days;
 
         /**
          * <p>The type of the encryption algorithm of the certificate. Valid values:</p>
@@ -51,132 +86,81 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
          * <p>*   **ECC**: the elliptic curve cryptography (ECC) algorithm.</p>
          * <p>*   **SM2**: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</p>
          */
-        @NameInMap("Algorithm")
-        public String algorithm;
-
-        /**
-         * <p>The issuance date of the certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
-         */
-        @NameInMap("BeforeDate")
-        public Long beforeDate;
-
-        /**
-         * <p>The type of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **CLIENT**: client certificate</p>
-         * <p>*   **SERVER**: server certificate</p>
-         */
-        @NameInMap("CertificateType")
-        public String certificateType;
-
-        /**
-         * <p>The common name of the certificate.</p>
-         */
-        @NameInMap("CommonName")
-        public String commonName;
-
-        /**
-         * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
-         * <br>
-         * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
-         */
-        @NameInMap("CountryCode")
-        public String countryCode;
-
-        /**
-         * <p>The validity period of the certificate. Unit: days.</p>
-         */
-        @NameInMap("Days")
-        public Integer days;
-
-        /**
-         * <p>The unique identifier of the certificate.</p>
-         */
         @NameInMap("Identifier")
         public String identifier;
 
         /**
-         * <p>The key length of the certificate.</p>
+         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
          */
         @NameInMap("KeySize")
         public Integer keySize;
 
         /**
-         * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The details about the client certificate or the server certificate.</p>
          */
         @NameInMap("Locality")
         public String locality;
 
         /**
-         * <p>The MD5 fingerprint of the certificate.</p>
+         * <p>WB943639</p>
          */
         @NameInMap("Md5")
         public String md5;
 
         /**
-         * <p>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The key length of the certificate.</p>
          */
         @NameInMap("Organization")
         public String organization;
 
         /**
-         * <p>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</p>
+         * <p>The signature algorithm of the certificate.</p>
          */
         @NameInMap("OrganizationUnit")
         public String organizationUnit;
 
         /**
-         * <p>The unique identifier of the intermediate certificate from which the client certificate is issued.</p>
+         * <p>All Alibaba Cloud API requests must include common request parameters.</p>
+         * <br>
+         * <p>For more information about sample requests, see the **"Examples"** section of this topic.</p>
          */
         @NameInMap("ParentIdentifier")
         public String parentIdentifier;
 
         /**
-         * <p>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</p>
-         * <br>
-         * <p>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</p>
-         * <br>
-         * <p>*   **Type**: the type of the extension. Data type: integer. Valid values:</p>
-         * <br>
-         * <p>    *   **1**: an email address</p>
-         * <p>    *   **2**: a domain name</p>
-         * <p>    *   **6**: a Uniform Resource Identifier (URI)</p>
-         * <p>    *   **7**: an IP address</p>
-         * <br>
-         * <p>*   **Value**: the value of the extension. Data type: string.</p>
+         * <p>The content of the certificate.</p>
          */
         @NameInMap("Sans")
         public String sans;
 
         /**
-         * <p>The serial number of the certificate.</p>
+         * <p>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         /**
-         * <p>The SHA-256 fingerprint of the certificate.</p>
+         * <p>Queries the details about a client certificate or a server certificate by using the unique identifier of the certificate.</p>
          */
         @NameInMap("Sha2")
         public String sha2;
 
         /**
-         * <p>The signature algorithm of the certificate.</p>
+         * <p>The validity period of the certificate. Unit: days.</p>
          */
         @NameInMap("SignAlgorithm")
         public String signAlgorithm;
 
         /**
-         * <p>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
+         * <p>The serial number of the certificate.</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The status of the certificate. Valid values:</p>
+         * <p>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</p>
          * <br>
-         * <p>*   **ISSUE**: issued</p>
-         * <p>*   **REVOKE**: revoked</p>
+         * <p>For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -195,7 +179,10 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
         public String subjectDN;
 
         /**
-         * <p>The content of the certificate.</p>
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **ISSUE**: issued</p>
+         * <p>*   **REVOKE**: revoked</p>
          */
         @NameInMap("X509Certificate")
         public String x509Certificate;

@@ -12,7 +12,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("cn-hangzhou", "cas.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "cas.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "cas.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "cas.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "cas.aliyuncs.com"),
             new TeaPair("cn-beijing", "cas.aliyuncs.com"),
@@ -34,6 +33,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hongkong", "cas.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "cas.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "cas.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "cas.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "cas.aliyuncs.com"),
             new TeaPair("cn-qingdao", "cas.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "cas.aliyuncs.com"),
@@ -49,7 +49,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shenzhen-st4-d01", "cas.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "cas.aliyuncs.com"),
             new TeaPair("cn-wuhan", "cas.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "cas.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "cas.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "cas.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "cas.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "cas.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "cas.aliyuncs.com"),
@@ -109,12 +111,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Country", request.country);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
-            query.put("Csr", request.csr);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("Days", request.days);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCrl)) {
+            query.put("EnableCrl", request.enableCrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
@@ -188,9 +190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you have created a root certificate authority (CA) certificate by calling the [CreateRootCACertificate](~~328093~~) operation and an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation. Only intermediate CA certificates can be used to issue client certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
       *
       * @param request CreateClientCertificateWithCsrRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -223,12 +223,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Csr", request.csr);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.csr1)) {
-            query.put("Csr1", request.csr1);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("Days", request.days);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCrl)) {
+            query.put("EnableCrl", request.enableCrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
@@ -289,9 +289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you have created a root certificate authority (CA) certificate by calling the [CreateRootCACertificate](~~328093~~) operation and an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation. Only intermediate CA certificates can be used to issue client certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
       *
       * @param request CreateClientCertificateWithCsrRequest
       * @return CreateClientCertificateWithCsrResponse
@@ -301,6 +299,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createClientCertificateWithCsrWithOptions(request, runtime);
     }
 
+    /**
+      * By default, the name of the entity is obtained from the certificate signing request (CSR) of the certificate that you want to issue. If you specify a different name for the entity, the name of the entity in the CSR becomes invalid. The specified name is used to issue the certificate.
+      * You must specify the key usage and extended key usage based on the certificate type. The following list describes common certificate types:
+      * *   Server certificate
+      * Key usage: digitalSignature or keyEncipherment
+      * Extended key usage: serverAuth
+      * *   Client certificate
+      * Key usage: digitalSignature or keyEncipherment
+      * Extended key usage: clientAuth
+      * *   Mutual Transport Layer Security (TLS) authentication certificate
+      * Key usage: digitalSignature or keyEncipherment
+      * Extended key usage: serverAuth or clientAuth
+      * *   Email certificate
+      * Key usage: digitalSignature or contentCommitment
+      * Extended key usage: emailProtection
+      * Note: Compliant certificate authorities (CAs) are managed by third-party authorities. This operation is not supported for compliant CAs.
+      *
+      * @param request CreateCustomCertificateRequest
+      * @param runtime runtime options for this request RuntimeOptions
+      * @return CreateCustomCertificateResponse
+     */
     public CreateCustomCertificateResponse createCustomCertificateWithOptions(CreateCustomCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -310,6 +329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
             query.put("Csr", request.csr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCrl)) {
+            query.put("EnableCrl", request.enableCrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
@@ -341,21 +364,31 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCustomCertificateResponse());
     }
 
+    /**
+      * By default, the name of the entity is obtained from the certificate signing request (CSR) of the certificate that you want to issue. If you specify a different name for the entity, the name of the entity in the CSR becomes invalid. The specified name is used to issue the certificate.
+      * You must specify the key usage and extended key usage based on the certificate type. The following list describes common certificate types:
+      * *   Server certificate
+      * Key usage: digitalSignature or keyEncipherment
+      * Extended key usage: serverAuth
+      * *   Client certificate
+      * Key usage: digitalSignature or keyEncipherment
+      * Extended key usage: clientAuth
+      * *   Mutual Transport Layer Security (TLS) authentication certificate
+      * Key usage: digitalSignature or keyEncipherment
+      * Extended key usage: serverAuth or clientAuth
+      * *   Email certificate
+      * Key usage: digitalSignature or contentCommitment
+      * Extended key usage: emailProtection
+      * Note: Compliant certificate authorities (CAs) are managed by third-party authorities. This operation is not supported for compliant CAs.
+      *
+      * @param request CreateCustomCertificateRequest
+      * @return CreateCustomCertificateResponse
+     */
     public CreateCustomCertificateResponse createCustomCertificate(CreateCustomCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createCustomCertificateWithOptions(request, runtime);
     }
 
-    /**
-      * After a client certificate or a server certificate is revoked, the client or the server on which the certificate is installed cannot establish HTTPS connections with other devices.
-      * After a client certificate or a server certificate is revoked, you can call the [DeleteClientCertificate](~~330880~~) operation to permanently delete the certificate.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request CreateRevokeClientCertificateRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return CreateRevokeClientCertificateResponse
-     */
     public CreateRevokeClientCertificateResponse createRevokeClientCertificateWithOptions(CreateRevokeClientCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -380,25 +413,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRevokeClientCertificateResponse());
     }
 
-    /**
-      * After a client certificate or a server certificate is revoked, the client or the server on which the certificate is installed cannot establish HTTPS connections with other devices.
-      * After a client certificate or a server certificate is revoked, you can call the [DeleteClientCertificate](~~330880~~) operation to permanently delete the certificate.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request CreateRevokeClientCertificateRequest
-      * @return CreateRevokeClientCertificateResponse
-     */
     public CreateRevokeClientCertificateResponse createRevokeClientCertificate(CreateRevokeClientCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRevokeClientCertificateWithOptions(request, runtime);
     }
 
     /**
-      * You can call the CreateRootCACertificate operation to create a self-signed root CA certificate. A root CA certificate is the trust anchor in a chain of trust for private certificates that are used within an enterprise. You must create a root CA certificate before you can use the root CA certificate to issue intermediate CA certificates. Then, you can use the intermediate CA certificates to issue client certificates and server certificates.
-      * Before you call this operation, make sure that you have purchased a private root CA instance by using the [Certificate Management Service console](https://yundun.console.aliyun.com/?p=cas#/pca/rootlist). For more information, see [Create a private CA](~~208553~~).
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The root CA certificate in the PEM format.
       *
       * @param request CreateRootCACertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -457,10 +478,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the CreateRootCACertificate operation to create a self-signed root CA certificate. A root CA certificate is the trust anchor in a chain of trust for private certificates that are used within an enterprise. You must create a root CA certificate before you can use the root CA certificate to issue intermediate CA certificates. Then, you can use the intermediate CA certificates to issue client certificates and server certificates.
-      * Before you call this operation, make sure that you have purchased a private root CA instance by using the [Certificate Management Service console](https://yundun.console.aliyun.com/?p=cas#/pca/rootlist). For more information, see [Create a private CA](~~208553~~).
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The root CA certificate in the PEM format.
       *
       * @param request CreateRootCACertificateRequest
       * @return CreateRootCACertificateResponse
@@ -471,9 +489,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you have created a root certificate authority (CA) certificate by calling the [CreateRootCACertificate](~~328093~~) operation and an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation. Only intermediate CA certificates can be used to issue server certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The additional domain names and additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.
+      * Separate multiple domain names and multiple IP addresses with commas (,).
       *
       * @param request CreateServerCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -502,16 +519,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Country", request.country);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.csr)) {
-            query.put("Csr", request.csr);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("Days", request.days);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCrl)) {
+            query.put("EnableCrl", request.enableCrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
@@ -564,9 +581,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you have created a root certificate authority (CA) certificate by calling the [CreateRootCACertificate](~~328093~~) operation and an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation. Only intermediate CA certificates can be used to issue server certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The additional domain names and additional IP addresses of the server certificate. After you add additional domain names and additional IP addresses to a certificate, you can apply the certificate to the domain names and IP addresses.
+      * Separate multiple domain names and multiple IP addresses with commas (,).
       *
       * @param request CreateServerCertificateRequest
       * @return CreateServerCertificateResponse
@@ -577,9 +593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you have created a root certificate authority (CA) certificate by calling the [CreateRootCACertificate](~~328093~~) operation and an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation. Only intermediate CA certificates can be used to issue server certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
       *
       * @param request CreateServerCertificateWithCsrRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -612,16 +626,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Csr", request.csr);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.csr1)) {
-            query.put("Csr1", request.csr1);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.days)) {
             query.put("Days", request.days);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
             query.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCrl)) {
+            query.put("EnableCrl", request.enableCrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.immediately)) {
@@ -674,9 +688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Before you call this operation, make sure that you have created a root certificate authority (CA) certificate by calling the [CreateRootCACertificate](~~328093~~) operation and an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation. Only intermediate CA certificates can be used to issue server certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
       *
       * @param request CreateServerCertificateWithCsrRequest
       * @return CreateServerCertificateWithCsrResponse
@@ -687,8 +699,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the CreateSubCACertificate operation to issue an intermediate CA certificate by using an existing root CA certificate. Intermediate CA certificates can be used to issue client certificates and server certificates.
-      * Before you call this operation, make sure that you have created a root CA certificate by calling the [CreateRootCACertificate](~~328093~~) operation.
+      * You can call this operation to issue an intermediate certificate authority (CA) certificate by using an existing root CA certificate. Intermediate CA certificates can be used to issue client certificates and server certificates.
+      * Before you call this operation, make sure that you have issued a root CA certificate by calling the [CreateRootCACertificate](~~465962~~) operation.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -709,6 +721,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.countryCode)) {
             query.put("CountryCode", request.countryCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.crlDay)) {
+            query.put("CrlDay", request.crlDay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableCrl)) {
+            query.put("EnableCrl", request.enableCrl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.extendedKeyUsages)) {
@@ -761,8 +781,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the CreateSubCACertificate operation to issue an intermediate CA certificate by using an existing root CA certificate. Intermediate CA certificates can be used to issue client certificates and server certificates.
-      * Before you call this operation, make sure that you have created a root CA certificate by calling the [CreateRootCACertificate](~~328093~~) operation.
+      * You can call this operation to issue an intermediate certificate authority (CA) certificate by using an existing root CA certificate. Intermediate CA certificates can be used to issue client certificates and server certificates.
+      * Before you call this operation, make sure that you have issued a root CA certificate by calling the [CreateRootCACertificate](~~465962~~) operation.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -774,15 +794,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createSubCACertificateWithOptions(request, runtime);
     }
 
-    /**
-      * Before you call this operation, you must call the [CreateRevokeClientCertificate](~~330876~~) operation to revoke a client certificate or a server certificate.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DeleteClientCertificateRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DeleteClientCertificateResponse
-     */
     public DeleteClientCertificateResponse deleteClientCertificateWithOptions(DeleteClientCertificateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -807,14 +818,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteClientCertificateResponse());
     }
 
-    /**
-      * Before you call this operation, you must call the [CreateRevokeClientCertificate](~~330876~~) operation to revoke a client certificate or a server certificate.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DeleteClientCertificateRequest
-      * @return DeleteClientCertificateResponse
-     */
     public DeleteClientCertificateResponse deleteClientCertificate(DeleteClientCertificateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteClientCertificateWithOptions(request, runtime);
@@ -868,15 +871,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeCACertificateWithOptions(request, runtime);
     }
 
-    /**
-      * You can call the DescribeCACertificateCount operation to query the number of created CA certificates, which includes root CA certificates and intermediate CA certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DescribeCACertificateCountRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeCACertificateCountResponse
-     */
     public DescribeCACertificateCountResponse describeCACertificateCountWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -893,13 +887,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCACertificateCountResponse());
     }
 
-    /**
-      * You can call the DescribeCACertificateCount operation to query the number of created CA certificates, which includes root CA certificates and intermediate CA certificates.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @return DescribeCACertificateCountResponse
-     */
     public DescribeCACertificateCountResponse describeCACertificateCount() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCACertificateCountWithOptions(runtime);
@@ -919,6 +906,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifier)) {
+            query.put("Identifier", request.identifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
@@ -960,7 +951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * You can call the DescribeCertificatePrivateKey operation to obtain the encrypted private key of a client certificate or a server certificate. The certificate is issued based on a system-generated certificate signing request (CSR). Before you call this operation, make sure that you have issued a client certificate or a server certificate by calling the following operation:
       * *   [CreateClientCertificate](~~330873~~)
       * *   [CreateServerCertificate](~~330877~~)
-      * To ensure the security of private key transmission, the DescribeCertificatePrivateKey operation encrypts the private key by using the private key password that you specify and returns the encrypted private key. The private key password is an string that is used to encrypt the private key. After you obtain the encrypted private key of the certificate, you can use the following methods to decrypt the private key:
+      * To ensure the security of private key transmission, the DescribeCertificatePrivateKey operation encrypts the private key by using the private key password that you specify and returns the encrypted private key. The private key password is a string that is used to encrypt the private key. After you obtain the encrypted private key of the certificate, you can use the following methods to decrypt the private key:
       * *   If the encryption algorithm of the certificate is RSA, you must run the `openssl rsa -in <Encrypted private key file> -passin pass:<Private key password> -out <Decrypted private key file>` command in the computer on which [OpenSSL](https://www.openssl.org/source/) or [BabaSSL](https://github.com/BabaSSL/BabaSSL) is installed.
       * *   If the encryption algorithm of the certificate is ECC, you must run the `openssl ec -in <Encrypted private key file> -passin pass:<Private key password> -out <Decrypted private key file>` command in the computer on which [OpenSSL](https://www.openssl.org/source/) or [BabaSSL](https://github.com/BabaSSL/BabaSSL) is installed.
       * *   If the encryption algorithm of the certificate is SM2, you must run the `openssl ec -in <Encrypted private key file> -passin pass:<Private key password> -out <Decrypted private key file>` command in the computer on which [BabaSSL](https://github.com/BabaSSL/BabaSSL) is installed.
@@ -1005,7 +996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
       * You can call the DescribeCertificatePrivateKey operation to obtain the encrypted private key of a client certificate or a server certificate. The certificate is issued based on a system-generated certificate signing request (CSR). Before you call this operation, make sure that you have issued a client certificate or a server certificate by calling the following operation:
       * *   [CreateClientCertificate](~~330873~~)
       * *   [CreateServerCertificate](~~330877~~)
-      * To ensure the security of private key transmission, the DescribeCertificatePrivateKey operation encrypts the private key by using the private key password that you specify and returns the encrypted private key. The private key password is an string that is used to encrypt the private key. After you obtain the encrypted private key of the certificate, you can use the following methods to decrypt the private key:
+      * To ensure the security of private key transmission, the DescribeCertificatePrivateKey operation encrypts the private key by using the private key password that you specify and returns the encrypted private key. The private key password is a string that is used to encrypt the private key. After you obtain the encrypted private key of the certificate, you can use the following methods to decrypt the private key:
       * *   If the encryption algorithm of the certificate is RSA, you must run the `openssl rsa -in <Encrypted private key file> -passin pass:<Private key password> -out <Decrypted private key file>` command in the computer on which [OpenSSL](https://www.openssl.org/source/) or [BabaSSL](https://github.com/BabaSSL/BabaSSL) is installed.
       * *   If the encryption algorithm of the certificate is ECC, you must run the `openssl ec -in <Encrypted private key file> -passin pass:<Private key password> -out <Decrypted private key file>` command in the computer on which [OpenSSL](https://www.openssl.org/source/) or [BabaSSL](https://github.com/BabaSSL/BabaSSL) is installed.
       * *   If the encryption algorithm of the certificate is SM2, you must run the `openssl ec -in <Encrypted private key file> -passin pass:<Private key password> -out <Decrypted private key file>` command in the computer on which [BabaSSL](https://github.com/BabaSSL/BabaSSL) is installed.
@@ -1022,16 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the DescribeClientCertificate operation to query the details about a client certificate or a server certificate by using the unique identifier of the certificate. The details include the serial number, user information, content, and status of each certificate.
-      * Before you call this operation, make sure that you have created a client certificate or a server certificate.
-      * For more information about how to call an operation to create a client certificate, see the following topics:
-      * *   [CreateClientCertificate](~~330873~~)
-      * *   [CreateClientCertificateWithCsr](~~330875~~)
-      * For more information about how to call an operation to create a server certificate, see the following topics:
-      * *   [CreateServerCertificate](~~330877~~)
-      * *   [CreateServerCertificateWithCsr](~~330878~~)
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.
       *
       * @param request DescribeClientCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1062,16 +1044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the DescribeClientCertificate operation to query the details about a client certificate or a server certificate by using the unique identifier of the certificate. The details include the serial number, user information, content, and status of each certificate.
-      * Before you call this operation, make sure that you have created a client certificate or a server certificate.
-      * For more information about how to call an operation to create a client certificate, see the following topics:
-      * *   [CreateClientCertificate](~~330873~~)
-      * *   [CreateClientCertificateWithCsr](~~330875~~)
-      * For more information about how to call an operation to create a server certificate, see the following topics:
-      * *   [CreateServerCertificate](~~330877~~)
-      * *   [CreateServerCertificateWithCsr](~~330878~~)
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.
       *
       * @param request DescribeClientCertificateRequest
       * @return DescribeClientCertificateResponse
@@ -1081,15 +1054,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeClientCertificateWithOptions(request, runtime);
     }
 
-    /**
-      * You can call the DescribeClientCertificateStatus operation to query the status information about multiple client certificates or server certificates at a time by using the unique identifiers of the certificates. For example, you can check whether a certificate is revoked.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DescribeClientCertificateStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return DescribeClientCertificateStatusResponse
-     */
     public DescribeClientCertificateStatusResponse describeClientCertificateStatusWithOptions(DescribeClientCertificateStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1114,24 +1078,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeClientCertificateStatusResponse());
     }
 
-    /**
-      * You can call the DescribeClientCertificateStatus operation to query the status information about multiple client certificates or server certificates at a time by using the unique identifiers of the certificates. For example, you can check whether a certificate is revoked.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request DescribeClientCertificateStatusRequest
-      * @return DescribeClientCertificateStatusResponse
-     */
     public DescribeClientCertificateStatusResponse describeClientCertificateStatus(DescribeClientCertificateStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeClientCertificateStatusWithOptions(request, runtime);
     }
 
     /**
-      * You can call the GetCAInstanceStatus operation to query the status information about a private CA instance by using the ID of the instance. The instance is purchased by using the Certificate Management Service console. The status information includes the status of the private CA instance, the number of certificates that can be issued by using the private CA instance, and the number of issued certificates.
-      * Before you call this operation, make sure that you have purchased a private CA by using the [Certificate Management Service console](https://yundun.console.aliyun.com/?p=cas#/pca/rootlist). For more information, see [Create a private CA](~~208553~~).
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The unique identifier of the private CA certificate.
+      * >  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.
       *
       * @param request GetCAInstanceStatusRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1140,6 +1094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCAInstanceStatusResponse getCAInstanceStatusWithOptions(GetCAInstanceStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.identifier)) {
+            query.put("Identifier", request.identifier);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -1162,10 +1120,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the GetCAInstanceStatus operation to query the status information about a private CA instance by using the ID of the instance. The instance is purchased by using the Certificate Management Service console. The status information includes the status of the private CA instance, the number of certificates that can be issued by using the private CA instance, and the number of issued certificates.
-      * Before you call this operation, make sure that you have purchased a private CA by using the [Certificate Management Service console](https://yundun.console.aliyun.com/?p=cas#/pca/rootlist). For more information, see [Create a private CA](~~208553~~).
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The unique identifier of the private CA certificate.
+      * >  This parameter is returned only when the value of the **Status** parameter is **USED** or **REVOKE**. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.
       *
       * @param request GetCAInstanceStatusRequest
       * @return GetCAInstanceStatusResponse
@@ -1189,6 +1145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
             query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifier)) {
+            query.put("Identifier", request.identifier);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.showSize)) {
@@ -1226,9 +1186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the ListRevokeCertificate operation to perform a paged query of the details about all revoked client certificates and server certificates. The details include the unique identifier, serial number, and revocation date of each certificate.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The total number of revoked client certificates and server certificates that are returned.
       *
       * @param request ListRevokeCertificateRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -1263,9 +1221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call the ListRevokeCertificate operation to perform a paged query of the details about all revoked client certificates and server certificates. The details include the unique identifier, serial number, and revocation date of each certificate.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * The total number of revoked client certificates and server certificates that are returned.
       *
       * @param request ListRevokeCertificateRequest
       * @return ListRevokeCertificateResponse
@@ -1275,16 +1231,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listRevokeCertificateWithOptions(request, runtime);
     }
 
-    /**
-      * After a CA certificate is created, the CA certificate is in the ISSUE state by default. You can call the UpdateCACertificateStatus operation to change the status of a CA certificate from ISSUE to REVOKE. If a CA certificate is in the ISSUE state, the CA certificate can be used to issue certificates. If a CA certificate is in the REVOKE state, the CA certificate cannot be used to issue certificates, and the certificates that are issued from the CA certificate become invalid.
-      * Before you call this operation, make sure that you have created a root CA by calling the [CreateRootCACertificate](~~328093~~) operation or an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request UpdateCACertificateStatusRequest
-      * @param runtime runtime options for this request RuntimeOptions
-      * @return UpdateCACertificateStatusResponse
-     */
     public UpdateCACertificateStatusResponse updateCACertificateStatusWithOptions(UpdateCACertificateStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1313,15 +1259,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateCACertificateStatusResponse());
     }
 
-    /**
-      * After a CA certificate is created, the CA certificate is in the ISSUE state by default. You can call the UpdateCACertificateStatus operation to change the status of a CA certificate from ISSUE to REVOKE. If a CA certificate is in the ISSUE state, the CA certificate can be used to issue certificates. If a CA certificate is in the REVOKE state, the CA certificate cannot be used to issue certificates, and the certificates that are issued from the CA certificate become invalid.
-      * Before you call this operation, make sure that you have created a root CA by calling the [CreateRootCACertificate](~~328093~~) operation or an intermediate CA certificate by calling the [CreateSubCACertificate](~~328094~~) operation.
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-      * @param request UpdateCACertificateStatusRequest
-      * @return UpdateCACertificateStatusResponse
-     */
     public UpdateCACertificateStatusResponse updateCACertificateStatus(UpdateCACertificateStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateCACertificateStatusWithOptions(request, runtime);

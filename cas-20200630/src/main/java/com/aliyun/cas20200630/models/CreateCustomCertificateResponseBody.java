@@ -4,18 +4,33 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomCertificateResponseBody extends TeaModel {
+    /**
+     * <p>The content of the certificate. This parameter is returned only if Immediately is set to 1 or 2.</p>
+     */
     @NameInMap("Certificate")
     public String certificate;
 
+    /**
+     * <p>The certificate chain of the certificate. This parameter is returned only if Immediately is set to 2.</p>
+     */
     @NameInMap("CertificateChain")
     public String certificateChain;
 
+    /**
+     * <p>The unique identifier of the certificate.</p>
+     */
     @NameInMap("Identifier")
     public String identifier;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The serial number of the certificate. This parameter is returned only if Immediately is set to 1 or 2.</p>
+     */
     @NameInMap("SerialNumber")
     public String serialNumber;
 

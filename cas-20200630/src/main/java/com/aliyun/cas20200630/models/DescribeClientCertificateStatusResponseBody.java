@@ -4,15 +4,9 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeClientCertificateStatusResponseBody extends TeaModel {
-    /**
-     * <p>An array that consists of the status information about the certificates.</p>
-     */
     @NameInMap("CertificateStatus")
     public java.util.List<DescribeClientCertificateStatusResponseBodyCertificateStatus> certificateStatus;
 
-    /**
-     * <p>The ID of the request.</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -38,27 +32,12 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeClientCertificateStatusResponseBodyCertificateStatus extends TeaModel {
-        /**
-         * <p>The date on which the certificate was revoked.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the **Status** parameter is **revoked**. The value revoked indicates that the certificate is revoked.</p>
-         */
         @NameInMap("RevokeTime")
         public Long revokeTime;
 
-        /**
-         * <p>The serial number of the certificate.</p>
-         */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
-        /**
-         * <p>The status of the certificate. Valid values:</p>
-         * <br>
-         * <p>*   **good**: The certificate is not revoked.</p>
-         * <p>*   **revoked**: The certificate is revoked.</p>
-         * <p>*   **unknown**: The server cannot determine the status of the certificate.</p>
-         */
         @NameInMap("Status")
         public String status;
 

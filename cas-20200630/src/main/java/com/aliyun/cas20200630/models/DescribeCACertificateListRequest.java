@@ -11,6 +11,14 @@ public class DescribeCACertificateListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The unique identifier of the client certificate or server certificate that you want to revoke.</p>
+     * <br>
+     * <p>>  You can call the [ListClientCertificate](~~330884~~) operation to query the unique identifiers of all client certificates and server certificates.</p>
+     */
+    @NameInMap("Identifier")
+    public String identifier;
+
+    /**
      * <p>The number of CA certificates to return on each page. Default value: **20**.</p>
      */
     @NameInMap("ShowSize")
@@ -27,6 +35,14 @@ public class DescribeCACertificateListRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeCACertificateListRequest setIdentifier(String identifier) {
+        this.identifier = identifier;
+        return this;
+    }
+    public String getIdentifier() {
+        return this.identifier;
     }
 
     public DescribeCACertificateListRequest setShowSize(Integer showSize) {
