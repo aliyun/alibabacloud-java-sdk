@@ -11,7 +11,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of protected objects.</p>
+     * <p>The protected objects.</p>
      */
     @NameInMap("Resources")
     public java.util.List<DescribeDefenseResourcesResponseBodyResources> resources;
@@ -53,37 +53,34 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
 
     public static class DescribeDefenseResourcesResponseBodyResources extends TeaModel {
         /**
-         * <p>跟踪cookie开关状态。</p>
+         * <p>The status of the tracking cookie.</p>
          * <br>
-         * <p>- **0**：表示关闭。</p>
-         * <br>
-         * <p>- **1**：表示开启。</p>
+         * <p>*   **0:** disabled.</p>
+         * <p>*   **1:** enabled.</p>
          */
         @NameInMap("AcwCookieStatus")
         public Integer acwCookieStatus;
 
         /**
-         * <p>跟踪cookie的secure属性状态。</p>
+         * <p>The status of the secure attribute of the tracking cookie.</p>
          * <br>
-         * <p>- **0**：表示关闭。</p>
-         * <br>
-         * <p>- **1**：表示开启。</p>
+         * <p>*   **0:** disabled.</p>
+         * <p>*   **1:** enabled.</p>
          */
         @NameInMap("AcwSecureStatus")
         public Integer acwSecureStatus;
 
         /**
-         * <p>滑块cookie的secure属性状态。</p>
+         * <p>The status of the secure attribute of the slider verification cookie.</p>
          * <br>
-         * <p>- **0**：表示关闭。</p>
-         * <br>
-         * <p>- **1**：表示开启。</p>
+         * <p>*   **0:** disabled.</p>
+         * <p>*   **1:** enabled.</p>
          */
         @NameInMap("AcwV3SecureStatus")
         public Integer acwV3SecureStatus;
 
         /**
-         * <p>An array of custom XFF headers that are used to identify the originating IP addresses of clients. If the value of the XffStatus parameter is 1 and the CustomHeaders field is left empty, the first IP address in the XFF header is the originating IP address of the client.</p>
+         * <p>The custom XFF headers that are used to identify the originating IP addresses of clients. If the value of XffStatus is 1 and CustomHeaders is left empty, the first IP address in the XFF header is the originating IP address of the client.</p>
          */
         @NameInMap("CustomHeaders")
         public java.util.List<String> customHeaders;
@@ -95,7 +92,7 @@ public class DescribeDefenseResourcesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The description of the protected object. Different key-value pairs in a map indicate different properties of the protected object.</p>
+         * <p>The details of the protected object. Different key-value pairs in a map indicate different properties of the protected object.</p>
          */
         @NameInMap("Detail")
         public java.util.Map<String, ?> detail;

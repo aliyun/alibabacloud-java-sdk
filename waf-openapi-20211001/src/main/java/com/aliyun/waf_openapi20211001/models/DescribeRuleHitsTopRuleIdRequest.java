@@ -18,6 +18,9 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("IsGroupResource")
+    public String isGroupResource;
+
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <br>
@@ -76,6 +79,14 @@ public class DescribeRuleHitsTopRuleIdRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeRuleHitsTopRuleIdRequest setIsGroupResource(String isGroupResource) {
+        this.isGroupResource = isGroupResource;
+        return this;
+    }
+    public String getIsGroupResource() {
+        return this.isGroupResource;
     }
 
     public DescribeRuleHitsTopRuleIdRequest setRegionId(String regionId) {

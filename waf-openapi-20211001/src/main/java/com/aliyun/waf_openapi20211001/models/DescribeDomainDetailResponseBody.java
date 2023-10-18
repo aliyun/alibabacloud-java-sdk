@@ -46,6 +46,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    /**
+     * <p>The information about the SM certificate.</p>
+     */
     @NameInMap("SM2CertDetail")
     public DescribeDomainDetailResponseBodySM2CertDetail SM2CertDetail;
 
@@ -499,7 +502,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     public static class DescribeDomainDetailResponseBodyRedirectBackends extends TeaModel {
         /**
-         * <p>The back-to-origin IP address or domain name.</p>
+         * <p>The IP address or domain name of the origin server.</p>
          */
         @NameInMap("Backend")
         public String backend;
@@ -766,21 +769,39 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainDetailResponseBodySM2CertDetail extends TeaModel {
+        /**
+         * <p>The domain name of your website.</p>
+         */
         @NameInMap("CommonName")
         public String commonName;
 
+        /**
+         * <p>The end of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The ID of the SSL certificate.</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the SSL certificate.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>All domain names that are bound to the certificate.</p>
+         */
         @NameInMap("Sans")
         public java.util.List<String> sans;
 
+        /**
+         * <p>The beginning of the validity period of the SSL certificate. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
