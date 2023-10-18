@@ -4,6 +4,9 @@ package com.aliyun.cdn20180510.models;
 import com.aliyun.tea.*;
 
 public class RefreshObjectCachesRequest extends TeaModel {
+    @NameInMap("Force")
+    public Boolean force;
+
     @NameInMap("ObjectPath")
     public String objectPath;
 
@@ -31,6 +34,14 @@ public class RefreshObjectCachesRequest extends TeaModel {
     public static RefreshObjectCachesRequest build(java.util.Map<String, ?> map) throws Exception {
         RefreshObjectCachesRequest self = new RefreshObjectCachesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RefreshObjectCachesRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public RefreshObjectCachesRequest setObjectPath(String objectPath) {
