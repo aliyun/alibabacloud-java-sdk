@@ -4,6 +4,9 @@ package com.aliyun.ess20220222.models;
 import com.aliyun.tea.*;
 
 public class DetachInstancesRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("DecreaseDesiredCapacity")
     public Boolean decreaseDesiredCapacity;
 
@@ -34,6 +37,14 @@ public class DetachInstancesRequest extends TeaModel {
     public static DetachInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachInstancesRequest self = new DetachInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DetachInstancesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public DetachInstancesRequest setDecreaseDesiredCapacity(Boolean decreaseDesiredCapacity) {
