@@ -5,27 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetVideoInfosResponseBody extends TeaModel {
     /**
-     * <p>The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:</p>
-     * <br>
-     * <p>*   **Uploading**: The video is being uploaded.</p>
-     * <p>*   **UploadFail**: The video fails to be uploaded.</p>
-     * <p>*   **UploadSucc**: The video is uploaded.</p>
-     * <p>*   **Transcoding**: The video is being transcoded.</p>
-     * <p>*   **TranscodeFail**: The video fails to be transcoded.</p>
-     * <p>*   **Blocked**: The video is blocked.</p>
-     * <p>*   **Normal**: The video can be played.</p>
+     * <p>The IDs of the videos that do not exist.</p>
      */
     @NameInMap("NonExistVideoIds")
     public java.util.List<String> nonExistVideoIds;
 
     /**
-     * <p>The title of the video.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The description of the video.</p>
+     * <p>The period of time in which the object remains in the restored state.</p>
      */
     @NameInMap("VideoList")
     public java.util.List<GetVideoInfosResponseBodyVideoList> videoList;
@@ -60,11 +52,14 @@ public class GetVideoInfosResponseBody extends TeaModel {
     }
 
     public static class GetVideoInfosResponseBodyVideoList extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The Object Storage Service (OSS) bucket where the video file is stored.</p>
+         * <p>The ID of the video category.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
@@ -75,6 +70,9 @@ public class GetVideoInfosResponseBody extends TeaModel {
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <p>The URL of the video thumbnail.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
@@ -85,61 +83,104 @@ public class GetVideoInfosResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Queries the information about multiple videos at a time.</p>
+         * <p>The description of the video.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The duration of the video. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The URL array of video snapshots.</p>
+         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The period of time in which the object remains in the restored state.</p>
+         */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
+        /**
+         * <p>The restoration status of the audio or video file. Valid values:</p>
+         * <p>- **Processing**</p>
+         * <p>- **Success**</p>
+         * <p>- **Failed**</p>
+         */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
+        /**
+         * <p>The size of the video mezzanine file. Unit: byte.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The URL array of video snapshots.</p>
+         */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
-         * <p>The URL of the video thumbnail.</p>
+         * <p>The status of the video. By default, videos in all states are returned. Multiple states are separated by commas (,). Valid values:</p>
+         * <br>
+         * <p>*   **Uploading**: The video is being uploaded.</p>
+         * <p>*   **UploadFail**: The video fails to be uploaded.</p>
+         * <p>*   **UploadSucc**: The video is uploaded.</p>
+         * <p>*   **Transcoding**: The video is being transcoded.</p>
+         * <p>*   **TranscodeFail**: The video fails to be transcoded.</p>
+         * <p>*   **Blocked**: The video is blocked.</p>
+         * <p>*   **Normal**: The video can be played.</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage class of the audio or video file. Valid values:</p>
+         * <p>- **Standard**: All media resources are stored as Standard objects.</p>
+         * <p>- **IA**: All media resources are stored as IA objects.</p>
+         * <p>- **Archive**: All media resources are stored as Archive objects.</p>
+         * <p>- **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
+         * <p>- **SourceIA**: Only the source files are IA objects.</p>
+         * <p>- **SourceArchive**: Only the source files are Archive objects.</p>
+         * <p>- **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
+         * <p>- **Changing**: The storage class is being modified.</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
-         * <p>The information about the video.</p>
+         * <p>The Object Storage Service (OSS) bucket where the video file is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The ID of the video category.</p>
+         * <p>The tags of the video. Multiple tags are separated by commas (,).</p>
          */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The ID of the template group that was used to transcode the video.</p>
+         */
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
+        /**
+         * <p>The title of the video.</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The list of video IDs. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.</p>
+         * <p>The ID of the video.</p>
          */
         @NameInMap("VideoId")
         public String videoId;

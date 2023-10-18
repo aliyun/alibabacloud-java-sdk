@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAITemplateResponseBody extends TeaModel {
     /**
-     * <p>The source of the AI template. Valid values:</p>
-     * <br>
-     * <p>*   **System**</p>
-     * <p>*   **Custom**</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the AI template.</p>
+     * <p>The information about the AI templates.</p>
      */
     @NameInMap("TemplateInfoList")
     public java.util.List<ListAITemplateResponseBodyTemplateInfoList> templateInfoList;
@@ -42,46 +39,58 @@ public class ListAITemplateResponseBody extends TeaModel {
 
     public static class ListAITemplateResponseBodyTemplateInfoList extends TeaModel {
         /**
-         * <p>The type of the AI template. Valid values:</p>
-         * <br>
-         * <p>*   **AIMediaAudit**: automated review</p>
-         * <p>*   **AIImage**: smart thumbnail</p>
+         * <p>The time when the AI template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>Details of the AI template.</p>
+         * <p>Indicates whether the template is the default AI template. Valid values:</p>
+         * <br>
+         * <p>*   **Default**</p>
+         * <p>*   **NotDefault**</p>
          */
         @NameInMap("IsDefault")
         public String isDefault;
 
+        /**
+         * <p>The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
-         * <p>Queries AI templates.</p>
+         * <p>The source of the AI template. Valid values:</p>
+         * <br>
+         * <p>*   **System**</p>
+         * <p>*   **Custom**</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).</p>
          */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
+        /**
+         * <p>The ID of the AI template.</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
         /**
-         * <p>The time when the AI template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The name of the AI template.</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
-         * <p>The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](~~89863~~#title-vd3-499-o36).</p>
+         * <p>The type of the AI template. Valid values:</p>
+         * <br>
+         * <p>*   **AIMediaAudit**: automated review</p>
+         * <p>*   **AIImage**: smart thumbnail</p>
          */
         @NameInMap("TemplateType")
         public String templateType;

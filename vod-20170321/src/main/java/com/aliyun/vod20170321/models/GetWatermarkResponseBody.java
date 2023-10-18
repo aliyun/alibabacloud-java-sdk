@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetWatermarkResponseBody extends TeaModel {
     /**
-     * <p>The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the application.</p>
+     * <p>The information about the watermark.</p>
      */
     @NameInMap("WatermarkInfo")
     public GetWatermarkResponseBodyWatermarkInfo watermarkInfo;
@@ -39,44 +39,56 @@ public class GetWatermarkResponseBody extends TeaModel {
 
     public static class GetWatermarkResponseBodyWatermarkInfo extends TeaModel {
         /**
-         * <p>The ID of the watermark.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The name of the watermark.</p>
+         * <p>The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **GetWatermark**.</p>
+         * <p>The Object Storage Service (OSS) URL or CDN URL of the watermark file. A text watermark does not have a file URL.</p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Indicates whether the watermark is the default one. Valid values:</p>
+         * <br>
+         * <p>*   **Default**</p>
+         * <p>*   **NotDefault**</p>
          */
         @NameInMap("IsDefault")
         public String isDefault;
 
+        /**
+         * <p>The name of the watermark.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The Object Storage Service (OSS) URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.</p>
+         * <p>The type of the watermark. Valid values:</p>
+         * <br>
+         * <p>*   **Image**</p>
+         * <p>*   **Text**</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>Queries a single watermark.</p>
+         * <p>The configuration information such as the position and effect about the text watermark or image watermark. The value is a JSON string. For more information about the data structure, see the "WatermarkConfig: specifies the watermark configurations" section of the [Parameters for media processing](~~98618~~) topic.</p>
          */
         @NameInMap("WatermarkConfig")
         public String watermarkConfig;
 
+        /**
+         * <p>The ID of the watermark.</p>
+         */
         @NameInMap("WatermarkId")
         public String watermarkId;
 

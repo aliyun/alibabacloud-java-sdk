@@ -5,28 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetAuditHistoryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The review records.</p>
      */
     @NameInMap("Histories")
     public java.util.List<GetAuditHistoryResponseBodyHistories> histories;
 
     /**
-     * <p>The review comments, which are provided by the reviewer.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The reviewer.</p>
+     * <p>The manual review result. Valid values:</p>
+     * <p>- **Normal**: The video can be played.</p>
+     * <p>- **Blocked**: The video is blocked.</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The sorting rule of the results. Valid values:</p>
-     * <br>
-     * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
-     * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
+     * <p>The total number of review records.</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -69,29 +68,34 @@ public class GetAuditHistoryResponseBody extends TeaModel {
     }
 
     public static class GetAuditHistoryResponseBodyHistories extends TeaModel {
+        /**
+         * <p>The reviewer.</p>
+         */
         @NameInMap("Auditor")
         public String auditor;
 
         /**
-         * <p>Queries the manual review history.</p>
+         * <p>The review comments, which are provided by the reviewer.</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The manual review result. Valid values:</p>
-         * <br>
-         * <p>- **Normal**: The video can be played.</p>
-         * <p>- **Blocked**: The video is blocked.</p>
+         * <p>The time when the review record was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The reason why the video failed the review. If the video failed the review, specify the reason.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The time when the review record was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The manual review result. Valid values:</p>
+         * <p>- **Normal**: The video can be played.</p>
+         * <p>- **Blocked**: The video is blocked.</p>
          */
         @NameInMap("Status")
         public String status;

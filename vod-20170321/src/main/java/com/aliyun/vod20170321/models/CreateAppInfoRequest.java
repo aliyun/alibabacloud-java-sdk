@@ -5,22 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateAppInfoRequest extends TeaModel {
     /**
-     * <p>Creates an application.</p>
+     * <p>The name of the application. The application name must be unique.</p>
+     * <br>
+     * <p>*   The name can contain letters, digits, periods (.), hyphens (-), and at signs (@). The name can be up to 128 characters in length.</p>
+     * <p>*   The value must be encoded in UTF-8.</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>## Common errors</p>
+     * <p>The description of the application.</p>
      * <br>
-     * <p>The following table describes the common errors that this operation can return. </p>
-     * <br>
-     * <p>| Error code | Error message | HTTP status code | Description |</p>
-     * <p>| ---------- | ------------- | ---------------- | ----------- |</p>
-     * <p>| OperationDenied.NotOpenAppService | The app service is not open. | 403 | The error message returned because the multi-application service has not been activated. |</p>
-     * <p>| Forbidden.OperateApp | User not authorized to operate app. | 403 | The error message returned because you are not authorized to manage the application. |</p>
-     * <p>| AlreadyExist.AppName | The specified AppName has already exist. | 409 | The error message returned because the name of the application already exists. |</p>
-     * <p>| LimitExceeded.AppCount | App Count has exceeded 10. | 400 | The error message returned because the number of applications that can be created exceeds the upper limit. |</p>
+     * <p>*   The description can contain up to 512 characters in length.</p>
+     * <p>*   The value must be encoded in UTF-8.</p>
      */
     @NameInMap("Description")
     public String description;

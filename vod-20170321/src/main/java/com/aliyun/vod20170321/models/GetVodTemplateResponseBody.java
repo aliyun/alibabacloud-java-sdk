@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetVodTemplateResponseBody extends TeaModel {
     /**
-     * <p>The time when the template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>The information about the snapshot template.</p>
      */
     @NameInMap("VodTemplateInfo")
     public GetVodTemplateResponseBodyVodTemplateInfo vodTemplateInfo;
@@ -39,37 +39,49 @@ public class GetVodTemplateResponseBody extends TeaModel {
 
     public static class GetVodTemplateResponseBodyVodTemplateInfo extends TeaModel {
         /**
-         * <p>The name of the template.</p>
+         * <p>The time when the template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Indicates whether the template is the default one. Valid values:</p>
+         * <br>
+         * <p>*   **Default**: The template is the default one.</p>
+         * <p>*   **NotDefault**: The template is not the default one.</p>
          */
         @NameInMap("IsDefault")
         public String isDefault;
 
+        /**
+         * <p>The time when the template was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
+        /**
+         * <p>The name of the template.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Queries a single snapshot template.</p>
+         * <p>The detailed configurations of the template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
          */
         @NameInMap("TemplateConfig")
         public String templateConfig;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **GetVodTemplate**.</p>
+         * <p>The type of the template. Valid values:</p>
+         * <br>
+         * <p>*   **Snapshot**</p>
+         * <p>*   **DynamicImage**</p>
          */
         @NameInMap("TemplateType")
         public String templateType;
 
         /**
-         * <p>The detailed configurations of the template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
+         * <p>The ID of the template.</p>
          */
         @NameInMap("VodTemplateId")
         public String vodTemplateId;

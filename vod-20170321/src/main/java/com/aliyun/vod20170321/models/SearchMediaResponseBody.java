@@ -5,30 +5,25 @@ import com.aliyun.tea.*;
 
 public class SearchMediaResponseBody extends TeaModel {
     /**
-     * <p>The status of the audio file. Valid values:</p>
-     * <br>
-     * <p>*   **Uploading**</p>
-     * <p>*   **Normal**</p>
-     * <p>*   **UploadFail**</p>
-     * <p>*   **Deleted**</p>
+     * <p>The AI type.</p>
      */
     @NameInMap("MediaList")
     public java.util.List<SearchMediaResponseBodyMediaList> mediaList;
 
     /**
-     * <p>The tags of the audio file.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The title of the auxiliary media asset.</p>
+     * <p>The pagination identifier.</p>
      */
     @NameInMap("ScrollToken")
     public String scrollToken;
 
     /**
-     * <p>[Details about image files](~~86991~~).</p>
+     * <p>The total number of data records that meet the specified filter criteria.</p>
      */
     @NameInMap("Total")
     public Long total;
@@ -72,19 +67,19 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAiDataAiLabelInfoOccurrences extends TeaModel {
         /**
-         * <p>片段起始时间</p>
+         * <p>The start time of the clip.</p>
          */
         @NameInMap("From")
         public Double from;
 
         /**
-         * <p>打分</p>
+         * <p>The score.</p>
          */
         @NameInMap("Score")
         public Double score;
 
         /**
-         * <p>片段结束时间</p>
+         * <p>The end time of the clip.</p>
          */
         @NameInMap("To")
         public Double to;
@@ -122,25 +117,25 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAiDataAiLabelInfo extends TeaModel {
         /**
-         * <p>分类</p>
+         * <p>The category.</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
-         * <p>实体ID</p>
+         * <p>The ID of the tag.</p>
          */
         @NameInMap("LabelId")
         public String labelId;
 
         /**
-         * <p>实体名称</p>
+         * <p>The name of the tag.</p>
          */
         @NameInMap("LabelName")
         public String labelName;
 
         /**
-         * <p>片段列表</p>
+         * <p>The clips.</p>
          */
         @NameInMap("Occurrences")
         public java.util.List<SearchMediaResponseBodyMediaListAiDataAiLabelInfoOccurrences> occurrences;
@@ -186,19 +181,19 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAiDataOcrInfo extends TeaModel {
         /**
-         * <p>文本内容</p>
+         * <p>The text.</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>片段起始时间</p>
+         * <p>The start time of the subtitle.</p>
          */
         @NameInMap("From")
         public Double from;
 
         /**
-         * <p>片段结束时间</p>
+         * <p>The end time of the subtitle.</p>
          */
         @NameInMap("To")
         public Double to;
@@ -236,13 +231,13 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAiData extends TeaModel {
         /**
-         * <p>AI标签信息列表</p>
+         * <p>The AI tags.</p>
          */
         @NameInMap("AiLabelInfo")
         public java.util.List<SearchMediaResponseBodyMediaListAiDataAiLabelInfo> aiLabelInfo;
 
         /**
-         * <p>字幕信息列表</p>
+         * <p>The information about subtitles.</p>
          */
         @NameInMap("OcrInfo")
         public java.util.List<SearchMediaResponseBodyMediaListAiDataOcrInfo> ocrInfo;
@@ -272,25 +267,25 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAiRoughData extends TeaModel {
         /**
-         * <p>视频AI分类</p>
+         * <p>The AI type.</p>
          */
         @NameInMap("AiCategory")
         public String aiCategory;
 
         /**
-         * <p>AI任务ID</p>
+         * <p>The ID of the AI task.</p>
          */
         @NameInMap("AiJobId")
         public String aiJobId;
 
         /**
-         * <p>保存类型</p>
+         * <p>The save type.</p>
          */
         @NameInMap("SaveType")
         public String saveType;
 
         /**
-         * <p>数据状态</p>
+         * <p>The status of the data.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -335,15 +330,27 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaListAttachedMediaCategories extends TeaModel {
+        /**
+         * <p>The category ID of the auxiliary media asset.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>The name of the category.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <p>The level of the category.</p>
+         */
         @NameInMap("Level")
         public Long level;
 
+        /**
+         * <p>The ID of the parent category.</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
@@ -387,39 +394,83 @@ public class SearchMediaResponseBody extends TeaModel {
     }
 
     public static class SearchMediaResponseBodyMediaListAttachedMedia extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The type of the auxiliary media asset. Valid values:</p>
+         * <br>
+         * <p>*   **watermark**</p>
+         * <p>*   **subtitle**</p>
+         * <p>*   **material**</p>
+         */
         @NameInMap("BusinessType")
         public String businessType;
 
+        /**
+         * <p>The list of category IDs.</p>
+         */
         @NameInMap("Categories")
         public java.util.List<SearchMediaResponseBodyMediaListAttachedMediaCategories> categories;
 
+        /**
+         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the auxiliary media asset.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The ID of the auxiliary media asset.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The time when the auxiliary media asset was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The status of the auxiliary media asset. Valid values:</p>
+         * <br>
+         * <p>*   **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.</p>
+         * <p>*   **Normal**: The auxiliary media asset is uploaded.</p>
+         * <p>*   **UploadFail**: The auxiliary media asset fails to be uploaded.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The endpoint of the OSS bucket in which the auxiliary media asset is stored.</p>
+         */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
+        /**
+         * <p>The tags of the auxiliary media asset.</p>
+         */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The title of the auxiliary media asset.</p>
+         */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The URL of the auxiliary media asset.</p>
+         */
         @NameInMap("URL")
         public String URL;
 
@@ -528,19 +579,19 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListAudio extends TeaModel {
         /**
-         * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The time when the auxiliary media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the audio file.</p>
          */
         @NameInMap("AudioId")
         public String audioId;
 
         /**
-         * <p>The URL of the auxiliary media asset.</p>
+         * <p>The category ID of the audio file.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
@@ -552,116 +603,143 @@ public class SearchMediaResponseBody extends TeaModel {
         public String cateName;
 
         /**
-         * <p>The status of the auxiliary media asset. Valid values:</p>
-         * <br>
-         * <p>*   **Uploading**: The auxiliary media asset is being uploaded. This is the initial status.</p>
-         * <p>*   **Normal**: The auxiliary media asset is uploaded.</p>
-         * <p>*   **UploadFail**: The auxiliary media asset fails to be uploaded.</p>
+         * <p>The URL of the thumbnail.</p>
          */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The source. Valid values:</p>
-         * <br>
-         * <p>*   **general**: The video file is uploaded by using ApsaraVideo VOD.</p>
-         * <p>*   **short_video**: The video file is uploaded by using the short video SDK.</p>
-         * <p>*   **editing**: The video file is produced after online editing.</p>
-         * <p>*   **live**: The video stream is recorded and uploaded as a file.</p>
+         * <p>The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The type of the auxiliary media asset. Valid values:</p>
-         * <br>
-         * <p>*   **watermark**</p>
-         * <p>*   **subtitle**</p>
-         * <p>*   **material**</p>
+         * <p>The description of the audio file.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the auxiliary media asset.</p>
+         * <p>The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
          */
         @NameInMap("DownloadSwitch")
         public String downloadSwitch;
 
         /**
-         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The duration of the audio file.</p>
          */
         @NameInMap("Duration")
         public Float duration;
 
         /**
-         * <p>The number of the page to return. Default value: **1**.</p>
+         * <p>The source. Valid values:</p>
          * <br>
-         * <p>> If the value of this parameter exceeds **200**, we recommend that you set the ScrollToken parameter as well.</p>
+         * <p>*   **general**: The audio file is uploaded by using ApsaraVideo VOD.</p>
+         * <p>*   **short_video**: The audio file is uploaded to ApsaraVideo VOD by using the short video SDK. For more information, see [Introduction](~~53407~~).</p>
+         * <p>*   **editing**: The audio file is uploaded to ApsaraVideo VOD after online editing and production. For more information, see [ProduceEditingProjectVideo](~~68536~~).</p>
+         * <p>*   **live**: The audio stream is recorded and uploaded as a file to ApsaraVideo VOD.</p>
          */
         @NameInMap("MediaSource")
         public String mediaSource;
 
         /**
-         * <p>The pagination identifier.</p>
+         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The total number of data records that meet the specified filter criteria.</p>
+         * <p>The preprocessing status. Only preprocessed videos can be used for live streaming in the production studio. Valid values:</p>
+         * <br>
+         * <p>*   **UnPreprocess**</p>
+         * <p>*   **Preprocessing**</p>
+         * <p>*   **PreprocessSucceed**</p>
+         * <p>*   **PreprocessFailed**</p>
          */
         @NameInMap("PreprocessStatus")
         public String preprocessStatus;
 
+        /**
+         * <p>The period of time in which the audio file remains in the restored state.</p>
+         */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
+        /**
+         * <p>The restoration status of the audio file. Valid values:</p>
+         * <br>
+         * <p>*   **Processing**</p>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
+         */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
         /**
-         * <p>The title of the video file.</p>
+         * <p>The size of the audio file.</p>
          */
         @NameInMap("Size")
         public Long size;
 
         /**
-         * <p>The ID of the video file.</p>
+         * <p>The list of automatic snapshots.</p>
          */
         @NameInMap("Snapshots")
         public java.util.List<String> snapshots;
 
         /**
-         * <p>The status of the image file.</p>
-         * <br>
-         * <p>*   **Uploading**: The image file is being uploaded. This is the initial status.</p>
-         * <p>*   **Normal**: The image file is uploaded.</p>
-         * <p>*   **UploadFail**: The image file fails to be uploaded.</p>
+         * <p>The list of sprite snapshots.</p>
          */
         @NameInMap("SpriteSnapshots")
         public java.util.List<String> spriteSnapshots;
 
         /**
-         * <p>The size of the audio file.</p>
+         * <p>The status of the audio file. Valid values:</p>
+         * <br>
+         * <p>*   **Uploading**</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **UploadFail**</p>
+         * <p>*   **Deleted**</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage class of the audio file. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
+         * <p>*   **IA**: All media resources are stored as IA objects.</p>
+         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
+         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
+         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
+         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
+         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
+         * <p>*   **Changing**: The storage class is being modified.</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
-         * <p>The duration of the audio file.</p>
+         * <p>The endpoint of the OSS bucket in which the audio file is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The tags of the video file.</p>
+         * <p>The tags of the audio file.</p>
          */
         @NameInMap("Tags")
         public String tags;
+
+        /**
+         * <p>The title of the audio file.</p>
+         */
+        @NameInMap("Title")
+        public String title;
 
         /**
          * <p>The transcoding mode. Default value: FastTranscode. Valid values:</p>
@@ -669,12 +747,6 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **FastTranscode**: The audio file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
          * <p>*   **NoTranscode**: The audio file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
          * <p>*   **AsyncTranscode**: The audio file can be immediately played and asynchronously transcoded after it is uploaded.</p>
-         */
-        @NameInMap("Title")
-        public String title;
-
-        /**
-         * <p>The time when the audio file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("TranscodeMode")
         public String transcodeMode;
@@ -872,78 +944,77 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListImage extends TeaModel {
         /**
-         * <p>The ID of the audio file.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The duration of the video file. Unit: seconds.</p>
+         * <p>The category ID of the image file.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
-         * <p>The tags of the auxiliary media asset.</p>
+         * <p>The name of the category.</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>[Details about auxiliary media assets](~~86991~~).</p>
+         * <p>The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The description of the image file.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The endpoint of the OSS bucket in which the audio file is stored.</p>
+         * <p>The ID of the image file.</p>
          */
         @NameInMap("ImageId")
         public String imageId;
 
         /**
-         * <p>The URL of the thumbnail.</p>
+         * <p>The time when the image file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>The type of the media asset. Valid values:</p>
+         * <p>The status of the image file.</p>
          * <br>
-         * <p>*   **video**</p>
-         * <p>*   **audio**</p>
-         * <p>*   **image**</p>
-         * <p>*   **attached**</p>
+         * <p>*   **Uploading**: The image file is being uploaded. This is the initial status.</p>
+         * <p>*   **Normal**: The image file is uploaded.</p>
+         * <p>*   **UploadFail**: The image file fails to be uploaded.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the application.</p>
+         * <p>The endpoint of the OSS bucket in which the image file is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The list of automatic snapshots.</p>
+         * <p>The tags of the image file.</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The title of the image file.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The URL of the thumbnail.</p>
+         * <p>The URL of the image file.</p>
          */
         @NameInMap("URL")
         public String URL;
@@ -1053,13 +1124,117 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaListVideo extends TeaModel {
         /**
-         * <p>The download switch. The audio file can be downloaded offline only when the download switch is turned on. Valid values:</p>
+         * <p>The ID of the application.</p>
+         */
+        @NameInMap("AppId")
+        public String appId;
+
+        /**
+         * <p>The category ID of the video file.</p>
+         */
+        @NameInMap("CateId")
+        public Long cateId;
+
+        /**
+         * <p>The name of the category.</p>
+         */
+        @NameInMap("CateName")
+        public String cateName;
+
+        /**
+         * <p>The URL of the thumbnail.</p>
+         */
+        @NameInMap("CoverURL")
+        public String coverURL;
+
+        /**
+         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        /**
+         * <p>The description of the video file.</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:</p>
          * <br>
          * <p>*   **on**</p>
          * <p>*   **off**</p>
          */
-        @NameInMap("AppId")
-        public String appId;
+        @NameInMap("DownloadSwitch")
+        public String downloadSwitch;
+
+        /**
+         * <p>The duration of the video file. Unit: seconds.</p>
+         */
+        @NameInMap("Duration")
+        public Float duration;
+
+        /**
+         * <p>The source. Valid values:</p>
+         * <br>
+         * <p>*   **general**: The video file is uploaded by using ApsaraVideo VOD.</p>
+         * <p>*   **short_video**: The video file is uploaded by using the short video SDK.</p>
+         * <p>*   **editing**: The video file is produced after online editing.</p>
+         * <p>*   **live**: The video stream is recorded and uploaded as a file.</p>
+         */
+        @NameInMap("MediaSource")
+        public String mediaSource;
+
+        /**
+         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
+        @NameInMap("ModificationTime")
+        public String modificationTime;
+
+        /**
+         * <p>The preprocessing status. Valid values:</p>
+         * <br>
+         * <p>*   **UnPreprocess**</p>
+         * <p>*   **Preprocessing**</p>
+         * <p>*   **PreprocessSucceed**</p>
+         * <p>*   **PreprocessFailed**</p>
+         */
+        @NameInMap("PreprocessStatus")
+        public String preprocessStatus;
+
+        /**
+         * <p>The period of time in which the video file remains in the restored state.</p>
+         */
+        @NameInMap("RestoreExpiration")
+        public String restoreExpiration;
+
+        /**
+         * <p>The restoration status of the video file. Valid values:</p>
+         * <br>
+         * <p>*   **Processing**</p>
+         * <p>*   **Success**</p>
+         * <p>*   **Failed**</p>
+         */
+        @NameInMap("RestoreStatus")
+        public String restoreStatus;
+
+        /**
+         * <p>The size of the video file.</p>
+         */
+        @NameInMap("Size")
+        public Long size;
+
+        /**
+         * <p>The list of automatic snapshots.</p>
+         */
+        @NameInMap("Snapshots")
+        public java.util.List<String> snapshots;
+
+        /**
+         * <p>The list of sprite snapshots.</p>
+         */
+        @NameInMap("SpriteSnapshots")
+        public java.util.List<String> spriteSnapshots;
 
         /**
          * <p>The status of the video file. Valid values:</p>
@@ -1072,122 +1247,54 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>*   **Blocked**</p>
          * <p>*   **Normal**</p>
          */
-        @NameInMap("CateId")
-        public Long cateId;
-
-        /**
-         * <p>The name of the category.</p>
-         */
-        @NameInMap("CateName")
-        public String cateName;
-
-        /**
-         * <p>The filter condition. For more information about the syntax, see [Protocol for media asset search](~~86991~~).</p>
-         */
-        @NameInMap("CoverURL")
-        public String coverURL;
-
-        /**
-         * <p>The category ID of the auxiliary media asset.</p>
-         */
-        @NameInMap("CreationTime")
-        public String creationTime;
-
-        /**
-         * <p>The endpoint of the OSS bucket in which the image file is stored.</p>
-         */
-        @NameInMap("Description")
-        public String description;
-
-        /**
-         * <p>The ID of the application.</p>
-         */
-        @NameInMap("DownloadSwitch")
-        public String downloadSwitch;
-
-        /**
-         * <p>The description of the auxiliary media asset.</p>
-         */
-        @NameInMap("Duration")
-        public Float duration;
-
-        /**
-         * <p>[Details about video files](~~86991~~).</p>
-         */
-        @NameInMap("MediaSource")
-        public String mediaSource;
-
-        /**
-         * <p>The description of the audio file.</p>
-         */
-        @NameInMap("ModificationTime")
-        public String modificationTime;
-
-        /**
-         * <p>The URL of the image file.</p>
-         */
-        @NameInMap("PreprocessStatus")
-        public String preprocessStatus;
-
-        @NameInMap("RestoreExpiration")
-        public String restoreExpiration;
-
-        @NameInMap("RestoreStatus")
-        public String restoreStatus;
-
-        /**
-         * <p>The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
-         */
-        @NameInMap("Size")
-        public Long size;
-
-        /**
-         * <p>The endpoint of the OSS bucket in which the auxiliary media asset is stored.</p>
-         */
-        @NameInMap("Snapshots")
-        public java.util.List<String> snapshots;
-
-        /**
-         * <p>The list of automatic snapshots.</p>
-         */
-        @NameInMap("SpriteSnapshots")
-        public java.util.List<String> spriteSnapshots;
-
-        /**
-         * <p>The ID of the application.</p>
-         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage class of the video file. Valid values:</p>
+         * <br>
+         * <p>*   **Standard**: All media resources are stored as Standard objects.</p>
+         * <p>*   **IA**: All media resources are stored as IA objects.</p>
+         * <p>*   **Archive**: All media resources are stored as Archive objects.</p>
+         * <p>*   **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
+         * <p>*   **SourceIA**: Only the source files are IA objects.</p>
+         * <p>*   **SourceArchive**: Only the source files are Archive objects.</p>
+         * <p>*   **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
+         * <p>*   **Changing**: The storage class is being modified.</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 
         /**
-         * <p>The time when the audio file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The endpoint of the OSS bucket in which the video file is stored.</p>
          */
         @NameInMap("StorageLocation")
         public String storageLocation;
 
         /**
-         * <p>The title of the image file.</p>
+         * <p>The tags of the video file.</p>
          */
         @NameInMap("Tags")
         public String tags;
 
         /**
-         * <p>The title of the audio file.</p>
+         * <p>The title of the video file.</p>
          */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>The category ID of the audio file.</p>
+         * <p>The transcoding mode. Default value: FastTranscode. Valid values:</p>
+         * <br>
+         * <p>*   **FastTranscode**: The video file is immediately transcoded after it is uploaded. You cannot play the file before it is transcoded.</p>
+         * <p>*   **NoTranscode**: The video file can be played without being transcoded. You can immediately play the file after it is uploaded.</p>
+         * <p>*   **AsyncTranscode**: The video file can be immediately played and asynchronously transcoded after it is uploaded.</p>
          */
         @NameInMap("TranscodeMode")
         public String transcodeMode;
 
         /**
-         * <p>The time when the video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the video file.</p>
          */
         @NameInMap("VideoId")
         public String videoId;
@@ -1385,58 +1492,60 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaList extends TeaModel {
         /**
-         * <p>AI详细信息</p>
+         * <p>Details about AI data.</p>
          */
         @NameInMap("AiData")
         public SearchMediaResponseBodyMediaListAiData aiData;
 
         /**
-         * <p>AI简介数据</p>
+         * <p>The basic information about AI data.</p>
          */
         @NameInMap("AiRoughData")
         public SearchMediaResponseBodyMediaListAiRoughData aiRoughData;
 
         /**
-         * <p>Queries the information about media assets such as video, audio, and image files, and auxiliary media assets.</p>
+         * <p>[Details about auxiliary media assets](~~86991~~).</p>
          */
         @NameInMap("AttachedMedia")
         public SearchMediaResponseBodyMediaListAttachedMedia attachedMedia;
 
         /**
-         * <p>The name of the category.</p>
+         * <p>[Details about audio files](~~86991~~).</p>
          */
         @NameInMap("Audio")
         public SearchMediaResponseBodyMediaListAudio audio;
 
         /**
-         * <p>The list of category IDs.</p>
+         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The time when the video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>[Details about image files](~~86991~~).</p>
          */
         @NameInMap("Image")
         public SearchMediaResponseBodyMediaListImage image;
 
         /**
-         * <p>The time when the media asset was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the media asset.</p>
          */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>The description of the image file.</p>
+         * <p>The type of the media asset. Valid values:</p>
+         * <br>
+         * <p>*   **video**</p>
+         * <p>*   **audio**</p>
+         * <p>*   **image**</p>
+         * <p>*   **attached**</p>
          */
         @NameInMap("MediaType")
         public String mediaType;
 
         /**
-         * <p>The download switch. The video file can be downloaded offline only when the download switch is turned on. Valid values:</p>
-         * <br>
-         * <p>*   **on**</p>
-         * <p>*   **off**</p>
+         * <p>[Details about video files](~~86991~~).</p>
          */
         @NameInMap("Video")
         public SearchMediaResponseBodyMediaListVideo video;

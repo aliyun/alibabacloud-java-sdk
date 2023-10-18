@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitAIJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the video.</p>
+     * <p>The information about the AI jobs.</p>
      */
     @NameInMap("AIJobList")
     public SubmitAIJobResponseBodyAIJobList AIJobList;
@@ -38,14 +38,23 @@ public class SubmitAIJobResponseBody extends TeaModel {
     }
 
     public static class SubmitAIJobResponseBodyAIJobListAIJob extends TeaModel {
+        /**
+         * <p>The ID of the AI job.</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The ID of the video.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
         /**
-         * <p>SubmitAIJob</p>
+         * <p>The type of the AI job. Valid values:</p>
+         * <br>
+         * <p>*   **AIMediaDNA**: The media fingerprinting job.</p>
+         * <p>*   **AIVideoTag**: The smart tagging job.</p>
          */
         @NameInMap("Type")
         public String type;

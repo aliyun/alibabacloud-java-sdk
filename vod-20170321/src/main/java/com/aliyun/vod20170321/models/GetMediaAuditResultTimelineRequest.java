@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditResultTimelineRequest extends TeaModel {
     /**
-     * <p>The category of the review result. Valid values:</p>
-     * <br>
-     * <p>*   **normal**</p>
-     * <p>*   **logo**</p>
+     * <p>The ID of the video.</p>
      */
     @NameInMap("MediaId")
     public String mediaId;

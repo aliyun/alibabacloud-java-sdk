@@ -17,7 +17,7 @@ public class GetVideoListResponseBody extends TeaModel {
     public Integer total;
 
     /**
-     * <p>The information about the media file. Information about a maximum of 5,000 media files can be returned.</p>
+     * <p>The period of time in which the object remains in the restored state.</p>
      */
     @NameInMap("VideoList")
     public GetVideoListResponseBodyVideoList videoList;
@@ -72,19 +72,19 @@ public class GetVideoListResponseBody extends TeaModel {
 
     public static class GetVideoListResponseBodyVideoListVideo extends TeaModel {
         /**
-         * <p>The application ID. Default value: **app-1000000**.</p>
+         * <p>The ID of the application. Default value: **app-1000000**.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The category ID.</p>
+         * <p>The category ID of the media file.</p>
          */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
-         * <p>The category name.</p>
+         * <p>The name of the category.</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -119,9 +119,19 @@ public class GetVideoListResponseBody extends TeaModel {
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The period of time in which the object remains in the restored state.</p>
+         */
         @NameInMap("RestoreExpiration")
         public String restoreExpiration;
 
+        /**
+         * <p>The restoration status of the media file. Valid values:</p>
+         * <br>
+         * <p>- **Processing**</p>
+         * <p>- **Success**</p>
+         * <p>- **Failed**</p>
+         */
         @NameInMap("RestoreStatus")
         public String restoreStatus;
 
@@ -138,7 +148,7 @@ public class GetVideoListResponseBody extends TeaModel {
         public GetVideoListResponseBodyVideoListVideoSnapshots snapshots;
 
         /**
-         * <p>The video status. Valid values:</p>
+         * <p>The status of the video. Valid values:</p>
          * <br>
          * <p>*   **Uploading**: The video is being uploaded.</p>
          * <p>*   **UploadFail**: The video failed to be uploaded.</p>
@@ -155,6 +165,18 @@ public class GetVideoListResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The storage class of the media file. Valid values:</p>
+         * <br>
+         * <p>- **Standard**: All media resources are stored as Standard objects.</p>
+         * <p>- **IA**: All media resources are stored as IA objects.</p>
+         * <p>- **Archive**: All media resources are stored as Archive objects.</p>
+         * <p>- **ColdArchive**: All media resources are stored as Cold Archive objects.</p>
+         * <p>- **SourceIA**: Only the source files are IA objects.</p>
+         * <p>- **SourceArchive**: Only the source files are Archive objects.</p>
+         * <p>- **SourceColdArchive**: Only the source files are Cold Archive objects.</p>
+         * <p>- **Changing**: The storage class is being modified.</p>
+         */
         @NameInMap("StorageClass")
         public String storageClass;
 

@@ -4,9 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
+    /**
+     * <p>The certificate information about the domain name.</p>
+     */
     @NameInMap("CertInfos")
     public DescribeVodDomainCertificateInfoResponseBodyCertInfos certInfos;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +38,74 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainCertificateInfoResponseBodyCertInfosCertInfo extends TeaModel {
+        /**
+         * <p>The domain name that matches the certificate.</p>
+         */
         @NameInMap("CertDomainName")
         public String certDomainName;
 
+        /**
+         * <p>The time at which the certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CertExpireTime")
         public String certExpireTime;
 
+        /**
+         * <p>The validity period of the certificate. Unit: months or years.</p>
+         */
         @NameInMap("CertLife")
         public String certLife;
 
+        /**
+         * <p>The name of the certificate.</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         */
         @NameInMap("CertOrg")
         public String certOrg;
 
+        /**
+         * <p>The type of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **free**: a free certificate.</p>
+         * <p>*   **cas**: a certificate that is purchased from Certificate Management Service.</p>
+         * <p>*   **upload**: a user-uploaded certificate.</p>
+         */
         @NameInMap("CertType")
         public String certType;
 
+        /**
+         * <p>The accelerated domain name.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Indicates whether the SSL certificate is enabled.</p>
+         * <br>
+         * <p>*   **on**</p>
+         * <p>*   **off**</p>
+         */
         @NameInMap("ServerCertificateStatus")
         public String serverCertificateStatus;
 
+        /**
+         * <p>The status of the certificate. Valid values:</p>
+         * <br>
+         * <p>*   **success**: The certificate is in effect.</p>
+         * <p>*   **checking**: The system is checking whether the domain name is added to ApsaraVideo VOD.</p>
+         * <p>*   **cname_error**: The domain name is not added to ApsaraVideo VOD.</p>
+         * <p>*   **domain_invalid**: The domain name contains invalid characters.</p>
+         * <p>*   **unsupport_wildcard**: The domain name is a wildcard domain name. Wildcard domain names are not supported.</p>
+         * <p>*   **applying**: The certificate application is in progress.</p>
+         * <p>*   **failed**: The certificate application failed.</p>
+         * <br>
+         * <p>> A value is returned for this parameter only if `free` is returned for `CertType`. If a value other than free is returned for CertType, an empty string is returned for this parameter.</p>
+         */
         @NameInMap("Status")
         public String status;
 

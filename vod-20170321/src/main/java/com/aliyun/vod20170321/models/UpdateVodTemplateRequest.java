@@ -14,13 +14,13 @@ public class UpdateVodTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Modifies a snapshot template.</p>
+     * <p>The configurations of the snapshot template. The value is a JSON-formatted string. For more information about the data structure, see the "SnapshotTemplateConfig" section of the [Media processing parameters](~~98618~~) topic.</p>
      */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **UpdateVodTemplate**.</p>
+     * <p>The ID of the snapshot template.</p>
      */
     @NameInMap("VodTemplateId")
     public String vodTemplateId;

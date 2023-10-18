@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAuditSecurityIpResponseBody extends TeaModel {
     /**
-     * <p>The name of the review security group.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The details of the review security group.</p>
      */
     @NameInMap("SecurityIpList")
     public java.util.List<ListAuditSecurityIpResponseBodySecurityIpList> securityIpList;
@@ -39,20 +39,26 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
 
     public static class ListAuditSecurityIpResponseBodySecurityIpList extends TeaModel {
         /**
-         * <p>The operation that you want to perform. Set the value to **ListAuditSecurityIp**.</p>
+         * <p>The time when the review security group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>Queries the IP addresses in a review security group.</p>
+         * <p>The IP addresses in the review security group.</p>
          */
         @NameInMap("Ips")
         public String ips;
 
+        /**
+         * <p>The time when the review security group was last modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
+        /**
+         * <p>The name of the review security group.</p>
+         */
         @NameInMap("SecurityGroupName")
         public String securityGroupName;
 

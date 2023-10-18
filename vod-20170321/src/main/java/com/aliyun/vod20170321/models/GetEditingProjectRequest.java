@@ -11,7 +11,7 @@ public class GetEditingProjectRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The timeline of the online editing project.</p>
+     * <p>The ID of the online editing project.</p>
      */
     @NameInMap("ProjectId")
     public String projectId;

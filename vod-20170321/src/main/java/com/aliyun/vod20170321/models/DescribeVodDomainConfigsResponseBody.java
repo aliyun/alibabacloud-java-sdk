@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     /**
-     * <p>The value of the parameter.</p>
+     * <p>The configurations of the domain name.</p>
      */
     @NameInMap("DomainConfigs")
     public DescribeVodDomainConfigsResponseBodyDomainConfigs domainConfigs;
 
     /**
-     * <p>The status of the configuration. Valid values:</p>
-     * <br>
-     * <p>- **success**</p>
-     * <p>- **testing**</p>
-     * <p>- **failed**</p>
-     * <p>- **configuring**</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -43,9 +38,15 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
+        /**
+         * <p>The parameter name.</p>
+         */
         @NameInMap("ArgName")
         public String argName;
 
+        /**
+         * <p>The parameter value.</p>
+         */
         @NameInMap("ArgValue")
         public String argValue;
 
@@ -93,47 +94,30 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
 
     public static class DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfig extends TeaModel {
         /**
-         * <p>## Feature description</p>
-         * <br>
-         * <p>| Feature | Description |</p>
-         * <p>| ------- | ----------- |</p>
-         * <p>| referer_white_list_set | Specifies the referer whitelist. |</p>
-         * <p>| referer_black_list_set | Specifies the referer blacklist. |</p>
-         * <p>| filetype_based_ttl_set | Specifies the time period after which a file expires. |</p>
-         * <p>| path_based_ttl_set | Specifies the time period after which a directory expires. |</p>
-         * <p>| cc_defense | Configures protection against HTTP flood attacks. |</p>
-         * <p>| oss_auth | Configures authentication for the access to an Object Storage Service (OSS) bucket. |</p>
-         * <p>| ip_black_list_set | Specifies the IP address blacklist. |</p>
-         * <p>| ip_white_list_set | Specifies the IP address whitelist. |</p>
-         * <p>| error_page | Redirects an error page to a specified page. |</p>
-         * <p>| tesla | Optimizes pages to accelerate access. |</p>
-         * <p>| set_req_host_header | Modifies the custom header of back-to-origin requests. |</p>
-         * <p>| set_hashkey_args | Ignores the specified URL parameters. |</p>
-         * <p>| aliauth | Configures Alibaba Cloud authentication. |</p>
-         * <p>| set_resp_header | Specifies a response header. To verify the setting, you can check the response message in a browser. |</p>
-         * <p>| video_seek | Configures video seeking. |</p>
-         * <p>| range | Configures object chunking. |</p>
-         * <p>| gzip | Optimizes pages by using GNU zip (Gzip) compression. |</p>
-         * <p>| https_force | Configures force redirect to HTTPS. |</p>
-         * <p>| http_force | Configures force redirect to HTTP. |</p>
-         * <p>| alivod | Configures ApsaraVideo VOD. |</p>
-         * <p>| forward_scheme | Specifies the origin protocol policy or configures whether to enable adaptive origin fetch. |</p>
-         * <p>| tmd_signature | Specifies the self-defined rules for the rate limit. |</p>
+         * <p>The configuration ID.</p>
          */
         @NameInMap("ConfigId")
         public String configId;
 
+        /**
+         * <p>The feature parameters.</p>
+         */
         @NameInMap("FunctionArgs")
         public DescribeVodDomainConfigsResponseBodyDomainConfigsDomainConfigFunctionArgs functionArgs;
 
         /**
-         * <p>Queries the configurations of a specified domain name for CDN. You can query the configurations of one or more features at a time.</p>
+         * <p>The feature name.</p>
          */
         @NameInMap("FunctionName")
         public String functionName;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeVodDomainConfigs**.</p>
+         * <p>The configuration status. Valid values:</p>
+         * <br>
+         * <p>*   **success**</p>
+         * <p>*   **testing**</p>
+         * <p>*   **failed**</p>
+         * <p>*   **configuring**</p>
          */
         @NameInMap("Status")
         public String status;

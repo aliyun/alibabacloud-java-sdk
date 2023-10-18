@@ -4,15 +4,30 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateMediaStorageClassResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the media assets that failed to be processed.</p>
+     */
     @NameInMap("ForbiddenList")
     public UpdateMediaStorageClassResponseBodyForbiddenList forbiddenList;
 
+    /**
+     * <p>The IDs of the media assets that failed to be obtained.</p>
+     */
     @NameInMap("IgnoredList")
     public UpdateMediaStorageClassResponseBodyIgnoredList ignoredList;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The state of the task. Valid values:</p>
+     * <br>
+     * <p>*   **Processing**</p>
+     * <p>*   **Failed**</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -54,9 +69,15 @@ public class UpdateMediaStorageClassResponseBody extends TeaModel {
     }
 
     public static class UpdateMediaStorageClassResponseBodyForbiddenListMediaForbiddenReasonDTO extends TeaModel {
+        /**
+         * <p>The ID of the media asset.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The reason for the failure.</p>
+         */
         @NameInMap("Reason")
         public String reason;
 

@@ -5,25 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetAuditHistoryRequest extends TeaModel {
     /**
-     * <p>The reason why the video failed the review. If the video failed the review, specify the reason.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The number of entries to return on each page. Default value: **10**. Maximum value: **100**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The review records.</p>
+     * <p>The sorting rule of the results. Valid values:</p>
+     * <p>*   **CreationTime:Desc**: sorts the results based on the creation time in descending order. This is the default value.</p>
+     * <p>*   **CreationTime:Asc**: sorts the results based on the creation time in ascending order.</p>
      */
     @NameInMap("SortBy")
     public String sortBy;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetAuditHistory**.</p>
+     * <p>The ID of the video.</p>
      */
     @NameInMap("VideoId")
     public String videoId;

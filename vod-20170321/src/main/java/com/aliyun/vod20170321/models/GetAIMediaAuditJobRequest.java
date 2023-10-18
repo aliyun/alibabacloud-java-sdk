@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAIMediaAuditJobRequest extends TeaModel {
     /**
-     * <p>http://temp-****bucket.oss-cn-shanghai.aliyuncs.com/aivideocensor/****.jpg</p>
+     * <p>The ID of the intelligent review job.</p>
      */
     @NameInMap("JobId")
     public String jobId;

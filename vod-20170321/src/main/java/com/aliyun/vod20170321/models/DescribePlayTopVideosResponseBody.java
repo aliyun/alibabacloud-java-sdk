@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosResponseBody extends TeaModel {
     /**
-     * <p>The playback duration. Unit: milliseconds.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
-     * <p>The total number of entries that were collected in playback statistics on top videos.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The number of unique visitors.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the video.</p>
+     * <p>The daily playback statistics on each top video.</p>
      */
     @NameInMap("TopPlayVideos")
     public DescribePlayTopVideosResponseBodyTopPlayVideos topPlayVideos;
 
     /**
-     * <p>The number of video views.</p>
+     * <p>The total number of entries that were collected in playback statistics on top videos.</p>
      */
     @NameInMap("TotalNum")
     public Long totalNum;
@@ -80,24 +80,33 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     }
 
     public static class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis extends TeaModel {
+        /**
+         * <p>The playback duration. Unit: milliseconds.</p>
+         */
         @NameInMap("PlayDuration")
         public String playDuration;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The title of the video.</p>
          */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The number of unique visitors.</p>
+         */
         @NameInMap("UV")
         public String UV;
 
         /**
-         * <p>Queries daily playback statistics on top videos, including video views, unique visitors, and total playback duration.</p>
+         * <p>The number of video views.</p>
          */
         @NameInMap("VV")
         public String VV;
 
+        /**
+         * <p>The ID of the video.</p>
+         */
         @NameInMap("VideoId")
         public String videoId;
 

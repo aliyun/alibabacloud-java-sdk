@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ProduceEditingProjectVideoRequest extends TeaModel {
     /**
-     * <p>>ApsaraVideo VOD sends a FileUploadComplete event notification after video production is complete, which is similar to the action that is performed after video upload. After the produced video is transcoded, ApsaraVideo VOD sends the StreamTranscodeComplete and TranscodeComplete event notifications.</p>
+     * <p>The thumbnail URL of the online editing project.</p>
      */
     @NameInMap("CoverURL")
     public String coverURL;
@@ -17,7 +17,7 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Produces a video from one or more mezzanine files. You can directly submit mezzanine files by specifying the Timeline parameter. Alternatively, you can submit mezzanine files after you create an online editing project.</p>
+     * <p>The video metadata. The value must be in JSON format. For more information about the parameter structure, see [MediaMetadata](~~52839#title_rtf_ry5\_gjp~~).</p>
      */
     @NameInMap("MediaMetadata")
     public String mediaMetadata;
@@ -26,13 +26,18 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>朴灵</p>
+     * <p>The configuration of video production. The value must be in JSON format. For more information about the parameter structure, see [ProduceConfig](~~52839#title_ybl\_7cs_y7d~~).</p>
+     * <br>
+     * <p>> The StorageLocation field is required if you create an online editing project in a region other than the China (Shanghai) region.</p>
      */
     @NameInMap("ProduceConfig")
     public String produceConfig;
 
     /**
-     * <p>The thumbnail URL of the online editing project.</p>
+     * <p>The ID of the online editing project. You can use one of the following methods to obtain the ID of the online editing project:</p>
+     * <br>
+     * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Production Center** > **Video Editing** to view the ID of the online editing project.</p>
+     * <p>*   Obtain the value of ProjectId from the response to the [AddEditingProject](~~69048~~) operation.</p>
      */
     @NameInMap("ProjectId")
     public String projectId;
@@ -44,20 +49,22 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the produced video.</p>
-     * <br>
-     * <p>> *   This operation returns the ID of the produced video in synchronous mode.</p>
-     * <p>> *   If this operation returns the MediaId parameter, the video production task is being asynchronously processed.</p>
+     * <p>The timeline of the online editing project. The value must be in JSON format. For more information about the parameter structure, see [Timeline](~~52839#07bc7fe0f2xuh~~).</p>
      */
     @NameInMap("Timeline")
     public String timeline;
 
     /**
-     * <p>The metadata of the produced video, in JSON format. For more information about the structure, see [MediaMetadata](~~52839~~).</p>
+     * <p>The title of the online editing project.</p>
      */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <p>The custom configurations, such as the callback configuration. The value must be a JSON string. For more information about the parameter structure, see [UserData](~~86952#title_vz7\_xzs\_0c5~~).</p>
+     * <br>
+     * <p>> The callback configurations take effect only after you specify an HTTP URL for receiving callback notifications and select the event types in the ApsaraVideo VOD console.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

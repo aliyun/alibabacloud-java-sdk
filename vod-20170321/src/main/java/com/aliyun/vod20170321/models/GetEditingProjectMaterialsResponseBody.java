@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     /**
-     * <p>The duration of the material. The value is rounded to four decimal places. Unit: seconds.</p>
+     * <p>The materials.</p>
      */
     @NameInMap("MaterialList")
     public GetEditingProjectMaterialsResponseBodyMaterialList materialList;
 
     /**
-     * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -77,38 +77,44 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
     public static class GetEditingProjectMaterialsResponseBodyMaterialListMaterial extends TeaModel {
         /**
-         * <p>The thumbnail URL of the material.</p>
+         * <p>The category ID of the material.</p>
          */
         @NameInMap("CateId")
         public Integer cateId;
 
         /**
-         * <p>The category ID of the material.</p>
+         * <p>The category name of the material.</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <p>The thumbnail URL of the material.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The type of the material. Valid values:</p>
-         * <br>
-         * <p>*   **video**</p>
-         * <p>*   **audio**</p>
+         * <p>The time when the material was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>58928</p>
+         * <p>The description of the material.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The duration of the material. The value is rounded to four decimal places. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <p>The ID of the material.</p>
+         */
         @NameInMap("MaterialId")
         public String materialId;
 
@@ -123,48 +129,61 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
         public String materialType;
 
         /**
-         * <p>Queries materials to be edited for an online editing project.</p>
+         * <p>The time when the material was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The size of the mezzanine file. Unit: byte.</p>
+         */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The URLs of material snapshots. The value is an array.</p>
+         */
         @NameInMap("Snapshots")
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSnapshots snapshots;
 
         /**
-         * <p>The time when the material was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The source of the sprite.</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
-         * <p>The URLs of material sprites. The value is an array.</p>
+         * <p>The configuration of the sprite.</p>
          */
         @NameInMap("SpriteConfig")
         public String spriteConfig;
 
+        /**
+         * <p>The URLs of material sprites. The value is an array.</p>
+         */
         @NameInMap("Sprites")
         public GetEditingProjectMaterialsResponseBodyMaterialListMaterialSprites sprites;
 
         /**
-         * <p>The configuration of the sprite.</p>
+         * <p>The status of the material. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: The material is in draft.</p>
+         * <p>*   **Producing**: The material is being produced.</p>
+         * <p>*   **Produced**: The material was produced.</p>
+         * <p>*   **ProduceFailed**: The material failed to be produced.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the material. Valid values:</p>
-         * <br>
-         * <p>*   **video**</p>
-         * <p>*   **audio**</p>
-         * <p>*   **image**</p>
+         * <p>The tag of the material. Multiple tags are separated by commas (,).</p>
          */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The title of the material.</p>
+         */
         @NameInMap("Title")
         public String title;
 

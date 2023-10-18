@@ -5,13 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     /**
-     * <p>The description of the policy.</p>
+     * <p>The details of each policy.</p>
+     * <br>
+     * <p>> A maximum of 100 entries can be returned.</p>
      */
     @NameInMap("AppPolicyList")
     public java.util.List<ListAppPoliciesForIdentityResponseBodyAppPolicyList> appPolicyList;
 
     /**
-     * <p>The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,41 +41,46 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
 
     public static class ListAppPoliciesForIdentityResponseBodyAppPolicyList extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the application.</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
-         * <p>The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The time when the application policy was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The content of the policy.</p>
+         * <p>The description of the policy.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The last time when the application policy was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>Queries the application policies that are attached to the specified identity. The identity may be a RAM user or RAM role.</p>
+         * <p>The name of the policy.</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
+        /**
+         * <p>The type of the policy. Valid values:</p>
+         * <br>
+         * <p>*   **System**</p>
+         * <p>*   **Custom**</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
-         * <p>The details of each policy.</p>
-         * <br>
-         * <p>**</p>
-         * <br>
-         * <p>**Note** A maximum of 100 entries can be returned.</p>
+         * <p>The content of the policy.</p>
          */
         @NameInMap("PolicyValue")
         public String policyValue;

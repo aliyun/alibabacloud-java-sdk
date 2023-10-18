@@ -5,31 +5,39 @@ import com.aliyun.tea.*;
 
 public class AddWatermarkRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The OSS URL or Content Delivery Network (CDN) URL of the watermark file. A text watermark does not have a file URL.</p>
+     * <p>The Object Storage Service (OSS) URL of the watermark file. This parameter is required if you add image watermarks.</p>
      */
     @NameInMap("FileUrl")
     public String fileUrl;
 
     /**
-     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     * <p>The name of the watermark. The name can contain only letters and digits.</p>
+     * <br>
+     * <p>*   The name can be up to 128 bytes in length.</p>
+     * <p>*   The value must be encoded in UTF-8.</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The ID of the watermark.</p>
+     * <p>The type of the watermark. Valid values:</p>
+     * <br>
+     * <p>*   **Image** (default)</p>
+     * <p>*   **Text**</p>
      */
     @NameInMap("Type")
     public String type;
 
     /**
-     * <p>The time when the watermark was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The configurations such as the position and effect of the text watermark or image watermark. The value must be a JSON string.</p>
+     * <br>
+     * <p>> The value of this parameter varies based on the watermark type. For more information about the data structure, see [WatermarkConfig](~~98618~~).</p>
      */
     @NameInMap("WatermarkConfig")
     public String watermarkConfig;

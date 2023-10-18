@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The information about the animated image job.</p>
      */
     @NameInMap("DynamicImageJob")
     public SubmitDynamicImageJobResponseBodyDynamicImageJob dynamicImageJob;
 
     /**
-     * <p>The parameters used for overriding. The value is a JSON-formatted string. For more information, see the "OverrideParams" section of the [Media processing parameters](~~98618~~) topic. The parameters are used to replace the parameters in the animated image template. For more information, see the [Basic data types](~~52839~~) topic.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,7 +39,7 @@ public class SubmitDynamicImageJobResponseBody extends TeaModel {
 
     public static class SubmitDynamicImageJobResponseBodyDynamicImageJob extends TeaModel {
         /**
-         * <p>The operation that you want to perform. Set the value to **SubmitDynamicImageJob**.</p>
+         * <p>The ID of the animated image job.</p>
          */
         @NameInMap("JobId")
         public String jobId;

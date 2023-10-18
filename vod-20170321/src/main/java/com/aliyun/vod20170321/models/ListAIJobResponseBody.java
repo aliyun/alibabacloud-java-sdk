@@ -5,21 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListAIJobResponseBody extends TeaModel {
     /**
-     * <p>The list of job IDs. You can obtain the job ID from the PlayInfo parameter in the response to the [GetPlayInfo](~~56124~~) operation.</p>
-     * <br>
-     * <p>>  You can specify a maximum of 10 job IDs in a request. Separate multiple IDs with commas (,).</p>
+     * <p>The list of jobs.</p>
      */
     @NameInMap("AIJobList")
     public ListAIJobResponseBodyAIJobList AIJobList;
 
     /**
-     * <p>The error code. This parameter is returned if the value of Status is fail.</p>
+     * <p>The IDs of the jobs that do not exist.</p>
      */
     @NameInMap("NonExistAIJobIds")
     public ListAIJobResponseBodyNonExistAIJobIds nonExistAIJobIds;
 
     /**
-     * <p>The ID of the job.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -55,56 +53,63 @@ public class ListAIJobResponseBody extends TeaModel {
 
     public static class ListAIJobResponseBodyAIJobListAIJob extends TeaModel {
         /**
-         * <p>Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</p>
+         * <p>The error code. This parameter is returned if the value of Status is fail.</p>
          */
         @NameInMap("Code")
         public String code;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CompleteTime")
         public String completeTime;
 
         /**
-         * <p>The status of the job. Valid values:</p>
-         * <br>
-         * <p>*   **success**: The job is complete.</p>
-         * <p>*   **fail**: The job failed.</p>
-         * <p>*   **init**: The job is being initialized.</p>
-         * <p>*   **Processing**: The job is in progress.</p>
+         * <p>The time when the job was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>{"OrigASRData":{"AsrTextList":\[{"EndTime":700,"StartTime":0,"Text":"Yes.","ChannelId":0,"SpeechRate":85},{"EndTime":3750,"StartTime":1630,"Text":"No.","ChannelId":0,"SpeechRate":28},{"EndTime":5910,"StartTime":4020,"Text":"Of course.","ChannelId":0,"SpeechRate":95},{"EndTime":12750,"StartTime":10090,"Text":"Message.","ChannelId":0,"SpeechRate":45},{"EndTime":25230,"StartTime":13590,"Text":"Hello, good afternoon.","ChannelId":0,"SpeechRate":20},{"EndTime":30000,"StartTime":28220,"Text":"Yes.","ChannelId":0,"SpeechRate":33}],"Duration":"30016"}}</p>
+         * <p>The returned data. The value is a JSON string. For more information, see [AITemplateConfig](~~89863~~).</p>
          */
         @NameInMap("Data")
         public String data;
 
         /**
-         * <p>The ID of the video.</p>
+         * <p>The job ID.</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <p>The ID of the video file.</p>
+         */
         @NameInMap("MediaId")
         public String mediaId;
 
+        /**
+         * <p>The error message. This parameter is returned if the value of Status is fail.</p>
+         */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The error message. This parameter is returned if the value of Status is fail.</p>
+         * <p>The status of the job. Valid values:</p>
+         * <br>
+         * <p>*   **success**: The job is successful.</p>
+         * <p>*   **fail**: The job failed.</p>
+         * <p>*   **init**: The job is being initialized.</p>
+         * <p>*   **Processing**: The job is in progress.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The returned data. The value is a JSON string.</p>
+         * <p>The type of the job. Valid values:</p>
          * <br>
-         * <p>For more information, see [AITemplateConfig](~~89863~~).</p>
+         * <p>*   **AIMediaDNA**: video fingerprinting</p>
+         * <p>*   **AIVideoTag**: smart tagging</p>
          */
         @NameInMap("Type")
         public String type;

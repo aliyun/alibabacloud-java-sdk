@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateAITemplateRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).</p>
      */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
-     * <p>The name of the AI template. The name can be up to 128 bytes in length.</p>
+     * <p>The ID of the AI template. You can use one of the following methods to obtain the ID:</p>
+     * <br>
+     * <p>*   Call the [AddAITemplate](~~102930~~) operation to add an AI template if no AI template exists. The value of TemplateId in the response is the ID of the AI template.</p>
+     * <p>*   Call the [ListAITemplate](~~102936~~) operation if the template already exists. The value of TemplateId in the response is the ID of the AI template.</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The detailed configurations of the AI template. The value is a JSON string. For more information, see [AITemplateConfig](https://help.aliyun.com/document_detail/89863.html#title-vd3-499-o36).</p>
+     * <p>The name of the AI template. The name can be up to 128 bytes in length.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

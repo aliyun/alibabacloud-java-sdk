@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAppInfosResponseBody extends TeaModel {
     /**
-     * <p>The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The details of each application.</p>
      */
     @NameInMap("AppInfoList")
     public java.util.List<GetAppInfosResponseBodyAppInfoList> appInfoList;
@@ -14,13 +14,13 @@ public class GetAppInfosResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the application. You can specify a maximum of 10 application IDs. Separate them with commas (,).</p>
+     * <p>The ID of the application that was not found.</p>
      */
     @NameInMap("NonExistAppIds")
     public java.util.List<String> nonExistAppIds;
 
     /**
-     * <p>The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -63,29 +63,48 @@ public class GetAppInfosResponseBody extends TeaModel {
     }
 
     public static class GetAppInfosResponseBodyAppInfoList extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The time when the application was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The last time when the application was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModificationTime")
         public String modificationTime;
 
         /**
-         * <p>Queries the information about one or more applications based on application IDs.</p>
+         * <p>The status of the application. Valid values:</p>
+         * <p>- **Normal**</p>
+         * <p>- **Disable**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The type of the application. Valid values:</p>
+         * <p>- **System**</p>
+         * <p>- **Custom**</p>
          */
         @NameInMap("Type")
         public String type;

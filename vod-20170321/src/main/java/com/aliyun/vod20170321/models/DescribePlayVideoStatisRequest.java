@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlayVideoStatisRequest extends TeaModel {
     /**
-     * <p>The number of video views.</p>
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("EndTime")
     public String endTime;
@@ -14,13 +14,13 @@ public class DescribePlayVideoStatisRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("StartTime")
     public String startTime;
 
     /**
-     * <p>The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.</p>
+     * <p>The video ID.</p>
      */
     @NameInMap("VideoId")
     public String videoId;

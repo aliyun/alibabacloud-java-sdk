@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVideoListRequest extends TeaModel {
     /**
-     * <p>The category ID. You can use one of the following methods to obtain the category ID:</p>
+     * <p>The ID of the category. You can use one of the following methods to obtain the category ID:</p>
      * <br>
      * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID.</p>
      * <p>*   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.</p>
@@ -48,7 +48,7 @@ public class GetVideoListRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The video status. You can specify multiple video statuses and separate them with commas (,). Valid values:</p>
+     * <p>The status of the video. You can specify multiple video statuses and separate them with commas (,). Valid values:</p>
      * <br>
      * <p>*   **Uploading**: The video is being uploaded.</p>
      * <p>*   **UploadFail**: The video failed to be uploaded.</p>

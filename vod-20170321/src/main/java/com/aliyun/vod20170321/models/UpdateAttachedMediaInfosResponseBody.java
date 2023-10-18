@@ -4,9 +4,15 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateAttachedMediaInfosResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the auxiliary media assets that do not exist.</p>
+     */
     @NameInMap("NonExistMediaIds")
     public java.util.List<String> nonExistMediaIds;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

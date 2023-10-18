@@ -4,14 +4,20 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
+    /**
+     * <p>The names of the policies that failed to be granted to the RAM user or RAM role.</p>
+     */
     @NameInMap("FailedPolicyNames")
     public java.util.List<String> failedPolicyNames;
 
+    /**
+     * <p>The names of the policies that were not found.</p>
+     */
     @NameInMap("NonExistPolicyNames")
     public java.util.List<String> nonExistPolicyNames;
 
     /**
-     * <p>Authorizes the specified identity to access the applications of ApsaraVideo VOD. The identity may be a RAM user or RAM role.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

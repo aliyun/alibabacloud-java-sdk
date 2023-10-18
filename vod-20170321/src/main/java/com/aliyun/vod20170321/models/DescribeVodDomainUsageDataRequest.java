@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVodDomainUsageDataRequest extends TeaModel {
     /**
-     * <p>The region where you want to query data. Default value: CN. Valid values:</p>
+     * <p>The region in which you want to query data. Default value: CN. Valid values:</p>
      * <br>
-     * <p>*   **CN**: Chinese mainland</p>
-     * <p>*   **OverSeas**: outside the Chinese mainland</p>
+     * <p>*   **CN**: the Chinese mainland.</p>
+     * <p>*   **OverSeas**: outside the Chinese mainland.</p>
      */
     @NameInMap("Area")
     public String area;
