@@ -5,11 +5,18 @@ import com.aliyun.tea.*;
 
 public class BatchSetVodDomainConfigsRequest extends TeaModel {
     /**
-     * <p>Configures one or more domain names for CDN.</p>
+     * <p>The domain name for CDN. Separate multiple domain names with commas (,).</p>
      */
     @NameInMap("DomainNames")
     public String domainNames;
 
+    /**
+     * <p>The features to configure.</p>
+     * <br>
+     * <p>*   Set this parameter in the following format: `[{"functionArgs":[{"argName":"domain_name","argValue":"www.example.com"}],"functionName":"set_req_host_header"}]`.</p>
+     * <p>*   Specific features, such as filetype_based_ttl_set, support more than one configuration record. To update one of the configuration records, use the configId field to specify the record. `[{"functionArgs":[{"argName":"file_type","argValue":"jpg"},{"argName":"ttl","argValue":"18"},{"argName":"weight","argValue":"30"}],"functionName":"filetype_based_ttl_set","configId":5068995}]`</p>
+     * <p>*   For more information, see the **Feature description** section.</p>
+     */
     @NameInMap("Functions")
     public String functions;
 

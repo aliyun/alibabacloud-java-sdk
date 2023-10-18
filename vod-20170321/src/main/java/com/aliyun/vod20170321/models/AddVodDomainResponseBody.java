@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddVodDomainResponseBody extends TeaModel {
     /**
-     * <p>The URL that is used for health checks.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

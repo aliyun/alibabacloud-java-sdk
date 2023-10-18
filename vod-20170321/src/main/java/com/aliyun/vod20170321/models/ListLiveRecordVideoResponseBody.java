@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListLiveRecordVideoResponseBody extends TeaModel {
     /**
-     * <p>The total number of videos returned.</p>
+     * <p>The list of videos.</p>
      */
     @NameInMap("LiveRecordVideoList")
     public ListLiveRecordVideoResponseBodyLiveRecordVideoList liveRecordVideoList;
 
     /**
-     * <p>The description of the video.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The title of the video.</p>
+     * <p>The total number of videos returned.</p>
      */
     @NameInMap("Total")
     public Integer total;
@@ -72,67 +72,92 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
     public static class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo extends TeaModel {
         /**
-         * <p>The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the video category.</p>
          */
         @NameInMap("CateId")
         public Integer cateId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The name of the video category.</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <p>The thumbnail URL of the video.</p>
+         */
         @NameInMap("CoverURL")
         public String coverURL;
 
         /**
-         * <p>The beginning of the time range to query. The query is performed based on the time range during which the required live streams were recorded. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+         * <p>The time when the video was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The name of the live stream.</p>
+         * <p>The description of the video.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The duration of the video. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <p>The last time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifyTime")
         public String modifyTime;
 
         /**
-         * <p>Queries live-to-VOD videos.</p>
+         * <p>The size of the mezzanine file. Unit: byte.</p>
          */
         @NameInMap("Size")
         public Long size;
 
+        /**
+         * <p>The array of video snapshot URLs.</p>
+         */
         @NameInMap("Snapshots")
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideoSnapshots snapshots;
 
         /**
-         * <p>The ID of the playlist.</p>
+         * <p>The status of the video. Valid values:</p>
+         * <p>*   **Uploading:**: indicates that the video is being uploaded.</p>
+         * <p>*   **UploadFail**: indicates that the video failed to be uploaded.</p>
+         * <p>*   **UploadSucces**: indicates that the video was uploaded.</p>
+         * <p>*   **Transcoding**: indicates that the video is being transcoded.</p>
+         * <p>*   **TranscodeFail**: indicates that the video failed to be transcoded.</p>
+         * <p>*   **Blocked**: indicates that the video is blocked.</p>
+         * <p>*   **Normal**: indicates that the video is in a normal state.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>2017-01-11T13:00:00Z</p>
+         * <p>The tags of the video. Separate multiple tags with commas (,).</p>
          */
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>The ID of the transcoding template group.</p>
+         */
         @NameInMap("TemplateGroupId")
         public String templateGroupId;
 
+        /**
+         * <p>The title of the video.</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
-         * <p>10</p>
+         * <p>The ID of the video.</p>
          */
         @NameInMap("VideoId")
         public String videoId;
@@ -258,43 +283,43 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
     public static class ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideo extends TeaModel {
         /**
-         * <p>The information about the video.</p>
+         * <p>The name of the application.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>The tags of the video. Separate multiple tags with commas (,).</p>
+         * <p>The domain name.</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
-         * <p>The last time when the video was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The ID of the playlist.</p>
          */
         @NameInMap("PlaylistId")
         public String playlistId;
 
         /**
-         * <p>The domain name of the recorded live stream.</p>
+         * <p>The end of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("RecordEndTime")
         public String recordEndTime;
 
         /**
-         * <p>The array of video snapshot URLs.</p>
+         * <p>The beginning of the time range in which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("RecordStartTime")
         public String recordStartTime;
 
         /**
-         * <p>The end of the time range to query. The query is performed based on the time range during which the required live streams were recorded. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+         * <p>The name of the live stream.</p>
          */
         @NameInMap("StreamName")
         public String streamName;
 
         /**
-         * <p>The name of the application that was used to record the live stream.</p>
+         * <p>The information about the video.</p>
          */
         @NameInMap("Video")
         public ListLiveRecordVideoResponseBodyLiveRecordVideoListLiveRecordVideoVideo video;

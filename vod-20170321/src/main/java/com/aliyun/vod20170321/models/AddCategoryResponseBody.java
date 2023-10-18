@@ -11,7 +11,7 @@ public class AddCategoryResponseBody extends TeaModel {
     public AddCategoryResponseBodyCategory category;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **AddCategory**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,26 +38,38 @@ public class AddCategoryResponseBody extends TeaModel {
     }
 
     public static class AddCategoryResponseBodyCategory extends TeaModel {
+        /**
+         * <p>The ID of the video category.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
         /**
-         * <p>AddCategory</p>
+         * <p>The name of the category.</p>
+         * <br>
+         * <p>- The value can be up to 64 bytes in length.</p>
+         * <p>- The string must be encoded in the UTF-8 format.</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <p>The level of the category. A value of **0** indicates a level 1 category.</p>
+         */
         @NameInMap("Level")
         public Long level;
 
         /**
-         * <p>Creates a video category.</p>
+         * <p>The ID of the parent category. The parent category ID of a level 1 category is **-1**.</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
 
         /**
-         * <p>The ID of the video category.</p>
+         * <p>The type of the category. Valid values:</p>
+         * <br>
+         * <p>- **default** (default): default category</p>
+         * <p>- **material**: material category</p>
          */
         @NameInMap("Type")
         public String type;

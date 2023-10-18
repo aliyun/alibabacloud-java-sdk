@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaDNAResultResponseBody extends TeaModel {
     /**
-     * <p>The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.</p>
+     * <p>The media fingerprinting results.</p>
      */
     @NameInMap("DNAResult")
     public GetMediaDNAResultResponseBodyDNAResult DNAResult;
 
     /**
-     * <p>The start time of the video. Unit: seconds.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,9 +38,15 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     }
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication extends TeaModel {
+        /**
+         * <p>The duration of the video. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The start time of the video. Unit: seconds.</p>
+         */
         @NameInMap("Start")
         public String start;
 
@@ -69,13 +75,13 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput extends TeaModel {
         /**
-         * <p>The start time of the video. Unit: seconds.</p>
+         * <p>The duration of the video. Unit: seconds.</p>
          */
         @NameInMap("Duration")
         public String duration;
 
         /**
-         * <p>The duration of the video. Unit: seconds.</p>
+         * <p>The start time of the video. Unit: seconds.</p>
          */
         @NameInMap("Start")
         public String start;
@@ -105,13 +111,13 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNADetail extends TeaModel {
         /**
-         * <p>Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</p>
+         * <p>The start time and duration of the matched video.</p>
          */
         @NameInMap("Duplication")
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailDuplication duplication;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The start time and duration of the input video.</p>
          */
         @NameInMap("Input")
         public GetMediaDNAResultResponseBodyDNAResultVideoDNADetailInput input;
@@ -141,19 +147,19 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     public static class GetMediaDNAResultResponseBodyDNAResultVideoDNA extends TeaModel {
         /**
-         * <p>The duration of the video. Unit: seconds.</p>
+         * <p>The details of the matched video. Information such as the location and duration of the video is returned.</p>
          */
         @NameInMap("Detail")
         public java.util.List<GetMediaDNAResultResponseBodyDNAResultVideoDNADetail> detail;
 
         /**
-         * <p>The start time and duration of the input video.</p>
+         * <p>The ID of the video that has a similar fingerprint.</p>
          */
         @NameInMap("PrimaryKey")
         public String primaryKey;
 
         /**
-         * <p>The video fingerprint recognition result.</p>
+         * <p>The similarity between the fingerprints of the input video and the matched video. 1 indicates that the fingerprints of the two videos are the same.</p>
          */
         @NameInMap("Similarity")
         public String similarity;
@@ -191,7 +197,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     public static class GetMediaDNAResultResponseBodyDNAResult extends TeaModel {
         /**
-         * <p>The media fingerprinting results.</p>
+         * <p>The video fingerprint recognition result.</p>
          */
         @NameInMap("VideoDNA")
         public java.util.List<GetMediaDNAResultResponseBodyDNAResultVideoDNA> videoDNA;

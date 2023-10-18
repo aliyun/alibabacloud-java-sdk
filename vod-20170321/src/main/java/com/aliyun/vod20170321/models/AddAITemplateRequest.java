@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class AddAITemplateRequest extends TeaModel {
     /**
-     * <p>Adds an AI template for automated review and smart thumbnail tasks.</p>
+     * <p>The detailed configurations of the AI template. The value must be a JSON string. For more information, see [AITemplateConfig](~~89863#title-vd3-499-o36~~).</p>
      */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the AI template. The name can be up to 128 bytes in length.</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **AddAITemplate**.</p>
+     * <p>The type of the AI template. Valid values:</p>
+     * <br>
+     * <p>*   **AIMediaAudit**: automated review</p>
+     * <p>*   **AIImage**: smart thumbnail</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

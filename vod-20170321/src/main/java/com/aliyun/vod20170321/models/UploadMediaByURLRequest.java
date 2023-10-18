@@ -5,70 +5,77 @@ import com.aliyun.tea.*;
 
 public class UploadMediaByURLRequest extends TeaModel {
     /**
-     * <p>## UploadMetadata</p>
-     * <br>
-     * <p>| Parameter | Type | Required | Description |</p>
-     * <p>| --------- | ---- | -------- | ----------- |</p>
-     * <p>| SourceURL | String | Yes | The URL of the source file to be uploaded. |</p>
-     * <p>| Title | String | Yes | The title of the media file. The title can be up to 128 bytes in length. The value must be encoded in UTF-8. |</p>
-     * <p>| FileSize | String | No | The size of the media file. |</p>
-     * <p>| Description | String | No | The description of the media file. The description can be up to 1,024 bytes in length. The value must be encoded in UTF-8. |</p>
-     * <p>| CoverURL | String | No | The URL of the custom thumbnail of the media file. |</p>
-     * <p>| CateId | String | No | The category ID of the media file. To view the category ID of the media file, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories**. |</p>
-     * <p>| Tags | String | No | The one or more tags of the media file. Each tag can be up to 32 bytes in length. You can set a maximum of 16 tags. Separate multiple tags with commas (,). The value must be encoded in UTF-8. |</p>
-     * <p>| TemplateGroupId | String | No | The ID of the transcoding template group. If both the request parameter TemplateGroupId and the nested parameter TemplateGroupId are set, the value of the nested parameter takes effect. |</p>
-     * <p>| WorkflowId | String | No | The ID of the workflow. If both the WorkflowId and TemplateGroupId parameters are set, the value of the WorkflowId parameter takes effect. For more information, see [Workflows](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/workflows). |</p>
-     * <p>| FileExtension | String | No | The file name extension of the media file. For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/upload-medias-overview). |</p>
-     * <p>> - Do not include emoticons in the nested parameters, such as Title, Description, and Tags, under the UploadMetadata parameter.</p>
-     * <p>- If you set the TemplateGroupId parameter to VOD_NO_TRANSCODE to upload videos, only the videos in the format of MP4, FLV, MP3, M3U8, or WebM can be played. Videos in the other formats are supported only for storage. You can identify the video format based on the file name extension. If you want to use ApsaraVideo Player, the version must be 3.1.0 or later.</p>
-     * <p>- If you set the TemplateGroupId parameter to VOD_NO_TRANSCODE, only the [FileUploadComplete](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/fileuploadcomplete) but not the [StreamTranscodeComplete](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/streamtranscodecomplete) event notification is returned after the media file is uploaded.</p>
-     * <p>- If a callback is configured, ApsaraVideo VOD sends an [UploadByURLComplete](https://www.alibabacloud.com/help/en/apsaravideo-for-vod/latest/uploadbyurlcomplete) event notification after the media file is uploaded, in addition to the FileUploadComplete and StreamTranscodeComplete event notifications.</p>
-     * <p>- If you specify multiple media files at a time, ApsaraVideo VOD sends an event notification for each media file after the media file is uploaded.</p>
+     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The URL of the source file.</p>
-     * <p>* The URL must contain a file name extension, such as mp4 in `https://****.mp4`.</p>
-     * <p>    * If the URL does not contain a file name extension, you can specify one by setting the `FileExtension` parameter under the `UploadMetadatas` parameter.</p>
-     * <p>    * If the URL contains a file name extension and the `FileExtension` parameter is set, the value of the `FileExtension` parameter is used.</p>
-     * <p>    * For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](~~55396~~).</p>
-     * <p>* URL encoding is required. Separate multiple URLs with commas (,). You can specify a maximum of 20 URLs.</p>
-     * <p>* Special characters may cause upload failures. Therefore, encode URLs before you separate them with commas (,).</p>
+     * <p>The custom identifier for deduplication. If you specify this parameter and send a request, an error is returned if a request with the same identifier was sent in the last 10 minutes. A custom identifier can be up to 50 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). If you do not specify this parameter or leave this parameter empty, duplicate requests are not filtered.</p>
+     */
+    @NameInMap("SessionId")
+    public String sessionId;
+
+    /**
+     * <p>The storage address of the media file.</p>
+     * <br>
+     * <p>To view the storage address, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/?spm=a2c4g.11186623.2.15.6948257eaZ4m54#/vod/settings/censored). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. If you do not specify a storage address, the default storage address is used.</p>
      */
     @NameInMap("StorageLocation")
     public String storageLocation;
 
     /**
-     * <p>The information about one or more upload jobs.</p>
+     * <p>The ID of the transcoding template group. You can use one of the following methods to obtain the ID of the transcoding template group:</p>
+     * <br>
+     * <p>*   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Transcoding Template Groups**. On the Transcoding Template Groups page, view the ID of the transcoding template group.</p>
+     * <p>*   Obtain the value of TranscodeTemplateGroupId from the response to the [AddTranscodeTemplateGroup](~~102665~~) operation.</p>
+     * <p>*   Obtain the value of TranscodeTemplateGroupId from the response to the [ListTranscodeTemplateGroup](~~102669~~) operation.</p>
+     * <br>
+     * <p>>-   If you leave this parameter empty, the default transcoding template group is used for transcoding. If you specify this parameter, the specified transcoding template group is used for transcoding.</p>
+     * <p>>-   You can also specify the ID of the transcoding template group in `UploadMetadatas`. If you specify this parameter and TemplateGroupId in UploadMetadatas, the TemplateGroupId in UploadMetadatas takes effect.</p>
      */
     @NameInMap("TemplateGroupId")
     public String templateGroupId;
 
     /**
-     * <p>The metadata of the media file to be uploaded. The value is a JSON string.</p>
-     * <p>* This parameter takes effect only if the value of the SourceURL parameter matches the URL that is specified by the UploadURLs parameter.</p>
-     * <p>* The JSON-formatted data, such as `[UploadMetadata, UploadMetadata,…]`, must be converted into a JSON string.</p>
-     * <p>* For more information, see the **UploadMetadata** section.</p>
+     * <p>The metadata of the media file that you want to upload. The value must be a JSON string.</p>
+     * <br>
+     * <p>*   This parameter takes effect only if SourceURL matches the URL that you specified for UploadURLs.</p>
+     * <p>*   You must convert the JSON-formatted data such as `[UploadMetadata, UploadMetadata,…]` to a JSON string.</p>
+     * <p>*   For more information, see the **UploadMetadata** table.</p>
      */
     @NameInMap("UploadMetadatas")
     public String uploadMetadatas;
 
     /**
-     * <p>The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).</p>
+     * <p>The URL of the media file.</p>
+     * <br>
+     * <p>*   You must include a file name extension in the URL, such as `https://****.mp4`.</p>
+     * <br>
+     * <p>    *   If the URL does not contain a file name extension, specify a file name extension for `FileExtension` in `UploadMetadatas`.</p>
+     * <p>    *   If you specify `FileExtension` when the URL contains a file name extension, the file name extension that you specified for `FileExtension` takes effect.</p>
+     * <p>    *   For more information about file name extensions supported by ApsaraVideo VOD, see [Overview](~~55396~~).</p>
+     * <br>
+     * <p>*   URL encoding is required. Separate multiple URLs with commas (,). You can specify a maximum of 20 URLs.</p>
+     * <br>
+     * <p>*   Special characters may cause upload failures. You must encode URLs before you separate them with commas (,).</p>
      */
     @NameInMap("UploadURLs")
     public String uploadURLs;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see [Request parameters](~~86952#UserData~~).</p>
+     * <br>
+     * <p>>-   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).</p>
+     * <p>>-   If you want to enable the upload acceleration feature, [submit a request on Yida](https://yida.alibaba-inc.com/o/ticketapply). For more information, see [Overview](~~55396~~).</p>
      */
     @NameInMap("UserData")
     public String userData;
 
     /**
-     * <p>> This operation is used to asynchronously upload media files. Upload jobs are queued for execution after they are submitted. The completion time of an upload job varies with the number of jobs in the queue.</p>
+     * <p>The ID of the workflow. To view the ID of the workflow, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Workflows**.</p>
+     * <br>
+     * <p>> If you specify WorkflowId and TemplateGroupId, the value of WorkflowId takes effect. For more information, see [Workflows](~~115347~~).</p>
      */
     @NameInMap("WorkflowId")
     public String workflowId;
@@ -84,6 +91,14 @@ public class UploadMediaByURLRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public UploadMediaByURLRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public UploadMediaByURLRequest setStorageLocation(String storageLocation) {

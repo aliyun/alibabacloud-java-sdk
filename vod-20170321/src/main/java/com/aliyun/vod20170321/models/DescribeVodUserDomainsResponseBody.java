@@ -5,41 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeVodUserDomainsResponseBody extends TeaModel {
     /**
-     * <p>The status of the domain name. The value of this parameter is used as a condition to filter domain names. Value values:</p>
-     * <br>
-     * <p>*   **online**: indicates that the domain name is enabled.</p>
-     * <p>*   **offline**: indicates that the domain name is disabled.</p>
-     * <p>*   **configuring**: indicates that the domain name is being configured.</p>
-     * <p>*   **configure_failed**: indicates that the domain name failed to be configured.</p>
-     * <p>*   **checking**: indicates that the domain name is under review.</p>
-     * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
+     * <p>The detailed information about each domain name for CDN. The returned information is displayed in the format that is specified by the PageData parameter.</p>
      */
     @NameInMap("Domains")
     public DescribeVodUserDomainsResponseBodyDomains domains;
 
     /**
-     * <p>The domain name. The value of this parameter is used as a filter condition for a fuzzy match.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     /**
-     * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether HTTPS is enabled.</p>
-     * <br>
-     * <p>- **on**: indicates that HTTPS is enabled.</p>
-     * <p>- **off**: indicates that HTTPS is disabled.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -90,15 +80,31 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
     }
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
+        /**
+         * <p>The address of the origin server.</p>
+         */
         @NameInMap("Content")
         public String content;
 
+        /**
+         * <p>The port number. Valid values: **443** and **80**.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The priority of the origin server.</p>
+         */
         @NameInMap("Priority")
         public String priority;
 
+        /**
+         * <p>The type of the origin server. Valid values:</p>
+         * <br>
+         * <p>*   **ipaddr**: a server that you can access by using an IP address.</p>
+         * <p>*   **domain**: a server that you can access by using a domain name.</p>
+         * <p>*   **oss**: an Object Storage Service (OSS) bucket.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -162,45 +168,65 @@ public class DescribeVodUserDomainsResponseBody extends TeaModel {
 
     public static class DescribeVodUserDomainsResponseBodyDomainsPageData extends TeaModel {
         /**
-         * <p>Queries the domain names for CDN within your Alibaba Cloud account. You can filter domain names by name or by state. When you filter domain names by name, a fuzzy match is supported.</p>
+         * <p>The canonical domain name that is assigned to the domain name for CDN.</p>
          */
         @NameInMap("Cname")
         public String cname;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The remarks.</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The domain name for CDN.</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status of the domain name for CDN. Valid values:</p>
+         * <br>
+         * <p>*   **online**: indicates that the domain name is enabled.</p>
+         * <p>*   **offline**: indicates that the domain name is disabled.</p>
+         * <p>*   **configuring**: indicates that the domain name is being configured.</p>
+         * <p>*   **configure_failed**: indicates that the domain name failed to be configured.</p>
+         * <p>*   **checking**: indicates that the domain name is under review.</p>
+         * <p>*   **check_failed**: indicates that the domain name failed the review.</p>
+         */
         @NameInMap("DomainStatus")
         public String domainStatus;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The time when the domain name for CDN was added. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("GmtCreated")
         public String gmtCreated;
 
+        /**
+         * <p>The last time when the domain name for CDN was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Indicates whether the domain name for CDN is in a sandbox environment.</p>
          */
         @NameInMap("Sandbox")
         public String sandbox;
 
+        /**
+         * <p>The information about the origin server.</p>
+         */
         @NameInMap("Sources")
         public DescribeVodUserDomainsResponseBodyDomainsPageDataSources sources;
 
         /**
-         * <p>The key of tag N. Valid values of N: **1** to **20**.</p>
+         * <p>Indicates whether HTTPS is enabled.</p>
          * <br>
-         * <p>If you do not specify this parameter, all tag keys are queried.</p>
+         * <p>- **on**: indicates that HTTPS is enabled.</p>
+         * <p>- **off**: indicates that HTTPS is disabled.</p>
          */
         @NameInMap("SslProtocol")
         public String sslProtocol;

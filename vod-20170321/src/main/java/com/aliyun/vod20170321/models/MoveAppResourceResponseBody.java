@@ -4,14 +4,20 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class MoveAppResourceResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the resources that failed to be migrated.</p>
+     */
     @NameInMap("FailedResourceIds")
     public java.util.List<String> failedResourceIds;
 
+    /**
+     * <p>The IDs of the resources that were not found.</p>
+     */
     @NameInMap("NonExistResourceIds")
     public java.util.List<String> nonExistResourceIds;
 
     /**
-     * <p>Migrates one or more resources from an application to another application.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

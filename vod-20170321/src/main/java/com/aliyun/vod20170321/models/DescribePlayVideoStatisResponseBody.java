@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePlayVideoStatisResponseBody extends TeaModel {
     /**
-     * <p>The ID of the video.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of unique visitors.</p>
+     * <p>The daily playback statistics on the video.</p>
      */
     @NameInMap("VideoPlayStatisDetails")
     public DescribePlayVideoStatisResponseBodyVideoPlayStatisDetails videoPlayStatisDetails;
@@ -39,31 +39,37 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
 
     public static class DescribePlayVideoStatisResponseBodyVideoPlayStatisDetailsVideoPlayStatisDetail extends TeaModel {
         /**
-         * <p>The ID of the request.</p>
+         * <p>The date. The date is displayed in the *yyyy-MM-dd* format.</p>
          */
         @NameInMap("Date")
         public String date;
 
         /**
-         * <p>The title of the video.</p>
+         * <p>The playback duration. Unit: millisecond.</p>
          */
         @NameInMap("PlayDuration")
         public String playDuration;
 
+        /**
+         * <p>The distribution of the playback duration.</p>
+         */
         @NameInMap("PlayRange")
         public String playRange;
 
         /**
-         * <p>Queries daily playback statistics on a specified video in a specified time range.</p>
+         * <p>The video title.</p>
          */
         @NameInMap("Title")
         public String title;
 
+        /**
+         * <p>The number of unique visitors.</p>
+         */
         @NameInMap("UV")
         public String UV;
 
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribePlayVideoStatis**.</p>
+         * <p>The number of video views.</p>
          */
         @NameInMap("VV")
         public String VV;

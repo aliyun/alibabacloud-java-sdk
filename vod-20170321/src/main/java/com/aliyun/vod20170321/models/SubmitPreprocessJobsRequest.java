@@ -4,11 +4,14 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsRequest extends TeaModel {
+    /**
+     * <p>The preprocessing type. Set the value to **LivePreprocess**, which indicates that the video is preprocessed in the production studio.</p>
+     */
     @NameInMap("PreprocessType")
     public String preprocessType;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **SubmitPreprocessJobs**.</p>
+     * <p>The ID of the video.</p>
      */
     @NameInMap("VideoId")
     public String videoId;

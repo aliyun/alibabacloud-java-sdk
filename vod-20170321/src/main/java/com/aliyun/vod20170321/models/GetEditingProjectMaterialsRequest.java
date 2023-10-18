@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetEditingProjectMaterialsRequest extends TeaModel {
     /**
-     * <p>The URLs of material snapshots. The value is an array.</p>
+     * <p>The type of the material. Valid values:</p>
+     * <br>
+     * <p>*   **video**</p>
+     * <p>*   **audio**</p>
+     * <p>*   **image**</p>
      */
     @NameInMap("MaterialType")
     public String materialType;
@@ -32,7 +36,10 @@ public class GetEditingProjectMaterialsRequest extends TeaModel {
     public String resourceOwnerId;
 
     /**
-     * <p>The ID of the material.</p>
+     * <p>The type of the material. Valid values:</p>
+     * <br>
+     * <p>*   **video**</p>
+     * <p>*   **audio**</p>
      */
     @NameInMap("Type")
     public String type;

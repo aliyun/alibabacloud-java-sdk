@@ -4,11 +4,17 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateCategoryRequest extends TeaModel {
+    /**
+     * <p>The ID of the category.</p>
+     */
     @NameInMap("CateId")
     public Long cateId;
 
     /**
-     * <p>Modifies a video category.</p>
+     * <p>The name of the category.</p>
+     * <br>
+     * <p>*   The value can be up to 64 bytes in length.</p>
+     * <p>*   The string must be encoded in the UTF-8 format.</p>
      */
     @NameInMap("CateName")
     public String cateName;

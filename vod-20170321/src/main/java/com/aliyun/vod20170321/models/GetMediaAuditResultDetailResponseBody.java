@@ -5,21 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaAuditResultDetailResponseBody extends TeaModel {
     /**
-     * <p>The total number of snapshots returned.</p>
+     * <p>Details about review results.</p>
      */
     @NameInMap("MediaAuditResultDetail")
     public GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail mediaAuditResultDetail;
 
     /**
-     * <p>The category of the terrorist content review result.</p>
-     * <br>
-     * <p>*   **normal**: normal</p>
-     * <p>*   **terrorism**: terrorist content</p>
-     * <p>*   **outfit**: special costume</p>
-     * <p>*   **logo**: special logo</p>
-     * <p>*   **weapon**: weapon</p>
-     * <p>*   **politics**: politically sensitive content</p>
-     * <p>*   **others**: other terrorist content and politically sensitive content</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -47,37 +39,34 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList extends TeaModel {
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         * <p>The category of the ad review result. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: normal content</p>
+         * <p>*   **ad**: ad or text violation</p>
          */
         @NameInMap("AdLabel")
         public String adLabel;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
          */
         @NameInMap("AdScore")
         public String adScore;
 
         /**
-         * <p>The position in the video. Unit: milliseconds.</p>
+         * <p>The category of the undesirable scene review result. Valid values:</p>
+         * <br>
+         * <p>*   **normal**: The video does not contain undesirable scenes.</p>
+         * <p>*   **live**: The video contains undesirable scenes.</p>
          */
         @NameInMap("LiveLabel")
         public String liveLabel;
 
+        /**
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         */
         @NameInMap("LiveScore")
         public String liveScore;
-
-        @NameInMap("LogoLabel")
-        public String logoLabel;
-
-        @NameInMap("LogoScore")
-        public String logoScore;
-
-        /**
-         * <p>The ID of the video.</p>
-         */
-        @NameInMap("PornLabel")
-        public String pornLabel;
 
         /**
          * <p>The category of the logo review result. Valid values:</p>
@@ -85,29 +74,59 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
          * <p>*   **normal**</p>
          * <p>*   **tlogo**</p>
          */
+        @NameInMap("LogoLabel")
+        public String logoLabel;
+
+        /**
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         */
+        @NameInMap("LogoScore")
+        public String logoScore;
+
+        /**
+         * <p>The category of the pornographic content review result. Valid values:</p>
+         * <br>
+         * <p>*   **normal**</p>
+         * <p>*   **porn**</p>
+         * <p>*   **sexy**</p>
+         */
+        @NameInMap("PornLabel")
+        public String pornLabel;
+
+        /**
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         */
         @NameInMap("PornScore")
         public String pornScore;
 
+        /**
+         * <p>The category of the terrorist content review result.</p>
+         * <br>
+         * <p>*   **normal**: normal</p>
+         * <p>*   **terrorism**: terrorist content</p>
+         * <p>*   **outfit**: special costume</p>
+         * <p>*   **logo**: special logo</p>
+         * <p>*   **weapon**: weapon</p>
+         * <p>*   **politics**: politically sensitive content</p>
+         * <p>*   **others**: other terrorist content and politically sensitive content</p>
+         */
         @NameInMap("TerrorismLabel")
         public String terrorismLabel;
 
         /**
-         * <p>The URL of the image.</p>
+         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
          */
         @NameInMap("TerrorismScore")
         public String terrorismScore;
 
         /**
-         * <p>The review results returned.</p>
+         * <p>The position in the video. Unit: milliseconds.</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
 
         /**
-         * <p>The category of the ad review result. Valid values:</p>
-         * <br>
-         * <p>*   **normal**: normal content</p>
-         * <p>*   **ad**: ad or text violation</p>
+         * <p>The URL of the image.</p>
          */
         @NameInMap("Url")
         public String url;
@@ -217,13 +236,13 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
 
     public static class GetMediaAuditResultDetailResponseBodyMediaAuditResultDetail extends TeaModel {
         /**
-         * <p>The operation that you want to perform. Set the value to **GetMediaAuditResultDetail**.</p>
+         * <p>The review results returned.</p>
          */
         @NameInMap("List")
         public java.util.List<GetMediaAuditResultDetailResponseBodyMediaAuditResultDetailList> list;
 
         /**
-         * <p>The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.</p>
+         * <p>The total number of snapshots returned.</p>
          */
         @NameInMap("Total")
         public Integer total;

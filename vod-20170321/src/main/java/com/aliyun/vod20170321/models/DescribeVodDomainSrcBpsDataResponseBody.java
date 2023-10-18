@@ -4,21 +4,39 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the entries returned. Unit: seconds.</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The accelerated domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Details about the origin bandwidth data returned at each time interval. Unit: bit/s.</p>
+     */
     @NameInMap("SrcBpsDataPerInterval")
     public DescribeVodDomainSrcBpsDataResponseBodySrcBpsDataPerInterval srcBpsDataPerInterval;
 
+    /**
+     * <p>The start of the time range during which data was queried.</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +94,21 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeVodDomainSrcBpsDataResponseBodySrcBpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The bandwidth values of origin HTTPS requests.</p>
+         */
         @NameInMap("HttpsValue")
         public String httpsValue;
 
+        /**
+         * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The bandwidth value at each time interval.</p>
+         */
         @NameInMap("Value")
         public String value;
 

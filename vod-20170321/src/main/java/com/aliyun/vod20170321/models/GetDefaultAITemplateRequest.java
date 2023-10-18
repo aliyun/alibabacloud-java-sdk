@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDefaultAITemplateRequest extends TeaModel {
     /**
-     * <p>The source of the AI template. Valid values:</p>
-     * <br>
-     * <p>*   **System**</p>
-     * <p>*   **Custom**</p>
+     * <p>The type of the AI template. Set the value to **AIMediaAudit**, which specifies the automated review.</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

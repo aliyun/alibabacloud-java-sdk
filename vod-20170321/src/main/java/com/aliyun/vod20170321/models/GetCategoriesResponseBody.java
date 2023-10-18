@@ -5,28 +5,25 @@ import com.aliyun.tea.*;
 
 public class GetCategoriesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.</p>
+     * <p>The information about the specified category.</p>
      */
     @NameInMap("Category")
     public GetCategoriesResponseBodyCategory category;
 
     /**
-     * <p>The type of the category. Valid values:</p>
-     * <br>
-     * <p>*   **default** (default): default category</p>
-     * <p>*   **material**: material category</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The list of subcategories.</p>
      */
     @NameInMap("SubCategories")
     public GetCategoriesResponseBodySubCategories subCategories;
 
     /**
-     * <p>The information about the specified category.</p>
+     * <p>The total number of subcategories.</p>
      */
     @NameInMap("SubTotal")
     public Long subTotal;
@@ -76,28 +73,29 @@ public class GetCategoriesResponseBody extends TeaModel {
         public Long cateId;
 
         /**
-         * <p>The ID of the parent category. The parent category ID of a level 1 category is **-1**.</p>
+         * <p>The name of the category.</p>
+         * <p>*   The value can be up to 64 bytes in length.</p>
+         * <p>*   The string must be encoded in the UTF-8 format.</p>
          */
         @NameInMap("CateName")
         public String cateName;
 
         /**
-         * <p>The name of the category.</p>
-         * <br>
-         * <p>*   The value can be up to 64 bytes in length.</p>
-         * <p>*   The string must be encoded in the UTF-8 format.</p>
+         * <p>The level of the category. A value of **0** indicates a level 1 category.</p>
          */
         @NameInMap("Level")
         public Long level;
 
         /**
-         * <p>The level of the category. A value of **0** indicates a level 1 category.</p>
+         * <p>The ID of the parent category. The parent category ID of a level 1 category is **-1**.</p>
          */
         @NameInMap("ParentId")
         public Long parentId;
 
         /**
-         * <p>The total number of subcategories.</p>
+         * <p>The type of the category. Valid values:</p>
+         * <p>*   **default** (default): default category</p>
+         * <p>*   **material**: material category</p>
          */
         @NameInMap("Type")
         public String type;
@@ -150,23 +148,43 @@ public class GetCategoriesResponseBody extends TeaModel {
     }
 
     public static class GetCategoriesResponseBodySubCategoriesCategory extends TeaModel {
+        /**
+         * <p>The ID of the video category.</p>
+         */
         @NameInMap("CateId")
         public Long cateId;
 
+        /**
+         * <p>The name of the category.</p>
+         * <p>*   The value can be up to 64 bytes in length.</p>
+         * <p>*   The string must be encoded in the UTF-8 format.</p>
+         */
         @NameInMap("CateName")
         public String cateName;
 
+        /**
+         * <p>The level of the category. A value of **0** indicates a level 1 category.</p>
+         */
         @NameInMap("Level")
         public Long level;
 
+        /**
+         * <p>The ID of the parent category. The parent category ID of a level 1 category is **-1**.</p>
+         */
         @NameInMap("ParentId")
         public Long parentId;
 
+        /**
+         * <p>The total number of subcategories.</p>
+         */
         @NameInMap("SubTotal")
         public Long subTotal;
 
         /**
-         * <p>Queries the information about the specified category and its subcategories.</p>
+         * <p>The type of the category. Valid values:</p>
+         * <br>
+         * <p>*   **default** (default): default category</p>
+         * <p>*   **material**: material category</p>
          */
         @NameInMap("Type")
         public String type;

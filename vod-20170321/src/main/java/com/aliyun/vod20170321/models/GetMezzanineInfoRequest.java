@@ -5,30 +5,49 @@ import com.aliyun.tea.*;
 
 public class GetMezzanineInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the video.</p>
+     * <p>The type of additional information. Separate multiple values with commas (,). By default, only the basic information is returned. Valid values:</p>
+     * <br>
+     * <p>*   **video**: video stream information</p>
+     * <p>*   **audio**: audio stream information</p>
      */
     @NameInMap("AdditionType")
     public String additionType;
 
     /**
-     * <p>The type of the mezzanine file URL. Valid values:</p>
+     * <p>The validity period of the mezzanine file URL. Unit: seconds. Default value: **1800**. Minimum value: **1**.</p>
      * <br>
-     * <p>- **oss**: OSS URL</p>
-     * <p>- **cdn** (default): CDN URL</p>
+     * <p>*   If the OutputType parameter is set to **cdn**:</p>
      * <br>
-     * <p>> If you specify an OSS URL for the video stream, the video stream must be in the MP4 format.</p>
+     * <p>    *   The mezzanine file URL has a validity period only if URL signing is enabled. Otherwise, the mezzanine file URL is permanently valid.</p>
+     * <p>    *   Minimum value: **1**.</p>
+     * <p>    *   Maximum Value: unlimited.</p>
+     * <p>    *   Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.</p>
+     * <br>
+     * <p><!----></p>
+     * <br>
+     * <p>*   If the OutputType parameter is set to **oss**:</p>
+     * <br>
+     * <p>    *   The mezzanine file URL has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the mezzanine file URL is permanently valid.</p>
+     * <p>    *   Minimum value: **1**.</p>
+     * <p>    *   Maximum value: **2592000** (30 days). The maximum value is limited to reduce security risks of the origin.</p>
+     * <p>    *   Default value: If you do not set this parameter, the default value is **3600**.</p>
      */
     @NameInMap("AuthTimeout")
     public Long authTimeout;
 
     /**
-     * <p>The frame rate of the file. Unit: frames per second.</p>
+     * <p>The type of the mezzanine file URL. Valid values:</p>
+     * <br>
+     * <p>- **oss**: OSS URL</p>
+     * <p>- **cdn** (default): Content Delivery Network (CDN) URL</p>
+     * <br>
+     * <p>> If the mezzanine file is stored in a bucket of the in type, only an OSS URL is returned.</p>
      */
     @NameInMap("OutputType")
     public String outputType;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **GetMezzanineInfo**.</p>
+     * <p>The ID of the video.</p>
      */
     @NameInMap("VideoId")
     public String videoId;

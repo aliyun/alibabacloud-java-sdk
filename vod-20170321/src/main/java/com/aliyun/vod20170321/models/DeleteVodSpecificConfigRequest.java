@@ -4,14 +4,20 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteVodSpecificConfigRequest extends TeaModel {
+    /**
+     * <p>The ID of the configuration.</p>
+     */
     @NameInMap("ConfigId")
     public String configId;
 
     /**
-     * <p>Deletes the configurations of a domain name for CDN.</p>
+     * <p>The domain name for CDN.</p>
      */
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("Env")
+    public String env;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -38,6 +44,14 @@ public class DeleteVodSpecificConfigRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public DeleteVodSpecificConfigRequest setEnv(String env) {
+        this.env = env;
+        return this;
+    }
+    public String getEnv() {
+        return this.env;
     }
 
     public DeleteVodSpecificConfigRequest setOwnerId(Long ownerId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAuditSecurityIpRequest extends TeaModel {
     /**
-     * <p>The time when the review security group was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+     * <p>The name of the review security group in which you want to query IP addresses. If you do not specify this parameter, IP addresses in all review security groups are queried.</p>
      */
     @NameInMap("SecurityGroupName")
     public String securityGroupName;

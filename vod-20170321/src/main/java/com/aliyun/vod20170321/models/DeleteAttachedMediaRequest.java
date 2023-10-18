@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteAttachedMediaRequest extends TeaModel {
     /**
-     * <p>Deletes one or more auxiliary media assets at a time.</p>
+     * <p>The list of auxiliary media asset IDs.</p>
+     * <br>
+     * <p>*   Separate multiple IDs with commas (,).</p>
+     * <p>*   A maximum of 20 IDs can be specified.</p>
      */
     @NameInMap("MediaIds")
     public String mediaIds;

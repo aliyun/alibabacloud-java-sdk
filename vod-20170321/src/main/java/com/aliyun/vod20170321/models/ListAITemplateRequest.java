@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAITemplateRequest extends TeaModel {
     /**
-     * <p>Indicates whether the template is the default AI template. Valid values:</p>
+     * <p>The type of the AI template. Valid values:</p>
      * <br>
-     * <p>*   **Default**</p>
-     * <p>*   **NotDefault**</p>
+     * <p>*   **AIMediaAudit**: automated review</p>
+     * <p>*   **AIImage**: smart thumbnail</p>
      */
     @NameInMap("TemplateType")
     public String templateType;

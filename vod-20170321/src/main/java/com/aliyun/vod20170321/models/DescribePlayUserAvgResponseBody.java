@@ -11,7 +11,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribePlayUserAvg**.</p>
+     * <p>The statistics on average playback each day.</p>
      */
     @NameInMap("UserPlayStatisAvgs")
     public DescribePlayUserAvgResponseBodyUserPlayStatisAvgs userPlayStatisAvgs;
@@ -38,14 +38,20 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
     }
 
     public static class DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg extends TeaModel {
+        /**
+         * <p>The average number of video views.</p>
+         */
         @NameInMap("AvgPlayCount")
         public String avgPlayCount;
 
+        /**
+         * <p>The average playback duration. Unit: milliseconds.</p>
+         */
         @NameInMap("AvgPlayDuration")
         public String avgPlayDuration;
 
         /**
-         * <p>Queries the statistics on average playback each day in a specified time range.</p>
+         * <p>The date when the statistics were generated. The date follows the *yyyy-MM-dd* format.</p>
          */
         @NameInMap("Date")
         public String date;

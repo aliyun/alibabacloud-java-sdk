@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDynamicImageResponseBody extends TeaModel {
     /**
-     * <p>The format of the animated sticker. Valid values: gif and webp.</p>
+     * <p>The list of animated stickers.</p>
      */
     @NameInMap("DynamicImageList")
     public java.util.List<ListDynamicImageResponseBodyDynamicImageList> dynamicImageList;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListDynamicImage**.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,55 +39,67 @@ public class ListDynamicImageResponseBody extends TeaModel {
 
     public static class ListDynamicImageResponseBodyDynamicImageList extends TeaModel {
         /**
-         * <p>The job ID for creating the animated sticker.</p>
+         * <p>The time when the animated sticker was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The duration of the animated sticker. Unit: seconds.</p>
+         */
         @NameInMap("Duration")
         public String duration;
 
+        /**
+         * <p>The ID of the animated sticker.</p>
+         */
         @NameInMap("DynamicImageId")
         public String dynamicImageId;
 
+        /**
+         * <p>The size of the animated sticker file. Unit: byte.</p>
+         */
         @NameInMap("FileSize")
         public String fileSize;
 
         /**
-         * <p>The time when the animated sticker was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.</p>
+         * <p>The URL of the animated sticker file.</p>
          */
         @NameInMap("FileURL")
         public String fileURL;
 
+        /**
+         * <p>The format of the animated sticker. Valid values: gif and webp.</p>
+         */
         @NameInMap("Format")
         public String format;
 
         /**
-         * <p>Queries the information about animated stickers of a video based on the video ID.</p>
+         * <p>The frame rate of the animated sticker. Unit: frames per second.</p>
          */
         @NameInMap("Fps")
         public String fps;
 
         /**
-         * <p>The frame rate of the animated sticker. Unit: frames per second.</p>
+         * <p>The height of the animated sticker. Unit: pixel.</p>
          */
         @NameInMap("Height")
         public String height;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The job ID for creating the animated sticker.</p>
          */
         @NameInMap("JobId")
         public String jobId;
 
         /**
-         * <p>The duration of the animated sticker. Unit: seconds.</p>
+         * <p>The ID of the video.</p>
          */
         @NameInMap("VideoId")
         public String videoId;
 
         /**
-         * <p>The list of animated stickers.</p>
+         * <p>The width of the animated sticker. Unit: pixel.</p>
          */
         @NameInMap("Width")
         public String width;

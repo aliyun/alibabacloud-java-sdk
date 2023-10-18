@@ -4,20 +4,28 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UploadStreamByURLResponseBody extends TeaModel {
+    /**
+     * <p>The URL of the OSS object.</p>
+     */
     @NameInMap("FileURL")
     public String fileURL;
 
     /**
-     * <p>Uploads transcoded streams to ApsaraVideo VOD from external storage.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The URL of the input stream. This parameter is used when you call the [GetURLUploadInfos](~~106830~~) operation.</p>
+     */
     @NameInMap("SourceURL")
     public String sourceURL;
 
     /**
-     * <p>UploadStreamByURL</p>
+     * <p>The ID of the stream upload job. This parameter is used when you call the [GetURLUploadInfos](~~106830~~) operation.</p>
+     * <br>
+     * <p>In ApsaraVideo VOD, you can upload only one transcoded stream in an upload job. For more information, see the PlayInfo: the playback information about a video stream section in [Basic structures](~~52839~~).</p>
      */
     @NameInMap("StreamJobId")
     public String streamJobId;

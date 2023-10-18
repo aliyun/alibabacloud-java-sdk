@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetAIImageJobsRequest extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The ID of the image AI processing job. You can obtain the value of JobId from the response to the [SubmitAIImageJob](~~SubmitAIImageJob~~) operation.</p>
+     * <p>*   You can specify a maximum of 10 IDs.</p>
+     * <p>*   Separate multiple IDs with commas (,).</p>
      */
     @NameInMap("JobIds")
     public String jobIds;

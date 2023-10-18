@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVodTemplateRequest extends TeaModel {
     /**
-     * <p>Indicates whether the template is the default one. Valid values:</p>
-     * <br>
-     * <p>*   **Default**: The template is the default one.</p>
-     * <p>*   **NotDefault**: The template is not the default one.</p>
+     * <p>The ID of the snapshot template.</p>
      */
     @NameInMap("VodTemplateId")
     public String vodTemplateId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePlayTopVideosRequest extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The time to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
      */
     @NameInMap("BizDate")
     public String bizDate;
@@ -14,13 +14,13 @@ public class DescribePlayTopVideosRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DescribePlayTopVideos**.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNo")
     public Long pageNo;
 
     /**
-     * <p>The time to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.</p>
+     * <p>The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;

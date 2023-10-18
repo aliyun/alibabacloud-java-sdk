@@ -5,32 +5,34 @@ import com.aliyun.tea.*;
 
 public class DetachAppPolicyFromIdentityRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the application. This parameter is optional when the PolicyNames parameter is set to VODAppAdministratorAccess. This parameter is required when the PolicyNames parameter is set to other values.</p>
+     * <p>*   Default value: **app-1000000**.</p>
+     * <p>*   For more information, see [Overview](~~113600~~).</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The name of the policy. Separate multiple policies with commas (,). Only system policies are supported.</p>
-     * <br>
-     * <p>*   **VODAppFullAccess**: authorizes an identity to manage all resources in an application.</p>
-     * <p>*   **VODAppReadOnlyAccess**: authorizes an identity to access all resources in an application in read-only mode.</p>
-     * <p>*   **VODAppAdministratorAccess**: assigns the application administrator role to an identity.</p>
+     * <p>The name of the identity.</p>
+     * <p>*   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.</p>
+     * <p>*   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.</p>
      */
     @NameInMap("IdentityName")
     public String identityName;
 
     /**
-     * <p>The ID of the application. This parameter is optional when the PolicyNames parameter is set to VODAppAdministratorAccess. This parameter is required when the PolicyNames parameter is set to other values.</p>
-     * <br>
-     * <p>*   Default value: **app-1000000**.</p>
-     * <p>*   For more information, see [Overview](~~113600~~).</p>
+     * <p>The type of the identity. Valid values:</p>
+     * <p>*   **RamUser**: a RAM user.</p>
+     * <p>*   **RamRole**: a RAM role.</p>
      */
     @NameInMap("IdentityType")
     public String identityType;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DetachAppPolicyFromIdentity**.</p>
+     * <p>The name of the policy. Separate multiple policies with commas (,). Only system policies are supported.</p>
+     * <p>*   **VODAppFullAccess**: authorizes an identity to manage all resources in an application.</p>
+     * <p>*   **VODAppReadOnlyAccess**: authorizes an identity to access all resources in an application in read-only mode.</p>
+     * <p>*   **VODAppAdministratorAccess**: assigns the application administrator role to an identity.</p>
      */
     @NameInMap("PolicyNames")
     public String policyNames;

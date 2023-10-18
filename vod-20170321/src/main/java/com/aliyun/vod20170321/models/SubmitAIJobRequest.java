@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class SubmitAIJobRequest extends TeaModel {
     /**
-     * <p>The configurations of the AI job. The value is a JSON string.</p>
+     * <p>The configurations of the AI job. The value must be a JSON string.</p>
+     * <br>
+     * <p>*   If `Types` is set to `AIVideoTag`, you can configure `AnalyseTypes` for `Config` to set the analysis algorithm of a smart tagging job. Valid values:</p>
+     * <br>
+     * <p>    *   ASR: speech recognition.</p>
+     * <p>    *   OCR: image optical character recognition (OCR).</p>
+     * <br>
+     * <p>*   If `Types` is set to `AIMediaDNA`, you can configure `DNADBId` for `Config` to set the ID of the media fingerprint library for video fingerprinting jobs.</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The type of the AI job. Separate multiple types with commas (,). Valid values:</p>
+     * <p>The ID of the video. You can use one of the following methods to obtain the ID:</p>
      * <br>
-     * <p>*   **AIMediaDNA**: The media fingerprinting job.</p>
-     * <p>*   **AIVideoTag**: The smart tagging job.</p>
+     * <p>*   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.</p>
+     * <p>*   Obtain the value of VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload media files.</p>
+     * <p>*   Obtain the value of VideoId from the response to the [SearchMedia](~~86044~~) operation after you upload media files.</p>
      */
     @NameInMap("MediaId")
     public String mediaId;
@@ -32,7 +40,10 @@ public class SubmitAIJobRequest extends TeaModel {
     public String resourceOwnerId;
 
     /**
-     * <p>The ID of the AI job.</p>
+     * <p>The type of the AI job. Separate multiple types with commas (,). Valid values:</p>
+     * <br>
+     * <p>*   **AIMediaDNA**: The media fingerprinting job.</p>
+     * <p>*   **AIVideoTag**: The smart tagging job.</p>
      */
     @NameInMap("Types")
     public String types;
