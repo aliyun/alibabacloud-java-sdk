@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     /**
-     * <p>The details of the EIP bandwidth plan.</p>
+     * <p>The details of the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("CommonBandwidthPackages")
     public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackages commonBandwidthPackages;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -87,10 +87,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>Indicates whether the EIP is associated with the EIP bandwidth plan.</p>
+         * <p>Indicates whether the EIP is associated with the Internet Shared Bandwidth instance. Valid values:</p>
          * <br>
-         * <p>*   **BINDED**: The EIP is associated with the EIP bandwidth plan.</p>
-         * <p>*   **BINDING**: The EIP is being associated with the EIP bandwidth plan.</p>
+         * <p>*   **BINDED**</p>
+         * <p>*   **BINDING**</p>
          */
         @NameInMap("BandwidthPackageIpRelationStatus")
         public String bandwidthPackageIpRelationStatus;
@@ -171,9 +171,15 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
     }
 
     public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageTagsTag extends TeaModel {
+        /**
+         * <p>The tag key that is added to the Internet Shared Bandwidth instance.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value that is added to the Internet Shared Bandwidth instance.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -221,80 +227,86 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
 
     public static class DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackage extends TeaModel {
         /**
-         * <p>The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.</p>
+         * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
          */
         @NameInMap("Bandwidth")
         public String bandwidth;
 
         /**
-         * <p>The ID of the EIP bandwidth plan.</p>
+         * <p>The ID of the Internet Shared Bandwidth instance.</p>
          */
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        /**
+         * <p>The service type of the Internet Shared Bandwidth instance. Valid values:</p>
+         * <br>
+         * <p>*   **CloudBox** The cloud box. Only cloud box users can select this type.</p>
+         * <p>*   **Default** (default): The general service type.</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
         /**
-         * <p>The service state of the EIP bandwidth plan.</p>
+         * <p>The service status of the Internet Shared Bandwidth instance. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: The EIP bandwidth plan works as expected.</p>
-         * <p>*   **FinancialLocked**: The EIP bandwidth plan has an overdue payment.</p>
-         * <p>*   **Unactivated**: The EIP bandwidth plan is not activated.</p>
+         * <p>*   **Normal**: The Internet Shared Bandwidth instance runs as expected.</p>
+         * <p>*   **FinancialLocked**: An overdue payment occurs in the Internet Shared Bandwidth instance</p>
+         * <p>*   **Unactivated**: The Internet Shared Bandwidth instance is not activated.</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
-         * <p>The time when the EIP bandwidth plan was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the Internet Shared Bandwidth instance was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>Indicates whether deletion protection was enabled.</p>
+         * <p>Indicates whether deletion protection is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true**: Deletion protection was enabled.</p>
-         * <p>*   **false**: Deletion protection was disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
         /**
-         * <p>The description of the EIP bandwidth plan.</p>
+         * <p>The description of the Internet Shared Bandwidth instance.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time when the EIP bandwidth plan expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The time when the Internet Shared Bandwidth instance expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>Indicates whether the information about pending orders was returned.</p>
+         * <p>Indicates whether the information about pending orders is returned. Valid values:</p>
          * <br>
-         * <p>*   **false**: The information about pending orders was not returned.</p>
-         * <p>*   **true**: The information about pending orders was returned.</p>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
         /**
-         * <p>The line type.</p>
+         * <p>The line type. Valid values:</p>
          * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) lines. BGP (Multi-ISP) lines are available in all regions.</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro lines are available only in the China (Hong Kong), Singapore, Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
+         * <p>*   **BGP**: BGP (Multi-ISP) line The BGP (Multi-ISP) line is supported in all regions.</p>
+         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line The BGP (Multi-ISP) Pro line is supported in the China (Hong Kong), Singapore (Singapore), Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
          * <br>
          * <p>If you are allowed to use single-ISP bandwidth, one of the following values is returned:</p>
          * <br>
-         * <p>*   **ChinaTelecom**: China Telecom</p>
-         * <p>*   **ChinaUnicom**: China Unicom</p>
-         * <p>*   **ChinaMobile**: China Mobile</p>
-         * <p>*   **ChinaTelecom_L2**: China Telecom L2</p>
-         * <p>*   **ChinaUnicom_L2**: China Unicom L2</p>
-         * <p>*   **ChinaMobile_L2**: China Mobile L2</p>
+         * <p>*   **ChinaTelecom**</p>
+         * <p>*   **ChinaUnicom**</p>
+         * <p>*   **ChinaMobile**</p>
+         * <p>*   **ChinaTelecom_L2**</p>
+         * <p>*   **ChinaUnicom_L2**</p>
+         * <p>*   **ChinaMobile_L2**</p>
          * <br>
          * <p>If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.</p>
          */
@@ -302,43 +314,43 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         public String ISP;
 
         /**
-         * <p>The billing method of the EIP bandwidth plan.</p>
+         * <p>The billing method of the Internet Shared Bandwidth instance. Valid value:</p>
          * <br>
-         * <p>**PostPaid**: the pay-as-you-go billing method</p>
+         * <p>**PostPaid**: pay-as-you-go</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
-         * <p>The metering method of the EIP bandwidth plan.</p>
+         * <p>The metering method of the Internet Shared Bandwidth instance. Valid value:</p>
          * <br>
-         * <p>**PayByTraffic**: the pay-by-data-transfer metering method.</p>
+         * <p>**PayByTraffic**</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
-         * <p>The name of the EIP bandwidth plan.</p>
+         * <p>The name of the Internet Shared Bandwidth instance.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The elastic IP addresses (EIPs) associated with the EIP bandwidth plan.</p>
+         * <p>The elastic IP addresses (EIPs) that are associated with the Internet Shared Bandwidth instance.</p>
          */
         @NameInMap("PublicIpAddresses")
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackagePublicIpAddresses publicIpAddresses;
 
         /**
-         * <p>The percentage of the minimum bandwidth commitment. **20** is returned.</p>
+         * <p>The percentage of the minimum bandwidth commitment. Only **20** is returned.</p>
          * <br>
-         * <p>>  This parameter is available only on the Alibaba Cloud China site.</p>
+         * <p>>  This parameter is supported only on the Alibaba Cloud China site.</p>
          */
         @NameInMap("Ratio")
         public Integer ratio;
 
         /**
-         * <p>The region ID of the EIP bandwidth plan.</p>
+         * <p>The ID of the region where the Internet Shared Bandwidth instance resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -350,25 +362,25 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         public String reservationActiveTime;
 
         /**
-         * <p>The new maximum bandwidth. Unit: Mbit/s.</p>
+         * <p>The new maximum bandwidth after the configurations are changed. Unit: Mbit/s.</p>
          */
         @NameInMap("ReservationBandwidth")
         public String reservationBandwidth;
 
         /**
-         * <p>The new metering method.</p>
+         * <p>The metering method after the configurations are changed. Valid value:</p>
          * <br>
-         * <p>**PayByTraffic**: the pay-by-data-transfer metering method</p>
+         * <p>**PayByTraffic**</p>
          */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
         /**
-         * <p>The renewal method.</p>
+         * <p>The renewal method. Valid values:</p>
          * <br>
-         * <p>*   **RENEWCHANGE**: renewal with an upgrade or a downgrade</p>
-         * <p>*   **TEMP_UPGRADE**: temporary upgrade</p>
-         * <p>*   **UPGRADE**: upgrade</p>
+         * <p>*   **RENEWCHANGE**: renewal with a specification change</p>
+         * <p>*   **TEMP_UPGRADE**: renewal with a temporary upgrade</p>
+         * <p>*   **UPGRADE**: renewal with an upgrade</p>
          */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
@@ -380,35 +392,41 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The edition of Anti-DDoS. </p>
+         * <p>The editions of Anti-DDoS.</p>
          * <br>
-         * <p>- If this parameter is empty, it indicates that Anti-DDoS Origin Basic was enabled.</p>
-         * <p>- If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium was enabled.</p>
+         * <p>*   If this parameter is empty, Anti-DDoS Origin Basic is enabled.</p>
+         * <p>*   If **AntiDDoS_Enhanced** is returned, Anti-DDoS Pro/Premium is enabled.</p>
          */
         @NameInMap("SecurityProtectionTypes")
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageSecurityProtectionTypes securityProtectionTypes;
 
         /**
-         * <p>Indicates whether the EIP bandwidth plan was created by the service account.</p>
+         * <p>Indicates whether the resource is created by the service account. Valid values:</p>
          * <br>
-         * <p>*   **0**: The EIP bandwidth plan was not created by the service account.</p>
-         * <p>*   **1**: The EIP bandwidth plan was created by the service account.</p>
+         * <p>*   **0**: The resource is not created by the service account.</p>
+         * <p>*   **1**: The resource is created by the service account.</p>
          */
         @NameInMap("ServiceManaged")
         public Integer serviceManaged;
 
         /**
-         * <p>The status of the EIP bandwidth plan. Valid values:</p>
+         * <p>The status of the Internet Shared Bandwidth instance. Valid values:</p>
          * <br>
-         * <p>*   **Available**: The EIP bandwidth plan is available.</p>
-         * <p>*   **Modifying**: The EIP bandwidth plan is being modified.</p>
+         * <p>*   **Available**: The Internet Shared Bandwidth instance is available.</p>
+         * <p>*   **Modifying**: The Internet Shared Bandwidth instance is being modified.</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag that is added to the Internet Shared Bandwidth instance.</p>
+         */
         @NameInMap("Tags")
         public DescribeCommonBandwidthPackagesResponseBodyCommonBandwidthPackagesCommonBandwidthPackageTags tags;
 
+        /**
+         * <p>The zone of the Internet Shared Bandwidth instance. This parameter is returned only when BizType is set to CloudBox. If BizType is set to Default, an empty value is returned.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 

@@ -13,13 +13,13 @@ public class CreateIpsecServerResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The ID of the IPsec server.</p>
+     * <p>The IPsec server ID.</p>
      */
     @NameInMap("IpsecServerId")
     public String ipsecServerId;
 
     /**
-     * <p>The name of the IPsec server.</p>
+     * <p>The IPsec server name.</p>
      */
     @NameInMap("IpsecServerName")
     public String ipsecServerName;
@@ -31,7 +31,7 @@ public class CreateIpsecServerResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

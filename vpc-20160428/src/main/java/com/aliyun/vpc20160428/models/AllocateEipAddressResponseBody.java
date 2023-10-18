@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateEipAddressResponseBody extends TeaModel {
     /**
-     * <p>The ID of the EIP.</p>
+     * <p>The EIP ID.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
@@ -17,13 +17,13 @@ public class AllocateEipAddressResponseBody extends TeaModel {
     public String eipAddress;
 
     /**
-     * <p>The ID of the order. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.</p>
+     * <p>The order ID. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

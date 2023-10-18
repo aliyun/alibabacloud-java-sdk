@@ -7,7 +7,7 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     /**
      * <p>The certificate ID.</p>
      * <br>
-     * <p>> The certificate ID is generated after the SSL certificate is associated with the VPN gateway. It is not the ID of the SSL certificate. You can call [ListVpnCertificateAssociations](~~203359~~) to query certificate IDs.</p>
+     * <p>>  The certificate ID refers to the ID generated after the SSL certificate is associated with a VPN gateway. It is not the ID of the certificate itself. You can call [ListVpnCertificateAssociations](~~448813~~) to query certificate IDs.</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;

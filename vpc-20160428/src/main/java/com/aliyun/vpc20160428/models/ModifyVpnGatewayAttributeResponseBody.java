@@ -7,8 +7,8 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether BGP routes are automatically advertised to the VPC. Valid values:</p>
      * <br>
-     * <p>*   **true:** yes.</p>
-     * <p>*   **false:** no.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("AutoPropagate")
     public Boolean autoPropagate;
@@ -16,16 +16,16 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The payment status of the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **Normal:** The VPN gateway is running as expected.</p>
-     * <p>*   **FinancialLocked:** The VPN gateway is locked due to overdue payments.</p>
+     * <p>*   **Normal**</p>
+     * <p>*   **FinancialLocked**</p>
      */
     @NameInMap("BusinessStatus")
     public String businessStatus;
 
     /**
-     * <p>The timestamp is generated when the VPN gateway was created. Unit: milliseconds.</p>
+     * <p>The time when the VPN gateway was created. Unit: milliseconds.</p>
      * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
@@ -37,28 +37,32 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The second IP address assigned by the system to create an IPsec-VPN connection. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+     * <p>The second IP address assigned by the system to create an IPsec-VPN connection.</p>
+     * <br>
+     * <p>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
      */
     @NameInMap("DisasterRecoveryInternetIp")
     public String disasterRecoveryInternetIp;
 
     /**
-     * <p>The ID of the second vSwitch associated with the VPN gateway. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
+     * <p>The ID of the second vSwitch associated with the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is returned only when the VPN gateway supports the dual-tunnel mode.</p>
      */
     @NameInMap("DisasterRecoveryVSwitchId")
     public String disasterRecoveryVSwitchId;
 
     /**
-     * <p>The BGP status of the VPN gateway. Valid values:</p>
+     * <p>Indicates whether BGP is enabled for the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **true:** enabled.</p>
-     * <p>*   **false:** disabled.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("EnableBgp")
     public Boolean enableBgp;
 
     /**
-     * <p>The timestamp generated when the VPN gateway expires. Unit: milliseconds.</p>
+     * <p>The time when the VPN gateway expires. Unit: milliseconds.</p>
      * <br>
      * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
      */
@@ -66,14 +70,19 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>- If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. </p>
-     * <p>- If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.</p>
+     * <p>*   If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection.</p>
+     * <br>
+     * <p>*   If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection.</p>
+     * <br>
+     * <p>    If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.</p>
      */
     @NameInMap("InternetIp")
     public String internetIp;
 
     /**
-     * <p>The private IP address of the VPN gateway.</p>
+     * <p>The IP address of the VPN gateway.</p>
+     * <br>
+     * <p>This parameter is returned only when the VPN gateway is a private VPN gateway and supports only the single-tunnel mode.</p>
      */
     @NameInMap("IntranetIp")
     public String intranetIp;
@@ -85,7 +94,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -97,7 +106,9 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     public String spec;
 
     /**
-     * <p>The IP address of the SSL-VPN connection. This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.</p>
+     * <p>The IP address of the SSL-VPN connection.</p>
+     * <br>
+     * <p>This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.</p>
      */
     @NameInMap("SslVpnInternetIp")
     public String sslVpnInternetIp;
@@ -105,17 +116,17 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the VPN gateway. Valid values:</p>
      * <br>
-     * <p>*   **init:** The VPN gateway is being initialized.</p>
-     * <p>*   **provisioning:** The VPN gateway is being prepared.</p>
-     * <p>*   **active:** The VPN gateway is ready.</p>
-     * <p>*   **updating:** The VPN gateway is being updated.</p>
-     * <p>*   **deleting:** The VPN gateway is being deleted.</p>
+     * <p>*   **init**</p>
+     * <p>*   **provisioning**</p>
+     * <p>*   **active**</p>
+     * <p>*   **updating**</p>
+     * <p>*   **deleting**</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The ID of the vSwitch to which the VPN gateway belongs.</p>
+     * <p>The ID of the vSwitch associated with the VPN gateway.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;

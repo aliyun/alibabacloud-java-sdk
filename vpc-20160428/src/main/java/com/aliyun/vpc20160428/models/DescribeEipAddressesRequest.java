@@ -10,15 +10,15 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The ID of the EIP that you want to query.</p>
      * <br>
-     * <p>You can enter up to 50 IDs of EIPs. Separate multiple IDs with commas (,).</p>
+     * <p>You can specify up to 50 EIP IDs. Separate multiple IDs with commas (,).</p>
      * <br>
-     * <p>>  If both the **EipAddress** and **AllocationId** parameters are set, you can enter up to 50 IDs of EIPs in **AllocationId**, and enter up to 50 IP addresses of EIPs in **EipAddress**.</p>
+     * <p>>  If both **EipAddress** and **AllocationId** are specified, you can specify up to 50 EIP IDs for **AllocationId**, and specify up to 50 EIPs for **EipAddress**.</p>
      */
     @NameInMap("AllocationId")
     public String allocationId;
 
     /**
-     * <p>The ID of the cloud resource.</p>
+     * <p>The ID of the instance associated with the EIP.</p>
      */
     @NameInMap("AssociatedInstanceId")
     public String associatedInstanceId;
@@ -26,14 +26,14 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The type of the cloud resource with which you want to associate the EIP. Valid values:</p>
      * <br>
-     * <p>*   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)</p>
-     * <p>*   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC</p>
-     * <p>*   **Nat**: a NAT gateway</p>
-     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP)</p>
-     * <p>*   **NetworkInterface**: a secondary ENI</p>
-     * <p>*   **IpAddress**: an IP address</p>
+     * <p>*   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC).</p>
+     * <p>*   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC.</p>
+     * <p>*   **Nat**: a NAT gateway.</p>
+     * <p>*   **HaVip**: a high-availability virtual IP address (HAVIP).</p>
+     * <p>*   **NetworkInterface**: a secondary elastic network interface (ENI).</p>
+     * <p>*   **IpAddress**: an IP address.</p>
      * <br>
-     * <p>>  You can associate only one EIP with each ECS instance, SLB instance, HAVIP, or IP address. You can associate multiple EIPs with each NAT gateway. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [EIP overview](~~72125~~).</p>
+     * <p>>  You can associate only one EIP with each ECS instance, SLB instance, HAVIP, or IP address. You can associate multiple EIPs with each NAT gateway. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [Associate EIPs with and disassociate EIPs from cloud resources](~~72125~~).</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
@@ -41,27 +41,27 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The billing method of the EIP. Valid values:</p>
      * <br>
-     * <p>*   **PostPaid**: pay-as-you-go</p>
-     * <p>*   **PrePaid**: subscription</p>
+     * <p>*   **PostPaid**: pay-as-you-go.</p>
+     * <p>*   **PrePaid**: subscription.</p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The IP address of the EIP that you want to query.</p>
+     * <p>The EIP that you want to query.</p>
      * <br>
-     * <p>You can enter up to 50 IP addresses of EIPs. Separate multiple IP addresses with commas (,).</p>
+     * <p>You can specify up to 50 EIPs. Separate multiple EIPs with commas (,).</p>
      * <br>
-     * <p>>  If both the **EipAddress** and **AllocationId** parameters are set, you can enter up to 50 IP addresses of EIPs in **EipAddress**, and enter up to 50 IDs of EIPs in **AllocationId**.</p>
+     * <p>>  If both **EipAddress** and **AllocationId** are specified, you can specify up to 50 EIPs for **EipAddress**, and specify up to 50 EIP IDs for **AllocationId**.</p>
      */
     @NameInMap("EipAddress")
     public String eipAddress;
@@ -77,21 +77,21 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <br>
-     * <p>*   **BGP** (default): BGP (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
+     * <p>*   **BGP** (default): Border Gateway Protocol (BGP) (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.</p>
+     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).</p>
      * <br>
-     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).</p>
+     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see the [Line types](~~32321~~) section of the "What is EIP?" topic.</p>
      * <br>
-     * <p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
+     * <p>If you are allowed to use single-ISP bandwidth, you can also use one of the following values:</p>
      * <br>
-     * <p>*   **ChinaTelecom**: China Telecom</p>
-     * <p>*   **ChinaUnicom**: China Unicom</p>
-     * <p>*   **ChinaMobile**: China Mobile</p>
-     * <p>*   **ChinaTelecom_L2**: China Telecom L2</p>
-     * <p>*   **ChinaUnicom_L2**: China Unicom L2</p>
-     * <p>*   **ChinaMobile_L2**: China Mobile L2</p>
+     * <p>*   **ChinaTelecom**</p>
+     * <p>*   **ChinaUnicom**</p>
+     * <p>*   **ChinaMobile**</p>
+     * <p>*   **ChinaTelecom_L2**</p>
+     * <p>*   **ChinaUnicom_L2**</p>
+     * <p>*   **ChinaMobile_L2**</p>
      * <br>
-     * <p>If your services are deployed in China East 1 Finance, you must set this parameter to **BGP_FinanceCloud**.</p>
+     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
      */
     @NameInMap("ISP")
     public String ISP;
@@ -99,8 +99,8 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>Specifies whether to return information about pending orders. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): does not return information about pending orders.</p>
-     * <p>*   **true**: returns information about pending orders.</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
@@ -121,13 +121,13 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **100**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: 1 to **100**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -141,13 +141,13 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>The region ID of the EIP.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the EIPs belong.</p>
+     * <p>The ID of the resource group to which the EIP belongs.</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -161,30 +161,33 @@ public class DescribeEipAddressesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:</p>
      * <br>
-     * <p>*   **false** (default): no</p>
-     * <p>*   **true**: yes</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("SecurityProtectionEnabled")
     public Boolean securityProtectionEnabled;
 
     /**
-     * <p>The IDs of the contiguous EIPs.</p>
+     * <p>The ID of the contiguous EIP group.</p>
      */
     @NameInMap("SegmentInstanceId")
     public String segmentInstanceId;
 
     /**
-     * <p>The status of the EIP. Valid values:</p>
+     * <p>The state of the EIP. Valid values:</p>
      * <br>
-     * <p>*   **Associating**: being associated</p>
-     * <p>*   **Unassociating**: being disassociated</p>
-     * <p>*   **InUse**: allocated</p>
-     * <p>*   **Available**: available</p>
-     * <p>*   **Releasing**: being released</p>
+     * <p>*   **Associating**</p>
+     * <p>*   **Unassociating**</p>
+     * <p>*   **InUse**</p>
+     * <p>*   **Available**</p>
+     * <p>*   **Releasing**</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags used to filter EIPs.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeEipAddressesRequestTag> tag;
 
@@ -387,13 +390,13 @@ public class DescribeEipAddressesRequest extends TeaModel {
 
     public static class DescribeEipAddressesRequestFilter extends TeaModel {
         /**
-         * <p>The filter key used to query resources. Set the value to **CreationStartTime**, which indicates the time when the system started to create the resource.</p>
+         * <p>The filter key used to query resources. Set the value to **CreationStartTime**, which specifies the time when the system started to create the resource.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The filter value used to query resources. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mmZ` format. The time must be in UTC.</p>
+         * <p>The filter value used to query resources. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mmZ` format. The time must be in Coordinated Universal Time (UTC).</p>
          */
         @NameInMap("Value")
         public String value;
@@ -422,9 +425,19 @@ public class DescribeEipAddressesRequest extends TeaModel {
     }
 
     public static class DescribeEipAddressesRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

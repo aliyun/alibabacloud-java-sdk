@@ -19,16 +19,16 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.</p>
+     * <p>The number of entries per page. Valid values: **1** to **100**. Default value: **20**.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If this is your first query and no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.</p>
+     * <p>*   You do not need to specify this parameter for the first request.</p>
+     * <p>*   If a value is returned for NextToken, specify the value in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -47,6 +47,9 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -62,6 +65,9 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListVpcGatewayEndpointsRequestTags> tags;
 
@@ -167,9 +173,19 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     }
 
     public static class ListVpcGatewayEndpointsRequestTags extends TeaModel {
+        /**
+         * <p>The key of tag N added to the resource. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <br>
+         * <p>The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N added to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

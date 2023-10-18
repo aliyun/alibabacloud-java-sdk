@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaModel {
     /**
-     * <p>The ID of the fine-grained monitoring instance.</p>
+     * <p>The ID of the instance whose fine-grained monitoring configurations you want to query.</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
-     * <p>The type of the monitoring instance that is queried. The value is set to **EIP**.</p>
+     * <p>The type of instance for which you want to query fine-grained monitoring. Only **EIP** may be returned.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;
 
     /**
-     * <p>The name of the log project of Log Service.</p>
+     * <p>The name of the project.</p>
      */
     @NameInMap("LogProject")
     public String logProject;
 
     /**
-     * <p>The name of the Logstore of Log Service.</p>
+     * <p>The name of the Logstore.</p>
      */
     @NameInMap("LogStore")
     public String logStore;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,8 +37,8 @@ public class DescribeHighDefinitionMonitorLogAttributeResponseBody extends TeaMo
     /**
      * <p>Indicates whether the operation is performed. Valid values:</p>
      * <br>
-     * <p>*   **true**: The operation is performed.</p>
-     * <p>*   **false**: The operation is not performed.</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public String success;

@@ -13,7 +13,9 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     public Long createTime;
 
     /**
-     * <p>The ID of the customer gateway.</p>
+     * <p>The ID of the customer gateway associated with the IPsec-VPN connection.</p>
+     * <br>
+     * <p>This parameter is returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
@@ -27,34 +29,39 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether IPsec negotiations immediately start after the configuration takes effect. Valid values:</p>
      * <br>
-     * <p>*   **true:** IPsec negotiations immediately start after the configuration takes effect.</p>
-     * <p>*   **false:** IPsec negotiations start when inbound traffic is detected.</p>
+     * <p>*   **true**: IPsec negotiations immediately start after the configuration takes effect.</p>
+     * <p>*   **false**: IPsec negotiations start when inbound traffic is detected.</p>
      */
     @NameInMap("EffectImmediately")
     public Boolean effectImmediately;
 
     /**
-     * <p>Indicates whether DPD is enabled. Valid values:</p>
+     * <p>Indicates whether the DPD feature is enabled for the IPsec-VPN connection. Valid values:</p>
      * <br>
-     * <p>*   **false:** The DPD feature is disabled.</p>
-     * <p>*   **true:** The DPD feature is enabled.</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
+     * <br>
+     * <p>This parameter is returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("EnableDpd")
     public Boolean enableDpd;
 
     /**
-     * <p>Indicates whether NAT traversal is enabled. Valid values:</p>
+     * <p>Indicates whether NAT traversal is enabled for the IPsec-VPN connection. Valid values: Valid values:</p>
      * <br>
-     * <p>*   **false:** NAT traversal is disabled.</p>
-     * <p>*   **true:** NAT traversal is enabled.</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
+     * <br>
+     * <p>This parameter is returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
 
     /**
-     * <p>Indicates whether BGP is enabled for the tunnel. Valid values: </p>
-     * <p>- **true** </p>
-     * <p>- **false** </p>
+     * <p>Indicates whether BGP is enabled for the tunnel. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      * <br>
      * <p>This parameter is returned only by dual-tunnel IPsec-VPN connections.</p>
      */
@@ -62,13 +69,17 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     public Boolean enableTunnelsBgp;
 
     /**
-     * <p>The configurations of Phase 1 negotiations.</p>
+     * <p>The configuration of Phase 1 negotiations.</p>
+     * <br>
+     * <p>**IkeConfig** parameters are returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("IkeConfig")
     public ModifyVpnConnectionAttributeResponseBodyIkeConfig ikeConfig;
 
     /**
-     * <p>The configurations of Phase 2 negotiations.</p>
+     * <p>The configuration of Phase 2 negotiations.</p>
+     * <br>
+     * <p>**IpsecConfig** parameters are returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("IpsecConfig")
     public ModifyVpnConnectionAttributeResponseBodyIpsecConfig ipsecConfig;
@@ -92,13 +103,13 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     public String remoteSubnet;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tunnel configurations of the IPsec-VPN connection. </p>
+     * <p>The tunnel configuration of the IPsec-VPN connection.</p>
      * <br>
      * <p>**TunnelOptionsSpecification** parameters are returned only for dual-tunnel IPsec-VPN connections.</p>
      */
@@ -106,13 +117,17 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecification tunnelOptionsSpecification;
 
     /**
-     * <p>The health check configurations.</p>
+     * <p>The health check configuration.</p>
+     * <br>
+     * <p>**VcoHealthCheck** parameters are returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("VcoHealthCheck")
     public ModifyVpnConnectionAttributeResponseBodyVcoHealthCheck vcoHealthCheck;
 
     /**
-     * <p>The BGP configurations.</p>
+     * <p>The BGP configuration.</p>
+     * <br>
+     * <p>**VpnBgpConfig** parameters are returned only for single-tunnel IPsec-VPN connections.</p>
      */
     @NameInMap("VpnBgpConfig")
     public ModifyVpnConnectionAttributeResponseBodyVpnBgpConfig vpnBgpConfig;
@@ -280,34 +295,34 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnConnectionAttributeResponseBodyIkeConfig extends TeaModel {
         /**
-         * <p>The IKE authentication algorithm.</p>
+         * <p>The authentication algorithm in the IKE phase.</p>
          */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
         /**
-         * <p>The IKE encryption algorithm.</p>
+         * <p>The encryption algorithm in the IKE phase.</p>
          */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
         /**
-         * <p>The IKE lifetime. Unit: seconds.</p>
+         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
          */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode. Valid values:</p>
+         * <p>The IKE negotiation mode.</p>
          * <br>
-         * <p>*   **main:** This mode offers higher security during negotiations.</p>
-         * <p>*   **aggressive:** This mode is faster and has a higher success rate.</p>
+         * <p>*   **main**: This mode offers higher security during negotiations.</p>
+         * <p>*   **aggressive**: This mode is faster and has a higher success rate.</p>
          */
         @NameInMap("IkeMode")
         public String ikeMode;
 
         /**
-         * <p>The Diffie-Hellman group.</p>
+         * <p>The DH group in the IKE phase.</p>
          */
         @NameInMap("IkePfs")
         public String ikePfs;
@@ -336,7 +351,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The identifier on the data center side. The default value is the IP address of the customer gateway. The value can be a fully qualified domain name (FQDN) or an IP address.</p>
+         * <p>The identifier on the data center side. The default value is the IP address of the customer gateway. The value can be a FQDN or an IP address.</p>
          */
         @NameInMap("RemoteId")
         public String remoteId;
@@ -422,25 +437,25 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnConnectionAttributeResponseBodyIpsecConfig extends TeaModel {
         /**
-         * <p>The IPsec authentication algorithm.</p>
+         * <p>The authentication algorithm in the IPsec phase.</p>
          */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
         /**
-         * <p>The IPsec encryption algorithm.</p>
+         * <p>The encryption algorithm in the IPsec phase.</p>
          */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
         /**
-         * <p>The IPsec lifetime. Unit: seconds.</p>
+         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
          */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
         /**
-         * <p>The Diffie-Hellman group.</p>
+         * <p>The DH group in the IPsec phase.</p>
          */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
@@ -486,25 +501,25 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig extends TeaModel {
         /**
-         * <p>The local ASN (Alibaba Cloud side).</p>
+         * <p>The ASN of the tunnel on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalAsn")
         public Long localAsn;
 
         /**
-         * <p>The local BGP address (Alibaba Cloud side).</p>
+         * <p>The BGP IP address of the tunnel on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalBgpIp")
         public String localBgpIp;
 
         /**
-         * <p>The peer ASN.</p>
+         * <p>The ASN of the tunnel peer.</p>
          */
         @NameInMap("PeerAsn")
         public Long peerAsn;
 
         /**
-         * <p>The peer BGP address.</p>
+         * <p>The BGP IP address of the tunnel peer.</p>
          */
         @NameInMap("PeerBgpIp")
         public String peerBgpIp;
@@ -564,7 +579,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelIkeConfig extends TeaModel {
         /**
-         * <p>The algorithm in the IKE phase.</p>
+         * <p>The authentication algorithm in the IKE phase.</p>
          */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
@@ -582,10 +597,10 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode. </p>
+         * <p>The IKE negotiation mode.</p>
          * <br>
-         * <p>- **main**: This mode offers higher security during negotiations. </p>
-         * <p>- **aggressive**: This mode is faster and has a higher success rate.</p>
+         * <p>*   **main**: This mode offers higher security during negotiations.</p>
+         * <p>*   **aggressive**: This mode is faster and has a higher success rate.</p>
          */
         @NameInMap("IkeMode")
         public String ikeMode;
@@ -603,7 +618,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The local identifier (Alibaba Cloud side).</p>
+         * <p>The identifier of the tunnel on the Alibaba Cloud side.</p>
          */
         @NameInMap("LocalId")
         public String localId;
@@ -615,7 +630,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The peer identifier.</p>
+         * <p>The identifier of the tunnel peer.</p>
          */
         @NameInMap("RemoteId")
         public String remoteId;
@@ -765,25 +780,25 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptions extends TeaModel {
         /**
-         * <p>The ID of the customer gateway that is associated with the tunnel.</p>
+         * <p>The ID of the customer gateway associated with the tunnel.</p>
          */
         @NameInMap("CustomerGatewayId")
         public String customerGatewayId;
 
         /**
-         * <p>Indicates whether DPD is enabled for the tunnel. Valid values: </p>
+         * <p>Indicates whether the DPD feature is enabled for the tunnel. Valid values:</p>
          * <br>
-         * <p>- **false** </p>
-         * <p>- **true**</p>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("EnableDpd")
         public Boolean enableDpd;
 
         /**
-         * <p>Indicates whether NAT traversal is enabled for the tunnel. Valid values: </p>
+         * <p>Indicates whether NAT traversal is enabled for the tunnel. Valid values:</p>
          * <br>
-         * <p>- **false** </p>
-         * <p>- **true**</p>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("EnableNatTraversal")
         public Boolean enableNatTraversal;
@@ -795,34 +810,34 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The CA certificate used by the IPsec peer. </p>
+         * <p>The CA certificate of the tunnel peer.</p>
          * <br>
-         * <p>This parameter is returned only by VPN gateways that use SM certificates.</p>
+         * <p>This parameter is returned only if the VPN gateway is of the SM type.</p>
          */
         @NameInMap("RemoteCaCertificate")
         public String remoteCaCertificate;
 
         /**
-         * <p>The tunnel role. Valid values: </p>
+         * <p>The tunnel role. Valid values:</p>
          * <br>
-         * <p>- **master** </p>
-         * <p>- **slave**</p>
+         * <p>*   **master**: The tunnel is an active tunnel.</p>
+         * <p>*   **slave**: The tunnel is a standby tunnel.</p>
          */
         @NameInMap("Role")
         public String role;
 
         /**
-         * <p>The tunnel status. Valid values: </p>
+         * <p>The tunnel status. Valid values:</p>
          * <br>
-         * <p>- **active**</p>
-         * <p>- **updating**</p>
-         * <p>- **deleting**</p>
+         * <p>*   **active**</p>
+         * <p>*   **updating**</p>
+         * <p>*   **deleting**</p>
          */
         @NameInMap("State")
         public String state;
 
         /**
-         * <p>The BGP configurations.</p>
+         * <p>The BGP configuration.</p>
          */
         @NameInMap("TunnelBgpConfig")
         public ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecificationTunnelOptionsTunnelBgpConfig tunnelBgpConfig;
@@ -975,22 +990,22 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
     public static class ModifyVpnConnectionAttributeResponseBodyVcoHealthCheck extends TeaModel {
         /**
-         * <p>The destination IP address that was used for health checks.</p>
+         * <p>The destination IP address.</p>
          */
         @NameInMap("Dip")
         public String dip;
 
         /**
-         * <p>Indicates whether the health check feature is enabled. Valid values:</p>
+         * <p>Indicates whether the health check feature is enabled for the IPsec-VPN connection.</p>
          * <br>
-         * <p>*   **true:** The health check feature is enabled.</p>
-         * <p>*   **false:** The health check feature is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("Enable")
         public String enable;
 
         /**
-         * <p>The interval between two consecutive health check retries. Unit: seconds.</p>
+         * <p>The interval between two consecutive health checks. Unit: seconds.</p>
          */
         @NameInMap("Interval")
         public Integer interval;
@@ -1002,7 +1017,7 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public Integer retry;
 
         /**
-         * <p>The source IP address that was used for health checks.</p>
+         * <p>The source IP address that is used for health checks.</p>
          */
         @NameInMap("Sip")
         public String sip;
@@ -1058,8 +1073,8 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether BGP is enabled. Valid values:</p>
          * <br>
-         * <p>*   **true:** BGP is enabled.</p>
-         * <p>*   **false:** BGP is disabled.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableBgp")
         public String enableBgp;
@@ -1083,22 +1098,22 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         public Integer peerAsn;
 
         /**
-         * <p>The BGP IP address on the data center side.</p>
+         * <p>The BGP IP address of the data center.</p>
          */
         @NameInMap("PeerBgpIp")
         public String peerBgpIp;
 
         /**
-         * <p>The negotiation status of BGP. Valid values:</p>
+         * <p>The negotiation state of BGP. Valid values:</p>
          * <br>
-         * <p>*   **success:** normal.</p>
-         * <p>*   **false:** abnormal.</p>
+         * <p>*   **success**: normal</p>
+         * <p>*   **false**: abnormal</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The CIDR block of the IPsec tunnel.</p>
+         * <p>The BGP CIDR block of the IPsec-VPN connection.</p>
          */
         @NameInMap("TunnelCidr")
         public String tunnelCidr;

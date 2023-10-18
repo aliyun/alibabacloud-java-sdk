@@ -37,8 +37,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     /**
      * <p>Indicates whether two-factor authentication is enabled.</p>
      * <br>
-     * <p>*   **true**: enabled</p>
-     * <p>*   **false** (default): disabled</p>
+     * <p>*   **true**</p>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("EnableMultiFactorAuth")
     public Boolean enableMultiFactorAuth;
@@ -92,7 +92,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

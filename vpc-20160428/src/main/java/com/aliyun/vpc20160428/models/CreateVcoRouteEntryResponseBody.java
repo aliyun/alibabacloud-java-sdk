@@ -7,7 +7,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the destination-based route was created. Unit: milliseconds.</p>
      * <br>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
@@ -33,7 +33,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String overlayMode;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -59,7 +59,7 @@ public class CreateVcoRouteEntryResponseBody extends TeaModel {
     public String vpnConnectionId;
 
     /**
-     * <p>The weight of the destination-based route.</p>
+     * <p>The weight of the destination-based route. Valid values:</p>
      * <br>
      * <p>*   **0**: a low priority</p>
      * <p>*   **100**: a high priority</p>

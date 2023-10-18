@@ -7,7 +7,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     /**
      * <p>The time when the diagnostic started.</p>
      * <br>
-     * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+     * <p>The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
      */
     @NameInMap("BeginTime")
     public String beginTime;
@@ -27,7 +27,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the system finishes diagnosing the item.</p>
      * <br>
-     * <p>The time follows the ISO8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.</p>
+     * <p>The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.</p>
      */
     @NameInMap("FinishTime")
     public String finishTime;
@@ -39,7 +39,7 @@ public class GetVpnGatewayDiagnoseResultResponseBody extends TeaModel {
     public Integer finishedCount;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

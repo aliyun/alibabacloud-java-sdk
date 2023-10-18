@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The maximum bandwidth of the EIP bandwidth plan.</p>
+     * <p>The maximum bandwidth of the Internet Shared Bandwidth instance. Unit: Mbit/s.</p>
      * <br>
-     * <p>Valid values: **1** to **1000**. Unit: Mbit/s.</p>
+     * <p>Valid values: **1** to **1000**. Default value: **1**.</p>
      */
     @NameInMap("Bandwidth")
     public Integer bandwidth;
@@ -15,17 +15,17 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate a token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system automatically sets the **ClientToken** parameter to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the value of **RequestId** as the **client token**. The value of **RequestId** is different for each API request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The description of the EIP bandwidth plan.</p>
+     * <p>The description of the Internet Shared Bandwidth instance.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
      */
     @NameInMap("Description")
     public String description;
@@ -33,33 +33,33 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <br>
-     * <p>*   **BGP**: BGP (Multi-ISP) lines. BGP (Multi-ISP) lines are available in all regions.</p>
-     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines. BGP (Multi-ISP) Pro is available only in the China (Hong Kong), Singapore, Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</p>
+     * <p>*   **BGP**: BGP (Multi-ISP) All regions support BGP (Multi-ISP).</p>
+     * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok).</p>
      * <br>
      * <p>If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:</p>
      * <br>
-     * <p>*   **ChinaTelecom**: China Telecom</p>
-     * <p>*   **ChinaUnicom**: China Unicom</p>
-     * <p>*   **ChinaMobile**: China Mobile</p>
-     * <p>*   **ChinaTelecom_L2**: China Telecom L2</p>
-     * <p>*   **ChinaUnicom_L2**: China Unicom L2</p>
-     * <p>*   **ChinaMobile_L2**: China Mobile L2</p>
+     * <p>*   **ChinaTelecom**</p>
+     * <p>*   **ChinaUnicom**</p>
+     * <p>*   **ChinaMobile**</p>
+     * <p>*   **ChinaTelecom_L2**</p>
+     * <p>*   **ChinaUnicom_L2**</p>
+     * <p>*   **ChinaMobile_L2**</p>
      * <br>
-     * <p>If your services are deployed in China East 1 Finance, you must set this parameter to **BGP_FinanceCloud**.</p>
+     * <p>If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.</p>
      */
     @NameInMap("ISP")
     public String ISP;
 
     /**
-     * <p>The billing method of the EIP bandwidth plan. Set the value to **PayByTraffic**, which refers to the pay-by-data-transfer metering method.</p>
+     * <p>The billing method of the Internet Shared Bandwidth instance. Valid values: **PayByTraffic**: pay-by-data-transfer</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
-     * <p>The name of the EIP bandwidth plan.</p>
+     * <p>The name of the Internet Shared Bandwidth instance.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>The name must be 2 to 128 characters in length and start with a letter, and can contain letters, digits, underscores (\_), and hyphens (-).</p>
      */
     @NameInMap("Name")
     public String name;
@@ -73,15 +73,15 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The percentage of the minimum bandwidth commitment. Set the parameter to **20**.</p>
      * <br>
-     * <p>>  This parameter is available only on the Alibaba Cloud China site.</p>
+     * <p>>  This parameter is supported only on the Alibaba Cloud China site.</p>
      */
     @NameInMap("Ratio")
     public Integer ratio;
 
     /**
-     * <p>The region ID of the EIP bandwidth plan.</p>
+     * <p>The region ID of the Internet Shared Bandwidth instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -98,13 +98,19 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The editions of Anti-DDoS.</p>
+     * <br>
+     * <p>*   If you do not specify this parameter, Anti-DDoS Origin Basic is used.</p>
+     * <p>*   If you set the parameter to **AntiDDoS_Enhanced**, Anti-DDoS Pro/Premium is used.</p>
+     * <br>
+     * <p>You can specify up to 10 editions of Anti-DDoS.</p>
+     */
     @NameInMap("SecurityProtectionTypes")
     public java.util.List<String> securityProtectionTypes;
 
     /**
-     * <p>The zone of the EIP bandwidth plan.</p>
-     * <br>
-     * <p>You do not need to set this parameter.</p>
+     * <p>The zone of the Internet Shared Bandwidth instance. This parameter must be specified when you create an Internet Shared Bandwidth instance for a cloud box.</p>
      */
     @NameInMap("Zone")
     public String zone;

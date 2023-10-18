@@ -11,25 +11,25 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
     public DescribeEipSegmentResponseBodyEipSegments eipSegments;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,7 +81,7 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
 
     public static class DescribeEipSegmentResponseBodyEipSegmentsEipSegment extends TeaModel {
         /**
-         * <p>The time when the contiguous EIP group was created. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.</p>
+         * <p>The time when the contiguous EIP group was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -123,15 +123,18 @@ public class DescribeEipSegmentResponseBody extends TeaModel {
         public String segment;
 
         /**
-         * <p>The status of the contiguous EIP group.</p>
+         * <p>The status of the contiguous EIP group. Valid values:</p>
          * <br>
-         * <p>*   **Allocating**: being allocated</p>
-         * <p>*   **Allocated**: allocated</p>
-         * <p>*   **Releasing**: being released</p>
+         * <p>*   **Allocating**</p>
+         * <p>*   **Allocated**</p>
+         * <p>*   **Releasing**</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The zone of the contiguous EIP group.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 

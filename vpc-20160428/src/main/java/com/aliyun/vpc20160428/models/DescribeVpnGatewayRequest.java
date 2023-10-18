@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnGatewayRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return information about pending orders. Valid values:</p>
+     * <p>Specifies whether to include the data about pending orders. Valid values:</p>
      * <br>
      * <p>*   **false** (default)</p>
      * <p>*   **true**</p>

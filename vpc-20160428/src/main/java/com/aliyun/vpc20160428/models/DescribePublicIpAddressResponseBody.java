@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribePublicIpAddressResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status codes returned.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The response messages.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -41,7 +41,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -49,14 +49,14 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call is successful. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;

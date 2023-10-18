@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
     /**
-     * <p>The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
@@ -23,11 +23,14 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

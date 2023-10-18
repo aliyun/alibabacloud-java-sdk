@@ -13,17 +13,17 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     /**
      * <p>Indicates whether DPD is enabled. Valid values:</p>
      * <br>
-     * <p>- **true** </p>
-     * <p>- **false**</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("EnableDpd")
     public Boolean enableDpd;
 
     /**
-     * <p>Indicates whether BAT traversal is enabled. Valid values:</p>
+     * <p>Indicates whether NAT traversal is enabled. Valid values:</p>
      * <br>
-     * <p>- **true** </p>
-     * <p>- **false**</p>
+     * <p>*   **false**</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("EnableNatTraversal")
     public Boolean enableNatTraversal;
@@ -35,7 +35,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     public String internetIp;
 
     /**
-     * <p>The peer CA certificate when a ShangMi (SM) VPN gateway is associated with the IPsec connection.</p>
+     * <p>The peer CA certificate when a VPN gateway that uses an SM certificate is used to create the IPsec connection.</p>
      */
     @NameInMap("RemoteCaCertificate")
     public String remoteCaCertificate;
@@ -47,26 +47,26 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tunnel role. Valid values: </p>
+     * <p>The tunnel role. Valid values:</p>
      * <br>
-     * <p>- **master**</p>
-     * <p>- **slave**</p>
+     * <p>*   **master**</p>
+     * <p>*   **slave**</p>
      */
     @NameInMap("Role")
     public String role;
 
     /**
-     * <p>The tunnel status. Valid values: </p>
+     * <p>The tunnel status. Valid values:</p>
      * <br>
-     * <p>- **active** </p>
-     * <p>- **updating** </p>
-     * <p>- d**eleting**</p>
+     * <p>*   **active**</p>
+     * <p>*   **updating**</p>
+     * <p>*   **deleting**</p>
      */
     @NameInMap("State")
     public String state;
 
     /**
-     * <p>The BGP configurations.</p>
+     * <p>The BGP configuration.</p>
      */
     @NameInMap("TunnelBgpConfig")
     public ModifyTunnelAttributeResponseBodyTunnelBgpConfig tunnelBgpConfig;
@@ -78,13 +78,13 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
     public String tunnelId;
 
     /**
-     * <p>The IKE settings for Phase 1 negotiations.</p>
+     * <p>The configurations of IKE Phase 1.</p>
      */
     @NameInMap("TunnelIkeConfig")
     public ModifyTunnelAttributeResponseBodyTunnelIkeConfig tunnelIkeConfig;
 
     /**
-     * <p>The IPsec settings for Phase 2 negotiations.</p>
+     * <p>The configurations of IPsec Phase 2.</p>
      */
     @NameInMap("TunnelIpsecConfig")
     public ModifyTunnelAttributeResponseBodyTunnelIpsecConfig tunnelIpsecConfig;
@@ -206,10 +206,10 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
 
     public static class ModifyTunnelAttributeResponseBodyTunnelBgpConfig extends TeaModel {
         /**
-         * <p>Indicates whether BGP is enabled. Valid values: </p>
+         * <p>Indicates whether the BGP feature is enabled. Valid values:</p>
          * <br>
-         * <p>- **true** </p>
-         * <p>- **false**</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("EnableBgp")
         public Boolean enableBgp;
@@ -319,25 +319,25 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode. Valid values: </p>
+         * <p>The IKE negotiation mode. Valid values:</p>
          * <br>
-         * <p>- **main**: This mode offers higher security during negotiations. </p>
-         * <p>- **aggressive**: This mode is faster and has a higher success rate.</p>
+         * <p>*   **main:** This mode offers higher security during negotiations.</p>
+         * <p>*   **aggressive:** This mode is faster and has a higher success rate.</p>
          */
         @NameInMap("IkeMode")
         public String ikeMode;
 
         /**
-         * <p>The Diffie-Hellman group.</p>
+         * <p>The DH group.</p>
          */
         @NameInMap("IkePfs")
         public String ikePfs;
 
         /**
-         * <p>The version of the IKE protocol. </p>
+         * <p>The IKE version. Valid values:</p>
          * <br>
-         * <p>- **ikev1**</p>
-         * <p>- **ikev2**</p>
+         * <p>*   **ikev1**</p>
+         * <p>*   **ikev2**</p>
          * <br>
          * <p>Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.</p>
          */
@@ -345,7 +345,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The tunnel identifier. The identifier supports FQDNs and IP addresses. The default identifier is the tunnel IP address.</p>
+         * <p>The tunnel identifier. The identifier supports FQDNs and IP addresses. The default value is the tunnel IP address.</p>
          */
         @NameInMap("LocalId")
         public String localId;
@@ -461,7 +461,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         public Long ipsecLifetime;
 
         /**
-         * <p>The Diffie-Hellman group.</p>
+         * <p>The DH group.</p>
          */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;

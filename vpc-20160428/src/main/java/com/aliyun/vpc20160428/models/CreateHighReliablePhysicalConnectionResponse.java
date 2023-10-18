@@ -3,7 +3,7 @@ package com.aliyun.vpc20160428.models;
 
 import com.aliyun.tea.*;
 
-public class AssociateGlobalAccelerationInstanceResponse extends TeaModel {
+public class CreateHighReliablePhysicalConnectionResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
@@ -14,14 +14,14 @@ public class AssociateGlobalAccelerationInstanceResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public AssociateGlobalAccelerationInstanceResponseBody body;
+    public CreateHighReliablePhysicalConnectionResponseBody body;
 
-    public static AssociateGlobalAccelerationInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        AssociateGlobalAccelerationInstanceResponse self = new AssociateGlobalAccelerationInstanceResponse();
+    public static CreateHighReliablePhysicalConnectionResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateHighReliablePhysicalConnectionResponse self = new CreateHighReliablePhysicalConnectionResponse();
         return TeaModel.build(map, self);
     }
 
-    public AssociateGlobalAccelerationInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateHighReliablePhysicalConnectionResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +29,7 @@ public class AssociateGlobalAccelerationInstanceResponse extends TeaModel {
         return this.headers;
     }
 
-    public AssociateGlobalAccelerationInstanceResponse setStatusCode(Integer statusCode) {
+    public CreateHighReliablePhysicalConnectionResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +37,11 @@ public class AssociateGlobalAccelerationInstanceResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public AssociateGlobalAccelerationInstanceResponse setBody(AssociateGlobalAccelerationInstanceResponseBody body) {
+    public CreateHighReliablePhysicalConnectionResponse setBody(CreateHighReliablePhysicalConnectionResponseBody body) {
         this.body = body;
         return this;
     }
-    public AssociateGlobalAccelerationInstanceResponseBody getBody() {
+    public CreateHighReliablePhysicalConnectionResponseBody getBody() {
         return this.body;
     }
 

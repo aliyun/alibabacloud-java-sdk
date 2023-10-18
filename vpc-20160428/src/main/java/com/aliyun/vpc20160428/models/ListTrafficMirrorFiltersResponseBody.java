@@ -4,23 +4,29 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>The maximum number of entries returned.</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
-     * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If the return value of **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is the token that is used for the next query.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -94,8 +100,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The action of the outbound rule. Valid values:</p>
          * <br>
-         * <p>*   **accept**: collects network traffic.</p>
-         * <p>*   **drop**: does not collect network traffic.</p>
+         * <p>*   **accept**</p>
+         * <p>*   **drop**</p>
          */
         @NameInMap("Action")
         public String action;
@@ -121,10 +127,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used by the outbound traffic to be mirrored. Valid values:</p>
          * <br>
-         * <p>*   **ALL**: all protocols</p>
-         * <p>*   **ICMP**: ICMP</p>
-         * <p>*   **TCP**: TCP</p>
-         * <p>*   **UDP**: UDP</p>
+         * <p>*   **ALL**</p>
+         * <p>*   **ICMP**</p>
+         * <p>*   **TCP**</p>
+         * <p>*   **UDP**</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -144,8 +150,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The direction of the network traffic. Valid values:</p>
          * <br>
-         * <p>*   **egress**: outbound</p>
-         * <p>*   **ingress**: inbound</p>
+         * <p>*   **egress**</p>
+         * <p>*   **ingress**</p>
          */
         @NameInMap("TrafficDirection")
         public String trafficDirection;
@@ -272,8 +278,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The action of the inbound rule. Valid values:</p>
          * <br>
-         * <p>*   **accept**: accepts network traffic.</p>
-         * <p>*   **drop**: does not collect network traffic.</p>
+         * <p>*   **accept**</p>
+         * <p>*   **drop**</p>
          */
         @NameInMap("Action")
         public String action;
@@ -299,10 +305,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The protocol that is used by the inbound traffic to be mirrored. Valid values:</p>
          * <br>
-         * <p>*   **ALL**: all protocols</p>
-         * <p>*   **ICMP**: ICMP</p>
-         * <p>*   **TCP**: TCP</p>
-         * <p>*   **UDP**: UDP</p>
+         * <p>*   **ALL**</p>
+         * <p>*   **ICMP**</p>
+         * <p>*   **TCP**</p>
+         * <p>*   **UDP**</p>
          */
         @NameInMap("Protocol")
         public String protocol;
@@ -322,8 +328,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The direction of the network traffic. Valid values:</p>
          * <br>
-         * <p>*   **egress**: outbound</p>
-         * <p>*   **ingress**: inbound</p>
+         * <p>*   **egress**</p>
+         * <p>*   **ingress**</p>
          */
         @NameInMap("TrafficDirection")
         public String trafficDirection;
@@ -448,13 +454,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -514,7 +520,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String trafficMirrorFilterDescription;
 
         /**
-         * <p>The ID of the filter.</p>
+         * <p>The ID of the traffic mirror filter.</p>
          */
         @NameInMap("TrafficMirrorFilterId")
         public String trafficMirrorFilterId;

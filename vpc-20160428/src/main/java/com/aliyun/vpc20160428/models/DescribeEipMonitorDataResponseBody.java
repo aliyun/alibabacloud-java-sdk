@@ -11,7 +11,7 @@ public class DescribeEipMonitorDataResponseBody extends TeaModel {
     public DescribeEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

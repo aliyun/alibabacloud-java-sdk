@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP bandwidth plan.</p>
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
@@ -13,18 +13,23 @@ public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The list of EIPs that you want to associate with the Internet Shared Bandwidth instance.</p>
+     * <br>
+     * <p>You can specify at most 10 EIP IDs at a time.</p>
+     */
     @NameInMap("IpInstanceIds")
     public java.util.List<String> ipInstanceIds;
 
     /**
-     * <p>The type of IP address. Set the value to **EIP** to associate EIPs with the EIP bandwidth plan.</p>
+     * <p>The type of the IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("IpType")
     public String ipType;
@@ -36,7 +41,7 @@ public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the EIP bandwidth plan.</p>
+     * <p>The region ID of the Internet Shared Bandwidth instance.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */

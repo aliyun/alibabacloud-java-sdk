@@ -11,7 +11,7 @@ public class CreateIpv6EgressOnlyRuleResponseBody extends TeaModel {
     public String ipv6EgressRuleId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

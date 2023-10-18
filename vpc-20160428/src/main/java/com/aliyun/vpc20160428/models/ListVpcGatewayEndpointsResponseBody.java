@@ -11,28 +11,28 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpoints> endpoints;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("MaxResults")
     public Long maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
      * <br>
      * <p>*   If no value is returned for **NextToken**, no next queries are sent.</p>
-     * <p>*   If **NextToken** is not empty, the value indicates the token that is used for the next query.</p>
+     * <p>*   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Long totalCount;
@@ -83,9 +83,15 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
     }
 
     public static class ListVpcGatewayEndpointsResponseBodyEndpointsTags extends TeaModel {
+        /**
+         * <p>The key of tag N added to the resource.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N added to the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -120,7 +126,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         public java.util.List<String> associatedRouteTables;
 
         /**
-         * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
@@ -164,6 +170,9 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
+        /**
+         * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -173,6 +182,9 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The tag list.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListVpcGatewayEndpointsResponseBodyEndpointsTags> tags;
 

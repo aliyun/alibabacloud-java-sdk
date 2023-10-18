@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP bandwidth plan.</p>
+     * <p>The ID of the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("BandwidthPackageId")
     public String bandwidthPackageId;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
      * <br>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -22,14 +22,14 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>Specifies whether to return the information about pending orders. Valid values:</p>
      * <br>
-     * <p>*   **false**: does not return the information about pending orders. This is the default value.</p>
-     * <p>*   **true**: returns the information about pending orders.</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
     /**
-     * <p>The name of the EIP bandwidth plan.</p>
+     * <p>The name of the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -41,21 +41,21 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Valid values: **1 to 50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the EIP bandwidth plan.</p>
+     * <p>The ID of the region where the Internet Shared Bandwidth instance resides.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.</p>
+     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the region ID.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -75,12 +75,15 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:</p>
      * <br>
-     * <p>*   **false**: disables Anti-DDoS Pro/Premium. This is the default value.</p>
-     * <p>*   **true**: enables Anti-DDoS Pro/Premium.</p>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
      */
     @NameInMap("SecurityProtectionEnabled")
     public Boolean securityProtectionEnabled;
 
+    /**
+     * <p>The tags to add to the Internet Shared Bandwidth instance.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCommonBandwidthPackagesRequestTag> tag;
 
@@ -202,9 +205,19 @@ public class DescribeCommonBandwidthPackagesRequest extends TeaModel {
     }
 
     public static class DescribeCommonBandwidthPackagesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key to add to the Internet Shared Bandwidth instance. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <br>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value to add to the Internet Shared Bandwidth instance. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <br>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.</p>
+         */
         @NameInMap("Value")
         public String value;
 

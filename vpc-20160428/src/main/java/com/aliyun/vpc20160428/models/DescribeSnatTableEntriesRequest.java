@@ -7,7 +7,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the NAT gateway.</p>
      * <br>
-     * <p>>  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.</p>
+     * <p>>  You must specify at least one of **SnatTableId** and **NatGatewayId**.</p>
      */
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -19,19 +19,19 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: **1**.</p>
+     * <p>The page number. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the NAT gateway.</p>
+     * <p>The ID of the region where you want to create the NAT gateway.</p>
      * <br>
      * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
      */
@@ -68,7 +68,7 @@ public class DescribeSnatTableEntriesRequest extends TeaModel {
     /**
      * <p>The ID of the SNAT table.</p>
      * <br>
-     * <p>>  You must set at least one of the **SnatTableId** and **NatGatewayId** parameters.</p>
+     * <p>>  You must specify at least one of **SnatTableId** and **NatGatewayId**.</p>
      */
     @NameInMap("SnatTableId")
     public String snatTableId;

@@ -7,9 +7,9 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <br>
-     * <p>>  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.</p>
+     * <p>>  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
@@ -75,7 +75,7 @@ public class ModifyVpnPbrRouteEntryPriorityRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The weight of the policy-based route.</p>
+     * <p>The weight of the policy-based route. Valid values:</p>
      */
     @NameInMap("Weight")
     public Integer weight;

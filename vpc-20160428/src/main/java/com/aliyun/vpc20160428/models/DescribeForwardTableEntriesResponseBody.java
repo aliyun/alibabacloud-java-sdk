@@ -11,19 +11,19 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     public DescribeForwardTableEntriesResponseBodyForwardTableEntries forwardTableEntries;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -131,22 +131,25 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The protocol. Valid values:</p>
          * <br>
-         * <p>*   **TCP**: The NAT gateway forwards TCP packets.</p>
-         * <p>*   **UDP**: The NAT gateway forwards UDP packets.</p>
-         * <p>*   **Any**: The NAT gateway forwards packets of all protocols.</p>
+         * <p>*   **TCP**</p>
+         * <p>*   **UDP**</p>
+         * <p>*   **Any**</p>
          */
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        /**
+         * <p>The ID of the NAT gateway to which the DNAT entry belongs.</p>
+         */
         @NameInMap("NatGatewayId")
         public String natGatewayId;
 
         /**
          * <p>The status of the DNAT entry. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: being created or modified</p>
-         * <p>*   **Available**: available</p>
-         * <p>*   **Deleting**: being deleted</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
+         * <p>*   **Deleting**</p>
          */
         @NameInMap("Status")
         public String status;

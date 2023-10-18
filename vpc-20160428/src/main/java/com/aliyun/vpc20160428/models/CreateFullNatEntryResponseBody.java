@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateFullNatEntryResponseBody extends TeaModel {
     /**
-     * <p>The ID of the FULLNAT entry.</p>
+     * <p>The FULLNAT entry ID.</p>
      */
     @NameInMap("FullNatEntryId")
     public String fullNatEntryId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

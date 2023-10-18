@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     /**
-     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <br>
-     * <p>*   If **NextToken** is returned, it indicates that no additional results exist.</p>
-     * <p>*   If **NextToken** is returned, the value indicates the token that is used for the next query.</p>
+     * <p>*   If **NextToken** is empty, no next page exists.</p>
+     * <p>*   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The IP address pools.</p>
      */
     @NameInMap("PublicIpAddressPoolList")
     public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList> publicIpAddressPoolList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The maximum number of entries returned.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -70,13 +70,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags extends TeaModel {
         /**
-         * <p>The list of tags.</p>
+         * <p>The tag key.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -105,122 +105,137 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
     }
 
     public static class ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolList extends TeaModel {
+        /**
+         * <p>The service type of the IP address pool. Valid values:</p>
+         * <br>
+         * <p>*   **CloudBox**: the cloud box service type. Only cloud box users can select this type.</p>
+         * <p>*   **Default** (default): the general service type.</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
         /**
-         * <p>The region ID of the IP address pool.</p>
+         * <p>The time when the IP address pool was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The status of the IP address pool. Valid values:</p>
-         * <br>
-         * <p>*   **Created**: The IP address pool is available.</p>
-         * <p>*   **Deleting**: The IP address pool is being deleted.</p>
-         * <p>*   **Modifying**: The IP address pool is being modified.</p>
+         * <p>The information about the IP address pool.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The number of occupied IP addresses in the public IP address pool.</p>
+         * <p>Indicates whether the IP address pool has idle IP addresses. Valid values:</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("IpAddressRemaining")
         public Boolean ipAddressRemaining;
 
         /**
-         * <p>The time when the IP address pool was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         * <p>The line type. Valid values:</p>
+         * <br>
+         * <p>*   **BGP**: BGP (Multi-ISP) line</p>
+         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro line</p>
+         * <br>
+         * <p>For more information about the BGP (Multi-ISP) line and BGP (Multi-ISP) Pro line, see the "Line types" section of [What is EIP?](~~32321~~)</p>
+         * <br>
+         * <p>If you are allowed to use single-ISP bandwidth, one of the following values may be returned:</p>
+         * <br>
+         * <p>*   **ChinaTelecom**</p>
+         * <p>*   **ChinaUnicom**</p>
+         * <p>*   **ChinaMobile**</p>
+         * <p>*   **ChinaTelecom_L2**</p>
+         * <p>*   **ChinaUnicom_L2**</p>
+         * <p>*   **ChinaMobile_L2**</p>
+         * <br>
+         * <p>If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.</p>
          */
         @NameInMap("Isp")
         public String isp;
 
         /**
-         * <p>The line type.</p>
-         * <br>
-         * <p>*   **BGP**: BGP (Multi-ISP) lines</p>
-         * <p>*   **BGP_PRO**: BGP (Multi-ISP) Pro lines</p>
-         * <br>
-         * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).</p>
-         * <br>
-         * <p>If you are allowed to use single-ISP bandwidth, one of the following values is returned:</p>
-         * <br>
-         * <p>*   **ChinaTelecom**: China Telecom</p>
-         * <p>*   **ChinaUnicom**: China Unicom</p>
-         * <p>*   **ChinaMobile**: China Mobile</p>
-         * <p>*   **ChinaTelecom_L2**: China Telecom L2</p>
-         * <p>*   **ChinaUnicom_L2**: China Unicom L2</p>
-         * <p>*   **ChinaMobile_L2**: China Mobile L2</p>
-         * <br>
-         * <p>If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.</p>
+         * <p>The name of the IP address pool.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Indicates whether the IP address pool has idle IP addresses. Valid values:</p>
-         * <br>
-         * <p>*   **true**: yes</p>
-         * <p>*   **false**: no</p>
+         * <p>The Alibaba Cloud account to which the IP address pool belongs.</p>
          */
         @NameInMap("OwnerId")
         public Long ownerId;
 
         /**
-         * <p>The list of IP address pools.</p>
+         * <p>The ID of the IP address pool.</p>
          */
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
 
         /**
-         * <p>The ID of the IP address pool.</p>
+         * <p>The ID of the region in which the IP address pool that you want to query resides.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>Indicates whether the IP address pool is shared.</p>
-         * <br>
-         * <p>*   **Shared**: The IP address pool is shared.</p>
-         * <p>*   An empty value indicates that the IP address pool is not shared.</p>
+         * <p>The ID of the resource group to which the IP address pool belongs.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The Alibaba Cloud account to which the IP address pool belongs.</p>
+         * <p>Indicates whether the IP address pool is shared.</p>
+         * <br>
+         * <p>*   Only **Shared** may be returned.</p>
+         * <p>*   An empty value indicates that the IP address pool is not shared.</p>
          */
         @NameInMap("ShareType")
         public String shareType;
 
         /**
-         * <p>The name of the IP address pool.</p>
+         * <p>The status of the IP address pool. Valid values:</p>
+         * <br>
+         * <p>*   **Created**</p>
+         * <p>*   **Deleting**</p>
+         * <p>*   **Modifying**</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the resource group to which the IP address pool belongs.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListPublicIpAddressPoolsResponseBodyPublicIpAddressPoolListTags> tags;
 
         /**
-         * <p>The description of the IP address pool.</p>
+         * <p>The total number of IP addresses in the public IP address pool.</p>
          */
         @NameInMap("TotalIpNum")
         public Integer totalIpNum;
 
         /**
-         * <p>The total number of IP addresses in the public IP address pool.</p>
+         * <p>The number of occupied IP addresses in the public IP address pool.</p>
          */
         @NameInMap("UsedIpNum")
         public Integer usedIpNum;
 
+        /**
+         * <p>The user type. Valid values:</p>
+         * <br>
+         * <p>*   **admin**: administrator. An administrator can delete, modify, and query IP address pools and allocate elastic IP addresses (EIPs) to IP address pools.</p>
+         * <p>*   **user**: regular user. A regular user can only allocate EIPs to IP address pools and query IP address pools. A regular user cannot modify or delete IP address pools.</p>
+         */
         @NameInMap("UserType")
         public Boolean userType;
 
+        /**
+         * <p>The zones of the IP address pool. This parameter is returned only when BizType is set to CloudBox.</p>
+         */
         @NameInMap("Zones")
         public java.util.List<String> zones;
 

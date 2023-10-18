@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The configuration of the IPsec-VPN connection.</p>
+     * <p>The configurations of the peer gateway device.</p>
      */
     @NameInMap("VpnConnectionConfig")
     public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig vpnConnectionConfig;
@@ -39,31 +39,34 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig extends TeaModel {
         /**
-         * <p>The IKE authentication algorithm. Valid values: **sha1** and **MD5**.</p>
+         * <p>The authentication algorithm in the IKE phase.</p>
          */
         @NameInMap("IkeAuthAlg")
         public String ikeAuthAlg;
 
         /**
-         * <p>The IKE encryption algorithm.</p>
+         * <p>The encryption algorithm in the IKE phase.</p>
          */
         @NameInMap("IkeEncAlg")
         public String ikeEncAlg;
 
         /**
-         * <p>The IKE lifetime. Unit: seconds.</p>
+         * <p>The lifetime in the IKE phase. Unit: seconds.</p>
          */
         @NameInMap("IkeLifetime")
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE mode. Valid values: **main** and **aggressive**. The **main** mode offers higher security. If NAT traversal is enabled, we recommend that you use the **aggressive** mode.</p>
+         * <p>The IKE negotiation mode. Valid values:</p>
+         * <br>
+         * <p>*   **main**: This mode offers higher security during negotiations.</p>
+         * <p>*   **aggressive**: This mode is faster and has a higher success rate.</p>
          */
         @NameInMap("IkeMode")
         public String ikeMode;
 
         /**
-         * <p>The DH group.</p>
+         * <p>The DH group in the IKE phase.</p>
          */
         @NameInMap("IkePfs")
         public String ikePfs;
@@ -75,7 +78,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String ikeVersion;
 
         /**
-         * <p>The local ID. The default value is the IP address of the VPN gateway. You can specify the value as an IP address or in the FQDN format.</p>
+         * <p>The identifier of the customer gateway. FQDN and IP formats are supported. The default value is the IP address of the customer gateway.</p>
          */
         @NameInMap("LocalId")
         public String localId;
@@ -87,7 +90,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public String psk;
 
         /**
-         * <p>The peer ID. The default value is the IP address of the customer gateway. You can specify the value as an IP address or in the fully qualified domain name (FQDN) format.</p>
+         * <p>The identifier of the VPN gateway. FQDN and IP formats are supported. The default value is the IP address of the VPN gateway.</p>
          */
         @NameInMap("RemoteId")
         public String remoteId;
@@ -173,25 +176,25 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig extends TeaModel {
         /**
-         * <p>The IPsec authentication algorithm. Valid values: **sha1** and **md5**.</p>
+         * <p>The authentication algorithm in the IPsec phase.</p>
          */
         @NameInMap("IpsecAuthAlg")
         public String ipsecAuthAlg;
 
         /**
-         * <p>The IPsec encryption algorithm.</p>
+         * <p>The encryption algorithm in the IPsec phase.</p>
          */
         @NameInMap("IpsecEncAlg")
         public String ipsecEncAlg;
 
         /**
-         * <p>The IPsec lifetime. Unit: seconds.</p>
+         * <p>The lifetime in the IPsec phase. Unit: seconds.</p>
          */
         @NameInMap("IpsecLifetime")
         public Long ipsecLifetime;
 
         /**
-         * <p>The DH group.</p>
+         * <p>The DH group in the IPsec phase.</p>
          */
         @NameInMap("IpsecPfs")
         public String ipsecPfs;
@@ -255,10 +258,10 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public Long ikeLifetime;
 
         /**
-         * <p>The IKE negotiation mode. Valid values: </p>
+         * <p>The IKE negotiation mode. Valid values:</p>
          * <br>
-         * <p>- **main**: This mode offers higher security during negotiations. </p>
-         * <p>- **aggressive**: This mode is faster and has a higher success rate.</p>
+         * <p>*   **main**: This mode offers higher security during negotiations.</p>
+         * <p>*   **aggressive**: This mode is faster and has a higher success rate.</p>
          */
         @NameInMap("IkeMode")
         public String ikeMode;
@@ -535,43 +538,45 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig extends TeaModel {
         /**
-         * <p>The IKE configuration.</p>
+         * <p>The configurations of Phase 1 negotiations.</p>
          */
         @NameInMap("IkeConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig ikeConfig;
 
         /**
-         * <p>The configuration of the IPsec-VPN connection.</p>
+         * <p>The configurations of Phase 2 negotiations.</p>
          */
         @NameInMap("IpsecConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIpsecConfig ipsecConfig;
 
         /**
-         * <p>The identifier of the VPN gateway.</p>
+         * <p>The identifier of the customer gateway.</p>
          */
         @NameInMap("Local")
         public String local;
 
         /**
-         * <p>The CIDR block on the virtual private cloud (VPC) side.</p>
+         * <p>The CIDR block on the data center side.</p>
          */
         @NameInMap("LocalSubnet")
         public String localSubnet;
 
         /**
-         * <p>The identifier of the customer gateway.</p>
+         * <p>The identifier of the VPN gateway.</p>
          */
         @NameInMap("Remote")
         public String remote;
 
         /**
-         * <p>The CIDR block on the data center side.</p>
+         * <p>The CIDR block on the virtual private cloud (VPC) side.</p>
          */
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
 
         /**
-         * <p>The tunnel configuration of the peer gateway device. Parameters in TunnelsConfig are returned only if the IPsec-VPN connection is in dual-tunnel mode.</p>
+         * <p>The tunnel configurations of the peer gateway device.</p>
+         * <br>
+         * <p>The parameters in **TunnelsConfig** are returned only when the IPsec-VPN connection supports the dual-tunnel mode.</p>
          */
         @NameInMap("TunnelsConfig")
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigTunnelsConfig tunnelsConfig;

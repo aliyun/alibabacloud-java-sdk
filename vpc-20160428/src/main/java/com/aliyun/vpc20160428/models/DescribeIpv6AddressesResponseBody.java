@@ -11,25 +11,25 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
     public DescribeIpv6AddressesResponseBodyIpv6Addresses ipv6Addresses;
 
     /**
-     * <p>The number of the returned page. Default value: **1**.</p>
+     * <p>The page number of the returned page. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries returned on each page. Maximum value: **50**. Default value: **10**.</p>
+     * <p>The number of entries returned per page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -89,20 +89,26 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * <p>The status of the Internet bandwidth of the IPv6 address. Valid values:</p>
          * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
-         * <p>*   **SecurityLocked**: locked due to security reasons</p>
+         * <p>*   **Normal**</p>
+         * <p>*   **FinancialLocked**</p>
+         * <p>*   **SecurityLocked**</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
+        /**
+         * <p>Indicates whether renewal data is included.</p>
+         * <br>
+         * <p>*   **false**</p>
+         * <p>*   **true** This parameter returns **true** only if **IncludeReservationData** is set to **true** and some orders have not taken effect.</p>
+         */
         @NameInMap("HasReservationData")
         public Boolean hasReservationData;
 
         /**
-         * <p>The billing method of the Internet bandwidth of the IPv6 address. Valid values:</p>
+         * <p>The billing method of the Internet bandwidth of the IPv6 address.</p>
          * <br>
-         * <p>**PostPaid**: pay-as-you-go</p>
+         * <p>Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
@@ -122,15 +128,30 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         @NameInMap("Ipv6InternetBandwidthId")
         public String ipv6InternetBandwidthId;
 
+        /**
+         * <p>The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.</p>
+         */
         @NameInMap("ReservationActiveTime")
         public String reservationActiveTime;
 
+        /**
+         * <p>The maximum bandwidth after the renewal takes effect. Unit: Mbit/s.</p>
+         */
         @NameInMap("ReservationBandwidth")
         public Long reservationBandwidth;
 
+        /**
+         * <p>The metering method that is used after the renewal takes effect.</p>
+         * <br>
+         * <p>*   **PayByTraffic**: pay-by-data-transfer</p>
+         * <p>*   **PayByBandwidth**: pay-by-bandwidth</p>
+         */
         @NameInMap("ReservationInternetChargeType")
         public String reservationInternetChargeType;
 
+        /**
+         * <p>The type of the renewal order. Only **RENEW** may be returned, which indicates that the order is placed for service renewal.</p>
+         */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
@@ -241,7 +262,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         public String associatedInstanceType;
 
         /**
-         * <p>The IPv6 address.</p>
+         * <p>The IPv6 address of the instance.</p>
          */
         @NameInMap("Ipv6Address")
         public String ipv6Address;
@@ -273,10 +294,10 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * <p>The service provider of the IPv6 address. Valid values:</p>
          * <br>
-         * <p>*   **BGP**: Alibaba Cloud Border Gateway Protocol (BGP) IPv6. This is the default value.</p>
-         * <p>*   **ChinaMobile**: China Mobile (single ISP).</p>
-         * <p>*   **ChinaUnicom**: China Unicom (single ISP).</p>
-         * <p>*   **ChinaTelecom**: China Telecom (single ISP).</p>
+         * <p>*   **BGP** (default)</p>
+         * <p>*   **ChinaMobile**</p>
+         * <p>*   **ChinaUnicom**</p>
+         * <p>*   **ChinaTelecom**</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -284,8 +305,8 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * <p>The type of communication supported by the IPv6 address. Valid values:</p>
          * <br>
-         * <p>*   **Private**: communication within private networks</p>
-         * <p>*   **Public**: communication over the Internet</p>
+         * <p>*   **Private**</p>
+         * <p>*   **Public**</p>
          */
         @NameInMap("NetworkType")
         public String networkType;
@@ -303,8 +324,8 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         /**
          * <p>The status of the IPv6 address. Valid values:</p>
          * <br>
-         * <p>*   **Pending**: being configured</p>
-         * <p>*   **Available**: available</p>
+         * <p>*   **Pending**</p>
+         * <p>*   **Available**</p>
          */
         @NameInMap("Status")
         public String status;

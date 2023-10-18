@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
-     * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
@@ -31,12 +31,12 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the gateway endpoint. Valid values:</p>
      * <br>
-     * <p>*   **Creating**: being created</p>
-     * <p>*   **Created**: created</p>
-     * <p>*   **Modifying**: being modified</p>
-     * <p>*   **Associating**: being associated</p>
-     * <p>*   **Dissociating**: being disassociated</p>
-     * <p>*   **Deleting**: being deleted</p>
+     * <p>*   **Creating**</p>
+     * <p>*   **Created**</p>
+     * <p>*   **Modifying**</p>
+     * <p>*   **Associating**</p>
+     * <p>*   **Dissociating**</p>
+     * <p>*   **Deleting**</p>
      */
     @NameInMap("EndpointStatus")
     public String endpointStatus;
@@ -48,11 +48,14 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     public String policyDocument;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -68,6 +71,9 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<GetVpcGatewayEndpointAttributeResponseBodyTags> tags;
 
@@ -179,9 +185,15 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
     }
 
     public static class GetVpcGatewayEndpointAttributeResponseBodyTags extends TeaModel {
+        /**
+         * <p>The key of tag N added to the resource.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N added to the resource.</p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -18,6 +18,12 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
+    /**
+     * <p>Specifies whether to return information about pending orders. Valid values:</p>
+     * <br>
+     * <p>*   **false** (default)</p>
+     * <p>*   **true**</p>
+     */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
@@ -28,7 +34,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String ipv6Address;
 
     /**
-     * <p>The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 IDs in each API request. Separate IPv6 IDs with commas (,).</p>
+     * <p>The ID of the IPv6 address that you want to query. You can enter at most 20 IPv6 address IDs in each API request. Separate IPv6 address IDs with commas (,).</p>
      */
     @NameInMap("Ipv6AddressId")
     public String ipv6AddressId;
@@ -50,8 +56,8 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The type of communication supported by the IPv6 address. Valid values:</p>
      * <br>
-     * <p>*   **Private**: communication within private networks</p>
-     * <p>*   **Public**: communication over the Internet</p>
+     * <p>*   **Private**</p>
+     * <p>*   **Public**</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
