@@ -83,6 +83,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("gatewayCount")
     public Long gatewayCount;
 
+    @NameInMap("initialDatabases")
+    public String initialDatabases;
+
     /**
      * <p>The name of the Hologres instance that you want to purchase. The name must be 2 to 64 characters in length.</p>
      */
@@ -232,6 +235,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Long getGatewayCount() {
         return this.gatewayCount;
+    }
+
+    public CreateInstanceRequest setInitialDatabases(String initialDatabases) {
+        this.initialDatabases = initialDatabases;
+        return this;
+    }
+    public String getInitialDatabases() {
+        return this.initialDatabases;
     }
 
     public CreateInstanceRequest setInstanceName(String instanceName) {

@@ -83,6 +83,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("gatewayCount", request.gatewayCount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.initialDatabases)) {
+            body.put("initialDatabases", request.initialDatabases);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
             body.put("instanceName", request.instanceName);
         }
