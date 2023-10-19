@@ -5,34 +5,31 @@ import com.aliyun.tea.*;
 
 public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The type of the savings plan. Valid values:</p>
-     * <br>
-     * <p>*   universal: general-purpose</p>
-     * <p>*   ecs: ECS compute</p>
+     * <p>The return data.</p>
      */
     @NameInMap("Data")
     public QuerySavingsPlansDeductLogResponseBodyData data;
 
     /**
-     * <p>The ID of the savings plan instance.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The deduction details.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The return data.</p>
+     * <p>Indicates whether the operation was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -84,40 +81,49 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansDeductLogResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The total number of entries.</p>
+         * <p>The billable item for which the fee is deducted.</p>
          */
         @NameInMap("BillModule")
         public String billModule;
 
+        /**
+         * <p>The service for which the fee is deducted.</p>
+         */
         @NameInMap("DeductCommodity")
         public String deductCommodity;
 
+        /**
+         * <p>The deducted amount.</p>
+         */
         @NameInMap("DeductFee")
         public String deductFee;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The ID of the instance for which the fee is deducted.</p>
          */
         @NameInMap("DeductInstanceId")
         public String deductInstanceId;
 
+        /**
+         * <p>The deduction rate.</p>
+         */
         @NameInMap("DeductRate")
         public String deductRate;
 
         /**
-         * <p>The billable item for which the fee is deducted.</p>
+         * <p>The discount used for the current deduction.</p>
          */
         @NameInMap("DiscountRate")
         public String discountRate;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The end of the billing cycle for which the fee is deducted.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The service for which the fee is deducted.</p>
+         * <p>The ID of the savings plan instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -126,7 +132,10 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         public Long ownerId;
 
         /**
-         * <p>The ID of the instance for which the fee is deducted.</p>
+         * <p>The type of the savings plan. Valid values:</p>
+         * <br>
+         * <p>*   universal: general-purpose</p>
+         * <p>*   ecs: ECS compute</p>
          */
         @NameInMap("SavingsType")
         public String savingsType;
@@ -138,7 +147,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The ID of the user.</p>
          */
         @NameInMap("UserId")
         public Long userId;
@@ -248,28 +257,25 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
 
     public static class QuerySavingsPlansDeductLogResponseBodyData extends TeaModel {
         /**
-         * <p>The deduction rate.</p>
+         * <p>The deduction details.</p>
          */
         @NameInMap("Items")
         public java.util.List<QuerySavingsPlansDeductLogResponseBodyDataItems> items;
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page number of the returned page.</p>
          */
         @NameInMap("PageNum")
         public Integer pageNum;
 
         /**
-         * <p>The language of the return data. Valid values:</p>
-         * <br>
-         * <p>*   ZH: Chinese</p>
-         * <p>*   EN: English</p>
+         * <p>The number of entries returned per page.</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The total number of entries.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

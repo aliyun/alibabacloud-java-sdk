@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceCoverageTotalRequest extends TeaModel {
     /**
-     * <p>The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.</p>
+     * <p>The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
      */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
     /**
-     * <p>The information about the coverage rate of deduction plans within a period.</p>
+     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
      */
     @NameInMap("EndPeriod")
     public String endPeriod;
 
     /**
-     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The time granularity at which total coverage data is queried. Valid values: MONTH, DAY, and HOUR.</p>
      */
     @NameInMap("PeriodType")
     public String periodType;
 
     /**
-     * <p>The status code.</p>
+     * <p>The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>The total amount of the resources deducted from deduction plans.</p>
+     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
      */
     @NameInMap("StartPeriod")
     public String startPeriod;

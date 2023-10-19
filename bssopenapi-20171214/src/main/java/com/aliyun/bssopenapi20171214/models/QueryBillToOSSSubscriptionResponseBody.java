@@ -11,7 +11,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public QueryBillToOSSSubscriptionResponseBodyData data;
@@ -81,17 +81,20 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
     public static class QueryBillToOSSSubscriptionResponseBodyDataItemsItem extends TeaModel {
         /**
-         * <p>The owner ID of the OSS bucket.</p>
+         * <p>The owner ID of the Object Storage Service (OSS) bucket.</p>
          */
         @NameInMap("BucketOwnerId")
         public Long bucketOwnerId;
 
         /**
-         * <p>The directory of the OSS bucket.</p>
+         * <p>The path in the OSS bucket.</p>
          */
         @NameInMap("BucketPath")
         public String bucketPath;
 
+        /**
+         * <p>The maximum number of data rows in a single file. If the number of data rows in a bill exceeds the upper limit, the bill is split into multiple files. Then, multiple files are merged and compressed into a package.</p>
+         */
         @NameInMap("RowLimitPerFile")
         public Integer rowLimitPerFile;
 
@@ -103,6 +106,11 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
         /**
          * <p>The code of the language.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   en: English</p>
+         * <p>*   zh: Chinese</p>
          */
         @NameInMap("SubscribeLanguage")
         public String subscribeLanguage;
@@ -116,8 +124,8 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         /**
          * <p>The type of the subscribed bill. Valid values:</p>
          * <br>
-         * <p>*   BillingItemDetailForBillingPeriod: bill of a billable item</p>
-         * <p>*   InstanceDetailForBillingPeriod: bill of an instance</p>
+         * <p>*   BillingItemDetailForBillingPeriod: the bill of a billable item.</p>
+         * <p>*   InstanceDetailForBillingPeriod: the bill of an instance.</p>
          */
         @NameInMap("SubscribeType")
         public String subscribeType;
@@ -218,7 +226,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The details of the subscribed bills.</p>
+         * <p>The details of the subscribed bill.</p>
          */
         @NameInMap("Items")
         public QueryBillToOSSSubscriptionResponseBodyDataItems items;
