@@ -4,24 +4,41 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListProductRequest extends TeaModel {
+    /**
+     * <p>The cursor that points to the end of the page of the returned data.</p>
+     */
     @NameInMap("After")
     public String after;
 
+    /**
+     * <p>The cursor that points to the beginning of the page of the returned data.</p>
+     */
     @NameInMap("Before")
     public String before;
 
     /**
-     * <p>CatalogId</p>
+     * <p>The ID of the product catalog.</p>
      */
     @NameInMap("CatalogId")
     public String catalogId;
 
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The fields. Separate multiple fields with commas (,).</p>
+     * <br>
+     * <p> see [product fields](~~2579419~~)</p>
+     */
     @NameInMap("Fields")
     public String fields;
 
+    /**
+     * <p>The number of products to be queried. Valid values: 1 to 1000.</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 
@@ -35,7 +52,7 @@ public class ListProductRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Waba Id。</p>
+     * <p>The ID of the WhatsApp Business account (WABA).</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

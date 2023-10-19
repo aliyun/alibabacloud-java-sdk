@@ -197,6 +197,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
         @NameInMap("AutofillText")
         public String autofillText;
 
+        @NameInMap("CouponCode")
+        public String couponCode;
+
         /**
          * <p>The unsubscribe button. This parameter is valid if Category is set to MARKETING and the Type sub-parameter of the Buttons parameter is set to QUICK_REPLY in a WhatsApp message template. After you configure message sending in the ChatApp Message Service console, marketing messages will not be sent to customers if they click this button.</p>
          */
@@ -277,6 +280,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
             return this.autofillText;
         }
 
+        public CreateChatappTemplateRequestComponentsButtons setCouponCode(String couponCode) {
+            this.couponCode = couponCode;
+            return this;
+        }
+        public String getCouponCode() {
+            return this.couponCode;
+        }
+
         public CreateChatappTemplateRequestComponentsButtons setIsOptOut(Boolean isOptOut) {
             this.isOptOut = isOptOut;
             return this;
@@ -343,6 +354,151 @@ public class CreateChatappTemplateRequest extends TeaModel {
 
     }
 
+    public static class CreateChatappTemplateRequestComponentsCardsCardComponentsButtons extends TeaModel {
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        @NameInMap("Text")
+        public String text;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("UrlType")
+        public String urlType;
+
+        public static CreateChatappTemplateRequestComponentsCardsCardComponentsButtons build(java.util.Map<String, ?> map) throws Exception {
+            CreateChatappTemplateRequestComponentsCardsCardComponentsButtons self = new CreateChatappTemplateRequestComponentsCardsCardComponentsButtons();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponentsButtons setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponentsButtons setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponentsButtons setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponentsButtons setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponentsButtons setUrlType(String urlType) {
+            this.urlType = urlType;
+            return this;
+        }
+        public String getUrlType() {
+            return this.urlType;
+        }
+
+    }
+
+    public static class CreateChatappTemplateRequestComponentsCardsCardComponents extends TeaModel {
+        @NameInMap("Buttons")
+        public java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponentsButtons> buttons;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("Text")
+        public String text;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static CreateChatappTemplateRequestComponentsCardsCardComponents build(java.util.Map<String, ?> map) throws Exception {
+            CreateChatappTemplateRequestComponentsCardsCardComponents self = new CreateChatappTemplateRequestComponentsCardsCardComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponents setButtons(java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponentsButtons> buttons) {
+            this.buttons = buttons;
+            return this;
+        }
+        public java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponentsButtons> getButtons() {
+            return this.buttons;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponents setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponents setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponents setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreateChatappTemplateRequestComponentsCardsCardComponents setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class CreateChatappTemplateRequestComponentsCards extends TeaModel {
+        @NameInMap("CardComponents")
+        public java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponents> cardComponents;
+
+        public static CreateChatappTemplateRequestComponentsCards build(java.util.Map<String, ?> map) throws Exception {
+            CreateChatappTemplateRequestComponentsCards self = new CreateChatappTemplateRequestComponentsCards();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateChatappTemplateRequestComponentsCards setCardComponents(java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponents> cardComponents) {
+            this.cardComponents = cardComponents;
+            return this;
+        }
+        public java.util.List<CreateChatappTemplateRequestComponentsCardsCardComponents> getCardComponents() {
+            return this.cardComponents;
+        }
+
+    }
+
     public static class CreateChatappTemplateRequestComponents extends TeaModel {
         /**
          * <p>The note indicating that customers cannot share verification codes with others. The note is displayed in the message body. This parameter is valid if Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to BODY in a WhatsApp message template.</p>
@@ -361,6 +517,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
          */
         @NameInMap("Caption")
         public String caption;
+
+        @NameInMap("Cards")
+        public java.util.List<CreateChatappTemplateRequestComponentsCards> cards;
 
         /**
          * <p>The validity period of the verification code in the WhatsApp authentication template. Unit: minutes. This parameter is valid only when Category is set to AUTHENTICATION and the Type sub-parameter of the Components parameter is set to FOOTER in a WhatsApp message template. The validity period of the verification code is displayed in the footer.</p>
@@ -396,6 +555,9 @@ public class CreateChatappTemplateRequest extends TeaModel {
          */
         @NameInMap("Format")
         public String format;
+
+        @NameInMap("HasExpiration")
+        public Boolean hasExpiration;
 
         /**
          * <p>The text of the message that you want to send.</p>
@@ -467,6 +629,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
             return this.caption;
         }
 
+        public CreateChatappTemplateRequestComponents setCards(java.util.List<CreateChatappTemplateRequestComponentsCards> cards) {
+            this.cards = cards;
+            return this;
+        }
+        public java.util.List<CreateChatappTemplateRequestComponentsCards> getCards() {
+            return this.cards;
+        }
+
         public CreateChatappTemplateRequestComponents setCodeExpirationMinutes(Integer codeExpirationMinutes) {
             this.codeExpirationMinutes = codeExpirationMinutes;
             return this;
@@ -505,6 +675,14 @@ public class CreateChatappTemplateRequest extends TeaModel {
         }
         public String getFormat() {
             return this.format;
+        }
+
+        public CreateChatappTemplateRequestComponents setHasExpiration(Boolean hasExpiration) {
+            this.hasExpiration = hasExpiration;
+            return this;
+        }
+        public Boolean getHasExpiration() {
+            return this.hasExpiration;
         }
 
         public CreateChatappTemplateRequestComponents setText(String text) {

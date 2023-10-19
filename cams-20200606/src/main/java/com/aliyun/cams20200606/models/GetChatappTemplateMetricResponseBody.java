@@ -4,18 +4,36 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappTemplateMetricResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetChatappTemplateMetricResponseBodyData> data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,12 +83,21 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateMetricResponseBodyDataCliented extends TeaModel {
+        /**
+         * <p>Button name</p>
+         */
         @NameInMap("ButtonContent")
         public String buttonContent;
 
+        /**
+         * <p>Clicked count</p>
+         */
         @NameInMap("Count")
         public Integer count;
 
+        /**
+         * <p>The type of button.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -106,27 +133,51 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateMetricResponseBodyData extends TeaModel {
+        /**
+         * <p>Click Statistics</p>
+         */
         @NameInMap("Cliented")
         public java.util.List<GetChatappTemplateMetricResponseBodyDataCliented> cliented;
 
+        /**
+         * <p>Delivered count</p>
+         */
         @NameInMap("DeliveredCount")
         public Integer deliveredCount;
 
+        /**
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <p>The language that is used in the message template. For more information, see [Language codes](~~463420~~).</p>
+         */
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>Read count</p>
+         */
         @NameInMap("ReadCount")
         public Integer readCount;
 
+        /**
+         * <p>Sent count</p>
+         */
         @NameInMap("SentCount")
         public Integer sentCount;
 
+        /**
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Start")
         public Long start;
 
+        /**
+         * <p>The code of the message template.</p>
+         */
         @NameInMap("TemplateCode")
         public String templateCode;
 

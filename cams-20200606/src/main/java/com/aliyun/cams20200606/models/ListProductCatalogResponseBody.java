@@ -4,21 +4,45 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListProductCatalogResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The response code.</p>
+     * <br>
+     * <p>*   The value OK indicates that the request was successful.</p>
+     * <p>*   Other values indicate that the request failed. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The error message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Model")
     public ListProductCatalogResponseBodyModel model;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,9 +100,15 @@ public class ListProductCatalogResponseBody extends TeaModel {
     }
 
     public static class ListProductCatalogResponseBodyModelPagingCursors extends TeaModel {
+        /**
+         * <p>The cursor that points to the end of the page of the returned data.</p>
+         */
         @NameInMap("After")
         public String after;
 
+        /**
+         * <p>The cursor that points to the beginning of the page of the returned data.</p>
+         */
         @NameInMap("Before")
         public String before;
 
@@ -106,6 +136,9 @@ public class ListProductCatalogResponseBody extends TeaModel {
     }
 
     public static class ListProductCatalogResponseBodyModelPaging extends TeaModel {
+        /**
+         * <p>The cursors for pagination.</p>
+         */
         @NameInMap("Cursors")
         public ListProductCatalogResponseBodyModelPagingCursors cursors;
 
@@ -125,9 +158,15 @@ public class ListProductCatalogResponseBody extends TeaModel {
     }
 
     public static class ListProductCatalogResponseBodyModel extends TeaModel {
+        /**
+         * <p>The returned data.</p>
+         */
         @NameInMap("Data")
         public java.util.List<java.util.Map<String, ?>> data;
 
+        /**
+         * <p>The pagination details.</p>
+         */
         @NameInMap("Paging")
         public ListProductCatalogResponseBodyModelPaging paging;
 

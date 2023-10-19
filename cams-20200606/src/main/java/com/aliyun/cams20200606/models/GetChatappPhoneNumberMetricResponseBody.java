@@ -4,18 +4,36 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The HTTP status code returned.</p>
+     * <br>
+     * <p>*   A value of OK indicates that the call is successful.</p>
+     * <p>*   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetChatappPhoneNumberMetricResponseBodyData> data;
 
+    /**
+     * <p>The error message returned.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,21 +83,39 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     }
 
     public static class GetChatappPhoneNumberMetricResponseBodyData extends TeaModel {
+        /**
+         * <p>Delivered count</p>
+         */
         @NameInMap("DeliveredCount")
         public Integer deliveredCount;
 
+        /**
+         * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("End")
         public Long end;
 
+        /**
+         * <p>The granularity at which bills are queried.</p>
+         */
         @NameInMap("Granularity")
         public String granularity;
 
+        /**
+         * <p>The business phone number.</p>
+         */
         @NameInMap("PhoneNumber")
         public String phoneNumber;
 
+        /**
+         * <p>Sent count</p>
+         */
         @NameInMap("SentCount")
         public Integer sentCount;
 
+        /**
+         * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         */
         @NameInMap("Start")
         public Long start;
 
