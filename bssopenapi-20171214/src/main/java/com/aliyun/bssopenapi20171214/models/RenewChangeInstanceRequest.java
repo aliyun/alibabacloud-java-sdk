@@ -10,6 +10,9 @@ public class RenewChangeInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Parameter")
     public java.util.List<RenewChangeInstanceRequestParameter> parameter;
 
@@ -41,6 +44,14 @@ public class RenewChangeInstanceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public RenewChangeInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public RenewChangeInstanceRequest setParameter(java.util.List<RenewChangeInstanceRequestParameter> parameter) {

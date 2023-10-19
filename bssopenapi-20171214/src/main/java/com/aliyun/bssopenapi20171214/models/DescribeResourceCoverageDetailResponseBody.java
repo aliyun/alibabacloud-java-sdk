@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
     /**
-     * <p>The end of the time range in which the coverage details were queried.</p>
+     * <p>The status code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The ID of the account for which you want to query coverage details. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeResourceCoverageDetailResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries to return. Default value: 20. Maximum value: 300.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The amount of the bill.</p>
+     * <p>Indicates whether the operation was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,112 +81,121 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageDetailResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The type of deduction plans whose coverage details are queried. Valid values: RI and SCU.</p>
+         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
          */
         @NameInMap("CapacityUnit")
         public String capacityUnit;
 
         /**
-         * <p>The returned data.</p>
+         * <p>The code of the service.</p>
          */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
         /**
-         * <p>The time granularity at which coverage details are queried. Valid values: MONTH, DAY, and HOUR.</p>
+         * <p>The name and billing method of the service.</p>
          */
         @NameInMap("CommodityName")
         public String commodityName;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The coverage rate of a deduction plan.</p>
          */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
         /**
-         * <p>The specifications of a deduction plan.</p>
+         * <p>The currency in which deduction plans were priced.</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>The unit that is used to measure the resources deducted from deduction plans.</p>
+         * <p>The amount of the resources deducted from a deduction plan.</p>
          */
         @NameInMap("DeductQuantity")
         public Float deductQuantity;
 
         /**
-         * <p>The beginning of the time range in which the coverage details were queried.</p>
+         * <p>The end of the time range in which the coverage details were queried.</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
-         * <p>The code of the service.</p>
+         * <p>The ID of a pay-as-you-go instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The name of the service.</p>
+         * <p>The specifications of a deduction plan.</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
         /**
-         * <p>The coverage rate of a deduction plan.</p>
+         * <p>The amount of the bill.</p>
          */
         @NameInMap("PaymentAmount")
         public Float paymentAmount;
 
+        /**
+         * <p>The code of the service.</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The region.</p>
+         * <p>The name of the service.</p>
          */
         @NameInMap("ProductName")
         public String productName;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The region.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The code of the region.</p>
          */
         @NameInMap("RegionNo")
         public String regionNo;
 
         /**
-         * <p>The token that is used to retrieve the next page of results. You do not need to set this parameter if you query coverage details within a specific time range for the first time. The response returns a token that you can use to query coverage details that are displayed on the next page. If a null value is returned for the NextToken parameter, no more coverage details can be queried.</p>
+         * <p>The beginning of the time range in which the coverage details were queried.</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The total amount of resources consumed.</p>
          */
         @NameInMap("TotalQuantity")
         public Float totalQuantity;
 
         /**
-         * <p>The code of the zone.</p>
+         * <p>The ID of the account.</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The username of the account.</p>
+         */
         @NameInMap("UserName")
         public String userName;
 
+        /**
+         * <p>The code of the zone.</p>
+         */
         @NameInMap("Zone")
         public String zone;
 
         /**
-         * <p>The currency in which deduction plans were priced.</p>
+         * <p>The zone.</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;
@@ -360,27 +369,25 @@ public class DescribeResourceCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeResourceCoverageDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The code of the region.</p>
+         * <p>The data entries.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeResourceCoverageDetailResponseBodyDataItems> items;
 
         /**
-         * <p>The data entries.</p>
+         * <p>The number of entries returned on the current page.</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
         /**
-         * <p>The beginning of the time range to query.</p>
-         * <br>
-         * <p>The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The token of the next page.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
-         * <p>The ID of a pay-as-you-go instance.</p>
+         * <p>The total number of entries returned.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

@@ -5,25 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansUsageTotalRequest extends TeaModel {
     /**
-     * <p>The total amount of the savings plan.</p>
+     * <p>The ID of the account for which you want to query usage summary. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.</p>
      */
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
     /**
-     * <p>The usage summary.</p>
+     * <p>The end of the time range to query. The end is excluded from the time range. If you do not set this parameter, the end time is the current time. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
      */
     @NameInMap("EndPeriod")
     public String endPeriod;
 
     /**
-     * <p>The amount that is saved.</p>
+     * <p>The time granularity at which usage summary are queried. Valid values: MONTH, DAY, and HOUR.</p>
      */
     @NameInMap("PeriodType")
     public String periodType;
 
     /**
-     * <p>The usage.</p>
+     * <p>The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.</p>
      */
     @NameInMap("StartPeriod")
     public String startPeriod;

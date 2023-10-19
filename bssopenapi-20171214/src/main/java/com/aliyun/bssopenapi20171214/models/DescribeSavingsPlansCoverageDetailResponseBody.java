@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
     /**
-     * <p>The message returned.</p>
+     * <p>The status code.</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The return data.</p>
      */
     @NameInMap("Data")
     public DescribeSavingsPlansCoverageDetailResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The message returned.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The return data.</p>
+     * <p>Indicates whether the operation was successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -81,70 +81,76 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansCoverageDetailResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The region.</p>
+         * <p>The coverage.</p>
          */
         @NameInMap("CoveragePercentage")
         public Float coveragePercentage;
 
         /**
-         * <p>The specifications.</p>
+         * <p>The currency.</p>
          */
         @NameInMap("Currency")
         public String currency;
 
         /**
-         * <p>The start time.</p>
+         * <p>The deducted amount.</p>
          */
         @NameInMap("DeductAmount")
         public Float deductAmount;
 
+        /**
+         * <p>The end time.</p>
+         */
         @NameInMap("EndPeriod")
         public String endPeriod;
 
         /**
-         * <p>The currency.</p>
+         * <p>The ID of the instance.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The pay-as-you-go cost.</p>
+         * <p>The specifications.</p>
          */
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
+        @NameInMap("OwnerId")
+        public Long ownerId;
+
         /**
-         * <p>The coverage.</p>
+         * <p>The pay-as-you-go cost.</p>
          */
         @NameInMap("PostpaidCost")
         public Float postpaidCost;
 
         /**
-         * <p>The deducted amount.</p>
+         * <p>The region.</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
-         * <p>The total expenditure.</p>
+         * <p>The start time.</p>
          */
         @NameInMap("StartPeriod")
         public String startPeriod;
 
         /**
-         * <p>The username of the account.</p>
+         * <p>The total expenditure.</p>
          */
         @NameInMap("TotalAmount")
         public Float totalAmount;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the account.</p>
          */
         @NameInMap("UserId")
         public Long userId;
 
         /**
-         * <p>The end time.</p>
+         * <p>The username of the account.</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -202,6 +208,14 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             return this.instanceSpec;
         }
 
+        public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setOwnerId(Long ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public Long getOwnerId() {
+            return this.ownerId;
+        }
+
         public DescribeSavingsPlansCoverageDetailResponseBodyDataItems setPostpaidCost(Float postpaidCost) {
             this.postpaidCost = postpaidCost;
             return this;
@@ -254,19 +268,19 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
 
     public static class DescribeSavingsPlansCoverageDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the account.</p>
+         * <p>The data entries.</p>
          */
         @NameInMap("Items")
         public java.util.List<DescribeSavingsPlansCoverageDetailResponseBodyDataItems> items;
 
         /**
-         * <p>The data entries.</p>
+         * <p>The token of the next page.</p>
          */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
-         * <p>The token of the next page.</p>
+         * <p>The total number of entries.</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;

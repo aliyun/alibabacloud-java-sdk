@@ -5,35 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryAccountBillRequest extends TeaModel {
     /**
-     * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
-     */
-    @NameInMap("BillOwnerId")
-    public Long billOwnerId;
-
-    /**
-     * <p>The billing cycle. Format: YYYY-MM.</p>
-     */
-    @NameInMap("BillingCycle")
-    public String billingCycle;
-
-    /**
-     * <p>The billing date. This parameter is required only if the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.</p>
-     */
-    @NameInMap("BillingDate")
-    public String billingDate;
-
-    /**
-     * <p>The granularity at which bills are queried. Valid values:</p>
-     * <br>
-     * <p>*   MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</p>
-     * <p>*   DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</p>
-     * <br>
-     * <p>You must set the BillingDate parameter before you can set the Granularity parameter to DAILY.</p>
-     */
-    @NameInMap("Granularity")
-    public String granularity;
-
-    /**
      * <p>Specifies whether to summarize bills based on service codes. Valid values:</p>
      * <br>
      * <p>*   true: summarizes bills based on service codes.</p>
@@ -41,26 +12,44 @@ public class QueryAccountBillRequest extends TeaModel {
      * <br>
      * <p>Default value: false.</p>
      */
+    @NameInMap("BillOwnerId")
+    public Long billOwnerId;
+
+    @NameInMap("BillingCycle")
+    public String billingCycle;
+
+    /**
+     * <p>The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.</p>
+     */
+    @NameInMap("BillingDate")
+    public String billingDate;
+
+    /**
+     * <p>The code of the service.</p>
+     */
+    @NameInMap("Granularity")
+    public String granularity;
+
+    /**
+     * <p>The number of the page to return. Default value: 1.</p>
+     */
     @NameInMap("IsGroupByProduct")
     public Boolean isGroupByProduct;
 
     @NameInMap("OwnerID")
     public Long ownerID;
 
-    /**
-     * <p>The number of the page to return. Default value: 1.</p>
-     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
+     * <p>The billing cycle. Format: YYYY-MM.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The code of the service.</p>
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 300.</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
