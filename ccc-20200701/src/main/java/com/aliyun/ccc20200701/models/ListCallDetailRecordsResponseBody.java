@@ -110,6 +110,9 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         @NameInMap("EstablishedTime")
         public Long establishedTime;
 
+        @NameInMap("HeldTime")
+        public Long heldTime;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -287,6 +290,14 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         }
         public Long getEstablishedTime() {
             return this.establishedTime;
+        }
+
+        public ListCallDetailRecordsResponseBodyDataList setHeldTime(Long heldTime) {
+            this.heldTime = heldTime;
+            return this;
+        }
+        public Long getHeldTime() {
+            return this.heldTime;
         }
 
         public ListCallDetailRecordsResponseBodyDataList setInstanceId(String instanceId) {
