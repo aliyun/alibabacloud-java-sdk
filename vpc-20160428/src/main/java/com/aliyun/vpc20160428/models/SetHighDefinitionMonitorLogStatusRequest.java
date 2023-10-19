@@ -11,7 +11,7 @@ public class SetHighDefinitionMonitorLogStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance. Set the value to **EIP**.</p>
+     * <p>The instance type. Set the value to **EIP**.</p>
      */
     @NameInMap("InstanceType")
     public String instanceType;

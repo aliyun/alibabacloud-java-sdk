@@ -108,6 +108,9 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The tunnel configuration of the IPsec-VPN connection.</p>
      * <br>
@@ -251,6 +254,14 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifyVpnConnectionAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifyVpnConnectionAttributeResponseBody setTunnelOptionsSpecification(ModifyVpnConnectionAttributeResponseBodyTunnelOptionsSpecification tunnelOptionsSpecification) {

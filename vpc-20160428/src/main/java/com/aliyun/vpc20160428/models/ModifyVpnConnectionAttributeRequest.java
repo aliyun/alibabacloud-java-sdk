@@ -714,6 +714,9 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         @NameInMap("RemoteCaCertificate")
         public String remoteCaCertificate;
 
+        @NameInMap("Role")
+        public String role;
+
         /**
          * <p>The BGP configuration to be modified for the IPsec tunnel.</p>
          */
@@ -767,6 +770,14 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
         }
         public String getRemoteCaCertificate() {
             return this.remoteCaCertificate;
+        }
+
+        public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
         public ModifyVpnConnectionAttributeRequestTunnelOptionsSpecification setTunnelBgpConfig(ModifyVpnConnectionAttributeRequestTunnelOptionsSpecificationTunnelBgpConfig tunnelBgpConfig) {

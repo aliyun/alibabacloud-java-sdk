@@ -29,7 +29,7 @@ public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
     public java.util.List<String> ipInstanceIds;
 
     /**
-     * <p>The type of the IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.</p>
+     * <p>The type of the IP address. Set the value to **EIP** to associate EIPs with the EIP bandwidth plan.</p>
      */
     @NameInMap("IpType")
     public String ipType;
@@ -43,7 +43,7 @@ public class AddCommonBandwidthPackageIpsRequest extends TeaModel {
     /**
      * <p>The region ID of the Internet Shared Bandwidth instance.</p>
      * <br>
-     * <p>You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.</p>
+     * <p>You can call the [DescribeRegions](~~448570~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;

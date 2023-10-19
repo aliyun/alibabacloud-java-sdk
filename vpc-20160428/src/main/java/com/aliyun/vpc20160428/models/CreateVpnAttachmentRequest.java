@@ -190,6 +190,9 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     @NameInMap("RemoteSubnet")
     public String remoteSubnet;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -345,6 +348,14 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
     public String getRemoteSubnet() {
         return this.remoteSubnet;
+    }
+
+    public CreateVpnAttachmentRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateVpnAttachmentRequest setResourceOwnerAccount(String resourceOwnerAccount) {

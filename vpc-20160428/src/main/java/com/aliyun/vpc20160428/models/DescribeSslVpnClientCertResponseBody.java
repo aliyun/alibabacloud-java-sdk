@@ -62,6 +62,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the SSL client certificate.</p>
      */
@@ -159,6 +162,14 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeSslVpnClientCertResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeSslVpnClientCertResponseBody setSslVpnClientCertId(String sslVpnClientCertId) {
