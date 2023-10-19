@@ -37,6 +37,9 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetAuthorityTemplateItemResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAuthorityTemplateItemResponseBody self = new GetAuthorityTemplateItemResponseBody();
         return TeaModel.build(map, self);
@@ -80,6 +83,14 @@ public class GetAuthorityTemplateItemResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetAuthorityTemplateItemResponseBody setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
     public static class GetAuthorityTemplateItemResponseBodyAuthorityTemplateItemListAuthorityTemplateItem extends TeaModel {
