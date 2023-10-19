@@ -179,6 +179,9 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The list of tags added to the customer gateway.</p>
          */
@@ -244,6 +247,14 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGateway setTags(DescribeCustomerGatewaysResponseBodyCustomerGatewaysCustomerGatewayTags tags) {

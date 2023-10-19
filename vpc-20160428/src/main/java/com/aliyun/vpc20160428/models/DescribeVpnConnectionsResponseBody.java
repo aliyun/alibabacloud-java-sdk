@@ -1228,6 +1228,9 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         @NameInMap("RemoteSubnet")
         public String remoteSubnet;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The bandwidth specification of the IPsec-VPN connection. Unit: **Mbit/s**.</p>
          */
@@ -1451,6 +1454,14 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
         }
         public String getRemoteSubnet() {
             return this.remoteSubnet;
+        }
+
+        public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeVpnConnectionsResponseBodyVpnConnectionsVpnConnection setSpec(String spec) {

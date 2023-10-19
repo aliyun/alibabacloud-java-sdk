@@ -108,6 +108,9 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The ID of the SSL client certificate.</p>
          */
@@ -165,6 +168,14 @@ public class DescribeSslVpnClientCertsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeSslVpnClientCertsResponseBodySslVpnClientCertKeysSslVpnClientCertKey setSslVpnClientCertId(String sslVpnClientCertId) {

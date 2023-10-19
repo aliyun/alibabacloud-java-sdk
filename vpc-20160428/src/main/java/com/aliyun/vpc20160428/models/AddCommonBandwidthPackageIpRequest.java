@@ -29,7 +29,7 @@ public class AddCommonBandwidthPackageIpRequest extends TeaModel {
     public String ipInstanceId;
 
     /**
-     * <p>The type of the IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.</p>
+     * <p>The type of IP address. Set the value to **EIP** to associate EIPs with the Internet Shared Bandwidth instance.</p>
      */
     @NameInMap("IpType")
     public String ipType;

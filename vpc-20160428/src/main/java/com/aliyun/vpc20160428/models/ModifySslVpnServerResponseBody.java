@@ -97,6 +97,9 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The ID of the SSL server.</p>
      */
@@ -232,6 +235,14 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ModifySslVpnServerResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ModifySslVpnServerResponseBody setSslVpnServerId(String sslVpnServerId) {

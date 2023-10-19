@@ -371,6 +371,9 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         @NameInMap("ReservationData")
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData reservationData;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The maximum bandwidth of the VPN gateway. **M** indicates Mbit/s.</p>
          */
@@ -589,6 +592,14 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
         }
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGatewayReservationData getReservationData() {
             return this.reservationData;
+        }
+
+        public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribeVpnGatewaysResponseBodyVpnGatewaysVpnGateway setSpec(String spec) {
