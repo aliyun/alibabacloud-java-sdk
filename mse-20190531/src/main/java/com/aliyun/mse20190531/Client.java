@@ -261,8 +261,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InternetSlbSpec", request.internetSlbSpec);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mserVersion)) {
+            query.put("MserVersion", request.mserVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nlbNetworkType)) {
+            query.put("NlbNetworkType", request.nlbNetworkType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
@@ -2666,7 +2674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
       * @param request DeleteNacosConfigsRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -2709,7 +2717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * >  The current API operation is not provided in Nacos SDK. For more information about the Nacos-SDK API, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
       * @param request DeleteNacosConfigsRequest
       * @return DeleteNacosConfigsResponse
@@ -6598,6 +6606,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GatewayUniqueId", request.gatewayUniqueId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -8240,6 +8252,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maintenanceEndTime)) {
+            query.put("MaintenanceEndTime", request.maintenanceEndTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maintenanceStartTime)) {
+            query.put("MaintenanceStartTime", request.maintenanceStartTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.requestPars)) {
             query.put("RequestPars", request.requestPars);
         }
@@ -8267,7 +8287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go or subscription MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see "Pricing" (`~~1806469~~`).
       *
       * @param request UpdateClusterSpecRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -8318,7 +8338,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go or subscription MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see "Pricing" (`~~1806469~~`).
       *
       * @param request UpdateClusterSpecRequest
       * @return UpdateClusterSpecResponse
@@ -8357,6 +8377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
             query.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.consoleUIEnabled)) {
+            query.put("ConsoleUIEnabled", request.consoleUIEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eurekaSupported)) {
@@ -9534,7 +9558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
+      * You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](~~250950~~).
       *
       * @param request UpdateGatewaySpecRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9577,7 +9601,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
+      * You can call this operation to update the number of nodes or the specifications of nodes in a pay-as-you-go or subscription cloud-native gateway. If you add nodes or increase the specifications, you will incur fees. For more information, see [Pricing](~~250950~~).
       *
       * @param request UpdateGatewaySpecRequest
       * @return UpdateGatewaySpecResponse
@@ -9818,7 +9842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
       * @param request UpdateNacosConfigRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -9897,7 +9921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      * >  The current API operation is not provided in Nacos SDK. For more information about Nacos SDK, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
       * @param request UpdateNacosConfigRequest
       * @return UpdateNacosConfigResponse

@@ -227,6 +227,9 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         @NameInMap("SlbPort")
         public String slbPort;
 
+        @NameInMap("SlbType")
+        public String slbType;
+
         /**
          * <p>The description of the status.</p>
          */
@@ -358,6 +361,14 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
         public String getSlbPort() {
             return this.slbPort;
+        }
+
+        public ListGatewaySlbResponseBodyData setSlbType(String slbType) {
+            this.slbType = slbType;
+            return this;
+        }
+        public String getSlbType() {
+            return this.slbType;
         }
 
         public ListGatewaySlbResponseBodyData setStatusDesc(String statusDesc) {

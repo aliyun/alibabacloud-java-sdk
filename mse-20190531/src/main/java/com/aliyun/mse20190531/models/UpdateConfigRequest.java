@@ -59,6 +59,9 @@ public class UpdateConfigRequest extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    @NameInMap("ConsoleUIEnabled")
+    public Boolean consoleUIEnabled;
+
     @NameInMap("EurekaSupported")
     public Boolean eurekaSupported;
 
@@ -238,6 +241,14 @@ public class UpdateConfigRequest extends TeaModel {
     }
     public String getConfigType() {
         return this.configType;
+    }
+
+    public UpdateConfigRequest setConsoleUIEnabled(Boolean consoleUIEnabled) {
+        this.consoleUIEnabled = consoleUIEnabled;
+        return this;
+    }
+    public Boolean getConsoleUIEnabled() {
+        return this.consoleUIEnabled;
     }
 
     public UpdateConfigRequest setEurekaSupported(Boolean eurekaSupported) {

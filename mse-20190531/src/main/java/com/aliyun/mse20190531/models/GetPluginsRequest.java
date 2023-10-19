@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetPluginsRequest extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>zh: Chinese en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

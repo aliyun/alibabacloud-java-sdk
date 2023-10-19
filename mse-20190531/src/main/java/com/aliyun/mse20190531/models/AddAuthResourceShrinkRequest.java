@@ -19,6 +19,9 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     @NameInMap("AuthId")
     public Long authId;
 
+    /**
+     * <p>The authentication resource headers.</p>
+     */
     @NameInMap("AuthResourceHeaderList")
     public String authResourceHeaderListShrink;
 
@@ -34,15 +37,18 @@ public class AddAuthResourceShrinkRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>Specifies whether the matching is not case-sensitive. Default value: true.</p>
+     */
     @NameInMap("IgnoreCase")
     public Boolean ignoreCase;
 
     /**
-     * <p>The matching type.</p>
+     * <p>The matching type. Valid values:</p>
      * <br>
-     * <p>*   exact: exact matching</p>
-     * <p>*   prefix: prefix matching</p>
-     * <p>*   regex: regular expression matching</p>
+     * <p>*   EQUAL</p>
+     * <p>*   PRE</p>
+     * <p>*   ERGULAR</p>
      */
     @NameInMap("MatchType")
     public String matchType;

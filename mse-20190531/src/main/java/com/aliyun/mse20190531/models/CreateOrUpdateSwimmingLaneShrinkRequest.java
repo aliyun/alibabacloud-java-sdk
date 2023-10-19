@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:****</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese</p>
-     * <p>*   **en-US**: English</p>
-     * <br>
-     * <p>> Default value: **zh-CN**.</p>
+     * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -36,6 +31,9 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneShrinkRequestEntryRules> entryRules;
 
+    /**
+     * <p>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</p>
+     */
     @NameInMap("GatewaySwimmingLaneRouteJson")
     public String gatewaySwimmingLaneRouteJsonShrink;
 
@@ -51,13 +49,13 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.</p>
+     * <p>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The name of the MSE namespace.</p>
+     * <p>The name of the lane.</p>
      */
     @NameInMap("Name")
     public String name;

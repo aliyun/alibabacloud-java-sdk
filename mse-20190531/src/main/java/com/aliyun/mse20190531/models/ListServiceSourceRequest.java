@@ -19,6 +19,9 @@ public class ListServiceSourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    @NameInMap("Source")
+    public String source;
+
     public static ListServiceSourceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListServiceSourceRequest self = new ListServiceSourceRequest();
         return TeaModel.build(map, self);
@@ -38,6 +41,14 @@ public class ListServiceSourceRequest extends TeaModel {
     }
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
+    }
+
+    public ListServiceSourceRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
 }

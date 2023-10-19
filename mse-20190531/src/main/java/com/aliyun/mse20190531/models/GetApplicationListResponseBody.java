@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApplicationListResponseBody extends TeaModel {
     /**
-     * <p>The data structure.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public GetApplicationListResponseBodyData data;
@@ -99,11 +99,14 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("Language")
         public String language;
 
+        /**
+         * <p>The microservice namespace to which the application belongs.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The region ID of the instance.</p>
+         * <p>The region ID.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -121,7 +124,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          */
         @NameInMap("UserId")
         public String userId;
@@ -227,7 +230,7 @@ public class GetApplicationListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The returned information.</p>
+         * <p>The data returned.</p>
          */
         @NameInMap("Result")
         public java.util.List<GetApplicationListResponseBodyDataResult> result;

@@ -4,15 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteCircuitBreakerRulesRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The IDs of the rules that you want to delete.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
+    /**
+     * <p>The microservice namespace to which the application belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

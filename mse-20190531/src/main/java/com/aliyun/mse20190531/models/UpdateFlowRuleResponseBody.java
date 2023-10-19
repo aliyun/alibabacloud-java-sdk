@@ -4,18 +4,59 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateFlowRuleResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data of the node.</p>
+     */
     @NameInMap("Data")
     public UpdateFlowRuleResponseBodyData data;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The request was successful.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The request failed.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,30 +106,101 @@ public class UpdateFlowRuleResponseBody extends TeaModel {
     }
 
     public static class UpdateFlowRuleResponseBodyData extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The throttling effect.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    fast failure</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    in queue</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("ControlBehavior")
         public Integer controlBehavior;
 
+        /**
+         * <p>Indicates whether the rule was enabled.</p>
+         * <br>
+         * <p>Valid value:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The rule ID.</p>
+         */
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
+         */
         @NameInMap("MaxQueueingTimeMs")
         public Integer maxQueueingTimeMs;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The name of the API resource.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>The throttling threshold.</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 

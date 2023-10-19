@@ -4,15 +4,27 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListPageResponseBody extends TeaModel {
+    /**
+     * <p>The response to the request.</p>
+     */
     @NameInMap("Data")
     public GetServiceListPageResponseBodyData data;
 
+    /**
+     * <p>The request information.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,24 +66,45 @@ public class GetServiceListPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceListPageResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The time when the service was last updated.</p>
+         */
         @NameInMap("GmtModifyTime")
         public String gmtModifyTime;
 
+        /**
+         * <p>The group to which the service belongs.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The number of service nodes.</p>
+         */
         @NameInMap("InstanceNum")
         public Integer instanceNum;
 
+        /**
+         * <p>The service name.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The service version.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -139,15 +172,27 @@ public class GetServiceListPageResponseBody extends TeaModel {
     }
 
     public static class GetServiceListPageResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNumber")
         public String pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public String pageSize;
 
+        /**
+         * <p>The data on the current page.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetServiceListPageResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of entries returned.</p>
+         */
         @NameInMap("TotalSize")
         public String totalSize;
 

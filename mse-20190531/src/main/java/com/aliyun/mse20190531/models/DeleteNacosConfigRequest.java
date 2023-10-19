@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteNacosConfigRequest extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

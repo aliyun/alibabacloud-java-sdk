@@ -64,6 +64,9 @@ public class AddGatewaySlbRequest extends TeaModel {
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
+    /**
+     * <p>The SLB monitoring information.</p>
+     */
     @NameInMap("VServiceList")
     public java.util.List<AddGatewaySlbRequestVServiceList> VServiceList;
 
@@ -153,15 +156,30 @@ public class AddGatewaySlbRequest extends TeaModel {
     }
 
     public static class AddGatewaySlbRequestVServiceList extends TeaModel {
+        /**
+         * <p>The port number.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The protocol type. Valid values:</p>
+         * <br>
+         * <p>*   HTTP</p>
+         * <p>*   HTTPS</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The ID of the virtual server group.</p>
+         */
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
+        /**
+         * <p>The name of the virtual server group.</p>
+         */
         @NameInMap("VServerGroupName")
         public String VServerGroupName;
 

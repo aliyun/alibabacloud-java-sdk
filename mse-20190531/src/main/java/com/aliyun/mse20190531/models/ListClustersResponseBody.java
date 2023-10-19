@@ -138,6 +138,36 @@ public class ListClustersResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListClustersResponseBodyDataMaintenancePeriod extends TeaModel {
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static ListClustersResponseBodyDataMaintenancePeriod build(java.util.Map<String, ?> map) throws Exception {
+            ListClustersResponseBodyDataMaintenancePeriod self = new ListClustersResponseBodyDataMaintenancePeriod();
+            return TeaModel.build(map, self);
+        }
+
+        public ListClustersResponseBodyDataMaintenancePeriod setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListClustersResponseBodyDataMaintenancePeriod setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class ListClustersResponseBodyData extends TeaModel {
         /**
          * <p>The application version.</p>
@@ -158,31 +188,31 @@ public class ListClustersResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The alias of the instance.</p>
+         * <p>The alias of the cluster.</p>
          */
         @NameInMap("ClusterAliasName")
         public String clusterAliasName;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The name of the cluster.</p>
          */
         @NameInMap("ClusterName")
         public String clusterName;
 
         /**
-         * <p>The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
+         * <p>The type of the cluster. Valid values: ZooKeeper, Nacos-Ans, and Eureka.</p>
          */
         @NameInMap("ClusterType")
         public String clusterType;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The time when the cluster was created.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The time when the cluster expires.</p>
          */
         @NameInMap("EndDate")
         public String endDate;
@@ -194,13 +224,13 @@ public class ListClustersResponseBody extends TeaModel {
         public String initStatus;
 
         /**
-         * <p>The number of instance nodes.</p>
+         * <p>The number of clusters.</p>
          */
         @NameInMap("InstanceCount")
         public Long instanceCount;
 
         /**
-         * <p>The ID of the instance</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -212,7 +242,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String internetAddress;
 
         /**
-         * <p>The public endpoint of the instance.</p>
+         * <p>The public endpoint.</p>
          */
         @NameInMap("InternetDomain")
         public String internetDomain;
@@ -224,13 +254,16 @@ public class ListClustersResponseBody extends TeaModel {
         public String intranetAddress;
 
         /**
-         * <p>The internal endpoint of the instance.</p>
+         * <p>The internal endpoint.</p>
          */
         @NameInMap("IntranetDomain")
         public String intranetDomain;
 
+        @NameInMap("MaintenancePeriod")
+        public ListClustersResponseBodyDataMaintenancePeriod maintenancePeriod;
+
         /**
-         * <p>The edition of the instance.</p>
+         * <p>The edition of the cluster.</p>
          */
         @NameInMap("MseVersion")
         public String mseVersion;
@@ -379,6 +412,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public String getIntranetDomain() {
             return this.intranetDomain;
+        }
+
+        public ListClustersResponseBodyData setMaintenancePeriod(ListClustersResponseBodyDataMaintenancePeriod maintenancePeriod) {
+            this.maintenancePeriod = maintenancePeriod;
+            return this;
+        }
+        public ListClustersResponseBodyDataMaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
         }
 
         public ListClustersResponseBodyData setMseVersion(String mseVersion) {

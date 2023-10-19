@@ -11,7 +11,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data of the node.</p>
+     * <p>The details of the data.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListGatewayDomainResponseBodyData> data;
@@ -98,7 +98,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     public static class ListGatewayDomainResponseBodyDataComment extends TeaModel {
         /**
-         * <p>The status.</p>
+         * <p>The route status.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -120,37 +120,37 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the certificate expires.</p>
          */
         @NameInMap("CertBeforeDate")
         public String certBeforeDate;
 
         /**
-         * <p>The ID of the certificate.</p>
+         * <p>The certificate ID.</p>
          */
         @NameInMap("CertIdentifier")
         public String certIdentifier;
 
         /**
-         * <p>The route comment (ingress).</p>
+         * <p>The route comment. This parameter is returned only in ingress scenarios.</p>
          */
         @NameInMap("Comment")
         public ListGatewayDomainResponseBodyDataComment comment;
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the domain name was created.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the domain name was updated.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -166,7 +166,7 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String http2;
 
         /**
-         * <p>The domain ID.</p>
+         * <p>The ID of the domain name.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -190,9 +190,9 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The status of the domain name. Valid values:</p>
+         * <p>The state of the domain name. Valid values:</p>
          * <br>
-         * <p>*   0: unpublish</p>
+         * <p>*   0: unpublished</p>
          * <p>*   2: publishing</p>
          * <p>*   3: published</p>
          * <p>*   4: editing</p>
@@ -215,7 +215,10 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         public String tlsMin;
 
         /**
-         * <p>The type.</p>
+         * <p>The type of the domain name source. Valid values:</p>
+         * <br>
+         * <p>*   Op: console</p>
+         * <p>*   Ingress: MSE Ingress</p>
          */
         @NameInMap("Type")
         public String type;

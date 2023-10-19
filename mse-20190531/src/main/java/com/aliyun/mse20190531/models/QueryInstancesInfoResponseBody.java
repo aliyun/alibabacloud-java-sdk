@@ -107,7 +107,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         public String clientPort;
 
         /**
-         * <p>The creation time. The value of this parameter is a timestamp.</p>
+         * <p>The creation time.</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
@@ -149,11 +149,14 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         public String singleTunnelVip;
 
         /**
-         * <p>The zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("Zone")
         public String zone;
 
+        /**
+         * <p>Indicates whether all pods in the cluster are distributed in the specified zones.</p>
+         */
         @NameInMap("ZoneDistributed")
         public Boolean zoneDistributed;
 

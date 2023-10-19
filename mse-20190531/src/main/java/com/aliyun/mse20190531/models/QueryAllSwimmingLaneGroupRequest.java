@@ -13,6 +13,9 @@ public class QueryAllSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The name of the Microservices Engine (MSE) namespace that you want to query.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

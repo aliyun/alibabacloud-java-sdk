@@ -22,11 +22,11 @@ public class UpdateGatewayOptionShrinkRequest extends TeaModel {
     /**
      * <p>The detailed configurations of the gateway.</p>
      * <br>
-     * <p>*   **TraceDetails**: the sampling description of Tracing Analysis. Content: TraceEnabled specifies whether to activate Tracing Analysis. Sample specifies the sampling rate of Tracing Analysis.</p>
-     * <p>*   **LogConfigDetails**: the description of Log Service. Content: LogEnabled specifies whether to activate Log Service. ProjectName specifies the Log Service project to which logs are delivered. LogStoreName specifies the name of the Logstore.</p>
-     * <p>*   **EnableHardwareAcceleration**: specifies whether to enable hardware acceleration.</p>
-     * <p>*   **DisableHttp2Alpn**: specifies whether to disable the HTTP/2 protocol.</p>
-     * <p>*   **EnableWaf**: specifies whether to activate Web Application Firewall (WAF).</p>
+     * <p>*   **TraceDetails**: the sampling description of Managed Service for OpenTelemetry. Content: TraceEnabled indicates whether Managed Service for OpenTelemetry is activated. Sample indicates the sampling rate of Managed Service for OpenTelemetry.</p>
+     * <p>*   **LogConfigDetails**: the description of Simple Log Service. Content: LogEnabled indicates whether Simple Log Service is activated. ProjectName indicates the Simple Log Service project to which logs are delivered. LogStoreName indicates the name of the Logstore.</p>
+     * <p>*   **EnableHardwareAcceleration**: indicates whether hardware acceleration is enabled.</p>
+     * <p>*   **DisableHttp2Alpn**: indicates whether the HTTP/2 protocol is disabled.</p>
+     * <p>*   **EnableWaf**: indicates whether Web Application Firewall (WAF) is enabled.</p>
      */
     @NameInMap("GatewayOption")
     public String gatewayOptionShrink;

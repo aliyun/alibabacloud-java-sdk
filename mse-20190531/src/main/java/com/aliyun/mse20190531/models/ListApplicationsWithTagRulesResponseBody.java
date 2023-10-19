@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public ListApplicationsWithTagRulesResponseBodyData data;
@@ -578,16 +578,16 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
 
     public static class ListApplicationsWithTagRulesResponseBodyDataResultRouteRules extends TeaModel {
         /**
-         * <p>Indicates whether the alert rule is enabled. Valid value:</p>
+         * <p>Indicates whether the alert rule is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: enabled.</p>
-         * <p>*   `false`: disabled.</p>
+         * <p>*   `true`</p>
+         * <p>*   `false`</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>The ID of the rule.</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -599,7 +599,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Integer instanceNum;
 
         /**
-         * <p>The name of the rule.</p>
+         * <p>The rule name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -707,25 +707,28 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>应用所属的MSE命名空间。</p>
+         * <p>The MSE namespace to which the application belongs.</p>
          */
         @NameInMap("Namespace")
         public String namespace;
 
         /**
-         * <p>The information about the rules.</p>
+         * <p>The queried rules.</p>
          */
         @NameInMap("RouteRules")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResultRouteRules> routeRules;
 
         /**
-         * <p>The status of the route. Valid values: -0: disabled. -1: enabled.</p>
+         * <p>The route state. Valid values:</p>
+         * <br>
+         * <p>*   0: disabled</p>
+         * <p>*   1: enabled</p>
          */
         @NameInMap("RouteStatus")
         public Long routeStatus;
@@ -791,7 +794,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The data structure.</p>
+         * <p>The returned data.</p>
          */
         @NameInMap("Result")
         public java.util.List<ListApplicationsWithTagRulesResponseBodyDataResult> result;

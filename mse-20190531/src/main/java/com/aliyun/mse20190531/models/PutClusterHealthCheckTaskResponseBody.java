@@ -11,7 +11,7 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public Boolean data;

@@ -4,21 +4,42 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAuthPolicyResponseBody extends TeaModel {
+    /**
+     * <p>The response code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public ListAuthPolicyResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <br>
+     * <p>*   `true`: The request was successful.</p>
+     * <p>*   `false`: The request failed.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,21 +97,39 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAuthPolicyResponseBodyDataResultAuthRuleMethod extends TeaModel {
+        /**
+         * <p>The group.</p>
+         */
         @NameInMap("Group")
         public String group;
 
+        /**
+         * <p>The method name.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The types of request parameters.</p>
+         */
         @NameInMap("ParameterTypes")
         public java.util.List<String> parameterTypes;
 
+        /**
+         * <p>The type of the return value.</p>
+         */
         @NameInMap("ReturnType")
         public String returnType;
 
+        /**
+         * <p>The service name.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The method version.</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -150,21 +189,42 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAuthPolicyResponseBodyDataResultAuthRule extends TeaModel {
+        /**
+         * <p>The IDs of applications.</p>
+         */
         @NameInMap("AppIds")
         public java.util.List<String> appIds;
 
+        /**
+         * <p>The rule type. Valid values:</p>
+         * <br>
+         * <p>*   0: by application</p>
+         * <p>*   1: by namespace</p>
+         */
         @NameInMap("AuthType")
         public Integer authType;
 
+        /**
+         * <p>Indicates whether the rule is a blacklist rule.</p>
+         */
         @NameInMap("Black")
         public Boolean black;
 
+        /**
+         * <p>The queried namespaces.</p>
+         */
         @NameInMap("K8sNamespaces")
         public java.util.List<String> k8sNamespaces;
 
+        /**
+         * <p>The request method.</p>
+         */
         @NameInMap("Method")
         public ListAuthPolicyResponseBodyDataResultAuthRuleMethod method;
 
+        /**
+         * <p>The service path.</p>
+         */
         @NameInMap("Path")
         public String path;
 
@@ -224,48 +284,97 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAuthPolicyResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>The application ID.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The application name.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The content of the service authentication rule.</p>
+         */
         @NameInMap("AuthRule")
         public java.util.List<ListAuthPolicyResponseBodyDataResultAuthRule> authRule;
 
+        /**
+         * <p>The rule type. Valid values:</p>
+         * <br>
+         * <p>*   0: by application</p>
+         * <p>*   1: by namespace</p>
+         */
         @NameInMap("AuthType")
         public Integer authType;
 
+        /**
+         * <p>Indicates whether the rule was enabled or disabled. Valid values:</p>
+         * <br>
+         * <p>*   `true`: enabled</p>
+         * <p>*   `false`: disabled</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
         /**
-         * <p>ID。</p>
+         * <p>The rule ID.</p>
          */
         @NameInMap("Id")
         public Integer id;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("K8sNamespace")
         public String k8sNamespace;
 
+        /**
+         * <p>The name of the authentication rule.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The namespace ID.</p>
+         */
         @NameInMap("NamespaceId")
         public String namespaceId;
 
+        /**
+         * <p>The protocol type. Valid values:</p>
+         * <br>
+         * <p>*   **SPRING_CLOUD**</p>
+         * <p>*   **DUBBO**</p>
+         * <p>*   **istio**</p>
+         */
         @NameInMap("Protocol")
         public String protocol;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The source of the application.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The status.</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -389,15 +498,27 @@ public class ListAuthPolicyResponseBody extends TeaModel {
     }
 
     public static class ListAuthPolicyResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The data returned.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListAuthPolicyResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

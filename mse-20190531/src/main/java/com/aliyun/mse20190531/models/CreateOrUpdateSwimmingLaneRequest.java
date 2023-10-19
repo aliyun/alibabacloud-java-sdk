@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:****</p>
-     * <br>
-     * <p>*   **zh-CN**: Chinese</p>
-     * <p>*   **en-US**: English</p>
-     * <br>
-     * <p>> Default value: **zh-CN**.</p>
+     * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -36,6 +31,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     @NameInMap("EntryRules")
     public java.util.List<CreateOrUpdateSwimmingLaneRequestEntryRules> entryRules;
 
+    /**
+     * <p>The information about the routing rule for the gateway. This parameter is required when a cloud-native gateway is used as the ingress.</p>
+     */
     @NameInMap("GatewaySwimmingLaneRouteJson")
     public CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson gatewaySwimmingLaneRouteJson;
 
@@ -51,13 +49,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the primary key. A value -1 specifies a request that is used to create a lane. A value greater than 0 specifies a request that is used to modify a lane.</p>
+     * <p>The ID of the primary key. The value -1 indicates a request that is used to create a lane. A value greater than 0 indicates a request that is used to modify a lane.</p>
      */
     @NameInMap("Id")
     public Long id;
 
     /**
-     * <p>The name of the MSE namespace.</p>
+     * <p>The name of the lane.</p>
      */
     @NameInMap("Name")
     public String name;
@@ -349,15 +347,34 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions extends TeaModel {
+        /**
+         * <p>The matching condition. Valid values:</p>
+         * <br>
+         * <p>*   PRE: prefix matching</p>
+         * <p>*   EQUAL: exact matching</p>
+         * <p>*   ERGULAR: regular expression matching</p>
+         */
         @NameInMap("Cond")
         public String cond;
 
+        /**
+         * <p>The name of the parameter.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the parameter. Valid values:</p>
+         * <br>
+         * <p>*   header</p>
+         * <p>*   param</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of the parameter.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -401,15 +418,27 @@ public class CreateOrUpdateSwimmingLaneRequest extends TeaModel {
     }
 
     public static class CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJson extends TeaModel {
+        /**
+         * <p>The matching conditions.</p>
+         */
         @NameInMap("Conditions")
         public java.util.List<CreateOrUpdateSwimmingLaneRequestGatewaySwimmingLaneRouteJsonConditions> conditions;
 
+        /**
+         * <p>The ID of the gateway.</p>
+         */
         @NameInMap("GatewayId")
         public Long gatewayId;
 
+        /**
+         * <p>The unique ID of the gateway.</p>
+         */
         @NameInMap("GatewayUniqueId")
         public String gatewayUniqueId;
 
+        /**
+         * <p>The route IDs.</p>
+         */
         @NameInMap("RouteIdList")
         public java.util.List<Long> routeIdList;
 

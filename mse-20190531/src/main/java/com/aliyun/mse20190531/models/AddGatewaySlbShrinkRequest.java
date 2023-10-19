@@ -64,6 +64,9 @@ public class AddGatewaySlbShrinkRequest extends TeaModel {
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
+    /**
+     * <p>The SLB monitoring information.</p>
+     */
     @NameInMap("VServiceList")
     public String VServiceListShrink;
 

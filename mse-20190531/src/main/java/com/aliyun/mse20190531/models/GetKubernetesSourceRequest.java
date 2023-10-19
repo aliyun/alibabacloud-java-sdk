@@ -19,6 +19,9 @@ public class GetKubernetesSourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>Specifies whether to obtain the information about all Kubernetes clusters. If you set the value to false, only the information about unassociated clusters is obtained.</p>
+     */
     @NameInMap("IsAll")
     public Boolean isAll;
 

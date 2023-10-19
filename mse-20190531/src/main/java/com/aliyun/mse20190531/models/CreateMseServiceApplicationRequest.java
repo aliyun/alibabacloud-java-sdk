@@ -7,8 +7,8 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <br>
-     * <p>*   zh: Chinese.</p>
-     * <p>*   en: English.</p>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -59,7 +59,7 @@ public class CreateMseServiceApplicationRequest extends TeaModel {
     public String sentinelEnable;
 
     /**
-     * <p>The source.</p>
+     * <p>The service source.</p>
      */
     @NameInMap("Source")
     public String source;

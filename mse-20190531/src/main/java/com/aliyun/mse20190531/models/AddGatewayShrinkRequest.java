@@ -5,13 +5,42 @@ import com.aliyun.tea.*;
 
 public class AddGatewayShrinkRequest extends TeaModel {
     /**
-     * <p>The data structure.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
     /**
-     * <p>付费类型。</p>
+     * <p>The billing method.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   PREPAY</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    the subscription billing method</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   POSTPAY</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    the pay-as-you-go billing method</p>
+     * <br>
+     * <p>    <!-- --></p>
      */
     @NameInMap("ChargeType")
     public String chargeType;
@@ -47,10 +76,29 @@ public class AddGatewayShrinkRequest extends TeaModel {
     public String internetSlbSpec;
 
     /**
+     * <p>The MSE instance type. Valid values:</p>
+     * <br>
+     * <p>*   mse_pro: ordinary instance.</p>
+     * <p>*   mse_serverless: serverless instance.</p>
+     */
+    @NameInMap("MserVersion")
+    public String mserVersion;
+
+    /**
      * <p>The ID of the region.</p>
      */
     @NameInMap("Name")
     public String name;
+
+    /**
+     * <p>The network type of the Network Load Balancer (NLB) instance when the serverless NLB instance is purchased. Valid values:</p>
+     * <br>
+     * <p>*   pubnet</p>
+     * <p>*   privatenet</p>
+     * <p>*   privatepubnet</p>
+     */
+    @NameInMap("NlbNetworkType")
+    public String nlbNetworkType;
 
     /**
      * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
@@ -66,20 +114,13 @@ public class AddGatewayShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The specifications of the Internet-facing SLB instance. Valid values:</p>
-     * <br>
-     * <p>*   slb.s1.small</p>
-     * <p>*   slb.s2.small</p>
-     * <p>*   slb.s2.medium</p>
-     * <p>*   slb.s3.small</p>
-     * <p>*   slb.s3.medium</p>
-     * <p>*   slb.s3.large</p>
+     * <p>The number of nodes.</p>
      */
     @NameInMap("Replica")
     public Integer replica;
 
     /**
-     * <p>扩展字段。</p>
+     * <p>The extended field.</p>
      */
     @NameInMap("RequestPars")
     public String requestPars;
@@ -94,13 +135,25 @@ public class AddGatewayShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The specifications of the internal-facing Server Load Balancer (SLB) instance. Valid values:</p>
+     * <br>
+     * <p>*   slb.s1.small</p>
+     * <p>*   slb.s2.small</p>
+     * <p>*   slb.s2.medium</p>
+     * <p>*   slb.s3.small</p>
+     * <p>*   slb.s3.medium</p>
+     * <p>*   slb.s3.large</p>
      */
     @NameInMap("SlbSpec")
     public String slbSpec;
 
     /**
-     * <p>The number of nodes.</p>
+     * <p>The node specifications. Valid values:</p>
+     * <br>
+     * <p>*   MSE_GTW\_16\_32\_200\_c(16C32G)</p>
+     * <p>*   MSE_GTW\_2\_4\_200\_c(2C4G)</p>
+     * <p>*   MSE_GTW\_4\_8\_200\_c(4C8G)</p>
+     * <p>*   MSE_GTW\_8\_16\_200\_c(8C16G)</p>
      */
     @NameInMap("Spec")
     public String spec;
@@ -112,12 +165,7 @@ public class AddGatewayShrinkRequest extends TeaModel {
     public java.util.List<AddGatewayShrinkRequestTag> tag;
 
     /**
-     * <p>The node specifications. Valid values:</p>
-     * <br>
-     * <p>*   MSE_GTW\_16\_32\_200\_c(16C32G)</p>
-     * <p>*   MSE_GTW\_2\_4\_200\_c(2C4G)</p>
-     * <p>*   MSE_GTW\_4\_8\_200\_c(4C8G)</p>
-     * <p>*   MSE_GTW\_8\_16\_200\_c(8C16G)</p>
+     * <p>The ID of the primary vSwitch.</p>
      */
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -141,7 +189,7 @@ public class AddGatewayShrinkRequest extends TeaModel {
     public String xtraceRatio;
 
     /**
-     * <p>可用区信息。</p>
+     * <p>The details of the zone.</p>
      */
     @NameInMap("ZoneInfo")
     public String zoneInfoShrink;
@@ -207,12 +255,28 @@ public class AddGatewayShrinkRequest extends TeaModel {
         return this.internetSlbSpec;
     }
 
+    public AddGatewayShrinkRequest setMserVersion(String mserVersion) {
+        this.mserVersion = mserVersion;
+        return this;
+    }
+    public String getMserVersion() {
+        return this.mserVersion;
+    }
+
     public AddGatewayShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public AddGatewayShrinkRequest setNlbNetworkType(String nlbNetworkType) {
+        this.nlbNetworkType = nlbNetworkType;
+        return this;
+    }
+    public String getNlbNetworkType() {
+        return this.nlbNetworkType;
     }
 
     public AddGatewayShrinkRequest setRegion(String region) {

@@ -98,13 +98,13 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
 
     public static class ListSecurityGroupRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The description of the rule.</p>
+         * <p>The rule description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          */
         @NameInMap("GatewayId")
         public Long gatewayId;
@@ -116,19 +116,19 @@ public class ListSecurityGroupRuleResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the instance was created.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The last modification time.</p>
+         * <p>The time when the instance configuration was last modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID.</p>
+         * <p>The authorization record ID of the security group.</p>
          */
         @NameInMap("Id")
         public String id;

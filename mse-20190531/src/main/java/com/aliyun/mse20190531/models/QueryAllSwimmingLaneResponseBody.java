@@ -11,13 +11,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
     public java.util.List<QueryAllSwimmingLaneResponseBodyData> data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      */
     @NameInMap("Message")
     public String message;

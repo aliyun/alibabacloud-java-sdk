@@ -11,7 +11,7 @@ public class ListGatewayResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListGatewayResponseBodyData data;
@@ -97,12 +97,21 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList extends TeaModel {
+        /**
+         * <p>The expected number of replicas for auto scale-out.</p>
+         */
         @NameInMap("DesiredReplica")
         public Integer desiredReplica;
 
+        /**
+         * <p>The end time of auto scale-out.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The start time of auto scale-out.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -138,15 +147,29 @@ public class ListGatewayResponseBody extends TeaModel {
     }
 
     public static class ListGatewayResponseBodyDataResultElasticPolicy extends TeaModel {
+        /**
+         * <p>Indicates whether auto scale-out is enabled.</p>
+         */
         @NameInMap("Elastic")
         public Boolean elastic;
 
+        /**
+         * <p>The type of auto scale-out. Valid value:</p>
+         * <br>
+         * <p>*   CronHPA: scale-out by time</p>
+         */
         @NameInMap("ElasticType")
         public String elasticType;
 
+        /**
+         * <p>The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.</p>
+         */
         @NameInMap("MaxReplica")
         public Integer maxReplica;
 
+        /**
+         * <p>The time policy list for auto scale-out.</p>
+         */
         @NameInMap("TimePolicyList")
         public java.util.List<ListGatewayResponseBodyDataResultElasticPolicyTimePolicyList> timePolicyList;
 
@@ -233,7 +256,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public String gatewaySlbMode;
 
         /**
-         * <p>The status of the SLB instance.</p>
+         * <p>The state of the SLB instance.</p>
          */
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
@@ -269,13 +292,13 @@ public class ListGatewayResponseBody extends TeaModel {
         public String slbSpec;
 
         /**
-         * <p>The description of the status.</p>
+         * <p>The description of the state.</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
-         * <p>The type.</p>
+         * <p>The type of the SLB instance.</p>
          */
         @NameInMap("Type")
         public String type;
@@ -359,6 +382,47 @@ public class ListGatewayResponseBody extends TeaModel {
 
     }
 
+    public static class ListGatewayResponseBodyDataResultMaintenancePeriod extends TeaModel {
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("TimeZone")
+        public String timeZone;
+
+        public static ListGatewayResponseBodyDataResultMaintenancePeriod build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayResponseBodyDataResultMaintenancePeriod self = new ListGatewayResponseBodyDataResultMaintenancePeriod();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayResponseBodyDataResultMaintenancePeriod setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListGatewayResponseBodyDataResultMaintenancePeriod setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public ListGatewayResponseBodyDataResultMaintenancePeriod setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+    }
+
     public static class ListGatewayResponseBodyDataResultSlb extends TeaModel {
         /**
          * <p>The mode of the SLB instance.</p>
@@ -367,7 +431,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public String gatewaySlbMode;
 
         /**
-         * <p>The status of the SLB instance.</p>
+         * <p>The state of the SLB instance.</p>
          */
         @NameInMap("GatewaySlbStatus")
         public String gatewaySlbStatus;
@@ -397,13 +461,16 @@ public class ListGatewayResponseBody extends TeaModel {
         public String slbSpec;
 
         /**
-         * <p>The description of the status.</p>
+         * <p>The description of the state.</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
 
         /**
-         * <p>The type.</p>
+         * <p>The network type. Valid values:</p>
+         * <br>
+         * <p>*   PUB_NET</p>
+         * <p>*   PRIVATE_NET</p>
          */
         @NameInMap("Type")
         public String type;
@@ -510,29 +577,46 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("CurrentVersion")
         public String currentVersion;
 
+        /**
+         * <p>Indicates whether auto scale-out is enabled.</p>
+         */
         @NameInMap("Elastic")
         public Boolean elastic;
 
+        /**
+         * <p>The ID of the elastic gateway. This parameter is returned if auto scale-out is used.</p>
+         */
         @NameInMap("ElasticInstanceId")
         public String elasticInstanceId;
 
+        /**
+         * <p>The auto scale-out policy.</p>
+         */
         @NameInMap("ElasticPolicy")
         public ListGatewayResponseBodyDataResultElasticPolicy elasticPolicy;
 
+        /**
+         * <p>The number of replicas that are automatically scaled out.</p>
+         */
         @NameInMap("ElasticReplica")
         public Integer elasticReplica;
 
+        /**
+         * <p>The type of auto scale-out. Valid value:</p>
+         * <br>
+         * <p>*   CronHPA: scale-out by time</p>
+         */
         @NameInMap("ElasticType")
         public String elasticType;
 
         /**
-         * <p>The time when the subscription gateway expires.</p>
+         * <p>The time when the instance expires.</p>
          */
         @NameInMap("EndDate")
         public String endDate;
 
         /**
-         * <p>The type of the gateway.</p>
+         * <p>The gateway type.</p>
          */
         @NameInMap("GatewayType")
         public String gatewayType;
@@ -550,19 +634,19 @@ public class ListGatewayResponseBody extends TeaModel {
         public String gatewayVersion;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the gateway was created.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The time when the gateway was modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
 
         /**
-         * <p>The ID of the gateway.</p>
+         * <p>The gateway ID.</p>
          */
         @NameInMap("Id")
         public Long id;
@@ -574,7 +658,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public ListGatewayResponseBodyDataResultInitConfig initConfig;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
@@ -591,26 +675,32 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("LatestVersion")
         public String latestVersion;
 
+        @NameInMap("MaintenancePeriod")
+        public ListGatewayResponseBodyDataResultMaintenancePeriod maintenancePeriod;
+
         /**
-         * <p>The tag of the instance.</p>
+         * <p>The resource tag.</p>
          */
         @NameInMap("MseTag")
         public String mseTag;
 
+        @NameInMap("MseVersion")
+        public String mseVersion;
+
         /**
-         * <p>Indicates whether the gateway can be forcefully updated.</p>
+         * <p>Indicates whether the instance was forcefully upgraded.</p>
          */
         @NameInMap("MustUpgrade")
         public Boolean mustUpgrade;
 
         /**
-         * <p>The name of the gateway.</p>
+         * <p>The gateway name.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The information about the user.</p>
+         * <p>The user information.</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
@@ -628,7 +718,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public Integer replica;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -640,7 +730,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public Boolean rollBack;
 
         /**
-         * <p>The details of the Server Load Balancer (SLB) instances.</p>
+         * <p>The details of Server Load Balancer (SLB) instances.</p>
          */
         @NameInMap("Slb")
         public java.util.List<ListGatewayResponseBodyDataResultSlb> slb;
@@ -652,26 +742,26 @@ public class ListGatewayResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The gateway status.</p>
+         * <p>The gateway state. Valid values:</p>
          * <br>
          * <p>*   0: The gateway is being created.</p>
-         * <p>*   1: The gateway fails to be created.</p>
+         * <p>*   1: The gateway failed to be created.</p>
          * <p>*   2: The gateway is running.</p>
-         * <p>*   3: The gateway is changing.</p>
-         * <p>*   4: The gateway is scaling down.</p>
-         * <p>*   6: The gateway is scaling up.</p>
+         * <p>*   3: The gateway is being changed.</p>
+         * <p>*   4: The gateway is scaling in.</p>
+         * <p>*   6: The gateway is scaling out.</p>
          * <p>*   8: The gateway is being deleted.</p>
-         * <p>*   9: The gateway is suspended and to be released.</p>
+         * <p>*   9: The gateway is suspended and is to be released.</p>
          * <p>*   10: The gateway is restarting.</p>
          * <p>*   11: The gateway is being rebuilt.</p>
-         * <p>*   12: The gateway is updating.</p>
-         * <p>*   13: The gateway fails to be updated.</p>
+         * <p>*   12: The gateway is being upgraded.</p>
+         * <p>*   13: The gateway failed to be upgraded.</p>
          */
         @NameInMap("Status")
         public Integer status;
 
         /**
-         * <p>The description of the status.</p>
+         * <p>The description of the gateway state.</p>
          */
         @NameInMap("StatusDesc")
         public String statusDesc;
@@ -688,15 +778,21 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("Tag")
         public String tag;
 
+        /**
+         * <p>The total number of replicas, including the number of replicas that are automatically scaled out.</p>
+         */
         @NameInMap("TotalReplica")
         public Integer totalReplica;
 
         /**
-         * <p>Indicates whether the gateway can be updated.</p>
+         * <p>Indicates whether the instance was upgraded.</p>
          */
         @NameInMap("Upgrade")
         public Boolean upgrade;
 
+        /**
+         * <p>The ID of the virtual private cloud (VPC) to which the gateway belongs.</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -879,12 +975,28 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.latestVersion;
         }
 
+        public ListGatewayResponseBodyDataResult setMaintenancePeriod(ListGatewayResponseBodyDataResultMaintenancePeriod maintenancePeriod) {
+            this.maintenancePeriod = maintenancePeriod;
+            return this;
+        }
+        public ListGatewayResponseBodyDataResultMaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
+        }
+
         public ListGatewayResponseBodyDataResult setMseTag(String mseTag) {
             this.mseTag = mseTag;
             return this;
         }
         public String getMseTag() {
             return this.mseTag;
+        }
+
+        public ListGatewayResponseBodyDataResult setMseVersion(String mseVersion) {
+            this.mseVersion = mseVersion;
+            return this;
+        }
+        public String getMseVersion() {
+            return this.mseVersion;
         }
 
         public ListGatewayResponseBodyDataResult setMustUpgrade(Boolean mustUpgrade) {
@@ -1039,7 +1151,7 @@ public class ListGatewayResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The data entries returned.</p>
+         * <p>The data returned.</p>
          */
         @NameInMap("Result")
         public java.util.List<ListGatewayResponseBodyDataResult> result;

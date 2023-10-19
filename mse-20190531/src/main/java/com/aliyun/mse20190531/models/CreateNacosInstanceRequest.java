@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateNacosInstanceRequest extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;

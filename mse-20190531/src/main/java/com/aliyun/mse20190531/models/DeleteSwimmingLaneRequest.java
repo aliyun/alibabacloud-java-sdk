@@ -20,7 +20,7 @@ public class DeleteSwimmingLaneRequest extends TeaModel {
     public Long laneId;
 
     /**
-     * <p>MSE命名空间名字</p>
+     * <p>The name of the Microservices Engine (MSE) namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

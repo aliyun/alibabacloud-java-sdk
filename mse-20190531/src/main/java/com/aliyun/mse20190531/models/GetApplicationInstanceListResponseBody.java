@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationInstanceListResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public GetApplicationInstanceListResponseBodyData data;
 
@@ -21,6 +24,9 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetApplicationInstanceListResponseBodyDataResultTags extends TeaModel {
+        /**
+         * <p>标签值。</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -40,12 +46,21 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetApplicationInstanceListResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The node IP address.</p>
+         */
         @NameInMap("Ip")
         public String ip;
 
+        /**
+         * <p>The application port.</p>
+         */
         @NameInMap("Port")
         public String port;
 
+        /**
+         * <p>The node tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetApplicationInstanceListResponseBodyDataResultTags> tags;
 
@@ -81,15 +96,27 @@ public class GetApplicationInstanceListResponseBody extends TeaModel {
     }
 
     public static class GetApplicationInstanceListResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number. Pages start from page 1.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The queried nodes.</p>
+         */
         @NameInMap("Result")
         public java.util.List<GetApplicationInstanceListResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of nodes.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

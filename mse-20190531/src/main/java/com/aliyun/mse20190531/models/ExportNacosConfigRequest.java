@@ -14,9 +14,10 @@ public class ExportNacosConfigRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The tag of the application.</p>
+     * <p>The application tag.</p>
      */
     @NameInMap("AppName")
+    @Deprecated
     public String appName;
 
     /**
@@ -25,13 +26,15 @@ public class ExportNacosConfigRequest extends TeaModel {
      * <p>> </p>
      * <br>
      * <p>*   Multiple export methods are supported.</p>
+     * <br>
      * <p>*   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.</p>
      */
     @NameInMap("DataId")
+    @Deprecated
     public String dataId;
 
     /**
-     * <p>The configuration group name and the ID of the data that you want to export. Separate multiple configurations with comma (,).</p>
+     * <p>The configuration group name and the ID of the configuration that you want to export. Separate multiple configurations with comma (,).</p>
      */
     @NameInMap("DataIds")
     public String dataIds;
@@ -40,6 +43,7 @@ public class ExportNacosConfigRequest extends TeaModel {
      * <p>The name of the configuration group.</p>
      */
     @NameInMap("Group")
+    @Deprecated
     public String group;
 
     /**
@@ -48,6 +52,7 @@ public class ExportNacosConfigRequest extends TeaModel {
      * <p>>  - Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.</p>
      */
     @NameInMap("Ids")
+    @Deprecated
     public String ids;
 
     /**

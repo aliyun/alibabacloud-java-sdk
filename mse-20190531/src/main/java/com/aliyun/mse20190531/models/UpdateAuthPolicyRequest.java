@@ -4,33 +4,67 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class UpdateAuthPolicyRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values: zh-CN and en-US. Default value: zh-CN. The value zh-CN indicates Chinese, and the value en-US indicates English.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The content of the service authentication rule.</p>
+     */
     @NameInMap("AuthRule")
     public String authRule;
 
+    /**
+     * <p>Specifies whether to enable the rule.</p>
+     */
     @NameInMap("Enable")
     public String enable;
 
+    /**
+     * <p>The rule ID.</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The ID of the ACK cluster namespace.</p>
+     */
     @NameInMap("K8sNamespace")
     public String k8sNamespace;
 
+    /**
+     * <p>The name of the rule.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The protocol type. Valid values:</p>
+     * <br>
+     * <p>*   **SPRING_CLOUD**</p>
+     * <p>*   **DUBBO**</p>
+     * <p>*   **istio**</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The source for application access.</p>
+     */
     @NameInMap("Source")
     public String source;
 

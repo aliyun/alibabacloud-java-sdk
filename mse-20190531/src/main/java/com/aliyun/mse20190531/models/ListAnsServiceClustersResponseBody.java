@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAnsServiceClustersResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListAnsServiceClustersResponseBodyData data;
@@ -16,6 +16,9 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpCode")
     public String httpCode;
 
@@ -94,30 +97,61 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyDataAppDetail extends TeaModel {
+        /**
+         * <p>The ID of the application for which Microservices Governance is enabled.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application for which Microservices Governance is enabled.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The health check interval. Unit: seconds.</p>
+         */
         @NameInMap("CheckInternal")
         public Integer checkInternal;
 
+        /**
+         * <p>The path of the health check. This parameter is required only when the CheckType parameter is set to http.</p>
+         */
         @NameInMap("CheckPath")
         public String checkPath;
 
+        /**
+         * <p>The timeout period of the health check response. Unit: seconds.</p>
+         */
         @NameInMap("CheckTimeout")
         public Integer checkTimeout;
 
+        /**
+         * <p>The type of the health check. Valid values:</p>
+         * <br>
+         * <p>*   connection: connection status check</p>
+         * <p>*   tcp: TCP connection check</p>
+         * <p>*   http: HTTP connection check</p>
+         */
         @NameInMap("CheckType")
         public String checkType;
 
+        /**
+         * <p>The maximum number of health check retries when the instance state changes from unhealthy to healthy.</p>
+         */
         @NameInMap("HealthyCheckTimes")
         public Integer healthyCheckTimes;
 
+        /**
+         * <p>The port number of the application for which Microservices Governance is enabled.</p>
+         */
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>The maximum number of health check retries when the instance state changes from healthy to unhealthy.</p>
+         */
         @NameInMap("UnhealthyCheckTimes")
         public Integer unhealthyCheckTimes;
 
@@ -214,7 +248,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         public Integer defaultPort;
 
         /**
-         * <p>The type of health check.</p>
+         * <p>The type of the health check.</p>
          */
         @NameInMap("HealthCheckerType")
         public String healthCheckerType;
@@ -226,7 +260,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         public java.util.Map<String, ?> metadata;
 
         /**
-         * <p>The name of the cluster.</p>
+         * <p>The cluster name.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -238,7 +272,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.</p>
+         * <p>Indicates whether an end-to-end health check was initiated by the server. This parameter is valid only if the service is not a temporary service.</p>
          */
         @NameInMap("UseIPPort4Check")
         public Boolean useIPPort4Check;
@@ -307,11 +341,14 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     public static class ListAnsServiceClustersResponseBodyData extends TeaModel {
+        /**
+         * <p>The information about the associated application for which Microservices Governance is enabled when the Source parameter is set to governance.</p>
+         */
         @NameInMap("AppDetail")
         public ListAnsServiceClustersResponseBodyDataAppDetail appDetail;
 
         /**
-         * <p>The information about the clusters.</p>
+         * <p>The cluster information.</p>
          */
         @NameInMap("Clusters")
         public java.util.List<ListAnsServiceClustersResponseBodyDataClusters> clusters;
@@ -326,7 +363,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         public Boolean ephemeral;
 
         /**
-         * <p>The name of the contact group.</p>
+         * <p>The service group to which the service belongs.</p>
          */
         @NameInMap("GroupName")
         public String groupName;
@@ -355,6 +392,13 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         @NameInMap("SelectorType")
         public String selectorType;
 
+        /**
+         * <p>The source type of the service. Valid values:</p>
+         * <br>
+         * <p>*   console: The service was registered in the console.</p>
+         * <p>*   sdk: The service was registered by using the SDK.</p>
+         * <p>*   governance: The service was registered on Microservices Governance.</p>
+         */
         @NameInMap("Source")
         public String source;
 
