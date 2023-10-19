@@ -346,6 +346,9 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
 
+        @NameInMap("traveler_member_type_name")
+        public String travelerMemberTypeName;
+
         @NameInMap("traveler_name")
         public String travelerName;
 
@@ -1062,6 +1065,14 @@ public class FlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        public FlightBillSettlementQueryResponseBodyModuleDataList setTravelerMemberTypeName(String travelerMemberTypeName) {
+            this.travelerMemberTypeName = travelerMemberTypeName;
+            return this;
+        }
+        public String getTravelerMemberTypeName() {
+            return this.travelerMemberTypeName;
         }
 
         public FlightBillSettlementQueryResponseBodyModuleDataList setTravelerName(String travelerName) {

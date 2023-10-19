@@ -205,6 +205,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("primary_id")
         public Long primaryId;
 
+        @NameInMap("print_ticket_price")
+        public Double printTicketPrice;
+
         @NameInMap("project_code")
         public String projectCode;
 
@@ -285,6 +288,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
+
+        @NameInMap("traveler_member_type_name")
+        public String travelerMemberTypeName;
 
         @NameInMap("traveler_name")
         public String travelerName;
@@ -633,6 +639,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             return this.primaryId;
         }
 
+        public TrainBillSettlementQueryResponseBodyModuleDataList setPrintTicketPrice(Double printTicketPrice) {
+            this.printTicketPrice = printTicketPrice;
+            return this;
+        }
+        public Double getPrintTicketPrice() {
+            return this.printTicketPrice;
+        }
+
         public TrainBillSettlementQueryResponseBodyModuleDataList setProjectCode(String projectCode) {
             this.projectCode = projectCode;
             return this;
@@ -839,6 +853,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        public TrainBillSettlementQueryResponseBodyModuleDataList setTravelerMemberTypeName(String travelerMemberTypeName) {
+            this.travelerMemberTypeName = travelerMemberTypeName;
+            return this;
+        }
+        public String getTravelerMemberTypeName() {
+            return this.travelerMemberTypeName;
         }
 
         public TrainBillSettlementQueryResponseBodyModuleDataList setTravelerName(String travelerName) {

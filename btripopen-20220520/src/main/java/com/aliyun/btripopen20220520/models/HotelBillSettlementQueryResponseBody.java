@@ -271,6 +271,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         public String settlementType;
 
+        @NameInMap("star")
+        public String star;
+
         @NameInMap("status")
         public Integer status;
 
@@ -291,6 +294,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("traveler_job_no")
         public String travelerJobNo;
+
+        @NameInMap("traveler_member_type_name")
+        public String travelerMemberTypeName;
 
         @NameInMap("traveler_name")
         public String travelerName;
@@ -815,6 +821,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.settlementType;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setStar(String star) {
+            this.star = star;
+            return this;
+        }
+        public String getStar() {
+            return this.star;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setStatus(Integer status) {
             this.status = status;
             return this;
@@ -861,6 +875,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerJobNo() {
             return this.travelerJobNo;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setTravelerMemberTypeName(String travelerMemberTypeName) {
+            this.travelerMemberTypeName = travelerMemberTypeName;
+            return this;
+        }
+        public String getTravelerMemberTypeName() {
+            return this.travelerMemberTypeName;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setTravelerName(String travelerName) {

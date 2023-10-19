@@ -5371,6 +5371,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.hotelOrderQueryWithOptions(request, headers, runtime);
     }
 
+    public HotelPricePullResponse hotelPricePullWithOptions(HotelPricePullRequest tmpReq, HotelPricePullHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        HotelPricePullShrinkRequest request = new HotelPricePullShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotelIds)) {
+            request.hotelIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotelIds, "hotel_ids", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.btripUserId)) {
+            query.put("btrip_user_id", request.btripUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkIn)) {
+            query.put("check_in", request.checkIn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.checkOut)) {
+            query.put("check_out", request.checkOut);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cityCode)) {
+            query.put("city_code", request.cityCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotelIdsShrink)) {
+            query.put("hotel_ids", request.hotelIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            query.put("payment_type", request.paymentType);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsBtripCorpToken)) {
+            realHeaders.put("x-acs-btrip-corp-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsBtripCorpToken));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HotelPricePull"),
+            new TeaPair("version", "2022-05-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dtb-hotel/v1/prices/action/pull"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HotelPricePullResponse());
+    }
+
+    public HotelPricePullResponse hotelPricePull(HotelPricePullRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        HotelPricePullHeaders headers = new HotelPricePullHeaders();
+        return this.hotelPricePullWithOptions(request, headers, runtime);
+    }
+
     public HotelRoomInfoResponse hotelRoomInfoWithOptions(HotelRoomInfoRequest tmpReq, HotelRoomInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         HotelRoomInfoShrinkRequest request = new HotelRoomInfoShrinkRequest();
