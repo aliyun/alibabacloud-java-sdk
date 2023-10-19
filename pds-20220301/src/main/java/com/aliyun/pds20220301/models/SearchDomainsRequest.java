@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchDomainsRequest extends TeaModel {
+    @NameInMap("instance_id")
+    public String instanceId;
+
     @NameInMap("limit")
     public Long limit;
 
@@ -19,6 +22,14 @@ public class SearchDomainsRequest extends TeaModel {
     public static SearchDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchDomainsRequest self = new SearchDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchDomainsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public SearchDomainsRequest setLimit(Long limit) {

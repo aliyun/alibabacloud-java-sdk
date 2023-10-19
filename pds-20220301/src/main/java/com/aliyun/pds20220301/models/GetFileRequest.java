@@ -16,6 +16,9 @@ public class GetFileRequest extends TeaModel {
     @NameInMap("share_id")
     public String shareId;
 
+    @NameInMap("thumbnail_processes")
+    public java.util.Map<String, ImageProcess> thumbnailProcesses;
+
     @NameInMap("url_expire_sec")
     public Integer urlExpireSec;
 
@@ -54,6 +57,14 @@ public class GetFileRequest extends TeaModel {
     }
     public String getShareId() {
         return this.shareId;
+    }
+
+    public GetFileRequest setThumbnailProcesses(java.util.Map<String, ImageProcess> thumbnailProcesses) {
+        this.thumbnailProcesses = thumbnailProcesses;
+        return this;
+    }
+    public java.util.Map<String, ImageProcess> getThumbnailProcesses() {
+        return this.thumbnailProcesses;
     }
 
     public GetFileRequest setUrlExpireSec(Integer urlExpireSec) {

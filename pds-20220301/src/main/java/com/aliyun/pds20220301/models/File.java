@@ -94,6 +94,9 @@ public class File extends TeaModel {
     @NameInMap("user_tags")
     public java.util.Map<String, String> userTags;
 
+    @NameInMap("video_media_metadata")
+    public VideoMediaMetadata videoMediaMetadata;
+
     public static File build(java.util.Map<String, ?> map) throws Exception {
         File self = new File();
         return TeaModel.build(map, self);
@@ -337,6 +340,14 @@ public class File extends TeaModel {
     }
     public java.util.Map<String, String> getUserTags() {
         return this.userTags;
+    }
+
+    public File setVideoMediaMetadata(VideoMediaMetadata videoMediaMetadata) {
+        this.videoMediaMetadata = videoMediaMetadata;
+        return this;
+    }
+    public VideoMediaMetadata getVideoMediaMetadata() {
+        return this.videoMediaMetadata;
     }
 
     public static class FileInvestigationInfo extends TeaModel {

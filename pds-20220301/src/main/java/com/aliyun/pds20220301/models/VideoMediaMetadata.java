@@ -4,31 +4,53 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class VideoMediaMetadata extends TeaModel {
-    @NameInMap("duration")
-    public String duration;
+    @NameInMap("height")
+    public Long height;
 
-    @NameInMap("taken_at")
-    public String takenAt;
+    @NameInMap("video_media_audio_stream")
+    public java.util.List<VideoMediaAudioStream> videoMediaAudioStream;
+
+    @NameInMap("video_media_video_stream")
+    public java.util.List<VideoMediaVideoStream> videoMediaVideoStream;
+
+    @NameInMap("width")
+    public Long width;
 
     public static VideoMediaMetadata build(java.util.Map<String, ?> map) throws Exception {
         VideoMediaMetadata self = new VideoMediaMetadata();
         return TeaModel.build(map, self);
     }
 
-    public VideoMediaMetadata setDuration(String duration) {
-        this.duration = duration;
+    public VideoMediaMetadata setHeight(Long height) {
+        this.height = height;
         return this;
     }
-    public String getDuration() {
-        return this.duration;
+    public Long getHeight() {
+        return this.height;
     }
 
-    public VideoMediaMetadata setTakenAt(String takenAt) {
-        this.takenAt = takenAt;
+    public VideoMediaMetadata setVideoMediaAudioStream(java.util.List<VideoMediaAudioStream> videoMediaAudioStream) {
+        this.videoMediaAudioStream = videoMediaAudioStream;
         return this;
     }
-    public String getTakenAt() {
-        return this.takenAt;
+    public java.util.List<VideoMediaAudioStream> getVideoMediaAudioStream() {
+        return this.videoMediaAudioStream;
+    }
+
+    public VideoMediaMetadata setVideoMediaVideoStream(java.util.List<VideoMediaVideoStream> videoMediaVideoStream) {
+        this.videoMediaVideoStream = videoMediaVideoStream;
+        return this;
+    }
+    public java.util.List<VideoMediaVideoStream> getVideoMediaVideoStream() {
+        return this.videoMediaVideoStream;
+    }
+
+    public VideoMediaMetadata setWidth(Long width) {
+        this.width = width;
+        return this;
+    }
+    public Long getWidth() {
+        return this.width;
     }
 
 }
