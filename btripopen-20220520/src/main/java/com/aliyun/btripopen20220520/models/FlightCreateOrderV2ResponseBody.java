@@ -10,24 +10,15 @@ public class FlightCreateOrderV2ResponseBody extends TeaModel {
     @NameInMap("message")
     public String message;
 
-    /**
-     * <p>module</p>
-     */
     @NameInMap("module")
     public FlightCreateOrderV2ResponseBodyModule module;
 
-    /**
-     * <p>requestId</p>
-     */
     @NameInMap("requestId")
     public String requestId;
 
     @NameInMap("success")
     public Boolean success;
 
-    /**
-     * <p>traceId</p>
-     */
     @NameInMap("traceId")
     public String traceId;
 
