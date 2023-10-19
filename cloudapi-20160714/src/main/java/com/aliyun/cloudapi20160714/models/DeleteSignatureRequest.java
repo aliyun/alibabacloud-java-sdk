@@ -4,14 +4,14 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteSignatureRequest extends TeaModel {
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
-     * <p>*   This API is intended for API providers.</p>
-     * <p>*   This API operation deletes an existing backend signature key.</p>
-     * <p>*   You cannot delete a key that is bound to an API. To delete the key, you must unbind it first.</p>
-     * <p>*   The QPS limit on this operation is 50 per user.</p>
+     * <p>The ID of the key to be deleted.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;

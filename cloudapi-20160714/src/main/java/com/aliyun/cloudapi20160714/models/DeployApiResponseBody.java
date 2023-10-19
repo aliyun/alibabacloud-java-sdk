@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeployApiResponseBody extends TeaModel {
     /**
-     * <p>Publishes an API to a specified environment.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

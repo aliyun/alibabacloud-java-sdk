@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyModelResponseBody extends TeaModel {
     /**
-     * <p>Updates the model of an API group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

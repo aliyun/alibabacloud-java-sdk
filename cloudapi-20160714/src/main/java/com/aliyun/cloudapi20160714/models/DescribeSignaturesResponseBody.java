@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeSignaturesResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The returned signature information. It is an array consisting of SignatureInfo data.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The ID of the backend signature key.</p>
+     * <p>The returned signature information. It is an array consisting of SignatureInfo data.</p>
      */
     @NameInMap("SignatureInfos")
     public DescribeSignaturesResponseBodySignatureInfos signatureInfos;
 
     /**
-     * <p>The last modification time of the key.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,44 +81,43 @@ public class DescribeSignaturesResponseBody extends TeaModel {
 
     public static class DescribeSignaturesResponseBodySignatureInfosSignatureInfo extends TeaModel {
         /**
-         * <p>*   This API is intended for API providers.</p>
-         * <p>*   This operation is used to query the backend signature keys in a Region. Region is a system parameter.</p>
+         * <p>The creation time of the key.</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The Secret value of the backend signature key.</p>
+         * <p>The last modification time of the key.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>Queries backend signature keys.</p>
+         * <p>The region where the key is located.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The name of the backend signature key.</p>
+         * <p>The ID of the backend signature key.</p>
          */
         @NameInMap("SignatureId")
         public String signatureId;
 
         /**
-         * <p>The region where the key is located.</p>
+         * <p>The Key value of the backend signature key.</p>
          */
         @NameInMap("SignatureKey")
         public String signatureKey;
 
         /**
-         * <p>The creation time of the key.</p>
+         * <p>The name of the backend signature key.</p>
          */
         @NameInMap("SignatureName")
         public String signatureName;
 
         /**
-         * <p>The Key value of the backend signature key.</p>
+         * <p>The Secret value of the backend signature key.</p>
          */
         @NameInMap("SignatureSecret")
         public String signatureSecret;

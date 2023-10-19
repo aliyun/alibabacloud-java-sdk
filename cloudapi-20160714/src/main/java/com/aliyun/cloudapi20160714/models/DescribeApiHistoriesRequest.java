@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeApiHistoriesRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * <p>The ID of the API.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The name of the API. The name is used for fuzzy match.</p>
      */
     @NameInMap("ApiName")
     public String apiName;
 
     /**
-     * <p>The ID of the API.</p>
+     * <p>The ID of the API group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -38,7 +38,10 @@ public class DescribeApiHistoriesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The name of the API. The name is used for fuzzy match.</p>
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("StageName")
     public String stageName;

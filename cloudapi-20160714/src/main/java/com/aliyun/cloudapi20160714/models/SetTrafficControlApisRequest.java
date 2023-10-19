@@ -5,10 +5,22 @@ import com.aliyun.tea.*;
 
 public class SetTrafficControlApisRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
+
+    /**
+     * <p>The ID of the API group containing the APIs to which you want to bind a specified throttling policy.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     /**
      * <p>The name of the runtime environment. Valid values:</p>
@@ -16,21 +28,11 @@ public class SetTrafficControlApisRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
      */
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    /**
-     * <p>*   This API is intended for API providers.</p>
-     * <p>*   This API allows you to bind a specific throttling policy to up to 100 APIs at a time.</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 
     /**
-     * <p>The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <p>The ID of the throttling policy.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;

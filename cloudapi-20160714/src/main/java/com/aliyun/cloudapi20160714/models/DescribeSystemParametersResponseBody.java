@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemParametersResponseBody extends TeaModel {
     /**
-     * <p>Examples</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The description of a parameter.</p>
+     * <p>The returned information about system parameters. It is an array that consists of SystemParam data.</p>
      */
     @NameInMap("SystemParams")
     public DescribeSystemParametersResponseBodySystemParams systemParams;
@@ -39,26 +39,25 @@ public class DescribeSystemParametersResponseBody extends TeaModel {
 
     public static class DescribeSystemParametersResponseBodySystemParamsSystemParamItem extends TeaModel {
         /**
-         * <p>Client IP Address</p>
+         * <p>Examples</p>
          */
         @NameInMap("DemoValue")
         public String demoValue;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The description of a parameter.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>*   This API is intended for API callers.</p>
-         * <p>*   The response of this API contains the system parameters that are optional in API definitions.</p>
+         * <p>The name of the parameter.</p>
          */
         @NameInMap("ParamName")
         public String paramName;
 
         /**
-         * <p>Queries the common parameters supported by the system.</p>
+         * <p>The type of the parameter.</p>
          */
         @NameInMap("ParamType")
         public String paramType;

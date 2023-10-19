@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveSignatureApisResponseBody extends TeaModel {
     /**
-     * <p>Unbinds a backend signature key from APIs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

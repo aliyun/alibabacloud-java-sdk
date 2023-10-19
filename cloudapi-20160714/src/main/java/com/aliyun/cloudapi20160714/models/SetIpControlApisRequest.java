@@ -5,23 +5,19 @@ import com.aliyun.tea.*;
 
 public class SetIpControlApisRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The API IDs. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE**</p>
-     * <p>*   **TEST**</p>
+     * <p>The ID of the API group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The API IDs. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <p>The ID of the ACL.</p>
      */
     @NameInMap("IpControlId")
     public String ipControlId;
@@ -30,8 +26,11 @@ public class SetIpControlApisRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>*   This operation is intended for API callers.</p>
-     * <p>*   A maximum of 100 APIs can be bound at a time.</p>
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **PRE**</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("StageName")
     public String stageName;

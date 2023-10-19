@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReactivateDomainResponseBody extends TeaModel {
     /**
-     * <p>Reactivates a custom domain name whose validity status is Abnormal.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

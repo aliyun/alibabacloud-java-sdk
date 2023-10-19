@@ -5,32 +5,25 @@ import com.aliyun.tea.*;
 
 public class SwitchApiRequest extends TeaModel {
     /**
-     * <p>The description of the switch operation.</p>
+     * <p>The ID of the API.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The description of the switch operation.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
+     * <p>The ID of the API group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>*   This API is intended for API providers.</p>
-     * <p>*   The historical version can be obtained through the DescribeHistoryApis API.****</p>
-     * <p>*   Only APIs that have been published more than once have historical versions to switch to.</p>
-     * <p>*   This operation can only be performed on running APIs. Use caution when performing this operation because the operation cannot be undone after it has been completed and takes effect within 5 seconds.</p>
-     * <p>*   The switch operation is in essence a publish operation, and the reason for this operation must be provided.</p>
+     * <p>The historical version that you want to switch to.</p>
      */
     @NameInMap("HistoryVersion")
     public String historyVersion;
@@ -39,7 +32,10 @@ public class SwitchApiRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The historical version you want to switch to.</p>
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("StageName")
     public String stageName;

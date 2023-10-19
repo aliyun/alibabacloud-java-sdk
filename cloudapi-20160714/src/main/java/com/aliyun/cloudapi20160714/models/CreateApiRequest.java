@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateApiRequest extends TeaModel {
     /**
-     * <p>If the **AuthType** is **APP** authentication, you need to pass this value to specify the signature algorithm. If you do not specify this parameter, the default value HmacSHA256 is used. Valid values:</p>
+     * <p>The type of the two-way communication API.</p>
      * <br>
-     * <p>*   HmacSHA256</p>
-     * <p>*   HmacSHA1,HmacSHA256</p>
+     * <p>*   **COMMON**: normal APIs</p>
+     * <p>*   **REGISTER**: registered APIs</p>
+     * <p>*   **UNREGISTER**: unregistered APIs</p>
+     * <p>*   **NOTIFY**: downstream notification APIs</p>
      */
     @NameInMap("AllowSignatureMethod")
     public String allowSignatureMethod;
@@ -20,22 +22,15 @@ public class CreateApiRequest extends TeaModel {
     public String apiName;
 
     /**
-     * <p>If the **AuthType** parameter is set to **APP**, the valid values are:</p>
-     * <br>
-     * <p>*   **DEFAULT**: The default value that is used if no other values are passed. This value indicates that the settings of the group are used.</p>
-     * <p>*   **DISABLE**: The authentication is disabled.</p>
-     * <p>*   **HEADER**: AppCode can be placed in the Header parameter for authentication.</p>
-     * <p>*   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.</p>
+     * <p>The IDof the backend service</p>
      */
     @NameInMap("AppCodeAuthType")
     public String appCodeAuthType;
 
     /**
-     * <p>API安全认证类型，目前可以取值：</p>
+     * <p>The configuration items of API requests sent by the consumer to API Gateway.</p>
      * <br>
-     * <p>- **APP**：只允许已授权的APP调用</p>
-     * <p>- **ANONYMOUS**：允许匿名调用，设置为允许匿名调用需要注意：</p>
-     * <p>  任何能够获取该API服务信息的人，都将能够调用该API。网关不会对调用者做身份认证，也无法设置按用户的流量控制，若开放该API请设置好按API的流量控制。</p>
+     * <p>For more information, see [RequestConfig](~~43985~~).</p>
      */
     @NameInMap("AuthType")
     public String authType;
@@ -47,7 +42,7 @@ public class CreateApiRequest extends TeaModel {
     public Boolean backendEnable;
 
     /**
-     * <p>The IDof the backend service</p>
+     * <p>Specifies whether to enable backend services.</p>
      */
     @NameInMap("BackendId")
     public String backendId;
@@ -62,8 +57,12 @@ public class CreateApiRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>*   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.</p>
-     * <p>*   If you set **DisableInternet** to **false**, the limit is lifted. The default value is false when you create an API.</p>
+     * <p>If **AuthType** is set to **APP**, the valid values are:</p>
+     * <br>
+     * <p>*   **DEFAULT**: The default value that is used if no other values are passed. This value means that the setting of the group is used.</p>
+     * <p>*   **DISABLE**: The authentication is disabled.</p>
+     * <p>*   **HEADER**: AppCode can be placed in the Header parameter for authentication.</p>
+     * <p>*   **HEADER_QUERY**: AppCode can be placed in the Header or Query parameter for authentication.</p>
      */
     @NameInMap("DisableInternet")
     public Boolean disableInternet;
@@ -75,8 +74,8 @@ public class CreateApiRequest extends TeaModel {
     public String failResultSample;
 
     /**
-     * <p>*   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
-     * <p>*   If you set **ForceNonceCheck** to **false**, the check is not performed. The default value is false when you create an API.</p>
+     * <p>*   Specifies whether to set **DisableInternet** to **true** to limit API calls to within the VPC.</p>
+     * <p>*   If you set **DisableInternet** to **false**, the limit is lifted. The default value is false when you create an API.</p>
      */
     @NameInMap("ForceNonceCheck")
     public Boolean forceNonceCheck;
@@ -88,15 +87,18 @@ public class CreateApiRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The switch status of ACL. Valid values:- **on** and **off**.</p>
+     * <p>If the **AuthType** is **APP** authentication, you need to pass this value to specify the signature algorithm. If you do not specify this parameter, the default value HmacSHA256 is used. Valid values:</p>
+     * <br>
+     * <p>*   HmacSHA256</p>
+     * <p>*   HmacSHA1,HmacSHA256</p>
      */
     @NameInMap("OpenIdConnectConfig")
     public String openIdConnectConfig;
 
     /**
-     * <p>The configuration items of API requests sent by the consumer to API Gateway.</p>
+     * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
      * <br>
-     * <p>For more information, see [RequestConfig](~~43985~~).</p>
+     * <p>For more information, see [ServiceConfig](~~43987~~).</p>
      */
     @NameInMap("RequestConfig")
     public String requestConfig;
@@ -105,7 +107,8 @@ public class CreateApiRequest extends TeaModel {
     public String requestParameters;
 
     /**
-     * <p>The return description of the API.</p>
+     * <p>*   Specifies whether to set **ForceNonceCheck** to **true** to force the check of X-Ca-Nonce during the request. This is the unique identifier of the request and is generally identified by UUID. After receiving this parameter, API Gateway verifies the validity of this parameter. The same value can be used only once within 15 minutes. This helps prevent replay attacks.</p>
+     * <p>*   If you set **ForceNonceCheck** to **false**, the check is not performed. The default value is false when you create an API.</p>
      */
     @NameInMap("ResultBodyModel")
     public String resultBodyModel;
@@ -117,7 +120,7 @@ public class CreateApiRequest extends TeaModel {
     public String resultSample;
 
     /**
-     * <p>The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. Default value: JSON.</p>
+     * <p>The sample response from the backend service.</p>
      */
     @NameInMap("ResultType")
     public String resultType;
@@ -126,9 +129,9 @@ public class CreateApiRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The configuration items of API requests sent by API Gateway to the backend service.</p>
+     * <p>The parameters of API requests sent by the consumer to API Gateway.</p>
      * <br>
-     * <p>For more information, see [ServiceConfig](~~43987~~).</p>
+     * <p>For more information, see [RequestParameter](~~43986~~).</p>
      */
     @NameInMap("ServiceConfig")
     public String serviceConfig;
@@ -152,12 +155,7 @@ public class CreateApiRequest extends TeaModel {
     public String visibility;
 
     /**
-     * <p>The type of the two-way communication API.</p>
-     * <br>
-     * <p>*   **COMMON**: common API</p>
-     * <p>*   **REGISTER**: registered API</p>
-     * <p>*   **UNREGISTER**: unregistered API</p>
-     * <p>*   **NOTIFY**: downstream notification API</p>
+     * <p>The return description of the API.</p>
      */
     @NameInMap("WebSocketApiType")
     public String webSocketApiType;

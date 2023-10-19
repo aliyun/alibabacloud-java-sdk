@@ -4,12 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiTrafficDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned downlink traffic data of API calls. It is an array consisting of MonitorItem data.</p>
+     */
     @NameInMap("CallDownloads")
     public DescribeApiTrafficDataResponseBodyCallDownloads callDownloads;
 
+    /**
+     * <p>The returned uplink traffic data of API calls. It is an array consisting of MonitorItem data.</p>
+     */
     @NameInMap("CallUploads")
     public DescribeApiTrafficDataResponseBodyCallUploads callUploads;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeApiTrafficDataResponseBodyCallDownloadsMonitorItem extends TeaModel {
+        /**
+         * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         */
         @NameInMap("ItemTime")
         public String itemTime;
 
+        /**
+         * <p>The value corresponding to the monitoring metric.</p>
+         */
         @NameInMap("ItemValue")
         public String itemValue;
 
@@ -92,9 +107,15 @@ public class DescribeApiTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeApiTrafficDataResponseBodyCallUploadsMonitorItem extends TeaModel {
+        /**
+         * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         */
         @NameInMap("ItemTime")
         public String itemTime;
 
+        /**
+         * <p>The value corresponding to the monitoring metric.</p>
+         */
         @NameInMap("ItemValue")
         public String itemValue;
 

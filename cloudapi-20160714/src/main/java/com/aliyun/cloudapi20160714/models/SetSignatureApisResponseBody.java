@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetSignatureApisResponseBody extends TeaModel {
     /**
-     * <p>Binds a signature key to APIs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

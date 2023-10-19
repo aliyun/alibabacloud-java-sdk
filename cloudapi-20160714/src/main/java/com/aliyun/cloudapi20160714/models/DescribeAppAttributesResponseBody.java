@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppAttributesResponseBody extends TeaModel {
+    /**
+     * <p>The returned application information. It is an array that consists of AppAttribute data.</p>
+     */
     @NameInMap("Apps")
     public DescribeAppAttributesResponseBodyApps apps;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,9 +80,15 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttributeTagsTagInfo extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -114,24 +135,42 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAttributesResponseBodyAppsAppAttribute extends TeaModel {
+        /**
+         * <p>The ID of the app.</p>
+         */
         @NameInMap("AppId")
         public Long appId;
 
+        /**
+         * <p>The name of the app.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The creation time (UTC) of the app.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The description of the app.</p>
+         */
         @NameInMap("Description")
         public String description;
 
         @NameInMap("Extend")
         public String extend;
 
+        /**
+         * <p>The modification time (UTC) of the app.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The tags.</p>
+         */
         @NameInMap("Tags")
         public DescribeAppAttributesResponseBodyAppsAppAttributeTags tags;
 

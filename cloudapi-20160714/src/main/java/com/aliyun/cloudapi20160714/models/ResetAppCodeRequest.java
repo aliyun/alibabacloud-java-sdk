@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ResetAppCodeRequest extends TeaModel {
     /**
-     * <p>The current AppCode of the application.</p>
+     * <p>The AppCode of the app.</p>
      */
     @NameInMap("AppCode")
     public String appCode;
 
     /**
-     * <p>The new AppCode of the application.</p>
+     * <p>The new AppCode of the app.</p>
      */
     @NameInMap("NewAppCode")
     public String newAppCode;

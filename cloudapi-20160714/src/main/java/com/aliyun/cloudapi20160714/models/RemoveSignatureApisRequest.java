@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class RemoveSignatureApisRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The IDs of the APIs from which you want to unbind the signature key.</p>
+     * <br>
+     * <p>*   If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.</p>
+     * <p>*   The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
      */
     @NameInMap("ApiIds")
     public String apiIds;
 
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **TEST**</p>
+     * <p>The ID of the API group to which the API that you want to manage belongs.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -23,17 +23,16 @@ public class RemoveSignatureApisRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The IDs of the APIs from which you want to unbind the signature key.</p>
-     * <br>
-     * <p>*   If this parameter is not specified, the signature key is unbound from all the APIs in the specified environment of the API group.</p>
-     * <p>*   The IDs of the APIs that you want to manage. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.</p>
+     * <p>The ID of the signature key.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
 
     /**
-     * <p>*   This API is intended for API providers.</p>
-     * <p>*   The operation takes effect immediately. The request sent from API Gateway to the backend service does not contain the signature string. The corresponding verification step can be removed from the backend.</p>
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("StageName")
     public String stageName;

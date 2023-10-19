@@ -4,29 +4,32 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class ModifySignatureRequest extends TeaModel {
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
     /**
-     * <p>The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
+     * <p>The ID of the signature key that you want to manage.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The new Key value of the key. The value must be 6 to 20 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
      */
     @NameInMap("SignatureKey")
     public String signatureKey;
 
     /**
-     * <p>The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.</p>
+     * <p>The new name of the key. The name must be 4 to 50 characters in length and can contain letters, digits, and underscores (\_). It must start with a letter.</p>
      */
     @NameInMap("SignatureName")
     public String signatureName;
 
     /**
-     * <p>The ID of the key.</p>
+     * <p>The new Secret value of the key. The value must be 6 to 30 characters in length and can contain letters, digits, and special characters. Special characters include underscores (\_), at signs (@), number signs (#), exclamation points (!), and asterisks (\*). The value must start with a letter.</p>
      */
     @NameInMap("SignatureSecret")
     public String signatureSecret;

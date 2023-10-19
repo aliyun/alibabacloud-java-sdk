@@ -4,6 +4,9 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAbolishApiTaskRequest extends TeaModel {
+    /**
+     * <p>The ID of the unpublishing operation.</p>
+     */
     @NameInMap("OperationUid")
     public String operationUid;
 

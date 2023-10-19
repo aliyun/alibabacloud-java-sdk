@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeApiSignaturesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the API.</p>
+     * <p>The returned signature key information. It is an array consisting of ApiSignatureItem data.</p>
      */
     @NameInMap("ApiSignatures")
     public DescribeApiSignaturesResponseBodyApiSignatures apiSignatures;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The returned signature key information. It is an array consisting of ApiSignatureItem data.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The time when the backend signature key was bound.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,32 +81,31 @@ public class DescribeApiSignaturesResponseBody extends TeaModel {
 
     public static class DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem extends TeaModel {
         /**
-         * <p>The name of the backend signature key.</p>
+         * <p>The ID of the API.</p>
          */
         @NameInMap("ApiId")
         public String apiId;
 
         /**
-         * <p>Queries the backend signature keys that are bound to the APIs of a specified API group in a specified environment.</p>
+         * <p>The name of the API.</p>
          */
         @NameInMap("ApiName")
         public String apiName;
 
         /**
-         * <p>The ID of the backend signature key.</p>
+         * <p>The time when the backend signature key was bound.</p>
          */
         @NameInMap("BoundTime")
         public String boundTime;
 
         /**
-         * <p>The name of the API.</p>
+         * <p>The ID of the backend signature key.</p>
          */
         @NameInMap("SignatureId")
         public String signatureId;
 
         /**
-         * <p>*   This API is intended for API providers.</p>
-         * <p>*   The ApiIds parameter is optional. If this parameter is not specified, all results in the specified environment of an API group are returned.</p>
+         * <p>The name of the backend signature key.</p>
          */
         @NameInMap("SignatureName")
         public String signatureName;

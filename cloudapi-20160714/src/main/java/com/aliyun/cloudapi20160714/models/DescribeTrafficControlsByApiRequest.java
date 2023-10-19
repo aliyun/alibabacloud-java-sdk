@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficControlsByApiRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the API.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
+
+    /**
+     * <p>The ID of the group to which the API to be queried belongs.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     /**
      * <p>The runtime environment of the API. Valid values:</p>
      * <br>
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
-     */
-    @NameInMap("GroupId")
-    public String groupId;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    /**
-     * <p>The returned throttling policy information. It is an array consisting of TrafficControlItem data.</p>
      */
     @NameInMap("StageName")
     public String stageName;
