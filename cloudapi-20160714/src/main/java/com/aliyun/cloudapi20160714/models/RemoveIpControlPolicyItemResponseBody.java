@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveIpControlPolicyItemResponseBody extends TeaModel {
     /**
-     * <p>Removes one or more policies from an access control list (ACL).</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

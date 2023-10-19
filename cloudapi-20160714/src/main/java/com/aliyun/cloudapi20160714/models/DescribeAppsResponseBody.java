@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeAppsResponseBody extends TeaModel {
     /**
-     * <p>The description of the app.</p>
+     * <p>The returned app information. It is an array consisting of AppItem data.</p>
      */
     @NameInMap("Apps")
     public DescribeAppsResponseBodyApps apps;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The returned app information. It is an array consisting of AppItem data.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The name of the app.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,21 +81,19 @@ public class DescribeAppsResponseBody extends TeaModel {
 
     public static class DescribeAppsResponseBodyAppsAppItem extends TeaModel {
         /**
-         * <p>Queries the apps. App information is returned only to the app owner.</p>
+         * <p>The ID of the app.</p>
          */
         @NameInMap("AppId")
         public Long appId;
 
         /**
-         * <p>The ID of the app.</p>
+         * <p>The name of the app.</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
-         * <p>*   This API is intended for API providers.</p>
-         * <p>*   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.</p>
-         * <p>*   Each provider can call this operation for a maximum of 200 times every day in a region.</p>
+         * <p>The description of the app.</p>
          */
         @NameInMap("Description")
         public String description;

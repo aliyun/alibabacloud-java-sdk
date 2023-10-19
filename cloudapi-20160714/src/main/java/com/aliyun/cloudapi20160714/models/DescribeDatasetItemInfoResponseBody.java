@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatasetItemInfoResponseBody extends TeaModel {
+    /**
+     * <p>The Dataset information.</p>
+     */
     @NameInMap("DatasetItemInfo")
     public DescribeDatasetItemInfoResponseBodyDatasetItemInfo datasetItemInfo;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +38,45 @@ public class DescribeDatasetItemInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDatasetItemInfoResponseBodyDatasetItemInfo extends TeaModel {
+        /**
+         * <p>The creation time (UTC) of the data entry.</p>
+         */
         @NameInMap("CreatedTime")
         public String createdTime;
 
+        /**
+         * <p>The ID of the dataset.</p>
+         */
         @NameInMap("DatasetId")
         public String datasetId;
 
+        /**
+         * <p>The ID of the data entry.</p>
+         */
         @NameInMap("DatasetItemId")
         public String datasetItemId;
 
+        /**
+         * <p>The description of the data entry.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The time in UTC when the data entry expires. The time is in the **yyyy-MM-ddTHH:mm:ssZ** format. If this parameter is empty, the data entry does not expire.</p>
+         */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        /**
+         * <p>The last modification time (UTC) of the data entry.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The value of the data entry.</p>
+         */
         @NameInMap("Value")
         public String value;
 

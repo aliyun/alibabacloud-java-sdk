@@ -87,7 +87,7 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The description of the plug-in.</p>
+         * <p>The plug-in description.</p>
          */
         @NameInMap("Description")
         public String description;
@@ -105,19 +105,19 @@ public class DescribePluginsByApiResponseBody extends TeaModel {
         public String pluginData;
 
         /**
-         * <p>The ID of the plug-in.</p>
+         * <p>The plug-in ID.</p>
          */
         @NameInMap("PluginId")
         public String pluginId;
 
         /**
-         * <p>The name of the plug-in.</p>
+         * <p>The plug-in name.</p>
          */
         @NameInMap("PluginName")
         public String pluginName;
 
         /**
-         * <p>The type of the plug-in.</p>
+         * <p>The plug-in type.</p>
          */
         @NameInMap("PluginType")
         public String pluginType;

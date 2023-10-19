@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeModelsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the API group to which the model belongs.</p>
+     * <p>The returned information about models. It is an array consisting of ModelDetail data.</p>
      */
     @NameInMap("ModelDetails")
     public DescribeModelsResponseBodyModelDetails modelDetails;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The page number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The returned information about models. It is an array consisting of ModelDetail data.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The last modification time of the model.</p>
+     * <p>The total number of returned entries.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -81,49 +81,49 @@ public class DescribeModelsResponseBody extends TeaModel {
 
     public static class DescribeModelsResponseBodyModelDetailsModelDetail extends TeaModel {
         /**
-         * <p>The URI of the model.</p>
+         * <p>The time when the model was created.</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
-         * <p>The name of the model.</p>
+         * <p>The definition of the model description.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The definition of the model.</p>
+         * <p>The ID of the API group to which the model belongs.</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>*   Fuzzy queries are supported.</p>
+         * <p>The ID of the model.</p>
          */
         @NameInMap("ModelId")
         public String modelId;
 
         /**
-         * <p>The ID of the model.</p>
+         * <p>The name of the model.</p>
          */
         @NameInMap("ModelName")
         public String modelName;
 
         /**
-         * <p>Obtains the created models of an API group.</p>
+         * <p>The URI of the model.</p>
          */
         @NameInMap("ModelRef")
         public String modelRef;
 
         /**
-         * <p>The definition of the model description.</p>
+         * <p>The last modification time of the model.</p>
          */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
         /**
-         * <p>The time when the model was created.</p>
+         * <p>The definition of the model.</p>
          */
         @NameInMap("Schema")
         public String schema;

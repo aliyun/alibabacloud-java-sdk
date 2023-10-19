@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSignaturesRequest extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -20,13 +20,13 @@ public class DescribeSignaturesRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The IDs of the keys to query.</p>
      */
     @NameInMap("SignatureId")
     public String signatureId;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * <p>The names of the keys to query.</p>
      */
     @NameInMap("SignatureName")
     public String signatureName;

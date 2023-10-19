@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeAbolishApiTaskResponseBody extends TeaModel {
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("ApiAbolishResults")
     public DescribeAbolishApiTaskResponseBodyApiAbolishResults apiAbolishResults;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,27 +38,54 @@ public class DescribeAbolishApiTaskResponseBody extends TeaModel {
     }
 
     public static class DescribeAbolishApiTaskResponseBodyApiAbolishResultsApiAbolishResult extends TeaModel {
+        /**
+         * <p>The unpublishing status.</p>
+         */
         @NameInMap("AbolishStatus")
         public String abolishStatus;
 
+        /**
+         * <p>The name of the API.</p>
+         */
         @NameInMap("ApiName")
         public String apiName;
 
+        /**
+         * <p>The ID of the API.</p>
+         */
         @NameInMap("ApiUid")
         public String apiUid;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
+        /**
+         * <p>The ID of the API group.</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The name of the API group.</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <p>The ID of the runtime environment.</p>
+         */
         @NameInMap("StageId")
         public String stageId;
 
+        /**
+         * <p>The name of the runtime environment. Valid values:</p>
+         * <br>
+         * <p>*   **RELEASE**</p>
+         * <p>*   **TEST**</p>
+         */
         @NameInMap("StageName")
         public String stageName;
 

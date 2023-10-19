@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetAppsAuthoritiesResponseBody extends TeaModel {
     /**
-     * <p>Grants access permissions on a specified API to multiple apps.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

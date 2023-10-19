@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveTrafficControlApisResponseBody extends TeaModel {
     /**
-     * <p>Unbinds a specified throttling policy from APIs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

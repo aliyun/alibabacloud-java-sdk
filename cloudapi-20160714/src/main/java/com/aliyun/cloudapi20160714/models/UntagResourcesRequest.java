@@ -5,25 +5,39 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to delete all tags. This parameter is valid only when the **TagKey.N**parameter is not specified. Default value: false. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("All")
     public Boolean all;
 
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The key of tag N.</p>
+     * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
      * <br>
-     * <p>Valid values of N: `1 to 20.`</p>
+     * <p>*   **apiGroup**</p>
+     * <p>*   **plugin**</p>
+     * <p>*   **app**</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tag keys of the resource.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

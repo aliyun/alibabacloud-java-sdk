@@ -4,12 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiQpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The returned information about failed API calls. It is an array consisting of MonitorItem data.</p>
+     */
     @NameInMap("CallFails")
     public DescribeApiQpsDataResponseBodyCallFails callFails;
 
+    /**
+     * <p>The returned information about successful API calls. It is an array consisting of MonitorItem data.</p>
+     */
     @NameInMap("CallSuccesses")
     public DescribeApiQpsDataResponseBodyCallSuccesses callSuccesses;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +52,15 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeApiQpsDataResponseBodyCallFailsMonitorItem extends TeaModel {
+        /**
+         * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         */
         @NameInMap("ItemTime")
         public String itemTime;
 
+        /**
+         * <p>The value corresponding to the monitoring metric.</p>
+         */
         @NameInMap("ItemValue")
         public String itemValue;
 
@@ -92,9 +107,15 @@ public class DescribeApiQpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeApiQpsDataResponseBodyCallSuccessesMonitorItem extends TeaModel {
+        /**
+         * <p>The time of the monitoring metric. The time format follows the ISO 8601 standard and UTC time is used. Format: YYYY-MM-DDThh:mm:ssZ</p>
+         */
         @NameInMap("ItemTime")
         public String itemTime;
 
+        /**
+         * <p>The value corresponding to the monitoring metric.</p>
+         */
         @NameInMap("ItemValue")
         public String itemValue;
 

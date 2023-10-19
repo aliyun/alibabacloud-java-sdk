@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreateIpControlResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the ACL.</p>
+     */
     @NameInMap("IpControlId")
     public String ipControlId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

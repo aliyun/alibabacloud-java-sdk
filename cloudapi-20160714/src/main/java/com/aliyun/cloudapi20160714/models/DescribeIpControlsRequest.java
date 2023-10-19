@@ -4,35 +4,29 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpControlsRequest extends TeaModel {
-    /**
-     * <p>The ID of the ACL. The ID is unique.</p>
-     */
     @NameInMap("IpControlId")
     public String ipControlId;
 
-    /**
-     * <p>The name of the ACL.</p>
-     */
     @NameInMap("IpControlName")
     public String ipControlName;
 
     /**
-     * <p>The type of the ACL. Valid values:</p>
-     * <br>
-     * <p>*   **ALLOW**: a whitelist</p>
-     * <p>*   **REFUSE**: a blacklist</p>
+     * <p>The name of the ACL.</p>
      */
     @NameInMap("IpControlType")
     public String ipControlType;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>ACLtest</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     * <p>The type of the ACL. Valid values:</p>
+     * <br>
+     * <p>*   **ALLOW**: an IP address whitelist</p>
+     * <p>*   **REFUSE**: an IP address blacklist</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

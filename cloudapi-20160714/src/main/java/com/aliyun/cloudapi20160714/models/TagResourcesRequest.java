@@ -4,11 +4,18 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    /**
+     * <p>The ID of the resource.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **TagResources**.</p>
+     * <p>The type of the resource. Tags are bound to API groups, plug-ins, and applications. You can use tags to manage cloud resources by group. Valid values:</p>
+     * <br>
+     * <p>*   **apiGroup**</p>
+     * <p>*   **plugin**</p>
+     * <p>*   **app**</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -16,6 +23,9 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
 
@@ -58,13 +68,13 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>Adds tags to resources.</p>
+         * <p>The key of tag N.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>TagResources</p>
+         * <p>The value of tag N.</p>
          */
         @NameInMap("Value")
         public String value;

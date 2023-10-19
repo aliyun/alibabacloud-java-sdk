@@ -4,18 +4,33 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
+    /**
+     * <p>The information about policies. The information is an array of IpControlPolicyItem data.</p>
+     */
     @NameInMap("IpControlPolicyItems")
     public DescribeIpControlPolicyItemsResponseBodyIpControlPolicyItems ipControlPolicyItems;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of returned entries.</p>
+     */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -65,18 +80,33 @@ public class DescribeIpControlPolicyItemsResponseBody extends TeaModel {
     }
 
     public static class DescribeIpControlPolicyItemsResponseBodyIpControlPolicyItemsIpControlPolicyItem extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The IP addresses or CIDR blocks.</p>
+         */
         @NameInMap("CidrIp")
         public String cidrIp;
 
+        /**
+         * <p>The time when the policy was created. The time is displayed in UTC.</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The time when the policy was modified. The time is displayed in UTC.</p>
+         */
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        /**
+         * <p>The ID of the policy.</p>
+         */
         @NameInMap("PolicyItemId")
         public String policyItemId;
 

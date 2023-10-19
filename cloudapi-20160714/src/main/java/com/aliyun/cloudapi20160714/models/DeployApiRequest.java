@@ -5,25 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeployApiRequest extends TeaModel {
     /**
-     * <p>The publishing remarks.</p>
+     * <p>The ID of the API.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
 
     /**
-     * <p>*   This operation is intended for API providers. Only the API that you have defined and published to a runtime environment can be called.</p>
-     * <p>*   An API is published to a cluster in less than 5 seconds.</p>
-     * <p>*   The QPS limit on this operation is 50 per user.</p>
+     * <p>The publishing remarks.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the runtime environment. Valid values:</p>
-     * <br>
-     * <p>*   **RELEASE**</p>
-     * <p>*   **PRE: the pre-release environment**</p>
-     * <p>*   **TEST: the test environment**</p>
+     * <p>The ID of the API group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;
@@ -32,7 +26,11 @@ public class DeployApiRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The name of the runtime environment. Valid values:</p>
+     * <br>
+     * <p>*   **RELEASE**</p>
+     * <p>*   **PRE**: the pre-release environment</p>
+     * <p>*   **TEST**</p>
      */
     @NameInMap("StageName")
     public String stageName;

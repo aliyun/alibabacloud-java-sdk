@@ -4,12 +4,21 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class CreatePluginResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the plug-in.</p>
+     */
     @NameInMap("PluginId")
     public String pluginId;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the plug-in is successfully marked.</p>
+     */
     @NameInMap("TagStatus")
     public Boolean tagStatus;
 

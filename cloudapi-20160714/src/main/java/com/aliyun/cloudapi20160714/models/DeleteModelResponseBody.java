@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteModelResponseBody extends TeaModel {
     /**
-     * <p>Deletes a model from Model Management for an API group.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

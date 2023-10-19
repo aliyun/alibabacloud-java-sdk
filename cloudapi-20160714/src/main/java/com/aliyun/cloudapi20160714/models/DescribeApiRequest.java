@@ -11,7 +11,7 @@ public class DescribeApiRequest extends TeaModel {
     public String apiId;
 
     /**
-     * <p>The ID of the API.</p>
+     * <p>The ID of the API group.</p>
      */
     @NameInMap("GroupId")
     public String groupId;

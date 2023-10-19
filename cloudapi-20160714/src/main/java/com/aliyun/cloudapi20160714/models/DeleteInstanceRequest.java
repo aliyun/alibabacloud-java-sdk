@@ -4,9 +4,15 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstanceRequest extends TeaModel {
+    /**
+     * <p>The ID of the instance.</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The tag of objects that match the lifecycle rule. You can specify multiple tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DeleteInstanceRequestTag> tag;
 
@@ -32,9 +38,15 @@ public class DeleteInstanceRequest extends TeaModel {
     }
 
     public static class DeleteInstanceRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public String value;
 

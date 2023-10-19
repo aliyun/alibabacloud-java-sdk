@@ -5,10 +5,34 @@ import com.aliyun.tea.*;
 
 public class DescribeTrafficControlsRequest extends TeaModel {
     /**
-     * <p>The name of the throttling policy.</p>
+     * <p>The specified API ID. This parameter must be specified together with GroupId and StageName.</p>
      */
     @NameInMap("ApiId")
     public String apiId;
+
+    /**
+     * <p>The specified group ID. This parameter must be specified together with ApiId and StageName.</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
+     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>The number of entries to return on each page. Maximum value: 100. Default value: 10.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</p>
+     */
+    @NameInMap("SecurityToken")
+    public String securityToken;
 
     /**
      * <p>The environment name. This parameter must be specified together with GroupId and ApiId. Valid values:********</p>
@@ -16,38 +40,17 @@ public class DescribeTrafficControlsRequest extends TeaModel {
      * <p>*   **RELEASE**</p>
      * <p>*   **TEST**</p>
      */
-    @NameInMap("GroupId")
-    public String groupId;
-
-    /**
-     * <p>The page number of the returned page.</p>
-     */
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    /**
-     * <p>The ID of the request.</p>
-     */
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    /**
-     * <p>ThrottlingTest</p>
-     */
     @NameInMap("StageName")
     public String stageName;
 
     /**
-     * <p>The specified API ID. This parameter must be specified together with GroupId and StageName.</p>
+     * <p>The ID of the throttling policy.</p>
      */
     @NameInMap("TrafficControlId")
     public String trafficControlId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The name of the throttling policy.</p>
      */
     @NameInMap("TrafficControlName")
     public String trafficControlName;

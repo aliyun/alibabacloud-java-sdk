@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetIpControlApisResponseBody extends TeaModel {
     /**
-     * <p>Creates a binding relationship between specified access control lists (ACLs) and APIs.</p>
+     * <p>The ID of the request.</p>
      */
     @NameInMap("RequestId")
     public String requestId;

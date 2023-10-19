@@ -4,15 +4,24 @@ package com.aliyun.cloudapi20160714.models;
 import com.aliyun.tea.*;
 
 public class DescribeDatasetItemInfoRequest extends TeaModel {
+    /**
+     * <p>The ID of the dataset.</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <p>The ID of the data entry.</p>
+     */
     @NameInMap("DatasetItemId")
     public String datasetItemId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The value of the data entry.</p>
+     */
     @NameInMap("Value")
     public String value;
 

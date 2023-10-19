@@ -10,6 +10,9 @@ public class ResetAppSecretRequest extends TeaModel {
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>The new AppKey that you set must be globally unique.</p>
+     */
     @NameInMap("NewAppKey")
     public String newAppKey;
 
