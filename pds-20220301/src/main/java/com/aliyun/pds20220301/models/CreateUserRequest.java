@@ -29,7 +29,7 @@ public class CreateUserRequest extends TeaModel {
     public String status;
 
     @NameInMap("user_data")
-    public String userData;
+    public java.util.Map<String, ?> userData;
 
     @NameInMap("user_id")
     public String userId;
@@ -106,11 +106,11 @@ public class CreateUserRequest extends TeaModel {
         return this.status;
     }
 
-    public CreateUserRequest setUserData(String userData) {
+    public CreateUserRequest setUserData(java.util.Map<String, ?> userData) {
         this.userData = userData;
         return this;
     }
-    public String getUserData() {
+    public java.util.Map<String, ?> getUserData() {
         return this.userData;
     }
 

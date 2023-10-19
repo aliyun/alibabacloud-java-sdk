@@ -4,12 +4,21 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class SearchFileResponseBody extends TeaModel {
+    /**
+     * <p>The information about the files.</p>
+     */
     @NameInMap("items")
     public java.util.List<File> items;
 
+    /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If next_marker is empty, no next page exists.</p>
+     */
     @NameInMap("next_marker")
     public String nextMarker;
 
+    /**
+     * <p>The total number of retrieved files.</p>
+     */
     @NameInMap("total_count")
     public Long totalCount;
 

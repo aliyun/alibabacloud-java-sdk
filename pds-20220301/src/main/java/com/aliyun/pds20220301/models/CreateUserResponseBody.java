@@ -41,7 +41,7 @@ public class CreateUserResponseBody extends TeaModel {
     public Long updatedAt;
 
     @NameInMap("user_data")
-    public java.util.Map<String, String> userData;
+    public java.util.Map<String, ?> userData;
 
     @NameInMap("user_id")
     public String userId;
@@ -150,11 +150,11 @@ public class CreateUserResponseBody extends TeaModel {
         return this.updatedAt;
     }
 
-    public CreateUserResponseBody setUserData(java.util.Map<String, String> userData) {
+    public CreateUserResponseBody setUserData(java.util.Map<String, ?> userData) {
         this.userData = userData;
         return this;
     }
-    public java.util.Map<String, String> getUserData() {
+    public java.util.Map<String, ?> getUserData() {
         return this.userData;
     }
 

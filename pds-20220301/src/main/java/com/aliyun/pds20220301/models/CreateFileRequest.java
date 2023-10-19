@@ -240,9 +240,42 @@ public class CreateFileRequest extends TeaModel {
         return this.videoMediaMetadata;
     }
 
+    public static class CreateFileRequestPartInfoListParallelSha1Ctx extends TeaModel {
+        @NameInMap("h")
+        public java.util.List<Long> h;
+
+        @NameInMap("part_offset")
+        public Long partOffset;
+
+        public static CreateFileRequestPartInfoListParallelSha1Ctx build(java.util.Map<String, ?> map) throws Exception {
+            CreateFileRequestPartInfoListParallelSha1Ctx self = new CreateFileRequestPartInfoListParallelSha1Ctx();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFileRequestPartInfoListParallelSha1Ctx setH(java.util.List<Long> h) {
+            this.h = h;
+            return this;
+        }
+        public java.util.List<Long> getH() {
+            return this.h;
+        }
+
+        public CreateFileRequestPartInfoListParallelSha1Ctx setPartOffset(Long partOffset) {
+            this.partOffset = partOffset;
+            return this;
+        }
+        public Long getPartOffset() {
+            return this.partOffset;
+        }
+
+    }
+
     public static class CreateFileRequestPartInfoList extends TeaModel {
         @NameInMap("content_md5")
         public String contentMd5;
+
+        @NameInMap("parallel_sha1_ctx")
+        public CreateFileRequestPartInfoListParallelSha1Ctx parallelSha1Ctx;
 
         @NameInMap("part_number")
         public Integer partNumber;
@@ -258,6 +291,14 @@ public class CreateFileRequest extends TeaModel {
         }
         public String getContentMd5() {
             return this.contentMd5;
+        }
+
+        public CreateFileRequestPartInfoList setParallelSha1Ctx(CreateFileRequestPartInfoListParallelSha1Ctx parallelSha1Ctx) {
+            this.parallelSha1Ctx = parallelSha1Ctx;
+            return this;
+        }
+        public CreateFileRequestPartInfoListParallelSha1Ctx getParallelSha1Ctx() {
+            return this.parallelSha1Ctx;
         }
 
         public CreateFileRequestPartInfoList setPartNumber(Integer partNumber) {
