@@ -3487,10 +3487,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specifies whether to return nested stacks. Default value: false. Valid values:
-      * *   true
-      * *   false
-      * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
+      * ###
+      * This topic provides an example on how to query a list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
       *
       * @param request ListStacksRequest
       * @param runtime runtime options for this request RuntimeOptions
@@ -3569,10 +3567,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-      * Specifies whether to return nested stacks. Default value: false. Valid values:
-      * *   true
-      * *   false
-      * > If the ParentStackId parameter is specified, you must set the ShowNestedStack parameter to true.
+      * ###
+      * This topic provides an example on how to query a list of stacks. In this example, the stacks that are deployed in the China (Hangzhou) region are queried.
       *
       * @param request ListStacksRequest
       * @return ListStacksResponse
