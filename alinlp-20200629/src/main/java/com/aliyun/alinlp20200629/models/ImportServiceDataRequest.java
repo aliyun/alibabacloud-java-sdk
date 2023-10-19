@@ -13,6 +13,9 @@ public class ImportServiceDataRequest extends TeaModel {
     @NameInMap("SubPath")
     public String subPath;
 
+    @NameInMap("Url")
+    public String url;
+
     public static ImportServiceDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportServiceDataRequest self = new ImportServiceDataRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ImportServiceDataRequest extends TeaModel {
     }
     public String getSubPath() {
         return this.subPath;
+    }
+
+    public ImportServiceDataRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
     }
 
 }
