@@ -110,13 +110,13 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         public String maxConnection;
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the instance.</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The maximum connections per second (CPS).</p>
+         * <p>The number of connections per second.</p>
          */
         @NameInMap("NewConnectionPerSecond")
         public String newConnectionPerSecond;
@@ -128,7 +128,7 @@ public class QuerySlbSpecResponseBody extends TeaModel {
         public String qps;
 
         /**
-         * <p>The specifications.</p>
+         * <p>The specification of the instance.</p>
          */
         @NameInMap("Spec")
         public String spec;

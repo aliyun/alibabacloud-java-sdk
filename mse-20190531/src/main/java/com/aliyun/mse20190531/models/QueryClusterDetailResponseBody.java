@@ -84,13 +84,13 @@ public class QueryClusterDetailResponseBody extends TeaModel {
 
     public static class QueryClusterDetailResponseBodyDataInstanceModels extends TeaModel {
         /**
-         * <p>The timestamp when the instance node was created.</p>
+         * <p>The timestamp when the instance was created.</p>
          */
         @NameInMap("CreationTimestamp")
         public String creationTimestamp;
 
         /**
-         * <p>The health status of the instance node.</p>
+         * <p>The health status of the instance.</p>
          */
         @NameInMap("HealthStatus")
         public String healthStatus;
@@ -102,7 +102,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         public String internetIp;
 
         /**
-         * <p>The IP address of the node.</p>
+         * <p>The IP address of the instance.</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -126,7 +126,7 @@ public class QueryClusterDetailResponseBody extends TeaModel {
         public String singleTunnelVip;
 
         /**
-         * <p>The zone.</p>
+         * <p>The zone ID.</p>
          */
         @NameInMap("Zone")
         public String zone;

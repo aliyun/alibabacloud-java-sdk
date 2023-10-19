@@ -4,15 +4,30 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowRulesRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The IDs of the rules to be deleted.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
+    /**
+     * <p>The microservice namespace to which the application belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

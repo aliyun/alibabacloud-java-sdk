@@ -104,7 +104,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag values.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -140,13 +140,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the service was created.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The time when the service was modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -158,7 +158,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the service.</p>
+         * <p>The service ID.</p>
          */
         @NameInMap("ServiceId")
         public Long serviceId;
@@ -246,7 +246,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -276,7 +276,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
 
     public static class GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersion extends TeaModel {
         /**
-         * <p>The tag.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Labels")
         public java.util.List<GetGatewayServiceDetailResponseBodyDataVersionDetailsServiceVersionLabels> labels;
@@ -368,13 +368,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The type.</p>
+         * <p>The type of the service.</p>
          */
         @NameInMap("Type")
         public String type;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("Value")
         public String value;

@@ -4,21 +4,65 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListFlowRulesResponseBody extends TeaModel {
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>The details of the data.</p>
+     */
     @NameInMap("Data")
     public ListFlowRulesResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <p>The returned message.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The request was successful.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    The request failed.</p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -76,42 +120,125 @@ public class ListFlowRulesResponseBody extends TeaModel {
     }
 
     public static class ListFlowRulesResponseBodyDataResult extends TeaModel {
+        /**
+         * <p>The ID of the application.</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the application.</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The throttling effect.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   0</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    fast failure</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   2</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    :</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    in queue</p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("ControlBehavior")
         public Integer controlBehavior;
 
+        /**
+         * <p>Indicates whether the throttling rule was enabled.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   false</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The throttling behavior.</p>
+         */
         @NameInMap("FallbackObject")
         public String fallbackObject;
 
+        /**
+         * <p>The timeout period for queuing when the value of ControlBehavior is set to 2. Unit: milliseconds.</p>
+         */
         @NameInMap("MaxQueueingTimeMs")
         public Integer maxQueueingTimeMs;
 
+        /**
+         * <p>The statistical dimension. The value 1 indicates the number of accepted requests.</p>
+         */
         @NameInMap("MetricType")
         public Integer metricType;
 
+        /**
+         * <p>The namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The region ID.</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The name of the interface resource.</p>
+         */
         @NameInMap("Resource")
         public String resource;
 
+        /**
+         * <p>The ID of the rule.</p>
+         */
         @NameInMap("RuleId")
         public Long ruleId;
 
+        /**
+         * <p>The throttling threshold.</p>
+         */
         @NameInMap("Threshold")
         public Float threshold;
 
+        /**
+         * <p>A reserved parameter.</p>
+         */
         @NameInMap("TrafficTags")
         public java.util.Map<String, ?> trafficTags;
 
@@ -227,15 +354,27 @@ public class ListFlowRulesResponseBody extends TeaModel {
     }
 
     public static class ListFlowRulesResponseBodyData extends TeaModel {
+        /**
+         * <p>The page number.</p>
+         */
         @NameInMap("PageNumber")
         public Integer pageNumber;
 
+        /**
+         * <p>The number of entries per page.</p>
+         */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The data returned.</p>
+         */
         @NameInMap("Result")
         public java.util.List<ListFlowRulesResponseBodyDataResult> result;
 
+        /**
+         * <p>The total number of entries.</p>
+         */
         @NameInMap("TotalSize")
         public Integer totalSize;
 

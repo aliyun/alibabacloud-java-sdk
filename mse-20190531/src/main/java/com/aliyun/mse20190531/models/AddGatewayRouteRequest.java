@@ -14,49 +14,13 @@ public class AddGatewayRouteRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The destination service type.</p>
-     * <br>
-     * <p>Enumeration values:</p>
-     * <br>
-     * <p>*   VersionOriented</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Multiple</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <p>The type of the destination service. Valid values:</p>
      * <br>
      * <p>*   Single</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   Mock\"\"</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
+     * <p>*   Multiple</p>
+     * <p>*   VersionOriented</p>
+     * <p>*   Mock</p>
      * <p>*   Redirect</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    <!-- --></p>
      */
     @NameInMap("DestinationType")
     public String destinationType;
@@ -74,7 +38,7 @@ public class AddGatewayRouteRequest extends TeaModel {
     public Long domainId;
 
     /**
-     * <p>The list of domain IDs.</p>
+     * <p>The domain IDs.</p>
      */
     @NameInMap("DomainIdListJSON")
     public String domainIdListJSON;

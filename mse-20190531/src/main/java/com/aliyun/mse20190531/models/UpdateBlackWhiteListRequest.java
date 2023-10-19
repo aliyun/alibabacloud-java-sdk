@@ -32,7 +32,7 @@ public class UpdateBlackWhiteListRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Specifies whether to enable the whitelist.</p>
+     * <p>The whitelist. Default value: No.</p>
      */
     @NameInMap("IsWhite")
     public Boolean isWhite;

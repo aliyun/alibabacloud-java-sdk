@@ -11,7 +11,7 @@ public class ListZkTrackResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The HTTP status code.</p>
      */
     @NameInMap("HttpCode")
     public String httpCode;
@@ -155,7 +155,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The type of the event. Valid values: For tracks of the Notify type:</p>
+         * <p>The type of the event. For trajectory of the Notify type:</p>
          * <br>
          * <p>*   NodeCreated</p>
          * <p>*   NodeDeleted</p>
@@ -184,7 +184,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public Long multiSize;
 
         /**
-         * <p>The operation type. For tracks of the Push type:</p>
+         * <p>The type of the operation. For trajectory of the Push type:</p>
          * <br>
          * <p>*   Create</p>
          * <p>*   Update</p>
@@ -192,7 +192,7 @@ public class ListZkTrackResponseBody extends TeaModel {
          * <p>*   SetAcl</p>
          * <p>*   Multi</p>
          * <br>
-         * <p>For tracks of the Pull type:</p>
+         * <p>For trajectory of the Pull type:</p>
          * <br>
          * <p>*   GetData</p>
          * <p>*   GetChild</p>
@@ -208,7 +208,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The result.</p>
+         * <p>The returned result.</p>
          */
         @NameInMap("Result")
         public String result;
@@ -220,13 +220,13 @@ public class ListZkTrackResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The timestamp (not available).</p>
+         * <p>The timestamp. It is not available.</p>
          */
         @NameInMap("Timestamp")
         public String timestamp;
 
         /**
-         * <p>The type of the track. Valid values:</p>
+         * <p>The type of the trajectory. Valid values:</p>
          * <br>
          * <p>*   Push</p>
          * <p>*   Pull</p>
@@ -242,7 +242,7 @@ public class ListZkTrackResponseBody extends TeaModel {
         public Long ttl;
 
         /**
-         * <p>Indicates whether to enable the monitoring feature.</p>
+         * <p>Indicates whether the monitoring feature is enabled.</p>
          */
         @NameInMap("Watch")
         public Boolean watch;

@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryNamespaceRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh which indicates Chinese, and the value en indicates English.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

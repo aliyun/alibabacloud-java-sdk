@@ -4,11 +4,14 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class QueryNamespaceResponseBody extends TeaModel {
+    /**
+     * <p>The data returned.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryNamespaceResponseBodyData> data;
 
     /**
-     * <p>错误码。</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -68,9 +71,15 @@ public class QueryNamespaceResponseBody extends TeaModel {
     }
 
     public static class QueryNamespaceResponseBodyData extends TeaModel {
+        /**
+         * <p>The name of the namespace.</p>
+         */
         @NameInMap("Namespace")
         public String namespace;
 
+        /**
+         * <p>The region to which the namespace belongs.</p>
+         */
         @NameInMap("Region")
         public String region;
 

@@ -19,9 +19,15 @@ public class DeleteSwimmingLaneGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public Long groupId;
 
+    /**
+     * <p>The name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

@@ -4,18 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class ListAppBySwimmingLaneGroupTagsResponseBody extends TeaModel {
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, java.util.List<DataValue>> data;
 
+    /**
+     * <p>The error code.</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The additional request information.</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

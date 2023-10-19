@@ -20,6 +20,9 @@ public class ApplyTagPoliciesShrinkRequest extends TeaModel {
     @Deprecated
     public String appId;
 
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
@@ -29,6 +32,9 @@ public class ApplyTagPoliciesShrinkRequest extends TeaModel {
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The Microservices Engine (MSE) namespace to which the application belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

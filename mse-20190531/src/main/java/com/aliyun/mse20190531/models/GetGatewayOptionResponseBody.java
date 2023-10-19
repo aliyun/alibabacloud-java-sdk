@@ -13,8 +13,8 @@ public class GetGatewayOptionResponseBody extends TeaModel {
     /**
      * <p>The detailed configurations of the gateway.</p>
      * <br>
-     * <p>*   **TraceDetails**: the sampling description of Tracing Analysis. Content: TraceEnabled indicates whether Tracing Analysis is activated. Sample indicates the sampling rate of Tracing Analysis.</p>
-     * <p>*   **LogConfigDetails**: the description of Log Service. Content: LogEnabled indicates whether Log Service is activated. ProjectName indicates the Log Service project to which logs are delivered. LogStoreName indicates the name of the Logstore.</p>
+     * <p>*   **TraceDetails**: the sampling description of Managed Service for OpenTelemetry. Content: TraceEnabled indicates whether Managed Service for OpenTelemetry is activated. Sample indicates the sampling rate of Managed Service for OpenTelemetry.</p>
+     * <p>*   **LogConfigDetails**: the description of Simple Log Service. Content: LogEnabled indicates whether Simple Log Service is activated. ProjectName indicates the Simple Log Service project to which logs are delivered. LogStoreName indicates the name of the Logstore.</p>
      * <p>*   **EnableHardwareAcceleration**: indicates whether hardware acceleration is enabled.</p>
      * <p>*   **DisableHttp2Alpn**: indicates whether the HTTP/2 protocol is disabled.</p>
      * <p>*   **EnableWaf**: indicates whether Web Application Firewall (WAF) is enabled.</p>

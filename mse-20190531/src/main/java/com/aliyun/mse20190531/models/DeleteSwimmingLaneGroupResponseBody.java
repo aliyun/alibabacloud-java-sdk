@@ -11,7 +11,7 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

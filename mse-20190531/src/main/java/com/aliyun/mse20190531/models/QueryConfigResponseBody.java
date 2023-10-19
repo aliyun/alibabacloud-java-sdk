@@ -179,6 +179,12 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("ConfigSecretSupported")
         public Boolean configSecretSupported;
 
+        @NameInMap("ConsoleUIEnabled")
+        public Boolean consoleUIEnabled;
+
+        /**
+         * <p>Indicates whether access port 8761 was enabled for Eureka. If this port is disabled, applications cannot use the Eureka protocol for service registration and discovery.</p>
+         */
         @NameInMap("EurekaSupported")
         public Boolean eurekaSupported;
 
@@ -312,6 +318,9 @@ public class QueryConfigResponseBody extends TeaModel {
         @NameInMap("SyncLimit")
         public String syncLimit;
 
+        /**
+         * <p>MSE Nacos supports TLS transmission link encryption since version 2.1.2.1. Nacos clients must be upgraded to version 2.2.1 or later. After TLS is enabled, the system performance will decrease by about 10%. You must evaluate the system capacity. For more information about the relevant operations, see Nacos TLS transmission encryption.</p>
+         */
         @NameInMap("TLSEnabled")
         public Boolean TLSEnabled;
 
@@ -394,6 +403,14 @@ public class QueryConfigResponseBody extends TeaModel {
         }
         public Boolean getConfigSecretSupported() {
             return this.configSecretSupported;
+        }
+
+        public QueryConfigResponseBodyData setConsoleUIEnabled(Boolean consoleUIEnabled) {
+            this.consoleUIEnabled = consoleUIEnabled;
+            return this;
+        }
+        public Boolean getConsoleUIEnabled() {
+            return this.consoleUIEnabled;
         }
 
         public QueryConfigResponseBodyData setEurekaSupported(Boolean eurekaSupported) {

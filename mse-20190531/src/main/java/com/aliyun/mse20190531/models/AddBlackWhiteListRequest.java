@@ -26,7 +26,7 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>Specifies whether to create a whitelist.</p>
+     * <p>The whitelist. Default value: No.</p>
      */
     @NameInMap("IsWhite")
     public Boolean isWhite;
@@ -50,7 +50,11 @@ public class AddBlackWhiteListRequest extends TeaModel {
     public String resourceIdJsonList;
 
     /**
-     * <p>The resource type to which the blacklist or whitelist applies.</p>
+     * <p>The effective scope of the blacklist or whitelist. Valid values:</p>
+     * <br>
+     * <p>*   GATEWAY</p>
+     * <p>*   DOMAIN</p>
+     * <p>*   ROUTE</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;

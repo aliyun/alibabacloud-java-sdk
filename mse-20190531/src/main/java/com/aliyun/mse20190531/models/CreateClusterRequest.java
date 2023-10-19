@@ -13,6 +13,35 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The billing method.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   PREPAY</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    the subscription billing method</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   POSTPAY</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    the pay-as-you-go billing method</p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("ChargeType")
     public String chargeType;
 
@@ -67,7 +96,7 @@ public class CreateClusterRequest extends TeaModel {
     public String connectionType;
 
     /**
-     * <p>The disk type. Valid values:</p>
+     * <p>The type of the disk. Valid values:</p>
      * <br>
      * <p>*   alicloud-disk-ssd</p>
      * <p>*   alicloud-disk-essd-pl1</p>
@@ -76,6 +105,9 @@ public class CreateClusterRequest extends TeaModel {
     @Deprecated
     public String diskType;
 
+    /**
+     * <p>Specifies whether to enable Internet access (Elastic IP Address) if ConnectionType is set to `single_eni`.</p>
+     */
     @NameInMap("EipEnabled")
     public Boolean eipEnabled;
 
@@ -94,16 +126,16 @@ public class CreateClusterRequest extends TeaModel {
     public Integer instanceCount;
 
     /**
-     * <p>The name of the instance.</p>
+     * <p>The name of the MSE instance.</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>Set this parameter unless otherwise specified. Valid values:</p>
+     * <p>Configure this parameter unless otherwise specified. Valid values:</p>
      * <br>
      * <p>*   `mse_pro`: Professional Edition</p>
-     * <p>*   `mse_dev`: Developer Edition</p>
+     * <p>*   `mse_dev`: Developer Edition.</p>
      */
     @NameInMap("MseVersion")
     public String mseVersion;
@@ -128,8 +160,8 @@ public class CreateClusterRequest extends TeaModel {
     public String privateSlbSpecification;
 
     /**
-     * <p>The public bandwidth. Unit: Mbit/s.\</p>
-     * <p>Valid values: 0 to 5000. The value 0 indicates no access to the Internet.</p>
+     * <p>The public bandwidth. Unit: Mbit/s. This parameter is required.\</p>
+     * <p>Valid values: 0 to 5000. A value of 0 indicates no access to the Internet.</p>
      */
     @NameInMap("PubNetworkFlow")
     public String pubNetworkFlow;
@@ -168,6 +200,14 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The type of the security group to which the instance belongs. This parameter is valid only when the ConnectionType parameter is set to `single_eni`.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   enterprise</p>
+     * <p>*   normal</p>
+     */
     @NameInMap("SecurityGroupType")
     public String securityGroupType;
 

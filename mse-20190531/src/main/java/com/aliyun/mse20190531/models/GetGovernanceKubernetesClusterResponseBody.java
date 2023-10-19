@@ -69,11 +69,14 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static class GetGovernanceKubernetesClusterResponseBodyDataNamespaces extends TeaModel {
+        /**
+         * <p>The name of the MSE namespace that you want to access.</p>
+         */
         @NameInMap("MseNamespace")
         public String mseNamespace;
 
         /**
-         * <p>The name.</p>
+         * <p>The name of the namespace in the ACK cluster.</p>
          */
         @NameInMap("Name")
         public String name;
@@ -127,13 +130,13 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         public String namespaceInfos;
 
         /**
-         * <p>The list of namespaces.</p>
+         * <p>The queried namespaces.</p>
          */
         @NameInMap("Namespaces")
         public java.util.List<GetGovernanceKubernetesClusterResponseBodyDataNamespaces> namespaces;
 
         /**
-         * <p>The time when the ack-onepilot component was started.</p>
+         * <p>The time when the pilot component was started.</p>
          */
         @NameInMap("PilotStartTime")
         public String pilotStartTime;

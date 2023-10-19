@@ -4,28 +4,52 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetApplicationInstanceListRequest extends TeaModel {
+    /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     @Deprecated
     public String appId;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The Microservices Engine (MSE) namespace to which the application belongs.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The page number. Pages start from page 1.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The tags that you want to add to nodes.</p>
+     */
     @NameInMap("Tag")
     public String tag;
 

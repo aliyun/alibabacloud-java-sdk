@@ -19,6 +19,9 @@ public class AddAuthResourceRequest extends TeaModel {
     @NameInMap("AuthId")
     public Long authId;
 
+    /**
+     * <p>The authentication resource headers.</p>
+     */
     @NameInMap("AuthResourceHeaderList")
     public java.util.List<AddAuthResourceRequestAuthResourceHeaderList> authResourceHeaderList;
 
@@ -34,15 +37,18 @@ public class AddAuthResourceRequest extends TeaModel {
     @NameInMap("GatewayUniqueId")
     public String gatewayUniqueId;
 
+    /**
+     * <p>Specifies whether the matching is not case-sensitive. Default value: true.</p>
+     */
     @NameInMap("IgnoreCase")
     public Boolean ignoreCase;
 
     /**
-     * <p>The matching type.</p>
+     * <p>The matching type. Valid values:</p>
      * <br>
-     * <p>*   exact: exact matching</p>
-     * <p>*   prefix: prefix matching</p>
-     * <p>*   regex: regular expression matching</p>
+     * <p>*   EQUAL</p>
+     * <p>*   PRE</p>
+     * <p>*   ERGULAR</p>
      */
     @NameInMap("MatchType")
     public String matchType;
@@ -123,12 +129,95 @@ public class AddAuthResourceRequest extends TeaModel {
     }
 
     public static class AddAuthResourceRequestAuthResourceHeaderList extends TeaModel {
+        /**
+         * <p>The parameter of the HTTP header.</p>
+         */
         @NameInMap("HeaderKey")
         public String headerKey;
 
+        /**
+         * <p>The header matching mode.</p>
+         * <br>
+         * <p>Valid values:</p>
+         * <br>
+         * <p>*   SUFFIX</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   EXIST</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   PREFIX</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   EQUAL</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   EXCLUDE</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NOT_EQUAL</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   NOT_EXIST</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   REGREX</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>*   INCLUDE</p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         * <br>
+         * <p>    <!-- --></p>
+         */
         @NameInMap("HeaderMethod")
         public String headerMethod;
 
+        /**
+         * <p>The parameter value of the HTTP header.</p>
+         */
         @NameInMap("HeaderValue")
         public String headerValue;
 

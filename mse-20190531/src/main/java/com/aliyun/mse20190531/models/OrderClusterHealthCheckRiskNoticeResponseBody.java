@@ -11,7 +11,7 @@ public class OrderClusterHealthCheckRiskNoticeResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data of the node.</p>
+     * <p>Indicates whether the subscription was successful.</p>
      */
     @NameInMap("Data")
     public Boolean data;

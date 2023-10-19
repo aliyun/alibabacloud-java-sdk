@@ -25,6 +25,12 @@ public class UpdateClusterRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaintenanceEndTime")
+    public String maintenanceEndTime;
+
+    @NameInMap("MaintenanceStartTime")
+    public String maintenanceStartTime;
+
     /**
      * <p>The extended request parameters in the JSON format.</p>
      */
@@ -58,6 +64,22 @@ public class UpdateClusterRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateClusterRequest setMaintenanceEndTime(String maintenanceEndTime) {
+        this.maintenanceEndTime = maintenanceEndTime;
+        return this;
+    }
+    public String getMaintenanceEndTime() {
+        return this.maintenanceEndTime;
+    }
+
+    public UpdateClusterRequest setMaintenanceStartTime(String maintenanceStartTime) {
+        this.maintenanceStartTime = maintenanceStartTime;
+        return this;
+    }
+    public String getMaintenanceStartTime() {
+        return this.maintenanceStartTime;
     }
 
     public UpdateClusterRequest setRequestPars(String requestPars) {

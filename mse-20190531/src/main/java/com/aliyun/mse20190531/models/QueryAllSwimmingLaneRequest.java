@@ -20,7 +20,7 @@ public class QueryAllSwimmingLaneRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>MSE命名空间名字</p>
+     * <p>The name of the MSE namespace.</p>
      */
     @NameInMap("Namespace")
     public String namespace;

@@ -4,6 +4,9 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
+    /**
+     * <p>The language in which you want to display the results. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

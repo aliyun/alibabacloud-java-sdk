@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceResponseBody extends TeaModel {
     /**
-     * <p>错误码。</p>
+     * <p>The error code.</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

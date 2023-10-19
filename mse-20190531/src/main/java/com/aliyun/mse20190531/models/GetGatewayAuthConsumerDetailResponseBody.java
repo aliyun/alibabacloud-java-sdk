@@ -11,7 +11,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The data structure.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public GetGatewayAuthConsumerDetailResponseBodyData data;
@@ -142,7 +142,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
 
     public static class GetGatewayAuthConsumerDetailResponseBodyDataResourceList extends TeaModel {
         /**
-         * <p>The ID of the consumer.</p>
+         * <p>The consumer ID.</p>
          */
         @NameInMap("ConsumerId")
         public Long consumerId;
@@ -154,13 +154,13 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the resource associated with the consumer authentication record was created.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The time when the resource associated with the consumer authentication record was modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;
@@ -172,10 +172,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The resource authorization status. Valid values:</p>
+         * <p>The resource authorization state. Valid values:</p>
          * <br>
-         * <p>*   true: enabled</p>
-         * <p>*   false: disabled</p>
+         * <p>*   true: Resource authorization is enabled.</p>
+         * <p>*   false: Resource authorization is disabled.</p>
          */
         @NameInMap("ResourceStatus")
         public Boolean resourceStatus;
@@ -295,13 +295,13 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         public String gatewayUniqueId;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the consumer authentication record was created.</p>
          */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the consumer authentication record was modified.</p>
          */
         @NameInMap("GmtModified")
         public String gmtModified;

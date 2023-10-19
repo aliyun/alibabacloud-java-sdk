@@ -4,33 +4,63 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class GetServiceListPageRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values: zh and en. Default value: zh. The value zh indicates Chinese, and the value en indicates English.</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>应用名字。</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The IP address from which the query is initiated.</p>
+     */
     @NameInMap("Ip")
     public String ip;
 
+    /**
+     * <p>The name of the MSE namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The page number.</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     */
     @NameInMap("Region")
     public String region;
 
+    /**
+     * <p>The service name.</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 
+    /**
+     * <p>The service type.</p>
+     */
     @NameInMap("ServiceType")
     public String serviceType;
 

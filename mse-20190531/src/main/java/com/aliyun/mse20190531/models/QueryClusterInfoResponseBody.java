@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryClusterInfoResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public QueryClusterInfoResponseBodyData data;
@@ -205,6 +205,36 @@ public class QueryClusterInfoResponseBody extends TeaModel {
 
     }
 
+    public static class QueryClusterInfoResponseBodyDataMaintenancePeriod extends TeaModel {
+        @NameInMap("EndTime")
+        public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        public static QueryClusterInfoResponseBodyDataMaintenancePeriod build(java.util.Map<String, ?> map) throws Exception {
+            QueryClusterInfoResponseBodyDataMaintenancePeriod self = new QueryClusterInfoResponseBodyDataMaintenancePeriod();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryClusterInfoResponseBodyDataMaintenancePeriod setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public QueryClusterInfoResponseBodyDataMaintenancePeriod setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class QueryClusterInfoResponseBodyData extends TeaModel {
         /**
          * <p>The public IP address whitelist.</p>
@@ -290,12 +320,21 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("DiskType")
         public String diskType;
 
+        /**
+         * <p>弹性公网IP（EIP）的实例ID</p>
+         */
         @NameInMap("EipInstanceId")
         public String eipInstanceId;
 
+        /**
+         * <p>到期时间（包年包月）</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
+        /**
+         * <p>The zones to which the current cluster can be distributed.</p>
+         */
         @NameInMap("ExpectZones")
         public java.util.List<String> expectZones;
 
@@ -371,6 +410,9 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         public String intranetPort;
 
+        @NameInMap("MaintenancePeriod")
+        public QueryClusterInfoResponseBodyDataMaintenancePeriod maintenancePeriod;
+
         /**
          * <p>A deprecated parameter.</p>
          */
@@ -408,9 +450,15 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>ENI网络接入的安全组ID</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <p>ENI网络接入的安全组类型</p>
+         */
         @NameInMap("SecurityGroupType")
         public String securityGroupType;
 
@@ -667,6 +715,14 @@ public class QueryClusterInfoResponseBody extends TeaModel {
         }
         public String getIntranetPort() {
             return this.intranetPort;
+        }
+
+        public QueryClusterInfoResponseBodyData setMaintenancePeriod(QueryClusterInfoResponseBodyDataMaintenancePeriod maintenancePeriod) {
+            this.maintenancePeriod = maintenancePeriod;
+            return this;
+        }
+        public QueryClusterInfoResponseBodyDataMaintenancePeriod getMaintenancePeriod() {
+            return this.maintenancePeriod;
         }
 
         public QueryClusterInfoResponseBodyData setMemoryCapacity(Long memoryCapacity) {

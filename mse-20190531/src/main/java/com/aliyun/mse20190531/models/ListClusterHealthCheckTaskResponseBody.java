@@ -151,7 +151,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("Id")
         public Integer id;
@@ -163,7 +163,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String module;
 
         /**
-         * <p>Indicates whether the risk item notification feature is disabled.</p>
+         * <p>Indicates whether the risk item notification feature is disabled. Valid values:</p>
          * <br>
          * <p>*   true: disabled</p>
          * <p>*   false: enabled</p>
@@ -184,7 +184,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String primaryUser;
 
         /**
-         * <p>The risk code.</p>
+         * <p>The code of the risk.</p>
          */
         @NameInMap("RiskCode")
         public String riskCode;
@@ -394,7 +394,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID.</p>
+         * <p>The serial number.</p>
          */
         @NameInMap("Id")
         public Integer id;
@@ -406,25 +406,25 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String imageVersion;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
-         * <p>The ID of the user to which the instance belongs.</p>
+         * <p>The ID of the user to which the cluster belongs.</p>
          */
         @NameInMap("PrimaryUser")
         public String primaryUser;
 
         /**
-         * <p>The number of nodes in the instance.</p>
+         * <p>The number of nodes in the cluster.</p>
          */
         @NameInMap("Replica")
         public String replica;
 
         /**
-         * <p>The list of risk items.</p>
+         * <p>The risk items.</p>
          */
         @NameInMap("RiskList")
         public java.util.List<ListClusterHealthCheckTaskResponseBodyDataResultRiskList> riskList;
@@ -442,7 +442,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String spec;
 
         /**
-         * <p>The status of the task.</p>
+         * <p>The task state.</p>
          */
         @NameInMap("Status")
         public String status;
@@ -466,7 +466,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The last update time.</p>
+         * <p>The time when the task was last updated.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

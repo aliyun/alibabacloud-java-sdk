@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddServiceSourceRequest extends TeaModel {
     /**
-     * <p>The return value.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh-CN (default): Chinese</p>
+     * <p>*   en-US: English</p>
+     * <p>*   ja: Japanese</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
@@ -47,13 +51,19 @@ public class AddServiceSourceRequest extends TeaModel {
     public java.util.List<String> pathList;
 
     /**
-     * <p>Specifies whether to enable Ingress.</p>
+     * <p>The service source.</p>
+     * <br>
+     * <p>*   K8s: ACK cluster</p>
+     * <p>*   NACOS: MSE Nacos instance</p>
      */
     @NameInMap("Source")
     public String source;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>The type of the service source.</p>
+     * <br>
+     * <p>*   K8s: Container Service for Kubernetes (ACK) cluster</p>
+     * <p>*   NACOS: Nacos instance</p>
      */
     @NameInMap("Type")
     public String type;

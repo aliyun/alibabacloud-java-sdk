@@ -4,33 +4,110 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowRuleRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The throttling effect.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   0</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    fast failure</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   2</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    :</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    in queue</p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("ControlBehavior")
     public Integer controlBehavior;
 
+    /**
+     * <p>Specifies whether to enable the rule.</p>
+     * <br>
+     * <p>Valid values:</p>
+     * <br>
+     * <p>*   true</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>*   false</p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     * <br>
+     * <p>    <!-- --></p>
+     */
     @NameInMap("Enable")
     public Boolean enable;
 
+    /**
+     * <p>The timeout period. Unit: milliseconds. This value is required if the ControlBehavior parameter is set to 2.</p>
+     */
     @NameInMap("MaxQueueingTimeMs")
     public Integer maxQueueingTimeMs;
 
+    /**
+     * <p>The namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The region in which the instance resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the API resource.</p>
+     */
     @NameInMap("Resource")
     public String resource;
 
+    /**
+     * <p>The throttling threshold.</p>
+     */
     @NameInMap("Threshold")
     public Integer threshold;
 

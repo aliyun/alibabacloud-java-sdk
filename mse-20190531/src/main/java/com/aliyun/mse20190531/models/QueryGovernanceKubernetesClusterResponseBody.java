@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public QueryGovernanceKubernetesClusterResponseBodyData data;
@@ -67,7 +67,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
 
     public static class QueryGovernanceKubernetesClusterResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The ID of cluster.</p>
+         * <p>The ID of the cluster.</p>
          */
         @NameInMap("ClusterId")
         public String clusterId;
@@ -85,13 +85,13 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         public String k8sVersion;
 
         /**
-         * <p>The information of the namespace.</p>
+         * <p>The information about the namespace.</p>
          */
         @NameInMap("NamespaceInfos")
         public String namespaceInfos;
 
         /**
-         * <p>The time when the ack-onepilot component was started.</p>
+         * <p>The time when the pilot component was started.</p>
          */
         @NameInMap("PilotStartTime")
         public String pilotStartTime;
@@ -171,7 +171,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The data structure.</p>
+         * <p>The details of the data.</p>
          */
         @NameInMap("Result")
         public java.util.List<QueryGovernanceKubernetesClusterResponseBodyDataResult> result;

@@ -98,7 +98,7 @@ public class ListSSLCertResponseBody extends TeaModel {
 
     public static class ListSSLCertResponseBodyData extends TeaModel {
         /**
-         * <p>The validation time.</p>
+         * <p>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("AfterDate")
         public String afterDate;
@@ -110,7 +110,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the certificate took effect. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          */
         @NameInMap("BeforeDate")
         public String beforeDate;
@@ -134,19 +134,19 @@ public class ListSSLCertResponseBody extends TeaModel {
         public String commonName;
 
         /**
-         * <p>The validation time.</p>
+         * <p>The time when the certificate expires. This value is a GMT timestamp.</p>
          */
         @NameInMap("GmtAfter")
         public String gmtAfter;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The time when the certificate took effect. This value is a GMT timestamp.</p>
          */
         @NameInMap("GmtBefore")
         public String gmtBefore;
 
         /**
-         * <p>The issuer.</p>
+         * <p>The issuer of the certificate.</p>
          */
         @NameInMap("Issuer")
         public String issuer;

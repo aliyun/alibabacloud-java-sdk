@@ -19,9 +19,15 @@ public class GetAppMessageQueueRouteRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the application.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The name of the Microservices Engine (MSE) namespace.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 

@@ -73,10 +73,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         public Boolean carryData;
 
         /**
-         * <p>Indicates whether the routing rule is enabled.</p>
+         * <p>Indicates whether the rule is enabled. Valid values:</p>
          * <br>
-         * <p>*   `true`: enabled</p>
-         * <p>*   `false`: disabled</p>
+         * <p>*   `true`: The rule is enabled.</p>
+         * <p>*   `false`: The rule is disabled.</p>
          */
         @NameInMap("Enable")
         public Boolean enable;
@@ -106,7 +106,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         public Integer rate;
 
         /**
-         * <p>Indicates whether the routing rule is deleted.</p>
+         * <p>Indicates whether the routing rule was deleted.</p>
          */
         @NameInMap("Remove")
         public Boolean remove;

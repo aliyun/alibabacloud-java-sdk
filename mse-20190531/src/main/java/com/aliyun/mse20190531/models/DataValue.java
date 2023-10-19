@@ -4,18 +4,33 @@ package com.aliyun.mse20190531.models;
 import com.aliyun.tea.*;
 
 public class DataValue extends TeaModel {
+    /**
+     * <p>The ID of the user to which the application belongs.</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The region where the application resides.</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The microservice namespace where the application resides.</p>
+     */
     @NameInMap("Namespace")
     public String namespace;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

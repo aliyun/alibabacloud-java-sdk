@@ -97,12 +97,21 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyDataElasticPolicyTimePolicyList extends TeaModel {
+        /**
+         * <p>The number of expected replicas.</p>
+         */
         @NameInMap("DesiredReplica")
         public Integer desiredReplica;
 
+        /**
+         * <p>The end time of auto scale-out.</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The start time of auto scale-out.</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
@@ -138,12 +147,23 @@ public class GetGatewayResponseBody extends TeaModel {
     }
 
     public static class GetGatewayResponseBodyDataElasticPolicy extends TeaModel {
+        /**
+         * <p>The type of auto scale-out. Valid value:</p>
+         * <br>
+         * <p>*   CronHPA: scale-out by time</p>
+         */
         @NameInMap("ElasticType")
         public String elasticType;
 
+        /**
+         * <p>The maximum number of instances that are automatically scaled out. This parameter is used for horizontal scale-out.</p>
+         */
         @NameInMap("MaxReplica")
         public Integer maxReplica;
 
+        /**
+         * <p>The policy of scale-out by time.</p>
+         */
         @NameInMap("TimePolicyList")
         public java.util.List<GetGatewayResponseBodyDataElasticPolicyTimePolicyList> timePolicyList;
 
@@ -271,15 +291,29 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        /**
+         * <p>Indicates whether auto scale-out is enabled.</p>
+         */
         @NameInMap("Elastic")
         public Boolean elastic;
 
+        /**
+         * <p>The auto scale-out policy.</p>
+         */
         @NameInMap("ElasticPolicy")
         public GetGatewayResponseBodyDataElasticPolicy elasticPolicy;
 
+        /**
+         * <p>The number of replicas that are automatically scaled out.</p>
+         */
         @NameInMap("ElasticReplica")
         public Integer elasticReplica;
 
+        /**
+         * <p>The type of auto scale-out. Valid value:</p>
+         * <br>
+         * <p>*   CronHPA: scale-out by time</p>
+         */
         @NameInMap("ElasticType")
         public String elasticType;
 
@@ -385,6 +419,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("StatusDesc")
         public String statusDesc;
 
+        /**
+         * <p>The total number of replicas, including the number of replicas that are automatically scaled out.</p>
+         */
         @NameInMap("TotalReplica")
         public Integer totalReplica;
 

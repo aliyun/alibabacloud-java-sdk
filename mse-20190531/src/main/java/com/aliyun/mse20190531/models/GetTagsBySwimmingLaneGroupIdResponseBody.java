@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTagsBySwimmingLaneGroupIdResponseBody extends TeaModel {
     /**
-     * <p>The details of the data.</p>
+     * <p>The data of the tag.</p>
      */
     @NameInMap("Data")
     public java.util.List<String> data;

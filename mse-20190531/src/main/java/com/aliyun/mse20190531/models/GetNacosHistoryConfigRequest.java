@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetNacosHistoryConfigRequest extends TeaModel {
     /**
-     * <p>The data structure.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <br>
+     * <p>*   zh: Chinese</p>
+     * <p>*   en: English</p>
      */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
