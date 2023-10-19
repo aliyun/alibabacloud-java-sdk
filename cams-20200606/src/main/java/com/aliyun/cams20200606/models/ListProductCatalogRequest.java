@@ -4,21 +4,40 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListProductCatalogRequest extends TeaModel {
+    /**
+     * <p>The cursor that points to the end of the page of the returned data.</p>
+     */
     @NameInMap("After")
     public String after;
 
+    /**
+     * <p>The cursor that points to the beginning of the page of the returned data.</p>
+     */
     @NameInMap("Before")
     public String before;
 
+    /**
+     * <p>The Business Manager ID.</p>
+     */
     @NameInMap("BusinessId")
     public Long businessId;
 
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The fields. Separate multiple fields with commas (,).</p>
+     * <p>see  [catalog fields](~~2579419~~)</p>
+     */
     @NameInMap("Fields")
     public String fields;
 
+    /**
+     * <p>The number of catalogs to be queried. Valid values: 1 to 1000.</p>
+     */
     @NameInMap("Limit")
     public Long limit;
 

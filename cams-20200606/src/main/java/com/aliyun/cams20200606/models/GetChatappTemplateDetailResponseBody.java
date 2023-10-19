@@ -164,6 +164,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("AutofillText")
         public String autofillText;
 
+        @NameInMap("CouponCode")
+        public String couponCode;
+
         /**
          * <p>扩展字段</p>
          */
@@ -246,6 +249,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             return this.autofillText;
         }
 
+        public GetChatappTemplateDetailResponseBodyDataComponentsButtons setCouponCode(String couponCode) {
+            this.couponCode = couponCode;
+            return this;
+        }
+        public String getCouponCode() {
+            return this.couponCode;
+        }
+
         public GetChatappTemplateDetailResponseBodyDataComponentsButtons setExtendAttrs(GetChatappTemplateDetailResponseBodyDataComponentsButtonsExtendAttrs extendAttrs) {
             this.extendAttrs = extendAttrs;
             return this;
@@ -320,6 +331,151 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     }
 
+    public static class GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons extends TeaModel {
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        @NameInMap("Text")
+        public String text;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("UrlType")
+        public String urlType;
+
+        public static GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons build(java.util.Map<String, ?> map) throws Exception {
+            GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons self = new GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons setUrlType(String urlType) {
+            this.urlType = urlType;
+            return this;
+        }
+        public String getUrlType() {
+            return this.urlType;
+        }
+
+    }
+
+    public static class GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents extends TeaModel {
+        @NameInMap("Buttons")
+        public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons> buttons;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("Text")
+        public String text;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents build(java.util.Map<String, ?> map) throws Exception {
+            GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents self = new GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents setButtons(java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons> buttons) {
+            this.buttons = buttons;
+            return this;
+        }
+        public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponentsButtons> getButtons() {
+            return this.buttons;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class GetChatappTemplateDetailResponseBodyDataComponentsCards extends TeaModel {
+        @NameInMap("CardComponents")
+        public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents> cardComponents;
+
+        public static GetChatappTemplateDetailResponseBodyDataComponentsCards build(java.util.Map<String, ?> map) throws Exception {
+            GetChatappTemplateDetailResponseBodyDataComponentsCards self = new GetChatappTemplateDetailResponseBodyDataComponentsCards();
+            return TeaModel.build(map, self);
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponentsCards setCardComponents(java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents> cardComponents) {
+            this.cardComponents = cardComponents;
+            return this;
+        }
+        public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCardsCardComponents> getCardComponents() {
+            return this.cardComponents;
+        }
+
+    }
+
     public static class GetChatappTemplateDetailResponseBodyDataComponents extends TeaModel {
         /**
          * <p>Whatsapp类型模板，Category为Authentication，并且Component Type为Body时有效，表示在Body上面显示不要将验证码信息提供给其它人的提示信息</p>
@@ -338,6 +494,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          */
         @NameInMap("Caption")
         public String caption;
+
+        @NameInMap("Cards")
+        public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCards> cards;
 
         /**
          * <p>Whatsapp Authentication模板验证码有效期（分钟），只在Whatsapp类型消息，Category为Authentication并且Component Type为Footer时有效（此信息显示在Footer位置）</p>
@@ -393,6 +552,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Longitude")
         public String longitude;
 
+        @NameInMap("OfferExpirationTimeMs")
+        public String offerExpirationTimeMs;
+
         /**
          * <p>The text of the message that you want to send.</p>
          */
@@ -434,6 +596,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Url")
         public String url;
 
+        @NameInMap("hasExpiration")
+        public Boolean hasExpiration;
+
         public static GetChatappTemplateDetailResponseBodyDataComponents build(java.util.Map<String, ?> map) throws Exception {
             GetChatappTemplateDetailResponseBodyDataComponents self = new GetChatappTemplateDetailResponseBodyDataComponents();
             return TeaModel.build(map, self);
@@ -461,6 +626,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
         public String getCaption() {
             return this.caption;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponents setCards(java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCards> cards) {
+            this.cards = cards;
+            return this;
+        }
+        public java.util.List<GetChatappTemplateDetailResponseBodyDataComponentsCards> getCards() {
+            return this.cards;
         }
 
         public GetChatappTemplateDetailResponseBodyDataComponents setCodeExpirationMinutes(Integer codeExpirationMinutes) {
@@ -535,6 +708,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             return this.longitude;
         }
 
+        public GetChatappTemplateDetailResponseBodyDataComponents setOfferExpirationTimeMs(String offerExpirationTimeMs) {
+            this.offerExpirationTimeMs = offerExpirationTimeMs;
+            return this;
+        }
+        public String getOfferExpirationTimeMs() {
+            return this.offerExpirationTimeMs;
+        }
+
         public GetChatappTemplateDetailResponseBodyDataComponents setText(String text) {
             this.text = text;
             return this;
@@ -565,6 +746,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public GetChatappTemplateDetailResponseBodyDataComponents setHasExpiration(Boolean hasExpiration) {
+            this.hasExpiration = hasExpiration;
+            return this;
+        }
+        public Boolean getHasExpiration() {
+            return this.hasExpiration;
         }
 
     }

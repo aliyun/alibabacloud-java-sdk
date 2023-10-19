@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetWhatsappConnectionCatalogRequest extends TeaModel {
+    /**
+     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
@@ -17,7 +20,7 @@ public class GetWhatsappConnectionCatalogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Waba Id。</p>
+     * <p>The WABA ID.</p>
      */
     @NameInMap("WabaId")
     public String wabaId;

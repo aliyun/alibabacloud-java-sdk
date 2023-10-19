@@ -4,21 +4,44 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetChatappPhoneNumberMetricRequest extends TeaModel {
+    /**
+     * <p>The space ID of the user under the ISV account.</p>
+     */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    /**
+     * <p>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <br>
+     * <p>>  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 24 hours.</p>
+     */
     @NameInMap("End")
     public Long end;
 
+    /**
+     * <p>Metric granularity. Valid values:</p>
+     * <br>
+     * <p>- DAILY</p>
+     * <p>- HALF_HOUR</p>
+     */
     @NameInMap("Granularity")
     public String granularity;
 
+    /**
+     * <p>The ISV verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+     */
     @NameInMap("IsvCode")
     public String isvCode;
 
+    /**
+     * <p>The business phone number.</p>
+     */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    /**
+     * <p>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     */
     @NameInMap("Start")
     public Long start;
 
