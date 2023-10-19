@@ -5,34 +5,35 @@ import com.aliyun.tea.*;
 
 public class ListStacksResponseBody extends TeaModel {
     /**
-     * <p>The tag key of the stack.</p>
+     * <p>The page number.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>Indicates whether rollback is disabled when the stack fails to be created. Default value: false. Valid values:</p>
+     * <p>The number of entries per page.</p>
      * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <p>Maximum value: 50.</p>
+     * <br>
+     * <p>Default value: 10.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The tags of the stack.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The tag value of the stack.</p>
+     * <p>The stacks.</p>
      */
     @NameInMap("Stacks")
     public java.util.List<ListStacksResponseBodyStacks> stacks;
 
     /**
-     * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The total number of stacks.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -83,21 +84,39 @@ public class ListStacksResponseBody extends TeaModel {
     }
 
     public static class ListStacksResponseBodyStacksOperationInfo extends TeaModel {
+        /**
+         * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>The error code.</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <p>The logical ID of the resource on which the operation error occurred.</p>
+         */
         @NameInMap("LogicalResourceId")
         public String logicalResourceId;
 
+        /**
+         * <p>The error message.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <p>The type of the resource on which the operation error occurred.</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -158,16 +177,13 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static class ListStacksResponseBodyStacksTags extends TeaModel {
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The key of the tag.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>Indicates whether the stack is a managed stack. Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <p>*   false</p>
+         * <p>The value of the tag.</p>
          */
         @NameInMap("Value")
         public String value;
@@ -197,7 +213,7 @@ public class ListStacksResponseBody extends TeaModel {
 
     public static class ListStacksResponseBodyStacks extends TeaModel {
         /**
-         * <p>The ID of the stack.</p>
+         * <p>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -206,103 +222,118 @@ public class ListStacksResponseBody extends TeaModel {
         public String deletionProtection;
 
         /**
-         * <p>The state of the stack on which the last successful drift detection was performed. Valid values:</p>
+         * <p>Indicates whether rollback is disabled when the stack fails to be created. Valid values:</p>
          * <br>
-         * <p>*   DRIFTED: Drift detection is being performed on the stack.</p>
-         * <p>*   NOT_CHECKED: No successful drift detection is performed on the stack.</p>
-         * <p>*   IN_SYNC: The stack is being synchronized.</p>
+         * <p>*   true</p>
+         * <p>*   false (default)</p>
          */
         @NameInMap("DisableRollback")
         public Boolean disableRollback;
 
         /**
-         * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
+         * <p>The time when the most recent successful drift detection was performed on the stack.</p>
          */
         @NameInMap("DriftDetectionTime")
         public String driftDetectionTime;
 
+        /**
+         * <p>The supplementary information that is returned when an error occurs on a stack operation.</p>
+         * <br>
+         * <p>> This parameter is returned only if an error occurs on a stack operation. The system returns at least one sub-property. For example, an error occurred when an API operation of another Alibaba Cloud service was called.</p>
+         */
         @NameInMap("OperationInfo")
         public ListStacksResponseBodyStacksOperationInfo operationInfo;
 
         /**
-         * <p>The error message.</p>
+         * <p>The ID of the parent stack.</p>
          */
         @NameInMap("ParentStackId")
         public String parentStackId;
 
         /**
-         * <p>The error code.</p>
+         * <p>The region ID of the stack. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The logical ID of the resource on which an operation fails to be performed.</p>
+         * <p>The ID of the resource group.</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>Indicates whether the stack is a managed stack. Valid values:</p>
+         * <br>
+         * <p>*   true</p>
+         * <p>*   false</p>
+         */
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
 
+        /**
+         * <p>The name of the service to which the managed stack belongs.</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
         /**
-         * <p>The name of the API operation that belongs to another Alibaba Cloud service.</p>
+         * <p>The state of the stack on which the most recent successful drift detection was performed. Valid values:</p>
+         * <br>
+         * <p>*   DRIFTED: The stack has drifted.</p>
+         * <p>*   NOT_CHECKED: No successful drift detection is performed on the stack.</p>
+         * <p>*   IN_SYNC: The stack is being synchronized.</p>
          */
         @NameInMap("StackDriftStatus")
         public String stackDriftStatus;
 
         /**
-         * <p>The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.</p>
+         * <p>The stack ID.</p>
          */
         @NameInMap("StackId")
         public String stackId;
 
         /**
-         * <p>The name of the service to which the managed stack belongs.</p>
+         * <p>The stack name.</p>
          */
         @NameInMap("StackName")
         public String stackName;
 
         /**
-         * <p>The type of the resource on which an operation fails to be performed.</p>
+         * <p>The stack type. Valid values:</p>
+         * <br>
+         * <p>*   ROS: Resource Orchestration Service (ROS) stack. The stack is created by using a ROS template.</p>
+         * <p>*   Terraform: Terraform stack. The stack is created by using a Terraform template.</p>
          */
         @NameInMap("StackType")
         public String stackType;
 
         /**
-         * <p>The name of the stack.</p>
+         * <p>The state of the stack.</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The ID of the parent stack.</p>
+         * <p>The reason why the stack is in its current state.</p>
          */
         @NameInMap("StatusReason")
         public String statusReason;
 
         /**
-         * <p>The type of the stack. Valid values:</p>
-         * <br>
-         * <p>*   ROS: ROS stack. The stack is created by using a Resource Orchestration Service (ROS) template.</p>
-         * <p>*   Terraform: Terraform stack. The stack is created by using a Terraform template.</p>
+         * <p>The tags of the stack.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListStacksResponseBodyStacksTags> tags;
 
         /**
-         * <p>The supplementary information that is returned when an operation fails to be performed on the stack.</p>
-         * <br>
-         * <p>>  This parameter is returned if an operation fails to be performed on the stack. The system returns at least one sub-property. Example: An error occurred when the API operation of another Alibaba Cloud service was called.</p>
+         * <p>The timeout period that is allowed to create the stack. Unit: minutes.</p>
          */
         @NameInMap("TimeoutInMinutes")
         public Integer timeoutInMinutes;
 
         /**
-         * <p>The timeout period that is allowed to create the stack. Unit: minutes.</p>
+         * <p>The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

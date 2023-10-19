@@ -272,6 +272,9 @@ public class CreateTemplateScratchRequest extends TeaModel {
     }
 
     public static class CreateTemplateScratchRequestSourceResources extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
         /**
          * <p>The ID of the resource.</p>
          */
@@ -287,6 +290,14 @@ public class CreateTemplateScratchRequest extends TeaModel {
         public static CreateTemplateScratchRequestSourceResources build(java.util.Map<String, ?> map) throws Exception {
             CreateTemplateScratchRequestSourceResources self = new CreateTemplateScratchRequestSourceResources();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTemplateScratchRequestSourceResources setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public CreateTemplateScratchRequestSourceResources setResourceId(String resourceId) {
