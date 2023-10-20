@@ -825,6 +825,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Authorize", request.authorize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackToken)) {
+            query.put("CallbackToken", request.callbackToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackUrl)) {
+            query.put("CallbackUrl", request.callbackUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.crop)) {
             query.put("Crop", request.crop);
         }
