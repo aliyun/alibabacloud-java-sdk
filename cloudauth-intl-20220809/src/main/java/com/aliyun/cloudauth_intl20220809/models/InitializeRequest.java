@@ -7,6 +7,12 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("Authorize")
     public String authorize;
 
+    @NameInMap("CallbackToken")
+    public String callbackToken;
+
+    @NameInMap("CallbackUrl")
+    public String callbackUrl;
+
     @NameInMap("Crop")
     public String crop;
 
@@ -81,6 +87,22 @@ public class InitializeRequest extends TeaModel {
     }
     public String getAuthorize() {
         return this.authorize;
+    }
+
+    public InitializeRequest setCallbackToken(String callbackToken) {
+        this.callbackToken = callbackToken;
+        return this;
+    }
+    public String getCallbackToken() {
+        return this.callbackToken;
+    }
+
+    public InitializeRequest setCallbackUrl(String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+        return this;
+    }
+    public String getCallbackUrl() {
+        return this.callbackUrl;
     }
 
     public InitializeRequest setCrop(String crop) {
