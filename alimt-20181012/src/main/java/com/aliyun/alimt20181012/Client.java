@@ -378,6 +378,55 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getBatchTranslateWithOptions(request, runtime);
     }
 
+    public GetBatchTranslateByVPCResponse getBatchTranslateByVPCWithOptions(GetBatchTranslateByVPCRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiType)) {
+            body.put("ApiType", request.apiType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.formatType)) {
+            body.put("FormatType", request.formatType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("Scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceText)) {
+            body.put("SourceText", request.sourceText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("TargetLanguage", request.targetLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBatchTranslateByVPC"),
+            new TeaPair("version", "2018-10-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBatchTranslateByVPCResponse());
+    }
+
+    public GetBatchTranslateByVPCResponse getBatchTranslateByVPC(GetBatchTranslateByVPCRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBatchTranslateByVPCWithOptions(request, runtime);
+    }
+
     public GetDetectLanguageResponse getDetectLanguageWithOptions(GetDetectLanguageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1066,6 +1115,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TranslateGeneralResponse translateGeneral(TranslateGeneralRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.translateGeneralWithOptions(request, runtime);
+    }
+
+    public TranslateGeneralVpcResponse translateGeneralVpcWithOptions(TranslateGeneralVpcRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.context)) {
+            query.put("Context", request.context);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.formatType)) {
+            body.put("FormatType", request.formatType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("Scene", request.scene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLanguage)) {
+            body.put("SourceLanguage", request.sourceLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceText)) {
+            body.put("SourceText", request.sourceText);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetLanguage)) {
+            body.put("TargetLanguage", request.targetLanguage);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TranslateGeneralVpc"),
+            new TeaPair("version", "2018-10-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateGeneralVpcResponse());
+    }
+
+    public TranslateGeneralVpcResponse translateGeneralVpc(TranslateGeneralVpcRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.translateGeneralVpcWithOptions(request, runtime);
     }
 
     public TranslateImageResponse translateImageWithOptions(TranslateImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
