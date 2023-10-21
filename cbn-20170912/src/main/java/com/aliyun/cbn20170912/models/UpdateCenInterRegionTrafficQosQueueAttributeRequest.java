@@ -5,19 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaModel {
     /**
-     * <p>The new name of the queue.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The differentiated services code point (DSCP) value used to match packets in the queue.</p>
+     */
     @NameInMap("Dscps")
     public java.util.List<Integer> dscps;
 
@@ -36,21 +42,23 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public String qosQueueDescription;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **UpdateCenInterRegionTrafficQosQueueAttribute**.</p>
+     * <p>The queue ID.</p>
      */
     @NameInMap("QosQueueId")
     public String qosQueueId;
 
     /**
-     * <p>The differentiated services code point (DSCP) value of the packets to be matched by the queue. Valid values: **0** to **63**.</p>
+     * <p>The new name of the queue.</p>
      * <br>
-     * <p>You can enter up to 20 DSCP values at a time.</p>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
      */
     @NameInMap("QosQueueName")
     public String qosQueueName;
 
     /**
-     * <p>Modifies a queue in a quality of service (QoS) policy.</p>
+     * <p>The percentage of the inter-region bandwidth that can be used by the queue.</p>
+     * <br>
+     * <p>Enter a number. You do not need to enter a percent sign (%).</p>
      */
     @NameInMap("RemainBandwidthPercent")
     public String remainBandwidthPercent;

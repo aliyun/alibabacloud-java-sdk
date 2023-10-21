@@ -84,7 +84,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
          * <p>*   **Configured**: The aggregate route is advertised to the VPC.</p>
          * <p>*   **Configuring**: The aggregate route is being advertised.</p>
          * <p>*   **ConfigFailed**: The aggregate route failed to be advertised.</p>
-         * <p>*   **PartialConfigured**: Some content of the aggregate route failed to be advertised.</p>
+         * <p>*   **PartialConfigured**: Failed to advertise the aggregate route to some VPCs.</p>
          * <p>*   **Deleting**: The aggregate route is being deleted.</p>
          */
         @NameInMap("Status")

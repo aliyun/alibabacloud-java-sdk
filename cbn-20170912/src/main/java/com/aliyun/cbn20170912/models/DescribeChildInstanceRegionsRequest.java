@@ -4,6 +4,9 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeChildInstanceRegionsRequest extends TeaModel {
+    /**
+     * <p>The language of the response. Valid values: zh-CN (Chinese, which is the default language), en-US (English), and ja (Japanese).</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 

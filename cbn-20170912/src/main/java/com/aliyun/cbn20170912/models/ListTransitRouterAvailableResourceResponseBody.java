@@ -4,29 +4,32 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterAvailableResourceResponseBody extends TeaModel {
+    /**
+     * <p>A list of zone IDs.</p>
+     */
     @NameInMap("AvailableZones")
     public java.util.List<String> availableZones;
 
     /**
-     * <p>ListTransitRouterAvailableResource</p>
+     * <p>A list of primary zones.</p>
      */
     @NameInMap("MasterZones")
     public java.util.List<String> masterZones;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **ListTransitRouterAvailableResource**.</p>
+     * <p>A list of secondary zone IDs.</p>
      */
     @NameInMap("SlaveZones")
     public java.util.List<String> slaveZones;
 
     /**
-     * <p>是否为支持组播功能的可用区信息。</p>
+     * <p>Indicates whether the zone supports the multicast feature.</p>
      */
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;

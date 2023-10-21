@@ -4,18 +4,31 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class UpdateTransitRouterVbrAttachmentAttributeRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
+     */
     @NameInMap("AutoPublishRouteEnabled")
     public Boolean autoPublishRouteEnabled;
 
     /**
-     * <p>Specifies whether to allow the Enterprise Edition transit router to automatically advertise routes to the VBR. Valid values:</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <br>
+     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Default values:</p>
+     * <br>
+     * <p>*   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -31,12 +44,25 @@ public class UpdateTransitRouterVbrAttachmentAttributeRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The new description of the VBR connection.</p>
+     * <br>
+     * <p>The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.</p>
+     */
     @NameInMap("TransitRouterAttachmentDescription")
     public String transitRouterAttachmentDescription;
 
+    /**
+     * <p>The ID of the VBR connection.</p>
+     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
+    /**
+     * <p>The new name of the VBR connection.</p>
+     * <br>
+     * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.</p>
+     */
     @NameInMap("TransitRouterAttachmentName")
     public String transitRouterAttachmentName;
 

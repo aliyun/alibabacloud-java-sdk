@@ -4,18 +4,39 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteConflictRequest extends TeaModel {
+    /**
+     * <p>The ID of the network instance that you want to query.</p>
+     */
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
+    /**
+     * <p>The ID of the region where the network instance is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     */
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
+    /**
+     * <p>The ID of the route table that is configured on the network instance.</p>
+     */
     @NameInMap("ChildInstanceRouteTableId")
     public String childInstanceRouteTableId;
 
+    /**
+     * <p>The type of the network instance. Valid values:</p>
+     * <br>
+     * <p>*   **VPC**: virtual private cloud (VPC)</p>
+     * <p>*   **VBR**: virtual border router (VBR)</p>
+     * <p>*   **CCN**: Cloud Connect Network (CCN) instance</p>
+     */
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    /**
+     * <p>The destination CIDR block of the conflicting route.</p>
+     */
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
@@ -26,11 +47,14 @@ public class DescribeRouteConflictRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Queries conflicting routes on a network instance.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **10**. Valid values: **1** to **50**.</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

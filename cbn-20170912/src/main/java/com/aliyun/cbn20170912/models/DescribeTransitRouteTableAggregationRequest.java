@@ -4,12 +4,28 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The number of entries to return on each page. Default value: **20**.</p>
+     */
     @NameInMap("MaxResults")
     public Long maxResults;
 
+    /**
+     * <p>The token that determines the start point of the query. Valid values:</p>
+     * <br>
+     * <p>*   If this is your first query or no subsequent query is to be sent, ignore this parameter.</p>
+     * <p>*   If a next query is to be sent, set the value to the value of **NextToken** that is returned from the last call.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -25,9 +41,15 @@ public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The destination CIDR block of the aggregate route.</p>
+     */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
 
+    /**
+     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+     */
     @NameInMap("TransitRouteTableId")
     public String transitRouteTableId;
 

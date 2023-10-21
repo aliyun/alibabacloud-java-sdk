@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     /**
-     * <p>The description of the bandwidth plan.</p>
+     * <p>The filter configurations.</p>
      */
     @NameInMap("Filter")
     public java.util.List<DescribeCenBandwidthPackagesRequestFilter> filter;
@@ -13,20 +13,17 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     /**
      * <p>Specifies whether to include renewal data. Valid values:</p>
      * <br>
-     * <p>*   **true**: yes</p>
-     * <p>*   **false**: no</p>
+     * <p>*   **true**</p>
+     * <p>*   **false**</p>
      */
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
 
     /**
-     * <p>The ID of the other connected area of the bandwidth plan. Valid values:</p>
+     * <p>The logical operator between the filter conditions. Valid values:</p>
      * <br>
-     * <p>*   **china**: Chinese mainland.</p>
-     * <p>*   **asia-pacific**: Asia Pacific</p>
-     * <p>*   **europe**: Europe</p>
-     * <p>*   **australia**: Australia</p>
-     * <p>*   **north-america**: North America</p>
+     * <p>*   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.</p>
+     * <p>*   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.</p>
      */
     @NameInMap("IsOrKey")
     public Boolean isOrKey;
@@ -38,19 +35,20 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Specify a filter value based on the **Key** parameter.</p>
-     * <br>
-     * <p>You can specify multiple values for a **filter key**. The logical relation among multiple filter values is **OR**. If a bandwidth package matches one of the values that you specify, the bandwidth package matches the filter condition.</p>
+     * <p>The number of the page to return. Default value: **1**.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the peer region.</p>
+     * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -60,6 +58,11 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The information about the tags.</p>
+     * <br>
+     * <p>You can specify at most 20 tags in each call.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeCenBandwidthPackagesRequestTag> tag;
 
@@ -158,17 +161,24 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
 
     public static class DescribeCenBandwidthPackagesRequestFilter extends TeaModel {
         /**
-         * <p>The operation that you want to perform. Set the value to **DescribeCenBandwidthPackages**.</p>
+         * <p>The filter conditions. You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:</p>
+         * <br>
+         * <p>*   **CenId**: CEN instance ID</p>
+         * <br>
+         * <p>*   **Status**: bandwidth plan status. Valid values:</p>
+         * <br>
+         * <p>    *   **Idle**: not associated with a CEN instance.</p>
+         * <p>    *   **InUse**: associated with a CEN instance.</p>
+         * <br>
+         * <p>*   **CenBandwidthPackageId**: bandwidth plan ID</p>
+         * <br>
+         * <p>*   **Name**: bandwidth plan name You can specify one or more filter conditions. The maximum value of **N** is **5**.</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The status of the bandwidth plan. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**: normal</p>
-         * <p>*   **FinancialLocked**: locked due to overdue payments</p>
-         * <p>*   **SecurityLocked**: locked due to security reasons</p>
+         * <p>Specify a filter value based on the **Key** parameter. You can specify multiple filter values for each **Key**. The logical operator between filter values is **OR**. If one filter value is matched, the filter condition is matched.</p>
          */
         @NameInMap("Value")
         public java.util.List<String> value;
@@ -197,9 +207,23 @@ public class DescribeCenBandwidthPackagesRequest extends TeaModel {
     }
 
     public static class DescribeCenBandwidthPackagesRequestTag extends TeaModel {
+        /**
+         * <p>The tag keys.</p>
+         * <br>
+         * <p>The tag keys cannot be an empty string. The tag keys can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>You can specify at most 20 tag keys.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag values.</p>
+         * <br>
+         * <p>The tag values can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.</p>
+         * <br>
+         * <p>The tag value of each tag key must be unique. You can specify at most 20 tag values in each call.</p>
+         */
         @NameInMap("Value")
         public String value;
 

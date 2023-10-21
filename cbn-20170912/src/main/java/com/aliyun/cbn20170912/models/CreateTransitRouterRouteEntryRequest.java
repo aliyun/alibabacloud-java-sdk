@@ -18,7 +18,7 @@ public class CreateTransitRouterRouteEntryRequest extends TeaModel {
      * <p>Specifies whether to perform a precheck to check information such as the permissions and instance status. Valid values:</p>
      * <br>
      * <p>*   **false** (default): sends the request. If the request passes the precheck, the route entry is added.</p>
-     * <p>*   **true**: sends a precheck request but does not add the route. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the system returns the ID of the request.</p>
+     * <p>*   **true**: sends a precheck request but does not add the route. If you use this value, the system checks the required parameters and the request syntax. If the request fails to pass the precheck, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -38,7 +38,7 @@ public class CreateTransitRouterRouteEntryRequest extends TeaModel {
     /**
      * <p>The description of the route.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.</p>
+     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
      */
     @NameInMap("TransitRouterRouteEntryDescription")
     public String transitRouterRouteEntryDescription;

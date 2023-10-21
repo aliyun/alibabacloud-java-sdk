@@ -18,7 +18,7 @@ public class DeleteTransitRouterRouteTableRequest extends TeaModel {
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <br>
      * <p>*   **false** (default): performs a dry run and sends the request.</p>
-     * <p>*   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the system returns the ID of the request.</p>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters and the request syntax. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;

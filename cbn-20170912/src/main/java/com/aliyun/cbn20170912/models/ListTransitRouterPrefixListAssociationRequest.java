@@ -12,6 +12,9 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     @NameInMap("NextHop")
     public String nextHop;
 
+    /**
+     * <p>The ID of the network instance associated with the next hop connection.</p>
+     */
     @NameInMap("NextHopInstanceId")
     public String nextHopInstanceId;
 
@@ -70,6 +73,12 @@ public class ListTransitRouterPrefixListAssociationRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The status of the prefix list. Valid values:</p>
+     * <br>
+     * <p>*   **Active**</p>
+     * <p>*   **Updating**</p>
+     */
     @NameInMap("Status")
     public String status;
 

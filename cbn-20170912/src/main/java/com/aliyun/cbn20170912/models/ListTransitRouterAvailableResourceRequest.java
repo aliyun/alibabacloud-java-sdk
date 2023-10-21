@@ -11,7 +11,9 @@ public class ListTransitRouterAvailableResourceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the zone.</p>
+     * <p>The region ID of the Enterprise Edition transit router.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -23,7 +25,13 @@ public class ListTransitRouterAvailableResourceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A list of zones.</p>
+     * <p>Specifies whether to query only the zones in which the multicast feature is supported. Valid values:</p>
+     * <br>
+     * <p>*   **true**</p>
+     * <br>
+     * <p>    After you call **ListTransitRouterAvailableResource**, if no zone is returned, it indicates that the Enterprise Edition transit router does not support the multicast feature.</p>
+     * <br>
+     * <p>*   **false** (default)</p>
      */
     @NameInMap("SupportMulticast")
     public Boolean supportMulticast;

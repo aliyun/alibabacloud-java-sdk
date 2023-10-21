@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The information about the routes.</p>
+     * <p>The information about the route.</p>
      */
     @NameInMap("CenRouteEntries")
     public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntries cenRouteEntries;
@@ -100,13 +100,13 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord extends TeaModel {
         /**
-         * <p>The ID of the region in which the routing policy is applied.</p>
+         * <p>The region ID of the routing policy.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The ID of the routing policy.</p>
+         * <p>The routing policy ID.</p>
          */
         @NameInMap("RouteMapId")
         public String routeMapId;
@@ -186,17 +186,17 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The type of the peer network instance on which the overlapping routes are found. Valid values: Valid values:</p>
+         * <p>The type of the peer network instance on which the overlapping routes are found. Valid values:</p>
          * <br>
-         * <p>*   **VPC**: VPC</p>
-         * <p>*   **VBR**: VBR</p>
-         * <p>*   **CCN**: CCN instance</p>
+         * <p>*   **VPC**</p>
+         * <p>*   **VBR**</p>
+         * <p>*   **CCN**</p>
          */
         @NameInMap("InstanceType")
         public String instanceType;
 
         /**
-         * <p>The ID of the region where the peer network instance on which the overlapping routes are found is deployed.</p>
+         * <p>The region ID of the peer network instance on which the overlapping routes are found.</p>
          */
         @NameInMap("RegionId")
         public String regionId;
@@ -278,7 +278,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
 
     public static class DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry extends TeaModel {
         /**
-         * <p>The autonomous system (AS) paths of the routes.</p>
+         * <p>The AS paths of the routes.</p>
          */
         @NameInMap("AsPaths")
         public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths;
@@ -290,7 +290,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords;
 
         /**
-         * <p>The community attributes of the route entry.</p>
+         * <p>The community attributes of the route entries.</p>
          */
         @NameInMap("Communities")
         public DescribeCenChildInstanceRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities;
@@ -314,7 +314,7 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         public String nextHopInstanceId;
 
         /**
-         * <p>The ID of the region where the instance specified as the next hop in the route belongs.</p>
+         * <p>The region ID of the instance specified as the next hop in the route.</p>
          */
         @NameInMap("NextHopRegionId")
         public String nextHopRegionId;
@@ -322,27 +322,28 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The type of the instance specified as the next hop in the route. Valid values:</p>
          * <br>
-         * <p>*   **Instance**: Elastic Compute Service (ECS) instance.</p>
-         * <p>*   **HaVip**: high-availability virtual IP address (HAVIP).</p>
-         * <p>*   **RouterInterface**: router interface.</p>
-         * <p>*   **NetworkInterface**: elastic network interface (ENI).</p>
-         * <p>*   **VpnGateway**: VPN gateway.</p>
-         * <p>*   **IPv6Gateway**: IPv6 gateway.</p>
-         * <p>*   **NatGateway**: NAT gateway.</p>
-         * <p>*   **Attachment**: network instance connection.</p>
-         * <p>*   **service**: cloud service.</p>
-         * <p>*   **VBR**: VBR.</p>
-         * <p>*   **CCN**: CCN instance.</p>
-         * <p>*   **VPC**: VPC.</p>
-         * <p>*   **local**: system route. No next hop is specified.</p>
-         * <p>*   **TR**: transit router.</p>
-         * <p>*   \*\*BlackHole\*\*: blackhole route. No next hop is specified.</p>
-         * <p>*   \*\*EcRouterInterface\*\*: router interface for Express Connect</p>
-         * <p>*   **HealthCheck**: health check.</p>
-         * <p>*   **AS**: access gateway for CCN.</p>
-         * <p>*   **classicLink**: classic network-type instance.</p>
-         * <p>*   **GatewayEndpoint**: gateway endpoint.</p>
-         * <p>*   **CPE**: data center connected to the VBR.</p>
+         * <p>*   **Instance**: an ECS instance</p>
+         * <p>*   **HaVip**: an HAVIP</p>
+         * <p>*   **RouterInterface**: a router interface</p>
+         * <p>*   **NetworkInterface**: an ENI</p>
+         * <p>*   **VpnGateway**: a VPN gateway</p>
+         * <p>*   **IPv6Gateway**: an IPv6 gateway</p>
+         * <p>*   **Ipv4Gateway**: an IPv4 gateway</p>
+         * <p>*   **NatGateway**: a NAT gateway</p>
+         * <p>*   **Attachment**: a network instance connection</p>
+         * <p>*   **service**: a cloud service</p>
+         * <p>*   **VBR**: a VBR</p>
+         * <p>*   **CCN**: a CCN instance</p>
+         * <p>*   **VPC**: a VPC</p>
+         * <p>*   **local**: a system route (no next hop is specified)</p>
+         * <p>*   **TR**: a transit router</p>
+         * <p>*   **BlackHole**: a blackhole route (no next hop is specified)</p>
+         * <p>*   **EcRouterInterface**: a router interface for Express Connect</p>
+         * <p>*   **HealthCheck**: a health check</p>
+         * <p>*   **AS**: an access gateway for CCN</p>
+         * <p>*   **classic**: a classic network-type instance</p>
+         * <p>*   **GatewayEndpoint**: a gateway endpoint</p>
+         * <p>*   **CPE**: a data center connected to a VBR</p>
          */
         @NameInMap("NextHopType")
         public String nextHopType;
@@ -350,42 +351,42 @@ public class DescribeCenChildInstanceRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the route is allowed to be advertised to or withdrawn from the CEN instance. Valid values:</p>
          * <br>
-         * <p>*   **true**: The route is allowed to be advertised to or withdrawn from the CEN instance.</p>
-         * <p>*   **false**: The route is not allowed to be advertised to or withdrawn from the CEN instance.</p>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
          */
         @NameInMap("OperationalMode")
         public Boolean operationalMode;
 
         /**
-         * <p>Indicates whether the route is advertised to the CEN instance. Valid values: Valid values:</p>
+         * <p>Indicates whether the route is advertised to the CEN instance. Valid values:</p>
          * <br>
-         * <p>*   **Published**: The route is advertised to the CEN instance.</p>
-         * <p>*   **NonPublished**: The route is not advertised to the CEN instance.</p>
+         * <p>*   **Published**</p>
+         * <p>*   **NonPublished**</p>
          */
         @NameInMap("PublishStatus")
         public String publishStatus;
 
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The route table ID.</p>
          */
         @NameInMap("RouteTableId")
         public String routeTableId;
 
         /**
-         * <p>The status of the route. Valid values:</p>
+         * <p>The route status. Valid values:</p>
          * <br>
-         * <p>*   **Active**: available</p>
-         * <p>*   **Candidate**: standby</p>
-         * <p>*   **Rejected**: rejected</p>
-         * <p>*   **Prohibited**: prohibited</p>
+         * <p>*   **Active**: available routes</p>
+         * <p>*   **Candidate**: standby routes</p>
+         * <p>*   **Rejected**: rejected routes</p>
+         * <p>*   **Prohibited**: prohibited routes</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
-         * <p>The type of the route. Valid values: Valid values:</p>
+         * <p>The route type. Valid values:</p>
          * <br>
-         * <p>*   **CEN**: advertised by CEN</p>
+         * <p>*   **CEN**: route that is advertised through CEN</p>
          * <p>*   **System**: system route</p>
          * <p>*   **Custom**: custom route</p>
          */
