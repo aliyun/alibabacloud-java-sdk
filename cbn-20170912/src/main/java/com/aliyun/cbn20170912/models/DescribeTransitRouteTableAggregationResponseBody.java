@@ -4,18 +4,36 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned per page.</p>
+     */
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>A list of aggregate routes.</p>
+     */
     @NameInMap("Data")
     public java.util.List<DescribeTransitRouteTableAggregationResponseBodyData> data;
 
+    /**
+     * <p>The token that determines the start point of the next query. Valid values:</p>
+     * <br>
+     * <p>*   If **NextToken** is not returned, it indicates that no additional results exist.</p>
+     * <p>*   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -65,24 +83,55 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     }
 
     public static class DescribeTransitRouteTableAggregationResponseBodyData extends TeaModel {
+        /**
+         * <p>The description of the aggregate route.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The name of the aggregate route.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the aggregate route.</p>
+         * <br>
+         * <p>The valid value is **Static**, which indicates a static route. By default, aggregate routes advertised to a VPC are considered custom routes.</p>
+         */
         @NameInMap("RouteType")
         public String routeType;
 
+        /**
+         * <p>The cope of networks to which the aggregate route is advertised.</p>
+         * <br>
+         * <p>The valid value is **VPC**, which indicates that the aggregate route is advertised to all virtual private clouds (VPCs) that are in associated forwarding correlation with the Enterprise Edition transit router and have route synchronization enabled.</p>
+         */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>The status of the advertisement of the aggregate route. Valid values:</p>
+         * <br>
+         * <p>*   **AllConfigured**: The aggregate route is advertised to all VPCs.</p>
+         * <p>*   **Configuring**: The aggregate route is being advertised.</p>
+         * <p>*   **ConfigFailed**: The aggregate route failed to be advertised.</p>
+         * <p>*   **PartialConfigured**: Failed to advertise the aggregate route to some VPCs.</p>
+         * <p>*   **Deleting**: The aggregate route is being deleted.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
+         */
         @NameInMap("TrRouteTableId")
         public String trRouteTableId;
 
+        /**
+         * <p>The destination CIDR block of the aggregate route.</p>
+         */
         @NameInMap("TransitRouteTableAggregationCidr")
         public String transitRouteTableAggregationCidr;
 

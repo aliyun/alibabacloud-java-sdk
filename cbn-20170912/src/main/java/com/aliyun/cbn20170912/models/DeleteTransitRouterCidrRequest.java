@@ -5,13 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeleteTransitRouterCidrRequest extends TeaModel {
     /**
-     * <p>The ID of the transit router.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <br>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <br>
+     * <p>>  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
-     * <p>The operation that you want to perform. Set the value to **DeleteTransitRouterCidr**.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <br>
+     * <p>*   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
+     * <p>*   **false** (default): performs a dry run and sends the request.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -23,7 +30,9 @@ public class DeleteTransitRouterCidrRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region where the transit router is deployed.</p>
+     * <br>
+     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
      */
     @NameInMap("RegionId")
     public String regionId;
@@ -35,17 +44,15 @@ public class DeleteTransitRouterCidrRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the region where the transit router is deployed.</p>
+     * <p>The ID of the CIDR block.</p>
      * <br>
-     * <p>You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.</p>
+     * <p>You can call the [ListTransitRouterCidr](~~462772~~) operation to query the ID of a CIDR block.</p>
      */
     @NameInMap("TransitRouterCidrId")
     public String transitRouterCidrId;
 
     /**
-     * <p>The ID of the transit router CIDR block.</p>
-     * <br>
-     * <p>You can call [ListTransitRouterCidr](~~462772~~) to query the ID of a transit router CIDR block.</p>
+     * <p>The ID of the transit router.</p>
      */
     @NameInMap("TransitRouterId")
     public String transitRouterId;

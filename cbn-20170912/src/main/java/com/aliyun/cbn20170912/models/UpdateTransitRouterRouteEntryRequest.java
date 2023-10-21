@@ -38,7 +38,7 @@ public class UpdateTransitRouterRouteEntryRequest extends TeaModel {
     /**
      * <p>The new description of the route.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.</p>
+     * <p>The description must be 1 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.</p>
      */
     @NameInMap("TransitRouterRouteEntryDescription")
     public String transitRouterRouteEntryDescription;

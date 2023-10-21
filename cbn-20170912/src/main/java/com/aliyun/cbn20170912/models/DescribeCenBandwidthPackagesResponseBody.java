@@ -5,37 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
     /**
-     * <p>The expiration time of the temporary upgrade.</p>
+     * <p>The details about the bandwidth plan.</p>
      */
     @NameInMap("CenBandwidthPackages")
     public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackages cenBandwidthPackages;
 
     /**
-     * <p>A list of CEN instances that are associated with the bandwidth plan.</p>
+     * <p>The number of the returned page.</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the source region.</p>
+     * <p>The number of entries returned per page.</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
-     * <p>The ID of the area that you want to query. Valid values:</p>
-     * <br>
-     * <p>*   **china**: Chinese mainland.</p>
-     * <p>*   **asia-pacific**: Asia Pacific</p>
-     * <p>*   **europe**: Europe</p>
-     * <p>*   **australia**: Australia</p>
-     * <p>*   **north-america**: North America</p>
+     * <p>The request ID.</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The bandwidth value to which the bandwidth plan is rolled back when the temporary upgrade ends.</p>
+     * <p>The total number of entries returned.</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -106,17 +100,26 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     public static class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimitsOrginInterRegionBandwidthLimit extends TeaModel {
         /**
-         * <p>WB01235021</p>
+         * <p>The maximum bandwidth value for the inter-region connection.</p>
          */
         @NameInMap("BandwidthLimit")
         public String bandwidthLimit;
 
+        /**
+         * <p>The connected regions.</p>
+         */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
+        /**
+         * <p>The ID of the local region.</p>
+         */
         @NameInMap("LocalRegionId")
         public String localRegionId;
 
+        /**
+         * <p>The ID of the peer region.</p>
+         */
         @NameInMap("OppositeRegionId")
         public String oppositeRegionId;
 
@@ -179,9 +182,15 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
     }
 
     public static class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageTagsTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -229,94 +238,136 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
 
     public static class DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackage extends TeaModel {
         /**
-         * <p>The ID of the bandwidth plan.</p>
+         * <p>The maximum bandwidth of the bandwidth plan.</p>
          */
         @NameInMap("Bandwidth")
         public Long bandwidth;
 
         /**
-         * <p>The maximum bandwidth of the bandwidth plan.</p>
+         * <p>The billing method of the bandwidth plan.</p>
          */
         @NameInMap("BandwidthPackageChargeType")
         public String bandwidthPackageChargeType;
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The status of the bandwidth plan. Valid values:</p>
+         * <br>
+         * <p>*   **Normal**: running as expected.</p>
+         * <p>*   **FinancialLocked**: locked due to overdue payments.</p>
+         * <p>*   **SecurityLocked**: locked due to security reasons</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
-         * <p>The ID of the connected area.</p>
+         * <p>The ID of the bandwidth plan.</p>
          */
         @NameInMap("CenBandwidthPackageId")
         public String cenBandwidthPackageId;
 
+        /**
+         * <p>A list of CEN instances that are associated with the bandwidth plan.</p>
+         */
         @NameInMap("CenIds")
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageCenIds cenIds;
 
         /**
-         * <p>The connected regions.</p>
+         * <p>The time when the bandwidth plan was created. The time is displayed in the ISO8601 standard in the YYYY-MM-DDThh:mmZ format.</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
         /**
-         * <p>The timeout period of the bandwidth plan.</p>
+         * <p>The description of the bandwidth plan.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The new billing method.</p>
+         * <p>The time when the bandwidth plan expires.</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>The name of the bandwidth plan.</p>
+         * <p>The ID of the area that you want to query. Valid values:</p>
+         * <br>
+         * <p>*   **china**: Chinese mainland.</p>
+         * <p>*   **asia-pacific**: Asia Pacific</p>
+         * <p>*   **europe**: Europe</p>
+         * <p>*   **australia**: Australia</p>
+         * <p>*   **north-america**: North America</p>
          */
         @NameInMap("GeographicRegionAId")
         public String geographicRegionAId;
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The ID of the other area connected by the bandwidth plan. Valid values:</p>
+         * <br>
+         * <p>*   **china**: Chinese mainland.</p>
+         * <p>*   **asia-pacific**: Asia Pacific</p>
+         * <p>*   **europe**: Europe</p>
+         * <p>*   **australia**: Australia</p>
+         * <p>*   **north-america**: North America</p>
          */
         @NameInMap("GeographicRegionBId")
         public String geographicRegionBId;
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The ID of the connected area.</p>
          */
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
         /**
-         * <p>Queries details about Cloud Enterprise Network (CEN) bandwidth plans within the current Alibaba Cloud account.</p>
+         * <p>Indicates whether renewal data is included.</p>
+         * <br>
+         * <p>*   **true**</p>
+         * <p>*   **false**</p>
+         * <br>
+         * <p>>  This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and a pending order exists.</p>
          */
         @NameInMap("HasReservationData")
         public String hasReservationData;
 
         /**
-         * <p>The filter condition.</p>
+         * <p>Indicates whether the bandwidth plan supports cross-border communication.</p>
          * <br>
-         * <p>You can use filter conditions to filter the bandwidth plans that you want to query. The following filter conditions are supported:</p>
-         * <br>
-         * <p>*   **CenId**: CEN instance ID</p>
-         * <br>
-         * <p>*   **Status**: bandwidth plan status. Valid values:</p>
-         * <br>
-         * <p>    *   **Idle**: not associated with a CEN instance.</p>
-         * <p>    *   **InUse**: associated with a CEN instance.</p>
-         * <br>
-         * <p>*   **CenBandwidthPackageId**: bandwidth plan ID</p>
-         * <br>
-         * <p>*   **Name**: bandwidth plan name</p>
-         * <br>
-         * <p>    You can specify one or more filter conditions. The maximum value of **N** is **5**.</p>
+         * <p>*   **false**</p>
+         * <p>*   **true**</p>
          */
         @NameInMap("IsCrossBorder")
         public Boolean isCrossBorder;
+
+        /**
+         * <p>The name of the bandwidth plan.</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The details about the connected regions.</p>
+         */
+        @NameInMap("OrginInterRegionBandwidthLimits")
+        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits;
+
+        /**
+         * <p>The expiration time of the temporary upgrade.</p>
+         */
+        @NameInMap("ReservationActiveTime")
+        public String reservationActiveTime;
+
+        /**
+         * <p>The bandwidth value to which the bandwidth plan is restored when the temporary upgrade ends.</p>
+         */
+        @NameInMap("ReservationBandwidth")
+        public String reservationBandwidth;
+
+        /**
+         * <p>The new billing method.</p>
+         */
+        @NameInMap("ReservationInternetChargeType")
+        public String reservationInternetChargeType;
 
         /**
          * <p>The renewal method.</p>
@@ -324,54 +375,27 @@ public class DescribeCenBandwidthPackagesResponseBody extends TeaModel {
          * <p>*   **TEMP_UPGRADE**: temporary upgrade</p>
          * <p>*   **UPGRADE**: upgrade</p>
          */
-        @NameInMap("Name")
-        public String name;
-
-        /**
-         * <p>DescribeCenBandwidthPackages</p>
-         */
-        @NameInMap("OrginInterRegionBandwidthLimits")
-        public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageOrginInterRegionBandwidthLimits orginInterRegionBandwidthLimits;
-
-        /**
-         * <p>The maximum bandwidth value for the inter-region connection.</p>
-         */
-        @NameInMap("ReservationActiveTime")
-        public String reservationActiveTime;
-
-        /**
-         * <p>The logical operator between the filter conditions. Valid values:</p>
-         * <br>
-         * <p>*   **false** (default): **AND** Bandwidth plans that meet all filter conditions are returned.</p>
-         * <p>*   **true**: **OR** Bandwidth plans that meet one of the filter conditions are returned.</p>
-         */
-        @NameInMap("ReservationBandwidth")
-        public String reservationBandwidth;
-
-        /**
-         * <p>Indicates whether the bandwidth plan is associated with a CEN instance.</p>
-         * <br>
-         * <p>*   **Idle**: no</p>
-         * <p>*   **InUse**: yes</p>
-         */
-        @NameInMap("ReservationInternetChargeType")
-        public String reservationInternetChargeType;
-
-        /**
-         * <p>The number of entries to return on each page. Maximum value: **50**. Default value: **10**.</p>
-         */
         @NameInMap("ReservationOrderType")
         public String reservationOrderType;
 
+        /**
+         * <p>The ID of the resource group to which the ACL belongs.</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The number of the page to return. Default value: **1**.</p>
+         * <p>Indicates whether the bandwidth plan is associated with a CEN instance.</p>
+         * <br>
+         * <p>*   **Idle**</p>
+         * <p>*   **InUse**</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tags of the bandwidth plan.</p>
+         */
         @NameInMap("Tags")
         public DescribeCenBandwidthPackagesResponseBodyCenBandwidthPackagesCenBandwidthPackageTags tags;
 

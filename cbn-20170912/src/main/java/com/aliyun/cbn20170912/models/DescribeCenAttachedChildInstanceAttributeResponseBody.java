@@ -167,14 +167,14 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         public String ipv6CidrBlock;
 
         /**
-         * <p>The type of the IPv6 CIDR block. Valid values:</p>
+         * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
          * <br>
-         * <p>* **BGP** (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</p>
-         * <p>* **ChinaMobile:** China Mobile (single line)</p>
-         * <p>* **ChinaUnicom:** China Unicom (single line)</p>
-         * <p>* **ChinaTelecom:** China Telecom (single line)</p>
+         * <p>*   BGP (default): Alibaba Cloud Border Gateway Protocol (BGP) IPv6</p>
+         * <p>*   ChinaMobile: China Mobile (single line)</p>
+         * <p>*   ChinaUnicom: China Unicom (single line)</p>
+         * <p>*   ChinaTelecom: China Telecom (single line)</p>
          * <br>
-         * <p>> If your Alibaba Cloud account has the required permissions to activate single-ISP bandwidth, you can set Ipv6Isp to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
+         * <p>>  If you are on the whitelist of single-line bandwidth, you can set this parameter to ChinaTelecom, ChinaUnicom, or ChinaMobile.</p>
          */
         @NameInMap("Ipv6Isp")
         public String ipv6Isp;
@@ -254,13 +254,13 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         public String ipv6CidrBlock;
 
         /**
-         * <p>The information about the IPv6 CIDR blocks of the VPC.</p>
+         * <p>The IPv6 CIDR blocks of the VPC.</p>
          */
         @NameInMap("Ipv6CidrBlocks")
         public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesIpv6CidrBlocks ipv6CidrBlocks;
 
         /**
-         * <p>The secondary IPv4 CIDR block of the VPC.</p>
+         * <p>The information about the VPC secondary CIDR block.</p>
          */
         @NameInMap("SecondaryCidrBlocks")
         public DescribeCenAttachedChildInstanceAttributeResponseBodyChildInstanceAttributesSecondaryCidrBlocks secondaryCidrBlocks;

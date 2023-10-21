@@ -39,9 +39,8 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
      * <p>The destination CIDR block of the aggregate route.</p>
      * <br>
      * <p>>  The following CIDR blocks are not supported:</p>
-     * <br>
-     * <p>*   CIDR blocks that start with 0 or 100.64.</p>
-     * <p>*   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</p>
+     * <p>>*   CIDR blocks that start with 0 or 100.64.</p>
+     * <p>>*   Multicast CIDR blocks, including 224.0.0.1 to 239.255.255.254.</p>
      */
     @NameInMap("TransitRouteTableAggregationCidr")
     public String transitRouteTableAggregationCidr;
@@ -49,7 +48,7 @@ public class CreateTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The description of the aggregate route.</p>
      * <br>
-     * <p>The description must be 2 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -. You can also leave the description empty.</p>
+     * <p>The description must be 0 to 256 characters in length, and can contain letters, digits, and the following special characters: , . ; / @ \_ -.</p>
      */
     @NameInMap("TransitRouteTableAggregationDescription")
     public String transitRouteTableAggregationDescription;

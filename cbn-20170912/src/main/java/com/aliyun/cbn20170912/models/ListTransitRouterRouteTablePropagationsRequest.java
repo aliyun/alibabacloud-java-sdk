@@ -45,13 +45,13 @@ public class ListTransitRouterRouteTablePropagationsRequest extends TeaModel {
     public String transitRouterAttachmentId;
 
     /**
-     * <p>The ID of the next hop.</p>
+     * <p>The ID of the network instance.</p>
      */
     @NameInMap("TransitRouterAttachmentResourceId")
     public String transitRouterAttachmentResourceId;
 
     /**
-     * <p>The type of next hop. Valid values:</p>
+     * <p>The type of the network instance. Valid values:</p>
      * <br>
      * <p>*   **VPC**: virtual private cloud (VPC)</p>
      * <p>*   **VBR**: virtual border router (VBR)</p>

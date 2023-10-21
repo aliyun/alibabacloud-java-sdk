@@ -81,13 +81,13 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
 
     public static class ListTransitRouterRouteTablePropagationsResponseBodyTransitRouterPropagations extends TeaModel {
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The ID of the network instance.</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The type of next hop. Valid values:</p>
+         * <p>The type of the network instance. Valid values:</p>
          * <br>
          * <p>*   **VPC**: VPC</p>
          * <p>*   **VBR**: VBR</p>
@@ -103,7 +103,6 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
          * <p>*   **Enabling**: being enabled</p>
          * <p>*   **Disabling**: being disabled</p>
          * <p>*   **Active**: available</p>
-         * <p>*   **Deleted**: deleted</p>
          */
         @NameInMap("Status")
         public String status;
